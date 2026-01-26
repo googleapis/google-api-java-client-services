@@ -154,14 +154,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
   public class Folders {
 
     /**
-     * Returns the AutokeyConfig for a folder.
+     * Returns the AutokeyConfig for a folder or project.
      *
      * Create a request for the method "folders.getAutokeyConfig".
      *
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
      * @return the request
      */
     public GetAutokeyConfig getAutokeyConfig(java.lang.String name) throws java.io.IOException {
@@ -178,7 +179,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^folders/[^/]+/autokeyConfig$");
 
       /**
-       * Returns the AutokeyConfig for a folder.
+       * Returns the AutokeyConfig for a folder or project.
        *
        * Create a request for the method "folders.getAutokeyConfig".
        *
@@ -188,7 +189,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * tractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
        * @since 1.13
        */
       protected GetAutokeyConfig(java.lang.String name) {
@@ -267,19 +269,22 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     `projects/{PROJECT_NUMBER}/autokeyConfig`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`.
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
        */
       public GetAutokeyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -436,7 +441,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates the AutokeyConfig for a folder. The caller must have both
+     * Updates the AutokeyConfig for a folder or a project. The caller must have both
      * `cloudkms.autokeyConfigs.update` permission on the parent folder and
      * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A KeyHandle creation
      * in the folder's descendant projects will use this configuration to determine where to create the
@@ -465,7 +470,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^folders/[^/]+/autokeyConfig$");
 
       /**
-       * Updates the AutokeyConfig for a folder. The caller must have both
+       * Updates the AutokeyConfig for a folder or a project. The caller must have both
        * `cloudkms.autokeyConfigs.update` permission on the parent folder and
        * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A KeyHandle creation
        * in the folder's descendant projects will use this configuration to determine where to create
@@ -1096,6 +1101,154 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
   public class Projects {
 
     /**
+     * Returns the AutokeyConfig for a folder or project.
+     *
+     * Create a request for the method "projects.getAutokeyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+     * @return the request
+     */
+    public GetAutokeyConfig getAutokeyConfig(java.lang.String name) throws java.io.IOException {
+      GetAutokeyConfig result = new GetAutokeyConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetAutokeyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.AutokeyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/autokeyConfig$");
+
+      /**
+       * Returns the AutokeyConfig for a folder or project.
+       *
+       * Create a request for the method "projects.getAutokeyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link GetAutokeyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link GetAutokeyConfig#initialize(com.google.api.client.googleapis.services.Abs
+       * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       * @since 1.13
+       */
+      protected GetAutokeyConfig(java.lang.String name) {
+        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.AutokeyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/autokeyConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetAutokeyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetAutokeyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetAutokeyConfig setAccessToken(java.lang.String accessToken) {
+        return (GetAutokeyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetAutokeyConfig setAlt(java.lang.String alt) {
+        return (GetAutokeyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetAutokeyConfig setCallback(java.lang.String callback) {
+        return (GetAutokeyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetAutokeyConfig setFields(java.lang.String fields) {
+        return (GetAutokeyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetAutokeyConfig setKey(java.lang.String key) {
+        return (GetAutokeyConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetAutokeyConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetAutokeyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetAutokeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetAutokeyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetAutokeyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetAutokeyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetAutokeyConfig setUploadType(java.lang.String uploadType) {
+        return (GetAutokeyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetAutokeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetAutokeyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * or `projects/{PROJECT_NUMBER}/autokeyConfig`.
+       */
+      public GetAutokeyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/autokeyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetAutokeyConfig set(String parameterName, Object value) {
+        return (GetAutokeyConfig) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the KeyAccessJustificationsPolicyConfig for a given organization, folder, or project.
      *
      * Create a request for the method "projects.getKajPolicyConfig".
@@ -1691,6 +1844,167 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public ShowEffectiveKeyAccessJustificationsPolicyConfig set(String parameterName, Object value) {
         return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the AutokeyConfig for a folder or a project. The caller must have both
+     * `cloudkms.autokeyConfigs.update` permission on the parent folder and
+     * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A KeyHandle creation
+     * in the folder's descendant projects will use this configuration to determine where to create the
+     * resulting CryptoKey.
+     *
+     * Create a request for the method "projects.updateAutokeyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+     * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
+     * @return the request
+     */
+    public UpdateAutokeyConfig updateAutokeyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.AutokeyConfig content) throws java.io.IOException {
+      UpdateAutokeyConfig result = new UpdateAutokeyConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateAutokeyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.AutokeyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/autokeyConfig$");
+
+      /**
+       * Updates the AutokeyConfig for a folder or a project. The caller must have both
+       * `cloudkms.autokeyConfigs.update` permission on the parent folder and
+       * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A KeyHandle creation
+       * in the folder's descendant projects will use this configuration to determine where to create
+       * the resulting CryptoKey.
+       *
+       * Create a request for the method "projects.updateAutokeyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link UpdateAutokeyConfig#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
+       * @since 1.13
+       */
+      protected UpdateAutokeyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.AutokeyConfig content) {
+        super(CloudKMS.this, "PATCH", REST_PATH, content, com.google.api.services.cloudkms.v1.model.AutokeyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/autokeyConfig$");
+        }
+      }
+
+      @Override
+      public UpdateAutokeyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateAutokeyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateAutokeyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setAlt(java.lang.String alt) {
+        return (UpdateAutokeyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setCallback(java.lang.String callback) {
+        return (UpdateAutokeyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setFields(java.lang.String fields) {
+        return (UpdateAutokeyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setKey(java.lang.String key) {
+        return (UpdateAutokeyConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateAutokeyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateAutokeyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateAutokeyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateAutokeyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateAutokeyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateAutokeyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Identifier. Name of the AutokeyConfig resource, e.g.
+       * `folders/{FOLDER_NUMBER}/autokeyConfig`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Identifier. Name of the AutokeyConfig resource, e.g.
+       * `folders/{FOLDER_NUMBER}/autokeyConfig`
+       */
+      public UpdateAutokeyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/autokeyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Required. Masks which fields of the AutokeyConfig to update, e.g. `keyProject`. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. Masks which fields of the AutokeyConfig to update, e.g. `keyProject`.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. Masks which fields of the AutokeyConfig to update, e.g. `keyProject`. */
+      public UpdateAutokeyConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateAutokeyConfig set(String parameterName, Object value) {
+        return (UpdateAutokeyConfig) super.set(parameterName, value);
       }
     }
     /**
@@ -11303,6 +11617,1601 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
         }
 
+      }
+      /**
+       * An accessor for creating requests from the SingleTenantHsmInstances collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudKMS cloudkms = new CloudKMS(...);}
+       *   {@code CloudKMS.SingleTenantHsmInstances.List request = cloudkms.singleTenantHsmInstances().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SingleTenantHsmInstances singleTenantHsmInstances() {
+        return new SingleTenantHsmInstances();
+      }
+
+      /**
+       * The "singleTenantHsmInstances" collection of methods.
+       */
+      public class SingleTenantHsmInstances {
+
+        /**
+         * Creates a new SingleTenantHsmInstance in a given Project and Location. User must create a
+         * RegisterTwoFactorAuthKeys proposal with this single-tenant HSM instance to finish setup of the
+         * instance.
+         *
+         * Create a request for the method "singleTenantHsmInstances.create".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location associated with the SingleTenantHsmInstance, in the
+         *        format `projects/locations`.
+         * @param content the {@link com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstance}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstance content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/singleTenantHsmInstances";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new SingleTenantHsmInstance in a given Project and Location. User must create a
+           * RegisterTwoFactorAuthKeys proposal with this single-tenant HSM instance to finish setup of the
+           * instance.
+           *
+           * Create a request for the method "singleTenantHsmInstances.create".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location associated with the SingleTenantHsmInstance, in the
+         *        format `projects/locations`.
+           * @param content the {@link com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstance}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstance content) {
+            super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location associated with the
+           * SingleTenantHsmInstance, in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location associated with the SingleTenantHsmInstance, in the
+         format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location associated with the
+           * SingleTenantHsmInstance, in the format `projects/locations`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. It must be unique within a location and match the regular expression
+           * `[a-zA-Z0-9_-]{1,63}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String singleTenantHsmInstanceId;
+
+          /** Optional. It must be unique within a location and match the regular expression
+         `[a-zA-Z0-9_-]{1,63}`.
+           */
+          public java.lang.String getSingleTenantHsmInstanceId() {
+            return singleTenantHsmInstanceId;
+          }
+
+          /**
+           * Optional. It must be unique within a location and match the regular expression
+           * `[a-zA-Z0-9_-]{1,63}`.
+           */
+          public Create setSingleTenantHsmInstanceId(java.lang.String singleTenantHsmInstanceId) {
+            this.singleTenantHsmInstanceId = singleTenantHsmInstanceId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns metadata for a given SingleTenantHsmInstance.
+         *
+         * Create a request for the method "singleTenantHsmInstances.get".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the SingleTenantHsmInstance to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstance> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+$");
+
+          /**
+           * Returns metadata for a given SingleTenantHsmInstance.
+           *
+           * Create a request for the method "singleTenantHsmInstances.get".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the SingleTenantHsmInstance to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstance.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the SingleTenantHsmInstance to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the SingleTenantHsmInstance to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the SingleTenantHsmInstance to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists SingleTenantHsmInstances.
+         *
+         * Create a request for the method "singleTenantHsmInstances.list".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location associated with the SingleTenantHsmInstances to list, in
+         *        the format `projects/locations`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ListSingleTenantHsmInstancesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/singleTenantHsmInstances";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists SingleTenantHsmInstances.
+           *
+           * Create a request for the method "singleTenantHsmInstances.list".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location associated with the SingleTenantHsmInstances to list, in
+         *        the format `projects/locations`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.ListSingleTenantHsmInstancesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location associated with the
+           * SingleTenantHsmInstances to list, in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location associated with the SingleTenantHsmInstances to list,
+         in the format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location associated with the
+           * SingleTenantHsmInstances to list, in the format `projects/locations`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Only include resources that match the filter in the response. For more
+           * information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Only include resources that match the filter in the response. For more information, see
+         [Sorting and filtering list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Only include resources that match the filter in the response. For more
+           * information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Specify how the results should be sorted. If not specified, the results will
+           * be sorted in the default order. For more information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Specify how the results should be sorted. If not specified, the results will be sorted in
+         the default order. For more information, see [Sorting and filtering list
+         results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Specify how the results should be sorted. If not specified, the results will
+           * be sorted in the default order. For more information, see [Sorting and filtering list
+           * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Optional limit on the number of SingleTenantHsmInstances to include in the
+           * response. Further SingleTenantHsmInstances can subsequently be obtained by including
+           * the ListSingleTenantHsmInstancesResponse.next_page_token in a subsequent request. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Optional limit on the number of SingleTenantHsmInstances to include in the response.
+         Further SingleTenantHsmInstances can subsequently be obtained by including the
+         ListSingleTenantHsmInstancesResponse.next_page_token in a subsequent request. If unspecified, the
+         server will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Optional limit on the number of SingleTenantHsmInstances to include in the
+           * response. Further SingleTenantHsmInstances can subsequently be obtained by including
+           * the ListSingleTenantHsmInstancesResponse.next_page_token in a subsequent request. If
+           * unspecified, the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Optional pagination token, returned earlier via
+           * ListSingleTenantHsmInstancesResponse.next_page_token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Optional pagination token, returned earlier via
+         ListSingleTenantHsmInstancesResponse.next_page_token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Optional pagination token, returned earlier via
+           * ListSingleTenantHsmInstancesResponse.next_page_token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, HsmManagement.ListSingleTenantHsmInstances will also return
+           * SingleTenantHsmInstances in DELETED state.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showDeleted;
+
+          /** Optional. If set to true, HsmManagement.ListSingleTenantHsmInstances will also return
+         SingleTenantHsmInstances in DELETED state.
+           */
+          public java.lang.Boolean getShowDeleted() {
+            return showDeleted;
+          }
+
+          /**
+           * Optional. If set to true, HsmManagement.ListSingleTenantHsmInstances will also return
+           * SingleTenantHsmInstances in DELETED state.
+           */
+          public List setShowDeleted(java.lang.Boolean showDeleted) {
+            this.showDeleted = showDeleted;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Proposals collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudKMS cloudkms = new CloudKMS(...);}
+         *   {@code CloudKMS.Proposals.List request = cloudkms.proposals().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Proposals proposals() {
+          return new Proposals();
+        }
+
+        /**
+         * The "proposals" collection of methods.
+         */
+        public class Proposals {
+
+          /**
+           * Approves a SingleTenantHsmInstanceProposal for a given SingleTenantHsmInstance. The proposal must
+           * be in the PENDING state.
+           *
+           * Create a request for the method "proposals.approve".
+           *
+           * This request holds the parameters needed by the cloudkms server.  After setting any optional
+           * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the SingleTenantHsmInstanceProposal to approve.
+           * @param content the {@link com.google.api.services.cloudkms.v1.model.ApproveSingleTenantHsmInstanceProposalRequest}
+           * @return the request
+           */
+          public Approve approve(java.lang.String name, com.google.api.services.cloudkms.v1.model.ApproveSingleTenantHsmInstanceProposalRequest content) throws java.io.IOException {
+            Approve result = new Approve(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Approve extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ApproveSingleTenantHsmInstanceProposalResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:approve";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+
+            /**
+             * Approves a SingleTenantHsmInstanceProposal for a given SingleTenantHsmInstance. The proposal
+             * must be in the PENDING state.
+             *
+             * Create a request for the method "proposals.approve".
+             *
+             * This request holds the parameters needed by the the cloudkms server.  After setting any
+             * optional parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the SingleTenantHsmInstanceProposal to approve.
+             * @param content the {@link com.google.api.services.cloudkms.v1.model.ApproveSingleTenantHsmInstanceProposalRequest}
+             * @since 1.13
+             */
+            protected Approve(java.lang.String name, com.google.api.services.cloudkms.v1.model.ApproveSingleTenantHsmInstanceProposalRequest content) {
+              super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.ApproveSingleTenantHsmInstanceProposalResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+              }
+            }
+
+            @Override
+            public Approve set$Xgafv(java.lang.String $Xgafv) {
+              return (Approve) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Approve setAccessToken(java.lang.String accessToken) {
+              return (Approve) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Approve setAlt(java.lang.String alt) {
+              return (Approve) super.setAlt(alt);
+            }
+
+            @Override
+            public Approve setCallback(java.lang.String callback) {
+              return (Approve) super.setCallback(callback);
+            }
+
+            @Override
+            public Approve setFields(java.lang.String fields) {
+              return (Approve) super.setFields(fields);
+            }
+
+            @Override
+            public Approve setKey(java.lang.String key) {
+              return (Approve) super.setKey(key);
+            }
+
+            @Override
+            public Approve setOauthToken(java.lang.String oauthToken) {
+              return (Approve) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Approve setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Approve) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Approve setQuotaUser(java.lang.String quotaUser) {
+              return (Approve) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Approve setUploadType(java.lang.String uploadType) {
+              return (Approve) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Approve setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Approve) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to approve. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to approve.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to approve. */
+            public Approve setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Approve set(String parameterName, Object value) {
+              return (Approve) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a new SingleTenantHsmInstanceProposal for a given SingleTenantHsmInstance.
+           *
+           * Create a request for the method "proposals.create".
+           *
+           * This request holds the parameters needed by the cloudkms server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of the SingleTenantHsmInstance associated with the
+           *        SingleTenantHsmInstanceProposals.
+           * @param content the {@link com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstanceProposal}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstanceProposal content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/proposals";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+$");
+
+            /**
+             * Creates a new SingleTenantHsmInstanceProposal for a given SingleTenantHsmInstance.
+             *
+             * Create a request for the method "proposals.create".
+             *
+             * This request holds the parameters needed by the the cloudkms server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of the SingleTenantHsmInstance associated with the
+           *        SingleTenantHsmInstanceProposals.
+             * @param content the {@link com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstanceProposal}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstanceProposal content) {
+              super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the SingleTenantHsmInstance associated with the
+             * SingleTenantHsmInstanceProposals.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of the SingleTenantHsmInstance associated with the
+           SingleTenantHsmInstanceProposals.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of the SingleTenantHsmInstance associated with the
+             * SingleTenantHsmInstanceProposals.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. It must be unique within a location and match the regular expression
+             * `[a-zA-Z0-9_-]{1,63}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String singleTenantHsmInstanceProposalId;
+
+            /** Optional. It must be unique within a location and match the regular expression
+           `[a-zA-Z0-9_-]{1,63}`.
+             */
+            public java.lang.String getSingleTenantHsmInstanceProposalId() {
+              return singleTenantHsmInstanceProposalId;
+            }
+
+            /**
+             * Optional. It must be unique within a location and match the regular expression
+             * `[a-zA-Z0-9_-]{1,63}`.
+             */
+            public Create setSingleTenantHsmInstanceProposalId(java.lang.String singleTenantHsmInstanceProposalId) {
+              this.singleTenantHsmInstanceProposalId = singleTenantHsmInstanceProposalId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a SingleTenantHsmInstanceProposal.
+           *
+           * Create a request for the method "proposals.delete".
+           *
+           * This request holds the parameters needed by the cloudkms server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the SingleTenantHsmInstanceProposal to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+
+            /**
+             * Deletes a SingleTenantHsmInstanceProposal.
+             *
+             * Create a request for the method "proposals.delete".
+             *
+             * This request holds the parameters needed by the the cloudkms server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the SingleTenantHsmInstanceProposal to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudKMS.this, "DELETE", REST_PATH, null, com.google.api.services.cloudkms.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Executes a SingleTenantHsmInstanceProposal for a given SingleTenantHsmInstance. The proposal must
+           * be in the APPROVED state.
+           *
+           * Create a request for the method "proposals.execute".
+           *
+           * This request holds the parameters needed by the cloudkms server.  After setting any optional
+           * parameters, call the {@link Execute#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the SingleTenantHsmInstanceProposal to execute.
+           * @param content the {@link com.google.api.services.cloudkms.v1.model.ExecuteSingleTenantHsmInstanceProposalRequest}
+           * @return the request
+           */
+          public Execute execute(java.lang.String name, com.google.api.services.cloudkms.v1.model.ExecuteSingleTenantHsmInstanceProposalRequest content) throws java.io.IOException {
+            Execute result = new Execute(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Execute extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:execute";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+
+            /**
+             * Executes a SingleTenantHsmInstanceProposal for a given SingleTenantHsmInstance. The proposal
+             * must be in the APPROVED state.
+             *
+             * Create a request for the method "proposals.execute".
+             *
+             * This request holds the parameters needed by the the cloudkms server.  After setting any
+             * optional parameters, call the {@link Execute#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Execute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the SingleTenantHsmInstanceProposal to execute.
+             * @param content the {@link com.google.api.services.cloudkms.v1.model.ExecuteSingleTenantHsmInstanceProposalRequest}
+             * @since 1.13
+             */
+            protected Execute(java.lang.String name, com.google.api.services.cloudkms.v1.model.ExecuteSingleTenantHsmInstanceProposalRequest content) {
+              super(CloudKMS.this, "POST", REST_PATH, content, com.google.api.services.cloudkms.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+              }
+            }
+
+            @Override
+            public Execute set$Xgafv(java.lang.String $Xgafv) {
+              return (Execute) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Execute setAccessToken(java.lang.String accessToken) {
+              return (Execute) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Execute setAlt(java.lang.String alt) {
+              return (Execute) super.setAlt(alt);
+            }
+
+            @Override
+            public Execute setCallback(java.lang.String callback) {
+              return (Execute) super.setCallback(callback);
+            }
+
+            @Override
+            public Execute setFields(java.lang.String fields) {
+              return (Execute) super.setFields(fields);
+            }
+
+            @Override
+            public Execute setKey(java.lang.String key) {
+              return (Execute) super.setKey(key);
+            }
+
+            @Override
+            public Execute setOauthToken(java.lang.String oauthToken) {
+              return (Execute) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Execute setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Execute) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Execute setQuotaUser(java.lang.String quotaUser) {
+              return (Execute) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Execute setUploadType(java.lang.String uploadType) {
+              return (Execute) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Execute setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Execute) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to execute. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to execute.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to execute. */
+            public Execute setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Execute set(String parameterName, Object value) {
+              return (Execute) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns metadata for a given SingleTenantHsmInstanceProposal.
+           *
+           * Create a request for the method "proposals.get".
+           *
+           * This request holds the parameters needed by the cloudkms server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the SingleTenantHsmInstanceProposal to get.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstanceProposal> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+
+            /**
+             * Returns metadata for a given SingleTenantHsmInstanceProposal.
+             *
+             * Create a request for the method "proposals.get".
+             *
+             * This request holds the parameters needed by the the cloudkms server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the SingleTenantHsmInstanceProposal to get.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.SingleTenantHsmInstanceProposal.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to get. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to get.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the SingleTenantHsmInstanceProposal to get. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+/proposals/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists SingleTenantHsmInstanceProposals.
+           *
+           * Create a request for the method "proposals.list".
+           *
+           * This request holds the parameters needed by the cloudkms server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the location associated with the SingleTenantHsmInstanceProposals to
+           *        list, in the format `projects/locations/singleTenantHsmInstances`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ListSingleTenantHsmInstanceProposalsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/proposals";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+$");
+
+            /**
+             * Lists SingleTenantHsmInstanceProposals.
+             *
+             * Create a request for the method "proposals.list".
+             *
+             * This request holds the parameters needed by the the cloudkms server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the location associated with the SingleTenantHsmInstanceProposals to
+           *        list, in the format `projects/locations/singleTenantHsmInstances`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.ListSingleTenantHsmInstanceProposalsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the location associated with the
+             * SingleTenantHsmInstanceProposals to list, in the format
+             * `projects/locations/singleTenantHsmInstances`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the location associated with the SingleTenantHsmInstanceProposals to
+           list, in the format `projects/locations/singleTenantHsmInstances`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the location associated with the
+             * SingleTenantHsmInstanceProposals to list, in the format
+             * `projects/locations/singleTenantHsmInstances`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/singleTenantHsmInstances/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Only include resources that match the filter in the response. For more
+             * information, see [Sorting and filtering list
+             * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Only include resources that match the filter in the response. For more information, see
+           [Sorting and filtering list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Only include resources that match the filter in the response. For more
+             * information, see [Sorting and filtering list
+             * results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Specify how the results should be sorted. If not specified, the results
+             * will be sorted in the default order. For more information, see [Sorting and filtering
+             * list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Specify how the results should be sorted. If not specified, the results will be sorted in
+           the default order. For more information, see [Sorting and filtering list
+           results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Specify how the results should be sorted. If not specified, the results
+             * will be sorted in the default order. For more information, see [Sorting and filtering
+             * list results](https://cloud.google.com/kms/docs/sorting-and-filtering).
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. Optional limit on the number of SingleTenantHsmInstanceProposals to include
+             * in the response. Further SingleTenantHsmInstanceProposals can subsequently be
+             * obtained by including the
+             * ListSingleTenantHsmInstanceProposalsResponse.next_page_token in a subsequent request.
+             * If unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Optional limit on the number of SingleTenantHsmInstanceProposals to include in the
+           response. Further SingleTenantHsmInstanceProposals can subsequently be obtained by including the
+           ListSingleTenantHsmInstanceProposalsResponse.next_page_token in a subsequent request. If
+           unspecified, the server will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Optional limit on the number of SingleTenantHsmInstanceProposals to include
+             * in the response. Further SingleTenantHsmInstanceProposals can subsequently be
+             * obtained by including the
+             * ListSingleTenantHsmInstanceProposalsResponse.next_page_token in a subsequent request.
+             * If unspecified, the server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Optional pagination token, returned earlier via
+             * ListSingleTenantHsmInstanceProposalsResponse.next_page_token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Optional pagination token, returned earlier via
+           ListSingleTenantHsmInstanceProposalsResponse.next_page_token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Optional pagination token, returned earlier via
+             * ListSingleTenantHsmInstanceProposalsResponse.next_page_token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, HsmManagement.ListSingleTenantHsmInstanceProposals will
+             * also return SingleTenantHsmInstanceProposals in DELETED state.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean showDeleted;
+
+            /** Optional. If set to true, HsmManagement.ListSingleTenantHsmInstanceProposals will also return
+           SingleTenantHsmInstanceProposals in DELETED state.
+             */
+            public java.lang.Boolean getShowDeleted() {
+              return showDeleted;
+            }
+
+            /**
+             * Optional. If set to true, HsmManagement.ListSingleTenantHsmInstanceProposals will
+             * also return SingleTenantHsmInstanceProposals in DELETED state.
+             */
+            public List setShowDeleted(java.lang.Boolean showDeleted) {
+              this.showDeleted = showDeleted;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
   }

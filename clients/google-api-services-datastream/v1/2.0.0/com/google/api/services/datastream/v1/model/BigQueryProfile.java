@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * BigQuery warehouse profile.
+ * Profile for connecting to a BigQuery destination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:

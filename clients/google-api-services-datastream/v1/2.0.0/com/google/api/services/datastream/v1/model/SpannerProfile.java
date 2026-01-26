@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * MySQL database.
+ * Profile for connecting to a Spanner source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -27,24 +27,28 @@ package com.google.api.services.datastream.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MysqlDatabase extends com.google.api.client.json.GenericJson {
+public final class SpannerProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * The database name.
+   * Required. Immutable. Cloud Spanner database resource. This field is immutable. Must be in the
+   * format: projects/{project}/instances/{instance}/databases/{database_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String database;
 
   /**
-   * Tables in the database.
+   * Optional. The Spanner endpoint to connect to. Defaults to the global endpoint
+   * (https://spanner.googleapis.com). Must be in the format:
+   * https://spanner.{region}.rep.googleapis.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<MysqlTable> mysqlTables;
+  private java.lang.String host;
 
   /**
-   * The database name.
+   * Required. Immutable. Cloud Spanner database resource. This field is immutable. Must be in the
+   * format: projects/{project}/instances/{instance}/databases/{database_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -52,39 +56,44 @@ public final class MysqlDatabase extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The database name.
+   * Required. Immutable. Cloud Spanner database resource. This field is immutable. Must be in the
+   * format: projects/{project}/instances/{instance}/databases/{database_id}.
    * @param database database or {@code null} for none
    */
-  public MysqlDatabase setDatabase(java.lang.String database) {
+  public SpannerProfile setDatabase(java.lang.String database) {
     this.database = database;
     return this;
   }
 
   /**
-   * Tables in the database.
+   * Optional. The Spanner endpoint to connect to. Defaults to the global endpoint
+   * (https://spanner.googleapis.com). Must be in the format:
+   * https://spanner.{region}.rep.googleapis.com.
    * @return value or {@code null} for none
    */
-  public java.util.List<MysqlTable> getMysqlTables() {
-    return mysqlTables;
+  public java.lang.String getHost() {
+    return host;
   }
 
   /**
-   * Tables in the database.
-   * @param mysqlTables mysqlTables or {@code null} for none
+   * Optional. The Spanner endpoint to connect to. Defaults to the global endpoint
+   * (https://spanner.googleapis.com). Must be in the format:
+   * https://spanner.{region}.rep.googleapis.com.
+   * @param host host or {@code null} for none
    */
-  public MysqlDatabase setMysqlTables(java.util.List<MysqlTable> mysqlTables) {
-    this.mysqlTables = mysqlTables;
+  public SpannerProfile setHost(java.lang.String host) {
+    this.host = host;
     return this;
   }
 
   @Override
-  public MysqlDatabase set(String fieldName, Object value) {
-    return (MysqlDatabase) super.set(fieldName, value);
+  public SpannerProfile set(String fieldName, Object value) {
+    return (SpannerProfile) super.set(fieldName, value);
   }
 
   @Override
-  public MysqlDatabase clone() {
-    return (MysqlDatabase) super.clone();
+  public SpannerProfile clone() {
+    return (SpannerProfile) super.clone();
   }
 
 }

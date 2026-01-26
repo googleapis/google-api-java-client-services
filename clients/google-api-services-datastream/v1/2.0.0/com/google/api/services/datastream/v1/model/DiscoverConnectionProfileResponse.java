@@ -65,6 +65,13 @@ public final class DiscoverConnectionProfileResponse extends com.google.api.clie
   private SalesforceOrg salesforceOrg;
 
   /**
+   * Enriched Spanner database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpannerDatabase spannerDatabase;
+
+  /**
    * Enriched SQLServer RDBMS object.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class DiscoverConnectionProfileResponse extends com.google.api.clie
    */
   public DiscoverConnectionProfileResponse setSalesforceOrg(SalesforceOrg salesforceOrg) {
     this.salesforceOrg = salesforceOrg;
+    return this;
+  }
+
+  /**
+   * Enriched Spanner database.
+   * @return value or {@code null} for none
+   */
+  public SpannerDatabase getSpannerDatabase() {
+    return spannerDatabase;
+  }
+
+  /**
+   * Enriched Spanner database.
+   * @param spannerDatabase spannerDatabase or {@code null} for none
+   */
+  public DiscoverConnectionProfileResponse setSpannerDatabase(SpannerDatabase spannerDatabase) {
+    this.spannerDatabase = spannerDatabase;
     return this;
   }
 

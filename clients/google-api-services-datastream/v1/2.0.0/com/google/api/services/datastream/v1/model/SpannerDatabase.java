@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * MongoDB Field.
+ * Spanner database structure.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.datastream.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MongodbField extends com.google.api.client.json.GenericJson {
+public final class SpannerDatabase extends com.google.api.client.json.GenericJson {
 
   /**
-   * The field name.
+   * Optional. Spanner schemas in the database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String field;
+  private java.util.List<SpannerSchema> schemas;
 
   /**
-   * The field name.
+   * Optional. Spanner schemas in the database.
    * @return value or {@code null} for none
    */
-  public java.lang.String getField() {
-    return field;
+  public java.util.List<SpannerSchema> getSchemas() {
+    return schemas;
   }
 
   /**
-   * The field name.
-   * @param field field or {@code null} for none
+   * Optional. Spanner schemas in the database.
+   * @param schemas schemas or {@code null} for none
    */
-  public MongodbField setField(java.lang.String field) {
-    this.field = field;
+  public SpannerDatabase setSchemas(java.util.List<SpannerSchema> schemas) {
+    this.schemas = schemas;
     return this;
   }
 
   @Override
-  public MongodbField set(String fieldName, Object value) {
-    return (MongodbField) super.set(fieldName, value);
+  public SpannerDatabase set(String fieldName, Object value) {
+    return (SpannerDatabase) super.set(fieldName, value);
   }
 
   @Override
-  public MongodbField clone() {
-    return (MongodbField) super.clone();
+  public SpannerDatabase clone() {
+    return (SpannerDatabase) super.clone();
   }
 
 }

@@ -37,7 +37,7 @@ public final class OracleSchema extends com.google.api.client.json.GenericJson {
   private java.util.List<OracleTable> oracleTables;
 
   /**
-   * Schema name.
+   * The schema name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class OracleSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Schema name.
+   * The schema name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchema() {
@@ -69,7 +69,7 @@ public final class OracleSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Schema name.
+   * The schema name.
    * @param schema schema or {@code null} for none
    */
   public OracleSchema setSchema(java.lang.String schema) {

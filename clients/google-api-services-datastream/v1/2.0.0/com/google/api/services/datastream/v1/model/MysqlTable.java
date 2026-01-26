@@ -44,7 +44,7 @@ public final class MysqlTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table name.
+   * The table name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class MysqlTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table name.
+   * The table name.
    * @return value or {@code null} for none
    */
   public java.lang.String getTable() {
@@ -78,7 +78,7 @@ public final class MysqlTable extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table name.
+   * The table name.
    * @param table table or {@code null} for none
    */
   public MysqlTable setTable(java.lang.String table) {

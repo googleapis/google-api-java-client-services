@@ -30,7 +30,7 @@ package com.google.api.services.datastream.v1.model;
 public final class MongodbCollection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Collection name.
+   * The collection name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class MongodbCollection extends com.google.api.client.json.GenericJ
   private java.util.List<MongodbField> fields;
 
   /**
-   * Collection name.
+   * The collection name.
    * @return value or {@code null} for none
    */
   public java.lang.String getCollection() {
@@ -52,7 +52,7 @@ public final class MongodbCollection extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Collection name.
+   * The collection name.
    * @param collection collection or {@code null} for none
    */
   public MongodbCollection setCollection(java.lang.String collection) {

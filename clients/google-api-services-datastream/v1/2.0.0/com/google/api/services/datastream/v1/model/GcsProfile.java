@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * Cloud Storage bucket profile.
+ * Profile for connecting to a Cloud Storage destination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class GcsProfile extends com.google.api.client.json.GenericJson {
   private java.lang.String bucket;
 
   /**
-   * The root path inside the Cloud Storage bucket.
+   * Optional. The root path inside the Cloud Storage bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GcsProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The root path inside the Cloud Storage bucket.
+   * Optional. The root path inside the Cloud Storage bucket.
    * @return value or {@code null} for none
    */
   public java.lang.String getRootPath() {
@@ -69,7 +69,7 @@ public final class GcsProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The root path inside the Cloud Storage bucket.
+   * Optional. The root path inside the Cloud Storage bucket.
    * @param rootPath rootPath or {@code null} for none
    */
   public GcsProfile setRootPath(java.lang.String rootPath) {

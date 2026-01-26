@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * Salesforce object.
+ * Spanner table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -27,73 +27,70 @@ package com.google.api.services.datastream.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SalesforceObject extends com.google.api.client.json.GenericJson {
+public final class SpannerTable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Salesforce fields. When unspecified as part of include objects, includes everything, when
-   * unspecified as part of exclude objects, excludes nothing.
+   * Optional. Spanner columns in the table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SalesforceField> fields;
+  private java.util.List<SpannerColumn> columns;
 
   static {
-    // hack to force ProGuard to consider SalesforceField used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider SpannerColumn used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(SalesforceField.class);
+    com.google.api.client.util.Data.nullOf(SpannerColumn.class);
   }
 
   /**
-   * The object name.
+   * Required. The table name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String objectName;
+  private java.lang.String table;
 
   /**
-   * Salesforce fields. When unspecified as part of include objects, includes everything, when
-   * unspecified as part of exclude objects, excludes nothing.
+   * Optional. Spanner columns in the table.
    * @return value or {@code null} for none
    */
-  public java.util.List<SalesforceField> getFields() {
-    return fields;
+  public java.util.List<SpannerColumn> getColumns() {
+    return columns;
   }
 
   /**
-   * Salesforce fields. When unspecified as part of include objects, includes everything, when
-   * unspecified as part of exclude objects, excludes nothing.
-   * @param fields fields or {@code null} for none
+   * Optional. Spanner columns in the table.
+   * @param columns columns or {@code null} for none
    */
-  public SalesforceObject setFields(java.util.List<SalesforceField> fields) {
-    this.fields = fields;
+  public SpannerTable setColumns(java.util.List<SpannerColumn> columns) {
+    this.columns = columns;
     return this;
   }
 
   /**
-   * The object name.
+   * Required. The table name.
    * @return value or {@code null} for none
    */
-  public java.lang.String getObjectName() {
-    return objectName;
+  public java.lang.String getTable() {
+    return table;
   }
 
   /**
-   * The object name.
-   * @param objectName objectName or {@code null} for none
+   * Required. The table name.
+   * @param table table or {@code null} for none
    */
-  public SalesforceObject setObjectName(java.lang.String objectName) {
-    this.objectName = objectName;
+  public SpannerTable setTable(java.lang.String table) {
+    this.table = table;
     return this;
   }
 
   @Override
-  public SalesforceObject set(String fieldName, Object value) {
-    return (SalesforceObject) super.set(fieldName, value);
+  public SpannerTable set(String fieldName, Object value) {
+    return (SpannerTable) super.set(fieldName, value);
   }
 
   @Override
-  public SalesforceObject clone() {
-    return (SalesforceObject) super.clone();
+  public SpannerTable clone() {
+    return (SpannerTable) super.clone();
   }
 
 }

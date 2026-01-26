@@ -73,6 +73,13 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceConnectionProfile;
 
   /**
+   * Spanner data source configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpannerSourceConfig spannerSourceConfig;
+
+  /**
    * SQLServer data source configuration.
    * The value may be {@code null}.
    */
@@ -180,6 +187,23 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
    */
   public SourceConfig setSourceConnectionProfile(java.lang.String sourceConnectionProfile) {
     this.sourceConnectionProfile = sourceConnectionProfile;
+    return this;
+  }
+
+  /**
+   * Spanner data source configuration.
+   * @return value or {@code null} for none
+   */
+  public SpannerSourceConfig getSpannerSourceConfig() {
+    return spannerSourceConfig;
+  }
+
+  /**
+   * Spanner data source configuration.
+   * @param spannerSourceConfig spannerSourceConfig or {@code null} for none
+   */
+  public SourceConfig setSpannerSourceConfig(SpannerSourceConfig spannerSourceConfig) {
+    this.spannerSourceConfig = spannerSourceConfig;
     return this;
   }
 

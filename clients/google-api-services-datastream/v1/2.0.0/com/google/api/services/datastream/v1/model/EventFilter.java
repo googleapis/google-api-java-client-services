@@ -31,7 +31,7 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * An SQL-query Where clause selecting which data should be included, not including the "WHERE"
-   * keyword. E.g., "t.key1 = 'value1' AND t.key2 = 'value2'".
+   * keyword. e.g., `t.key1 = 'value1' AND t.key2 = 'value2'`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * An SQL-query Where clause selecting which data should be included, not including the "WHERE"
-   * keyword. E.g., "t.key1 = 'value1' AND t.key2 = 'value2'".
+   * keyword. e.g., `t.key1 = 'value1' AND t.key2 = 'value2'`
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlWhereClause() {
@@ -48,7 +48,7 @@ public final class EventFilter extends com.google.api.client.json.GenericJson {
 
   /**
    * An SQL-query Where clause selecting which data should be included, not including the "WHERE"
-   * keyword. E.g., "t.key1 = 'value1' AND t.key2 = 'value2'".
+   * keyword. e.g., `t.key1 = 'value1' AND t.key2 = 'value2'`
    * @param sqlWhereClause sqlWhereClause or {@code null} for none
    */
   public EventFilter setSqlWhereClause(java.lang.String sqlWhereClause) {

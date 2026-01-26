@@ -37,7 +37,7 @@ public final class MysqlColumn extends com.google.api.client.json.GenericJson {
   private java.lang.String collation;
 
   /**
-   * Column name.
+   * The column name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class MysqlColumn extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Column name.
+   * The column name.
    * @return value or {@code null} for none
    */
   public java.lang.String getColumn() {
@@ -119,7 +119,7 @@ public final class MysqlColumn extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Column name.
+   * The column name.
    * @param column column or {@code null} for none
    */
   public MysqlColumn setColumn(java.lang.String column) {

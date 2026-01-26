@@ -65,6 +65,13 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
   private SalesforceObjectIdentifier salesforceIdentifier;
 
   /**
+   * Spanner data source object identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SpannerObjectIdentifier spannerIdentifier;
+
+  /**
    * SQLServer data source object identifier.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
    */
   public SourceObjectIdentifier setSalesforceIdentifier(SalesforceObjectIdentifier salesforceIdentifier) {
     this.salesforceIdentifier = salesforceIdentifier;
+    return this;
+  }
+
+  /**
+   * Spanner data source object identifier.
+   * @return value or {@code null} for none
+   */
+  public SpannerObjectIdentifier getSpannerIdentifier() {
+    return spannerIdentifier;
+  }
+
+  /**
+   * Spanner data source object identifier.
+   * @param spannerIdentifier spannerIdentifier or {@code null} for none
+   */
+  public SourceObjectIdentifier setSpannerIdentifier(SpannerObjectIdentifier spannerIdentifier) {
+    this.spannerIdentifier = spannerIdentifier;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.datastream.v1.model;
 
 /**
- * MySQL source configuration
+ * Configuration for syncing data from a MySQL source.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Datastream API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
   private BinaryLogPosition binaryLogPosition;
 
   /**
-   * MySQL objects to exclude from the stream.
+   * The MySQL objects to exclude from the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
   private Gtid gtid;
 
   /**
-   * MySQL objects to retrieve from the source.
+   * The MySQL objects to retrieve from the source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * MySQL objects to exclude from the stream.
+   * The MySQL objects to exclude from the stream.
    * @return value or {@code null} for none
    */
   public MysqlRdbms getExcludeObjects() {
@@ -99,7 +99,7 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * MySQL objects to exclude from the stream.
+   * The MySQL objects to exclude from the stream.
    * @param excludeObjects excludeObjects or {@code null} for none
    */
   public MysqlSourceConfig setExcludeObjects(MysqlRdbms excludeObjects) {
@@ -125,7 +125,7 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * MySQL objects to retrieve from the source.
+   * The MySQL objects to retrieve from the source.
    * @return value or {@code null} for none
    */
   public MysqlRdbms getIncludeObjects() {
@@ -133,7 +133,7 @@ public final class MysqlSourceConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * MySQL objects to retrieve from the source.
+   * The MySQL objects to retrieve from the source.
    * @param includeObjects includeObjects or {@code null} for none
    */
   public MysqlSourceConfig setIncludeObjects(MysqlRdbms includeObjects) {

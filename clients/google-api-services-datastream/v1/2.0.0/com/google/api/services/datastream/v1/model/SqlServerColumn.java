@@ -30,7 +30,7 @@ package com.google.api.services.datastream.v1.model;
 public final class SqlServerColumn extends com.google.api.client.json.GenericJson {
 
   /**
-   * Column name.
+   * The column name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class SqlServerColumn extends com.google.api.client.json.GenericJso
   private java.lang.Integer scale;
 
   /**
-   * Column name.
+   * The column name.
    * @return value or {@code null} for none
    */
   public java.lang.String getColumn() {
@@ -94,7 +94,7 @@ public final class SqlServerColumn extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Column name.
+   * The column name.
    * @param column column or {@code null} for none
    */
   public SqlServerColumn setColumn(java.lang.String column) {

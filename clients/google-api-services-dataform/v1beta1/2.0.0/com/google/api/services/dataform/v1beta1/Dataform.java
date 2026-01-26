@@ -676,6 +676,257 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * Returns the contents of a caller's root folder in a given location. The root folder contains all
+       * resources that are created by the user and not contained in any other folder.
+       *
+       * Create a request for the method "locations.queryUserRootContents".
+       *
+       * This request holds the parameters needed by the dataform server.  After setting any optional
+       * parameters, call the {@link QueryUserRootContents#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param location Required. Location of the user root folder whose contents to list. Format: projects/locations
+       * @return the request
+       */
+      public QueryUserRootContents queryUserRootContents(java.lang.String location) throws java.io.IOException {
+        QueryUserRootContents result = new QueryUserRootContents(location);
+        initialize(result);
+        return result;
+      }
+
+      public class QueryUserRootContents extends DataformRequest<com.google.api.services.dataform.v1beta1.model.QueryUserRootContentsResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+location}:queryUserRootContents";
+
+        private final java.util.regex.Pattern LOCATION_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Returns the contents of a caller's root folder in a given location. The root folder contains
+         * all resources that are created by the user and not contained in any other folder.
+         *
+         * Create a request for the method "locations.queryUserRootContents".
+         *
+         * This request holds the parameters needed by the the dataform server.  After setting any
+         * optional parameters, call the {@link QueryUserRootContents#execute()} method to invoke the
+         * remote operation. <p> {@link QueryUserRootContents#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param location Required. Location of the user root folder whose contents to list. Format: projects/locations
+         * @since 1.13
+         */
+        protected QueryUserRootContents(java.lang.String location) {
+          super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.QueryUserRootContentsResponse.class);
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public QueryUserRootContents set$Xgafv(java.lang.String $Xgafv) {
+          return (QueryUserRootContents) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public QueryUserRootContents setAccessToken(java.lang.String accessToken) {
+          return (QueryUserRootContents) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public QueryUserRootContents setAlt(java.lang.String alt) {
+          return (QueryUserRootContents) super.setAlt(alt);
+        }
+
+        @Override
+        public QueryUserRootContents setCallback(java.lang.String callback) {
+          return (QueryUserRootContents) super.setCallback(callback);
+        }
+
+        @Override
+        public QueryUserRootContents setFields(java.lang.String fields) {
+          return (QueryUserRootContents) super.setFields(fields);
+        }
+
+        @Override
+        public QueryUserRootContents setKey(java.lang.String key) {
+          return (QueryUserRootContents) super.setKey(key);
+        }
+
+        @Override
+        public QueryUserRootContents setOauthToken(java.lang.String oauthToken) {
+          return (QueryUserRootContents) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public QueryUserRootContents setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (QueryUserRootContents) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public QueryUserRootContents setQuotaUser(java.lang.String quotaUser) {
+          return (QueryUserRootContents) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public QueryUserRootContents setUploadType(java.lang.String uploadType) {
+          return (QueryUserRootContents) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public QueryUserRootContents setUploadProtocol(java.lang.String uploadProtocol) {
+          return (QueryUserRootContents) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Location of the user root folder whose contents to list. Format:
+         * projects/locations
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Required. Location of the user root folder whose contents to list. Format: projects/locations
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /**
+         * Required. Location of the user root folder whose contents to list. Format:
+         * projects/locations
+         */
+        public QueryUserRootContents setLocation(java.lang.String location) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.location = location;
+          return this;
+        }
+
+        /**
+         * Optional. Optional filtering for the returned list. Filtering is currently only supported
+         * on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Optional filtering for the returned list. Filtering is currently only supported on the
+       `display_name` field. Example: - `filter="display_name="MyFolder""`
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Optional filtering for the returned list. Filtering is currently only supported
+         * on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+         */
+        public QueryUserRootContents setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. Field to additionally sort results by. Will order Folders before Repositories,
+         * and then by `order_by` in ascending order. Supported keywords: display_name (default),
+         * created_at, last_modified_at. Examples: - `orderBy="display_name"` -
+         * `orderBy="display_name desc"`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. Field to additionally sort results by. Will order Folders before Repositories, and then
+       by `order_by` in ascending order. Supported keywords: display_name (default), created_at,
+       last_modified_at. Examples: - `orderBy="display_name"` - `orderBy="display_name desc"`
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. Field to additionally sort results by. Will order Folders before Repositories,
+         * and then by `order_by` in ascending order. Supported keywords: display_name (default),
+         * created_at, last_modified_at. Examples: - `orderBy="display_name"` -
+         * `orderBy="display_name desc"`
+         */
+        public QueryUserRootContents setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of paths to return. The server may return fewer items than
+         * requested. If unspecified, the server will pick an appropriate default.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of paths to return. The server may return fewer items than requested. If
+       unspecified, the server will pick an appropriate default.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of paths to return. The server may return fewer items than
+         * requested. If unspecified, the server will pick an appropriate default.
+         */
+        public QueryUserRootContents setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. Page token received from a previous `QueryUserRootContents` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `QueryUserRootFolderContents`, with the exception of `page_size`, must match the call
+         * that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Page token received from a previous `QueryUserRootContents` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `QueryUserRootFolderContents`, with the exception of `page_size`, must match the call that provided
+       the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. Page token received from a previous `QueryUserRootContents` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `QueryUserRootFolderContents`, with the exception of `page_size`, must match the call
+         * that provided the page token.
+         */
+        public QueryUserRootContents setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public QueryUserRootContents set(String parameterName, Object value) {
+          return (QueryUserRootContents) super.set(parameterName, value);
+        }
+      }
+      /**
        * Update default config for a given project and location. **Note:** *This method does not fully
        * implement [AIP/134](https://google.aip.dev/134). The wildcard entry () is treated as a bad
        * request, and when the `field_mask` is omitted, the request is treated as a full update on all
@@ -849,6 +1100,432 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
        */
       public class Folders {
 
+        /**
+         * Creates a new Folder in a given project and location.
+         *
+         * Create a request for the method "folders.create".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location in which to create the Folder. Must be in the format `projects/locations`.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.Folder}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataform.v1beta1.model.Folder content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Folder> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/folders";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new Folder in a given project and location.
+           *
+           * Create a request for the method "folders.create".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location in which to create the Folder. Must be in the format `projects/locations`.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.Folder}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataform.v1beta1.model.Folder content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Folder.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location in which to create the Folder. Must be in the format
+           * `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location in which to create the Folder. Must be in the format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location in which to create the Folder. Must be in the format
+           * `projects/locations`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The ID to use for the Folder, which will become the final component of the Folder's
+           * resource name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String folderId;
+
+          /** The ID to use for the Folder, which will become the final component of the Folder's resource name.
+           */
+          public java.lang.String getFolderId() {
+            return folderId;
+          }
+
+          /**
+           * The ID to use for the Folder, which will become the final component of the Folder's
+           * resource name.
+           */
+          public Create setFolderId(java.lang.String folderId) {
+            this.folderId = folderId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single Folder.
+         *
+         * Create a request for the method "folders.delete".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The Folder's name.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+
+          /**
+           * Deletes a single Folder.
+           *
+           * Create a request for the method "folders.delete".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The Folder's name.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dataform.this, "DELETE", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The Folder's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The Folder's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The Folder's name. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Fetches a single Folder.
+         *
+         * Create a request for the method "folders.get".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The Folder's name.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Folder> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+
+          /**
+           * Fetches a single Folder.
+           *
+           * Create a request for the method "folders.get".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The Folder's name.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.Folder.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The Folder's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The Folder's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The Folder's name. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
         /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
@@ -1045,6 +1722,538 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Moves a Folder to a new Folder, TeamFolder, or the root location.
+         *
+         * Create a request for the method "folders.move".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Move#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the Folder to move.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.MoveFolderRequest}
+         * @return the request
+         */
+        public Move move(java.lang.String name, com.google.api.services.dataform.v1beta1.model.MoveFolderRequest content) throws java.io.IOException {
+          Move result = new Move(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Move extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:move";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+
+          /**
+           * Moves a Folder to a new Folder, TeamFolder, or the root location.
+           *
+           * Create a request for the method "folders.move".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Move#execute()} method to invoke the remote operation. <p>
+           * {@link Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the Folder to move.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.MoveFolderRequest}
+           * @since 1.13
+           */
+          protected Move(java.lang.String name, com.google.api.services.dataform.v1beta1.model.MoveFolderRequest content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+          }
+
+          @Override
+          public Move set$Xgafv(java.lang.String $Xgafv) {
+            return (Move) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Move setAccessToken(java.lang.String accessToken) {
+            return (Move) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Move setAlt(java.lang.String alt) {
+            return (Move) super.setAlt(alt);
+          }
+
+          @Override
+          public Move setCallback(java.lang.String callback) {
+            return (Move) super.setCallback(callback);
+          }
+
+          @Override
+          public Move setFields(java.lang.String fields) {
+            return (Move) super.setFields(fields);
+          }
+
+          @Override
+          public Move setKey(java.lang.String key) {
+            return (Move) super.setKey(key);
+          }
+
+          @Override
+          public Move setOauthToken(java.lang.String oauthToken) {
+            return (Move) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Move) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Move setQuotaUser(java.lang.String quotaUser) {
+            return (Move) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Move setUploadType(java.lang.String uploadType) {
+            return (Move) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Move setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Move) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The full resource name of the Folder to move. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the Folder to move.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The full resource name of the Folder to move. */
+          public Move setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Move set(String parameterName, Object value) {
+            return (Move) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a single Folder.
+         *
+         * Create a request for the method "folders.patch".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The Folder's name.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.Folder}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dataform.v1beta1.model.Folder content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Folder> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+
+          /**
+           * Updates a single Folder.
+           *
+           * Create a request for the method "folders.patch".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The Folder's name.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.Folder}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dataform.v1beta1.model.Folder content) {
+            super(Dataform.this, "PATCH", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Folder.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifier. The Folder's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The Folder's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Identifier. The Folder's name. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Specifies the fields to be updated in the Folder. If left unset, all fields
+           * that can be updated, will be updated. A few fields cannot be updated and will be
+           * ignored if specified in the update_mask (e.g. parent_name, team_folder_name).
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Specifies the fields to be updated in the Folder. If left unset, all fields that can be
+         updated, will be updated. A few fields cannot be updated and will be ignored if specified in the
+         update_mask (e.g. parent_name, team_folder_name).
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Specifies the fields to be updated in the Folder. If left unset, all fields
+           * that can be updated, will be updated. A few fields cannot be updated and will be
+           * ignored if specified in the update_mask (e.g. parent_name, team_folder_name).
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the contents of a given Folder.
+         *
+         * Create a request for the method "folders.queryFolderContents".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link QueryFolderContents#execute()} method to invoke the remote operation.
+         *
+         * @param folder Required. Name of the folder whose contents to list. Format: projects/locations/folders
+         * @return the request
+         */
+        public QueryFolderContents queryFolderContents(java.lang.String folder) throws java.io.IOException {
+          QueryFolderContents result = new QueryFolderContents(folder);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryFolderContents extends DataformRequest<com.google.api.services.dataform.v1beta1.model.QueryFolderContentsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+folder}:queryFolderContents";
+
+          private final java.util.regex.Pattern FOLDER_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+
+          /**
+           * Returns the contents of a given Folder.
+           *
+           * Create a request for the method "folders.queryFolderContents".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link QueryFolderContents#execute()} method to invoke the remote
+           * operation. <p> {@link QueryFolderContents#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param folder Required. Name of the folder whose contents to list. Format: projects/locations/folders
+           * @since 1.13
+           */
+          protected QueryFolderContents(java.lang.String folder) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.QueryFolderContentsResponse.class);
+            this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+                  "Parameter folder must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public QueryFolderContents set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryFolderContents) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryFolderContents setAccessToken(java.lang.String accessToken) {
+            return (QueryFolderContents) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryFolderContents setAlt(java.lang.String alt) {
+            return (QueryFolderContents) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryFolderContents setCallback(java.lang.String callback) {
+            return (QueryFolderContents) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryFolderContents setFields(java.lang.String fields) {
+            return (QueryFolderContents) super.setFields(fields);
+          }
+
+          @Override
+          public QueryFolderContents setKey(java.lang.String key) {
+            return (QueryFolderContents) super.setKey(key);
+          }
+
+          @Override
+          public QueryFolderContents setOauthToken(java.lang.String oauthToken) {
+            return (QueryFolderContents) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryFolderContents setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryFolderContents) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryFolderContents setQuotaUser(java.lang.String quotaUser) {
+            return (QueryFolderContents) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryFolderContents setUploadType(java.lang.String uploadType) {
+            return (QueryFolderContents) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryFolderContents setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryFolderContents) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the folder whose contents to list. Format: projects/locations/folders
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String folder;
+
+          /** Required. Name of the folder whose contents to list. Format: projects/locations/folders
+           */
+          public java.lang.String getFolder() {
+            return folder;
+          }
+
+          /**
+           * Required. Name of the folder whose contents to list. Format: projects/locations/folders
+           */
+          public QueryFolderContents setFolder(java.lang.String folder) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+                  "Parameter folder must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+            this.folder = folder;
+            return this;
+          }
+
+          /**
+           * Optional. Optional filtering for the returned list. Filtering is currently only
+           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Optional filtering for the returned list. Filtering is currently only supported on the
+         `display_name` field. Example: - `filter="display_name="MyFolder""`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Optional filtering for the returned list. Filtering is currently only
+           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           */
+          public QueryFolderContents setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Field to additionally sort results by. Will order Folders before
+           * Repositories, and then by `order_by` in ascending order. Supported keywords:
+           * display_name (default), create_time, last_modified_time. Examples: -
+           * `orderBy="display_name"` - `orderBy="display_name desc"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field to additionally sort results by. Will order Folders before Repositories, and then
+         by `order_by` in ascending order. Supported keywords: display_name (default), create_time,
+         last_modified_time. Examples: - `orderBy="display_name"` - `orderBy="display_name desc"`
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Field to additionally sort results by. Will order Folders before
+           * Repositories, and then by `order_by` in ascending order. Supported keywords:
+           * display_name (default), create_time, last_modified_time. Examples: -
+           * `orderBy="display_name"` - `orderBy="display_name desc"`
+           */
+          public QueryFolderContents setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of paths to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of paths to return. The server may return fewer items than requested. If
+         unspecified, the server will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of paths to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default.
+           */
+          public QueryFolderContents setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous `QueryFolderContents` call. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `QueryFolderContents`, with the exception of `page_size`, must match the call that
+           * provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous `QueryFolderContents` call. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters provided to `QueryFolderContents`, with
+         the exception of `page_size`, must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous `QueryFolderContents` call. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `QueryFolderContents`, with the exception of `page_size`, must match the call that
+           * provided the page token.
+           */
+          public QueryFolderContents setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public QueryFolderContents set(String parameterName, Object value) {
+            return (QueryFolderContents) super.set(parameterName, value);
           }
         }
         /**
@@ -3527,6 +4736,136 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Moves a Repository to a new location.
+         *
+         * Create a request for the method "repositories.move".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Move#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the repository to move.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.MoveRepositoryRequest}
+         * @return the request
+         */
+        public Move move(java.lang.String name, com.google.api.services.dataform.v1beta1.model.MoveRepositoryRequest content) throws java.io.IOException {
+          Move result = new Move(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Move extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:move";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+          /**
+           * Moves a Repository to a new location.
+           *
+           * Create a request for the method "repositories.move".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Move#execute()} method to invoke the remote operation. <p>
+           * {@link Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the repository to move.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.MoveRepositoryRequest}
+           * @since 1.13
+           */
+          protected Move(java.lang.String name, com.google.api.services.dataform.v1beta1.model.MoveRepositoryRequest content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+          }
+
+          @Override
+          public Move set$Xgafv(java.lang.String $Xgafv) {
+            return (Move) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Move setAccessToken(java.lang.String accessToken) {
+            return (Move) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Move setAlt(java.lang.String alt) {
+            return (Move) super.setAlt(alt);
+          }
+
+          @Override
+          public Move setCallback(java.lang.String callback) {
+            return (Move) super.setCallback(callback);
+          }
+
+          @Override
+          public Move setFields(java.lang.String fields) {
+            return (Move) super.setFields(fields);
+          }
+
+          @Override
+          public Move setKey(java.lang.String key) {
+            return (Move) super.setKey(key);
+          }
+
+          @Override
+          public Move setOauthToken(java.lang.String oauthToken) {
+            return (Move) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Move) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Move setQuotaUser(java.lang.String quotaUser) {
+            return (Move) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Move setUploadType(java.lang.String uploadType) {
+            return (Move) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Move setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Move) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The full resource name of the repository to move. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the repository to move.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The full resource name of the repository to move. */
+          public Move setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Move set(String parameterName, Object value) {
+            return (Move) super.set(parameterName, value);
           }
         }
         /**
@@ -11501,6 +12840,436 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
       public class TeamFolders {
 
         /**
+         * Creates a new TeamFolder in a given project and location.
+         *
+         * Create a request for the method "teamFolders.create".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location in which to create the TeamFolder. Must be in the format
+         *        `projects/locations`.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.TeamFolder}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataform.v1beta1.model.TeamFolder content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataformRequest<com.google.api.services.dataform.v1beta1.model.TeamFolder> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/teamFolders";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new TeamFolder in a given project and location.
+           *
+           * Create a request for the method "teamFolders.create".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location in which to create the TeamFolder. Must be in the format
+         *        `projects/locations`.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.TeamFolder}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataform.v1beta1.model.TeamFolder content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.TeamFolder.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location in which to create the TeamFolder. Must be in the format
+           * `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location in which to create the TeamFolder. Must be in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location in which to create the TeamFolder. Must be in the format
+           * `projects/locations`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The ID to use for the TeamFolder, which will become the final component of the
+           * TeamFolder's resource name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String teamFolderId;
+
+          /** The ID to use for the TeamFolder, which will become the final component of the TeamFolder's
+         resource name.
+           */
+          public java.lang.String getTeamFolderId() {
+            return teamFolderId;
+          }
+
+          /**
+           * The ID to use for the TeamFolder, which will become the final component of the
+           * TeamFolder's resource name.
+           */
+          public Create setTeamFolderId(java.lang.String teamFolderId) {
+            this.teamFolderId = teamFolderId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single TeamFolder.
+         *
+         * Create a request for the method "teamFolders.delete".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The TeamFolder's name.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+
+          /**
+           * Deletes a single TeamFolder.
+           *
+           * Create a request for the method "teamFolders.delete".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The TeamFolder's name.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dataform.this, "DELETE", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The TeamFolder's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The TeamFolder's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The TeamFolder's name. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Fetches a single TeamFolder.
+         *
+         * Create a request for the method "teamFolders.get".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The TeamFolder's name.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataformRequest<com.google.api.services.dataform.v1beta1.model.TeamFolder> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+
+          /**
+           * Fetches a single TeamFolder.
+           *
+           * Create a request for the method "teamFolders.get".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The TeamFolder's name.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.TeamFolder.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The TeamFolder's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The TeamFolder's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The TeamFolder's name. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -11696,6 +13465,649 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a single TeamFolder.
+         *
+         * Create a request for the method "teamFolders.patch".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The TeamFolder's name.
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.TeamFolder}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dataform.v1beta1.model.TeamFolder content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DataformRequest<com.google.api.services.dataform.v1beta1.model.TeamFolder> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+
+          /**
+           * Updates a single TeamFolder.
+           *
+           * Create a request for the method "teamFolders.patch".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The TeamFolder's name.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.TeamFolder}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dataform.v1beta1.model.TeamFolder content) {
+            super(Dataform.this, "PATCH", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.TeamFolder.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifier. The TeamFolder's name. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The TeamFolder's name.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Identifier. The TeamFolder's name. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Specifies the fields to be updated in the Folder. If left unset, all fields
+           * will be updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Specifies the fields to be updated in the Folder. If left unset, all fields will be
+         updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Specifies the fields to be updated in the Folder. If left unset, all fields
+           * will be updated.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the contents of a given TeamFolder.
+         *
+         * Create a request for the method "teamFolders.queryContents".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link QueryContents#execute()} method to invoke the remote operation.
+         *
+         * @param teamFolder Required. Name of the team_folder whose contents to list. Format: `projects/locations/teamFolders`.
+         * @return the request
+         */
+        public QueryContents queryContents(java.lang.String teamFolder) throws java.io.IOException {
+          QueryContents result = new QueryContents(teamFolder);
+          initialize(result);
+          return result;
+        }
+
+        public class QueryContents extends DataformRequest<com.google.api.services.dataform.v1beta1.model.QueryTeamFolderContentsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+teamFolder}:queryContents";
+
+          private final java.util.regex.Pattern TEAM_FOLDER_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+
+          /**
+           * Returns the contents of a given TeamFolder.
+           *
+           * Create a request for the method "teamFolders.queryContents".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link QueryContents#execute()} method to invoke the remote
+           * operation. <p> {@link QueryContents#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param teamFolder Required. Name of the team_folder whose contents to list. Format: `projects/locations/teamFolders`.
+           * @since 1.13
+           */
+          protected QueryContents(java.lang.String teamFolder) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.QueryTeamFolderContentsResponse.class);
+            this.teamFolder = com.google.api.client.util.Preconditions.checkNotNull(teamFolder, "Required parameter teamFolder must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TEAM_FOLDER_PATTERN.matcher(teamFolder).matches(),
+                  "Parameter teamFolder must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public QueryContents set$Xgafv(java.lang.String $Xgafv) {
+            return (QueryContents) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public QueryContents setAccessToken(java.lang.String accessToken) {
+            return (QueryContents) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public QueryContents setAlt(java.lang.String alt) {
+            return (QueryContents) super.setAlt(alt);
+          }
+
+          @Override
+          public QueryContents setCallback(java.lang.String callback) {
+            return (QueryContents) super.setCallback(callback);
+          }
+
+          @Override
+          public QueryContents setFields(java.lang.String fields) {
+            return (QueryContents) super.setFields(fields);
+          }
+
+          @Override
+          public QueryContents setKey(java.lang.String key) {
+            return (QueryContents) super.setKey(key);
+          }
+
+          @Override
+          public QueryContents setOauthToken(java.lang.String oauthToken) {
+            return (QueryContents) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public QueryContents setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (QueryContents) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public QueryContents setQuotaUser(java.lang.String quotaUser) {
+            return (QueryContents) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public QueryContents setUploadType(java.lang.String uploadType) {
+            return (QueryContents) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public QueryContents setUploadProtocol(java.lang.String uploadProtocol) {
+            return (QueryContents) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the team_folder whose contents to list. Format:
+           * `projects/locations/teamFolders`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String teamFolder;
+
+          /** Required. Name of the team_folder whose contents to list. Format: `projects/locations/teamFolders`.
+           */
+          public java.lang.String getTeamFolder() {
+            return teamFolder;
+          }
+
+          /**
+           * Required. Name of the team_folder whose contents to list. Format:
+           * `projects/locations/teamFolders`.
+           */
+          public QueryContents setTeamFolder(java.lang.String teamFolder) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(TEAM_FOLDER_PATTERN.matcher(teamFolder).matches(),
+                  "Parameter teamFolder must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+            this.teamFolder = teamFolder;
+            return this;
+          }
+
+          /**
+           * Optional. Optional filtering for the returned list. Filtering is currently only
+           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Optional filtering for the returned list. Filtering is currently only supported on the
+         `display_name` field. Example: - `filter="display_name="MyFolder""`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Optional filtering for the returned list. Filtering is currently only
+           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           */
+          public QueryContents setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Field to additionally sort results by. Will order Folders before
+           * Repositories, and then by `order_by` in ascending order. Supported keywords:
+           * `display_name` (default), `create_time`, last_modified_time. Examples: -
+           * `orderBy="display_name"` - `orderBy="display_name desc"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field to additionally sort results by. Will order Folders before Repositories, and then
+         by `order_by` in ascending order. Supported keywords: `display_name` (default), `create_time`,
+         last_modified_time. Examples: - `orderBy="display_name"` - `orderBy="display_name desc"`
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Field to additionally sort results by. Will order Folders before
+           * Repositories, and then by `order_by` in ascending order. Supported keywords:
+           * `display_name` (default), `create_time`, last_modified_time. Examples: -
+           * `orderBy="display_name"` - `orderBy="display_name desc"`
+           */
+          public QueryContents setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of paths to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of paths to return. The server may return fewer items than requested. If
+         unspecified, the server will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of paths to return. The server may return fewer items than
+           * requested. If unspecified, the server will pick an appropriate default.
+           */
+          public QueryContents setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous `QueryTeamFolderContents` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `QueryTeamFolderContents`, with the exception of `page_size`, must match the call that
+           * provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous `QueryTeamFolderContents` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `QueryTeamFolderContents`, with the exception of `page_size`, must match the call that provided the
+         page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous `QueryTeamFolderContents` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `QueryTeamFolderContents`, with the exception of `page_size`, must match the call that
+           * provided the page token.
+           */
+          public QueryContents setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public QueryContents set(String parameterName, Object value) {
+            return (QueryContents) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns all TeamFolders in a given location that the caller has access to and match the provided
+         * filter.
+         *
+         * Create a request for the method "teamFolders.search".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param location Required. Location in which to query TeamFolders. Format: `projects/locations`.
+         * @return the request
+         */
+        public Search search(java.lang.String location) throws java.io.IOException {
+          Search result = new Search(location);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends DataformRequest<com.google.api.services.dataform.v1beta1.model.SearchTeamFoldersResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+location}/teamFolders:search";
+
+          private final java.util.regex.Pattern LOCATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Returns all TeamFolders in a given location that the caller has access to and match the
+           * provided filter.
+           *
+           * Create a request for the method "teamFolders.search".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param location Required. Location in which to query TeamFolders. Format: `projects/locations`.
+           * @since 1.13
+           */
+          protected Search(java.lang.String location) {
+            super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.SearchTeamFoldersResponse.class);
+            this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Location in which to query TeamFolders. Format: `projects/locations`. */
+          @com.google.api.client.util.Key
+          private java.lang.String location;
+
+          /** Required. Location in which to query TeamFolders. Format: `projects/locations`.
+           */
+          public java.lang.String getLocation() {
+            return location;
+          }
+
+          /** Required. Location in which to query TeamFolders. Format: `projects/locations`. */
+          public Search setLocation(java.lang.String location) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                  "Parameter location must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.location = location;
+            return this;
+          }
+
+          /**
+           * Optional. Optional filtering for the returned list. Filtering is currently only
+           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Optional filtering for the returned list. Filtering is currently only supported on the
+         `display_name` field. Example: - `filter="display_name="MyFolder""`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Optional filtering for the returned list. Filtering is currently only
+           * supported on the `display_name` field. Example: - `filter="display_name="MyFolder""`
+           */
+          public Search setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Field to additionally sort results by. Supported keywords: `display_name`
+           * (default), `create_time`, `last_modified_time`. Examples: - `orderBy="display_name"` -
+           * `orderBy="display_name desc"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field to additionally sort results by. Supported keywords: `display_name` (default),
+         `create_time`, `last_modified_time`. Examples: - `orderBy="display_name"` - `orderBy="display_name
+         desc"`
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Field to additionally sort results by. Supported keywords: `display_name`
+           * (default), `create_time`, `last_modified_time`. Examples: - `orderBy="display_name"` -
+           * `orderBy="display_name desc"`
+           */
+          public Search setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of TeamFolders to return. The server may return fewer items
+           * than requested. If unspecified, the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of TeamFolders to return. The server may return fewer items than
+         requested. If unspecified, the server will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of TeamFolders to return. The server may return fewer items
+           * than requested. If unspecified, the server will pick an appropriate default.
+           */
+          public Search setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Page token received from a previous `SearchTeamFolders` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `SearchTeamFolders`, with the exception of `page_size`, must match the call that
+           * provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page token received from a previous `SearchTeamFolders` call. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters provided to `SearchTeamFolders`, with
+         the exception of `page_size`, must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Page token received from a previous `SearchTeamFolders` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `SearchTeamFolders`, with the exception of `page_size`, must match the call that
+           * provided the page token.
+           */
+          public Search setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
           }
         }
         /**

@@ -30,6 +30,15 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class Repository extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The name of the containing folder of the repository. The field is immutable and it
+   * can be modified via a MoveRepository operation. Format: `projects/locations/folders`. or
+   * `projects/locations/teamFolders`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String containingFolder;
+
+  /**
    * Output only. The timestamp of when the repository was created.
    * The value may be {@code null}.
    */
@@ -117,6 +126,15 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean setAuthenticatedUserAdmin;
 
   /**
+   * Output only. The resource name of the TeamFolder that this Repository is associated with. This
+   * should take the format: projects/{project}/locations/{location}/teamFolders/{teamFolder}. If
+   * this is not set, the Repository is not associated with a TeamFolder.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String teamFolderName;
+
+  /**
    * Optional. If set, fields of `workspace_compilation_overrides` override the default compilation
    * settings that are specified in dataform.json when creating workspace-scoped compilation
    * results. See documentation for `WorkspaceCompilationOverrides` for more information.
@@ -124,6 +142,27 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WorkspaceCompilationOverrides workspaceCompilationOverrides;
+
+  /**
+   * Optional. The name of the containing folder of the repository. The field is immutable and it
+   * can be modified via a MoveRepository operation. Format: `projects/locations/folders`. or
+   * `projects/locations/teamFolders`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContainingFolder() {
+    return containingFolder;
+  }
+
+  /**
+   * Optional. The name of the containing folder of the repository. The field is immutable and it
+   * can be modified via a MoveRepository operation. Format: `projects/locations/folders`. or
+   * `projects/locations/teamFolders`.
+   * @param containingFolder containingFolder or {@code null} for none
+   */
+  public Repository setContainingFolder(java.lang.String containingFolder) {
+    this.containingFolder = containingFolder;
+    return this;
+  }
 
   /**
    * Output only. The timestamp of when the repository was created.
@@ -329,6 +368,27 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setSetAuthenticatedUserAdmin(java.lang.Boolean setAuthenticatedUserAdmin) {
     this.setAuthenticatedUserAdmin = setAuthenticatedUserAdmin;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the TeamFolder that this Repository is associated with. This
+   * should take the format: projects/{project}/locations/{location}/teamFolders/{teamFolder}. If
+   * this is not set, the Repository is not associated with a TeamFolder.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTeamFolderName() {
+    return teamFolderName;
+  }
+
+  /**
+   * Output only. The resource name of the TeamFolder that this Repository is associated with. This
+   * should take the format: projects/{project}/locations/{location}/teamFolders/{teamFolder}. If
+   * this is not set, the Repository is not associated with a TeamFolder.
+   * @param teamFolderName teamFolderName or {@code null} for none
+   */
+  public Repository setTeamFolderName(java.lang.String teamFolderName) {
+    this.teamFolderName = teamFolderName;
     return this;
   }
 

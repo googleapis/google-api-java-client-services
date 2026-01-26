@@ -45,6 +45,20 @@ public final class QueryInterpretation extends com.google.api.client.json.Generi
   private java.lang.String interpretedQuery;
 
   /**
+   * The actual number of results returned by the interpreted query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer interpretedQueryActualResultCount;
+
+  /**
+   * The estimated number of results returned by the interpreted query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long interpretedQueryEstimatedResultCount;
+
+  /**
    * The reason for interpretation of the query. This field will not be UNSPECIFIED if the
    * interpretation type is not NONE.
    * The value may be {@code null}.
@@ -85,6 +99,40 @@ public final class QueryInterpretation extends com.google.api.client.json.Generi
    */
   public QueryInterpretation setInterpretedQuery(java.lang.String interpretedQuery) {
     this.interpretedQuery = interpretedQuery;
+    return this;
+  }
+
+  /**
+   * The actual number of results returned by the interpreted query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInterpretedQueryActualResultCount() {
+    return interpretedQueryActualResultCount;
+  }
+
+  /**
+   * The actual number of results returned by the interpreted query.
+   * @param interpretedQueryActualResultCount interpretedQueryActualResultCount or {@code null} for none
+   */
+  public QueryInterpretation setInterpretedQueryActualResultCount(java.lang.Integer interpretedQueryActualResultCount) {
+    this.interpretedQueryActualResultCount = interpretedQueryActualResultCount;
+    return this;
+  }
+
+  /**
+   * The estimated number of results returned by the interpreted query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getInterpretedQueryEstimatedResultCount() {
+    return interpretedQueryEstimatedResultCount;
+  }
+
+  /**
+   * The estimated number of results returned by the interpreted query.
+   * @param interpretedQueryEstimatedResultCount interpretedQueryEstimatedResultCount or {@code null} for none
+   */
+  public QueryInterpretation setInterpretedQueryEstimatedResultCount(java.lang.Long interpretedQueryEstimatedResultCount) {
+    this.interpretedQueryEstimatedResultCount = interpretedQueryEstimatedResultCount;
     return this;
   }
 

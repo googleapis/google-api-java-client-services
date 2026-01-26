@@ -25,7 +25,7 @@ package com.google.api.services.cloudsearch.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/cloud-search/docs/guides/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/cloud-search/docs/guides/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -1926,8 +1926,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Search Indexing won't delete any queued item with a version value that is less than or
            * equal to the version of the currently indexed item. The maximum length for this field
            * is 1024 bytes. For information on how item version affects the deletion process, refer
-           * to [Handle revisions after manual deletes](https://developers.google.com/cloud-
-           * search/docs/guides/operations).
+           * to [Handle revisions after manual
+           * deletes](https://developers.google.com/workspace/cloud-search/docs/guides/operations).
            */
           @com.google.api.client.util.Key
           private java.lang.String version;
@@ -1938,7 +1938,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          item with a version value that is less than or equal to the version of the currently indexed item.
          The maximum length for this field is 1024 bytes. For information on how item version affects the
          deletion process, refer to [Handle revisions after manual
-         deletes](https://developers.google.com/cloud-search/docs/guides/operations).
+         deletes](https://developers.google.com/workspace/cloud-search/docs/guides/operations).
            */
           public java.lang.String getVersion() {
             return version;
@@ -1951,8 +1951,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
            * Search Indexing won't delete any queued item with a version value that is less than or
            * equal to the version of the currently indexed item. The maximum length for this field
            * is 1024 bytes. For information on how item version affects the deletion process, refer
-           * to [Handle revisions after manual deletes](https://developers.google.com/cloud-
-           * search/docs/guides/operations).
+           * to [Handle revisions after manual
+           * deletes](https://developers.google.com/workspace/cloud-search/docs/guides/operations).
            */
           public Delete setVersion(java.lang.String version) {
             this.version = version;
@@ -3292,7 +3292,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     /**
      * Uploads media for indexing. The upload endpoint supports direct and resumable upload protocols
      * and is intended for large items that can not be [inlined during index
-     * requests](https://developers.google.com/cloud-
+     * requests](https://developers.google.com/workspace/cloud-
      * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content: 1.
      * Call indexing.datasources.items.upload with the item name to begin an upload session and retrieve
      * the UploadItemRef. 1. Call media.upload to upload the content, as a streaming request, using the
@@ -3300,8 +3300,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * to index the item. Populate the [ItemContent](/cloud-
      * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef from
      * step 1. For additional information, see [Create a content connector using the REST
-     * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest). **Note:**
-     * This API requires a service account to execute.
+     * API](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector#rest).
+     * **Note:** This API requires a service account to execute.
      *
      * Create a request for the method "media.upload".
      *
@@ -3321,7 +3321,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
     /**
      * Uploads media for indexing. The upload endpoint supports direct and resumable upload protocols
      * and is intended for large items that can not be [inlined during index
-     * requests](https://developers.google.com/cloud-
+     * requests](https://developers.google.com/workspace/cloud-
      * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content: 1.
      * Call indexing.datasources.items.upload with the item name to begin an upload session and retrieve
      * the UploadItemRef. 1. Call media.upload to upload the content, as a streaming request, using the
@@ -3329,8 +3329,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * to index the item. Populate the [ItemContent](/cloud-
      * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef from
      * step 1. For additional information, see [Create a content connector using the REST
-     * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest). **Note:**
-     * This API requires a service account to execute.
+     * API](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector#rest).
+     * **Note:** This API requires a service account to execute.
      *
      * Create a request for the method "media.upload".
      *
@@ -3363,7 +3363,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Uploads media for indexing. The upload endpoint supports direct and resumable upload protocols
        * and is intended for large items that can not be [inlined during index
-       * requests](https://developers.google.com/cloud-
+       * requests](https://developers.google.com/workspace/cloud-
        * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
        * 1. Call indexing.datasources.items.upload with the item name to begin an upload session and
        * retrieve the UploadItemRef. 1. Call media.upload to upload the content, as a streaming request,
@@ -3371,8 +3371,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * indexing.datasources.items.index to index the item. Populate the [ItemContent](/cloud-
        * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef
        * from step 1. For additional information, see [Create a content connector using the REST
-       * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest). **Note:**
-       * This API requires a service account to execute.
+       * API](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector#rest).
+       * **Note:** This API requires a service account to execute.
        *
        * Create a request for the method "media.upload".
        *
@@ -3399,7 +3399,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
       /**
        * Uploads media for indexing. The upload endpoint supports direct and resumable upload protocols
        * and is intended for large items that can not be [inlined during index
-       * requests](https://developers.google.com/cloud-
+       * requests](https://developers.google.com/workspace/cloud-
        * search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content:
        * 1. Call indexing.datasources.items.upload with the item name to begin an upload session and
        * retrieve the UploadItemRef. 1. Call media.upload to upload the content, as a streaming request,
@@ -3407,8 +3407,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * indexing.datasources.items.index to index the item. Populate the [ItemContent](/cloud-
        * search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef
        * from step 1. For additional information, see [Create a content connector using the REST
-       * API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest). **Note:**
-       * This API requires a service account to execute.
+       * API](https://developers.google.com/workspace/cloud-search/docs/guides/content-connector#rest).
+       * **Note:** This API requires a service account to execute.
        *
        * Create a request for the method "media.upload".
        *
@@ -3882,6 +3882,41 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return this;
         }
 
+        /**
+         * When set to `true`, operations that are reachable are returned as normal, and those that
+         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
+         * only be `true` when reading across collections. For example, when `parent` is set to
+         * `"projects/example/locations/-"`. This field is not supported by default and will result
+         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
+         * product specific documentation.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean returnPartialSuccess;
+
+        /** When set to `true`, operations that are reachable are returned as normal, and those that are
+       unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+       when reading across collections. For example, when `parent` is set to
+       `"projects/example/locations/-"`. This field is not supported by default and will result in an
+       `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+       documentation.
+         */
+        public java.lang.Boolean getReturnPartialSuccess() {
+          return returnPartialSuccess;
+        }
+
+        /**
+         * When set to `true`, operations that are reachable are returned as normal, and those that
+         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
+         * only be `true` when reading across collections. For example, when `parent` is set to
+         * `"projects/example/locations/-"`. This field is not supported by default and will result
+         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
+         * product specific documentation.
+         */
+        public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+          this.returnPartialSuccess = returnPartialSuccess;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -3912,118 +3947,11 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
   public class Query {
 
     /**
-     * Returns Debug information for Cloud Search Query API provides the search method. **Note:** This
-     * API requires a standard end user account to execute. A service account can't perform Query API
-     * requests directly; to use a service account to perform queries, set up [Google Workspace domain-
-     * wide delegation of authority](https://developers.google.com/cloud-
-     * search/docs/guides/delegation/).
-     *
-     * Create a request for the method "query.debugSearch".
-     *
-     * This request holds the parameters needed by the cloudsearch server.  After setting any optional
-     * parameters, call the {@link DebugSearch#execute()} method to invoke the remote operation.
-     *
-     * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchRequest}
-     * @return the request
-     */
-    public DebugSearch debugSearch(com.google.api.services.cloudsearch.v1.model.SearchRequest content) throws java.io.IOException {
-      DebugSearch result = new DebugSearch(content);
-      initialize(result);
-      return result;
-    }
-
-    public class DebugSearch extends CloudSearchRequest<com.google.api.services.cloudsearch.v1.model.DebugResponse> {
-
-      private static final String REST_PATH = "v1/query:debugSearch";
-
-      /**
-       * Returns Debug information for Cloud Search Query API provides the search method. **Note:** This
-       * API requires a standard end user account to execute. A service account can't perform Query API
-       * requests directly; to use a service account to perform queries, set up [Google Workspace
-       * domain-wide delegation of authority](https://developers.google.com/cloud-
-       * search/docs/guides/delegation/).
-       *
-       * Create a request for the method "query.debugSearch".
-       *
-       * This request holds the parameters needed by the the cloudsearch server.  After setting any
-       * optional parameters, call the {@link DebugSearch#execute()} method to invoke the remote
-       * operation. <p> {@link
-       * DebugSearch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param content the {@link com.google.api.services.cloudsearch.v1.model.SearchRequest}
-       * @since 1.13
-       */
-      protected DebugSearch(com.google.api.services.cloudsearch.v1.model.SearchRequest content) {
-        super(CloudSearch.this, "POST", REST_PATH, content, com.google.api.services.cloudsearch.v1.model.DebugResponse.class);
-      }
-
-      @Override
-      public DebugSearch set$Xgafv(java.lang.String $Xgafv) {
-        return (DebugSearch) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public DebugSearch setAccessToken(java.lang.String accessToken) {
-        return (DebugSearch) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public DebugSearch setAlt(java.lang.String alt) {
-        return (DebugSearch) super.setAlt(alt);
-      }
-
-      @Override
-      public DebugSearch setCallback(java.lang.String callback) {
-        return (DebugSearch) super.setCallback(callback);
-      }
-
-      @Override
-      public DebugSearch setFields(java.lang.String fields) {
-        return (DebugSearch) super.setFields(fields);
-      }
-
-      @Override
-      public DebugSearch setKey(java.lang.String key) {
-        return (DebugSearch) super.setKey(key);
-      }
-
-      @Override
-      public DebugSearch setOauthToken(java.lang.String oauthToken) {
-        return (DebugSearch) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public DebugSearch setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (DebugSearch) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public DebugSearch setQuotaUser(java.lang.String quotaUser) {
-        return (DebugSearch) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public DebugSearch setUploadType(java.lang.String uploadType) {
-        return (DebugSearch) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public DebugSearch setUploadProtocol(java.lang.String uploadProtocol) {
-        return (DebugSearch) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public DebugSearch set(String parameterName, Object value) {
-        return (DebugSearch) super.set(parameterName, value);
-      }
-    }
-    /**
      * Provides functionality to remove logged activity for a user. Currently to be used only for Chat
      * 1p clients **Note:** This API requires a standard end user account to execute. A service account
      * can't perform Remove Activity requests directly; to use a service account to perform queries, set
-     * up [Google Workspace domain-wide delegation of authority](https://developers.google.com/cloud-
-     * search/docs/guides/delegation/).
+     * up [Google Workspace domain-wide delegation of
+     * authority](https://developers.google.com/workspace/cloud-search/docs/guides/delegation/).
      *
      * Create a request for the method "query.removeActivity".
      *
@@ -4048,7 +3976,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * 1p clients **Note:** This API requires a standard end user account to execute. A service
        * account can't perform Remove Activity requests directly; to use a service account to perform
        * queries, set up [Google Workspace domain-wide delegation of
-       * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
+       * authority](https://developers.google.com/workspace/cloud-search/docs/guides/delegation/).
        *
        * Create a request for the method "query.removeActivity".
        *
@@ -4131,7 +4059,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * Drive, or they can come from data that you have indexed from a third party. **Note:** This API
      * requires a standard end user account to execute. A service account can't perform Query API
      * requests directly; to use a service account to perform queries, set up [Google Workspace domain-
-     * wide delegation of authority](https://developers.google.com/cloud-
+     * wide delegation of authority](https://developers.google.com/workspace/cloud-
      * search/docs/guides/delegation/).
      *
      * Create a request for the method "query.search".
@@ -4158,7 +4086,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * Drive, or they can come from data that you have indexed from a third party. **Note:** This API
        * requires a standard end user account to execute. A service account can't perform Query API
        * requests directly; to use a service account to perform queries, set up [Google Workspace
-       * domain-wide delegation of authority](https://developers.google.com/cloud-
+       * domain-wide delegation of authority](https://developers.google.com/workspace/cloud-
        * search/docs/guides/delegation/).
        *
        * Create a request for the method "query.search".
@@ -4240,7 +4168,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
      * Provides suggestions for autocompleting the query. **Note:** This API requires a standard end
      * user account to execute. A service account can't perform Query API requests directly; to use a
      * service account to perform queries, set up [Google Workspace domain-wide delegation of
-     * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
+     * authority](https://developers.google.com/workspace/cloud-search/docs/guides/delegation/).
      *
      * Create a request for the method "query.suggest".
      *
@@ -4264,7 +4192,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * Provides suggestions for autocompleting the query. **Note:** This API requires a standard end
        * user account to execute. A service account can't perform Query API requests directly; to use a
        * service account to perform queries, set up [Google Workspace domain-wide delegation of
-       * authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
+       * authority](https://developers.google.com/workspace/cloud-search/docs/guides/delegation/).
        *
        * Create a request for the method "query.suggest".
        *
@@ -4366,7 +4294,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
        * Returns list of sources that user can use for Search and Suggest APIs. **Note:** This API
        * requires a standard end user account to execute. A service account can't perform Query API
        * requests directly; to use a service account to perform queries, set up [Google Workspace domain-
-       * wide delegation of authority](https://developers.google.com/cloud-
+       * wide delegation of authority](https://developers.google.com/workspace/cloud-
        * search/docs/guides/delegation/).
        *
        * Create a request for the method "sources.list".
@@ -4390,7 +4318,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
          * Returns list of sources that user can use for Search and Suggest APIs. **Note:** This API
          * requires a standard end user account to execute. A service account can't perform Query API
          * requests directly; to use a service account to perform queries, set up [Google Workspace
-         * domain-wide delegation of authority](https://developers.google.com/cloud-
+         * domain-wide delegation of authority](https://developers.google.com/workspace/cloud-
          * search/docs/guides/delegation/).
          *
          * Create a request for the method "sources.list".
@@ -5623,7 +5551,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Only applies to [`settings.datasources.patch`](https://developers.google.com/cloud-
+         * Only applies to
+         * [`settings.datasources.patch`](https://developers.google.com/workspace/cloud-
          * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to control which
          * fields to update. Example field paths: `name`, `displayName`. * If `update_mask` is non-
          * empty, then only the fields specified in the `update_mask` are updated. * If you specify
@@ -5634,7 +5563,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Only applies to [`settings.datasources.patch`](https://developers.google.com/cloud-
+        /** Only applies to [`settings.datasources.patch`](https://developers.google.com/workspace/cloud-
        search/docs/reference/rest/v1/settings.datasources/patch). Update mask to control which fields to
        update. Example field paths: `name`, `displayName`. * If `update_mask` is non-empty, then only the
        fields specified in the `update_mask` are updated. * If you specify a field in the `update_mask`,
@@ -5646,7 +5575,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         }
 
         /**
-         * Only applies to [`settings.datasources.patch`](https://developers.google.com/cloud-
+         * Only applies to
+         * [`settings.datasources.patch`](https://developers.google.com/workspace/cloud-
          * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to control which
          * fields to update. Example field paths: `name`, `displayName`. * If `update_mask` is non-
          * empty, then only the fields specified in the `update_mask` are updated. * If you specify
@@ -6534,7 +6464,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Only applies to
-         * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
+         * [`settings.searchapplications.patch`](https://developers.google.com/workspace/cloud-
          * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control
          * which fields to update. Example field paths: `search_application.name`,
          * `search_application.displayName`. * If `update_mask` is non-empty, then only the fields
@@ -6546,7 +6476,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Only applies to [`settings.searchapplications.patch`](https://developers.google.com/cloud-
+        /** Only applies to
+       [`settings.searchapplications.patch`](https://developers.google.com/workspace/cloud-
        search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control which
        fields to update. Example field paths: `search_application.name`, `search_application.displayName`.
        * If `update_mask` is non-empty, then only the fields specified in the `update_mask` are updated. *
@@ -6560,7 +6491,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Only applies to
-         * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
+         * [`settings.searchapplications.patch`](https://developers.google.com/workspace/cloud-
          * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control
          * which fields to update. Example field paths: `search_application.name`,
          * `search_application.displayName`. * If `update_mask` is non-empty, then only the fields
@@ -6844,7 +6775,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Only applies to
-         * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
+         * [`settings.searchapplications.patch`](https://developers.google.com/workspace/cloud-
          * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control
          * which fields to update. Example field paths: `search_application.name`,
          * `search_application.displayName`. * If `update_mask` is non-empty, then only the fields
@@ -6856,7 +6787,8 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Only applies to [`settings.searchapplications.patch`](https://developers.google.com/cloud-
+        /** Only applies to
+       [`settings.searchapplications.patch`](https://developers.google.com/workspace/cloud-
        search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control which
        fields to update. Example field paths: `search_application.name`, `search_application.displayName`.
        * If `update_mask` is non-empty, then only the fields specified in the `update_mask` are updated. *
@@ -6870,7 +6802,7 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
 
         /**
          * Only applies to
-         * [`settings.searchapplications.patch`](https://developers.google.com/cloud-
+         * [`settings.searchapplications.patch`](https://developers.google.com/workspace/cloud-
          * search/docs/reference/rest/v1/settings.searchapplications/patch). Update mask to control
          * which fields to update. Example field paths: `search_application.name`,
          * `search_application.displayName`. * If `update_mask` is non-empty, then only the fields

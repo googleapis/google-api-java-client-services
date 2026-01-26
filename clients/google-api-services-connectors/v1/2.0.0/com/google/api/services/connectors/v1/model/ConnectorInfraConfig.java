@@ -45,6 +45,14 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Long connectionRatelimitWindowSeconds;
 
   /**
+   * Indicate whether connection service account is enabled. If false, the common runtime service
+   * agent is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean connectionServiceAccountEnabled;
+
+  /**
    * Indicate whether connector versioning is enabled.
    * The value may be {@code null}.
    */
@@ -115,6 +123,13 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean provisionMemstore;
 
   /**
+   * Indicate whether public network ingress should be enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean publicNetworkIngressEnabled;
+
+  /**
    * Max QPS supported by the connector version before throttling of requests.
    * The value may be {@code null}.
    */
@@ -173,6 +188,25 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setConnectionRatelimitWindowSeconds(java.lang.Long connectionRatelimitWindowSeconds) {
     this.connectionRatelimitWindowSeconds = connectionRatelimitWindowSeconds;
+    return this;
+  }
+
+  /**
+   * Indicate whether connection service account is enabled. If false, the common runtime service
+   * agent is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getConnectionServiceAccountEnabled() {
+    return connectionServiceAccountEnabled;
+  }
+
+  /**
+   * Indicate whether connection service account is enabled. If false, the common runtime service
+   * agent is used.
+   * @param connectionServiceAccountEnabled connectionServiceAccountEnabled or {@code null} for none
+   */
+  public ConnectorInfraConfig setConnectionServiceAccountEnabled(java.lang.Boolean connectionServiceAccountEnabled) {
+    this.connectionServiceAccountEnabled = connectionServiceAccountEnabled;
     return this;
   }
 
@@ -343,6 +377,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setProvisionMemstore(java.lang.Boolean provisionMemstore) {
     this.provisionMemstore = provisionMemstore;
+    return this;
+  }
+
+  /**
+   * Indicate whether public network ingress should be enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPublicNetworkIngressEnabled() {
+    return publicNetworkIngressEnabled;
+  }
+
+  /**
+   * Indicate whether public network ingress should be enabled.
+   * @param publicNetworkIngressEnabled publicNetworkIngressEnabled or {@code null} for none
+   */
+  public ConnectorInfraConfig setPublicNetworkIngressEnabled(java.lang.Boolean publicNetworkIngressEnabled) {
+    this.publicNetworkIngressEnabled = publicNetworkIngressEnabled;
     return this;
   }
 

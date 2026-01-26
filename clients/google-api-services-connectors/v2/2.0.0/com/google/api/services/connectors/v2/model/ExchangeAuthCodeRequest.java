@@ -39,6 +39,20 @@ public final class ExchangeAuthCodeRequest extends com.google.api.client.json.Ge
   private AuthCodeData authCodeData;
 
   /**
+   * ExecutionConfig contains the configuration for the execution of the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExecutionConfig executionConfig;
+
+  /**
+   * OAuth2Config contains the OAuth2 config for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OAuth2Config oauth2Config;
+
+  /**
    * Optional. AuthCodeData contains the data the runtime requires to exchange for access and
    * refresh tokens. If the data is not provided, the runtime will read the data from the secret
    * manager.
@@ -56,6 +70,40 @@ public final class ExchangeAuthCodeRequest extends com.google.api.client.json.Ge
    */
   public ExchangeAuthCodeRequest setAuthCodeData(AuthCodeData authCodeData) {
     this.authCodeData = authCodeData;
+    return this;
+  }
+
+  /**
+   * ExecutionConfig contains the configuration for the execution of the request.
+   * @return value or {@code null} for none
+   */
+  public ExecutionConfig getExecutionConfig() {
+    return executionConfig;
+  }
+
+  /**
+   * ExecutionConfig contains the configuration for the execution of the request.
+   * @param executionConfig executionConfig or {@code null} for none
+   */
+  public ExchangeAuthCodeRequest setExecutionConfig(ExecutionConfig executionConfig) {
+    this.executionConfig = executionConfig;
+    return this;
+  }
+
+  /**
+   * OAuth2Config contains the OAuth2 config for the connection.
+   * @return value or {@code null} for none
+   */
+  public OAuth2Config getOauth2Config() {
+    return oauth2Config;
+  }
+
+  /**
+   * OAuth2Config contains the OAuth2 config for the connection.
+   * @param oauth2Config oauth2Config or {@code null} for none
+   */
+  public ExchangeAuthCodeRequest setOauth2Config(OAuth2Config oauth2Config) {
+    this.oauth2Config = oauth2Config;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v2.model;
 
 /**
- * Request message for ActionService.ExecuteAction
+ * Request message for ConnectorAgentService.GetResourcePost
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,24 +27,24 @@ package com.google.api.services.connectors.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ExecuteActionRequest extends com.google.api.client.json.GenericJson {
+public final class GetResourcePostRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Execution config for the request.
+   * execution config for the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExecutionConfig executionConfig;
 
   /**
-   * Parameters for executing the action. The parameters can be key/value pairs or nested structs.
+   * List of tool specifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> parameters;
+  private ToolSpec toolSpec;
 
   /**
-   * Execution config for the request.
+   * execution config for the request.
    * @return value or {@code null} for none
    */
   public ExecutionConfig getExecutionConfig() {
@@ -52,39 +52,39 @@ public final class ExecuteActionRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Execution config for the request.
+   * execution config for the request.
    * @param executionConfig executionConfig or {@code null} for none
    */
-  public ExecuteActionRequest setExecutionConfig(ExecutionConfig executionConfig) {
+  public GetResourcePostRequest setExecutionConfig(ExecutionConfig executionConfig) {
     this.executionConfig = executionConfig;
     return this;
   }
 
   /**
-   * Parameters for executing the action. The parameters can be key/value pairs or nested structs.
+   * List of tool specifications.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getParameters() {
-    return parameters;
+  public ToolSpec getToolSpec() {
+    return toolSpec;
   }
 
   /**
-   * Parameters for executing the action. The parameters can be key/value pairs or nested structs.
-   * @param parameters parameters or {@code null} for none
+   * List of tool specifications.
+   * @param toolSpec toolSpec or {@code null} for none
    */
-  public ExecuteActionRequest setParameters(java.util.Map<String, java.lang.Object> parameters) {
-    this.parameters = parameters;
+  public GetResourcePostRequest setToolSpec(ToolSpec toolSpec) {
+    this.toolSpec = toolSpec;
     return this;
   }
 
   @Override
-  public ExecuteActionRequest set(String fieldName, Object value) {
-    return (ExecuteActionRequest) super.set(fieldName, value);
+  public GetResourcePostRequest set(String fieldName, Object value) {
+    return (GetResourcePostRequest) super.set(fieldName, value);
   }
 
   @Override
-  public ExecuteActionRequest clone() {
-    return (ExecuteActionRequest) super.clone();
+  public GetResourcePostRequest clone() {
+    return (GetResourcePostRequest) super.clone();
   }
 
 }

@@ -37,6 +37,14 @@ public final class ExtractionRule extends com.google.api.client.json.GenericJson
   private java.lang.String extractionRegex;
 
   /**
+   * Format string used to format the extracted backend details. If empty, extracted backend details
+   * will be returned as it is.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String formatString;
+
+  /**
    * Source on which the rule is applied.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class ExtractionRule extends com.google.api.client.json.GenericJson
    */
   public ExtractionRule setExtractionRegex(java.lang.String extractionRegex) {
     this.extractionRegex = extractionRegex;
+    return this;
+  }
+
+  /**
+   * Format string used to format the extracted backend details. If empty, extracted backend details
+   * will be returned as it is.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFormatString() {
+    return formatString;
+  }
+
+  /**
+   * Format string used to format the extracted backend details. If empty, extracted backend details
+   * will be returned as it is.
+   * @param formatString formatString or {@code null} for none
+   */
+  public ExtractionRule setFormatString(java.lang.String formatString) {
+    this.formatString = formatString;
     return this;
   }
 

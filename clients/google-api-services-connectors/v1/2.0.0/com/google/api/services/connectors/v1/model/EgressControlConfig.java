@@ -33,6 +33,29 @@ package com.google.api.services.connectors.v1.model;
 public final class EgressControlConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Access mode for egress control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accessMode;
+
+  /**
+   * Additional extraction rules to identity the backends from customer provided configuration in
+   * Connection resource. These rules are applied in addition to the ones specified in
+   * `oneof_backends`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExtractionRules additionalExtractionRules;
+
+  /**
+   * Optional. Used when access_mode is RESTRICTED or ACCESS_MODE_UNSPECIFIED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowlistedProjectNumbers;
+
+  /**
    * Static Comma separated backends which are common for all Connection resources. Supported
    * formats for each backend are host:port or just host (host can be ip address or domain name).
    * The value may be {@code null}.
@@ -46,6 +69,68 @@ public final class EgressControlConfig extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private ExtractionRules extractionRules;
+
+  /**
+   * Launch environment for egress control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String launchEnvironment;
+
+  /**
+   * Optional. Access mode for egress control.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccessMode() {
+    return accessMode;
+  }
+
+  /**
+   * Optional. Access mode for egress control.
+   * @param accessMode accessMode or {@code null} for none
+   */
+  public EgressControlConfig setAccessMode(java.lang.String accessMode) {
+    this.accessMode = accessMode;
+    return this;
+  }
+
+  /**
+   * Additional extraction rules to identity the backends from customer provided configuration in
+   * Connection resource. These rules are applied in addition to the ones specified in
+   * `oneof_backends`.
+   * @return value or {@code null} for none
+   */
+  public ExtractionRules getAdditionalExtractionRules() {
+    return additionalExtractionRules;
+  }
+
+  /**
+   * Additional extraction rules to identity the backends from customer provided configuration in
+   * Connection resource. These rules are applied in addition to the ones specified in
+   * `oneof_backends`.
+   * @param additionalExtractionRules additionalExtractionRules or {@code null} for none
+   */
+  public EgressControlConfig setAdditionalExtractionRules(ExtractionRules additionalExtractionRules) {
+    this.additionalExtractionRules = additionalExtractionRules;
+    return this;
+  }
+
+  /**
+   * Optional. Used when access_mode is RESTRICTED or ACCESS_MODE_UNSPECIFIED.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowlistedProjectNumbers() {
+    return allowlistedProjectNumbers;
+  }
+
+  /**
+   * Optional. Used when access_mode is RESTRICTED or ACCESS_MODE_UNSPECIFIED.
+   * @param allowlistedProjectNumbers allowlistedProjectNumbers or {@code null} for none
+   */
+  public EgressControlConfig setAllowlistedProjectNumbers(java.util.List<java.lang.String> allowlistedProjectNumbers) {
+    this.allowlistedProjectNumbers = allowlistedProjectNumbers;
+    return this;
+  }
 
   /**
    * Static Comma separated backends which are common for all Connection resources. Supported
@@ -80,6 +165,23 @@ public final class EgressControlConfig extends com.google.api.client.json.Generi
    */
   public EgressControlConfig setExtractionRules(ExtractionRules extractionRules) {
     this.extractionRules = extractionRules;
+    return this;
+  }
+
+  /**
+   * Launch environment for egress control.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLaunchEnvironment() {
+    return launchEnvironment;
+  }
+
+  /**
+   * Launch environment for egress control.
+   * @param launchEnvironment launchEnvironment or {@code null} for none
+   */
+  public EgressControlConfig setLaunchEnvironment(java.lang.String launchEnvironment) {
+    this.launchEnvironment = launchEnvironment;
     return this;
   }
 

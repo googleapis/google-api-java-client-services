@@ -72,6 +72,16 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean disableRequiredFieldValidation;
 
   /**
+   * Optional. Whether to enable FHIRPath validation for incoming resource types that have profiles
+   * configured for them in the `enabled_implementation_guides` list. Set this to true to enable
+   * checking incoming resources for conformance against FHIRPath requirements defined in the
+   * configured profiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableFhirpathProfileValidation;
+
+  /**
    * A list of ImplementationGuide URLs in this FHIR store that are used to configure the profiles
    * to use for validation. For example, to use the US Core profiles for validation, set
    * `enabled_implementation_guides` to `["http://hl7.org/fhir/us/core/ImplementationGuide/ig"]`. If
@@ -181,6 +191,29 @@ public final class ValidationConfig extends com.google.api.client.json.GenericJs
    */
   public ValidationConfig setDisableRequiredFieldValidation(java.lang.Boolean disableRequiredFieldValidation) {
     this.disableRequiredFieldValidation = disableRequiredFieldValidation;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to enable FHIRPath validation for incoming resource types that have profiles
+   * configured for them in the `enabled_implementation_guides` list. Set this to true to enable
+   * checking incoming resources for conformance against FHIRPath requirements defined in the
+   * configured profiles.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableFhirpathProfileValidation() {
+    return enableFhirpathProfileValidation;
+  }
+
+  /**
+   * Optional. Whether to enable FHIRPath validation for incoming resource types that have profiles
+   * configured for them in the `enabled_implementation_guides` list. Set this to true to enable
+   * checking incoming resources for conformance against FHIRPath requirements defined in the
+   * configured profiles.
+   * @param enableFhirpathProfileValidation enableFhirpathProfileValidation or {@code null} for none
+   */
+  public ValidationConfig setEnableFhirpathProfileValidation(java.lang.Boolean enableFhirpathProfileValidation) {
+    this.enableFhirpathProfileValidation = enableFhirpathProfileValidation;
     return this;
   }
 

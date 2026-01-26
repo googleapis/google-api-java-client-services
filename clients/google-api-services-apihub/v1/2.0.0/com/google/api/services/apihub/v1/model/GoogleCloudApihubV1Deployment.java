@@ -168,8 +168,9 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   private java.util.List<GoogleCloudApihubV1SourceMetadata> sourceMetadata;
 
   /**
-   * Optional. The project to which the deployment belongs. For GCP gateways, this will refer to the
-   * project identifier. For others like Edge/OPDK, this will refer to the org identifier.
+   * Optional. The project to which the deployment belongs. For Google Cloud gateways, this will
+   * refer to the project identifier. For others like Edge/OPDK, this will refer to the org
+   * identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -500,8 +501,9 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Optional. The project to which the deployment belongs. For GCP gateways, this will refer to the
-   * project identifier. For others like Edge/OPDK, this will refer to the org identifier.
+   * Optional. The project to which the deployment belongs. For Google Cloud gateways, this will
+   * refer to the project identifier. For others like Edge/OPDK, this will refer to the org
+   * identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceProject() {
@@ -509,8 +511,9 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   }
 
   /**
-   * Optional. The project to which the deployment belongs. For GCP gateways, this will refer to the
-   * project identifier. For others like Edge/OPDK, this will refer to the org identifier.
+   * Optional. The project to which the deployment belongs. For Google Cloud gateways, this will
+   * refer to the project identifier. For others like Edge/OPDK, this will refer to the org
+   * identifier.
    * @param sourceProject sourceProject or {@code null} for none
    */
   public GoogleCloudApihubV1Deployment setSourceProject(java.lang.String sourceProject) {

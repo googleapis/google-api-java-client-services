@@ -54,7 +54,7 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
 
   /**
    * Output only. The configuration of resources created for a given plugin instance action. Note
-   * these will be returned only in case of Non-GCP plugins like OPDK.
+   * these will be returned only in case of non-Google Cloud plugins like OPDK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
 
   /**
    * Optional. The service account used to publish data. Note, the service account will only be
-   * accepted for non GCP plugins like OPDK.
+   * accepted for non-Google Cloud plugins like OPDK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
 
   /**
    * Output only. The configuration of resources created for a given plugin instance action. Note
-   * these will be returned only in case of Non-GCP plugins like OPDK.
+   * these will be returned only in case of non-Google Cloud plugins like OPDK.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1ResourceConfig getResourceConfig() {
@@ -156,7 +156,7 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
 
   /**
    * Output only. The configuration of resources created for a given plugin instance action. Note
-   * these will be returned only in case of Non-GCP plugins like OPDK.
+   * these will be returned only in case of non-Google Cloud plugins like OPDK.
    * @param resourceConfig resourceConfig or {@code null} for none
    */
   public GoogleCloudApihubV1PluginInstanceAction setResourceConfig(GoogleCloudApihubV1ResourceConfig resourceConfig) {
@@ -202,7 +202,7 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
 
   /**
    * Optional. The service account used to publish data. Note, the service account will only be
-   * accepted for non GCP plugins like OPDK.
+   * accepted for non-Google Cloud plugins like OPDK.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -211,7 +211,7 @@ public final class GoogleCloudApihubV1PluginInstanceAction extends com.google.ap
 
   /**
    * Optional. The service account used to publish data. Note, the service account will only be
-   * accepted for non GCP plugins like OPDK.
+   * accepted for non-Google Cloud plugins like OPDK.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudApihubV1PluginInstanceAction setServiceAccount(java.lang.String serviceAccount) {

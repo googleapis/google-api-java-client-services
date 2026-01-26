@@ -2196,16 +2196,16 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Looks up an Api Hub instance in a given GCP project. There will always be only one Api Hub
-         * instance for a GCP project across all locations.
+         * Looks up an Api Hub instance in a given Google Cloud project. There will always be only one Api
+         * Hub instance for a Google Cloud project across all locations.
          *
          * Create a request for the method "apiHubInstances.lookup".
          *
          * This request holds the parameters needed by the apihub server.  After setting any optional
          * parameters, call the {@link Lookup#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. There will always be only one Api Hub instance for a GCP project across all locations. The
-         *        parent resource for the Api Hub instance resource. Format:
+         * @param parent Required. There will always be only one Api Hub instance for a Google Cloud project across all
+         *        locations. The parent resource for the Api Hub instance resource. Format:
          *        `projects/{project}/locations/{location}`
          * @return the request
          */
@@ -2223,8 +2223,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Looks up an Api Hub instance in a given GCP project. There will always be only one Api Hub
-           * instance for a GCP project across all locations.
+           * Looks up an Api Hub instance in a given Google Cloud project. There will always be only one Api
+           * Hub instance for a Google Cloud project across all locations.
            *
            * Create a request for the method "apiHubInstances.lookup".
            *
@@ -2233,8 +2233,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            * Lookup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. There will always be only one Api Hub instance for a GCP project across all locations. The
-         *        parent resource for the Api Hub instance resource. Format:
+           * @param parent Required. There will always be only one Api Hub instance for a Google Cloud project across all
+         *        locations. The parent resource for the Api Hub instance resource. Format:
          *        `projects/{project}/locations/{location}`
            * @since 1.13
            */
@@ -2314,15 +2314,15 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. There will always be only one Api Hub instance for a GCP project across all
-           * locations. The parent resource for the Api Hub instance resource. Format:
+           * Required. There will always be only one Api Hub instance for a Google Cloud project
+           * across all locations. The parent resource for the Api Hub instance resource. Format:
            * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. There will always be only one Api Hub instance for a GCP project across all locations.
-         The parent resource for the Api Hub instance resource. Format:
+          /** Required. There will always be only one Api Hub instance for a Google Cloud project across all
+         locations. The parent resource for the Api Hub instance resource. Format:
          `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
@@ -2330,8 +2330,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. There will always be only one Api Hub instance for a GCP project across all
-           * locations. The parent resource for the Api Hub instance resource. Format:
+           * Required. There will always be only one Api Hub instance for a Google Cloud project
+           * across all locations. The parent resource for the Api Hub instance resource. Format:
            * `projects/{project}/locations/{location}`
            */
           public Lookup setParent(java.lang.String parent) {

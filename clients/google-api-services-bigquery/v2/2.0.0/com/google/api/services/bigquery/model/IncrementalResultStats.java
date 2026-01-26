@@ -31,30 +31,30 @@ package com.google.api.services.bigquery.model;
 public final class IncrementalResultStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Reason why incremental query results are/were not written by the query.
+   * Output only. Reason why incremental query results are/were not written by the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String disabledReason;
 
   /**
-   * The time at which the result table's contents were modified. May be absent if no results have
-   * been written or the query has completed.
+   * Output only. The time at which the result table's contents were modified. May be absent if no
+   * results have been written or the query has completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String resultSetLastModifyTime;
 
   /**
-   * The time at which the result table's contents were completely replaced. May be absent if no
-   * results have been written or the query has completed.
+   * Output only. The time at which the result table's contents were completely replaced. May be
+   * absent if no results have been written or the query has completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String resultSetLastReplaceTime;
 
   /**
-   * Reason why incremental query results are/were not written by the query.
+   * Output only. Reason why incremental query results are/were not written by the query.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisabledReason() {
@@ -62,7 +62,7 @@ public final class IncrementalResultStats extends com.google.api.client.json.Gen
   }
 
   /**
-   * Reason why incremental query results are/were not written by the query.
+   * Output only. Reason why incremental query results are/were not written by the query.
    * @param disabledReason disabledReason or {@code null} for none
    */
   public IncrementalResultStats setDisabledReason(java.lang.String disabledReason) {
@@ -71,8 +71,8 @@ public final class IncrementalResultStats extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time at which the result table's contents were modified. May be absent if no results have
-   * been written or the query has completed.
+   * Output only. The time at which the result table's contents were modified. May be absent if no
+   * results have been written or the query has completed.
    * @return value or {@code null} for none
    */
   public String getResultSetLastModifyTime() {
@@ -80,8 +80,8 @@ public final class IncrementalResultStats extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time at which the result table's contents were modified. May be absent if no results have
-   * been written or the query has completed.
+   * Output only. The time at which the result table's contents were modified. May be absent if no
+   * results have been written or the query has completed.
    * @param resultSetLastModifyTime resultSetLastModifyTime or {@code null} for none
    */
   public IncrementalResultStats setResultSetLastModifyTime(String resultSetLastModifyTime) {
@@ -90,8 +90,8 @@ public final class IncrementalResultStats extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time at which the result table's contents were completely replaced. May be absent if no
-   * results have been written or the query has completed.
+   * Output only. The time at which the result table's contents were completely replaced. May be
+   * absent if no results have been written or the query has completed.
    * @return value or {@code null} for none
    */
   public String getResultSetLastReplaceTime() {
@@ -99,8 +99,8 @@ public final class IncrementalResultStats extends com.google.api.client.json.Gen
   }
 
   /**
-   * The time at which the result table's contents were completely replaced. May be absent if no
-   * results have been written or the query has completed.
+   * Output only. The time at which the result table's contents were completely replaced. May be
+   * absent if no results have been written or the query has completed.
    * @param resultSetLastReplaceTime resultSetLastReplaceTime or {@code null} for none
    */
   public IncrementalResultStats setResultSetLastReplaceTime(String resultSetLastReplaceTime) {

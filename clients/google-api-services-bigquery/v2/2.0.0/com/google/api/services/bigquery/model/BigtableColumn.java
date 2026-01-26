@@ -32,9 +32,10 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   /**
    * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
-   * encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column
-   * family level. However, the setting at this level takes precedence if 'encoding' is set at both
-   * levels.
+   * encoded using HBase Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in combination with JSON type.
+   * 'encoding' can also be set at the column family level. However, the setting at this level takes
+   * precedence if 'encoding' is set at both levels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,6 +58,14 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean onlyReadLatest;
+
+  /**
+   * Optional. Protobuf-specific configurations, only takes effect when the encoding is
+   * PROTO_BINARY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigtableProtoConfig protoConfig;
 
   /**
    * [Required] Qualifier of the column. Columns in the parent column family that has this exact
@@ -91,9 +100,10 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   /**
    * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
-   * encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column
-   * family level. However, the setting at this level takes precedence if 'encoding' is set at both
-   * levels.
+   * encoded using HBase Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in combination with JSON type.
+   * 'encoding' can also be set at the column family level. However, the setting at this level takes
+   * precedence if 'encoding' is set at both levels.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncoding() {
@@ -103,9 +113,10 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
   /**
    * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
-   * encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column
-   * family level. However, the setting at this level takes precedence if 'encoding' is set at both
-   * levels.
+   * encoded using HBase Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in combination with JSON type.
+   * 'encoding' can also be set at the column family level. However, the setting at this level takes
+   * precedence if 'encoding' is set at both levels.
    * @param encoding encoding or {@code null} for none
    */
   public BigtableColumn setEncoding(java.lang.String encoding) {
@@ -152,6 +163,25 @@ public final class BigtableColumn extends com.google.api.client.json.GenericJson
    */
   public BigtableColumn setOnlyReadLatest(java.lang.Boolean onlyReadLatest) {
     this.onlyReadLatest = onlyReadLatest;
+    return this;
+  }
+
+  /**
+   * Optional. Protobuf-specific configurations, only takes effect when the encoding is
+   * PROTO_BINARY.
+   * @return value or {@code null} for none
+   */
+  public BigtableProtoConfig getProtoConfig() {
+    return protoConfig;
+  }
+
+  /**
+   * Optional. Protobuf-specific configurations, only takes effect when the encoding is
+   * PROTO_BINARY.
+   * @param protoConfig protoConfig or {@code null} for none
+   */
+  public BigtableColumn setProtoConfig(BigtableProtoConfig protoConfig) {
+    this.protoConfig = protoConfig;
     return this;
   }
 

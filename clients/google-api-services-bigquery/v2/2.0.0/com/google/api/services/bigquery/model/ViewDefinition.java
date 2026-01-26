@@ -66,9 +66,10 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set
-   * to false, the view will use BigQuery's GoogleSQL: https://cloud.google.com/bigquery/sql-
-   * reference/ Queries and views that reference this view must use the same flag value. A wrapper
-   * is used here because the default value is True.
+   * to false, the view uses BigQuery's
+   * [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql). Queries and views
+   * that reference this view must use the same flag value. A wrapper is used here because the
+   * default value is True.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,9 +160,10 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set
-   * to false, the view will use BigQuery's GoogleSQL: https://cloud.google.com/bigquery/sql-
-   * reference/ Queries and views that reference this view must use the same flag value. A wrapper
-   * is used here because the default value is True.
+   * to false, the view uses BigQuery's
+   * [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql). Queries and views
+   * that reference this view must use the same flag value. A wrapper is used here because the
+   * default value is True.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseLegacySql() {
@@ -170,9 +172,10 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies whether to use BigQuery's legacy SQL for this view. The default value is true. If set
-   * to false, the view will use BigQuery's GoogleSQL: https://cloud.google.com/bigquery/sql-
-   * reference/ Queries and views that reference this view must use the same flag value. A wrapper
-   * is used here because the default value is True.
+   * to false, the view uses BigQuery's
+   * [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql). Queries and views
+   * that reference this view must use the same flag value. A wrapper is used here because the
+   * default value is True.
    * @param useLegacySql useLegacySql or {@code null} for none
    */
   public ViewDefinition setUseLegacySql(java.lang.Boolean useLegacySql) {

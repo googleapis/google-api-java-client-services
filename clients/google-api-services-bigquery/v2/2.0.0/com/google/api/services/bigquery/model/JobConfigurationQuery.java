@@ -249,9 +249,10 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
 
   /**
    * Optional. Specifies whether to use BigQuery's legacy SQL dialect for this query. The default
-   * value is true. If set to false, the query will use BigQuery's GoogleSQL:
-   * https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
-   * of flattenResults is ignored; query will be run as if flattenResults is false.
+   * value is true. If set to false, the query uses BigQuery's
+   * [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql). When useLegacySql is
+   * set to false, the value of flattenResults is ignored; query will be run as if flattenResults is
+   * false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -841,9 +842,10 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
 
   /**
    * Optional. Specifies whether to use BigQuery's legacy SQL dialect for this query. The default
-   * value is true. If set to false, the query will use BigQuery's GoogleSQL:
-   * https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
-   * of flattenResults is ignored; query will be run as if flattenResults is false.
+   * value is true. If set to false, the query uses BigQuery's
+   * [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql). When useLegacySql is
+   * set to false, the value of flattenResults is ignored; query will be run as if flattenResults is
+   * false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseLegacySql() {
@@ -852,9 +854,10 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
 
   /**
    * Optional. Specifies whether to use BigQuery's legacy SQL dialect for this query. The default
-   * value is true. If set to false, the query will use BigQuery's GoogleSQL:
-   * https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value
-   * of flattenResults is ignored; query will be run as if flattenResults is false.
+   * value is true. If set to false, the query uses BigQuery's
+   * [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql). When useLegacySql is
+   * set to false, the value of flattenResults is ignored; query will be run as if flattenResults is
+   * false.
    * @param useLegacySql useLegacySql or {@code null} for none
    */
   public JobConfigurationQuery setUseLegacySql(java.lang.Boolean useLegacySql) {
@@ -880,9 +883,9 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    *
    * <p>
    * Optional. Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value
- is true. If set to false, the query will use BigQuery's GoogleSQL:
- https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value of
- flattenResults is ignored; query will be run as if flattenResults is false.
+ is true. If set to false, the query uses BigQuery's
+ [GoogleSQL](https://docs.cloud.google.com/bigquery/docs/introduction-sql). When useLegacySql is set
+ to false, the value of flattenResults is ignored; query will be run as if flattenResults is false.
    * </p>
    */
   public boolean isUseLegacySql() {

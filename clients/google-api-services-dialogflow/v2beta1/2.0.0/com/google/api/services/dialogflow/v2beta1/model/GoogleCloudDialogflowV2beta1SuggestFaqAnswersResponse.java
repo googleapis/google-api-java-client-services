@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The request message for Participants.SuggestFaqAnswers.
+ * Model definition for GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of messages prior to and including latest_message to compile the suggestion. It may be
-   * smaller than the SuggestFaqAnswersRequest.context_size field in the request if there aren't
-   * that many messages in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * Output only. Answers extracted from FAQ documents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,17 +48,12 @@ public final class GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse extends
   }
 
   /**
-   * The name of the latest conversation message used to compile suggestion for. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Number of messages prior to and including latest_message to compile the suggestion. It may be
-   * smaller than the SuggestFaqAnswersRequest.context_size field in the request if there aren't
-   * that many messages in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -70,9 +61,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse extends
   }
 
   /**
-   * Number of messages prior to and including latest_message to compile the suggestion. It may be
-   * smaller than the SuggestFaqAnswersRequest.context_size field in the request if there aren't
-   * that many messages in the conversation.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse setContextSize(java.lang.Integer contextSize) {
@@ -81,7 +69,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse extends
   }
 
   /**
-   * Output only. Answers extracted from FAQ documents.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1FaqAnswer> getFaqAnswers() {
@@ -89,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse extends
   }
 
   /**
-   * Output only. Answers extracted from FAQ documents.
    * @param faqAnswers faqAnswers or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse setFaqAnswers(java.util.List<GoogleCloudDialogflowV2beta1FaqAnswer> faqAnswers) {
@@ -98,8 +84,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse extends
   }
 
   /**
-   * The name of the latest conversation message used to compile suggestion for. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -107,8 +91,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse extends
   }
 
   /**
-   * The name of the latest conversation message used to compile suggestion for. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse setLatestMessage(java.lang.String latestMessage) {

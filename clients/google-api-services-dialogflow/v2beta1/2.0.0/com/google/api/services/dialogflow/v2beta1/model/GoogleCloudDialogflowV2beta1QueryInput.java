@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the query input. It can contain either: 1. An audio config which instructs the speech
- * recognizer how to process the speech audio. 2. A conversational query in the form of text. 3. An
- * event that specifies which intent to trigger.
+ * Model definition for GoogleCloudDialogflowV2beta1QueryInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,35 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1QueryInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Instructs the speech recognizer how to process the speech audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1InputAudioConfig audioConfig;
 
   /**
-   * The DTMF digits used to invoke intent and fill in parameter value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1TelephonyDtmfEvents dtmf;
 
   /**
-   * The event to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1EventInput event;
 
   /**
-   * The natural language text to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1TextInput text;
 
   /**
-   * Instructs the speech recognizer how to process the speech audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig getAudioConfig() {
@@ -68,7 +61,6 @@ public final class GoogleCloudDialogflowV2beta1QueryInput extends com.google.api
   }
 
   /**
-   * Instructs the speech recognizer how to process the speech audio.
    * @param audioConfig audioConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryInput setAudioConfig(GoogleCloudDialogflowV2beta1InputAudioConfig audioConfig) {
@@ -77,7 +69,6 @@ public final class GoogleCloudDialogflowV2beta1QueryInput extends com.google.api
   }
 
   /**
-   * The DTMF digits used to invoke intent and fill in parameter value.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1TelephonyDtmfEvents getDtmf() {
@@ -85,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1QueryInput extends com.google.api
   }
 
   /**
-   * The DTMF digits used to invoke intent and fill in parameter value.
    * @param dtmf dtmf or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryInput setDtmf(GoogleCloudDialogflowV2beta1TelephonyDtmfEvents dtmf) {
@@ -94,7 +84,6 @@ public final class GoogleCloudDialogflowV2beta1QueryInput extends com.google.api
   }
 
   /**
-   * The event to be processed.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EventInput getEvent() {
@@ -102,7 +91,6 @@ public final class GoogleCloudDialogflowV2beta1QueryInput extends com.google.api
   }
 
   /**
-   * The event to be processed.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryInput setEvent(GoogleCloudDialogflowV2beta1EventInput event) {
@@ -111,7 +99,6 @@ public final class GoogleCloudDialogflowV2beta1QueryInput extends com.google.api
   }
 
   /**
-   * The natural language text to be processed.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1TextInput getText() {
@@ -119,7 +106,6 @@ public final class GoogleCloudDialogflowV2beta1QueryInput extends com.google.api
   }
 
   /**
-   * The natural language text to be processed.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryInput setText(GoogleCloudDialogflowV2beta1TextInput text) {

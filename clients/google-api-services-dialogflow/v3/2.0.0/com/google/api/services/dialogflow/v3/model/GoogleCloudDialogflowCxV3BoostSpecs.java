@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Boost specifications for data stores.
+ * Model definition for GoogleCloudDialogflowCxV3BoostSpecs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,17 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3BoostSpecs extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Data Stores where the boosting configuration is applied. The full names of the
-   * referenced data stores. Formats:
-   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> dataStores;
 
   /**
-   * Optional. A list of boosting specifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,10 +48,6 @@ public final class GoogleCloudDialogflowCxV3BoostSpecs extends com.google.api.cl
   }
 
   /**
-   * Optional. Data Stores where the boosting configuration is applied. The full names of the
-   * referenced data stores. Formats:
-   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataStores() {
@@ -64,10 +55,6 @@ public final class GoogleCloudDialogflowCxV3BoostSpecs extends com.google.api.cl
   }
 
   /**
-   * Optional. Data Stores where the boosting configuration is applied. The full names of the
-   * referenced data stores. Formats:
-   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * @param dataStores dataStores or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3BoostSpecs setDataStores(java.util.List<java.lang.String> dataStores) {
@@ -76,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3BoostSpecs extends com.google.api.cl
   }
 
   /**
-   * Optional. A list of boosting specifications.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3BoostSpec> getSpec() {
@@ -84,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3BoostSpecs extends com.google.api.cl
   }
 
   /**
-   * Optional. A list of boosting specifications.
    * @param spec spec or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3BoostSpecs setSpec(java.util.List<GoogleCloudDialogflowCxV3BoostSpec> spec) {

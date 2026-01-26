@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The request message for Participants.SuggestKnowledgeAssist.
+ * Model definition for GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,34 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Max number of messages prior to and including latest_message to use as context when
-   * compiling the suggestion. The context size is by default 100 and at most 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * Optional. The name of the latest conversation message to compile suggestions for. If empty, it
-   * will be the latest message of the conversation. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Optional. The previously suggested query for the given conversation. This helps identify
-   * whether the next suggestion we generate is reasonably different from the previous one. This is
-   * useful to avoid similar suggestions within the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String previousSuggestedQuery;
 
   /**
-   * Optional. Max number of messages prior to and including latest_message to use as context when
-   * compiling the suggestion. The context size is by default 100 and at most 100.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -65,8 +55,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest ext
   }
 
   /**
-   * Optional. Max number of messages prior to and including latest_message to use as context when
-   * compiling the suggestion. The context size is by default 100 and at most 100.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest setContextSize(java.lang.Integer contextSize) {
@@ -75,9 +63,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest ext
   }
 
   /**
-   * Optional. The name of the latest conversation message to compile suggestions for. If empty, it
-   * will be the latest message of the conversation. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -85,9 +70,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest ext
   }
 
   /**
-   * Optional. The name of the latest conversation message to compile suggestions for. If empty, it
-   * will be the latest message of the conversation. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest setLatestMessage(java.lang.String latestMessage) {
@@ -96,9 +78,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest ext
   }
 
   /**
-   * Optional. The previously suggested query for the given conversation. This helps identify
-   * whether the next suggestion we generate is reasonably different from the previous one. This is
-   * useful to avoid similar suggestions within the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreviousSuggestedQuery() {
@@ -106,9 +85,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest ext
   }
 
   /**
-   * Optional. The previously suggested query for the given conversation. This helps identify
-   * whether the next suggestion we generate is reasonably different from the previous one. This is
-   * useful to avoid similar suggestions within the conversation.
    * @param previousSuggestedQuery previousSuggestedQuery or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest setPreviousSuggestedQuery(java.lang.String previousSuggestedQuery) {

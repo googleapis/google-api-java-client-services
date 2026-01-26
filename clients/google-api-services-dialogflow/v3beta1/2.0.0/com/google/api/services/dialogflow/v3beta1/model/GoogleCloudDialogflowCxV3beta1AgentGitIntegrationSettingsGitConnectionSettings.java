@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Integration settings for a Git service hosted on Cloud Run.
+ * Model definition for
+ * GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,44 +31,36 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the SecretManager secret version resource storing the git access token. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessTokenSecret;
 
   /**
-   * Optional. List of branches configured for the repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> branches;
 
   /**
-   * Required. Display name for the repository
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. Git server reporitory URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String repositoryUri;
 
   /**
-   * Required. Default branch of the repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingBranch;
 
   /**
-   * The name of the SecretManager secret version resource storing the git access token. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessTokenSecret() {
@@ -75,8 +68,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitC
   }
 
   /**
-   * The name of the SecretManager secret version resource storing the git access token. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @param accessTokenSecret accessTokenSecret or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings setAccessTokenSecret(java.lang.String accessTokenSecret) {
@@ -85,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitC
   }
 
   /**
-   * Optional. List of branches configured for the repository.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBranches() {
@@ -93,7 +83,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitC
   }
 
   /**
-   * Optional. List of branches configured for the repository.
    * @param branches branches or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings setBranches(java.util.List<java.lang.String> branches) {
@@ -102,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitC
   }
 
   /**
-   * Required. Display name for the repository
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -110,7 +98,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitC
   }
 
   /**
-   * Required. Display name for the repository
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings setDisplayName(java.lang.String displayName) {
@@ -119,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitC
   }
 
   /**
-   * Required. Git server reporitory URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getRepositoryUri() {
@@ -127,7 +113,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitC
   }
 
   /**
-   * Required. Git server reporitory URI.
    * @param repositoryUri repositoryUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings setRepositoryUri(java.lang.String repositoryUri) {
@@ -136,7 +121,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitC
   }
 
   /**
-   * Required. Default branch of the repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingBranch() {
@@ -144,7 +128,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitC
   }
 
   /**
-   * Required. Default branch of the repository.
    * @param trackingBranch trackingBranch or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings setTrackingBranch(java.lang.String trackingBranch) {

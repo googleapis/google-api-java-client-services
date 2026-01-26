@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a section of ingested context information.
+ * Model definition for GoogleCloudDialogflowV2ConversationContextReference.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConversationContextReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of content updates for a context reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2ConversationContextReferenceContextContent> contextContents;
 
   /**
-   * Output only. The time the context reference was first created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The language of the information ingested, defaults to "en-US" if not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Required. The mode in which context reference contents are updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String updateMode;
 
   /**
-   * Required. The list of content updates for a context reference.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2ConversationContextReferenceContextContent> getContextContents() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReference extends c
   }
 
   /**
-   * Required. The list of content updates for a context reference.
    * @param contextContents contextContents or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContextReference setContextContents(java.util.List<GoogleCloudDialogflowV2ConversationContextReferenceContextContent> contextContents) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReference extends c
   }
 
   /**
-   * Output only. The time the context reference was first created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReference extends c
   }
 
   /**
-   * Output only. The time the context reference was first created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContextReference setCreateTime(String createTime) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReference extends c
   }
 
   /**
-   * Optional. The language of the information ingested, defaults to "en-US" if not set.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReference extends c
   }
 
   /**
-   * Optional. The language of the information ingested, defaults to "en-US" if not set.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContextReference setLanguageCode(java.lang.String languageCode) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReference extends c
   }
 
   /**
-   * Required. The mode in which context reference contents are updated.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateMode() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReference extends c
   }
 
   /**
-   * Required. The mode in which context reference contents are updated.
    * @param updateMode updateMode or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContextReference setUpdateMode(java.lang.String updateMode) {

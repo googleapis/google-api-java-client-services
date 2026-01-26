@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for exporting to a git branch.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExportAgentRequestGitDestination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ExportAgentRequestGitDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Commit message for the git push.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commitMessage;
 
   /**
-   * Tracking branch for the git push.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingBranch;
 
   /**
-   * Commit message for the git push.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommitMessage() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportAgentRequestGitDestinatio
   }
 
   /**
-   * Commit message for the git push.
    * @param commitMessage commitMessage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportAgentRequestGitDestination setCommitMessage(java.lang.String commitMessage) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportAgentRequestGitDestinatio
   }
 
   /**
-   * Tracking branch for the git push.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingBranch() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportAgentRequestGitDestinatio
   }
 
   /**
-   * Tracking branch for the git push.
    * @param trackingBranch trackingBranch or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportAgentRequestGitDestination setTrackingBranch(java.lang.String trackingBranch) {

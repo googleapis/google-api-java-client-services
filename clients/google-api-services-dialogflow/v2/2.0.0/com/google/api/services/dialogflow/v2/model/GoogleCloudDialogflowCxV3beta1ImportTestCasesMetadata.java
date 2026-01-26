@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Metadata returned for the TestCases.ImportTestCases long running operation.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ImportTestCasesMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3beta1ImportTestCasesMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Errors for failed test cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1TestCaseError> errors;
 
   /**
-   * Errors for failed test cases.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1TestCaseError> getErrors() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1ImportTestCasesMetadata extends
   }
 
   /**
-   * Errors for failed test cases.
    * @param errors errors or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ImportTestCasesMetadata setErrors(java.util.List<GoogleCloudDialogflowCxV3beta1TestCaseError> errors) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Rich Business Messaging (RBM) text response with suggestions.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageRbmText.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmText extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. One or more suggestions to show to the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +42,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmText extends com.
   }
 
   /**
-   * Required. Text sent and displayed to the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Optional. One or more suggestions to show to the user.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion> getRbmSuggestion() {
@@ -58,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmText extends com.
   }
 
   /**
-   * Optional. One or more suggestions to show to the user.
    * @param rbmSuggestion rbmSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmText setRbmSuggestion(java.util.List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion> rbmSuggestion) {
@@ -67,7 +63,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmText extends com.
   }
 
   /**
-   * Required. Text sent and displayed to the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -75,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmText extends com.
   }
 
   /**
-   * Required. Text sent and displayed to the user.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmText setText(java.lang.String text) {

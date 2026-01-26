@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents a call of a specific tool's action with the specified inputs.
+ * Model definition for GoogleCloudDialogflowV2beta1ToolCall.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,63 +30,54 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the tool's action associated with this call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Optional. The answer record associated with this tool call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * Output only. Create time of the tool call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The action's input parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> inputParameters;
 
   /**
-   * Output only. State of the tool call
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tool;
 
   /**
-   * Optional. A human readable description of the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String toolDisplayDetails;
 
   /**
-   * Optional. A human readable short name of the tool, to be shown on the UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String toolDisplayName;
 
   /**
-   * Optional. The name of the tool's action associated with this call.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -94,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. The name of the tool's action associated with this call.
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setAction(java.lang.String action) {
@@ -103,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. The answer record associated with this tool call.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -111,7 +100,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. The answer record associated with this tool call.
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setAnswerRecord(java.lang.String answerRecord) {
@@ -120,7 +108,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Output only. Create time of the tool call.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -128,7 +115,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Output only. Create time of the tool call.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setCreateTime(String createTime) {
@@ -137,7 +123,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. The action's input parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getInputParameters() {
@@ -145,7 +130,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. The action's input parameters.
    * @param inputParameters inputParameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setInputParameters(java.util.Map<String, java.lang.Object> inputParameters) {
@@ -154,7 +138,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Output only. State of the tool call
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -162,7 +145,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Output only. State of the tool call
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setState(java.lang.String state) {
@@ -171,7 +153,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTool() {
@@ -179,7 +160,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * @param tool tool or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setTool(java.lang.String tool) {
@@ -188,7 +168,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. A human readable description of the tool.
    * @return value or {@code null} for none
    */
   public java.lang.String getToolDisplayDetails() {
@@ -196,7 +175,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. A human readable description of the tool.
    * @param toolDisplayDetails toolDisplayDetails or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setToolDisplayDetails(java.lang.String toolDisplayDetails) {
@@ -205,7 +183,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. A human readable short name of the tool, to be shown on the UI.
    * @return value or {@code null} for none
    */
   public java.lang.String getToolDisplayName() {
@@ -213,7 +190,6 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Optional. A human readable short name of the tool, to be shown on the UI.
    * @param toolDisplayName toolDisplayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setToolDisplayName(java.lang.String toolDisplayName) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The card for presenting a list of options to select from.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageListSelect.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2IntentMessageListSelect extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. List items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessageListSelectItem> items;
 
   /**
-   * Optional. Subtitle of the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subtitle;
 
   /**
-   * Optional. The overall title of the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Required. List items.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessageListSelectItem> getItems() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelect extends com.go
   }
 
   /**
-   * Required. List items.
    * @param items items or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageListSelect setItems(java.util.List<GoogleCloudDialogflowV2IntentMessageListSelectItem> items) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelect extends com.go
   }
 
   /**
-   * Optional. Subtitle of the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubtitle() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelect extends com.go
   }
 
   /**
-   * Optional. Subtitle of the list.
    * @param subtitle subtitle or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageListSelect setSubtitle(java.lang.String subtitle) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelect extends com.go
   }
 
   /**
-   * Optional. The overall title of the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelect extends com.go
   }
 
   /**
-   * Optional. The overall title of the list.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageListSelect setTitle(java.lang.String title) {

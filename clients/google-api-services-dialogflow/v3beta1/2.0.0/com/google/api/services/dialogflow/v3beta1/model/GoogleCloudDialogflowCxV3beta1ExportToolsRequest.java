@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The request message for Tools.ExportTools.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExportToolsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,39 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ExportToolsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The data format of the exported tools. If not specified, `BLOB` is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataFormat;
 
   /**
-   * Required. The name of the tools to export. Format: `projects//locations//agents//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tools;
 
   /**
-   * Optional. The option to return the serialized tools inline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean toolsContentInline;
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * tools to. The format of this URI must be `gs:`. Dialogflow performs a write operation for the
-   * Cloud Storage object on the caller's behalf, so your request authentication must have write
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String toolsUri;
 
   /**
-   * Optional. The data format of the exported tools. If not specified, `BLOB` is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataFormat() {
@@ -70,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportToolsRequest extends com.
   }
 
   /**
-   * Optional. The data format of the exported tools. If not specified, `BLOB` is assumed.
    * @param dataFormat dataFormat or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportToolsRequest setDataFormat(java.lang.String dataFormat) {
@@ -79,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportToolsRequest extends com.
   }
 
   /**
-   * Required. The name of the tools to export. Format: `projects//locations//agents//tools/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTools() {
@@ -87,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportToolsRequest extends com.
   }
 
   /**
-   * Required. The name of the tools to export. Format: `projects//locations//agents//tools/`.
    * @param tools tools or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportToolsRequest setTools(java.util.List<java.lang.String> tools) {
@@ -96,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportToolsRequest extends com.
   }
 
   /**
-   * Optional. The option to return the serialized tools inline.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getToolsContentInline() {
@@ -104,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportToolsRequest extends com.
   }
 
   /**
-   * Optional. The option to return the serialized tools inline.
    * @param toolsContentInline toolsContentInline or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportToolsRequest setToolsContentInline(java.lang.Boolean toolsContentInline) {
@@ -113,11 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportToolsRequest extends com.
   }
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * tools to. The format of this URI must be `gs:`. Dialogflow performs a write operation for the
-   * Cloud Storage object on the caller's behalf, so your request authentication must have write
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getToolsUri() {
@@ -125,11 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportToolsRequest extends com.
   }
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * tools to. The format of this URI must be `gs:`. Dialogflow performs a write operation for the
-   * Cloud Storage object on the caller's behalf, so your request authentication must have write
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param toolsUri toolsUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportToolsRequest setToolsUri(java.lang.String toolsUri) {

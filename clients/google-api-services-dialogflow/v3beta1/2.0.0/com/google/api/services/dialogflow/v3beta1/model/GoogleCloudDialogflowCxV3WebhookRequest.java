@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The request message for a webhook call. The request is sent as a JSON object and the field names
- * will be presented in camel cases. You may see undocumented fields in an actual request. These
- * fields are used internally by Dialogflow and should be ignored.
+ * Model definition for GoogleCloudDialogflowCxV3WebhookRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,51 +30,42 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Always present. The unique identifier of the DetectIntentResponse that will be returned to the
-   * API caller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String detectIntentResponseId;
 
   /**
-   * If DTMF was provided as input, this field will contain the DTMF digits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dtmfDigits;
 
   /**
-   * Always present. Information about the fulfillment that triggered this webhook call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo fulfillmentInfo;
 
   /**
-   * Information about the last matched intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3WebhookRequestIntentInfo intentInfo;
 
   /**
-   * The language code specified in the original request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Information about the language of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3LanguageInfo languageInfo;
 
   /**
-   * The list of rich message responses to present to the user. Webhook can choose to append or
-   * replace this list in WebhookResponse.fulfillment_response;
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,67 +78,54 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Information about page status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3PageInfo pageInfo;
 
   /**
-   * Custom data set in QueryParameters.payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
-   * The sentiment analysis result of the current user request. The field is filled when sentiment
-   * analysis is configured to be enabled for the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult sentimentAnalysisResult;
 
   /**
-   * Information about session status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3SessionInfo sessionInfo;
 
   /**
-   * If natural language text was provided as input, this field will contain a copy of the text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * If natural language speech audio was provided as input, this field will contain the transcript
-   * for the audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transcript;
 
   /**
-   * If an event was provided as input, this field will contain the name of the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerEvent;
 
   /**
-   * If an intent was provided as input, this field will contain a copy of the intent identifier.
-   * Format: `projects//locations//agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerIntent;
 
   /**
-   * Always present. The unique identifier of the DetectIntentResponse that will be returned to the
-   * API caller.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetectIntentResponseId() {
@@ -157,8 +133,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Always present. The unique identifier of the DetectIntentResponse that will be returned to the
-   * API caller.
    * @param detectIntentResponseId detectIntentResponseId or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setDetectIntentResponseId(java.lang.String detectIntentResponseId) {
@@ -167,7 +141,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If DTMF was provided as input, this field will contain the DTMF digits.
    * @return value or {@code null} for none
    */
   public java.lang.String getDtmfDigits() {
@@ -175,7 +148,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If DTMF was provided as input, this field will contain the DTMF digits.
    * @param dtmfDigits dtmfDigits or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setDtmfDigits(java.lang.String dtmfDigits) {
@@ -184,7 +156,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Always present. Information about the fulfillment that triggered this webhook call.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo getFulfillmentInfo() {
@@ -192,7 +163,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Always present. Information about the fulfillment that triggered this webhook call.
    * @param fulfillmentInfo fulfillmentInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setFulfillmentInfo(GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo fulfillmentInfo) {
@@ -201,7 +171,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Information about the last matched intent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequestIntentInfo getIntentInfo() {
@@ -209,7 +178,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Information about the last matched intent.
    * @param intentInfo intentInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setIntentInfo(GoogleCloudDialogflowCxV3WebhookRequestIntentInfo intentInfo) {
@@ -218,7 +186,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * The language code specified in the original request.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -226,7 +193,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * The language code specified in the original request.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setLanguageCode(java.lang.String languageCode) {
@@ -235,7 +201,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Information about the language of the request.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3LanguageInfo getLanguageInfo() {
@@ -243,7 +208,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Information about the language of the request.
    * @param languageInfo languageInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setLanguageInfo(GoogleCloudDialogflowCxV3LanguageInfo languageInfo) {
@@ -252,8 +216,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * The list of rich message responses to present to the user. Webhook can choose to append or
-   * replace this list in WebhookResponse.fulfillment_response;
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3ResponseMessage> getMessages() {
@@ -261,8 +223,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * The list of rich message responses to present to the user. Webhook can choose to append or
-   * replace this list in WebhookResponse.fulfillment_response;
    * @param messages messages or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setMessages(java.util.List<GoogleCloudDialogflowCxV3ResponseMessage> messages) {
@@ -271,7 +231,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Information about page status.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PageInfo getPageInfo() {
@@ -279,7 +238,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Information about page status.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setPageInfo(GoogleCloudDialogflowCxV3PageInfo pageInfo) {
@@ -288,7 +246,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Custom data set in QueryParameters.payload.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -296,7 +253,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Custom data set in QueryParameters.payload.
    * @param payload payload or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setPayload(java.util.Map<String, java.lang.Object> payload) {
@@ -305,8 +261,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * The sentiment analysis result of the current user request. The field is filled when sentiment
-   * analysis is configured to be enabled for the request.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult getSentimentAnalysisResult() {
@@ -314,8 +268,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * The sentiment analysis result of the current user request. The field is filled when sentiment
-   * analysis is configured to be enabled for the request.
    * @param sentimentAnalysisResult sentimentAnalysisResult or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setSentimentAnalysisResult(GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult sentimentAnalysisResult) {
@@ -324,7 +276,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Information about session status.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SessionInfo getSessionInfo() {
@@ -332,7 +283,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * Information about session status.
    * @param sessionInfo sessionInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setSessionInfo(GoogleCloudDialogflowCxV3SessionInfo sessionInfo) {
@@ -341,7 +291,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If natural language text was provided as input, this field will contain a copy of the text.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -349,7 +298,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If natural language text was provided as input, this field will contain a copy of the text.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setText(java.lang.String text) {
@@ -358,8 +306,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If natural language speech audio was provided as input, this field will contain the transcript
-   * for the audio.
    * @return value or {@code null} for none
    */
   public java.lang.String getTranscript() {
@@ -367,8 +313,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If natural language speech audio was provided as input, this field will contain the transcript
-   * for the audio.
    * @param transcript transcript or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setTranscript(java.lang.String transcript) {
@@ -377,7 +321,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If an event was provided as input, this field will contain the name of the event.
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerEvent() {
@@ -385,7 +328,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If an event was provided as input, this field will contain the name of the event.
    * @param triggerEvent triggerEvent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setTriggerEvent(java.lang.String triggerEvent) {
@@ -394,8 +336,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If an intent was provided as input, this field will contain a copy of the intent identifier.
-   * Format: `projects//locations//agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerIntent() {
@@ -403,8 +343,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequest extends com.google.ap
   }
 
   /**
-   * If an intent was provided as input, this field will contain a copy of the intent identifier.
-   * Format: `projects//locations//agents//intents/`.
    * @param triggerIntent triggerIntent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequest setTriggerIntent(java.lang.String triggerIntent) {

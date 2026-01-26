@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Description of which voice to use for speech synthesis.
+ * Model definition for GoogleCloudDialogflowCxV3beta1VoiceSelectionParams.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1VoiceSelectionParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the voice. If not set, the service will choose a voice based on the other
-   * parameters such as language_code and ssml_gender. For the list of available voices, please
-   * refer to [Supported voices and languages](https://cloud.google.com/text-to-speech/docs/voices).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The preferred gender of the voice. If not set, the service will choose a voice based
-   * on the other parameters such as language_code and name. Note that this is only a preference,
-   * not requirement. If a voice of the appropriate gender is not available, the synthesizer should
-   * substitute a voice with a different gender rather than failing the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ssmlGender;
 
   /**
-   * Optional. The name of the voice. If not set, the service will choose a voice based on the other
-   * parameters such as language_code and ssml_gender. For the list of available voices, please
-   * refer to [Supported voices and languages](https://cloud.google.com/text-to-speech/docs/voices).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -59,9 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1VoiceSelectionParams extends co
   }
 
   /**
-   * Optional. The name of the voice. If not set, the service will choose a voice based on the other
-   * parameters such as language_code and ssml_gender. For the list of available voices, please
-   * refer to [Supported voices and languages](https://cloud.google.com/text-to-speech/docs/voices).
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1VoiceSelectionParams setName(java.lang.String name) {
@@ -70,10 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1VoiceSelectionParams extends co
   }
 
   /**
-   * Optional. The preferred gender of the voice. If not set, the service will choose a voice based
-   * on the other parameters such as language_code and name. Note that this is only a preference,
-   * not requirement. If a voice of the appropriate gender is not available, the synthesizer should
-   * substitute a voice with a different gender rather than failing the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getSsmlGender() {
@@ -81,10 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1VoiceSelectionParams extends co
   }
 
   /**
-   * Optional. The preferred gender of the voice. If not set, the service will choose a voice based
-   * on the other parameters such as language_code and name. Note that this is only a preference,
-   * not requirement. If a voice of the appropriate gender is not available, the synthesizer should
-   * substitute a voice with a different gender rather than failing the request.
    * @param ssmlGender ssmlGender or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1VoiceSelectionParams setSsmlGender(java.lang.String ssmlGender) {

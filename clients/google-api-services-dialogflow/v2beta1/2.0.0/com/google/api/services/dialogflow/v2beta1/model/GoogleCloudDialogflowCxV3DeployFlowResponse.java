@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The response message for Environments.DeployFlow.
+ * Model definition for GoogleCloudDialogflowCxV3DeployFlowResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3DeployFlowResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the flow version Deployment. Format:
-   * `projects//locations//agents//environments//deployments/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deployment;
 
   /**
-   * The updated environment where the flow is deployed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3Environment environment;
 
   /**
-   * The name of the flow version Deployment. Format:
-   * `projects//locations//agents//environments//deployments/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeployment() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3DeployFlowResponse extends com.googl
   }
 
   /**
-   * The name of the flow version Deployment. Format:
-   * `projects//locations//agents//environments//deployments/`.
    * @param deployment deployment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DeployFlowResponse setDeployment(java.lang.String deployment) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3DeployFlowResponse extends com.googl
   }
 
   /**
-   * The updated environment where the flow is deployed.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Environment getEnvironment() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3DeployFlowResponse extends com.googl
   }
 
   /**
-   * The updated environment where the flow is deployed.
    * @param environment environment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DeployFlowResponse setEnvironment(GoogleCloudDialogflowCxV3Environment environment) {

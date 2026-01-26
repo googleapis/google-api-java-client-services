@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents a conversation.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Conversation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,98 +30,78 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Duration of the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String duration;
 
   /**
-   * Environment of the conversation. Only `name` and `display_name` are filled in this message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Environment environment;
 
   /**
-   * Flow versions used in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.Map<String, java.lang.Long> flowVersions;
 
   /**
-   * All the Flow the conversation has went through. Only `name` and `display_name` are filled in
-   * this message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1Flow> flows;
 
   /**
-   * All the matched Intent in the conversation. Only `name` and `display_name` are filled in this
-   * message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1Intent> intents;
 
   /**
-   * Interactions of the conversation. Only populated for `GetConversation` and empty for
-   * `ListConversations`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1ConversationInteraction> interactions;
 
   /**
-   * The language of the conversation, which is the language of the first request in the
-   * conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Conversation metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ConversationMetrics metrics;
 
   /**
-   * Identifier. The identifier of the conversation. If conversation ID is reused, interactions
-   * happened later than 48 hours of the conversation's create time will be ignored. Format:
-   * `projects//locations//agents//conversations/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * All the Page the conversation has went through. Only `name` and `display_name` are filled in
-   * this message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1Page> pages;
 
   /**
-   * Start time of the conversation, which is the time of the first request of the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The type of the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Duration of the conversation.
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -129,7 +109,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Duration of the conversation.
    * @param duration duration or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setDuration(String duration) {
@@ -138,7 +117,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Environment of the conversation. Only `name` and `display_name` are filled in this message.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Environment getEnvironment() {
@@ -146,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Environment of the conversation. Only `name` and `display_name` are filled in this message.
    * @param environment environment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setEnvironment(GoogleCloudDialogflowCxV3beta1Environment environment) {
@@ -155,7 +132,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Flow versions used in the conversation.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Long> getFlowVersions() {
@@ -163,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Flow versions used in the conversation.
    * @param flowVersions flowVersions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setFlowVersions(java.util.Map<String, java.lang.Long> flowVersions) {
@@ -172,8 +147,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * All the Flow the conversation has went through. Only `name` and `display_name` are filled in
-   * this message.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1Flow> getFlows() {
@@ -181,8 +154,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * All the Flow the conversation has went through. Only `name` and `display_name` are filled in
-   * this message.
    * @param flows flows or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setFlows(java.util.List<GoogleCloudDialogflowCxV3beta1Flow> flows) {
@@ -191,8 +162,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * All the matched Intent in the conversation. Only `name` and `display_name` are filled in this
-   * message.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1Intent> getIntents() {
@@ -200,8 +169,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * All the matched Intent in the conversation. Only `name` and `display_name` are filled in this
-   * message.
    * @param intents intents or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setIntents(java.util.List<GoogleCloudDialogflowCxV3beta1Intent> intents) {
@@ -210,8 +177,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Interactions of the conversation. Only populated for `GetConversation` and empty for
-   * `ListConversations`.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1ConversationInteraction> getInteractions() {
@@ -219,8 +184,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Interactions of the conversation. Only populated for `GetConversation` and empty for
-   * `ListConversations`.
    * @param interactions interactions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setInteractions(java.util.List<GoogleCloudDialogflowCxV3beta1ConversationInteraction> interactions) {
@@ -229,8 +192,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * The language of the conversation, which is the language of the first request in the
-   * conversation.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -238,8 +199,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * The language of the conversation, which is the language of the first request in the
-   * conversation.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setLanguageCode(java.lang.String languageCode) {
@@ -248,7 +207,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Conversation metrics.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics getMetrics() {
@@ -256,7 +214,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Conversation metrics.
    * @param metrics metrics or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setMetrics(GoogleCloudDialogflowCxV3beta1ConversationMetrics metrics) {
@@ -265,9 +222,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Identifier. The identifier of the conversation. If conversation ID is reused, interactions
-   * happened later than 48 hours of the conversation's create time will be ignored. Format:
-   * `projects//locations//agents//conversations/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -275,9 +229,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Identifier. The identifier of the conversation. If conversation ID is reused, interactions
-   * happened later than 48 hours of the conversation's create time will be ignored. Format:
-   * `projects//locations//agents//conversations/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setName(java.lang.String name) {
@@ -286,8 +237,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * All the Page the conversation has went through. Only `name` and `display_name` are filled in
-   * this message.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1Page> getPages() {
@@ -295,8 +244,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * All the Page the conversation has went through. Only `name` and `display_name` are filled in
-   * this message.
    * @param pages pages or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setPages(java.util.List<GoogleCloudDialogflowCxV3beta1Page> pages) {
@@ -305,7 +252,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Start time of the conversation, which is the time of the first request of the conversation.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -313,7 +259,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * Start time of the conversation, which is the time of the first request of the conversation.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setStartTime(String startTime) {
@@ -322,7 +267,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * The type of the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -330,7 +274,6 @@ public final class GoogleCloudDialogflowCxV3beta1Conversation extends com.google
   }
 
   /**
-   * The type of the conversation.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Conversation setType(java.lang.String type) {

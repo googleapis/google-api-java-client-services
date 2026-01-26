@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents an intent suggestion.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1IntentSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human readable description for better understanding an intent like its scope, content, result
-   * etc. Maximum character limit: 140 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The display name of the intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The unique identifier of this intent. Format: `projects//locations//agent/intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intentV2;
 
   /**
-   * Human readable description for better understanding an intent like its scope, content, result
-   * etc. Maximum character limit: 140 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -61,8 +55,6 @@ public final class GoogleCloudDialogflowV2beta1IntentSuggestion extends com.goog
   }
 
   /**
-   * Human readable description for better understanding an intent like its scope, content, result
-   * etc. Maximum character limit: 140 characters.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentSuggestion setDescription(java.lang.String description) {
@@ -71,7 +63,6 @@ public final class GoogleCloudDialogflowV2beta1IntentSuggestion extends com.goog
   }
 
   /**
-   * The display name of the intent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -79,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1IntentSuggestion extends com.goog
   }
 
   /**
-   * The display name of the intent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentSuggestion setDisplayName(java.lang.String displayName) {
@@ -88,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1IntentSuggestion extends com.goog
   }
 
   /**
-   * The unique identifier of this intent. Format: `projects//locations//agent/intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntentV2() {
@@ -96,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1IntentSuggestion extends com.goog
   }
 
   /**
-   * The unique identifier of this intent. Format: `projects//locations//agent/intents/`.
    * @param intentV2 intentV2 or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentSuggestion setIntentV2(java.lang.String intentV2) {

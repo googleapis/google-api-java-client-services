@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Prompt template.
+ * Model definition for
+ * GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettingsPromptTemplate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +31,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettingsPromptTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Prompt name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * If the flag is true, the prompt is frozen and cannot be modified by users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean frozen;
 
   /**
-   * Prompt text that is sent to a LLM on no-match default, placeholders are filled downstream. For
-   * example: "Here is a conversation $conversation, a response is: "
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String promptText;
 
   /**
-   * Prompt name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -60,7 +56,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSetti
   }
 
   /**
-   * Prompt name.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettingsPromptTemplate setDisplayName(java.lang.String displayName) {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSetti
   }
 
   /**
-   * If the flag is true, the prompt is frozen and cannot be modified by users.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFrozen() {
@@ -77,7 +71,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSetti
   }
 
   /**
-   * If the flag is true, the prompt is frozen and cannot be modified by users.
    * @param frozen frozen or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettingsPromptTemplate setFrozen(java.lang.Boolean frozen) {
@@ -86,8 +79,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSetti
   }
 
   /**
-   * Prompt text that is sent to a LLM on no-match default, placeholders are filled downstream. For
-   * example: "Here is a conversation $conversation, a response is: "
    * @return value or {@code null} for none
    */
   public java.lang.String getPromptText() {
@@ -95,8 +86,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSetti
   }
 
   /**
-   * Prompt text that is sent to a LLM on no-match default, placeholders are filled downstream. For
-   * example: "Here is a conversation $conversation, a response is: "
    * @param promptText promptText or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettingsPromptTemplate setPromptText(java.lang.String promptText) {

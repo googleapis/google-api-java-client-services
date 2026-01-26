@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Opens the given URI.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The HTTP or HTTPS scheme URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. The HTTP or HTTPS scheme URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
   }
 
   /**
-   * Required. The HTTP or HTTPS scheme URI.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAction setUri(java.lang.String uri) {

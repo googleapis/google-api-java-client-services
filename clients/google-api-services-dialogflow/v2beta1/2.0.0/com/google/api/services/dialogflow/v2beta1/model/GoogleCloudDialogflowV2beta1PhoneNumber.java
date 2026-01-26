@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a phone number. `PhoneNumber` resources enable phone calls to be answered by
- * Dialogflow services and are added to a project through a PhoneNumberOrder.
+ * Model definition for GoogleCloudDialogflowV2beta1PhoneNumber.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,43 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The conversation profile calls to this `PhoneNumber` should use. The project ID here
-   * should be the same as the one in name. Format: `projects//conversationProfiles/`. Format:
-   * `projects//locations//conversationProfiles/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationProfile;
 
   /**
-   * Output only. The state of the `PhoneNumber`. Defaults to `ACTIVE`. `PhoneNumber` objects set to
-   * `DELETE_REQUESTED` always decline incoming calls and can be removed completely within 30 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lifecycleState;
 
   /**
-   * Optional. The unique identifier of this phone number. Required for
-   * PhoneNumbers.UpdatePhoneNumber method. Format: `projects//phoneNumbers/`. Format:
-   * `projects//locations//phoneNumbers/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Phone number in [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of
-   * a correctly formatted phone number: +15556767888.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
 
   /**
-   * Optional. The conversation profile calls to this `PhoneNumber` should use. The project ID here
-   * should be the same as the one in name. Format: `projects//conversationProfiles/`. Format:
-   * `projects//locations//conversationProfiles/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationProfile() {
@@ -75,9 +61,6 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
   }
 
   /**
-   * Optional. The conversation profile calls to this `PhoneNumber` should use. The project ID here
-   * should be the same as the one in name. Format: `projects//conversationProfiles/`. Format:
-   * `projects//locations//conversationProfiles/`.
    * @param conversationProfile conversationProfile or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1PhoneNumber setConversationProfile(java.lang.String conversationProfile) {
@@ -86,8 +69,6 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
   }
 
   /**
-   * Output only. The state of the `PhoneNumber`. Defaults to `ACTIVE`. `PhoneNumber` objects set to
-   * `DELETE_REQUESTED` always decline incoming calls and can be removed completely within 30 days.
    * @return value or {@code null} for none
    */
   public java.lang.String getLifecycleState() {
@@ -95,8 +76,6 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
   }
 
   /**
-   * Output only. The state of the `PhoneNumber`. Defaults to `ACTIVE`. `PhoneNumber` objects set to
-   * `DELETE_REQUESTED` always decline incoming calls and can be removed completely within 30 days.
    * @param lifecycleState lifecycleState or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1PhoneNumber setLifecycleState(java.lang.String lifecycleState) {
@@ -105,9 +84,6 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
   }
 
   /**
-   * Optional. The unique identifier of this phone number. Required for
-   * PhoneNumbers.UpdatePhoneNumber method. Format: `projects//phoneNumbers/`. Format:
-   * `projects//locations//phoneNumbers/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -115,9 +91,6 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
   }
 
   /**
-   * Optional. The unique identifier of this phone number. Required for
-   * PhoneNumbers.UpdatePhoneNumber method. Format: `projects//phoneNumbers/`. Format:
-   * `projects//locations//phoneNumbers/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1PhoneNumber setName(java.lang.String name) {
@@ -126,8 +99,6 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
   }
 
   /**
-   * Output only. Phone number in [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of
-   * a correctly formatted phone number: +15556767888.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -135,8 +106,6 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
   }
 
   /**
-   * Output only. Phone number in [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of
-   * a correctly formatted phone number: +15556767888.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1PhoneNumber setPhoneNumber(java.lang.String phoneNumber) {

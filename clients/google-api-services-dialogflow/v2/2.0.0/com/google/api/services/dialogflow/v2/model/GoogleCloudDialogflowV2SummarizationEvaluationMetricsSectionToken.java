@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * A pair of section name and input token count of the input summary section.
+ * Model definition for GoogleCloudDialogflowV2SummarizationEvaluationMetricsSectionToken.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSectionToken extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The name of the summary instruction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String section;
 
   /**
-   * Output only. Token count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long tokenCount;
 
   /**
-   * Output only. The name of the summary instruction.
    * @return value or {@code null} for none
    */
   public java.lang.String getSection() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSectionT
   }
 
   /**
-   * Output only. The name of the summary instruction.
    * @param section section or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsSectionToken setSection(java.lang.String section) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSectionT
   }
 
   /**
-   * Output only. Token count.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTokenCount() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSectionT
   }
 
   /**
-   * Output only. Token count.
    * @param tokenCount tokenCount or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsSectionToken setTokenCount(java.lang.Long tokenCount) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Instructs the speech synthesizer on how to generate the output audio content.
+ * Model definition for GoogleCloudDialogflowV2TextToSpeechSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,33 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2TextToSpeechSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates whether text to speech is enabled. Even when this field is false, other
-   * settings in this proto are still retained.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableTextToSpeech;
 
   /**
-   * Required. Audio encoding of the synthesized audio content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputAudioEncoding;
 
   /**
-   * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the
-   * synthesizer will use the default sample rate based on the audio encoding. If this is different
-   * from the voice's natural sample rate, then the synthesizer will honor this request by
-   * converting to the desired sample rate (which might result in worse audio quality).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * Optional. Configuration of how speech should be synthesized, mapping from language
-   * (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +60,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettings extends com.googl
   }
 
   /**
-   * Optional. Indicates whether text to speech is enabled. Even when this field is false, other
-   * settings in this proto are still retained.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableTextToSpeech() {
@@ -78,8 +67,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettings extends com.googl
   }
 
   /**
-   * Optional. Indicates whether text to speech is enabled. Even when this field is false, other
-   * settings in this proto are still retained.
    * @param enableTextToSpeech enableTextToSpeech or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextToSpeechSettings setEnableTextToSpeech(java.lang.Boolean enableTextToSpeech) {
@@ -88,7 +75,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettings extends com.googl
   }
 
   /**
-   * Required. Audio encoding of the synthesized audio content.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputAudioEncoding() {
@@ -96,7 +82,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettings extends com.googl
   }
 
   /**
-   * Required. Audio encoding of the synthesized audio content.
    * @param outputAudioEncoding outputAudioEncoding or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextToSpeechSettings setOutputAudioEncoding(java.lang.String outputAudioEncoding) {
@@ -105,10 +90,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettings extends com.googl
   }
 
   /**
-   * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the
-   * synthesizer will use the default sample rate based on the audio encoding. If this is different
-   * from the voice's natural sample rate, then the synthesizer will honor this request by
-   * converting to the desired sample rate (which might result in worse audio quality).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleRateHertz() {
@@ -116,10 +97,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettings extends com.googl
   }
 
   /**
-   * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the
-   * synthesizer will use the default sample rate based on the audio encoding. If this is different
-   * from the voice's natural sample rate, then the synthesizer will honor this request by
-   * converting to the desired sample rate (which might result in worse audio quality).
    * @param sampleRateHertz sampleRateHertz or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextToSpeechSettings setSampleRateHertz(java.lang.Integer sampleRateHertz) {
@@ -128,8 +105,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettings extends com.googl
   }
 
   /**
-   * Optional. Configuration of how speech should be synthesized, mapping from language
-   * (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDialogflowV2SynthesizeSpeechConfig> getSynthesizeSpeechConfigs() {
@@ -137,8 +112,6 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettings extends com.googl
   }
 
   /**
-   * Optional. Configuration of how speech should be synthesized, mapping from language
-   * (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
    * @param synthesizeSpeechConfigs synthesizeSpeechConfigs or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextToSpeechSettings setSynthesizeSpeechConfigs(java.util.Map<String, GoogleCloudDialogflowV2SynthesizeSpeechConfig> synthesizeSpeechConfigs) {

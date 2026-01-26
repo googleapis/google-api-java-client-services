@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores token counts of the LLM call.
+ * Model definition for GoogleCloudDialogflowCxV3beta1LlmCallTokenCount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1LlmCallTokenCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of tokens used for the conversation history in the prompt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long conversationContextTokenCount;
 
   /**
-   * The number of tokens used for the retrieved examples in the prompt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long exampleTokenCount;
 
   /**
-   * The total number of tokens used for the input to the LLM call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalInputTokenCount;
 
   /**
-   * The total number of tokens used for the output of the LLM call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalOutputTokenCount;
 
   /**
-   * The number of tokens used for the conversation history in the prompt.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConversationContextTokenCount() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallTokenCount extends com.g
   }
 
   /**
-   * The number of tokens used for the conversation history in the prompt.
    * @param conversationContextTokenCount conversationContextTokenCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCallTokenCount setConversationContextTokenCount(java.lang.Long conversationContextTokenCount) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallTokenCount extends com.g
   }
 
   /**
-   * The number of tokens used for the retrieved examples in the prompt.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExampleTokenCount() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallTokenCount extends com.g
   }
 
   /**
-   * The number of tokens used for the retrieved examples in the prompt.
    * @param exampleTokenCount exampleTokenCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCallTokenCount setExampleTokenCount(java.lang.Long exampleTokenCount) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallTokenCount extends com.g
   }
 
   /**
-   * The total number of tokens used for the input to the LLM call.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalInputTokenCount() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallTokenCount extends com.g
   }
 
   /**
-   * The total number of tokens used for the input to the LLM call.
    * @param totalInputTokenCount totalInputTokenCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCallTokenCount setTotalInputTokenCount(java.lang.Long totalInputTokenCount) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallTokenCount extends com.g
   }
 
   /**
-   * The total number of tokens used for the output of the LLM call.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalOutputTokenCount() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallTokenCount extends com.g
   }
 
   /**
-   * The total number of tokens used for the output of the LLM call.
    * @param totalOutputTokenCount totalOutputTokenCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCallTokenCount setTotalOutputTokenCount(java.lang.Long totalOutputTokenCount) {

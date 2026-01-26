@@ -17,9 +17,8 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Opens the user's default web browser app to the specified uri If the user has an app installed
- * that is registered as the default handler for the URL, then this app will be opened instead, and
- * its icon will be used in the suggested action UI.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,14 +31,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The uri to open on the user device
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. The uri to open on the user device
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -47,7 +44,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
   }
 
   /**
-   * Required. The uri to open on the user device
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri setUri(java.lang.String uri) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Specifies an audio clip to be played by the client as part of the response.
+ * Model definition for GoogleCloudDialogflowCxV3ResponseMessagePlayAudio.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudio extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether the playback of this message can be interrupted by the end user's speech
-   * and the client can then starts the next Dialogflow request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowPlaybackInterruption;
 
   /**
-   * Required. URI of the audio clip. Dialogflow does not impose any validation on this value. It is
-   * specific to the client that reads it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioUri;
 
   /**
-   * Output only. Whether the playback of this message can be interrupted by the end user's speech
-   * and the client can then starts the next Dialogflow request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowPlaybackInterruption() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudio extends com
   }
 
   /**
-   * Output only. Whether the playback of this message can be interrupted by the end user's speech
-   * and the client can then starts the next Dialogflow request.
    * @param allowPlaybackInterruption allowPlaybackInterruption or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessagePlayAudio setAllowPlaybackInterruption(java.lang.Boolean allowPlaybackInterruption) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudio extends com
   }
 
   /**
-   * Required. URI of the audio clip. Dialogflow does not impose any validation on this value. It is
-   * specific to the client that reads it.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioUri() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudio extends com
   }
 
   /**
-   * Required. URI of the audio clip. Dialogflow does not impose any validation on this value. It is
-   * specific to the client that reads it.
    * @param audioUri audioUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessagePlayAudio setAudioUri(java.lang.String audioUri) {

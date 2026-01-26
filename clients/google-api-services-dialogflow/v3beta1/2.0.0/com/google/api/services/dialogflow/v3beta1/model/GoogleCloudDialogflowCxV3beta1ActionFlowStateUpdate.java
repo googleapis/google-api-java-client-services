@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores metadata of the state update action, such as a state machine execution in flows.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,44 +30,36 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends com.google.api.client.json.GenericJson {
 
   /**
-   * The destination of the transition. Format: `projects//locations//agents//flows//pages/` or
-   * `projects//locations//agents//playbooks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destination;
 
   /**
-   * The type of the event that triggered the state update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventType;
 
   /**
-   * The function call to execute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdateFunctionCall functionCall;
 
   /**
-   * The updated page and flow state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState pageState;
 
   /**
-   * The updated parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> updatedParameters;
 
   /**
-   * The destination of the transition. Format: `projects//locations//agents//flows//pages/` or
-   * `projects//locations//agents//playbooks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -75,8 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends c
   }
 
   /**
-   * The destination of the transition. Format: `projects//locations//agents//flows//pages/` or
-   * `projects//locations//agents//playbooks/`.
    * @param destination destination or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate setDestination(java.lang.String destination) {
@@ -85,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends c
   }
 
   /**
-   * The type of the event that triggered the state update.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -93,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends c
   }
 
   /**
-   * The type of the event that triggered the state update.
    * @param eventType eventType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate setEventType(java.lang.String eventType) {
@@ -102,7 +90,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends c
   }
 
   /**
-   * The function call to execute.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdateFunctionCall getFunctionCall() {
@@ -110,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends c
   }
 
   /**
-   * The function call to execute.
    * @param functionCall functionCall or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate setFunctionCall(GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdateFunctionCall functionCall) {
@@ -119,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends c
   }
 
   /**
-   * The updated page and flow state.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState getPageState() {
@@ -127,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends c
   }
 
   /**
-   * The updated page and flow state.
    * @param pageState pageState or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate setPageState(GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState pageState) {
@@ -136,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends c
   }
 
   /**
-   * The updated parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getUpdatedParameters() {
@@ -144,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate extends c
   }
 
   /**
-   * The updated parameters.
    * @param updatedParameters updatedParameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate setUpdatedParameters(java.util.Map<String, java.lang.Object> updatedParameters) {

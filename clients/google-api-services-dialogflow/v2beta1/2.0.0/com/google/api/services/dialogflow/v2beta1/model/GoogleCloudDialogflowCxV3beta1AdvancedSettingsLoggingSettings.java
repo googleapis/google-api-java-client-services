@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Define behaviors on logging.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,32 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enables consent-based end-user input redaction, if true, a pre-defined session parameter
-   * `$session.params.conversation-redaction` will be used to determine if the utterance should be
-   * redacted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableConsentBasedRedaction;
 
   /**
-   * Enables DF Interaction logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableInteractionLogging;
 
   /**
-   * Enables Google Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableStackdriverLogging;
 
   /**
-   * Enables consent-based end-user input redaction, if true, a pre-defined session parameter
-   * `$session.params.conversation-redaction` will be used to determine if the utterance should be
-   * redacted.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConsentBasedRedaction() {
@@ -63,9 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
   }
 
   /**
-   * Enables consent-based end-user input redaction, if true, a pre-defined session parameter
-   * `$session.params.conversation-redaction` will be used to determine if the utterance should be
-   * redacted.
    * @param enableConsentBasedRedaction enableConsentBasedRedaction or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings setEnableConsentBasedRedaction(java.lang.Boolean enableConsentBasedRedaction) {
@@ -74,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
   }
 
   /**
-   * Enables DF Interaction logging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableInteractionLogging() {
@@ -82,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
   }
 
   /**
-   * Enables DF Interaction logging.
    * @param enableInteractionLogging enableInteractionLogging or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings setEnableInteractionLogging(java.lang.Boolean enableInteractionLogging) {
@@ -91,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
   }
 
   /**
-   * Enables Google Cloud Logging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableStackdriverLogging() {
@@ -99,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
   }
 
   /**
-   * Enables Google Cloud Logging.
    * @param enableStackdriverLogging enableStackdriverLogging or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings setEnableStackdriverLogging(java.lang.Boolean enableStackdriverLogging) {

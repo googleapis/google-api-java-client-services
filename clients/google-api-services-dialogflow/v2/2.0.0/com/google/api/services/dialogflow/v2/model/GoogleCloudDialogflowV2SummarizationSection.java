@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the section of summarization.
+ * Model definition for GoogleCloudDialogflowV2SummarizationSection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SummarizationSection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Definition of the section, for example, "what the customer needs help with or has
-   * question about."
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String definition;
 
   /**
-   * Optional. Name of the section, for example, "situation".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Optional. Type of the summarization section.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. Definition of the section, for example, "what the customer needs help with or has
-   * question about."
    * @return value or {@code null} for none
    */
   public java.lang.String getDefinition() {
@@ -61,8 +55,6 @@ public final class GoogleCloudDialogflowV2SummarizationSection extends com.googl
   }
 
   /**
-   * Optional. Definition of the section, for example, "what the customer needs help with or has
-   * question about."
    * @param definition definition or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationSection setDefinition(java.lang.String definition) {
@@ -71,7 +63,6 @@ public final class GoogleCloudDialogflowV2SummarizationSection extends com.googl
   }
 
   /**
-   * Optional. Name of the section, for example, "situation".
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -79,7 +70,6 @@ public final class GoogleCloudDialogflowV2SummarizationSection extends com.googl
   }
 
   /**
-   * Optional. Name of the section, for example, "situation".
    * @param key key or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationSection setKey(java.lang.String key) {
@@ -88,7 +78,6 @@ public final class GoogleCloudDialogflowV2SummarizationSection extends com.googl
   }
 
   /**
-   * Optional. Type of the summarization section.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -96,7 +85,6 @@ public final class GoogleCloudDialogflowV2SummarizationSection extends com.googl
   }
 
   /**
-   * Optional. Type of the summarization section.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationSection setType(java.lang.String type) {

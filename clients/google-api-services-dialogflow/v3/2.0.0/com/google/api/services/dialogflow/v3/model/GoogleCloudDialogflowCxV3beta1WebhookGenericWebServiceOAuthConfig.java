@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents configuration of OAuth client credential flow for 3rd party API authentication.
+ * Model definition for GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,44 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The client ID provided by the 3rd party platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientId;
 
   /**
-   * Optional. The client secret provided by the 3rd party platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientSecret;
 
   /**
-   * Optional. The OAuth scopes to grant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> scopes;
 
   /**
-   * Optional. The name of the SecretManager secret version resource storing the client secret. If
-   * this field is set, the `client_secret` field will be ignored. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretVersionForClientSecret;
 
   /**
-   * Required. The token endpoint provided by the 3rd party platform to exchange an access token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tokenEndpoint;
 
   /**
-   * Required. The client ID provided by the 3rd party platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -75,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthCo
   }
 
   /**
-   * Required. The client ID provided by the 3rd party platform.
    * @param clientId clientId or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthConfig setClientId(java.lang.String clientId) {
@@ -84,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthCo
   }
 
   /**
-   * Optional. The client secret provided by the 3rd party platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientSecret() {
@@ -92,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthCo
   }
 
   /**
-   * Optional. The client secret provided by the 3rd party platform.
    * @param clientSecret clientSecret or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthConfig setClientSecret(java.lang.String clientSecret) {
@@ -101,7 +90,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthCo
   }
 
   /**
-   * Optional. The OAuth scopes to grant.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopes() {
@@ -109,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthCo
   }
 
   /**
-   * Optional. The OAuth scopes to grant.
    * @param scopes scopes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthConfig setScopes(java.util.List<java.lang.String> scopes) {
@@ -118,9 +105,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthCo
   }
 
   /**
-   * Optional. The name of the SecretManager secret version resource storing the client secret. If
-   * this field is set, the `client_secret` field will be ignored. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretVersionForClientSecret() {
@@ -128,9 +112,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthCo
   }
 
   /**
-   * Optional. The name of the SecretManager secret version resource storing the client secret. If
-   * this field is set, the `client_secret` field will be ignored. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @param secretVersionForClientSecret secretVersionForClientSecret or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthConfig setSecretVersionForClientSecret(java.lang.String secretVersionForClientSecret) {
@@ -139,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthCo
   }
 
   /**
-   * Required. The token endpoint provided by the 3rd party platform to exchange an access token.
    * @return value or {@code null} for none
    */
   public java.lang.String getTokenEndpoint() {
@@ -147,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthCo
   }
 
   /**
-   * Required. The token endpoint provided by the 3rd party platform to exchange an access token.
    * @param tokenEndpoint tokenEndpoint or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceOAuthConfig setTokenEndpoint(java.lang.String tokenEndpoint) {

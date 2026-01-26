@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The distinctive configs for Agent Assist conversations as the conversation source.
+ * Model definition for GoogleCloudDialogflowV2GeneratorEvaluationConfigAgentAssistInputDataConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigAgentAssistInputDataConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The end of the time range for conversations to be evaluated. Only conversations ended
-   * at or before this timestamp will be sampled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Required. The start of the time range for conversations to be evaluated. Only conversations
-   * created at or after this timestamp will be sampled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Required. The end of the time range for conversations to be evaluated. Only conversations ended
-   * at or before this timestamp will be sampled.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigAgentAssistIn
   }
 
   /**
-   * Required. The end of the time range for conversations to be evaluated. Only conversations ended
-   * at or before this timestamp will be sampled.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfigAgentAssistInputDataConfig setEndTime(String endTime) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigAgentAssistIn
   }
 
   /**
-   * Required. The start of the time range for conversations to be evaluated. Only conversations
-   * created at or after this timestamp will be sampled.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigAgentAssistIn
   }
 
   /**
-   * Required. The start of the time range for conversations to be evaluated. Only conversations
-   * created at or after this timestamp will be sampled.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfigAgentAssistInputDataConfig setStartTime(String startTime) {

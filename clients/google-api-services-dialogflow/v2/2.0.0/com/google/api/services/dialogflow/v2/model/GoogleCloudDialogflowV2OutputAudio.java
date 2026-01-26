@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the natural language speech audio to be played to the end user.
+ * Model definition for GoogleCloudDialogflowV2OutputAudio.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2OutputAudio extends com.google.api.client.json.GenericJson {
 
   /**
-   * The natural language speech audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audio;
 
   /**
-   * Instructs the speech synthesizer how to generate the speech audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2OutputAudioConfig config;
 
   /**
-   * The natural language speech audio.
    * @see #decodeAudio()
    * @return value or {@code null} for none
    */
@@ -53,7 +50,7 @@ public final class GoogleCloudDialogflowV2OutputAudio extends com.google.api.cli
   }
 
   /**
-   * The natural language speech audio.
+
    * @see #getAudio()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -64,7 +61,6 @@ public final class GoogleCloudDialogflowV2OutputAudio extends com.google.api.cli
   }
 
   /**
-   * The natural language speech audio.
    * @see #encodeAudio()
    * @param audio audio or {@code null} for none
    */
@@ -74,7 +70,7 @@ public final class GoogleCloudDialogflowV2OutputAudio extends com.google.api.cli
   }
 
   /**
-   * The natural language speech audio.
+
    * @see #setAudio()
    *
    * <p>
@@ -89,7 +85,6 @@ public final class GoogleCloudDialogflowV2OutputAudio extends com.google.api.cli
   }
 
   /**
-   * Instructs the speech synthesizer how to generate the speech audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2OutputAudioConfig getConfig() {
@@ -97,7 +92,6 @@ public final class GoogleCloudDialogflowV2OutputAudio extends com.google.api.cli
   }
 
   /**
-   * Instructs the speech synthesizer how to generate the speech audio.
    * @param config config or {@code null} for none
    */
   public GoogleCloudDialogflowV2OutputAudio setConfig(GoogleCloudDialogflowV2OutputAudioConfig config) {

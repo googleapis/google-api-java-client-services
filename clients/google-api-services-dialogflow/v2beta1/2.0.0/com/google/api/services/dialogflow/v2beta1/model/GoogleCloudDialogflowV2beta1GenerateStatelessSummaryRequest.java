@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The request message for Conversations.GenerateStatelessSummary.
+ * Model definition for GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,40 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A ConversationProfile containing information required for Summary generation.
-   * Required fields: {language_code, security_settings} Optional fields: {agent_assistant_config}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ConversationProfile conversationProfile;
 
   /**
-   * Optional. The name of the latest conversation message used as context for generating a Summary.
-   * If empty, the latest message of the conversation will be used. The format is specific to the
-   * user and the names of the messages provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Optional. Max number of messages prior to and including [latest_message] to use as context when
-   * compiling the suggestion. By default 500 and at most 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxContextSize;
 
   /**
-   * Required. The conversation to suggest a summary for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequestMinimalConversation statelessConversation;
 
   /**
-   * Required. A ConversationProfile containing information required for Summary generation.
-   * Required fields: {language_code, security_settings} Optional fields: {agent_assistant_config}
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile getConversationProfile() {
@@ -71,8 +61,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest e
   }
 
   /**
-   * Required. A ConversationProfile containing information required for Summary generation.
-   * Required fields: {language_code, security_settings} Optional fields: {agent_assistant_config}
    * @param conversationProfile conversationProfile or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest setConversationProfile(GoogleCloudDialogflowV2beta1ConversationProfile conversationProfile) {
@@ -81,9 +69,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest e
   }
 
   /**
-   * Optional. The name of the latest conversation message used as context for generating a Summary.
-   * If empty, the latest message of the conversation will be used. The format is specific to the
-   * user and the names of the messages provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -91,9 +76,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest e
   }
 
   /**
-   * Optional. The name of the latest conversation message used as context for generating a Summary.
-   * If empty, the latest message of the conversation will be used. The format is specific to the
-   * user and the names of the messages provided.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest setLatestMessage(java.lang.String latestMessage) {
@@ -102,8 +84,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest e
   }
 
   /**
-   * Optional. Max number of messages prior to and including [latest_message] to use as context when
-   * compiling the suggestion. By default 500 and at most 1000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxContextSize() {
@@ -111,8 +91,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest e
   }
 
   /**
-   * Optional. Max number of messages prior to and including [latest_message] to use as context when
-   * compiling the suggestion. By default 500 and at most 1000.
    * @param maxContextSize maxContextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest setMaxContextSize(java.lang.Integer maxContextSize) {
@@ -121,7 +99,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest e
   }
 
   /**
-   * Required. The conversation to suggest a summary for.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequestMinimalConversation getStatelessConversation() {
@@ -129,7 +106,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest e
   }
 
   /**
-   * Required. The conversation to suggest a summary for.
    * @param statelessConversation statelessConversation or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequest setStatelessConversation(GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequestMinimalConversation statelessConversation) {

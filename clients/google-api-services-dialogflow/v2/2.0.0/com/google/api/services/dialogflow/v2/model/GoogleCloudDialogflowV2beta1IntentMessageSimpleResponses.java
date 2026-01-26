@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The collection of simple response candidates. This message in `QueryResult.fulfillment_messages`
- * and `WebhookResponse.fulfillment_messages` should contain only one `SimpleResponse`.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,7 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of simple responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +42,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses exte
   }
 
   /**
-   * Required. The list of simple responses.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse> getSimpleResponses() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses exte
   }
 
   /**
-   * Required. The list of simple responses.
    * @param simpleResponses simpleResponses or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses setSimpleResponses(java.util.List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse> simpleResponses) {

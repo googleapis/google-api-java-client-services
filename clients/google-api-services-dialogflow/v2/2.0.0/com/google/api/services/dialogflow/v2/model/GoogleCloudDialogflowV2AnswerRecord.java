@@ -17,17 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Answer records are records to manage answer history and feedbacks for Dialogflow. Currently,
- * answer record includes: - human agent assistant article suggestion - human agent assistant faq
- * article It doesn't include: - `DetectIntent` intent matching - `DetectIntent` knowledge Answer
- * records are not related to the conversation history in the Dialogflow Console. A Record is
- * generated even when the end-user disables conversation history in the console. Records are
- * created when there's a human agent assistant suggestion generated. A typical workflow for
- * customers provide feedback to an answer is: 1. For human agent assistant, customers get
- * suggestion via ListSuggestions API. Together with the answers, AnswerRecord.name are returned to
- * the customers. 2. The customer uses the AnswerRecord.name to call the
- * AnswerRecords.UpdateAnswerRecord method to send feedback about a specific answer that they
- * believe is wrong.
+ * Model definition for GoogleCloudDialogflowV2AnswerRecord.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -40,29 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AnswerRecord extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The record for human agent assistant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentAssistantRecord agentAssistantRecord;
 
   /**
-   * Required. The AnswerFeedback for this record. You can set this with
-   * AnswerRecords.UpdateAnswerRecord in order to give us feedback about this answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AnswerFeedback answerFeedback;
 
   /**
-   * The unique identifier of this answer record. Format: `projects//locations//answerRecords/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The record for human agent assistant.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantRecord getAgentAssistantRecord() {
@@ -70,7 +55,6 @@ public final class GoogleCloudDialogflowV2AnswerRecord extends com.google.api.cl
   }
 
   /**
-   * Output only. The record for human agent assistant.
    * @param agentAssistantRecord agentAssistantRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerRecord setAgentAssistantRecord(GoogleCloudDialogflowV2AgentAssistantRecord agentAssistantRecord) {
@@ -79,8 +63,6 @@ public final class GoogleCloudDialogflowV2AnswerRecord extends com.google.api.cl
   }
 
   /**
-   * Required. The AnswerFeedback for this record. You can set this with
-   * AnswerRecords.UpdateAnswerRecord in order to give us feedback about this answer.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerFeedback getAnswerFeedback() {
@@ -88,8 +70,6 @@ public final class GoogleCloudDialogflowV2AnswerRecord extends com.google.api.cl
   }
 
   /**
-   * Required. The AnswerFeedback for this record. You can set this with
-   * AnswerRecords.UpdateAnswerRecord in order to give us feedback about this answer.
    * @param answerFeedback answerFeedback or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerRecord setAnswerFeedback(GoogleCloudDialogflowV2AnswerFeedback answerFeedback) {
@@ -98,7 +78,6 @@ public final class GoogleCloudDialogflowV2AnswerRecord extends com.google.api.cl
   }
 
   /**
-   * The unique identifier of this answer record. Format: `projects//locations//answerRecords/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -106,7 +85,6 @@ public final class GoogleCloudDialogflowV2AnswerRecord extends com.google.api.cl
   }
 
   /**
-   * The unique identifier of this answer record. Format: `projects//locations//answerRecords/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerRecord setName(java.lang.String name) {

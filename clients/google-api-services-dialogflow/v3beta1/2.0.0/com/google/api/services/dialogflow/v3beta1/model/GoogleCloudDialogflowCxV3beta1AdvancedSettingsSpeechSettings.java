@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Define behaviors of speech to text detection.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,37 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer endpointerSensitivity;
 
   /**
-   * Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected
-   * for requests from its corresponding language. For more information, see [Speech
-   * models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> models;
 
   /**
-   * Timeout before detecting no speech.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String noSpeechTimeout;
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useTimeoutBasedEndpointing;
 
   /**
-   * Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndpointerSensitivity() {
@@ -68,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings 
   }
 
   /**
-   * Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.
    * @param endpointerSensitivity endpointerSensitivity or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings setEndpointerSensitivity(java.lang.Integer endpointerSensitivity) {
@@ -77,9 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings 
   }
 
   /**
-   * Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected
-   * for requests from its corresponding language. For more information, see [Speech
-   * models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getModels() {
@@ -87,9 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings 
   }
 
   /**
-   * Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected
-   * for requests from its corresponding language. For more information, see [Speech
-   * models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
    * @param models models or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings setModels(java.util.Map<String, java.lang.String> models) {
@@ -98,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings 
   }
 
   /**
-   * Timeout before detecting no speech.
    * @return value or {@code null} for none
    */
   public String getNoSpeechTimeout() {
@@ -106,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings 
   }
 
   /**
-   * Timeout before detecting no speech.
    * @param noSpeechTimeout noSpeechTimeout or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings setNoSpeechTimeout(String noSpeechTimeout) {
@@ -115,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings 
   }
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseTimeoutBasedEndpointing() {
@@ -123,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings 
   }
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * @param useTimeoutBasedEndpointing useTimeoutBasedEndpointing or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings setUseTimeoutBasedEndpointing(java.lang.Boolean useTimeoutBasedEndpointing) {

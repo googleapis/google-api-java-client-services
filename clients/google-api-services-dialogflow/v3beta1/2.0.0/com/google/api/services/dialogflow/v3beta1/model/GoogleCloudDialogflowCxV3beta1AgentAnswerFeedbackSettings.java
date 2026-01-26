@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for answer feedback collection.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If enabled, end users will be able to provide answer feedback to Dialogflow
-   * responses. Feature works only if interaction logging is enabled in the Dialogflow agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAnswerFeedback;
 
   /**
-   * Optional. If enabled, end users will be able to provide answer feedback to Dialogflow
-   * responses. Feature works only if interaction logging is enabled in the Dialogflow agent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAnswerFeedback() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings ext
   }
 
   /**
-   * Optional. If enabled, end users will be able to provide answer feedback to Dialogflow
-   * responses. Feature works only if interaction logging is enabled in the Dialogflow agent.
    * @param enableAnswerFeedback enableAnswerFeedback or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings setEnableAnswerFeedback(java.lang.Boolean enableAnswerFeedback) {

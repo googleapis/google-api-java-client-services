@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Rich Business Messaging (RBM) suggested client-side action that the user can choose from the
- * card.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,43 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Suggested client side action: Dial a phone number
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial dial;
 
   /**
-   * Suggested client side action: Open a URI on device
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri openUrl;
 
   /**
-   * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested
-   * action. This data will be also forwarded to webhook to allow performing custom business logic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String postbackData;
 
   /**
-   * Suggested client side action: Share user location
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocation shareLocation;
 
   /**
-   * Text to display alongside the action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Suggested client side action: Dial a phone number
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial getDial() {
@@ -75,7 +67,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction e
   }
 
   /**
-   * Suggested client side action: Dial a phone number
    * @param dial dial or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction setDial(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial dial) {
@@ -84,7 +75,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction e
   }
 
   /**
-   * Suggested client side action: Open a URI on device
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri getOpenUrl() {
@@ -92,7 +82,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction e
   }
 
   /**
-   * Suggested client side action: Open a URI on device
    * @param openUrl openUrl or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction setOpenUrl(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri openUrl) {
@@ -101,8 +90,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction e
   }
 
   /**
-   * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested
-   * action. This data will be also forwarded to webhook to allow performing custom business logic.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostbackData() {
@@ -110,8 +97,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction e
   }
 
   /**
-   * Opaque payload that the Dialogflow receives in a user event when the user taps the suggested
-   * action. This data will be also forwarded to webhook to allow performing custom business logic.
    * @param postbackData postbackData or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction setPostbackData(java.lang.String postbackData) {
@@ -120,7 +105,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction e
   }
 
   /**
-   * Suggested client side action: Share user location
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocation getShareLocation() {
@@ -128,7 +112,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction e
   }
 
   /**
-   * Suggested client side action: Share user location
    * @param shareLocation shareLocation or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction setShareLocation(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocation shareLocation) {
@@ -137,7 +120,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction e
   }
 
   /**
-   * Text to display alongside the action.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -145,7 +127,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction e
   }
 
   /**
-   * Text to display alongside the action.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction setText(java.lang.String text) {

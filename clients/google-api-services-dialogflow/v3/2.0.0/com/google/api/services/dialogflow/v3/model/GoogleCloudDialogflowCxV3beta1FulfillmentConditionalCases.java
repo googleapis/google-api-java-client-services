@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A list of cascading if-else conditions. Cases are mutually exclusive. The first one with a
- * matching condition is selected, all the rest ignored.
+ * Model definition for GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of cascading if-else conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase> cases;
 
   /**
-   * A list of cascading if-else conditions.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase> getCases() {
@@ -46,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases ext
   }
 
   /**
-   * A list of cascading if-else conditions.
    * @param cases cases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases setCases(java.util.List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase> cases) {

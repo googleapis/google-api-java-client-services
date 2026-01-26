@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The response message for a webhook call. This response is validated by the Dialogflow server. If
- * validation fails, an error will be returned in the QueryResult.diagnostic_info field. Setting
- * JSON fields to an empty value with the wrong type is a common error. To avoid this error: - Use
- * `""` for empty strings - Use `{}` or `null` for empty objects - Use `[]` or `null` for empty
- * arrays For more information, see the [Protocol Buffers Language
- * Guide](https://developers.google.com/protocol-buffers/docs/proto3#json).
+ * Model definition for GoogleCloudDialogflowV2WebhookResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,16 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Invokes the supplied events. When this field is set, Dialogflow ignores the
-   * `fulfillment_text`, `fulfillment_messages`, and `payload` fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2EventInput followupEventInput;
 
   /**
-   * Optional. The rich response messages intended for the end-user. When provided, Dialogflow uses
-   * this field to populate QueryResult.fulfillment_messages sent to the integration or API caller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,18 +48,12 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. The text response message intended for the end-user. It is recommended to use
-   * `fulfillment_messages.text.text[0]` instead. When provided, Dialogflow uses this field to
-   * populate QueryResult.fulfillment_text sent to the integration or API caller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fulfillmentText;
 
   /**
-   * Optional. The collection of output contexts that will overwrite currently active contexts for
-   * the session and reset their lifespans. When provided, Dialogflow uses this field to populate
-   * QueryResult.output_contexts sent to the integration or API caller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,23 +66,12 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. This field can be used to pass custom data from your webhook to the integration or
-   * API caller. Arbitrary JSON objects are supported. When provided, Dialogflow uses this field to
-   * populate QueryResult.webhook_payload sent to the integration or API caller. This field is also
-   * used by the [Google Assistant
-   * integration](https://cloud.google.com/dialogflow/docs/integrations/aog) for rich response
-   * messages. See the format definition at [Google Assistant Dialogflow webhook
-   * format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
-   * Optional. Additional session entity types to replace or extend developer entity types with. The
-   * entity synonyms apply to all languages and persist for the session. Setting this data from a
-   * webhook overwrites the session entity types that have been set using `detectIntent`,
-   * `streamingDetectIntent` or SessionEntityType management methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,17 +84,12 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. A custom field used to identify the webhook source. Arbitrary strings are supported.
-   * When provided, Dialogflow uses this field to populate QueryResult.webhook_source sent to the
-   * integration or API caller.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * Optional. Invokes the supplied events. When this field is set, Dialogflow ignores the
-   * `fulfillment_text`, `fulfillment_messages`, and `payload` fields.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EventInput getFollowupEventInput() {
@@ -128,8 +97,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. Invokes the supplied events. When this field is set, Dialogflow ignores the
-   * `fulfillment_text`, `fulfillment_messages`, and `payload` fields.
    * @param followupEventInput followupEventInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookResponse setFollowupEventInput(GoogleCloudDialogflowV2EventInput followupEventInput) {
@@ -138,8 +105,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. The rich response messages intended for the end-user. When provided, Dialogflow uses
-   * this field to populate QueryResult.fulfillment_messages sent to the integration or API caller.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessage> getFulfillmentMessages() {
@@ -147,8 +112,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. The rich response messages intended for the end-user. When provided, Dialogflow uses
-   * this field to populate QueryResult.fulfillment_messages sent to the integration or API caller.
    * @param fulfillmentMessages fulfillmentMessages or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookResponse setFulfillmentMessages(java.util.List<GoogleCloudDialogflowV2IntentMessage> fulfillmentMessages) {
@@ -157,9 +120,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. The text response message intended for the end-user. It is recommended to use
-   * `fulfillment_messages.text.text[0]` instead. When provided, Dialogflow uses this field to
-   * populate QueryResult.fulfillment_text sent to the integration or API caller.
    * @return value or {@code null} for none
    */
   public java.lang.String getFulfillmentText() {
@@ -167,9 +127,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. The text response message intended for the end-user. It is recommended to use
-   * `fulfillment_messages.text.text[0]` instead. When provided, Dialogflow uses this field to
-   * populate QueryResult.fulfillment_text sent to the integration or API caller.
    * @param fulfillmentText fulfillmentText or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookResponse setFulfillmentText(java.lang.String fulfillmentText) {
@@ -178,9 +135,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. The collection of output contexts that will overwrite currently active contexts for
-   * the session and reset their lifespans. When provided, Dialogflow uses this field to populate
-   * QueryResult.output_contexts sent to the integration or API caller.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2Context> getOutputContexts() {
@@ -188,9 +142,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. The collection of output contexts that will overwrite currently active contexts for
-   * the session and reset their lifespans. When provided, Dialogflow uses this field to populate
-   * QueryResult.output_contexts sent to the integration or API caller.
    * @param outputContexts outputContexts or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookResponse setOutputContexts(java.util.List<GoogleCloudDialogflowV2Context> outputContexts) {
@@ -199,13 +150,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. This field can be used to pass custom data from your webhook to the integration or
-   * API caller. Arbitrary JSON objects are supported. When provided, Dialogflow uses this field to
-   * populate QueryResult.webhook_payload sent to the integration or API caller. This field is also
-   * used by the [Google Assistant
-   * integration](https://cloud.google.com/dialogflow/docs/integrations/aog) for rich response
-   * messages. See the format definition at [Google Assistant Dialogflow webhook
-   * format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json)
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -213,13 +157,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. This field can be used to pass custom data from your webhook to the integration or
-   * API caller. Arbitrary JSON objects are supported. When provided, Dialogflow uses this field to
-   * populate QueryResult.webhook_payload sent to the integration or API caller. This field is also
-   * used by the [Google Assistant
-   * integration](https://cloud.google.com/dialogflow/docs/integrations/aog) for rich response
-   * messages. See the format definition at [Google Assistant Dialogflow webhook
-   * format](https://developers.google.com/assistant/actions/build/json/dialogflow-webhook-json)
    * @param payload payload or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookResponse setPayload(java.util.Map<String, java.lang.Object> payload) {
@@ -228,10 +165,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. Additional session entity types to replace or extend developer entity types with. The
-   * entity synonyms apply to all languages and persist for the session. Setting this data from a
-   * webhook overwrites the session entity types that have been set using `detectIntent`,
-   * `streamingDetectIntent` or SessionEntityType management methods.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SessionEntityType> getSessionEntityTypes() {
@@ -239,10 +172,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. Additional session entity types to replace or extend developer entity types with. The
-   * entity synonyms apply to all languages and persist for the session. Setting this data from a
-   * webhook overwrites the session entity types that have been set using `detectIntent`,
-   * `streamingDetectIntent` or SessionEntityType management methods.
    * @param sessionEntityTypes sessionEntityTypes or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookResponse setSessionEntityTypes(java.util.List<GoogleCloudDialogflowV2SessionEntityType> sessionEntityTypes) {
@@ -251,9 +180,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. A custom field used to identify the webhook source. Arbitrary strings are supported.
-   * When provided, Dialogflow uses this field to populate QueryResult.webhook_source sent to the
-   * integration or API caller.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -261,9 +187,6 @@ public final class GoogleCloudDialogflowV2WebhookResponse extends com.google.api
   }
 
   /**
-   * Optional. A custom field used to identify the webhook source. Arbitrary strings are supported.
-   * When provided, Dialogflow uses this field to populate QueryResult.webhook_source sent to the
-   * integration or API caller.
    * @param source source or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookResponse setSource(java.lang.String source) {

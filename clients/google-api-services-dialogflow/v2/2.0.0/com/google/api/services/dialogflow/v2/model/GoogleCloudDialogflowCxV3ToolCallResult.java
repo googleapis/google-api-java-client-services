@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The result of calling a tool's action that has been executed by the client.
+ * Model definition for GoogleCloudDialogflowCxV3ToolCallResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3ToolCallResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the tool's action associated with this call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * The tool call's error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolCallResultError error;
 
   /**
-   * The tool call's output parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> outputParameters;
 
   /**
-   * Required. The tool associated with this call. Format: `projects//locations//agents//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tool;
 
   /**
-   * Required. The name of the tool's action associated with this call.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3ToolCallResult extends com.google.ap
   }
 
   /**
-   * Required. The name of the tool's action associated with this call.
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolCallResult setAction(java.lang.String action) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3ToolCallResult extends com.google.ap
   }
 
   /**
-   * The tool call's error.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolCallResultError getError() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3ToolCallResult extends com.google.ap
   }
 
   /**
-   * The tool call's error.
    * @param error error or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolCallResult setError(GoogleCloudDialogflowCxV3ToolCallResultError error) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3ToolCallResult extends com.google.ap
   }
 
   /**
-   * The tool call's output parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getOutputParameters() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3ToolCallResult extends com.google.ap
   }
 
   /**
-   * The tool call's output parameters.
    * @param outputParameters outputParameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolCallResult setOutputParameters(java.util.Map<String, java.lang.Object> outputParameters) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3ToolCallResult extends com.google.ap
   }
 
   /**
-   * Required. The tool associated with this call. Format: `projects//locations//agents//tools/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTool() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3ToolCallResult extends com.google.ap
   }
 
   /**
-   * Required. The tool associated with this call. Format: `projects//locations//agents//tools/`.
    * @param tool tool or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolCallResult setTool(java.lang.String tool) {

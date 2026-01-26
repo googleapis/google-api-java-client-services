@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Inline destination for a Dialogflow operation that writes or exports objects (e.g. intents)
- * outside of Dialogflow.
+ * Model definition for GoogleCloudDialogflowCxV3beta1InlineDestination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3beta1InlineDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The uncompressed byte content for the objects. Only populated in responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * Output only. The uncompressed byte content for the objects. Only populated in responses.
    * @see #decodeContent()
    * @return value or {@code null} for none
    */
@@ -47,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1InlineDestination extends com.g
   }
 
   /**
-   * Output only. The uncompressed byte content for the objects. Only populated in responses.
+
    * @see #getContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -58,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1InlineDestination extends com.g
   }
 
   /**
-   * Output only. The uncompressed byte content for the objects. Only populated in responses.
    * @see #encodeContent()
    * @param content content or {@code null} for none
    */
@@ -68,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3beta1InlineDestination extends com.g
   }
 
   /**
-   * Output only. The uncompressed byte content for the objects. Only populated in responses.
+
    * @see #setContent()
    *
    * <p>

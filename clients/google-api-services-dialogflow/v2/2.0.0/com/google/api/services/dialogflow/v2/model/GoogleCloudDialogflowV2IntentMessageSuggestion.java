@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The suggestion chip message that the user can tap to quickly post a reply to the conversation.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2IntentMessageSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The text shown the in the suggestion chip.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Required. The text shown the in the suggestion chip.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestion extends com.go
   }
 
   /**
-   * Required. The text shown the in the suggestion chip.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageSuggestion setTitle(java.lang.String title) {

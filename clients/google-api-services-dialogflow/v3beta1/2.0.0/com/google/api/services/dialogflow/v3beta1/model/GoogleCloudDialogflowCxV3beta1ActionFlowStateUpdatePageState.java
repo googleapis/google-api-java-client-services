@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores the state of a page and its flow.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState extends com.google.api.client.json.GenericJson {
 
   /**
-   * The display name of the page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The ID of the page. Format: `projects//locations//agents//flows//pages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String page;
 
   /**
-   * The status of the page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * The display name of the page.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState 
   }
 
   /**
-   * The display name of the page.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState setDisplayName(java.lang.String displayName) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState 
   }
 
   /**
-   * The ID of the page. Format: `projects//locations//agents//flows//pages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPage() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState 
   }
 
   /**
-   * The ID of the page. Format: `projects//locations//agents//flows//pages/`.
    * @param page page or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState setPage(java.lang.String page) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState 
   }
 
   /**
-   * The status of the page.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState 
   }
 
   /**
-   * The status of the page.
    * @param status status or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdatePageState setStatus(java.lang.String status) {

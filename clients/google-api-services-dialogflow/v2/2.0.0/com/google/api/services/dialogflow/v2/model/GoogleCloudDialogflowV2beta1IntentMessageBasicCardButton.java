@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The button object that appears at the bottom of a card.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Action to take when a user taps on the button.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction openUriAction;
 
   /**
-   * Required. The title of the button.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Required. Action to take when a user taps on the button.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction getOpenUriAction() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton exte
   }
 
   /**
-   * Required. Action to take when a user taps on the button.
    * @param openUriAction openUriAction or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton setOpenUriAction(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction openUriAction) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton exte
   }
 
   /**
-   * Required. The title of the button.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton exte
   }
 
   /**
-   * Required. The title of the button.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton setTitle(java.lang.String title) {

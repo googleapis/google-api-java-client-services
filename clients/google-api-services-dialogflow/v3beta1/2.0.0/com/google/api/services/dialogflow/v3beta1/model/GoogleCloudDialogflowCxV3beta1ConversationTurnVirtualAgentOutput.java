@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The output from the virtual agent.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,58 +30,48 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Page on which the utterance was spoken. Only name and displayName will be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Page currentPage;
 
   /**
-   * Required. Input only. The diagnostic info output for the turn. Required to calculate the
-   * testing coverage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> diagnosticInfo;
 
   /**
-   * Output only. If this is part of a result conversation turn, the list of differences between the
-   * original run and the replay for this output, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1TestRunDifference> differences;
 
   /**
-   * The session parameters available to the bot at this point.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> sessionParameters;
 
   /**
-   * Response error from the agent in the test result. If set, other output is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus status;
 
   /**
-   * The text responses from the agent for the turn.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1ResponseMessageText> textResponses;
 
   /**
-   * The Intent that triggered the response. Only name and displayName will be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Intent triggeredIntent;
 
   /**
-   * The Page on which the utterance was spoken. Only name and displayName will be set.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Page getCurrentPage() {
@@ -89,7 +79,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * The Page on which the utterance was spoken. Only name and displayName will be set.
    * @param currentPage currentPage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput setCurrentPage(GoogleCloudDialogflowCxV3beta1Page currentPage) {
@@ -98,8 +87,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * Required. Input only. The diagnostic info output for the turn. Required to calculate the
-   * testing coverage.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getDiagnosticInfo() {
@@ -107,8 +94,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * Required. Input only. The diagnostic info output for the turn. Required to calculate the
-   * testing coverage.
    * @param diagnosticInfo diagnosticInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput setDiagnosticInfo(java.util.Map<String, java.lang.Object> diagnosticInfo) {
@@ -117,8 +102,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * Output only. If this is part of a result conversation turn, the list of differences between the
-   * original run and the replay for this output, if any.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1TestRunDifference> getDifferences() {
@@ -126,8 +109,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * Output only. If this is part of a result conversation turn, the list of differences between the
-   * original run and the replay for this output, if any.
    * @param differences differences or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput setDifferences(java.util.List<GoogleCloudDialogflowCxV3beta1TestRunDifference> differences) {
@@ -136,7 +117,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * The session parameters available to the bot at this point.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getSessionParameters() {
@@ -144,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * The session parameters available to the bot at this point.
    * @param sessionParameters sessionParameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput setSessionParameters(java.util.Map<String, java.lang.Object> sessionParameters) {
@@ -153,7 +132,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * Response error from the agent in the test result. If set, other output is empty.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -161,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * Response error from the agent in the test result. If set, other output is empty.
    * @param status status or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput setStatus(GoogleRpcStatus status) {
@@ -170,7 +147,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * The text responses from the agent for the turn.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1ResponseMessageText> getTextResponses() {
@@ -178,7 +154,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * The text responses from the agent for the turn.
    * @param textResponses textResponses or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput setTextResponses(java.util.List<GoogleCloudDialogflowCxV3beta1ResponseMessageText> textResponses) {
@@ -187,7 +162,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * The Intent that triggered the response. Only name and displayName will be set.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Intent getTriggeredIntent() {
@@ -195,7 +169,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOut
   }
 
   /**
-   * The Intent that triggered the response. Only name and displayName will be set.
    * @param triggeredIntent triggeredIntent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput setTriggeredIntent(GoogleCloudDialogflowCxV3beta1Intent triggeredIntent) {

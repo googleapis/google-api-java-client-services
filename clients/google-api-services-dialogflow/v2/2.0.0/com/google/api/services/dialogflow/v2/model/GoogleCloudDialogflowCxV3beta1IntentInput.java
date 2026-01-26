@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the intent to trigger programmatically rather than as a result of natural language
- * processing.
+ * Model definition for GoogleCloudDialogflowCxV3beta1IntentInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3beta1IntentInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intent;
 
   /**
-   * Required. The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntent() {
@@ -46,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInput extends com.google.
   }
 
   /**
-   * Required. The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
    * @param intent intent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1IntentInput setIntent(java.lang.String intent) {

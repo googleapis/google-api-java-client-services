@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for Versions.LoadVersion.
+ * Model definition for GoogleCloudDialogflowCxV3LoadVersionRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,18 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3LoadVersionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field is used to prevent accidental overwrite of other agent resources, which can
-   * potentially impact other flow's behavior. If `allow_override_agent_resources` is false,
-   * conflicted agent-level resources will not be overridden (i.e. intents, entities, webhooks).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowOverrideAgentResources;
 
   /**
-   * This field is used to prevent accidental overwrite of other agent resources, which can
-   * potentially impact other flow's behavior. If `allow_override_agent_resources` is false,
-   * conflicted agent-level resources will not be overridden (i.e. intents, entities, webhooks).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowOverrideAgentResources() {
@@ -49,9 +43,6 @@ public final class GoogleCloudDialogflowCxV3LoadVersionRequest extends com.googl
   }
 
   /**
-   * This field is used to prevent accidental overwrite of other agent resources, which can
-   * potentially impact other flow's behavior. If `allow_override_agent_resources` is false,
-   * conflicted agent-level resources will not be overridden (i.e. intents, entities, webhooks).
    * @param allowOverrideAgentResources allowOverrideAgentResources or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3LoadVersionRequest setAllowOverrideAgentResources(java.lang.Boolean allowOverrideAgentResources) {

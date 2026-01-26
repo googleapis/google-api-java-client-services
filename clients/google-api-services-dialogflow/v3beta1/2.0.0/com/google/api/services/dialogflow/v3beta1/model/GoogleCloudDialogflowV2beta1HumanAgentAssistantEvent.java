@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Output only. Represents a notification sent to Pub/Sub subscribers for agent assistant events in
- * a specific conversation.
+ * Model definition for GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,31 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The conversation this notification refers to. Format: `projects//conversations/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversation;
 
   /**
-   * The participant that the suggestion is compiled for. And This field is used to call
-   * Participants.ListSuggestions API. Format: `projects//conversations//participants/`. It will not
-   * be set in legacy workflow. HumanAgentAssistantConfig.name for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String participant;
 
   /**
-   * The suggestion results payload that this notification refers to. It will only be set when
-   * HumanAgentAssistantConfig.SuggestionConfig.group_suggestion_responses sets to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SuggestionResult> suggestionResults;
 
   /**
-   * The conversation this notification refers to. Format: `projects//conversations/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversation() {
@@ -63,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent extends 
   }
 
   /**
-   * The conversation this notification refers to. Format: `projects//conversations/`.
    * @param conversation conversation or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent setConversation(java.lang.String conversation) {
@@ -72,9 +63,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent extends 
   }
 
   /**
-   * The participant that the suggestion is compiled for. And This field is used to call
-   * Participants.ListSuggestions API. Format: `projects//conversations//participants/`. It will not
-   * be set in legacy workflow. HumanAgentAssistantConfig.name for more information.
    * @return value or {@code null} for none
    */
   public java.lang.String getParticipant() {
@@ -82,9 +70,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent extends 
   }
 
   /**
-   * The participant that the suggestion is compiled for. And This field is used to call
-   * Participants.ListSuggestions API. Format: `projects//conversations//participants/`. It will not
-   * be set in legacy workflow. HumanAgentAssistantConfig.name for more information.
    * @param participant participant or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent setParticipant(java.lang.String participant) {
@@ -93,8 +78,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent extends 
   }
 
   /**
-   * The suggestion results payload that this notification refers to. It will only be set when
-   * HumanAgentAssistantConfig.SuggestionConfig.group_suggestion_responses sets to true.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SuggestionResult> getSuggestionResults() {
@@ -102,8 +85,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent extends 
   }
 
   /**
-   * The suggestion results payload that this notification refers to. It will only be set when
-   * HumanAgentAssistantConfig.SuggestionConfig.group_suggestion_responses sets to true.
    * @param suggestionResults suggestionResults or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantEvent setSuggestionResults(java.util.List<GoogleCloudDialogflowV2beta1SuggestionResult> suggestionResults) {

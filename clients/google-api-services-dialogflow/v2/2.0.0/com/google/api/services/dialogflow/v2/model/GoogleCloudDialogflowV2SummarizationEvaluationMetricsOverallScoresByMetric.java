@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Overall performance per metric. This is the aggregated score for each metric across all
- * conversations that are selected for summarization evaluation.
+ * Model definition for GoogleCloudDialogflowV2SummarizationEvaluationMetricsOverallScoresByMetric.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsOverallScoresByMetric extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Metric name. e.g. accuracy, adherence, completeness.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metric;
 
   /**
-   * Output only. Metric name. e.g. accuracy, adherence, completeness.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetric() {
@@ -46,7 +43,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsOverallS
   }
 
   /**
-   * Output only. Metric name. e.g. accuracy, adherence, completeness.
    * @param metric metric or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsOverallScoresByMetric setMetric(java.lang.String metric) {

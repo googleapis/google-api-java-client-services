@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Detail feedback of Agent Assist result.
+ * Model definition for GoogleCloudDialogflowV2AgentAssistantFeedback.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,58 +30,42 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether or not the suggested answer is relevant. For example: * Query: "Can I change
-   * my mailing address?" * Suggested document says: "Items must be returned/exchanged within 60
-   * days of the purchase date." * answer_relevance: AnswerRelevance.IRRELEVANT
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRelevance;
 
   /**
-   * Optional. Whether or not the information in the document is correct. For example: * Query: "Can
-   * I return the package in 2 days once received?" * Suggested document says: "Items must be
-   * returned/exchanged within 60 days of the purchase date." * Ground truth: "No return or exchange
-   * is allowed." * document_correctness: INCORRECT
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentCorrectness;
 
   /**
-   * Optional. Whether or not the suggested document is efficient. For example, if the document is
-   * poorly written, hard to understand, hard to use or too long to find useful information,
-   * document_efficiency is DocumentEfficiency.INEFFICIENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentEfficiency;
 
   /**
-   * Optional. Feedback for knowledge assist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeAssistFeedback knowledgeAssistFeedback;
 
   /**
-   * Optional. Feedback for knowledge search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchFeedback knowledgeSearchFeedback;
 
   /**
-   * Optional. Feedback for conversation summarization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback summarizationFeedback;
 
   /**
-   * Optional. Whether or not the suggested answer is relevant. For example: * Query: "Can I change
-   * my mailing address?" * Suggested document says: "Items must be returned/exchanged within 60
-   * days of the purchase date." * answer_relevance: AnswerRelevance.IRRELEVANT
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRelevance() {
@@ -89,9 +73,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Whether or not the suggested answer is relevant. For example: * Query: "Can I change
-   * my mailing address?" * Suggested document says: "Items must be returned/exchanged within 60
-   * days of the purchase date." * answer_relevance: AnswerRelevance.IRRELEVANT
    * @param answerRelevance answerRelevance or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedback setAnswerRelevance(java.lang.String answerRelevance) {
@@ -100,10 +81,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Whether or not the information in the document is correct. For example: * Query: "Can
-   * I return the package in 2 days once received?" * Suggested document says: "Items must be
-   * returned/exchanged within 60 days of the purchase date." * Ground truth: "No return or exchange
-   * is allowed." * document_correctness: INCORRECT
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentCorrectness() {
@@ -111,10 +88,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Whether or not the information in the document is correct. For example: * Query: "Can
-   * I return the package in 2 days once received?" * Suggested document says: "Items must be
-   * returned/exchanged within 60 days of the purchase date." * Ground truth: "No return or exchange
-   * is allowed." * document_correctness: INCORRECT
    * @param documentCorrectness documentCorrectness or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedback setDocumentCorrectness(java.lang.String documentCorrectness) {
@@ -123,9 +96,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Whether or not the suggested document is efficient. For example, if the document is
-   * poorly written, hard to understand, hard to use or too long to find useful information,
-   * document_efficiency is DocumentEfficiency.INEFFICIENT.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentEfficiency() {
@@ -133,9 +103,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Whether or not the suggested document is efficient. For example, if the document is
-   * poorly written, hard to understand, hard to use or too long to find useful information,
-   * document_efficiency is DocumentEfficiency.INEFFICIENT.
    * @param documentEfficiency documentEfficiency or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedback setDocumentEfficiency(java.lang.String documentEfficiency) {
@@ -144,7 +111,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Feedback for knowledge assist.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeAssistFeedback getKnowledgeAssistFeedback() {
@@ -152,7 +118,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Feedback for knowledge assist.
    * @param knowledgeAssistFeedback knowledgeAssistFeedback or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedback setKnowledgeAssistFeedback(GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeAssistFeedback knowledgeAssistFeedback) {
@@ -161,7 +126,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Feedback for knowledge search.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchFeedback getKnowledgeSearchFeedback() {
@@ -169,7 +133,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Feedback for knowledge search.
    * @param knowledgeSearchFeedback knowledgeSearchFeedback or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedback setKnowledgeSearchFeedback(GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchFeedback knowledgeSearchFeedback) {
@@ -178,7 +141,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Feedback for conversation summarization.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback getSummarizationFeedback() {
@@ -186,7 +148,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedback extends com.goo
   }
 
   /**
-   * Optional. Feedback for conversation summarization.
    * @param summarizationFeedback summarizationFeedback or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedback setSummarizationFeedback(GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback summarizationFeedback) {

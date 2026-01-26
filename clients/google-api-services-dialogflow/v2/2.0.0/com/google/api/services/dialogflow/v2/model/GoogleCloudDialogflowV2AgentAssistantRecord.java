@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a record of a human agent assist answer.
+ * Model definition for GoogleCloudDialogflowV2AgentAssistantRecord.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The article suggestion answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ArticleAnswer articleSuggestionAnswer;
 
   /**
-   * Output only. Dialogflow assist answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2DialogflowAssistAnswer dialogflowAssistAnswer;
 
   /**
-   * Output only. The FAQ answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2FaqAnswer faqAnswer;
 
   /**
-   * Output only. The generator suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion;
 
   /**
-   * Output only. The article suggestion answer.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleAnswer getArticleSuggestionAnswer() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
   }
 
   /**
-   * Output only. The article suggestion answer.
    * @param articleSuggestionAnswer articleSuggestionAnswer or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantRecord setArticleSuggestionAnswer(GoogleCloudDialogflowV2ArticleAnswer articleSuggestionAnswer) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
   }
 
   /**
-   * Output only. Dialogflow assist answer.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2DialogflowAssistAnswer getDialogflowAssistAnswer() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
   }
 
   /**
-   * Output only. Dialogflow assist answer.
    * @param dialogflowAssistAnswer dialogflowAssistAnswer or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantRecord setDialogflowAssistAnswer(GoogleCloudDialogflowV2DialogflowAssistAnswer dialogflowAssistAnswer) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
   }
 
   /**
-   * Output only. The FAQ answer.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2FaqAnswer getFaqAnswer() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
   }
 
   /**
-   * Output only. The FAQ answer.
    * @param faqAnswer faqAnswer or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantRecord setFaqAnswer(GoogleCloudDialogflowV2FaqAnswer faqAnswer) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
   }
 
   /**
-   * Output only. The generator suggestion.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestion getGeneratorSuggestion() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
   }
 
   /**
-   * Output only. The generator suggestion.
    * @param generatorSuggestion generatorSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantRecord setGeneratorSuggestion(GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion) {

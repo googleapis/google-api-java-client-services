@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Evaluation result that contains one of accuracy, adherence or completeness evaluation result.
+ * Model definition for GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEvaluationResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEvaluationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Only available for accuracy metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition accuracyDecomposition;
 
   /**
-   * Only available for adherence metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAdherenceRubric adherenceRubric;
 
   /**
-   * Only available for completeness metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCompletenessRubric completenessRubric;
 
   /**
-   * Only available for accuracy metric.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition getAccuracyDecomposition() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEva
   }
 
   /**
-   * Only available for accuracy metric.
    * @param accuracyDecomposition accuracyDecomposition or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEvaluationResult setAccuracyDecomposition(GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition accuracyDecomposition) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEva
   }
 
   /**
-   * Only available for adherence metric.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAdherenceRubric getAdherenceRubric() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEva
   }
 
   /**
-   * Only available for adherence metric.
    * @param adherenceRubric adherenceRubric or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEvaluationResult setAdherenceRubric(GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAdherenceRubric adherenceRubric) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEva
   }
 
   /**
-   * Only available for completeness metric.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCompletenessRubric getCompletenessRubric() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEva
   }
 
   /**
-   * Only available for completeness metric.
    * @param completenessRubric completenessRubric or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsEvaluationResult setCompletenessRubric(GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCompletenessRubric completenessRubric) {

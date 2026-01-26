@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the value of an HTTP header stored in a SecretManager secret version.
+ * Model definition for GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The SecretManager secret version resource storing the header value. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretVersion;
 
   /**
-   * Required. The SecretManager secret version resource storing the header value. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretVersion() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersio
   }
 
   /**
-   * Required. The SecretManager secret version resource storing the header value. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @param secretVersion secretVersion or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue setSecretVersion(java.lang.String secretVersion) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for EntityTypes.BatchUpdateEntities.
+ * Model definition for GoogleCloudDialogflowV2BatchUpdateEntitiesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2BatchUpdateEntitiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The entities to update or create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> entities;
 
   /**
-   * Optional. The language used to access language-specific data. If not specified, the agent's
-   * default language is used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Optional. The mask to control which fields get updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateMask;
 
   /**
-   * Required. The entities to update or create.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> getEntities() {
@@ -61,7 +55,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateEntitiesRequest extends com
   }
 
   /**
-   * Required. The entities to update or create.
    * @param entities entities or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchUpdateEntitiesRequest setEntities(java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> entities) {
@@ -70,9 +63,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateEntitiesRequest extends com
   }
 
   /**
-   * Optional. The language used to access language-specific data. If not specified, the agent's
-   * default language is used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -80,9 +70,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateEntitiesRequest extends com
   }
 
   /**
-   * Optional. The language used to access language-specific data. If not specified, the agent's
-   * default language is used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchUpdateEntitiesRequest setLanguageCode(java.lang.String languageCode) {
@@ -91,7 +78,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateEntitiesRequest extends com
   }
 
   /**
-   * Optional. The mask to control which fields get updated.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -99,7 +85,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateEntitiesRequest extends com
   }
 
   /**
-   * Optional. The mask to control which fields get updated.
    * @param updateMask updateMask or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchUpdateEntitiesRequest setUpdateMask(String updateMask) {

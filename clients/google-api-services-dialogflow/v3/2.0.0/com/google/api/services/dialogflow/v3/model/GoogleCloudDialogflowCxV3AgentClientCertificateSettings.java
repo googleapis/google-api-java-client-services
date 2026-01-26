@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for custom client certificates.
+ * Model definition for GoogleCloudDialogflowCxV3AgentClientCertificateSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,34 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3AgentClientCertificateSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the SecretManager secret version resource storing the passphrase.
-   * 'passphrase' should be left unset if the private key is not encrypted. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String passphrase;
 
   /**
-   * Required. The name of the SecretManager secret version resource storing the private key encoded
-   * in PEM format. Format: `projects/{project}/secrets/{secret}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privateKey;
 
   /**
-   * Required. The ssl certificate encoded in PEM format. This string must include the begin header
-   * and end footer lines.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sslCertificate;
 
   /**
-   * Optional. The name of the SecretManager secret version resource storing the passphrase.
-   * 'passphrase' should be left unset if the private key is not encrypted. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getPassphrase() {
@@ -65,9 +55,6 @@ public final class GoogleCloudDialogflowCxV3AgentClientCertificateSettings exten
   }
 
   /**
-   * Optional. The name of the SecretManager secret version resource storing the passphrase.
-   * 'passphrase' should be left unset if the private key is not encrypted. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @param passphrase passphrase or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AgentClientCertificateSettings setPassphrase(java.lang.String passphrase) {
@@ -76,8 +63,6 @@ public final class GoogleCloudDialogflowCxV3AgentClientCertificateSettings exten
   }
 
   /**
-   * Required. The name of the SecretManager secret version resource storing the private key encoded
-   * in PEM format. Format: `projects/{project}/secrets/{secret}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateKey() {
@@ -85,8 +70,6 @@ public final class GoogleCloudDialogflowCxV3AgentClientCertificateSettings exten
   }
 
   /**
-   * Required. The name of the SecretManager secret version resource storing the private key encoded
-   * in PEM format. Format: `projects/{project}/secrets/{secret}/versions/{version}`
    * @param privateKey privateKey or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AgentClientCertificateSettings setPrivateKey(java.lang.String privateKey) {
@@ -95,8 +78,6 @@ public final class GoogleCloudDialogflowCxV3AgentClientCertificateSettings exten
   }
 
   /**
-   * Required. The ssl certificate encoded in PEM format. This string must include the begin header
-   * and end footer lines.
    * @return value or {@code null} for none
    */
   public java.lang.String getSslCertificate() {
@@ -104,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3AgentClientCertificateSettings exten
   }
 
   /**
-   * Required. The ssl certificate encoded in PEM format. This string must include the begin header
-   * and end footer lines.
    * @param sslCertificate sslCertificate or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AgentClientCertificateSettings setSslCertificate(java.lang.String sslCertificate) {

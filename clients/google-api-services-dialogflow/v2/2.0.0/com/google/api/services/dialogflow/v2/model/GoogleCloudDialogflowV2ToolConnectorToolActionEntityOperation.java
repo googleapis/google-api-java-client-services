@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Entity CRUD operation specification.
+ * Model definition for GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. ID of the entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityId;
 
   /**
-   * Required. Operation to perform on the entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operation;
 
   /**
-   * Required. ID of the entity.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityId() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation
   }
 
   /**
-   * Required. ID of the entity.
    * @param entityId entityId or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation setEntityId(java.lang.String entityId) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation
   }
 
   /**
-   * Required. Operation to perform on the entity.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperation() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation
   }
 
   /**
-   * Required. Operation to perform on the entity.
    * @param operation operation or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation setOperation(java.lang.String operation) {

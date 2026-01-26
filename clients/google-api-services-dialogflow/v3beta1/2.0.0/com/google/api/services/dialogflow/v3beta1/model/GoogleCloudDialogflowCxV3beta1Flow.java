@@ -17,15 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Flows represents the conversation flows when you build your chatbot agent. A flow consists of
- * many pages connected by the transition routes. Conversations always start with the built-in Start
- * Flow (with an all-0 ID). Transition routes can direct the conversation session from the current
- * flow (parent flow) to another flow (sub flow). When the sub flow is finished, Dialogflow will
- * bring the session back to the parent flow, where the sub flow is started. Usually, when a
- * transition route is followed by a matched intent, the intent will be "consumed". This means the
- * intent won't activate more transition routes. However, when the followed transition route moves
- * the conversation session into a different flow, the matched intent can be carried over and to be
- * consumed in the target flow.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Flow.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -38,35 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides
-   * the settings exposed at the higher level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings;
 
   /**
-   * The description of the flow. The maximum length is 500 characters. If exceeded, the request is
-   * rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The human-readable name of the flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * A flow's event handlers serve two purposes: * They are responsible for handling events (e.g. no
-   * match, webhook errors) in the flow. * They are inherited by every page's event handlers, which
-   * can be used to handle common events regardless of the current page. Event handlers defined in
-   * the page have higher priority than those defined in the flow. Unlike transition_routes, these
-   * handlers are evaluated on a first-match basis. The first one that matches the event get
-   * executed, with the rest being ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,82 +60,60 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Optional. Defined structured input parameters for this flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> inputParameterDefinitions;
 
   /**
-   * Optional. Knowledge connector configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings knowledgeConnectorSettings;
 
   /**
-   * Indicates whether the flow is locked for changes. If the flow is locked, modifications to the
-   * flow will be rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean locked;
 
   /**
-   * Optional. Multi-lingual agent settings for this flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1FlowMultiLanguageSettings multiLanguageSettings;
 
   /**
-   * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * NLU related settings of the flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1NluSettings nluSettings;
 
   /**
-   * Optional. Defined structured output parameters for this flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> outputParameterDefinitions;
 
   /**
-   * A flow's transition route group serve two purposes: * They are responsible for matching the
-   * user's first utterances in the flow. * They are inherited by every page's transition route
-   * groups. Transition route groups defined in the page have higher priority than those defined in
-   * the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/` or
-   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> transitionRouteGroups;
 
   /**
-   * A flow's transition routes serve two purposes: * They are responsible for matching the user's
-   * first utterances in the flow. * They are inherited by every page's transition routes and can
-   * support use cases such as the user saying "help" or "can I talk to a human?", which can be
-   * handled in a common way regardless of the current page. Transition routes defined in the page
-   * have higher priority than those defined in the flow. TransitionRoutes are evaluated in the
-   * following order: * TransitionRoutes with intent specified. * TransitionRoutes with only
-   * condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1TransitionRoute> transitionRoutes;
 
   /**
-   * Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides
-   * the settings exposed at the higher level.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettings getAdvancedSettings() {
@@ -162,8 +121,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Hierarchical advanced settings for this flow. The settings exposed at the lower level overrides
-   * the settings exposed at the higher level.
    * @param advancedSettings advancedSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setAdvancedSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings) {
@@ -172,8 +129,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * The description of the flow. The maximum length is 500 characters. If exceeded, the request is
-   * rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -181,8 +136,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * The description of the flow. The maximum length is 500 characters. If exceeded, the request is
-   * rejected.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setDescription(java.lang.String description) {
@@ -191,7 +144,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Required. The human-readable name of the flow.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -199,7 +151,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Required. The human-readable name of the flow.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setDisplayName(java.lang.String displayName) {
@@ -208,12 +159,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * A flow's event handlers serve two purposes: * They are responsible for handling events (e.g. no
-   * match, webhook errors) in the flow. * They are inherited by every page's event handlers, which
-   * can be used to handle common events regardless of the current page. Event handlers defined in
-   * the page have higher priority than those defined in the flow. Unlike transition_routes, these
-   * handlers are evaluated on a first-match basis. The first one that matches the event get
-   * executed, with the rest being ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1EventHandler> getEventHandlers() {
@@ -221,12 +166,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * A flow's event handlers serve two purposes: * They are responsible for handling events (e.g. no
-   * match, webhook errors) in the flow. * They are inherited by every page's event handlers, which
-   * can be used to handle common events regardless of the current page. Event handlers defined in
-   * the page have higher priority than those defined in the flow. Unlike transition_routes, these
-   * handlers are evaluated on a first-match basis. The first one that matches the event get
-   * executed, with the rest being ignored.
    * @param eventHandlers eventHandlers or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setEventHandlers(java.util.List<GoogleCloudDialogflowCxV3beta1EventHandler> eventHandlers) {
@@ -235,7 +174,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Optional. Defined structured input parameters for this flow.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> getInputParameterDefinitions() {
@@ -243,7 +181,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Optional. Defined structured input parameters for this flow.
    * @param inputParameterDefinitions inputParameterDefinitions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setInputParameterDefinitions(java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> inputParameterDefinitions) {
@@ -252,7 +189,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Optional. Knowledge connector configuration.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings getKnowledgeConnectorSettings() {
@@ -260,7 +196,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Optional. Knowledge connector configuration.
    * @param knowledgeConnectorSettings knowledgeConnectorSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setKnowledgeConnectorSettings(GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings knowledgeConnectorSettings) {
@@ -269,8 +204,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Indicates whether the flow is locked for changes. If the flow is locked, modifications to the
-   * flow will be rejected.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocked() {
@@ -278,8 +211,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Indicates whether the flow is locked for changes. If the flow is locked, modifications to the
-   * flow will be rejected.
    * @param locked locked or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setLocked(java.lang.Boolean locked) {
@@ -288,7 +219,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Optional. Multi-lingual agent settings for this flow.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FlowMultiLanguageSettings getMultiLanguageSettings() {
@@ -296,7 +226,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Optional. Multi-lingual agent settings for this flow.
    * @param multiLanguageSettings multiLanguageSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setMultiLanguageSettings(GoogleCloudDialogflowCxV3beta1FlowMultiLanguageSettings multiLanguageSettings) {
@@ -305,7 +234,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -313,7 +241,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setName(java.lang.String name) {
@@ -322,7 +249,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * NLU related settings of the flow.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1NluSettings getNluSettings() {
@@ -330,7 +256,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * NLU related settings of the flow.
    * @param nluSettings nluSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setNluSettings(GoogleCloudDialogflowCxV3beta1NluSettings nluSettings) {
@@ -339,7 +264,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Optional. Defined structured output parameters for this flow.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> getOutputParameterDefinitions() {
@@ -347,7 +271,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * Optional. Defined structured output parameters for this flow.
    * @param outputParameterDefinitions outputParameterDefinitions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setOutputParameterDefinitions(java.util.List<GoogleCloudDialogflowCxV3beta1ParameterDefinition> outputParameterDefinitions) {
@@ -356,11 +279,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * A flow's transition route group serve two purposes: * They are responsible for matching the
-   * user's first utterances in the flow. * They are inherited by every page's transition route
-   * groups. Transition route groups defined in the page have higher priority than those defined in
-   * the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/` or
-   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTransitionRouteGroups() {
@@ -368,11 +286,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * A flow's transition route group serve two purposes: * They are responsible for matching the
-   * user's first utterances in the flow. * They are inherited by every page's transition route
-   * groups. Transition route groups defined in the page have higher priority than those defined in
-   * the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/` or
-   * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
    * @param transitionRouteGroups transitionRouteGroups or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setTransitionRouteGroups(java.util.List<java.lang.String> transitionRouteGroups) {
@@ -381,13 +294,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * A flow's transition routes serve two purposes: * They are responsible for matching the user's
-   * first utterances in the flow. * They are inherited by every page's transition routes and can
-   * support use cases such as the user saying "help" or "can I talk to a human?", which can be
-   * handled in a common way regardless of the current page. Transition routes defined in the page
-   * have higher priority than those defined in the flow. TransitionRoutes are evaluated in the
-   * following order: * TransitionRoutes with intent specified. * TransitionRoutes with only
-   * condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1TransitionRoute> getTransitionRoutes() {
@@ -395,13 +301,6 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
-   * A flow's transition routes serve two purposes: * They are responsible for matching the user's
-   * first utterances in the flow. * They are inherited by every page's transition routes and can
-   * support use cases such as the user saying "help" or "can I talk to a human?", which can be
-   * handled in a common way regardless of the current page. Transition routes defined in the page
-   * have higher priority than those defined in the flow. TransitionRoutes are evaluated in the
-   * following order: * TransitionRoutes with intent specified. * TransitionRoutes with only
-   * condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
    * @param transitionRoutes transitionRoutes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow setTransitionRoutes(java.util.List<GoogleCloudDialogflowCxV3beta1TransitionRoute> transitionRoutes) {

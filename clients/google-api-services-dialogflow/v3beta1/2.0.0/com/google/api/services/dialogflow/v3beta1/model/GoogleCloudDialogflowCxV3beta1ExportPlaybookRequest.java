@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The request message for Playbooks.ExportPlaybook.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExportPlaybookRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,26 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ExportPlaybookRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataFormat;
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * playbook to. The format of this URI must be `gs:`. If left unspecified, the serialized playbook
-   * is returned inline. Dialogflow performs a write operation for the Cloud Storage object on the
-   * caller's behalf, so your request authentication must have write permissions for the object. For
-   * more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String playbookUri;
 
   /**
-   * Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataFormat() {
@@ -57,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportPlaybookRequest extends c
   }
 
   /**
-   * Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
    * @param dataFormat dataFormat or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportPlaybookRequest setDataFormat(java.lang.String dataFormat) {
@@ -66,12 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportPlaybookRequest extends c
   }
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * playbook to. The format of this URI must be `gs:`. If left unspecified, the serialized playbook
-   * is returned inline. Dialogflow performs a write operation for the Cloud Storage object on the
-   * caller's behalf, so your request authentication must have write permissions for the object. For
-   * more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaybookUri() {
@@ -79,12 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportPlaybookRequest extends c
   }
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * playbook to. The format of this URI must be `gs:`. If left unspecified, the serialized playbook
-   * is returned inline. Dialogflow performs a write operation for the Cloud Storage object on the
-   * caller's behalf, so your request authentication must have write permissions for the object. For
-   * more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param playbookUri playbookUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportPlaybookRequest setPlaybookUri(java.lang.String playbookUri) {

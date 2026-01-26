@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for Agents.ExportAgent.
+ * Model definition for GoogleCloudDialogflowCxV3ExportAgentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,53 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * agent to. The format of this URI must be `gs:`. If left unspecified, the serialized agent is
-   * returned inline. Dialogflow performs a write operation for the Cloud Storage object on the
-   * caller's behalf, so your request authentication must have write permissions for the object. For
-   * more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentUri;
 
   /**
-   * Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataFormat;
 
   /**
-   * Optional. Environment name. If not set, draft environment is assumed. Format:
-   * `projects//locations//agents//environments/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environment;
 
   /**
-   * Optional. The Git branch to export the agent to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination gitDestination;
 
   /**
-   * Optional. Whether to include BigQuery Export setting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeBigqueryExportSettings;
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * agent to. The format of this URI must be `gs:`. If left unspecified, the serialized agent is
-   * returned inline. Dialogflow performs a write operation for the Cloud Storage object on the
-   * caller's behalf, so your request authentication must have write permissions for the object. For
-   * more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentUri() {
@@ -84,12 +67,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   }
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * agent to. The format of this URI must be `gs:`. If left unspecified, the serialized agent is
-   * returned inline. Dialogflow performs a write operation for the Cloud Storage object on the
-   * caller's behalf, so your request authentication must have write permissions for the object. For
-   * more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param agentUri agentUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportAgentRequest setAgentUri(java.lang.String agentUri) {
@@ -98,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   }
 
   /**
-   * Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataFormat() {
@@ -106,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   }
 
   /**
-   * Optional. The data format of the exported agent. If not specified, `BLOB` is assumed.
    * @param dataFormat dataFormat or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportAgentRequest setDataFormat(java.lang.String dataFormat) {
@@ -115,8 +90,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   }
 
   /**
-   * Optional. Environment name. If not set, draft environment is assumed. Format:
-   * `projects//locations//agents//environments/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -124,8 +97,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   }
 
   /**
-   * Optional. Environment name. If not set, draft environment is assumed. Format:
-   * `projects//locations//agents//environments/`.
    * @param environment environment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportAgentRequest setEnvironment(java.lang.String environment) {
@@ -134,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   }
 
   /**
-   * Optional. The Git branch to export the agent to.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination getGitDestination() {
@@ -142,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   }
 
   /**
-   * Optional. The Git branch to export the agent to.
    * @param gitDestination gitDestination or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportAgentRequest setGitDestination(GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination gitDestination) {
@@ -151,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   }
 
   /**
-   * Optional. Whether to include BigQuery Export setting.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncludeBigqueryExportSettings() {
@@ -159,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentRequest extends com.googl
   }
 
   /**
-   * Optional. Whether to include BigQuery Export setting.
    * @param includeBigqueryExportSettings includeBigqueryExportSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportAgentRequest setIncludeBigqueryExportSettings(java.lang.Boolean includeBigqueryExportSettings) {

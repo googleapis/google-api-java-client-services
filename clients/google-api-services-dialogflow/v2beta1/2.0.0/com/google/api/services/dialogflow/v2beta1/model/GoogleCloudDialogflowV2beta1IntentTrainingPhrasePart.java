@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a part of a training phrase.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,40 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The parameter name for the value extracted from the annotated part of the example.
-   * This field is required for annotated parts of the training phrase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String alias;
 
   /**
-   * Optional. The entity type name prefixed with `@`. This field is required for annotated parts of
-   * the training phrase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityType;
 
   /**
-   * Required. The text for this part.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Optional. Indicates whether the text was manually annotated. This field is set to true when the
-   * Dialogflow Console is used to manually annotate the part. When creating an annotated part with
-   * the API, you must set this to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean userDefined;
 
   /**
-   * Optional. The parameter name for the value extracted from the annotated part of the example.
-   * This field is required for annotated parts of the training phrase.
    * @return value or {@code null} for none
    */
   public java.lang.String getAlias() {
@@ -71,8 +61,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   }
 
   /**
-   * Optional. The parameter name for the value extracted from the annotated part of the example.
-   * This field is required for annotated parts of the training phrase.
    * @param alias alias or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart setAlias(java.lang.String alias) {
@@ -81,8 +69,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   }
 
   /**
-   * Optional. The entity type name prefixed with `@`. This field is required for annotated parts of
-   * the training phrase.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityType() {
@@ -90,8 +76,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   }
 
   /**
-   * Optional. The entity type name prefixed with `@`. This field is required for annotated parts of
-   * the training phrase.
    * @param entityType entityType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart setEntityType(java.lang.String entityType) {
@@ -100,7 +84,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   }
 
   /**
-   * Required. The text for this part.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -108,7 +91,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   }
 
   /**
-   * Required. The text for this part.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart setText(java.lang.String text) {
@@ -117,9 +99,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   }
 
   /**
-   * Optional. Indicates whether the text was manually annotated. This field is set to true when the
-   * Dialogflow Console is used to manually annotate the part. When creating an annotated part with
-   * the API, you must set this to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUserDefined() {
@@ -127,9 +106,6 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart extends 
   }
 
   /**
-   * Optional. Indicates whether the text was manually annotated. This field is set to true when the
-   * Dialogflow Console is used to manually annotate the part. When creating an annotated part with
-   * the API, you must set this to true.
    * @param userDefined userDefined or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentTrainingPhrasePart setUserDefined(java.lang.Boolean userDefined) {

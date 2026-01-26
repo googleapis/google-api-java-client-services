@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Rubric details of the completeness evaluation result.
+ * Model definition for GoogleCloudDialogflowV2SummarizationEvaluationMetricsCompletenessRubric.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsCompletenessRubric extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A boolean that indicates whether the rubric question is addressed or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isAddressed;
 
   /**
-   * Output only. The question generated from instruction that used to evaluate summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String question;
 
   /**
-   * Output only. A boolean that indicates whether the rubric question is addressed or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAddressed() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsComplete
   }
 
   /**
-   * Output only. A boolean that indicates whether the rubric question is addressed or not.
    * @param isAddressed isAddressed or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsCompletenessRubric setIsAddressed(java.lang.Boolean isAddressed) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsComplete
   }
 
   /**
-   * Output only. The question generated from instruction that used to evaluate summary.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuestion() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsComplete
   }
 
   /**
-   * Output only. The question generated from instruction that used to evaluate summary.
    * @param question question or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsCompletenessRubric setQuestion(java.lang.String question) {

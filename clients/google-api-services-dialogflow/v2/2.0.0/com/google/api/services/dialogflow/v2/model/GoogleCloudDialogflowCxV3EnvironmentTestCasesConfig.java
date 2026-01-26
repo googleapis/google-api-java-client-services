@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The configuration for continuous tests.
+ * Model definition for GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,32 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to
-   * true, run once a day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableContinuousRun;
 
   /**
-   * Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the
-   * environment. Default false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enablePredeploymentRun;
 
   /**
-   * A list of test case names to run. They should be under the same agent. Format of each test case
-   * name: `projects//locations//agents//testCases/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> testCases;
 
   /**
-   * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to
-   * true, run once a day.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableContinuousRun() {
@@ -63,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig extends c
   }
 
   /**
-   * Whether to run test cases in TestCasesConfig.test_cases periodically. Default false. If set to
-   * true, run once a day.
    * @param enableContinuousRun enableContinuousRun or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig setEnableContinuousRun(java.lang.Boolean enableContinuousRun) {
@@ -73,8 +63,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig extends c
   }
 
   /**
-   * Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the
-   * environment. Default false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePredeploymentRun() {
@@ -82,8 +70,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig extends c
   }
 
   /**
-   * Whether to run test cases in TestCasesConfig.test_cases before deploying a flow version to the
-   * environment. Default false.
    * @param enablePredeploymentRun enablePredeploymentRun or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig setEnablePredeploymentRun(java.lang.Boolean enablePredeploymentRun) {
@@ -92,8 +78,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig extends c
   }
 
   /**
-   * A list of test case names to run. They should be under the same agent. Format of each test case
-   * name: `projects//locations//agents//testCases/`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTestCases() {
@@ -101,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig extends c
   }
 
   /**
-   * A list of test case names to run. They should be under the same agent. Format of each test case
-   * name: `projects//locations//agents//testCases/`
    * @param testCases testCases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig setTestCases(java.util.List<java.lang.String> testCases) {

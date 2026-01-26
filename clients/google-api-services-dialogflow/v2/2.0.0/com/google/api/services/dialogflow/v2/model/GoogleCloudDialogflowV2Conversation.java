@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a conversation. A conversation is an interaction between an agent, including live
- * agents and Dialogflow agents, and a support customer. Conversations can include phone calls and
- * text-based chat sessions.
+ * Model definition for GoogleCloudDialogflowV2Conversation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,79 +30,60 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2Conversation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Conversation Profile to be used to configure this Conversation. This field cannot
-   * be updated. Format: `projects//locations//conversationProfiles/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationProfile;
 
   /**
-   * Optional. The stage of a conversation. It indicates whether the virtual agent or a human agent
-   * is handling the conversation. If the conversation is created with the conversation profile that
-   * has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise,
-   * defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the
-   * conversation profile that has Dialogflow config set but explicitly sets conversation_stage to
-   * ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and
-   * directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationStage;
 
   /**
-   * Output only. The time the conversation was finished.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Output only. The context reference updates provided by external systems.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> ingestedContextReferences;
 
   /**
-   * Output only. The current state of the Conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lifecycleState;
 
   /**
-   * Output only. Identifier. The unique identifier of this conversation. Format:
-   * `projects//locations//conversations/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. It will not be empty if the conversation is to be connected over telephony.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ConversationPhoneNumber phoneNumber;
 
   /**
-   * Output only. The time the conversation was started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Output only. The telephony connection information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo telephonyConnectionInfo;
 
   /**
-   * Required. The Conversation Profile to be used to configure this Conversation. This field cannot
-   * be updated. Format: `projects//locations//conversationProfiles/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationProfile() {
@@ -112,8 +91,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Required. The Conversation Profile to be used to configure this Conversation. This field cannot
-   * be updated. Format: `projects//locations//conversationProfiles/`.
    * @param conversationProfile conversationProfile or {@code null} for none
    */
   public GoogleCloudDialogflowV2Conversation setConversationProfile(java.lang.String conversationProfile) {
@@ -122,13 +99,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Optional. The stage of a conversation. It indicates whether the virtual agent or a human agent
-   * is handling the conversation. If the conversation is created with the conversation profile that
-   * has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise,
-   * defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the
-   * conversation profile that has Dialogflow config set but explicitly sets conversation_stage to
-   * ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and
-   * directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationStage() {
@@ -136,13 +106,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Optional. The stage of a conversation. It indicates whether the virtual agent or a human agent
-   * is handling the conversation. If the conversation is created with the conversation profile that
-   * has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise,
-   * defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the
-   * conversation profile that has Dialogflow config set but explicitly sets conversation_stage to
-   * ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and
-   * directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
    * @param conversationStage conversationStage or {@code null} for none
    */
   public GoogleCloudDialogflowV2Conversation setConversationStage(java.lang.String conversationStage) {
@@ -151,7 +114,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The time the conversation was finished.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -159,7 +121,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The time the conversation was finished.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2Conversation setEndTime(String endTime) {
@@ -168,7 +129,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The context reference updates provided by external systems.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> getIngestedContextReferences() {
@@ -176,7 +136,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The context reference updates provided by external systems.
    * @param ingestedContextReferences ingestedContextReferences or {@code null} for none
    */
   public GoogleCloudDialogflowV2Conversation setIngestedContextReferences(java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> ingestedContextReferences) {
@@ -185,7 +144,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The current state of the Conversation.
    * @return value or {@code null} for none
    */
   public java.lang.String getLifecycleState() {
@@ -193,7 +151,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The current state of the Conversation.
    * @param lifecycleState lifecycleState or {@code null} for none
    */
   public GoogleCloudDialogflowV2Conversation setLifecycleState(java.lang.String lifecycleState) {
@@ -202,8 +159,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. Identifier. The unique identifier of this conversation. Format:
-   * `projects//locations//conversations/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -211,8 +166,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. Identifier. The unique identifier of this conversation. Format:
-   * `projects//locations//conversations/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2Conversation setName(java.lang.String name) {
@@ -221,7 +174,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. It will not be empty if the conversation is to be connected over telephony.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationPhoneNumber getPhoneNumber() {
@@ -229,7 +181,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. It will not be empty if the conversation is to be connected over telephony.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public GoogleCloudDialogflowV2Conversation setPhoneNumber(GoogleCloudDialogflowV2ConversationPhoneNumber phoneNumber) {
@@ -238,7 +189,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The time the conversation was started.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -246,7 +196,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The time the conversation was started.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2Conversation setStartTime(String startTime) {
@@ -255,7 +204,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The telephony connection information.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo getTelephonyConnectionInfo() {
@@ -263,7 +211,6 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   }
 
   /**
-   * Output only. The telephony connection information.
    * @param telephonyConnectionInfo telephonyConnectionInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2Conversation setTelephonyConnectionInfo(GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo telephonyConnectionInfo) {

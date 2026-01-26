@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Encapsulates different type schema variations: either a reference to an a schema that's already
- * defined by a tool, or an inline definition.
+ * Model definition for GoogleCloudDialogflowCxV3beta1TypeSchema.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1TypeSchema extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set if this is an inline schema definition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1InlineSchema inlineSchema;
 
   /**
-   * Set if this is a schema reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1TypeSchemaSchemaReference schemaReference;
 
   /**
-   * Set if this is an inline schema definition.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1InlineSchema getInlineSchema() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1TypeSchema extends com.google.a
   }
 
   /**
-   * Set if this is an inline schema definition.
    * @param inlineSchema inlineSchema or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TypeSchema setInlineSchema(GoogleCloudDialogflowCxV3beta1InlineSchema inlineSchema) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1TypeSchema extends com.google.a
   }
 
   /**
-   * Set if this is a schema reference.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TypeSchemaSchemaReference getSchemaReference() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1TypeSchema extends com.google.a
   }
 
   /**
-   * Set if this is a schema reference.
    * @param schemaReference schemaReference or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TypeSchema setSchemaReference(GoogleCloudDialogflowCxV3beta1TypeSchemaSchemaReference schemaReference) {

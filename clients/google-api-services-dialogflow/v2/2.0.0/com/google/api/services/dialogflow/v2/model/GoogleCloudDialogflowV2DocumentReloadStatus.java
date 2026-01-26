@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The status of a reload attempt.
+ * Model definition for GoogleCloudDialogflowV2DocumentReloadStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2DocumentReloadStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status of a reload attempt or the initial load.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus status;
 
   /**
-   * The time of a reload attempt. This reload may have been triggered automatically or manually and
-   * may not have succeeded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String time;
 
   /**
-   * The status of a reload attempt or the initial load.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatus extends com.googl
   }
 
   /**
-   * The status of a reload attempt or the initial load.
    * @param status status or {@code null} for none
    */
   public GoogleCloudDialogflowV2DocumentReloadStatus setStatus(GoogleRpcStatus status) {
@@ -62,8 +57,6 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatus extends com.googl
   }
 
   /**
-   * The time of a reload attempt. This reload may have been triggered automatically or manually and
-   * may not have succeeded.
    * @return value or {@code null} for none
    */
   public String getTime() {
@@ -71,8 +64,6 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatus extends com.googl
   }
 
   /**
-   * The time of a reload attempt. This reload may have been triggered automatically or manually and
-   * may not have succeeded.
    * @param time time or {@code null} for none
    */
   public GoogleCloudDialogflowV2DocumentReloadStatus setTime(String time) {

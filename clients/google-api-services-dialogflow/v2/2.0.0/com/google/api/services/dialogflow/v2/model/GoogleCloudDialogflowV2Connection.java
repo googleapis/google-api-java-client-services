@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a connection for SIP Trunk.
+ * Model definition for GoogleCloudDialogflowV2Connection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,36 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2Connection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The unique identifier of the SIP Trunk connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectionId;
 
   /**
-   * Output only. The error details for the connection. Only populated when authentication errors
-   * occur.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ConnectionErrorDetails errorDetails;
 
   /**
-   * Output only. State of the connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. When the connection status changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The unique identifier of the SIP Trunk connection.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionId() {
@@ -67,7 +61,6 @@ public final class GoogleCloudDialogflowV2Connection extends com.google.api.clie
   }
 
   /**
-   * Output only. The unique identifier of the SIP Trunk connection.
    * @param connectionId connectionId or {@code null} for none
    */
   public GoogleCloudDialogflowV2Connection setConnectionId(java.lang.String connectionId) {
@@ -76,8 +69,6 @@ public final class GoogleCloudDialogflowV2Connection extends com.google.api.clie
   }
 
   /**
-   * Output only. The error details for the connection. Only populated when authentication errors
-   * occur.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConnectionErrorDetails getErrorDetails() {
@@ -85,8 +76,6 @@ public final class GoogleCloudDialogflowV2Connection extends com.google.api.clie
   }
 
   /**
-   * Output only. The error details for the connection. Only populated when authentication errors
-   * occur.
    * @param errorDetails errorDetails or {@code null} for none
    */
   public GoogleCloudDialogflowV2Connection setErrorDetails(GoogleCloudDialogflowV2ConnectionErrorDetails errorDetails) {
@@ -95,7 +84,6 @@ public final class GoogleCloudDialogflowV2Connection extends com.google.api.clie
   }
 
   /**
-   * Output only. State of the connection.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -103,7 +91,6 @@ public final class GoogleCloudDialogflowV2Connection extends com.google.api.clie
   }
 
   /**
-   * Output only. State of the connection.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowV2Connection setState(java.lang.String state) {
@@ -112,7 +99,6 @@ public final class GoogleCloudDialogflowV2Connection extends com.google.api.clie
   }
 
   /**
-   * Output only. When the connection status changed.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -120,7 +106,6 @@ public final class GoogleCloudDialogflowV2Connection extends com.google.api.clie
   }
 
   /**
-   * Output only. When the connection status changed.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2Connection setUpdateTime(String updateTime) {

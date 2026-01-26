@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Configuration for how the filling of a parameter should be handled.
+ * Model definition for GoogleCloudDialogflowCxV3FormParameterFillBehavior.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3FormParameterFillBehavior extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The fulfillment to provide the initial prompt that the agent can present to the user
-   * in order to fill the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3Fulfillment initialPromptFulfillment;
 
   /**
-   * The handlers for parameter-level events, used to provide reprompt for the parameter or
-   * transition to a different page/flow. The supported events are: * `sys.no-match-`, where N can
-   * be from 1 to 6 * `sys.no-match-default` * `sys.no-input-`, where N can be from 1 to 6 *
-   * `sys.no-input-default` * `sys.invalid-parameter` `initial_prompt_fulfillment` provides the
-   * first prompt for the parameter. If the user's response does not fill the parameter, a no-
-   * match/no-input event will be triggered, and the fulfillment associated with the `sys.no-
-   * match-1`/`sys.no-input-1` handler (if defined) will be called to provide a prompt. The `sys.no-
-   * match-2`/`sys.no-input-2` handler (if defined) will respond to the next no-match/no-input
-   * event, and so on. A `sys.no-match-default` or `sys.no-input-default` handler will be used to
-   * handle all following no-match/no-input events after all numbered no-match/no-input handlers for
-   * the parameter are consumed. A `sys.invalid-parameter` handler can be defined to handle the case
-   * where the parameter values have been `invalidated` by webhook. For example, if the user's
-   * response fill the parameter, however the parameter was invalidated by webhook, the fulfillment
-   * associated with the `sys.invalid-parameter` handler (if defined) will be called to provide a
-   * prompt. If the event handler for the corresponding event can't be found on the parameter,
-   * `initial_prompt_fulfillment` will be re-prompted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +48,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehavior extends co
   }
 
   /**
-   * Required. The fulfillment to provide the initial prompt that the agent can present to the user
-   * in order to fill the parameter.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment getInitialPromptFulfillment() {
@@ -75,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehavior extends co
   }
 
   /**
-   * Required. The fulfillment to provide the initial prompt that the agent can present to the user
-   * in order to fill the parameter.
    * @param initialPromptFulfillment initialPromptFulfillment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FormParameterFillBehavior setInitialPromptFulfillment(GoogleCloudDialogflowCxV3Fulfillment initialPromptFulfillment) {
@@ -85,22 +63,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehavior extends co
   }
 
   /**
-   * The handlers for parameter-level events, used to provide reprompt for the parameter or
-   * transition to a different page/flow. The supported events are: * `sys.no-match-`, where N can
-   * be from 1 to 6 * `sys.no-match-default` * `sys.no-input-`, where N can be from 1 to 6 *
-   * `sys.no-input-default` * `sys.invalid-parameter` `initial_prompt_fulfillment` provides the
-   * first prompt for the parameter. If the user's response does not fill the parameter, a no-
-   * match/no-input event will be triggered, and the fulfillment associated with the `sys.no-
-   * match-1`/`sys.no-input-1` handler (if defined) will be called to provide a prompt. The `sys.no-
-   * match-2`/`sys.no-input-2` handler (if defined) will respond to the next no-match/no-input
-   * event, and so on. A `sys.no-match-default` or `sys.no-input-default` handler will be used to
-   * handle all following no-match/no-input events after all numbered no-match/no-input handlers for
-   * the parameter are consumed. A `sys.invalid-parameter` handler can be defined to handle the case
-   * where the parameter values have been `invalidated` by webhook. For example, if the user's
-   * response fill the parameter, however the parameter was invalidated by webhook, the fulfillment
-   * associated with the `sys.invalid-parameter` handler (if defined) will be called to provide a
-   * prompt. If the event handler for the corresponding event can't be found on the parameter,
-   * `initial_prompt_fulfillment` will be re-prompted.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3EventHandler> getRepromptEventHandlers() {
@@ -108,22 +70,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehavior extends co
   }
 
   /**
-   * The handlers for parameter-level events, used to provide reprompt for the parameter or
-   * transition to a different page/flow. The supported events are: * `sys.no-match-`, where N can
-   * be from 1 to 6 * `sys.no-match-default` * `sys.no-input-`, where N can be from 1 to 6 *
-   * `sys.no-input-default` * `sys.invalid-parameter` `initial_prompt_fulfillment` provides the
-   * first prompt for the parameter. If the user's response does not fill the parameter, a no-
-   * match/no-input event will be triggered, and the fulfillment associated with the `sys.no-
-   * match-1`/`sys.no-input-1` handler (if defined) will be called to provide a prompt. The `sys.no-
-   * match-2`/`sys.no-input-2` handler (if defined) will respond to the next no-match/no-input
-   * event, and so on. A `sys.no-match-default` or `sys.no-input-default` handler will be used to
-   * handle all following no-match/no-input events after all numbered no-match/no-input handlers for
-   * the parameter are consumed. A `sys.invalid-parameter` handler can be defined to handle the case
-   * where the parameter values have been `invalidated` by webhook. For example, if the user's
-   * response fill the parameter, however the parameter was invalidated by webhook, the fulfillment
-   * associated with the `sys.invalid-parameter` handler (if defined) will be called to provide a
-   * prompt. If the event handler for the corresponding event can't be found on the parameter,
-   * `initial_prompt_fulfillment` will be re-prompted.
    * @param repromptEventHandlers repromptEventHandlers or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FormParameterFillBehavior setRepromptEventHandlers(java.util.List<GoogleCloudDialogflowCxV3EventHandler> repromptEventHandlers) {

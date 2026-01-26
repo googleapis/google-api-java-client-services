@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Data store connection feature output signals. Might be only partially field if processing stop
- * before the final answer. Reasons for this can be, but are not limited to: empty UCS search
- * results, positive RAI check outcome, grounding failure, ...
+ * Model definition for GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,71 +30,60 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The final compiled answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answer;
 
   /**
-   * Optional. Diagnostic info related to the answer generation model call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerGenerationModelCallSignals answerGenerationModelCallSignals;
 
   /**
-   * Optional. Answer parts with relevant citations. Concatenation of texts should add up the
-   * `answer` (not counting whitespaces).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerPart> answerParts;
 
   /**
-   * Optional. Snippets cited by the answer generation model from the most to least relevant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsCitedSnippet> citedSnippets;
 
   /**
-   * Optional. Grounding signals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroundingSignals groundingSignals;
 
   /**
-   * Optional. Diagnostic info related to the rewriter model call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsRewriterModelCallSignals rewriterModelCallSignals;
 
   /**
-   * Optional. Rewritten string query used for search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rewrittenQuery;
 
   /**
-   * Optional. Safety check result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafetySignals safetySignals;
 
   /**
-   * Optional. Search snippets included in the answer generation prompt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet> searchSnippets;
 
   /**
-   * Optional. The final compiled answer.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswer() {
@@ -104,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. The final compiled answer.
    * @param answer answer or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals setAnswer(java.lang.String answer) {
@@ -113,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Diagnostic info related to the answer generation model call.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerGenerationModelCallSignals getAnswerGenerationModelCallSignals() {
@@ -121,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Diagnostic info related to the answer generation model call.
    * @param answerGenerationModelCallSignals answerGenerationModelCallSignals or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals setAnswerGenerationModelCallSignals(GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerGenerationModelCallSignals answerGenerationModelCallSignals) {
@@ -130,8 +114,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Answer parts with relevant citations. Concatenation of texts should add up the
-   * `answer` (not counting whitespaces).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerPart> getAnswerParts() {
@@ -139,8 +121,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Answer parts with relevant citations. Concatenation of texts should add up the
-   * `answer` (not counting whitespaces).
    * @param answerParts answerParts or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals setAnswerParts(java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerPart> answerParts) {
@@ -149,7 +129,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Snippets cited by the answer generation model from the most to least relevant.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsCitedSnippet> getCitedSnippets() {
@@ -157,7 +136,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Snippets cited by the answer generation model from the most to least relevant.
    * @param citedSnippets citedSnippets or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals setCitedSnippets(java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsCitedSnippet> citedSnippets) {
@@ -166,7 +144,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Grounding signals.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroundingSignals getGroundingSignals() {
@@ -174,7 +151,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Grounding signals.
    * @param groundingSignals groundingSignals or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals setGroundingSignals(GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroundingSignals groundingSignals) {
@@ -183,7 +159,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Diagnostic info related to the rewriter model call.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsRewriterModelCallSignals getRewriterModelCallSignals() {
@@ -191,7 +166,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Diagnostic info related to the rewriter model call.
    * @param rewriterModelCallSignals rewriterModelCallSignals or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals setRewriterModelCallSignals(GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsRewriterModelCallSignals rewriterModelCallSignals) {
@@ -200,7 +174,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Rewritten string query used for search.
    * @return value or {@code null} for none
    */
   public java.lang.String getRewrittenQuery() {
@@ -208,7 +181,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Rewritten string query used for search.
    * @param rewrittenQuery rewrittenQuery or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals setRewrittenQuery(java.lang.String rewrittenQuery) {
@@ -217,7 +189,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Safety check result.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafetySignals getSafetySignals() {
@@ -225,7 +196,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Safety check result.
    * @param safetySignals safetySignals or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals setSafetySignals(GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafetySignals safetySignals) {
@@ -234,7 +204,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Search snippets included in the answer generation prompt.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet> getSearchSnippets() {
@@ -242,7 +211,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals exte
   }
 
   /**
-   * Optional. Search snippets included in the answer generation prompt.
    * @param searchSnippets searchSnippets or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals setSearchSnippets(java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet> searchSnippets) {

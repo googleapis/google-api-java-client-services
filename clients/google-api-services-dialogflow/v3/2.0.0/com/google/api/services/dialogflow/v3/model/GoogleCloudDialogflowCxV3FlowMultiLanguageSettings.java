@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for multi-lingual agents.
+ * Model definition for GoogleCloudDialogflowCxV3FlowMultiLanguageSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,26 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3FlowMultiLanguageSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Enable multi-language detection for this flow. This can be set only if agent level
-   * multi language setting is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableMultiLanguageDetection;
 
   /**
-   * Optional. Agent will respond in the detected language if the detected language code is in the
-   * supported resolved languages for this flow. This will be used only if multi-language training
-   * is enabled in the agent and multi-language detection is enabled in the flow. The supported
-   * languages must be a subset of the languages supported by the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedResponseLanguageCodes;
 
   /**
-   * Optional. Enable multi-language detection for this flow. This can be set only if agent level
-   * multi language setting is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableMultiLanguageDetection() {
@@ -57,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3FlowMultiLanguageSettings extends co
   }
 
   /**
-   * Optional. Enable multi-language detection for this flow. This can be set only if agent level
-   * multi language setting is enabled.
    * @param enableMultiLanguageDetection enableMultiLanguageDetection or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowMultiLanguageSettings setEnableMultiLanguageDetection(java.lang.Boolean enableMultiLanguageDetection) {
@@ -67,10 +57,6 @@ public final class GoogleCloudDialogflowCxV3FlowMultiLanguageSettings extends co
   }
 
   /**
-   * Optional. Agent will respond in the detected language if the detected language code is in the
-   * supported resolved languages for this flow. This will be used only if multi-language training
-   * is enabled in the agent and multi-language detection is enabled in the flow. The supported
-   * languages must be a subset of the languages supported by the agent.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedResponseLanguageCodes() {
@@ -78,10 +64,6 @@ public final class GoogleCloudDialogflowCxV3FlowMultiLanguageSettings extends co
   }
 
   /**
-   * Optional. Agent will respond in the detected language if the detected language code is in the
-   * supported resolved languages for this flow. This will be used only if multi-language training
-   * is enabled in the agent and multi-language detection is enabled in the flow. The supported
-   * languages must be a subset of the languages supported by the agent.
    * @param supportedResponseLanguageCodes supportedResponseLanguageCodes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowMultiLanguageSettings setSupportedResponseLanguageCodes(java.util.List<java.lang.String> supportedResponseLanguageCodes) {

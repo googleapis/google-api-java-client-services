@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Webhooks host the developer's business logic. During a session, webhooks allow the developer to
- * use the data extracted by Dialogflow's natural language processing to generate dynamic responses,
- * validate collected data, or trigger actions on the backend.
+ * Model definition for GoogleCloudDialogflowCxV3Webhook.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,53 +30,42 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether the webhook is disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * Required. The human-readable name of the webhook, unique within the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Configuration for a generic web service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3WebhookGenericWebService genericWebService;
 
   /**
-   * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method.
-   * Webhooks.CreateWebhook populates the name automatically. Format:
-   * `projects//locations//agents//webhooks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfig serviceDirectory;
 
   /**
-   * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a
-   * response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed
-   * timeout is 30 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timeout;
 
   /**
-   * Indicates whether the webhook is disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -86,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * Indicates whether the webhook is disabled.
    * @param disabled disabled or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Webhook setDisabled(java.lang.Boolean disabled) {
@@ -95,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * Required. The human-readable name of the webhook, unique within the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -103,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * Required. The human-readable name of the webhook, unique within the agent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Webhook setDisplayName(java.lang.String displayName) {
@@ -112,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * Configuration for a generic web service.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService getGenericWebService() {
@@ -120,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * Configuration for a generic web service.
    * @param genericWebService genericWebService or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Webhook setGenericWebService(GoogleCloudDialogflowCxV3WebhookGenericWebService genericWebService) {
@@ -129,9 +111,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method.
-   * Webhooks.CreateWebhook populates the name automatically. Format:
-   * `projects//locations//agents//webhooks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -139,9 +118,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method.
-   * Webhooks.CreateWebhook populates the name automatically. Format:
-   * `projects//locations//agents//webhooks/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Webhook setName(java.lang.String name) {
@@ -150,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfig getServiceDirectory() {
@@ -158,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
    * @param serviceDirectory serviceDirectory or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Webhook setServiceDirectory(GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfig serviceDirectory) {
@@ -167,9 +141,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a
-   * response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed
-   * timeout is 30 seconds.
    * @return value or {@code null} for none
    */
   public String getTimeout() {
@@ -177,9 +148,6 @@ public final class GoogleCloudDialogflowCxV3Webhook extends com.google.api.clien
   }
 
   /**
-   * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a
-   * response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed
-   * timeout is 30 seconds.
    * @param timeout timeout or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Webhook setTimeout(String timeout) {

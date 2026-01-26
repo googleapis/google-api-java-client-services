@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The response message for ConversationsService.IngestContextReferences.
+ * Model definition for GoogleCloudDialogflowV2IngestContextReferencesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2IngestContextReferencesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * All context references ingested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +42,6 @@ public final class GoogleCloudDialogflowV2IngestContextReferencesResponse extend
   }
 
   /**
-   * All context references ingested.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> getIngestedContextReferences() {
@@ -51,7 +49,6 @@ public final class GoogleCloudDialogflowV2IngestContextReferencesResponse extend
   }
 
   /**
-   * All context references ingested.
    * @param ingestedContextReferences ingestedContextReferences or {@code null} for none
    */
   public GoogleCloudDialogflowV2IngestContextReferencesResponse setIngestedContextReferences(java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> ingestedContextReferences) {

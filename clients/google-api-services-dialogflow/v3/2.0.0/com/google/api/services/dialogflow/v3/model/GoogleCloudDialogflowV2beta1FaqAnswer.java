@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents answer from "frequently asked questions".
+ * Model definition for GoogleCloudDialogflowV2beta1FaqAnswer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,51 +30,42 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The piece of text from the `source` knowledge base document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answer;
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * The system's confidence score that this Knowledge answer is a good match for this
-   * conversational query, range from 0.0 (completely uncertain) to 1.0 (completely certain).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * A map that contains metadata about the answer and the document from which it originates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * The corresponding FAQ question.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String question;
 
   /**
-   * Indicates which Knowledge Document this answer was extracted from. Format:
-   * `projects//locations//agent/knowledgeBases//documents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * The piece of text from the `source` knowledge base document.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswer() {
@@ -82,7 +73,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * The piece of text from the `source` knowledge base document.
    * @param answer answer or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FaqAnswer setAnswer(java.lang.String answer) {
@@ -91,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -99,7 +88,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FaqAnswer setAnswerRecord(java.lang.String answerRecord) {
@@ -108,8 +96,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * The system's confidence score that this Knowledge answer is a good match for this
-   * conversational query, range from 0.0 (completely uncertain) to 1.0 (completely certain).
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -117,8 +103,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * The system's confidence score that this Knowledge answer is a good match for this
-   * conversational query, range from 0.0 (completely uncertain) to 1.0 (completely certain).
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FaqAnswer setConfidence(java.lang.Float confidence) {
@@ -127,7 +111,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * A map that contains metadata about the answer and the document from which it originates.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -135,7 +118,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * A map that contains metadata about the answer and the document from which it originates.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FaqAnswer setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -144,7 +126,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * The corresponding FAQ question.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuestion() {
@@ -152,7 +133,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * The corresponding FAQ question.
    * @param question question or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FaqAnswer setQuestion(java.lang.String question) {
@@ -161,8 +141,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * Indicates which Knowledge Document this answer was extracted from. Format:
-   * `projects//locations//agent/knowledgeBases//documents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -170,8 +148,6 @@ public final class GoogleCloudDialogflowV2beta1FaqAnswer extends com.google.api.
   }
 
   /**
-   * Indicates which Knowledge Document this answer was extracted from. Format:
-   * `projects//locations//agent/knowledgeBases//documents/`.
    * @param source source or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FaqAnswer setSource(java.lang.String source) {

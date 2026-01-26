@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for connecting to Git repository for an agent.
+ * Model definition for GoogleCloudDialogflowCxV3AgentGitIntegrationSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3AgentGitIntegrationSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * GitHub settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3AgentGitIntegrationSettingsGithubSettings githubSettings;
 
   /**
-   * GitHub settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AgentGitIntegrationSettingsGithubSettings getGithubSettings() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3AgentGitIntegrationSettings extends 
   }
 
   /**
-   * GitHub settings.
    * @param githubSettings githubSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AgentGitIntegrationSettings setGithubSettings(GoogleCloudDialogflowCxV3AgentGitIntegrationSettingsGithubSettings githubSettings) {

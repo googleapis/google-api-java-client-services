@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * InputDataset used to create model or do evaluation. NextID:5
+ * Model definition for GoogleCloudDialogflowV2InputDataset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2InputDataset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. ConversationDataset resource name. Format:
-   * `projects//locations//conversationDatasets/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataset;
 
   /**
-   * Required. ConversationDataset resource name. Format:
-   * `projects//locations//conversationDatasets/`
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2InputDataset extends com.google.api.cl
   }
 
   /**
-   * Required. ConversationDataset resource name. Format:
-   * `projects//locations//conversationDatasets/`
    * @param dataset dataset or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputDataset setDataset(java.lang.String dataset) {

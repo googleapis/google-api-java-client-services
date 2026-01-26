@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for EntityTypes.ExportEntityTypes.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExportEntityTypesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uncompressed byte content for entity types. This field is populated only if
-   * `entity_types_content_inline` is set to true in ExportEntityTypesRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1InlineDestination entityTypesContent;
 
   /**
-   * The URI to a file containing the exported entity types. This field is populated only if
-   * `entity_types_uri` is specified in ExportEntityTypesRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityTypesUri;
 
   /**
-   * Uncompressed byte content for entity types. This field is populated only if
-   * `entity_types_content_inline` is set to true in ExportEntityTypesRequest.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1InlineDestination getEntityTypesContent() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesResponse exten
   }
 
   /**
-   * Uncompressed byte content for entity types. This field is populated only if
-   * `entity_types_content_inline` is set to true in ExportEntityTypesRequest.
    * @param entityTypesContent entityTypesContent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportEntityTypesResponse setEntityTypesContent(GoogleCloudDialogflowCxV3beta1InlineDestination entityTypesContent) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesResponse exten
   }
 
   /**
-   * The URI to a file containing the exported entity types. This field is populated only if
-   * `entity_types_uri` is specified in ExportEntityTypesRequest.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityTypesUri() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesResponse exten
   }
 
   /**
-   * The URI to a file containing the exported entity types. This field is populated only if
-   * `entity_types_uri` is specified in ExportEntityTypesRequest.
    * @param entityTypesUri entityTypesUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportEntityTypesResponse setEntityTypesUri(java.lang.String entityTypesUri) {

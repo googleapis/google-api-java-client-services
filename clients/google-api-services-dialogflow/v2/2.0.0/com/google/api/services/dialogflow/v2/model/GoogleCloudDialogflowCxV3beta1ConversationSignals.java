@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * This message is used to hold all the Conversation Signals data, which will be converted to JSON
- * and exported to BigQuery.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ConversationSignals.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationSignals extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Turn signals for the current turn.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1TurnSignals turnSignals;
 
   /**
-   * Required. Turn signals for the current turn.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TurnSignals getTurnSignals() {
@@ -46,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationSignals extends com
   }
 
   /**
-   * Required. Turn signals for the current turn.
    * @param turnSignals turnSignals or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationSignals setTurnSignals(GoogleCloudDialogflowCxV3beta1TurnSignals turnSignals) {

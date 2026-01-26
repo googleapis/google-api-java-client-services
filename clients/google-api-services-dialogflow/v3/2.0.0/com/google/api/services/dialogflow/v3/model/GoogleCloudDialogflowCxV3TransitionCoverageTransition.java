@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A transition in a page.
+ * Model definition for GoogleCloudDialogflowCxV3TransitionCoverageTransition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,49 +30,42 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the transition is covered by at least one of the agent's test cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean covered;
 
   /**
-   * Event handler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3EventHandler eventHandler;
 
   /**
-   * The index of a transition in the transition list. Starting from 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer index;
 
   /**
-   * The start node of a transition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode source;
 
   /**
-   * The end node of a transition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode target;
 
   /**
-   * Intent route or condition route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3TransitionRoute transitionRoute;
 
   /**
-   * Whether the transition is covered by at least one of the agent's test cases.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCovered() {
@@ -80,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * Whether the transition is covered by at least one of the agent's test cases.
    * @param covered covered or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionCoverageTransition setCovered(java.lang.Boolean covered) {
@@ -89,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * Event handler.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3EventHandler getEventHandler() {
@@ -97,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * Event handler.
    * @param eventHandler eventHandler or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionCoverageTransition setEventHandler(GoogleCloudDialogflowCxV3EventHandler eventHandler) {
@@ -106,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * The index of a transition in the transition list. Starting from 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -114,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * The index of a transition in the transition list. Starting from 0.
    * @param index index or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionCoverageTransition setIndex(java.lang.Integer index) {
@@ -123,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * The start node of a transition.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode getSource() {
@@ -131,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * The start node of a transition.
    * @param source source or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionCoverageTransition setSource(GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode source) {
@@ -140,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * The end node of a transition.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode getTarget() {
@@ -148,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * The end node of a transition.
    * @param target target or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionCoverageTransition setTarget(GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode target) {
@@ -157,7 +141,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * Intent route or condition route.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionRoute getTransitionRoute() {
@@ -165,7 +148,6 @@ public final class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends
   }
 
   /**
-   * Intent route or condition route.
    * @param transitionRoute transitionRoute or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionCoverageTransition setTransitionRoute(GoogleCloudDialogflowCxV3TransitionRoute transitionRoute) {

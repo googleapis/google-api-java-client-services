@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The basic card message. Useful for displaying information.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageBasicCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,42 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The collection of card buttons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessageBasicCardButton> buttons;
 
   /**
-   * Required, unless image is present. The body text of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String formattedText;
 
   /**
-   * Optional. The image for the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageImage image;
 
   /**
-   * Optional. The subtitle of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subtitle;
 
   /**
-   * Optional. The title of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Optional. The collection of card buttons.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessageBasicCardButton> getButtons() {
@@ -73,7 +67,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.goo
   }
 
   /**
-   * Optional. The collection of card buttons.
    * @param buttons buttons or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBasicCard setButtons(java.util.List<GoogleCloudDialogflowV2IntentMessageBasicCardButton> buttons) {
@@ -82,7 +75,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.goo
   }
 
   /**
-   * Required, unless image is present. The body text of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormattedText() {
@@ -90,7 +82,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.goo
   }
 
   /**
-   * Required, unless image is present. The body text of the card.
    * @param formattedText formattedText or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBasicCard setFormattedText(java.lang.String formattedText) {
@@ -99,7 +90,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.goo
   }
 
   /**
-   * Optional. The image for the card.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageImage getImage() {
@@ -107,7 +97,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.goo
   }
 
   /**
-   * Optional. The image for the card.
    * @param image image or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBasicCard setImage(GoogleCloudDialogflowV2IntentMessageImage image) {
@@ -116,7 +105,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.goo
   }
 
   /**
-   * Optional. The subtitle of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubtitle() {
@@ -124,7 +112,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.goo
   }
 
   /**
-   * Optional. The subtitle of the card.
    * @param subtitle subtitle or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBasicCard setSubtitle(java.lang.String subtitle) {
@@ -133,7 +120,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.goo
   }
 
   /**
-   * Optional. The title of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -141,7 +127,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCard extends com.goo
   }
 
   /**
-   * Optional. The title of the card.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBasicCard setTitle(java.lang.String title) {

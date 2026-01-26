@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Defines the hand off to a live agent, typically on which external agent service provider to
- * connect to a conversation. Currently, this feature is not general available, please contact
- * Google to get access.
+ * Model definition for GoogleCloudDialogflowV2HumanAgentHandoffConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentHandoffConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uses [LivePerson](https://www.liveperson.com).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig livePersonConfig;
 
   /**
-   * Uses Salesforce Live Agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig salesforceLiveAgentConfig;
 
   /**
-   * Uses [LivePerson](https://www.liveperson.com).
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig getLivePersonConfig() {
@@ -54,7 +49,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfig extends com.go
   }
 
   /**
-   * Uses [LivePerson](https://www.liveperson.com).
    * @param livePersonConfig livePersonConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentHandoffConfig setLivePersonConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig livePersonConfig) {
@@ -63,7 +57,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfig extends com.go
   }
 
   /**
-   * Uses Salesforce Live Agent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig getSalesforceLiveAgentConfig() {
@@ -71,7 +64,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfig extends com.go
   }
 
   /**
-   * Uses Salesforce Live Agent.
    * @param salesforceLiveAgentConfig salesforceLiveAgentConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentHandoffConfig setSalesforceLiveAgentConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig salesforceLiveAgentConfig) {

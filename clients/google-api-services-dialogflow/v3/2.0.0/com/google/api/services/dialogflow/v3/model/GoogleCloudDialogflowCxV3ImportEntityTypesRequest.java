@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for EntityTypes.ImportEntityTypes.
+ * Model definition for GoogleCloudDialogflowCxV3ImportEntityTypesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,42 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ImportEntityTypesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uncompressed byte content of entity types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3InlineSource entityTypesContent;
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import entity types
-   * from. The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
-   * Storage object on the caller's behalf, so your request authentication must have read
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityTypesUri;
 
   /**
-   * Required. Merge option for importing entity types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mergeOption;
 
   /**
-   * Optional. The target entity type to import into. Format:
-   * `projects//locations//agents//entity_types/`. If set, there should be only one entity type
-   * included in entity_types, of which the type should match the type of the target entity type.
-   * All entities in the imported entity type will be added to the target entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetEntityType;
 
   /**
-   * Uncompressed byte content of entity types.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InlineSource getEntityTypesContent() {
@@ -73,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3ImportEntityTypesRequest extends com
   }
 
   /**
-   * Uncompressed byte content of entity types.
    * @param entityTypesContent entityTypesContent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportEntityTypesRequest setEntityTypesContent(GoogleCloudDialogflowCxV3InlineSource entityTypesContent) {
@@ -82,11 +69,6 @@ public final class GoogleCloudDialogflowCxV3ImportEntityTypesRequest extends com
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import entity types
-   * from. The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
-   * Storage object on the caller's behalf, so your request authentication must have read
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityTypesUri() {
@@ -94,11 +76,6 @@ public final class GoogleCloudDialogflowCxV3ImportEntityTypesRequest extends com
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import entity types
-   * from. The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
-   * Storage object on the caller's behalf, so your request authentication must have read
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param entityTypesUri entityTypesUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportEntityTypesRequest setEntityTypesUri(java.lang.String entityTypesUri) {
@@ -107,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3ImportEntityTypesRequest extends com
   }
 
   /**
-   * Required. Merge option for importing entity types.
    * @return value or {@code null} for none
    */
   public java.lang.String getMergeOption() {
@@ -115,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3ImportEntityTypesRequest extends com
   }
 
   /**
-   * Required. Merge option for importing entity types.
    * @param mergeOption mergeOption or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportEntityTypesRequest setMergeOption(java.lang.String mergeOption) {
@@ -124,10 +99,6 @@ public final class GoogleCloudDialogflowCxV3ImportEntityTypesRequest extends com
   }
 
   /**
-   * Optional. The target entity type to import into. Format:
-   * `projects//locations//agents//entity_types/`. If set, there should be only one entity type
-   * included in entity_types, of which the type should match the type of the target entity type.
-   * All entities in the imported entity type will be added to the target entity type.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetEntityType() {
@@ -135,10 +106,6 @@ public final class GoogleCloudDialogflowCxV3ImportEntityTypesRequest extends com
   }
 
   /**
-   * Optional. The target entity type to import into. Format:
-   * `projects//locations//agents//entity_types/`. If set, there should be only one entity type
-   * included in entity_types, of which the type should match the type of the target entity type.
-   * All entities in the imported entity type will be added to the target entity type.
    * @param targetEntityType targetEntityType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportEntityTypesRequest setTargetEntityType(java.lang.String targetEntityType) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The history of variants update.
+ * Model definition for GoogleCloudDialogflowCxV3VariantsHistory.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3VariantsHistory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Update time of the variants.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The flow versions as the variants.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3VersionVariants versionVariants;
 
   /**
-   * Update time of the variants.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3VariantsHistory extends com.google.a
   }
 
   /**
-   * Update time of the variants.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3VariantsHistory setUpdateTime(String updateTime) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3VariantsHistory extends com.google.a
   }
 
   /**
-   * The flow versions as the variants.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3VersionVariants getVersionVariants() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3VariantsHistory extends com.google.a
   }
 
   /**
-   * The flow versions as the variants.
    * @param versionVariants versionVariants or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3VariantsHistory setVersionVariants(GoogleCloudDialogflowCxV3VersionVariants versionVariants) {

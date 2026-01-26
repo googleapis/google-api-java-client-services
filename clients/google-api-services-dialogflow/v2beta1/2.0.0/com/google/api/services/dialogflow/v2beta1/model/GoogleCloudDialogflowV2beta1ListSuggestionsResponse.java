@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The response message for Participants.ListSuggestions.
+ * Model definition for GoogleCloudDialogflowV2beta1ListSuggestionsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,25 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ListSuggestionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Token to retrieve the next page of results or empty if there are no more results in
-   * the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Required. The list of suggestions. There will be a maximum number of items returned based on
-   * the page_size field in the request. `suggestions` is sorted by `create_time` in descending
-   * order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Suggestion> suggestions;
 
   /**
-   * Optional. Token to retrieve the next page of results or empty if there are no more results in
-   * the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -56,8 +49,6 @@ public final class GoogleCloudDialogflowV2beta1ListSuggestionsResponse extends c
   }
 
   /**
-   * Optional. Token to retrieve the next page of results or empty if there are no more results in
-   * the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ListSuggestionsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -66,9 +57,6 @@ public final class GoogleCloudDialogflowV2beta1ListSuggestionsResponse extends c
   }
 
   /**
-   * Required. The list of suggestions. There will be a maximum number of items returned based on
-   * the page_size field in the request. `suggestions` is sorted by `create_time` in descending
-   * order.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1Suggestion> getSuggestions() {
@@ -76,9 +64,6 @@ public final class GoogleCloudDialogflowV2beta1ListSuggestionsResponse extends c
   }
 
   /**
-   * Required. The list of suggestions. There will be a maximum number of items returned based on
-   * the page_size field in the request. `suggestions` is sorted by `create_time` in descending
-   * order.
    * @param suggestions suggestions or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ListSuggestionsResponse setSuggestions(java.util.List<GoogleCloudDialogflowV2beta1Suggestion> suggestions) {

@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Config for auth using [Diglogflow service agent](https://cloud.google.com/iam/docs/service-
- * agents#dialogflow-service-agent).
+ * Model definition for GoogleCloudDialogflowCxV3ToolAuthenticationServiceAgentAuthConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,18 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ToolAuthenticationServiceAgentAuthConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicate the auth token type generated from the [Diglogflow service
-   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
-   * generated token is sent in the Authorization header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAgentAuth;
 
   /**
-   * Optional. Indicate the auth token type generated from the [Diglogflow service
-   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
-   * generated token is sent in the Authorization header.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAgentAuth() {
@@ -50,9 +43,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthenticationServiceAgentAuthCo
   }
 
   /**
-   * Optional. Indicate the auth token type generated from the [Diglogflow service
-   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
-   * generated token is sent in the Authorization header.
    * @param serviceAgentAuth serviceAgentAuth or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthenticationServiceAgentAuthConfig setServiceAgentAuth(java.lang.String serviceAgentAuth) {

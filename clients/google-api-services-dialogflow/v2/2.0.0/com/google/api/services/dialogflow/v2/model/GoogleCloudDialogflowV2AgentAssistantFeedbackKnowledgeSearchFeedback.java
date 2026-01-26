@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Feedback for knowledge search.
+ * Model definition for GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchFeedback.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchFeedback extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the answer was copied by the human agent or not. If the value is set to be true,
-   * AnswerFeedback.clicked will be updated to be true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean answerCopied;
 
   /**
-   * The URIs clicked by the human agent. The value is appended for each UpdateAnswerRecordRequest.
-   * If the value is not empty, AnswerFeedback.clicked will be updated to be true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> clickedUris;
 
   /**
-   * Whether the answer was copied by the human agent or not. If the value is set to be true,
-   * AnswerFeedback.clicked will be updated to be true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnswerCopied() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchF
   }
 
   /**
-   * Whether the answer was copied by the human agent or not. If the value is set to be true,
-   * AnswerFeedback.clicked will be updated to be true.
    * @param answerCopied answerCopied or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchFeedback setAnswerCopied(java.lang.Boolean answerCopied) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchF
   }
 
   /**
-   * The URIs clicked by the human agent. The value is appended for each UpdateAnswerRecordRequest.
-   * If the value is not empty, AnswerFeedback.clicked will be updated to be true.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getClickedUris() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchF
   }
 
   /**
-   * The URIs clicked by the human agent. The value is appended for each UpdateAnswerRecordRequest.
-   * If the value is not empty, AnswerFeedback.clicked will be updated to be true.
    * @param clickedUris clickedUris or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedbackKnowledgeSearchFeedback setClickedUris(java.util.List<java.lang.String> clickedUris) {

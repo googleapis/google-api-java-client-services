@@ -17,8 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Specification for custom ranking based on customer specified attribute value. It provides more
- * controls for customized ranking than the simple (condition, boost) combination above.
+ * Model definition for GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoos
+ * tSpecConditionBoostSpecBoostControlSpec.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,42 +31,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The attribute type to be used to determine the boost amount. The attribute value can
-   * be derived from the field value of the specified field_name. In the case of numerical it is
-   * straightforward i.e. attribute_value = numerical_field_value. In the case of freshness however,
-   * attribute_value = (time.now() - datetime_field_value).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attributeType;
 
   /**
-   * Optional. The control points used to define the curve. The monotonic function (defined through
-   * the interpolation_type above) passes through the control points listed here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpecControlPoint> controlPoints;
 
   /**
-   * Optional. The name of the field whose value will be used to determine the boost amount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldName;
 
   /**
-   * Optional. The interpolation type to be applied to connect the control points listed below.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String interpolationType;
 
   /**
-   * Optional. The attribute type to be used to determine the boost amount. The attribute value can
-   * be derived from the field value of the specified field_name. In the case of numerical it is
-   * straightforward i.e. attribute_value = numerical_field_value. In the case of freshness however,
-   * attribute_value = (time.now() - datetime_field_value).
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributeType() {
@@ -74,10 +62,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The attribute type to be used to determine the boost amount. The attribute value can
-   * be derived from the field value of the specified field_name. In the case of numerical it is
-   * straightforward i.e. attribute_value = numerical_field_value. In the case of freshness however,
-   * attribute_value = (time.now() - datetime_field_value).
    * @param attributeType attributeType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpec setAttributeType(java.lang.String attributeType) {
@@ -86,8 +70,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The control points used to define the curve. The monotonic function (defined through
-   * the interpolation_type above) passes through the control points listed here.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpecControlPoint> getControlPoints() {
@@ -95,8 +77,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The control points used to define the curve. The monotonic function (defined through
-   * the interpolation_type above) passes through the control points listed here.
    * @param controlPoints controlPoints or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpec setControlPoints(java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpecControlPoint> controlPoints) {
@@ -105,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The name of the field whose value will be used to determine the boost amount.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldName() {
@@ -113,7 +92,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The name of the field whose value will be used to determine the boost amount.
    * @param fieldName fieldName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpec setFieldName(java.lang.String fieldName) {
@@ -122,7 +100,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The interpolation type to be applied to connect the control points listed below.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterpolationType() {
@@ -130,7 +107,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The interpolation type to be applied to connect the control points listed below.
    * @param interpolationType interpolationType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpec setInterpolationType(java.lang.String interpolationType) {

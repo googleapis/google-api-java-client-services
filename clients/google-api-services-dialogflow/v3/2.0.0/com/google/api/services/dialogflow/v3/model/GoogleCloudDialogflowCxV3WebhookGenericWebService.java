@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents configuration for a generic web service.
+ * Model definition for GoogleCloudDialogflowCxV3WebhookGenericWebService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,126 +30,90 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS
-   * verification. This overrides the default SSL trust store. If this is empty or unspecified,
-   * Dialogflow will use Google's default trust store to verify certificates. N.B. Make sure the
-   * HTTPS server certificates are signed with "subject alt name". For instance a certificate can be
-   * self-signed using the following command, ``` openssl x509 -req -days 200 -in example.com.csr \
-   * -signkey example.com.key \ -out example.com.crt \ -extfile <(printf
-   * "\nsubjectAltName='DNS:www.example.com'") ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedCaCerts;
 
   /**
-   * Optional. HTTP method for the flexible webhook calls. Standard webhook always uses POST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String httpMethod;
 
   /**
-   * Optional. The OAuth configuration of the webhook. If specified, Dialogflow will initiate the
-   * OAuth client credential flow to exchange an access token from the 3rd party platform and put it
-   * in the auth header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3WebhookGenericWebServiceOAuthConfig oauthConfig;
 
   /**
-   * Optional. Maps the values extracted from specific fields of the flexible webhook response into
-   * session parameters. - Key: session parameter name - Value: field path in the webhook response
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> parameterMapping;
 
   /**
-   * The password for HTTP Basic authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String password;
 
   /**
-   * Optional. Defines a custom JSON object as request body to send to flexible webhook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestBody;
 
   /**
-   * The HTTP request headers to send together with webhook requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> requestHeaders;
 
   /**
-   * Optional. The SecretManager secret version resource storing the username:password pair for HTTP
-   * Basic authentication. Format: `projects/{project}/secrets/{secret}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretVersionForUsernamePassword;
 
   /**
-   * Optional. The HTTP request headers to send together with webhook requests. Header values are
-   * stored in SecretManager secret versions. When the same header name is specified in both
-   * `request_headers` and `secret_versions_for_request_headers`, the value in
-   * `secret_versions_for_request_headers` will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue> secretVersionsForRequestHeaders;
 
   /**
-   * Optional. Configuration for service account authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3WebhookGenericWebServiceServiceAccountAuthConfig serviceAccountAuthConfig;
 
   /**
-   * Optional. Indicate the auth token type generated from the [Diglogflow service
-   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
-   * generated token is sent in the Authorization header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAgentAuth;
 
   /**
-   * Required. The webhook URI for receiving POST requests. It must use https protocol.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * The user name for HTTP Basic authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
 
   /**
-   * Optional. Type of the webhook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String webhookType;
 
   /**
-   * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS
-   * verification. This overrides the default SSL trust store. If this is empty or unspecified,
-   * Dialogflow will use Google's default trust store to verify certificates. N.B. Make sure the
-   * HTTPS server certificates are signed with "subject alt name". For instance a certificate can be
-   * self-signed using the following command, ``` openssl x509 -req -days 200 -in example.com.csr \
-   * -signkey example.com.key \ -out example.com.crt \ -extfile <(printf
-   * "\nsubjectAltName='DNS:www.example.com'") ```
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedCaCerts() {
@@ -157,13 +121,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS
-   * verification. This overrides the default SSL trust store. If this is empty or unspecified,
-   * Dialogflow will use Google's default trust store to verify certificates. N.B. Make sure the
-   * HTTPS server certificates are signed with "subject alt name". For instance a certificate can be
-   * self-signed using the following command, ``` openssl x509 -req -days 200 -in example.com.csr \
-   * -signkey example.com.key \ -out example.com.crt \ -extfile <(printf
-   * "\nsubjectAltName='DNS:www.example.com'") ```
    * @param allowedCaCerts allowedCaCerts or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setAllowedCaCerts(java.util.List<java.lang.String> allowedCaCerts) {
@@ -172,7 +129,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. HTTP method for the flexible webhook calls. Standard webhook always uses POST.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpMethod() {
@@ -180,7 +136,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. HTTP method for the flexible webhook calls. Standard webhook always uses POST.
    * @param httpMethod httpMethod or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setHttpMethod(java.lang.String httpMethod) {
@@ -189,9 +144,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. The OAuth configuration of the webhook. If specified, Dialogflow will initiate the
-   * OAuth client credential flow to exchange an access token from the 3rd party platform and put it
-   * in the auth header.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebServiceOAuthConfig getOauthConfig() {
@@ -199,9 +151,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. The OAuth configuration of the webhook. If specified, Dialogflow will initiate the
-   * OAuth client credential flow to exchange an access token from the 3rd party platform and put it
-   * in the auth header.
    * @param oauthConfig oauthConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setOauthConfig(GoogleCloudDialogflowCxV3WebhookGenericWebServiceOAuthConfig oauthConfig) {
@@ -210,8 +159,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Maps the values extracted from specific fields of the flexible webhook response into
-   * session parameters. - Key: session parameter name - Value: field path in the webhook response
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getParameterMapping() {
@@ -219,8 +166,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Maps the values extracted from specific fields of the flexible webhook response into
-   * session parameters. - Key: session parameter name - Value: field path in the webhook response
    * @param parameterMapping parameterMapping or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setParameterMapping(java.util.Map<String, java.lang.String> parameterMapping) {
@@ -229,7 +174,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * The password for HTTP Basic authentication.
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -237,7 +181,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * The password for HTTP Basic authentication.
    * @param password password or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setPassword(java.lang.String password) {
@@ -246,7 +189,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Defines a custom JSON object as request body to send to flexible webhook.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestBody() {
@@ -254,7 +196,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Defines a custom JSON object as request body to send to flexible webhook.
    * @param requestBody requestBody or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setRequestBody(java.lang.String requestBody) {
@@ -263,7 +204,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * The HTTP request headers to send together with webhook requests.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getRequestHeaders() {
@@ -271,7 +211,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * The HTTP request headers to send together with webhook requests.
    * @param requestHeaders requestHeaders or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setRequestHeaders(java.util.Map<String, java.lang.String> requestHeaders) {
@@ -280,8 +219,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. The SecretManager secret version resource storing the username:password pair for HTTP
-   * Basic authentication. Format: `projects/{project}/secrets/{secret}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretVersionForUsernamePassword() {
@@ -289,8 +226,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. The SecretManager secret version resource storing the username:password pair for HTTP
-   * Basic authentication. Format: `projects/{project}/secrets/{secret}/versions/{version}`
    * @param secretVersionForUsernamePassword secretVersionForUsernamePassword or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setSecretVersionForUsernamePassword(java.lang.String secretVersionForUsernamePassword) {
@@ -299,10 +234,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. The HTTP request headers to send together with webhook requests. Header values are
-   * stored in SecretManager secret versions. When the same header name is specified in both
-   * `request_headers` and `secret_versions_for_request_headers`, the value in
-   * `secret_versions_for_request_headers` will be used.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue> getSecretVersionsForRequestHeaders() {
@@ -310,10 +241,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. The HTTP request headers to send together with webhook requests. Header values are
-   * stored in SecretManager secret versions. When the same header name is specified in both
-   * `request_headers` and `secret_versions_for_request_headers`, the value in
-   * `secret_versions_for_request_headers` will be used.
    * @param secretVersionsForRequestHeaders secretVersionsForRequestHeaders or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setSecretVersionsForRequestHeaders(java.util.Map<String, GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue> secretVersionsForRequestHeaders) {
@@ -322,7 +249,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Configuration for service account authentication.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebServiceServiceAccountAuthConfig getServiceAccountAuthConfig() {
@@ -330,7 +256,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Configuration for service account authentication.
    * @param serviceAccountAuthConfig serviceAccountAuthConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setServiceAccountAuthConfig(GoogleCloudDialogflowCxV3WebhookGenericWebServiceServiceAccountAuthConfig serviceAccountAuthConfig) {
@@ -339,9 +264,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Indicate the auth token type generated from the [Diglogflow service
-   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
-   * generated token is sent in the Authorization header.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAgentAuth() {
@@ -349,9 +271,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Indicate the auth token type generated from the [Diglogflow service
-   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
-   * generated token is sent in the Authorization header.
    * @param serviceAgentAuth serviceAgentAuth or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setServiceAgentAuth(java.lang.String serviceAgentAuth) {
@@ -360,7 +279,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Required. The webhook URI for receiving POST requests. It must use https protocol.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -368,7 +286,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Required. The webhook URI for receiving POST requests. It must use https protocol.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setUri(java.lang.String uri) {
@@ -377,7 +294,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * The user name for HTTP Basic authentication.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -385,7 +301,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * The user name for HTTP Basic authentication.
    * @param username username or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setUsername(java.lang.String username) {
@@ -394,7 +309,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Type of the webhook.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebhookType() {
@@ -402,7 +316,6 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   }
 
   /**
-   * Optional. Type of the webhook.
    * @param webhookType webhookType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setWebhookType(java.lang.String webhookType) {

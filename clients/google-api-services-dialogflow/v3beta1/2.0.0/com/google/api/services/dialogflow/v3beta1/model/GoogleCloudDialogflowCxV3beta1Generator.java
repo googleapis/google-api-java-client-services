@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Generators contain prompt to be sent to the LLM model to generate text. The prompt can contain
- * parameters which will be resolved before calling the model. It can optionally contain banned
- * phrases to ensure the model responses are safe.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Generator.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,55 +30,42 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The human-readable name of the generator, unique within the agent. The prompt
-   * contains pre-defined parameters such as $conversation, $last-user-utterance, etc. populated by
-   * Dialogflow. It can also contain custom placeholders which will be resolved during fulfillment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The LLM model settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings;
 
   /**
-   * Parameters passed to the LLM to configure its behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1GeneratorModelParameter modelParameter;
 
   /**
-   * The unique identifier of the generator. Must be set for the Generators.UpdateGenerator method.
-   * Generators.CreateGenerate populates the name automatically. Format:
-   * `projects//locations//agents//generators/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. List of custom placeholders in the prompt text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1GeneratorPlaceholder> placeholders;
 
   /**
-   * Required. Prompt for the LLM model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Phrase promptText;
 
   /**
-   * Required. The human-readable name of the generator, unique within the agent. The prompt
-   * contains pre-defined parameters such as $conversation, $last-user-utterance, etc. populated by
-   * Dialogflow. It can also contain custom placeholders which will be resolved during fulfillment.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -88,9 +73,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * Required. The human-readable name of the generator, unique within the agent. The prompt
-   * contains pre-defined parameters such as $conversation, $last-user-utterance, etc. populated by
-   * Dialogflow. It can also contain custom placeholders which will be resolved during fulfillment.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Generator setDisplayName(java.lang.String displayName) {
@@ -99,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * The LLM model settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettings getLlmModelSettings() {
@@ -107,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * The LLM model settings.
    * @param llmModelSettings llmModelSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Generator setLlmModelSettings(GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings) {
@@ -116,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * Parameters passed to the LLM to configure its behavior.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GeneratorModelParameter getModelParameter() {
@@ -124,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * Parameters passed to the LLM to configure its behavior.
    * @param modelParameter modelParameter or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Generator setModelParameter(GoogleCloudDialogflowCxV3beta1GeneratorModelParameter modelParameter) {
@@ -133,9 +111,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * The unique identifier of the generator. Must be set for the Generators.UpdateGenerator method.
-   * Generators.CreateGenerate populates the name automatically. Format:
-   * `projects//locations//agents//generators/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -143,9 +118,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * The unique identifier of the generator. Must be set for the Generators.UpdateGenerator method.
-   * Generators.CreateGenerate populates the name automatically. Format:
-   * `projects//locations//agents//generators/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Generator setName(java.lang.String name) {
@@ -154,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * Optional. List of custom placeholders in the prompt text.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1GeneratorPlaceholder> getPlaceholders() {
@@ -162,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * Optional. List of custom placeholders in the prompt text.
    * @param placeholders placeholders or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Generator setPlaceholders(java.util.List<GoogleCloudDialogflowCxV3beta1GeneratorPlaceholder> placeholders) {
@@ -171,7 +141,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * Required. Prompt for the LLM model.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Phrase getPromptText() {
@@ -179,7 +148,6 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   }
 
   /**
-   * Required. Prompt for the LLM model.
    * @param promptText promptText or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Generator setPromptText(GoogleCloudDialogflowCxV3beta1Phrase promptText) {

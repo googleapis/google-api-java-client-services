@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Metadata for a ConversationModels.CreateConversationModel operation.
+ * Model definition for GoogleCloudDialogflowV2CreateConversationModelOperationMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,36 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2CreateConversationModelOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the conversation model. Format: `projects//conversationModels/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationModel;
 
   /**
-   * Timestamp when the request to create conversation model is submitted. The time is measured on
-   * server side.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The time when the operation finished.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String doneTime;
 
   /**
-   * State of CreateConversationModel operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The resource name of the conversation model. Format: `projects//conversationModels/`
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationModel() {
@@ -67,7 +61,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelOperationMetada
   }
 
   /**
-   * The resource name of the conversation model. Format: `projects//conversationModels/`
    * @param conversationModel conversationModel or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationModelOperationMetadata setConversationModel(java.lang.String conversationModel) {
@@ -76,8 +69,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelOperationMetada
   }
 
   /**
-   * Timestamp when the request to create conversation model is submitted. The time is measured on
-   * server side.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -85,8 +76,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelOperationMetada
   }
 
   /**
-   * Timestamp when the request to create conversation model is submitted. The time is measured on
-   * server side.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationModelOperationMetadata setCreateTime(String createTime) {
@@ -95,7 +84,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelOperationMetada
   }
 
   /**
-   * The time when the operation finished.
    * @return value or {@code null} for none
    */
   public String getDoneTime() {
@@ -103,7 +91,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelOperationMetada
   }
 
   /**
-   * The time when the operation finished.
    * @param doneTime doneTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationModelOperationMetadata setDoneTime(String doneTime) {
@@ -112,7 +99,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelOperationMetada
   }
 
   /**
-   * State of CreateConversationModel operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -120,7 +106,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelOperationMetada
   }
 
   /**
-   * State of CreateConversationModel operation.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationModelOperationMetadata setState(java.lang.String state) {

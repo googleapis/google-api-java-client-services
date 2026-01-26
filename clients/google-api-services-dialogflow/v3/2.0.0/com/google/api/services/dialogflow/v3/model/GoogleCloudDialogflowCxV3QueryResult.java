@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents the result of a conversational query.
+ * Model definition for GoogleCloudDialogflowCxV3QueryResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,179 +30,126 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Returns the current advanced settings including IVR settings. Even though the operations
-   * configured by these settings are performed by Dialogflow, the client may need to perform
-   * special logic at the moment. For example, if Dialogflow exports audio to Google Cloud Storage,
-   * then the client may need to wait for the resulting object to appear in the bucket before
-   * proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings;
 
   /**
-   * Indicates whether the Thumbs up/Thumbs down rating controls are need to be shown for the
-   * response in the Dialogflow Messenger widget.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowAnswerFeedback;
 
   /**
-   * The current Page. Some, not all fields are filled in this message, including but not limited to
-   * `name` and `display_name`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3Flow currentFlow;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3Page currentPage;
 
   /**
-   * Optional. Data store connection feature output signals. Filled only when data stores are
-   * involved in serving the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3DataStoreConnectionSignals dataStoreConnectionSignals;
 
   /**
-   * The free-form diagnostic info. For example, this field could contain webhook call latency. The
-   * fields of this data can change without notice, so you should not write code that depends on its
-   * structure. One of the fields is called "Alternative Matched Intents", which may aid with
-   * debugging. The following describes these intent results: - The list is empty if no intent was
-   * matched to end-user input. - Only intents that are referenced in the currently active flow are
-   * included. - The matched intent is included. - Other intents that could have matched end-user
-   * input, but did not match because they are referenced by intent routes that are out of
-   * [scope](https://cloud.google.com/dialogflow/cx/docs/concept/handler#scope), are included. -
-   * Other intents referenced by intent routes in scope that matched end-user input, but had a lower
-   * confidence score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> diagnosticInfo;
 
   /**
-   * If a DTMF was provided as input, this field will contain a copy of the DtmfInput.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3DtmfInput dtmf;
 
   /**
-   * The Intent that matched the conversational query. Some, not all fields are filled in this
-   * message, including but not limited to: `name` and `display_name`. This field is deprecated,
-   * please use QueryResult.match instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3Intent intent;
 
   /**
-   * The intent detection confidence. Values range from 0.0 (completely uncertain) to 1.0
-   * (completely certain). This value is for informational purpose only and is only used to help
-   * match the best intent within the classification threshold. This value may change for the same
-   * end-user expression at any time due to a model retraining or change in implementation. This
-   * field is deprecated, please use QueryResult.match instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float intentDetectionConfidence;
 
   /**
-   * The language that was triggered during intent detection. See [Language
-   * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
-   * currently supported language codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Intent match result, could be an intent or an event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3Match match;
 
   /**
-   * The collected session parameters. Depending on your protocol or client library language, this
-   * is a map, associative array, symbol table, dictionary, or JSON object composed of a collection
-   * of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value: parameter name * MapValue
-   * type: If parameter's entity type is a composite entity then use map, otherwise, depending on
-   * the parameter value type, it could be one of string, number, boolean, null, list or map. *
-   * MapValue value: If parameter's entity type is a composite entity then use map from composite
-   * entity property names to property values, otherwise, use parameter value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * The list of rich messages returned to the client. Responses vary from simple text messages to
-   * more sophisticated, structured payloads used to drive complex logic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3ResponseMessage> responseMessages;
 
   /**
-   * The sentiment analyss result, which depends on `analyze_query_text_sentiment`, specified in the
-   * request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3SentimentAnalysisResult sentimentAnalysisResult;
 
   /**
-   * If natural language text was provided as input, this field will contain a copy of the text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * If natural language speech audio was provided as input, this field will contain the transcript
-   * for the audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transcript;
 
   /**
-   * If an event was provided as input, this field will contain the name of the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerEvent;
 
   /**
-   * If an intent was provided as input, this field will contain a copy of the intent identifier.
-   * Format: `projects//locations//agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerIntent;
 
   /**
-   * The list of webhook payload in WebhookResponse.payload, in the order of call sequence. If some
-   * webhook call fails or doesn't return any payload, an empty `Struct` would be used instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.util.Map<String, java.lang.Object>> webhookPayloads;
 
   /**
-   * The list of webhook call status in the order of call sequence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleRpcStatus> webhookStatuses;
 
   /**
-   * Returns the current advanced settings including IVR settings. Even though the operations
-   * configured by these settings are performed by Dialogflow, the client may need to perform
-   * special logic at the moment. For example, if Dialogflow exports audio to Google Cloud Storage,
-   * then the client may need to wait for the resulting object to appear in the bucket before
-   * proceeding.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AdvancedSettings getAdvancedSettings() {
@@ -210,11 +157,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * Returns the current advanced settings including IVR settings. Even though the operations
-   * configured by these settings are performed by Dialogflow, the client may need to perform
-   * special logic at the moment. For example, if Dialogflow exports audio to Google Cloud Storage,
-   * then the client may need to wait for the resulting object to appear in the bucket before
-   * proceeding.
    * @param advancedSettings advancedSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings) {
@@ -223,8 +165,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * Indicates whether the Thumbs up/Thumbs down rating controls are need to be shown for the
-   * response in the Dialogflow Messenger widget.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowAnswerFeedback() {
@@ -232,8 +172,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * Indicates whether the Thumbs up/Thumbs down rating controls are need to be shown for the
-   * response in the Dialogflow Messenger widget.
    * @param allowAnswerFeedback allowAnswerFeedback or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setAllowAnswerFeedback(java.lang.Boolean allowAnswerFeedback) {
@@ -242,8 +180,21 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The current Page. Some, not all fields are filled in this message, including but not limited to
-   * `name` and `display_name`.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Flow getCurrentFlow() {
+    return currentFlow;
+  }
+
+  /**
+   * @param currentFlow currentFlow or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3QueryResult setCurrentFlow(GoogleCloudDialogflowCxV3Flow currentFlow) {
+    this.currentFlow = currentFlow;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Page getCurrentPage() {
@@ -251,8 +202,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The current Page. Some, not all fields are filled in this message, including but not limited to
-   * `name` and `display_name`.
    * @param currentPage currentPage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setCurrentPage(GoogleCloudDialogflowCxV3Page currentPage) {
@@ -261,8 +210,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * Optional. Data store connection feature output signals. Filled only when data stores are
-   * involved in serving the query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DataStoreConnectionSignals getDataStoreConnectionSignals() {
@@ -270,8 +217,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * Optional. Data store connection feature output signals. Filled only when data stores are
-   * involved in serving the query.
    * @param dataStoreConnectionSignals dataStoreConnectionSignals or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setDataStoreConnectionSignals(GoogleCloudDialogflowCxV3DataStoreConnectionSignals dataStoreConnectionSignals) {
@@ -280,16 +225,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The free-form diagnostic info. For example, this field could contain webhook call latency. The
-   * fields of this data can change without notice, so you should not write code that depends on its
-   * structure. One of the fields is called "Alternative Matched Intents", which may aid with
-   * debugging. The following describes these intent results: - The list is empty if no intent was
-   * matched to end-user input. - Only intents that are referenced in the currently active flow are
-   * included. - The matched intent is included. - Other intents that could have matched end-user
-   * input, but did not match because they are referenced by intent routes that are out of
-   * [scope](https://cloud.google.com/dialogflow/cx/docs/concept/handler#scope), are included. -
-   * Other intents referenced by intent routes in scope that matched end-user input, but had a lower
-   * confidence score.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getDiagnosticInfo() {
@@ -297,16 +232,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The free-form diagnostic info. For example, this field could contain webhook call latency. The
-   * fields of this data can change without notice, so you should not write code that depends on its
-   * structure. One of the fields is called "Alternative Matched Intents", which may aid with
-   * debugging. The following describes these intent results: - The list is empty if no intent was
-   * matched to end-user input. - Only intents that are referenced in the currently active flow are
-   * included. - The matched intent is included. - Other intents that could have matched end-user
-   * input, but did not match because they are referenced by intent routes that are out of
-   * [scope](https://cloud.google.com/dialogflow/cx/docs/concept/handler#scope), are included. -
-   * Other intents referenced by intent routes in scope that matched end-user input, but had a lower
-   * confidence score.
    * @param diagnosticInfo diagnosticInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setDiagnosticInfo(java.util.Map<String, java.lang.Object> diagnosticInfo) {
@@ -315,7 +240,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If a DTMF was provided as input, this field will contain a copy of the DtmfInput.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DtmfInput getDtmf() {
@@ -323,7 +247,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If a DTMF was provided as input, this field will contain a copy of the DtmfInput.
    * @param dtmf dtmf or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setDtmf(GoogleCloudDialogflowCxV3DtmfInput dtmf) {
@@ -332,9 +255,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The Intent that matched the conversational query. Some, not all fields are filled in this
-   * message, including but not limited to: `name` and `display_name`. This field is deprecated,
-   * please use QueryResult.match instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Intent getIntent() {
@@ -342,9 +262,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The Intent that matched the conversational query. Some, not all fields are filled in this
-   * message, including but not limited to: `name` and `display_name`. This field is deprecated,
-   * please use QueryResult.match instead.
    * @param intent intent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setIntent(GoogleCloudDialogflowCxV3Intent intent) {
@@ -353,11 +270,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The intent detection confidence. Values range from 0.0 (completely uncertain) to 1.0
-   * (completely certain). This value is for informational purpose only and is only used to help
-   * match the best intent within the classification threshold. This value may change for the same
-   * end-user expression at any time due to a model retraining or change in implementation. This
-   * field is deprecated, please use QueryResult.match instead.
    * @return value or {@code null} for none
    */
   public java.lang.Float getIntentDetectionConfidence() {
@@ -365,11 +277,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The intent detection confidence. Values range from 0.0 (completely uncertain) to 1.0
-   * (completely certain). This value is for informational purpose only and is only used to help
-   * match the best intent within the classification threshold. This value may change for the same
-   * end-user expression at any time due to a model retraining or change in implementation. This
-   * field is deprecated, please use QueryResult.match instead.
    * @param intentDetectionConfidence intentDetectionConfidence or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setIntentDetectionConfidence(java.lang.Float intentDetectionConfidence) {
@@ -378,9 +285,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The language that was triggered during intent detection. See [Language
-   * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
-   * currently supported language codes.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -388,9 +292,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The language that was triggered during intent detection. See [Language
-   * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
-   * currently supported language codes.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setLanguageCode(java.lang.String languageCode) {
@@ -399,7 +300,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * Intent match result, could be an intent or an event.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Match getMatch() {
@@ -407,7 +307,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * Intent match result, could be an intent or an event.
    * @param match match or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setMatch(GoogleCloudDialogflowCxV3Match match) {
@@ -416,13 +315,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The collected session parameters. Depending on your protocol or client library language, this
-   * is a map, associative array, symbol table, dictionary, or JSON object composed of a collection
-   * of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value: parameter name * MapValue
-   * type: If parameter's entity type is a composite entity then use map, otherwise, depending on
-   * the parameter value type, it could be one of string, number, boolean, null, list or map. *
-   * MapValue value: If parameter's entity type is a composite entity then use map from composite
-   * entity property names to property values, otherwise, use parameter value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -430,13 +322,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The collected session parameters. Depending on your protocol or client library language, this
-   * is a map, associative array, symbol table, dictionary, or JSON object composed of a collection
-   * of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value: parameter name * MapValue
-   * type: If parameter's entity type is a composite entity then use map, otherwise, depending on
-   * the parameter value type, it could be one of string, number, boolean, null, list or map. *
-   * MapValue value: If parameter's entity type is a composite entity then use map from composite
-   * entity property names to property values, otherwise, use parameter value.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setParameters(java.util.Map<String, java.lang.Object> parameters) {
@@ -445,8 +330,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The list of rich messages returned to the client. Responses vary from simple text messages to
-   * more sophisticated, structured payloads used to drive complex logic.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3ResponseMessage> getResponseMessages() {
@@ -454,8 +337,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The list of rich messages returned to the client. Responses vary from simple text messages to
-   * more sophisticated, structured payloads used to drive complex logic.
    * @param responseMessages responseMessages or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setResponseMessages(java.util.List<GoogleCloudDialogflowCxV3ResponseMessage> responseMessages) {
@@ -464,8 +345,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The sentiment analyss result, which depends on `analyze_query_text_sentiment`, specified in the
-   * request.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SentimentAnalysisResult getSentimentAnalysisResult() {
@@ -473,8 +352,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The sentiment analyss result, which depends on `analyze_query_text_sentiment`, specified in the
-   * request.
    * @param sentimentAnalysisResult sentimentAnalysisResult or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setSentimentAnalysisResult(GoogleCloudDialogflowCxV3SentimentAnalysisResult sentimentAnalysisResult) {
@@ -483,7 +360,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If natural language text was provided as input, this field will contain a copy of the text.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -491,7 +367,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If natural language text was provided as input, this field will contain a copy of the text.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setText(java.lang.String text) {
@@ -500,8 +375,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If natural language speech audio was provided as input, this field will contain the transcript
-   * for the audio.
    * @return value or {@code null} for none
    */
   public java.lang.String getTranscript() {
@@ -509,8 +382,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If natural language speech audio was provided as input, this field will contain the transcript
-   * for the audio.
    * @param transcript transcript or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setTranscript(java.lang.String transcript) {
@@ -519,7 +390,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If an event was provided as input, this field will contain the name of the event.
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerEvent() {
@@ -527,7 +397,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If an event was provided as input, this field will contain the name of the event.
    * @param triggerEvent triggerEvent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setTriggerEvent(java.lang.String triggerEvent) {
@@ -536,8 +405,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If an intent was provided as input, this field will contain a copy of the intent identifier.
-   * Format: `projects//locations//agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerIntent() {
@@ -545,8 +412,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * If an intent was provided as input, this field will contain a copy of the intent identifier.
-   * Format: `projects//locations//agents//intents/`.
    * @param triggerIntent triggerIntent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setTriggerIntent(java.lang.String triggerIntent) {
@@ -555,8 +420,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The list of webhook payload in WebhookResponse.payload, in the order of call sequence. If some
-   * webhook call fails or doesn't return any payload, an empty `Struct` would be used instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.util.Map<String, java.lang.Object>> getWebhookPayloads() {
@@ -564,8 +427,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The list of webhook payload in WebhookResponse.payload, in the order of call sequence. If some
-   * webhook call fails or doesn't return any payload, an empty `Struct` would be used instead.
    * @param webhookPayloads webhookPayloads or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setWebhookPayloads(java.util.List<java.util.Map<String, java.lang.Object>> webhookPayloads) {
@@ -574,7 +435,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The list of webhook call status in the order of call sequence.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleRpcStatus> getWebhookStatuses() {
@@ -582,7 +442,6 @@ public final class GoogleCloudDialogflowCxV3QueryResult extends com.google.api.c
   }
 
   /**
-   * The list of webhook call status in the order of call sequence.
    * @param webhookStatuses webhookStatuses or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult setWebhookStatuses(java.util.List<GoogleRpcStatus> webhookStatuses) {

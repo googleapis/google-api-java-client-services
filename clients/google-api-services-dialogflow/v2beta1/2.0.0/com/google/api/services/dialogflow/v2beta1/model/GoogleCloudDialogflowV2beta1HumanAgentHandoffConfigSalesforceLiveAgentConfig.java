@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Configuration specific to Salesforce Live Agent.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,38 +31,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Live Agent chat button ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String buttonId;
 
   /**
-   * Required. Live Agent deployment ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deploymentId;
 
   /**
-   * Required. Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in
-   * the `Live Agent settings` page. For example if URL has the form
-   * https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in
-   * d.la4-c2-phx.salesforceliveagent.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String endpointDomain;
 
   /**
-   * Required. The organization ID of the Salesforce account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String organizationId;
 
   /**
-   * Required. Live Agent chat button ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getButtonId() {
@@ -69,7 +62,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
   }
 
   /**
-   * Required. Live Agent chat button ID.
    * @param buttonId buttonId or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfig setButtonId(java.lang.String buttonId) {
@@ -78,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
   }
 
   /**
-   * Required. Live Agent deployment ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentId() {
@@ -86,7 +77,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
   }
 
   /**
-   * Required. Live Agent deployment ID.
    * @param deploymentId deploymentId or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfig setDeploymentId(java.lang.String deploymentId) {
@@ -95,10 +85,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
   }
 
   /**
-   * Required. Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in
-   * the `Live Agent settings` page. For example if URL has the form
-   * https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in
-   * d.la4-c2-phx.salesforceliveagent.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndpointDomain() {
@@ -106,10 +92,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
   }
 
   /**
-   * Required. Domain of the Live Agent endpoint for this agent. You can find the endpoint URL in
-   * the `Live Agent settings` page. For example if URL has the form
-   * https://d.la4-c2-phx.salesforceliveagent.com/..., you should fill in
-   * d.la4-c2-phx.salesforceliveagent.com.
    * @param endpointDomain endpointDomain or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfig setEndpointDomain(java.lang.String endpointDomain) {
@@ -118,7 +100,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
   }
 
   /**
-   * Required. The organization ID of the Salesforce account.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrganizationId() {
@@ -126,7 +107,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
   }
 
   /**
-   * Required. The organization ID of the Salesforce account.
    * @param organizationId organizationId or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfig setOrganizationId(java.lang.String organizationId) {

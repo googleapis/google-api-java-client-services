@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for ConversationProfiles.SetSuggestionFeatureConfig.
+ * Model definition for GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The participant role to add or update the suggestion feature config. Only HUMAN_AGENT
-   * or END_USER can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String participantRole;
 
   /**
-   * Required. The suggestion feature config to add or update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig suggestionFeatureConfig;
 
   /**
-   * Required. The participant role to add or update the suggestion feature config. Only HUMAN_AGENT
-   * or END_USER can be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getParticipantRole() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest exte
   }
 
   /**
-   * Required. The participant role to add or update the suggestion feature config. Only HUMAN_AGENT
-   * or END_USER can be used.
    * @param participantRole participantRole or {@code null} for none
    */
   public GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest setParticipantRole(java.lang.String participantRole) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest exte
   }
 
   /**
-   * Required. The suggestion feature config to add or update.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig getSuggestionFeatureConfig() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest exte
   }
 
   /**
-   * Required. The suggestion feature config to add or update.
    * @param suggestionFeatureConfig suggestionFeatureConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequest setSuggestionFeatureConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig suggestionFeatureConfig) {

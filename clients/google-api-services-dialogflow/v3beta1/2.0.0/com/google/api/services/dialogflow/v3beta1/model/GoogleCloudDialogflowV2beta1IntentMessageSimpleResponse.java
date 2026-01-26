@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The simple response message containing speech or text.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The text to display.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayText;
 
   /**
-   * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the
-   * SSML format. Mutually exclusive with text_to_speech.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ssml;
 
   /**
-   * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually
-   * exclusive with ssml.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String textToSpeech;
 
   /**
-   * Optional. The text to display.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayText() {
@@ -61,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse exten
   }
 
   /**
-   * Optional. The text to display.
    * @param displayText displayText or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse setDisplayText(java.lang.String displayText) {
@@ -70,8 +63,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse exten
   }
 
   /**
-   * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the
-   * SSML format. Mutually exclusive with text_to_speech.
    * @return value or {@code null} for none
    */
   public java.lang.String getSsml() {
@@ -79,8 +70,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse exten
   }
 
   /**
-   * One of text_to_speech or ssml must be provided. Structured spoken response to the user in the
-   * SSML format. Mutually exclusive with text_to_speech.
    * @param ssml ssml or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse setSsml(java.lang.String ssml) {
@@ -89,8 +78,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse exten
   }
 
   /**
-   * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually
-   * exclusive with ssml.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextToSpeech() {
@@ -98,8 +85,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse exten
   }
 
   /**
-   * One of text_to_speech or ssml must be provided. The plain text of the speech output. Mutually
-   * exclusive with ssml.
    * @param textToSpeech textToSpeech or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponse setTextToSpeech(java.lang.String textToSpeech) {

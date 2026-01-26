@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The request message for Agents.ImportAgent.
+ * Model definition for GoogleCloudDialogflowV2beta1ImportAgentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,25 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ImportAgentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Zip compressed raw byte content for agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentContent;
 
   /**
-   * The URI to a Google Cloud Storage file containing the agent to import. Note: The URI must start
-   * with "gs://". Dialogflow performs a read operation for the Cloud Storage object on the caller's
-   * behalf, so your request authentication must have read permissions for the object. For more
-   * information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentUri;
 
   /**
-   * Zip compressed raw byte content for agent.
    * @see #decodeAgentContent()
    * @return value or {@code null} for none
    */
@@ -57,7 +50,7 @@ public final class GoogleCloudDialogflowV2beta1ImportAgentRequest extends com.go
   }
 
   /**
-   * Zip compressed raw byte content for agent.
+
    * @see #getAgentContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -68,7 +61,6 @@ public final class GoogleCloudDialogflowV2beta1ImportAgentRequest extends com.go
   }
 
   /**
-   * Zip compressed raw byte content for agent.
    * @see #encodeAgentContent()
    * @param agentContent agentContent or {@code null} for none
    */
@@ -78,7 +70,7 @@ public final class GoogleCloudDialogflowV2beta1ImportAgentRequest extends com.go
   }
 
   /**
-   * Zip compressed raw byte content for agent.
+
    * @see #setAgentContent()
    *
    * <p>
@@ -93,11 +85,6 @@ public final class GoogleCloudDialogflowV2beta1ImportAgentRequest extends com.go
   }
 
   /**
-   * The URI to a Google Cloud Storage file containing the agent to import. Note: The URI must start
-   * with "gs://". Dialogflow performs a read operation for the Cloud Storage object on the caller's
-   * behalf, so your request authentication must have read permissions for the object. For more
-   * information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentUri() {
@@ -105,11 +92,6 @@ public final class GoogleCloudDialogflowV2beta1ImportAgentRequest extends com.go
   }
 
   /**
-   * The URI to a Google Cloud Storage file containing the agent to import. Note: The URI must start
-   * with "gs://". Dialogflow performs a read operation for the Cloud Storage object on the caller's
-   * behalf, so your request authentication must have read permissions for the object. For more
-   * information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param agentUri agentUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ImportAgentRequest setAgentUri(java.lang.String agentUri) {

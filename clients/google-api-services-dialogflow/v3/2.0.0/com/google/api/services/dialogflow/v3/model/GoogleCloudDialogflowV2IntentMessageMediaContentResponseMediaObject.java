@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Response media object for media content card.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,42 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Url where the media is stored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentUrl;
 
   /**
-   * Optional. Description of media card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. Icon to display above media content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageImage icon;
 
   /**
-   * Optional. Image to display above media content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageImage largeImage;
 
   /**
-   * Required. Name of media card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Url where the media is stored.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentUrl() {
@@ -73,7 +67,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
   }
 
   /**
-   * Required. Url where the media is stored.
    * @param contentUrl contentUrl or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject setContentUrl(java.lang.String contentUrl) {
@@ -82,7 +75,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
   }
 
   /**
-   * Optional. Description of media card.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -90,7 +82,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
   }
 
   /**
-   * Optional. Description of media card.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject setDescription(java.lang.String description) {
@@ -99,7 +90,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
   }
 
   /**
-   * Optional. Icon to display above media content.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageImage getIcon() {
@@ -107,7 +97,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
   }
 
   /**
-   * Optional. Icon to display above media content.
    * @param icon icon or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject setIcon(GoogleCloudDialogflowV2IntentMessageImage icon) {
@@ -116,7 +105,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
   }
 
   /**
-   * Optional. Image to display above media content.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageImage getLargeImage() {
@@ -124,7 +112,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
   }
 
   /**
-   * Optional. Image to display above media content.
    * @param largeImage largeImage or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject setLargeImage(GoogleCloudDialogflowV2IntentMessageImage largeImage) {
@@ -133,7 +120,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
   }
 
   /**
-   * Required. Name of media card.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -141,7 +127,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
   }
 
   /**
-   * Required. Name of media card.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject setName(java.lang.String name) {

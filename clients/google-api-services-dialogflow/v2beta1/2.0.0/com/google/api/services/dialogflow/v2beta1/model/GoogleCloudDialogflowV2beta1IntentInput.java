@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the intent to trigger programmatically rather than as a result of natural language
- * processing. The intent input is only used for V3 agent.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,25 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The unique identifier of the intent in V3 agent. Format:
-   * `projects//locations//locations//agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intent;
 
   /**
-   * Required. The language of this conversational query. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Required. The unique identifier of the intent in V3 agent. Format:
-   * `projects//locations//locations//agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntent() {
@@ -57,8 +49,6 @@ public final class GoogleCloudDialogflowV2beta1IntentInput extends com.google.ap
   }
 
   /**
-   * Required. The unique identifier of the intent in V3 agent. Format:
-   * `projects//locations//locations//agents//intents/`.
    * @param intent intent or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentInput setIntent(java.lang.String intent) {
@@ -67,9 +57,6 @@ public final class GoogleCloudDialogflowV2beta1IntentInput extends com.google.ap
   }
 
   /**
-   * Required. The language of this conversational query. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -77,9 +64,6 @@ public final class GoogleCloudDialogflowV2beta1IntentInput extends com.google.ap
   }
 
   /**
-   * Required. The language of this conversational query. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentInput setLanguageCode(java.lang.String languageCode) {

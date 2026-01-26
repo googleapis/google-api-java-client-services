@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Free form generator context that customer can configure.
+ * Model definition for GoogleCloudDialogflowV2FreeFormContext.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2FreeFormContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Free form text input to LLM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Optional. Free form text input to LLM.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2FreeFormContext extends com.google.api
   }
 
   /**
-   * Optional. Free form text input to LLM.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2FreeFormContext setText(java.lang.String text) {

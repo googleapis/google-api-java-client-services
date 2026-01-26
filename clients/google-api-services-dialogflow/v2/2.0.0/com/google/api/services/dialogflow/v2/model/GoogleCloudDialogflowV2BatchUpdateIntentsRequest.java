@@ -30,46 +30,36 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The collection of intents to update or create.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentBatch intentBatchInline;
 
   /**
-   * The URI to a Google Cloud Storage file containing intents to update or create. The file format
-   * can either be a serialized proto (of IntentBatch type) or JSON object. Note: The URI must start
-   * with "gs://".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intentBatchUri;
 
   /**
-   * Optional. The resource view to apply to the returned intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intentView;
 
   /**
-   * Optional. The language used to access language-specific data. If not specified, the agent's
-   * default language is used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Optional. The mask to control which fields get updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateMask;
 
   /**
-   * The collection of intents to update or create.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentBatch getIntentBatchInline() {
@@ -77,7 +67,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.
   }
 
   /**
-   * The collection of intents to update or create.
    * @param intentBatchInline intentBatchInline or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchUpdateIntentsRequest setIntentBatchInline(GoogleCloudDialogflowV2IntentBatch intentBatchInline) {
@@ -86,9 +75,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.
   }
 
   /**
-   * The URI to a Google Cloud Storage file containing intents to update or create. The file format
-   * can either be a serialized proto (of IntentBatch type) or JSON object. Note: The URI must start
-   * with "gs://".
    * @return value or {@code null} for none
    */
   public java.lang.String getIntentBatchUri() {
@@ -96,9 +82,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.
   }
 
   /**
-   * The URI to a Google Cloud Storage file containing intents to update or create. The file format
-   * can either be a serialized proto (of IntentBatch type) or JSON object. Note: The URI must start
-   * with "gs://".
    * @param intentBatchUri intentBatchUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchUpdateIntentsRequest setIntentBatchUri(java.lang.String intentBatchUri) {
@@ -107,7 +90,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.
   }
 
   /**
-   * Optional. The resource view to apply to the returned intent.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntentView() {
@@ -115,7 +97,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.
   }
 
   /**
-   * Optional. The resource view to apply to the returned intent.
    * @param intentView intentView or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchUpdateIntentsRequest setIntentView(java.lang.String intentView) {
@@ -124,9 +105,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.
   }
 
   /**
-   * Optional. The language used to access language-specific data. If not specified, the agent's
-   * default language is used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -134,9 +112,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.
   }
 
   /**
-   * Optional. The language used to access language-specific data. If not specified, the agent's
-   * default language is used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchUpdateIntentsRequest setLanguageCode(java.lang.String languageCode) {
@@ -145,7 +120,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.
   }
 
   /**
-   * Optional. The mask to control which fields get updated.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -153,7 +127,6 @@ public final class GoogleCloudDialogflowV2BatchUpdateIntentsRequest extends com.
   }
 
   /**
-   * Optional. The mask to control which fields get updated.
    * @param updateMask updateMask or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchUpdateIntentsRequest setUpdateMask(String updateMask) {

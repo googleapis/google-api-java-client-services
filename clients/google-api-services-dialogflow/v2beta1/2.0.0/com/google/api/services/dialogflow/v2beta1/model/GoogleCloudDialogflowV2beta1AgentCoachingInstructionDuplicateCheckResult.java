@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Duplication check for the suggestion.
+ * Model definition for GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The duplicate suggestions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResultDuplicateSuggestion> duplicateSuggestions;
 
   /**
-   * Output only. The duplicate suggestions.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResultDuplicateSuggestion> getDuplicateSuggestions() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicate
   }
 
   /**
-   * Output only. The duplicate suggestions.
    * @param duplicateSuggestions duplicateSuggestions or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResult setDuplicateSuggestions(java.util.List<GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResultDuplicateSuggestion> duplicateSuggestions) {

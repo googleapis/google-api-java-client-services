@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Config for suggestion deduping. NEXT_ID: 3
+ * Model definition for GoogleCloudDialogflowV2SuggestionDedupingConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SuggestionDedupingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether to enable suggestion deduping.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableDeduping;
 
   /**
-   * Optional. The threshold for similarity between two suggestions. Acceptable value is [0.0, 1.0],
-   * default to 0.8
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float similarityThreshold;
 
   /**
-   * Optional. Whether to enable suggestion deduping.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableDeduping() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2SuggestionDedupingConfig extends com.g
   }
 
   /**
-   * Optional. Whether to enable suggestion deduping.
    * @param enableDeduping enableDeduping or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestionDedupingConfig setEnableDeduping(java.lang.Boolean enableDeduping) {
@@ -62,8 +57,6 @@ public final class GoogleCloudDialogflowV2SuggestionDedupingConfig extends com.g
   }
 
   /**
-   * Optional. The threshold for similarity between two suggestions. Acceptable value is [0.0, 1.0],
-   * default to 0.8
    * @return value or {@code null} for none
    */
   public java.lang.Float getSimilarityThreshold() {
@@ -71,8 +64,6 @@ public final class GoogleCloudDialogflowV2SuggestionDedupingConfig extends com.g
   }
 
   /**
-   * Optional. The threshold for similarity between two suggestions. Acceptable value is [0.0, 1.0],
-   * default to 0.8
    * @param similarityThreshold similarityThreshold or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestionDedupingConfig setSimilarityThreshold(java.lang.Float similarityThreshold) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents the result of conversational query or event processing.
+ * Model definition for GoogleCloudDialogflowV2QueryResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,41 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The action name from the matched intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * This field is set to: - `false` if the matched intent has required parameters and not all of
-   * the required parameter values have been collected. - `true` if all required parameter values
-   * have been collected, or if the matched intent doesn't contain any required parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allRequiredParamsPresent;
 
   /**
-   * Indicates whether the conversational query triggers a cancellation for slot filling. For more
-   * information, see the [cancel slot filling
-   * documentation](https://cloud.google.com/dialogflow/es/docs/intents-actions-parameters#cancel).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean cancelsSlotFilling;
 
   /**
-   * Free-form diagnostic information for the associated detect intent request. The fields of this
-   * data can change without notice, so you should not write code that depends on its structure. The
-   * data may contain: - webhook call latency - webhook errors
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> diagnosticInfo;
 
   /**
-   * The collection of rich messages to present to the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,46 +66,30 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The text to be pronounced to the user or shown on the screen. Note: This is a legacy field,
-   * `fulfillment_messages` should be preferred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fulfillmentText;
 
   /**
-   * The intent that matched the conversational query. Some, not all fields are filled in this
-   * message, including but not limited to: `name`, `display_name`, `end_interaction` and
-   * `is_fallback`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2Intent intent;
 
   /**
-   * The intent detection confidence. Values range from 0.0 (completely uncertain) to 1.0
-   * (completely certain). This value is for informational purpose only and is only used to help
-   * match the best intent within the classification threshold. This value may change for the same
-   * end-user expression at any time due to a model retraining or change in implementation. If there
-   * are `multiple knowledge_answers` messages, this value is set to the greatest
-   * `knowledgeAnswers.match_confidence` value in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float intentDetectionConfidence;
 
   /**
-   * The language that was triggered during intent detection. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * The collection of output contexts. If applicable, `output_contexts.parameters` contains entries
-   * with name `.original` containing the original parameter values before the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,66 +102,42 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The collection of extracted parameters. Depending on your protocol or client library language,
-   * this is a map, associative array, symbol table, dictionary, or JSON object composed of a
-   * collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value: parameter name *
-   * MapValue type: If parameter's entity type is a composite entity then use map, otherwise,
-   * depending on the parameter value type, it could be one of string, number, boolean, null, list
-   * or map. * MapValue value: If parameter's entity type is a composite entity then use map from
-   * composite entity property names to property values, otherwise, use parameter value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * The original conversational query text: - If natural language text was provided as input,
-   * `query_text` contains a copy of the input. - If natural language speech audio was provided as
-   * input, `query_text` contains the speech recognition result. If speech recognizer produced
-   * multiple alternatives, a particular one is picked. - If automatic spell correction is enabled,
-   * `query_text` will contain the corrected user input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String queryText;
 
   /**
-   * The sentiment analysis result, which depends on the `sentiment_analysis_request_config`
-   * specified in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysisResult;
 
   /**
-   * The Speech recognition confidence between 0.0 and 1.0. A higher number indicates an estimated
-   * greater likelihood that the recognized words are correct. The default of 0.0 is a sentinel
-   * value indicating that confidence was not set. This field is not guaranteed to be accurate or
-   * set. In particular this field isn't set for StreamingDetectIntent since the streaming endpoint
-   * has separate confidence estimates per portion of the audio in StreamingRecognitionResult.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float speechRecognitionConfidence;
 
   /**
-   * If the query was fulfilled by a webhook call, this field is set to the value of the `payload`
-   * field returned in the webhook response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> webhookPayload;
 
   /**
-   * If the query was fulfilled by a webhook call, this field is set to the value of the `source`
-   * field returned in the webhook response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String webhookSource;
 
   /**
-   * The action name from the matched intent.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -196,7 +145,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The action name from the matched intent.
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setAction(java.lang.String action) {
@@ -205,9 +153,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * This field is set to: - `false` if the matched intent has required parameters and not all of
-   * the required parameter values have been collected. - `true` if all required parameter values
-   * have been collected, or if the matched intent doesn't contain any required parameters.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllRequiredParamsPresent() {
@@ -215,9 +160,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * This field is set to: - `false` if the matched intent has required parameters and not all of
-   * the required parameter values have been collected. - `true` if all required parameter values
-   * have been collected, or if the matched intent doesn't contain any required parameters.
    * @param allRequiredParamsPresent allRequiredParamsPresent or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setAllRequiredParamsPresent(java.lang.Boolean allRequiredParamsPresent) {
@@ -226,9 +168,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * Indicates whether the conversational query triggers a cancellation for slot filling. For more
-   * information, see the [cancel slot filling
-   * documentation](https://cloud.google.com/dialogflow/es/docs/intents-actions-parameters#cancel).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCancelsSlotFilling() {
@@ -236,9 +175,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * Indicates whether the conversational query triggers a cancellation for slot filling. For more
-   * information, see the [cancel slot filling
-   * documentation](https://cloud.google.com/dialogflow/es/docs/intents-actions-parameters#cancel).
    * @param cancelsSlotFilling cancelsSlotFilling or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setCancelsSlotFilling(java.lang.Boolean cancelsSlotFilling) {
@@ -247,9 +183,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * Free-form diagnostic information for the associated detect intent request. The fields of this
-   * data can change without notice, so you should not write code that depends on its structure. The
-   * data may contain: - webhook call latency - webhook errors
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getDiagnosticInfo() {
@@ -257,9 +190,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * Free-form diagnostic information for the associated detect intent request. The fields of this
-   * data can change without notice, so you should not write code that depends on its structure. The
-   * data may contain: - webhook call latency - webhook errors
    * @param diagnosticInfo diagnosticInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setDiagnosticInfo(java.util.Map<String, java.lang.Object> diagnosticInfo) {
@@ -268,7 +198,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The collection of rich messages to present to the user.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessage> getFulfillmentMessages() {
@@ -276,7 +205,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The collection of rich messages to present to the user.
    * @param fulfillmentMessages fulfillmentMessages or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setFulfillmentMessages(java.util.List<GoogleCloudDialogflowV2IntentMessage> fulfillmentMessages) {
@@ -285,8 +213,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The text to be pronounced to the user or shown on the screen. Note: This is a legacy field,
-   * `fulfillment_messages` should be preferred.
    * @return value or {@code null} for none
    */
   public java.lang.String getFulfillmentText() {
@@ -294,8 +220,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The text to be pronounced to the user or shown on the screen. Note: This is a legacy field,
-   * `fulfillment_messages` should be preferred.
    * @param fulfillmentText fulfillmentText or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setFulfillmentText(java.lang.String fulfillmentText) {
@@ -304,9 +228,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The intent that matched the conversational query. Some, not all fields are filled in this
-   * message, including but not limited to: `name`, `display_name`, `end_interaction` and
-   * `is_fallback`.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2Intent getIntent() {
@@ -314,9 +235,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The intent that matched the conversational query. Some, not all fields are filled in this
-   * message, including but not limited to: `name`, `display_name`, `end_interaction` and
-   * `is_fallback`.
    * @param intent intent or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setIntent(GoogleCloudDialogflowV2Intent intent) {
@@ -325,12 +243,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The intent detection confidence. Values range from 0.0 (completely uncertain) to 1.0
-   * (completely certain). This value is for informational purpose only and is only used to help
-   * match the best intent within the classification threshold. This value may change for the same
-   * end-user expression at any time due to a model retraining or change in implementation. If there
-   * are `multiple knowledge_answers` messages, this value is set to the greatest
-   * `knowledgeAnswers.match_confidence` value in the list.
    * @return value or {@code null} for none
    */
   public java.lang.Float getIntentDetectionConfidence() {
@@ -338,12 +250,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The intent detection confidence. Values range from 0.0 (completely uncertain) to 1.0
-   * (completely certain). This value is for informational purpose only and is only used to help
-   * match the best intent within the classification threshold. This value may change for the same
-   * end-user expression at any time due to a model retraining or change in implementation. If there
-   * are `multiple knowledge_answers` messages, this value is set to the greatest
-   * `knowledgeAnswers.match_confidence` value in the list.
    * @param intentDetectionConfidence intentDetectionConfidence or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setIntentDetectionConfidence(java.lang.Float intentDetectionConfidence) {
@@ -352,9 +258,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The language that was triggered during intent detection. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -362,9 +265,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The language that was triggered during intent detection. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setLanguageCode(java.lang.String languageCode) {
@@ -373,8 +273,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The collection of output contexts. If applicable, `output_contexts.parameters` contains entries
-   * with name `.original` containing the original parameter values before the query.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2Context> getOutputContexts() {
@@ -382,8 +280,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The collection of output contexts. If applicable, `output_contexts.parameters` contains entries
-   * with name `.original` containing the original parameter values before the query.
    * @param outputContexts outputContexts or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setOutputContexts(java.util.List<GoogleCloudDialogflowV2Context> outputContexts) {
@@ -392,13 +288,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The collection of extracted parameters. Depending on your protocol or client library language,
-   * this is a map, associative array, symbol table, dictionary, or JSON object composed of a
-   * collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value: parameter name *
-   * MapValue type: If parameter's entity type is a composite entity then use map, otherwise,
-   * depending on the parameter value type, it could be one of string, number, boolean, null, list
-   * or map. * MapValue value: If parameter's entity type is a composite entity then use map from
-   * composite entity property names to property values, otherwise, use parameter value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -406,13 +295,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The collection of extracted parameters. Depending on your protocol or client library language,
-   * this is a map, associative array, symbol table, dictionary, or JSON object composed of a
-   * collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value: parameter name *
-   * MapValue type: If parameter's entity type is a composite entity then use map, otherwise,
-   * depending on the parameter value type, it could be one of string, number, boolean, null, list
-   * or map. * MapValue value: If parameter's entity type is a composite entity then use map from
-   * composite entity property names to property values, otherwise, use parameter value.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setParameters(java.util.Map<String, java.lang.Object> parameters) {
@@ -421,11 +303,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The original conversational query text: - If natural language text was provided as input,
-   * `query_text` contains a copy of the input. - If natural language speech audio was provided as
-   * input, `query_text` contains the speech recognition result. If speech recognizer produced
-   * multiple alternatives, a particular one is picked. - If automatic spell correction is enabled,
-   * `query_text` will contain the corrected user input.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryText() {
@@ -433,11 +310,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The original conversational query text: - If natural language text was provided as input,
-   * `query_text` contains a copy of the input. - If natural language speech audio was provided as
-   * input, `query_text` contains the speech recognition result. If speech recognizer produced
-   * multiple alternatives, a particular one is picked. - If automatic spell correction is enabled,
-   * `query_text` will contain the corrected user input.
    * @param queryText queryText or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setQueryText(java.lang.String queryText) {
@@ -446,8 +318,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The sentiment analysis result, which depends on the `sentiment_analysis_request_config`
-   * specified in the request.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SentimentAnalysisResult getSentimentAnalysisResult() {
@@ -455,8 +325,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The sentiment analysis result, which depends on the `sentiment_analysis_request_config`
-   * specified in the request.
    * @param sentimentAnalysisResult sentimentAnalysisResult or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setSentimentAnalysisResult(GoogleCloudDialogflowV2SentimentAnalysisResult sentimentAnalysisResult) {
@@ -465,11 +333,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The Speech recognition confidence between 0.0 and 1.0. A higher number indicates an estimated
-   * greater likelihood that the recognized words are correct. The default of 0.0 is a sentinel
-   * value indicating that confidence was not set. This field is not guaranteed to be accurate or
-   * set. In particular this field isn't set for StreamingDetectIntent since the streaming endpoint
-   * has separate confidence estimates per portion of the audio in StreamingRecognitionResult.
    * @return value or {@code null} for none
    */
   public java.lang.Float getSpeechRecognitionConfidence() {
@@ -477,11 +340,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * The Speech recognition confidence between 0.0 and 1.0. A higher number indicates an estimated
-   * greater likelihood that the recognized words are correct. The default of 0.0 is a sentinel
-   * value indicating that confidence was not set. This field is not guaranteed to be accurate or
-   * set. In particular this field isn't set for StreamingDetectIntent since the streaming endpoint
-   * has separate confidence estimates per portion of the audio in StreamingRecognitionResult.
    * @param speechRecognitionConfidence speechRecognitionConfidence or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setSpeechRecognitionConfidence(java.lang.Float speechRecognitionConfidence) {
@@ -490,8 +348,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * If the query was fulfilled by a webhook call, this field is set to the value of the `payload`
-   * field returned in the webhook response.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getWebhookPayload() {
@@ -499,8 +355,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * If the query was fulfilled by a webhook call, this field is set to the value of the `payload`
-   * field returned in the webhook response.
    * @param webhookPayload webhookPayload or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setWebhookPayload(java.util.Map<String, java.lang.Object> webhookPayload) {
@@ -509,8 +363,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * If the query was fulfilled by a webhook call, this field is set to the value of the `source`
-   * field returned in the webhook response.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebhookSource() {
@@ -518,8 +370,6 @@ public final class GoogleCloudDialogflowV2QueryResult extends com.google.api.cli
   }
 
   /**
-   * If the query was fulfilled by a webhook call, this field is set to the value of the `source`
-   * field returned in the webhook response.
    * @param webhookSource webhookSource or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult setWebhookSource(java.lang.String webhookSource) {

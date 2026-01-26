@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the signal that telles the client to transfer the phone call connected to the agent to
- * a third-party endpoint.
+ * Model definition for GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall extends com.google.api.client.json.GenericJson {
 
   /**
-   * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
 
   /**
-   * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -46,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
   }
 
   /**
-   * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall setPhoneNumber(java.lang.String phoneNumber) {

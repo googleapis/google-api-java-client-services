@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Event represents the event sent by the customer.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Event.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Event extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String event;
 
   /**
-   * Optional. Unstructured text payload of the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Required. Name of the event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvent() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1Event extends com.google.api.cl
   }
 
   /**
-   * Required. Name of the event.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Event setEvent(java.lang.String event) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1Event extends com.google.api.cl
   }
 
   /**
-   * Optional. Unstructured text payload of the event.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1Event extends com.google.api.cl
   }
 
   /**
-   * Optional. Unstructured text payload of the event.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Event setText(java.lang.String text) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Authentication information required for API calls
+ * Model definition for GoogleCloudDialogflowV2ToolAuthentication.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,36 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ToolAuthentication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Config for API key auth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ToolAuthenticationApiKeyConfig apiKeyConfig;
 
   /**
-   * Config for bearer token auth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ToolAuthenticationBearerTokenConfig bearerTokenConfig;
 
   /**
-   * Config for OAuth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ToolAuthenticationOAuthConfig oauthConfig;
 
   /**
-   * Config for [Diglogflow service agent](https://cloud.google.com/iam/docs/service-
-   * agents#dialogflow-service-agent) auth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ToolAuthenticationServiceAgentAuthConfig serviceAgentAuthConfig;
 
   /**
-   * Config for API key auth.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolAuthenticationApiKeyConfig getApiKeyConfig() {
@@ -67,7 +61,6 @@ public final class GoogleCloudDialogflowV2ToolAuthentication extends com.google.
   }
 
   /**
-   * Config for API key auth.
    * @param apiKeyConfig apiKeyConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolAuthentication setApiKeyConfig(GoogleCloudDialogflowV2ToolAuthenticationApiKeyConfig apiKeyConfig) {
@@ -76,7 +69,6 @@ public final class GoogleCloudDialogflowV2ToolAuthentication extends com.google.
   }
 
   /**
-   * Config for bearer token auth.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolAuthenticationBearerTokenConfig getBearerTokenConfig() {
@@ -84,7 +76,6 @@ public final class GoogleCloudDialogflowV2ToolAuthentication extends com.google.
   }
 
   /**
-   * Config for bearer token auth.
    * @param bearerTokenConfig bearerTokenConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolAuthentication setBearerTokenConfig(GoogleCloudDialogflowV2ToolAuthenticationBearerTokenConfig bearerTokenConfig) {
@@ -93,7 +84,6 @@ public final class GoogleCloudDialogflowV2ToolAuthentication extends com.google.
   }
 
   /**
-   * Config for OAuth.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolAuthenticationOAuthConfig getOauthConfig() {
@@ -101,7 +91,6 @@ public final class GoogleCloudDialogflowV2ToolAuthentication extends com.google.
   }
 
   /**
-   * Config for OAuth.
    * @param oauthConfig oauthConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolAuthentication setOauthConfig(GoogleCloudDialogflowV2ToolAuthenticationOAuthConfig oauthConfig) {
@@ -110,8 +99,6 @@ public final class GoogleCloudDialogflowV2ToolAuthentication extends com.google.
   }
 
   /**
-   * Config for [Diglogflow service agent](https://cloud.google.com/iam/docs/service-
-   * agents#dialogflow-service-agent) auth.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolAuthenticationServiceAgentAuthConfig getServiceAgentAuthConfig() {
@@ -119,8 +106,6 @@ public final class GoogleCloudDialogflowV2ToolAuthentication extends com.google.
   }
 
   /**
-   * Config for [Diglogflow service agent](https://cloud.google.com/iam/docs/service-
-   * agents#dialogflow-service-agent) auth.
    * @param serviceAgentAuthConfig serviceAgentAuthConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolAuthentication setServiceAgentAuthConfig(GoogleCloudDialogflowV2ToolAuthenticationServiceAgentAuthConfig serviceAgentAuthConfig) {

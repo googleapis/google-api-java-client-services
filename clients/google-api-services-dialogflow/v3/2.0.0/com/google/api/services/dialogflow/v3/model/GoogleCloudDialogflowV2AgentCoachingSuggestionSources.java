@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Sources for the suggestion.
+ * Model definition for GoogleCloudDialogflowV2AgentCoachingSuggestionSources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2AgentCoachingSuggestionSources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Source instruction indexes for the suggestion. This is the index of the
-   * applicable_instructions field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> instructionIndexes;
 
   /**
-   * Output only. Source instruction indexes for the suggestion. This is the index of the
-   * applicable_instructions field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getInstructionIndexes() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionSources extends
   }
 
   /**
-   * Output only. Source instruction indexes for the suggestion. This is the index of the
-   * applicable_instructions field.
    * @param instructionIndexes instructionIndexes or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionSources setInstructionIndexes(java.util.List<java.lang.Integer> instructionIndexes) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Configuration of how speech should be synthesized.
+ * Model definition for GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. An identifier which selects 'audio effects' profiles that are applied on (post
-   * synthesized) text to speech. Effects are applied on top of each other in the order they are
-   * given.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> effectsProfileId;
 
   /**
-   * Optional. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20 semitones from the
-   * original pitch. -20 means decrease 20 semitones from the original pitch.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double pitch;
 
   /**
-   * Optional. The custom pronunciations for the synthesized audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,37 +54,24 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native speed
-   * supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If unset(0.0),
-   * defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double speakingRate;
 
   /**
-   * Optional. The desired voice of the synthesized audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1VoiceSelectionParams voice;
 
   /**
-   * Optional. Volume gain (in dB) of the normal native volume supported by the specific voice, in
-   * the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal native
-   * signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of the
-   * normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
-   * amplitude of the normal native signal amplitude. We strongly recommend not to exceed +10 (dB)
-   * as there's usually no effective increase in loudness for any value greater than that.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double volumeGainDb;
 
   /**
-   * Optional. An identifier which selects 'audio effects' profiles that are applied on (post
-   * synthesized) text to speech. Effects are applied on top of each other in the order they are
-   * given.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEffectsProfileId() {
@@ -98,9 +79,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. An identifier which selects 'audio effects' profiles that are applied on (post
-   * synthesized) text to speech. Effects are applied on top of each other in the order they are
-   * given.
    * @param effectsProfileId effectsProfileId or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig setEffectsProfileId(java.util.List<java.lang.String> effectsProfileId) {
@@ -109,8 +87,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20 semitones from the
-   * original pitch. -20 means decrease 20 semitones from the original pitch.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPitch() {
@@ -118,8 +94,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. Speaking pitch, in the range [-20.0, 20.0]. 20 means increase 20 semitones from the
-   * original pitch. -20 means decrease 20 semitones from the original pitch.
    * @param pitch pitch or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig setPitch(java.lang.Double pitch) {
@@ -128,7 +102,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. The custom pronunciations for the synthesized audio.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1CustomPronunciationParams> getPronunciations() {
@@ -136,7 +109,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. The custom pronunciations for the synthesized audio.
    * @param pronunciations pronunciations or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig setPronunciations(java.util.List<GoogleCloudDialogflowV2beta1CustomPronunciationParams> pronunciations) {
@@ -145,9 +117,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native speed
-   * supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If unset(0.0),
-   * defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an error.
    * @return value or {@code null} for none
    */
   public java.lang.Double getSpeakingRate() {
@@ -155,9 +124,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native speed
-   * supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If unset(0.0),
-   * defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an error.
    * @param speakingRate speakingRate or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig setSpeakingRate(java.lang.Double speakingRate) {
@@ -166,7 +132,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. The desired voice of the synthesized audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1VoiceSelectionParams getVoice() {
@@ -174,7 +139,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. The desired voice of the synthesized audio.
    * @param voice voice or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig setVoice(GoogleCloudDialogflowV2beta1VoiceSelectionParams voice) {
@@ -183,12 +147,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. Volume gain (in dB) of the normal native volume supported by the specific voice, in
-   * the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal native
-   * signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of the
-   * normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
-   * amplitude of the normal native signal amplitude. We strongly recommend not to exceed +10 (dB)
-   * as there's usually no effective increase in loudness for any value greater than that.
    * @return value or {@code null} for none
    */
   public java.lang.Double getVolumeGainDb() {
@@ -196,12 +154,6 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   }
 
   /**
-   * Optional. Volume gain (in dB) of the normal native volume supported by the specific voice, in
-   * the range [-96.0, 16.0]. If unset, or set to a value of 0.0 (dB), will play at normal native
-   * signal amplitude. A value of -6.0 (dB) will play at approximately half the amplitude of the
-   * normal native signal amplitude. A value of +6.0 (dB) will play at approximately twice the
-   * amplitude of the normal native signal amplitude. We strongly recommend not to exceed +10 (dB)
-   * as there's usually no effective increase in loudness for any value greater than that.
    * @param volumeGainDb volumeGainDb or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig setVolumeGainDb(java.lang.Double volumeGainDb) {

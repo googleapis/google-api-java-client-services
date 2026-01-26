@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * One interaction between a human and virtual agent. The human provides some input and the virtual
- * agent provides a response.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ConversationTurn.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationTurn extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ConversationTurnUserInput userInput;
 
   /**
-   * The virtual agent output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput virtualAgentOutput;
 
   /**
-   * The user input.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInput getUserInput() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurn extends com.go
   }
 
   /**
-   * The user input.
    * @param userInput userInput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurn setUserInput(GoogleCloudDialogflowCxV3beta1ConversationTurnUserInput userInput) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurn extends com.go
   }
 
   /**
-   * The virtual agent output.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput getVirtualAgentOutput() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurn extends com.go
   }
 
   /**
-   * The virtual agent output.
    * @param virtualAgentOutput virtualAgentOutput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationTurn setVirtualAgentOutput(GoogleCloudDialogflowCxV3beta1ConversationTurnVirtualAgentOutput virtualAgentOutput) {

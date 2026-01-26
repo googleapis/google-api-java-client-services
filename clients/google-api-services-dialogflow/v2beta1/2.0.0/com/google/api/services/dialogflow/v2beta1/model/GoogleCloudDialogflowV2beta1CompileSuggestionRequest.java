@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The request message for Participants.CompileSuggestion.
+ * Model definition for GoogleCloudDialogflowV2beta1CompileSuggestionRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,25 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1CompileSuggestionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Max number of messages prior to and including [latest_message] to use as context when
-   * compiling the suggestion. If zero or less than zero, 20 is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * Optional. The name of the latest conversation message to compile suggestion for. If empty, it
-   * will be the latest message of the conversation. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Optional. Max number of messages prior to and including [latest_message] to use as context when
-   * compiling the suggestion. If zero or less than zero, 20 is used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -56,8 +49,6 @@ public final class GoogleCloudDialogflowV2beta1CompileSuggestionRequest extends 
   }
 
   /**
-   * Optional. Max number of messages prior to and including [latest_message] to use as context when
-   * compiling the suggestion. If zero or less than zero, 20 is used.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CompileSuggestionRequest setContextSize(java.lang.Integer contextSize) {
@@ -66,9 +57,6 @@ public final class GoogleCloudDialogflowV2beta1CompileSuggestionRequest extends 
   }
 
   /**
-   * Optional. The name of the latest conversation message to compile suggestion for. If empty, it
-   * will be the latest message of the conversation. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -76,9 +64,6 @@ public final class GoogleCloudDialogflowV2beta1CompileSuggestionRequest extends 
   }
 
   /**
-   * Optional. The name of the latest conversation message to compile suggestion for. If empty, it
-   * will be the latest message of the conversation. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CompileSuggestionRequest setLatestMessage(java.lang.String latestMessage) {

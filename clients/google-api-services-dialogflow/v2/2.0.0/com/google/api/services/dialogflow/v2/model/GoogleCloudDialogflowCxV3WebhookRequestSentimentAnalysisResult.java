@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the result of sentiment analysis.
+ * Model definition for GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * A non-negative number in the [0, +inf) range, which represents the absolute magnitude of
-   * sentiment, regardless of score (positive or negative).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float magnitude;
 
   /**
-   * Sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
 
   /**
-   * A non-negative number in the [0, +inf) range, which represents the absolute magnitude of
-   * sentiment, regardless of score (positive or negative).
    * @return value or {@code null} for none
    */
   public java.lang.Float getMagnitude() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResul
   }
 
   /**
-   * A non-negative number in the [0, +inf) range, which represents the absolute magnitude of
-   * sentiment, regardless of score (positive or negative).
    * @param magnitude magnitude or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult setMagnitude(java.lang.Float magnitude) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResul
   }
 
   /**
-   * Sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResul
   }
 
   /**
-   * Sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
    * @param score score or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult setScore(java.lang.Float score) {

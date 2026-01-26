@@ -17,8 +17,8 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The control points used to define the curve. The curve defined through these control points can
- * only be monotonically increasing or decreasing(constant values are acceptable).
+ * Model definition for GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpec
+ * ConditionBoostSpecBoostControlSpecControlPoint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,26 +31,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpecControlPoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Can be one of: 1. The numerical field value. 2. The duration spec for freshness: The
-   * value must be formatted as an XSD `dayTimeDuration` value (a restricted subset of an ISO 8601
-   * duration value). The pattern for this is: `nDnM]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attributeValue;
 
   /**
-   * Optional. The value between -1 to 1 by which to boost the score if the attribute_value
-   * evaluates to the value specified above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float boostAmount;
 
   /**
-   * Optional. Can be one of: 1. The numerical field value. 2. The duration spec for freshness: The
-   * value must be formatted as an XSD `dayTimeDuration` value (a restricted subset of an ISO 8601
-   * duration value). The pattern for this is: `nDnM]`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributeValue() {
@@ -58,9 +50,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoos
   }
 
   /**
-   * Optional. Can be one of: 1. The numerical field value. 2. The duration spec for freshness: The
-   * value must be formatted as an XSD `dayTimeDuration` value (a restricted subset of an ISO 8601
-   * duration value). The pattern for this is: `nDnM]`.
    * @param attributeValue attributeValue or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpecControlPoint setAttributeValue(java.lang.String attributeValue) {
@@ -69,8 +58,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoos
   }
 
   /**
-   * Optional. The value between -1 to 1 by which to boost the score if the attribute_value
-   * evaluates to the value specified above.
    * @return value or {@code null} for none
    */
   public java.lang.Float getBoostAmount() {
@@ -78,8 +65,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoos
   }
 
   /**
-   * Optional. The value between -1 to 1 by which to boost the score if the attribute_value
-   * evaluates to the value specified above.
    * @param boostAmount boostAmount or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpecControlPoint setBoostAmount(java.lang.Float boostAmount) {

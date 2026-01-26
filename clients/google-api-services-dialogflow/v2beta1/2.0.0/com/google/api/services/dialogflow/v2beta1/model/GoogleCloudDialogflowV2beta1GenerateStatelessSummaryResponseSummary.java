@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Generated summary for a conversation.
+ * Model definition for GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseSummary.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,31 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * The baseline model version used to generate this summary. It is empty if a baseline model was
-   * not used to generate this summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String baselineModelVersion;
 
   /**
-   * The summary content that is concatenated into one string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * The summary content that is divided into sections. The key is the section's name and the value
-   * is the section's content. There is no specific format for the key or value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> textSections;
 
   /**
-   * The baseline model version used to generate this summary. It is empty if a baseline model was
-   * not used to generate this summary.
    * @return value or {@code null} for none
    */
   public java.lang.String getBaselineModelVersion() {
@@ -62,8 +55,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseS
   }
 
   /**
-   * The baseline model version used to generate this summary. It is empty if a baseline model was
-   * not used to generate this summary.
    * @param baselineModelVersion baselineModelVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseSummary setBaselineModelVersion(java.lang.String baselineModelVersion) {
@@ -72,7 +63,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseS
   }
 
   /**
-   * The summary content that is concatenated into one string.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -80,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseS
   }
 
   /**
-   * The summary content that is concatenated into one string.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseSummary setText(java.lang.String text) {
@@ -89,8 +78,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseS
   }
 
   /**
-   * The summary content that is divided into sections. The key is the section's name and the value
-   * is the section's content. There is no specific format for the key or value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTextSections() {
@@ -98,8 +85,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseS
   }
 
   /**
-   * The summary content that is divided into sections. The key is the section's name and the value
-   * is the section's content. There is no specific format for the key or value.
    * @param textSections textSections or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSummaryResponseSummary setTextSections(java.util.Map<String, java.lang.String> textSections) {

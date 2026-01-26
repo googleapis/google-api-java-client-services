@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Metadata for article suggestion models.
+ * Model definition for GoogleCloudDialogflowV2ArticleSuggestionModelMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2ArticleSuggestionModelMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Type of the article suggestion model. If not provided, model_type is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trainingModelType;
 
   /**
-   * Optional. Type of the article suggestion model. If not provided, model_type is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrainingModelType() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2ArticleSuggestionModelMetadata extends
   }
 
   /**
-   * Optional. Type of the article suggestion model. If not provided, model_type is used.
    * @param trainingModelType trainingModelType or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleSuggestionModelMetadata setTrainingModelType(java.lang.String trainingModelType) {

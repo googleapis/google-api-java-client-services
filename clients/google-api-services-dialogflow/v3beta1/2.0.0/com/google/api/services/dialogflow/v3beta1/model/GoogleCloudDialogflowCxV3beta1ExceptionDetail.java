@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Exception thrown during the execution of an action.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExceptionDetail.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ExceptionDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The error message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String errorMessage;
 
   /**
-   * Optional. The error message.
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorMessage() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExceptionDetail extends com.goo
   }
 
   /**
-   * Optional. The error message.
    * @param errorMessage errorMessage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExceptionDetail setErrorMessage(java.lang.String errorMessage) {

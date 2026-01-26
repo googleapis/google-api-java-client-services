@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * This resource represents a long-running operation that is the result of a network API call.
+ * Model definition for GoogleLongrunningOperation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,54 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleLongrunningOperation extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the value is `false`, it means the operation is still in progress. If `true`, the operation
-   * is completed, and either `error` or `response` is available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean done;
 
   /**
-   * The error result of the operation in case of failure or cancellation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus error;
 
   /**
-   * Service-specific metadata associated with the operation. It typically contains progress
-   * information and common metadata such as create time. Some services might not provide such
-   * metadata. Any method that returns a long-running operation should document the metadata type,
-   * if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * The server-assigned name, which is only unique within the same service that originally returns
-   * it. If you use the default HTTP mapping, the `name` should be a resource name ending with
-   * `operations/{unique_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The normal, successful response of the operation. If the original method returns no data on
-   * success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is
-   * standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the
-   * response should have the type `XxxResponse`, where `Xxx` is the original method name. For
-   * example, if the original method name is `TakeSnapshot()`, the inferred response type is
-   * `TakeSnapshotResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> response;
 
   /**
-   * If the value is `false`, it means the operation is still in progress. If `true`, the operation
-   * is completed, and either `error` or `response` is available.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDone() {
@@ -85,8 +67,6 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * If the value is `false`, it means the operation is still in progress. If `true`, the operation
-   * is completed, and either `error` or `response` is available.
    * @param done done or {@code null} for none
    */
   public GoogleLongrunningOperation setDone(java.lang.Boolean done) {
@@ -95,7 +75,6 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * The error result of the operation in case of failure or cancellation.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getError() {
@@ -103,7 +82,6 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * The error result of the operation in case of failure or cancellation.
    * @param error error or {@code null} for none
    */
   public GoogleLongrunningOperation setError(GoogleRpcStatus error) {
@@ -112,10 +90,6 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * Service-specific metadata associated with the operation. It typically contains progress
-   * information and common metadata such as create time. Some services might not provide such
-   * metadata. Any method that returns a long-running operation should document the metadata type,
-   * if any.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -123,10 +97,6 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * Service-specific metadata associated with the operation. It typically contains progress
-   * information and common metadata such as create time. Some services might not provide such
-   * metadata. Any method that returns a long-running operation should document the metadata type,
-   * if any.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleLongrunningOperation setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -135,9 +105,6 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * The server-assigned name, which is only unique within the same service that originally returns
-   * it. If you use the default HTTP mapping, the `name` should be a resource name ending with
-   * `operations/{unique_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -145,9 +112,6 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * The server-assigned name, which is only unique within the same service that originally returns
-   * it. If you use the default HTTP mapping, the `name` should be a resource name ending with
-   * `operations/{unique_id}`.
    * @param name name or {@code null} for none
    */
   public GoogleLongrunningOperation setName(java.lang.String name) {
@@ -156,12 +120,6 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * The normal, successful response of the operation. If the original method returns no data on
-   * success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is
-   * standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the
-   * response should have the type `XxxResponse`, where `Xxx` is the original method name. For
-   * example, if the original method name is `TakeSnapshot()`, the inferred response type is
-   * `TakeSnapshotResponse`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getResponse() {
@@ -169,12 +127,6 @@ public final class GoogleLongrunningOperation extends com.google.api.client.json
   }
 
   /**
-   * The normal, successful response of the operation. If the original method returns no data on
-   * success, such as `Delete`, the response is `google.protobuf.Empty`. If the original method is
-   * standard `Get`/`Create`/`Update`, the response should be the resource. For other methods, the
-   * response should have the type `XxxResponse`, where `Xxx` is the original method name. For
-   * example, if the original method name is `TakeSnapshot()`, the inferred response type is
-   * `TakeSnapshotResponse`.
    * @param response response or {@code null} for none
    */
   public GoogleLongrunningOperation setResponse(java.util.Map<String, java.lang.Object> response) {

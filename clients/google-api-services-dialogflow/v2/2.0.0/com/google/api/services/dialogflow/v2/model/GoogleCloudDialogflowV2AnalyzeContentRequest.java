@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for Participants.AnalyzeContent.
+ * Model definition for GoogleCloudDialogflowV2AnalyzeContentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,75 +30,60 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Parameters for a human assist query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams;
 
   /**
-   * The natural language speech audio to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AudioInput audioInput;
 
   /**
-   * Additional parameters to be put into Dialogflow CX session parameters. To remove a parameter
-   * from the session, clients should explicitly set the parameter value to null. Note: this field
-   * should only be used if you are connecting to a Dialogflow CX agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> cxParameters;
 
   /**
-   * An input event to send to Dialogflow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2EventInput eventInput;
 
   /**
-   * Parameters for a Dialogflow virtual-agent query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2QueryParameters queryParams;
 
   /**
-   * Speech synthesis configuration. The speech synthesis settings for a virtual agent that may be
-   * configured for the associated conversation profile are not used when calling AnalyzeContent. If
-   * this configuration is not supplied, speech synthesis is disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2OutputAudioConfig replyAudioConfig;
 
   /**
-   * A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
-   * recommended. This request is only idempotent if a `request_id` is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
 
   /**
-   * An input representing the selection of a suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SuggestionInput suggestionInput;
 
   /**
-   * The natural language text to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2TextInput textInput;
 
   /**
-   * Parameters for a human assist query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AssistQueryParameters getAssistQueryParams() {
@@ -106,7 +91,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * Parameters for a human assist query.
    * @param assistQueryParams assistQueryParams or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setAssistQueryParams(GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams) {
@@ -115,7 +99,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * The natural language speech audio to be processed.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AudioInput getAudioInput() {
@@ -123,7 +106,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * The natural language speech audio to be processed.
    * @param audioInput audioInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setAudioInput(GoogleCloudDialogflowV2AudioInput audioInput) {
@@ -132,9 +114,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * Additional parameters to be put into Dialogflow CX session parameters. To remove a parameter
-   * from the session, clients should explicitly set the parameter value to null. Note: this field
-   * should only be used if you are connecting to a Dialogflow CX agent.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCxParameters() {
@@ -142,9 +121,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * Additional parameters to be put into Dialogflow CX session parameters. To remove a parameter
-   * from the session, clients should explicitly set the parameter value to null. Note: this field
-   * should only be used if you are connecting to a Dialogflow CX agent.
    * @param cxParameters cxParameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setCxParameters(java.util.Map<String, java.lang.Object> cxParameters) {
@@ -153,7 +129,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * An input event to send to Dialogflow.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EventInput getEventInput() {
@@ -161,7 +136,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * An input event to send to Dialogflow.
    * @param eventInput eventInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setEventInput(GoogleCloudDialogflowV2EventInput eventInput) {
@@ -170,7 +144,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * Parameters for a Dialogflow virtual-agent query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryParameters getQueryParams() {
@@ -178,7 +151,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * Parameters for a Dialogflow virtual-agent query.
    * @param queryParams queryParams or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setQueryParams(GoogleCloudDialogflowV2QueryParameters queryParams) {
@@ -187,9 +159,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * Speech synthesis configuration. The speech synthesis settings for a virtual agent that may be
-   * configured for the associated conversation profile are not used when calling AnalyzeContent. If
-   * this configuration is not supplied, speech synthesis is disabled.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2OutputAudioConfig getReplyAudioConfig() {
@@ -197,9 +166,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * Speech synthesis configuration. The speech synthesis settings for a virtual agent that may be
-   * configured for the associated conversation profile are not used when calling AnalyzeContent. If
-   * this configuration is not supplied, speech synthesis is disabled.
    * @param replyAudioConfig replyAudioConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setReplyAudioConfig(GoogleCloudDialogflowV2OutputAudioConfig replyAudioConfig) {
@@ -208,8 +174,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
-   * recommended. This request is only idempotent if a `request_id` is provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -217,8 +181,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * A unique identifier for this request. Restricted to 36 ASCII characters. A random UUID is
-   * recommended. This request is only idempotent if a `request_id` is provided.
    * @param requestId requestId or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setRequestId(java.lang.String requestId) {
@@ -227,7 +189,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * An input representing the selection of a suggestion.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestionInput getSuggestionInput() {
@@ -235,7 +196,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * An input representing the selection of a suggestion.
    * @param suggestionInput suggestionInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setSuggestionInput(GoogleCloudDialogflowV2SuggestionInput suggestionInput) {
@@ -244,7 +204,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * The natural language text to be processed.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextInput getTextInput() {
@@ -252,7 +211,6 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   }
 
   /**
-   * The natural language text to be processed.
    * @param textInput textInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setTextInput(GoogleCloudDialogflowV2TextInput textInput) {

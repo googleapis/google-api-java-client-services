@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Output of the playbook.
+ * Model definition for GoogleCloudDialogflowCxV3PlaybookOutput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3PlaybookOutput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Summary string of the execution result of the child playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String executionSummary;
 
   /**
-   * Optional. Summary string of the execution result of the child playbook.
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionSummary() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookOutput extends com.google.ap
   }
 
   /**
-   * Optional. Summary string of the execution result of the child playbook.
    * @param executionSummary executionSummary or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookOutput setExecutionSummary(java.lang.String executionSummary) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a result from running a test case in an agent environment.
+ * Model definition for GoogleCloudDialogflowCxV3TestCaseResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The conversation turns uttered during the test case replay in chronological order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,36 +42,30 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * Environment where the test was run. If not set, it indicates the draft environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environment;
 
   /**
-   * The resource name for the test case result. Format:
-   * `projects//locations//agents//testCases//results/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Whether the test case passed in the agent environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String testResult;
 
   /**
-   * The time that the test was run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String testTime;
 
   /**
-   * The conversation turns uttered during the test case replay in chronological order.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3ConversationTurn> getConversationTurns() {
@@ -80,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * The conversation turns uttered during the test case replay in chronological order.
    * @param conversationTurns conversationTurns or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TestCaseResult setConversationTurns(java.util.List<GoogleCloudDialogflowCxV3ConversationTurn> conversationTurns) {
@@ -89,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * Environment where the test was run. If not set, it indicates the draft environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -97,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * Environment where the test was run. If not set, it indicates the draft environment.
    * @param environment environment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TestCaseResult setEnvironment(java.lang.String environment) {
@@ -106,8 +96,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * The resource name for the test case result. Format:
-   * `projects//locations//agents//testCases//results/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -115,8 +103,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * The resource name for the test case result. Format:
-   * `projects//locations//agents//testCases//results/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TestCaseResult setName(java.lang.String name) {
@@ -125,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * Whether the test case passed in the agent environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getTestResult() {
@@ -133,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * Whether the test case passed in the agent environment.
    * @param testResult testResult or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TestCaseResult setTestResult(java.lang.String testResult) {
@@ -142,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * The time that the test was run.
    * @return value or {@code null} for none
    */
   public String getTestTime() {
@@ -150,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3TestCaseResult extends com.google.ap
   }
 
   /**
-   * The time that the test was run.
    * @param testTime testTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TestCaseResult setTestTime(String testTime) {

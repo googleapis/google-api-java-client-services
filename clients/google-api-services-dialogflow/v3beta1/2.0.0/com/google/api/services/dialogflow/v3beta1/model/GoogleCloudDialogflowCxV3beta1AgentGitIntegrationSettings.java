@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for connecting to Git repository for an agent.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Git connection settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings gitConnectionSettings;
 
   /**
-   * GitHub settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings githubSettings;
 
   /**
-   * Git connection settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings getGitConnectionSettings() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings ext
   }
 
   /**
-   * Git connection settings.
    * @param gitConnectionSettings gitConnectionSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings setGitConnectionSettings(GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings gitConnectionSettings) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings ext
   }
 
   /**
-   * GitHub settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings getGithubSettings() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings ext
   }
 
   /**
-   * GitHub settings.
    * @param githubSettings githubSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings setGithubSettings(GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings githubSettings) {

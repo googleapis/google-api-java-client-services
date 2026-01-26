@@ -17,13 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * End-user authentication configuration used for Connection calls. The field values can either be
- * hardcoded authentication values or the names of [session
- * parameters](https://cloud.google.com/dialogflow/cx/docs/concept/parameter#session-ref) or
- * [request parameters](https://cloud.google.com/dialogflow/cx/docs/concept/parameter#request-
- * scoped). If parameter names are provided, then those parameters can be used to pass the
- * authentication values dynamically, through `$session.params.param-id` or `$request.payload.param-
- * id`.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -36,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Oauth 2.0 Authorization Code authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2AuthCodeConfig oauth2AuthCodeConfig;
 
   /**
-   * JWT Profile Oauth 2.0 Authorization Grant authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtBearerConfig oauth2JwtBearerConfig;
 
   /**
-   * Oauth 2.0 Authorization Code authentication.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2AuthCodeConfig getOauth2AuthCodeConfig() {
@@ -58,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfig extends c
   }
 
   /**
-   * Oauth 2.0 Authorization Code authentication.
    * @param oauth2AuthCodeConfig oauth2AuthCodeConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfig setOauth2AuthCodeConfig(GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2AuthCodeConfig oauth2AuthCodeConfig) {
@@ -67,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfig extends c
   }
 
   /**
-   * JWT Profile Oauth 2.0 Authorization Grant authentication.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtBearerConfig getOauth2JwtBearerConfig() {
@@ -75,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfig extends c
   }
 
   /**
-   * JWT Profile Oauth 2.0 Authorization Grant authentication.
    * @param oauth2JwtBearerConfig oauth2JwtBearerConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfig setOauth2JwtBearerConfig(GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtBearerConfig oauth2JwtBearerConfig) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * State of the auto-rollout process.
+ * Model definition for GoogleCloudDialogflowCxV3RolloutState.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3RolloutState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Start time of the current step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Display name of the current auto rollout step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String step;
 
   /**
-   * Index of the current step in the auto rollout steps list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer stepIndex;
 
   /**
-   * Start time of the current step.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3RolloutState extends com.google.api.
   }
 
   /**
-   * Start time of the current step.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3RolloutState setStartTime(String startTime) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3RolloutState extends com.google.api.
   }
 
   /**
-   * Display name of the current auto rollout step.
    * @return value or {@code null} for none
    */
   public java.lang.String getStep() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3RolloutState extends com.google.api.
   }
 
   /**
-   * Display name of the current auto rollout step.
    * @param step step or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3RolloutState setStep(java.lang.String step) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3RolloutState extends com.google.api.
   }
 
   /**
-   * Index of the current step in the auto rollout steps list.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStepIndex() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3RolloutState extends com.google.api.
   }
 
   /**
-   * Index of the current step in the auto rollout steps list.
    * @param stepIndex stepIndex or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3RolloutState setStepIndex(java.lang.Integer stepIndex) {

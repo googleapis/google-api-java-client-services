@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents a message posted into a conversation.
+ * Model definition for GoogleCloudDialogflowV2beta1Message.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,80 +30,66 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The message content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * Output only. The time when the message was created in Contact Center AI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The message language. This should be a [BCP-47](https://www.rfc-
-   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Output only. The annotation for the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1MessageAnnotation messageAnnotation;
 
   /**
-   * Optional. The unique identifier of the message. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The participant that sends this message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String participant;
 
   /**
-   * Output only. The role of the participant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String participantRole;
 
   /**
-   * Optional. Automated agent responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1ResponseMessage> responseMessages;
 
   /**
-   * Optional. The time when the message was sent. For voice messages, this is the time when an
-   * utterance started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String sendTime;
 
   /**
-   * Output only. The sentiment analysis result for the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SentimentAnalysisResult sentimentAnalysis;
 
   /**
-   * Required. The message content.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -111,7 +97,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Required. The message content.
    * @param content content or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setContent(java.lang.String content) {
@@ -120,7 +105,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The time when the message was created in Contact Center AI.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -128,7 +112,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The time when the message was created in Contact Center AI.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setCreateTime(String createTime) {
@@ -137,8 +120,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. The message language. This should be a [BCP-47](https://www.rfc-
-   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -146,8 +127,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. The message language. This should be a [BCP-47](https://www.rfc-
-   * editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setLanguageCode(java.lang.String languageCode) {
@@ -156,7 +135,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The annotation for the message.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1MessageAnnotation getMessageAnnotation() {
@@ -164,7 +142,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The annotation for the message.
    * @param messageAnnotation messageAnnotation or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setMessageAnnotation(GoogleCloudDialogflowV2beta1MessageAnnotation messageAnnotation) {
@@ -173,8 +150,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. The unique identifier of the message. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -182,8 +157,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. The unique identifier of the message. Format:
-   * `projects//locations//conversations//messages/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setName(java.lang.String name) {
@@ -192,7 +165,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The participant that sends this message.
    * @return value or {@code null} for none
    */
   public java.lang.String getParticipant() {
@@ -200,7 +172,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The participant that sends this message.
    * @param participant participant or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setParticipant(java.lang.String participant) {
@@ -209,7 +180,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The role of the participant.
    * @return value or {@code null} for none
    */
   public java.lang.String getParticipantRole() {
@@ -217,7 +187,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The role of the participant.
    * @param participantRole participantRole or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setParticipantRole(java.lang.String participantRole) {
@@ -226,7 +195,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. Automated agent responses.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1ResponseMessage> getResponseMessages() {
@@ -234,7 +202,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. Automated agent responses.
    * @param responseMessages responseMessages or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setResponseMessages(java.util.List<GoogleCloudDialogflowV2beta1ResponseMessage> responseMessages) {
@@ -243,8 +210,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. The time when the message was sent. For voice messages, this is the time when an
-   * utterance started.
    * @return value or {@code null} for none
    */
   public String getSendTime() {
@@ -252,8 +217,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. The time when the message was sent. For voice messages, this is the time when an
-   * utterance started.
    * @param sendTime sendTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setSendTime(String sendTime) {
@@ -262,7 +225,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The sentiment analysis result for the message.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SentimentAnalysisResult getSentimentAnalysis() {
@@ -270,7 +232,6 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Output only. The sentiment analysis result for the message.
    * @param sentimentAnalysis sentimentAnalysis or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setSentimentAnalysis(GoogleCloudDialogflowV2beta1SentimentAnalysisResult sentimentAnalysis) {

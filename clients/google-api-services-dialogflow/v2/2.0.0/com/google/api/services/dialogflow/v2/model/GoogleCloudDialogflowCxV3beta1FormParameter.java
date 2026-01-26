@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a form parameter.
+ * Model definition for GoogleCloudDialogflowCxV3beta1FormParameter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,74 +30,54 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Hierarchical advanced settings for this parameter. The settings exposed at the lower level
-   * overrides the settings exposed at the higher level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings;
 
   /**
-   * The default value of an optional parameter. If the parameter is required, the default value
-   * will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object defaultValue;
 
   /**
-   * Required. The human-readable name of the parameter, unique within the form.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. The entity type of the parameter. Format:
-   * `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example,
-   * `projects/-/locations/-/agents/-/entityTypes/sys.date`), or
-   * `projects//locations//agents//entityTypes/` for developer entity types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityType;
 
   /**
-   * Required. Defines fill behavior for the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1FormParameterFillBehavior fillBehavior;
 
   /**
-   * Indicates whether the parameter represents a list of values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isList;
 
   /**
-   * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the
-   * parameter content will be replaced by parameter name during logging. Note: the parameter
-   * content is subject to redaction if either parameter level redaction or entity type level
-   * redaction is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean redact;
 
   /**
-   * Indicates whether the parameter is required. Optional parameters will not trigger prompts;
-   * however, they are filled if the user specifies them. Required parameters must be filled before
-   * form filling concludes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean required;
 
   /**
-   * Hierarchical advanced settings for this parameter. The settings exposed at the lower level
-   * overrides the settings exposed at the higher level.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettings getAdvancedSettings() {
@@ -105,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Hierarchical advanced settings for this parameter. The settings exposed at the lower level
-   * overrides the settings exposed at the higher level.
    * @param advancedSettings advancedSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FormParameter setAdvancedSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings) {
@@ -115,8 +93,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * The default value of an optional parameter. If the parameter is required, the default value
-   * will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Object getDefaultValue() {
@@ -124,8 +100,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * The default value of an optional parameter. If the parameter is required, the default value
-   * will be ignored.
    * @param defaultValue defaultValue or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FormParameter setDefaultValue(java.lang.Object defaultValue) {
@@ -134,7 +108,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Required. The human-readable name of the parameter, unique within the form.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -142,7 +115,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Required. The human-readable name of the parameter, unique within the form.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FormParameter setDisplayName(java.lang.String displayName) {
@@ -151,10 +123,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Required. The entity type of the parameter. Format:
-   * `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example,
-   * `projects/-/locations/-/agents/-/entityTypes/sys.date`), or
-   * `projects//locations//agents//entityTypes/` for developer entity types.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityType() {
@@ -162,10 +130,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Required. The entity type of the parameter. Format:
-   * `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for example,
-   * `projects/-/locations/-/agents/-/entityTypes/sys.date`), or
-   * `projects//locations//agents//entityTypes/` for developer entity types.
    * @param entityType entityType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FormParameter setEntityType(java.lang.String entityType) {
@@ -174,7 +138,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Required. Defines fill behavior for the parameter.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FormParameterFillBehavior getFillBehavior() {
@@ -182,7 +145,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Required. Defines fill behavior for the parameter.
    * @param fillBehavior fillBehavior or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FormParameter setFillBehavior(GoogleCloudDialogflowCxV3beta1FormParameterFillBehavior fillBehavior) {
@@ -191,7 +153,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Indicates whether the parameter represents a list of values.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsList() {
@@ -199,7 +160,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Indicates whether the parameter represents a list of values.
    * @param isList isList or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FormParameter setIsList(java.lang.Boolean isList) {
@@ -208,10 +168,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the
-   * parameter content will be replaced by parameter name during logging. Note: the parameter
-   * content is subject to redaction if either parameter level redaction or entity type level
-   * redaction is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRedact() {
@@ -219,10 +175,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Indicates whether the parameter content should be redacted in log. If redaction is enabled, the
-   * parameter content will be replaced by parameter name during logging. Note: the parameter
-   * content is subject to redaction if either parameter level redaction or entity type level
-   * redaction is enabled.
    * @param redact redact or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FormParameter setRedact(java.lang.Boolean redact) {
@@ -231,9 +183,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Indicates whether the parameter is required. Optional parameters will not trigger prompts;
-   * however, they are filled if the user specifies them. Required parameters must be filled before
-   * form filling concludes.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequired() {
@@ -241,9 +190,6 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameter extends com.googl
   }
 
   /**
-   * Indicates whether the parameter is required. Optional parameters will not trigger prompts;
-   * however, they are filled if the user specifies them. Required parameters must be filled before
-   * form filling concludes.
    * @param required required or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FormParameter setRequired(java.lang.Boolean required) {

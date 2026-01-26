@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The request to initialize a location-level encryption specification.
+ * Model definition for GoogleCloudDialogflowV2beta1InitializeEncryptionSpecRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,18 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1InitializeEncryptionSpecRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The encryption spec used for CMEK encryption. It is required that the kms key is in
-   * the same region as the endpoint. The same key will be used for all provisioned resources, if
-   * encryption is available. If the kms_key_name is left empty, no encryption will be enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1EncryptionSpec encryptionSpec;
 
   /**
-   * Required. The encryption spec used for CMEK encryption. It is required that the kms key is in
-   * the same region as the endpoint. The same key will be used for all provisioned resources, if
-   * encryption is available. If the kms_key_name is left empty, no encryption will be enforced.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EncryptionSpec getEncryptionSpec() {
@@ -49,9 +43,6 @@ public final class GoogleCloudDialogflowV2beta1InitializeEncryptionSpecRequest e
   }
 
   /**
-   * Required. The encryption spec used for CMEK encryption. It is required that the kms key is in
-   * the same region as the endpoint. The same key will be used for all provisioned resources, if
-   * encryption is available. If the kms_key_name is left empty, no encryption will be enforced.
    * @param encryptionSpec encryptionSpec or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1InitializeEncryptionSpecRequest setEncryptionSpec(GoogleCloudDialogflowV2beta1EncryptionSpec encryptionSpec) {

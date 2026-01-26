@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Resource name and display name.
+ * Model definition for GoogleCloudDialogflowCxV3ResourceName.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ResourceName extends com.google.api.client.json.GenericJson {
 
   /**
-   * Display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3ResourceName extends com.google.api.
   }
 
   /**
-   * Display name.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResourceName setDisplayName(java.lang.String displayName) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3ResourceName extends com.google.api.
   }
 
   /**
-   * Name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3ResourceName extends com.google.api.
   }
 
   /**
-   * Name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResourceName setName(java.lang.String name) {

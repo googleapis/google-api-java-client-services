@@ -17,11 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The `Status` type defines a logical error model that is suitable for different programming
- * environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc).
- * Each `Status` message contains three pieces of data: error code, error message, and error
- * details. You can find out more about this error model and how to work with it in the [API Design
- * Guide](https://cloud.google.com/apis/design/errors).
+ * Model definition for GoogleRpcStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -34,31 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleRpcStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status code, which should be an enum value of google.rpc.Code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer code;
 
   /**
-   * A list of messages that carry the error details. There is a common set of message types for
-   * APIs to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.util.Map<String, java.lang.Object>> details;
 
   /**
-   * A developer-facing error message, which should be in English. Any user-facing error message
-   * should be localized and sent in the google.rpc.Status.details field, or localized by the
-   * client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * The status code, which should be an enum value of google.rpc.Code.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCode() {
@@ -66,7 +55,6 @@ public final class GoogleRpcStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The status code, which should be an enum value of google.rpc.Code.
    * @param code code or {@code null} for none
    */
   public GoogleRpcStatus setCode(java.lang.Integer code) {
@@ -75,8 +63,6 @@ public final class GoogleRpcStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of messages that carry the error details. There is a common set of message types for
-   * APIs to use.
    * @return value or {@code null} for none
    */
   public java.util.List<java.util.Map<String, java.lang.Object>> getDetails() {
@@ -84,8 +70,6 @@ public final class GoogleRpcStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A list of messages that carry the error details. There is a common set of message types for
-   * APIs to use.
    * @param details details or {@code null} for none
    */
   public GoogleRpcStatus setDetails(java.util.List<java.util.Map<String, java.lang.Object>> details) {
@@ -94,9 +78,6 @@ public final class GoogleRpcStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A developer-facing error message, which should be in English. Any user-facing error message
-   * should be localized and sent in the google.rpc.Status.details field, or localized by the
-   * client.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -104,9 +85,6 @@ public final class GoogleRpcStatus extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A developer-facing error message, which should be in English. Any user-facing error message
-   * should be localized and sent in the google.rpc.Status.details field, or localized by the
-   * client.
    * @param message message or {@code null} for none
    */
   public GoogleRpcStatus setMessage(java.lang.String message) {

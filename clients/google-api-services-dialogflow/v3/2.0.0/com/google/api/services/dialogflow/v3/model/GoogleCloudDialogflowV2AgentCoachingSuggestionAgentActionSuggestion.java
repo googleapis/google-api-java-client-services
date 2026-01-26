@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Actions suggested for the agent. This is based on applicable instructions.
+ * Model definition for GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The suggested action for the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentAction;
 
   /**
-   * Output only. Duplicate check result for the agent action suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentCoachingSuggestionDuplicateCheckResult duplicateCheckResult;
 
   /**
-   * Output only. Sources for the agent action suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentCoachingSuggestionSources sources;
 
   /**
-   * Optional. The suggested action for the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentAction() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSugg
   }
 
   /**
-   * Optional. The suggested action for the agent.
    * @param agentAction agentAction or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSuggestion setAgentAction(java.lang.String agentAction) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSugg
   }
 
   /**
-   * Output only. Duplicate check result for the agent action suggestion.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionDuplicateCheckResult getDuplicateCheckResult() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSugg
   }
 
   /**
-   * Output only. Duplicate check result for the agent action suggestion.
    * @param duplicateCheckResult duplicateCheckResult or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSuggestion setDuplicateCheckResult(GoogleCloudDialogflowV2AgentCoachingSuggestionDuplicateCheckResult duplicateCheckResult) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSugg
   }
 
   /**
-   * Output only. Sources for the agent action suggestion.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionSources getSources() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSugg
   }
 
   /**
-   * Output only. Sources for the agent action suggestion.
    * @param sources sources or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSuggestion setSources(GoogleCloudDialogflowV2AgentCoachingSuggestionSources sources) {

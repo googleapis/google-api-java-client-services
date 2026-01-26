@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for Versions.ListVersions.
+ * Model definition for GoogleCloudDialogflowCxV3ListVersionsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ListVersionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * A list of versions. There will be a maximum number of items returned based on the page_size
-   * field in the request. The list may in some cases be empty or contain fewer entries than
-   * page_size even if this isn't the last page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3Version> versions;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3ListVersionsResponse extends com.goo
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ListVersionsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -63,9 +57,6 @@ public final class GoogleCloudDialogflowCxV3ListVersionsResponse extends com.goo
   }
 
   /**
-   * A list of versions. There will be a maximum number of items returned based on the page_size
-   * field in the request. The list may in some cases be empty or contain fewer entries than
-   * page_size even if this isn't the last page.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3Version> getVersions() {
@@ -73,9 +64,6 @@ public final class GoogleCloudDialogflowCxV3ListVersionsResponse extends com.goo
   }
 
   /**
-   * A list of versions. There will be a maximum number of items returned based on the page_size
-   * field in the request. The list may in some cases be empty or contain fewer entries than
-   * page_size even if this isn't the last page.
    * @param versions versions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ListVersionsResponse setVersions(java.util.List<GoogleCloudDialogflowCxV3Version> versions) {

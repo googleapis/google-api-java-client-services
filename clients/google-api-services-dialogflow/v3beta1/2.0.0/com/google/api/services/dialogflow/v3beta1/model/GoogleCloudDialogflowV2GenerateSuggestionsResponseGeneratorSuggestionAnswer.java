@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * A GeneratorSuggestion answer.
+ * Model definition for GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSuggestionAnswer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,31 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSuggestionAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Answer record that uniquely identifies the suggestion. This can be used to provide suggestion
-   * feedback.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * Suggestion details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion;
 
   /**
-   * The name of the generator used to generate this suggestion. Format:
-   * `projects//locations//generators/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceGenerator;
 
   /**
-   * Answer record that uniquely identifies the suggestion. This can be used to provide suggestion
-   * feedback.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -62,8 +55,6 @@ public final class GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSu
   }
 
   /**
-   * Answer record that uniquely identifies the suggestion. This can be used to provide suggestion
-   * feedback.
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSuggestionAnswer setAnswerRecord(java.lang.String answerRecord) {
@@ -72,7 +63,6 @@ public final class GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSu
   }
 
   /**
-   * Suggestion details.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestion getGeneratorSuggestion() {
@@ -80,7 +70,6 @@ public final class GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSu
   }
 
   /**
-   * Suggestion details.
    * @param generatorSuggestion generatorSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSuggestionAnswer setGeneratorSuggestion(GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion) {
@@ -89,8 +78,6 @@ public final class GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSu
   }
 
   /**
-   * The name of the generator used to generate this suggestion. Format:
-   * `projects//locations//generators/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceGenerator() {
@@ -98,8 +85,6 @@ public final class GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSu
   }
 
   /**
-   * The name of the generator used to generate this suggestion. Format:
-   * `projects//locations//generators/`.
    * @param sourceGenerator sourceGenerator or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateSuggestionsResponseGeneratorSuggestionAnswer setSourceGenerator(java.lang.String sourceGenerator) {

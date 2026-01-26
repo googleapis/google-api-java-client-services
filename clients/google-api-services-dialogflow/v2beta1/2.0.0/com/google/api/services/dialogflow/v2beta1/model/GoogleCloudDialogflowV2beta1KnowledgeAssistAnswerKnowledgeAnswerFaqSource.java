@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Details about source of FAQ answer.
+ * Model definition for GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerFaqSource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerFaqSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The corresponding FAQ question.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String question;
 
   /**
-   * The corresponding FAQ question.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuestion() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * The corresponding FAQ question.
    * @param question question or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerFaqSource setQuestion(java.lang.String question) {

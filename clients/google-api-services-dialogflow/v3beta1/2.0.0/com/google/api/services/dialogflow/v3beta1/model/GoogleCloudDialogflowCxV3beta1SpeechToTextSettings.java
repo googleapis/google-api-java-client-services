@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings related to speech recognition.
+ * Model definition for GoogleCloudDialogflowCxV3beta1SpeechToTextSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to use speech adaptation for speech recognition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableSpeechAdaptation;
 
   /**
-   * Whether to use speech adaptation for speech recognition.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSpeechAdaptation() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettings extends co
   }
 
   /**
-   * Whether to use speech adaptation for speech recognition.
    * @param enableSpeechAdaptation enableSpeechAdaptation or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SpeechToTextSettings setEnableSpeechAdaptation(java.lang.Boolean enableSpeechAdaptation) {

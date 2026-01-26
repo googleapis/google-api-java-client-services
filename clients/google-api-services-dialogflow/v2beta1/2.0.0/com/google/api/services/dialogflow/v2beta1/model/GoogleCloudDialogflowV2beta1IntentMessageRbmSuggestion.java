@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Rich Business Messaging (RBM) suggestion. Suggestions allow user to easily select/click a
- * predefined response or perform an action (like opening a web uri).
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Predefined client side actions that user can choose
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction action;
 
   /**
-   * Predefined replies for user to select instead of typing
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReply reply;
 
   /**
-   * Predefined client side actions that user can choose
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction getAction() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion extend
   }
 
   /**
-   * Predefined client side actions that user can choose
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion setAction(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction action) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion extend
   }
 
   /**
-   * Predefined replies for user to select instead of typing
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReply getReply() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion extend
   }
 
   /**
-   * Predefined replies for user to select instead of typing
    * @param reply reply or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion setReply(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReply reply) {

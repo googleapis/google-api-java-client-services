@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A single flow version with specified traffic allocation.
+ * Model definition for GoogleCloudDialogflowCxV3VersionVariantsVariant.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3VersionVariantsVariant extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the variant is for the control group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isControlGroup;
 
   /**
-   * Percentage of the traffic which should be routed to this version of flow. Traffic allocation
-   * for a single flow must sum up to 1.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float trafficAllocation;
 
   /**
-   * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Whether the variant is for the control group.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsControlGroup() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariant extends com.g
   }
 
   /**
-   * Whether the variant is for the control group.
    * @param isControlGroup isControlGroup or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3VersionVariantsVariant setIsControlGroup(java.lang.Boolean isControlGroup) {
@@ -69,8 +63,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariant extends com.g
   }
 
   /**
-   * Percentage of the traffic which should be routed to this version of flow. Traffic allocation
-   * for a single flow must sum up to 1.0.
    * @return value or {@code null} for none
    */
   public java.lang.Float getTrafficAllocation() {
@@ -78,8 +70,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariant extends com.g
   }
 
   /**
-   * Percentage of the traffic which should be routed to this version of flow. Traffic allocation
-   * for a single flow must sum up to 1.0.
    * @param trafficAllocation trafficAllocation or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3VersionVariantsVariant setTrafficAllocation(java.lang.Float trafficAllocation) {
@@ -88,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariant extends com.g
   }
 
   /**
-   * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -96,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariant extends com.g
   }
 
   /**
-   * The name of the flow version. Format: `projects//locations//agents//flows//versions/`.
    * @param version version or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3VersionVariantsVariant setVersion(java.lang.String version) {

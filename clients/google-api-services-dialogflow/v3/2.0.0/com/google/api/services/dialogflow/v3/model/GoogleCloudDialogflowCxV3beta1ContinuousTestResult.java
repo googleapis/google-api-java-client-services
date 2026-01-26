@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents a result from running a test case in an agent environment.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ContinuousTestResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,38 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1ContinuousTestResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name for the continuous test result. Format:
-   * `projects//locations//agents//environments//continuousTestResults/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The result of this continuous test run, i.e. whether all the tests in this continuous test run
-   * pass or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String result;
 
   /**
-   * Time when the continuous testing run starts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String runTime;
 
   /**
-   * A list of individual test case results names in this continuous test run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> testCaseResults;
 
   /**
-   * The resource name for the continuous test result. Format:
-   * `projects//locations//agents//environments//continuousTestResults/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -69,8 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1ContinuousTestResult extends co
   }
 
   /**
-   * The resource name for the continuous test result. Format:
-   * `projects//locations//agents//environments//continuousTestResults/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ContinuousTestResult setName(java.lang.String name) {
@@ -79,8 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1ContinuousTestResult extends co
   }
 
   /**
-   * The result of this continuous test run, i.e. whether all the tests in this continuous test run
-   * pass or not.
    * @return value or {@code null} for none
    */
   public java.lang.String getResult() {
@@ -88,8 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1ContinuousTestResult extends co
   }
 
   /**
-   * The result of this continuous test run, i.e. whether all the tests in this continuous test run
-   * pass or not.
    * @param result result or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ContinuousTestResult setResult(java.lang.String result) {
@@ -98,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1ContinuousTestResult extends co
   }
 
   /**
-   * Time when the continuous testing run starts.
    * @return value or {@code null} for none
    */
   public String getRunTime() {
@@ -106,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1ContinuousTestResult extends co
   }
 
   /**
-   * Time when the continuous testing run starts.
    * @param runTime runTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ContinuousTestResult setRunTime(String runTime) {
@@ -115,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1ContinuousTestResult extends co
   }
 
   /**
-   * A list of individual test case results names in this continuous test run.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTestCaseResults() {
@@ -123,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1ContinuousTestResult extends co
   }
 
   /**
-   * A list of individual test case results names in this continuous test run.
    * @param testCaseResults testCaseResults or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ContinuousTestResult setTestCaseResults(java.util.List<java.lang.String> testCaseResults) {

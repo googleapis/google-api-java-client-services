@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The response message for Changelogs.ListChangelogs.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ListChangelogsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,8 +30,6 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ListChangelogsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of changelogs. There will be a maximum number of items returned based on the page_size
-   * field in the request. The changelogs will be ordered by timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +42,12 @@ public final class GoogleCloudDialogflowCxV3beta1ListChangelogsResponse extends 
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of changelogs. There will be a maximum number of items returned based on the page_size
-   * field in the request. The changelogs will be ordered by timestamp.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1Changelog> getChangelogs() {
@@ -60,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListChangelogsResponse extends 
   }
 
   /**
-   * The list of changelogs. There will be a maximum number of items returned based on the page_size
-   * field in the request. The changelogs will be ordered by timestamp.
    * @param changelogs changelogs or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListChangelogsResponse setChangelogs(java.util.List<GoogleCloudDialogflowCxV3beta1Changelog> changelogs) {
@@ -70,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListChangelogsResponse extends 
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListChangelogsResponse extends 
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListChangelogsResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -17,9 +17,8 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Custom sections to return when requesting a summary of a conversation. This is only supported
- * when `baseline_model_version` == '2.0'. Supported features: CONVERSATION_SUMMARIZATION,
- * CONVERSATION_SUMMARIZATION_VOICE.
+ * Model definition for
+ * GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigSections.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,18 +31,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigSections extends com.google.api.client.json.GenericJson {
 
   /**
-   * The selected sections chosen to return when requesting a summary of a conversation. A duplicate
-   * selected section will be treated as a single selected section. If section types are not
-   * provided, the default will be {SITUATION, ACTION, RESULT}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sectionTypes;
 
   /**
-   * The selected sections chosen to return when requesting a summary of a conversation. A duplicate
-   * selected section will be treated as a single selected section. If section types are not
-   * provided, the default will be {SITUATION, ACTION, RESULT}.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSectionTypes() {
@@ -51,9 +44,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * The selected sections chosen to return when requesting a summary of a conversation. A duplicate
-   * selected section will be treated as a single selected section. If section types are not
-   * provided, the default will be {SITUATION, ACTION, RESULT}.
    * @param sectionTypes sectionTypes or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigSections setSectionTypes(java.util.List<java.lang.String> sectionTypes) {

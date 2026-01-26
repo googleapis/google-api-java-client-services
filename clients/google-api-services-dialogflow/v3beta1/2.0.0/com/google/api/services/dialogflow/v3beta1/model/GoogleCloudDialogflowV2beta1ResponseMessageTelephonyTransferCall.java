@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents the signal that telles the client to transfer the phone call connected to the agent to
- * a third-party endpoint.
+ * Model definition for GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall extends com.google.api.client.json.GenericJson {
 
   /**
-   * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
 
   /**
-   * Transfer the call to a SIP endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sipUri;
 
   /**
-   * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferC
   }
 
   /**
-   * Transfer the call to a phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall setPhoneNumber(java.lang.String phoneNumber) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferC
   }
 
   /**
-   * Transfer the call to a SIP endpoint.
    * @return value or {@code null} for none
    */
   public java.lang.String getSipUri() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferC
   }
 
   /**
-   * Transfer the call to a SIP endpoint.
    * @param sipUri sipUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall setSipUri(java.lang.String sipUri) {

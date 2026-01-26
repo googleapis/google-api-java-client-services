@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Contains basic configuration for a sub-agent.
+ * Model definition for GoogleCloudDialogflowV2beta1SubAgent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SubAgent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The unique identifier (`environment name` in dialogflow console) of this sub-agent
-   * environment. Assumes draft environment if `environment` is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environment;
 
   /**
-   * Required. The project of this agent. Format: `projects/` or `projects//locations/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * Optional. The unique identifier (`environment name` in dialogflow console) of this sub-agent
-   * environment. Assumes draft environment if `environment` is not set.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowV2beta1SubAgent extends com.google.api.c
   }
 
   /**
-   * Optional. The unique identifier (`environment name` in dialogflow console) of this sub-agent
-   * environment. Assumes draft environment if `environment` is not set.
    * @param environment environment or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SubAgent setEnvironment(java.lang.String environment) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1SubAgent extends com.google.api.c
   }
 
   /**
-   * Required. The project of this agent. Format: `projects/` or `projects//locations/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1SubAgent extends com.google.api.c
   }
 
   /**
-   * Required. The project of this agent. Format: `projects/` or `projects//locations/`.
    * @param project project or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SubAgent setProject(java.lang.String project) {

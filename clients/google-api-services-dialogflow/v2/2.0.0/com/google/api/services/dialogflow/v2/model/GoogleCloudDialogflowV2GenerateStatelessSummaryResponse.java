@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The response message for Conversations.GenerateStatelessSummary.
+ * Model definition for GoogleCloudDialogflowV2GenerateStatelessSummaryResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,33 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2GenerateStatelessSummaryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of messages prior to and including latest_message used to compile the suggestion. It may
-   * be smaller than the GenerateStatelessSummaryRequest.max_context_size field in the request if
-   * there weren't that many messages in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. The
-   * format is specific to the user and the names of the messages provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Generated summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GenerateStatelessSummaryResponseSummary summary;
 
   /**
-   * Number of messages prior to and including latest_message used to compile the suggestion. It may
-   * be smaller than the GenerateStatelessSummaryRequest.max_context_size field in the request if
-   * there weren't that many messages in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -64,9 +55,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSummaryResponse exten
   }
 
   /**
-   * Number of messages prior to and including latest_message used to compile the suggestion. It may
-   * be smaller than the GenerateStatelessSummaryRequest.max_context_size field in the request if
-   * there weren't that many messages in the conversation.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSummaryResponse setContextSize(java.lang.Integer contextSize) {
@@ -75,8 +63,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSummaryResponse exten
   }
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. The
-   * format is specific to the user and the names of the messages provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -84,8 +70,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSummaryResponse exten
   }
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. The
-   * format is specific to the user and the names of the messages provided.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSummaryResponse setLatestMessage(java.lang.String latestMessage) {
@@ -94,7 +78,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSummaryResponse exten
   }
 
   /**
-   * Generated summary.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSummaryResponseSummary getSummary() {
@@ -102,7 +85,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSummaryResponse exten
   }
 
   /**
-   * Generated summary.
    * @param summary summary or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSummaryResponse setSummary(GoogleCloudDialogflowV2GenerateStatelessSummaryResponseSummary summary) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents metrics for the conversation.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ConversationMetrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,74 +30,60 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * The average confidence all of the Match in the conversation. Values range from 0.0 (completely
-   * uncertain) to 1.0 (completely certain).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float averageMatchConfidence;
 
   /**
-   * A signal that indicates the interaction with the Dialogflow agent has ended. If any response
-   * has the ResponseMessage.end_interaction signal, this is set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasEndInteraction;
 
   /**
-   * Hands off conversation to a human agent. If any response has the
-   * ResponseMessage.live_agent_handoffsignal, this is set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasLiveAgentHandoff;
 
   /**
-   * Duration of all the input's audio in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String inputAudioDuration;
 
   /**
-   * The number of interactions in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer interactionCount;
 
   /**
-   * Match type counts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount matchTypeCount;
 
   /**
-   * Maximum latency of the Webhook calls in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String maxWebhookLatency;
 
   /**
-   * Duration of all the output's audio in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String outputAudioDuration;
 
   /**
-   * Query input counts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount queryInputCount;
 
   /**
-   * The average confidence all of the Match in the conversation. Values range from 0.0 (completely
-   * uncertain) to 1.0 (completely certain).
    * @return value or {@code null} for none
    */
   public java.lang.Float getAverageMatchConfidence() {
@@ -105,8 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * The average confidence all of the Match in the conversation. Values range from 0.0 (completely
-   * uncertain) to 1.0 (completely certain).
    * @param averageMatchConfidence averageMatchConfidence or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics setAverageMatchConfidence(java.lang.Float averageMatchConfidence) {
@@ -115,8 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * A signal that indicates the interaction with the Dialogflow agent has ended. If any response
-   * has the ResponseMessage.end_interaction signal, this is set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasEndInteraction() {
@@ -124,8 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * A signal that indicates the interaction with the Dialogflow agent has ended. If any response
-   * has the ResponseMessage.end_interaction signal, this is set to true.
    * @param hasEndInteraction hasEndInteraction or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics setHasEndInteraction(java.lang.Boolean hasEndInteraction) {
@@ -134,8 +114,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Hands off conversation to a human agent. If any response has the
-   * ResponseMessage.live_agent_handoffsignal, this is set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasLiveAgentHandoff() {
@@ -143,8 +121,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Hands off conversation to a human agent. If any response has the
-   * ResponseMessage.live_agent_handoffsignal, this is set to true.
    * @param hasLiveAgentHandoff hasLiveAgentHandoff or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics setHasLiveAgentHandoff(java.lang.Boolean hasLiveAgentHandoff) {
@@ -153,7 +129,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Duration of all the input's audio in the conversation.
    * @return value or {@code null} for none
    */
   public String getInputAudioDuration() {
@@ -161,7 +136,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Duration of all the input's audio in the conversation.
    * @param inputAudioDuration inputAudioDuration or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics setInputAudioDuration(String inputAudioDuration) {
@@ -170,7 +144,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * The number of interactions in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInteractionCount() {
@@ -178,7 +151,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * The number of interactions in the conversation.
    * @param interactionCount interactionCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics setInteractionCount(java.lang.Integer interactionCount) {
@@ -187,7 +159,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Match type counts.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount getMatchTypeCount() {
@@ -195,7 +166,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Match type counts.
    * @param matchTypeCount matchTypeCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics setMatchTypeCount(GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount matchTypeCount) {
@@ -204,7 +174,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Maximum latency of the Webhook calls in the conversation.
    * @return value or {@code null} for none
    */
   public String getMaxWebhookLatency() {
@@ -212,7 +181,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Maximum latency of the Webhook calls in the conversation.
    * @param maxWebhookLatency maxWebhookLatency or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics setMaxWebhookLatency(String maxWebhookLatency) {
@@ -221,7 +189,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Duration of all the output's audio in the conversation.
    * @return value or {@code null} for none
    */
   public String getOutputAudioDuration() {
@@ -229,7 +196,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Duration of all the output's audio in the conversation.
    * @param outputAudioDuration outputAudioDuration or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics setOutputAudioDuration(String outputAudioDuration) {
@@ -238,7 +204,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Query input counts.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount getQueryInputCount() {
@@ -246,7 +211,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetrics extends com
   }
 
   /**
-   * Query input counts.
    * @param queryInputCount queryInputCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetrics setQueryInputCount(GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount queryInputCount) {

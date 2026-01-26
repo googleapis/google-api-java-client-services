@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A confidence interval is a range of possible values for the experiment objective you are trying
- * to measure.
+ * Model definition for GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,37 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval extends com.google.api.client.json.GenericJson {
 
   /**
-   * The confidence level used to construct the interval, i.e. there is X% chance that the true
-   * value is within this interval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double confidenceLevel;
 
   /**
-   * Lower bound of the interval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double lowerBound;
 
   /**
-   * The percent change between an experiment metric's value and the value for its control.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double ratio;
 
   /**
-   * Upper bound of the interval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double upperBound;
 
   /**
-   * The confidence level used to construct the interval, i.e. there is X% chance that the true
-   * value is within this interval.
    * @return value or {@code null} for none
    */
   public java.lang.Double getConfidenceLevel() {
@@ -69,8 +61,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval e
   }
 
   /**
-   * The confidence level used to construct the interval, i.e. there is X% chance that the true
-   * value is within this interval.
    * @param confidenceLevel confidenceLevel or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval setConfidenceLevel(java.lang.Double confidenceLevel) {
@@ -79,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval e
   }
 
   /**
-   * Lower bound of the interval.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLowerBound() {
@@ -87,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval e
   }
 
   /**
-   * Lower bound of the interval.
    * @param lowerBound lowerBound or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval setLowerBound(java.lang.Double lowerBound) {
@@ -96,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval e
   }
 
   /**
-   * The percent change between an experiment metric's value and the value for its control.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRatio() {
@@ -104,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval e
   }
 
   /**
-   * The percent change between an experiment metric's value and the value for its control.
    * @param ratio ratio or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval setRatio(java.lang.Double ratio) {
@@ -113,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval e
   }
 
   /**
-   * Upper bound of the interval.
    * @return value or {@code null} for none
    */
   public java.lang.Double getUpperBound() {
@@ -121,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval e
   }
 
   /**
-   * Upper bound of the interval.
    * @param upperBound upperBound or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval setUpperBound(java.lang.Double upperBound) {

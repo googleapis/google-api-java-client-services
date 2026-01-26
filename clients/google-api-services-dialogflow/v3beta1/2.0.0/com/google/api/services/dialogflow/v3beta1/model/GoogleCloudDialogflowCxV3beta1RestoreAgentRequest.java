@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The request message for Agents.RestoreAgent.
+ * Model definition for GoogleCloudDialogflowCxV3beta1RestoreAgentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,39 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uncompressed raw byte content for agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentContent;
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to restore agent from.
-   * The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
-   * Storage object on the caller's behalf, so your request authentication must have read
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentUri;
 
   /**
-   * Setting for restoring from a git branch
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource gitSource;
 
   /**
-   * Agent restore mode. If not specified, `KEEP` is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String restoreOption;
 
   /**
-   * Uncompressed raw byte content for agent.
    * @see #decodeAgentContent()
    * @return value or {@code null} for none
    */
@@ -71,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   }
 
   /**
-   * Uncompressed raw byte content for agent.
+
    * @see #getAgentContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -82,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   }
 
   /**
-   * Uncompressed raw byte content for agent.
    * @see #encodeAgentContent()
    * @param agentContent agentContent or {@code null} for none
    */
@@ -92,7 +82,7 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   }
 
   /**
-   * Uncompressed raw byte content for agent.
+
    * @see #setAgentContent()
    *
    * <p>
@@ -107,11 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to restore agent from.
-   * The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
-   * Storage object on the caller's behalf, so your request authentication must have read
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentUri() {
@@ -119,11 +104,6 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to restore agent from.
-   * The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
-   * Storage object on the caller's behalf, so your request authentication must have read
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param agentUri agentUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RestoreAgentRequest setAgentUri(java.lang.String agentUri) {
@@ -132,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   }
 
   /**
-   * Setting for restoring from a git branch
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource getGitSource() {
@@ -140,7 +119,6 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   }
 
   /**
-   * Setting for restoring from a git branch
    * @param gitSource gitSource or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RestoreAgentRequest setGitSource(GoogleCloudDialogflowCxV3beta1RestoreAgentRequestGitSource gitSource) {
@@ -149,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   }
 
   /**
-   * Agent restore mode. If not specified, `KEEP` is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getRestoreOption() {
@@ -157,7 +134,6 @@ public final class GoogleCloudDialogflowCxV3beta1RestoreAgentRequest extends com
   }
 
   /**
-   * Agent restore mode. If not specified, `KEEP` is assumed.
    * @param restoreOption restoreOption or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RestoreAgentRequest setRestoreOption(java.lang.String restoreOption) {

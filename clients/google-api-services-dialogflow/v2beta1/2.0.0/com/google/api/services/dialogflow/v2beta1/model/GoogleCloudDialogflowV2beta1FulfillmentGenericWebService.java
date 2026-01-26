@@ -17,10 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents configuration for a generic web service. Dialogflow supports two mechanisms for
- * authentications: - Basic authentication with username and password. - Authentication with
- * additional authentication headers. More information could be found at:
- * https://cloud.google.com/dialogflow/docs/fulfillment-configure.
+ * Model definition for GoogleCloudDialogflowV2beta1FulfillmentGenericWebService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -33,46 +30,36 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates if generic web service is created through Cloud Functions integration.
-   * Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its
-   * uri as a regular web service now.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isCloudFunction;
 
   /**
-   * The password for HTTP Basic authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String password;
 
   /**
-   * The HTTP request headers to send together with fulfillment requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> requestHeaders;
 
   /**
-   * Required. The fulfillment URI for receiving POST requests. It must use https protocol.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * The user name for HTTP Basic authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
 
   /**
-   * Optional. Indicates if generic web service is created through Cloud Functions integration.
-   * Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its
-   * uri as a regular web service now.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsCloudFunction() {
@@ -80,9 +67,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService exte
   }
 
   /**
-   * Optional. Indicates if generic web service is created through Cloud Functions integration.
-   * Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its
-   * uri as a regular web service now.
    * @param isCloudFunction isCloudFunction or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService setIsCloudFunction(java.lang.Boolean isCloudFunction) {
@@ -91,7 +75,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService exte
   }
 
   /**
-   * The password for HTTP Basic authentication.
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -99,7 +82,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService exte
   }
 
   /**
-   * The password for HTTP Basic authentication.
    * @param password password or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService setPassword(java.lang.String password) {
@@ -108,7 +90,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService exte
   }
 
   /**
-   * The HTTP request headers to send together with fulfillment requests.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getRequestHeaders() {
@@ -116,7 +97,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService exte
   }
 
   /**
-   * The HTTP request headers to send together with fulfillment requests.
    * @param requestHeaders requestHeaders or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService setRequestHeaders(java.util.Map<String, java.lang.String> requestHeaders) {
@@ -125,7 +105,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService exte
   }
 
   /**
-   * Required. The fulfillment URI for receiving POST requests. It must use https protocol.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -133,7 +112,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService exte
   }
 
   /**
-   * Required. The fulfillment URI for receiving POST requests. It must use https protocol.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService setUri(java.lang.String uri) {
@@ -142,7 +120,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService exte
   }
 
   /**
-   * The user name for HTTP Basic authentication.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -150,7 +127,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebService exte
   }
 
   /**
-   * The user name for HTTP Basic authentication.
    * @param username username or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService setUsername(java.lang.String username) {

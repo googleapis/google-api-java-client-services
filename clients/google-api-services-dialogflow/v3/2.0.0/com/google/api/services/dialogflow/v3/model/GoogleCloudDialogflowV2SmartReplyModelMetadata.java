@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Metadata for smart reply models.
+ * Model definition for GoogleCloudDialogflowV2SmartReplyModelMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2SmartReplyModelMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Type of the smart reply model. If not provided, model_type is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trainingModelType;
 
   /**
-   * Optional. Type of the smart reply model. If not provided, model_type is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrainingModelType() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2SmartReplyModelMetadata extends com.go
   }
 
   /**
-   * Optional. Type of the smart reply model. If not provided, model_type is used.
    * @param trainingModelType trainingModelType or {@code null} for none
    */
   public GoogleCloudDialogflowV2SmartReplyModelMetadata setTrainingModelType(java.lang.String trainingModelType) {

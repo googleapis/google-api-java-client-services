@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The response message for Participants.SuggestDialogflowAssists.
+ * Model definition for GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,17 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of messages prior to and including latest_message to compile the suggestion. It may be
-   * smaller than the SuggestDialogflowAssistsRequest.context_size field in the request if there
-   * aren't that many messages in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * Output only. Multiple reply options provided by Dialogflow assist service. The order is based
-   * on the rank of the model prediction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,17 +48,12 @@ public final class GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse 
   }
 
   /**
-   * The name of the latest conversation message used to suggest answer. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Number of messages prior to and including latest_message to compile the suggestion. It may be
-   * smaller than the SuggestDialogflowAssistsRequest.context_size field in the request if there
-   * aren't that many messages in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -71,9 +61,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse 
   }
 
   /**
-   * Number of messages prior to and including latest_message to compile the suggestion. It may be
-   * smaller than the SuggestDialogflowAssistsRequest.context_size field in the request if there
-   * aren't that many messages in the conversation.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse setContextSize(java.lang.Integer contextSize) {
@@ -82,8 +69,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse 
   }
 
   /**
-   * Output only. Multiple reply options provided by Dialogflow assist service. The order is based
-   * on the rank of the model prediction.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1DialogflowAssistAnswer> getDialogflowAssistAnswers() {
@@ -91,8 +76,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse 
   }
 
   /**
-   * Output only. Multiple reply options provided by Dialogflow assist service. The order is based
-   * on the rank of the model prediction.
    * @param dialogflowAssistAnswers dialogflowAssistAnswers or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse setDialogflowAssistAnswers(java.util.List<GoogleCloudDialogflowV2beta1DialogflowAssistAnswer> dialogflowAssistAnswers) {
@@ -101,8 +84,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse 
   }
 
   /**
-   * The name of the latest conversation message used to suggest answer. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -110,8 +91,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse 
   }
 
   /**
-   * The name of the latest conversation message used to suggest answer. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse setLatestMessage(java.lang.String latestMessage) {

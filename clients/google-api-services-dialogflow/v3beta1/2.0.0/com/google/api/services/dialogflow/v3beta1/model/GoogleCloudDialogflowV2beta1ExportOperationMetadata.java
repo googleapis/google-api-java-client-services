@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Metadata related to the Export Data Operations (e.g. ExportDocument).
+ * Model definition for GoogleCloudDialogflowV2beta1ExportOperationMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1ExportOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Storage file path of the exported data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1GcsDestination exportedGcsDestination;
 
   /**
-   * Cloud Storage file path of the exported data.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GcsDestination getExportedGcsDestination() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1ExportOperationMetadata extends c
   }
 
   /**
-   * Cloud Storage file path of the exported data.
    * @param exportedGcsDestination exportedGcsDestination or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ExportOperationMetadata setExportedGcsDestination(GoogleCloudDialogflowV2beta1GcsDestination exportedGcsDestination) {

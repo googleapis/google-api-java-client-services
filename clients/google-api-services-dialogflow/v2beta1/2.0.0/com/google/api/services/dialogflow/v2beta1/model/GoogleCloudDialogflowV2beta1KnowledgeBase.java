@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * A knowledge base represents a collection of knowledge documents that you provide to Dialogflow.
- * Your knowledge documents contain information that may be useful during conversations with end-
- * users. Some Dialogflow features use knowledge bases when looking for a response to an end-user
- * input. For more information, see the [knowledge base
- * guide](https://cloud.google.com/dialogflow/docs/how/knowledge-bases). Note: The
- * `projects.agent.knowledgeBases` resource is deprecated; only use `projects.knowledgeBases`.
+ * Model definition for GoogleCloudDialogflowV2beta1KnowledgeBase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,32 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1KnowledgeBase extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The display name of the knowledge base. The name must be 1024 bytes or less;
-   * otherwise, the creation request fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is
-   * populated for all non en-us languages. If not populated, the default language en-us applies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * The knowledge base resource name. The name must be empty when creating a knowledge base.
-   * Format: `projects//locations//knowledgeBases/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The display name of the knowledge base. The name must be 1024 bytes or less;
-   * otherwise, the creation request fails.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -68,8 +55,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeBase extends com.google.
   }
 
   /**
-   * Required. The display name of the knowledge base. The name must be 1024 bytes or less;
-   * otherwise, the creation request fails.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeBase setDisplayName(java.lang.String displayName) {
@@ -78,8 +63,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeBase extends com.google.
   }
 
   /**
-   * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is
-   * populated for all non en-us languages. If not populated, the default language en-us applies.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -87,8 +70,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeBase extends com.google.
   }
 
   /**
-   * Language which represents the KnowledgeBase. When the KnowledgeBase is created/updated, this is
-   * populated for all non en-us languages. If not populated, the default language en-us applies.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeBase setLanguageCode(java.lang.String languageCode) {
@@ -97,8 +78,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeBase extends com.google.
   }
 
   /**
-   * The knowledge base resource name. The name must be empty when creating a knowledge base.
-   * Format: `projects//locations//knowledgeBases/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -106,8 +85,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeBase extends com.google.
   }
 
   /**
-   * The knowledge base resource name. The name must be empty when creating a knowledge base.
-   * Format: `projects//locations//knowledgeBases/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeBase setName(java.lang.String name) {

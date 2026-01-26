@@ -17,10 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * A knowledge document to be used by a KnowledgeBase. For more information, see the [knowledge base
- * guide](https://cloud.google.com/dialogflow/docs/how/knowledge-bases). Note: The
- * `projects.agent.knowledgeBases.documents` resource is deprecated; only use
- * `projects.knowledgeBases.documents`.
+ * Model definition for GoogleCloudDialogflowV2Document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -33,99 +30,66 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2Document extends com.google.api.client.json.GenericJson {
 
   /**
-   * The URI where the file content is located. For documents stored in Google Cloud Storage, these
-   * URIs must have the form `gs:`. NOTE: External URLs must correspond to public webpages, i.e.,
-   * they must be indexed by Google Search. In particular, URLs for showing documents in Google
-   * Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format
-   * URI described above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentUri;
 
   /**
-   * Required. The display name of the document. The name must be 1024 bytes or less; otherwise, the
-   * creation request fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. If true, we try to automatically reload the document every day (at a time picked by
-   * the system). If false or unspecified, we don't try to automatically reload the document.
-   * Currently you can only enable automatic reload for documents sourced from a public url, see
-   * `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If
-   * a reload fails, we will keep the document unchanged. If a reload fails with internal errors,
-   * the system will try to reload the document on the next day. If a reload fails with non-
-   * retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document
-   * anymore. You need to manually reload the document successfully by calling `ReloadDocument` and
-   * clear the errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAutoReload;
 
   /**
-   * Required. The knowledge type of document content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> knowledgeTypes;
 
   /**
-   * Output only. The time and status of the latest reload. This reload may have been triggered
-   * automatically or manually and may not have succeeded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2DocumentReloadStatus latestReloadStatus;
 
   /**
-   * Optional. Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested
-   * use cases include storing a document's title, an external URL distinct from the document's
-   * content_uri, etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * Required. The MIME type of this document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * Optional. The document resource name. The name must be empty when creating a document. Format:
-   * `projects//locations//knowledgeBases//documents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ
-   * knowledge types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rawContent;
 
   /**
-   * Output only. The current state of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The URI where the file content is located. For documents stored in Google Cloud Storage, these
-   * URIs must have the form `gs:`. NOTE: External URLs must correspond to public webpages, i.e.,
-   * they must be indexed by Google Search. In particular, URLs for showing documents in Google
-   * Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format
-   * URI described above.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentUri() {
@@ -133,11 +97,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * The URI where the file content is located. For documents stored in Google Cloud Storage, these
-   * URIs must have the form `gs:`. NOTE: External URLs must correspond to public webpages, i.e.,
-   * they must be indexed by Google Search. In particular, URLs for showing documents in Google
-   * Cloud Storage (i.e. the URL in your browser) are not supported. Instead use the `gs://` format
-   * URI described above.
    * @param contentUri contentUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2Document setContentUri(java.lang.String contentUri) {
@@ -146,8 +105,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Required. The display name of the document. The name must be 1024 bytes or less; otherwise, the
-   * creation request fails.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -155,8 +112,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Required. The display name of the document. The name must be 1024 bytes or less; otherwise, the
-   * creation request fails.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2Document setDisplayName(java.lang.String displayName) {
@@ -165,15 +120,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Optional. If true, we try to automatically reload the document every day (at a time picked by
-   * the system). If false or unspecified, we don't try to automatically reload the document.
-   * Currently you can only enable automatic reload for documents sourced from a public url, see
-   * `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If
-   * a reload fails, we will keep the document unchanged. If a reload fails with internal errors,
-   * the system will try to reload the document on the next day. If a reload fails with non-
-   * retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document
-   * anymore. You need to manually reload the document successfully by calling `ReloadDocument` and
-   * clear the errors.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAutoReload() {
@@ -181,15 +127,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Optional. If true, we try to automatically reload the document every day (at a time picked by
-   * the system). If false or unspecified, we don't try to automatically reload the document.
-   * Currently you can only enable automatic reload for documents sourced from a public url, see
-   * `source` field for the source types. Reload status can be tracked in `latest_reload_status`. If
-   * a reload fails, we will keep the document unchanged. If a reload fails with internal errors,
-   * the system will try to reload the document on the next day. If a reload fails with non-
-   * retriable errors (e.g. PERMISSION_DENIED), the system will not try to reload the document
-   * anymore. You need to manually reload the document successfully by calling `ReloadDocument` and
-   * clear the errors.
    * @param enableAutoReload enableAutoReload or {@code null} for none
    */
   public GoogleCloudDialogflowV2Document setEnableAutoReload(java.lang.Boolean enableAutoReload) {
@@ -198,7 +135,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Required. The knowledge type of document content.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getKnowledgeTypes() {
@@ -206,7 +142,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Required. The knowledge type of document content.
    * @param knowledgeTypes knowledgeTypes or {@code null} for none
    */
   public GoogleCloudDialogflowV2Document setKnowledgeTypes(java.util.List<java.lang.String> knowledgeTypes) {
@@ -215,8 +150,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Output only. The time and status of the latest reload. This reload may have been triggered
-   * automatically or manually and may not have succeeded.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2DocumentReloadStatus getLatestReloadStatus() {
@@ -224,8 +157,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Output only. The time and status of the latest reload. This reload may have been triggered
-   * automatically or manually and may not have succeeded.
    * @param latestReloadStatus latestReloadStatus or {@code null} for none
    */
   public GoogleCloudDialogflowV2Document setLatestReloadStatus(GoogleCloudDialogflowV2DocumentReloadStatus latestReloadStatus) {
@@ -234,9 +165,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Optional. Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested
-   * use cases include storing a document's title, an external URL distinct from the document's
-   * content_uri, etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -244,9 +172,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Optional. Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested
-   * use cases include storing a document's title, an external URL distinct from the document's
-   * content_uri, etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2Document setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -255,7 +180,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Required. The MIME type of this document.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -263,7 +187,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Required. The MIME type of this document.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudDialogflowV2Document setMimeType(java.lang.String mimeType) {
@@ -272,8 +195,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Optional. The document resource name. The name must be empty when creating a document. Format:
-   * `projects//locations//knowledgeBases//documents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -281,8 +202,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Optional. The document resource name. The name must be empty when creating a document. Format:
-   * `projects//locations//knowledgeBases//documents/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2Document setName(java.lang.String name) {
@@ -291,8 +210,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ
-   * knowledge types.
    * @see #decodeRawContent()
    * @return value or {@code null} for none
    */
@@ -301,8 +218,7 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ
-   * knowledge types.
+
    * @see #getRawContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -313,8 +229,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ
-   * knowledge types.
    * @see #encodeRawContent()
    * @param rawContent rawContent or {@code null} for none
    */
@@ -324,8 +238,7 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * The raw content of the document. This field is only permitted for EXTRACTIVE_QA and FAQ
-   * knowledge types.
+
    * @see #setRawContent()
    *
    * <p>
@@ -340,7 +253,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Output only. The current state of the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -348,7 +260,6 @@ public final class GoogleCloudDialogflowV2Document extends com.google.api.client
   }
 
   /**
-   * Output only. The current state of the document.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowV2Document setState(java.lang.String state) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for Agents.ExportAgent.
+ * Model definition for GoogleCloudDialogflowCxV3ExportAgentResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,32 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ExportAgentResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uncompressed raw byte content for agent. This field is populated if none of `agent_uri` and
-   * `git_destination` are specified in ExportAgentRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentContent;
 
   /**
-   * The URI to a file containing the exported agent. This field is populated if `agent_uri` is
-   * specified in ExportAgentRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentUri;
 
   /**
-   * Commit SHA of the git push. This field is populated if `git_destination` is specified in
-   * ExportAgentRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commitSha;
 
   /**
-   * Uncompressed raw byte content for agent. This field is populated if none of `agent_uri` and
-   * `git_destination` are specified in ExportAgentRequest.
    * @see #decodeAgentContent()
    * @return value or {@code null} for none
    */
@@ -64,8 +56,7 @@ public final class GoogleCloudDialogflowCxV3ExportAgentResponse extends com.goog
   }
 
   /**
-   * Uncompressed raw byte content for agent. This field is populated if none of `agent_uri` and
-   * `git_destination` are specified in ExportAgentRequest.
+
    * @see #getAgentContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -76,8 +67,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentResponse extends com.goog
   }
 
   /**
-   * Uncompressed raw byte content for agent. This field is populated if none of `agent_uri` and
-   * `git_destination` are specified in ExportAgentRequest.
    * @see #encodeAgentContent()
    * @param agentContent agentContent or {@code null} for none
    */
@@ -87,8 +76,7 @@ public final class GoogleCloudDialogflowCxV3ExportAgentResponse extends com.goog
   }
 
   /**
-   * Uncompressed raw byte content for agent. This field is populated if none of `agent_uri` and
-   * `git_destination` are specified in ExportAgentRequest.
+
    * @see #setAgentContent()
    *
    * <p>
@@ -103,8 +91,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentResponse extends com.goog
   }
 
   /**
-   * The URI to a file containing the exported agent. This field is populated if `agent_uri` is
-   * specified in ExportAgentRequest.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentUri() {
@@ -112,8 +98,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentResponse extends com.goog
   }
 
   /**
-   * The URI to a file containing the exported agent. This field is populated if `agent_uri` is
-   * specified in ExportAgentRequest.
    * @param agentUri agentUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportAgentResponse setAgentUri(java.lang.String agentUri) {
@@ -122,8 +106,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentResponse extends com.goog
   }
 
   /**
-   * Commit SHA of the git push. This field is populated if `git_destination` is specified in
-   * ExportAgentRequest.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommitSha() {
@@ -131,8 +113,6 @@ public final class GoogleCloudDialogflowCxV3ExportAgentResponse extends com.goog
   }
 
   /**
-   * Commit SHA of the git push. This field is populated if `git_destination` is specified in
-   * ExportAgentRequest.
    * @param commitSha commitSha or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportAgentResponse setCommitSha(java.lang.String commitSha) {

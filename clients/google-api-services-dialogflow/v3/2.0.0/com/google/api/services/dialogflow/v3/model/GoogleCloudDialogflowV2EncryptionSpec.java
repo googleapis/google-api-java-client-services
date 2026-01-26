@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A customer-managed encryption key specification that can be applied to all created resources
- * (e.g. Conversation).
+ * Model definition for GoogleCloudDialogflowV2EncryptionSpec.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,28 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2EncryptionSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of customer-managed encryption key that is used to secure a resource and its
-   * sub-resources. If empty, the resource is secured by the default Google encryption key. Only the
-   * key in the same location as this resource is allowed to be used for encryption. Format:
-   * `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{key}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKey;
 
   /**
-   * Immutable. The resource name of the encryption key specification resource. Format:
-   * projects/{project}/locations/{location}/encryptionSpec
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The name of customer-managed encryption key that is used to secure a resource and its
-   * sub-resources. If empty, the resource is secured by the default Google encryption key. Only the
-   * key in the same location as this resource is allowed to be used for encryption. Format:
-   * `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{key}`
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKey() {
@@ -60,10 +49,6 @@ public final class GoogleCloudDialogflowV2EncryptionSpec extends com.google.api.
   }
 
   /**
-   * Required. The name of customer-managed encryption key that is used to secure a resource and its
-   * sub-resources. If empty, the resource is secured by the default Google encryption key. Only the
-   * key in the same location as this resource is allowed to be used for encryption. Format:
-   * `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{key}`
    * @param kmsKey kmsKey or {@code null} for none
    */
   public GoogleCloudDialogflowV2EncryptionSpec setKmsKey(java.lang.String kmsKey) {
@@ -72,8 +57,6 @@ public final class GoogleCloudDialogflowV2EncryptionSpec extends com.google.api.
   }
 
   /**
-   * Immutable. The resource name of the encryption key specification resource. Format:
-   * projects/{project}/locations/{location}/encryptionSpec
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -81,8 +64,6 @@ public final class GoogleCloudDialogflowV2EncryptionSpec extends com.google.api.
   }
 
   /**
-   * Immutable. The resource name of the encryption key specification resource. Format:
-   * projects/{project}/locations/{location}/encryptionSpec
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2EncryptionSpec setName(java.lang.String name) {

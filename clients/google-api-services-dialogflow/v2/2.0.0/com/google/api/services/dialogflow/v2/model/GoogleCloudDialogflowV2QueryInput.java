@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the query input. It can contain either: 1. An audio config which instructs the speech
- * recognizer how to process the speech audio. 2. A conversational query in the form of text. 3. An
- * event that specifies which intent to trigger.
+ * Model definition for GoogleCloudDialogflowV2QueryInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,29 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2QueryInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Instructs the speech recognizer how to process the speech audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2InputAudioConfig audioConfig;
 
   /**
-   * The event to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2EventInput event;
 
   /**
-   * The natural language text to be processed. Text length must not exceed 256 character for
-   * virtual agent interactions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2TextInput text;
 
   /**
-   * Instructs the speech recognizer how to process the speech audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig getAudioConfig() {
@@ -62,7 +55,6 @@ public final class GoogleCloudDialogflowV2QueryInput extends com.google.api.clie
   }
 
   /**
-   * Instructs the speech recognizer how to process the speech audio.
    * @param audioConfig audioConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryInput setAudioConfig(GoogleCloudDialogflowV2InputAudioConfig audioConfig) {
@@ -71,7 +63,6 @@ public final class GoogleCloudDialogflowV2QueryInput extends com.google.api.clie
   }
 
   /**
-   * The event to be processed.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EventInput getEvent() {
@@ -79,7 +70,6 @@ public final class GoogleCloudDialogflowV2QueryInput extends com.google.api.clie
   }
 
   /**
-   * The event to be processed.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryInput setEvent(GoogleCloudDialogflowV2EventInput event) {
@@ -88,8 +78,6 @@ public final class GoogleCloudDialogflowV2QueryInput extends com.google.api.clie
   }
 
   /**
-   * The natural language text to be processed. Text length must not exceed 256 character for
-   * virtual agent interactions.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextInput getText() {
@@ -97,8 +85,6 @@ public final class GoogleCloudDialogflowV2QueryInput extends com.google.api.clie
   }
 
   /**
-   * The natural language text to be processed. Text length must not exceed 256 character for
-   * virtual agent interactions.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryInput setText(GoogleCloudDialogflowV2TextInput text) {

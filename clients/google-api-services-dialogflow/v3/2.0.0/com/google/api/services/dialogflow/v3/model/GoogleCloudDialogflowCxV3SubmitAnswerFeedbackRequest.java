@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request to set the feedback for a bot answer.
+ * Model definition for GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Feedback provided for a bot answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3AnswerFeedback answerFeedback;
 
   /**
-   * Required. ID of the response to update its feedback. This is the same as
-   * DetectIntentResponse.response_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseId;
 
   /**
-   * Optional. The mask to control which fields to update. If the mask is not present, all fields
-   * will be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateMask;
 
   /**
-   * Required. Feedback provided for a bot answer.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AnswerFeedback getAnswerFeedback() {
@@ -61,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest extends 
   }
 
   /**
-   * Required. Feedback provided for a bot answer.
    * @param answerFeedback answerFeedback or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest setAnswerFeedback(GoogleCloudDialogflowCxV3AnswerFeedback answerFeedback) {
@@ -70,8 +63,6 @@ public final class GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest extends 
   }
 
   /**
-   * Required. ID of the response to update its feedback. This is the same as
-   * DetectIntentResponse.response_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseId() {
@@ -79,8 +70,6 @@ public final class GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest extends 
   }
 
   /**
-   * Required. ID of the response to update its feedback. This is the same as
-   * DetectIntentResponse.response_id.
    * @param responseId responseId or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest setResponseId(java.lang.String responseId) {
@@ -89,8 +78,6 @@ public final class GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest extends 
   }
 
   /**
-   * Optional. The mask to control which fields to update. If the mask is not present, all fields
-   * will be updated.
    * @return value or {@code null} for none
    */
   public String getUpdateMask() {
@@ -98,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest extends 
   }
 
   /**
-   * Optional. The mask to control which fields to update. If the mask is not present, all fields
-   * will be updated.
    * @param updateMask updateMask or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest setUpdateMask(String updateMask) {

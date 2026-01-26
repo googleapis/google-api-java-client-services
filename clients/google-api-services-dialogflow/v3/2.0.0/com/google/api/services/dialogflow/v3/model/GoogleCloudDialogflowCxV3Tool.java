@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A tool provides a list of actions which are available to the Playbook to attain its goal. A Tool
- * consists of a description of the tool's usage and a specification of the tool which contains the
- * schema and authentication information.
+ * Model definition for GoogleCloudDialogflowCxV3Tool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,56 +30,48 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.json.GenericJson {
 
   /**
-   * Data store search tool specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolDataStoreTool dataStoreSpec;
 
   /**
-   * Required. High level description of the Tool and its usage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The human-readable name of the Tool, unique within an agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Client side executed function specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolFunctionTool functionSpec;
 
   /**
-   * The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * OpenAPI specification of the Tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolOpenApiTool openApiSpec;
 
   /**
-   * Output only. The tool type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String toolType;
 
   /**
-   * Data store search tool specification.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolDataStoreTool getDataStoreSpec() {
@@ -89,7 +79,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * Data store search tool specification.
    * @param dataStoreSpec dataStoreSpec or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Tool setDataStoreSpec(GoogleCloudDialogflowCxV3ToolDataStoreTool dataStoreSpec) {
@@ -98,7 +87,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * Required. High level description of the Tool and its usage.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -106,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * Required. High level description of the Tool and its usage.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Tool setDescription(java.lang.String description) {
@@ -115,7 +102,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * Required. The human-readable name of the Tool, unique within an agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -123,7 +109,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * Required. The human-readable name of the Tool, unique within an agent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Tool setDisplayName(java.lang.String displayName) {
@@ -132,7 +117,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * Client side executed function specification.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolFunctionTool getFunctionSpec() {
@@ -140,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * Client side executed function specification.
    * @param functionSpec functionSpec or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Tool setFunctionSpec(GoogleCloudDialogflowCxV3ToolFunctionTool functionSpec) {
@@ -149,7 +132,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -157,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Tool setName(java.lang.String name) {
@@ -166,7 +147,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * OpenAPI specification of the Tool.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolOpenApiTool getOpenApiSpec() {
@@ -174,7 +154,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * OpenAPI specification of the Tool.
    * @param openApiSpec openApiSpec or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Tool setOpenApiSpec(GoogleCloudDialogflowCxV3ToolOpenApiTool openApiSpec) {
@@ -183,7 +162,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * Output only. The tool type.
    * @return value or {@code null} for none
    */
   public java.lang.String getToolType() {
@@ -191,7 +169,6 @@ public final class GoogleCloudDialogflowCxV3Tool extends com.google.api.client.j
   }
 
   /**
-   * Output only. The tool type.
    * @param toolType toolType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Tool setToolType(java.lang.String toolType) {

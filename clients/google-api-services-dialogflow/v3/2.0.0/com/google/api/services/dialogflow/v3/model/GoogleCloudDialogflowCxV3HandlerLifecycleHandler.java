@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A handler that is triggered on the specific lifecycle_stage of the playbook execution.
+ * Model definition for GoogleCloudDialogflowCxV3HandlerLifecycleHandler.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3HandlerLifecycleHandler extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The condition that must be satisfied to trigger this handler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * Required. The fulfillment to call when this handler is triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3Fulfillment fulfillment;
 
   /**
-   * Required. The name of the lifecycle stage that triggers this handler. Supported values: *
-   * `playbook-start` * `pre-action-selection` * `pre-action-execution`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lifecycleStage;
 
   /**
-   * Optional. The condition that must be satisfied to trigger this handler.
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3HandlerLifecycleHandler extends com.
   }
 
   /**
-   * Optional. The condition that must be satisfied to trigger this handler.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3HandlerLifecycleHandler setCondition(java.lang.String condition) {
@@ -69,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3HandlerLifecycleHandler extends com.
   }
 
   /**
-   * Required. The fulfillment to call when this handler is triggered.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment getFulfillment() {
@@ -77,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3HandlerLifecycleHandler extends com.
   }
 
   /**
-   * Required. The fulfillment to call when this handler is triggered.
    * @param fulfillment fulfillment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3HandlerLifecycleHandler setFulfillment(GoogleCloudDialogflowCxV3Fulfillment fulfillment) {
@@ -86,8 +78,6 @@ public final class GoogleCloudDialogflowCxV3HandlerLifecycleHandler extends com.
   }
 
   /**
-   * Required. The name of the lifecycle stage that triggers this handler. Supported values: *
-   * `playbook-start` * `pre-action-selection` * `pre-action-execution`
    * @return value or {@code null} for none
    */
   public java.lang.String getLifecycleStage() {
@@ -95,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3HandlerLifecycleHandler extends com.
   }
 
   /**
-   * Required. The name of the lifecycle stage that triggers this handler. Supported values: *
-   * `playbook-start` * `pre-action-selection` * `pre-action-execution`
    * @param lifecycleStage lifecycleStage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3HandlerLifecycleHandler setLifecycleStage(java.lang.String lifecycleStage) {

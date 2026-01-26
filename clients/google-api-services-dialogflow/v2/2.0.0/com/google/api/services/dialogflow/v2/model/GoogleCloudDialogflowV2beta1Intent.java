@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * An intent categorizes an end-user's intention for one conversation turn. For each agent, you
- * define many intents, where your combined intents can handle a complete conversation. When an end-
- * user writes or says something, referred to as an end-user expression or end-user input,
- * Dialogflow matches the end-user input to the best intent in your agent. Matching an intent is
- * also known as intent classification. For more information, see the [intent
- * guide](https://cloud.google.com/dialogflow/docs/intents-overview).
+ * Model definition for GoogleCloudDialogflowV2beta1Intent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,122 +30,84 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the action associated with the intent. Note: The action name must not
-   * contain whitespaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Optional. The list of platforms for which the first responses will be copied from the messages
-   * in PLATFORM_UNSPECIFIED (i.e. default platform).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> defaultResponsePlatforms;
 
   /**
-   * Required. The name of this intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. Indicates that this intent ends an interaction. Some integrations (e.g., Actions on
-   * Google or Dialogflow phone gateway) use this information to close interaction with an end user.
-   * Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean endInteraction;
 
   /**
-   * Optional. The collection of event names that trigger the intent. If the collection of input
-   * contexts is not empty, all of the contexts must be present in the active user session for an
-   * event to trigger this intent. Event names are limited to 150 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> events;
 
   /**
-   * Output only. Information about all followup intents that have this intent as a direct or
-   * indirect parent. We populate this field only in the output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo> followupIntentInfo;
 
   /**
-   * Optional. The list of context names required for this intent to be triggered. Formats: -
-   * `projects//agent/sessions/-/contexts/` - `projects//locations//agent/sessions/-/contexts/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> inputContextNames;
 
   /**
-   * Optional. Indicates whether this is a fallback intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isFallback;
 
   /**
-   * Optional. Indicates that a live agent should be brought in to handle the interaction with the
-   * user. In most cases, when you set this flag to true, you would also want to set end_interaction
-   * to true as well. Default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean liveAgentHandoff;
 
   /**
-   * Optional. The collection of rich messages corresponding to the `Response` field in the
-   * Dialogflow console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentMessage> messages;
 
   /**
-   * Optional. Indicates whether Machine Learning is disabled for the intent. Note: If `ml_disabled`
-   * setting is set to true, then this intent is not taken into account during inference in `ML
-   * ONLY` match mode. Also, auto-markup in the UI is turned off.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean mlDisabled;
 
   /**
-   * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled`
-   * setting is set to false, then this intent is not taken into account during inference in `ML
-   * ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use
-   * `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or
-   * false, then the default value is determined as follows: - Before April 15th, 2018 the default
-   * is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is:
-   * ml_enabled = true / ml_disabled = false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean mlEnabled;
 
   /**
-   * Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and
-   * Intents.BatchUpdateIntents methods. Supported formats: - `projects//agent/intents/` -
-   * `projects//locations//agent/intents/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The collection of contexts that are activated when the intent is matched. Context
-   * messages in this collection should not set the parameters field. Setting the `lifespan_count`
-   * to 0 will reset the context when the intent is matched. Format:
-   * `projects//agent/sessions/-/contexts/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,66 +120,48 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of parameters associated with the intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentParameter> parameters;
 
   /**
-   * Optional. The unique identifier of the parent intent in the chain of followup intents. You can
-   * set this field when creating an intent, for example with CreateIntent or BatchUpdateIntents, in
-   * order to make this intent a followup intent. It identifies the parent followup intent. Format:
-   * `projects//agent/intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentFollowupIntentName;
 
   /**
-   * Optional. The priority of this intent. Higher numbers represent higher priorities. - If the
-   * supplied value is unspecified or 0, the service translates the value to 500,000, which
-   * corresponds to the `Normal` priority in the console. - If the supplied value is negative, the
-   * intent is ignored in runtime detect intent requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer priority;
 
   /**
-   * Optional. Indicates whether to delete all contexts in the current session when this intent is
-   * matched.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean resetContexts;
 
   /**
-   * Output only. The unique identifier of the root intent in the chain of followup intents. It
-   * identifies the correct followup intents chain for this intent. Format:
-   * `projects//agent/intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rootFollowupIntentName;
 
   /**
-   * Optional. The collection of examples that the agent is trained on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentTrainingPhrase> trainingPhrases;
 
   /**
-   * Optional. Indicates whether webhooks are enabled for the intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String webhookState;
 
   /**
-   * Optional. The name of the action associated with the intent. Note: The action name must not
-   * contain whitespaces.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -230,8 +169,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The name of the action associated with the intent. Note: The action name must not
-   * contain whitespaces.
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setAction(java.lang.String action) {
@@ -240,8 +177,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The list of platforms for which the first responses will be copied from the messages
-   * in PLATFORM_UNSPECIFIED (i.e. default platform).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDefaultResponsePlatforms() {
@@ -249,8 +184,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The list of platforms for which the first responses will be copied from the messages
-   * in PLATFORM_UNSPECIFIED (i.e. default platform).
    * @param defaultResponsePlatforms defaultResponsePlatforms or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setDefaultResponsePlatforms(java.util.List<java.lang.String> defaultResponsePlatforms) {
@@ -259,7 +192,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Required. The name of this intent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -267,7 +199,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Required. The name of this intent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setDisplayName(java.lang.String displayName) {
@@ -276,9 +207,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates that this intent ends an interaction. Some integrations (e.g., Actions on
-   * Google or Dialogflow phone gateway) use this information to close interaction with an end user.
-   * Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEndInteraction() {
@@ -286,9 +214,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates that this intent ends an interaction. Some integrations (e.g., Actions on
-   * Google or Dialogflow phone gateway) use this information to close interaction with an end user.
-   * Default is false.
    * @param endInteraction endInteraction or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setEndInteraction(java.lang.Boolean endInteraction) {
@@ -297,9 +222,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of event names that trigger the intent. If the collection of input
-   * contexts is not empty, all of the contexts must be present in the active user session for an
-   * event to trigger this intent. Event names are limited to 150 characters.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEvents() {
@@ -307,9 +229,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of event names that trigger the intent. If the collection of input
-   * contexts is not empty, all of the contexts must be present in the active user session for an
-   * event to trigger this intent. Event names are limited to 150 characters.
    * @param events events or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setEvents(java.util.List<java.lang.String> events) {
@@ -318,8 +237,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Output only. Information about all followup intents that have this intent as a direct or
-   * indirect parent. We populate this field only in the output.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo> getFollowupIntentInfo() {
@@ -327,8 +244,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Output only. Information about all followup intents that have this intent as a direct or
-   * indirect parent. We populate this field only in the output.
    * @param followupIntentInfo followupIntentInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setFollowupIntentInfo(java.util.List<GoogleCloudDialogflowV2beta1IntentFollowupIntentInfo> followupIntentInfo) {
@@ -337,8 +252,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The list of context names required for this intent to be triggered. Formats: -
-   * `projects//agent/sessions/-/contexts/` - `projects//locations//agent/sessions/-/contexts/`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInputContextNames() {
@@ -346,8 +259,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The list of context names required for this intent to be triggered. Formats: -
-   * `projects//agent/sessions/-/contexts/` - `projects//locations//agent/sessions/-/contexts/`
    * @param inputContextNames inputContextNames or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setInputContextNames(java.util.List<java.lang.String> inputContextNames) {
@@ -356,7 +267,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether this is a fallback intent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsFallback() {
@@ -364,7 +274,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether this is a fallback intent.
    * @param isFallback isFallback or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setIsFallback(java.lang.Boolean isFallback) {
@@ -373,9 +282,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates that a live agent should be brought in to handle the interaction with the
-   * user. In most cases, when you set this flag to true, you would also want to set end_interaction
-   * to true as well. Default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLiveAgentHandoff() {
@@ -383,9 +289,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates that a live agent should be brought in to handle the interaction with the
-   * user. In most cases, when you set this flag to true, you would also want to set end_interaction
-   * to true as well. Default is false.
    * @param liveAgentHandoff liveAgentHandoff or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setLiveAgentHandoff(java.lang.Boolean liveAgentHandoff) {
@@ -394,8 +297,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of rich messages corresponding to the `Response` field in the
-   * Dialogflow console.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentMessage> getMessages() {
@@ -403,8 +304,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of rich messages corresponding to the `Response` field in the
-   * Dialogflow console.
    * @param messages messages or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setMessages(java.util.List<GoogleCloudDialogflowV2beta1IntentMessage> messages) {
@@ -413,9 +312,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether Machine Learning is disabled for the intent. Note: If `ml_disabled`
-   * setting is set to true, then this intent is not taken into account during inference in `ML
-   * ONLY` match mode. Also, auto-markup in the UI is turned off.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMlDisabled() {
@@ -423,9 +319,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether Machine Learning is disabled for the intent. Note: If `ml_disabled`
-   * setting is set to true, then this intent is not taken into account during inference in `ML
-   * ONLY` match mode. Also, auto-markup in the UI is turned off.
    * @param mlDisabled mlDisabled or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setMlDisabled(java.lang.Boolean mlDisabled) {
@@ -434,13 +327,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled`
-   * setting is set to false, then this intent is not taken into account during inference in `ML
-   * ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use
-   * `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or
-   * false, then the default value is determined as follows: - Before April 15th, 2018 the default
-   * is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is:
-   * ml_enabled = true / ml_disabled = false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMlEnabled() {
@@ -448,13 +334,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether Machine Learning is enabled for the intent. Note: If `ml_enabled`
-   * setting is set to false, then this intent is not taken into account during inference in `ML
-   * ONLY` match mode. Also, auto-markup in the UI is turned off. DEPRECATED! Please use
-   * `ml_disabled` field instead. NOTE: If both `ml_enabled` and `ml_disabled` are either not set or
-   * false, then the default value is determined as follows: - Before April 15th, 2018 the default
-   * is: ml_enabled = false / ml_disabled = true. - After April 15th, 2018 the default is:
-   * ml_enabled = true / ml_disabled = false.
    * @param mlEnabled mlEnabled or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setMlEnabled(java.lang.Boolean mlEnabled) {
@@ -463,9 +342,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and
-   * Intents.BatchUpdateIntents methods. Supported formats: - `projects//agent/intents/` -
-   * `projects//locations//agent/intents/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -473,9 +349,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The unique identifier of this intent. Required for Intents.UpdateIntent and
-   * Intents.BatchUpdateIntents methods. Supported formats: - `projects//agent/intents/` -
-   * `projects//locations//agent/intents/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setName(java.lang.String name) {
@@ -484,10 +357,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of contexts that are activated when the intent is matched. Context
-   * messages in this collection should not set the parameters field. Setting the `lifespan_count`
-   * to 0 will reset the context when the intent is matched. Format:
-   * `projects//agent/sessions/-/contexts/`.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1Context> getOutputContexts() {
@@ -495,10 +364,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of contexts that are activated when the intent is matched. Context
-   * messages in this collection should not set the parameters field. Setting the `lifespan_count`
-   * to 0 will reset the context when the intent is matched. Format:
-   * `projects//agent/sessions/-/contexts/`.
    * @param outputContexts outputContexts or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setOutputContexts(java.util.List<GoogleCloudDialogflowV2beta1Context> outputContexts) {
@@ -507,7 +372,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of parameters associated with the intent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentParameter> getParameters() {
@@ -515,7 +379,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of parameters associated with the intent.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setParameters(java.util.List<GoogleCloudDialogflowV2beta1IntentParameter> parameters) {
@@ -524,10 +387,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The unique identifier of the parent intent in the chain of followup intents. You can
-   * set this field when creating an intent, for example with CreateIntent or BatchUpdateIntents, in
-   * order to make this intent a followup intent. It identifies the parent followup intent. Format:
-   * `projects//agent/intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentFollowupIntentName() {
@@ -535,10 +394,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The unique identifier of the parent intent in the chain of followup intents. You can
-   * set this field when creating an intent, for example with CreateIntent or BatchUpdateIntents, in
-   * order to make this intent a followup intent. It identifies the parent followup intent. Format:
-   * `projects//agent/intents/`.
    * @param parentFollowupIntentName parentFollowupIntentName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setParentFollowupIntentName(java.lang.String parentFollowupIntentName) {
@@ -547,10 +402,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The priority of this intent. Higher numbers represent higher priorities. - If the
-   * supplied value is unspecified or 0, the service translates the value to 500,000, which
-   * corresponds to the `Normal` priority in the console. - If the supplied value is negative, the
-   * intent is ignored in runtime detect intent requests.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -558,10 +409,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The priority of this intent. Higher numbers represent higher priorities. - If the
-   * supplied value is unspecified or 0, the service translates the value to 500,000, which
-   * corresponds to the `Normal` priority in the console. - If the supplied value is negative, the
-   * intent is ignored in runtime detect intent requests.
    * @param priority priority or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setPriority(java.lang.Integer priority) {
@@ -570,8 +417,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether to delete all contexts in the current session when this intent is
-   * matched.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getResetContexts() {
@@ -579,8 +424,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether to delete all contexts in the current session when this intent is
-   * matched.
    * @param resetContexts resetContexts or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setResetContexts(java.lang.Boolean resetContexts) {
@@ -589,9 +432,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Output only. The unique identifier of the root intent in the chain of followup intents. It
-   * identifies the correct followup intents chain for this intent. Format:
-   * `projects//agent/intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRootFollowupIntentName() {
@@ -599,9 +439,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Output only. The unique identifier of the root intent in the chain of followup intents. It
-   * identifies the correct followup intents chain for this intent. Format:
-   * `projects//agent/intents/`.
    * @param rootFollowupIntentName rootFollowupIntentName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setRootFollowupIntentName(java.lang.String rootFollowupIntentName) {
@@ -610,7 +447,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of examples that the agent is trained on.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentTrainingPhrase> getTrainingPhrases() {
@@ -618,7 +454,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. The collection of examples that the agent is trained on.
    * @param trainingPhrases trainingPhrases or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setTrainingPhrases(java.util.List<GoogleCloudDialogflowV2beta1IntentTrainingPhrase> trainingPhrases) {
@@ -627,7 +462,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether webhooks are enabled for the intent.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebhookState() {
@@ -635,7 +469,6 @@ public final class GoogleCloudDialogflowV2beta1Intent extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates whether webhooks are enabled for the intent.
    * @param webhookState webhookState or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Intent setWebhookState(java.lang.String webhookState) {

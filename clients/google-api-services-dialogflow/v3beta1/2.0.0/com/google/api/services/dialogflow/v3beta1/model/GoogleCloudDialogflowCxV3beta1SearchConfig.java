@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Search configuration for UCS search queries.
+ * Model definition for GoogleCloudDialogflowCxV3beta1SearchConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,9 +30,6 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1SearchConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Boosting configuration for the datastores. Maps from datastore name to their boost
-   * configuration. Do not specify more than one BoostSpecs for each datastore name. If multiple
-   * BoostSpecs are provided for the same datastore name, the behavior is undefined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,10 +42,6 @@ public final class GoogleCloudDialogflowCxV3beta1SearchConfig extends com.google
   }
 
   /**
-   * Optional. Filter configuration for the datastores. Maps from datastore name to the filter
-   * expression for that datastore. Do not specify more than one FilterSpecs for each datastore
-   * name. If multiple FilterSpecs are provided for the same datastore name, the behavior is
-   * undefined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +54,6 @@ public final class GoogleCloudDialogflowCxV3beta1SearchConfig extends com.google
   }
 
   /**
-   * Optional. Boosting configuration for the datastores. Maps from datastore name to their boost
-   * configuration. Do not specify more than one BoostSpecs for each datastore name. If multiple
-   * BoostSpecs are provided for the same datastore name, the behavior is undefined.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1BoostSpecs> getBoostSpecs() {
@@ -71,9 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1SearchConfig extends com.google
   }
 
   /**
-   * Optional. Boosting configuration for the datastores. Maps from datastore name to their boost
-   * configuration. Do not specify more than one BoostSpecs for each datastore name. If multiple
-   * BoostSpecs are provided for the same datastore name, the behavior is undefined.
    * @param boostSpecs boostSpecs or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SearchConfig setBoostSpecs(java.util.List<GoogleCloudDialogflowCxV3beta1BoostSpecs> boostSpecs) {
@@ -82,10 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1SearchConfig extends com.google
   }
 
   /**
-   * Optional. Filter configuration for the datastores. Maps from datastore name to the filter
-   * expression for that datastore. Do not specify more than one FilterSpecs for each datastore
-   * name. If multiple FilterSpecs are provided for the same datastore name, the behavior is
-   * undefined.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1FilterSpecs> getFilterSpecs() {
@@ -93,10 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1SearchConfig extends com.google
   }
 
   /**
-   * Optional. Filter configuration for the datastores. Maps from datastore name to the filter
-   * expression for that datastore. Do not specify more than one FilterSpecs for each datastore
-   * name. If multiple FilterSpecs are provided for the same datastore name, the behavior is
-   * undefined.
    * @param filterSpecs filterSpecs or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SearchConfig setFilterSpecs(java.util.List<GoogleCloudDialogflowCxV3beta1FilterSpecs> filterSpecs) {

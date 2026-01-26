@@ -174,14 +174,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
     public class Locations {
 
       /**
-       * Gets information about a location.
-       *
        * Create a request for the method "locations.get".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Resource name for the location.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -198,8 +196,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Gets information about a location.
-         *
          * Create a request for the method "locations.get".
          *
          * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -207,7 +203,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Resource name for the location.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -285,17 +281,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Resource name for the location. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Resource name for the location.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Resource name for the location. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -312,14 +307,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists information about the supported locations for this service.
-       *
        * Create a request for the method "locations.list".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name The resource that owns the locations collection, if applicable.
+       * @param name
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -336,8 +329,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
-         *
          * Create a request for the method "locations.list".
          *
          * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -345,7 +336,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource that owns the locations collection, if applicable.
+         * @param name
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -423,17 +414,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The resource that owns the locations collection, if applicable. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource that owns the locations collection, if applicable.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The resource that owns the locations collection, if applicable. */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -444,88 +434,61 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
-         */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /**
+
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
-        /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
-         */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
           return this;
         }
 
-        /**
-         * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like `"displayName=tokyo"`, and is documented in more detail in
-         * [AIP-160](https://google.aip.dev/160).
-         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
-       `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /**
-         * A filter to narrow down results to a preferred subset. The filtering language accepts
-         * strings like `"displayName=tokyo"`, and is documented in more detail in
-         * [AIP-160](https://google.aip.dev/160).
-         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** The maximum number of results to return. If not set, the service selects a default. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of results to return. If not set, the service selects a default.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The maximum number of results to return. If not set, the service selects a default. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /**
-         * A page token received from the `next_page_token` field in the response. Send that page
-         * token to receive the subsequent page.
-         */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token received from the `next_page_token` field in the response. Send that page token to
-       receive the subsequent page.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /**
-         * A page token received from the `next_page_token` field in the response. Send that page
-         * token to receive the subsequent page.
-         */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -558,16 +521,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       public class Agents {
 
         /**
-         * Creates an agent in the specified location. Note: You should always train a flow prior to sending
-         * it queries. See the [training
-         * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-         *
          * Create a request for the method "agents.create".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location to create a agent for. Format: `projects//locations/`.
+         * @param parent
          * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Agent}
          * @return the request
          */
@@ -585,10 +544,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates an agent in the specified location. Note: You should always train a flow prior to
-           * sending it queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "agents.create".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -597,7 +552,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location to create a agent for. Format: `projects//locations/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Agent}
            * @since 1.13
            */
@@ -666,17 +621,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The location to create a agent for. Format: `projects//locations/`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location to create a agent for. Format: `projects//locations/`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The location to create a agent for. Format: `projects//locations/`. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -693,14 +647,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Deletes the specified agent.
-         *
          * Create a request for the method "agents.delete".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the agent to delete. Format: `projects//locations//agents/`.
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -717,8 +669,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
           /**
-           * Deletes the specified agent.
-           *
            * Create a request for the method "agents.delete".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -727,7 +677,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the agent to delete. Format: `projects//locations//agents/`.
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -795,17 +745,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the agent to delete. Format: `projects//locations//agents/`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the agent to delete. Format: `projects//locations//agents/`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the agent to delete. Format: `projects//locations//agents/`. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -822,18 +771,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Exports the specified agent to a binary file. This method is a [long-running
-         * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-         * `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct
-         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) -
-         * `response`: ExportAgentResponse
-         *
          * Create a request for the method "agents.export".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Export#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the agent to export. Format: `projects//locations//agents/`.
+         * @param name
          * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportAgentRequest}
          * @return the request
          */
@@ -851,12 +794,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
           /**
-           * Exports the specified agent to a binary file. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-           * returned `Operation` type has the following method-specific fields: - `metadata`: An empty
-           * [Struct message](https://developers.google.com/protocol-
-           * buffers/docs/reference/google.protobuf#struct) - `response`: ExportAgentResponse
-           *
            * Create a request for the method "agents.export".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -865,7 +802,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the agent to export. Format: `projects//locations//agents/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportAgentRequest}
            * @since 1.13
            */
@@ -934,17 +871,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Export) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the agent to export. Format: `projects//locations//agents/`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the agent to export. Format: `projects//locations//agents/`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the agent to export. Format: `projects//locations//agents/`. */
           public Export setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -961,14 +897,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Retrieves the specified agent.
-         *
          * Create a request for the method "agents.get".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the agent. Format: `projects//locations//agents/`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -985,8 +919,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
           /**
-           * Retrieves the specified agent.
-           *
            * Create a request for the method "agents.get".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -994,7 +926,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the agent. Format: `projects//locations//agents/`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1072,17 +1004,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the agent. Format: `projects//locations//agents/`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the agent. Format: `projects//locations//agents/`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the agent. Format: `projects//locations//agents/`. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1099,15 +1030,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets the generative settings for the agent.
-         *
          * Create a request for the method "agents.getGenerativeSettings".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link GetGenerativeSettings#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. Format: `projects//locations//agents//generativeSettings`.
+         * @param name
          * @return the request
          */
         public GetGenerativeSettings getGenerativeSettings(java.lang.String name) throws java.io.IOException {
@@ -1124,8 +1053,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/generativeSettings$");
 
           /**
-           * Gets the generative settings for the agent.
-           *
            * Create a request for the method "agents.getGenerativeSettings".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -1134,7 +1061,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param name Required. Format: `projects//locations//agents//generativeSettings`.
+           * @param name
            * @since 1.13
            */
           protected GetGenerativeSettings(java.lang.String name) {
@@ -1212,17 +1139,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (GetGenerativeSettings) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Format: `projects//locations//agents//generativeSettings`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Format: `projects//locations//agents//generativeSettings`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Format: `projects//locations//agents//generativeSettings`. */
           public GetGenerativeSettings setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1233,17 +1159,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Required. Language code of the generative settings. */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
-          /** Required. Language code of the generative settings.
+          /**
+
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
           }
 
-          /** Required. Language code of the generative settings. */
           public GetGenerativeSettings setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
             return this;
@@ -1255,15 +1180,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets the latest agent validation result. Agent validation is performed when ValidateAgent is
-         * called.
-         *
          * Create a request for the method "agents.getValidationResult".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link GetValidationResult#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The agent name. Format: `projects//locations//agents//validationResult`.
+         * @param name
          * @return the request
          */
         public GetValidationResult getValidationResult(java.lang.String name) throws java.io.IOException {
@@ -1280,9 +1202,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/validationResult$");
 
           /**
-           * Gets the latest agent validation result. Agent validation is performed when ValidateAgent is
-           * called.
-           *
            * Create a request for the method "agents.getValidationResult".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -1291,7 +1210,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. The agent name. Format: `projects//locations//agents//validationResult`.
+           * @param name
            * @since 1.13
            */
           protected GetValidationResult(java.lang.String name) {
@@ -1369,17 +1288,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (GetValidationResult) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The agent name. Format: `projects//locations//agents//validationResult`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The agent name. Format: `projects//locations//agents//validationResult`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The agent name. Format: `projects//locations//agents//validationResult`. */
           public GetValidationResult setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1390,17 +1308,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** If not specified, the agent's default language is used. */
           @com.google.api.client.util.Key
           private java.lang.String languageCode;
 
-          /** If not specified, the agent's default language is used.
+          /**
+
            */
           public java.lang.String getLanguageCode() {
             return languageCode;
           }
 
-          /** If not specified, the agent's default language is used. */
           public GetValidationResult setLanguageCode(java.lang.String languageCode) {
             this.languageCode = languageCode;
             return this;
@@ -1412,14 +1329,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Returns the list of all agents in the specified location.
-         *
          * Create a request for the method "agents.list".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location to list all agents for. Format: `projects//locations/`.
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1436,8 +1351,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Returns the list of all agents in the specified location.
-           *
            * Create a request for the method "agents.list".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -1445,7 +1358,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location to list all agents for. Format: `projects//locations/`.
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1523,17 +1436,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The location to list all agents for. Format: `projects//locations/`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location to list all agents for. Format: `projects//locations/`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The location to list all agents for. Format: `projects//locations/`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1544,39 +1456,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * The maximum number of items to return in a single page. By default 100 and at most
-           * 1000.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of items to return in a single page. By default 100 and at most
-           * 1000.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The next_page_token value returned from a previous list request. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The next_page_token value returned from a previous list request.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The next_page_token value returned from a previous list request. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -1588,16 +1492,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates the specified agent. Note: You should always train a flow prior to sending it queries.
-         * See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-         *
          * Create a request for the method "agents.patch".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent
-         *        populates the name automatically. Format: `projects//locations//agents/`.
+         * @param name
          * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Agent}
          * @return the request
          */
@@ -1615,9 +1515,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
           /**
-           * Updates the specified agent. Note: You should always train a flow prior to sending it queries.
-           * See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "agents.patch".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -1626,8 +1523,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent
-         *        populates the name automatically. Format: `projects//locations//agents/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Agent}
            * @since 1.13
            */
@@ -1696,26 +1592,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * The unique identifier of the agent. Required for the Agents.UpdateAgent method.
-           * Agents.CreateAgent populates the name automatically. Format:
-           * `projects//locations//agents/`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The unique identifier of the agent. Required for the Agents.UpdateAgent method. Agents.CreateAgent
-         populates the name automatically. Format: `projects//locations//agents/`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * The unique identifier of the agent. Required for the Agents.UpdateAgent method.
-           * Agents.CreateAgent populates the name automatically. Format:
-           * `projects//locations//agents/`.
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1726,24 +1612,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * The mask to control which fields get updated. If the mask is not present, all fields
-           * will be updated.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The mask to control which fields get updated. If the mask is not present, all fields will be
-         updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * The mask to control which fields get updated. If the mask is not present, all fields
-           * will be updated.
-           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -1755,22 +1633,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Restores the specified agent from a binary file. Replaces the current agent with a new one. Note
-         * that all existing resources in agent (e.g. intents, entity types, flows) will be removed. This
-         * method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-
-         * running-operation). The returned `Operation` type has the following method-specific fields: -
-         * `metadata`: An empty [Struct message](https://developers.google.com/protocol-
-         * buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty
-         * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
-         * Note: You should always train a flow prior to sending it queries. See the [training
-         * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-         *
          * Create a request for the method "agents.restore".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the agent to restore into. Format: `projects//locations//agents/`.
+         * @param name
          * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RestoreAgentRequest}
          * @return the request
          */
@@ -1788,16 +1656,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
           /**
-           * Restores the specified agent from a binary file. Replaces the current agent with a new one.
-           * Note that all existing resources in agent (e.g. intents, entity types, flows) will be removed.
-           * This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-
-           * running-operation). The returned `Operation` type has the following method-specific fields: -
-           * `metadata`: An empty [Struct message](https://developers.google.com/protocol-
-           * buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty
-           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
-           * Note: You should always train a flow prior to sending it queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "agents.restore".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -1806,7 +1664,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the agent to restore into. Format: `projects//locations//agents/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RestoreAgentRequest}
            * @since 1.13
            */
@@ -1875,23 +1733,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Restore) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The name of the agent to restore into. Format:
-           * `projects//locations//agents/`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the agent to restore into. Format: `projects//locations//agents/`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The name of the agent to restore into. Format:
-           * `projects//locations//agents/`.
-           */
           public Restore setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1908,15 +1759,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates the generative settings for the agent.
-         *
          * Create a request for the method "agents.updateGenerativeSettings".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link UpdateGenerativeSettings#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Format: `projects//locations//agents//generativeSettings`.
+         * @param name
          * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings}
          * @return the request
          */
@@ -1934,8 +1783,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/generativeSettings$");
 
           /**
-           * Updates the generative settings for the agent.
-           *
            * Create a request for the method "agents.updateGenerativeSettings".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -1944,7 +1791,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
            * immediately after invoking the constructor. </p>
            *
-           * @param name Format: `projects//locations//agents//generativeSettings`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1GenerativeSettings}
            * @since 1.13
            */
@@ -2013,17 +1860,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (UpdateGenerativeSettings) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Format: `projects//locations//agents//generativeSettings`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Format: `projects//locations//agents//generativeSettings`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Format: `projects//locations//agents//generativeSettings`. */
           public UpdateGenerativeSettings setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2034,24 +1880,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * Optional. The mask to control which fields get updated. If the mask is not present, all
-           * fields will be updated.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Optional. The mask to control which fields get updated. If the mask is not present, all fields will
-         be updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * Optional. The mask to control which fields get updated. If the mask is not present, all
-           * fields will be updated.
-           */
           public UpdateGenerativeSettings setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -2063,16 +1901,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Validates the specified agent and creates or updates validation results. The agent in draft
-         * version is validated. Please call this API after the training is completed to get the complete
-         * validation results.
-         *
          * Create a request for the method "agents.validate".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The agent to validate. Format: `projects//locations//agents/`.
+         * @param name
          * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ValidateAgentRequest}
          * @return the request
          */
@@ -2090,10 +1924,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
           /**
-           * Validates the specified agent and creates or updates validation results. The agent in draft
-           * version is validated. Please call this API after the training is completed to get the complete
-           * validation results.
-           *
            * Create a request for the method "agents.validate".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -2102,7 +1932,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The agent to validate. Format: `projects//locations//agents/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ValidateAgentRequest}
            * @since 1.13
            */
@@ -2171,17 +2001,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Validate) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The agent to validate. Format: `projects//locations//agents/`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The agent to validate. Format: `projects//locations//agents/`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The agent to validate. Format: `projects//locations//agents/`. */
           public Validate setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2219,14 +2048,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Changelogs {
 
           /**
-           * Retrieves the specified Changelog.
-           *
            * Create a request for the method "changelogs.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the changelog to get. Format: `projects//locations//agents//changelogs/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2243,8 +2070,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/changelogs/[^/]+$");
 
             /**
-             * Retrieves the specified Changelog.
-             *
              * Create a request for the method "changelogs.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -2252,7 +2077,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the changelog to get. Format: `projects//locations//agents//changelogs/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2330,23 +2155,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the changelog to get. Format:
-             * `projects//locations//agents//changelogs/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the changelog to get. Format: `projects//locations//agents//changelogs/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the changelog to get. Format:
-             * `projects//locations//agents//changelogs/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2363,14 +2181,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns the list of Changelogs.
-           *
            * Create a request for the method "changelogs.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent containing the changelogs. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2387,8 +2203,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns the list of Changelogs.
-             *
              * Create a request for the method "changelogs.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -2396,7 +2210,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent containing the changelogs. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2474,23 +2288,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent containing the changelogs. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent containing the changelogs. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent containing the changelogs. Format:
-             * `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2501,82 +2308,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The filter string. Supports filter by user_email, resource, type and create_time.
-             * Some examples: 1. By user email: user_email = "someone@google.com" 2. By resource
-             * name: resource = "projects/123/locations/global/agents/456/flows/789" 3. By resource
-             * display name: display_name = "my agent" 4. By action: action = "Create" 5. By type:
-             * type = "flows" 6. By create time. Currently predicates on `create_time` and
-             * `create_time_epoch_seconds` are supported: create_time_epoch_seconds > 1551790877 AND
-             * create_time <= 2017-01-15T01:30:15.01Z 7. Combination of above filters: resource =
-             * "projects/123/locations/global/agents/456/flows/789" AND user_email =
-             * "someone@google.com" AND create_time <= 2017-01-15T01:30:15.01Z
-             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** The filter string. Supports filter by user_email, resource, type and create_time. Some examples: 1.
-           By user email: user_email = "someone@google.com" 2. By resource name: resource =
-           "projects/123/locations/global/agents/456/flows/789" 3. By resource display name: display_name =
-           "my agent" 4. By action: action = "Create" 5. By type: type = "flows" 6. By create time. Currently
-           predicates on `create_time` and `create_time_epoch_seconds` are supported:
-           create_time_epoch_seconds > 1551790877 AND create_time <= 2017-01-15T01:30:15.01Z 7. Combination of
-           above filters: resource = "projects/123/locations/global/agents/456/flows/789" AND user_email =
-           "someone@google.com" AND create_time <= 2017-01-15T01:30:15.01Z
+            /**
+
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /**
-             * The filter string. Supports filter by user_email, resource, type and create_time.
-             * Some examples: 1. By user email: user_email = "someone@google.com" 2. By resource
-             * name: resource = "projects/123/locations/global/agents/456/flows/789" 3. By resource
-             * display name: display_name = "my agent" 4. By action: action = "Create" 5. By type:
-             * type = "flows" 6. By create time. Currently predicates on `create_time` and
-             * `create_time_epoch_seconds` are supported: create_time_epoch_seconds > 1551790877 AND
-             * create_time <= 2017-01-15T01:30:15.01Z 7. Combination of above filters: resource =
-             * "projects/123/locations/global/agents/456/flows/789" AND user_email =
-             * "someone@google.com" AND create_time <= 2017-01-15T01:30:15.01Z
-             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -2610,14 +2381,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Conversations {
 
           /**
-           * Deletes the specified conversation.
-           *
            * Create a request for the method "conversations.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the conversation. Format: `projects//locations//agents//conversations/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2634,8 +2403,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/conversations/[^/]+$");
 
             /**
-             * Deletes the specified conversation.
-             *
              * Create a request for the method "conversations.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -2644,7 +2411,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the conversation. Format: `projects//locations//agents//conversations/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -2712,23 +2479,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the conversation. Format:
-             * `projects//locations//agents//conversations/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the conversation. Format: `projects//locations//agents//conversations/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the conversation. Format:
-             * `projects//locations//agents//conversations/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2745,14 +2505,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified conversation.
-           *
            * Create a request for the method "conversations.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the conversation. Format: `projects//locations//agents//conversations/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2769,8 +2527,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/conversations/[^/]+$");
 
             /**
-             * Retrieves the specified conversation.
-             *
              * Create a request for the method "conversations.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -2778,7 +2534,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the conversation. Format: `projects//locations//agents//conversations/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2856,23 +2612,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the conversation. Format:
-             * `projects//locations//agents//conversations/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the conversation. Format: `projects//locations//agents//conversations/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the conversation. Format:
-             * `projects//locations//agents//conversations/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2889,14 +2638,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns the list of all conversations.
-           *
            * Create a request for the method "conversations.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to list all conversations for. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2913,8 +2660,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns the list of all conversations.
-             *
              * Create a request for the method "conversations.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -2922,7 +2667,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to list all conversations for. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3000,23 +2745,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to list all conversations for. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to list all conversations for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to list all conversations for. Format:
-             * `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3027,76 +2765,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * Optional. The filter string. Supports filter by create_time,
-             * metrics.has_end_interaction, metrics.has_live_agent_handoff, intents.display_name,
-             * pages.display_name and flows.display_name. Timestamps expect an RFC-3339 formatted
-             * string (e.g. 2012-04-21T11:30:00-04:00). UTC offsets are supported. Some examples: 1.
-             * By create time: create_time > "2022-04-21T11:30:00-04:00" 2. By intent display name:
-             * intents.display_name : "billing" 3. By end interaction signal:
-             * metrics.has_end_interaction = true
-             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. The filter string. Supports filter by create_time, metrics.has_end_interaction,
-           metrics.has_live_agent_handoff, intents.display_name, pages.display_name and flows.display_name.
-           Timestamps expect an RFC-3339 formatted string (e.g. 2012-04-21T11:30:00-04:00). UTC offsets are
-           supported. Some examples: 1. By create time: create_time > "2022-04-21T11:30:00-04:00" 2. By intent
-           display name: intents.display_name : "billing" 3. By end interaction signal:
-           metrics.has_end_interaction = true
+            /**
+
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /**
-             * Optional. The filter string. Supports filter by create_time,
-             * metrics.has_end_interaction, metrics.has_live_agent_handoff, intents.display_name,
-             * pages.display_name and flows.display_name. Timestamps expect an RFC-3339 formatted
-             * string (e.g. 2012-04-21T11:30:00-04:00). UTC offsets are supported. Some examples: 1.
-             * By create time: create_time > "2022-04-21T11:30:00-04:00" 2. By intent display name:
-             * intents.display_name : "billing" 3. By end interaction signal:
-             * metrics.has_end_interaction = true
-             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /**
-             * Optional. The maximum number of items to return in a single page. By default 100 and
-             * at most 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * Optional. The maximum number of items to return in a single page. By default 100 and
-             * at most 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** Optional. The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** Optional. The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -3130,14 +2838,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class EntityTypes {
 
           /**
-           * Creates an entity type in the specified agent.
-           *
            * Create a request for the method "entityTypes.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to create a entity type for. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1EntityType}
            * @return the request
            */
@@ -3155,8 +2861,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates an entity type in the specified agent.
-             *
              * Create a request for the method "entityTypes.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -3165,7 +2869,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to create a entity type for. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1EntityType}
              * @since 1.13
              */
@@ -3234,23 +2938,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to create a entity type for. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to create a entity type for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to create a entity type for. Format:
-             * `projects//locations//agents/`.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3261,33 +2958,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language of the following fields in `entity_type`: * `EntityType.entities.value`
-             * * `EntityType.entities.synonyms` * `EntityType.excluded_phrases.value` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language of the following fields in `entity_type`: * `EntityType.entities.value` *
-           `EntityType.entities.synonyms` * `EntityType.excluded_phrases.value` If not specified, the agent's
-           default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language of the following fields in `entity_type`: * `EntityType.entities.value`
-             * * `EntityType.entities.synonyms` * `EntityType.excluded_phrases.value` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Create setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -3299,17 +2979,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes the specified entity type. Note: You should always train a flow prior to sending it
-           * queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "entityTypes.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the entity type to delete. Format:
-           *        `projects//locations//agents//entityTypes/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3326,10 +3001,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/entityTypes/[^/]+$");
 
             /**
-             * Deletes the specified entity type. Note: You should always train a flow prior to sending it
-             * queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "entityTypes.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -3338,8 +3009,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the entity type to delete. Format:
-           *        `projects//locations//agents//entityTypes/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -3407,24 +3077,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the entity type to delete. Format:
-             * `projects//locations//agents//entityTypes/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the entity type to delete. Format:
-           `projects//locations//agents//entityTypes/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the entity type to delete. Format:
-             * `projects//locations//agents//entityTypes/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3435,35 +3097,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * This field has no effect for entity type not being used. For entity types that are
-             * used by intents or pages: * If `force` is set to false, an error will be returned
-             * with message indicating the referencing resources. * If `force` is set to true,
-             * Dialogflow will remove the entity type, as well as any references to the entity type
-             * (i.e. Page parameter of the entity type will be changed to '@sys.any' and intent
-             * parameter of the entity type will be removed).
-             */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** This field has no effect for entity type not being used. For entity types that are used by intents
-           or pages: * If `force` is set to false, an error will be returned with message indicating the
-           referencing resources. * If `force` is set to true, Dialogflow will remove the entity type, as well
-           as any references to the entity type (i.e. Page parameter of the entity type will be changed to
-           '@sys.any' and intent parameter of the entity type will be removed).
+            /**
+
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
-            /**
-             * This field has no effect for entity type not being used. For entity types that are
-             * used by intents or pages: * If `force` is set to false, an error will be returned
-             * with message indicating the referencing resources. * If `force` is set to true,
-             * Dialogflow will remove the entity type, as well as any references to the entity type
-             * (i.e. Page parameter of the entity type will be changed to '@sys.any' and intent
-             * parameter of the entity type will be removed).
-             */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
               return this;
@@ -3475,15 +3118,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Exports the selected entity types.
-           *
            * Create a request for the method "entityTypes.export".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the parent agent to export entity types. Format:
-           *        `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest}
            * @return the request
            */
@@ -3501,8 +3141,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Exports the selected entity types.
-             *
              * Create a request for the method "entityTypes.export".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -3511,8 +3149,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the parent agent to export entity types. Format:
-           *        `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest}
              * @since 1.13
              */
@@ -3581,24 +3218,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Export) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the parent agent to export entity types. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The name of the parent agent to export entity types. Format:
-           `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The name of the parent agent to export entity types. Format:
-             * `projects//locations//agents/`.
-             */
             public Export setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3615,14 +3244,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified entity type.
-           *
            * Create a request for the method "entityTypes.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the entity type. Format: `projects//locations//agents//entityTypes/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3639,8 +3266,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/entityTypes/[^/]+$");
 
             /**
-             * Retrieves the specified entity type.
-             *
              * Create a request for the method "entityTypes.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -3648,7 +3273,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the entity type. Format: `projects//locations//agents//entityTypes/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3726,23 +3351,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the entity type. Format:
-             * `projects//locations//agents//entityTypes/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the entity type. Format: `projects//locations//agents//entityTypes/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the entity type. Format:
-             * `projects//locations//agents//entityTypes/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3753,35 +3371,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language to retrieve the entity type for. The following fields are language
-             * dependent: * `EntityType.entities.value` * `EntityType.entities.synonyms` *
-             * `EntityType.excluded_phrases.value` If not specified, the agent's default language is
-             * used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to retrieve the entity type for. The following fields are language dependent: *
-           `EntityType.entities.value` * `EntityType.entities.synonyms` * `EntityType.excluded_phrases.value`
-           If not specified, the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language to retrieve the entity type for. The following fields are language
-             * dependent: * `EntityType.entities.value` * `EntityType.entities.synonyms` *
-             * `EntityType.excluded_phrases.value` If not specified, the agent's default language is
-             * used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Get setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -3793,14 +3392,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Imports the specified entitytypes into the agent.
-           *
            * Create a request for the method "entityTypes.import".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link DialogflowImport#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to import the entity types into. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportEntityTypesRequest}
            * @return the request
            */
@@ -3818,8 +3415,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Imports the specified entitytypes into the agent.
-             *
              * Create a request for the method "entityTypes.import".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -3828,7 +3423,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * tractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param parent Required. The agent to import the entity types into. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportEntityTypesRequest}
              * @since 1.13
              */
@@ -3897,23 +3492,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (DialogflowImport) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to import the entity types into. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to import the entity types into. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to import the entity types into. Format:
-             * `projects//locations//agents/`.
-             */
             public DialogflowImport setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3930,14 +3518,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns the list of all entity types in the specified agent.
-           *
            * Create a request for the method "entityTypes.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to list all entity types for. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3954,8 +3540,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns the list of all entity types in the specified agent.
-             *
              * Create a request for the method "entityTypes.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -3963,7 +3547,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to list all entity types for. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -4041,23 +3625,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to list all entity types for. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to list all entity types for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to list all entity types for. Format:
-             * `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4068,73 +3645,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language to list entity types for. The following fields are language dependent: *
-             * `EntityType.entities.value` * `EntityType.entities.synonyms` *
-             * `EntityType.excluded_phrases.value` If not specified, the agent's default language is
-             * used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to list entity types for. The following fields are language dependent: *
-           `EntityType.entities.value` * `EntityType.entities.synonyms` * `EntityType.excluded_phrases.value`
-           If not specified, the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language to list entity types for. The following fields are language dependent: *
-             * `EntityType.entities.value` * `EntityType.entities.synonyms` *
-             * `EntityType.excluded_phrases.value` If not specified, the agent's default language is
-             * used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public List setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -4146,17 +3696,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the specified entity type. Note: You should always train a flow prior to sending it
-           * queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "entityTypes.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format:
-           *        `projects//locations//agents//entityTypes/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1EntityType}
            * @return the request
            */
@@ -4174,10 +3719,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/entityTypes/[^/]+$");
 
             /**
-             * Updates the specified entity type. Note: You should always train a flow prior to sending it
-             * queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "entityTypes.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -4186,8 +3727,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format:
-           *        `projects//locations//agents//entityTypes/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1EntityType}
              * @since 1.13
              */
@@ -4256,24 +3796,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType.
-             * Format: `projects//locations//agents//entityTypes/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format:
-           `projects//locations//agents//entityTypes/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType.
-             * Format: `projects//locations//agents//entityTypes/`.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4284,49 +3816,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language of the following fields in `entity_type`: * `EntityType.entities.value`
-             * * `EntityType.entities.synonyms` * `EntityType.excluded_phrases.value` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language of the following fields in `entity_type`: * `EntityType.entities.value` *
-           `EntityType.entities.synonyms` * `EntityType.excluded_phrases.value` If not specified, the agent's
-           default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language of the following fields in `entity_type`: * `EntityType.entities.value`
-             * * `EntityType.entities.synonyms` * `EntityType.excluded_phrases.value` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Patch setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /** The mask to control which fields get updated. */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The mask to control which fields get updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** The mask to control which fields get updated. */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -4360,18 +3874,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Environments {
 
           /**
-           * Creates an Environment in the specified Agent. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct
-           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) -
-           * `response`: Environment
-           *
            * Create a request for the method "environments.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The Agent to create an Environment for. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Environment}
            * @return the request
            */
@@ -4389,12 +3897,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates an Environment in the specified Agent. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`: An empty
-             * [Struct message](https://developers.google.com/protocol-
-             * buffers/docs/reference/google.protobuf#struct) - `response`: Environment
-             *
              * Create a request for the method "environments.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -4403,7 +3905,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The Agent to create an Environment for. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Environment}
              * @since 1.13
              */
@@ -4472,23 +3974,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The Agent to create an Environment for. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The Agent to create an Environment for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The Agent to create an Environment for. Format:
-             * `projects//locations//agents/`.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4505,15 +4000,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes the specified Environment.
-           *
            * Create a request for the method "environments.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the Environment to delete. Format:
-           *        `projects//locations//agents//environments/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4530,8 +4022,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
             /**
-             * Deletes the specified Environment.
-             *
              * Create a request for the method "environments.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -4540,8 +4030,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the Environment to delete. Format:
-           *        `projects//locations//agents//environments/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -4609,24 +4098,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the Environment to delete. Format:
-             * `projects//locations//agents//environments/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the Environment to delete. Format:
-           `projects//locations//agents//environments/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the Environment to delete. Format:
-             * `projects//locations//agents//environments/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4643,18 +4124,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deploys a flow to the specified Environment. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`: DeployFlowMetadata -
-           * `response`: DeployFlowResponse
-           *
            * Create a request for the method "environments.deployFlow".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link DeployFlow#execute()} method to invoke the remote operation.
            *
-           * @param environment Required. The environment to deploy the flow to. Format:
-           *        `projects//locations//agents//environments/`.
+           * @param environment
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DeployFlowRequest}
            * @return the request
            */
@@ -4672,11 +4147,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
             /**
-             * Deploys a flow to the specified Environment. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * DeployFlowMetadata - `response`: DeployFlowResponse
-             *
              * Create a request for the method "environments.deployFlow".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -4685,8 +4155,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * DeployFlow#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param environment Required. The environment to deploy the flow to. Format:
-           *        `projects//locations//agents//environments/`.
+             * @param environment
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DeployFlowRequest}
              * @since 1.13
              */
@@ -4755,24 +4224,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (DeployFlow) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The environment to deploy the flow to. Format:
-             * `projects//locations//agents//environments/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String environment;
 
-            /** Required. The environment to deploy the flow to. Format:
-           `projects//locations//agents//environments/`.
+            /**
+
              */
             public java.lang.String getEnvironment() {
               return environment;
             }
 
-            /**
-             * Required. The environment to deploy the flow to. Format:
-             * `projects//locations//agents//environments/`.
-             */
             public DeployFlow setEnvironment(java.lang.String environment) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
@@ -4789,14 +4250,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified Environment.
-           *
            * Create a request for the method "environments.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the Environment. Format: `projects//locations//agents//environments/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -4813,8 +4272,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
             /**
-             * Retrieves the specified Environment.
-             *
              * Create a request for the method "environments.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -4822,7 +4279,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the Environment. Format: `projects//locations//agents//environments/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -4900,23 +4357,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the Environment. Format:
-             * `projects//locations//agents//environments/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the Environment. Format: `projects//locations//agents//environments/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the Environment. Format:
-             * `projects//locations//agents//environments/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4933,14 +4383,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns the list of all environments in the specified Agent.
-           *
            * Create a request for the method "environments.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The Agent to list all environments for. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -4957,8 +4405,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns the list of all environments in the specified Agent.
-             *
              * Create a request for the method "environments.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -4966,7 +4412,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The Agent to list all environments for. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5044,23 +4490,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The Agent to list all environments for. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The Agent to list all environments for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The Agent to list all environments for. Format:
-             * `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5071,39 +4510,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 20 and at most
-             * 100.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 20 and at most 100.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 20 and at most
-             * 100.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -5115,16 +4546,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Looks up the history of the specified Environment.
-           *
            * Create a request for the method "environments.lookupEnvironmentHistory".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link LookupEnvironmentHistory#execute()} method to invoke the remote
            * operation.
            *
-           * @param name Required. Resource name of the environment to look up the history for. Format:
-           *        `projects//locations//agents//environments/`.
+           * @param name
            * @return the request
            */
           public LookupEnvironmentHistory lookupEnvironmentHistory(java.lang.String name) throws java.io.IOException {
@@ -5141,8 +4569,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
             /**
-             * Looks up the history of the specified Environment.
-             *
              * Create a request for the method "environments.lookupEnvironmentHistory".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -5151,8 +4577,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param name Required. Resource name of the environment to look up the history for. Format:
-           *        `projects//locations//agents//environments/`.
+             * @param name
              * @since 1.13
              */
             protected LookupEnvironmentHistory(java.lang.String name) {
@@ -5230,24 +4655,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (LookupEnvironmentHistory) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. Resource name of the environment to look up the history for. Format:
-             * `projects//locations//agents//environments/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Resource name of the environment to look up the history for. Format:
-           `projects//locations//agents//environments/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. Resource name of the environment to look up the history for. Format:
-             * `projects//locations//agents//environments/`.
-             */
             public LookupEnvironmentHistory setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5258,39 +4675,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public LookupEnvironmentHistory setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public LookupEnvironmentHistory setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -5302,18 +4711,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the specified Environment. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct
-           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) -
-           * `response`: Environment
-           *
            * Create a request for the method "environments.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The name of the environment. Format: `projects//locations//agents//environments/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Environment}
            * @return the request
            */
@@ -5331,12 +4734,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
             /**
-             * Updates the specified Environment. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`: An empty
-             * [Struct message](https://developers.google.com/protocol-
-             * buffers/docs/reference/google.protobuf#struct) - `response`: Environment
-             *
              * Create a request for the method "environments.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -5345,7 +4742,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The name of the environment. Format: `projects//locations//agents//environments/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Environment}
              * @since 1.13
              */
@@ -5414,21 +4811,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The name of the environment. Format: `projects//locations//agents//environments/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The name of the environment. Format: `projects//locations//agents//environments/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The name of the environment. Format: `projects//locations//agents//environments/`.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5439,17 +4831,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** Required. The mask to control which fields get updated. */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Required. The mask to control which fields get updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** Required. The mask to control which fields get updated. */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -5461,17 +4852,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Kicks off a continuous test under the specified Environment. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`:
-           * RunContinuousTestMetadata - `response`: RunContinuousTestResponse
-           *
            * Create a request for the method "environments.runContinuousTest".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link RunContinuousTest#execute()} method to invoke the remote operation.
            *
-           * @param environment Required. Format: `projects//locations//agents//environments/`.
+           * @param environment
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RunContinuousTestRequest}
            * @return the request
            */
@@ -5489,11 +4875,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
             /**
-             * Kicks off a continuous test under the specified Environment. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * RunContinuousTestMetadata - `response`: RunContinuousTestResponse
-             *
              * Create a request for the method "environments.runContinuousTest".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -5502,7 +4883,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * stractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param environment Required. Format: `projects//locations//agents//environments/`.
+             * @param environment
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RunContinuousTestRequest}
              * @since 1.13
              */
@@ -5571,17 +4952,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (RunContinuousTest) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Format: `projects//locations//agents//environments/`. */
             @com.google.api.client.util.Key
             private java.lang.String environment;
 
-            /** Required. Format: `projects//locations//agents//environments/`.
+            /**
+
              */
             public java.lang.String getEnvironment() {
               return environment;
             }
 
-            /** Required. Format: `projects//locations//agents//environments/`. */
             public RunContinuousTest setEnvironment(java.lang.String environment) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(ENVIRONMENT_PATTERN.matcher(environment).matches(),
@@ -5619,14 +4999,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class ContinuousTestResults {
 
             /**
-             * Fetches a list of continuous test results for a given environment.
-             *
              * Create a request for the method "continuousTestResults.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The environment to list results for. Format: `projects//locations//agents//environments/`.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -5643,8 +5021,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
               /**
-               * Fetches a list of continuous test results for a given environment.
-               *
                * Create a request for the method "continuousTestResults.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -5652,7 +5028,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The environment to list results for. Format: `projects//locations//agents//environments/`.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -5730,24 +5106,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The environment to list results for. Format:
-               * `projects//locations//agents//environments/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The environment to list results for. Format:
-             `projects//locations//agents//environments/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The environment to list results for. Format:
-               * `projects//locations//agents//environments/`.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5758,39 +5126,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -5824,15 +5184,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class Deployments {
 
             /**
-             * Retrieves the specified Deployment.
-             *
              * Create a request for the method "deployments.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the Deployment. Format:
-             *        `projects//locations//agents//environments//deployments/`.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -5849,8 +5206,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/deployments/[^/]+$");
 
               /**
-               * Retrieves the specified Deployment.
-               *
                * Create a request for the method "deployments.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -5858,8 +5213,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the Deployment. Format:
-             *        `projects//locations//agents//environments//deployments/`.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -5937,24 +5291,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the Deployment. Format:
-               * `projects//locations//agents//environments//deployments/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the Deployment. Format:
-             `projects//locations//agents//environments//deployments/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the Deployment. Format:
-               * `projects//locations//agents//environments//deployments/`.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5971,15 +5317,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Returns the list of all deployments in the specified Environment.
-             *
              * Create a request for the method "deployments.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The Environment to list all environments for. Format:
-             *        `projects//locations//agents//environments/`.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -5996,8 +5339,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
               /**
-               * Returns the list of all deployments in the specified Environment.
-               *
                * Create a request for the method "deployments.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -6005,8 +5346,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The Environment to list all environments for. Format:
-             *        `projects//locations//agents//environments/`.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -6084,24 +5424,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The Environment to list all environments for. Format:
-               * `projects//locations//agents//environments/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The Environment to list all environments for. Format:
-             `projects//locations//agents//environments/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The Environment to list all environments for. Format:
-               * `projects//locations//agents//environments/`.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6112,39 +5444,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 20 and at most
-               * 100.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of items to return in a single page. By default 20 and at most 100.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 20 and at most
-               * 100.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -6178,15 +5502,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class Experiments {
 
             /**
-             * Creates an Experiment in the specified Environment.
-             *
              * Create a request for the method "experiments.create".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The Agent to create an Environment for. Format:
-             *        `projects//locations//agents//environments/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Experiment}
              * @return the request
              */
@@ -6204,8 +5525,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
               /**
-               * Creates an Experiment in the specified Environment.
-               *
                * Create a request for the method "experiments.create".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -6214,8 +5533,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The Agent to create an Environment for. Format:
-             *        `projects//locations//agents//environments/`.
+               * @param parent
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Experiment}
                * @since 1.13
                */
@@ -6284,24 +5602,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The Agent to create an Environment for. Format:
-               * `projects//locations//agents//environments/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The Agent to create an Environment for. Format:
-             `projects//locations//agents//environments/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The Agent to create an Environment for. Format:
-               * `projects//locations//agents//environments/`.
-               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6318,15 +5628,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Deletes the specified Experiment.
-             *
              * Create a request for the method "experiments.delete".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the Environment to delete. Format:
-             *        `projects//locations//agents//environments//experiments/`.
+             * @param name
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6343,8 +5650,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/experiments/[^/]+$");
 
               /**
-               * Deletes the specified Experiment.
-               *
                * Create a request for the method "experiments.delete".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -6353,8 +5658,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the Environment to delete. Format:
-             *        `projects//locations//agents//environments//experiments/`.
+               * @param name
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -6422,24 +5726,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the Environment to delete. Format:
-               * `projects//locations//agents//environments//experiments/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the Environment to delete. Format:
-             `projects//locations//agents//environments//experiments/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the Environment to delete. Format:
-               * `projects//locations//agents//environments//experiments/`.
-               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6456,15 +5752,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified Experiment.
-             *
              * Create a request for the method "experiments.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the Environment. Format:
-             *        `projects//locations//agents//environments//experiments/`.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -6481,8 +5774,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/experiments/[^/]+$");
 
               /**
-               * Retrieves the specified Experiment.
-               *
                * Create a request for the method "experiments.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -6490,8 +5781,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the Environment. Format:
-             *        `projects//locations//agents//environments//experiments/`.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -6569,24 +5859,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the Environment. Format:
-               * `projects//locations//agents//environments//experiments/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the Environment. Format:
-             `projects//locations//agents//environments//experiments/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the Environment. Format:
-               * `projects//locations//agents//environments//experiments/`.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6603,15 +5885,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Returns the list of all experiments in the specified Environment.
-             *
              * Create a request for the method "experiments.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The Environment to list all environments for. Format:
-             *        `projects//locations//agents//environments/`.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -6628,8 +5907,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+$");
 
               /**
-               * Returns the list of all experiments in the specified Environment.
-               *
                * Create a request for the method "experiments.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -6637,8 +5914,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The Environment to list all environments for. Format:
-             *        `projects//locations//agents//environments/`.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -6716,24 +5992,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The Environment to list all environments for. Format:
-               * `projects//locations//agents//environments/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The Environment to list all environments for. Format:
-             `projects//locations//agents//environments/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The Environment to list all environments for. Format:
-               * `projects//locations//agents//environments/`.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6744,39 +6012,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 20 and at most
-               * 100.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of items to return in a single page. By default 20 and at most 100.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 20 and at most
-               * 100.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -6788,14 +6048,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Updates the specified Experiment.
-             *
              * Create a request for the method "experiments.patch".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the experiment. Format: projects//locations//agents//environments//experiments/.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Experiment}
              * @return the request
              */
@@ -6813,8 +6071,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/experiments/[^/]+$");
 
               /**
-               * Updates the specified Experiment.
-               *
                * Create a request for the method "experiments.patch".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -6823,7 +6079,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the experiment. Format: projects//locations//agents//environments//experiments/.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Experiment}
                * @since 1.13
                */
@@ -6892,23 +6148,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * The name of the experiment. Format:
-               * projects//locations//agents//environments//experiments/.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the experiment. Format: projects//locations//agents//environments//experiments/.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * The name of the experiment. Format:
-               * projects//locations//agents//environments//experiments/.
-               */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6919,17 +6168,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /** Required. The mask to control which fields get updated. */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Required. The mask to control which fields get updated.
+              /**
+
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /** Required. The mask to control which fields get updated. */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -6941,16 +6189,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Starts the specified Experiment. This rpc only changes the state of experiment from PENDING to
-             * RUNNING.
-             *
              * Create a request for the method "experiments.start".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Start#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Resource name of the experiment to start. Format:
-             *        `projects//locations//agents//environments//experiments/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1StartExperimentRequest}
              * @return the request
              */
@@ -6968,9 +6212,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/experiments/[^/]+$");
 
               /**
-               * Starts the specified Experiment. This rpc only changes the state of experiment from PENDING to
-               * RUNNING.
-               *
                * Create a request for the method "experiments.start".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -6979,8 +6220,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Resource name of the experiment to start. Format:
-             *        `projects//locations//agents//environments//experiments/`.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1StartExperimentRequest}
                * @since 1.13
                */
@@ -7049,24 +6289,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Start) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. Resource name of the experiment to start. Format:
-               * `projects//locations//agents//environments//experiments/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Resource name of the experiment to start. Format:
-             `projects//locations//agents//environments//experiments/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. Resource name of the experiment to start. Format:
-               * `projects//locations//agents//environments//experiments/`.
-               */
               public Start setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7083,16 +6315,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Stops the specified Experiment. This rpc only changes the state of experiment from RUNNING to
-             * DONE.
-             *
              * Create a request for the method "experiments.stop".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
              *
-             * @param name Required. Resource name of the experiment to stop. Format:
-             *        `projects//locations//agents//environments//experiments/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1StopExperimentRequest}
              * @return the request
              */
@@ -7110,9 +6338,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/experiments/[^/]+$");
 
               /**
-               * Stops the specified Experiment. This rpc only changes the state of experiment from RUNNING to
-               * DONE.
-               *
                * Create a request for the method "experiments.stop".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -7120,8 +6345,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. Resource name of the experiment to stop. Format:
-             *        `projects//locations//agents//environments//experiments/`.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1StopExperimentRequest}
                * @since 1.13
                */
@@ -7190,24 +6414,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Stop) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. Resource name of the experiment to stop. Format:
-               * `projects//locations//agents//environments//experiments/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. Resource name of the experiment to stop. Format:
-             `projects//locations//agents//environments//experiments/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. Resource name of the experiment to stop. Format:
-               * `projects//locations//agents//environments//experiments/`.
-               */
               public Stop setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7246,26 +6462,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class Sessions {
 
             /**
-             * Processes a natural language query and returns structured, actionable data as a result. This
-             * method is not idempotent, because it may cause session entity types to be updated, which in turn
-             * might affect results of future queries. Note: Always use agent versions for production traffic.
-             * See [Versions and environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-             *
              * Create a request for the method "sessions.detectIntent".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link DetectIntent#execute()} method to invoke the remote operation.
              *
-             * @param session Required. The name of the session this query is sent to. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             *        more information, see the [sessions
-             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-             *        agent versions for production traffic. See [Versions and
-             *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+             * @param session
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DetectIntentRequest}
              * @return the request
              */
@@ -7283,12 +6485,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+$");
 
               /**
-               * Processes a natural language query and returns structured, actionable data as a result. This
-               * method is not idempotent, because it may cause session entity types to be updated, which in
-               * turn might affect results of future queries. Note: Always use agent versions for production
-               * traffic. See [Versions and
-               * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-               *
                * Create a request for the method "sessions.detectIntent".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -7297,16 +6493,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * DetectIntent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param session Required. The name of the session this query is sent to. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             *        more information, see the [sessions
-             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-             *        agent versions for production traffic. See [Versions and
-             *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+               * @param session
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DetectIntentRequest}
                * @since 1.13
                */
@@ -7375,47 +6562,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (DetectIntent) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the session this query is sent to. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment. It's up to the API caller to
-               * choose an appropriate `Session ID`. It can be a random number or some type of
-               * session identifiers (preferably hashed). The length of the `Session ID` must not
-               * exceed 36 characters. For more information, see the [sessions
-               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always
-               * use agent versions for production traffic. See [Versions and
-               * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-               */
               @com.google.api.client.util.Key
               private java.lang.String session;
 
-              /** Required. The name of the session this query is sent to. Format:
-             `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-             If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
-             caller to choose an appropriate `Session ID`. It can be a random number or some type of session
-             identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             more information, see the [sessions
-             guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use agent
-             versions for production traffic. See [Versions and
-             environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+              /**
+
                */
               public java.lang.String getSession() {
                 return session;
               }
 
-              /**
-               * Required. The name of the session this query is sent to. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment. It's up to the API caller to
-               * choose an appropriate `Session ID`. It can be a random number or some type of
-               * session identifiers (preferably hashed). The length of the `Session ID` must not
-               * exceed 36 characters. For more information, see the [sessions
-               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always
-               * use agent versions for production traffic. See [Versions and
-               * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-               */
               public DetectIntent setSession(java.lang.String session) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
@@ -7432,22 +6588,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Fulfills a matched intent returned by MatchIntent. Must be called after MatchIntent, with input
-             * from MatchIntentResponse. Otherwise, the behavior is undefined.
-             *
              * Create a request for the method "sessions.fulfillIntent".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link FulfillIntent#execute()} method to invoke the remote operation.
              *
-             * @param session Required. The name of the session this query is sent to. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             *        more information, see the [sessions
-             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+             * @param session
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1FulfillIntentRequest}
              * @return the request
              */
@@ -7465,9 +6611,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+$");
 
               /**
-               * Fulfills a matched intent returned by MatchIntent. Must be called after MatchIntent, with input
-               * from MatchIntentResponse. Otherwise, the behavior is undefined.
-               *
                * Create a request for the method "sessions.fulfillIntent".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -7476,14 +6619,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param session Required. The name of the session this query is sent to. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             *        more information, see the [sessions
-             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+               * @param session
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1FulfillIntentRequest}
                * @since 1.13
                */
@@ -7552,41 +6688,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (FulfillIntent) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the session this query is sent to. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment. It's up to the API caller to
-               * choose an appropriate `Session ID`. It can be a random number or some type of
-               * session identifiers (preferably hashed). The length of the `Session ID` must not
-               * exceed 36 characters. For more information, see the [sessions
-               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
-               */
               @com.google.api.client.util.Key
               private java.lang.String session;
 
-              /** Required. The name of the session this query is sent to. Format:
-             `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-             If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
-             caller to choose an appropriate `Session ID`. It can be a random number or some type of session
-             identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             more information, see the [sessions
-             guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+              /**
+
                */
               public java.lang.String getSession() {
                 return session;
               }
 
-              /**
-               * Required. The name of the session this query is sent to. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment. It's up to the API caller to
-               * choose an appropriate `Session ID`. It can be a random number or some type of
-               * session identifiers (preferably hashed). The length of the `Session ID` must not
-               * exceed 36 characters. For more information, see the [sessions
-               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
-               */
               public FulfillIntent setSession(java.lang.String session) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
@@ -7603,21 +6714,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Returns preliminary intent match results, doesn't change the session status.
-             *
              * Create a request for the method "sessions.matchIntent".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link MatchIntent#execute()} method to invoke the remote operation.
              *
-             * @param session Required. The name of the session this query is sent to. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             *        more information, see the [sessions
-             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+             * @param session
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1MatchIntentRequest}
              * @return the request
              */
@@ -7635,8 +6737,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+$");
 
               /**
-               * Returns preliminary intent match results, doesn't change the session status.
-               *
                * Create a request for the method "sessions.matchIntent".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -7645,14 +6745,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * MatchIntent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param session Required. The name of the session this query is sent to. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             *        more information, see the [sessions
-             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+               * @param session
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1MatchIntentRequest}
                * @since 1.13
                */
@@ -7721,41 +6814,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (MatchIntent) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the session this query is sent to. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment. It's up to the API caller to
-               * choose an appropriate `Session ID`. It can be a random number or some type of
-               * session identifiers (preferably hashed). The length of the `Session ID` must not
-               * exceed 36 characters. For more information, see the [sessions
-               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
-               */
               @com.google.api.client.util.Key
               private java.lang.String session;
 
-              /** Required. The name of the session this query is sent to. Format:
-             `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-             If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
-             caller to choose an appropriate `Session ID`. It can be a random number or some type of session
-             identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             more information, see the [sessions
-             guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+              /**
+
                */
               public java.lang.String getSession() {
                 return session;
               }
 
-              /**
-               * Required. The name of the session this query is sent to. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment. It's up to the API caller to
-               * choose an appropriate `Session ID`. It can be a random number or some type of
-               * session identifiers (preferably hashed). The length of the `Session ID` must not
-               * exceed 36 characters. For more information, see the [sessions
-               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
-               */
               public MatchIntent setSession(java.lang.String session) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
@@ -7772,27 +6840,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Processes a natural language query and returns structured, actionable data as a result through
-             * server-side streaming. Server-side streaming allows Dialogflow to send [partial
-             * responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
-             * earlier in a single request.
-             *
              * Create a request for the method "sessions.serverStreamingDetectIntent".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link ServerStreamingDetectIntent#execute()} method to invoke the remote
              * operation.
              *
-             * @param session Required. The name of the session this query is sent to. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             *        more information, see the [sessions
-             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-             *        agent versions for production traffic. See [Versions and
-             *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+             * @param session
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DetectIntentRequest}
              * @return the request
              */
@@ -7810,11 +6864,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+$");
 
               /**
-               * Processes a natural language query and returns structured, actionable data as a result through
-               * server-side streaming. Server-side streaming allows Dialogflow to send [partial
-               * responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
-               * earlier in a single request.
-               *
                * Create a request for the method "sessions.serverStreamingDetectIntent".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -7823,16 +6872,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
                * immediately after invoking the constructor. </p>
                *
-               * @param session Required. The name of the session this query is sent to. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-             *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-             *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             *        more information, see the [sessions
-             *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-             *        agent versions for production traffic. See [Versions and
-             *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+               * @param session
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DetectIntentRequest}
                * @since 1.13
                */
@@ -7901,47 +6941,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (ServerStreamingDetectIntent) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the session this query is sent to. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment. It's up to the API caller to
-               * choose an appropriate `Session ID`. It can be a random number or some type of
-               * session identifiers (preferably hashed). The length of the `Session ID` must not
-               * exceed 36 characters. For more information, see the [sessions
-               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always
-               * use agent versions for production traffic. See [Versions and
-               * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-               */
               @com.google.api.client.util.Key
               private java.lang.String session;
 
-              /** Required. The name of the session this query is sent to. Format:
-             `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-             If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
-             caller to choose an appropriate `Session ID`. It can be a random number or some type of session
-             identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-             more information, see the [sessions
-             guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use agent
-             versions for production traffic. See [Versions and
-             environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+              /**
+
                */
               public java.lang.String getSession() {
                 return session;
               }
 
-              /**
-               * Required. The name of the session this query is sent to. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment. It's up to the API caller to
-               * choose an appropriate `Session ID`. It can be a random number or some type of
-               * session identifiers (preferably hashed). The length of the `Session ID` must not
-               * exceed 36 characters. For more information, see the [sessions
-               * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always
-               * use agent versions for production traffic. See [Versions and
-               * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-               */
               public ServerStreamingDetectIntent setSession(java.lang.String session) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
@@ -7979,17 +6988,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             public class EntityTypes {
 
               /**
-               * Creates a session entity type.
-               *
                * Create a request for the method "entityTypes.create".
                *
                * This request holds the parameters needed by the dialogflow server.  After setting any optional
                * parameters, call the {@link Create#execute()} method to invoke the remote operation.
                *
-               * @param parent Required. The session to create a session entity type for. Format:
-               *        `projects//locations//agents//sessions/` or
-               *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               *        specified, we assume default 'draft' environment.
+               * @param parent
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SessionEntityType}
                * @return the request
                */
@@ -8007,8 +7011,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+$");
 
                 /**
-                 * Creates a session entity type.
-                 *
                  * Create a request for the method "entityTypes.create".
                  *
                  * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -8017,10 +7019,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                  * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                  * be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param parent Required. The session to create a session entity type for. Format:
-               *        `projects//locations//agents//sessions/` or
-               *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               *        specified, we assume default 'draft' environment.
+                 * @param parent
                  * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SessionEntityType}
                  * @since 1.13
                  */
@@ -8089,29 +7088,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   return (Create) super.setUploadProtocol(uploadProtocol);
                 }
 
-                /**
-                 * Required. The session to create a session entity type for. Format:
-                 * `projects//locations//agents//sessions/` or
-                 * `projects//locations//agents//environments//sessions/`. If `Environment ID` is
-                 * not specified, we assume default 'draft' environment.
-                 */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** Required. The session to create a session entity type for. Format:
-               `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-               If `Environment ID` is not specified, we assume default 'draft' environment.
+                /**
+
                  */
                 public java.lang.String getParent() {
                   return parent;
                 }
 
-                /**
-                 * Required. The session to create a session entity type for. Format:
-                 * `projects//locations//agents//sessions/` or
-                 * `projects//locations//agents//environments//sessions/`. If `Environment ID` is
-                 * not specified, we assume default 'draft' environment.
-                 */
                 public Create setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8128,17 +7114,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 }
               }
               /**
-               * Deletes the specified session entity type.
-               *
                * Create a request for the method "entityTypes.delete".
                *
                * This request holds the parameters needed by the dialogflow server.  After setting any optional
                * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
                *
-               * @param name Required. The name of the session entity type to delete. Format:
-               *        `projects//locations//agents//sessions//entityTypes/` or
-               *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-               *        is not specified, we assume default 'draft' environment.
+               * @param name
                * @return the request
                */
               public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -8155,8 +7136,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+/entityTypes/[^/]+$");
 
                 /**
-                 * Deletes the specified session entity type.
-                 *
                  * Create a request for the method "entityTypes.delete".
                  *
                  * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -8165,10 +7144,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                  * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                  * be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. The name of the session entity type to delete. Format:
-               *        `projects//locations//agents//sessions//entityTypes/` or
-               *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-               *        is not specified, we assume default 'draft' environment.
+                 * @param name
                  * @since 1.13
                  */
                 protected Delete(java.lang.String name) {
@@ -8236,30 +7212,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   return (Delete) super.setUploadProtocol(uploadProtocol);
                 }
 
-                /**
-                 * Required. The name of the session entity type to delete. Format:
-                 * `projects//locations//agents//sessions//entityTypes/` or
-                 * `projects//locations//agents//environments//sessions//entityTypes/`. If
-                 * `Environment ID` is not specified, we assume default 'draft' environment.
-                 */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. The name of the session entity type to delete. Format:
-               `projects//locations//agents//sessions//entityTypes/` or
-               `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not
-               specified, we assume default 'draft' environment.
+                /**
+
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
-                /**
-                 * Required. The name of the session entity type to delete. Format:
-                 * `projects//locations//agents//sessions//entityTypes/` or
-                 * `projects//locations//agents//environments//sessions//entityTypes/`. If
-                 * `Environment ID` is not specified, we assume default 'draft' environment.
-                 */
                 public Delete setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8276,17 +7238,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 }
               }
               /**
-               * Retrieves the specified session entity type.
-               *
                * Create a request for the method "entityTypes.get".
                *
                * This request holds the parameters needed by the dialogflow server.  After setting any optional
                * parameters, call the {@link Get#execute()} method to invoke the remote operation.
                *
-               * @param name Required. The name of the session entity type. Format:
-               *        `projects//locations//agents//sessions//entityTypes/` or
-               *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-               *        is not specified, we assume default 'draft' environment.
+               * @param name
                * @return the request
                */
               public Get get(java.lang.String name) throws java.io.IOException {
@@ -8303,8 +7260,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+/entityTypes/[^/]+$");
 
                 /**
-                 * Retrieves the specified session entity type.
-                 *
                  * Create a request for the method "entityTypes.get".
                  *
                  * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -8312,10 +7267,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                  * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                  * must be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. The name of the session entity type. Format:
-               *        `projects//locations//agents//sessions//entityTypes/` or
-               *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-               *        is not specified, we assume default 'draft' environment.
+                 * @param name
                  * @since 1.13
                  */
                 protected Get(java.lang.String name) {
@@ -8393,30 +7345,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   return (Get) super.setUploadProtocol(uploadProtocol);
                 }
 
-                /**
-                 * Required. The name of the session entity type. Format:
-                 * `projects//locations//agents//sessions//entityTypes/` or
-                 * `projects//locations//agents//environments//sessions//entityTypes/`. If
-                 * `Environment ID` is not specified, we assume default 'draft' environment.
-                 */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. The name of the session entity type. Format:
-               `projects//locations//agents//sessions//entityTypes/` or
-               `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not
-               specified, we assume default 'draft' environment.
+                /**
+
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
-                /**
-                 * Required. The name of the session entity type. Format:
-                 * `projects//locations//agents//sessions//entityTypes/` or
-                 * `projects//locations//agents//environments//sessions//entityTypes/`. If
-                 * `Environment ID` is not specified, we assume default 'draft' environment.
-                 */
                 public Get setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8433,17 +7371,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 }
               }
               /**
-               * Returns the list of all session entity types in the specified session.
-               *
                * Create a request for the method "entityTypes.list".
                *
                * This request holds the parameters needed by the dialogflow server.  After setting any optional
                * parameters, call the {@link List#execute()} method to invoke the remote operation.
                *
-               * @param parent Required. The session to list all session entity types from. Format:
-               *        `projects//locations//agents//sessions/` or
-               *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               *        specified, we assume default 'draft' environment.
+               * @param parent
                * @return the request
                */
               public List list(java.lang.String parent) throws java.io.IOException {
@@ -8460,8 +7393,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+$");
 
                 /**
-                 * Returns the list of all session entity types in the specified session.
-                 *
                  * Create a request for the method "entityTypes.list".
                  *
                  * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -8469,10 +7400,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                  * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                  * must be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param parent Required. The session to list all session entity types from. Format:
-               *        `projects//locations//agents//sessions/` or
-               *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               *        specified, we assume default 'draft' environment.
+                 * @param parent
                  * @since 1.13
                  */
                 protected List(java.lang.String parent) {
@@ -8550,29 +7478,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   return (List) super.setUploadProtocol(uploadProtocol);
                 }
 
-                /**
-                 * Required. The session to list all session entity types from. Format:
-                 * `projects//locations//agents//sessions/` or
-                 * `projects//locations//agents//environments//sessions/`. If `Environment ID` is
-                 * not specified, we assume default 'draft' environment.
-                 */
                 @com.google.api.client.util.Key
                 private java.lang.String parent;
 
-                /** Required. The session to list all session entity types from. Format:
-               `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-               If `Environment ID` is not specified, we assume default 'draft' environment.
+                /**
+
                  */
                 public java.lang.String getParent() {
                   return parent;
                 }
 
-                /**
-                 * Required. The session to list all session entity types from. Format:
-                 * `projects//locations//agents//sessions/` or
-                 * `projects//locations//agents//environments//sessions/`. If `Environment ID` is
-                 * not specified, we assume default 'draft' environment.
-                 */
                 public List setParent(java.lang.String parent) {
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8583,39 +7498,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   return this;
                 }
 
-                /**
-                 * The maximum number of items to return in a single page. By default 100 and at
-                 * most 1000.
-                 */
                 @com.google.api.client.util.Key
                 private java.lang.Integer pageSize;
 
-                /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+                /**
+
                  */
                 public java.lang.Integer getPageSize() {
                   return pageSize;
                 }
 
-                /**
-                 * The maximum number of items to return in a single page. By default 100 and at
-                 * most 1000.
-                 */
                 public List setPageSize(java.lang.Integer pageSize) {
                   this.pageSize = pageSize;
                   return this;
                 }
 
-                /** The next_page_token value returned from a previous list request. */
                 @com.google.api.client.util.Key
                 private java.lang.String pageToken;
 
-                /** The next_page_token value returned from a previous list request.
+                /**
+
                  */
                 public java.lang.String getPageToken() {
                   return pageToken;
                 }
 
-                /** The next_page_token value returned from a previous list request. */
                 public List setPageToken(java.lang.String pageToken) {
                   this.pageToken = pageToken;
                   return this;
@@ -8627,17 +7534,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 }
               }
               /**
-               * Updates the specified session entity type.
-               *
                * Create a request for the method "entityTypes.patch".
                *
                * This request holds the parameters needed by the dialogflow server.  After setting any optional
                * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
                *
-               * @param name Required. The unique identifier of the session entity type. Format:
-               *        `projects//locations//agents//sessions//entityTypes/` or
-               *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-               *        is not specified, we assume default 'draft' environment.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SessionEntityType}
                * @return the request
                */
@@ -8655,8 +7557,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                     java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/environments/[^/]+/sessions/[^/]+/entityTypes/[^/]+$");
 
                 /**
-                 * Updates the specified session entity type.
-                 *
                  * Create a request for the method "entityTypes.patch".
                  *
                  * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -8665,10 +7565,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                  * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                  * be called to initialize this instance immediately after invoking the constructor. </p>
                  *
-                 * @param name Required. The unique identifier of the session entity type. Format:
-               *        `projects//locations//agents//sessions//entityTypes/` or
-               *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-               *        is not specified, we assume default 'draft' environment.
+                 * @param name
                  * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SessionEntityType}
                  * @since 1.13
                  */
@@ -8737,30 +7634,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   return (Patch) super.setUploadProtocol(uploadProtocol);
                 }
 
-                /**
-                 * Required. The unique identifier of the session entity type. Format:
-                 * `projects//locations//agents//sessions//entityTypes/` or
-                 * `projects//locations//agents//environments//sessions//entityTypes/`. If
-                 * `Environment ID` is not specified, we assume default 'draft' environment.
-                 */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
-                /** Required. The unique identifier of the session entity type. Format:
-               `projects//locations//agents//sessions//entityTypes/` or
-               `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not
-               specified, we assume default 'draft' environment.
+                /**
+
                  */
                 public java.lang.String getName() {
                   return name;
                 }
 
-                /**
-                 * Required. The unique identifier of the session entity type. Format:
-                 * `projects//locations//agents//sessions//entityTypes/` or
-                 * `projects//locations//agents//environments//sessions//entityTypes/`. If
-                 * `Environment ID` is not specified, we assume default 'draft' environment.
-                 */
                 public Patch setName(java.lang.String name) {
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8771,17 +7654,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   return this;
                 }
 
-                /** The mask to control which fields get updated. */
                 @com.google.api.client.util.Key
                 private String updateMask;
 
-                /** The mask to control which fields get updated.
+                /**
+
                  */
                 public String getUpdateMask() {
                   return updateMask;
                 }
 
-                /** The mask to control which fields get updated. */
                 public Patch setUpdateMask(String updateMask) {
                   this.updateMask = updateMask;
                   return this;
@@ -8817,16 +7699,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Flows {
 
           /**
-           * Creates a flow in the specified agent. Note: You should always train a flow prior to sending it
-           * queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "flows.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to create a flow for. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Flow}
            * @return the request
            */
@@ -8844,10 +7722,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates a flow in the specified agent. Note: You should always train a flow prior to sending it
-             * queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "flows.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -8856,7 +7730,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to create a flow for. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Flow}
              * @since 1.13
              */
@@ -8925,21 +7799,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to create a flow for. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to create a flow for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to create a flow for. Format: `projects//locations//agents/`.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8950,42 +7819,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language of the following fields in `flow`: *
-             * `Flow.event_handlers.trigger_fulfillment.messages` *
-             * `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-             * `Flow.transition_routes.trigger_fulfillment.messages` *
-             * `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the
-             * agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language of the following fields in `flow`: *
-           `Flow.event_handlers.trigger_fulfillment.messages` *
-           `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-           `Flow.transition_routes.trigger_fulfillment.messages` *
-           `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent's
-           default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language of the following fields in `flow`: *
-             * `Flow.event_handlers.trigger_fulfillment.messages` *
-             * `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-             * `Flow.transition_routes.trigger_fulfillment.messages` *
-             * `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the
-             * agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Create setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -8997,14 +7840,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes a specified flow.
-           *
            * Create a request for the method "flows.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the flow to delete. Format: `projects//locations//agents//flows/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -9021,8 +7862,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
             /**
-             * Deletes a specified flow.
-             *
              * Create a request for the method "flows.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -9031,7 +7870,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the flow to delete. Format: `projects//locations//agents//flows/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -9099,23 +7938,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the flow to delete. Format:
-             * `projects//locations//agents//flows/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the flow to delete. Format: `projects//locations//agents//flows/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the flow to delete. Format:
-             * `projects//locations//agents//flows/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9126,35 +7958,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * This field has no effect for flows with no incoming transitions. For flows with
-             * incoming transitions: * If `force` is set to false, an error will be returned with
-             * message indicating the incoming transitions. * If `force` is set to true, Dialogflow
-             * will remove the flow, as well as any transitions to the flow (i.e. Target flow in
-             * event handlers or Target flow in transition routes that point to this flow will be
-             * cleared).
-             */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** This field has no effect for flows with no incoming transitions. For flows with incoming
-           transitions: * If `force` is set to false, an error will be returned with message indicating the
-           incoming transitions. * If `force` is set to true, Dialogflow will remove the flow, as well as any
-           transitions to the flow (i.e. Target flow in event handlers or Target flow in transition routes
-           that point to this flow will be cleared).
+            /**
+
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
-            /**
-             * This field has no effect for flows with no incoming transitions. For flows with
-             * incoming transitions: * If `force` is set to false, an error will be returned with
-             * message indicating the incoming transitions. * If `force` is set to true, Dialogflow
-             * will remove the flow, as well as any transitions to the flow (i.e. Target flow in
-             * event handlers or Target flow in transition routes that point to this flow will be
-             * cleared).
-             */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
               return this;
@@ -9166,19 +7979,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Exports the specified flow to a binary file. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct
-           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) -
-           * `response`: ExportFlowResponse Note that resources (e.g. intents, entities, webhooks) that the
-           * flow references will also be exported.
-           *
            * Create a request for the method "flows.export".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the flow to export. Format: `projects//locations//agents//flows/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportFlowRequest}
            * @return the request
            */
@@ -9196,13 +8002,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
             /**
-             * Exports the specified flow to a binary file. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`: An empty
-             * [Struct message](https://developers.google.com/protocol-
-             * buffers/docs/reference/google.protobuf#struct) - `response`: ExportFlowResponse Note that
-             * resources (e.g. intents, entities, webhooks) that the flow references will also be exported.
-             *
              * Create a request for the method "flows.export".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -9211,7 +8010,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the flow to export. Format: `projects//locations//agents//flows/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportFlowRequest}
              * @since 1.13
              */
@@ -9280,23 +8079,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Export) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the flow to export. Format:
-             * `projects//locations//agents//flows/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the flow to export. Format: `projects//locations//agents//flows/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the flow to export. Format:
-             * `projects//locations//agents//flows/`.
-             */
             public Export setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9313,14 +8105,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified flow.
-           *
            * Create a request for the method "flows.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the flow to get. Format: `projects//locations//agents//flows/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -9337,8 +8127,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
             /**
-             * Retrieves the specified flow.
-             *
              * Create a request for the method "flows.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -9346,7 +8134,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the flow to get. Format: `projects//locations//agents//flows/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -9424,21 +8212,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the flow to get. Format: `projects//locations//agents//flows/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the flow to get. Format: `projects//locations//agents//flows/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the flow to get. Format: `projects//locations//agents//flows/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9449,42 +8232,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language to retrieve the flow for. The following fields are language dependent: *
-             * `Flow.event_handlers.trigger_fulfillment.messages` *
-             * `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-             * `Flow.transition_routes.trigger_fulfillment.messages` *
-             * `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the
-             * agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to retrieve the flow for. The following fields are language dependent: *
-           `Flow.event_handlers.trigger_fulfillment.messages` *
-           `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-           `Flow.transition_routes.trigger_fulfillment.messages` *
-           `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent's
-           default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language to retrieve the flow for. The following fields are language dependent: *
-             * `Flow.event_handlers.trigger_fulfillment.messages` *
-             * `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-             * `Flow.transition_routes.trigger_fulfillment.messages` *
-             * `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the
-             * agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Get setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -9496,14 +8253,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Gets the latest flow validation result. Flow validation is performed when ValidateFlow is called.
-           *
            * Create a request for the method "flows.getValidationResult".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link GetValidationResult#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The flow name. Format: `projects//locations//agents//flows//validationResult`.
+           * @param name
            * @return the request
            */
           public GetValidationResult getValidationResult(java.lang.String name) throws java.io.IOException {
@@ -9520,9 +8275,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/validationResult$");
 
             /**
-             * Gets the latest flow validation result. Flow validation is performed when ValidateFlow is
-             * called.
-             *
              * Create a request for the method "flows.getValidationResult".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -9531,7 +8283,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param name Required. The flow name. Format: `projects//locations//agents//flows//validationResult`.
+             * @param name
              * @since 1.13
              */
             protected GetValidationResult(java.lang.String name) {
@@ -9609,23 +8361,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (GetValidationResult) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The flow name. Format:
-             * `projects//locations//agents//flows//validationResult`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The flow name. Format: `projects//locations//agents//flows//validationResult`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The flow name. Format:
-             * `projects//locations//agents//flows//validationResult`.
-             */
             public GetValidationResult setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9636,17 +8381,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** If not specified, the agent's default language is used. */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** If not specified, the agent's default language is used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /** If not specified, the agent's default language is used. */
             public GetValidationResult setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -9658,20 +8402,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Imports the specified flow to the specified agent from a binary file. This method is a [long-
-           * running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-           * returned `Operation` type has the following method-specific fields: - `metadata`: An empty
-           * [Struct message](https://developers.google.com/protocol-
-           * buffers/docs/reference/google.protobuf#struct) - `response`: ImportFlowResponse Note: You should
-           * always train a flow prior to sending it queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "flows.import".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link DialogflowImport#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to import the flow into. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportFlowRequest}
            * @return the request
            */
@@ -9689,14 +8425,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Imports the specified flow to the specified agent from a binary file. This method is a [long-
-             * running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`: An empty
-             * [Struct message](https://developers.google.com/protocol-
-             * buffers/docs/reference/google.protobuf#struct) - `response`: ImportFlowResponse Note: You
-             * should always train a flow prior to sending it queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "flows.import".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -9705,7 +8433,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * tractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param parent Required. The agent to import the flow into. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportFlowRequest}
              * @since 1.13
              */
@@ -9774,21 +8502,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (DialogflowImport) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to import the flow into. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to import the flow into. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to import the flow into. Format: `projects//locations//agents/`.
-             */
             public DialogflowImport setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9805,14 +8528,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns the list of all flows in the specified agent.
-           *
            * Create a request for the method "flows.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent containing the flows. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -9829,8 +8550,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns the list of all flows in the specified agent.
-             *
              * Create a request for the method "flows.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -9838,7 +8557,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent containing the flows. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -9916,21 +8635,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent containing the flows. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent containing the flows. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent containing the flows. Format: `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9941,80 +8655,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language to list flows for. The following fields are language dependent: *
-             * `Flow.event_handlers.trigger_fulfillment.messages` *
-             * `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-             * `Flow.transition_routes.trigger_fulfillment.messages` *
-             * `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the
-             * agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to list flows for. The following fields are language dependent: *
-           `Flow.event_handlers.trigger_fulfillment.messages` *
-           `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-           `Flow.transition_routes.trigger_fulfillment.messages` *
-           `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent's
-           default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language to list flows for. The following fields are language dependent: *
-             * `Flow.event_handlers.trigger_fulfillment.messages` *
-             * `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-             * `Flow.transition_routes.trigger_fulfillment.messages` *
-             * `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the
-             * agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public List setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -10026,15 +8706,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the specified flow. Note: You should always train a flow prior to sending it queries. See
-           * the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "flows.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Flow}
            * @return the request
            */
@@ -10052,9 +8729,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
             /**
-             * Updates the specified flow. Note: You should always train a flow prior to sending it queries.
-             * See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "flows.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -10063,7 +8737,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Flow}
              * @since 1.13
              */
@@ -10132,21 +8806,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10157,65 +8826,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language of the following fields in `flow`: *
-             * `Flow.event_handlers.trigger_fulfillment.messages` *
-             * `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-             * `Flow.transition_routes.trigger_fulfillment.messages` *
-             * `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the
-             * agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language of the following fields in `flow`: *
-           `Flow.event_handlers.trigger_fulfillment.messages` *
-           `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-           `Flow.transition_routes.trigger_fulfillment.messages` *
-           `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent's
-           default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language of the following fields in `flow`: *
-             * `Flow.event_handlers.trigger_fulfillment.messages` *
-             * `Flow.event_handlers.trigger_fulfillment.conditional_cases` *
-             * `Flow.transition_routes.trigger_fulfillment.messages` *
-             * `Flow.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the
-             * agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Patch setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The mask to control which fields get updated. If the mask is not present, all fields will be
-           updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -10227,21 +8862,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Trains the specified flow. Note that only the flow in 'draft' environment is trained. This method
-           * is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-
-           * operation). The returned `Operation` type has the following method-specific fields: - `metadata`:
-           * An empty [Struct message](https://developers.google.com/protocol-
-           * buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty
-           * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
-           * Note: You should always train a flow prior to sending it queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "flows.train".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Train#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The flow to train. Format: `projects//locations//agents//flows/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TrainFlowRequest}
            * @return the request
            */
@@ -10259,15 +8885,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
             /**
-             * Trains the specified flow. Note that only the flow in 'draft' environment is trained. This
-             * method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-
-             * running-operation). The returned `Operation` type has the following method-specific fields: -
-             * `metadata`: An empty [Struct message](https://developers.google.com/protocol-
-             * buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty
-             * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
-             * Note: You should always train a flow prior to sending it queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "flows.train".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -10276,7 +8893,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Train#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The flow to train. Format: `projects//locations//agents//flows/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TrainFlowRequest}
              * @since 1.13
              */
@@ -10345,17 +8962,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Train) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The flow to train. Format: `projects//locations//agents//flows/`. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The flow to train. Format: `projects//locations//agents//flows/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The flow to train. Format: `projects//locations//agents//flows/`. */
             public Train setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10372,15 +8988,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Validates the specified flow and creates or updates validation results. Please call this API
-           * after the training is completed to get the complete validation results.
-           *
            * Create a request for the method "flows.validate".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The flow to validate. Format: `projects//locations//agents//flows/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ValidateFlowRequest}
            * @return the request
            */
@@ -10398,9 +9011,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
             /**
-             * Validates the specified flow and creates or updates validation results. Please call this API
-             * after the training is completed to get the complete validation results.
-             *
              * Create a request for the method "flows.validate".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -10409,7 +9019,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The flow to validate. Format: `projects//locations//agents//flows/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ValidateFlowRequest}
              * @since 1.13
              */
@@ -10478,17 +9088,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Validate) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The flow to validate. Format: `projects//locations//agents//flows/`. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The flow to validate. Format: `projects//locations//agents//flows/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The flow to validate. Format: `projects//locations//agents//flows/`. */
             public Validate setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10526,14 +9135,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class Pages {
 
             /**
-             * Creates a page in the specified flow.
-             *
              * Create a request for the method "pages.create".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The flow to create a page for. Format: `projects//locations//agents//flows/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Page}
              * @return the request
              */
@@ -10551,8 +9158,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
               /**
-               * Creates a page in the specified flow.
-               *
                * Create a request for the method "pages.create".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -10561,7 +9166,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The flow to create a page for. Format: `projects//locations//agents//flows/`.
+               * @param parent
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Page}
                * @since 1.13
                */
@@ -10630,23 +9235,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The flow to create a page for. Format:
-               * `projects//locations//agents//flows/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The flow to create a page for. Format: `projects//locations//agents//flows/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The flow to create a page for. Format:
-               * `projects//locations//agents//flows/`.
-               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10657,56 +9255,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The language of the following fields in `page`: * `Page.entry_fulfillment.messages`
-               * * `Page.entry_fulfillment.conditional_cases` *
-               * `Page.event_handlers.trigger_fulfillment.messages` *
-               * `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-               * `Page.transition_routes.trigger_fulfillment.messages` *
-               * `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-               * the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
 
-              /** The language of the following fields in `page`: * `Page.entry_fulfillment.messages` *
-             `Page.entry_fulfillment.conditional_cases` * `Page.event_handlers.trigger_fulfillment.messages` *
-             `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-             `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-             `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-             `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-             `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-             `Page.transition_routes.trigger_fulfillment.messages` *
-             `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent's
-             default language is used. [Many
-             languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-             languages must be enabled in the agent before they can be used.
+              /**
+
                */
               public java.lang.String getLanguageCode() {
                 return languageCode;
               }
 
-              /**
-               * The language of the following fields in `page`: * `Page.entry_fulfillment.messages`
-               * * `Page.entry_fulfillment.conditional_cases` *
-               * `Page.event_handlers.trigger_fulfillment.messages` *
-               * `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-               * `Page.transition_routes.trigger_fulfillment.messages` *
-               * `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-               * the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               public Create setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
                 return this;
@@ -10718,14 +9276,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Deletes the specified page.
-             *
              * Create a request for the method "pages.delete".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the page to delete. Format: `projects//locations//agents//Flows//pages/`.
+             * @param name
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -10742,8 +9298,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/pages/[^/]+$");
 
               /**
-               * Deletes the specified page.
-               *
                * Create a request for the method "pages.delete".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -10752,7 +9306,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the page to delete. Format: `projects//locations//agents//Flows//pages/`.
+               * @param name
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -10820,23 +9374,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the page to delete. Format:
-               * `projects//locations//agents//Flows//pages/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the page to delete. Format: `projects//locations//agents//Flows//pages/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the page to delete. Format:
-               * `projects//locations//agents//Flows//pages/`.
-               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -10847,35 +9394,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * This field has no effect for pages with no incoming transitions. For pages with
-               * incoming transitions: * If `force` is set to false, an error will be returned with
-               * message indicating the incoming transitions. * If `force` is set to true,
-               * Dialogflow will remove the page, as well as any transitions to the page (i.e.
-               * Target page in event handlers or Target page in transition routes that point to
-               * this page will be cleared).
-               */
               @com.google.api.client.util.Key
               private java.lang.Boolean force;
 
-              /** This field has no effect for pages with no incoming transitions. For pages with incoming
-             transitions: * If `force` is set to false, an error will be returned with message indicating the
-             incoming transitions. * If `force` is set to true, Dialogflow will remove the page, as well as any
-             transitions to the page (i.e. Target page in event handlers or Target page in transition routes
-             that point to this page will be cleared).
+              /**
+
                */
               public java.lang.Boolean getForce() {
                 return force;
               }
 
-              /**
-               * This field has no effect for pages with no incoming transitions. For pages with
-               * incoming transitions: * If `force` is set to false, an error will be returned with
-               * message indicating the incoming transitions. * If `force` is set to true,
-               * Dialogflow will remove the page, as well as any transitions to the page (i.e.
-               * Target page in event handlers or Target page in transition routes that point to
-               * this page will be cleared).
-               */
               public Delete setForce(java.lang.Boolean force) {
                 this.force = force;
                 return this;
@@ -10887,14 +9415,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified page.
-             *
              * Create a request for the method "pages.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the page. Format: `projects//locations//agents//flows//pages/`.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -10911,8 +9437,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/pages/[^/]+$");
 
               /**
-               * Retrieves the specified page.
-               *
                * Create a request for the method "pages.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -10920,7 +9444,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the page. Format: `projects//locations//agents//flows//pages/`.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -10998,23 +9522,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the page. Format:
-               * `projects//locations//agents//flows//pages/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the page. Format: `projects//locations//agents//flows//pages/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the page. Format:
-               * `projects//locations//agents//flows//pages/`.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11025,57 +9542,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The language to retrieve the page for. The following fields are language dependent:
-               * * `Page.entry_fulfillment.messages` * `Page.entry_fulfillment.conditional_cases` *
-               * `Page.event_handlers.trigger_fulfillment.messages` *
-               * `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-               * `Page.transition_routes.trigger_fulfillment.messages` *
-               * `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-               * the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
 
-              /** The language to retrieve the page for. The following fields are language dependent: *
-             `Page.entry_fulfillment.messages` * `Page.entry_fulfillment.conditional_cases` *
-             `Page.event_handlers.trigger_fulfillment.messages` *
-             `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-             `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-             `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-             `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-             `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-             `Page.transition_routes.trigger_fulfillment.messages` *
-             `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent's
-             default language is used. [Many
-             languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-             languages must be enabled in the agent before they can be used.
+              /**
+
                */
               public java.lang.String getLanguageCode() {
                 return languageCode;
               }
 
-              /**
-               * The language to retrieve the page for. The following fields are language dependent:
-               * * `Page.entry_fulfillment.messages` * `Page.entry_fulfillment.conditional_cases` *
-               * `Page.event_handlers.trigger_fulfillment.messages` *
-               * `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-               * `Page.transition_routes.trigger_fulfillment.messages` *
-               * `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-               * the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               public Get setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
                 return this;
@@ -11087,14 +9563,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Returns the list of all pages in the specified flow.
-             *
              * Create a request for the method "pages.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The flow to list all pages for. Format: `projects//locations//agents//flows/`.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -11111,8 +9585,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
               /**
-               * Returns the list of all pages in the specified flow.
-               *
                * Create a request for the method "pages.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -11120,7 +9592,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The flow to list all pages for. Format: `projects//locations//agents//flows/`.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -11198,23 +9670,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The flow to list all pages for. Format:
-               * `projects//locations//agents//flows/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The flow to list all pages for. Format: `projects//locations//agents//flows/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The flow to list all pages for. Format:
-               * `projects//locations//agents//flows/`.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -11225,95 +9690,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The language to list pages for. The following fields are language dependent: *
-               * `Page.entry_fulfillment.messages` * `Page.entry_fulfillment.conditional_cases` *
-               * `Page.event_handlers.trigger_fulfillment.messages` *
-               * `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-               * `Page.transition_routes.trigger_fulfillment.messages` *
-               * `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-               * the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
 
-              /** The language to list pages for. The following fields are language dependent: *
-             `Page.entry_fulfillment.messages` * `Page.entry_fulfillment.conditional_cases` *
-             `Page.event_handlers.trigger_fulfillment.messages` *
-             `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-             `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-             `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-             `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-             `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-             `Page.transition_routes.trigger_fulfillment.messages` *
-             `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent's
-             default language is used. [Many
-             languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-             languages must be enabled in the agent before they can be used.
+              /**
+
                */
               public java.lang.String getLanguageCode() {
                 return languageCode;
               }
 
-              /**
-               * The language to list pages for. The following fields are language dependent: *
-               * `Page.entry_fulfillment.messages` * `Page.entry_fulfillment.conditional_cases` *
-               * `Page.event_handlers.trigger_fulfillment.messages` *
-               * `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-               * `Page.transition_routes.trigger_fulfillment.messages` *
-               * `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-               * the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               public List setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
                 return this;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -11325,15 +9741,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Updates the specified page.
-             *
              * Create a request for the method "pages.patch".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage
-             *        populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Page}
              * @return the request
              */
@@ -11351,8 +9764,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/pages/[^/]+$");
 
               /**
-               * Updates the specified page.
-               *
                * Create a request for the method "pages.patch".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -11361,8 +9772,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage
-             *        populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Page}
                * @since 1.13
                */
@@ -11431,26 +9841,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * The unique identifier of the page. Required for the Pages.UpdatePage method.
-               * Pages.CreatePage populates the name automatically. Format:
-               * `projects//locations//agents//flows//pages/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The unique identifier of the page. Required for the Pages.UpdatePage method. Pages.CreatePage
-             populates the name automatically. Format: `projects//locations//agents//flows//pages/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * The unique identifier of the page. Required for the Pages.UpdatePage method.
-               * Pages.CreatePage populates the name automatically. Format:
-               * `projects//locations//agents//flows//pages/`.
-               */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11461,79 +9861,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The language of the following fields in `page`: * `Page.entry_fulfillment.messages`
-               * * `Page.entry_fulfillment.conditional_cases` *
-               * `Page.event_handlers.trigger_fulfillment.messages` *
-               * `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-               * `Page.transition_routes.trigger_fulfillment.messages` *
-               * `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-               * the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
 
-              /** The language of the following fields in `page`: * `Page.entry_fulfillment.messages` *
-             `Page.entry_fulfillment.conditional_cases` * `Page.event_handlers.trigger_fulfillment.messages` *
-             `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-             `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-             `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-             `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-             `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-             `Page.transition_routes.trigger_fulfillment.messages` *
-             `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified, the agent's
-             default language is used. [Many
-             languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-             languages must be enabled in the agent before they can be used.
+              /**
+
                */
               public java.lang.String getLanguageCode() {
                 return languageCode;
               }
 
-              /**
-               * The language of the following fields in `page`: * `Page.entry_fulfillment.messages`
-               * * `Page.entry_fulfillment.conditional_cases` *
-               * `Page.event_handlers.trigger_fulfillment.messages` *
-               * `Page.event_handlers.trigger_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages` *
-               * `Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.messages` *
-               * `Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases` *
-               * `Page.transition_routes.trigger_fulfillment.messages` *
-               * `Page.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-               * the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               public Patch setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
                 return this;
               }
 
-              /**
-               * The mask to control which fields get updated. If the mask is not present, all
-               * fields will be updated.
-               */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** The mask to control which fields get updated. If the mask is not present, all fields will be
-             updated.
+              /**
+
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /**
-               * The mask to control which fields get updated. If the mask is not present, all
-               * fields will be updated.
-               */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -11567,18 +9919,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class TransitionRouteGroups {
 
             /**
-             * Creates an TransitionRouteGroup in the specified flow. Note: You should always train a flow prior
-             * to sending it queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "transitionRouteGroups.create".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The flow to create an TransitionRouteGroup for. Format:
-             *        `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-level
-             *        groups.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TransitionRouteGroup}
              * @return the request
              */
@@ -11596,10 +9942,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
               /**
-               * Creates an TransitionRouteGroup in the specified flow. Note: You should always train a flow
-               * prior to sending it queries. See the [training
-               * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-               *
                * Create a request for the method "transitionRouteGroups.create".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -11608,9 +9950,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The flow to create an TransitionRouteGroup for. Format:
-             *        `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-level
-             *        groups.
+               * @param parent
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TransitionRouteGroup}
                * @since 1.13
                */
@@ -11679,26 +10019,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The flow to create an TransitionRouteGroup for. Format:
-               * `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-
-               * level groups.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The flow to create an TransitionRouteGroup for. Format:
-             `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-level groups.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The flow to create an TransitionRouteGroup for. Format:
-               * `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-
-               * level groups.
-               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -11709,36 +10039,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The language of the following fields in `TransitionRouteGroup`: *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If
-               * not specified, the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
 
-              /** The language of the following fields in `TransitionRouteGroup`: *
-             `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-             the agent's default language is used. [Many
-             languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-             languages must be enabled in the agent before they can be used.
+              /**
+
                */
               public java.lang.String getLanguageCode() {
                 return languageCode;
               }
 
-              /**
-               * The language of the following fields in `TransitionRouteGroup`: *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If
-               * not specified, the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               public Create setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
                 return this;
@@ -11750,18 +10060,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Deletes the specified TransitionRouteGroup. Note: You should always train a flow prior to sending
-             * it queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "transitionRouteGroups.delete".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the TransitionRouteGroup to delete. Format:
-             *        `projects//locations//agents//flows//transitionRouteGroups/` or
-             *        `projects//locations//agents//transitionRouteGroups/`.
+             * @param name
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -11778,10 +10082,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/transitionRouteGroups/[^/]+$");
 
               /**
-               * Deletes the specified TransitionRouteGroup. Note: You should always train a flow prior to
-               * sending it queries. See the [training
-               * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-               *
                * Create a request for the method "transitionRouteGroups.delete".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -11790,9 +10090,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the TransitionRouteGroup to delete. Format:
-             *        `projects//locations//agents//flows//transitionRouteGroups/` or
-             *        `projects//locations//agents//transitionRouteGroups/`.
+               * @param name
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -11860,27 +10158,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the TransitionRouteGroup to delete. Format:
-               * `projects//locations//agents//flows//transitionRouteGroups/` or
-               * `projects//locations//agents//transitionRouteGroups/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the TransitionRouteGroup to delete. Format:
-             `projects//locations//agents//flows//transitionRouteGroups/` or
-             `projects//locations//agents//transitionRouteGroups/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the TransitionRouteGroup to delete. Format:
-               * `projects//locations//agents//flows//transitionRouteGroups/` or
-               * `projects//locations//agents//transitionRouteGroups/`.
-               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -11891,32 +10178,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * This field has no effect for transition route group that no page is using. If the
-               * transition route group is referenced by any page: * If `force` is set to false, an
-               * error will be returned with message indicating pages that reference the transition
-               * route group. * If `force` is set to true, Dialogflow will remove the transition
-               * route group, as well as any reference to it.
-               */
               @com.google.api.client.util.Key
               private java.lang.Boolean force;
 
-              /** This field has no effect for transition route group that no page is using. If the transition route
-             group is referenced by any page: * If `force` is set to false, an error will be returned with
-             message indicating pages that reference the transition route group. * If `force` is set to true,
-             Dialogflow will remove the transition route group, as well as any reference to it.
+              /**
+
                */
               public java.lang.Boolean getForce() {
                 return force;
               }
 
-              /**
-               * This field has no effect for transition route group that no page is using. If the
-               * transition route group is referenced by any page: * If `force` is set to false, an
-               * error will be returned with message indicating pages that reference the transition
-               * route group. * If `force` is set to true, Dialogflow will remove the transition
-               * route group, as well as any reference to it.
-               */
               public Delete setForce(java.lang.Boolean force) {
                 this.force = force;
                 return this;
@@ -11928,16 +10199,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified TransitionRouteGroup.
-             *
              * Create a request for the method "transitionRouteGroups.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the TransitionRouteGroup. Format:
-             *        `projects//locations//agents//flows//transitionRouteGroups/` or
-             *        `projects//locations//agents//transitionRouteGroups/`.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -11954,8 +10221,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/transitionRouteGroups/[^/]+$");
 
               /**
-               * Retrieves the specified TransitionRouteGroup.
-               *
                * Create a request for the method "transitionRouteGroups.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -11963,9 +10228,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the TransitionRouteGroup. Format:
-             *        `projects//locations//agents//flows//transitionRouteGroups/` or
-             *        `projects//locations//agents//transitionRouteGroups/`.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -12043,27 +10306,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the TransitionRouteGroup. Format:
-               * `projects//locations//agents//flows//transitionRouteGroups/` or
-               * `projects//locations//agents//transitionRouteGroups/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the TransitionRouteGroup. Format:
-             `projects//locations//agents//flows//transitionRouteGroups/` or
-             `projects//locations//agents//transitionRouteGroups/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the TransitionRouteGroup. Format:
-               * `projects//locations//agents//flows//transitionRouteGroups/` or
-               * `projects//locations//agents//transitionRouteGroups/`.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12074,38 +10326,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The language to retrieve the transition route group for. The following fields are
-               * language dependent: *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If
-               * not specified, the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
 
-              /** The language to retrieve the transition route group for. The following fields are language
-             dependent: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-             the agent's default language is used. [Many
-             languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-             languages must be enabled in the agent before they can be used.
+              /**
+
                */
               public java.lang.String getLanguageCode() {
                 return languageCode;
               }
 
-              /**
-               * The language to retrieve the transition route group for. The following fields are
-               * language dependent: *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If
-               * not specified, the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               public Get setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
                 return this;
@@ -12117,15 +10347,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Returns the list of all transition route groups in the specified flow.
-             *
              * Create a request for the method "transitionRouteGroups.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The flow to list all transition route groups for. Format:
-             *        `projects//locations//agents//flows/` or `projects//locations//agents/.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -12142,8 +10369,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
               /**
-               * Returns the list of all transition route groups in the specified flow.
-               *
                * Create a request for the method "transitionRouteGroups.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -12151,8 +10376,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The flow to list all transition route groups for. Format:
-             *        `projects//locations//agents//flows/` or `projects//locations//agents/.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -12230,24 +10454,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The flow to list all transition route groups for. Format:
-               * `projects//locations//agents//flows/` or `projects//locations//agents/.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The flow to list all transition route groups for. Format:
-             `projects//locations//agents//flows/` or `projects//locations//agents/.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The flow to list all transition route groups for. Format:
-               * `projects//locations//agents//flows/` or `projects//locations//agents/.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12258,74 +10474,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The language to list transition route groups for. The following fields are language
-               * dependent: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages`
-               * * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If
-               * not specified, the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
 
-              /** The language to list transition route groups for. The following fields are language dependent: *
-             `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-             the agent's default language is used. [Many
-             languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-             languages must be enabled in the agent before they can be used.
+              /**
+
                */
               public java.lang.String getLanguageCode() {
                 return languageCode;
               }
 
-              /**
-               * The language to list transition route groups for. The following fields are language
-               * dependent: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages`
-               * * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If
-               * not specified, the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               public List setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
                 return this;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -12337,19 +10525,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Updates the specified TransitionRouteGroup. Note: You should always train a flow prior to sending
-             * it queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "transitionRouteGroups.patch".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name The unique identifier of the transition route group.
-             *        TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-             *        `projects//locations//agents//flows//transitionRouteGroups/` or
-             *        `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TransitionRouteGroup}
              * @return the request
              */
@@ -12367,10 +10548,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/transitionRouteGroups/[^/]+$");
 
               /**
-               * Updates the specified TransitionRouteGroup. Note: You should always train a flow prior to
-               * sending it queries. See the [training
-               * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-               *
                * Create a request for the method "transitionRouteGroups.patch".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -12379,10 +10556,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The unique identifier of the transition route group.
-             *        TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-             *        `projects//locations//agents//flows//transitionRouteGroups/` or
-             *        `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TransitionRouteGroup}
                * @since 1.13
                */
@@ -12451,30 +10625,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * The unique identifier of the transition route group.
-               * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically.
-               * Format: `projects//locations//agents//flows//transitionRouteGroups/` or
-               * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The unique identifier of the transition route group.
-             TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-             `projects//locations//agents//flows//transitionRouteGroups/` or
-             `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * The unique identifier of the transition route group.
-               * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically.
-               * Format: `projects//locations//agents//flows//transitionRouteGroups/` or
-               * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
-               */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12485,52 +10645,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The language of the following fields in `TransitionRouteGroup`: *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If
-               * not specified, the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
 
-              /** The language of the following fields in `TransitionRouteGroup`: *
-             `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-             the agent's default language is used. [Many
-             languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-             languages must be enabled in the agent before they can be used.
+              /**
+
                */
               public java.lang.String getLanguageCode() {
                 return languageCode;
               }
 
-              /**
-               * The language of the following fields in `TransitionRouteGroup`: *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-               * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If
-               * not specified, the agent's default language is used. [Many
-               * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-               * supported. Note: languages must be enabled in the agent before they can be used.
-               */
               public Patch setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
                 return this;
               }
 
-              /** The mask to control which fields get updated. */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** The mask to control which fields get updated.
+              /**
+
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /** The mask to control which fields get updated. */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -12564,16 +10703,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class Versions {
 
             /**
-             * Compares the specified base version with target version.
-             *
              * Create a request for the method "versions.compareVersions".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link CompareVersions#execute()} method to invoke the remote operation.
              *
-             * @param baseVersion Required. Name of the base flow version to compare with the target version. Use version ID `0` to
-             *        indicate the draft version of the specified flow. Format:
-             *        `projects//locations//agents//flows//versions/`.
+             * @param baseVersion
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1CompareVersionsRequest}
              * @return the request
              */
@@ -12591,8 +10726,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/versions/[^/]+$");
 
               /**
-               * Compares the specified base version with target version.
-               *
                * Create a request for the method "versions.compareVersions".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -12601,9 +10734,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
                * the constructor. </p>
                *
-               * @param baseVersion Required. Name of the base flow version to compare with the target version. Use version ID `0` to
-             *        indicate the draft version of the specified flow. Format:
-             *        `projects//locations//agents//flows//versions/`.
+               * @param baseVersion
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1CompareVersionsRequest}
                * @since 1.13
                */
@@ -12672,27 +10803,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (CompareVersions) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. Name of the base flow version to compare with the target version. Use
-               * version ID `0` to indicate the draft version of the specified flow. Format:
-               * `projects//locations//agents//flows//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String baseVersion;
 
-              /** Required. Name of the base flow version to compare with the target version. Use version ID `0` to
-             indicate the draft version of the specified flow. Format:
-             `projects//locations//agents//flows//versions/`.
+              /**
+
                */
               public java.lang.String getBaseVersion() {
                 return baseVersion;
               }
 
-              /**
-               * Required. Name of the base flow version to compare with the target version. Use
-               * version ID `0` to indicate the draft version of the specified flow. Format:
-               * `projects//locations//agents//flows//versions/`.
-               */
               public CompareVersions setBaseVersion(java.lang.String baseVersion) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(BASE_VERSION_PATTERN.matcher(baseVersion).matches(),
@@ -12709,17 +10829,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Creates a Version in the specified Flow. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-             * `Operation` type has the following method-specific fields: - `metadata`:
-             * CreateVersionOperationMetadata - `response`: Version
-             *
              * Create a request for the method "versions.create".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The Flow to create an Version for. Format: `projects//locations//agents//flows/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Version}
              * @return the request
              */
@@ -12737,11 +10852,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
               /**
-               * Creates a Version in the specified Flow. This method is a [long-running
-               * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-               * returned `Operation` type has the following method-specific fields: - `metadata`:
-               * CreateVersionOperationMetadata - `response`: Version
-               *
                * Create a request for the method "versions.create".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -12750,7 +10860,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The Flow to create an Version for. Format: `projects//locations//agents//flows/`.
+               * @param parent
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Version}
                * @since 1.13
                */
@@ -12819,23 +10929,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The Flow to create an Version for. Format:
-               * `projects//locations//agents//flows/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The Flow to create an Version for. Format: `projects//locations//agents//flows/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The Flow to create an Version for. Format:
-               * `projects//locations//agents//flows/`.
-               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12852,15 +10955,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Deletes the specified Version.
-             *
              * Create a request for the method "versions.delete".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the Version to delete. Format:
-             *        `projects//locations//agents//flows//versions/`.
+             * @param name
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -12877,8 +10977,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/versions/[^/]+$");
 
               /**
-               * Deletes the specified Version.
-               *
                * Create a request for the method "versions.delete".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -12887,8 +10985,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the Version to delete. Format:
-             *        `projects//locations//agents//flows//versions/`.
+               * @param name
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -12956,24 +11053,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the Version to delete. Format:
-               * `projects//locations//agents//flows//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the Version to delete. Format:
-             `projects//locations//agents//flows//versions/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the Version to delete. Format:
-               * `projects//locations//agents//flows//versions/`.
-               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12990,14 +11079,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified Version.
-             *
              * Create a request for the method "versions.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the Version. Format: `projects//locations//agents//flows//versions/`.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -13014,8 +11101,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/versions/[^/]+$");
 
               /**
-               * Retrieves the specified Version.
-               *
                * Create a request for the method "versions.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -13023,7 +11108,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the Version. Format: `projects//locations//agents//flows//versions/`.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -13101,23 +11186,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the Version. Format:
-               * `projects//locations//agents//flows//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the Version. Format: `projects//locations//agents//flows//versions/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the Version. Format:
-               * `projects//locations//agents//flows//versions/`.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -13134,14 +11212,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Returns the list of all versions in the specified Flow.
-             *
              * Create a request for the method "versions.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The Flow to list all versions for. Format: `projects//locations//agents//flows/`.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -13158,8 +11234,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+$");
 
               /**
-               * Returns the list of all versions in the specified Flow.
-               *
                * Create a request for the method "versions.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -13167,7 +11241,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The Flow to list all versions for. Format: `projects//locations//agents//flows/`.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -13245,23 +11319,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The Flow to list all versions for. Format:
-               * `projects//locations//agents//flows/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The Flow to list all versions for. Format: `projects//locations//agents//flows/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The Flow to list all versions for. Format:
-               * `projects//locations//agents//flows/`.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13272,39 +11339,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 20 and at most
-               * 100.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of items to return in a single page. By default 20 and at most 100.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 20 and at most
-               * 100.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -13316,20 +11375,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Loads resources in the specified version to the draft flow. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-             * `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct
-             * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) -
-             * `response`: An [Empty message](https://developers.google.com/protocol-
-             * buffers/docs/reference/google.protobuf#empty)
-             *
              * Create a request for the method "versions.load".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Load#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The Version to be loaded to draft flow. Format:
-             *        `projects//locations//agents//flows//versions/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1LoadVersionRequest}
              * @return the request
              */
@@ -13347,13 +11398,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/versions/[^/]+$");
 
               /**
-               * Loads resources in the specified version to the draft flow. This method is a [long-running
-               * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-               * returned `Operation` type has the following method-specific fields: - `metadata`: An empty
-               * [Struct message](https://developers.google.com/protocol-
-               * buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty
-               * message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
-               *
                * Create a request for the method "versions.load".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -13361,8 +11405,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Load#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The Version to be loaded to draft flow. Format:
-             *        `projects//locations//agents//flows//versions/`.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1LoadVersionRequest}
                * @since 1.13
                */
@@ -13431,24 +11474,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Load) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The Version to be loaded to draft flow. Format:
-               * `projects//locations//agents//flows//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The Version to be loaded to draft flow. Format:
-             `projects//locations//agents//flows//versions/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The Version to be loaded to draft flow. Format:
-               * `projects//locations//agents//flows//versions/`.
-               */
               public Load setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -13465,15 +11500,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Updates the specified Version.
-             *
              * Create a request for the method "versions.patch".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Format: projects//locations//agents//flows//versions/. Version ID is a self-increasing number
-             *        generated by Dialogflow upon version creation.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Version}
              * @return the request
              */
@@ -13491,8 +11523,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/flows/[^/]+/versions/[^/]+$");
 
               /**
-               * Updates the specified Version.
-               *
                * Create a request for the method "versions.patch".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -13501,8 +11531,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Format: projects//locations//agents//flows//versions/. Version ID is a self-increasing number
-             *        generated by Dialogflow upon version creation.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Version}
                * @since 1.13
                */
@@ -13571,24 +11600,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Format: projects//locations//agents//flows//versions/. Version ID is a self-
-               * increasing number generated by Dialogflow upon version creation.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Format: projects//locations//agents//flows//versions/. Version ID is a self-increasing number
-             generated by Dialogflow upon version creation.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Format: projects//locations//agents//flows//versions/. Version ID is a self-
-               * increasing number generated by Dialogflow upon version creation.
-               */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -13599,24 +11620,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * Required. The mask to control which fields get updated. Currently only
-               * `description` and `display_name` can be updated.
-               */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Required. The mask to control which fields get updated. Currently only `description` and
-             `display_name` can be updated.
+              /**
+
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /**
-               * Required. The mask to control which fields get updated. Currently only
-               * `description` and `display_name` can be updated.
-               */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -13651,14 +11664,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Generators {
 
           /**
-           * Creates a generator in the specified agent.
-           *
            * Create a request for the method "generators.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to create a generator for. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Generator}
            * @return the request
            */
@@ -13676,8 +11687,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates a generator in the specified agent.
-             *
              * Create a request for the method "generators.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -13686,7 +11695,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to create a generator for. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Generator}
              * @since 1.13
              */
@@ -13755,23 +11764,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to create a generator for. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to create a generator for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to create a generator for. Format:
-             * `projects//locations//agents/`.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13782,24 +11784,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language to create generators for the following fields: *
-             * `Generator.prompt_text.text` If not specified, the agent's default language is used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to create generators for the following fields: * `Generator.prompt_text.text` If not
-           specified, the agent's default language is used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language to create generators for the following fields: *
-             * `Generator.prompt_text.text` If not specified, the agent's default language is used.
-             */
             public Create setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -13811,14 +11805,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes the specified generators.
-           *
            * Create a request for the method "generators.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the generator to delete. Format: `projects//locations//agents//generators/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -13835,8 +11827,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/generators/[^/]+$");
 
             /**
-             * Deletes the specified generators.
-             *
              * Create a request for the method "generators.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -13845,7 +11835,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the generator to delete. Format: `projects//locations//agents//generators/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -13913,23 +11903,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the generator to delete. Format:
-             * `projects//locations//agents//generators/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the generator to delete. Format: `projects//locations//agents//generators/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the generator to delete. Format:
-             * `projects//locations//agents//generators/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -13940,32 +11923,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * This field has no effect for generators not being used. For generators that are used
-             * by pages/flows/transition route groups: * If `force` is set to false, an error will
-             * be returned with message indicating the referenced resources. * If `force` is set to
-             * true, Dialogflow will remove the generator, as well as any references to the
-             * generator (i.e. Generator) in fulfillments.
-             */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** This field has no effect for generators not being used. For generators that are used by
-           pages/flows/transition route groups: * If `force` is set to false, an error will be returned with
-           message indicating the referenced resources. * If `force` is set to true, Dialogflow will remove
-           the generator, as well as any references to the generator (i.e. Generator) in fulfillments.
+            /**
+
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
-            /**
-             * This field has no effect for generators not being used. For generators that are used
-             * by pages/flows/transition route groups: * If `force` is set to false, an error will
-             * be returned with message indicating the referenced resources. * If `force` is set to
-             * true, Dialogflow will remove the generator, as well as any references to the
-             * generator (i.e. Generator) in fulfillments.
-             */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
               return this;
@@ -13977,14 +11944,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified generator.
-           *
            * Create a request for the method "generators.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the generator. Format: `projects//locations//agents//generators/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -14001,8 +11966,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/generators/[^/]+$");
 
             /**
-             * Retrieves the specified generator.
-             *
              * Create a request for the method "generators.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -14010,7 +11973,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the generator. Format: `projects//locations//agents//generators/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -14088,23 +12051,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the generator. Format:
-             * `projects//locations//agents//generators/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the generator. Format: `projects//locations//agents//generators/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the generator. Format:
-             * `projects//locations//agents//generators/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -14115,17 +12071,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** The language to list generators for. */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to list generators for.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /** The language to list generators for. */
             public Get setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -14137,14 +12092,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns the list of all generators in the specified agent.
-           *
            * Create a request for the method "generators.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to list all generators for. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -14161,8 +12114,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns the list of all generators in the specified agent.
-             *
              * Create a request for the method "generators.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -14170,7 +12121,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to list all generators for. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -14248,23 +12199,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to list all generators for. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to list all generators for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to list all generators for. Format:
-             * `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14275,55 +12219,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** The language to list generators for. */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to list generators for.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /** The language to list generators for. */
             public List setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -14335,16 +12270,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Update the specified generator.
-           *
            * Create a request for the method "generators.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The unique identifier of the generator. Must be set for the Generators.UpdateGenerator method.
-           *        Generators.CreateGenerate populates the name automatically. Format:
-           *        `projects//locations//agents//generators/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Generator}
            * @return the request
            */
@@ -14362,8 +12293,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/generators/[^/]+$");
 
             /**
-             * Update the specified generator.
-             *
              * Create a request for the method "generators.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -14372,9 +12301,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The unique identifier of the generator. Must be set for the Generators.UpdateGenerator method.
-           *        Generators.CreateGenerate populates the name automatically. Format:
-           *        `projects//locations//agents//generators/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Generator}
              * @since 1.13
              */
@@ -14443,27 +12370,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The unique identifier of the generator. Must be set for the
-             * Generators.UpdateGenerator method. Generators.CreateGenerate populates the name
-             * automatically. Format: `projects//locations//agents//generators/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The unique identifier of the generator. Must be set for the Generators.UpdateGenerator method.
-           Generators.CreateGenerate populates the name automatically. Format:
-           `projects//locations//agents//generators/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The unique identifier of the generator. Must be set for the
-             * Generators.UpdateGenerator method. Generators.CreateGenerate populates the name
-             * automatically. Format: `projects//locations//agents//generators/`.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -14474,40 +12390,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** The language to list generators for. */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to list generators for.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /** The language to list generators for. */
             public Patch setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The mask to control which fields get updated. If the mask is not present, all fields will be
-           updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -14541,16 +12448,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Intents {
 
           /**
-           * Creates an intent in the specified agent. Note: You should always train a flow prior to sending
-           * it queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "intents.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to create an intent for. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Intent}
            * @return the request
            */
@@ -14568,10 +12471,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates an intent in the specified agent. Note: You should always train a flow prior to sending
-             * it queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "intents.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -14580,7 +12479,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to create an intent for. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Intent}
              * @since 1.13
              */
@@ -14649,21 +12548,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to create an intent for. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to create an intent for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to create an intent for. Format: `projects//locations//agents/`.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14674,32 +12568,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language of the following fields in `intent`: *
-             * `Intent.training_phrases.parts.text` If not specified, the agent's default language
-             * is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language of the following fields in `intent`: * `Intent.training_phrases.parts.text` If not
-           specified, the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language of the following fields in `intent`: *
-             * `Intent.training_phrases.parts.text` If not specified, the agent's default language
-             * is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Create setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -14711,15 +12589,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes the specified intent. Note: You should always train a flow prior to sending it queries.
-           * See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "intents.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the intent to delete. Format: `projects//locations//agents//intents/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -14736,9 +12611,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/intents/[^/]+$");
 
             /**
-             * Deletes the specified intent. Note: You should always train a flow prior to sending it queries.
-             * See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "intents.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -14747,7 +12619,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the intent to delete. Format: `projects//locations//agents//intents/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -14815,23 +12687,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the intent to delete. Format:
-             * `projects//locations//agents//intents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the intent to delete. Format: `projects//locations//agents//intents/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the intent to delete. Format:
-             * `projects//locations//agents//intents/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -14848,17 +12713,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Exports the selected intents. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`: ExportIntentsMetadata -
-           * `response`: ExportIntentsResponse
-           *
            * Create a request for the method "intents.export".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the parent agent to export intents. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportIntentsRequest}
            * @return the request
            */
@@ -14876,11 +12736,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Exports the selected intents. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * ExportIntentsMetadata - `response`: ExportIntentsResponse
-             *
              * Create a request for the method "intents.export".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -14889,7 +12744,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the parent agent to export intents. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportIntentsRequest}
              * @since 1.13
              */
@@ -14958,23 +12813,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Export) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the parent agent to export intents. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The name of the parent agent to export intents. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The name of the parent agent to export intents. Format:
-             * `projects//locations//agents/`.
-             */
             public Export setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14991,14 +12839,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified intent.
-           *
            * Create a request for the method "intents.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the intent. Format: `projects//locations//agents//intents/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -15015,8 +12861,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/intents/[^/]+$");
 
             /**
-             * Retrieves the specified intent.
-             *
              * Create a request for the method "intents.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -15024,7 +12868,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the intent. Format: `projects//locations//agents//intents/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -15102,21 +12946,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the intent. Format: `projects//locations//agents//intents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the intent. Format: `projects//locations//agents//intents/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the intent. Format: `projects//locations//agents//intents/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15127,32 +12966,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language to retrieve the intent for. The following fields are language dependent:
-             * * `Intent.training_phrases.parts.text` If not specified, the agent's default language
-             * is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to retrieve the intent for. The following fields are language dependent: *
-           `Intent.training_phrases.parts.text` If not specified, the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language to retrieve the intent for. The following fields are language dependent:
-             * * `Intent.training_phrases.parts.text` If not specified, the agent's default language
-             * is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Get setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -15164,17 +12987,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Imports the specified intents into the agent. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`: ImportIntentsMetadata -
-           * `response`: ImportIntentsResponse
-           *
            * Create a request for the method "intents.import".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link DialogflowImport#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to import the intents into. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportIntentsRequest}
            * @return the request
            */
@@ -15192,11 +13010,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Imports the specified intents into the agent. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * ImportIntentsMetadata - `response`: ImportIntentsResponse
-             *
              * Create a request for the method "intents.import".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -15205,7 +13018,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * tractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param parent Required. The agent to import the intents into. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportIntentsRequest}
              * @since 1.13
              */
@@ -15274,23 +13087,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (DialogflowImport) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to import the intents into. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to import the intents into. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to import the intents into. Format:
-             * `projects//locations//agents/`.
-             */
             public DialogflowImport setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15307,14 +13113,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns the list of all intents in the specified agent.
-           *
            * Create a request for the method "intents.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to list all intents for. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -15331,8 +13135,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns the list of all intents in the specified agent.
-             *
              * Create a request for the method "intents.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -15340,7 +13142,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to list all intents for. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -15418,21 +13220,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to list all intents for. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to list all intents for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to list all intents for. Format: `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15443,86 +13240,61 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** The resource view to apply to the returned intent. */
             @com.google.api.client.util.Key
             private java.lang.String intentView;
 
-            /** The resource view to apply to the returned intent.
+            /**
+
              */
             public java.lang.String getIntentView() {
               return intentView;
             }
 
-            /** The resource view to apply to the returned intent. */
             public List setIntentView(java.lang.String intentView) {
               this.intentView = intentView;
               return this;
             }
 
-            /**
-             * The language to list intents for. The following fields are language dependent: *
-             * `Intent.training_phrases.parts.text` If not specified, the agent's default language
-             * is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to list intents for. The following fields are language dependent: *
-           `Intent.training_phrases.parts.text` If not specified, the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language to list intents for. The following fields are language dependent: *
-             * `Intent.training_phrases.parts.text` If not specified, the agent's default language
-             * is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public List setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -15534,17 +13306,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the specified intent. Note: You should always train a flow prior to sending it queries.
-           * See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "intents.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The unique identifier of the intent. Required for the Intents.UpdateIntent method.
-           *        Intents.CreateIntent populates the name automatically. Format:
-           *        `projects//locations//agents//intents/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Intent}
            * @return the request
            */
@@ -15562,9 +13329,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/intents/[^/]+$");
 
             /**
-             * Updates the specified intent. Note: You should always train a flow prior to sending it queries.
-             * See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "intents.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -15573,9 +13337,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The unique identifier of the intent. Required for the Intents.UpdateIntent method.
-           *        Intents.CreateIntent populates the name automatically. Format:
-           *        `projects//locations//agents//intents/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Intent}
              * @since 1.13
              */
@@ -15644,27 +13406,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The unique identifier of the intent. Required for the Intents.UpdateIntent method.
-             * Intents.CreateIntent populates the name automatically. Format:
-             * `projects//locations//agents//intents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The unique identifier of the intent. Required for the Intents.UpdateIntent method.
-           Intents.CreateIntent populates the name automatically. Format:
-           `projects//locations//agents//intents/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The unique identifier of the intent. Required for the Intents.UpdateIntent method.
-             * Intents.CreateIntent populates the name automatically. Format:
-             * `projects//locations//agents//intents/`.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15675,55 +13426,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language of the following fields in `intent`: *
-             * `Intent.training_phrases.parts.text` If not specified, the agent's default language
-             * is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language of the following fields in `intent`: * `Intent.training_phrases.parts.text` If not
-           specified, the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language of the following fields in `intent`: *
-             * `Intent.training_phrases.parts.text` If not specified, the agent's default language
-             * is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Patch setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The mask to control which fields get updated. If the mask is not present, all fields will be
-           updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -15757,14 +13484,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Playbooks {
 
           /**
-           * Creates a playbook in a specified agent.
-           *
            * Create a request for the method "playbooks.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Playbook}
            * @return the request
            */
@@ -15782,8 +13507,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates a playbook in a specified agent.
-             *
              * Create a request for the method "playbooks.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -15792,7 +13515,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Playbook}
              * @since 1.13
              */
@@ -15861,21 +13584,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15892,14 +13610,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes a specified playbook.
-           *
            * Create a request for the method "playbooks.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the playbook to delete. Format: `projects//locations//agents//playbooks/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -15916,8 +13632,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
 
             /**
-             * Deletes a specified playbook.
-             *
              * Create a request for the method "playbooks.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -15926,7 +13640,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the playbook to delete. Format: `projects//locations//agents//playbooks/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -15994,23 +13708,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the playbook to delete. Format:
-             * `projects//locations//agents//playbooks/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the playbook to delete. Format: `projects//locations//agents//playbooks/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the playbook to delete. Format:
-             * `projects//locations//agents//playbooks/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16027,15 +13734,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Exports the specified playbook to a binary file. Note that resources (e.g. examples, tools) that
-           * the playbook references will also be exported.
-           *
            * Create a request for the method "playbooks.export".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the playbook to export. Format: `projects//locations//agents//playbooks/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportPlaybookRequest}
            * @return the request
            */
@@ -16053,9 +13757,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
 
             /**
-             * Exports the specified playbook to a binary file. Note that resources (e.g. examples, tools)
-             * that the playbook references will also be exported.
-             *
              * Create a request for the method "playbooks.export".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -16064,7 +13765,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the playbook to export. Format: `projects//locations//agents//playbooks/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportPlaybookRequest}
              * @since 1.13
              */
@@ -16133,23 +13834,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Export) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the playbook to export. Format:
-             * `projects//locations//agents//playbooks/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the playbook to export. Format: `projects//locations//agents//playbooks/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the playbook to export. Format:
-             * `projects//locations//agents//playbooks/`.
-             */
             public Export setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16166,14 +13860,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified Playbook.
-           *
            * Create a request for the method "playbooks.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the playbook. Format: `projects//locations//agents//playbooks/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -16190,8 +13882,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
 
             /**
-             * Retrieves the specified Playbook.
-             *
              * Create a request for the method "playbooks.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -16199,7 +13889,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the playbook. Format: `projects//locations//agents//playbooks/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -16277,23 +13967,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the playbook. Format:
-             * `projects//locations//agents//playbooks/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the playbook. Format: `projects//locations//agents//playbooks/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the playbook. Format:
-             * `projects//locations//agents//playbooks/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16310,14 +13993,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Imports the specified playbook to the specified agent from a binary file.
-           *
            * Create a request for the method "playbooks.import".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link DialogflowImport#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to import the playbook into. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportPlaybookRequest}
            * @return the request
            */
@@ -16335,8 +14016,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Imports the specified playbook to the specified agent from a binary file.
-             *
              * Create a request for the method "playbooks.import".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -16345,7 +14024,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * tractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param parent Required. The agent to import the playbook into. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportPlaybookRequest}
              * @since 1.13
              */
@@ -16414,23 +14093,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (DialogflowImport) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to import the playbook into. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to import the playbook into. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to import the playbook into. Format:
-             * `projects//locations//agents/`.
-             */
             public DialogflowImport setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16447,14 +14119,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns a list of playbooks in the specified agent.
-           *
            * Create a request for the method "playbooks.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -16471,8 +14141,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns a list of playbooks in the specified agent.
-             *
              * Create a request for the method "playbooks.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -16480,7 +14148,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -16558,21 +14226,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16583,39 +14246,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -16627,14 +14282,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the specified Playbook.
-           *
            * Create a request for the method "playbooks.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The unique identifier of the playbook. Format: `projects//locations//agents//playbooks/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Playbook}
            * @return the request
            */
@@ -16652,8 +14305,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
 
             /**
-             * Updates the specified Playbook.
-             *
              * Create a request for the method "playbooks.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -16662,7 +14313,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The unique identifier of the playbook. Format: `projects//locations//agents//playbooks/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Playbook}
              * @since 1.13
              */
@@ -16731,23 +14382,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The unique identifier of the playbook. Format:
-             * `projects//locations//agents//playbooks/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The unique identifier of the playbook. Format: `projects//locations//agents//playbooks/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The unique identifier of the playbook. Format:
-             * `projects//locations//agents//playbooks/`.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16758,24 +14402,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The mask to control which fields get updated. If the mask is not present, all fields will be
-           updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -16808,14 +14444,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class Examples {
 
             /**
-             * Creates an example in the specified playbook.
-             *
              * Create a request for the method "examples.create".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The playbook to create an example for. Format: `projects//locations//agents//playbooks/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Example}
              * @return the request
              */
@@ -16833,8 +14467,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
 
               /**
-               * Creates an example in the specified playbook.
-               *
                * Create a request for the method "examples.create".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -16843,7 +14475,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The playbook to create an example for. Format: `projects//locations//agents//playbooks/`.
+               * @param parent
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Example}
                * @since 1.13
                */
@@ -16912,23 +14544,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The playbook to create an example for. Format:
-               * `projects//locations//agents//playbooks/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The playbook to create an example for. Format: `projects//locations//agents//playbooks/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The playbook to create an example for. Format:
-               * `projects//locations//agents//playbooks/`.
-               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16945,15 +14570,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Deletes the specified example.
-             *
              * Create a request for the method "examples.delete".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the example to delete. Format:
-             *        `projects//locations//agents//playbooks//examples/`.
+             * @param name
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -16970,8 +14592,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
 
               /**
-               * Deletes the specified example.
-               *
                * Create a request for the method "examples.delete".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -16980,8 +14600,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the example to delete. Format:
-             *        `projects//locations//agents//playbooks//examples/`.
+               * @param name
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -17049,24 +14668,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the example to delete. Format:
-               * `projects//locations//agents//playbooks//examples/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the example to delete. Format:
-             `projects//locations//agents//playbooks//examples/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the example to delete. Format:
-               * `projects//locations//agents//playbooks//examples/`.
-               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17083,14 +14694,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified example.
-             *
              * Create a request for the method "examples.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the example. Format: `projects//locations//agents//playbooks//examples/`.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -17107,8 +14716,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
 
               /**
-               * Retrieves the specified example.
-               *
                * Create a request for the method "examples.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -17116,7 +14723,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the example. Format: `projects//locations//agents//playbooks//examples/`.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -17194,23 +14801,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the example. Format:
-               * `projects//locations//agents//playbooks//examples/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the example. Format: `projects//locations//agents//playbooks//examples/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the example. Format:
-               * `projects//locations//agents//playbooks//examples/`.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17227,14 +14827,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Returns a list of examples in the specified playbook.
-             *
              * Create a request for the method "examples.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The playbook to list the examples from. Format: `projects//locations//agents//playbooks/`.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -17251,8 +14849,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
 
               /**
-               * Returns a list of examples in the specified playbook.
-               *
                * Create a request for the method "examples.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -17260,7 +14856,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The playbook to list the examples from. Format: `projects//locations//agents//playbooks/`.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -17338,24 +14934,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The playbook to list the examples from. Format:
-               * `projects//locations//agents//playbooks/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The playbook to list the examples from. Format:
-             `projects//locations//agents//playbooks/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The playbook to list the examples from. Format:
-               * `projects//locations//agents//playbooks/`.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -17366,64 +14954,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * Optional. The language to list examples for. If not specified, list all examples
-               * under the playbook. Note: languages must be enabled in the agent before they can be
-               * used.
-               */
               @com.google.api.client.util.Key
               private java.lang.String languageCode;
 
-              /** Optional. The language to list examples for. If not specified, list all examples under the
-             playbook. Note: languages must be enabled in the agent before they can be used.
+              /**
+
                */
               public java.lang.String getLanguageCode() {
                 return languageCode;
               }
 
-              /**
-               * Optional. The language to list examples for. If not specified, list all examples
-               * under the playbook. Note: languages must be enabled in the agent before they can be
-               * used.
-               */
               public List setLanguageCode(java.lang.String languageCode) {
                 this.languageCode = languageCode;
                 return this;
               }
 
-              /**
-               * Optional. The maximum number of items to return in a single page. By default 100
-               * and at most 1000.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * Optional. The maximum number of items to return in a single page. By default 100
-               * and at most 1000.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** Optional. The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Optional. The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** Optional. The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -17435,15 +15005,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Update the specified example.
-             *
              * Create a request for the method "examples.patch".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name The unique identifier of the playbook example. Format:
-             *        `projects//locations//agents//playbooks//examples/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Example}
              * @return the request
              */
@@ -17461,8 +15028,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
 
               /**
-               * Update the specified example.
-               *
                * Create a request for the method "examples.patch".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -17471,8 +15036,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The unique identifier of the playbook example. Format:
-             *        `projects//locations//agents//playbooks//examples/`.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Example}
                * @since 1.13
                */
@@ -17541,24 +15105,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * The unique identifier of the playbook example. Format:
-               * `projects//locations//agents//playbooks//examples/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The unique identifier of the playbook example. Format:
-             `projects//locations//agents//playbooks//examples/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * The unique identifier of the playbook example. Format:
-               * `projects//locations//agents//playbooks//examples/`.
-               */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17569,24 +15125,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * Optional. The mask to control which fields get updated. If the mask is not present,
-               * all fields will be updated.
-               */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Optional. The mask to control which fields get updated. If the mask is not present, all fields will
-             be updated.
+              /**
+
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /**
-               * Optional. The mask to control which fields get updated. If the mask is not present,
-               * all fields will be updated.
-               */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -17620,14 +15168,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class Versions {
 
             /**
-             * Creates a version for the specified Playbook.
-             *
              * Create a request for the method "versions.create".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The playbook to create a version for. Format: `projects//locations//agents//playbooks/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1PlaybookVersion}
              * @return the request
              */
@@ -17645,8 +15191,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
 
               /**
-               * Creates a version for the specified Playbook.
-               *
                * Create a request for the method "versions.create".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -17655,7 +15199,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The playbook to create a version for. Format: `projects//locations//agents//playbooks/`.
+               * @param parent
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1PlaybookVersion}
                * @since 1.13
                */
@@ -17724,23 +15268,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The playbook to create a version for. Format:
-               * `projects//locations//agents//playbooks/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The playbook to create a version for. Format: `projects//locations//agents//playbooks/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The playbook to create a version for. Format:
-               * `projects//locations//agents//playbooks/`.
-               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -17757,15 +15294,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Deletes the specified version of the Playbook.
-             *
              * Create a request for the method "versions.delete".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the playbook version to delete. Format:
-             *        `projects//locations//agents//playbooks//versions/`.
+             * @param name
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -17782,8 +15316,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
 
               /**
-               * Deletes the specified version of the Playbook.
-               *
                * Create a request for the method "versions.delete".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -17792,8 +15324,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the playbook version to delete. Format:
-             *        `projects//locations//agents//playbooks//versions/`.
+               * @param name
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -17861,24 +15392,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the playbook version to delete. Format:
-               * `projects//locations//agents//playbooks//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the playbook version to delete. Format:
-             `projects//locations//agents//playbooks//versions/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the playbook version to delete. Format:
-               * `projects//locations//agents//playbooks//versions/`.
-               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17895,15 +15418,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified version of the Playbook.
-             *
              * Create a request for the method "versions.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the playbook version. Format:
-             *        `projects//locations//agents//playbooks//versions/`.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -17920,8 +15440,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
 
               /**
-               * Retrieves the specified version of the Playbook.
-               *
                * Create a request for the method "versions.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -17929,8 +15447,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the playbook version. Format:
-             *        `projects//locations//agents//playbooks//versions/`.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -18008,24 +15525,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the playbook version. Format:
-               * `projects//locations//agents//playbooks//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the playbook version. Format:
-             `projects//locations//agents//playbooks//versions/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the playbook version. Format:
-               * `projects//locations//agents//playbooks//versions/`.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18042,14 +15551,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Lists versions for the specified Playbook.
-             *
              * Create a request for the method "versions.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The playbook to list versions for. Format: `projects//locations//agents//playbooks/`.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -18066,8 +15573,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
 
               /**
-               * Lists versions for the specified Playbook.
-               *
                * Create a request for the method "versions.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -18075,7 +15580,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The playbook to list versions for. Format: `projects//locations//agents//playbooks/`.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -18153,23 +15658,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The playbook to list versions for. Format:
-               * `projects//locations//agents//playbooks/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The playbook to list versions for. Format: `projects//locations//agents//playbooks/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The playbook to list versions for. Format:
-               * `projects//locations//agents//playbooks/`.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -18180,39 +15678,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * Optional. The maximum number of items to return in a single page. By default 100
-               * and at most 1000.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * Optional. The maximum number of items to return in a single page. By default 100
-               * and at most 1000.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** Optional. The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Optional. The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** Optional. The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -18224,16 +15714,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified version of the Playbook and stores it as the current playbook draft,
-             * returning the playbook with resources updated.
-             *
              * Create a request for the method "versions.restore".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the playbook version. Format:
-             *        `projects//locations//agents//playbooks//versions/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RestorePlaybookVersionRequest}
              * @return the request
              */
@@ -18251,9 +15737,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
 
               /**
-               * Retrieves the specified version of the Playbook and stores it as the current playbook draft,
-               * returning the playbook with resources updated.
-               *
                * Create a request for the method "versions.restore".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -18262,8 +15745,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the playbook version. Format:
-             *        `projects//locations//agents//playbooks//versions/`.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RestorePlaybookVersionRequest}
                * @since 1.13
                */
@@ -18332,24 +15814,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Restore) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the playbook version. Format:
-               * `projects//locations//agents//playbooks//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the playbook version. Format:
-             `projects//locations//agents//playbooks//versions/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the playbook version. Format:
-               * `projects//locations//agents//playbooks//versions/`.
-               */
               public Restore setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18389,26 +15863,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Sessions {
 
           /**
-           * Processes a natural language query and returns structured, actionable data as a result. This
-           * method is not idempotent, because it may cause session entity types to be updated, which in turn
-           * might affect results of future queries. Note: Always use agent versions for production traffic.
-           * See [Versions and environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-           *
            * Create a request for the method "sessions.detectIntent".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link DetectIntent#execute()} method to invoke the remote operation.
            *
-           * @param session Required. The name of the session this query is sent to. Format:
-           *        `projects//locations//agents//sessions/` or
-           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           *        more information, see the [sessions
-           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-           *        agent versions for production traffic. See [Versions and
-           *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+           * @param session
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DetectIntentRequest}
            * @return the request
            */
@@ -18426,12 +15886,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
 
             /**
-             * Processes a natural language query and returns structured, actionable data as a result. This
-             * method is not idempotent, because it may cause session entity types to be updated, which in
-             * turn might affect results of future queries. Note: Always use agent versions for production
-             * traffic. See [Versions and
-             * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-             *
              * Create a request for the method "sessions.detectIntent".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -18440,16 +15894,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * DetectIntent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param session Required. The name of the session this query is sent to. Format:
-           *        `projects//locations//agents//sessions/` or
-           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           *        more information, see the [sessions
-           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-           *        agent versions for production traffic. See [Versions and
-           *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+             * @param session
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DetectIntentRequest}
              * @since 1.13
              */
@@ -18518,47 +15963,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (DetectIntent) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the session this query is sent to. Format:
-             * `projects//locations//agents//sessions/` or
-             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             * specified, we assume default 'draft' environment. It's up to the API caller to choose
-             * an appropriate `Session ID`. It can be a random number or some type of session
-             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
-             * characters. For more information, see the [sessions
-             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-             * agent versions for production traffic. See [Versions and
-             * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-             */
             @com.google.api.client.util.Key
             private java.lang.String session;
 
-            /** Required. The name of the session this query is sent to. Format:
-           `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-           If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
-           caller to choose an appropriate `Session ID`. It can be a random number or some type of session
-           identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           more information, see the [sessions
-           guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use agent
-           versions for production traffic. See [Versions and
-           environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+            /**
+
              */
             public java.lang.String getSession() {
               return session;
             }
 
-            /**
-             * Required. The name of the session this query is sent to. Format:
-             * `projects//locations//agents//sessions/` or
-             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             * specified, we assume default 'draft' environment. It's up to the API caller to choose
-             * an appropriate `Session ID`. It can be a random number or some type of session
-             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
-             * characters. For more information, see the [sessions
-             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-             * agent versions for production traffic. See [Versions and
-             * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-             */
             public DetectIntent setSession(java.lang.String session) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
@@ -18575,22 +15989,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Fulfills a matched intent returned by MatchIntent. Must be called after MatchIntent, with input
-           * from MatchIntentResponse. Otherwise, the behavior is undefined.
-           *
            * Create a request for the method "sessions.fulfillIntent".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link FulfillIntent#execute()} method to invoke the remote operation.
            *
-           * @param session Required. The name of the session this query is sent to. Format:
-           *        `projects//locations//agents//sessions/` or
-           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           *        more information, see the [sessions
-           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+           * @param session
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1FulfillIntentRequest}
            * @return the request
            */
@@ -18608,9 +16012,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
 
             /**
-             * Fulfills a matched intent returned by MatchIntent. Must be called after MatchIntent, with input
-             * from MatchIntentResponse. Otherwise, the behavior is undefined.
-             *
              * Create a request for the method "sessions.fulfillIntent".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -18619,14 +16020,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
              * the constructor. </p>
              *
-             * @param session Required. The name of the session this query is sent to. Format:
-           *        `projects//locations//agents//sessions/` or
-           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           *        more information, see the [sessions
-           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+             * @param session
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1FulfillIntentRequest}
              * @since 1.13
              */
@@ -18695,41 +16089,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (FulfillIntent) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the session this query is sent to. Format:
-             * `projects//locations//agents//sessions/` or
-             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             * specified, we assume default 'draft' environment. It's up to the API caller to choose
-             * an appropriate `Session ID`. It can be a random number or some type of session
-             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
-             * characters. For more information, see the [sessions
-             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
-             */
             @com.google.api.client.util.Key
             private java.lang.String session;
 
-            /** Required. The name of the session this query is sent to. Format:
-           `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-           If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
-           caller to choose an appropriate `Session ID`. It can be a random number or some type of session
-           identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           more information, see the [sessions
-           guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+            /**
+
              */
             public java.lang.String getSession() {
               return session;
             }
 
-            /**
-             * Required. The name of the session this query is sent to. Format:
-             * `projects//locations//agents//sessions/` or
-             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             * specified, we assume default 'draft' environment. It's up to the API caller to choose
-             * an appropriate `Session ID`. It can be a random number or some type of session
-             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
-             * characters. For more information, see the [sessions
-             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
-             */
             public FulfillIntent setSession(java.lang.String session) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
@@ -18746,21 +16115,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns preliminary intent match results, doesn't change the session status.
-           *
            * Create a request for the method "sessions.matchIntent".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link MatchIntent#execute()} method to invoke the remote operation.
            *
-           * @param session Required. The name of the session this query is sent to. Format:
-           *        `projects//locations//agents//sessions/` or
-           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           *        more information, see the [sessions
-           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+           * @param session
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1MatchIntentRequest}
            * @return the request
            */
@@ -18778,8 +16138,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
 
             /**
-             * Returns preliminary intent match results, doesn't change the session status.
-             *
              * Create a request for the method "sessions.matchIntent".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -18788,14 +16146,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * MatchIntent#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param session Required. The name of the session this query is sent to. Format:
-           *        `projects//locations//agents//sessions/` or
-           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           *        more information, see the [sessions
-           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+             * @param session
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1MatchIntentRequest}
              * @since 1.13
              */
@@ -18864,41 +16215,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (MatchIntent) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the session this query is sent to. Format:
-             * `projects//locations//agents//sessions/` or
-             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             * specified, we assume default 'draft' environment. It's up to the API caller to choose
-             * an appropriate `Session ID`. It can be a random number or some type of session
-             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
-             * characters. For more information, see the [sessions
-             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
-             */
             @com.google.api.client.util.Key
             private java.lang.String session;
 
-            /** Required. The name of the session this query is sent to. Format:
-           `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-           If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
-           caller to choose an appropriate `Session ID`. It can be a random number or some type of session
-           identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           more information, see the [sessions
-           guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
+            /**
+
              */
             public java.lang.String getSession() {
               return session;
             }
 
-            /**
-             * Required. The name of the session this query is sent to. Format:
-             * `projects//locations//agents//sessions/` or
-             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             * specified, we assume default 'draft' environment. It's up to the API caller to choose
-             * an appropriate `Session ID`. It can be a random number or some type of session
-             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
-             * characters. For more information, see the [sessions
-             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session).
-             */
             public MatchIntent setSession(java.lang.String session) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
@@ -18915,27 +16241,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Processes a natural language query and returns structured, actionable data as a result through
-           * server-side streaming. Server-side streaming allows Dialogflow to send [partial
-           * responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
-           * earlier in a single request.
-           *
            * Create a request for the method "sessions.serverStreamingDetectIntent".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link ServerStreamingDetectIntent#execute()} method to invoke the remote
            * operation.
            *
-           * @param session Required. The name of the session this query is sent to. Format:
-           *        `projects//locations//agents//sessions/` or
-           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           *        more information, see the [sessions
-           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-           *        agent versions for production traffic. See [Versions and
-           *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+           * @param session
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DetectIntentRequest}
            * @return the request
            */
@@ -18953,11 +16265,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
 
             /**
-             * Processes a natural language query and returns structured, actionable data as a result through
-             * server-side streaming. Server-side streaming allows Dialogflow to send [partial
-             * responses](https://cloud.google.com/dialogflow/cx/docs/concept/fulfillment#partial-response)
-             * earlier in a single request.
-             *
              * Create a request for the method "sessions.serverStreamingDetectIntent".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -18966,16 +16273,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param session Required. The name of the session this query is sent to. Format:
-           *        `projects//locations//agents//sessions/` or
-           *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-           *        specified, we assume default 'draft' environment. It's up to the API caller to choose an
-           *        appropriate `Session ID`. It can be a random number or some type of session identifiers
-           *        (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           *        more information, see the [sessions
-           *        guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-           *        agent versions for production traffic. See [Versions and
-           *        environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+             * @param session
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1DetectIntentRequest}
              * @since 1.13
              */
@@ -19044,47 +16342,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (ServerStreamingDetectIntent) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the session this query is sent to. Format:
-             * `projects//locations//agents//sessions/` or
-             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             * specified, we assume default 'draft' environment. It's up to the API caller to choose
-             * an appropriate `Session ID`. It can be a random number or some type of session
-             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
-             * characters. For more information, see the [sessions
-             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-             * agent versions for production traffic. See [Versions and
-             * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-             */
             @com.google.api.client.util.Key
             private java.lang.String session;
 
-            /** Required. The name of the session this query is sent to. Format:
-           `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-           If `Environment ID` is not specified, we assume default 'draft' environment. It's up to the API
-           caller to choose an appropriate `Session ID`. It can be a random number or some type of session
-           identifiers (preferably hashed). The length of the `Session ID` must not exceed 36 characters. For
-           more information, see the [sessions
-           guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use agent
-           versions for production traffic. See [Versions and
-           environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+            /**
+
              */
             public java.lang.String getSession() {
               return session;
             }
 
-            /**
-             * Required. The name of the session this query is sent to. Format:
-             * `projects//locations//agents//sessions/` or
-             * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             * specified, we assume default 'draft' environment. It's up to the API caller to choose
-             * an appropriate `Session ID`. It can be a random number or some type of session
-             * identifiers (preferably hashed). The length of the `Session ID` must not exceed 36
-             * characters. For more information, see the [sessions
-             * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note: Always use
-             * agent versions for production traffic. See [Versions and
-             * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
-             */
             public ServerStreamingDetectIntent setSession(java.lang.String session) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
@@ -19101,15 +16368,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the feedback received from the user for a single turn of the bot response.
-           *
            * Create a request for the method "sessions.submitAnswerFeedback".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link SubmitAnswerFeedback#execute()} method to invoke the remote
            * operation.
            *
-           * @param session Required. The name of the session the feedback was sent to.
+           * @param session
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SubmitAnswerFeedbackRequest}
            * @return the request
            */
@@ -19127,8 +16392,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
 
             /**
-             * Updates the feedback received from the user for a single turn of the bot response.
-             *
              * Create a request for the method "sessions.submitAnswerFeedback".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -19137,7 +16400,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param session Required. The name of the session the feedback was sent to.
+             * @param session
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SubmitAnswerFeedbackRequest}
              * @since 1.13
              */
@@ -19206,17 +16469,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (SubmitAnswerFeedback) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the session the feedback was sent to. */
             @com.google.api.client.util.Key
             private java.lang.String session;
 
-            /** Required. The name of the session the feedback was sent to.
+            /**
+
              */
             public java.lang.String getSession() {
               return session;
             }
 
-            /** Required. The name of the session the feedback was sent to. */
             public SubmitAnswerFeedback setSession(java.lang.String session) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
@@ -19254,17 +16516,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class EntityTypes {
 
             /**
-             * Creates a session entity type.
-             *
              * Create a request for the method "entityTypes.create".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The session to create a session entity type for. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SessionEntityType}
              * @return the request
              */
@@ -19282,8 +16539,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
 
               /**
-               * Creates a session entity type.
-               *
                * Create a request for the method "entityTypes.create".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -19292,10 +16547,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The session to create a session entity type for. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment.
+               * @param parent
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SessionEntityType}
                * @since 1.13
                */
@@ -19364,29 +16616,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The session to create a session entity type for. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The session to create a session entity type for. Format:
-             `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-             If `Environment ID` is not specified, we assume default 'draft' environment.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The session to create a session entity type for. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment.
-               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -19403,17 +16642,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Deletes the specified session entity type.
-             *
              * Create a request for the method "entityTypes.delete".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the session entity type to delete. Format:
-             *        `projects//locations//agents//sessions//entityTypes/` or
-             *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-             *        is not specified, we assume default 'draft' environment.
+             * @param name
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -19430,8 +16664,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+/entityTypes/[^/]+$");
 
               /**
-               * Deletes the specified session entity type.
-               *
                * Create a request for the method "entityTypes.delete".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -19440,10 +16672,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the session entity type to delete. Format:
-             *        `projects//locations//agents//sessions//entityTypes/` or
-             *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-             *        is not specified, we assume default 'draft' environment.
+               * @param name
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -19511,30 +16740,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the session entity type to delete. Format:
-               * `projects//locations//agents//sessions//entityTypes/` or
-               * `projects//locations//agents//environments//sessions//entityTypes/`. If
-               * `Environment ID` is not specified, we assume default 'draft' environment.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the session entity type to delete. Format:
-             `projects//locations//agents//sessions//entityTypes/` or
-             `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not
-             specified, we assume default 'draft' environment.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the session entity type to delete. Format:
-               * `projects//locations//agents//sessions//entityTypes/` or
-               * `projects//locations//agents//environments//sessions//entityTypes/`. If
-               * `Environment ID` is not specified, we assume default 'draft' environment.
-               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -19551,17 +16766,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified session entity type.
-             *
              * Create a request for the method "entityTypes.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the session entity type. Format:
-             *        `projects//locations//agents//sessions//entityTypes/` or
-             *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-             *        is not specified, we assume default 'draft' environment.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -19578,8 +16788,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+/entityTypes/[^/]+$");
 
               /**
-               * Retrieves the specified session entity type.
-               *
                * Create a request for the method "entityTypes.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -19587,10 +16795,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the session entity type. Format:
-             *        `projects//locations//agents//sessions//entityTypes/` or
-             *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-             *        is not specified, we assume default 'draft' environment.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -19668,30 +16873,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the session entity type. Format:
-               * `projects//locations//agents//sessions//entityTypes/` or
-               * `projects//locations//agents//environments//sessions//entityTypes/`. If
-               * `Environment ID` is not specified, we assume default 'draft' environment.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the session entity type. Format:
-             `projects//locations//agents//sessions//entityTypes/` or
-             `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not
-             specified, we assume default 'draft' environment.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the session entity type. Format:
-               * `projects//locations//agents//sessions//entityTypes/` or
-               * `projects//locations//agents//environments//sessions//entityTypes/`. If
-               * `Environment ID` is not specified, we assume default 'draft' environment.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -19708,17 +16899,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Returns the list of all session entity types in the specified session.
-             *
              * Create a request for the method "entityTypes.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The session to list all session entity types from. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -19735,8 +16921,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+$");
 
               /**
-               * Returns the list of all session entity types in the specified session.
-               *
                * Create a request for the method "entityTypes.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -19744,10 +16928,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The session to list all session entity types from. Format:
-             *        `projects//locations//agents//sessions/` or
-             *        `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-             *        specified, we assume default 'draft' environment.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -19825,29 +17006,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The session to list all session entity types from. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The session to list all session entity types from. Format:
-             `projects//locations//agents//sessions/` or `projects//locations//agents//environments//sessions/`.
-             If `Environment ID` is not specified, we assume default 'draft' environment.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The session to list all session entity types from. Format:
-               * `projects//locations//agents//sessions/` or
-               * `projects//locations//agents//environments//sessions/`. If `Environment ID` is not
-               * specified, we assume default 'draft' environment.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -19858,39 +17026,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -19902,17 +17062,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Updates the specified session entity type.
-             *
              * Create a request for the method "entityTypes.patch".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The unique identifier of the session entity type. Format:
-             *        `projects//locations//agents//sessions//entityTypes/` or
-             *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-             *        is not specified, we assume default 'draft' environment.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SessionEntityType}
              * @return the request
              */
@@ -19930,8 +17085,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/sessions/[^/]+/entityTypes/[^/]+$");
 
               /**
-               * Updates the specified session entity type.
-               *
                * Create a request for the method "entityTypes.patch".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -19940,10 +17093,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The unique identifier of the session entity type. Format:
-             *        `projects//locations//agents//sessions//entityTypes/` or
-             *        `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID`
-             *        is not specified, we assume default 'draft' environment.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SessionEntityType}
                * @since 1.13
                */
@@ -20012,30 +17162,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The unique identifier of the session entity type. Format:
-               * `projects//locations//agents//sessions//entityTypes/` or
-               * `projects//locations//agents//environments//sessions//entityTypes/`. If
-               * `Environment ID` is not specified, we assume default 'draft' environment.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The unique identifier of the session entity type. Format:
-             `projects//locations//agents//sessions//entityTypes/` or
-             `projects//locations//agents//environments//sessions//entityTypes/`. If `Environment ID` is not
-             specified, we assume default 'draft' environment.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The unique identifier of the session entity type. Format:
-               * `projects//locations//agents//sessions//entityTypes/` or
-               * `projects//locations//agents//environments//sessions//entityTypes/`. If
-               * `Environment ID` is not specified, we assume default 'draft' environment.
-               */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -20046,17 +17182,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /** The mask to control which fields get updated. */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** The mask to control which fields get updated.
+              /**
+
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /** The mask to control which fields get updated. */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -20091,14 +17226,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class TestCases {
 
           /**
-           * Batch deletes test cases.
-           *
            * Create a request for the method "testCases.batchDelete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to delete test cases from. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest}
            * @return the request
            */
@@ -20116,8 +17249,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Batch deletes test cases.
-             *
              * Create a request for the method "testCases.batchDelete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -20126,7 +17257,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to delete test cases from. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest}
              * @since 1.13
              */
@@ -20195,23 +17326,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (BatchDelete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to delete test cases from. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to delete test cases from. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to delete test cases from. Format:
-             * `projects//locations//agents/`.
-             */
             public BatchDelete setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20228,17 +17352,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Kicks off a batch run of test cases. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`:
-           * BatchRunTestCasesMetadata - `response`: BatchRunTestCasesResponse
-           *
            * Create a request for the method "testCases.batchRun".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link BatchRun#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Agent name. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1BatchRunTestCasesRequest}
            * @return the request
            */
@@ -20256,11 +17375,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Kicks off a batch run of test cases. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * BatchRunTestCasesMetadata - `response`: BatchRunTestCasesResponse
-             *
              * Create a request for the method "testCases.batchRun".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -20269,7 +17383,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * BatchRun#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Agent name. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1BatchRunTestCasesRequest}
              * @since 1.13
              */
@@ -20338,17 +17452,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (BatchRun) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Agent name. Format: `projects//locations//agents/`. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Agent name. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. Agent name. Format: `projects//locations//agents/`. */
             public BatchRun setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20365,14 +17478,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Calculates the test coverage for an agent.
-           *
            * Create a request for the method "testCases.calculateCoverage".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link CalculateCoverage#execute()} method to invoke the remote operation.
            *
-           * @param agent Required. The agent to calculate coverage for. Format: `projects//locations//agents/`.
+           * @param agent
            * @return the request
            */
           public CalculateCoverage calculateCoverage(java.lang.String agent) throws java.io.IOException {
@@ -20389,8 +17500,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Calculates the test coverage for an agent.
-             *
              * Create a request for the method "testCases.calculateCoverage".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -20399,7 +17508,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * stractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param agent Required. The agent to calculate coverage for. Format: `projects//locations//agents/`.
+             * @param agent
              * @since 1.13
              */
             protected CalculateCoverage(java.lang.String agent) {
@@ -20477,23 +17586,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (CalculateCoverage) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to calculate coverage for. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String agent;
 
-            /** Required. The agent to calculate coverage for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getAgent() {
               return agent;
             }
 
-            /**
-             * Required. The agent to calculate coverage for. Format:
-             * `projects//locations//agents/`.
-             */
             public CalculateCoverage setAgent(java.lang.String agent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(AGENT_PATTERN.matcher(agent).matches(),
@@ -20504,17 +17606,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** Required. The type of coverage requested. */
             @com.google.api.client.util.Key
             private java.lang.String type;
 
-            /** Required. The type of coverage requested.
+            /**
+
              */
             public java.lang.String getType() {
               return type;
             }
 
-            /** Required. The type of coverage requested. */
             public CalculateCoverage setType(java.lang.String type) {
               this.type = type;
               return this;
@@ -20526,14 +17627,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Creates a test case for the given agent.
-           *
            * Create a request for the method "testCases.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to create the test case for. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TestCase}
            * @return the request
            */
@@ -20551,8 +17650,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates a test case for the given agent.
-             *
              * Create a request for the method "testCases.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -20561,7 +17658,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to create the test case for. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TestCase}
              * @since 1.13
              */
@@ -20630,23 +17727,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to create the test case for. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to create the test case for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to create the test case for. Format:
-             * `projects//locations//agents/`.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20663,18 +17753,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Exports the test cases under the agent to a Cloud Storage bucket or a local file. Filter can be
-           * applied to export a subset of test cases. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`: ExportTestCasesMetadata
-           * - `response`: ExportTestCasesResponse
-           *
            * Create a request for the method "testCases.export".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent where to export test cases from. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportTestCasesRequest}
            * @return the request
            */
@@ -20692,12 +17776,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Exports the test cases under the agent to a Cloud Storage bucket or a local file. Filter can be
-             * applied to export a subset of test cases. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * ExportTestCasesMetadata - `response`: ExportTestCasesResponse
-             *
              * Create a request for the method "testCases.export".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -20706,7 +17784,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent where to export test cases from. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportTestCasesRequest}
              * @since 1.13
              */
@@ -20775,23 +17853,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Export) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent where to export test cases from. Format:
-             * `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent where to export test cases from. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent where to export test cases from. Format:
-             * `projects//locations//agents/`.
-             */
             public Export setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20808,14 +17879,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Gets a test case.
-           *
            * Create a request for the method "testCases.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the testcase. Format: `projects//locations//agents//testCases/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -20832,8 +17901,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/testCases/[^/]+$");
 
             /**
-             * Gets a test case.
-             *
              * Create a request for the method "testCases.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -20841,7 +17908,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the testcase. Format: `projects//locations//agents//testCases/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -20919,23 +17986,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the testcase. Format:
-             * `projects//locations//agents//testCases/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the testcase. Format: `projects//locations//agents//testCases/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the testcase. Format:
-             * `projects//locations//agents//testCases/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -20952,19 +18012,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Imports the test cases from a Cloud Storage bucket or a local file. It always creates new test
-           * cases and won't overwrite any existing ones. The provided ID in the imported test case is
-           * neglected. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`: ImportTestCasesMetadata
-           * - `response`: ImportTestCasesResponse
-           *
            * Create a request for the method "testCases.import".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link DialogflowImport#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to import test cases to. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest}
            * @return the request
            */
@@ -20982,13 +18035,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Imports the test cases from a Cloud Storage bucket or a local file. It always creates new test
-             * cases and won't overwrite any existing ones. The provided ID in the imported test case is
-             * neglected. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * ImportTestCasesMetadata - `response`: ImportTestCasesResponse
-             *
              * Create a request for the method "testCases.import".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -20997,7 +18043,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * tractGoogleClientRequest)} must be called to initialize this instance immediately after
              * invoking the constructor. </p>
              *
-             * @param parent Required. The agent to import test cases to. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ImportTestCasesRequest}
              * @since 1.13
              */
@@ -21066,21 +18112,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (DialogflowImport) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to import test cases to. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to import test cases to. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to import test cases to. Format: `projects//locations//agents/`.
-             */
             public DialogflowImport setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -21097,14 +18138,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Fetches a list of test cases for a given agent.
-           *
            * Create a request for the method "testCases.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to list all pages for. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -21121,8 +18160,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Fetches a list of test cases for a given agent.
-             *
              * Create a request for the method "testCases.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -21130,7 +18167,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to list all pages for. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -21208,21 +18245,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to list all pages for. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to list all pages for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to list all pages for. Format: `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -21233,59 +18265,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 20. Note that when
-             * TestCaseView = FULL, the maximum page size allowed is 20. When TestCaseView = BASIC,
-             * the maximum page size allowed is 500.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 20. Note that when TestCaseView
-           = FULL, the maximum page size allowed is 20. When TestCaseView = BASIC, the maximum page size
-           allowed is 500.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 20. Note that when
-             * TestCaseView = FULL, the maximum page size allowed is 20. When TestCaseView = BASIC,
-             * the maximum page size allowed is 500.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
             }
 
-            /** Specifies whether response should include all fields or just the metadata. */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** Specifies whether response should include all fields or just the metadata.
+            /**
+
              */
             public java.lang.String getView() {
               return view;
             }
 
-            /** Specifies whether response should include all fields or just the metadata. */
             public List setView(java.lang.String view) {
               this.view = view;
               return this;
@@ -21297,15 +18316,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the specified test case.
-           *
            * Create a request for the method "testCases.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The unique identifier of the test case. TestCases.CreateTestCase will populate the name
-           *        automatically. Otherwise use format: `projects//locations//agents//testCases/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TestCase}
            * @return the request
            */
@@ -21323,8 +18339,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/testCases/[^/]+$");
 
             /**
-             * Updates the specified test case.
-             *
              * Create a request for the method "testCases.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -21333,8 +18347,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The unique identifier of the test case. TestCases.CreateTestCase will populate the name
-           *        automatically. Otherwise use format: `projects//locations//agents//testCases/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TestCase}
              * @since 1.13
              */
@@ -21403,24 +18416,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The unique identifier of the test case. TestCases.CreateTestCase will populate the
-             * name automatically. Otherwise use format: `projects//locations//agents//testCases/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The unique identifier of the test case. TestCases.CreateTestCase will populate the name
-           automatically. Otherwise use format: `projects//locations//agents//testCases/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The unique identifier of the test case. TestCases.CreateTestCase will populate the
-             * name automatically. Otherwise use format: `projects//locations//agents//testCases/`.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -21431,24 +18436,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * Required. The mask to specify which fields should be updated. The `creationTime` and
-             * `lastTestResult` cannot be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Required. The mask to specify which fields should be updated. The `creationTime` and
-           `lastTestResult` cannot be updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * Required. The mask to specify which fields should be updated. The `creationTime` and
-             * `lastTestResult` cannot be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -21460,17 +18457,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Kicks off a test case run. This method is a [long-running
-           * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned
-           * `Operation` type has the following method-specific fields: - `metadata`: RunTestCaseMetadata -
-           * `response`: RunTestCaseResponse
-           *
            * Create a request for the method "testCases.run".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Run#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Format of test case name to run: `projects//locations//agents//testCases/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RunTestCaseRequest}
            * @return the request
            */
@@ -21488,11 +18480,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/testCases/[^/]+$");
 
             /**
-             * Kicks off a test case run. This method is a [long-running
-             * operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The
-             * returned `Operation` type has the following method-specific fields: - `metadata`:
-             * RunTestCaseMetadata - `response`: RunTestCaseResponse
-             *
              * Create a request for the method "testCases.run".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -21500,7 +18487,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Format of test case name to run: `projects//locations//agents//testCases/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RunTestCaseRequest}
              * @since 1.13
              */
@@ -21569,21 +18556,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Run) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. Format of test case name to run: `projects//locations//agents//testCases/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Format of test case name to run: `projects//locations//agents//testCases/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. Format of test case name to run: `projects//locations//agents//testCases/`.
-             */
             public Run setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -21621,14 +18603,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class Results {
 
             /**
-             * Gets a test case result.
-             *
              * Create a request for the method "results.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the testcase. Format: `projects//locations//agents//testCases//results/`.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -21645,8 +18625,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/testCases/[^/]+/results/[^/]+$");
 
               /**
-               * Gets a test case result.
-               *
                * Create a request for the method "results.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -21654,7 +18632,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the testcase. Format: `projects//locations//agents//testCases//results/`.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -21732,23 +18710,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the testcase. Format:
-               * `projects//locations//agents//testCases//results/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the testcase. Format: `projects//locations//agents//testCases//results/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the testcase. Format:
-               * `projects//locations//agents//testCases//results/`.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -21765,16 +18736,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Fetches the list of run results for the given test case. A maximum of 100 results are kept for
-             * each test case.
-             *
              * Create a request for the method "results.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The test case to list results for. Format: `projects//locations//agents//testCases/`.
-             *        Specify a `-` as a wildcard for TestCase ID to list results across multiple test cases.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -21791,9 +18758,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/testCases/[^/]+$");
 
               /**
-               * Fetches the list of run results for the given test case. A maximum of 100 results are kept for
-               * each test case.
-               *
                * Create a request for the method "results.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -21801,8 +18765,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The test case to list results for. Format: `projects//locations//agents//testCases/`.
-             *        Specify a `-` as a wildcard for TestCase ID to list results across multiple test cases.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -21880,26 +18843,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The test case to list results for. Format:
-               * `projects//locations//agents//testCases/`. Specify a `-` as a wildcard for TestCase
-               * ID to list results across multiple test cases.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The test case to list results for. Format: `projects//locations//agents//testCases/`.
-             Specify a `-` as a wildcard for TestCase ID to list results across multiple test cases.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The test case to list results for. Format:
-               * `projects//locations//agents//testCases/`. Specify a `-` as a wildcard for TestCase
-               * ID to list results across multiple test cases.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -21910,87 +18863,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * The filter expression used to filter test case results. See [API
-               * Filtering](https://aip.dev/160). The expression is case insensitive. Only 'AND' is
-               * supported for logical operators. The supported syntax is listed below in detail:
-               * [AND ] ... [AND latest] The supported fields and operators are: field operator
-               * `environment` `=`, `IN` (Use value `draft` for draft environment) `test_time` `>`,
-               * `<` `latest` only returns the latest test result in all results for each test case.
-               * Examples: * "environment=draft AND latest" matches the latest test result for each
-               * test case in the draft environment. * "environment IN (e1,e2)" matches any test
-               * case results with an environment resource name of either "e1" or "e2". * "test_time
-               * > 1602540713" matches any test case results with test time later than a unix
-               * timestamp in seconds 1602540713.
-               */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** The filter expression used to filter test case results. See [API Filtering](https://aip.dev/160).
-             The expression is case insensitive. Only 'AND' is supported for logical operators. The supported
-             syntax is listed below in detail: [AND ] ... [AND latest] The supported fields and operators are:
-             field operator `environment` `=`, `IN` (Use value `draft` for draft environment) `test_time` `>`,
-             `<` `latest` only returns the latest test result in all results for each test case. Examples: *
-             "environment=draft AND latest" matches the latest test result for each test case in the draft
-             environment. * "environment IN (e1,e2)" matches any test case results with an environment resource
-             name of either "e1" or "e2". * "test_time > 1602540713" matches any test case results with test
-             time later than a unix timestamp in seconds 1602540713.
+              /**
+
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
-              /**
-               * The filter expression used to filter test case results. See [API
-               * Filtering](https://aip.dev/160). The expression is case insensitive. Only 'AND' is
-               * supported for logical operators. The supported syntax is listed below in detail:
-               * [AND ] ... [AND latest] The supported fields and operators are: field operator
-               * `environment` `=`, `IN` (Use value `draft` for draft environment) `test_time` `>`,
-               * `<` `latest` only returns the latest test result in all results for each test case.
-               * Examples: * "environment=draft AND latest" matches the latest test result for each
-               * test case in the draft environment. * "environment IN (e1,e2)" matches any test
-               * case results with an environment resource name of either "e1" or "e2". * "test_time
-               * > 1602540713" matches any test case results with test time later than a unix
-               * timestamp in seconds 1602540713.
-               */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
                 return this;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * The maximum number of items to return in a single page. By default 100 and at most
-               * 1000.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -22025,14 +18937,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Tools {
 
           /**
-           * Creates a Tool in the specified agent.
-           *
            * Create a request for the method "tools.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Tool}
            * @return the request
            */
@@ -22050,8 +18960,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates a Tool in the specified agent.
-             *
              * Create a request for the method "tools.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -22060,7 +18968,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Tool}
              * @since 1.13
              */
@@ -22129,21 +19037,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -22160,14 +19063,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes a specified Tool.
-           *
            * Create a request for the method "tools.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the Tool to be deleted. Format: `projects//locations//agents//tools/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -22184,8 +19085,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
 
             /**
-             * Deletes a specified Tool.
-             *
              * Create a request for the method "tools.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -22194,7 +19093,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the Tool to be deleted. Format: `projects//locations//agents//tools/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -22262,23 +19161,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the Tool to be deleted. Format:
-             * `projects//locations//agents//tools/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the Tool to be deleted. Format: `projects//locations//agents//tools/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the Tool to be deleted. Format:
-             * `projects//locations//agents//tools/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -22289,29 +19181,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * This field has no effect for Tools not being used. For Tools that are used: * If
-             * `force` is set to false, an error will be returned with message indicating the
-             * referenced resources. * If `force` is set to true, Dialogflow will remove the tool,
-             * as well as any references to the tool.
-             */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** This field has no effect for Tools not being used. For Tools that are used: * If `force` is set to
-           false, an error will be returned with message indicating the referenced resources. * If `force` is
-           set to true, Dialogflow will remove the tool, as well as any references to the tool.
+            /**
+
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
-            /**
-             * This field has no effect for Tools not being used. For Tools that are used: * If
-             * `force` is set to false, an error will be returned with message indicating the
-             * referenced resources. * If `force` is set to true, Dialogflow will remove the tool,
-             * as well as any references to the tool.
-             */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
               return this;
@@ -22323,14 +19202,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Exports the selected tools.
-           *
            * Create a request for the method "tools.export".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Export#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to export tools from. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportToolsRequest}
            * @return the request
            */
@@ -22348,8 +19225,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Exports the selected tools.
-             *
              * Create a request for the method "tools.export".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -22358,7 +19233,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to export tools from. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ExportToolsRequest}
              * @since 1.13
              */
@@ -22427,21 +19302,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Export) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to export tools from. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to export tools from. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to export tools from. Format: `projects//locations//agents/`.
-             */
             public Export setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -22458,14 +19328,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified Tool.
-           *
            * Create a request for the method "tools.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the Tool. Format: `projects//locations//agents//tools/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -22482,8 +19350,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
 
             /**
-             * Retrieves the specified Tool.
-             *
              * Create a request for the method "tools.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -22491,7 +19357,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the Tool. Format: `projects//locations//agents//tools/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -22569,17 +19435,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. The name of the Tool. Format: `projects//locations//agents//tools/`. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the Tool. Format: `projects//locations//agents//tools/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. The name of the Tool. Format: `projects//locations//agents//tools/`. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -22596,14 +19461,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns a list of Tools in the specified agent.
-           *
            * Create a request for the method "tools.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -22620,8 +19483,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns a list of Tools in the specified agent.
-             *
              * Create a request for the method "tools.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -22629,7 +19490,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -22707,21 +19568,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -22732,39 +19588,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -22776,14 +19624,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Update the specified Tool.
-           *
            * Create a request for the method "tools.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Tool}
            * @return the request
            */
@@ -22801,8 +19647,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
 
             /**
-             * Update the specified Tool.
-             *
              * Create a request for the method "tools.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -22811,7 +19655,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Tool}
              * @since 1.13
              */
@@ -22880,21 +19724,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -22905,24 +19744,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The mask to control which fields get updated. If the mask is not present, all fields will be
-           updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -22955,14 +19786,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           public class Versions {
 
             /**
-             * Creates a version for the specified Tool.
-             *
              * Create a request for the method "versions.create".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Create#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The tool to create a version for. Format: `projects//locations//agents//tools/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ToolVersion}
              * @return the request
              */
@@ -22980,8 +19809,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
 
               /**
-               * Creates a version for the specified Tool.
-               *
                * Create a request for the method "versions.create".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -22990,7 +19817,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The tool to create a version for. Format: `projects//locations//agents//tools/`.
+               * @param parent
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1ToolVersion}
                * @since 1.13
                */
@@ -23059,23 +19886,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Create) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The tool to create a version for. Format:
-               * `projects//locations//agents//tools/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The tool to create a version for. Format: `projects//locations//agents//tools/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The tool to create a version for. Format:
-               * `projects//locations//agents//tools/`.
-               */
               public Create setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -23092,15 +19912,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Deletes the specified version of the Tool.
-             *
              * Create a request for the method "versions.delete".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the tool version to delete. Format:
-             *        `projects//locations//agents//tools//versions/`.
+             * @param name
              * @return the request
              */
             public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -23117,8 +19934,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
 
               /**
-               * Deletes the specified version of the Tool.
-               *
                * Create a request for the method "versions.delete".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -23127,8 +19942,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the tool version to delete. Format:
-             *        `projects//locations//agents//tools//versions/`.
+               * @param name
                * @since 1.13
                */
               protected Delete(java.lang.String name) {
@@ -23196,24 +20010,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Delete) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the tool version to delete. Format:
-               * `projects//locations//agents//tools//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the tool version to delete. Format:
-             `projects//locations//agents//tools//versions/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the tool version to delete. Format:
-               * `projects//locations//agents//tools//versions/`.
-               */
               public Delete setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -23224,29 +20030,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * Optional. This field has no effect for Tools not being used. For Tools that are
-               * used: * If `force` is set to false, an error will be returned with message
-               * indicating the referenced resources. * If `force` is set to true, Dialogflow will
-               * remove the tool, as well as any references to the tool.
-               */
               @com.google.api.client.util.Key
               private java.lang.Boolean force;
 
-              /** Optional. This field has no effect for Tools not being used. For Tools that are used: * If `force`
-             is set to false, an error will be returned with message indicating the referenced resources. * If
-             `force` is set to true, Dialogflow will remove the tool, as well as any references to the tool.
+              /**
+
                */
               public java.lang.Boolean getForce() {
                 return force;
               }
 
-              /**
-               * Optional. This field has no effect for Tools not being used. For Tools that are
-               * used: * If `force` is set to false, an error will be returned with message
-               * indicating the referenced resources. * If `force` is set to true, Dialogflow will
-               * remove the tool, as well as any references to the tool.
-               */
               public Delete setForce(java.lang.Boolean force) {
                 this.force = force;
                 return this;
@@ -23258,14 +20051,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified version of the Tool.
-             *
              * Create a request for the method "versions.get".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+             * @param name
              * @return the request
              */
             public Get get(java.lang.String name) throws java.io.IOException {
@@ -23282,8 +20073,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
 
               /**
-               * Retrieves the specified version of the Tool.
-               *
                * Create a request for the method "versions.get".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -23291,7 +20080,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+               * @param name
                * @since 1.13
                */
               protected Get(java.lang.String name) {
@@ -23369,23 +20158,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Get) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the tool version. Format:
-               * `projects//locations//agents//tools//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the tool version. Format:
-               * `projects//locations//agents//tools//versions/`.
-               */
               public Get setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -23402,14 +20184,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * List versions of the specified Tool.
-             *
              * Create a request for the method "versions.list".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The parent of the tool versions. Format: `projects//locations//agents//tools/`.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -23426,8 +20206,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
 
               /**
-               * List versions of the specified Tool.
-               *
                * Create a request for the method "versions.list".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -23435,7 +20213,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The parent of the tool versions. Format: `projects//locations//agents//tools/`.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -23513,23 +20291,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The parent of the tool versions. Format:
-               * `projects//locations//agents//tools/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The parent of the tool versions. Format: `projects//locations//agents//tools/`.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. The parent of the tool versions. Format:
-               * `projects//locations//agents//tools/`.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -23540,39 +20311,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /**
-               * Optional. The maximum number of items to return in a single page. By default 100
-               * and at most 1000.
-               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+              /**
+
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /**
-               * Optional. The maximum number of items to return in a single page. By default 100
-               * and at most 1000.
-               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
-              /** Optional. The next_page_token value returned from a previous list request. */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Optional. The next_page_token value returned from a previous list request.
+              /**
+
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
-              /** Optional. The next_page_token value returned from a previous list request. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
                 return this;
@@ -23584,15 +20347,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
             }
             /**
-             * Retrieves the specified version of the Tool and stores it as the current tool draft, returning
-             * the tool with resources updated.
-             *
              * Create a request for the method "versions.restore".
              *
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
              *
-             * @param name Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RestoreToolVersionRequest}
              * @return the request
              */
@@ -23610,9 +20370,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
 
               /**
-               * Retrieves the specified version of the Tool and stores it as the current tool draft, returning
-               * the tool with resources updated.
-               *
                * Create a request for the method "versions.restore".
                *
                * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -23621,7 +20378,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+               * @param name
                * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1RestoreToolVersionRequest}
                * @since 1.13
                */
@@ -23690,23 +20447,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 return (Restore) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. The name of the tool version. Format:
-               * `projects//locations//agents//tools//versions/`.
-               */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+              /**
+
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /**
-               * Required. The name of the tool version. Format:
-               * `projects//locations//agents//tools//versions/`.
-               */
               public Restore setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -23746,18 +20496,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class TransitionRouteGroups {
 
           /**
-           * Creates an TransitionRouteGroup in the specified flow. Note: You should always train a flow prior
-           * to sending it queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "transitionRouteGroups.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The flow to create an TransitionRouteGroup for. Format:
-           *        `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-level
-           *        groups.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TransitionRouteGroup}
            * @return the request
            */
@@ -23775,10 +20519,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates an TransitionRouteGroup in the specified flow. Note: You should always train a flow
-             * prior to sending it queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "transitionRouteGroups.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -23787,9 +20527,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The flow to create an TransitionRouteGroup for. Format:
-           *        `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-level
-           *        groups.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TransitionRouteGroup}
              * @since 1.13
              */
@@ -23858,26 +20596,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The flow to create an TransitionRouteGroup for. Format:
-             * `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-
-             * level groups.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The flow to create an TransitionRouteGroup for. Format:
-           `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-level groups.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The flow to create an TransitionRouteGroup for. Format:
-             * `projects//locations//agents//flows/` or `projects//locations//agents/` for agent-
-             * level groups.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -23888,36 +20616,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language of the following fields in `TransitionRouteGroup`: *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language of the following fields in `TransitionRouteGroup`: *
-           `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-           `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-           the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language of the following fields in `TransitionRouteGroup`: *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Create setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -23929,18 +20637,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes the specified TransitionRouteGroup. Note: You should always train a flow prior to sending
-           * it queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "transitionRouteGroups.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the TransitionRouteGroup to delete. Format:
-           *        `projects//locations//agents//flows//transitionRouteGroups/` or
-           *        `projects//locations//agents//transitionRouteGroups/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -23957,10 +20659,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/transitionRouteGroups/[^/]+$");
 
             /**
-             * Deletes the specified TransitionRouteGroup. Note: You should always train a flow prior to
-             * sending it queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "transitionRouteGroups.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -23969,9 +20667,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the TransitionRouteGroup to delete. Format:
-           *        `projects//locations//agents//flows//transitionRouteGroups/` or
-           *        `projects//locations//agents//transitionRouteGroups/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -24039,27 +20735,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the TransitionRouteGroup to delete. Format:
-             * `projects//locations//agents//flows//transitionRouteGroups/` or
-             * `projects//locations//agents//transitionRouteGroups/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the TransitionRouteGroup to delete. Format:
-           `projects//locations//agents//flows//transitionRouteGroups/` or
-           `projects//locations//agents//transitionRouteGroups/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the TransitionRouteGroup to delete. Format:
-             * `projects//locations//agents//flows//transitionRouteGroups/` or
-             * `projects//locations//agents//transitionRouteGroups/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -24070,32 +20755,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * This field has no effect for transition route group that no page is using. If the
-             * transition route group is referenced by any page: * If `force` is set to false, an
-             * error will be returned with message indicating pages that reference the transition
-             * route group. * If `force` is set to true, Dialogflow will remove the transition route
-             * group, as well as any reference to it.
-             */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** This field has no effect for transition route group that no page is using. If the transition route
-           group is referenced by any page: * If `force` is set to false, an error will be returned with
-           message indicating pages that reference the transition route group. * If `force` is set to true,
-           Dialogflow will remove the transition route group, as well as any reference to it.
+            /**
+
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
-            /**
-             * This field has no effect for transition route group that no page is using. If the
-             * transition route group is referenced by any page: * If `force` is set to false, an
-             * error will be returned with message indicating pages that reference the transition
-             * route group. * If `force` is set to true, Dialogflow will remove the transition route
-             * group, as well as any reference to it.
-             */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
               return this;
@@ -24107,16 +20776,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified TransitionRouteGroup.
-           *
            * Create a request for the method "transitionRouteGroups.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the TransitionRouteGroup. Format:
-           *        `projects//locations//agents//flows//transitionRouteGroups/` or
-           *        `projects//locations//agents//transitionRouteGroups/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -24133,8 +20798,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/transitionRouteGroups/[^/]+$");
 
             /**
-             * Retrieves the specified TransitionRouteGroup.
-             *
              * Create a request for the method "transitionRouteGroups.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -24142,9 +20805,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the TransitionRouteGroup. Format:
-           *        `projects//locations//agents//flows//transitionRouteGroups/` or
-           *        `projects//locations//agents//transitionRouteGroups/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -24222,27 +20883,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the TransitionRouteGroup. Format:
-             * `projects//locations//agents//flows//transitionRouteGroups/` or
-             * `projects//locations//agents//transitionRouteGroups/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the TransitionRouteGroup. Format:
-           `projects//locations//agents//flows//transitionRouteGroups/` or
-           `projects//locations//agents//transitionRouteGroups/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the TransitionRouteGroup. Format:
-             * `projects//locations//agents//flows//transitionRouteGroups/` or
-             * `projects//locations//agents//transitionRouteGroups/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -24253,38 +20903,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language to retrieve the transition route group for. The following fields are
-             * language dependent: *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to retrieve the transition route group for. The following fields are language
-           dependent: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-           `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-           the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language to retrieve the transition route group for. The following fields are
-             * language dependent: *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Get setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
@@ -24296,15 +20924,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns the list of all transition route groups in the specified flow.
-           *
            * Create a request for the method "transitionRouteGroups.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The flow to list all transition route groups for. Format:
-           *        `projects//locations//agents//flows/` or `projects//locations//agents/.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -24321,8 +20946,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns the list of all transition route groups in the specified flow.
-             *
              * Create a request for the method "transitionRouteGroups.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -24330,8 +20953,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The flow to list all transition route groups for. Format:
-           *        `projects//locations//agents//flows/` or `projects//locations//agents/.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -24409,24 +21031,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The flow to list all transition route groups for. Format:
-             * `projects//locations//agents//flows/` or `projects//locations//agents/.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The flow to list all transition route groups for. Format:
-           `projects//locations//agents//flows/` or `projects//locations//agents/.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The flow to list all transition route groups for. Format:
-             * `projects//locations//agents//flows/` or `projects//locations//agents/.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -24437,74 +21051,46 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language to list transition route groups for. The following fields are language
-             * dependent: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language to list transition route groups for. The following fields are language dependent: *
-           `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-           `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-           the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language to list transition route groups for. The following fields are language
-             * dependent: * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public List setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -24516,19 +21102,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the specified TransitionRouteGroup. Note: You should always train a flow prior to sending
-           * it queries. See the [training
-           * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-           *
            * Create a request for the method "transitionRouteGroups.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The unique identifier of the transition route group.
-           *        TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-           *        `projects//locations//agents//flows//transitionRouteGroups/` or
-           *        `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TransitionRouteGroup}
            * @return the request
            */
@@ -24546,10 +21125,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/transitionRouteGroups/[^/]+$");
 
             /**
-             * Updates the specified TransitionRouteGroup. Note: You should always train a flow prior to
-             * sending it queries. See the [training
-             * documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
-             *
              * Create a request for the method "transitionRouteGroups.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -24558,10 +21133,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The unique identifier of the transition route group.
-           *        TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-           *        `projects//locations//agents//flows//transitionRouteGroups/` or
-           *        `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1TransitionRouteGroup}
              * @since 1.13
              */
@@ -24630,30 +21202,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The unique identifier of the transition route group.
-             * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically.
-             * Format: `projects//locations//agents//flows//transitionRouteGroups/` or
-             * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The unique identifier of the transition route group.
-           TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-           `projects//locations//agents//flows//transitionRouteGroups/` or
-           `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The unique identifier of the transition route group.
-             * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically.
-             * Format: `projects//locations//agents//flows//transitionRouteGroups/` or
-             * `projects//locations//agents//transitionRouteGroups/` for agent-level groups.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -24664,52 +21222,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The language of the following fields in `TransitionRouteGroup`: *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             @com.google.api.client.util.Key
             private java.lang.String languageCode;
 
-            /** The language of the following fields in `TransitionRouteGroup`: *
-           `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-           `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not specified,
-           the agent's default language is used. [Many
-           languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are supported. Note:
-           languages must be enabled in the agent before they can be used.
+            /**
+
              */
             public java.lang.String getLanguageCode() {
               return languageCode;
             }
 
-            /**
-             * The language of the following fields in `TransitionRouteGroup`: *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.messages` *
-             * `TransitionRouteGroup.transition_routes.trigger_fulfillment.conditional_cases` If not
-             * specified, the agent's default language is used. [Many
-             * languages](https://cloud.google.com/dialogflow/cx/docs/reference/language) are
-             * supported. Note: languages must be enabled in the agent before they can be used.
-             */
             public Patch setLanguageCode(java.lang.String languageCode) {
               this.languageCode = languageCode;
               return this;
             }
 
-            /** The mask to control which fields get updated. */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The mask to control which fields get updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** The mask to control which fields get updated. */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -24743,14 +21280,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Webhooks {
 
           /**
-           * Creates a webhook in the specified agent.
-           *
            * Create a request for the method "webhooks.create".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to create a webhook for. Format: `projects//locations//agents/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Webhook}
            * @return the request
            */
@@ -24768,8 +21303,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Creates a webhook in the specified agent.
-             *
              * Create a request for the method "webhooks.create".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -24778,7 +21311,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to create a webhook for. Format: `projects//locations//agents/`.
+             * @param parent
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Webhook}
              * @since 1.13
              */
@@ -24847,21 +21380,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to create a webhook for. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to create a webhook for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to create a webhook for. Format: `projects//locations//agents/`.
-             */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -24878,14 +21406,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Deletes the specified webhook.
-           *
            * Create a request for the method "webhooks.delete".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the webhook to delete. Format: `projects//locations//agents//webhooks/`.
+           * @param name
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -24902,8 +21428,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/webhooks/[^/]+$");
 
             /**
-             * Deletes the specified webhook.
-             *
              * Create a request for the method "webhooks.delete".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -24912,7 +21436,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the webhook to delete. Format: `projects//locations//agents//webhooks/`.
+             * @param name
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -24980,23 +21504,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the webhook to delete. Format:
-             * `projects//locations//agents//webhooks/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the webhook to delete. Format: `projects//locations//agents//webhooks/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the webhook to delete. Format:
-             * `projects//locations//agents//webhooks/`.
-             */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25007,33 +21524,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * This field has no effect for webhook not being used. For webhooks that are used by
-             * pages/flows/transition route groups: * If `force` is set to false, an error will be
-             * returned with message indicating the referenced resources. * If `force` is set to
-             * true, Dialogflow will remove the webhook, as well as any references to the webhook
-             * (i.e. Webhook and tagin fulfillments that point to this webhook will be removed).
-             */
             @com.google.api.client.util.Key
             private java.lang.Boolean force;
 
-            /** This field has no effect for webhook not being used. For webhooks that are used by
-           pages/flows/transition route groups: * If `force` is set to false, an error will be returned with
-           message indicating the referenced resources. * If `force` is set to true, Dialogflow will remove
-           the webhook, as well as any references to the webhook (i.e. Webhook and tagin fulfillments that
-           point to this webhook will be removed).
+            /**
+
              */
             public java.lang.Boolean getForce() {
               return force;
             }
 
-            /**
-             * This field has no effect for webhook not being used. For webhooks that are used by
-             * pages/flows/transition route groups: * If `force` is set to false, an error will be
-             * returned with message indicating the referenced resources. * If `force` is set to
-             * true, Dialogflow will remove the webhook, as well as any references to the webhook
-             * (i.e. Webhook and tagin fulfillments that point to this webhook will be removed).
-             */
             public Delete setForce(java.lang.Boolean force) {
               this.force = force;
               return this;
@@ -25045,14 +21545,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Retrieves the specified webhook.
-           *
            * Create a request for the method "webhooks.get".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the webhook. Format: `projects//locations//agents//webhooks/`.
+           * @param name
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -25069,8 +21567,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/webhooks/[^/]+$");
 
             /**
-             * Retrieves the specified webhook.
-             *
              * Create a request for the method "webhooks.get".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -25078,7 +21574,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the webhook. Format: `projects//locations//agents//webhooks/`.
+             * @param name
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -25156,21 +21652,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The name of the webhook. Format: `projects//locations//agents//webhooks/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the webhook. Format: `projects//locations//agents//webhooks/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * Required. The name of the webhook. Format: `projects//locations//agents//webhooks/`.
-             */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25187,14 +21678,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Returns the list of all webhooks in the specified agent.
-           *
            * Create a request for the method "webhooks.list".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The agent to list all webhooks for. Format: `projects//locations//agents/`.
+           * @param parent
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -25211,8 +21700,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
 
             /**
-             * Returns the list of all webhooks in the specified agent.
-             *
              * Create a request for the method "webhooks.list".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -25220,7 +21707,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The agent to list all webhooks for. Format: `projects//locations//agents/`.
+             * @param parent
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -25298,21 +21785,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Required. The agent to list all webhooks for. Format: `projects//locations//agents/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The agent to list all webhooks for. Format: `projects//locations//agents/`.
+            /**
+
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Required. The agent to list all webhooks for. Format: `projects//locations//agents/`.
-             */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -25323,39 +21805,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+            /**
+
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /**
-             * The maximum number of items to return in a single page. By default 100 and at most
-             * 1000.
-             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The next_page_token value returned from a previous list request.
+            /**
+
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** The next_page_token value returned from a previous list request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -25367,16 +21841,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
-           * Updates the specified webhook.
-           *
            * Create a request for the method "webhooks.patch".
            *
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method.
-           *        Webhooks.CreateWebhook populates the name automatically. Format:
-           *        `projects//locations//agents//webhooks/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Webhook}
            * @return the request
            */
@@ -25394,8 +21864,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/webhooks/[^/]+$");
 
             /**
-             * Updates the specified webhook.
-             *
              * Create a request for the method "webhooks.patch".
              *
              * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -25404,9 +21872,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method.
-           *        Webhooks.CreateWebhook populates the name automatically. Format:
-           *        `projects//locations//agents//webhooks/`.
+             * @param name
              * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1Webhook}
              * @since 1.13
              */
@@ -25475,27 +21941,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method.
-             * Webhooks.CreateWebhook populates the name automatically. Format:
-             * `projects//locations//agents//webhooks/`.
-             */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method.
-           Webhooks.CreateWebhook populates the name automatically. Format:
-           `projects//locations//agents//webhooks/`.
+            /**
+
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /**
-             * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method.
-             * Webhooks.CreateWebhook populates the name automatically. Format:
-             * `projects//locations//agents//webhooks/`.
-             */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25506,24 +21961,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The mask to control which fields get updated. If the mask is not present, all fields will be
-           updated.
+            /**
+
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /**
-             * The mask to control which fields get updated. If the mask is not present, all fields
-             * will be updated.
-             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -25558,20 +22005,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       public class Operations {
 
         /**
-         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-         * methods to check whether the cancellation succeeded or whether the operation completed despite
-         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-         * `Code.CANCELLED`.
-         *
          * Create a request for the method "operations.cancel".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the operation resource to be cancelled.
+         * @param name
          * @return the request
          */
         public Cancel cancel(java.lang.String name) throws java.io.IOException {
@@ -25588,14 +22027,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-           * methods to check whether the cancellation succeeded or whether the operation completed despite
-           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-           * `Code.CANCELLED`.
-           *
            * Create a request for the method "operations.cancel".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -25604,7 +22035,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the operation resource to be cancelled.
+           * @param name
            * @since 1.13
            */
           protected Cancel(java.lang.String name) {
@@ -25672,17 +22103,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Cancel) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the operation resource to be cancelled. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the operation resource to be cancelled.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the operation resource to be cancelled. */
           public Cancel setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25699,15 +22129,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets the latest state of a long-running operation. Clients can use this method to poll the
-         * operation result at intervals as recommended by the API service.
-         *
          * Create a request for the method "operations.get".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the operation resource.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -25724,9 +22151,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
 
           /**
-           * Gets the latest state of a long-running operation. Clients can use this method to poll the
-           * operation result at intervals as recommended by the API service.
-           *
            * Create a request for the method "operations.get".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -25734,7 +22158,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the operation resource.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -25812,17 +22236,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the operation resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the operation resource.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the operation resource. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25839,15 +22262,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
          * Create a request for the method "operations.list".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param name The name of the operation's parent resource.
+         * @param name
          * @return the request
          */
         public List list(java.lang.String name) throws java.io.IOException {
@@ -25864,9 +22284,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
            * Create a request for the method "operations.list".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -25874,7 +22291,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The name of the operation's parent resource.
+           * @param name
            * @since 1.13
            */
           protected List(java.lang.String name) {
@@ -25952,17 +22369,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The name of the operation's parent resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The name of the operation's parent resource.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** The name of the operation's parent resource. */
           public List setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -25973,84 +22389,61 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** The standard list filter. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** The standard list filter.
+          /**
+
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** The standard list filter. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** The standard list page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The standard list page size.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The standard list page size. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The standard list page token. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The standard list page token.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The standard list page token. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /**
-           * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
-           * can only be `true` when reading across collections. For example, when `parent` is set
-           * to `"projects/example/locations/-"`. This field is not supported by default and will
-           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-           * service or product specific documentation.
-           */
           @com.google.api.client.util.Key
           private java.lang.Boolean returnPartialSuccess;
 
-          /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
-         when reading across collections. For example, when `parent` is set to
-         `"projects/example/locations/-"`. This field is not supported by default and will result in an
-         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
-         documentation.
+          /**
+
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
           }
 
-          /**
-           * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
-           * can only be `true` when reading across collections. For example, when `parent` is set
-           * to `"projects/example/locations/-"`. This field is not supported by default and will
-           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
-           * service or product specific documentation.
-           */
           public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
             this.returnPartialSuccess = returnPartialSuccess;
             return this;
@@ -26084,14 +22477,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       public class SecuritySettings {
 
         /**
-         * Create security settings in the specified location.
-         *
          * Create a request for the method "securitySettings.create".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location to create an SecuritySettings for. Format: `projects//locations/`.
+         * @param parent
          * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SecuritySettings}
          * @return the request
          */
@@ -26109,8 +22500,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Create security settings in the specified location.
-           *
            * Create a request for the method "securitySettings.create".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -26119,7 +22508,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location to create an SecuritySettings for. Format: `projects//locations/`.
+           * @param parent
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SecuritySettings}
            * @since 1.13
            */
@@ -26188,23 +22577,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The location to create an SecuritySettings for. Format:
-           * `projects//locations/`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location to create an SecuritySettings for. Format: `projects//locations/`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. The location to create an SecuritySettings for. Format:
-           * `projects//locations/`.
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -26221,15 +22603,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Deletes the specified SecuritySettings.
-         *
          * Create a request for the method "securitySettings.delete".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the SecuritySettings to delete. Format:
-         *        `projects//locations//securitySettings/`.
+         * @param name
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -26246,8 +22625,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securitySettings/[^/]+$");
 
           /**
-           * Deletes the specified SecuritySettings.
-           *
            * Create a request for the method "securitySettings.delete".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -26256,8 +22633,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the SecuritySettings to delete. Format:
-         *        `projects//locations//securitySettings/`.
+           * @param name
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -26325,24 +22701,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The name of the SecuritySettings to delete. Format:
-           * `projects//locations//securitySettings/`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the SecuritySettings to delete. Format:
-         `projects//locations//securitySettings/`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The name of the SecuritySettings to delete. Format:
-           * `projects//locations//securitySettings/`.
-           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -26359,14 +22727,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Retrieves the specified SecuritySettings. The returned settings may be stale by up to 1 minute.
-         *
          * Create a request for the method "securitySettings.get".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Resource name of the settings. Format: `projects//locations//securitySettings/`.
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -26383,8 +22749,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securitySettings/[^/]+$");
 
           /**
-           * Retrieves the specified SecuritySettings. The returned settings may be stale by up to 1 minute.
-           *
            * Create a request for the method "securitySettings.get".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -26392,7 +22756,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Resource name of the settings. Format: `projects//locations//securitySettings/`.
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -26470,23 +22834,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. Resource name of the settings. Format:
-           * `projects//locations//securitySettings/`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Resource name of the settings. Format: `projects//locations//securitySettings/`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. Resource name of the settings. Format:
-           * `projects//locations//securitySettings/`.
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -26503,14 +22860,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Returns the list of all security settings in the specified location.
-         *
          * Create a request for the method "securitySettings.list".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The location to list all security settings for. Format: `projects//locations/`.
+         * @param parent
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -26527,8 +22882,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Returns the list of all security settings in the specified location.
-           *
            * Create a request for the method "securitySettings.list".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -26536,7 +22889,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The location to list all security settings for. Format: `projects//locations/`.
+           * @param parent
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -26614,23 +22967,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The location to list all security settings for. Format:
-           * `projects//locations/`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The location to list all security settings for. Format: `projects//locations/`.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. The location to list all security settings for. Format:
-           * `projects//locations/`.
-           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -26641,37 +22987,31 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * The maximum number of items to return in a single page. By default 20 and at most 100.
-           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of items to return in a single page. By default 20 and at most 100.
+          /**
+
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /**
-           * The maximum number of items to return in a single page. By default 20 and at most 100.
-           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** The next_page_token value returned from a previous list request. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The next_page_token value returned from a previous list request.
+          /**
+
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** The next_page_token value returned from a previous list request. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -26683,16 +23023,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates the specified SecuritySettings.
-         *
          * Create a request for the method "securitySettings.patch".
          *
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings
-         *        method. SecuritySettingsService.CreateSecuritySettings populates the name automatically.
-         *        Format: `projects//locations//securitySettings/`.
+         * @param name
          * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SecuritySettings}
          * @return the request
          */
@@ -26710,8 +23046,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securitySettings/[^/]+$");
 
           /**
-           * Updates the specified SecuritySettings.
-           *
            * Create a request for the method "securitySettings.patch".
            *
            * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -26720,9 +23054,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings
-         *        method. SecuritySettingsService.CreateSecuritySettings populates the name automatically.
-         *        Format: `projects//locations//securitySettings/`.
+           * @param name
            * @param content the {@link com.google.api.services.dialogflow.v3beta1.model.GoogleCloudDialogflowCxV3beta1SecuritySettings}
            * @since 1.13
            */
@@ -26791,29 +23123,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Resource name of the settings. Required for the
-           * SecuritySettingsService.UpdateSecuritySettings method.
-           * SecuritySettingsService.CreateSecuritySettings populates the name automatically.
-           * Format: `projects//locations//securitySettings/`.
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings
-         method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format:
-         `projects//locations//securitySettings/`.
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Resource name of the settings. Required for the
-           * SecuritySettingsService.UpdateSecuritySettings method.
-           * SecuritySettingsService.CreateSecuritySettings populates the name automatically.
-           * Format: `projects//locations//securitySettings/`.
-           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -26824,24 +23143,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * Required. The mask to control which fields get updated. If the mask is not present, all
-           * fields will be updated.
-           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. The mask to control which fields get updated. If the mask is not present, all fields will
-         be updated.
+          /**
+
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /**
-           * Required. The mask to control which fields get updated. If the mask is not present, all
-           * fields will be updated.
-           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -26876,20 +23187,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
     public class Operations {
 
       /**
-       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-       * methods to check whether the cancellation succeeded or whether the operation completed despite
-       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-       * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-       * `Code.CANCELLED`.
-       *
        * Create a request for the method "operations.cancel".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
        * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation resource to be cancelled.
+       * @param name
        * @return the request
        */
       public Cancel cancel(java.lang.String name) throws java.io.IOException {
@@ -26906,14 +23209,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-         * methods to check whether the cancellation succeeded or whether the operation completed despite
-         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-         * `Code.CANCELLED`.
-         *
          * Create a request for the method "operations.cancel".
          *
          * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -26922,7 +23217,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation resource to be cancelled.
+         * @param name
          * @since 1.13
          */
         protected Cancel(java.lang.String name) {
@@ -26990,17 +23285,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return (Cancel) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation resource to be cancelled. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation resource to be cancelled.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation resource to be cancelled. */
         public Cancel setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -27017,15 +23311,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Gets the latest state of a long-running operation. Clients can use this method to poll the
-       * operation result at intervals as recommended by the API service.
-       *
        * Create a request for the method "operations.get".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation resource.
+       * @param name
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -27042,9 +23333,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/operations/[^/]+$");
 
         /**
-         * Gets the latest state of a long-running operation. Clients can use this method to poll the
-         * operation result at intervals as recommended by the API service.
-         *
          * Create a request for the method "operations.get".
          *
          * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -27052,7 +23340,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation resource.
+         * @param name
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -27130,17 +23418,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation resource. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation resource.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation resource. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -27157,15 +23444,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
        * Create a request for the method "operations.list".
        *
        * This request holds the parameters needed by the dialogflow server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the operation's parent resource.
+       * @param name
        * @return the request
        */
       public List list(java.lang.String name) throws java.io.IOException {
@@ -27182,9 +23466,6 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
          * Create a request for the method "operations.list".
          *
          * This request holds the parameters needed by the the dialogflow server.  After setting any
@@ -27192,7 +23473,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the operation's parent resource.
+         * @param name
          * @since 1.13
          */
         protected List(java.lang.String name) {
@@ -27270,17 +23551,16 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the operation's parent resource. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the operation's parent resource.
+        /**
+
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the operation's parent resource. */
         public List setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -27291,84 +23571,61 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** The standard list filter. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** The standard list filter.
+        /**
+
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** The standard list filter. */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** The standard list page size. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The standard list page size.
+        /**
+
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** The standard list page size. */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** The standard list page token. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** The standard list page token.
+        /**
+
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** The standard list page token. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
         }
 
-        /**
-         * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
-         * only be `true` when reading across collections. For example, when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not supported by default and will result
-         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-         * product specific documentation.
-         */
         @com.google.api.client.util.Key
         private java.lang.Boolean returnPartialSuccess;
 
-        /** When set to `true`, operations that are reachable are returned as normal, and those that are
-       unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
-       when reading across collections. For example, when `parent` is set to
-       `"projects/example/locations/-"`. This field is not supported by default and will result in an
-       `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
-       documentation.
+        /**
+
          */
         public java.lang.Boolean getReturnPartialSuccess() {
           return returnPartialSuccess;
         }
 
-        /**
-         * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
-         * only be `true` when reading across collections. For example, when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not supported by default and will result
-         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-         * product specific documentation.
-         */
         public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
           this.returnPartialSuccess = returnPartialSuccess;
           return this;

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for Generative AI.
+ * Model definition for GoogleCloudDialogflowCxV3GenerativeSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,49 +30,42 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Settings for Generative Fallback.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettings fallbackSettings;
 
   /**
-   * Settings for Generative Safety.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3SafetySettings generativeSafetySettings;
 
   /**
-   * Settings for knowledge connector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings knowledgeConnectorSettings;
 
   /**
-   * Language for this settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * LLM model settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings;
 
   /**
-   * Format: `projects//locations//agents//generativeSettings`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Settings for Generative Fallback.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettings getFallbackSettings() {
@@ -80,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * Settings for Generative Fallback.
    * @param fallbackSettings fallbackSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettings setFallbackSettings(GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettings fallbackSettings) {
@@ -89,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * Settings for Generative Safety.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SafetySettings getGenerativeSafetySettings() {
@@ -97,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * Settings for Generative Safety.
    * @param generativeSafetySettings generativeSafetySettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettings setGenerativeSafetySettings(GoogleCloudDialogflowCxV3SafetySettings generativeSafetySettings) {
@@ -106,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * Settings for knowledge connector.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings getKnowledgeConnectorSettings() {
@@ -114,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * Settings for knowledge connector.
    * @param knowledgeConnectorSettings knowledgeConnectorSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettings setKnowledgeConnectorSettings(GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings knowledgeConnectorSettings) {
@@ -123,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * Language for this settings.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -131,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * Language for this settings.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettings setLanguageCode(java.lang.String languageCode) {
@@ -140,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * LLM model settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3LlmModelSettings getLlmModelSettings() {
@@ -148,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * LLM model settings.
    * @param llmModelSettings llmModelSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettings setLlmModelSettings(GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings) {
@@ -157,7 +141,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * Format: `projects//locations//agents//generativeSettings`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -165,7 +148,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   }
 
   /**
-   * Format: `projects//locations//agents//generativeSettings`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettings setName(java.lang.String name) {

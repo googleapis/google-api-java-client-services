@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * A ConnectorTool enabling using Integration Connectors Connections as tools.
+ * Model definition for GoogleCloudDialogflowV2ToolConnectorTool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ToolConnectorTool extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Actions for the tool to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2ToolConnectorToolAction> actions;
 
   /**
-   * Required. The full resource name of the referenced Integration Connectors Connection. Format:
-   * 'projects/locations/connections'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Actions for the tool to use.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2ToolConnectorToolAction> getActions() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorTool extends com.google.a
   }
 
   /**
-   * Required. Actions for the tool to use.
    * @param actions actions or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolConnectorTool setActions(java.util.List<GoogleCloudDialogflowV2ToolConnectorToolAction> actions) {
@@ -62,8 +57,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorTool extends com.google.a
   }
 
   /**
-   * Required. The full resource name of the referenced Integration Connectors Connection. Format:
-   * 'projects/locations/connections'
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -71,8 +64,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorTool extends com.google.a
   }
 
   /**
-   * Required. The full resource name of the referenced Integration Connectors Connection. Format:
-   * 'projects/locations/connections'
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolConnectorTool setName(java.lang.String name) {

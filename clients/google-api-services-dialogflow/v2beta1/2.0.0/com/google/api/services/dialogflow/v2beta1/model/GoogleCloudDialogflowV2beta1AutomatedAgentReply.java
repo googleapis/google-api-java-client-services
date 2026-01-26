@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a response from an automated agent.
+ * Model definition for GoogleCloudDialogflowV2beta1AutomatedAgentReply.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,93 +30,72 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether the partial automated agent reply is interruptible when a later reply message
-   * arrives. e.g. if the agent specified some music as partial response, it can be cancelled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowCancellation;
 
   /**
-   * AutomatedAgentReply type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String automatedAgentReplyType;
 
   /**
-   * The auth code for accessing Call Companion UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String callCompanionAuthCode;
 
   /**
-   * The unique identifier of the current Dialogflow CX conversation page. Format:
-   * `projects//locations//agents//flows//pages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cxCurrentPage;
 
   /**
-   * The collection of current Dialogflow CX agent session parameters at the time of this response.
-   * Deprecated: Use `parameters` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> cxSessionParameters;
 
   /**
-   * Response of the Dialogflow Sessions.DetectIntent call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1DetectIntentResponse detectIntentResponse;
 
   /**
-   * Event name if an event is triggered for the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String event;
 
   /**
-   * Name of the intent if an intent is matched for the query. For a V2 query, the value format is
-   * `projects//locations/ /agent/intents/`. For a V3 query, the value format is
-   * `projects//locations/ /agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intent;
 
   /**
-   * The confidence of the match. Values range from 0.0 (completely uncertain) to 1.0 (completely
-   * certain). This value is for informational purpose only and is only used to help match the best
-   * intent within the classification threshold. This value may change for the same end-user
-   * expression at any time due to a model retraining or change in implementation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float matchConfidence;
 
   /**
-   * The collection of current parameters at the time of this response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * Response messages from the automated agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1ResponseMessage> responseMessages;
 
   /**
-   * Indicates whether the partial automated agent reply is interruptible when a later reply message
-   * arrives. e.g. if the agent specified some music as partial response, it can be cancelled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowCancellation() {
@@ -124,8 +103,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * Indicates whether the partial automated agent reply is interruptible when a later reply message
-   * arrives. e.g. if the agent specified some music as partial response, it can be cancelled.
    * @param allowCancellation allowCancellation or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setAllowCancellation(java.lang.Boolean allowCancellation) {
@@ -134,7 +111,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * AutomatedAgentReply type.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutomatedAgentReplyType() {
@@ -142,7 +118,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * AutomatedAgentReply type.
    * @param automatedAgentReplyType automatedAgentReplyType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setAutomatedAgentReplyType(java.lang.String automatedAgentReplyType) {
@@ -151,7 +126,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The auth code for accessing Call Companion UI.
    * @see #decodeCallCompanionAuthCode()
    * @return value or {@code null} for none
    */
@@ -160,7 +134,7 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The auth code for accessing Call Companion UI.
+
    * @see #getCallCompanionAuthCode()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -171,7 +145,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The auth code for accessing Call Companion UI.
    * @see #encodeCallCompanionAuthCode()
    * @param callCompanionAuthCode callCompanionAuthCode or {@code null} for none
    */
@@ -181,7 +154,7 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The auth code for accessing Call Companion UI.
+
    * @see #setCallCompanionAuthCode()
    *
    * <p>
@@ -196,8 +169,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The unique identifier of the current Dialogflow CX conversation page. Format:
-   * `projects//locations//agents//flows//pages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCxCurrentPage() {
@@ -205,8 +176,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The unique identifier of the current Dialogflow CX conversation page. Format:
-   * `projects//locations//agents//flows//pages/`.
    * @param cxCurrentPage cxCurrentPage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setCxCurrentPage(java.lang.String cxCurrentPage) {
@@ -215,8 +184,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The collection of current Dialogflow CX agent session parameters at the time of this response.
-   * Deprecated: Use `parameters` instead.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getCxSessionParameters() {
@@ -224,8 +191,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The collection of current Dialogflow CX agent session parameters at the time of this response.
-   * Deprecated: Use `parameters` instead.
    * @param cxSessionParameters cxSessionParameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setCxSessionParameters(java.util.Map<String, java.lang.Object> cxSessionParameters) {
@@ -234,7 +199,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * Response of the Dialogflow Sessions.DetectIntent call.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1DetectIntentResponse getDetectIntentResponse() {
@@ -242,7 +206,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * Response of the Dialogflow Sessions.DetectIntent call.
    * @param detectIntentResponse detectIntentResponse or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setDetectIntentResponse(GoogleCloudDialogflowV2beta1DetectIntentResponse detectIntentResponse) {
@@ -251,7 +214,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * Event name if an event is triggered for the query.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvent() {
@@ -259,7 +221,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * Event name if an event is triggered for the query.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setEvent(java.lang.String event) {
@@ -268,9 +229,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * Name of the intent if an intent is matched for the query. For a V2 query, the value format is
-   * `projects//locations/ /agent/intents/`. For a V3 query, the value format is
-   * `projects//locations/ /agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntent() {
@@ -278,9 +236,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * Name of the intent if an intent is matched for the query. For a V2 query, the value format is
-   * `projects//locations/ /agent/intents/`. For a V3 query, the value format is
-   * `projects//locations/ /agents//intents/`.
    * @param intent intent or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setIntent(java.lang.String intent) {
@@ -289,10 +244,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The confidence of the match. Values range from 0.0 (completely uncertain) to 1.0 (completely
-   * certain). This value is for informational purpose only and is only used to help match the best
-   * intent within the classification threshold. This value may change for the same end-user
-   * expression at any time due to a model retraining or change in implementation.
    * @return value or {@code null} for none
    */
   public java.lang.Float getMatchConfidence() {
@@ -300,10 +251,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The confidence of the match. Values range from 0.0 (completely uncertain) to 1.0 (completely
-   * certain). This value is for informational purpose only and is only used to help match the best
-   * intent within the classification threshold. This value may change for the same end-user
-   * expression at any time due to a model retraining or change in implementation.
    * @param matchConfidence matchConfidence or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setMatchConfidence(java.lang.Float matchConfidence) {
@@ -312,7 +259,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The collection of current parameters at the time of this response.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -320,7 +266,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * The collection of current parameters at the time of this response.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setParameters(java.util.Map<String, java.lang.Object> parameters) {
@@ -329,7 +274,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * Response messages from the automated agent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1ResponseMessage> getResponseMessages() {
@@ -337,7 +281,6 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentReply extends com.g
   }
 
   /**
-   * Response messages from the automated agent.
    * @param responseMessages responseMessages or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply setResponseMessages(java.util.List<GoogleCloudDialogflowV2beta1ResponseMessage> responseMessages) {

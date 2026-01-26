@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents metadata of a conversation.
+ * Model definition for GoogleCloudDialogflowV2ConversationInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,18 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConversationInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The language code of the conversation data within this dataset. See
-   * https://cloud.google.com/apis/design/standard_fields for more information. Supports all UTF-8
-   * languages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Optional. The language code of the conversation data within this dataset. See
-   * https://cloud.google.com/apis/design/standard_fields for more information. Supports all UTF-8
-   * languages.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -49,9 +43,6 @@ public final class GoogleCloudDialogflowV2ConversationInfo extends com.google.ap
   }
 
   /**
-   * Optional. The language code of the conversation data within this dataset. See
-   * https://cloud.google.com/apis/design/standard_fields for more information. Supports all UTF-8
-   * languages.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationInfo setLanguageCode(java.lang.String languageCode) {

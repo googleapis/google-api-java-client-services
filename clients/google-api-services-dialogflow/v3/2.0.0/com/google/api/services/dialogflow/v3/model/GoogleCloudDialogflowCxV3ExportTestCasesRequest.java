@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for TestCases.ExportTestCases.
+ * Model definition for GoogleCloudDialogflowCxV3ExportTestCasesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,36 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The data format of the exported test cases. If not specified, `BLOB` is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataFormat;
 
   /**
-   * The filter expression used to filter exported test cases, see [API
-   * Filtering](https://aip.dev/160). The expression is case insensitive and supports the following
-   * syntax: name = [OR name = ] ... For example: * "name = t1 OR name = t2" matches the test case
-   * with the exact resource name "t1" or "t2".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the test cases
-   * to. The format of this URI must be `gs:`. If unspecified, the serialized test cases is returned
-   * inline. Dialogflow performs a write operation for the Cloud Storage object on the caller's
-   * behalf, so your request authentication must have write permissions for the object. For more
-   * information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsUri;
 
   /**
-   * The data format of the exported test cases. If not specified, `BLOB` is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataFormat() {
@@ -67,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends com.g
   }
 
   /**
-   * The data format of the exported test cases. If not specified, `BLOB` is assumed.
    * @param dataFormat dataFormat or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportTestCasesRequest setDataFormat(java.lang.String dataFormat) {
@@ -76,10 +63,6 @@ public final class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends com.g
   }
 
   /**
-   * The filter expression used to filter exported test cases, see [API
-   * Filtering](https://aip.dev/160). The expression is case insensitive and supports the following
-   * syntax: name = [OR name = ] ... For example: * "name = t1 OR name = t2" matches the test case
-   * with the exact resource name "t1" or "t2".
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -87,10 +70,6 @@ public final class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends com.g
   }
 
   /**
-   * The filter expression used to filter exported test cases, see [API
-   * Filtering](https://aip.dev/160). The expression is case insensitive and supports the following
-   * syntax: name = [OR name = ] ... For example: * "name = t1 OR name = t2" matches the test case
-   * with the exact resource name "t1" or "t2".
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportTestCasesRequest setFilter(java.lang.String filter) {
@@ -99,12 +78,6 @@ public final class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends com.g
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the test cases
-   * to. The format of this URI must be `gs:`. If unspecified, the serialized test cases is returned
-   * inline. Dialogflow performs a write operation for the Cloud Storage object on the caller's
-   * behalf, so your request authentication must have write permissions for the object. For more
-   * information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -112,12 +85,6 @@ public final class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends com.g
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the test cases
-   * to. The format of this URI must be `gs:`. If unspecified, the serialized test cases is returned
-   * inline. Dialogflow performs a write operation for the Cloud Storage object on the caller's
-   * behalf, so your request authentication must have write permissions for the object. For more
-   * information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportTestCasesRequest setGcsUri(java.lang.String gcsUri) {

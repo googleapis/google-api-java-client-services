@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Dialogflow source setting. Supported feature: DIALOGFLOW_ASSIST, ENTITY_EXTRACTION.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,25 +31,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of a dialogflow virtual agent used for end user side intent detection and
-   * suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same
-   * Dialogflow project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agent;
 
   /**
-   * The Dialogflow assist configuration for human agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceHumanAgentSideConfig humanAgentSideConfig;
 
   /**
-   * Required. The name of a dialogflow virtual agent used for end user side intent detection and
-   * suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same
-   * Dialogflow project.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgent() {
@@ -56,9 +50,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * Required. The name of a dialogflow virtual agent used for end user side intent detection and
-   * suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same
-   * Dialogflow project.
    * @param agent agent or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource setAgent(java.lang.String agent) {
@@ -67,7 +58,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * The Dialogflow assist configuration for human agent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceHumanAgentSideConfig getHumanAgentSideConfig() {
@@ -75,7 +65,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * The Dialogflow assist configuration for human agent.
    * @param humanAgentSideConfig humanAgentSideConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource setHumanAgentSideConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceHumanAgentSideConfig humanAgentSideConfig) {

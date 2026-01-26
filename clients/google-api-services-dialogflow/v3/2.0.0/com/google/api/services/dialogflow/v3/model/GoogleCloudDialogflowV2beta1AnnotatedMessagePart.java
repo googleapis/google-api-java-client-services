@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents a part of a message possibly annotated with an entity. The part can be an entity or
- * purely a part of the message between two entities or message start/end.
+ * Model definition for GoogleCloudDialogflowV2beta1AnnotatedMessagePart.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,35 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1AnnotatedMessagePart extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The [Dialogflow system entity
-   * type](https://cloud.google.com/dialogflow/docs/reference/system-entities) of this message part.
-   * If this is empty, Dialogflow could not annotate the phrase part with a system entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityType;
 
   /**
-   * Optional. The [Dialogflow system entity formatted value
-   * ](https://cloud.google.com/dialogflow/docs/reference/system-entities) of this message part. For
-   * example for a system entity of type `@sys.unit-currency`, this may contain: { "amount": 5,
-   * "currency": "USD" }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object formattedValue;
 
   /**
-   * Required. A part of a message possibly annotated with an entity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Optional. The [Dialogflow system entity
-   * type](https://cloud.google.com/dialogflow/docs/reference/system-entities) of this message part.
-   * If this is empty, Dialogflow could not annotate the phrase part with a system entity.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityType() {
@@ -67,9 +55,6 @@ public final class GoogleCloudDialogflowV2beta1AnnotatedMessagePart extends com.
   }
 
   /**
-   * Optional. The [Dialogflow system entity
-   * type](https://cloud.google.com/dialogflow/docs/reference/system-entities) of this message part.
-   * If this is empty, Dialogflow could not annotate the phrase part with a system entity.
    * @param entityType entityType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnnotatedMessagePart setEntityType(java.lang.String entityType) {
@@ -78,10 +63,6 @@ public final class GoogleCloudDialogflowV2beta1AnnotatedMessagePart extends com.
   }
 
   /**
-   * Optional. The [Dialogflow system entity formatted value
-   * ](https://cloud.google.com/dialogflow/docs/reference/system-entities) of this message part. For
-   * example for a system entity of type `@sys.unit-currency`, this may contain: { "amount": 5,
-   * "currency": "USD" }
    * @return value or {@code null} for none
    */
   public java.lang.Object getFormattedValue() {
@@ -89,10 +70,6 @@ public final class GoogleCloudDialogflowV2beta1AnnotatedMessagePart extends com.
   }
 
   /**
-   * Optional. The [Dialogflow system entity formatted value
-   * ](https://cloud.google.com/dialogflow/docs/reference/system-entities) of this message part. For
-   * example for a system entity of type `@sys.unit-currency`, this may contain: { "amount": 5,
-   * "currency": "USD" }
    * @param formattedValue formattedValue or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnnotatedMessagePart setFormattedValue(java.lang.Object formattedValue) {
@@ -101,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1AnnotatedMessagePart extends com.
   }
 
   /**
-   * Required. A part of a message possibly annotated with an entity.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -109,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1AnnotatedMessagePart extends com.
   }
 
   /**
-   * Required. A part of a message possibly annotated with an entity.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnnotatedMessagePart setText(java.lang.String text) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The request message for ConversationProfiles.ClearFeature.
+ * Model definition for GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The participant role to remove the suggestion feature config. Only HUMAN_AGENT or
-   * END_USER can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String participantRole;
 
   /**
-   * Required. The type of the suggestion feature to remove.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String suggestionFeatureType;
 
   /**
-   * Required. The participant role to remove the suggestion feature config. Only HUMAN_AGENT or
-   * END_USER can be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getParticipantRole() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigReque
   }
 
   /**
-   * Required. The participant role to remove the suggestion feature config. Only HUMAN_AGENT or
-   * END_USER can be used.
    * @param participantRole participantRole or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest setParticipantRole(java.lang.String participantRole) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigReque
   }
 
   /**
-   * Required. The type of the suggestion feature to remove.
    * @return value or {@code null} for none
    */
   public java.lang.String getSuggestionFeatureType() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigReque
   }
 
   /**
-   * Required. The type of the suggestion feature to remove.
    * @param suggestionFeatureType suggestionFeatureType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigRequest setSuggestionFeatureType(java.lang.String suggestionFeatureType) {

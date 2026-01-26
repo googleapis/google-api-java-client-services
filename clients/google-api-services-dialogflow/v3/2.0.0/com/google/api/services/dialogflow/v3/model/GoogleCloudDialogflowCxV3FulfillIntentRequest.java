@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Request of FulfillIntent
+ * Model definition for GoogleCloudDialogflowCxV3FulfillIntentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3FulfillIntentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The matched intent/event to fulfill.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3Match match;
 
   /**
-   * Must be same as the corresponding MatchIntent request, otherwise the behavior is undefined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3MatchIntentRequest matchIntentRequest;
 
   /**
-   * Instructs the speech synthesizer how to generate output audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig;
 
   /**
-   * The matched intent/event to fulfill.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Match getMatch() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentRequest extends com.goo
   }
 
   /**
-   * The matched intent/event to fulfill.
    * @param match match or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillIntentRequest setMatch(GoogleCloudDialogflowCxV3Match match) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentRequest extends com.goo
   }
 
   /**
-   * Must be same as the corresponding MatchIntent request, otherwise the behavior is undefined.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3MatchIntentRequest getMatchIntentRequest() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentRequest extends com.goo
   }
 
   /**
-   * Must be same as the corresponding MatchIntent request, otherwise the behavior is undefined.
    * @param matchIntentRequest matchIntentRequest or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillIntentRequest setMatchIntentRequest(GoogleCloudDialogflowCxV3MatchIntentRequest matchIntentRequest) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentRequest extends com.goo
   }
 
   /**
-   * Instructs the speech synthesizer how to generate output audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3OutputAudioConfig getOutputAudioConfig() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentRequest extends com.goo
   }
 
   /**
-   * Instructs the speech synthesizer how to generate output audio.
    * @param outputAudioConfig outputAudioConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillIntentRequest setOutputAudioConfig(GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig) {

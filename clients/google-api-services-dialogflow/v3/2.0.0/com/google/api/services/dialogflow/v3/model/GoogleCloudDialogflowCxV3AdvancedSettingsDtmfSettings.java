@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Define behaviors for DTMF (dual tone multi frequency).
+ * Model definition for GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,48 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example,
-   * if the caller presses a button on their telephone keypad and DTMF processing is enabled,
-   * Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the
-   * event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Endpoint timeout setting for matching dtmf input to regex.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endpointingTimeoutDuration;
 
   /**
-   * The digit that terminates a DTMF digit sequence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String finishDigit;
 
   /**
-   * Interdigit timeout setting for matching dtmf input to regex.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String interdigitTimeoutDuration;
 
   /**
-   * Max length of DTMF digits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxDigits;
 
   /**
-   * If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example,
-   * if the caller presses a button on their telephone keypad and DTMF processing is enabled,
-   * Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the
-   * event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -79,10 +67,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends
   }
 
   /**
-   * If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example,
-   * if the caller presses a button on their telephone keypad and DTMF processing is enabled,
-   * Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the
-   * event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).
    * @param enabled enabled or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings setEnabled(java.lang.Boolean enabled) {
@@ -91,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends
   }
 
   /**
-   * Endpoint timeout setting for matching dtmf input to regex.
    * @return value or {@code null} for none
    */
   public String getEndpointingTimeoutDuration() {
@@ -99,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends
   }
 
   /**
-   * Endpoint timeout setting for matching dtmf input to regex.
    * @param endpointingTimeoutDuration endpointingTimeoutDuration or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings setEndpointingTimeoutDuration(String endpointingTimeoutDuration) {
@@ -108,7 +90,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends
   }
 
   /**
-   * The digit that terminates a DTMF digit sequence.
    * @return value or {@code null} for none
    */
   public java.lang.String getFinishDigit() {
@@ -116,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends
   }
 
   /**
-   * The digit that terminates a DTMF digit sequence.
    * @param finishDigit finishDigit or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings setFinishDigit(java.lang.String finishDigit) {
@@ -125,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends
   }
 
   /**
-   * Interdigit timeout setting for matching dtmf input to regex.
    * @return value or {@code null} for none
    */
   public String getInterdigitTimeoutDuration() {
@@ -133,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends
   }
 
   /**
-   * Interdigit timeout setting for matching dtmf input to regex.
    * @param interdigitTimeoutDuration interdigitTimeoutDuration or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings setInterdigitTimeoutDuration(String interdigitTimeoutDuration) {
@@ -142,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends
   }
 
   /**
-   * Max length of DTMF digits.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDigits() {
@@ -150,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings extends
   }
 
   /**
-   * Max length of DTMF digits.
    * @param maxDigits maxDigits or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AdvancedSettingsDtmfSettings setMaxDigits(java.lang.Integer maxDigits) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The information about phone calls connected via phone gateway to the conversation.
+ * Model definition for GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,36 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The number dialed to connect this call in E.164 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dialedNumber;
 
   /**
-   * Output only. The mime content from the initial SIP INVITE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMimeContent> extraMimeContents;
 
   /**
-   * Optional. SDP of the call. It's initially the SDP answer to the incoming call, but maybe later
-   * updated for the purpose of making the link active, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sdp;
 
   /**
-   * Output only. The SIP headers from the initial SIP INVITE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoSipHeader> sipHeaders;
 
   /**
-   * Output only. The number dialed to connect this call in E.164 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getDialedNumber() {
@@ -67,7 +61,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo ex
   }
 
   /**
-   * Output only. The number dialed to connect this call in E.164 format.
    * @param dialedNumber dialedNumber or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo setDialedNumber(java.lang.String dialedNumber) {
@@ -76,7 +69,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo ex
   }
 
   /**
-   * Output only. The mime content from the initial SIP INVITE.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMimeContent> getExtraMimeContents() {
@@ -84,7 +76,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo ex
   }
 
   /**
-   * Output only. The mime content from the initial SIP INVITE.
    * @param extraMimeContents extraMimeContents or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo setExtraMimeContents(java.util.List<GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMimeContent> extraMimeContents) {
@@ -93,8 +84,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo ex
   }
 
   /**
-   * Optional. SDP of the call. It's initially the SDP answer to the incoming call, but maybe later
-   * updated for the purpose of making the link active, etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getSdp() {
@@ -102,8 +91,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo ex
   }
 
   /**
-   * Optional. SDP of the call. It's initially the SDP answer to the incoming call, but maybe later
-   * updated for the purpose of making the link active, etc.
    * @param sdp sdp or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo setSdp(java.lang.String sdp) {
@@ -112,7 +99,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo ex
   }
 
   /**
-   * Output only. The SIP headers from the initial SIP INVITE.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoSipHeader> getSipHeaders() {
@@ -120,7 +106,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo ex
   }
 
   /**
-   * Output only. The SIP headers from the initial SIP INVITE.
    * @param sipHeaders sipHeaders or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo setSipHeaders(java.util.List<GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoSipHeader> sipHeaders) {

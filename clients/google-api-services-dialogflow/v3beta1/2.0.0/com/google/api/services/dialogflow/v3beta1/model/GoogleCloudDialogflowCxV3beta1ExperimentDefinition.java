@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Definition of the experiment.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExperimentDefinition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,25 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * The condition defines which subset of sessions are selected for this experiment. If not
-   * specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * The flow versions as the variants of this experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1VersionVariants versionVariants;
 
   /**
-   * The condition defines which subset of sessions are selected for this experiment. If not
-   * specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -56,9 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinition extends co
   }
 
   /**
-   * The condition defines which subset of sessions are selected for this experiment. If not
-   * specified, all sessions are eligible. E.g. "query_input.language_code=en" See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExperimentDefinition setCondition(java.lang.String condition) {
@@ -67,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinition extends co
   }
 
   /**
-   * The flow versions as the variants of this experiment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1VersionVariants getVersionVariants() {
@@ -75,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinition extends co
   }
 
   /**
-   * The flow versions as the variants of this experiment.
    * @param versionVariants versionVariants or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExperimentDefinition setVersionVariants(GoogleCloudDialogflowCxV3beta1VersionVariants versionVariants) {

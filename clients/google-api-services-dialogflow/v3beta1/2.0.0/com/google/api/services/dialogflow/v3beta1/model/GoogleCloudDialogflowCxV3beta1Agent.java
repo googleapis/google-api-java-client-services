@@ -17,11 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Agents are best described as Natural Language Understanding (NLU) modules that transform user
- * requests into actionable data. You can include agents in your app, product, or service to
- * determine user intent and respond to the user in a natural way. After you create an agent, you
- * can add Intents, Entity Types, Flows, Fulfillments, Webhooks, TransitionRouteGroups and so on to
- * manage the conversation flows.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Agent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -34,205 +30,156 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Hierarchical advanced settings for this agent. The settings exposed at the lower level
-   * overrides the settings exposed at the higher level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings;
 
   /**
-   * Optional. Answer feedback collection settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings answerFeedbackSettings;
 
   /**
-   * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the
-   * self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
-   * integration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String avatarUri;
 
   /**
-   * Optional. The BigQuery export settings for this agent. The conversation data will be exported
-   * to BigQuery tables if it is enabled. By default, BigQuery export settings will not be exported
-   * with agent. You need to set include_bigquery_export_settings to include it in the exported
-   * agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1BigQueryExportSettings bigqueryExportSettings;
 
   /**
-   * Optional. Settings for custom client certificates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AgentClientCertificateSettings clientCertificateSettings;
 
   /**
-   * Required. Immutable. The default language of the agent as a language tag. See [Language
-   * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
-   * currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultLanguageCode;
 
   /**
-   * The description of the agent. The maximum length is 500 characters. If exceeded, the request is
-   * rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The human-readable name of the agent, unique within the location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. Enable training multi-lingual models for this agent. These models will be trained on
-   * all the languages supported by the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableMultiLanguageTraining;
 
   /**
-   * Indicates if automatic spell correction is enabled in detect intent requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableSpellCorrection;
 
   /**
-   * Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings
-   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableStackdriverLogging;
 
   /**
-   * Gen App Builder-related agent-level settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AgentGenAppBuilderSettings genAppBuilderSettings;
 
   /**
-   * Git integration settings for this agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings gitIntegrationSettings;
 
   /**
-   * Indicates whether the agent is locked for changes. If the agent is locked, modifications to the
-   * agent will be rejected except for RestoreAgent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean locked;
 
   /**
-   * The unique identifier of the agent. Required for the Agents.UpdateAgent method.
-   * Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. Settings for end user personalization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings personalizationSettings;
 
   /**
-   * Optional. Output only. A read only boolean field reflecting Zone Isolation status of the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Optional. Output only. A read only boolean field reflecting Zone Separation status of the
-   * agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Name of the SecuritySettings reference for the agent. Format:
-   * `projects//locations//securitySettings/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String securitySettings;
 
   /**
-   * Speech recognition related settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1SpeechToTextSettings speechToTextSettings;
 
   /**
-   * Name of the start flow in this agent. A start flow will be automatically created when the agent
-   * is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//flows/`. Currently only the default start flow with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startFlow;
 
   /**
-   * Name of the start playbook in this agent. A start playbook will be automatically created when
-   * the agent is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startPlaybook;
 
   /**
-   * The list of all languages supported by the agent (except for the `default_language_code`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedLanguageCodes;
 
   /**
-   * Settings on instructing the speech synthesizer on how to generate the output audio content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1TextToSpeechSettings textToSpeechSettings;
 
   /**
-   * Required. The time zone of the agent from the [time zone database](https://www.iana.org/time-
-   * zones), e.g., America/New_York, Europe/Paris.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
 
   /**
-   * Hierarchical advanced settings for this agent. The settings exposed at the lower level
-   * overrides the settings exposed at the higher level.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettings getAdvancedSettings() {
@@ -240,8 +187,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Hierarchical advanced settings for this agent. The settings exposed at the lower level
-   * overrides the settings exposed at the higher level.
    * @param advancedSettings advancedSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setAdvancedSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettings advancedSettings) {
@@ -250,7 +195,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Answer feedback collection settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings getAnswerFeedbackSettings() {
@@ -258,7 +202,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Answer feedback collection settings.
    * @param answerFeedbackSettings answerFeedbackSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setAnswerFeedbackSettings(GoogleCloudDialogflowCxV3beta1AgentAnswerFeedbackSettings answerFeedbackSettings) {
@@ -267,9 +210,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the
-   * self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
-   * integration.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvatarUri() {
@@ -277,9 +217,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the
-   * self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
-   * integration.
    * @param avatarUri avatarUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setAvatarUri(java.lang.String avatarUri) {
@@ -288,10 +225,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. The BigQuery export settings for this agent. The conversation data will be exported
-   * to BigQuery tables if it is enabled. By default, BigQuery export settings will not be exported
-   * with agent. You need to set include_bigquery_export_settings to include it in the exported
-   * agent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1BigQueryExportSettings getBigqueryExportSettings() {
@@ -299,10 +232,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. The BigQuery export settings for this agent. The conversation data will be exported
-   * to BigQuery tables if it is enabled. By default, BigQuery export settings will not be exported
-   * with agent. You need to set include_bigquery_export_settings to include it in the exported
-   * agent.
    * @param bigqueryExportSettings bigqueryExportSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setBigqueryExportSettings(GoogleCloudDialogflowCxV3beta1BigQueryExportSettings bigqueryExportSettings) {
@@ -311,7 +240,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Settings for custom client certificates.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentClientCertificateSettings getClientCertificateSettings() {
@@ -319,7 +247,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Settings for custom client certificates.
    * @param clientCertificateSettings clientCertificateSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setClientCertificateSettings(GoogleCloudDialogflowCxV3beta1AgentClientCertificateSettings clientCertificateSettings) {
@@ -328,9 +255,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Required. Immutable. The default language of the agent as a language tag. See [Language
-   * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
-   * currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultLanguageCode() {
@@ -338,9 +262,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Required. Immutable. The default language of the agent as a language tag. See [Language
-   * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
-   * currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
    * @param defaultLanguageCode defaultLanguageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setDefaultLanguageCode(java.lang.String defaultLanguageCode) {
@@ -349,8 +270,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * The description of the agent. The maximum length is 500 characters. If exceeded, the request is
-   * rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -358,8 +277,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * The description of the agent. The maximum length is 500 characters. If exceeded, the request is
-   * rejected.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setDescription(java.lang.String description) {
@@ -368,7 +285,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Required. The human-readable name of the agent, unique within the location.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -376,7 +292,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Required. The human-readable name of the agent, unique within the location.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setDisplayName(java.lang.String displayName) {
@@ -385,8 +300,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Enable training multi-lingual models for this agent. These models will be trained on
-   * all the languages supported by the agent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableMultiLanguageTraining() {
@@ -394,8 +307,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Enable training multi-lingual models for this agent. These models will be trained on
-   * all the languages supported by the agent.
    * @param enableMultiLanguageTraining enableMultiLanguageTraining or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setEnableMultiLanguageTraining(java.lang.Boolean enableMultiLanguageTraining) {
@@ -404,7 +315,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Indicates if automatic spell correction is enabled in detect intent requests.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSpellCorrection() {
@@ -412,7 +322,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Indicates if automatic spell correction is enabled in detect intent requests.
    * @param enableSpellCorrection enableSpellCorrection or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setEnableSpellCorrection(java.lang.Boolean enableSpellCorrection) {
@@ -421,8 +330,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings
-   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableStackdriverLogging() {
@@ -430,8 +337,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Indicates if stackdriver logging is enabled for the agent. Please use agent.advanced_settings
-   * instead.
    * @param enableStackdriverLogging enableStackdriverLogging or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setEnableStackdriverLogging(java.lang.Boolean enableStackdriverLogging) {
@@ -440,7 +345,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Gen App Builder-related agent-level settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGenAppBuilderSettings getGenAppBuilderSettings() {
@@ -448,7 +352,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Gen App Builder-related agent-level settings.
    * @param genAppBuilderSettings genAppBuilderSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setGenAppBuilderSettings(GoogleCloudDialogflowCxV3beta1AgentGenAppBuilderSettings genAppBuilderSettings) {
@@ -457,7 +360,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Git integration settings for this agent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings getGitIntegrationSettings() {
@@ -465,7 +367,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Git integration settings for this agent.
    * @param gitIntegrationSettings gitIntegrationSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setGitIntegrationSettings(GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings gitIntegrationSettings) {
@@ -474,8 +375,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Indicates whether the agent is locked for changes. If the agent is locked, modifications to the
-   * agent will be rejected except for RestoreAgent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocked() {
@@ -483,8 +382,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Indicates whether the agent is locked for changes. If the agent is locked, modifications to the
-   * agent will be rejected except for RestoreAgent.
    * @param locked locked or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setLocked(java.lang.Boolean locked) {
@@ -493,8 +390,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * The unique identifier of the agent. Required for the Agents.UpdateAgent method.
-   * Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -502,8 +397,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * The unique identifier of the agent. Required for the Agents.UpdateAgent method.
-   * Agents.CreateAgent populates the name automatically. Format: `projects//locations//agents/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setName(java.lang.String name) {
@@ -512,7 +405,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Settings for end user personalization.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings getPersonalizationSettings() {
@@ -520,7 +412,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Settings for end user personalization.
    * @param personalizationSettings personalizationSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setPersonalizationSettings(GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings personalizationSettings) {
@@ -529,7 +420,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Output only. A read only boolean field reflecting Zone Isolation status of the agent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -537,7 +427,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Output only. A read only boolean field reflecting Zone Isolation status of the agent.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -546,8 +435,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Output only. A read only boolean field reflecting Zone Separation status of the
-   * agent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -555,8 +442,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Optional. Output only. A read only boolean field reflecting Zone Separation status of the
-   * agent.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -565,8 +450,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the SecuritySettings reference for the agent. Format:
-   * `projects//locations//securitySettings/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecuritySettings() {
@@ -574,8 +457,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the SecuritySettings reference for the agent. Format:
-   * `projects//locations//securitySettings/`.
    * @param securitySettings securitySettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setSecuritySettings(java.lang.String securitySettings) {
@@ -584,7 +465,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Speech recognition related settings.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SpeechToTextSettings getSpeechToTextSettings() {
@@ -592,7 +472,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Speech recognition related settings.
    * @param speechToTextSettings speechToTextSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setSpeechToTextSettings(GoogleCloudDialogflowCxV3beta1SpeechToTextSettings speechToTextSettings) {
@@ -601,10 +480,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the start flow in this agent. A start flow will be automatically created when the agent
-   * is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//flows/`. Currently only the default start flow with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartFlow() {
@@ -612,10 +487,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the start flow in this agent. A start flow will be automatically created when the agent
-   * is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//flows/`. Currently only the default start flow with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
    * @param startFlow startFlow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setStartFlow(java.lang.String startFlow) {
@@ -624,10 +495,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the start playbook in this agent. A start playbook will be automatically created when
-   * the agent is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartPlaybook() {
@@ -635,10 +502,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Name of the start playbook in this agent. A start playbook will be automatically created when
-   * the agent is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
-   * "00000000-0000-0000-0000-000000000000" is allowed.
    * @param startPlaybook startPlaybook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setStartPlaybook(java.lang.String startPlaybook) {
@@ -647,7 +510,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * The list of all languages supported by the agent (except for the `default_language_code`).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedLanguageCodes() {
@@ -655,7 +517,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * The list of all languages supported by the agent (except for the `default_language_code`).
    * @param supportedLanguageCodes supportedLanguageCodes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setSupportedLanguageCodes(java.util.List<java.lang.String> supportedLanguageCodes) {
@@ -664,7 +525,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Settings on instructing the speech synthesizer on how to generate the output audio content.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TextToSpeechSettings getTextToSpeechSettings() {
@@ -672,7 +532,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Settings on instructing the speech synthesizer on how to generate the output audio content.
    * @param textToSpeechSettings textToSpeechSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setTextToSpeechSettings(GoogleCloudDialogflowCxV3beta1TextToSpeechSettings textToSpeechSettings) {
@@ -681,8 +540,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Required. The time zone of the agent from the [time zone database](https://www.iana.org/time-
-   * zones), e.g., America/New_York, Europe/Paris.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -690,8 +547,6 @@ public final class GoogleCloudDialogflowCxV3beta1Agent extends com.google.api.cl
   }
 
   /**
-   * Required. The time zone of the agent from the [time zone database](https://www.iana.org/time-
-   * zones), e.g., America/New_York, Europe/Paris.
    * @param timeZone timeZone or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Agent setTimeZone(java.lang.String timeZone) {

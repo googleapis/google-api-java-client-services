@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The request message for Intents.BatchDeleteIntents.
+ * Model definition for GoogleCloudDialogflowV2beta1BatchDeleteIntentsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1BatchDeleteIntentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The collection of intents to delete. Only intent `name` must be filled in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Intent> intents;
 
   /**
-   * Required. The collection of intents to delete. Only intent `name` must be filled in.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1Intent> getIntents() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1BatchDeleteIntentsRequest extends
   }
 
   /**
-   * Required. The collection of intents to delete. Only intent `name` must be filled in.
    * @param intents intents or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1BatchDeleteIntentsRequest setIntents(java.util.List<GoogleCloudDialogflowV2beta1Intent> intents) {

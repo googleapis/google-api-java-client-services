@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Contains information about a button.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageCardButton.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2IntentMessageCardButton extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The text to send back to the Dialogflow API or a URI to open.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String postback;
 
   /**
-   * Optional. The text to show on the button.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Optional. The text to send back to the Dialogflow API or a URI to open.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostback() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButton extends com.go
   }
 
   /**
-   * Optional. The text to send back to the Dialogflow API or a URI to open.
    * @param postback postback or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCardButton setPostback(java.lang.String postback) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButton extends com.go
   }
 
   /**
-   * Optional. The text to show on the button.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButton extends com.go
   }
 
   /**
-   * Optional. The text to show on the button.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCardButton setText(java.lang.String text) {

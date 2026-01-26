@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for exporting audio.
+ * Model definition for GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,49 +30,36 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Filename pattern for exported audio. {conversation} and {timestamp} are placeholders that will
-   * be replaced with the conversation ID and epoch micros of the conversation. For example,
-   * "{conversation}/recording_{timestamp}.mulaw".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioExportPattern;
 
   /**
-   * File format for exported audio file. Currently only in telephony recordings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioFormat;
 
   /**
-   * Enable audio redaction if it is true. Note that this only redacts end-user audio data;
-   * Synthesised audio from the virtual agent is not redacted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAudioRedaction;
 
   /**
-   * Cloud Storage bucket to export audio record to. Setting this field would grant the Storage
-   * Object Creator role to the Dialogflow Service Agent. API caller that tries to modify this field
-   * should have the permission of storage.buckets.setIamPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsBucket;
 
   /**
-   * Whether to store TTS audio. By default, TTS audio from the virtual agent is not exported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean storeTtsAudio;
 
   /**
-   * Filename pattern for exported audio. {conversation} and {timestamp} are placeholders that will
-   * be replaced with the conversation ID and epoch micros of the conversation. For example,
-   * "{conversation}/recording_{timestamp}.mulaw".
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioExportPattern() {
@@ -80,9 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * Filename pattern for exported audio. {conversation} and {timestamp} are placeholders that will
-   * be replaced with the conversation ID and epoch micros of the conversation. For example,
-   * "{conversation}/recording_{timestamp}.mulaw".
    * @param audioExportPattern audioExportPattern or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings setAudioExportPattern(java.lang.String audioExportPattern) {
@@ -91,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * File format for exported audio file. Currently only in telephony recordings.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioFormat() {
@@ -99,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * File format for exported audio file. Currently only in telephony recordings.
    * @param audioFormat audioFormat or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings setAudioFormat(java.lang.String audioFormat) {
@@ -108,8 +90,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * Enable audio redaction if it is true. Note that this only redacts end-user audio data;
-   * Synthesised audio from the virtual agent is not redacted.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAudioRedaction() {
@@ -117,8 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * Enable audio redaction if it is true. Note that this only redacts end-user audio data;
-   * Synthesised audio from the virtual agent is not redacted.
    * @param enableAudioRedaction enableAudioRedaction or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings setEnableAudioRedaction(java.lang.Boolean enableAudioRedaction) {
@@ -127,9 +105,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * Cloud Storage bucket to export audio record to. Setting this field would grant the Storage
-   * Object Creator role to the Dialogflow Service Agent. API caller that tries to modify this field
-   * should have the permission of storage.buckets.setIamPolicy.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsBucket() {
@@ -137,9 +112,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * Cloud Storage bucket to export audio record to. Setting this field would grant the Storage
-   * Object Creator role to the Dialogflow Service Agent. API caller that tries to modify this field
-   * should have the permission of storage.buckets.setIamPolicy.
    * @param gcsBucket gcsBucket or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings setGcsBucket(java.lang.String gcsBucket) {
@@ -148,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * Whether to store TTS audio. By default, TTS audio from the virtual agent is not exported.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStoreTtsAudio() {
@@ -156,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSett
   }
 
   /**
-   * Whether to store TTS audio. By default, TTS audio from the virtual agent is not exported.
    * @param storeTtsAudio storeTtsAudio or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SecuritySettingsAudioExportSettings setStoreTtsAudio(java.lang.Boolean storeTtsAudio) {

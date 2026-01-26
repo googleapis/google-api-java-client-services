@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The distinctive configs for dataset as the conversation source.
+ * Model definition for GoogleCloudDialogflowV2GeneratorEvaluationConfigDatasetInputDataConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigDatasetInputDataConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier of the dataset to be evaluated. Format:
-   * `projects//locations//datasets/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataset;
 
   /**
-   * Required. The identifier of the dataset to be evaluated. Format:
-   * `projects//locations//datasets/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigDatasetInputD
   }
 
   /**
-   * Required. The identifier of the dataset to be evaluated. Format:
-   * `projects//locations//datasets/`.
    * @param dataset dataset or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfigDatasetInputDataConfig setDataset(java.lang.String dataset) {

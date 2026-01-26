@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The SIP headers from the initial SIP INVITE.
+ * Model definition for GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionInfoSipHeader.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionInfoSipHeader extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The value of the header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Optional. The name of the header.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionIn
   }
 
   /**
-   * Optional. The name of the header.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionInfoSipHeader setName(java.lang.String name) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionIn
   }
 
   /**
-   * Optional. The value of the header.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionIn
   }
 
   /**
-   * Optional. The value of the header.
    * @param value value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationTelephonyConnectionInfoSipHeader setValue(java.lang.String value) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a conversation participant (human agent, virtual agent, end-user).
+ * Model definition for GoogleCloudDialogflowV2Participant.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,75 +30,42 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2Participant extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. For tracking the utilization of prebuilt Agent Assist integration modules. This field
-   * is only inscope for Integration type that include UI Modules, Backend Modules, and Agent
-   * Desktop connector, it is out of scope for CCaaS and Direct Integration. For each human agent,
-   * prebuilt UI Modules needs to trigger the UpdateParticipant API to update this field. Both
-   * CreateParticipantRequest and UpdateParticipantRequest will be supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentDesktopSource;
 
   /**
-   * Optional. Key-value filters on the metadata of documents returned by article suggestion. If
-   * specified, article suggestion only returns suggested documents that match all filters in their
-   * Document.metadata. Multiple values for a metadata key should be concatenated by comma. For
-   * example, filters to match all documents that have 'US' or 'CA' in their market metadata values
-   * and 'agent' in their user metadata values will be ``` documents_metadata_filters { key:
-   * "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> documentsMetadataFilters;
 
   /**
-   * Optional. The unique identifier of this participant. Format:
-   * `projects//locations//conversations//participants/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. Obfuscated user id that should be associated with the created participant. You can
-   * specify a user id as follows: 1. If you set this field in CreateParticipantRequest or
-   * UpdateParticipantRequest, Dialogflow adds the obfuscated user id with the participant. 2. If
-   * you set this field in AnalyzeContent or StreamingAnalyzeContent, Dialogflow will update
-   * Participant.obfuscated_external_user_id. Dialogflow returns an error if you try to add a user
-   * id for a non-END_USER participant. Dialogflow uses this user id for billing and measurement
-   * purposes. For example, Dialogflow determines whether a user in one conversation returned in a
-   * later conversation. Note: * Please never pass raw user ids to Dialogflow. Always obfuscate your
-   * user id first. * Dialogflow only accepts a UTF-8 encoded string, e.g., a hex digest of a hash
-   * function like SHA-512. * The length of the user id must be <= 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String obfuscatedExternalUserId;
 
   /**
-   * Immutable. The role this participant plays in the conversation. This field must be set during
-   * participant creation and is then immutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
 
   /**
-   * Optional. Label applied to streams representing this participant in SIPREC XML metadata and
-   * SDP. This is used to assign transcriptions from that media stream to this participant. This
-   * field can be updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sipRecordingMediaLabel;
 
   /**
-   * Optional. For tracking the utilization of prebuilt Agent Assist integration modules. This field
-   * is only inscope for Integration type that include UI Modules, Backend Modules, and Agent
-   * Desktop connector, it is out of scope for CCaaS and Direct Integration. For each human agent,
-   * prebuilt UI Modules needs to trigger the UpdateParticipant API to update this field. Both
-   * CreateParticipantRequest and UpdateParticipantRequest will be supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentDesktopSource() {
@@ -106,11 +73,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Optional. For tracking the utilization of prebuilt Agent Assist integration modules. This field
-   * is only inscope for Integration type that include UI Modules, Backend Modules, and Agent
-   * Desktop connector, it is out of scope for CCaaS and Direct Integration. For each human agent,
-   * prebuilt UI Modules needs to trigger the UpdateParticipant API to update this field. Both
-   * CreateParticipantRequest and UpdateParticipantRequest will be supported.
    * @param agentDesktopSource agentDesktopSource or {@code null} for none
    */
   public GoogleCloudDialogflowV2Participant setAgentDesktopSource(java.lang.String agentDesktopSource) {
@@ -119,12 +81,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Optional. Key-value filters on the metadata of documents returned by article suggestion. If
-   * specified, article suggestion only returns suggested documents that match all filters in their
-   * Document.metadata. Multiple values for a metadata key should be concatenated by comma. For
-   * example, filters to match all documents that have 'US' or 'CA' in their market metadata values
-   * and 'agent' in their user metadata values will be ``` documents_metadata_filters { key:
-   * "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDocumentsMetadataFilters() {
@@ -132,12 +88,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Optional. Key-value filters on the metadata of documents returned by article suggestion. If
-   * specified, article suggestion only returns suggested documents that match all filters in their
-   * Document.metadata. Multiple values for a metadata key should be concatenated by comma. For
-   * example, filters to match all documents that have 'US' or 'CA' in their market metadata values
-   * and 'agent' in their user metadata values will be ``` documents_metadata_filters { key:
-   * "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
    * @param documentsMetadataFilters documentsMetadataFilters or {@code null} for none
    */
   public GoogleCloudDialogflowV2Participant setDocumentsMetadataFilters(java.util.Map<String, java.lang.String> documentsMetadataFilters) {
@@ -146,8 +96,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Optional. The unique identifier of this participant. Format:
-   * `projects//locations//conversations//participants/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -155,8 +103,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Optional. The unique identifier of this participant. Format:
-   * `projects//locations//conversations//participants/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2Participant setName(java.lang.String name) {
@@ -165,16 +111,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Optional. Obfuscated user id that should be associated with the created participant. You can
-   * specify a user id as follows: 1. If you set this field in CreateParticipantRequest or
-   * UpdateParticipantRequest, Dialogflow adds the obfuscated user id with the participant. 2. If
-   * you set this field in AnalyzeContent or StreamingAnalyzeContent, Dialogflow will update
-   * Participant.obfuscated_external_user_id. Dialogflow returns an error if you try to add a user
-   * id for a non-END_USER participant. Dialogflow uses this user id for billing and measurement
-   * purposes. For example, Dialogflow determines whether a user in one conversation returned in a
-   * later conversation. Note: * Please never pass raw user ids to Dialogflow. Always obfuscate your
-   * user id first. * Dialogflow only accepts a UTF-8 encoded string, e.g., a hex digest of a hash
-   * function like SHA-512. * The length of the user id must be <= 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getObfuscatedExternalUserId() {
@@ -182,16 +118,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Optional. Obfuscated user id that should be associated with the created participant. You can
-   * specify a user id as follows: 1. If you set this field in CreateParticipantRequest or
-   * UpdateParticipantRequest, Dialogflow adds the obfuscated user id with the participant. 2. If
-   * you set this field in AnalyzeContent or StreamingAnalyzeContent, Dialogflow will update
-   * Participant.obfuscated_external_user_id. Dialogflow returns an error if you try to add a user
-   * id for a non-END_USER participant. Dialogflow uses this user id for billing and measurement
-   * purposes. For example, Dialogflow determines whether a user in one conversation returned in a
-   * later conversation. Note: * Please never pass raw user ids to Dialogflow. Always obfuscate your
-   * user id first. * Dialogflow only accepts a UTF-8 encoded string, e.g., a hex digest of a hash
-   * function like SHA-512. * The length of the user id must be <= 256 characters.
    * @param obfuscatedExternalUserId obfuscatedExternalUserId or {@code null} for none
    */
   public GoogleCloudDialogflowV2Participant setObfuscatedExternalUserId(java.lang.String obfuscatedExternalUserId) {
@@ -200,8 +126,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Immutable. The role this participant plays in the conversation. This field must be set during
-   * participant creation and is then immutable.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -209,8 +133,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Immutable. The role this participant plays in the conversation. This field must be set during
-   * participant creation and is then immutable.
    * @param role role or {@code null} for none
    */
   public GoogleCloudDialogflowV2Participant setRole(java.lang.String role) {
@@ -219,9 +141,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Optional. Label applied to streams representing this participant in SIPREC XML metadata and
-   * SDP. This is used to assign transcriptions from that media stream to this participant. This
-   * field can be updated.
    * @return value or {@code null} for none
    */
   public java.lang.String getSipRecordingMediaLabel() {
@@ -229,9 +148,6 @@ public final class GoogleCloudDialogflowV2Participant extends com.google.api.cli
   }
 
   /**
-   * Optional. Label applied to streams representing this participant in SIPREC XML metadata and
-   * SDP. This is used to assign transcriptions from that media stream to this participant. This
-   * field can be updated.
    * @param sipRecordingMediaLabel sipRecordingMediaLabel or {@code null} for none
    */
   public GoogleCloudDialogflowV2Participant setSipRecordingMediaLabel(java.lang.String sipRecordingMediaLabel) {

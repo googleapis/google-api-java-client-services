@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Metric and corresponding confidence intervals.
+ * Model definition for GoogleCloudDialogflowCxV3ExperimentResultMetric.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,42 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.google.api.client.json.GenericJson {
 
   /**
-   * The probability that the treatment is better than all other treatments in the experiment
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval confidenceInterval;
 
   /**
-   * Count value of a metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double count;
 
   /**
-   * Count-based metric type. Only one of type or count_type is specified in each Metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String countType;
 
   /**
-   * Ratio value of a metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double ratio;
 
   /**
-   * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The probability that the treatment is better than all other treatments in the experiment
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval getConfidenceInterval() {
@@ -73,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.g
   }
 
   /**
-   * The probability that the treatment is better than all other treatments in the experiment
    * @param confidenceInterval confidenceInterval or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultMetric setConfidenceInterval(GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval confidenceInterval) {
@@ -82,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.g
   }
 
   /**
-   * Count value of a metric.
    * @return value or {@code null} for none
    */
   public java.lang.Double getCount() {
@@ -90,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.g
   }
 
   /**
-   * Count value of a metric.
    * @param count count or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultMetric setCount(java.lang.Double count) {
@@ -99,7 +90,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.g
   }
 
   /**
-   * Count-based metric type. Only one of type or count_type is specified in each Metric.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountType() {
@@ -107,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.g
   }
 
   /**
-   * Count-based metric type. Only one of type or count_type is specified in each Metric.
    * @param countType countType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultMetric setCountType(java.lang.String countType) {
@@ -116,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.g
   }
 
   /**
-   * Ratio value of a metric.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRatio() {
@@ -124,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.g
   }
 
   /**
-   * Ratio value of a metric.
    * @param ratio ratio or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultMetric setRatio(java.lang.Double ratio) {
@@ -133,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.g
   }
 
   /**
-   * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -141,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetric extends com.g
   }
 
   /**
-   * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResultMetric setType(java.lang.String type) {

@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Custom conversation models used in agent assist feature. Supported feature: ARTICLE_SUGGESTION,
- * SMART_COMPOSE, SMART_REPLY, CONVERSATION_SUMMARIZATION
+ * Model definition for GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,23 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Version of current baseline model. It will be ignored if model is set. Valid versions are: -
-   * Article Suggestion baseline model: - 0.9 - 1.0 (default) - Summarization baseline model: - 1.0
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String baselineModelVersion;
 
   /**
-   * Conversation model resource name. Format: `projects//conversationModels/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
 
   /**
-   * Version of current baseline model. It will be ignored if model is set. Valid versions are: -
-   * Article Suggestion baseline model: - 0.9 - 1.0 (default) - Summarization baseline model: - 1.0
    * @return value or {@code null} for none
    */
   public java.lang.String getBaselineModelVersion() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
   }
 
   /**
-   * Version of current baseline model. It will be ignored if model is set. Valid versions are: -
-   * Article Suggestion baseline model: - 0.9 - 1.0 (default) - Summarization baseline model: - 1.0
    * @param baselineModelVersion baselineModelVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfig setBaselineModelVersion(java.lang.String baselineModelVersion) {
@@ -65,7 +57,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
   }
 
   /**
-   * Conversation model resource name. Format: `projects//conversationModels/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -73,7 +64,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
   }
 
   /**
-   * Conversation model resource name. Format: `projects//conversationModels/`.
    * @param model model or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfig setModel(java.lang.String model) {

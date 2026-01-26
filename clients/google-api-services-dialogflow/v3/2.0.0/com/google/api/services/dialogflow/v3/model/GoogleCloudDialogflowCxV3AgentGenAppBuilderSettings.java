@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for Gen App Builder.
+ * Model definition for GoogleCloudDialogflowCxV3AgentGenAppBuilderSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,18 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3AgentGenAppBuilderSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full name of the Gen App Builder engine related to this agent if there is one.
-   * Format: `projects/{Project ID}/locations/{Location ID}/collections/{Collection
-   * ID}/engines/{Engine ID}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String engine;
 
   /**
-   * Required. The full name of the Gen App Builder engine related to this agent if there is one.
-   * Format: `projects/{Project ID}/locations/{Location ID}/collections/{Collection
-   * ID}/engines/{Engine ID}`
    * @return value or {@code null} for none
    */
   public java.lang.String getEngine() {
@@ -49,9 +43,6 @@ public final class GoogleCloudDialogflowCxV3AgentGenAppBuilderSettings extends c
   }
 
   /**
-   * Required. The full name of the Gen App Builder engine related to this agent if there is one.
-   * Format: `projects/{Project ID}/locations/{Location ID}/collections/{Collection
-   * ID}/engines/{Engine ID}`
    * @param engine engine or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AgentGenAppBuilderSettings setEngine(java.lang.String engine) {

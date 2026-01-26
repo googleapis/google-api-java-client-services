@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The input from the human user.
+ * Model definition for GoogleCloudDialogflowCxV3ConversationTurnUserInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,36 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3ConversationTurnUserInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether sentiment analysis is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableSentimentAnalysis;
 
   /**
-   * Parameters that need to be injected into the conversation during intent detection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> injectedParameters;
 
   /**
-   * Supports text input, event input, dtmf input in the test case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3QueryInput input;
 
   /**
-   * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters
-   * are injected, webhooks should not be enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isWebhookEnabled;
 
   /**
-   * Whether sentiment analysis is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSentimentAnalysis() {
@@ -67,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInput extends co
   }
 
   /**
-   * Whether sentiment analysis is enabled.
    * @param enableSentimentAnalysis enableSentimentAnalysis or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ConversationTurnUserInput setEnableSentimentAnalysis(java.lang.Boolean enableSentimentAnalysis) {
@@ -76,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInput extends co
   }
 
   /**
-   * Parameters that need to be injected into the conversation during intent detection.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getInjectedParameters() {
@@ -84,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInput extends co
   }
 
   /**
-   * Parameters that need to be injected into the conversation during intent detection.
    * @param injectedParameters injectedParameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ConversationTurnUserInput setInjectedParameters(java.util.Map<String, java.lang.Object> injectedParameters) {
@@ -93,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInput extends co
   }
 
   /**
-   * Supports text input, event input, dtmf input in the test case.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput getInput() {
@@ -101,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInput extends co
   }
 
   /**
-   * Supports text input, event input, dtmf input in the test case.
    * @param input input or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ConversationTurnUserInput setInput(GoogleCloudDialogflowCxV3QueryInput input) {
@@ -110,8 +99,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInput extends co
   }
 
   /**
-   * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters
-   * are injected, webhooks should not be enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsWebhookEnabled() {
@@ -119,8 +106,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInput extends co
   }
 
   /**
-   * If webhooks should be allowed to trigger in response to the user utterance. Often if parameters
-   * are injected, webhooks should not be enabled.
    * @param isWebhookEnabled isWebhookEnabled or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ConversationTurnUserInput setIsWebhookEnabled(java.lang.Boolean isWebhookEnabled) {

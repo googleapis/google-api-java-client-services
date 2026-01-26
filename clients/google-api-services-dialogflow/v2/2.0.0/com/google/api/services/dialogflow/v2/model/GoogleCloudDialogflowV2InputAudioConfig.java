@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Instructs the speech recognizer how to process the audio content.
+ * Model definition for GoogleCloudDialogflowV2InputAudioConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,123 +30,84 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Audio encoding of the audio content to process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioEncoding;
 
   /**
-   * Only used in Participants.AnalyzeContent and Participants.StreamingAnalyzeContent. If `false`
-   * and recognition doesn't return any result, trigger `NO_SPEECH_RECOGNIZED` event to Dialogflow
-   * agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableNoSpeechRecognizedEvent;
 
   /**
-   * Enable automatic punctuation option at the speech backend.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAutomaticPunctuation;
 
   /**
-   * If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information
-   * about the recognized speech words, e.g. start and end time offsets. If false or unspecified,
-   * Speech doesn't return any word-level information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableWordInfo;
 
   /**
-   * Required. The language of the supplied audio. Dialogflow does not do translations. See
-   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
-   * the currently supported language codes. Note that queries in the same session do not
-   * necessarily need to specify the same language. If not set, the language is inferred from the
-   * ConversationProfile.stt_config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Optional. Which Speech model to select for the given request. For more information, see [Speech
-   * models](https://cloud.google.com/dialogflow/es/docs/speech-models).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
 
   /**
-   * Which variant of the Speech model to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String modelVariant;
 
   /**
-   * If `true`, the request will opt out for STT conformer model migration. This field will be
-   * deprecated once force migration takes place in June 2024. Please refer to [Dialogflow ES Speech
-   * model migration](https://cloud.google.com/dialogflow/es/docs/speech-model-migration).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean optOutConformerModelMigration;
 
   /**
-   * A list of strings containing words and phrases that the speech recognizer should recognize with
-   * higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-
-   * text/docs/basics#phrase-hints) for more details. This field is deprecated. Please use
-   * [`speech_contexts`]() instead. If you specify both [`phrase_hints`]() and
-   * [`speech_contexts`](), Dialogflow will treat the [`phrase_hints`]() as a single additional
-   * [`SpeechContext`]().
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> phraseHints;
 
   /**
-   * A collection of phrase set resources to use for speech adaptation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> phraseSets;
 
   /**
-   * Required. Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech
-   * API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * If `false` (default), recognition does not cease until the client closes the stream. If `true`,
-   * the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it
-   * detects the audio's voice has stopped or paused. In this case, once a detected intent is
-   * received, the client should close the stream and start a new request with a new stream as
-   * needed. Note: This setting is relevant only for streaming methods. Note: When specified,
-   * InputAudioConfig.single_utterance takes precedence over
-   * StreamingDetectIntentRequest.single_utterance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean singleUtterance;
 
   /**
-   * Context information to assist speech recognition. See [the Cloud Speech
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more
-   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2SpeechContext> speechContexts;
 
   /**
-   * Required. Audio encoding of the audio content to process.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioEncoding() {
@@ -154,7 +115,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Required. Audio encoding of the audio content to process.
    * @param audioEncoding audioEncoding or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setAudioEncoding(java.lang.String audioEncoding) {
@@ -163,9 +123,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Only used in Participants.AnalyzeContent and Participants.StreamingAnalyzeContent. If `false`
-   * and recognition doesn't return any result, trigger `NO_SPEECH_RECOGNIZED` event to Dialogflow
-   * agent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableNoSpeechRecognizedEvent() {
@@ -173,9 +130,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Only used in Participants.AnalyzeContent and Participants.StreamingAnalyzeContent. If `false`
-   * and recognition doesn't return any result, trigger `NO_SPEECH_RECOGNIZED` event to Dialogflow
-   * agent.
    * @param disableNoSpeechRecognizedEvent disableNoSpeechRecognizedEvent or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setDisableNoSpeechRecognizedEvent(java.lang.Boolean disableNoSpeechRecognizedEvent) {
@@ -184,7 +138,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Enable automatic punctuation option at the speech backend.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAutomaticPunctuation() {
@@ -192,7 +145,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Enable automatic punctuation option at the speech backend.
    * @param enableAutomaticPunctuation enableAutomaticPunctuation or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setEnableAutomaticPunctuation(java.lang.Boolean enableAutomaticPunctuation) {
@@ -201,9 +153,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information
-   * about the recognized speech words, e.g. start and end time offsets. If false or unspecified,
-   * Speech doesn't return any word-level information.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableWordInfo() {
@@ -211,9 +160,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information
-   * about the recognized speech words, e.g. start and end time offsets. If false or unspecified,
-   * Speech doesn't return any word-level information.
    * @param enableWordInfo enableWordInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setEnableWordInfo(java.lang.Boolean enableWordInfo) {
@@ -222,11 +168,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Required. The language of the supplied audio. Dialogflow does not do translations. See
-   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
-   * the currently supported language codes. Note that queries in the same session do not
-   * necessarily need to specify the same language. If not set, the language is inferred from the
-   * ConversationProfile.stt_config.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -234,11 +175,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Required. The language of the supplied audio. Dialogflow does not do translations. See
-   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
-   * the currently supported language codes. Note that queries in the same session do not
-   * necessarily need to specify the same language. If not set, the language is inferred from the
-   * ConversationProfile.stt_config.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setLanguageCode(java.lang.String languageCode) {
@@ -247,8 +183,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Optional. Which Speech model to select for the given request. For more information, see [Speech
-   * models](https://cloud.google.com/dialogflow/es/docs/speech-models).
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -256,8 +190,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Optional. Which Speech model to select for the given request. For more information, see [Speech
-   * models](https://cloud.google.com/dialogflow/es/docs/speech-models).
    * @param model model or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setModel(java.lang.String model) {
@@ -266,7 +198,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Which variant of the Speech model to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelVariant() {
@@ -274,7 +205,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Which variant of the Speech model to use.
    * @param modelVariant modelVariant or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setModelVariant(java.lang.String modelVariant) {
@@ -283,9 +213,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * If `true`, the request will opt out for STT conformer model migration. This field will be
-   * deprecated once force migration takes place in June 2024. Please refer to [Dialogflow ES Speech
-   * model migration](https://cloud.google.com/dialogflow/es/docs/speech-model-migration).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptOutConformerModelMigration() {
@@ -293,9 +220,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * If `true`, the request will opt out for STT conformer model migration. This field will be
-   * deprecated once force migration takes place in June 2024. Please refer to [Dialogflow ES Speech
-   * model migration](https://cloud.google.com/dialogflow/es/docs/speech-model-migration).
    * @param optOutConformerModelMigration optOutConformerModelMigration or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setOptOutConformerModelMigration(java.lang.Boolean optOutConformerModelMigration) {
@@ -304,12 +228,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * A list of strings containing words and phrases that the speech recognizer should recognize with
-   * higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-
-   * text/docs/basics#phrase-hints) for more details. This field is deprecated. Please use
-   * [`speech_contexts`]() instead. If you specify both [`phrase_hints`]() and
-   * [`speech_contexts`](), Dialogflow will treat the [`phrase_hints`]() as a single additional
-   * [`SpeechContext`]().
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhraseHints() {
@@ -317,12 +235,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * A list of strings containing words and phrases that the speech recognizer should recognize with
-   * higher likelihood. See [the Cloud Speech documentation](https://cloud.google.com/speech-to-
-   * text/docs/basics#phrase-hints) for more details. This field is deprecated. Please use
-   * [`speech_contexts`]() instead. If you specify both [`phrase_hints`]() and
-   * [`speech_contexts`](), Dialogflow will treat the [`phrase_hints`]() as a single additional
-   * [`SpeechContext`]().
    * @param phraseHints phraseHints or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setPhraseHints(java.util.List<java.lang.String> phraseHints) {
@@ -331,7 +243,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * A collection of phrase set resources to use for speech adaptation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhraseSets() {
@@ -339,7 +250,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * A collection of phrase set resources to use for speech adaptation.
    * @param phraseSets phraseSets or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setPhraseSets(java.util.List<java.lang.String> phraseSets) {
@@ -348,8 +258,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Required. Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech
-   * API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleRateHertz() {
@@ -357,8 +265,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Required. Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech
-   * API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * @param sampleRateHertz sampleRateHertz or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setSampleRateHertz(java.lang.Integer sampleRateHertz) {
@@ -367,13 +273,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * If `false` (default), recognition does not cease until the client closes the stream. If `true`,
-   * the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it
-   * detects the audio's voice has stopped or paused. In this case, once a detected intent is
-   * received, the client should close the stream and start a new request with a new stream as
-   * needed. Note: This setting is relevant only for streaming methods. Note: When specified,
-   * InputAudioConfig.single_utterance takes precedence over
-   * StreamingDetectIntentRequest.single_utterance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSingleUtterance() {
@@ -381,13 +280,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * If `false` (default), recognition does not cease until the client closes the stream. If `true`,
-   * the recognizer will detect a single spoken utterance in input audio. Recognition ceases when it
-   * detects the audio's voice has stopped or paused. In this case, once a detected intent is
-   * received, the client should close the stream and start a new request with a new stream as
-   * needed. Note: This setting is relevant only for streaming methods. Note: When specified,
-   * InputAudioConfig.single_utterance takes precedence over
-   * StreamingDetectIntentRequest.single_utterance.
    * @param singleUtterance singleUtterance or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setSingleUtterance(java.lang.Boolean singleUtterance) {
@@ -396,9 +288,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Context information to assist speech recognition. See [the Cloud Speech
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more
-   * details.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SpeechContext> getSpeechContexts() {
@@ -406,9 +295,6 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   }
 
   /**
-   * Context information to assist speech recognition. See [the Cloud Speech
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more
-   * details.
    * @param speechContexts speechContexts or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputAudioConfig setSpeechContexts(java.util.List<GoogleCloudDialogflowV2SpeechContext> speechContexts) {

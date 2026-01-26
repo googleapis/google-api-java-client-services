@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A reference to the schema of an existing tool.
+ * Model definition for GoogleCloudDialogflowCxV3TypeSchemaSchemaReference.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3TypeSchemaSchemaReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String schema;
 
   /**
-   * The tool that contains this schema definition. Format: `projects//locations//agents//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tool;
 
   /**
-   * The name of the schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchema() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3TypeSchemaSchemaReference extends co
   }
 
   /**
-   * The name of the schema.
    * @param schema schema or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TypeSchemaSchemaReference setSchema(java.lang.String schema) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3TypeSchemaSchemaReference extends co
   }
 
   /**
-   * The tool that contains this schema definition. Format: `projects//locations//agents//tools/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTool() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3TypeSchemaSchemaReference extends co
   }
 
   /**
-   * The tool that contains this schema definition. Format: `projects//locations//agents//tools/`.
    * @param tool tool or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TypeSchemaSchemaReference setTool(java.lang.String tool) {

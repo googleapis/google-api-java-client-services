@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The request message for Conversations.BatchCreateMessagesRequest.
+ * Model definition for GoogleCloudDialogflowV2beta1BatchCreateMessagesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,18 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1BatchCreateMessagesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A maximum of 300 messages can be created in a batch.
-   * CreateMessageRequest.message.send_time is required. All created messages will have identical
-   * Message.create_time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1CreateMessageRequest> requests;
 
   /**
-   * Required. A maximum of 300 messages can be created in a batch.
-   * CreateMessageRequest.message.send_time is required. All created messages will have identical
-   * Message.create_time.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1CreateMessageRequest> getRequests() {
@@ -49,9 +43,6 @@ public final class GoogleCloudDialogflowV2beta1BatchCreateMessagesRequest extend
   }
 
   /**
-   * Required. A maximum of 300 messages can be created in a batch.
-   * CreateMessageRequest.message.send_time is required. All created messages will have identical
-   * Message.create_time.
    * @param requests requests or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1BatchCreateMessagesRequest setRequests(java.util.List<GoogleCloudDialogflowV2beta1CreateMessageRequest> requests) {

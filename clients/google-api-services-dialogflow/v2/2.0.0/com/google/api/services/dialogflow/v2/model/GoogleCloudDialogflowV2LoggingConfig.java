@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Defines logging behavior for conversation lifecycle events.
+ * Model definition for GoogleCloudDialogflowV2LoggingConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2LoggingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation
-   * project as JSON format ConversationEvent protos.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableStackdriverLogging;
 
   /**
-   * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation
-   * project as JSON format ConversationEvent protos.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableStackdriverLogging() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2LoggingConfig extends com.google.api.c
   }
 
   /**
-   * Whether to log conversation events like CONVERSATION_STARTED to Stackdriver in the conversation
-   * project as JSON format ConversationEvent protos.
    * @param enableStackdriverLogging enableStackdriverLogging or {@code null} for none
    */
   public GoogleCloudDialogflowV2LoggingConfig setEnableStackdriverLogging(java.lang.Boolean enableStackdriverLogging) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a suggestion for a human agent.
+ * Model definition for GoogleCloudDialogflowV2beta1Suggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,44 +30,36 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Articles ordered by score in descending order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SuggestionArticle> articles;
 
   /**
-   * Output only. The time the suggestion was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. Answers extracted from FAQ documents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SuggestionFaqAnswer> faqAnswers;
 
   /**
-   * Output only. Latest message used as context to compile this suggestion. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Output only. The name of this suggestion. Format:
-   * `projects//locations//conversations//participants/suggestions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Articles ordered by score in descending order.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SuggestionArticle> getArticles() {
@@ -75,7 +67,6 @@ public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api
   }
 
   /**
-   * Output only. Articles ordered by score in descending order.
    * @param articles articles or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Suggestion setArticles(java.util.List<GoogleCloudDialogflowV2beta1SuggestionArticle> articles) {
@@ -84,7 +75,6 @@ public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api
   }
 
   /**
-   * Output only. The time the suggestion was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -92,7 +82,6 @@ public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api
   }
 
   /**
-   * Output only. The time the suggestion was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Suggestion setCreateTime(String createTime) {
@@ -101,7 +90,6 @@ public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api
   }
 
   /**
-   * Output only. Answers extracted from FAQ documents.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SuggestionFaqAnswer> getFaqAnswers() {
@@ -109,7 +97,6 @@ public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api
   }
 
   /**
-   * Output only. Answers extracted from FAQ documents.
    * @param faqAnswers faqAnswers or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Suggestion setFaqAnswers(java.util.List<GoogleCloudDialogflowV2beta1SuggestionFaqAnswer> faqAnswers) {
@@ -118,8 +105,6 @@ public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api
   }
 
   /**
-   * Output only. Latest message used as context to compile this suggestion. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -127,8 +112,6 @@ public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api
   }
 
   /**
-   * Output only. Latest message used as context to compile this suggestion. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Suggestion setLatestMessage(java.lang.String latestMessage) {
@@ -137,8 +120,6 @@ public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api
   }
 
   /**
-   * Output only. The name of this suggestion. Format:
-   * `projects//locations//conversations//participants/suggestions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -146,8 +127,6 @@ public final class GoogleCloudDialogflowV2beta1Suggestion extends com.google.api
   }
 
   /**
-   * Output only. The name of this suggestion. Format:
-   * `projects//locations//conversations//participants/suggestions/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Suggestion setName(java.lang.String name) {

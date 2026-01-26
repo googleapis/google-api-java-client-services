@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Relevant example used for the LLM prompt.
+ * Model definition for GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample extends com.google.api.client.json.GenericJson {
 
   /**
-   * The display name of the example.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exampleDisplayName;
 
   /**
-   * The id of the example.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exampleId;
 
   /**
-   * Optional. The matched retrieval label of this LLM call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matchedRetrievalLabel;
 
   /**
-   * Retrieval strategy of the example.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String retrievalStrategy;
 
   /**
-   * The display name of the example.
    * @return value or {@code null} for none
    */
   public java.lang.String getExampleDisplayName() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample extends
   }
 
   /**
-   * The display name of the example.
    * @param exampleDisplayName exampleDisplayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample setExampleDisplayName(java.lang.String exampleDisplayName) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample extends
   }
 
   /**
-   * The id of the example.
    * @return value or {@code null} for none
    */
   public java.lang.String getExampleId() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample extends
   }
 
   /**
-   * The id of the example.
    * @param exampleId exampleId or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample setExampleId(java.lang.String exampleId) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample extends
   }
 
   /**
-   * Optional. The matched retrieval label of this LLM call.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchedRetrievalLabel() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample extends
   }
 
   /**
-   * Optional. The matched retrieval label of this LLM call.
    * @param matchedRetrievalLabel matchedRetrievalLabel or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample setMatchedRetrievalLabel(java.lang.String matchedRetrievalLabel) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample extends
   }
 
   /**
-   * Retrieval strategy of the example.
    * @return value or {@code null} for none
    */
   public java.lang.String getRetrievalStrategy() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample extends
   }
 
   /**
-   * Retrieval strategy of the example.
    * @param retrievalStrategy retrievalStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample setRetrievalStrategy(java.lang.String retrievalStrategy) {

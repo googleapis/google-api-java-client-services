@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Indicates that the conversation should be handed off to a human agent. Dialogflow only uses this
- * to determine which conversations were handed off to a human agent for measurement purposes. What
- * else to do with this signal is up to you and your handoff procedures. You may set this, for
- * example: * In the entry fulfillment of a Dialogflow CX Page if entering the page indicates
- * something went extremely wrong in the conversation. * In a webhook response when you determine
- * that the customer issue can only be handled by a human.
+ * Model definition for GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff extends com.google.api.client.json.GenericJson {
 
   /**
-   * Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -50,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff e
   }
 
   /**
-   * Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff setMetadata(java.util.Map<String, java.lang.Object> metadata) {

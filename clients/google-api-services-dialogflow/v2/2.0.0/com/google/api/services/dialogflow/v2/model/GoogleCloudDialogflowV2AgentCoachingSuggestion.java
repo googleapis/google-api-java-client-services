@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Suggestion for coaching agents.
+ * Model definition for GoogleCloudDialogflowV2AgentCoachingSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AgentCoachingSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Suggested actions for the agent to take.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSuggestion> agentActionSuggestions;
 
   /**
-   * Optional. Instructions applicable based on the current context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,14 +48,12 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestion extends com.go
   }
 
   /**
-   * Optional. Sample response for the Agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse> sampleResponses;
 
   /**
-   * Optional. Suggested actions for the agent to take.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSuggestion> getAgentActionSuggestions() {
@@ -65,7 +61,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestion extends com.go
   }
 
   /**
-   * Optional. Suggested actions for the agent to take.
    * @param agentActionSuggestions agentActionSuggestions or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestion setAgentActionSuggestions(java.util.List<GoogleCloudDialogflowV2AgentCoachingSuggestionAgentActionSuggestion> agentActionSuggestions) {
@@ -74,7 +69,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestion extends com.go
   }
 
   /**
-   * Optional. Instructions applicable based on the current context.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2AgentCoachingInstruction> getApplicableInstructions() {
@@ -82,7 +76,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestion extends com.go
   }
 
   /**
-   * Optional. Instructions applicable based on the current context.
    * @param applicableInstructions applicableInstructions or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestion setApplicableInstructions(java.util.List<GoogleCloudDialogflowV2AgentCoachingInstruction> applicableInstructions) {
@@ -91,7 +84,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestion extends com.go
   }
 
   /**
-   * Optional. Sample response for the Agent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse> getSampleResponses() {
@@ -99,7 +91,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestion extends com.go
   }
 
   /**
-   * Optional. Sample response for the Agent.
    * @param sampleResponses sampleResponses or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestion setSampleResponses(java.util.List<GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse> sampleResponses) {

@@ -17,11 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Playbook is the basic building block to instruct the LLM how to execute a certain task. A
- * playbook consists of a goal to accomplish, an optional list of step by step instructions (the
- * step instruction may refers to name of the custom or default plugin tools to use) to perform the
- * task, a list of contextual input data to be passed in at the beginning of the invoked, and a list
- * of output parameters to store the playbook result.
+ * Model definition for GoogleCloudDialogflowCxV3Playbook.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -34,36 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The playbook's scoped code block, which may implement handlers and actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3CodeBlock codeBlock;
 
   /**
-   * Output only. The timestamp of initial playbook creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Required. The human-readable name of the playbook, unique within an agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. High level description of the goal the playbook intend to accomplish. A goal should
-   * be concise since it's visible to other playbooks that may reference this playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String goal;
 
   /**
-   * Optional. A list of registered handlers to execuate based on the specified triggers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,16 +66,12 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Output only. Names of inline actions scoped to this playbook. These actions are in
-   * addition to those belonging to referenced tools, child playbooks, and flows, e.g. actions that
-   * are defined in the playbook's code block.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> inlineActions;
 
   /**
-   * Optional. Defined structured input parameters for this playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,28 +84,24 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Instruction to accomplish target goal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3PlaybookInstruction instruction;
 
   /**
-   * Optional. Llm model settings for the playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings;
 
   /**
-   * The unique identifier of the playbook. Format: `projects//locations//agents//playbooks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. Defined structured output parameters for this playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,52 +114,42 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Type of the playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String playbookType;
 
   /**
-   * Output only. The resource name of flows referenced by the current playbook in the instructions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> referencedFlows;
 
   /**
-   * Output only. The resource name of other playbooks referenced by the current playbook in the
-   * instructions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> referencedPlaybooks;
 
   /**
-   * Optional. The resource name of tools referenced by the current playbook in the instructions. If
-   * not provided explicitly, they are will be implied using the tool being referenced in goal and
-   * steps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> referencedTools;
 
   /**
-   * Output only. Estimated number of tokes current playbook takes when sent to the LLM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long tokenCount;
 
   /**
-   * Output only. Last time the playbook version was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. The playbook's scoped code block, which may implement handlers and actions.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3CodeBlock getCodeBlock() {
@@ -185,7 +157,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. The playbook's scoped code block, which may implement handlers and actions.
    * @param codeBlock codeBlock or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setCodeBlock(GoogleCloudDialogflowCxV3CodeBlock codeBlock) {
@@ -194,7 +165,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. The timestamp of initial playbook creation.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -202,7 +172,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. The timestamp of initial playbook creation.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setCreateTime(String createTime) {
@@ -211,7 +180,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Required. The human-readable name of the playbook, unique within an agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -219,7 +187,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Required. The human-readable name of the playbook, unique within an agent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setDisplayName(java.lang.String displayName) {
@@ -228,8 +195,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Required. High level description of the goal the playbook intend to accomplish. A goal should
-   * be concise since it's visible to other playbooks that may reference this playbook.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoal() {
@@ -237,8 +202,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Required. High level description of the goal the playbook intend to accomplish. A goal should
-   * be concise since it's visible to other playbooks that may reference this playbook.
    * @param goal goal or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setGoal(java.lang.String goal) {
@@ -247,7 +210,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. A list of registered handlers to execuate based on the specified triggers.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3Handler> getHandlers() {
@@ -255,7 +217,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. A list of registered handlers to execuate based on the specified triggers.
    * @param handlers handlers or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setHandlers(java.util.List<GoogleCloudDialogflowCxV3Handler> handlers) {
@@ -264,9 +225,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Output only. Names of inline actions scoped to this playbook. These actions are in
-   * addition to those belonging to referenced tools, child playbooks, and flows, e.g. actions that
-   * are defined in the playbook's code block.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInlineActions() {
@@ -274,9 +232,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Output only. Names of inline actions scoped to this playbook. These actions are in
-   * addition to those belonging to referenced tools, child playbooks, and flows, e.g. actions that
-   * are defined in the playbook's code block.
    * @param inlineActions inlineActions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setInlineActions(java.util.List<java.lang.String> inlineActions) {
@@ -285,7 +240,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Defined structured input parameters for this playbook.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> getInputParameterDefinitions() {
@@ -293,7 +247,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Defined structured input parameters for this playbook.
    * @param inputParameterDefinitions inputParameterDefinitions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setInputParameterDefinitions(java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> inputParameterDefinitions) {
@@ -302,7 +255,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Instruction to accomplish target goal.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookInstruction getInstruction() {
@@ -310,7 +262,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Instruction to accomplish target goal.
    * @param instruction instruction or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setInstruction(GoogleCloudDialogflowCxV3PlaybookInstruction instruction) {
@@ -319,7 +270,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Llm model settings for the playbook.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3LlmModelSettings getLlmModelSettings() {
@@ -327,7 +277,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Llm model settings for the playbook.
    * @param llmModelSettings llmModelSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setLlmModelSettings(GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings) {
@@ -336,7 +285,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * The unique identifier of the playbook. Format: `projects//locations//agents//playbooks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -344,7 +292,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * The unique identifier of the playbook. Format: `projects//locations//agents//playbooks/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setName(java.lang.String name) {
@@ -353,7 +300,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Defined structured output parameters for this playbook.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> getOutputParameterDefinitions() {
@@ -361,7 +307,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Defined structured output parameters for this playbook.
    * @param outputParameterDefinitions outputParameterDefinitions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setOutputParameterDefinitions(java.util.List<GoogleCloudDialogflowCxV3ParameterDefinition> outputParameterDefinitions) {
@@ -370,7 +315,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Type of the playbook.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaybookType() {
@@ -378,7 +322,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. Type of the playbook.
    * @param playbookType playbookType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setPlaybookType(java.lang.String playbookType) {
@@ -387,7 +330,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. The resource name of flows referenced by the current playbook in the instructions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReferencedFlows() {
@@ -395,7 +337,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. The resource name of flows referenced by the current playbook in the instructions.
    * @param referencedFlows referencedFlows or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setReferencedFlows(java.util.List<java.lang.String> referencedFlows) {
@@ -404,8 +345,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. The resource name of other playbooks referenced by the current playbook in the
-   * instructions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReferencedPlaybooks() {
@@ -413,8 +352,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. The resource name of other playbooks referenced by the current playbook in the
-   * instructions.
    * @param referencedPlaybooks referencedPlaybooks or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setReferencedPlaybooks(java.util.List<java.lang.String> referencedPlaybooks) {
@@ -423,9 +360,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. The resource name of tools referenced by the current playbook in the instructions. If
-   * not provided explicitly, they are will be implied using the tool being referenced in goal and
-   * steps.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReferencedTools() {
@@ -433,9 +367,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Optional. The resource name of tools referenced by the current playbook in the instructions. If
-   * not provided explicitly, they are will be implied using the tool being referenced in goal and
-   * steps.
    * @param referencedTools referencedTools or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setReferencedTools(java.util.List<java.lang.String> referencedTools) {
@@ -444,7 +375,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. Estimated number of tokes current playbook takes when sent to the LLM.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTokenCount() {
@@ -452,7 +382,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. Estimated number of tokes current playbook takes when sent to the LLM.
    * @param tokenCount tokenCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setTokenCount(java.lang.Long tokenCount) {
@@ -461,7 +390,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. Last time the playbook version was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -469,7 +397,6 @@ public final class GoogleCloudDialogflowCxV3Playbook extends com.google.api.clie
   }
 
   /**
-   * Output only. Last time the playbook version was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Playbook setUpdateTime(String updateTime) {

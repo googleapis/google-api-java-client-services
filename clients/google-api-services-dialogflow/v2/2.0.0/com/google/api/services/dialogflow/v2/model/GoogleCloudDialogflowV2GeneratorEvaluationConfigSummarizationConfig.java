@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Evaluation configs for summarization generator.
+ * Model definition for GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarizationConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,45 +30,36 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarizationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Version for summarization accuracy. This will determine the prompt and model used at
-   * backend.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accuracyEvaluationVersion;
 
   /**
-   * Optional. Version for summarization completeness. This will determine the prompt and model used
-   * at backend.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String completenessEvaluationVersion;
 
   /**
-   * Optional. Enable accuracy evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAccuracyEvaluation;
 
   /**
-   * Optional. Enable completeness evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableCompletenessEvaluation;
 
   /**
-   * Optional. Version for summarization evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String evaluatorVersion;
 
   /**
-   * Optional. Version for summarization accuracy. This will determine the prompt and model used at
-   * backend.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccuracyEvaluationVersion() {
@@ -76,8 +67,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Optional. Version for summarization accuracy. This will determine the prompt and model used at
-   * backend.
    * @param accuracyEvaluationVersion accuracyEvaluationVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarizationConfig setAccuracyEvaluationVersion(java.lang.String accuracyEvaluationVersion) {
@@ -86,8 +75,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Optional. Version for summarization completeness. This will determine the prompt and model used
-   * at backend.
    * @return value or {@code null} for none
    */
   public java.lang.String getCompletenessEvaluationVersion() {
@@ -95,8 +82,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Optional. Version for summarization completeness. This will determine the prompt and model used
-   * at backend.
    * @param completenessEvaluationVersion completenessEvaluationVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarizationConfig setCompletenessEvaluationVersion(java.lang.String completenessEvaluationVersion) {
@@ -105,7 +90,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Optional. Enable accuracy evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAccuracyEvaluation() {
@@ -113,7 +97,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Optional. Enable accuracy evaluation.
    * @param enableAccuracyEvaluation enableAccuracyEvaluation or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarizationConfig setEnableAccuracyEvaluation(java.lang.Boolean enableAccuracyEvaluation) {
@@ -122,7 +105,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Optional. Enable completeness evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableCompletenessEvaluation() {
@@ -130,7 +112,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Optional. Enable completeness evaluation.
    * @param enableCompletenessEvaluation enableCompletenessEvaluation or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarizationConfig setEnableCompletenessEvaluation(java.lang.Boolean enableCompletenessEvaluation) {
@@ -139,7 +120,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Optional. Version for summarization evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvaluatorVersion() {
@@ -147,7 +127,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarization
   }
 
   /**
-   * Optional. Version for summarization evaluation.
    * @param evaluatorVersion evaluatorVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfigSummarizationConfig setEvaluatorVersion(java.lang.String evaluatorVersion) {

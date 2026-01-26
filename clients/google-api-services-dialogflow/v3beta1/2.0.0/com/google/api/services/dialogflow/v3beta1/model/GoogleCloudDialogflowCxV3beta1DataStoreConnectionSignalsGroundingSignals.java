@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Grounding signals.
+ * Model definition for GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroundingSignals.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroundingSignals extends com.google.api.client.json.GenericJson {
 
   /**
-   * Represents the decision of the grounding check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String decision;
 
   /**
-   * Grounding score bucket setting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String score;
 
   /**
-   * Represents the decision of the grounding check.
    * @return value or {@code null} for none
    */
   public java.lang.String getDecision() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroun
   }
 
   /**
-   * Represents the decision of the grounding check.
    * @param decision decision or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroundingSignals setDecision(java.lang.String decision) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroun
   }
 
   /**
-   * Grounding score bucket setting.
    * @return value or {@code null} for none
    */
   public java.lang.String getScore() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroun
   }
 
   /**
-   * Grounding score bucket setting.
    * @param score score or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsGroundingSignals setScore(java.lang.String score) {

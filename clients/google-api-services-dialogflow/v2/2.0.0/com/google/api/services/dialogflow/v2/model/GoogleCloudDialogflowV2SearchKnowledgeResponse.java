@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The response message for Conversations.SearchKnowledge.
+ * Model definition for GoogleCloudDialogflowV2SearchKnowledgeResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,8 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SearchKnowledgeResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Most relevant snippets extracted from articles in the given knowledge base, ordered by
-   * confidence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +42,18 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeResponse extends com.go
   }
 
   /**
-   * The rewritten query used to search knowledge.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rewrittenQuery;
 
   /**
-   * Most relevant snippets extracted from articles in the given knowledge base, ordered by
-   * confidence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2SearchKnowledgeDebugInfo searchKnowledgeDebugInfo;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SearchKnowledgeAnswer> getAnswers() {
@@ -60,8 +61,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeResponse extends com.go
   }
 
   /**
-   * Most relevant snippets extracted from articles in the given knowledge base, ordered by
-   * confidence.
    * @param answers answers or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeResponse setAnswers(java.util.List<GoogleCloudDialogflowV2SearchKnowledgeAnswer> answers) {
@@ -70,7 +69,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeResponse extends com.go
   }
 
   /**
-   * The rewritten query used to search knowledge.
    * @return value or {@code null} for none
    */
   public java.lang.String getRewrittenQuery() {
@@ -78,11 +76,25 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeResponse extends com.go
   }
 
   /**
-   * The rewritten query used to search knowledge.
    * @param rewrittenQuery rewrittenQuery or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeResponse setRewrittenQuery(java.lang.String rewrittenQuery) {
     this.rewrittenQuery = rewrittenQuery;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SearchKnowledgeDebugInfo getSearchKnowledgeDebugInfo() {
+    return searchKnowledgeDebugInfo;
+  }
+
+  /**
+   * @param searchKnowledgeDebugInfo searchKnowledgeDebugInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SearchKnowledgeResponse setSearchKnowledgeDebugInfo(GoogleCloudDialogflowV2SearchKnowledgeDebugInfo searchKnowledgeDebugInfo) {
+    this.searchKnowledgeDebugInfo = searchKnowledgeDebugInfo;
     return this;
   }
 

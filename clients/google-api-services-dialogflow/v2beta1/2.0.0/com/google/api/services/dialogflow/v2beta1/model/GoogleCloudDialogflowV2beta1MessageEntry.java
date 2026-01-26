@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a message entry of a conversation.
+ * Model definition for GoogleCloudDialogflowV2beta1MessageEntry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,37 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1MessageEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Create time of the message entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The language of the text. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Optional. Participant role of the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
 
   /**
-   * Optional. Transcript content of the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Optional. Create time of the message entry.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -68,7 +61,6 @@ public final class GoogleCloudDialogflowV2beta1MessageEntry extends com.google.a
   }
 
   /**
-   * Optional. Create time of the message entry.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1MessageEntry setCreateTime(String createTime) {
@@ -77,9 +69,6 @@ public final class GoogleCloudDialogflowV2beta1MessageEntry extends com.google.a
   }
 
   /**
-   * Optional. The language of the text. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -87,9 +76,6 @@ public final class GoogleCloudDialogflowV2beta1MessageEntry extends com.google.a
   }
 
   /**
-   * Optional. The language of the text. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1MessageEntry setLanguageCode(java.lang.String languageCode) {
@@ -98,7 +84,6 @@ public final class GoogleCloudDialogflowV2beta1MessageEntry extends com.google.a
   }
 
   /**
-   * Optional. Participant role of the message.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -106,7 +91,6 @@ public final class GoogleCloudDialogflowV2beta1MessageEntry extends com.google.a
   }
 
   /**
-   * Optional. Participant role of the message.
    * @param role role or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1MessageEntry setRole(java.lang.String role) {
@@ -115,7 +99,6 @@ public final class GoogleCloudDialogflowV2beta1MessageEntry extends com.google.a
   }
 
   /**
-   * Optional. Transcript content of the message.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -123,7 +106,6 @@ public final class GoogleCloudDialogflowV2beta1MessageEntry extends com.google.a
   }
 
   /**
-   * Optional. Transcript content of the message.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1MessageEntry setText(java.lang.String text) {

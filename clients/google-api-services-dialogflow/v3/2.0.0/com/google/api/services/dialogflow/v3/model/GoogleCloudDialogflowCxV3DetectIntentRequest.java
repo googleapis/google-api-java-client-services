@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request to detect user's intent.
+ * Model definition for GoogleCloudDialogflowCxV3DetectIntentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,36 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3DetectIntentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Instructs the speech synthesizer how to generate the output audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig;
 
   /**
-   * Required. The input specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3QueryInput queryInput;
 
   /**
-   * The parameters of this query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3QueryParameters queryParams;
 
   /**
-   * Optional. Specifies which fields in the QueryResult to return. If not set, the default is
-   * DETECT_INTENT_RESPONSE_VIEW_FULL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseView;
 
   /**
-   * Instructs the speech synthesizer how to generate the output audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3OutputAudioConfig getOutputAudioConfig() {
@@ -67,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3DetectIntentRequest extends com.goog
   }
 
   /**
-   * Instructs the speech synthesizer how to generate the output audio.
    * @param outputAudioConfig outputAudioConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DetectIntentRequest setOutputAudioConfig(GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig) {
@@ -76,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3DetectIntentRequest extends com.goog
   }
 
   /**
-   * Required. The input specification.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput getQueryInput() {
@@ -84,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3DetectIntentRequest extends com.goog
   }
 
   /**
-   * Required. The input specification.
    * @param queryInput queryInput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DetectIntentRequest setQueryInput(GoogleCloudDialogflowCxV3QueryInput queryInput) {
@@ -93,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3DetectIntentRequest extends com.goog
   }
 
   /**
-   * The parameters of this query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryParameters getQueryParams() {
@@ -101,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3DetectIntentRequest extends com.goog
   }
 
   /**
-   * The parameters of this query.
    * @param queryParams queryParams or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DetectIntentRequest setQueryParams(GoogleCloudDialogflowCxV3QueryParameters queryParams) {
@@ -110,8 +99,6 @@ public final class GoogleCloudDialogflowCxV3DetectIntentRequest extends com.goog
   }
 
   /**
-   * Optional. Specifies which fields in the QueryResult to return. If not set, the default is
-   * DETECT_INTENT_RESPONSE_VIEW_FULL.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseView() {
@@ -119,8 +106,6 @@ public final class GoogleCloudDialogflowCxV3DetectIntentRequest extends com.goog
   }
 
   /**
-   * Optional. Specifies which fields in the QueryResult to return. If not set, the default is
-   * DETECT_INTENT_RESPONSE_VIEW_FULL.
    * @param responseView responseView or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DetectIntentRequest setResponseView(java.lang.String responseView) {

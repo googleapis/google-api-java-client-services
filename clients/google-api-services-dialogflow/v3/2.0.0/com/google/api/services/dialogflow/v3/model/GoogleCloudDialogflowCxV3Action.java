@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Action performed by end user or Dialogflow agent in the conversation.
+ * Model definition for GoogleCloudDialogflowCxV3Action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,56 +30,48 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Action performed by the agent as a message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3AgentUtterance agentUtterance;
 
   /**
-   * Optional. Action performed on behalf of the agent by invoking a CX flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3FlowInvocation flowInvocation;
 
   /**
-   * Optional. Action performed on behalf of the agent by transitioning to a target CX flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3FlowTransition flowTransition;
 
   /**
-   * Optional. Action performed on behalf of the agent by invoking a child playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3PlaybookInvocation playbookInvocation;
 
   /**
-   * Optional. Action performed on behalf of the agent by transitioning to a target playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3PlaybookTransition playbookTransition;
 
   /**
-   * Optional. Action performed on behalf of the agent by calling a plugin tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolUse toolUse;
 
   /**
-   * Optional. Agent obtained a message from the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3UserUtterance userUtterance;
 
   /**
-   * Optional. Action performed by the agent as a message.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AgentUtterance getAgentUtterance() {
@@ -87,7 +79,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed by the agent as a message.
    * @param agentUtterance agentUtterance or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Action setAgentUtterance(GoogleCloudDialogflowCxV3AgentUtterance agentUtterance) {
@@ -96,7 +87,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by invoking a CX flow.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowInvocation getFlowInvocation() {
@@ -104,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by invoking a CX flow.
    * @param flowInvocation flowInvocation or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Action setFlowInvocation(GoogleCloudDialogflowCxV3FlowInvocation flowInvocation) {
@@ -113,7 +102,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by transitioning to a target CX flow.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowTransition getFlowTransition() {
@@ -121,7 +109,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by transitioning to a target CX flow.
    * @param flowTransition flowTransition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Action setFlowTransition(GoogleCloudDialogflowCxV3FlowTransition flowTransition) {
@@ -130,7 +117,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by invoking a child playbook.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookInvocation getPlaybookInvocation() {
@@ -138,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by invoking a child playbook.
    * @param playbookInvocation playbookInvocation or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Action setPlaybookInvocation(GoogleCloudDialogflowCxV3PlaybookInvocation playbookInvocation) {
@@ -147,7 +132,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by transitioning to a target playbook.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookTransition getPlaybookTransition() {
@@ -155,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by transitioning to a target playbook.
    * @param playbookTransition playbookTransition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Action setPlaybookTransition(GoogleCloudDialogflowCxV3PlaybookTransition playbookTransition) {
@@ -164,7 +147,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by calling a plugin tool.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolUse getToolUse() {
@@ -172,7 +154,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Action performed on behalf of the agent by calling a plugin tool.
    * @param toolUse toolUse or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Action setToolUse(GoogleCloudDialogflowCxV3ToolUse toolUse) {
@@ -181,7 +162,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Agent obtained a message from the customer.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3UserUtterance getUserUtterance() {
@@ -189,7 +169,6 @@ public final class GoogleCloudDialogflowCxV3Action extends com.google.api.client
   }
 
   /**
-   * Optional. Agent obtained a message from the customer.
    * @param userUtterance userUtterance or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Action setUserUtterance(GoogleCloudDialogflowCxV3UserUtterance userUtterance) {

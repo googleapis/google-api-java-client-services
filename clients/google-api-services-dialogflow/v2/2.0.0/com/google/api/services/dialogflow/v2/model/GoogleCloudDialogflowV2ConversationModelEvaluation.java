@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents evaluation result of a conversation model.
+ * Model definition for GoogleCloudDialogflowV2ConversationModelEvaluation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,58 +30,42 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Creation time of this model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The display name of the model evaluation. At most 64 bytes long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. The configuration of the evaluation task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2EvaluationConfig evaluationConfig;
 
   /**
-   * The resource name of the evaluation. Format: `projects//conversationModels//evaluations/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Human eval template in csv format. It takes real-world conversations provided
-   * through input dataset, generates example suggestions for customer to verify quality of the
-   * model. For Smart Reply, the generated csv file contains columns of Context,
-   * (Suggestions,Q1,Q2)*3, Actual reply. Context contains at most 10 latest messages in the
-   * conversation prior to the current suggestion. Q1: "Would you send it as the next message of
-   * agent?" Evaluated based on whether the suggest is appropriate to be sent by agent in current
-   * context. Q2: "Does the suggestion move the conversation closer to resolution?" Evaluated based
-   * on whether the suggestion provide solutions, or answers customer's question or collect
-   * information from customer to resolve the customer's issue. Actual reply column contains the
-   * actual agent reply sent in the context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rawHumanEvalTemplateCsv;
 
   /**
-   * Output only. Only available when model is for smart reply.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SmartReplyMetrics smartReplyMetrics;
 
   /**
-   * Output only. Creation time of this model.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -89,7 +73,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Output only. Creation time of this model.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModelEvaluation setCreateTime(String createTime) {
@@ -98,7 +81,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Optional. The display name of the model evaluation. At most 64 bytes long.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -106,7 +88,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Optional. The display name of the model evaluation. At most 64 bytes long.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModelEvaluation setDisplayName(java.lang.String displayName) {
@@ -115,7 +96,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Optional. The configuration of the evaluation task.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfig getEvaluationConfig() {
@@ -123,7 +103,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Optional. The configuration of the evaluation task.
    * @param evaluationConfig evaluationConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModelEvaluation setEvaluationConfig(GoogleCloudDialogflowV2EvaluationConfig evaluationConfig) {
@@ -132,7 +111,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * The resource name of the evaluation. Format: `projects//conversationModels//evaluations/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -140,7 +118,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * The resource name of the evaluation. Format: `projects//conversationModels//evaluations/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModelEvaluation setName(java.lang.String name) {
@@ -149,16 +126,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Output only. Human eval template in csv format. It takes real-world conversations provided
-   * through input dataset, generates example suggestions for customer to verify quality of the
-   * model. For Smart Reply, the generated csv file contains columns of Context,
-   * (Suggestions,Q1,Q2)*3, Actual reply. Context contains at most 10 latest messages in the
-   * conversation prior to the current suggestion. Q1: "Would you send it as the next message of
-   * agent?" Evaluated based on whether the suggest is appropriate to be sent by agent in current
-   * context. Q2: "Does the suggestion move the conversation closer to resolution?" Evaluated based
-   * on whether the suggestion provide solutions, or answers customer's question or collect
-   * information from customer to resolve the customer's issue. Actual reply column contains the
-   * actual agent reply sent in the context.
    * @return value or {@code null} for none
    */
   public java.lang.String getRawHumanEvalTemplateCsv() {
@@ -166,16 +133,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Output only. Human eval template in csv format. It takes real-world conversations provided
-   * through input dataset, generates example suggestions for customer to verify quality of the
-   * model. For Smart Reply, the generated csv file contains columns of Context,
-   * (Suggestions,Q1,Q2)*3, Actual reply. Context contains at most 10 latest messages in the
-   * conversation prior to the current suggestion. Q1: "Would you send it as the next message of
-   * agent?" Evaluated based on whether the suggest is appropriate to be sent by agent in current
-   * context. Q2: "Does the suggestion move the conversation closer to resolution?" Evaluated based
-   * on whether the suggestion provide solutions, or answers customer's question or collect
-   * information from customer to resolve the customer's issue. Actual reply column contains the
-   * actual agent reply sent in the context.
    * @param rawHumanEvalTemplateCsv rawHumanEvalTemplateCsv or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModelEvaluation setRawHumanEvalTemplateCsv(java.lang.String rawHumanEvalTemplateCsv) {
@@ -184,7 +141,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Output only. Only available when model is for smart reply.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SmartReplyMetrics getSmartReplyMetrics() {
@@ -192,7 +148,6 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Output only. Only available when model is for smart reply.
    * @param smartReplyMetrics smartReplyMetrics or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModelEvaluation setSmartReplyMetrics(GoogleCloudDialogflowV2SmartReplyMetrics smartReplyMetrics) {

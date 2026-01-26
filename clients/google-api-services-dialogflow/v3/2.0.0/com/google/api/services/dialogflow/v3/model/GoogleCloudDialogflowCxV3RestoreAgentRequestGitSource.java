@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for restoring from a git branch
+ * Model definition for GoogleCloudDialogflowCxV3RestoreAgentRequestGitSource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3RestoreAgentRequestGitSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * tracking branch for the git pull
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingBranch;
 
   /**
-   * tracking branch for the git pull
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingBranch() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3RestoreAgentRequestGitSource extends
   }
 
   /**
-   * tracking branch for the git pull
    * @param trackingBranch trackingBranch or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3RestoreAgentRequestGitSource setTrackingBranch(java.lang.String trackingBranch) {

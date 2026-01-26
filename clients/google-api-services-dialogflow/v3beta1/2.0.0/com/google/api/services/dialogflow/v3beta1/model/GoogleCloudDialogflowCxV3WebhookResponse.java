@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The response message for a webhook call.
+ * Model definition for GoogleCloudDialogflowCxV3WebhookResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,53 +30,42 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fulfillment response to send to the user. This field can be omitted by the webhook if it
-   * does not intend to send any response to the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3WebhookResponseFulfillmentResponse fulfillmentResponse;
 
   /**
-   * Information about page status. This field can be omitted by the webhook if it does not intend
-   * to modify page status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3PageInfo pageInfo;
 
   /**
-   * Value to append directly to QueryResult.webhook_payloads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
-   * Information about session status. This field can be omitted by the webhook if it does not
-   * intend to modify session status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3SessionInfo sessionInfo;
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetFlow;
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetPage;
 
   /**
-   * The fulfillment response to send to the user. This field can be omitted by the webhook if it
-   * does not intend to send any response to the user.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookResponseFulfillmentResponse getFulfillmentResponse() {
@@ -84,8 +73,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * The fulfillment response to send to the user. This field can be omitted by the webhook if it
-   * does not intend to send any response to the user.
    * @param fulfillmentResponse fulfillmentResponse or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookResponse setFulfillmentResponse(GoogleCloudDialogflowCxV3WebhookResponseFulfillmentResponse fulfillmentResponse) {
@@ -94,8 +81,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * Information about page status. This field can be omitted by the webhook if it does not intend
-   * to modify page status.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PageInfo getPageInfo() {
@@ -103,8 +88,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * Information about page status. This field can be omitted by the webhook if it does not intend
-   * to modify page status.
    * @param pageInfo pageInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookResponse setPageInfo(GoogleCloudDialogflowCxV3PageInfo pageInfo) {
@@ -113,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * Value to append directly to QueryResult.webhook_payloads.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -121,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * Value to append directly to QueryResult.webhook_payloads.
    * @param payload payload or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookResponse setPayload(java.util.Map<String, java.lang.Object> payload) {
@@ -130,8 +111,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * Information about session status. This field can be omitted by the webhook if it does not
-   * intend to modify session status.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SessionInfo getSessionInfo() {
@@ -139,8 +118,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * Information about session status. This field can be omitted by the webhook if it does not
-   * intend to modify session status.
    * @param sessionInfo sessionInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookResponse setSessionInfo(GoogleCloudDialogflowCxV3SessionInfo sessionInfo) {
@@ -149,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetFlow() {
@@ -157,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * @param targetFlow targetFlow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookResponse setTargetFlow(java.lang.String targetFlow) {
@@ -166,7 +141,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetPage() {
@@ -174,7 +148,6 @@ public final class GoogleCloudDialogflowCxV3WebhookResponse extends com.google.a
   }
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * @param targetPage targetPage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookResponse setTargetPage(java.lang.String targetPage) {

@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Defines the properties of a parameter. Used to define parameters used in the agent and the input
- * / output parameters for each fulfillment.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ParameterDefinition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,35 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human-readable description of the parameter. Limited to 300 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. Name of parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Type of parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. Type schema of parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1TypeSchema typeSchema;
 
   /**
-   * Human-readable description of the parameter. Limited to 300 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -67,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   }
 
   /**
-   * Human-readable description of the parameter. Limited to 300 characters.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ParameterDefinition setDescription(java.lang.String description) {
@@ -76,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   }
 
   /**
-   * Required. Name of parameter.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -84,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   }
 
   /**
-   * Required. Name of parameter.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ParameterDefinition setName(java.lang.String name) {
@@ -93,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   }
 
   /**
-   * Type of parameter.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -101,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   }
 
   /**
-   * Type of parameter.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ParameterDefinition setType(java.lang.String type) {
@@ -110,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   }
 
   /**
-   * Optional. Type schema of parameter.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TypeSchema getTypeSchema() {
@@ -118,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1ParameterDefinition extends com
   }
 
   /**
-   * Optional. Type schema of parameter.
    * @param typeSchema typeSchema or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ParameterDefinition setTypeSchema(GoogleCloudDialogflowCxV3beta1TypeSchema typeSchema) {

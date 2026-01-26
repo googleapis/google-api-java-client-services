@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Information collected for DF CX agents in case NLU predicted an intent that was filtered out as
- * being inactive which may indicate a missing transition and/or absent functionality.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingTransition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,22 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingTransition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the intent that could have triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intentDisplayName;
 
   /**
-   * Score of the above intent. The higher it is the more likely a transition was missed on a given
-   * page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
 
   /**
-   * Name of the intent that could have triggered.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntentDisplayName() {
@@ -54,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingT
   }
 
   /**
-   * Name of the intent that could have triggered.
    * @param intentDisplayName intentDisplayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingTransition setIntentDisplayName(java.lang.String intentDisplayName) {
@@ -63,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingT
   }
 
   /**
-   * Score of the above intent. The higher it is the more likely a transition was missed on a given
-   * page.
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -72,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingT
   }
 
   /**
-   * Score of the above intent. The higher it is the more likely a transition was missed on a given
-   * page.
    * @param score score or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingTransition setScore(java.lang.Float score) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Config for suggestion query.
+ * Model definition for GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,82 +30,54 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Confidence threshold of query result. Agent Assist gives each suggestion a score in the range
-   * [0.0, 1.0], based on the relevance between the suggestion and the current conversation context.
-   * A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with
-   * a score greater than or equal to the value of this field are included in the results. For a
-   * baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom
-   * model, there is no recommended value. Tune this value by starting from a very low value and
-   * slowly increasing until you have desired results. If this field is not set, it defaults to 0.0,
-   * which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION, FAQ,
-   * SMART_REPLY, SMART_COMPOSE, KNOWLEDGE_SEARCH, KNOWLEDGE_ASSIST, ENTITY_EXTRACTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidenceThreshold;
 
   /**
-   * Determines how recent conversation context is filtered when generating suggestions. If
-   * unspecified, no messages will be dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings contextFilterSettings;
 
   /**
-   * Optional. The number of recent messages to include in the context. Supported features:
-   * KNOWLEDGE_ASSIST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource dialogflowQuerySource;
 
   /**
-   * Query from knowledge base document. It is used by: SMART_REPLY, SMART_COMPOSE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource documentQuerySource;
 
   /**
-   * Query from knowledgebase. It is used by: ARTICLE_SUGGESTION, FAQ.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySource knowledgeBaseQuerySource;
 
   /**
-   * Maximum number of results to return. Currently, if unset, defaults to 10. And the max number is
-   * 20.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxResults;
 
   /**
-   * Optional. The customized sections chosen to return when requesting a summary of a conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigSections sections;
 
   /**
-   * Confidence threshold of query result. Agent Assist gives each suggestion a score in the range
-   * [0.0, 1.0], based on the relevance between the suggestion and the current conversation context.
-   * A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with
-   * a score greater than or equal to the value of this field are included in the results. For a
-   * baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom
-   * model, there is no recommended value. Tune this value by starting from a very low value and
-   * slowly increasing until you have desired results. If this field is not set, it defaults to 0.0,
-   * which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION, FAQ,
-   * SMART_REPLY, SMART_COMPOSE, KNOWLEDGE_SEARCH, KNOWLEDGE_ASSIST, ENTITY_EXTRACTION.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidenceThreshold() {
@@ -113,15 +85,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Confidence threshold of query result. Agent Assist gives each suggestion a score in the range
-   * [0.0, 1.0], based on the relevance between the suggestion and the current conversation context.
-   * A score of 0.0 has no relevance, while a score of 1.0 has high relevance. Only suggestions with
-   * a score greater than or equal to the value of this field are included in the results. For a
-   * baseline model (the default), the recommended value is in the range [0.05, 0.1]. For a custom
-   * model, there is no recommended value. Tune this value by starting from a very low value and
-   * slowly increasing until you have desired results. If this field is not set, it defaults to 0.0,
-   * which means that all suggestions are returned. Supported features: ARTICLE_SUGGESTION, FAQ,
-   * SMART_REPLY, SMART_COMPOSE, KNOWLEDGE_SEARCH, KNOWLEDGE_ASSIST, ENTITY_EXTRACTION.
    * @param confidenceThreshold confidenceThreshold or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setConfidenceThreshold(java.lang.Float confidenceThreshold) {
@@ -130,8 +93,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Determines how recent conversation context is filtered when generating suggestions. If
-   * unspecified, no messages will be dropped.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings getContextFilterSettings() {
@@ -139,8 +100,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Determines how recent conversation context is filtered when generating suggestions. If
-   * unspecified, no messages will be dropped.
    * @param contextFilterSettings contextFilterSettings or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setContextFilterSettings(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings contextFilterSettings) {
@@ -149,8 +108,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Optional. The number of recent messages to include in the context. Supported features:
-   * KNOWLEDGE_ASSIST.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -158,8 +115,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Optional. The number of recent messages to include in the context. Supported features:
-   * KNOWLEDGE_ASSIST.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setContextSize(java.lang.Integer contextSize) {
@@ -168,7 +123,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource getDialogflowQuerySource() {
@@ -176,7 +130,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Query from Dialogflow agent. It is used by DIALOGFLOW_ASSIST.
    * @param dialogflowQuerySource dialogflowQuerySource or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setDialogflowQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySource dialogflowQuerySource) {
@@ -185,7 +138,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Query from knowledge base document. It is used by: SMART_REPLY, SMART_COMPOSE.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource getDocumentQuerySource() {
@@ -193,7 +145,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Query from knowledge base document. It is used by: SMART_REPLY, SMART_COMPOSE.
    * @param documentQuerySource documentQuerySource or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setDocumentQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource documentQuerySource) {
@@ -202,7 +153,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Query from knowledgebase. It is used by: ARTICLE_SUGGESTION, FAQ.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySource getKnowledgeBaseQuerySource() {
@@ -210,7 +160,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Query from knowledgebase. It is used by: ARTICLE_SUGGESTION, FAQ.
    * @param knowledgeBaseQuerySource knowledgeBaseQuerySource or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setKnowledgeBaseQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySource knowledgeBaseQuerySource) {
@@ -219,8 +168,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Maximum number of results to return. Currently, if unset, defaults to 10. And the max number is
-   * 20.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxResults() {
@@ -228,8 +175,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Maximum number of results to return. Currently, if unset, defaults to 10. And the max number is
-   * 20.
    * @param maxResults maxResults or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setMaxResults(java.lang.Integer maxResults) {
@@ -238,7 +183,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Optional. The customized sections chosen to return when requesting a summary of a conversation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigSections getSections() {
@@ -246,7 +190,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Optional. The customized sections chosen to return when requesting a summary of a conversation.
    * @param sections sections or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig setSections(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigSections sections) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Whether fulfillment is enabled for the specific feature.
+ * Model definition for GoogleCloudDialogflowV2beta1FulfillmentFeature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1FulfillmentFeature extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of the feature that enabled for fulfillment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The type of the feature that enabled for fulfillment.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeature extends com.go
   }
 
   /**
-   * The type of the feature that enabled for fulfillment.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FulfillmentFeature setType(java.lang.String type) {

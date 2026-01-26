@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The card response message.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2IntentMessageCard extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The collection of card buttons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessageCardButton> buttons;
 
   /**
-   * Optional. The public URI to an image file for the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUri;
 
   /**
-   * Optional. The subtitle of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subtitle;
 
   /**
-   * Optional. The title of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Optional. The collection of card buttons.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessageCardButton> getButtons() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCard extends com.google.a
   }
 
   /**
-   * Optional. The collection of card buttons.
    * @param buttons buttons or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCard setButtons(java.util.List<GoogleCloudDialogflowV2IntentMessageCardButton> buttons) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCard extends com.google.a
   }
 
   /**
-   * Optional. The public URI to an image file for the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCard extends com.google.a
   }
 
   /**
-   * Optional. The public URI to an image file for the card.
    * @param imageUri imageUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCard setImageUri(java.lang.String imageUri) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCard extends com.google.a
   }
 
   /**
-   * Optional. The subtitle of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubtitle() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCard extends com.google.a
   }
 
   /**
-   * Optional. The subtitle of the card.
    * @param subtitle subtitle or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCard setSubtitle(java.lang.String subtitle) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCard extends com.google.a
   }
 
   /**
-   * Optional. The title of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCard extends com.google.a
   }
 
   /**
-   * Optional. The title of the card.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCard setTitle(java.lang.String title) {

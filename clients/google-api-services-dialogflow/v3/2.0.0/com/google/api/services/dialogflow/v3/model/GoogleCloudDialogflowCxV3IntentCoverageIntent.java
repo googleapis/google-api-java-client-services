@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The agent's intent.
+ * Model definition for GoogleCloudDialogflowCxV3IntentCoverageIntent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3IntentCoverageIntent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the intent is covered by at least one of the agent's test cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean covered;
 
   /**
-   * The intent full resource name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intent;
 
   /**
-   * Whether the intent is covered by at least one of the agent's test cases.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCovered() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3IntentCoverageIntent extends com.goo
   }
 
   /**
-   * Whether the intent is covered by at least one of the agent's test cases.
    * @param covered covered or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3IntentCoverageIntent setCovered(java.lang.Boolean covered) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3IntentCoverageIntent extends com.goo
   }
 
   /**
-   * The intent full resource name
    * @return value or {@code null} for none
    */
   public java.lang.String getIntent() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3IntentCoverageIntent extends com.goo
   }
 
   /**
-   * The intent full resource name
    * @param intent intent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3IntentCoverageIntent setIntent(java.lang.String intent) {

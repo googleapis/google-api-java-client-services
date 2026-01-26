@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Defines notification behavior.
+ * Model definition for GoogleCloudDialogflowV2beta1NotificationConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,26 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1NotificationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Format of message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String messageFormat;
 
   /**
-   * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as
-   * serialized ConversationEvent protos. For telephony integration to receive notification, make
-   * sure either this topic is in the same project as the conversation or you grant `service-@gcp-
-   * sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic
-   * project. For chat integration to receive notification, make sure API caller has been granted
-   * the `Dialogflow Service Agent` role for the topic. Format: `projects//locations//topics/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String topic;
 
   /**
-   * Format of message.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageFormat() {
@@ -57,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfig extends com.go
   }
 
   /**
-   * Format of message.
    * @param messageFormat messageFormat or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1NotificationConfig setMessageFormat(java.lang.String messageFormat) {
@@ -66,12 +57,6 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfig extends com.go
   }
 
   /**
-   * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as
-   * serialized ConversationEvent protos. For telephony integration to receive notification, make
-   * sure either this topic is in the same project as the conversation or you grant `service-@gcp-
-   * sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic
-   * project. For chat integration to receive notification, make sure API caller has been granted
-   * the `Dialogflow Service Agent` role for the topic. Format: `projects//locations//topics/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopic() {
@@ -79,12 +64,6 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfig extends com.go
   }
 
   /**
-   * Name of the Pub/Sub topic to publish conversation events like CONVERSATION_STARTED as
-   * serialized ConversationEvent protos. For telephony integration to receive notification, make
-   * sure either this topic is in the same project as the conversation or you grant `service-@gcp-
-   * sa-dialogflow.iam.gserviceaccount.com` the `Dialogflow Service Agent` role in the topic
-   * project. For chat integration to receive notification, make sure API caller has been granted
-   * the `Dialogflow Service Agent` role for the topic. Format: `projects//locations//topics/`.
    * @param topic topic or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1NotificationConfig setTopic(java.lang.String topic) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for Generative Safety.
+ * Model definition for GoogleCloudDialogflowCxV3beta1SafetySettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,44 +30,36 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Banned phrases for generated text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase> bannedPhrases;
 
   /**
-   * Optional. Default phrase match strategy for banned phrases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultBannedPhraseMatchStrategy;
 
   /**
-   * Optional. Immutable. Default RAI settings to be annotated on the agent, so that users will be
-   * able to restore their RAI configurations to the default settings. Read-only field for the API
-   * proto only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1SafetySettingsRaiSettings defaultRaiSettings;
 
   /**
-   * Optional. Settings for prompt security checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1SafetySettingsPromptSecuritySettings promptSecuritySettings;
 
   /**
-   * Optional. Settings for Responsible AI checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1SafetySettingsRaiSettings raiSettings;
 
   /**
-   * Banned phrases for generated text.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase> getBannedPhrases() {
@@ -75,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   }
 
   /**
-   * Banned phrases for generated text.
    * @param bannedPhrases bannedPhrases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettings setBannedPhrases(java.util.List<GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase> bannedPhrases) {
@@ -84,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   }
 
   /**
-   * Optional. Default phrase match strategy for banned phrases.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultBannedPhraseMatchStrategy() {
@@ -92,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   }
 
   /**
-   * Optional. Default phrase match strategy for banned phrases.
    * @param defaultBannedPhraseMatchStrategy defaultBannedPhraseMatchStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettings setDefaultBannedPhraseMatchStrategy(java.lang.String defaultBannedPhraseMatchStrategy) {
@@ -101,9 +90,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   }
 
   /**
-   * Optional. Immutable. Default RAI settings to be annotated on the agent, so that users will be
-   * able to restore their RAI configurations to the default settings. Read-only field for the API
-   * proto only.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettingsRaiSettings getDefaultRaiSettings() {
@@ -111,9 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   }
 
   /**
-   * Optional. Immutable. Default RAI settings to be annotated on the agent, so that users will be
-   * able to restore their RAI configurations to the default settings. Read-only field for the API
-   * proto only.
    * @param defaultRaiSettings defaultRaiSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettings setDefaultRaiSettings(GoogleCloudDialogflowCxV3beta1SafetySettingsRaiSettings defaultRaiSettings) {
@@ -122,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   }
 
   /**
-   * Optional. Settings for prompt security checks.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettingsPromptSecuritySettings getPromptSecuritySettings() {
@@ -130,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   }
 
   /**
-   * Optional. Settings for prompt security checks.
    * @param promptSecuritySettings promptSecuritySettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettings setPromptSecuritySettings(GoogleCloudDialogflowCxV3beta1SafetySettingsPromptSecuritySettings promptSecuritySettings) {
@@ -139,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   }
 
   /**
-   * Optional. Settings for Responsible AI checks.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettingsRaiSettings getRaiSettings() {
@@ -147,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettings extends com.goog
   }
 
   /**
-   * Optional. Settings for Responsible AI checks.
    * @param raiSettings raiSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettings setRaiSettings(GoogleCloudDialogflowCxV3beta1SafetySettingsRaiSettings raiSettings) {

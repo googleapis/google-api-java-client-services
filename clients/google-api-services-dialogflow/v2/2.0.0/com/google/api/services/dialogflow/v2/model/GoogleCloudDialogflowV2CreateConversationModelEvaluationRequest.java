@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for ConversationModels.CreateConversationModelEvaluation
+ * Model definition for GoogleCloudDialogflowV2CreateConversationModelEvaluationRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The conversation model evaluation to be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ConversationModelEvaluation conversationModelEvaluation;
 
   /**
-   * Required. The conversation model evaluation to be created.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModelEvaluation getConversationModelEvaluation() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationReque
   }
 
   /**
-   * Required. The conversation model evaluation to be created.
    * @param conversationModelEvaluation conversationModelEvaluation or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationModelEvaluationRequest setConversationModelEvaluation(GoogleCloudDialogflowV2ConversationModelEvaluation conversationModelEvaluation) {

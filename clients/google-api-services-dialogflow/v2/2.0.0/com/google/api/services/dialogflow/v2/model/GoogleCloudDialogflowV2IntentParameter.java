@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents intent parameters.
+ * Model definition for GoogleCloudDialogflowV2IntentParameter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,71 +30,54 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The default value to use when the `value` yields an empty result. Default values can
-   * be extracted from contexts by using the following syntax: `#context_name.parameter_name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultValue;
 
   /**
-   * Required. The name of the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. The name of the entity type, prefixed with `@`, that describes values of the
-   * parameter. If the parameter is required, this must be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityTypeDisplayName;
 
   /**
-   * Optional. Indicates whether the parameter represents a list of values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isList;
 
   /**
-   * Optional. Indicates whether the parameter is required. That is, whether the intent cannot be
-   * completed without collecting the parameter value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean mandatory;
 
   /**
-   * The unique identifier of this parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The collection of prompts that the agent can present to the user in order to collect
-   * a value for the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> prompts;
 
   /**
-   * Optional. The definition of the parameter value. It can be: - a constant string, - a parameter
-   * value defined as `$parameter_name`, - an original parameter value defined as
-   * `$parameter_name.original`, - a parameter value from some context defined as
-   * `#context_name.parameter_name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Optional. The default value to use when the `value` yields an empty result. Default values can
-   * be extracted from contexts by using the following syntax: `#context_name.parameter_name`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultValue() {
@@ -102,8 +85,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. The default value to use when the `value` yields an empty result. Default values can
-   * be extracted from contexts by using the following syntax: `#context_name.parameter_name`.
    * @param defaultValue defaultValue or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentParameter setDefaultValue(java.lang.String defaultValue) {
@@ -112,7 +93,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Required. The name of the parameter.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -120,7 +100,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Required. The name of the parameter.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentParameter setDisplayName(java.lang.String displayName) {
@@ -129,8 +108,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. The name of the entity type, prefixed with `@`, that describes values of the
-   * parameter. If the parameter is required, this must be provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityTypeDisplayName() {
@@ -138,8 +115,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. The name of the entity type, prefixed with `@`, that describes values of the
-   * parameter. If the parameter is required, this must be provided.
    * @param entityTypeDisplayName entityTypeDisplayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentParameter setEntityTypeDisplayName(java.lang.String entityTypeDisplayName) {
@@ -148,7 +123,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. Indicates whether the parameter represents a list of values.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsList() {
@@ -156,7 +130,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. Indicates whether the parameter represents a list of values.
    * @param isList isList or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentParameter setIsList(java.lang.Boolean isList) {
@@ -165,8 +138,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. Indicates whether the parameter is required. That is, whether the intent cannot be
-   * completed without collecting the parameter value.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMandatory() {
@@ -174,8 +145,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. Indicates whether the parameter is required. That is, whether the intent cannot be
-   * completed without collecting the parameter value.
    * @param mandatory mandatory or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentParameter setMandatory(java.lang.Boolean mandatory) {
@@ -184,7 +153,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * The unique identifier of this parameter.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -192,7 +160,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * The unique identifier of this parameter.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentParameter setName(java.lang.String name) {
@@ -201,8 +168,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. The collection of prompts that the agent can present to the user in order to collect
-   * a value for the parameter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPrompts() {
@@ -210,8 +175,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. The collection of prompts that the agent can present to the user in order to collect
-   * a value for the parameter.
    * @param prompts prompts or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentParameter setPrompts(java.util.List<java.lang.String> prompts) {
@@ -220,10 +183,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. The definition of the parameter value. It can be: - a constant string, - a parameter
-   * value defined as `$parameter_name`, - an original parameter value defined as
-   * `$parameter_name.original`, - a parameter value from some context defined as
-   * `#context_name.parameter_name`.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -231,10 +190,6 @@ public final class GoogleCloudDialogflowV2IntentParameter extends com.google.api
   }
 
   /**
-   * Optional. The definition of the parameter value. It can be: - a constant string, - a parameter
-   * value defined as `$parameter_name`, - an original parameter value defined as
-   * `$parameter_name.original`, - a parameter value from some context defined as
-   * `#context_name.parameter_name`.
    * @param value value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentParameter setValue(java.lang.String value) {

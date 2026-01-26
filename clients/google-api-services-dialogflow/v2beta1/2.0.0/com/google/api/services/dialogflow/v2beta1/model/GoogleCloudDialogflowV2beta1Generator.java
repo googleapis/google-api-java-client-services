@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * LLM generator.
+ * Model definition for GoogleCloudDialogflowV2beta1Generator.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,96 +30,78 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input of Agent Coaching feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1AgentCoachingContext agentCoachingContext;
 
   /**
-   * Output only. Creation time of this generator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. Human readable description of the generator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Input of free from generator to LLM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1FreeFormContext freeFormContext;
 
   /**
-   * Optional. Inference parameters for this generator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1InferenceParameter inferenceParameter;
 
   /**
-   * Output only. Identifier. The resource name of the generator. Format:
-   * `projects//locations//generators/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The published Large Language Model name. * To use the latest model version, specify
-   * the model name without version number. Example: `text-bison` * To use a stable model version,
-   * specify the version number as well. Example: `text-bison@002`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String publishedModel;
 
   /**
-   * Optional. Configuration for suggestion deduping. This is only applicable to AI Coach feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SuggestionDedupingConfig suggestionDedupingConfig;
 
   /**
-   * Input of Summarization feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SummarizationContext summarizationContext;
 
   /**
-   * Optional. Resource names of the tools that the generator can choose from. Format:
-   * `projects//locations//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tools;
 
   /**
-   * Optional. The trigger event of the generator. It defines when the generator is triggered in a
-   * conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerEvent;
 
   /**
-   * Output only. Update time of this generator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Input of Agent Coaching feature.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingContext getAgentCoachingContext() {
@@ -127,7 +109,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Input of Agent Coaching feature.
    * @param agentCoachingContext agentCoachingContext or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setAgentCoachingContext(GoogleCloudDialogflowV2beta1AgentCoachingContext agentCoachingContext) {
@@ -136,7 +117,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Output only. Creation time of this generator.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -144,7 +124,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Output only. Creation time of this generator.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setCreateTime(String createTime) {
@@ -153,7 +132,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. Human readable description of the generator.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -161,7 +139,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. Human readable description of the generator.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setDescription(java.lang.String description) {
@@ -170,7 +147,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Input of free from generator to LLM.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FreeFormContext getFreeFormContext() {
@@ -178,7 +154,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Input of free from generator to LLM.
    * @param freeFormContext freeFormContext or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setFreeFormContext(GoogleCloudDialogflowV2beta1FreeFormContext freeFormContext) {
@@ -187,7 +162,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. Inference parameters for this generator.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1InferenceParameter getInferenceParameter() {
@@ -195,7 +169,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. Inference parameters for this generator.
    * @param inferenceParameter inferenceParameter or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setInferenceParameter(GoogleCloudDialogflowV2beta1InferenceParameter inferenceParameter) {
@@ -204,8 +177,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Output only. Identifier. The resource name of the generator. Format:
-   * `projects//locations//generators/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -213,8 +184,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Output only. Identifier. The resource name of the generator. Format:
-   * `projects//locations//generators/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setName(java.lang.String name) {
@@ -223,9 +192,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. The published Large Language Model name. * To use the latest model version, specify
-   * the model name without version number. Example: `text-bison` * To use a stable model version,
-   * specify the version number as well. Example: `text-bison@002`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublishedModel() {
@@ -233,9 +199,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. The published Large Language Model name. * To use the latest model version, specify
-   * the model name without version number. Example: `text-bison` * To use a stable model version,
-   * specify the version number as well. Example: `text-bison@002`.
    * @param publishedModel publishedModel or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setPublishedModel(java.lang.String publishedModel) {
@@ -244,7 +207,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. Configuration for suggestion deduping. This is only applicable to AI Coach feature.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionDedupingConfig getSuggestionDedupingConfig() {
@@ -252,7 +214,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. Configuration for suggestion deduping. This is only applicable to AI Coach feature.
    * @param suggestionDedupingConfig suggestionDedupingConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setSuggestionDedupingConfig(GoogleCloudDialogflowV2beta1SuggestionDedupingConfig suggestionDedupingConfig) {
@@ -261,7 +222,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Input of Summarization feature.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationContext getSummarizationContext() {
@@ -269,7 +229,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Input of Summarization feature.
    * @param summarizationContext summarizationContext or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setSummarizationContext(GoogleCloudDialogflowV2beta1SummarizationContext summarizationContext) {
@@ -278,8 +237,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. Resource names of the tools that the generator can choose from. Format:
-   * `projects//locations//tools/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTools() {
@@ -287,8 +244,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. Resource names of the tools that the generator can choose from. Format:
-   * `projects//locations//tools/`.
    * @param tools tools or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setTools(java.util.List<java.lang.String> tools) {
@@ -297,8 +252,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. The trigger event of the generator. It defines when the generator is triggered in a
-   * conversation.
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerEvent() {
@@ -306,8 +259,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Optional. The trigger event of the generator. It defines when the generator is triggered in a
-   * conversation.
    * @param triggerEvent triggerEvent or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setTriggerEvent(java.lang.String triggerEvent) {
@@ -316,7 +267,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Output only. Update time of this generator.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -324,7 +274,6 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
   }
 
   /**
-   * Output only. Update time of this generator.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Generator setUpdateTime(String updateTime) {

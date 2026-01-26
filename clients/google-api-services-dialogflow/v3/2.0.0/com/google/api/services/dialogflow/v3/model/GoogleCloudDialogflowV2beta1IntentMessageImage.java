@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The image response message.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageImage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageImage extends com.google.api.client.json.GenericJson {
 
   /**
-   * A text description of the image to be used for accessibility, e.g., screen readers. Required if
-   * image_uri is set for CarouselSelect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessibilityText;
 
   /**
-   * Optional. The public URI to an image file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUri;
 
   /**
-   * A text description of the image to be used for accessibility, e.g., screen readers. Required if
-   * image_uri is set for CarouselSelect.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessibilityText() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImage extends com.go
   }
 
   /**
-   * A text description of the image to be used for accessibility, e.g., screen readers. Required if
-   * image_uri is set for CarouselSelect.
    * @param accessibilityText accessibilityText or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageImage setAccessibilityText(java.lang.String accessibilityText) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImage extends com.go
   }
 
   /**
-   * Optional. The public URI to an image file.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImage extends com.go
   }
 
   /**
-   * Optional. The public URI to an image file.
    * @param imageUri imageUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageImage setImageUri(java.lang.String imageUri) {

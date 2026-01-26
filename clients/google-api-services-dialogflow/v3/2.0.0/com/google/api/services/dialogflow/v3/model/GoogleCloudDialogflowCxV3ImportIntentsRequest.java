@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for Intents.ImportIntents.
+ * Model definition for GoogleCloudDialogflowCxV3ImportIntentsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,32 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ImportIntentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uncompressed byte content of intents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3InlineSource intentsContent;
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import intents from.
-   * The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
-   * Storage object on the caller's behalf, so your request authentication must have read
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intentsUri;
 
   /**
-   * Merge option for importing intents. If not specified, `REJECT` is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mergeOption;
 
   /**
-   * Uncompressed byte content of intents.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InlineSource getIntentsContent() {
@@ -63,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3ImportIntentsRequest extends com.goo
   }
 
   /**
-   * Uncompressed byte content of intents.
    * @param intentsContent intentsContent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportIntentsRequest setIntentsContent(GoogleCloudDialogflowCxV3InlineSource intentsContent) {
@@ -72,11 +63,6 @@ public final class GoogleCloudDialogflowCxV3ImportIntentsRequest extends com.goo
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import intents from.
-   * The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
-   * Storage object on the caller's behalf, so your request authentication must have read
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getIntentsUri() {
@@ -84,11 +70,6 @@ public final class GoogleCloudDialogflowCxV3ImportIntentsRequest extends com.goo
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import intents from.
-   * The format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud
-   * Storage object on the caller's behalf, so your request authentication must have read
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param intentsUri intentsUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportIntentsRequest setIntentsUri(java.lang.String intentsUri) {
@@ -97,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3ImportIntentsRequest extends com.goo
   }
 
   /**
-   * Merge option for importing intents. If not specified, `REJECT` is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getMergeOption() {
@@ -105,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3ImportIntentsRequest extends com.goo
   }
 
   /**
-   * Merge option for importing intents. If not specified, `REJECT` is assumed.
    * @param mergeOption mergeOption or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportIntentsRequest setMergeOption(java.lang.String mergeOption) {

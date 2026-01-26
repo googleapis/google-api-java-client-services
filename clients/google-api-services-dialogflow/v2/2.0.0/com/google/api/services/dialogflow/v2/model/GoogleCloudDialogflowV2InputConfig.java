@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the configuration of importing a set of conversation files in Google Cloud Storage.
+ * Model definition for GoogleCloudDialogflowV2InputConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2InputConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Cloud Storage URI has the form gs:/agent*.json. Wildcards are allowed and will be expanded
-   * into all matched JSON files, which will be read as one conversation per file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GcsSources gcsSource;
 
   /**
-   * The Cloud Storage URI has the form gs:/agent*.json. Wildcards are allowed and will be expanded
-   * into all matched JSON files, which will be read as one conversation per file.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2GcsSources getGcsSource() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2InputConfig extends com.google.api.cli
   }
 
   /**
-   * The Cloud Storage URI has the form gs:/agent*.json. Wildcards are allowed and will be expanded
-   * into all matched JSON files, which will be read as one conversation per file.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputConfig setGcsSource(GoogleCloudDialogflowV2GcsSources gcsSource) {

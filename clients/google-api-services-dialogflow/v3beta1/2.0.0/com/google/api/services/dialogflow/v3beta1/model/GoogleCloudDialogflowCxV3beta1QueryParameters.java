@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents the parameters of a conversational query.
+ * Model definition for GoogleCloudDialogflowCxV3beta1QueryParameters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,178 +30,114 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configures whether sentiment analysis should be performed. If not provided, sentiment analysis
-   * is not performed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean analyzeQueryTextSentiment;
 
   /**
-   * The channel which this query is for. If specified, only the ResponseMessage associated with the
-   * channel will be returned. If no ResponseMessage is associated with the channel, it falls back
-   * to the ResponseMessage with unspecified channel. If unspecified, the ResponseMessage with
-   * unspecified channel will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String channel;
 
   /**
-   * The unique identifier of the page to override the current page in the session. Format:
-   * `projects//locations//agents//flows//pages/`. If `current_page` is specified, the previous
-   * state of the session will be ignored by Dialogflow, including the previous page and the
-   * previous session parameters. In most cases, current_page and parameters should be configured
-   * together to direct a session to a specific state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currentPage;
 
   /**
-   * Optional. The unique identifier of the playbook to start or continue the session with. If
-   * `current_playbook` is specified, the previous state of the session will be ignored by
-   * Dialogflow. Format: `projects//locations//agents//playbooks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currentPlaybook;
 
   /**
-   * Whether to disable webhook calls for this request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableWebhook;
 
   /**
-   * Optional. Information about the end-user to improve the relevance and accuracy of generative
-   * answers. This will be interpreted and used by a language model, so, for good results, the data
-   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
-   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
-   * Pixel Tablet"} ] } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> endUserMetadata;
 
   /**
-   * A list of flow versions to override for the request. Format:
-   * `projects//locations//agents//flows//versions/`. If version 1 of flow X is included in this
-   * list, the traffic of flow X will go through version 1 regardless of the version configuration
-   * in the environment. Each flow can have at most one version specified in this list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> flowVersions;
 
   /**
-   * The geo location of this conversational query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeLatLng geoLocation;
 
   /**
-   * Optional. Use the specified LLM model settings for processing the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings;
 
   /**
-   * Scope for the parameters. If not specified, parameters will be treated as session parameters.
-   * Parameters with custom scope will not be put into session parameters. You can reference the
-   * parameters with custom scope in the agent with the following format: $parameter-
-   * scope.params.parameter-id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parameterScope;
 
   /**
-   * Additional parameters to be put into session parameters. To remove a parameter from the
-   * session, clients should explicitly set the parameter value to null. You can reference the
-   * session parameters in the agent with the following format: $session.params.parameter-id.
-   * Depending on your protocol or client library language, this is a map, associative array, symbol
-   * table, dictionary, or JSON object composed of a collection of (MapKey, MapValue) pairs: *
-   * MapKey type: string * MapKey value: parameter name * MapValue type: If parameter's entity type
-   * is a composite entity then use map, otherwise, depending on the parameter value type, it could
-   * be one of string, number, boolean, null, list or map. * MapValue value: If parameter's entity
-   * type is a composite entity then use map from composite entity property names to property
-   * values, otherwise, use parameter value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * This field can be used to pass custom data into the webhook associated with the agent.
-   * Arbitrary JSON objects are supported. Some integrations that query a Dialogflow agent may
-   * provide additional information in the payload. In particular, for the Dialogflow Phone Gateway
-   * integration, this field has the form: ``` { "telephony": { "caller_id": "+18558363987" } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
-   * Optional. If set to true and data stores are involved in serving the request then
-   * DetectIntentResponse.query_result.data_store_connection_signals will be filled with data that
-   * can help evaluations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean populateDataStoreConnectionSignals;
 
   /**
-   * Optional. Search configuration for UCS search queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1SearchConfig searchConfig;
 
   /**
-   * Additional session entity types to replace or extend developer entity types with. The entity
-   * synonyms apply to all languages and persist for the session of this query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1SessionEntityType> sessionEntityTypes;
 
   /**
-   * Optional. Configure lifetime of the Dialogflow session. By default, a Dialogflow session
-   * remains active and its data is stored for 30 minutes after the last request is sent for the
-   * session. This value should be no longer than 1 day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String sessionTtl;
 
   /**
-   * The time zone of this conversational query from the [time zone
-   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not
-   * provided, the time zone specified in the agent is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
 
   /**
-   * This field can be used to pass HTTP headers for a webhook call. These headers will be sent to
-   * webhook along with the headers that have been configured through Dialogflow web console. The
-   * headers defined within this field will overwrite the headers configured through Dialogflow
-   * console if there is a conflict. Header names are case-insensitive. Google's specified headers
-   * are not allowed. Including: "Host", "Content-Length", "Connection", "From", "User-Agent",
-   * "Accept-Encoding", "If-Modified-Since", "If-None-Match", "X-Forwarded-For", etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> webhookHeaders;
 
   /**
-   * Configures whether sentiment analysis should be performed. If not provided, sentiment analysis
-   * is not performed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnalyzeQueryTextSentiment() {
@@ -209,8 +145,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Configures whether sentiment analysis should be performed. If not provided, sentiment analysis
-   * is not performed.
    * @param analyzeQueryTextSentiment analyzeQueryTextSentiment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setAnalyzeQueryTextSentiment(java.lang.Boolean analyzeQueryTextSentiment) {
@@ -219,10 +153,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * The channel which this query is for. If specified, only the ResponseMessage associated with the
-   * channel will be returned. If no ResponseMessage is associated with the channel, it falls back
-   * to the ResponseMessage with unspecified channel. If unspecified, the ResponseMessage with
-   * unspecified channel will be returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -230,10 +160,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * The channel which this query is for. If specified, only the ResponseMessage associated with the
-   * channel will be returned. If no ResponseMessage is associated with the channel, it falls back
-   * to the ResponseMessage with unspecified channel. If unspecified, the ResponseMessage with
-   * unspecified channel will be returned.
    * @param channel channel or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setChannel(java.lang.String channel) {
@@ -242,11 +168,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * The unique identifier of the page to override the current page in the session. Format:
-   * `projects//locations//agents//flows//pages/`. If `current_page` is specified, the previous
-   * state of the session will be ignored by Dialogflow, including the previous page and the
-   * previous session parameters. In most cases, current_page and parameters should be configured
-   * together to direct a session to a specific state.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentPage() {
@@ -254,11 +175,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * The unique identifier of the page to override the current page in the session. Format:
-   * `projects//locations//agents//flows//pages/`. If `current_page` is specified, the previous
-   * state of the session will be ignored by Dialogflow, including the previous page and the
-   * previous session parameters. In most cases, current_page and parameters should be configured
-   * together to direct a session to a specific state.
    * @param currentPage currentPage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setCurrentPage(java.lang.String currentPage) {
@@ -267,9 +183,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. The unique identifier of the playbook to start or continue the session with. If
-   * `current_playbook` is specified, the previous state of the session will be ignored by
-   * Dialogflow. Format: `projects//locations//agents//playbooks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentPlaybook() {
@@ -277,9 +190,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. The unique identifier of the playbook to start or continue the session with. If
-   * `current_playbook` is specified, the previous state of the session will be ignored by
-   * Dialogflow. Format: `projects//locations//agents//playbooks/`.
    * @param currentPlaybook currentPlaybook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setCurrentPlaybook(java.lang.String currentPlaybook) {
@@ -288,7 +198,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Whether to disable webhook calls for this request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableWebhook() {
@@ -296,7 +205,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Whether to disable webhook calls for this request.
    * @param disableWebhook disableWebhook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setDisableWebhook(java.lang.Boolean disableWebhook) {
@@ -305,11 +213,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Information about the end-user to improve the relevance and accuracy of generative
-   * answers. This will be interpreted and used by a language model, so, for good results, the data
-   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
-   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
-   * Pixel Tablet"} ] } ```
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getEndUserMetadata() {
@@ -317,11 +220,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Information about the end-user to improve the relevance and accuracy of generative
-   * answers. This will be interpreted and used by a language model, so, for good results, the data
-   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
-   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
-   * Pixel Tablet"} ] } ```
    * @param endUserMetadata endUserMetadata or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setEndUserMetadata(java.util.Map<String, java.lang.Object> endUserMetadata) {
@@ -330,10 +228,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * A list of flow versions to override for the request. Format:
-   * `projects//locations//agents//flows//versions/`. If version 1 of flow X is included in this
-   * list, the traffic of flow X will go through version 1 regardless of the version configuration
-   * in the environment. Each flow can have at most one version specified in this list.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFlowVersions() {
@@ -341,10 +235,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * A list of flow versions to override for the request. Format:
-   * `projects//locations//agents//flows//versions/`. If version 1 of flow X is included in this
-   * list, the traffic of flow X will go through version 1 regardless of the version configuration
-   * in the environment. Each flow can have at most one version specified in this list.
    * @param flowVersions flowVersions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setFlowVersions(java.util.List<java.lang.String> flowVersions) {
@@ -353,7 +243,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * The geo location of this conversational query.
    * @return value or {@code null} for none
    */
   public GoogleTypeLatLng getGeoLocation() {
@@ -361,7 +250,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * The geo location of this conversational query.
    * @param geoLocation geoLocation or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setGeoLocation(GoogleTypeLatLng geoLocation) {
@@ -370,7 +258,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Use the specified LLM model settings for processing the request.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettings getLlmModelSettings() {
@@ -378,7 +265,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Use the specified LLM model settings for processing the request.
    * @param llmModelSettings llmModelSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setLlmModelSettings(GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings) {
@@ -387,10 +273,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Scope for the parameters. If not specified, parameters will be treated as session parameters.
-   * Parameters with custom scope will not be put into session parameters. You can reference the
-   * parameters with custom scope in the agent with the following format: $parameter-
-   * scope.params.parameter-id.
    * @return value or {@code null} for none
    */
   public java.lang.String getParameterScope() {
@@ -398,10 +280,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Scope for the parameters. If not specified, parameters will be treated as session parameters.
-   * Parameters with custom scope will not be put into session parameters. You can reference the
-   * parameters with custom scope in the agent with the following format: $parameter-
-   * scope.params.parameter-id.
    * @param parameterScope parameterScope or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setParameterScope(java.lang.String parameterScope) {
@@ -410,16 +288,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Additional parameters to be put into session parameters. To remove a parameter from the
-   * session, clients should explicitly set the parameter value to null. You can reference the
-   * session parameters in the agent with the following format: $session.params.parameter-id.
-   * Depending on your protocol or client library language, this is a map, associative array, symbol
-   * table, dictionary, or JSON object composed of a collection of (MapKey, MapValue) pairs: *
-   * MapKey type: string * MapKey value: parameter name * MapValue type: If parameter's entity type
-   * is a composite entity then use map, otherwise, depending on the parameter value type, it could
-   * be one of string, number, boolean, null, list or map. * MapValue value: If parameter's entity
-   * type is a composite entity then use map from composite entity property names to property
-   * values, otherwise, use parameter value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -427,16 +295,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Additional parameters to be put into session parameters. To remove a parameter from the
-   * session, clients should explicitly set the parameter value to null. You can reference the
-   * session parameters in the agent with the following format: $session.params.parameter-id.
-   * Depending on your protocol or client library language, this is a map, associative array, symbol
-   * table, dictionary, or JSON object composed of a collection of (MapKey, MapValue) pairs: *
-   * MapKey type: string * MapKey value: parameter name * MapValue type: If parameter's entity type
-   * is a composite entity then use map, otherwise, depending on the parameter value type, it could
-   * be one of string, number, boolean, null, list or map. * MapValue value: If parameter's entity
-   * type is a composite entity then use map from composite entity property names to property
-   * values, otherwise, use parameter value.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setParameters(java.util.Map<String, java.lang.Object> parameters) {
@@ -445,10 +303,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * This field can be used to pass custom data into the webhook associated with the agent.
-   * Arbitrary JSON objects are supported. Some integrations that query a Dialogflow agent may
-   * provide additional information in the payload. In particular, for the Dialogflow Phone Gateway
-   * integration, this field has the form: ``` { "telephony": { "caller_id": "+18558363987" } } ```
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -456,10 +310,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * This field can be used to pass custom data into the webhook associated with the agent.
-   * Arbitrary JSON objects are supported. Some integrations that query a Dialogflow agent may
-   * provide additional information in the payload. In particular, for the Dialogflow Phone Gateway
-   * integration, this field has the form: ``` { "telephony": { "caller_id": "+18558363987" } } ```
    * @param payload payload or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setPayload(java.util.Map<String, java.lang.Object> payload) {
@@ -468,9 +318,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. If set to true and data stores are involved in serving the request then
-   * DetectIntentResponse.query_result.data_store_connection_signals will be filled with data that
-   * can help evaluations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPopulateDataStoreConnectionSignals() {
@@ -478,9 +325,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. If set to true and data stores are involved in serving the request then
-   * DetectIntentResponse.query_result.data_store_connection_signals will be filled with data that
-   * can help evaluations.
    * @param populateDataStoreConnectionSignals populateDataStoreConnectionSignals or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setPopulateDataStoreConnectionSignals(java.lang.Boolean populateDataStoreConnectionSignals) {
@@ -489,7 +333,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Search configuration for UCS search queries.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SearchConfig getSearchConfig() {
@@ -497,7 +340,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Search configuration for UCS search queries.
    * @param searchConfig searchConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setSearchConfig(GoogleCloudDialogflowCxV3beta1SearchConfig searchConfig) {
@@ -506,8 +348,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Additional session entity types to replace or extend developer entity types with. The entity
-   * synonyms apply to all languages and persist for the session of this query.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1SessionEntityType> getSessionEntityTypes() {
@@ -515,8 +355,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Additional session entity types to replace or extend developer entity types with. The entity
-   * synonyms apply to all languages and persist for the session of this query.
    * @param sessionEntityTypes sessionEntityTypes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setSessionEntityTypes(java.util.List<GoogleCloudDialogflowCxV3beta1SessionEntityType> sessionEntityTypes) {
@@ -525,9 +363,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Configure lifetime of the Dialogflow session. By default, a Dialogflow session
-   * remains active and its data is stored for 30 minutes after the last request is sent for the
-   * session. This value should be no longer than 1 day.
    * @return value or {@code null} for none
    */
   public String getSessionTtl() {
@@ -535,9 +370,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Configure lifetime of the Dialogflow session. By default, a Dialogflow session
-   * remains active and its data is stored for 30 minutes after the last request is sent for the
-   * session. This value should be no longer than 1 day.
    * @param sessionTtl sessionTtl or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setSessionTtl(String sessionTtl) {
@@ -546,9 +378,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * The time zone of this conversational query from the [time zone
-   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not
-   * provided, the time zone specified in the agent is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -556,9 +385,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * The time zone of this conversational query from the [time zone
-   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not
-   * provided, the time zone specified in the agent is used.
    * @param timeZone timeZone or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setTimeZone(java.lang.String timeZone) {
@@ -567,12 +393,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * This field can be used to pass HTTP headers for a webhook call. These headers will be sent to
-   * webhook along with the headers that have been configured through Dialogflow web console. The
-   * headers defined within this field will overwrite the headers configured through Dialogflow
-   * console if there is a conflict. Header names are case-insensitive. Google's specified headers
-   * are not allowed. Including: "Host", "Content-Length", "Connection", "From", "User-Agent",
-   * "Accept-Encoding", "If-Modified-Since", "If-None-Match", "X-Forwarded-For", etc.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getWebhookHeaders() {
@@ -580,12 +400,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * This field can be used to pass HTTP headers for a webhook call. These headers will be sent to
-   * webhook along with the headers that have been configured through Dialogflow web console. The
-   * headers defined within this field will overwrite the headers configured through Dialogflow
-   * console if there is a conflict. Header names are case-insensitive. Google's specified headers
-   * are not allowed. Including: "Host", "Content-Length", "Connection", "From", "User-Agent",
-   * "Accept-Encoding", "If-Modified-Since", "If-None-Match", "X-Forwarded-For", etc.
    * @param webhookHeaders webhookHeaders or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setWebhookHeaders(java.util.Map<String, java.lang.String> webhookHeaders) {

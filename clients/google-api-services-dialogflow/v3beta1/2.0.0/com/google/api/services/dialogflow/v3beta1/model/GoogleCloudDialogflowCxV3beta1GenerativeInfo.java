@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents the information of a query if handled by generative agent resources.
+ * Model definition for GoogleCloudDialogflowCxV3beta1GenerativeInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1GenerativeInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The actions performed by the generative playbook for the current agent response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Example actionTracingInfo;
 
   /**
-   * The stack of playbooks that the conversation has currently entered, with the most recent one on
-   * the top.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> currentPlaybooks;
 
   /**
-   * The actions performed by the generative playbook for the current agent response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example getActionTracingInfo() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeInfo extends com.goog
   }
 
   /**
-   * The actions performed by the generative playbook for the current agent response.
    * @param actionTracingInfo actionTracingInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GenerativeInfo setActionTracingInfo(GoogleCloudDialogflowCxV3beta1Example actionTracingInfo) {
@@ -62,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeInfo extends com.goog
   }
 
   /**
-   * The stack of playbooks that the conversation has currently entered, with the most recent one on
-   * the top.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCurrentPlaybooks() {
@@ -71,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeInfo extends com.goog
   }
 
   /**
-   * The stack of playbooks that the conversation has currently entered, with the most recent one on
-   * the top.
    * @param currentPlaybooks currentPlaybooks or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GenerativeInfo setCurrentPlaybooks(java.util.List<java.lang.String> currentPlaybooks) {

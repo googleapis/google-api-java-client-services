@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Text input which can be used for prompt or banned phrases.
+ * Model definition for GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Language code of the phrase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Required. Text input which can be used for prompt or banned phrases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Required. Language code of the phrase.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase extends co
   }
 
   /**
-   * Required. Language code of the phrase.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase setLanguageCode(java.lang.String languageCode) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase extends co
   }
 
   /**
-   * Required. Text input which can be used for prompt or banned phrases.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase extends co
   }
 
   /**
-   * Required. Text input which can be used for prompt or banned phrases.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettingsPhrase setText(java.lang.String text) {

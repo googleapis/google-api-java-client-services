@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Rich Business Messaging (RBM) Card content
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,39 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Description of the card (at most 2000 bytes). At least one of the title, description
-   * or media must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. However at least one of the title, description or media must be set. Media (image,
-   * GIF or a video) to include in the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia media;
 
   /**
-   * Optional. List of suggestions to include in the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion> suggestions;
 
   /**
-   * Optional. Title of the card (at most 200 bytes). At least one of the title, description or
-   * media must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Optional. Description of the card (at most 2000 bytes). At least one of the title, description
-   * or media must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -70,8 +61,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent exten
   }
 
   /**
-   * Optional. Description of the card (at most 2000 bytes). At least one of the title, description
-   * or media must be set.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent setDescription(java.lang.String description) {
@@ -80,8 +69,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent exten
   }
 
   /**
-   * Optional. However at least one of the title, description or media must be set. Media (image,
-   * GIF or a video) to include in the card.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia getMedia() {
@@ -89,8 +76,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent exten
   }
 
   /**
-   * Optional. However at least one of the title, description or media must be set. Media (image,
-   * GIF or a video) to include in the card.
    * @param media media or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent setMedia(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia media) {
@@ -99,7 +84,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent exten
   }
 
   /**
-   * Optional. List of suggestions to include in the card.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion> getSuggestions() {
@@ -107,7 +91,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent exten
   }
 
   /**
-   * Optional. List of suggestions to include in the card.
    * @param suggestions suggestions or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent setSuggestions(java.util.List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion> suggestions) {
@@ -116,8 +99,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent exten
   }
 
   /**
-   * Optional. Title of the card (at most 200 bytes). At least one of the title, description or
-   * media must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -125,8 +106,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent exten
   }
 
   /**
-   * Optional. Title of the card (at most 200 bytes). At least one of the title, description or
-   * media must be set.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent setTitle(java.lang.String title) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents an environment history entry.
+ * Model definition for GoogleCloudDialogflowV2EnvironmentHistoryEntry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2EnvironmentHistoryEntry extends com.google.api.client.json.GenericJson {
 
   /**
-   * The agent version loaded into this environment history entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentVersion;
 
   /**
-   * The creation time of this environment history entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The developer-provided description for this environment history entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The agent version loaded into this environment history entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentVersion() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistoryEntry extends com.go
   }
 
   /**
-   * The agent version loaded into this environment history entry.
    * @param agentVersion agentVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2EnvironmentHistoryEntry setAgentVersion(java.lang.String agentVersion) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistoryEntry extends com.go
   }
 
   /**
-   * The creation time of this environment history entry.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistoryEntry extends com.go
   }
 
   /**
-   * The creation time of this environment history entry.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2EnvironmentHistoryEntry setCreateTime(String createTime) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistoryEntry extends com.go
   }
 
   /**
-   * The developer-provided description for this environment history entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistoryEntry extends com.go
   }
 
   /**
-   * The developer-provided description for this environment history entry.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2EnvironmentHistoryEntry setDescription(java.lang.String description) {

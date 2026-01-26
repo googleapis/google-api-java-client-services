@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents fulfillment information communicated to the webhook.
+ * Model definition for GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,18 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Always present. The value of the Fulfillment.tag field will be populated in this field by
-   * Dialogflow when the associated webhook is called. The tag is typically used by the webhook
-   * service to identify which fulfillment is being called, but it could be used for other purposes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tag;
 
   /**
-   * Always present. The value of the Fulfillment.tag field will be populated in this field by
-   * Dialogflow when the associated webhook is called. The tag is typically used by the webhook
-   * service to identify which fulfillment is being called, but it could be used for other purposes.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -49,9 +43,6 @@ public final class GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo extend
   }
 
   /**
-   * Always present. The value of the Fulfillment.tag field will be populated in this field by
-   * Dialogflow when the associated webhook is called. The tag is typically used by the webhook
-   * service to identify which fulfillment is being called, but it could be used for other purposes.
    * @param tag tag or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo setTag(java.lang.String tag) {

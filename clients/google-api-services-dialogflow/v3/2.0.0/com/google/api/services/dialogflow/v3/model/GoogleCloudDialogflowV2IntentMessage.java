@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A rich response message. Corresponds to the intent `Response` field in the Dialogflow console.
- * For more information, see [Rich response
- * messages](https://cloud.google.com/dialogflow/docs/intents-rich-messages).
+ * Model definition for GoogleCloudDialogflowV2IntentMessage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,112 +30,96 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The basic card response for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageBasicCard basicCard;
 
   /**
-   * Browse carousel card for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard browseCarouselCard;
 
   /**
-   * The card response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageCard card;
 
   /**
-   * The carousel card response for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageCarouselSelect carouselSelect;
 
   /**
-   * The image response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageImage image;
 
   /**
-   * The link out suggestion chip for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion linkOutSuggestion;
 
   /**
-   * The list card response for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageListSelect listSelect;
 
   /**
-   * The media content card for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageMediaContent mediaContent;
 
   /**
-   * A custom platform-specific response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
-   * Optional. The platform that this message is intended for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platform;
 
   /**
-   * The quick replies response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageQuickReplies quickReplies;
 
   /**
-   * The voice and text-only responses for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageSimpleResponses simpleResponses;
 
   /**
-   * The suggestion chips for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageSuggestions suggestions;
 
   /**
-   * Table card for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageTableCard tableCard;
 
   /**
-   * The text response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageText text;
 
   /**
-   * The basic card response for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBasicCard getBasicCard() {
@@ -145,7 +127,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The basic card response for Actions on Google.
    * @param basicCard basicCard or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setBasicCard(GoogleCloudDialogflowV2IntentMessageBasicCard basicCard) {
@@ -154,7 +135,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * Browse carousel card for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard getBrowseCarouselCard() {
@@ -162,7 +142,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * Browse carousel card for Actions on Google.
    * @param browseCarouselCard browseCarouselCard or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setBrowseCarouselCard(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard browseCarouselCard) {
@@ -171,7 +150,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The card response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCard getCard() {
@@ -179,7 +157,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The card response.
    * @param card card or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setCard(GoogleCloudDialogflowV2IntentMessageCard card) {
@@ -188,7 +165,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The carousel card response for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCarouselSelect getCarouselSelect() {
@@ -196,7 +172,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The carousel card response for Actions on Google.
    * @param carouselSelect carouselSelect or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setCarouselSelect(GoogleCloudDialogflowV2IntentMessageCarouselSelect carouselSelect) {
@@ -205,7 +180,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The image response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageImage getImage() {
@@ -213,7 +187,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The image response.
    * @param image image or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setImage(GoogleCloudDialogflowV2IntentMessageImage image) {
@@ -222,7 +195,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The link out suggestion chip for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion getLinkOutSuggestion() {
@@ -230,7 +202,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The link out suggestion chip for Actions on Google.
    * @param linkOutSuggestion linkOutSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setLinkOutSuggestion(GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion linkOutSuggestion) {
@@ -239,7 +210,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The list card response for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageListSelect getListSelect() {
@@ -247,7 +217,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The list card response for Actions on Google.
    * @param listSelect listSelect or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setListSelect(GoogleCloudDialogflowV2IntentMessageListSelect listSelect) {
@@ -256,7 +225,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The media content card for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageMediaContent getMediaContent() {
@@ -264,7 +232,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The media content card for Actions on Google.
    * @param mediaContent mediaContent or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setMediaContent(GoogleCloudDialogflowV2IntentMessageMediaContent mediaContent) {
@@ -273,7 +240,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * A custom platform-specific response.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -281,7 +247,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * A custom platform-specific response.
    * @param payload payload or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setPayload(java.util.Map<String, java.lang.Object> payload) {
@@ -290,7 +255,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * Optional. The platform that this message is intended for.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatform() {
@@ -298,7 +262,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * Optional. The platform that this message is intended for.
    * @param platform platform or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setPlatform(java.lang.String platform) {
@@ -307,7 +270,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The quick replies response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageQuickReplies getQuickReplies() {
@@ -315,7 +277,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The quick replies response.
    * @param quickReplies quickReplies or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setQuickReplies(GoogleCloudDialogflowV2IntentMessageQuickReplies quickReplies) {
@@ -324,7 +285,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The voice and text-only responses for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageSimpleResponses getSimpleResponses() {
@@ -332,7 +292,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The voice and text-only responses for Actions on Google.
    * @param simpleResponses simpleResponses or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setSimpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponses simpleResponses) {
@@ -341,7 +300,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The suggestion chips for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageSuggestions getSuggestions() {
@@ -349,7 +307,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The suggestion chips for Actions on Google.
    * @param suggestions suggestions or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setSuggestions(GoogleCloudDialogflowV2IntentMessageSuggestions suggestions) {
@@ -358,7 +315,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * Table card for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageTableCard getTableCard() {
@@ -366,7 +322,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * Table card for Actions on Google.
    * @param tableCard tableCard or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setTableCard(GoogleCloudDialogflowV2IntentMessageTableCard tableCard) {
@@ -375,7 +330,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The text response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageText getText() {
@@ -383,7 +337,6 @@ public final class GoogleCloudDialogflowV2IntentMessage extends com.google.api.c
   }
 
   /**
-   * The text response.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessage setText(GoogleCloudDialogflowV2IntentMessageText text) {

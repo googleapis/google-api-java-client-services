@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for Versions.CompareVersions.
+ * Model definition for GoogleCloudDialogflowCxV3CompareVersionsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,27 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3CompareVersionsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The language to compare the flow versions for. If not specified, the agent's default language
-   * is used. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Required. Name of the target flow version to compare with the base version. Use version ID `0`
-   * to indicate the draft version of the specified flow. Format:
-   * `projects//locations//agents//flows//versions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetVersion;
 
   /**
-   * The language to compare the flow versions for. If not specified, the agent's default language
-   * is used. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -58,9 +49,6 @@ public final class GoogleCloudDialogflowCxV3CompareVersionsRequest extends com.g
   }
 
   /**
-   * The language to compare the flow versions for. If not specified, the agent's default language
-   * is used. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be used.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3CompareVersionsRequest setLanguageCode(java.lang.String languageCode) {
@@ -69,9 +57,6 @@ public final class GoogleCloudDialogflowCxV3CompareVersionsRequest extends com.g
   }
 
   /**
-   * Required. Name of the target flow version to compare with the base version. Use version ID `0`
-   * to indicate the draft version of the specified flow. Format:
-   * `projects//locations//agents//flows//versions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetVersion() {
@@ -79,9 +64,6 @@ public final class GoogleCloudDialogflowCxV3CompareVersionsRequest extends com.g
   }
 
   /**
-   * Required. Name of the target flow version to compare with the base version. Use version ID `0`
-   * to indicate the draft version of the specified flow. Format:
-   * `projects//locations//agents//flows//versions/`.
    * @param targetVersion targetVersion or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3CompareVersionsRequest setTargetVersion(java.lang.String targetVersion) {

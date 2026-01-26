@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Browsing carousel tile
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,43 +31,36 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Description of the carousel item. Maximum of four lines of text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of
-   * text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String footer;
 
   /**
-   * Optional. Hero image for the carousel item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageImage image;
 
   /**
-   * Required. Action to present to the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction openUriAction;
 
   /**
-   * Required. Title of the carousel item. Maximum of two lines of text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Optional. Description of the carousel item. Maximum of four lines of text.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -74,7 +68,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Optional. Description of the carousel item. Maximum of four lines of text.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem setDescription(java.lang.String description) {
@@ -83,8 +76,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of
-   * text.
    * @return value or {@code null} for none
    */
   public java.lang.String getFooter() {
@@ -92,8 +83,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Optional. Text that appears at the bottom of the Browse Carousel Card. Maximum of one line of
-   * text.
    * @param footer footer or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem setFooter(java.lang.String footer) {
@@ -102,7 +91,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Optional. Hero image for the carousel item.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageImage getImage() {
@@ -110,7 +98,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Optional. Hero image for the carousel item.
    * @param image image or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem setImage(GoogleCloudDialogflowV2beta1IntentMessageImage image) {
@@ -119,7 +106,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Required. Action to present to the user.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction getOpenUriAction() {
@@ -127,7 +113,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Required. Action to present to the user.
    * @param openUriAction openUriAction or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem setOpenUriAction(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction openUriAction) {
@@ -136,7 +121,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Required. Title of the carousel item. Maximum of two lines of text.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -144,7 +128,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Required. Title of the carousel item. Maximum of two lines of text.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem setTitle(java.lang.String title) {

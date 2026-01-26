@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Instructs the speech recognizer on how to process the audio content.
+ * Model definition for GoogleCloudDialogflowCxV3InputAudioConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,83 +30,60 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Audio encoding of the audio content to process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioEncoding;
 
   /**
-   * Configuration of barge-in behavior during the streaming of input audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3BargeInConfig bargeInConfig;
 
   /**
-   * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with
-   * information about the recognized speech words, e.g. start and end time offsets. If false or
-   * unspecified, Speech doesn't return any word-level information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableWordInfo;
 
   /**
-   * Optional. Which Speech model to select for the given request. For more information, see [Speech
-   * models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
 
   /**
-   * Optional. Which variant of the Speech model to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String modelVariant;
 
   /**
-   * If `true`, the request will opt out for STT conformer model migration. This field will be
-   * deprecated once force migration takes place in June 2024. Please refer to [Dialogflow CX Speech
-   * model migration](https://cloud.google.com/dialogflow/cx/docs/concept/speech-model-migration).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean optOutConformerModelMigration;
 
   /**
-   * Optional. A list of strings containing words and phrases that the speech recognizer should
-   * recognize with higher likelihood. See [the Cloud Speech
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more
-   * details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> phraseHints;
 
   /**
-   * Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * Optional. If `false` (default), recognition does not cease until the client closes the stream.
-   * If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition
-   * ceases when it detects the audio's voice has stopped or paused. In this case, once a detected
-   * intent is received, the client should close the stream and start a new request with a new
-   * stream as needed. Note: This setting is relevant only for streaming methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean singleUtterance;
 
   /**
-   * Required. Audio encoding of the audio content to process.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioEncoding() {
@@ -114,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Required. Audio encoding of the audio content to process.
    * @param audioEncoding audioEncoding or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig setAudioEncoding(java.lang.String audioEncoding) {
@@ -123,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Configuration of barge-in behavior during the streaming of input audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3BargeInConfig getBargeInConfig() {
@@ -131,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Configuration of barge-in behavior during the streaming of input audio.
    * @param bargeInConfig bargeInConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig setBargeInConfig(GoogleCloudDialogflowCxV3BargeInConfig bargeInConfig) {
@@ -140,9 +114,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with
-   * information about the recognized speech words, e.g. start and end time offsets. If false or
-   * unspecified, Speech doesn't return any word-level information.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableWordInfo() {
@@ -150,9 +121,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with
-   * information about the recognized speech words, e.g. start and end time offsets. If false or
-   * unspecified, Speech doesn't return any word-level information.
    * @param enableWordInfo enableWordInfo or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig setEnableWordInfo(java.lang.Boolean enableWordInfo) {
@@ -161,8 +129,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. Which Speech model to select for the given request. For more information, see [Speech
-   * models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -170,8 +136,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. Which Speech model to select for the given request. For more information, see [Speech
-   * models](https://cloud.google.com/dialogflow/cx/docs/concept/speech-models).
    * @param model model or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig setModel(java.lang.String model) {
@@ -180,7 +144,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. Which variant of the Speech model to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelVariant() {
@@ -188,7 +151,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. Which variant of the Speech model to use.
    * @param modelVariant modelVariant or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig setModelVariant(java.lang.String modelVariant) {
@@ -197,9 +159,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * If `true`, the request will opt out for STT conformer model migration. This field will be
-   * deprecated once force migration takes place in June 2024. Please refer to [Dialogflow CX Speech
-   * model migration](https://cloud.google.com/dialogflow/cx/docs/concept/speech-model-migration).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOptOutConformerModelMigration() {
@@ -207,9 +166,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * If `true`, the request will opt out for STT conformer model migration. This field will be
-   * deprecated once force migration takes place in June 2024. Please refer to [Dialogflow CX Speech
-   * model migration](https://cloud.google.com/dialogflow/cx/docs/concept/speech-model-migration).
    * @param optOutConformerModelMigration optOutConformerModelMigration or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig setOptOutConformerModelMigration(java.lang.Boolean optOutConformerModelMigration) {
@@ -218,10 +174,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. A list of strings containing words and phrases that the speech recognizer should
-   * recognize with higher likelihood. See [the Cloud Speech
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more
-   * details.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhraseHints() {
@@ -229,10 +181,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. A list of strings containing words and phrases that the speech recognizer should
-   * recognize with higher likelihood. See [the Cloud Speech
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics#phrase-hints) for more
-   * details.
    * @param phraseHints phraseHints or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig setPhraseHints(java.util.List<java.lang.String> phraseHints) {
@@ -241,8 +189,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleRateHertz() {
@@ -250,8 +196,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * @param sampleRateHertz sampleRateHertz or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig setSampleRateHertz(java.lang.Integer sampleRateHertz) {
@@ -260,11 +204,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. If `false` (default), recognition does not cease until the client closes the stream.
-   * If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition
-   * ceases when it detects the audio's voice has stopped or paused. In this case, once a detected
-   * intent is received, the client should close the stream and start a new request with a new
-   * stream as needed. Note: This setting is relevant only for streaming methods.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSingleUtterance() {
@@ -272,11 +211,6 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfig extends com.google.
   }
 
   /**
-   * Optional. If `false` (default), recognition does not cease until the client closes the stream.
-   * If `true`, the recognizer will detect a single spoken utterance in input audio. Recognition
-   * ceases when it detects the audio's voice has stopped or paused. In this case, once a detected
-   * intent is received, the client should close the stream and start a new request with a new
-   * stream as needed. Note: This setting is relevant only for streaming methods.
    * @param singleUtterance singleUtterance or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig setSingleUtterance(java.lang.Boolean singleUtterance) {

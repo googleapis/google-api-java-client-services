@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Cell of TableCardRow.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageTableCardCell.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCell extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Text in this cell.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Required. Text in this cell.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardCell extend
   }
 
   /**
-   * Required. Text in this cell.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTableCardCell setText(java.lang.String text) {

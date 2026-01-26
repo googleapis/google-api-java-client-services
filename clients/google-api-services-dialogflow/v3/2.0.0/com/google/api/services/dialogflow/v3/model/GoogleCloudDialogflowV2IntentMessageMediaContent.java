@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The media content card for Actions on Google.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageMediaContent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2IntentMessageMediaContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. List of media objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject> mediaObjects;
 
   /**
-   * Optional. What type of media is the content (ie "audio").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mediaType;
 
   /**
-   * Required. List of media objects.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject> getMediaObjects() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContent extends com.
   }
 
   /**
-   * Required. List of media objects.
    * @param mediaObjects mediaObjects or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageMediaContent setMediaObjects(java.util.List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject> mediaObjects) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContent extends com.
   }
 
   /**
-   * Optional. What type of media is the content (ie "audio").
    * @return value or {@code null} for none
    */
   public java.lang.String getMediaType() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContent extends com.
   }
 
   /**
-   * Optional. What type of media is the content (ie "audio").
    * @param mediaType mediaType or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageMediaContent setMediaType(java.lang.String mediaType) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a SearchKnowledge answer.
+ * Model definition for GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The piece of text from the knowledge base documents that answers the search query
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answer;
 
   /**
-   * The name of the answer record. Format: `projects//locations//answer Records/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * All sources used to generate the answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeAnswerAnswerSource> answerSources;
 
   /**
-   * The type of the answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerType;
 
   /**
-   * The piece of text from the knowledge base documents that answers the search query
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswer() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer extends com
   }
 
   /**
-   * The piece of text from the knowledge base documents that answers the search query
    * @param answer answer or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer setAnswer(java.lang.String answer) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer extends com
   }
 
   /**
-   * The name of the answer record. Format: `projects//locations//answer Records/`
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer extends com
   }
 
   /**
-   * The name of the answer record. Format: `projects//locations//answer Records/`
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer setAnswerRecord(java.lang.String answerRecord) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer extends com
   }
 
   /**
-   * All sources used to generate the answer.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeAnswerAnswerSource> getAnswerSources() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer extends com
   }
 
   /**
-   * All sources used to generate the answer.
    * @param answerSources answerSources or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer setAnswerSources(java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeAnswerAnswerSource> answerSources) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer extends com
   }
 
   /**
-   * The type of the answer.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerType() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer extends com
   }
 
   /**
-   * The type of the answer.
    * @param answerType answerType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeAnswer setAnswerType(java.lang.String answerType) {

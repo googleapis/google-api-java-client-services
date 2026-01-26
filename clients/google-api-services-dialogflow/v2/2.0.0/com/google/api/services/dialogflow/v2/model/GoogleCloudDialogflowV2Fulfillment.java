@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * By default, your agent responds to a matched intent with a static response. As an alternative,
- * you can provide a more dynamic response by using fulfillment. When you enable fulfillment for an
- * intent, Dialogflow responds to that intent by calling a service that you define. For example, if
- * an end-user wants to schedule a haircut on Friday, your service can check your database and
- * respond to the end-user with availability information for Friday. For more information, see the
- * [fulfillment guide](https://cloud.google.com/dialogflow/docs/fulfillment-overview).
+ * Model definition for GoogleCloudDialogflowV2Fulfillment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,46 +30,36 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The human-readable name of the fulfillment, unique within the agent. This field is
-   * not used for Fulfillment in an Environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. Whether fulfillment is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Optional. The field defines whether the fulfillment is enabled for certain features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2FulfillmentFeature> features;
 
   /**
-   * Configuration for a generic web service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2FulfillmentGenericWebService genericWebService;
 
   /**
-   * Required. The unique identifier of the fulfillment. Supported formats: -
-   * `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used
-   * for Fulfillment in an Environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The human-readable name of the fulfillment, unique within the agent. This field is
-   * not used for Fulfillment in an Environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -82,8 +67,6 @@ public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.cli
   }
 
   /**
-   * Optional. The human-readable name of the fulfillment, unique within the agent. This field is
-   * not used for Fulfillment in an Environment.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2Fulfillment setDisplayName(java.lang.String displayName) {
@@ -92,7 +75,6 @@ public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.cli
   }
 
   /**
-   * Optional. Whether fulfillment is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -100,7 +82,6 @@ public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.cli
   }
 
   /**
-   * Optional. Whether fulfillment is enabled.
    * @param enabled enabled or {@code null} for none
    */
   public GoogleCloudDialogflowV2Fulfillment setEnabled(java.lang.Boolean enabled) {
@@ -109,7 +90,6 @@ public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.cli
   }
 
   /**
-   * Optional. The field defines whether the fulfillment is enabled for certain features.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2FulfillmentFeature> getFeatures() {
@@ -117,7 +97,6 @@ public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.cli
   }
 
   /**
-   * Optional. The field defines whether the fulfillment is enabled for certain features.
    * @param features features or {@code null} for none
    */
   public GoogleCloudDialogflowV2Fulfillment setFeatures(java.util.List<GoogleCloudDialogflowV2FulfillmentFeature> features) {
@@ -126,7 +105,6 @@ public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.cli
   }
 
   /**
-   * Configuration for a generic web service.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2FulfillmentGenericWebService getGenericWebService() {
@@ -134,7 +112,6 @@ public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.cli
   }
 
   /**
-   * Configuration for a generic web service.
    * @param genericWebService genericWebService or {@code null} for none
    */
   public GoogleCloudDialogflowV2Fulfillment setGenericWebService(GoogleCloudDialogflowV2FulfillmentGenericWebService genericWebService) {
@@ -143,9 +120,6 @@ public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.cli
   }
 
   /**
-   * Required. The unique identifier of the fulfillment. Supported formats: -
-   * `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used
-   * for Fulfillment in an Environment.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -153,9 +127,6 @@ public final class GoogleCloudDialogflowV2Fulfillment extends com.google.api.cli
   }
 
   /**
-   * Required. The unique identifier of the fulfillment. Supported formats: -
-   * `projects//agent/fulfillment` - `projects//locations//agent/fulfillment` This field is not used
-   * for Fulfillment in an Environment.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2Fulfillment setName(java.lang.String name) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for EntityTypes.ImportEntityTypes.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Info which resources have conflicts when REPORT_CONFLICT merge_option is set in
-   * ImportEntityTypesRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConflictingResources conflictingResources;
 
   /**
-   * The unique identifier of the imported entity types. Format:
-   * `projects//locations//agents//entity_types/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entityTypes;
 
   /**
-   * Info which resources have conflicts when REPORT_CONFLICT merge_option is set in
-   * ImportEntityTypesRequest.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConflictingResources getConflictingResources() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponse exten
   }
 
   /**
-   * Info which resources have conflicts when REPORT_CONFLICT merge_option is set in
-   * ImportEntityTypesRequest.
    * @param conflictingResources conflictingResources or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponse setConflictingResources(GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConflictingResources conflictingResources) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponse exten
   }
 
   /**
-   * The unique identifier of the imported entity types. Format:
-   * `projects//locations//agents//entity_types/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntityTypes() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponse exten
   }
 
   /**
-   * The unique identifier of the imported entity types. Format:
-   * `projects//locations//agents//entity_types/`.
    * @param entityTypes entityTypes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponse setEntityTypes(java.util.List<java.lang.String> entityTypes) {

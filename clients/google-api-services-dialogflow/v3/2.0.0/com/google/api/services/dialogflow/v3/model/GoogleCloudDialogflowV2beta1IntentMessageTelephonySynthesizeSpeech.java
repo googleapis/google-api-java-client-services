@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Synthesizes speech and plays back the synthesized audio to the caller in Telephony Gateway.
- * Telephony Gateway takes the synthesizer settings from `DetectIntentResponse.output_audio_config`
- * which can either be set at request-level or can come from the agent-level synthesizer config.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,23 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech extends com.google.api.client.json.GenericJson {
 
   /**
-   * The SSML to be synthesized. For more information, see
-   * [SSML](https://developers.google.com/actions/reference/ssml).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ssml;
 
   /**
-   * The raw text to be synthesized.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * The SSML to be synthesized. For more information, see
-   * [SSML](https://developers.google.com/actions/reference/ssml).
    * @return value or {@code null} for none
    */
   public java.lang.String getSsml() {
@@ -56,8 +49,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
   }
 
   /**
-   * The SSML to be synthesized. For more information, see
-   * [SSML](https://developers.google.com/actions/reference/ssml).
    * @param ssml ssml or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech setSsml(java.lang.String ssml) {
@@ -66,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
   }
 
   /**
-   * The raw text to be synthesized.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -74,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
   }
 
   /**
-   * The raw text to be synthesized.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech setText(java.lang.String text) {

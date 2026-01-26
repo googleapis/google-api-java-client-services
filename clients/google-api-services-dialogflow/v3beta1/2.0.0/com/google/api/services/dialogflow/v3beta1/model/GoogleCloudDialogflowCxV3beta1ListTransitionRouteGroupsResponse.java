@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The response message for TransitionRouteGroups.ListTransitionRouteGroups.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of transition route groups. There will be a maximum number of items returned based on
-   * the page_size field in the request. The list may in some cases be empty or contain fewer
-   * entries than page_size even if this isn't the last page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1TransitionRouteGroup> transitionRouteGroups;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsRespon
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -63,9 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsRespon
   }
 
   /**
-   * The list of transition route groups. There will be a maximum number of items returned based on
-   * the page_size field in the request. The list may in some cases be empty or contain fewer
-   * entries than page_size even if this isn't the last page.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1TransitionRouteGroup> getTransitionRouteGroups() {
@@ -73,9 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsRespon
   }
 
   /**
-   * The list of transition route groups. There will be a maximum number of items returned based on
-   * the page_size field in the request. The list may in some cases be empty or contain fewer
-   * entries than page_size even if this isn't the last page.
    * @param transitionRouteGroups transitionRouteGroups or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListTransitionRouteGroupsResponse setTransitionRouteGroups(java.util.List<GoogleCloudDialogflowCxV3beta1TransitionRouteGroup> transitionRouteGroups) {

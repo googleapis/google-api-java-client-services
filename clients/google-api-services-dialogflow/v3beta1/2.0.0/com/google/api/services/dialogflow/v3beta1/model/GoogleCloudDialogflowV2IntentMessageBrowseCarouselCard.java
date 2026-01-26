@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Browse Carousel Card for Actions on Google.
- * https://developers.google.com/actions/assistant/responses#browsing_carousel
+ * Model definition for GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Settings for displaying the image. Applies to every image in items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageDisplayOptions;
 
   /**
-   * Required. List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItem> items;
 
   /**
-   * Optional. Settings for displaying the image. Applies to every image in items.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageDisplayOptions() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard extend
   }
 
   /**
-   * Optional. Settings for displaying the image. Applies to every image in items.
    * @param imageDisplayOptions imageDisplayOptions or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard setImageDisplayOptions(java.lang.String imageDisplayOptions) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard extend
   }
 
   /**
-   * Required. List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItem> getItems() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard extend
   }
 
   /**
-   * Required. List of items in the Browse Carousel Card. Minimum of two items, maximum of ten.
    * @param items items or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard setItems(java.util.List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItem> items) {

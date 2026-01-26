@@ -17,11 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * An event handler specifies an event that can be handled during a session. When the specified
- * event happens, the following actions are taken in order: * If there is a `trigger_fulfillment`
- * associated with the event, it will be called. * If there is a `target_page` associated with the
- * event, the session will transition into the specified page. * If there is a `target_flow`
- * associated with the event, the session will transition into the specified flow.
+ * Model definition for GoogleCloudDialogflowCxV3beta1EventHandler.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -34,51 +30,42 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the event to handle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String event;
 
   /**
-   * Output only. The unique identifier of this event handler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetFlow;
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetPage;
 
   /**
-   * The target playbook to transition to. Format: `projects//locations//agents//playbooks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetPlaybook;
 
   /**
-   * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment
-   * enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a
-   * handler handling webhooks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Fulfillment triggerFulfillment;
 
   /**
-   * Required. The name of the event to handle.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvent() {
@@ -86,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * Required. The name of the event to handle.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EventHandler setEvent(java.lang.String event) {
@@ -95,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * Output only. The unique identifier of this event handler.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * Output only. The unique identifier of this event handler.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EventHandler setName(java.lang.String name) {
@@ -112,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetFlow() {
@@ -120,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * @param targetFlow targetFlow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EventHandler setTargetFlow(java.lang.String targetFlow) {
@@ -129,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetPage() {
@@ -137,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * @param targetPage targetPage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EventHandler setTargetPage(java.lang.String targetPage) {
@@ -146,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * The target playbook to transition to. Format: `projects//locations//agents//playbooks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetPlaybook() {
@@ -154,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * The target playbook to transition to. Format: `projects//locations//agents//playbooks/`.
    * @param targetPlaybook targetPlaybook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EventHandler setTargetPlaybook(java.lang.String targetPlaybook) {
@@ -163,9 +141,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment
-   * enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a
-   * handler handling webhooks.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Fulfillment getTriggerFulfillment() {
@@ -173,9 +148,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   }
 
   /**
-   * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment
-   * enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a
-   * handler handling webhooks.
    * @param triggerFulfillment triggerFulfillment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EventHandler setTriggerFulfillment(GoogleCloudDialogflowCxV3beta1Fulfillment triggerFulfillment) {

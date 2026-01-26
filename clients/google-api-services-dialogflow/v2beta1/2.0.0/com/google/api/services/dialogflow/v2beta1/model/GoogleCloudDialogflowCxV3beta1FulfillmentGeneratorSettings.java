@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Generator settings used by the LLM to generate a text response.
+ * Model definition for GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,33 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The generator to call. Format: `projects//locations//agents//generators/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String generator;
 
   /**
-   * Map from placeholder parameter in the Generator to corresponding session parameters. By
-   * default, Dialogflow uses the session parameter with the same name to fill in the generator
-   * template. e.g. If there is a placeholder parameter `city` in the Generator, Dialogflow default
-   * to fill in the `$city` with `$session.params.city`. However, you may choose to fill `$city`
-   * with `$session.params.desination-city`. - Map key: parameter ID - Map value: session parameter
-   * name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> inputParameters;
 
   /**
-   * Required. Output parameter which should contain the generator response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputParameter;
 
   /**
-   * Required. The generator to call. Format: `projects//locations//agents//generators/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGenerator() {
@@ -64,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings ex
   }
 
   /**
-   * Required. The generator to call. Format: `projects//locations//agents//generators/`.
    * @param generator generator or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings setGenerator(java.lang.String generator) {
@@ -73,12 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings ex
   }
 
   /**
-   * Map from placeholder parameter in the Generator to corresponding session parameters. By
-   * default, Dialogflow uses the session parameter with the same name to fill in the generator
-   * template. e.g. If there is a placeholder parameter `city` in the Generator, Dialogflow default
-   * to fill in the `$city` with `$session.params.city`. However, you may choose to fill `$city`
-   * with `$session.params.desination-city`. - Map key: parameter ID - Map value: session parameter
-   * name
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getInputParameters() {
@@ -86,12 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings ex
   }
 
   /**
-   * Map from placeholder parameter in the Generator to corresponding session parameters. By
-   * default, Dialogflow uses the session parameter with the same name to fill in the generator
-   * template. e.g. If there is a placeholder parameter `city` in the Generator, Dialogflow default
-   * to fill in the `$city` with `$session.params.city`. However, you may choose to fill `$city`
-   * with `$session.params.desination-city`. - Map key: parameter ID - Map value: session parameter
-   * name
    * @param inputParameters inputParameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings setInputParameters(java.util.Map<String, java.lang.String> inputParameters) {
@@ -100,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings ex
   }
 
   /**
-   * Required. Output parameter which should contain the generator response.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputParameter() {
@@ -108,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings ex
   }
 
   /**
-   * Required. Output parameter which should contain the generator response.
    * @param outputParameter outputParameter or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings setOutputParameter(java.lang.String outputParameter) {

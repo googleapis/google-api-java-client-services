@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The response message for Conversations.GenerateSuggestions.
+ * Model definition for GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The answers generated for the conversation based on context.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1GenerateSuggestionsResponseGeneratorSuggestionAnswer> generatorSuggestionAnswers;
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * The answers generated for the conversation based on context.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1GenerateSuggestionsResponseGeneratorSuggestionAnswer> getGeneratorSuggestionAnswers() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse exten
   }
 
   /**
-   * The answers generated for the conversation based on context.
    * @param generatorSuggestionAnswers generatorSuggestionAnswers or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse setGeneratorSuggestionAnswers(java.util.List<GoogleCloudDialogflowV2beta1GenerateSuggestionsResponseGeneratorSuggestionAnswer> generatorSuggestionAnswers) {
@@ -62,8 +57,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse exten
   }
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -71,8 +64,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse exten
   }
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse setLatestMessage(java.lang.String latestMessage) {

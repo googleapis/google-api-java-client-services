@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Inline source for a Dialogflow operation that reads or imports objects (e.g. intents) into
- * Dialogflow.
+ * Model definition for GoogleCloudDialogflowCxV3beta1InlineSource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1InlineSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The uncompressed byte content for the objects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * The uncompressed byte content for the objects.
    * @see #decodeContent()
    * @return value or {@code null} for none
    */
@@ -47,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3beta1InlineSource extends com.google
   }
 
   /**
-   * The uncompressed byte content for the objects.
+
    * @see #getContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -58,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1InlineSource extends com.google
   }
 
   /**
-   * The uncompressed byte content for the objects.
    * @see #encodeContent()
    * @param content content or {@code null} for none
    */
@@ -68,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3beta1InlineSource extends com.google
   }
 
   /**
-   * The uncompressed byte content for the objects.
+
    * @see #setContent()
    *
    * <p>

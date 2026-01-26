@@ -17,20 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Entities are extracted from user input and represent parameters that are meaningful to your
- * application. For example, a date range, a proper name such as a geographic location or landmark,
- * and so on. Entities represent actionable data for your application. When you define an entity,
- * you can also include synonyms that all map to that entity. For example, "soft drink", "soda",
- * "pop", and so on. There are three types of entities: * **System** - entities that are defined by
- * the Dialogflow API for common data types such as date, time, currency, and so on. A system entity
- * is represented by the `EntityType` type. * **Custom** - entities that are defined by you that
- * represent actionable data that is meaningful to your application. For example, you could define a
- * `pizza.sauce` entity for red or white pizza sauce, a `pizza.cheese` entity for the different
- * types of cheese on a pizza, a `pizza.topping` entity for different toppings, and so on. A custom
- * entity is represented by the `EntityType` type. * **User** - entities that are built for an
- * individual user such as favorites, preferences, playlists, and so on. A user entity is
- * represented by the SessionEntityType type. For more information about entity types, see the
- * [Dialogflow documentation](https://cloud.google.com/dialogflow/docs/entities-overview).
+ * Model definition for GoogleCloudDialogflowCxV3beta1EntityType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -43,69 +30,54 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether the entity type can be automatically expanded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String autoExpansionMode;
 
   /**
-   * Required. The human-readable name of the entity type, unique within the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Enables fuzzy entity extraction during classification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableFuzzyExtraction;
 
   /**
-   * The collection of entity entries associated with the entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1EntityTypeEntity> entities;
 
   /**
-   * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have
-   * a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun)
-   * as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by
-   * entities and excluded phrases should be mutually exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhrase> excludedPhrases;
 
   /**
-   * Required. Indicates the kind of entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format:
-   * `projects//locations//agents//entityTypes/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Indicates whether parameters of the entity type should be redacted in log. If redaction is
-   * enabled, page parameters and intent parameters referring to the entity type will be replaced by
-   * parameter name during logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean redact;
 
   /**
-   * Indicates whether the entity type can be automatically expanded.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoExpansionMode() {
@@ -113,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Indicates whether the entity type can be automatically expanded.
    * @param autoExpansionMode autoExpansionMode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EntityType setAutoExpansionMode(java.lang.String autoExpansionMode) {
@@ -122,7 +93,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Required. The human-readable name of the entity type, unique within the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -130,7 +100,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Required. The human-readable name of the entity type, unique within the agent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EntityType setDisplayName(java.lang.String displayName) {
@@ -139,7 +108,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Enables fuzzy entity extraction during classification.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableFuzzyExtraction() {
@@ -147,7 +115,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Enables fuzzy entity extraction during classification.
    * @param enableFuzzyExtraction enableFuzzyExtraction or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EntityType setEnableFuzzyExtraction(java.lang.Boolean enableFuzzyExtraction) {
@@ -156,7 +123,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * The collection of entity entries associated with the entity type.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1EntityTypeEntity> getEntities() {
@@ -164,7 +130,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * The collection of entity entries associated with the entity type.
    * @param entities entities or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EntityType setEntities(java.util.List<GoogleCloudDialogflowCxV3beta1EntityTypeEntity> entities) {
@@ -173,10 +138,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have
-   * a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun)
-   * as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by
-   * entities and excluded phrases should be mutually exclusive.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhrase> getExcludedPhrases() {
@@ -184,10 +145,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Collection of exceptional words and phrases that shouldn't be matched. For example, if you have
-   * a size entity type with entry `giant`(an adjective), you might consider adding `giants`(a noun)
-   * as an exclusion. If the kind of entity type is `KIND_MAP`, then the phrases specified by
-   * entities and excluded phrases should be mutually exclusive.
    * @param excludedPhrases excludedPhrases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EntityType setExcludedPhrases(java.util.List<GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhrase> excludedPhrases) {
@@ -196,7 +153,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Required. Indicates the kind of entity type.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -204,7 +160,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Required. Indicates the kind of entity type.
    * @param kind kind or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EntityType setKind(java.lang.String kind) {
@@ -213,8 +168,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format:
-   * `projects//locations//agents//entityTypes/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -222,8 +175,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType. Format:
-   * `projects//locations//agents//entityTypes/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EntityType setName(java.lang.String name) {
@@ -232,9 +183,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Indicates whether parameters of the entity type should be redacted in log. If redaction is
-   * enabled, page parameters and intent parameters referring to the entity type will be replaced by
-   * parameter name during logging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRedact() {
@@ -242,9 +190,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityType extends com.google.a
   }
 
   /**
-   * Indicates whether parameters of the entity type should be redacted in log. If redaction is
-   * enabled, page parameters and intent parameters referring to the entity type will be replaced by
-   * parameter name during logging.
    * @param redact redact or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EntityType setRedact(java.lang.Boolean redact) {

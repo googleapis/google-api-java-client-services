@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The configuration used for human agent side Dialogflow assist suggestion.
+ * Model definition for GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDi
+ * alogflowQuerySourceHumanAgentSideConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +31,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceHumanAgentSideConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of a dialogflow virtual agent used for intent detection and suggestion
-   * triggered by human agent. Format: `projects//locations//agent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agent;
 
   /**
-   * Optional. The name of a dialogflow virtual agent used for intent detection and suggestion
-   * triggered by human agent. Format: `projects//locations//agent`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgent() {
@@ -47,8 +44,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * Optional. The name of a dialogflow virtual agent used for intent detection and suggestion
-   * triggered by human agent. Format: `projects//locations//agent`.
    * @param agent agent or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceHumanAgentSideConfig setAgent(java.lang.String agent) {

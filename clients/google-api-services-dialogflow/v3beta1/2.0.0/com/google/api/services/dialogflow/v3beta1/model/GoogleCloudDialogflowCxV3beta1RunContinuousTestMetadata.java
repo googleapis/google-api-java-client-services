@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Metadata returned for the Environments.RunContinuousTest long running operation.
+ * Model definition for GoogleCloudDialogflowCxV3beta1RunContinuousTestMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1RunContinuousTestMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The test errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1TestError> errors;
 
   /**
-   * The test errors.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1TestError> getErrors() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1RunContinuousTestMetadata exten
   }
 
   /**
-   * The test errors.
    * @param errors errors or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RunContinuousTestMetadata setErrors(java.util.List<GoogleCloudDialogflowCxV3beta1TestError> errors) {

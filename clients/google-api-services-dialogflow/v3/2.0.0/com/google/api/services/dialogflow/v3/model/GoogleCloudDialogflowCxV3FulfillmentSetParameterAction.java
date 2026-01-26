@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Setting a parameter value.
+ * Model definition for GoogleCloudDialogflowCxV3FulfillmentSetParameterAction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Display name of the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parameter;
 
   /**
-   * The new value of the parameter. A null value clears the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object value;
 
   /**
-   * Display name of the parameter.
    * @return value or {@code null} for none
    */
   public java.lang.String getParameter() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterAction extend
   }
 
   /**
-   * Display name of the parameter.
    * @param parameter parameter or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillmentSetParameterAction setParameter(java.lang.String parameter) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterAction extend
   }
 
   /**
-   * The new value of the parameter. A null value clears the parameter.
    * @return value or {@code null} for none
    */
   public java.lang.Object getValue() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterAction extend
   }
 
   /**
-   * The new value of the parameter. A null value clears the parameter.
    * @param value value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillmentSetParameterAction setValue(java.lang.Object value) {

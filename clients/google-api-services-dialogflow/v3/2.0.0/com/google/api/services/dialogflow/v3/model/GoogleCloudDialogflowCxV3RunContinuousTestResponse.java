@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for Environments.RunContinuousTest.
+ * Model definition for GoogleCloudDialogflowCxV3RunContinuousTestResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3RunContinuousTestResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The result for a continuous test run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ContinuousTestResult continuousTestResult;
 
   /**
-   * The result for a continuous test run.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ContinuousTestResult getContinuousTestResult() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3RunContinuousTestResponse extends co
   }
 
   /**
-   * The result for a continuous test run.
    * @param continuousTestResult continuousTestResult or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3RunContinuousTestResponse setContinuousTestResult(GoogleCloudDialogflowCxV3ContinuousTestResult continuousTestResult) {

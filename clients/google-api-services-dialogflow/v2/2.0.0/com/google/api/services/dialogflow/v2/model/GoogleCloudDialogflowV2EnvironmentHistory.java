@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The response message for Environments.GetEnvironmentHistory.
+ * Model definition for GoogleCloudDialogflowV2EnvironmentHistory.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,33 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2EnvironmentHistory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The list of agent environments. There will be a maximum number of items returned
-   * based on the page_size field in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2EnvironmentHistoryEntry> entries;
 
   /**
-   * Output only. Token to retrieve the next page of results, or empty if there are no more results
-   * in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. The name of the environment this history is for. Supported formats: -
-   * `projects//agent/environments/` - `projects//locations//agent/environments/` The environment ID
-   * for the default environment is `-`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Output only. The list of agent environments. There will be a maximum number of items returned
-   * based on the page_size field in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2EnvironmentHistoryEntry> getEntries() {
@@ -64,8 +55,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistory extends com.google.
   }
 
   /**
-   * Output only. The list of agent environments. There will be a maximum number of items returned
-   * based on the page_size field in the request.
    * @param entries entries or {@code null} for none
    */
   public GoogleCloudDialogflowV2EnvironmentHistory setEntries(java.util.List<GoogleCloudDialogflowV2EnvironmentHistoryEntry> entries) {
@@ -74,8 +63,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistory extends com.google.
   }
 
   /**
-   * Output only. Token to retrieve the next page of results, or empty if there are no more results
-   * in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -83,8 +70,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistory extends com.google.
   }
 
   /**
-   * Output only. Token to retrieve the next page of results, or empty if there are no more results
-   * in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowV2EnvironmentHistory setNextPageToken(java.lang.String nextPageToken) {
@@ -93,9 +78,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistory extends com.google.
   }
 
   /**
-   * Output only. The name of the environment this history is for. Supported formats: -
-   * `projects//agent/environments/` - `projects//locations//agent/environments/` The environment ID
-   * for the default environment is `-`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -103,9 +85,6 @@ public final class GoogleCloudDialogflowV2EnvironmentHistory extends com.google.
   }
 
   /**
-   * Output only. The name of the environment this history is for. Supported formats: -
-   * `projects//agent/environments/` - `projects//locations//agent/environments/` The environment ID
-   * for the default environment is `-`.
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudDialogflowV2EnvironmentHistory setParent(java.lang.String parent) {

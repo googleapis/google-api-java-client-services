@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings related to NLU.
+ * Model definition for GoogleCloudDialogflowCxV3NluSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,38 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3NluSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * To filter out false positive results and still get variety in matched natural language inputs
-   * for your agent, you can tune the machine learning classification threshold. If the returned
-   * score value is less than the threshold value, then a no-match event will be triggered. The
-   * score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0,
-   * the default of 0.3 is used. You can set a separate classification threshold for the flow in
-   * each language enabled for the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float classificationThreshold;
 
   /**
-   * Indicates NLU model training mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String modelTrainingMode;
 
   /**
-   * Indicates the type of NLU model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String modelType;
 
   /**
-   * To filter out false positive results and still get variety in matched natural language inputs
-   * for your agent, you can tune the machine learning classification threshold. If the returned
-   * score value is less than the threshold value, then a no-match event will be triggered. The
-   * score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0,
-   * the default of 0.3 is used. You can set a separate classification threshold for the flow in
-   * each language enabled for the agent.
    * @return value or {@code null} for none
    */
   public java.lang.Float getClassificationThreshold() {
@@ -69,12 +55,6 @@ public final class GoogleCloudDialogflowCxV3NluSettings extends com.google.api.c
   }
 
   /**
-   * To filter out false positive results and still get variety in matched natural language inputs
-   * for your agent, you can tune the machine learning classification threshold. If the returned
-   * score value is less than the threshold value, then a no-match event will be triggered. The
-   * score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0,
-   * the default of 0.3 is used. You can set a separate classification threshold for the flow in
-   * each language enabled for the agent.
    * @param classificationThreshold classificationThreshold or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3NluSettings setClassificationThreshold(java.lang.Float classificationThreshold) {
@@ -83,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3NluSettings extends com.google.api.c
   }
 
   /**
-   * Indicates NLU model training mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelTrainingMode() {
@@ -91,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3NluSettings extends com.google.api.c
   }
 
   /**
-   * Indicates NLU model training mode.
    * @param modelTrainingMode modelTrainingMode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3NluSettings setModelTrainingMode(java.lang.String modelTrainingMode) {
@@ -100,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3NluSettings extends com.google.api.c
   }
 
   /**
-   * Indicates the type of NLU model.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelType() {
@@ -108,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3NluSettings extends com.google.api.c
   }
 
   /**
-   * Indicates the type of NLU model.
    * @param modelType modelType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3NluSettings setModelType(java.lang.String modelType) {

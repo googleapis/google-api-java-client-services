@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The response message for Operations.ListOperations.
+ * Model definition for GoogleLongrunningListOperationsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleLongrunningListOperationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The standard List next-page token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * A list of operations that matches the specified filter in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleLongrunningOperation> operations;
 
   /**
-   * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
-   * attempting to list all resources across all supported locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The standard List next-page token.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -61,7 +55,6 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
   }
 
   /**
-   * The standard List next-page token.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleLongrunningListOperationsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -70,7 +63,6 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
   }
 
   /**
-   * A list of operations that matches the specified filter in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleLongrunningOperation> getOperations() {
@@ -78,7 +70,6 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
   }
 
   /**
-   * A list of operations that matches the specified filter in the request.
    * @param operations operations or {@code null} for none
    */
   public GoogleLongrunningListOperationsResponse setOperations(java.util.List<GoogleLongrunningOperation> operations) {
@@ -87,9 +78,6 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
   }
 
   /**
-   * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
-   * attempting to list all resources across all supported locations.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -97,9 +85,6 @@ public final class GoogleLongrunningListOperationsResponse extends com.google.ap
   }
 
   /**
-   * Unordered list. Unreachable resources. Populated when the request sets
-   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
-   * attempting to list all resources across all supported locations.
    * @param unreachable unreachable or {@code null} for none
    */
   public GoogleLongrunningListOperationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

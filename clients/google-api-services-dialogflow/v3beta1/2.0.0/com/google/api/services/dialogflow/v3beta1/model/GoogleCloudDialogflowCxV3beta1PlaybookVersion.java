@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Playbook version is a snapshot of the playbook at certain timestamp.
+ * Model definition for GoogleCloudDialogflowCxV3beta1PlaybookVersion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,15 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The description of the playbook version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Output only. Snapshot of the examples belonging to the playbook when the playbook version is
-   * created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,29 +48,24 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * The unique identifier of the playbook version. Format:
-   * `projects//locations//agents//playbooks//versions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Snapshot of the playbook when the playbook version is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Playbook playbook;
 
   /**
-   * Output only. Last time the playbook version was created or modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. The description of the playbook version.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -81,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * Optional. The description of the playbook version.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookVersion setDescription(java.lang.String description) {
@@ -90,8 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * Output only. Snapshot of the examples belonging to the playbook when the playbook version is
-   * created.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1Example> getExamples() {
@@ -99,8 +88,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * Output only. Snapshot of the examples belonging to the playbook when the playbook version is
-   * created.
    * @param examples examples or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookVersion setExamples(java.util.List<GoogleCloudDialogflowCxV3beta1Example> examples) {
@@ -109,8 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * The unique identifier of the playbook version. Format:
-   * `projects//locations//agents//playbooks//versions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -118,8 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * The unique identifier of the playbook version. Format:
-   * `projects//locations//agents//playbooks//versions/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookVersion setName(java.lang.String name) {
@@ -128,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * Output only. Snapshot of the playbook when the playbook version is created.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Playbook getPlaybook() {
@@ -136,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * Output only. Snapshot of the playbook when the playbook version is created.
    * @param playbook playbook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookVersion setPlaybook(GoogleCloudDialogflowCxV3beta1Playbook playbook) {
@@ -145,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * Output only. Last time the playbook version was created or modified.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -153,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookVersion extends com.goo
   }
 
   /**
-   * Output only. Last time the playbook version was created or modified.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookVersion setUpdateTime(String updateTime) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Tool version is a snapshot of the tool at certain timestamp.
+ * Model definition for GoogleCloudDialogflowCxV3ToolVersion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,43 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Last time the tool version was created or modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Required. The display name of the tool version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Identifier. The unique identifier of the tool version. Format:
-   * `projects//locations//agents//tools//versions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Snapshot of the tool to be associated with this version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3Tool tool;
 
   /**
-   * Output only. Last time the tool version was created or modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. Last time the tool version was created or modified.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -74,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.c
   }
 
   /**
-   * Output only. Last time the tool version was created or modified.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolVersion setCreateTime(String createTime) {
@@ -83,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.c
   }
 
   /**
-   * Required. The display name of the tool version.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -91,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.c
   }
 
   /**
-   * Required. The display name of the tool version.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolVersion setDisplayName(java.lang.String displayName) {
@@ -100,8 +90,6 @@ public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.c
   }
 
   /**
-   * Identifier. The unique identifier of the tool version. Format:
-   * `projects//locations//agents//tools//versions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -109,8 +97,6 @@ public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.c
   }
 
   /**
-   * Identifier. The unique identifier of the tool version. Format:
-   * `projects//locations//agents//tools//versions/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolVersion setName(java.lang.String name) {
@@ -119,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.c
   }
 
   /**
-   * Required. Snapshot of the tool to be associated with this version.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Tool getTool() {
@@ -127,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.c
   }
 
   /**
-   * Required. Snapshot of the tool to be associated with this version.
    * @param tool tool or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolVersion setTool(GoogleCloudDialogflowCxV3Tool tool) {
@@ -136,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.c
   }
 
   /**
-   * Output only. Last time the tool version was created or modified.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -144,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3ToolVersion extends com.google.api.c
   }
 
   /**
-   * Output only. Last time the tool version was created or modified.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolVersion setUpdateTime(String updateTime) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for Flows.ImportFlow.
+ * Model definition for GoogleCloudDialogflowCxV3ImportFlowRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,39 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uncompressed raw byte content for flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flowContent;
 
   /**
-   * Optional. Specifies the import strategy used when resolving resource conflicts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3FlowImportStrategy flowImportStrategy;
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import flow from. The
-   * format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud Storage
-   * object on the caller's behalf, so your request authentication must have read permissions for
-   * the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flowUri;
 
   /**
-   * Flow import mode. If not specified, `KEEP` is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String importOption;
 
   /**
-   * Uncompressed raw byte content for flow.
    * @see #decodeFlowContent()
    * @return value or {@code null} for none
    */
@@ -71,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google
   }
 
   /**
-   * Uncompressed raw byte content for flow.
+
    * @see #getFlowContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -82,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google
   }
 
   /**
-   * Uncompressed raw byte content for flow.
    * @see #encodeFlowContent()
    * @param flowContent flowContent or {@code null} for none
    */
@@ -92,7 +82,7 @@ public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google
   }
 
   /**
-   * Uncompressed raw byte content for flow.
+
    * @see #setFlowContent()
    *
    * <p>
@@ -107,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google
   }
 
   /**
-   * Optional. Specifies the import strategy used when resolving resource conflicts.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowImportStrategy getFlowImportStrategy() {
@@ -115,7 +104,6 @@ public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google
   }
 
   /**
-   * Optional. Specifies the import strategy used when resolving resource conflicts.
    * @param flowImportStrategy flowImportStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportFlowRequest setFlowImportStrategy(GoogleCloudDialogflowCxV3FlowImportStrategy flowImportStrategy) {
@@ -124,11 +112,6 @@ public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import flow from. The
-   * format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud Storage
-   * object on the caller's behalf, so your request authentication must have read permissions for
-   * the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getFlowUri() {
@@ -136,11 +119,6 @@ public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google
   }
 
   /**
-   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to import flow from. The
-   * format of this URI must be `gs:`. Dialogflow performs a read operation for the Cloud Storage
-   * object on the caller's behalf, so your request authentication must have read permissions for
-   * the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param flowUri flowUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportFlowRequest setFlowUri(java.lang.String flowUri) {
@@ -149,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google
   }
 
   /**
-   * Flow import mode. If not specified, `KEEP` is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getImportOption() {
@@ -157,7 +134,6 @@ public final class GoogleCloudDialogflowCxV3ImportFlowRequest extends com.google
   }
 
   /**
-   * Flow import mode. If not specified, `KEEP` is assumed.
    * @param importOption importOption or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportFlowRequest setImportOption(java.lang.String importOption) {

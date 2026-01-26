@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Handler can be used to define custom logic to be executed based on the user-specified triggers.
+ * Model definition for GoogleCloudDialogflowCxV3Handler.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3Handler extends com.google.api.client.json.GenericJson {
 
   /**
-   * A handler triggered by event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3HandlerEventHandler eventHandler;
 
   /**
-   * A handler triggered during specific lifecycle of the playbook execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3HandlerLifecycleHandler lifecycleHandler;
 
   /**
-   * A handler triggered by event.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3HandlerEventHandler getEventHandler() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3Handler extends com.google.api.clien
   }
 
   /**
-   * A handler triggered by event.
    * @param eventHandler eventHandler or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Handler setEventHandler(GoogleCloudDialogflowCxV3HandlerEventHandler eventHandler) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3Handler extends com.google.api.clien
   }
 
   /**
-   * A handler triggered during specific lifecycle of the playbook execution.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3HandlerLifecycleHandler getLifecycleHandler() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3Handler extends com.google.api.clien
   }
 
   /**
-   * A handler triggered during specific lifecycle of the playbook execution.
    * @param lifecycleHandler lifecycleHandler or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Handler setLifecycleHandler(GoogleCloudDialogflowCxV3HandlerLifecycleHandler lifecycleHandler) {

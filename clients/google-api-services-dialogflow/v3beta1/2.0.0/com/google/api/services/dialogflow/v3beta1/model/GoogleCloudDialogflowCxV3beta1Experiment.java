@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents an experiment in an environment.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Experiment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,119 +30,96 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Creation time of this experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The definition of the experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ExperimentDefinition definition;
 
   /**
-   * The human-readable description of the experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The human-readable name of the experiment (unique in an environment). Limit of 64
-   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * End time of this experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and
-   * maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String experimentLength;
 
   /**
-   * Last update time of this experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastUpdateTime;
 
   /**
-   * The name of the experiment. Format: projects//locations//agents//environments//experiments/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Inference result of the experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ExperimentResult result;
 
   /**
-   * The configuration for auto rollout. If set, there should be exactly two variants in the
-   * experiment (control variant being the default version of the flow), the traffic allocation for
-   * the non-control variant will gradually increase to 100% when conditions are met, and eventually
-   * replace the control variant to become the default version of the flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1RolloutConfig rolloutConfig;
 
   /**
-   * The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rolloutFailureReason;
 
   /**
-   * State of the auto rollout process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1RolloutState rolloutState;
 
   /**
-   * Start time of this experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The current state of the experiment. Transition triggered by Experiments.StartExperiment:
-   * DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or
-   * RUNNING->DONE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The history of updates to the experiment variants.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1VariantsHistory> variantsHistory;
 
   /**
-   * Creation time of this experiment.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -150,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Creation time of this experiment.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setCreateTime(String createTime) {
@@ -159,7 +135,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The definition of the experiment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExperimentDefinition getDefinition() {
@@ -167,7 +142,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The definition of the experiment.
    * @param definition definition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setDefinition(GoogleCloudDialogflowCxV3beta1ExperimentDefinition definition) {
@@ -176,7 +150,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The human-readable description of the experiment.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -184,7 +157,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The human-readable description of the experiment.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setDescription(java.lang.String description) {
@@ -193,8 +165,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Required. The human-readable name of the experiment (unique in an environment). Limit of 64
-   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -202,8 +172,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Required. The human-readable name of the experiment (unique in an environment). Limit of 64
-   * characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setDisplayName(java.lang.String displayName) {
@@ -212,7 +180,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * End time of this experiment.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -220,7 +187,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * End time of this experiment.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setEndTime(String endTime) {
@@ -229,8 +195,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and
-   * maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
    * @return value or {@code null} for none
    */
   public String getExperimentLength() {
@@ -238,8 +202,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Maximum number of days to run the experiment. If auto-rollout is not enabled, default value and
-   * maximum will be 30 days. If auto-rollout is enabled, default value and maximum will be 6 days.
    * @param experimentLength experimentLength or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setExperimentLength(String experimentLength) {
@@ -248,7 +210,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Last update time of this experiment.
    * @return value or {@code null} for none
    */
   public String getLastUpdateTime() {
@@ -256,7 +217,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Last update time of this experiment.
    * @param lastUpdateTime lastUpdateTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setLastUpdateTime(String lastUpdateTime) {
@@ -265,7 +225,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The name of the experiment. Format: projects//locations//agents//environments//experiments/.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -273,7 +232,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The name of the experiment. Format: projects//locations//agents//environments//experiments/.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setName(java.lang.String name) {
@@ -282,7 +240,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Inference result of the experiment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExperimentResult getResult() {
@@ -290,7 +247,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Inference result of the experiment.
    * @param result result or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setResult(GoogleCloudDialogflowCxV3beta1ExperimentResult result) {
@@ -299,10 +255,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The configuration for auto rollout. If set, there should be exactly two variants in the
-   * experiment (control variant being the default version of the flow), the traffic allocation for
-   * the non-control variant will gradually increase to 100% when conditions are met, and eventually
-   * replace the control variant to become the default version of the flow.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RolloutConfig getRolloutConfig() {
@@ -310,10 +262,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The configuration for auto rollout. If set, there should be exactly two variants in the
-   * experiment (control variant being the default version of the flow), the traffic allocation for
-   * the non-control variant will gradually increase to 100% when conditions are met, and eventually
-   * replace the control variant to become the default version of the flow.
    * @param rolloutConfig rolloutConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setRolloutConfig(GoogleCloudDialogflowCxV3beta1RolloutConfig rolloutConfig) {
@@ -322,7 +270,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRolloutFailureReason() {
@@ -330,7 +277,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The reason why rollout has failed. Should only be set when state is ROLLOUT_FAILED.
    * @param rolloutFailureReason rolloutFailureReason or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setRolloutFailureReason(java.lang.String rolloutFailureReason) {
@@ -339,7 +285,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * State of the auto rollout process.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RolloutState getRolloutState() {
@@ -347,7 +292,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * State of the auto rollout process.
    * @param rolloutState rolloutState or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setRolloutState(GoogleCloudDialogflowCxV3beta1RolloutState rolloutState) {
@@ -356,7 +300,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Start time of this experiment.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -364,7 +307,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * Start time of this experiment.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setStartTime(String startTime) {
@@ -373,9 +315,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The current state of the experiment. Transition triggered by Experiments.StartExperiment:
-   * DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or
-   * RUNNING->DONE.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -383,9 +322,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The current state of the experiment. Transition triggered by Experiments.StartExperiment:
-   * DRAFT->RUNNING. Transition triggered by Experiments.CancelExperiment: DRAFT->DONE or
-   * RUNNING->DONE.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setState(java.lang.String state) {
@@ -394,7 +330,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The history of updates to the experiment variants.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1VariantsHistory> getVariantsHistory() {
@@ -402,7 +337,6 @@ public final class GoogleCloudDialogflowCxV3beta1Experiment extends com.google.a
   }
 
   /**
-   * The history of updates to the experiment variants.
    * @param variantsHistory variantsHistory or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Experiment setVariantsHistory(java.util.List<GoogleCloudDialogflowCxV3beta1VariantsHistory> variantsHistory) {

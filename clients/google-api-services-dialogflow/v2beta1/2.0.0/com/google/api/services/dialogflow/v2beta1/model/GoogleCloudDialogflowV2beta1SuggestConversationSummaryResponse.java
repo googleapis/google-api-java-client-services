@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The response message for Conversations.SuggestConversationSummary.
+ * Model definition for GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,33 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of messages prior to and including last_conversation_message used to compile the
-   * suggestion. It may be smaller than the SuggestSummaryRequest.context_size field in the request
-   * if there weren't that many messages in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Generated summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSummary summary;
 
   /**
-   * Number of messages prior to and including last_conversation_message used to compile the
-   * suggestion. It may be smaller than the SuggestSummaryRequest.context_size field in the request
-   * if there weren't that many messages in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -64,9 +55,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestConversationSummaryRespons
   }
 
   /**
-   * Number of messages prior to and including last_conversation_message used to compile the
-   * suggestion. It may be smaller than the SuggestSummaryRequest.context_size field in the request
-   * if there weren't that many messages in the conversation.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponse setContextSize(java.lang.Integer contextSize) {
@@ -75,8 +63,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestConversationSummaryRespons
   }
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -84,8 +70,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestConversationSummaryRespons
   }
 
   /**
-   * The name of the latest conversation message used as context for compiling suggestion. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponse setLatestMessage(java.lang.String latestMessage) {
@@ -94,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestConversationSummaryRespons
   }
 
   /**
-   * Generated summary.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSummary getSummary() {
@@ -102,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestConversationSummaryRespons
   }
 
   /**
-   * Generated summary.
    * @param summary summary or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponse setSummary(GoogleCloudDialogflowV2beta1SuggestConversationSummaryResponseSummary summary) {

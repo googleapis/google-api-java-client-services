@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Table card for Actions on Google.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageTableCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. List of buttons for the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +42,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Display properties for the columns in this table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,35 +54,30 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Image which should be displayed on the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageImage image;
 
   /**
-   * Optional. Rows in this table of data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2IntentMessageTableCardRow> rows;
 
   /**
-   * Optional. Subtitle to the title.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subtitle;
 
   /**
-   * Required. Title of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Optional. List of buttons for the card.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessageBasicCardButton> getButtons() {
@@ -92,7 +85,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. List of buttons for the card.
    * @param buttons buttons or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageTableCard setButtons(java.util.List<GoogleCloudDialogflowV2IntentMessageBasicCardButton> buttons) {
@@ -101,7 +93,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Display properties for the columns in this table.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessageColumnProperties> getColumnProperties() {
@@ -109,7 +100,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Display properties for the columns in this table.
    * @param columnProperties columnProperties or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageTableCard setColumnProperties(java.util.List<GoogleCloudDialogflowV2IntentMessageColumnProperties> columnProperties) {
@@ -118,7 +108,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Image which should be displayed on the card.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageImage getImage() {
@@ -126,7 +115,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Image which should be displayed on the card.
    * @param image image or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageTableCard setImage(GoogleCloudDialogflowV2IntentMessageImage image) {
@@ -135,7 +123,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Rows in this table of data.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2IntentMessageTableCardRow> getRows() {
@@ -143,7 +130,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Rows in this table of data.
    * @param rows rows or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageTableCard setRows(java.util.List<GoogleCloudDialogflowV2IntentMessageTableCardRow> rows) {
@@ -152,7 +138,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Subtitle to the title.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubtitle() {
@@ -160,7 +145,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Optional. Subtitle to the title.
    * @param subtitle subtitle or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageTableCard setSubtitle(java.lang.String subtitle) {
@@ -169,7 +153,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Required. Title of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -177,7 +160,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCard extends com.goo
   }
 
   /**
-   * Required. Title of the card.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageTableCard setTitle(java.lang.String title) {

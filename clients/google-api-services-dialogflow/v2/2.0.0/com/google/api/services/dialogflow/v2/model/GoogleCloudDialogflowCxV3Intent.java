@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * An intent represents a user's intent to interact with a conversational agent. You can provide
- * information for the Dialogflow API to use to match user input to an intent by adding training
- * phrases (i.e., examples of user input) to your intent.
+ * Model definition for GoogleCloudDialogflowCxV3Intent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,79 +30,54 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human readable description for better understanding an intent like its scope, content, result
-   * etc. Maximum character limit: 140 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The human-readable name of the intent, unique within the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed
-   * in the agent, which is added upon agent creation. Adding training phrases to fallback intent is
-   * useful in the case of requests that are mistakenly matched, since training phrases assigned to
-   * fallback intents act as negative examples that triggers no-match event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isFallback;
 
   /**
-   * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the
-   * symbols '-' and '_'. International characters are allowed, including letters from unicase
-   * alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters
-   * and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently
-   * allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not
-   * require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent
-   * is a contextual intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The unique identifier of the intent. Required for the Intents.UpdateIntent method.
-   * Intents.CreateIntent populates the name automatically. Format:
-   * `projects//locations//agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The collection of parameters associated with the intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3IntentParameter> parameters;
 
   /**
-   * The priority of this intent. Higher numbers represent higher priorities. - If the supplied
-   * value is unspecified or 0, the service translates the value to 500,000, which corresponds to
-   * the `Normal` priority in the console. - If the supplied value is negative, the intent is
-   * ignored in runtime detect intent requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer priority;
 
   /**
-   * The collection of training phrases the agent is trained on to identify the intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3IntentTrainingPhrase> trainingPhrases;
 
   /**
-   * Human readable description for better understanding an intent like its scope, content, result
-   * etc. Maximum character limit: 140 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -112,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * Human readable description for better understanding an intent like its scope, content, result
-   * etc. Maximum character limit: 140 characters.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Intent setDescription(java.lang.String description) {
@@ -122,7 +93,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * Required. The human-readable name of the intent, unique within the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -130,7 +100,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * Required. The human-readable name of the intent, unique within the agent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Intent setDisplayName(java.lang.String displayName) {
@@ -139,10 +108,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed
-   * in the agent, which is added upon agent creation. Adding training phrases to fallback intent is
-   * useful in the case of requests that are mistakenly matched, since training phrases assigned to
-   * fallback intents act as negative examples that triggers no-match event.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsFallback() {
@@ -150,10 +115,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * Indicates whether this is a fallback intent. Currently only default fallback intent is allowed
-   * in the agent, which is added upon agent creation. Adding training phrases to fallback intent is
-   * useful in the case of requests that are mistakenly matched, since training phrases assigned to
-   * fallback intents act as negative examples that triggers no-match event.
    * @param isFallback isFallback or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Intent setIsFallback(java.lang.Boolean isFallback) {
@@ -162,13 +123,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the
-   * symbols '-' and '_'. International characters are allowed, including letters from unicase
-   * alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters
-   * and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently
-   * allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not
-   * require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent
-   * is a contextual intent.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -176,13 +130,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the
-   * symbols '-' and '_'. International characters are allowed, including letters from unicase
-   * alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters
-   * and no more than 128 bytes. Prefix "sys-" is reserved for Dialogflow defined labels. Currently
-   * allowed Dialogflow defined labels include: * sys-head * sys-contextual The above labels do not
-   * require value. "sys-head" means the intent is a head intent. "sys.contextual" means the intent
-   * is a contextual intent.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Intent setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -191,9 +138,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The unique identifier of the intent. Required for the Intents.UpdateIntent method.
-   * Intents.CreateIntent populates the name automatically. Format:
-   * `projects//locations//agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -201,9 +145,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The unique identifier of the intent. Required for the Intents.UpdateIntent method.
-   * Intents.CreateIntent populates the name automatically. Format:
-   * `projects//locations//agents//intents/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Intent setName(java.lang.String name) {
@@ -212,7 +153,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The collection of parameters associated with the intent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3IntentParameter> getParameters() {
@@ -220,7 +160,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The collection of parameters associated with the intent.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Intent setParameters(java.util.List<GoogleCloudDialogflowCxV3IntentParameter> parameters) {
@@ -229,10 +168,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The priority of this intent. Higher numbers represent higher priorities. - If the supplied
-   * value is unspecified or 0, the service translates the value to 500,000, which corresponds to
-   * the `Normal` priority in the console. - If the supplied value is negative, the intent is
-   * ignored in runtime detect intent requests.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -240,10 +175,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The priority of this intent. Higher numbers represent higher priorities. - If the supplied
-   * value is unspecified or 0, the service translates the value to 500,000, which corresponds to
-   * the `Normal` priority in the console. - If the supplied value is negative, the intent is
-   * ignored in runtime detect intent requests.
    * @param priority priority or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Intent setPriority(java.lang.Integer priority) {
@@ -252,7 +183,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The collection of training phrases the agent is trained on to identify the intent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3IntentTrainingPhrase> getTrainingPhrases() {
@@ -260,7 +190,6 @@ public final class GoogleCloudDialogflowCxV3Intent extends com.google.api.client
   }
 
   /**
-   * The collection of training phrases the agent is trained on to identify the intent.
    * @param trainingPhrases trainingPhrases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Intent setTrainingPhrases(java.util.List<GoogleCloudDialogflowCxV3IntentTrainingPhrase> trainingPhrases) {

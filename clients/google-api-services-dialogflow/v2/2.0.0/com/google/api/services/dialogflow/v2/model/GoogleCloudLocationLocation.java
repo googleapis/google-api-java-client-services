@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * A resource that represents a Google Cloud location.
+ * Model definition for GoogleCloudLocationLocation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,44 +30,36 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudLocationLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The friendly name for this location, typically a nearby city name. For example, "Tokyo".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Cross-service attributes for the location. For example {"cloud.googleapis.com/region": "us-
-   * east1"}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The canonical id for this location. For example: `"us-east1"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String locationId;
 
   /**
-   * Service-specific metadata. For example the available capacity at the given location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * Resource name for the location, which may vary between implementations. For example:
-   * `"projects/example-project/locations/us-east1"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The friendly name for this location, typically a nearby city name. For example, "Tokyo".
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -75,7 +67,6 @@ public final class GoogleCloudLocationLocation extends com.google.api.client.jso
   }
 
   /**
-   * The friendly name for this location, typically a nearby city name. For example, "Tokyo".
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudLocationLocation setDisplayName(java.lang.String displayName) {
@@ -84,8 +75,6 @@ public final class GoogleCloudLocationLocation extends com.google.api.client.jso
   }
 
   /**
-   * Cross-service attributes for the location. For example {"cloud.googleapis.com/region": "us-
-   * east1"}
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -93,8 +82,6 @@ public final class GoogleCloudLocationLocation extends com.google.api.client.jso
   }
 
   /**
-   * Cross-service attributes for the location. For example {"cloud.googleapis.com/region": "us-
-   * east1"}
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudLocationLocation setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -103,7 +90,6 @@ public final class GoogleCloudLocationLocation extends com.google.api.client.jso
   }
 
   /**
-   * The canonical id for this location. For example: `"us-east1"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationId() {
@@ -111,7 +97,6 @@ public final class GoogleCloudLocationLocation extends com.google.api.client.jso
   }
 
   /**
-   * The canonical id for this location. For example: `"us-east1"`.
    * @param locationId locationId or {@code null} for none
    */
   public GoogleCloudLocationLocation setLocationId(java.lang.String locationId) {
@@ -120,7 +105,6 @@ public final class GoogleCloudLocationLocation extends com.google.api.client.jso
   }
 
   /**
-   * Service-specific metadata. For example the available capacity at the given location.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -128,7 +112,6 @@ public final class GoogleCloudLocationLocation extends com.google.api.client.jso
   }
 
   /**
-   * Service-specific metadata. For example the available capacity at the given location.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudLocationLocation setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -137,8 +120,6 @@ public final class GoogleCloudLocationLocation extends com.google.api.client.jso
   }
 
   /**
-   * Resource name for the location, which may vary between implementations. For example:
-   * `"projects/example-project/locations/us-east1"`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -146,8 +127,6 @@ public final class GoogleCloudLocationLocation extends com.google.api.client.jso
   }
 
   /**
-   * Resource name for the location, which may vary between implementations. For example:
-   * `"projects/example-project/locations/us-east1"`
    * @param name name or {@code null} for none
    */
   public GoogleCloudLocationLocation setName(java.lang.String name) {

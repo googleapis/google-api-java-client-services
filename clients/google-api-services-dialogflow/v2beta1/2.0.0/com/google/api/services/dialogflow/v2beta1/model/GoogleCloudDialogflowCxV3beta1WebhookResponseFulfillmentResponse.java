@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a fulfillment response to the user.
+ * Model definition for GoogleCloudDialogflowCxV3beta1WebhookResponseFulfillmentResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1WebhookResponseFulfillmentResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Merge behavior for `messages`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mergeBehavior;
 
   /**
-   * The list of rich message responses to present to the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +48,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookResponseFulfillmentRespo
   }
 
   /**
-   * Merge behavior for `messages`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMergeBehavior() {
@@ -58,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookResponseFulfillmentRespo
   }
 
   /**
-   * Merge behavior for `messages`.
    * @param mergeBehavior mergeBehavior or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookResponseFulfillmentResponse setMergeBehavior(java.lang.String mergeBehavior) {
@@ -67,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookResponseFulfillmentRespo
   }
 
   /**
-   * The list of rich message responses to present to the user.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1ResponseMessage> getMessages() {
@@ -75,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookResponseFulfillmentRespo
   }
 
   /**
-   * The list of rich message responses to present to the user.
    * @param messages messages or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookResponseFulfillmentResponse setMessages(java.util.List<GoogleCloudDialogflowCxV3beta1ResponseMessage> messages) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for Environments.LookupEnvironmentHistory.
+ * Model definition for GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,8 +30,6 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Represents a list of snapshots for an environment. Time of the snapshots is stored in
-   * `update_time`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +42,12 @@ public final class GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse ext
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Represents a list of snapshots for an environment. Time of the snapshots is stored in
-   * `update_time`.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3Environment> getEnvironments() {
@@ -60,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse ext
   }
 
   /**
-   * Represents a list of snapshots for an environment. Time of the snapshots is stored in
-   * `update_time`.
    * @param environments environments or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse setEnvironments(java.util.List<GoogleCloudDialogflowCxV3Environment> environments) {
@@ -70,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse ext
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse ext
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse setNextPageToken(java.lang.String nextPageToken) {

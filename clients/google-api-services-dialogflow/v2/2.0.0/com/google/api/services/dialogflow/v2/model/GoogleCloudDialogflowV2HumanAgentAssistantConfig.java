@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Defines the Human Agent Assist to connect to a conversation.
+ * Model definition for GoogleCloudDialogflowV2HumanAgentAssistantConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,37 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration for agent assistance of end user participant. Currently, this feature is not
-   * general available, please contact Google to get access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig endUserSuggestionConfig;
 
   /**
-   * Configuration for agent assistance of human agent participant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig humanAgentSuggestionConfig;
 
   /**
-   * Configuration for message analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfig messageAnalysisConfig;
 
   /**
-   * Pub/Sub topic on which to publish new agent assistant events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2NotificationConfig notificationConfig;
 
   /**
-   * Configuration for agent assistance of end user participant. Currently, this feature is not
-   * general available, please contact Google to get access.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig getEndUserSuggestionConfig() {
@@ -68,8 +61,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfig extends com.
   }
 
   /**
-   * Configuration for agent assistance of end user participant. Currently, this feature is not
-   * general available, please contact Google to get access.
    * @param endUserSuggestionConfig endUserSuggestionConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfig setEndUserSuggestionConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig endUserSuggestionConfig) {
@@ -78,7 +69,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfig extends com.
   }
 
   /**
-   * Configuration for agent assistance of human agent participant.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig getHumanAgentSuggestionConfig() {
@@ -86,7 +76,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfig extends com.
   }
 
   /**
-   * Configuration for agent assistance of human agent participant.
    * @param humanAgentSuggestionConfig humanAgentSuggestionConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfig setHumanAgentSuggestionConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig humanAgentSuggestionConfig) {
@@ -95,7 +84,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfig extends com.
   }
 
   /**
-   * Configuration for message analysis.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfig getMessageAnalysisConfig() {
@@ -103,7 +91,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfig extends com.
   }
 
   /**
-   * Configuration for message analysis.
    * @param messageAnalysisConfig messageAnalysisConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfig setMessageAnalysisConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfig messageAnalysisConfig) {
@@ -112,7 +99,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfig extends com.
   }
 
   /**
-   * Pub/Sub topic on which to publish new agent assistant events.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2NotificationConfig getNotificationConfig() {
@@ -120,7 +106,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfig extends com.
   }
 
   /**
-   * Pub/Sub topic on which to publish new agent assistant events.
    * @param notificationConfig notificationConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfig setNotificationConfig(GoogleCloudDialogflowV2NotificationConfig notificationConfig) {

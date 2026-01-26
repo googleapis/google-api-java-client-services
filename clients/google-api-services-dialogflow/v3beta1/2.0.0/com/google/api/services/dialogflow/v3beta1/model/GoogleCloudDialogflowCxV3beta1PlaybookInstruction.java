@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Message of the Instruction of the playbook.
+ * Model definition for GoogleCloudDialogflowCxV3beta1PlaybookInstruction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,25 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1PlaybookInstruction extends com.google.api.client.json.GenericJson {
 
   /**
-   * General guidelines for the playbook. These are unstructured instructions that are not directly
-   * part of the goal, e.g. "Always be polite". It's valid for this text to be long and used instead
-   * of steps altogether.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String guidelines;
 
   /**
-   * Ordered list of step by step execution instructions to accomplish target goal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1PlaybookStep> steps;
 
   /**
-   * General guidelines for the playbook. These are unstructured instructions that are not directly
-   * part of the goal, e.g. "Always be polite". It's valid for this text to be long and used instead
-   * of steps altogether.
    * @return value or {@code null} for none
    */
   public java.lang.String getGuidelines() {
@@ -56,9 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookInstruction extends com
   }
 
   /**
-   * General guidelines for the playbook. These are unstructured instructions that are not directly
-   * part of the goal, e.g. "Always be polite". It's valid for this text to be long and used instead
-   * of steps altogether.
    * @param guidelines guidelines or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookInstruction setGuidelines(java.lang.String guidelines) {
@@ -67,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookInstruction extends com
   }
 
   /**
-   * Ordered list of step by step execution instructions to accomplish target goal.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1PlaybookStep> getSteps() {
@@ -75,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookInstruction extends com
   }
 
   /**
-   * Ordered list of step by step execution instructions to accomplish target goal.
    * @param steps steps or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookInstruction setSteps(java.util.List<GoogleCloudDialogflowCxV3beta1PlaybookStep> steps) {

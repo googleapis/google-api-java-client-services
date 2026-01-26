@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Agent Coaching instructions that customer can configure.
+ * Model definition for GoogleCloudDialogflowV2beta1AgentCoachingInstruction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,57 +30,48 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The action that human agent should take. For example, "apologize for the slow
-   * shipping". If the users only want to use agent coaching for intent detection, agent_action can
-   * be empty
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentAction;
 
   /**
-   * Optional. The condition of the instruction. For example, "the customer wants to cancel an
-   * order". If the users want the instruction to be triggered unconditionally, the condition can be
-   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * Optional. The detailed description of this instruction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayDetails;
 
   /**
-   * Optional. Display name for the instruction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. Duplication check for the AgentCoachingInstruction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResult duplicateCheckResult;
 
   /**
-   * Optional. The action that system should take. For example, "call GetOrderTime with
-   * order_number={order number provided by the customer}". If the users don't have plugins or don't
-   * want to trigger plugins, the system_action can be empty
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String systemAction;
 
   /**
-   * Optional. The action that human agent should take. For example, "apologize for the slow
-   * shipping". If the users only want to use agent coaching for intent detection, agent_action can
-   * be empty
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String triggeringEvent;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentAction() {
@@ -88,9 +79,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Optional. The action that human agent should take. For example, "apologize for the slow
-   * shipping". If the users only want to use agent coaching for intent detection, agent_action can
-   * be empty
    * @param agentAction agentAction or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstruction setAgentAction(java.lang.String agentAction) {
@@ -99,9 +87,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Optional. The condition of the instruction. For example, "the customer wants to cancel an
-   * order". If the users want the instruction to be triggered unconditionally, the condition can be
-   * empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -109,9 +94,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Optional. The condition of the instruction. For example, "the customer wants to cancel an
-   * order". If the users want the instruction to be triggered unconditionally, the condition can be
-   * empty.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstruction setCondition(java.lang.String condition) {
@@ -120,7 +102,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Optional. The detailed description of this instruction.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayDetails() {
@@ -128,7 +109,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Optional. The detailed description of this instruction.
    * @param displayDetails displayDetails or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstruction setDisplayDetails(java.lang.String displayDetails) {
@@ -137,7 +117,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Optional. Display name for the instruction.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -145,7 +124,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Optional. Display name for the instruction.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstruction setDisplayName(java.lang.String displayName) {
@@ -154,7 +132,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Output only. Duplication check for the AgentCoachingInstruction.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResult getDuplicateCheckResult() {
@@ -162,7 +139,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Output only. Duplication check for the AgentCoachingInstruction.
    * @param duplicateCheckResult duplicateCheckResult or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstruction setDuplicateCheckResult(GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResult duplicateCheckResult) {
@@ -171,9 +147,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Optional. The action that system should take. For example, "call GetOrderTime with
-   * order_number={order number provided by the customer}". If the users don't have plugins or don't
-   * want to trigger plugins, the system_action can be empty
    * @return value or {@code null} for none
    */
   public java.lang.String getSystemAction() {
@@ -181,13 +154,25 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstruction extends 
   }
 
   /**
-   * Optional. The action that system should take. For example, "call GetOrderTime with
-   * order_number={order number provided by the customer}". If the users don't have plugins or don't
-   * want to trigger plugins, the system_action can be empty
    * @param systemAction systemAction or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstruction setSystemAction(java.lang.String systemAction) {
     this.systemAction = systemAction;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTriggeringEvent() {
+    return triggeringEvent;
+  }
+
+  /**
+   * @param triggeringEvent triggeringEvent or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AgentCoachingInstruction setTriggeringEvent(java.lang.String triggeringEvent) {
+    this.triggeringEvent = triggeringEvent;
     return this;
   }
 

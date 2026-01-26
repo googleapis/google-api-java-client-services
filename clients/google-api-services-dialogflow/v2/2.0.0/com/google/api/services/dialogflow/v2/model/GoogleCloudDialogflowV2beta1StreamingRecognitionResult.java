@@ -17,24 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Contains a speech recognition result corresponding to a portion of the audio that is currently
- * being processed or an indication that this is the end of the single requested utterance. While
- * end-user audio is being processed, Dialogflow sends a series of results. Each result may contain
- * a `transcript` value. A transcript represents a portion of the utterance. While the recognizer is
- * processing audio, transcript values may be interim values or finalized values. Once a transcript
- * is finalized, the `is_final` value is set to true and processing continues for the next
- * transcript. If `StreamingDetectIntentRequest.query_input.audio_config.single_utterance` was true,
- * and the recognizer has completed processing audio, the `message_type` value is set to
- * `END_OF_SINGLE_UTTERANCE and the following (last) result contains the last finalized transcript.
- * The complete end-user utterance is determined by concatenating the finalized transcript values
- * received for the series of results. In the following example, single utterance is enabled. In the
- * case where single utterance is not enabled, result 7 would not occur. ``` Num | transcript |
- * message_type | is_final --- | ----------------------- | ----------------------- | -------- 1 |
- * "tube" | TRANSCRIPT | false 2 | "to be a" | TRANSCRIPT | false 3 | "to be" | TRANSCRIPT | false 4
- * | "to be or not to be" | TRANSCRIPT | true 5 | "that's" | TRANSCRIPT | false 6 | "that is |
- * TRANSCRIPT | false 7 | unset | END_OF_SINGLE_UTTERANCE | unset 8 | " that is the question" |
- * TRANSCRIPT | true ``` Concatenating the finalized transcripts with `is_final` set to true, the
- * complete utterance becomes "to be or not to be that is the question".
+ * Model definition for GoogleCloudDialogflowV2beta1StreamingRecognitionResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -47,56 +30,42 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Speech confidence between 0.0 and 1.0 for the current portion of audio. A higher number
-   * indicates an estimated greater likelihood that the recognized words are correct. The default of
-   * 0.0 is a sentinel value indicating that confidence was not set. This field is typically only
-   * provided if `is_final` is true and you should not rely on it being accurate or even set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * DTMF digits. Populated if and only if `message_type` = `DTMF_DIGITS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1TelephonyDtmfEvents dtmfDigits;
 
   /**
-   * If `false`, the `StreamingRecognitionResult` represents an interim result that may change. If
-   * `true`, the recognizer will not return any further hypotheses about this piece of the audio.
-   * May only be populated for `message_type` = `TRANSCRIPT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isFinal;
 
   /**
-   * Detected language code for the transcript.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Type of the result message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String messageType;
 
   /**
-   * Time offset of the end of this Speech recognition result relative to the beginning of the
-   * audio. Only populated for `message_type` = `TRANSCRIPT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String speechEndOffset;
 
   /**
-   * Word-specific information for the words recognized by Speech in transcript. Populated if and
-   * only if `message_type` = `TRANSCRIPT` and [InputAudioConfig.enable_word_info] is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,29 +78,18 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * An estimate of the likelihood that the speech recognizer will not change its guess about this
-   * interim recognition result: * If the value is unspecified or 0.0, Dialogflow didn't compute the
-   * stability. In particular, Dialogflow will only provide stability for `TRANSCRIPT` results with
-   * `is_final = false`. * Otherwise, the value is in (0.0, 1.0] where 0.0 means completely unstable
-   * and 1.0 means completely stable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float stability;
 
   /**
-   * Transcript text representing the words that the user spoke. Populated if and only if
-   * `message_type` = `TRANSCRIPT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transcript;
 
   /**
-   * The Speech confidence between 0.0 and 1.0 for the current portion of audio. A higher number
-   * indicates an estimated greater likelihood that the recognized words are correct. The default of
-   * 0.0 is a sentinel value indicating that confidence was not set. This field is typically only
-   * provided if `is_final` is true and you should not rely on it being accurate or even set.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -139,10 +97,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * The Speech confidence between 0.0 and 1.0 for the current portion of audio. A higher number
-   * indicates an estimated greater likelihood that the recognized words are correct. The default of
-   * 0.0 is a sentinel value indicating that confidence was not set. This field is typically only
-   * provided if `is_final` is true and you should not rely on it being accurate or even set.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult setConfidence(java.lang.Float confidence) {
@@ -151,7 +105,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * DTMF digits. Populated if and only if `message_type` = `DTMF_DIGITS`.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1TelephonyDtmfEvents getDtmfDigits() {
@@ -159,7 +112,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * DTMF digits. Populated if and only if `message_type` = `DTMF_DIGITS`.
    * @param dtmfDigits dtmfDigits or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult setDtmfDigits(GoogleCloudDialogflowV2beta1TelephonyDtmfEvents dtmfDigits) {
@@ -168,9 +120,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * If `false`, the `StreamingRecognitionResult` represents an interim result that may change. If
-   * `true`, the recognizer will not return any further hypotheses about this piece of the audio.
-   * May only be populated for `message_type` = `TRANSCRIPT`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsFinal() {
@@ -178,9 +127,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * If `false`, the `StreamingRecognitionResult` represents an interim result that may change. If
-   * `true`, the recognizer will not return any further hypotheses about this piece of the audio.
-   * May only be populated for `message_type` = `TRANSCRIPT`.
    * @param isFinal isFinal or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult setIsFinal(java.lang.Boolean isFinal) {
@@ -189,7 +135,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Detected language code for the transcript.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -197,7 +142,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Detected language code for the transcript.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult setLanguageCode(java.lang.String languageCode) {
@@ -206,7 +150,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Type of the result message.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageType() {
@@ -214,7 +157,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Type of the result message.
    * @param messageType messageType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult setMessageType(java.lang.String messageType) {
@@ -223,8 +165,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Time offset of the end of this Speech recognition result relative to the beginning of the
-   * audio. Only populated for `message_type` = `TRANSCRIPT`.
    * @return value or {@code null} for none
    */
   public String getSpeechEndOffset() {
@@ -232,8 +172,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Time offset of the end of this Speech recognition result relative to the beginning of the
-   * audio. Only populated for `message_type` = `TRANSCRIPT`.
    * @param speechEndOffset speechEndOffset or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult setSpeechEndOffset(String speechEndOffset) {
@@ -242,8 +180,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Word-specific information for the words recognized by Speech in transcript. Populated if and
-   * only if `message_type` = `TRANSCRIPT` and [InputAudioConfig.enable_word_info] is set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SpeechWordInfo> getSpeechWordInfo() {
@@ -251,8 +187,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Word-specific information for the words recognized by Speech in transcript. Populated if and
-   * only if `message_type` = `TRANSCRIPT` and [InputAudioConfig.enable_word_info] is set.
    * @param speechWordInfo speechWordInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult setSpeechWordInfo(java.util.List<GoogleCloudDialogflowV2beta1SpeechWordInfo> speechWordInfo) {
@@ -261,11 +195,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * An estimate of the likelihood that the speech recognizer will not change its guess about this
-   * interim recognition result: * If the value is unspecified or 0.0, Dialogflow didn't compute the
-   * stability. In particular, Dialogflow will only provide stability for `TRANSCRIPT` results with
-   * `is_final = false`. * Otherwise, the value is in (0.0, 1.0] where 0.0 means completely unstable
-   * and 1.0 means completely stable.
    * @return value or {@code null} for none
    */
   public java.lang.Float getStability() {
@@ -273,11 +202,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * An estimate of the likelihood that the speech recognizer will not change its guess about this
-   * interim recognition result: * If the value is unspecified or 0.0, Dialogflow didn't compute the
-   * stability. In particular, Dialogflow will only provide stability for `TRANSCRIPT` results with
-   * `is_final = false`. * Otherwise, the value is in (0.0, 1.0] where 0.0 means completely unstable
-   * and 1.0 means completely stable.
    * @param stability stability or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult setStability(java.lang.Float stability) {
@@ -286,8 +210,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Transcript text representing the words that the user spoke. Populated if and only if
-   * `message_type` = `TRANSCRIPT`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTranscript() {
@@ -295,8 +217,6 @@ public final class GoogleCloudDialogflowV2beta1StreamingRecognitionResult extend
   }
 
   /**
-   * Transcript text representing the words that the user spoke. Populated if and only if
-   * `message_type` = `TRANSCRIPT`.
    * @param transcript transcript or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult setTranscript(java.lang.String transcript) {

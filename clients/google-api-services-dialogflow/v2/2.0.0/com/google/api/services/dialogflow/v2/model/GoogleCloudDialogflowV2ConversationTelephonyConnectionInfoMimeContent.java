@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The mime content from the initial SIP INVITE.
+ * Model definition for GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMimeContent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMimeContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The content payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * Optional. The mime type of the content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * Optional. The content payload.
    * @see #decodeContent()
    * @return value or {@code null} for none
    */
@@ -53,7 +50,7 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMim
   }
 
   /**
-   * Optional. The content payload.
+
    * @see #getContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -64,7 +61,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMim
   }
 
   /**
-   * Optional. The content payload.
    * @see #encodeContent()
    * @param content content or {@code null} for none
    */
@@ -74,7 +70,7 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMim
   }
 
   /**
-   * Optional. The content payload.
+
    * @see #setContent()
    *
    * <p>
@@ -89,7 +85,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMim
   }
 
   /**
-   * Optional. The mime type of the content.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -97,7 +92,6 @@ public final class GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMim
   }
 
   /**
-   * Optional. The mime type of the content.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationTelephonyConnectionInfoMimeContent setMimeType(java.lang.String mimeType) {

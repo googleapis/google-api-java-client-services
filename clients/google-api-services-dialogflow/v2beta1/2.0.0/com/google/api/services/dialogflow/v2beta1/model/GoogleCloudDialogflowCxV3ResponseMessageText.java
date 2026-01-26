@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The text response message.
+ * Model definition for GoogleCloudDialogflowCxV3ResponseMessageText.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3ResponseMessageText extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether the playback of this message can be interrupted by the end user's speech
-   * and the client can then starts the next Dialogflow request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowPlaybackInterruption;
 
   /**
-   * Required. A collection of text response variants. If multiple variants are defined, only one
-   * text response variant is returned at runtime.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> text;
 
   /**
-   * Output only. Whether the playback of this message can be interrupted by the end user's speech
-   * and the client can then starts the next Dialogflow request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowPlaybackInterruption() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageText extends com.goog
   }
 
   /**
-   * Output only. Whether the playback of this message can be interrupted by the end user's speech
-   * and the client can then starts the next Dialogflow request.
    * @param allowPlaybackInterruption allowPlaybackInterruption or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessageText setAllowPlaybackInterruption(java.lang.Boolean allowPlaybackInterruption) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageText extends com.goog
   }
 
   /**
-   * Required. A collection of text response variants. If multiple variants are defined, only one
-   * text response variant is returned at runtime.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getText() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageText extends com.goog
   }
 
   /**
-   * Required. A collection of text response variants. If multiple variants are defined, only one
-   * text response variant is returned at runtime.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessageText setText(java.util.List<java.lang.String> text) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Filter specification for data store queries.
+ * Model definition for GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigFilterSpecs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,27 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigFilterSpecs extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The data store where the filter configuration is applied. Full resource name of data
-   * store, such as projects/{project}/locations/{location}/collections/{collectionId}/
-   * dataStores/{dataStoreId}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> dataStores;
 
   /**
-   * Optional. The filter expression to be applied. Expression syntax is documented at
-   * https://cloud.google.com/generative-ai-app-builder/docs/filter-search-metadata#filter-
-   * expression-syntax
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * Optional. The data store where the filter configuration is applied. Full resource name of data
-   * store, such as projects/{project}/locations/{location}/collections/{collectionId}/
-   * dataStores/{dataStoreId}.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataStores() {
@@ -58,9 +49,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The data store where the filter configuration is applied. Full resource name of data
-   * store, such as projects/{project}/locations/{location}/collections/{collectionId}/
-   * dataStores/{dataStoreId}.
    * @param dataStores dataStores or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigFilterSpecs setDataStores(java.util.List<java.lang.String> dataStores) {
@@ -69,9 +57,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The filter expression to be applied. Expression syntax is documented at
-   * https://cloud.google.com/generative-ai-app-builder/docs/filter-search-metadata#filter-
-   * expression-syntax
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -79,9 +64,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. The filter expression to be applied. Expression syntax is documented at
-   * https://cloud.google.com/generative-ai-app-builder/docs/filter-search-metadata#filter-
-   * expression-syntax
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigFilterSpecs setFilter(java.lang.String filter) {

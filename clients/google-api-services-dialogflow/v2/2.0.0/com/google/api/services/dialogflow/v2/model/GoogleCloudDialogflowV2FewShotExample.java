@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Providing examples in the generator (i.e. building a few-shot generator) helps convey the desired
- * format of the LLM response.
+ * Model definition for GoogleCloudDialogflowV2FewShotExample.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,36 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2FewShotExample extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Conversation transcripts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ConversationContext conversationContext;
 
   /**
-   * Optional. Key is the placeholder field name in input, value is the value of the placeholder.
-   * E.g. instruction contains "@price", and ingested data has <"price", "10">
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> extraInfo;
 
   /**
-   * Required. Example output of the model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GeneratorSuggestion output;
 
   /**
-   * Summarization sections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SummarizationSectionList summarizationSectionList;
 
   /**
-   * Optional. Conversation transcripts.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContext getConversationContext() {
@@ -68,7 +61,6 @@ public final class GoogleCloudDialogflowV2FewShotExample extends com.google.api.
   }
 
   /**
-   * Optional. Conversation transcripts.
    * @param conversationContext conversationContext or {@code null} for none
    */
   public GoogleCloudDialogflowV2FewShotExample setConversationContext(GoogleCloudDialogflowV2ConversationContext conversationContext) {
@@ -77,8 +69,6 @@ public final class GoogleCloudDialogflowV2FewShotExample extends com.google.api.
   }
 
   /**
-   * Optional. Key is the placeholder field name in input, value is the value of the placeholder.
-   * E.g. instruction contains "@price", and ingested data has <"price", "10">
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getExtraInfo() {
@@ -86,8 +76,6 @@ public final class GoogleCloudDialogflowV2FewShotExample extends com.google.api.
   }
 
   /**
-   * Optional. Key is the placeholder field name in input, value is the value of the placeholder.
-   * E.g. instruction contains "@price", and ingested data has <"price", "10">
    * @param extraInfo extraInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2FewShotExample setExtraInfo(java.util.Map<String, java.lang.String> extraInfo) {
@@ -96,7 +84,6 @@ public final class GoogleCloudDialogflowV2FewShotExample extends com.google.api.
   }
 
   /**
-   * Required. Example output of the model.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestion getOutput() {
@@ -104,7 +91,6 @@ public final class GoogleCloudDialogflowV2FewShotExample extends com.google.api.
   }
 
   /**
-   * Required. Example output of the model.
    * @param output output or {@code null} for none
    */
   public GoogleCloudDialogflowV2FewShotExample setOutput(GoogleCloudDialogflowV2GeneratorSuggestion output) {
@@ -113,7 +99,6 @@ public final class GoogleCloudDialogflowV2FewShotExample extends com.google.api.
   }
 
   /**
-   * Summarization sections.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationSectionList getSummarizationSectionList() {
@@ -121,7 +106,6 @@ public final class GoogleCloudDialogflowV2FewShotExample extends com.google.api.
   }
 
   /**
-   * Summarization sections.
    * @param summarizationSectionList summarizationSectionList or {@code null} for none
    */
   public GoogleCloudDialogflowV2FewShotExample setSummarizationSectionList(GoogleCloudDialogflowV2SummarizationSectionList summarizationSectionList) {

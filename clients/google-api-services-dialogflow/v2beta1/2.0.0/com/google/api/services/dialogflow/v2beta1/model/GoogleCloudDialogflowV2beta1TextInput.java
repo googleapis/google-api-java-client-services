@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the natural language text to be processed.
+ * Model definition for GoogleCloudDialogflowV2beta1TextInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1TextInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The language of this conversational query. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed
-   * 256 characters for virtual agent interactions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Required. The language of this conversational query. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -59,10 +49,6 @@ public final class GoogleCloudDialogflowV2beta1TextInput extends com.google.api.
   }
 
   /**
-   * Required. The language of this conversational query. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1TextInput setLanguageCode(java.lang.String languageCode) {
@@ -71,8 +57,6 @@ public final class GoogleCloudDialogflowV2beta1TextInput extends com.google.api.
   }
 
   /**
-   * Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed
-   * 256 characters for virtual agent interactions.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -80,8 +64,6 @@ public final class GoogleCloudDialogflowV2beta1TextInput extends com.google.api.
   }
 
   /**
-   * Required. The UTF-8 encoded natural language text to be processed. Text length must not exceed
-   * 256 characters for virtual agent interactions.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1TextInput setText(java.lang.String text) {

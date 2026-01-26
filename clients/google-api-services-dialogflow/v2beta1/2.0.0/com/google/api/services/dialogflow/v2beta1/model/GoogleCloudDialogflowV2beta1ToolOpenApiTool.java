@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * An OpenAPI tool is a way to provide the Tool specifications in the Open API schema format.
+ * Model definition for GoogleCloudDialogflowV2beta1ToolOpenApiTool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ToolOpenApiTool extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Authentication information required by the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ToolAuthentication authentication;
 
   /**
-   * Optional. Service Directory configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ToolServiceDirectoryConfig serviceDirectoryConfig;
 
   /**
-   * Required. The OpenAPI schema specified as a text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String textSchema;
 
   /**
-   * Optional. TLS configuration for the HTTPS verification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ToolTLSConfig tlsConfig;
 
   /**
-   * Optional. Authentication information required by the API.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolAuthentication getAuthentication() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2beta1ToolOpenApiTool extends com.googl
   }
 
   /**
-   * Optional. Authentication information required by the API.
    * @param authentication authentication or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolOpenApiTool setAuthentication(GoogleCloudDialogflowV2beta1ToolAuthentication authentication) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2beta1ToolOpenApiTool extends com.googl
   }
 
   /**
-   * Optional. Service Directory configuration.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolServiceDirectoryConfig getServiceDirectoryConfig() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1ToolOpenApiTool extends com.googl
   }
 
   /**
-   * Optional. Service Directory configuration.
    * @param serviceDirectoryConfig serviceDirectoryConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolOpenApiTool setServiceDirectoryConfig(GoogleCloudDialogflowV2beta1ToolServiceDirectoryConfig serviceDirectoryConfig) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2beta1ToolOpenApiTool extends com.googl
   }
 
   /**
-   * Required. The OpenAPI schema specified as a text.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextSchema() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2beta1ToolOpenApiTool extends com.googl
   }
 
   /**
-   * Required. The OpenAPI schema specified as a text.
    * @param textSchema textSchema or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolOpenApiTool setTextSchema(java.lang.String textSchema) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2beta1ToolOpenApiTool extends com.googl
   }
 
   /**
-   * Optional. TLS configuration for the HTTPS verification.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolTLSConfig getTlsConfig() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2beta1ToolOpenApiTool extends com.googl
   }
 
   /**
-   * Optional. TLS configuration for the HTTPS verification.
    * @param tlsConfig tlsConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolOpenApiTool setTlsConfig(GoogleCloudDialogflowV2beta1ToolTLSConfig tlsConfig) {

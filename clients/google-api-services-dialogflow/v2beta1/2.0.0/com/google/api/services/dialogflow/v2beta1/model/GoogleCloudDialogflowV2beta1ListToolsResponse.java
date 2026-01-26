@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Response of ListTools.
+ * Model definition for GoogleCloudDialogflowV2beta1ListToolsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ListToolsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of tools retrieved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Tool> tools;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1ListToolsResponse extends com.goo
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ListToolsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1ListToolsResponse extends com.goo
   }
 
   /**
-   * List of tools retrieved.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1Tool> getTools() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1ListToolsResponse extends com.goo
   }
 
   /**
-   * List of tools retrieved.
    * @param tools tools or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ListToolsResponse setTools(java.util.List<GoogleCloudDialogflowV2beta1Tool> tools) {

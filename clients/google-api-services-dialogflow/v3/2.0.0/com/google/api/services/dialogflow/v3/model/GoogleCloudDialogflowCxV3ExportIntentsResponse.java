@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for Intents.ExportIntents.
+ * Model definition for GoogleCloudDialogflowCxV3ExportIntentsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ExportIntentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uncompressed byte content for intents. This field is populated only if `intents_content_inline`
-   * is set to true in ExportIntentsRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3InlineDestination intentsContent;
 
   /**
-   * The URI to a file containing the exported intents. This field is populated only if
-   * `intents_uri` is specified in ExportIntentsRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intentsUri;
 
   /**
-   * Uncompressed byte content for intents. This field is populated only if `intents_content_inline`
-   * is set to true in ExportIntentsRequest.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InlineDestination getIntentsContent() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsResponse extends com.go
   }
 
   /**
-   * Uncompressed byte content for intents. This field is populated only if `intents_content_inline`
-   * is set to true in ExportIntentsRequest.
    * @param intentsContent intentsContent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportIntentsResponse setIntentsContent(GoogleCloudDialogflowCxV3InlineDestination intentsContent) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsResponse extends com.go
   }
 
   /**
-   * The URI to a file containing the exported intents. This field is populated only if
-   * `intents_uri` is specified in ExportIntentsRequest.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntentsUri() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsResponse extends com.go
   }
 
   /**
-   * The URI to a file containing the exported intents. This field is populated only if
-   * `intents_uri` is specified in ExportIntentsRequest.
    * @param intentsUri intentsUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportIntentsResponse setIntentsUri(java.lang.String intentsUri) {

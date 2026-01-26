@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores metadata of the call of an LLM.
+ * Model definition for GoogleCloudDialogflowCxV3beta1LlmCall.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1LlmCall extends com.google.api.client.json.GenericJson {
 
   /**
-   * The model of the LLM call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
 
   /**
-   * A list of relevant examples used for the LLM prompt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample> retrievedExamples;
 
   /**
-   * The temperature of the LLM call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float temperature;
 
   /**
-   * The token counts of the LLM call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1LlmCallTokenCount tokenCount;
 
   /**
-   * The model of the LLM call.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCall extends com.google.api.
   }
 
   /**
-   * The model of the LLM call.
    * @param model model or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCall setModel(java.lang.String model) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCall extends com.google.api.
   }
 
   /**
-   * A list of relevant examples used for the LLM prompt.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample> getRetrievedExamples() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCall extends com.google.api.
   }
 
   /**
-   * A list of relevant examples used for the LLM prompt.
    * @param retrievedExamples retrievedExamples or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCall setRetrievedExamples(java.util.List<GoogleCloudDialogflowCxV3beta1LlmCallRetrievedExample> retrievedExamples) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCall extends com.google.api.
   }
 
   /**
-   * The temperature of the LLM call.
    * @return value or {@code null} for none
    */
   public java.lang.Float getTemperature() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCall extends com.google.api.
   }
 
   /**
-   * The temperature of the LLM call.
    * @param temperature temperature or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCall setTemperature(java.lang.Float temperature) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCall extends com.google.api.
   }
 
   /**
-   * The token counts of the LLM call.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCallTokenCount getTokenCount() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmCall extends com.google.api.
   }
 
   /**
-   * The token counts of the LLM call.
    * @param tokenCount tokenCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmCall setTokenCount(GoogleCloudDialogflowCxV3beta1LlmCallTokenCount tokenCount) {

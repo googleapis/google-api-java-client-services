@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Result of the deployment.
+ * Model definition for GoogleCloudDialogflowCxV3DeploymentResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3DeploymentResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Results of test cases running before the deployment. Format:
-   * `projects//locations//agents//testCases//results/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> deploymentTestResults;
 
   /**
-   * The name of the experiment triggered by this deployment. Format:
-   * projects//locations//agents//environments//experiments/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String experiment;
 
   /**
-   * Results of test cases running before the deployment. Format:
-   * `projects//locations//agents//testCases//results/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDeploymentTestResults() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3DeploymentResult extends com.google.
   }
 
   /**
-   * Results of test cases running before the deployment. Format:
-   * `projects//locations//agents//testCases//results/`.
    * @param deploymentTestResults deploymentTestResults or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DeploymentResult setDeploymentTestResults(java.util.List<java.lang.String> deploymentTestResults) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3DeploymentResult extends com.google.
   }
 
   /**
-   * The name of the experiment triggered by this deployment. Format:
-   * projects//locations//agents//environments//experiments/.
    * @return value or {@code null} for none
    */
   public java.lang.String getExperiment() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3DeploymentResult extends com.google.
   }
 
   /**
-   * The name of the experiment triggered by this deployment. Format:
-   * projects//locations//agents//environments//experiments/.
    * @param experiment experiment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DeploymentResult setExperiment(java.lang.String experiment) {

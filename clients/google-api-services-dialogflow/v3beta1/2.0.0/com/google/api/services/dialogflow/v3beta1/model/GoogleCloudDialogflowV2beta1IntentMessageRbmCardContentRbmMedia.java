@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Rich Business Messaging (RBM) Media displayed in Cards The following media-types are currently
- * supported: Image Types * image/jpeg * image/jpg' * image/gif * image/png Video Types * video/h263
- * * video/m4v * video/mp4 * video/mpeg * video/mpeg4 * video/webm
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,37 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Publicly reachable URI of the file. The RBM platform determines the MIME type of the
-   * file from the content-type field in the HTTP headers when the platform fetches the file. The
-   * content-type field must be present and accurate in the HTTP response from the URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileUri;
 
   /**
-   * Required for cards with vertical orientation. The height of the media within a rich card with a
-   * vertical layout. For a standalone card with horizontal layout, height is not customizable, and
-   * this field is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String height;
 
   /**
-   * Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM
-   * platform displays a blank placeholder thumbnail until the user's device downloads the file.
-   * Depending on the user's setting, the file may not download automatically and may require the
-   * user to tap a download button.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String thumbnailUri;
 
   /**
-   * Required. Publicly reachable URI of the file. The RBM platform determines the MIME type of the
-   * file from the content-type field in the HTTP headers when the platform fetches the file. The
-   * content-type field must be present and accurate in the HTTP response from the URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileUri() {
@@ -70,9 +55,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
   }
 
   /**
-   * Required. Publicly reachable URI of the file. The RBM platform determines the MIME type of the
-   * file from the content-type field in the HTTP headers when the platform fetches the file. The
-   * content-type field must be present and accurate in the HTTP response from the URL.
    * @param fileUri fileUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia setFileUri(java.lang.String fileUri) {
@@ -81,9 +63,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
   }
 
   /**
-   * Required for cards with vertical orientation. The height of the media within a rich card with a
-   * vertical layout. For a standalone card with horizontal layout, height is not customizable, and
-   * this field is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeight() {
@@ -91,9 +70,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
   }
 
   /**
-   * Required for cards with vertical orientation. The height of the media within a rich card with a
-   * vertical layout. For a standalone card with horizontal layout, height is not customizable, and
-   * this field is ignored.
    * @param height height or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia setHeight(java.lang.String height) {
@@ -102,10 +78,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
   }
 
   /**
-   * Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM
-   * platform displays a blank placeholder thumbnail until the user's device downloads the file.
-   * Depending on the user's setting, the file may not download automatically and may require the
-   * user to tap a download button.
    * @return value or {@code null} for none
    */
   public java.lang.String getThumbnailUri() {
@@ -113,10 +85,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
   }
 
   /**
-   * Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM
-   * platform displays a blank placeholder thumbnail until the user's device downloads the file.
-   * Depending on the user's setting, the file may not download automatically and may require the
-   * user to tap a download button.
    * @param thumbnailUri thumbnailUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia setThumbnailUri(java.lang.String thumbnailUri) {

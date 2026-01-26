@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for Generative Fallback.
+ * Model definition for GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Stored prompts that can be selected, for example default templates like "conservative" or
-   * "chatty", or user defined ones.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettingsPromptTemplate> promptTemplates;
 
   /**
-   * Display name of the selected prompt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selectedPrompt;
 
   /**
-   * Stored prompts that can be selected, for example default templates like "conservative" or
-   * "chatty", or user defined ones.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettingsPromptTemplate> getPromptTemplates() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSetti
   }
 
   /**
-   * Stored prompts that can be selected, for example default templates like "conservative" or
-   * "chatty", or user defined ones.
    * @param promptTemplates promptTemplates or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettings setPromptTemplates(java.util.List<GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettingsPromptTemplate> promptTemplates) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSetti
   }
 
   /**
-   * Display name of the selected prompt.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelectedPrompt() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSetti
   }
 
   /**
-   * Display name of the selected prompt.
    * @param selectedPrompt selectedPrompt or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GenerativeSettingsFallbackSettings setSelectedPrompt(java.lang.String selectedPrompt) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Configures the types of sentiment analysis to perform.
+ * Model definition for GoogleCloudDialogflowV2beta1SentimentAnalysisRequestConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SentimentAnalysisRequestConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Instructs the service to perform sentiment analysis on `query_text`. If not provided, sentiment
-   * analysis is not performed on `query_text`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean analyzeQueryTextSentiment;
 
   /**
-   * Instructs the service to perform sentiment analysis on `query_text`. If not provided, sentiment
-   * analysis is not performed on `query_text`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAnalyzeQueryTextSentiment() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2beta1SentimentAnalysisRequestConfig ex
   }
 
   /**
-   * Instructs the service to perform sentiment analysis on `query_text`. If not provided, sentiment
-   * analysis is not performed on `query_text`.
    * @param analyzeQueryTextSentiment analyzeQueryTextSentiment or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SentimentAnalysisRequestConfig setAnalyzeQueryTextSentiment(java.lang.Boolean analyzeQueryTextSentiment) {

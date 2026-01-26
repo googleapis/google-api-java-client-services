@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Suggestion generated using free form generator.
+ * Model definition for GoogleCloudDialogflowV2beta1FreeFormSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1FreeFormSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Free form suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String response;
 
   /**
-   * Required. Free form suggestion.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponse() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1FreeFormSuggestion extends com.go
   }
 
   /**
-   * Required. Free form suggestion.
    * @param response response or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1FreeFormSuggestion setResponse(java.lang.String response) {

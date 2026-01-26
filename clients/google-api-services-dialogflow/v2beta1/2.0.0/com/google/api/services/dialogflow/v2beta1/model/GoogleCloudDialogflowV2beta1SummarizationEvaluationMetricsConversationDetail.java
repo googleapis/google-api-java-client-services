@@ -17,8 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Aggregated evaluation result on conversation level. This contains evaluation results of all the
- * metrics and sections.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsConversationDetail.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,7 +31,6 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsConversationDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Conversation transcript that used for summarization evaluation as a reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,29 +43,24 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCon
   }
 
   /**
-   * Output only. List of metric details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsConversationDetailMetricDetail> metricDetails;
 
   /**
-   * Output only. Conversation level token count per section. This is an aggregated(sum) result of
-   * input token of summary acorss all metrics for a single conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsSectionToken> sectionTokens;
 
   /**
-   * Output only. Summary sections that used for summarization evaluation as a reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection> summarySections;
 
   /**
-   * Output only. Conversation transcript that used for summarization evaluation as a reference.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1MessageEntry> getMessageEntries() {
@@ -74,7 +68,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCon
   }
 
   /**
-   * Output only. Conversation transcript that used for summarization evaluation as a reference.
    * @param messageEntries messageEntries or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsConversationDetail setMessageEntries(java.util.List<GoogleCloudDialogflowV2beta1MessageEntry> messageEntries) {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCon
   }
 
   /**
-   * Output only. List of metric details.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsConversationDetailMetricDetail> getMetricDetails() {
@@ -91,7 +83,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCon
   }
 
   /**
-   * Output only. List of metric details.
    * @param metricDetails metricDetails or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsConversationDetail setMetricDetails(java.util.List<GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsConversationDetailMetricDetail> metricDetails) {
@@ -100,8 +91,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCon
   }
 
   /**
-   * Output only. Conversation level token count per section. This is an aggregated(sum) result of
-   * input token of summary acorss all metrics for a single conversation.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsSectionToken> getSectionTokens() {
@@ -109,8 +98,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCon
   }
 
   /**
-   * Output only. Conversation level token count per section. This is an aggregated(sum) result of
-   * input token of summary acorss all metrics for a single conversation.
    * @param sectionTokens sectionTokens or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsConversationDetail setSectionTokens(java.util.List<GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsSectionToken> sectionTokens) {
@@ -119,7 +106,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCon
   }
 
   /**
-   * Output only. Summary sections that used for summarization evaluation as a reference.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection> getSummarySections() {
@@ -127,7 +113,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsCon
   }
 
   /**
-   * Output only. Summary sections that used for summarization evaluation as a reference.
    * @param summarySections summarySections or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsConversationDetail setSummarySections(java.util.List<GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection> summarySections) {

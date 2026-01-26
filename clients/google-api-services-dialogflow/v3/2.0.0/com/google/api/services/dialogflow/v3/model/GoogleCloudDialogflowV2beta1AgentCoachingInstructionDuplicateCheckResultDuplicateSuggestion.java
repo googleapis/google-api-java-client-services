@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The duplicate suggestion details.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResultDuplicateSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +31,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResultDuplicateSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The answer record id of the past duplicate suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * Output only. The similarity score of between the past and current suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float similarityScore;
 
   /**
-   * Output only. The index of the duplicate suggestion in the past suggestion list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer suggestionIndex;
 
   /**
-   * Output only. The answer record id of the past duplicate suggestion.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -59,7 +56,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicate
   }
 
   /**
-   * Output only. The answer record id of the past duplicate suggestion.
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResultDuplicateSuggestion setAnswerRecord(java.lang.String answerRecord) {
@@ -68,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicate
   }
 
   /**
-   * Output only. The similarity score of between the past and current suggestion.
    * @return value or {@code null} for none
    */
   public java.lang.Float getSimilarityScore() {
@@ -76,7 +71,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicate
   }
 
   /**
-   * Output only. The similarity score of between the past and current suggestion.
    * @param similarityScore similarityScore or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResultDuplicateSuggestion setSimilarityScore(java.lang.Float similarityScore) {
@@ -85,7 +79,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicate
   }
 
   /**
-   * Output only. The index of the duplicate suggestion in the past suggestion list.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuggestionIndex() {
@@ -93,7 +86,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicate
   }
 
   /**
-   * Output only. The index of the duplicate suggestion in the past suggestion list.
    * @param suggestionIndex suggestionIndex or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingInstructionDuplicateCheckResultDuplicateSuggestion setSuggestionIndex(java.lang.Integer suggestionIndex) {

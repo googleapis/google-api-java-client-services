@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Count by Match.MatchType of the matches in the conversation.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,56 +30,48 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of matches with type Match.MatchType.DIRECT_INTENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer directIntentCount;
 
   /**
-   * The number of matches with type Match.MatchType.EVENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer eventCount;
 
   /**
-   * The number of matches with type Match.MatchType.INTENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer intentCount;
 
   /**
-   * The number of matches with type Match.MatchType.NO_INPUT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer noInputCount;
 
   /**
-   * The number of matches with type Match.MatchType.NO_MATCH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer noMatchCount;
 
   /**
-   * The number of matches with type Match.MatchType.PARAMETER_FILLING.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer parameterFillingCount;
 
   /**
-   * The number of matches with type Match.MatchType.MATCH_TYPE_UNSPECIFIED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer unspecifiedCount;
 
   /**
-   * The number of matches with type Match.MatchType.DIRECT_INTENT.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDirectIntentCount() {
@@ -87,7 +79,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.DIRECT_INTENT.
    * @param directIntentCount directIntentCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount setDirectIntentCount(java.lang.Integer directIntentCount) {
@@ -96,7 +87,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.EVENT.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEventCount() {
@@ -104,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.EVENT.
    * @param eventCount eventCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount setEventCount(java.lang.Integer eventCount) {
@@ -113,7 +102,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.INTENT.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIntentCount() {
@@ -121,7 +109,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.INTENT.
    * @param intentCount intentCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount setIntentCount(java.lang.Integer intentCount) {
@@ -130,7 +117,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.NO_INPUT.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNoInputCount() {
@@ -138,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.NO_INPUT.
    * @param noInputCount noInputCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount setNoInputCount(java.lang.Integer noInputCount) {
@@ -147,7 +132,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.NO_MATCH.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNoMatchCount() {
@@ -155,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.NO_MATCH.
    * @param noMatchCount noMatchCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount setNoMatchCount(java.lang.Integer noMatchCount) {
@@ -164,7 +147,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.PARAMETER_FILLING.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getParameterFillingCount() {
@@ -172,7 +154,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.PARAMETER_FILLING.
    * @param parameterFillingCount parameterFillingCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount setParameterFillingCount(java.lang.Integer parameterFillingCount) {
@@ -181,7 +162,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.MATCH_TYPE_UNSPECIFIED.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUnspecifiedCount() {
@@ -189,7 +169,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCou
   }
 
   /**
-   * The number of matches with type Match.MatchType.MATCH_TYPE_UNSPECIFIED.
    * @param unspecifiedCount unspecifiedCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsMatchTypeCount setUnspecifiedCount(java.lang.Integer unspecifiedCount) {

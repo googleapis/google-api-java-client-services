@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Metadata in google::longrunning::Operation for Knowledge operations.
+ * Model definition for GoogleCloudDialogflowV2KnowledgeOperationMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time when the operation finished.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String doneTime;
 
   /**
-   * Metadata for the Export Data Operation such as the destination of export.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ExportOperationMetadata exportOperationMetadata;
 
   /**
-   * The name of the knowledge base interacted with during the operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String knowledgeBase;
 
   /**
-   * Output only. The current state of this operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The time when the operation finished.
    * @return value or {@code null} for none
    */
   public String getDoneTime() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com
   }
 
   /**
-   * The time when the operation finished.
    * @param doneTime doneTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2KnowledgeOperationMetadata setDoneTime(String doneTime) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com
   }
 
   /**
-   * Metadata for the Export Data Operation such as the destination of export.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ExportOperationMetadata getExportOperationMetadata() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com
   }
 
   /**
-   * Metadata for the Export Data Operation such as the destination of export.
    * @param exportOperationMetadata exportOperationMetadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2KnowledgeOperationMetadata setExportOperationMetadata(GoogleCloudDialogflowV2ExportOperationMetadata exportOperationMetadata) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com
   }
 
   /**
-   * The name of the knowledge base interacted with during the operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getKnowledgeBase() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com
   }
 
   /**
-   * The name of the knowledge base interacted with during the operation.
    * @param knowledgeBase knowledgeBase or {@code null} for none
    */
   public GoogleCloudDialogflowV2KnowledgeOperationMetadata setKnowledgeBase(java.lang.String knowledgeBase) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com
   }
 
   /**
-   * Output only. The current state of this operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com
   }
 
   /**
-   * Output only. The current state of this operation.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowV2KnowledgeOperationMetadata setState(java.lang.String state) {

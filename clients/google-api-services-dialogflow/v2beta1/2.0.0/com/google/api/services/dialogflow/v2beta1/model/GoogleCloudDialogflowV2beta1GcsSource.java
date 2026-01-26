@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Google Cloud Storage location for single input.
+ * Model definition for GoogleCloudDialogflowV2beta1GcsSource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GcsSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Google Cloud Storage URIs for the inputs. A URI is of the form:
-   * `gs://bucket/object-prefix-or-name` Whether a prefix or name is used depends on the use case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. The Google Cloud Storage URIs for the inputs. A URI is of the form:
-   * `gs://bucket/object-prefix-or-name` Whether a prefix or name is used depends on the use case.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2beta1GcsSource extends com.google.api.
   }
 
   /**
-   * Required. The Google Cloud Storage URIs for the inputs. A URI is of the form:
-   * `gs://bucket/object-prefix-or-name` Whether a prefix or name is used depends on the use case.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GcsSource setUri(java.lang.String uri) {

@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for knowledge connector. These parameters are used for LLM prompt like "You are . You
- * are a helpful and verbose at , . Your task is to help humans on ".
+ * Model definition for GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,53 +30,42 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the virtual agent. Used for LLM prompt. Can be left empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agent;
 
   /**
-   * Identity of the agent, e.g. "virtual agent", "AI assistant".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentIdentity;
 
   /**
-   * Agent scope, e.g. "Example company website", "internal Example company website for employees",
-   * "manual of car owner".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentScope;
 
   /**
-   * Name of the company, organization or other entity that the agent represents. Used for knowledge
-   * connector LLM prompt and for knowledge search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String business;
 
   /**
-   * Company description, used for LLM prompt, e.g. "a family company selling freshly roasted coffee
-   * beans".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String businessDescription;
 
   /**
-   * Whether to disable fallback to Data Store search results (in case the LLM couldn't pick a
-   * proper answer). Per default the feature is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableDataStoreFallback;
 
   /**
-   * Name of the virtual agent. Used for LLM prompt. Can be left empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgent() {
@@ -85,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Name of the virtual agent. Used for LLM prompt. Can be left empty.
    * @param agent agent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings setAgent(java.lang.String agent) {
@@ -94,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Identity of the agent, e.g. "virtual agent", "AI assistant".
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentIdentity() {
@@ -102,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Identity of the agent, e.g. "virtual agent", "AI assistant".
    * @param agentIdentity agentIdentity or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings setAgentIdentity(java.lang.String agentIdentity) {
@@ -111,8 +96,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Agent scope, e.g. "Example company website", "internal Example company website for employees",
-   * "manual of car owner".
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentScope() {
@@ -120,8 +103,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Agent scope, e.g. "Example company website", "internal Example company website for employees",
-   * "manual of car owner".
    * @param agentScope agentScope or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings setAgentScope(java.lang.String agentScope) {
@@ -130,8 +111,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Name of the company, organization or other entity that the agent represents. Used for knowledge
-   * connector LLM prompt and for knowledge search.
    * @return value or {@code null} for none
    */
   public java.lang.String getBusiness() {
@@ -139,8 +118,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Name of the company, organization or other entity that the agent represents. Used for knowledge
-   * connector LLM prompt and for knowledge search.
    * @param business business or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings setBusiness(java.lang.String business) {
@@ -149,8 +126,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Company description, used for LLM prompt, e.g. "a family company selling freshly roasted coffee
-   * beans".
    * @return value or {@code null} for none
    */
   public java.lang.String getBusinessDescription() {
@@ -158,8 +133,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Company description, used for LLM prompt, e.g. "a family company selling freshly roasted coffee
-   * beans".
    * @param businessDescription businessDescription or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings setBusinessDescription(java.lang.String businessDescription) {
@@ -168,8 +141,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Whether to disable fallback to Data Store search results (in case the LLM couldn't pick a
-   * proper answer). Per default the feature is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableDataStoreFallback() {
@@ -177,8 +148,6 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnector
   }
 
   /**
-   * Whether to disable fallback to Data Store search results (in case the LLM couldn't pick a
-   * proper answer). Per default the feature is enabled.
    * @param disableDataStoreFallback disableDataStoreFallback or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings setDisableDataStoreFallback(java.lang.Boolean disableDataStoreFallback) {

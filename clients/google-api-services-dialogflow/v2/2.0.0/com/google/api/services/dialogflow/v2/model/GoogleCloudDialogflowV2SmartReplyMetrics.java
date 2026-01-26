@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The evaluation metrics for smart reply model.
+ * Model definition for GoogleCloudDialogflowV2SmartReplyMetrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SmartReplyMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Percentage of target participant messages in the evaluation dataset for which similar messages
-   * have appeared at least once in the allowlist. Should be [0, 1].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float allowlistCoverage;
 
   /**
-   * Total number of conversations used to generate this metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long conversationCount;
 
   /**
-   * Metrics of top n smart replies, sorted by TopNMetric.n.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics> topNMetrics;
 
   /**
-   * Percentage of target participant messages in the evaluation dataset for which similar messages
-   * have appeared at least once in the allowlist. Should be [0, 1].
    * @return value or {@code null} for none
    */
   public java.lang.Float getAllowlistCoverage() {
@@ -61,8 +55,6 @@ public final class GoogleCloudDialogflowV2SmartReplyMetrics extends com.google.a
   }
 
   /**
-   * Percentage of target participant messages in the evaluation dataset for which similar messages
-   * have appeared at least once in the allowlist. Should be [0, 1].
    * @param allowlistCoverage allowlistCoverage or {@code null} for none
    */
   public GoogleCloudDialogflowV2SmartReplyMetrics setAllowlistCoverage(java.lang.Float allowlistCoverage) {
@@ -71,7 +63,6 @@ public final class GoogleCloudDialogflowV2SmartReplyMetrics extends com.google.a
   }
 
   /**
-   * Total number of conversations used to generate this metric.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConversationCount() {
@@ -79,7 +70,6 @@ public final class GoogleCloudDialogflowV2SmartReplyMetrics extends com.google.a
   }
 
   /**
-   * Total number of conversations used to generate this metric.
    * @param conversationCount conversationCount or {@code null} for none
    */
   public GoogleCloudDialogflowV2SmartReplyMetrics setConversationCount(java.lang.Long conversationCount) {
@@ -88,7 +78,6 @@ public final class GoogleCloudDialogflowV2SmartReplyMetrics extends com.google.a
   }
 
   /**
-   * Metrics of top n smart replies, sorted by TopNMetric.n.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics> getTopNMetrics() {
@@ -96,7 +85,6 @@ public final class GoogleCloudDialogflowV2SmartReplyMetrics extends com.google.a
   }
 
   /**
-   * Metrics of top n smart replies, sorted by TopNMetric.n.
    * @param topNMetrics topNMetrics or {@code null} for none
    */
   public GoogleCloudDialogflowV2SmartReplyMetrics setTopNMetrics(java.util.List<GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics> topNMetrics) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Version variant and associated metrics.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * The metrics and corresponding confidence intervals in the inference result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,21 +42,18 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics 
   }
 
   /**
-   * Number of sessions that were allocated to this version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sessionCount;
 
   /**
-   * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * The metrics and corresponding confidence intervals in the inference result.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetric> getMetrics() {
@@ -65,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics 
   }
 
   /**
-   * The metrics and corresponding confidence intervals in the inference result.
    * @param metrics metrics or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics setMetrics(java.util.List<GoogleCloudDialogflowCxV3beta1ExperimentResultMetric> metrics) {
@@ -74,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics 
   }
 
   /**
-   * Number of sessions that were allocated to this version.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSessionCount() {
@@ -82,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics 
   }
 
   /**
-   * Number of sessions that were allocated to this version.
    * @param sessionCount sessionCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics setSessionCount(java.lang.Integer sessionCount) {
@@ -91,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics 
   }
 
   /**
-   * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -99,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics 
   }
 
   /**
-   * The name of the flow Version. Format: `projects//locations//agents//flows//versions/`.
    * @param version version or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetrics setVersion(java.lang.String version) {

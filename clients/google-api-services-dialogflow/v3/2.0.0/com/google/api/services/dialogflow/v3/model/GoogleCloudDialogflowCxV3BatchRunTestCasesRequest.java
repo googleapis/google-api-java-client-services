@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for TestCases.BatchRunTestCases.
+ * Model definition for GoogleCloudDialogflowCxV3BatchRunTestCasesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3BatchRunTestCasesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If not set, draft environment is assumed. Format:
-   * `projects//locations//agents//environments/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environment;
 
   /**
-   * Required. Format: `projects//locations//agents//testCases/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> testCases;
 
   /**
-   * Optional. If not set, draft environment is assumed. Format:
-   * `projects//locations//agents//environments/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3BatchRunTestCasesRequest extends com
   }
 
   /**
-   * Optional. If not set, draft environment is assumed. Format:
-   * `projects//locations//agents//environments/`.
    * @param environment environment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3BatchRunTestCasesRequest setEnvironment(java.lang.String environment) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3BatchRunTestCasesRequest extends com
   }
 
   /**
-   * Required. Format: `projects//locations//agents//testCases/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTestCases() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3BatchRunTestCasesRequest extends com
   }
 
   /**
-   * Required. Format: `projects//locations//agents//testCases/`.
    * @param testCases testCases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3BatchRunTestCasesRequest setTestCases(java.util.List<java.lang.String> testCases) {

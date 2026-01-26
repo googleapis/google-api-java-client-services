@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Events allow for matching intents by event name instead of the natural language input. For
- * instance, input `` can trigger a personalized welcome response. The parameter `name` may be used
- * by the agent in the response: `"Hello #welcome_event.name! What can I do for you today?"`.
+ * Model definition for GoogleCloudDialogflowV2EventInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,44 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2EventInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The language of this query. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language. This field is ignored when used in the context of a
-   * WebhookResponse.followup_event_input field, because the language was already defined in the
-   * originating detect intent request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Required. The unique identifier of the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The collection of parameters associated with the event. Depending on your protocol or client
-   * library language, this is a map, associative array, symbol table, dictionary, or JSON object
-   * composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value:
-   * parameter name * MapValue type: If parameter's entity type is a composite entity then use map,
-   * otherwise, depending on the parameter value type, it could be one of string, number, boolean,
-   * null, list or map. * MapValue value: If parameter's entity type is a composite entity then use
-   * map from composite entity property names to property values, otherwise, use parameter value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * Required. The language of this query. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language. This field is ignored when used in the context of a
-   * WebhookResponse.followup_event_input field, because the language was already defined in the
-   * originating detect intent request.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -77,12 +55,6 @@ public final class GoogleCloudDialogflowV2EventInput extends com.google.api.clie
   }
 
   /**
-   * Required. The language of this query. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language. This field is ignored when used in the context of a
-   * WebhookResponse.followup_event_input field, because the language was already defined in the
-   * originating detect intent request.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2EventInput setLanguageCode(java.lang.String languageCode) {
@@ -91,7 +63,6 @@ public final class GoogleCloudDialogflowV2EventInput extends com.google.api.clie
   }
 
   /**
-   * Required. The unique identifier of the event.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -99,7 +70,6 @@ public final class GoogleCloudDialogflowV2EventInput extends com.google.api.clie
   }
 
   /**
-   * Required. The unique identifier of the event.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2EventInput setName(java.lang.String name) {
@@ -108,13 +78,6 @@ public final class GoogleCloudDialogflowV2EventInput extends com.google.api.clie
   }
 
   /**
-   * The collection of parameters associated with the event. Depending on your protocol or client
-   * library language, this is a map, associative array, symbol table, dictionary, or JSON object
-   * composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value:
-   * parameter name * MapValue type: If parameter's entity type is a composite entity then use map,
-   * otherwise, depending on the parameter value type, it could be one of string, number, boolean,
-   * null, list or map. * MapValue value: If parameter's entity type is a composite entity then use
-   * map from composite entity property names to property values, otherwise, use parameter value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -122,13 +85,6 @@ public final class GoogleCloudDialogflowV2EventInput extends com.google.api.clie
   }
 
   /**
-   * The collection of parameters associated with the event. Depending on your protocol or client
-   * library language, this is a map, associative array, symbol table, dictionary, or JSON object
-   * composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value:
-   * parameter name * MapValue type: If parameter's entity type is a composite entity then use map,
-   * otherwise, depending on the parameter value type, it could be one of string, number, boolean,
-   * null, list or map. * MapValue value: If parameter's entity type is a composite entity then use
-   * map from composite entity property names to property values, otherwise, use parameter value.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2EventInput setParameters(java.util.Map<String, java.lang.Object> parameters) {

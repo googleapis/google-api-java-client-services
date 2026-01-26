@@ -32,7 +32,7 @@ public final class Master extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * does not have emulated version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class Master extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * does not have emulated version.
    * @return value or {@code null} for none
    */
   public CompatibilityStatus getCompatibilityStatus() {
@@ -49,7 +49,7 @@ public final class Master extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The compatibility status of the control plane. It should be empty if the cluster
-   * does not have emulated version. For details, see go/user-initiated-rollbackable-upgrade-design.
+   * does not have emulated version.
    * @param compatibilityStatus compatibilityStatus or {@code null} for none
    */
   public Master setCompatibilityStatus(CompatibilityStatus compatibilityStatus) {

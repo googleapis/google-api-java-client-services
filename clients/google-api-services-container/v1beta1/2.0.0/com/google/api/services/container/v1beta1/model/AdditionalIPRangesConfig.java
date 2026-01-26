@@ -40,6 +40,13 @@ public final class AdditionalIPRangesConfig extends com.google.api.client.json.G
   private java.util.List<java.lang.String> podIpv4RangeNames;
 
   /**
+   * Draining status of the additional subnet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String status;
+
+  /**
    * Name of the subnetwork. This can be the full path of the subnetwork or just the name. Example1:
    * my-subnet Example2: projects/gke-project/regions/us-central1/subnetworks/my-subnet
    * The value may be {@code null}.
@@ -63,6 +70,23 @@ public final class AdditionalIPRangesConfig extends com.google.api.client.json.G
    */
   public AdditionalIPRangesConfig setPodIpv4RangeNames(java.util.List<java.lang.String> podIpv4RangeNames) {
     this.podIpv4RangeNames = podIpv4RangeNames;
+    return this;
+  }
+
+  /**
+   * Draining status of the additional subnet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatus() {
+    return status;
+  }
+
+  /**
+   * Draining status of the additional subnet.
+   * @param status status or {@code null} for none
+   */
+  public AdditionalIPRangesConfig setStatus(java.lang.String status) {
+    this.status = status;
     return this;
   }
 

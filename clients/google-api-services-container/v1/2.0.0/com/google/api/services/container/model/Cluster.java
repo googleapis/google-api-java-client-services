@@ -82,7 +82,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The IP address range of the container pods in this cluster, in
-   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in
    * `10.0.0.0/8`.
    * The value may be {@code null}.
@@ -603,7 +603,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The IP address range of the Kubernetes services in this cluster, in
-   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
    * The value may be {@code null}.
    */
@@ -643,7 +643,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The IP address range of the Cloud TPUs in this cluster, in
-   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`). This field is deprecated due to the deprecation of 2VM TPU. The end of life date
    * for 2VM TPU is 2025-04-25.
    * The value may be {@code null}.
@@ -804,7 +804,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The IP address range of the container pods in this cluster, in
-   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in
    * `10.0.0.0/8`.
    * @return value or {@code null} for none
@@ -815,7 +815,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The IP address range of the container pods in this cluster, in
-   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `10.96.0.0/14`). Leave blank to have one automatically chosen or specify a `/14` block in
    * `10.0.0.0/8`.
    * @param clusterIpv4Cidr clusterIpv4Cidr or {@code null} for none
@@ -2035,7 +2035,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The IP address range of the Kubernetes services in this cluster, in
-   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
    * @return value or {@code null} for none
    */
@@ -2045,7 +2045,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The IP address range of the Kubernetes services in this cluster, in
-   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`). Service addresses are typically put in the last `/16` from the container CIDR.
    * @param servicesIpv4Cidr servicesIpv4Cidr or {@code null} for none
    */
@@ -2130,7 +2130,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The IP address range of the Cloud TPUs in this cluster, in
-   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`). This field is deprecated due to the deprecation of 2VM TPU. The end of life date
    * for 2VM TPU is 2025-04-25.
    * @return value or {@code null} for none
@@ -2141,7 +2141,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The IP address range of the Cloud TPUs in this cluster, in
-   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
+   * [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
    * `1.2.3.4/29`). This field is deprecated due to the deprecation of 2VM TPU. The end of life date
    * for 2VM TPU is 2025-04-25.
    * @param tpuIpv4CidrBlock tpuIpv4CidrBlock or {@code null} for none

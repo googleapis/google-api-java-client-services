@@ -372,6 +372,13 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean vm;
 
   /**
+   * Enables VPC access connectivity for standard apps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpcAccess vpcAccess;
+
+  /**
    * Enables VPC connectivity for standard apps.
    * The value may be {@code null}.
    */
@@ -379,7 +386,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private VpcAccessConnector vpcAccessConnector;
 
   /**
-   * Enables VPC egress connectivity for standard apps.
+   * Deprecated: Use vpc_access instead. Enables VPC egress connectivity for standard apps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1163,6 +1170,23 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Enables VPC access connectivity for standard apps.
+   * @return value or {@code null} for none
+   */
+  public VpcAccess getVpcAccess() {
+    return vpcAccess;
+  }
+
+  /**
+   * Enables VPC access connectivity for standard apps.
+   * @param vpcAccess vpcAccess or {@code null} for none
+   */
+  public Version setVpcAccess(VpcAccess vpcAccess) {
+    this.vpcAccess = vpcAccess;
+    return this;
+  }
+
+  /**
    * Enables VPC connectivity for standard apps.
    * @return value or {@code null} for none
    */
@@ -1180,7 +1204,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enables VPC egress connectivity for standard apps.
+   * Deprecated: Use vpc_access instead. Enables VPC egress connectivity for standard apps.
    * @return value or {@code null} for none
    */
   public VpcEgress getVpcEgress() {
@@ -1188,7 +1212,7 @@ public final class Version extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enables VPC egress connectivity for standard apps.
+   * Deprecated: Use vpc_access instead. Enables VPC egress connectivity for standard apps.
    * @param vpcEgress vpcEgress or {@code null} for none
    */
   public Version setVpcEgress(VpcEgress vpcEgress) {

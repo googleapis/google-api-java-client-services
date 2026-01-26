@@ -5332,171 +5332,6 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
-         * Exports a user image to Artifact Registry.
-         *
-         * Create a request for the method "versions.exportAppImage".
-         *
-         * This request holds the parameters needed by the appengine server.  After setting any optional
-         * parameters, call the {@link ExportAppImage#execute()} method to invoke the remote operation.
-         *
-         * @param appsId Part of `name`. Required. Name of the App Engine version resource. Format:
-         *        apps/{app}/services/{service}/versions/{version}
-         * @param servicesId Part of `name`. See documentation of `appsId`.
-         * @param versionsId Part of `name`. See documentation of `appsId`.
-         * @param content the {@link com.google.api.services.appengine.v1.model.ExportAppImageRequest}
-         * @return the request
-         */
-        public ExportAppImage exportAppImage(java.lang.String appsId, java.lang.String servicesId, java.lang.String versionsId, com.google.api.services.appengine.v1.model.ExportAppImageRequest content) throws java.io.IOException {
-          ExportAppImage result = new ExportAppImage(appsId, servicesId, versionsId, content);
-          initialize(result);
-          return result;
-        }
-
-        public class ExportAppImage extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
-
-          private static final String REST_PATH = "v1/apps/{appsId}/services/{servicesId}/versions/{versionsId}:exportAppImage";
-
-          /**
-           * Exports a user image to Artifact Registry.
-           *
-           * Create a request for the method "versions.exportAppImage".
-           *
-           * This request holds the parameters needed by the the appengine server.  After setting any
-           * optional parameters, call the {@link ExportAppImage#execute()} method to invoke the remote
-           * operation. <p> {@link ExportAppImage#initialize(com.google.api.client.googleapis.services.Abstr
-           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-           * the constructor. </p>
-           *
-           * @param appsId Part of `name`. Required. Name of the App Engine version resource. Format:
-         *        apps/{app}/services/{service}/versions/{version}
-           * @param servicesId Part of `name`. See documentation of `appsId`.
-           * @param versionsId Part of `name`. See documentation of `appsId`.
-           * @param content the {@link com.google.api.services.appengine.v1.model.ExportAppImageRequest}
-           * @since 1.13
-           */
-          protected ExportAppImage(java.lang.String appsId, java.lang.String servicesId, java.lang.String versionsId, com.google.api.services.appengine.v1.model.ExportAppImageRequest content) {
-            super(Appengine.this, "POST", REST_PATH, content, com.google.api.services.appengine.v1.model.Operation.class);
-            this.appsId = com.google.api.client.util.Preconditions.checkNotNull(appsId, "Required parameter appsId must be specified.");
-            this.servicesId = com.google.api.client.util.Preconditions.checkNotNull(servicesId, "Required parameter servicesId must be specified.");
-            this.versionsId = com.google.api.client.util.Preconditions.checkNotNull(versionsId, "Required parameter versionsId must be specified.");
-          }
-
-          @Override
-          public ExportAppImage set$Xgafv(java.lang.String $Xgafv) {
-            return (ExportAppImage) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public ExportAppImage setAccessToken(java.lang.String accessToken) {
-            return (ExportAppImage) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public ExportAppImage setAlt(java.lang.String alt) {
-            return (ExportAppImage) super.setAlt(alt);
-          }
-
-          @Override
-          public ExportAppImage setCallback(java.lang.String callback) {
-            return (ExportAppImage) super.setCallback(callback);
-          }
-
-          @Override
-          public ExportAppImage setFields(java.lang.String fields) {
-            return (ExportAppImage) super.setFields(fields);
-          }
-
-          @Override
-          public ExportAppImage setKey(java.lang.String key) {
-            return (ExportAppImage) super.setKey(key);
-          }
-
-          @Override
-          public ExportAppImage setOauthToken(java.lang.String oauthToken) {
-            return (ExportAppImage) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public ExportAppImage setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ExportAppImage) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public ExportAppImage setQuotaUser(java.lang.String quotaUser) {
-            return (ExportAppImage) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public ExportAppImage setUploadType(java.lang.String uploadType) {
-            return (ExportAppImage) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public ExportAppImage setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ExportAppImage) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Part of `name`. Required. Name of the App Engine version resource. Format:
-           * apps/{app}/services/{service}/versions/{version}
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String appsId;
-
-          /** Part of `name`. Required. Name of the App Engine version resource. Format:
-         apps/{app}/services/{service}/versions/{version}
-           */
-          public java.lang.String getAppsId() {
-            return appsId;
-          }
-
-          /**
-           * Part of `name`. Required. Name of the App Engine version resource. Format:
-           * apps/{app}/services/{service}/versions/{version}
-           */
-          public ExportAppImage setAppsId(java.lang.String appsId) {
-            this.appsId = appsId;
-            return this;
-          }
-
-          /** Part of `name`. See documentation of `appsId`. */
-          @com.google.api.client.util.Key
-          private java.lang.String servicesId;
-
-          /** Part of `name`. See documentation of `appsId`.
-           */
-          public java.lang.String getServicesId() {
-            return servicesId;
-          }
-
-          /** Part of `name`. See documentation of `appsId`. */
-          public ExportAppImage setServicesId(java.lang.String servicesId) {
-            this.servicesId = servicesId;
-            return this;
-          }
-
-          /** Part of `name`. See documentation of `appsId`. */
-          @com.google.api.client.util.Key
-          private java.lang.String versionsId;
-
-          /** Part of `name`. See documentation of `appsId`.
-           */
-          public java.lang.String getVersionsId() {
-            return versionsId;
-          }
-
-          /** Part of `name`. See documentation of `appsId`. */
-          public ExportAppImage setVersionsId(java.lang.String versionsId) {
-            this.versionsId = versionsId;
-            return this;
-          }
-
-          @Override
-          public ExportAppImage set(String parameterName, Object value) {
-            return (ExportAppImage) super.set(parameterName, value);
-          }
-        }
-        /**
          * Gets the specified Version resource. By default, only a BASIC_VIEW will be returned. Specify the
          * FULL_VIEW parameter to get the full resource.
          *
@@ -10095,209 +9930,6 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
               }
             }
             /**
-             * Exports a user image to Artifact Registry.
-             *
-             * Create a request for the method "versions.exportAppImage".
-             *
-             * This request holds the parameters needed by the appengine server.  After setting any optional
-             * parameters, call the {@link ExportAppImage#execute()} method to invoke the remote operation.
-             *
-             * @param projectsId Part of `name`. Required. Name of the App Engine version resource. Format:
-             *        apps/{app}/services/{service}/versions/{version}
-             * @param locationsId Part of `name`. See documentation of `projectsId`.
-             * @param applicationsId Part of `name`. See documentation of `projectsId`.
-             * @param servicesId Part of `name`. See documentation of `projectsId`.
-             * @param versionsId Part of `name`. See documentation of `projectsId`.
-             * @param content the {@link com.google.api.services.appengine.v1.model.ExportAppImageRequest}
-             * @return the request
-             */
-            public ExportAppImage exportAppImage(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String servicesId, java.lang.String versionsId, com.google.api.services.appengine.v1.model.ExportAppImageRequest content) throws java.io.IOException {
-              ExportAppImage result = new ExportAppImage(projectsId, locationsId, applicationsId, servicesId, versionsId, content);
-              initialize(result);
-              return result;
-            }
-
-            public class ExportAppImage extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
-
-              private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/services/{servicesId}/versions/{versionsId}:exportAppImage";
-
-              /**
-               * Exports a user image to Artifact Registry.
-               *
-               * Create a request for the method "versions.exportAppImage".
-               *
-               * This request holds the parameters needed by the the appengine server.  After setting any
-               * optional parameters, call the {@link ExportAppImage#execute()} method to invoke the remote
-               * operation. <p> {@link ExportAppImage#initialize(com.google.api.client.googleapis.services.Abstr
-               * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-               * the constructor. </p>
-               *
-               * @param projectsId Part of `name`. Required. Name of the App Engine version resource. Format:
-             *        apps/{app}/services/{service}/versions/{version}
-               * @param locationsId Part of `name`. See documentation of `projectsId`.
-               * @param applicationsId Part of `name`. See documentation of `projectsId`.
-               * @param servicesId Part of `name`. See documentation of `projectsId`.
-               * @param versionsId Part of `name`. See documentation of `projectsId`.
-               * @param content the {@link com.google.api.services.appengine.v1.model.ExportAppImageRequest}
-               * @since 1.13
-               */
-              protected ExportAppImage(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String servicesId, java.lang.String versionsId, com.google.api.services.appengine.v1.model.ExportAppImageRequest content) {
-                super(Appengine.this, "POST", REST_PATH, content, com.google.api.services.appengine.v1.model.Operation.class);
-                this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
-                this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
-                this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
-                this.servicesId = com.google.api.client.util.Preconditions.checkNotNull(servicesId, "Required parameter servicesId must be specified.");
-                this.versionsId = com.google.api.client.util.Preconditions.checkNotNull(versionsId, "Required parameter versionsId must be specified.");
-              }
-
-              @Override
-              public ExportAppImage set$Xgafv(java.lang.String $Xgafv) {
-                return (ExportAppImage) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public ExportAppImage setAccessToken(java.lang.String accessToken) {
-                return (ExportAppImage) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public ExportAppImage setAlt(java.lang.String alt) {
-                return (ExportAppImage) super.setAlt(alt);
-              }
-
-              @Override
-              public ExportAppImage setCallback(java.lang.String callback) {
-                return (ExportAppImage) super.setCallback(callback);
-              }
-
-              @Override
-              public ExportAppImage setFields(java.lang.String fields) {
-                return (ExportAppImage) super.setFields(fields);
-              }
-
-              @Override
-              public ExportAppImage setKey(java.lang.String key) {
-                return (ExportAppImage) super.setKey(key);
-              }
-
-              @Override
-              public ExportAppImage setOauthToken(java.lang.String oauthToken) {
-                return (ExportAppImage) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public ExportAppImage setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (ExportAppImage) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public ExportAppImage setQuotaUser(java.lang.String quotaUser) {
-                return (ExportAppImage) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public ExportAppImage setUploadType(java.lang.String uploadType) {
-                return (ExportAppImage) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public ExportAppImage setUploadProtocol(java.lang.String uploadProtocol) {
-                return (ExportAppImage) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Part of `name`. Required. Name of the App Engine version resource. Format:
-               * apps/{app}/services/{service}/versions/{version}
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String projectsId;
-
-              /** Part of `name`. Required. Name of the App Engine version resource. Format:
-             apps/{app}/services/{service}/versions/{version}
-               */
-              public java.lang.String getProjectsId() {
-                return projectsId;
-              }
-
-              /**
-               * Part of `name`. Required. Name of the App Engine version resource. Format:
-               * apps/{app}/services/{service}/versions/{version}
-               */
-              public ExportAppImage setProjectsId(java.lang.String projectsId) {
-                this.projectsId = projectsId;
-                return this;
-              }
-
-              /** Part of `name`. See documentation of `projectsId`. */
-              @com.google.api.client.util.Key
-              private java.lang.String locationsId;
-
-              /** Part of `name`. See documentation of `projectsId`.
-               */
-              public java.lang.String getLocationsId() {
-                return locationsId;
-              }
-
-              /** Part of `name`. See documentation of `projectsId`. */
-              public ExportAppImage setLocationsId(java.lang.String locationsId) {
-                this.locationsId = locationsId;
-                return this;
-              }
-
-              /** Part of `name`. See documentation of `projectsId`. */
-              @com.google.api.client.util.Key
-              private java.lang.String applicationsId;
-
-              /** Part of `name`. See documentation of `projectsId`.
-               */
-              public java.lang.String getApplicationsId() {
-                return applicationsId;
-              }
-
-              /** Part of `name`. See documentation of `projectsId`. */
-              public ExportAppImage setApplicationsId(java.lang.String applicationsId) {
-                this.applicationsId = applicationsId;
-                return this;
-              }
-
-              /** Part of `name`. See documentation of `projectsId`. */
-              @com.google.api.client.util.Key
-              private java.lang.String servicesId;
-
-              /** Part of `name`. See documentation of `projectsId`.
-               */
-              public java.lang.String getServicesId() {
-                return servicesId;
-              }
-
-              /** Part of `name`. See documentation of `projectsId`. */
-              public ExportAppImage setServicesId(java.lang.String servicesId) {
-                this.servicesId = servicesId;
-                return this;
-              }
-
-              /** Part of `name`. See documentation of `projectsId`. */
-              @com.google.api.client.util.Key
-              private java.lang.String versionsId;
-
-              /** Part of `name`. See documentation of `projectsId`.
-               */
-              public java.lang.String getVersionsId() {
-                return versionsId;
-              }
-
-              /** Part of `name`. See documentation of `projectsId`. */
-              public ExportAppImage setVersionsId(java.lang.String versionsId) {
-                this.versionsId = versionsId;
-                return this;
-              }
-
-              @Override
-              public ExportAppImage set(String parameterName, Object value) {
-                return (ExportAppImage) super.set(parameterName, value);
-              }
-            }
-            /**
              * Updates the specified Version resource. You can specify the following fields depending on the App
              * Engine environment and type of scaling that the version resource uses:Standard environment
              * instance_class (https://cloud.google.com/appengine/docs/admin-
@@ -10597,6 +10229,258 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
               }
             }
 
+            /**
+             * An accessor for creating requests from the Instances collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code Appengine appengine = new Appengine(...);}
+             *   {@code Appengine.Instances.List request = appengine.instances().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Instances instances() {
+              return new Instances();
+            }
+
+            /**
+             * The "instances" collection of methods.
+             */
+            public class Instances {
+
+              /**
+               * Enables debugging on a VM instance. This allows you to use the SSH command to connect to the
+               * virtual machine where the instance lives. While in "debug mode", the instance continues to serve
+               * live traffic. You should delete the instance when you are done debugging and then allow the
+               * system to take over and determine if another instance should be started.Only applicable for
+               * instances in App Engine flexible environment.
+               *
+               * Create a request for the method "instances.debug".
+               *
+               * This request holds the parameters needed by the appengine server.  After setting any optional
+               * parameters, call the {@link Debug#execute()} method to invoke the remote operation.
+               *
+               * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+               *        apps/myapp/services/default/versions/v1/instances/instance-1.
+               * @param locationsId Part of `name`. See documentation of `projectsId`.
+               * @param applicationsId Part of `name`. See documentation of `projectsId`.
+               * @param servicesId Part of `name`. See documentation of `projectsId`.
+               * @param versionsId Part of `name`. See documentation of `projectsId`.
+               * @param instancesId Part of `name`. See documentation of `projectsId`.
+               * @param content the {@link com.google.api.services.appengine.v1.model.DebugInstanceRequest}
+               * @return the request
+               */
+              public Debug debug(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String servicesId, java.lang.String versionsId, java.lang.String instancesId, com.google.api.services.appengine.v1.model.DebugInstanceRequest content) throws java.io.IOException {
+                Debug result = new Debug(projectsId, locationsId, applicationsId, servicesId, versionsId, instancesId, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Debug extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
+
+                private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}:debug";
+
+                /**
+                 * Enables debugging on a VM instance. This allows you to use the SSH command to connect to the
+                 * virtual machine where the instance lives. While in "debug mode", the instance continues to
+                 * serve live traffic. You should delete the instance when you are done debugging and then allow
+                 * the system to take over and determine if another instance should be started.Only applicable for
+                 * instances in App Engine flexible environment.
+                 *
+                 * Create a request for the method "instances.debug".
+                 *
+                 * This request holds the parameters needed by the the appengine server.  After setting any
+                 * optional parameters, call the {@link Debug#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Debug#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+               *        apps/myapp/services/default/versions/v1/instances/instance-1.
+                 * @param locationsId Part of `name`. See documentation of `projectsId`.
+                 * @param applicationsId Part of `name`. See documentation of `projectsId`.
+                 * @param servicesId Part of `name`. See documentation of `projectsId`.
+                 * @param versionsId Part of `name`. See documentation of `projectsId`.
+                 * @param instancesId Part of `name`. See documentation of `projectsId`.
+                 * @param content the {@link com.google.api.services.appengine.v1.model.DebugInstanceRequest}
+                 * @since 1.13
+                 */
+                protected Debug(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String servicesId, java.lang.String versionsId, java.lang.String instancesId, com.google.api.services.appengine.v1.model.DebugInstanceRequest content) {
+                  super(Appengine.this, "POST", REST_PATH, content, com.google.api.services.appengine.v1.model.Operation.class);
+                  this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+                  this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+                  this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+                  this.servicesId = com.google.api.client.util.Preconditions.checkNotNull(servicesId, "Required parameter servicesId must be specified.");
+                  this.versionsId = com.google.api.client.util.Preconditions.checkNotNull(versionsId, "Required parameter versionsId must be specified.");
+                  this.instancesId = com.google.api.client.util.Preconditions.checkNotNull(instancesId, "Required parameter instancesId must be specified.");
+                }
+
+                @Override
+                public Debug set$Xgafv(java.lang.String $Xgafv) {
+                  return (Debug) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Debug setAccessToken(java.lang.String accessToken) {
+                  return (Debug) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Debug setAlt(java.lang.String alt) {
+                  return (Debug) super.setAlt(alt);
+                }
+
+                @Override
+                public Debug setCallback(java.lang.String callback) {
+                  return (Debug) super.setCallback(callback);
+                }
+
+                @Override
+                public Debug setFields(java.lang.String fields) {
+                  return (Debug) super.setFields(fields);
+                }
+
+                @Override
+                public Debug setKey(java.lang.String key) {
+                  return (Debug) super.setKey(key);
+                }
+
+                @Override
+                public Debug setOauthToken(java.lang.String oauthToken) {
+                  return (Debug) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Debug setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Debug) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Debug setQuotaUser(java.lang.String quotaUser) {
+                  return (Debug) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Debug setUploadType(java.lang.String uploadType) {
+                  return (Debug) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Debug setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Debug) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Part of `name`. Required. Name of the resource requested. Example:
+                 * apps/myapp/services/default/versions/v1/instances/instance-1.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String projectsId;
+
+                /** Part of `name`. Required. Name of the resource requested. Example:
+               apps/myapp/services/default/versions/v1/instances/instance-1.
+                 */
+                public java.lang.String getProjectsId() {
+                  return projectsId;
+                }
+
+                /**
+                 * Part of `name`. Required. Name of the resource requested. Example:
+                 * apps/myapp/services/default/versions/v1/instances/instance-1.
+                 */
+                public Debug setProjectsId(java.lang.String projectsId) {
+                  this.projectsId = projectsId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String locationsId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getLocationsId() {
+                  return locationsId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Debug setLocationsId(java.lang.String locationsId) {
+                  this.locationsId = locationsId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String applicationsId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getApplicationsId() {
+                  return applicationsId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Debug setApplicationsId(java.lang.String applicationsId) {
+                  this.applicationsId = applicationsId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String servicesId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getServicesId() {
+                  return servicesId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Debug setServicesId(java.lang.String servicesId) {
+                  this.servicesId = servicesId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String versionsId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getVersionsId() {
+                  return versionsId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Debug setVersionsId(java.lang.String versionsId) {
+                  this.versionsId = versionsId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String instancesId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getInstancesId() {
+                  return instancesId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Debug setInstancesId(java.lang.String instancesId) {
+                  this.instancesId = instancesId;
+                  return this;
+                }
+
+                @Override
+                public Debug set(String parameterName, Object value) {
+                  return (Debug) super.set(parameterName, value);
+                }
+              }
+
+            }
           }
         }
       }

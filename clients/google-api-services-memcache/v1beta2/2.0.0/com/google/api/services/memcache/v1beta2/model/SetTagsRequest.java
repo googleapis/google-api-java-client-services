@@ -31,7 +31,15 @@ package com.google.api.services.memcache.v1beta2.model;
 public final class SetTagsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * Optional. A checksum based on the current bindings which can be passed to prevent race
+   * conditions. If not passed, etag check would be skipped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
+   * Required. The full resource name of the service resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,13 +65,24 @@ public final class SetTagsRequest extends com.google.api.client.json.GenericJson
   /**
    * Optional. A checksum based on the current bindings which can be passed to prevent race
    * conditions. If not passed, etag check would be skipped.
-   * The value may be {@code null}.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.lang.String tagsEtag;
+  public java.lang.String getEtag() {
+    return etag;
+  }
 
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * Optional. A checksum based on the current bindings which can be passed to prevent race
+   * conditions. If not passed, etag check would be skipped.
+   * @param etag etag or {@code null} for none
+   */
+  public SetTagsRequest setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Required. The full resource name of the service resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -71,7 +90,7 @@ public final class SetTagsRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * Required. The full resource name of the service resource.
    * @param name name or {@code null} for none
    */
   public SetTagsRequest setName(java.lang.String name) {
@@ -116,25 +135,6 @@ public final class SetTagsRequest extends com.google.api.client.json.GenericJson
    */
   public SetTagsRequest setTags(java.util.Map<String, java.lang.String> tags) {
     this.tags = tags;
-    return this;
-  }
-
-  /**
-   * Optional. A checksum based on the current bindings which can be passed to prevent race
-   * conditions. If not passed, etag check would be skipped.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTagsEtag() {
-    return tagsEtag;
-  }
-
-  /**
-   * Optional. A checksum based on the current bindings which can be passed to prevent race
-   * conditions. If not passed, etag check would be skipped.
-   * @param tagsEtag tagsEtag or {@code null} for none
-   */
-  public SetTagsRequest setTagsEtag(java.lang.String tagsEtag) {
-    this.tagsEtag = tagsEtag;
     return this;
   }
 

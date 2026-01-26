@@ -31,14 +31,14 @@ package com.google.api.services.memcache.v1beta2.model;
 public final class GetTagsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * Required. The full resource name of the service resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * Required. The full resource name of the service resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -46,7 +46,7 @@ public final class GetTagsRequest extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The full One Platform resource name of the service resource.
+   * Required. The full resource name of the service resource.
    * @param name name or {@code null} for none
    */
   public GetTagsRequest setName(java.lang.String name) {

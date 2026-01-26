@@ -85,14 +85,14 @@ public final class Build extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A status and (human readable) error message for the build, if in a `FAILED` state.
-   * Deprecated. Use `errors` instead.
+   * Deprecated: Use `errors` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Status error;
 
   /**
-   * Output only. The source of the error for the build, if in a `FAILED` state. Deprecated. Use
+   * Output only. The source of the error for the build, if in a `FAILED` state. Deprecated: Use
    * `errors` instead.
    * The value may be {@code null}.
    */
@@ -299,7 +299,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A status and (human readable) error message for the build, if in a `FAILED` state.
-   * Deprecated. Use `errors` instead.
+   * Deprecated: Use `errors` instead.
    * @return value or {@code null} for none
    */
   public Status getError() {
@@ -308,7 +308,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. A status and (human readable) error message for the build, if in a `FAILED` state.
-   * Deprecated. Use `errors` instead.
+   * Deprecated: Use `errors` instead.
    * @param error error or {@code null} for none
    */
   public Build setError(Status error) {
@@ -317,7 +317,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The source of the error for the build, if in a `FAILED` state. Deprecated. Use
+   * Output only. The source of the error for the build, if in a `FAILED` state. Deprecated: Use
    * `errors` instead.
    * @return value or {@code null} for none
    */
@@ -326,7 +326,7 @@ public final class Build extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The source of the error for the build, if in a `FAILED` state. Deprecated. Use
+   * Output only. The source of the error for the build, if in a `FAILED` state. Deprecated: Use
    * `errors` instead.
    * @param errorSource errorSource or {@code null} for none
    */

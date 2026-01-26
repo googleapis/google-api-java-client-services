@@ -73,7 +73,8 @@ public final class GoogleCloudApihubV1DiscoveredApiObservation extends com.googl
   private java.lang.String name;
 
   /**
-   * Optional. For an observation pushed from a gcp resource, this would be the gcp project id.
+   * Optional. For an observation pushed from a Google Cloud resource, this would be the Google
+   * Cloud project id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,7 +236,8 @@ public final class GoogleCloudApihubV1DiscoveredApiObservation extends com.googl
   }
 
   /**
-   * Optional. For an observation pushed from a gcp resource, this would be the gcp project id.
+   * Optional. For an observation pushed from a Google Cloud resource, this would be the Google
+   * Cloud project id.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrigin() {
@@ -243,7 +245,8 @@ public final class GoogleCloudApihubV1DiscoveredApiObservation extends com.googl
   }
 
   /**
-   * Optional. For an observation pushed from a gcp resource, this would be the gcp project id.
+   * Optional. For an observation pushed from a Google Cloud resource, this would be the Google
+   * Cloud project id.
    * @param origin origin or {@code null} for none
    */
   public GoogleCloudApihubV1DiscoveredApiObservation setOrigin(java.lang.String origin) {

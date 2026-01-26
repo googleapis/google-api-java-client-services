@@ -3482,6 +3482,859 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
+     * An accessor for creating requests from the ApimServiceExtensions collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Apigee apigee = new Apigee(...);}
+     *   {@code Apigee.ApimServiceExtensions.List request = apigee.apimServiceExtensions().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ApimServiceExtensions apimServiceExtensions() {
+      return new ApimServiceExtensions();
+    }
+
+    /**
+     * The "apimServiceExtensions" collection of methods.
+     */
+    public class ApimServiceExtensions {
+
+      /**
+       * Creates an APIM ServiceExtension in an organization.
+       *
+       * Create a request for the method "apimServiceExtensions.create".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the organization in which the service extension will be created. Use the following
+       *        structure in your request: `organizations/{org}`
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+parent}/apimServiceExtensions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates an APIM ServiceExtension in an organization.
+         *
+         * Create a request for the method "apimServiceExtensions.create".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the organization in which the service extension will be created. Use the following
+       *        structure in your request: `organizations/{org}`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension content) {
+          super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the organization in which the service extension will be created. Use
+         * the following structure in your request: `organizations/{org}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the organization in which the service extension will be created. Use the
+       following structure in your request: `organizations/{org}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the organization in which the service extension will be created. Use
+         * the following structure in your request: `organizations/{org}`
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. ID used to uniquely identify of the service extension. It must conform with
+         * RFC-1034, is restricted to lower-cased letters, numbers and hyphens, and can have a
+         * maximum length of 63 characters. Additionally, the first character must be a letter and
+         * the last a letter or a number.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String apimServiceExtensionId;
+
+        /** Optional. ID used to uniquely identify of the service extension. It must conform with RFC-1034, is
+       restricted to lower-cased letters, numbers and hyphens, and can have a maximum length of 63
+       characters. Additionally, the first character must be a letter and the last a letter or a number.
+         */
+        public java.lang.String getApimServiceExtensionId() {
+          return apimServiceExtensionId;
+        }
+
+        /**
+         * Optional. ID used to uniquely identify of the service extension. It must conform with
+         * RFC-1034, is restricted to lower-cased letters, numbers and hyphens, and can have a
+         * maximum length of 63 characters. Additionally, the first character must be a letter and
+         * the last a letter or a number.
+         */
+        public Create setApimServiceExtensionId(java.lang.String apimServiceExtensionId) {
+          this.apimServiceExtensionId = apimServiceExtensionId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes APIM service extension from an organization.
+       *
+       * Create a request for the method "apimServiceExtensions.delete".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the service extension. Use the following structure in your request:
+       *        `organizations/{org}/apimServiceExtensions/{extension_id}`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/apimServiceExtensions/[^/]+$");
+
+        /**
+         * Deletes APIM service extension from an organization.
+         *
+         * Create a request for the method "apimServiceExtensions.delete".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the service extension. Use the following structure in your request:
+       *        `organizations/{org}/apimServiceExtensions/{extension_id}`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/apimServiceExtensions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the service extension. Use the following structure in your request:
+         * `organizations/{org}/apimServiceExtensions/{extension_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the service extension. Use the following structure in your request:
+       `organizations/{org}/apimServiceExtensions/{extension_id}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the service extension. Use the following structure in your request:
+         * `organizations/{org}/apimServiceExtensions/{extension_id}`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/apimServiceExtensions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets APIM service extension details.
+       *
+       * Create a request for the method "apimServiceExtensions.get".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the service extension. Use the following structure in your request:
+       *        `organizations/{org}/apimServiceExtensions/{extension_id}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/apimServiceExtensions/[^/]+$");
+
+        /**
+         * Gets APIM service extension details.
+         *
+         * Create a request for the method "apimServiceExtensions.get".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the service extension. Use the following structure in your request:
+       *        `organizations/{org}/apimServiceExtensions/{extension_id}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/apimServiceExtensions/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the service extension. Use the following structure in your request:
+         * `organizations/{org}/apimServiceExtensions/{extension_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the service extension. Use the following structure in your request:
+       `organizations/{org}/apimServiceExtensions/{extension_id}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the service extension. Use the following structure in your request:
+         * `organizations/{org}/apimServiceExtensions/{extension_id}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/apimServiceExtensions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all APIM service extensions in an organization.
+       *
+       * Create a request for the method "apimServiceExtensions.list".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the organization for which to list the service extension. Use the following
+       *        structure in your request: `organizations/{org}/apimServiceExtensions`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListApimServiceExtensionsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/apimServiceExtensions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists all APIM service extensions in an organization.
+         *
+         * Create a request for the method "apimServiceExtensions.list".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the organization for which to list the service extension. Use the following
+       *        structure in your request: `organizations/{org}/apimServiceExtensions`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListApimServiceExtensionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the organization for which to list the service extension. Use the
+         * following structure in your request: `organizations/{org}/apimServiceExtensions`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the organization for which to list the service extension. Use the following
+       structure in your request: `organizations/{org}/apimServiceExtensions`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the organization for which to list the service extension. Use the
+         * following structure in your request: `organizations/{org}/apimServiceExtensions`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of items to return. If unspecified, at most 25 service extension
+         * will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of items to return. If unspecified, at most 25 service extension will be
+       returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of items to return. If unspecified, at most 25 service extension
+         * will be returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. Page token, returned from a previous `ListApimServiceExtensions` call, that you
+         * can use to retrieve the next page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Page token, returned from a previous `ListApimServiceExtensions` call, that you can use
+       to retrieve the next page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. Page token, returned from a previous `ListApimServiceExtensions` call, that you
+         * can use to retrieve the next page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an APIM service extension in an organization.
+       *
+       * Create a request for the method "apimServiceExtensions.patch".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. unique name of the APIM service extension. The name must conform with RFC-1034, is
+       *        restricted to lower-cased letters, numbers and hyphens, and can have a maximum length of
+       *        63 characters. Additionally, the first character must be a letter and the last a letter or
+       *        a number.
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/apimServiceExtensions/[^/]+$");
+
+        /**
+         * Updates an APIM service extension in an organization.
+         *
+         * Create a request for the method "apimServiceExtensions.patch".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. unique name of the APIM service extension. The name must conform with RFC-1034, is
+       *        restricted to lower-cased letters, numbers and hyphens, and can have a maximum length of
+       *        63 characters. Additionally, the first character must be a letter and the last a letter or
+       *        a number.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ApimServiceExtension content) {
+          super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/apimServiceExtensions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. unique name of the APIM service extension. The name must conform with
+         * RFC-1034, is restricted to lower-cased letters, numbers and hyphens, and can have a
+         * maximum length of 63 characters. Additionally, the first character must be a letter and
+         * the last a letter or a number.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. unique name of the APIM service extension. The name must conform with RFC-1034, is
+       restricted to lower-cased letters, numbers and hyphens, and can have a maximum length of 63
+       characters. Additionally, the first character must be a letter and the last a letter or a number.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. unique name of the APIM service extension. The name must conform with
+         * RFC-1034, is restricted to lower-cased letters, numbers and hyphens, and can have a
+         * maximum length of 63 characters. Additionally, the first character must be a letter and
+         * the last a letter or a number.
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/apimServiceExtensions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. If set to true, and the service extension is not found, a new service extension
+         * will be created. In this situation, `update_mask` is ignored.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean allowMissing;
+
+        /** Optional. If set to true, and the service extension is not found, a new service extension will be
+       created. In this situation, `update_mask` is ignored.
+         */
+        public java.lang.Boolean getAllowMissing() {
+          return allowMissing;
+        }
+
+        /**
+         * Optional. If set to true, and the service extension is not found, a new service extension
+         * will be created. In this situation, `update_mask` is ignored.
+         */
+        public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+          this.allowMissing = allowMissing;
+          return this;
+        }
+
+        /** Optional. The list of fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The list of fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The list of fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Apiproducts collection.
      *
      * <p>The typical use is:</p>
@@ -10791,6 +11644,303 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
+       * Gets the account balance for the AppGroup.
+       *
+       * Create a request for the method "appgroups.getBalance".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link GetBalance#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Account balance for the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group}/balance`
+       * @return the request
+       */
+      public GetBalance getBalance(java.lang.String name) throws java.io.IOException {
+        GetBalance result = new GetBalance(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetBalance extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupBalance> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/balance$");
+
+        /**
+         * Gets the account balance for the AppGroup.
+         *
+         * Create a request for the method "appgroups.getBalance".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link GetBalance#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * GetBalance#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Account balance for the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group}/balance`
+         * @since 1.13
+         */
+        protected GetBalance(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupBalance.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+/balance$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetBalance set$Xgafv(java.lang.String $Xgafv) {
+          return (GetBalance) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetBalance setAccessToken(java.lang.String accessToken) {
+          return (GetBalance) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetBalance setAlt(java.lang.String alt) {
+          return (GetBalance) super.setAlt(alt);
+        }
+
+        @Override
+        public GetBalance setCallback(java.lang.String callback) {
+          return (GetBalance) super.setCallback(callback);
+        }
+
+        @Override
+        public GetBalance setFields(java.lang.String fields) {
+          return (GetBalance) super.setFields(fields);
+        }
+
+        @Override
+        public GetBalance setKey(java.lang.String key) {
+          return (GetBalance) super.setKey(key);
+        }
+
+        @Override
+        public GetBalance setOauthToken(java.lang.String oauthToken) {
+          return (GetBalance) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetBalance setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetBalance) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetBalance setQuotaUser(java.lang.String quotaUser) {
+          return (GetBalance) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetBalance setUploadType(java.lang.String uploadType) {
+          return (GetBalance) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetBalance setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetBalance) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Account balance for the AppGroup. Use the following structure in your request:
+         * `organizations/{org}/appgroups/{app_group}/balance`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Account balance for the AppGroup. Use the following structure in your request:
+       `organizations/{org}/appgroups/{app_group}/balance`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Account balance for the AppGroup. Use the following structure in your request:
+         * `organizations/{org}/appgroups/{app_group}/balance`
+         */
+        public GetBalance setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+/balance$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetBalance set(String parameterName, Object value) {
+          return (GetBalance) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets the monetization configuration for the AppGroup.
+       *
+       * Create a request for the method "appgroups.getMonetizationConfig".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link GetMonetizationConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Monetization configuration for the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+       * @return the request
+       */
+      public GetMonetizationConfig getMonetizationConfig(java.lang.String name) throws java.io.IOException {
+        GetMonetizationConfig result = new GetMonetizationConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetMonetizationConfig extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupMonetizationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/monetizationConfig$");
+
+        /**
+         * Gets the monetization configuration for the AppGroup.
+         *
+         * Create a request for the method "appgroups.getMonetizationConfig".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link GetMonetizationConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetMonetizationConfig#initialize(com.google.api.client.googleapis.service
+         * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. Monetization configuration for the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+         * @since 1.13
+         */
+        protected GetMonetizationConfig(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupMonetizationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+/monetizationConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetMonetizationConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetMonetizationConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetMonetizationConfig setAccessToken(java.lang.String accessToken) {
+          return (GetMonetizationConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetMonetizationConfig setAlt(java.lang.String alt) {
+          return (GetMonetizationConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetMonetizationConfig setCallback(java.lang.String callback) {
+          return (GetMonetizationConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetMonetizationConfig setFields(java.lang.String fields) {
+          return (GetMonetizationConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetMonetizationConfig setKey(java.lang.String key) {
+          return (GetMonetizationConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetMonetizationConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetMonetizationConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetMonetizationConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetMonetizationConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetMonetizationConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetMonetizationConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetMonetizationConfig setUploadType(java.lang.String uploadType) {
+          return (GetMonetizationConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetMonetizationConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetMonetizationConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Monetization configuration for the AppGroup. Use the following structure in
+         * your request: `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Monetization configuration for the AppGroup. Use the following structure in your request:
+       `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Monetization configuration for the AppGroup. Use the following structure in
+         * your request: `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+         */
+        public GetMonetizationConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+/monetizationConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetMonetizationConfig set(String parameterName, Object value) {
+          return (GetMonetizationConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists all AppGroups in an organization. A maximum of 1000 AppGroups are returned in the response
        * if PageSize is not specified, or if the PageSize is greater than 1000.
        *
@@ -11171,6 +12321,147 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         @Override
         public Update set(String parameterName, Object value) {
           return (Update) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the monetization configuration for the AppGroup.
+       *
+       * Create a request for the method "appgroups.updateMonetizationConfig".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link UpdateMonetizationConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Monetization configuration for the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupMonetizationConfig}
+       * @return the request
+       */
+      public UpdateMonetizationConfig updateMonetizationConfig(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupMonetizationConfig content) throws java.io.IOException {
+        UpdateMonetizationConfig result = new UpdateMonetizationConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateMonetizationConfig extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupMonetizationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/monetizationConfig$");
+
+        /**
+         * Updates the monetization configuration for the AppGroup.
+         *
+         * Create a request for the method "appgroups.updateMonetizationConfig".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link UpdateMonetizationConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateMonetizationConfig#initialize(com.google.api.client.googleapis.serv
+         * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. Monetization configuration for the AppGroup. Use the following structure in your request:
+       *        `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupMonetizationConfig}
+         * @since 1.13
+         */
+        protected UpdateMonetizationConfig(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupMonetizationConfig content) {
+          super(Apigee.this, "PUT", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupMonetizationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+/monetizationConfig$");
+          }
+        }
+
+        @Override
+        public UpdateMonetizationConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateMonetizationConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateMonetizationConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setAlt(java.lang.String alt) {
+          return (UpdateMonetizationConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setCallback(java.lang.String callback) {
+          return (UpdateMonetizationConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setFields(java.lang.String fields) {
+          return (UpdateMonetizationConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setKey(java.lang.String key) {
+          return (UpdateMonetizationConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateMonetizationConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateMonetizationConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateMonetizationConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateMonetizationConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateMonetizationConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateMonetizationConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Monetization configuration for the AppGroup. Use the following structure in
+         * your request: `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Monetization configuration for the AppGroup. Use the following structure in your request:
+       `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Monetization configuration for the AppGroup. Use the following structure in
+         * your request: `organizations/{org}/appgroups/{app_group}/monetizationConfig`
+         */
+        public UpdateMonetizationConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/appgroups/[^/]+/monetizationConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public UpdateMonetizationConfig set(String parameterName, Object value) {
+          return (UpdateMonetizationConfig) super.set(parameterName, value);
         }
       }
 
@@ -12956,6 +14247,956 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           }
         }
+      }
+      /**
+       * An accessor for creating requests from the Balance collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Apigee apigee = new Apigee(...);}
+       *   {@code Apigee.Balance.List request = apigee.balance().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Balance balance() {
+        return new Balance();
+      }
+
+      /**
+       * The "balance" collection of methods.
+       */
+      public class Balance {
+
+        /**
+         * Adjust the prepaid balance for the AppGroup. This API will be used in scenarios where the
+         * AppGroup has been under-charged or over-charged.
+         *
+         * Create a request for the method "balance.adjust".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Adjust#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Account balance for the AppGroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group}/balance`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AdjustAppGroupBalanceRequest}
+         * @return the request
+         */
+        public Adjust adjust(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AdjustAppGroupBalanceRequest content) throws java.io.IOException {
+          Adjust result = new Adjust(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Adjust extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupBalance> {
+
+          private static final String REST_PATH = "v1/{+name}:adjust";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/balance$");
+
+          /**
+           * Adjust the prepaid balance for the AppGroup. This API will be used in scenarios where the
+           * AppGroup has been under-charged or over-charged.
+           *
+           * Create a request for the method "balance.adjust".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Adjust#execute()} method to invoke the remote operation. <p> {@link
+           * Adjust#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Account balance for the AppGroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group}/balance`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AdjustAppGroupBalanceRequest}
+           * @since 1.13
+           */
+          protected Adjust(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AdjustAppGroupBalanceRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupBalance.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/balance$");
+            }
+          }
+
+          @Override
+          public Adjust set$Xgafv(java.lang.String $Xgafv) {
+            return (Adjust) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Adjust setAccessToken(java.lang.String accessToken) {
+            return (Adjust) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Adjust setAlt(java.lang.String alt) {
+            return (Adjust) super.setAlt(alt);
+          }
+
+          @Override
+          public Adjust setCallback(java.lang.String callback) {
+            return (Adjust) super.setCallback(callback);
+          }
+
+          @Override
+          public Adjust setFields(java.lang.String fields) {
+            return (Adjust) super.setFields(fields);
+          }
+
+          @Override
+          public Adjust setKey(java.lang.String key) {
+            return (Adjust) super.setKey(key);
+          }
+
+          @Override
+          public Adjust setOauthToken(java.lang.String oauthToken) {
+            return (Adjust) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Adjust setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Adjust) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Adjust setQuotaUser(java.lang.String quotaUser) {
+            return (Adjust) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Adjust setUploadType(java.lang.String uploadType) {
+            return (Adjust) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Adjust setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Adjust) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Account balance for the AppGroup. Use the following structure in your
+           * request: `organizations/{org}/appgroups/{app_group}/balance`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Account balance for the AppGroup. Use the following structure in your request:
+         `organizations/{org}/appgroups/{app_group}/balance`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Account balance for the AppGroup. Use the following structure in your
+           * request: `organizations/{org}/appgroups/{app_group}/balance`
+           */
+          public Adjust setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/balance$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Adjust set(String parameterName, Object value) {
+            return (Adjust) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Credits the account balance for the AppGroup.
+         *
+         * Create a request for the method "balance.credit".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Credit#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Account balance for the AppGroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group}/balance`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1CreditAppGroupBalanceRequest}
+         * @return the request
+         */
+        public Credit credit(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1CreditAppGroupBalanceRequest content) throws java.io.IOException {
+          Credit result = new Credit(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Credit extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupBalance> {
+
+          private static final String REST_PATH = "v1/{+name}:credit";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/balance$");
+
+          /**
+           * Credits the account balance for the AppGroup.
+           *
+           * Create a request for the method "balance.credit".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Credit#execute()} method to invoke the remote operation. <p> {@link
+           * Credit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Account balance for the AppGroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{app_group}/balance`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1CreditAppGroupBalanceRequest}
+           * @since 1.13
+           */
+          protected Credit(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1CreditAppGroupBalanceRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupBalance.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/balance$");
+            }
+          }
+
+          @Override
+          public Credit set$Xgafv(java.lang.String $Xgafv) {
+            return (Credit) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Credit setAccessToken(java.lang.String accessToken) {
+            return (Credit) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Credit setAlt(java.lang.String alt) {
+            return (Credit) super.setAlt(alt);
+          }
+
+          @Override
+          public Credit setCallback(java.lang.String callback) {
+            return (Credit) super.setCallback(callback);
+          }
+
+          @Override
+          public Credit setFields(java.lang.String fields) {
+            return (Credit) super.setFields(fields);
+          }
+
+          @Override
+          public Credit setKey(java.lang.String key) {
+            return (Credit) super.setKey(key);
+          }
+
+          @Override
+          public Credit setOauthToken(java.lang.String oauthToken) {
+            return (Credit) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Credit setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Credit) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Credit setQuotaUser(java.lang.String quotaUser) {
+            return (Credit) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Credit setUploadType(java.lang.String uploadType) {
+            return (Credit) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Credit setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Credit) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Account balance for the AppGroup. Use the following structure in your
+           * request: `organizations/{org}/appgroups/{app_group}/balance`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Account balance for the AppGroup. Use the following structure in your request:
+         `organizations/{org}/appgroups/{app_group}/balance`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Account balance for the AppGroup. Use the following structure in your
+           * request: `organizations/{org}/appgroups/{app_group}/balance`
+           */
+          public Credit setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/balance$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Credit set(String parameterName, Object value) {
+            return (Credit) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Subscriptions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Apigee apigee = new Apigee(...);}
+       *   {@code Apigee.Subscriptions.List request = apigee.subscriptions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Subscriptions subscriptions() {
+        return new Subscriptions();
+      }
+
+      /**
+       * The "subscriptions" collection of methods.
+       */
+      public class Subscriptions {
+
+        /**
+         * Creates a subscription to an API product.
+         *
+         * Create a request for the method "subscriptions.create".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the appgroup that is purchasing a subscription to the API product. Use the
+         *        following structure in your request: `organizations/{org}/appgroups/{appgroup}`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription> {
+
+          private static final String REST_PATH = "v1/{+parent}/subscriptions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+$");
+
+          /**
+           * Creates a subscription to an API product.
+           *
+           * Create a request for the method "subscriptions.create".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the appgroup that is purchasing a subscription to the API product. Use the
+         *        following structure in your request: `organizations/{org}/appgroups/{appgroup}`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the appgroup that is purchasing a subscription to the API product.
+           * Use the following structure in your request: `organizations/{org}/appgroups/{appgroup}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the appgroup that is purchasing a subscription to the API product. Use the
+         following structure in your request: `organizations/{org}/appgroups/{appgroup}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the appgroup that is purchasing a subscription to the API product.
+           * Use the following structure in your request: `organizations/{org}/appgroups/{appgroup}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Expires an API product subscription immediately.
+         *
+         * Create a request for the method "subscriptions.expire".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Expire#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the API product subscription. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ExpireAppGroupSubscriptionRequest}
+         * @return the request
+         */
+        public Expire expire(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ExpireAppGroupSubscriptionRequest content) throws java.io.IOException {
+          Expire result = new Expire(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Expire extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription> {
+
+          private static final String REST_PATH = "v1/{+name}:expire";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/subscriptions/[^/]+$");
+
+          /**
+           * Expires an API product subscription immediately.
+           *
+           * Create a request for the method "subscriptions.expire".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Expire#execute()} method to invoke the remote operation. <p> {@link
+           * Expire#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the API product subscription. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+           * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ExpireAppGroupSubscriptionRequest}
+           * @since 1.13
+           */
+          protected Expire(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ExpireAppGroupSubscriptionRequest content) {
+            super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/subscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Expire set$Xgafv(java.lang.String $Xgafv) {
+            return (Expire) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Expire setAccessToken(java.lang.String accessToken) {
+            return (Expire) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Expire setAlt(java.lang.String alt) {
+            return (Expire) super.setAlt(alt);
+          }
+
+          @Override
+          public Expire setCallback(java.lang.String callback) {
+            return (Expire) super.setCallback(callback);
+          }
+
+          @Override
+          public Expire setFields(java.lang.String fields) {
+            return (Expire) super.setFields(fields);
+          }
+
+          @Override
+          public Expire setKey(java.lang.String key) {
+            return (Expire) super.setKey(key);
+          }
+
+          @Override
+          public Expire setOauthToken(java.lang.String oauthToken) {
+            return (Expire) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Expire setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Expire) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Expire setQuotaUser(java.lang.String quotaUser) {
+            return (Expire) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Expire setUploadType(java.lang.String uploadType) {
+            return (Expire) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Expire setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Expire) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the API product subscription. Use the following structure in your
+           * request: `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the API product subscription. Use the following structure in your request:
+         `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the API product subscription. Use the following structure in your
+           * request: `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+           */
+          public Expire setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/subscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Expire set(String parameterName, Object value) {
+            return (Expire) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get an api product subscription for an appgroup.
+         *
+         * Create a request for the method "subscriptions.get".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the AppGroupSubscription to retrieve. Format:
+         *        `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+/subscriptions/[^/]+$");
+
+          /**
+           * Get an api product subscription for an appgroup.
+           *
+           * Create a request for the method "subscriptions.get".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the AppGroupSubscription to retrieve. Format:
+         *        `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1AppGroupSubscription.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/subscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the AppGroupSubscription to retrieve. Format:
+           * `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the AppGroupSubscription to retrieve. Format:
+         `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the AppGroupSubscription to retrieve. Format:
+           * `organizations/{org}/appgroups/{appgroup}/subscriptions/{subscription}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+/subscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List all api product subscriptions for an appgroup.
+         *
+         * Create a request for the method "subscriptions.list".
+         *
+         * This request holds the parameters needed by the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the appgroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{appgroup}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListAppGroupSubscriptionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/subscriptions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/appgroups/[^/]+$");
+
+          /**
+           * List all api product subscriptions for an appgroup.
+           *
+           * Create a request for the method "subscriptions.list".
+           *
+           * This request holds the parameters needed by the the apigee server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the appgroup. Use the following structure in your request:
+         *        `organizations/{org}/appgroups/{appgroup}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListAppGroupSubscriptionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the appgroup. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{appgroup}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the appgroup. Use the following structure in your request:
+         `organizations/{org}/appgroups/{appgroup}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the appgroup. Use the following structure in your request:
+           * `organizations/{org}/appgroups/{appgroup}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/appgroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of subscriptions to return. The service may return fewer
+           * than this value. If unspecified, at most 100 subscriptions will be returned. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of subscriptions to return. The service may return fewer than this
+         value. If unspecified, at most 100 subscriptions will be returned. The maximum value is 1000;
+         values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of subscriptions to return. The service may return fewer
+           * than this value. If unspecified, at most 100 subscriptions will be returned. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAppGroupSubscriptions` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListAppGroupSubscriptions` must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListAppGroupSubscriptions` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListAppGroupSubscriptions` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAppGroupSubscriptions` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListAppGroupSubscriptions` must match the call that provided the page
+           * token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
       }
     }
     /**

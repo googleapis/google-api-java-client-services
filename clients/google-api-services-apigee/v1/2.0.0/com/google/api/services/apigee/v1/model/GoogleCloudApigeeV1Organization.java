@@ -112,12 +112,21 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String billingType;
 
   /**
-   * Output only. Base64-encoded public certificate for the root CA of the Apigee organization.
-   * Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
+   * Output only. Deprecated: Use `ca_certificates` instead. Base64-encoded public certificate for
+   * the root CA of the Apigee organization. Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String caCertificate;
+
+  /**
+   * Output only. Base64-encoded public certificates for the root CA of the Apigee organization.
+   * Valid only when [RuntimeType](#RuntimeType) is `CLOUD`. Multiple certificates are used to
+   * support certificate rotation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> caCertificates;
 
   /**
    * Optional. Cloud KMS key name used for encrypting control plane data that is stored in a multi
@@ -467,8 +476,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Output only. Base64-encoded public certificate for the root CA of the Apigee organization.
-   * Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
+   * Output only. Deprecated: Use `ca_certificates` instead. Base64-encoded public certificate for
+   * the root CA of the Apigee organization. Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
    * @see #decodeCaCertificate()
    * @return value or {@code null} for none
    */
@@ -477,8 +486,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Output only. Base64-encoded public certificate for the root CA of the Apigee organization.
-   * Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
+   * Output only. Deprecated: Use `ca_certificates` instead. Base64-encoded public certificate for
+   * the root CA of the Apigee organization. Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
    * @see #getCaCertificate()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -489,8 +498,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Output only. Base64-encoded public certificate for the root CA of the Apigee organization.
-   * Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
+   * Output only. Deprecated: Use `ca_certificates` instead. Base64-encoded public certificate for
+   * the root CA of the Apigee organization. Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
    * @see #encodeCaCertificate()
    * @param caCertificate caCertificate or {@code null} for none
    */
@@ -500,8 +509,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Output only. Base64-encoded public certificate for the root CA of the Apigee organization.
-   * Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
+   * Output only. Deprecated: Use `ca_certificates` instead. Base64-encoded public certificate for
+   * the root CA of the Apigee organization. Valid only when [RuntimeType](#RuntimeType) is `CLOUD`.
    * @see #setCaCertificate()
    *
    * <p>
@@ -512,6 +521,27 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
    */
   public GoogleCloudApigeeV1Organization encodeCaCertificate(byte[] caCertificate) {
     this.caCertificate = com.google.api.client.util.Base64.encodeBase64URLSafeString(caCertificate);
+    return this;
+  }
+
+  /**
+   * Output only. Base64-encoded public certificates for the root CA of the Apigee organization.
+   * Valid only when [RuntimeType](#RuntimeType) is `CLOUD`. Multiple certificates are used to
+   * support certificate rotation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCaCertificates() {
+    return caCertificates;
+  }
+
+  /**
+   * Output only. Base64-encoded public certificates for the root CA of the Apigee organization.
+   * Valid only when [RuntimeType](#RuntimeType) is `CLOUD`. Multiple certificates are used to
+   * support certificate rotation.
+   * @param caCertificates caCertificates or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Organization setCaCertificates(java.util.List<java.lang.String> caCertificates) {
+    this.caCertificates = caCertificates;
     return this;
   }
 

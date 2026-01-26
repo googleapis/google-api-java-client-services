@@ -2551,6 +2551,145 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Returns tags directly bound to a GCP resource.
+         *
+         * Create a request for the method "backupPlans.getTags".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link GetTags#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the service resource.
+         * @return the request
+         */
+        public GetTags getTags(java.lang.String name) throws java.io.IOException {
+          GetTags result = new GetTags(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetTags extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.GetTagsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:getTags";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+
+          /**
+           * Returns tags directly bound to a GCP resource.
+           *
+           * Create a request for the method "backupPlans.getTags".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link GetTags#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * GetTags#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the service resource.
+           * @since 1.13
+           */
+          protected GetTags(java.lang.String name) {
+            super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.GetTagsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetTags set$Xgafv(java.lang.String $Xgafv) {
+            return (GetTags) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetTags setAccessToken(java.lang.String accessToken) {
+            return (GetTags) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetTags setAlt(java.lang.String alt) {
+            return (GetTags) super.setAlt(alt);
+          }
+
+          @Override
+          public GetTags setCallback(java.lang.String callback) {
+            return (GetTags) super.setCallback(callback);
+          }
+
+          @Override
+          public GetTags setFields(java.lang.String fields) {
+            return (GetTags) super.setFields(fields);
+          }
+
+          @Override
+          public GetTags setKey(java.lang.String key) {
+            return (GetTags) super.setKey(key);
+          }
+
+          @Override
+          public GetTags setOauthToken(java.lang.String oauthToken) {
+            return (GetTags) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetTags setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetTags) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetTags setQuotaUser(java.lang.String quotaUser) {
+            return (GetTags) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetTags setUploadType(java.lang.String uploadType) {
+            return (GetTags) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetTags setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetTags) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The full resource name of the service resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the service resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The full resource name of the service resource. */
+          public GetTags setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetTags set(String parameterName, Object value) {
+            return (GetTags) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists BackupPlans in a given location.
          *
          * Create a request for the method "backupPlans.list".
@@ -3105,6 +3244,137 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           @Override
           public SetIamPolicy set(String parameterName, Object value) {
             return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates tags directly bound to a GCP resource.
+         *
+         * Create a request for the method "backupPlans.setTags".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link SetTags#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the service resource.
+         * @param content the {@link com.google.api.services.gkebackup.v1.model.SetTagsRequest}
+         * @return the request
+         */
+        public SetTags setTags(java.lang.String name, com.google.api.services.gkebackup.v1.model.SetTagsRequest content) throws java.io.IOException {
+          SetTags result = new SetTags(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetTags extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.SetTagsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:setTags";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+
+          /**
+           * Updates tags directly bound to a GCP resource.
+           *
+           * Create a request for the method "backupPlans.setTags".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link SetTags#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * SetTags#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the service resource.
+           * @param content the {@link com.google.api.services.gkebackup.v1.model.SetTagsRequest}
+           * @since 1.13
+           */
+          protected SetTags(java.lang.String name, com.google.api.services.gkebackup.v1.model.SetTagsRequest content) {
+            super(BackupforGKE.this, "POST", REST_PATH, content, com.google.api.services.gkebackup.v1.model.SetTagsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetTags set$Xgafv(java.lang.String $Xgafv) {
+            return (SetTags) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetTags setAccessToken(java.lang.String accessToken) {
+            return (SetTags) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetTags setAlt(java.lang.String alt) {
+            return (SetTags) super.setAlt(alt);
+          }
+
+          @Override
+          public SetTags setCallback(java.lang.String callback) {
+            return (SetTags) super.setCallback(callback);
+          }
+
+          @Override
+          public SetTags setFields(java.lang.String fields) {
+            return (SetTags) super.setFields(fields);
+          }
+
+          @Override
+          public SetTags setKey(java.lang.String key) {
+            return (SetTags) super.setKey(key);
+          }
+
+          @Override
+          public SetTags setOauthToken(java.lang.String oauthToken) {
+            return (SetTags) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetTags setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetTags) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetTags setQuotaUser(java.lang.String quotaUser) {
+            return (SetTags) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetTags setUploadType(java.lang.String uploadType) {
+            return (SetTags) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetTags setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetTags) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The full resource name of the service resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the service resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The full resource name of the service resource. */
+          public SetTags setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupPlans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public SetTags set(String parameterName, Object value) {
+            return (SetTags) super.set(parameterName, value);
           }
         }
         /**
@@ -8427,6 +8697,145 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Returns tags directly bound to a GCP resource.
+         *
+         * Create a request for the method "restorePlans.getTags".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link GetTags#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the service resource.
+         * @return the request
+         */
+        public GetTags getTags(java.lang.String name) throws java.io.IOException {
+          GetTags result = new GetTags(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetTags extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.GetTagsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:getTags";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restorePlans/[^/]+$");
+
+          /**
+           * Returns tags directly bound to a GCP resource.
+           *
+           * Create a request for the method "restorePlans.getTags".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link GetTags#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * GetTags#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the service resource.
+           * @since 1.13
+           */
+          protected GetTags(java.lang.String name) {
+            super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.GetTagsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restorePlans/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetTags set$Xgafv(java.lang.String $Xgafv) {
+            return (GetTags) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetTags setAccessToken(java.lang.String accessToken) {
+            return (GetTags) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetTags setAlt(java.lang.String alt) {
+            return (GetTags) super.setAlt(alt);
+          }
+
+          @Override
+          public GetTags setCallback(java.lang.String callback) {
+            return (GetTags) super.setCallback(callback);
+          }
+
+          @Override
+          public GetTags setFields(java.lang.String fields) {
+            return (GetTags) super.setFields(fields);
+          }
+
+          @Override
+          public GetTags setKey(java.lang.String key) {
+            return (GetTags) super.setKey(key);
+          }
+
+          @Override
+          public GetTags setOauthToken(java.lang.String oauthToken) {
+            return (GetTags) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetTags setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetTags) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetTags setQuotaUser(java.lang.String quotaUser) {
+            return (GetTags) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetTags setUploadType(java.lang.String uploadType) {
+            return (GetTags) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetTags setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetTags) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The full resource name of the service resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the service resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The full resource name of the service resource. */
+          public GetTags setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restorePlans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetTags set(String parameterName, Object value) {
+            return (GetTags) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists RestorePlans in a given location.
          *
          * Create a request for the method "restorePlans.list".
@@ -8979,6 +9388,137 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           @Override
           public SetIamPolicy set(String parameterName, Object value) {
             return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates tags directly bound to a GCP resource.
+         *
+         * Create a request for the method "restorePlans.setTags".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link SetTags#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The full resource name of the service resource.
+         * @param content the {@link com.google.api.services.gkebackup.v1.model.SetTagsRequest}
+         * @return the request
+         */
+        public SetTags setTags(java.lang.String name, com.google.api.services.gkebackup.v1.model.SetTagsRequest content) throws java.io.IOException {
+          SetTags result = new SetTags(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetTags extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.SetTagsResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:setTags";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restorePlans/[^/]+$");
+
+          /**
+           * Updates tags directly bound to a GCP resource.
+           *
+           * Create a request for the method "restorePlans.setTags".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link SetTags#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * SetTags#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The full resource name of the service resource.
+           * @param content the {@link com.google.api.services.gkebackup.v1.model.SetTagsRequest}
+           * @since 1.13
+           */
+          protected SetTags(java.lang.String name, com.google.api.services.gkebackup.v1.model.SetTagsRequest content) {
+            super(BackupforGKE.this, "POST", REST_PATH, content, com.google.api.services.gkebackup.v1.model.SetTagsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restorePlans/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetTags set$Xgafv(java.lang.String $Xgafv) {
+            return (SetTags) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetTags setAccessToken(java.lang.String accessToken) {
+            return (SetTags) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetTags setAlt(java.lang.String alt) {
+            return (SetTags) super.setAlt(alt);
+          }
+
+          @Override
+          public SetTags setCallback(java.lang.String callback) {
+            return (SetTags) super.setCallback(callback);
+          }
+
+          @Override
+          public SetTags setFields(java.lang.String fields) {
+            return (SetTags) super.setFields(fields);
+          }
+
+          @Override
+          public SetTags setKey(java.lang.String key) {
+            return (SetTags) super.setKey(key);
+          }
+
+          @Override
+          public SetTags setOauthToken(java.lang.String oauthToken) {
+            return (SetTags) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetTags setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetTags) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetTags setQuotaUser(java.lang.String quotaUser) {
+            return (SetTags) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetTags setUploadType(java.lang.String uploadType) {
+            return (SetTags) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetTags setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetTags) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The full resource name of the service resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The full resource name of the service resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The full resource name of the service resource. */
+          public SetTags setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restorePlans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public SetTags set(String parameterName, Object value) {
+            return (SetTags) super.set(parameterName, value);
           }
         }
         /**

@@ -4966,22 +4966,22 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Restricts the list to return only records with this fully qualified domain name. Mutually
-       * exclusive with the {@code filter} field.
+       * Specify a fully qualified domain name to view only those records. The name parameter is not
+       * supported and must be omitted when you use filter.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Restricts the list to return only records with this fully qualified domain name. Mutually exclusive
-     with the {@code filter} field.
+      /** Specify a fully qualified domain name to view only those records. The name parameter is not
+     supported and must be omitted when you use filter.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Restricts the list to return only records with this fully qualified domain name. Mutually
-       * exclusive with the {@code filter} field.
+       * Specify a fully qualified domain name to view only those records. The name parameter is not
+       * supported and must be omitted when you use filter.
        */
       public List setName(java.lang.String name) {
         this.name = name;
@@ -5012,22 +5012,22 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Restricts the list to return only records of this type. If present, the "name" parameter
-       * must also be present. Mutually exclusive with the {@code filter} field.
+       * Specify a record type to view only those records. You must also specify the name parameter.
+       * The type parameter is not supported and must be omitted when you use filter.
        */
       @com.google.api.client.util.Key
       private java.lang.String type;
 
-      /** Restricts the list to return only records of this type. If present, the "name" parameter must also
-     be present. Mutually exclusive with the {@code filter} field.
+      /** Specify a record type to view only those records. You must also specify the name parameter. The
+     type parameter is not supported and must be omitted when you use filter.
        */
       public java.lang.String getType() {
         return type;
       }
 
       /**
-       * Restricts the list to return only records of this type. If present, the "name" parameter
-       * must also be present. Mutually exclusive with the {@code filter} field.
+       * Specify a record type to view only those records. You must also specify the name parameter.
+       * The type parameter is not supported and must be omitted when you use filter.
        */
       public List setType(java.lang.String type) {
         this.type = type;

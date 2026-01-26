@@ -30,11 +30,42 @@ package com.google.api.services.connectors.v2.model;
 public final class ExecuteToolRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * execution config for the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExecutionConfig executionConfig;
+
+  /**
    * Input parameters for the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
+
+  /**
+   * Tool definition for the tool to be executed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> toolDefinition;
+
+  /**
+   * execution config for the request.
+   * @return value or {@code null} for none
+   */
+  public ExecutionConfig getExecutionConfig() {
+    return executionConfig;
+  }
+
+  /**
+   * execution config for the request.
+   * @param executionConfig executionConfig or {@code null} for none
+   */
+  public ExecuteToolRequest setExecutionConfig(ExecutionConfig executionConfig) {
+    this.executionConfig = executionConfig;
+    return this;
+  }
 
   /**
    * Input parameters for the tool.
@@ -50,6 +81,23 @@ public final class ExecuteToolRequest extends com.google.api.client.json.Generic
    */
   public ExecuteToolRequest setParameters(java.util.Map<String, java.lang.Object> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Tool definition for the tool to be executed.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getToolDefinition() {
+    return toolDefinition;
+  }
+
+  /**
+   * Tool definition for the tool to be executed.
+   * @param toolDefinition toolDefinition or {@code null} for none
+   */
+  public ExecuteToolRequest setToolDefinition(java.util.Map<String, java.lang.Object> toolDefinition) {
+    this.toolDefinition = toolDefinition;
     return this;
   }
 

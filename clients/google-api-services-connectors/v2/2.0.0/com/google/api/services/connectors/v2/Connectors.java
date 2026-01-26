@@ -472,6 +472,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+           * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+           * cfg"}'
+           */
+          @com.google.api.client.util.Key("executionConfig.headers")
+          private java.lang.String executionConfigHeaders;
+
+          /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+         connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+           */
+          public java.lang.String getExecutionConfigHeaders() {
+            return executionConfigHeaders;
+          }
+
+          /**
+           * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+           * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+           * cfg"}'
+           */
+          public CheckStatus setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+            this.executionConfigHeaders = executionConfigHeaders;
+            return this;
+          }
+
           @Override
           public CheckStatus set(String parameterName, Object value) {
             return (CheckStatus) super.set(parameterName, value);
@@ -885,6 +910,146 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             return (RefreshAccessToken) super.set(parameterName, value);
           }
         }
+        /**
+         * Lists all available tools with POST.
+         *
+         * Create a request for the method "connections.tools".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link ToolsRequest#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Resource name of the Connection. Format:
+         *        projects/{project}/locations/{location}/connections/{connection}
+         * @param content the {@link com.google.api.services.connectors.v2.model.ListToolsPostRequest}
+         * @return the request
+         */
+        public ToolsRequest tools(java.lang.String parent, com.google.api.services.connectors.v2.model.ListToolsPostRequest content) throws java.io.IOException {
+          ToolsRequest result = new ToolsRequest(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ToolsRequest extends ConnectorsRequest<com.google.api.services.connectors.v2.model.ListToolsResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/tools";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * Lists all available tools with POST.
+           *
+           * Create a request for the method "connections.tools".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link ToolsRequest#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ToolsRequest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Resource name of the Connection. Format:
+         *        projects/{project}/locations/{location}/connections/{connection}
+           * @param content the {@link com.google.api.services.connectors.v2.model.ListToolsPostRequest}
+           * @since 1.13
+           */
+          protected ToolsRequest(java.lang.String parent, com.google.api.services.connectors.v2.model.ListToolsPostRequest content) {
+            super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v2.model.ListToolsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public ToolsRequest set$Xgafv(java.lang.String $Xgafv) {
+            return (ToolsRequest) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ToolsRequest setAccessToken(java.lang.String accessToken) {
+            return (ToolsRequest) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ToolsRequest setAlt(java.lang.String alt) {
+            return (ToolsRequest) super.setAlt(alt);
+          }
+
+          @Override
+          public ToolsRequest setCallback(java.lang.String callback) {
+            return (ToolsRequest) super.setCallback(callback);
+          }
+
+          @Override
+          public ToolsRequest setFields(java.lang.String fields) {
+            return (ToolsRequest) super.setFields(fields);
+          }
+
+          @Override
+          public ToolsRequest setKey(java.lang.String key) {
+            return (ToolsRequest) super.setKey(key);
+          }
+
+          @Override
+          public ToolsRequest setOauthToken(java.lang.String oauthToken) {
+            return (ToolsRequest) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ToolsRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ToolsRequest) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ToolsRequest setQuotaUser(java.lang.String quotaUser) {
+            return (ToolsRequest) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ToolsRequest setUploadType(java.lang.String uploadType) {
+            return (ToolsRequest) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ToolsRequest setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ToolsRequest) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the Connection. Format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Resource name of the Connection. Format:
+         projects/{project}/locations/{location}/connections/{connection}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Resource name of the Connection. Format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          public ToolsRequest setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ToolsRequest set(String parameterName, Object value) {
+            return (ToolsRequest) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Actions collection.
@@ -1190,6 +1355,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            @com.google.api.client.util.Key("executionConfig.headers")
+            private java.lang.String executionConfigHeaders;
+
+            /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+           connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+             */
+            public java.lang.String getExecutionConfigHeaders() {
+              return executionConfigHeaders;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            public Get setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+              this.executionConfigHeaders = executionConfigHeaders;
+              return this;
+            }
+
             /** Specified view of the action schema. */
             @com.google.api.client.util.Key
             private java.lang.String view;
@@ -1350,6 +1540,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                     "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            @com.google.api.client.util.Key("executionConfig.headers")
+            private java.lang.String executionConfigHeaders;
+
+            /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+           connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+             */
+            public java.lang.String getExecutionConfigHeaders() {
+              return executionConfigHeaders;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            public List setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+              this.executionConfigHeaders = executionConfigHeaders;
               return this;
             }
 
@@ -1599,6 +1814,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            @com.google.api.client.util.Key("executionConfig.headers")
+            private java.lang.String executionConfigHeaders;
+
+            /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+           connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+             */
+            public java.lang.String getExecutionConfigHeaders() {
+              return executionConfigHeaders;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            public Get setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+              this.executionConfigHeaders = executionConfigHeaders;
+              return this;
+            }
+
             /** Specifies view for entity type schema. */
             @com.google.api.client.util.Key
             private java.lang.String view;
@@ -1759,6 +1999,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                     "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            @com.google.api.client.util.Key("executionConfig.headers")
+            private java.lang.String executionConfigHeaders;
+
+            /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+           connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+             */
+            public java.lang.String getExecutionConfigHeaders() {
+              return executionConfigHeaders;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            public List setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+              this.executionConfigHeaders = executionConfigHeaders;
               return this;
             }
 
@@ -1984,6 +2249,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              @com.google.api.client.util.Key("executionConfig.headers")
+              private java.lang.String executionConfigHeaders;
+
+              /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+             connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+               */
+              public java.lang.String getExecutionConfigHeaders() {
+                return executionConfigHeaders;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              public Create setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+                this.executionConfigHeaders = executionConfigHeaders;
+                return this;
+              }
+
               @Override
               public Create set(String parameterName, Object value) {
                 return (Create) super.set(parameterName, value);
@@ -2121,6 +2411,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                       "^projects/[^/]+/locations/[^/]+/connections/[^/]+/entityTypes/[^/]+/entities/[^/]+$");
                 }
                 this.name = name;
+                return this;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              @com.google.api.client.util.Key("executionConfig.headers")
+              private java.lang.String executionConfigHeaders;
+
+              /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+             connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+               */
+              public java.lang.String getExecutionConfigHeaders() {
+                return executionConfigHeaders;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              public Delete setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+                this.executionConfigHeaders = executionConfigHeaders;
                 return this;
               }
 
@@ -2298,6 +2613,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              @com.google.api.client.util.Key("executionConfig.headers")
+              private java.lang.String executionConfigHeaders;
+
+              /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+             connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+               */
+              public java.lang.String getExecutionConfigHeaders() {
+                return executionConfigHeaders;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              public DeleteEntitiesWithConditions setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+                this.executionConfigHeaders = executionConfigHeaders;
+                return this;
+              }
+
               @Override
               public DeleteEntitiesWithConditions set(String parameterName, Object value) {
                 return (DeleteEntitiesWithConditions) super.set(parameterName, value);
@@ -2444,6 +2784,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                       "^projects/[^/]+/locations/[^/]+/connections/[^/]+/entityTypes/[^/]+/entities/[^/]+$");
                 }
                 this.name = name;
+                return this;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              @com.google.api.client.util.Key("executionConfig.headers")
+              private java.lang.String executionConfigHeaders;
+
+              /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+             connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+               */
+              public java.lang.String getExecutionConfigHeaders() {
+                return executionConfigHeaders;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              public Get setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+                this.executionConfigHeaders = executionConfigHeaders;
                 return this;
               }
 
@@ -2629,6 +2994,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                */
               public List setConditions(java.lang.String conditions) {
                 this.conditions = conditions;
+                return this;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              @com.google.api.client.util.Key("executionConfig.headers")
+              private java.lang.String executionConfigHeaders;
+
+              /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+             connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+               */
+              public java.lang.String getExecutionConfigHeaders() {
+                return executionConfigHeaders;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              public List setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+                this.executionConfigHeaders = executionConfigHeaders;
                 return this;
               }
 
@@ -2844,6 +3234,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              @com.google.api.client.util.Key("executionConfig.headers")
+              private java.lang.String executionConfigHeaders;
+
+              /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+             connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+               */
+              public java.lang.String getExecutionConfigHeaders() {
+                return executionConfigHeaders;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              public Patch setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+                this.executionConfigHeaders = executionConfigHeaders;
+                return this;
+              }
+
               @Override
               public Patch set(String parameterName, Object value) {
                 return (Patch) super.set(parameterName, value);
@@ -3020,6 +3435,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              @com.google.api.client.util.Key("executionConfig.headers")
+              private java.lang.String executionConfigHeaders;
+
+              /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+             connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+               */
+              public java.lang.String getExecutionConfigHeaders() {
+                return executionConfigHeaders;
+              }
+
+              /**
+               * headers to be used for the request. For example: headers:'{"x-integration-
+               * connectors-managed-connection-id":"conn-id","x-integration-connectors-runtime-
+               * config":"runtime-cfg"}'
+               */
+              public UpdateEntitiesWithConditions setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+                this.executionConfigHeaders = executionConfigHeaders;
+                return this;
+              }
+
               @Override
               public UpdateEntitiesWithConditions set(String parameterName, Object value) {
                 return (UpdateEntitiesWithConditions) super.set(parameterName, value);
@@ -3190,9 +3630,174 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            @com.google.api.client.util.Key("executionConfig.headers")
+            private java.lang.String executionConfigHeaders;
+
+            /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+           connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+             */
+            public java.lang.String getExecutionConfigHeaders() {
+              return executionConfigHeaders;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            public Get setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+              this.executionConfigHeaders = executionConfigHeaders;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a specific resource with POST.
+           *
+           * Create a request for the method "resources.getResourcePost".
+           *
+           * This request holds the parameters needed by the connectors server.  After setting any optional
+           * parameters, call the {@link GetResourcePost#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the Resource. Format:
+           *        projects/{project}/locations/{location}/connections/{connection}/resources/{resource}
+           * @param content the {@link com.google.api.services.connectors.v2.model.GetResourcePostRequest}
+           * @return the request
+           */
+          public GetResourcePost getResourcePost(java.lang.String name, com.google.api.services.connectors.v2.model.GetResourcePostRequest content) throws java.io.IOException {
+            GetResourcePost result = new GetResourcePost(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class GetResourcePost extends ConnectorsRequest<com.google.api.services.connectors.v2.model.GetResourceResponse> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/[^/]+$");
+
+            /**
+             * Gets a specific resource with POST.
+             *
+             * Create a request for the method "resources.getResourcePost".
+             *
+             * This request holds the parameters needed by the the connectors server.  After setting any
+             * optional parameters, call the {@link GetResourcePost#execute()} method to invoke the remote
+             * operation. <p> {@link GetResourcePost#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. Resource name of the Resource. Format:
+           *        projects/{project}/locations/{location}/connections/{connection}/resources/{resource}
+             * @param content the {@link com.google.api.services.connectors.v2.model.GetResourcePostRequest}
+             * @since 1.13
+             */
+            protected GetResourcePost(java.lang.String name, com.google.api.services.connectors.v2.model.GetResourcePostRequest content) {
+              super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v2.model.GetResourceResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/[^/]+$");
+              }
+            }
+
+            @Override
+            public GetResourcePost set$Xgafv(java.lang.String $Xgafv) {
+              return (GetResourcePost) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetResourcePost setAccessToken(java.lang.String accessToken) {
+              return (GetResourcePost) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetResourcePost setAlt(java.lang.String alt) {
+              return (GetResourcePost) super.setAlt(alt);
+            }
+
+            @Override
+            public GetResourcePost setCallback(java.lang.String callback) {
+              return (GetResourcePost) super.setCallback(callback);
+            }
+
+            @Override
+            public GetResourcePost setFields(java.lang.String fields) {
+              return (GetResourcePost) super.setFields(fields);
+            }
+
+            @Override
+            public GetResourcePost setKey(java.lang.String key) {
+              return (GetResourcePost) super.setKey(key);
+            }
+
+            @Override
+            public GetResourcePost setOauthToken(java.lang.String oauthToken) {
+              return (GetResourcePost) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetResourcePost setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetResourcePost) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetResourcePost setQuotaUser(java.lang.String quotaUser) {
+              return (GetResourcePost) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetResourcePost setUploadType(java.lang.String uploadType) {
+              return (GetResourcePost) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetResourcePost setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetResourcePost) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the Resource. Format:
+             * projects/{project}/locations/{location}/connections/{connection}/resources/{resource}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the Resource. Format:
+           projects/{project}/locations/{location}/connections/{connection}/resources/{resource}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the Resource. Format:
+             * projects/{project}/locations/{location}/connections/{connection}/resources/{resource}
+             */
+            public GetResourcePost setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GetResourcePost set(String parameterName, Object value) {
+              return (GetResourcePost) super.set(parameterName, value);
             }
           }
           /**
@@ -3334,6 +3939,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                     "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            @com.google.api.client.util.Key("executionConfig.headers")
+            private java.lang.String executionConfigHeaders;
+
+            /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+           connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+             */
+            public java.lang.String getExecutionConfigHeaders() {
+              return executionConfigHeaders;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            public List setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+              this.executionConfigHeaders = executionConfigHeaders;
               return this;
             }
 
@@ -3675,6 +4305,31 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                     "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            @com.google.api.client.util.Key("executionConfig.headers")
+            private java.lang.String executionConfigHeaders;
+
+            /** headers to be used for the request. For example: headers:'{"x-integration-connectors-managed-
+           connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-cfg"}'
+             */
+            public java.lang.String getExecutionConfigHeaders() {
+              return executionConfigHeaders;
+            }
+
+            /**
+             * headers to be used for the request. For example: headers:'{"x-integration-connectors-
+             * managed-connection-id":"conn-id","x-integration-connectors-runtime-config":"runtime-
+             * cfg"}'
+             */
+            public List setExecutionConfigHeaders(java.lang.String executionConfigHeaders) {
+              this.executionConfigHeaders = executionConfigHeaders;
               return this;
             }
 

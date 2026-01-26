@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v2.model;
 
 /**
- * RefreshAccessTokenRequest includes the refresh token.
+ * Request message for ConnectorAgentService.ListToolsPost
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,32 +27,38 @@ package com.google.api.services.connectors.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RefreshAccessTokenRequest extends com.google.api.client.json.GenericJson {
+public final class ListToolsPostRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * ExecutionConfig contains the configuration for the execution of the request.
+   * execution config for the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExecutionConfig executionConfig;
 
   /**
-   * OAuth2Config contains the OAuth2 config for the connection.
+   * Page size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private OAuth2Config oauth2Config;
+  private java.lang.Integer pageSize;
 
   /**
-   * Optional. Refresh Token String. If the Refresh Token is not provided, the runtime will read the
-   * data from the secret manager.
+   * Page token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String refreshToken;
+  private java.lang.String pageToken;
 
   /**
-   * ExecutionConfig contains the configuration for the execution of the request.
+   * List of tool specifications.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ToolSpec toolSpec;
+
+  /**
+   * execution config for the request.
    * @return value or {@code null} for none
    */
   public ExecutionConfig getExecutionConfig() {
@@ -60,58 +66,73 @@ public final class RefreshAccessTokenRequest extends com.google.api.client.json.
   }
 
   /**
-   * ExecutionConfig contains the configuration for the execution of the request.
+   * execution config for the request.
    * @param executionConfig executionConfig or {@code null} for none
    */
-  public RefreshAccessTokenRequest setExecutionConfig(ExecutionConfig executionConfig) {
+  public ListToolsPostRequest setExecutionConfig(ExecutionConfig executionConfig) {
     this.executionConfig = executionConfig;
     return this;
   }
 
   /**
-   * OAuth2Config contains the OAuth2 config for the connection.
+   * Page size.
    * @return value or {@code null} for none
    */
-  public OAuth2Config getOauth2Config() {
-    return oauth2Config;
+  public java.lang.Integer getPageSize() {
+    return pageSize;
   }
 
   /**
-   * OAuth2Config contains the OAuth2 config for the connection.
-   * @param oauth2Config oauth2Config or {@code null} for none
+   * Page size.
+   * @param pageSize pageSize or {@code null} for none
    */
-  public RefreshAccessTokenRequest setOauth2Config(OAuth2Config oauth2Config) {
-    this.oauth2Config = oauth2Config;
+  public ListToolsPostRequest setPageSize(java.lang.Integer pageSize) {
+    this.pageSize = pageSize;
     return this;
   }
 
   /**
-   * Optional. Refresh Token String. If the Refresh Token is not provided, the runtime will read the
-   * data from the secret manager.
+   * Page token.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRefreshToken() {
-    return refreshToken;
+  public java.lang.String getPageToken() {
+    return pageToken;
   }
 
   /**
-   * Optional. Refresh Token String. If the Refresh Token is not provided, the runtime will read the
-   * data from the secret manager.
-   * @param refreshToken refreshToken or {@code null} for none
+   * Page token.
+   * @param pageToken pageToken or {@code null} for none
    */
-  public RefreshAccessTokenRequest setRefreshToken(java.lang.String refreshToken) {
-    this.refreshToken = refreshToken;
+  public ListToolsPostRequest setPageToken(java.lang.String pageToken) {
+    this.pageToken = pageToken;
+    return this;
+  }
+
+  /**
+   * List of tool specifications.
+   * @return value or {@code null} for none
+   */
+  public ToolSpec getToolSpec() {
+    return toolSpec;
+  }
+
+  /**
+   * List of tool specifications.
+   * @param toolSpec toolSpec or {@code null} for none
+   */
+  public ListToolsPostRequest setToolSpec(ToolSpec toolSpec) {
+    this.toolSpec = toolSpec;
     return this;
   }
 
   @Override
-  public RefreshAccessTokenRequest set(String fieldName, Object value) {
-    return (RefreshAccessTokenRequest) super.set(fieldName, value);
+  public ListToolsPostRequest set(String fieldName, Object value) {
+    return (ListToolsPostRequest) super.set(fieldName, value);
   }
 
   @Override
-  public RefreshAccessTokenRequest clone() {
-    return (RefreshAccessTokenRequest) super.clone();
+  public ListToolsPostRequest clone() {
+    return (ListToolsPostRequest) super.clone();
   }
 
 }

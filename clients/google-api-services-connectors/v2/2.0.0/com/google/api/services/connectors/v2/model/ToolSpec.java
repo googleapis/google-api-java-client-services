@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v2.model;
 
 /**
- * Request message for ActionService.ExecuteAction
+ * Model definition for ToolSpec.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.connectors.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ExecuteActionRequest extends com.google.api.client.json.GenericJson {
+public final class ToolSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Execution config for the request.
+   * List of tool definitions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ExecutionConfig executionConfig;
+  private java.util.List<java.util.Map<String, java.lang.Object>> toolDefinitions;
 
   /**
-   * Parameters for executing the action. The parameters can be key/value pairs or nested structs.
+   * Version of the tool spec. Format: providerId/connectorId/versionId/toolSpecId
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> parameters;
+  private java.lang.String toolSpecVersion;
 
   /**
-   * Execution config for the request.
+   * List of tool definitions.
    * @return value or {@code null} for none
    */
-  public ExecutionConfig getExecutionConfig() {
-    return executionConfig;
+  public java.util.List<java.util.Map<String, java.lang.Object>> getToolDefinitions() {
+    return toolDefinitions;
   }
 
   /**
-   * Execution config for the request.
-   * @param executionConfig executionConfig or {@code null} for none
+   * List of tool definitions.
+   * @param toolDefinitions toolDefinitions or {@code null} for none
    */
-  public ExecuteActionRequest setExecutionConfig(ExecutionConfig executionConfig) {
-    this.executionConfig = executionConfig;
+  public ToolSpec setToolDefinitions(java.util.List<java.util.Map<String, java.lang.Object>> toolDefinitions) {
+    this.toolDefinitions = toolDefinitions;
     return this;
   }
 
   /**
-   * Parameters for executing the action. The parameters can be key/value pairs or nested structs.
+   * Version of the tool spec. Format: providerId/connectorId/versionId/toolSpecId
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getParameters() {
-    return parameters;
+  public java.lang.String getToolSpecVersion() {
+    return toolSpecVersion;
   }
 
   /**
-   * Parameters for executing the action. The parameters can be key/value pairs or nested structs.
-   * @param parameters parameters or {@code null} for none
+   * Version of the tool spec. Format: providerId/connectorId/versionId/toolSpecId
+   * @param toolSpecVersion toolSpecVersion or {@code null} for none
    */
-  public ExecuteActionRequest setParameters(java.util.Map<String, java.lang.Object> parameters) {
-    this.parameters = parameters;
+  public ToolSpec setToolSpecVersion(java.lang.String toolSpecVersion) {
+    this.toolSpecVersion = toolSpecVersion;
     return this;
   }
 
   @Override
-  public ExecuteActionRequest set(String fieldName, Object value) {
-    return (ExecuteActionRequest) super.set(fieldName, value);
+  public ToolSpec set(String fieldName, Object value) {
+    return (ToolSpec) super.set(fieldName, value);
   }
 
   @Override
-  public ExecuteActionRequest clone() {
-    return (ExecuteActionRequest) super.clone();
+  public ToolSpec clone() {
+    return (ToolSpec) super.clone();
   }
 
 }

@@ -18,7 +18,7 @@ package com.google.api.services.chat.v1.model;
 
 /**
  * A configuration object that helps configure the data sources for a widget. Available for Google
- * Workspace add-ons that extend Google Workspace Studio. Unavailable for Google Chat apps.
+ * Chat apps and Google Workspace add-ons that extend Google Workspace Studio.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

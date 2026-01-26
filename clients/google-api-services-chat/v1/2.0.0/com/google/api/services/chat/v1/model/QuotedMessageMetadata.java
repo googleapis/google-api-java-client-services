@@ -35,6 +35,14 @@ package com.google.api.services.chat.v1.model;
 public final class QuotedMessageMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Metadata about the source space of the quoted message. Populated only for FORWARD
+   * quote type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ForwardedMetadata forwardedMetadata;
+
+  /**
    * Required. The timestamp when the quoted message was created or when the quoted message was last
    * updated. If the message was edited, use this field, `last_update_time`. If the message was
    * never edited, use `create_time`. If `last_update_time` doesn't match the latest version of the
@@ -51,6 +59,40 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Specifies the quote type. If not set, defaults to REPLY in the message read/write
+   * path for backward compatibility.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String quoteType;
+
+  /**
+   * Output only. A snapshot of the quoted message's content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QuotedMessageSnapshot quotedMessageSnapshot;
+
+  /**
+   * Output only. Metadata about the source space of the quoted message. Populated only for FORWARD
+   * quote type.
+   * @return value or {@code null} for none
+   */
+  public ForwardedMetadata getForwardedMetadata() {
+    return forwardedMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the source space of the quoted message. Populated only for FORWARD
+   * quote type.
+   * @param forwardedMetadata forwardedMetadata or {@code null} for none
+   */
+  public QuotedMessageMetadata setForwardedMetadata(ForwardedMetadata forwardedMetadata) {
+    this.forwardedMetadata = forwardedMetadata;
+    return this;
+  }
 
   /**
    * Required. The timestamp when the quoted message was created or when the quoted message was last
@@ -91,6 +133,42 @@ public final class QuotedMessageMetadata extends com.google.api.client.json.Gene
    */
   public QuotedMessageMetadata setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the quote type. If not set, defaults to REPLY in the message read/write
+   * path for backward compatibility.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuoteType() {
+    return quoteType;
+  }
+
+  /**
+   * Optional. Specifies the quote type. If not set, defaults to REPLY in the message read/write
+   * path for backward compatibility.
+   * @param quoteType quoteType or {@code null} for none
+   */
+  public QuotedMessageMetadata setQuoteType(java.lang.String quoteType) {
+    this.quoteType = quoteType;
+    return this;
+  }
+
+  /**
+   * Output only. A snapshot of the quoted message's content.
+   * @return value or {@code null} for none
+   */
+  public QuotedMessageSnapshot getQuotedMessageSnapshot() {
+    return quotedMessageSnapshot;
+  }
+
+  /**
+   * Output only. A snapshot of the quoted message's content.
+   * @param quotedMessageSnapshot quotedMessageSnapshot or {@code null} for none
+   */
+  public QuotedMessageMetadata setQuotedMessageSnapshot(QuotedMessageSnapshot quotedMessageSnapshot) {
+    this.quotedMessageSnapshot = quotedMessageSnapshot;
     return this;
   }
 

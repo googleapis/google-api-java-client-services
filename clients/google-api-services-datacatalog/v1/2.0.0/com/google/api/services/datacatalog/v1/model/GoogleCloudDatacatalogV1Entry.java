@@ -249,6 +249,13 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
   private GoogleCloudDatacatalogV1SystemTimestamps sourceSystemTimestamps;
 
   /**
+   * Specification of a Spanner table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDatacatalogV1SpannerTableSpec spannerTableSpec;
+
+  /**
    * Specification that applies to a relational database system. Only settable when
    * `user_specified_system` is equal to `SQL_DATABASE`
    * The value may be {@code null}.
@@ -795,6 +802,23 @@ public final class GoogleCloudDatacatalogV1Entry extends com.google.api.client.j
    */
   public GoogleCloudDatacatalogV1Entry setSourceSystemTimestamps(GoogleCloudDatacatalogV1SystemTimestamps sourceSystemTimestamps) {
     this.sourceSystemTimestamps = sourceSystemTimestamps;
+    return this;
+  }
+
+  /**
+   * Specification of a Spanner table.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1SpannerTableSpec getSpannerTableSpec() {
+    return spannerTableSpec;
+  }
+
+  /**
+   * Specification of a Spanner table.
+   * @param spannerTableSpec spannerTableSpec or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1Entry setSpannerTableSpec(GoogleCloudDatacatalogV1SpannerTableSpec spannerTableSpec) {
+    this.spannerTableSpec = spannerTableSpec;
     return this;
   }
 

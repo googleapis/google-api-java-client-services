@@ -30,6 +30,13 @@ package com.google.api.services.docs.v1.model;
 public final class Response extends com.google.api.client.json.GenericJson {
 
   /**
+   * The result of adding a document tab.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddDocumentTabResponse addDocumentTab;
+
+  /**
    * The result of creating a footer.
    * The value may be {@code null}.
    */
@@ -77,6 +84,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ReplaceAllTextResponse replaceAllText;
+
+  /**
+   * The result of adding a document tab.
+   * @return value or {@code null} for none
+   */
+  public AddDocumentTabResponse getAddDocumentTab() {
+    return addDocumentTab;
+  }
+
+  /**
+   * The result of adding a document tab.
+   * @param addDocumentTab addDocumentTab or {@code null} for none
+   */
+  public Response setAddDocumentTab(AddDocumentTabResponse addDocumentTab) {
+    this.addDocumentTab = addDocumentTab;
+    return this;
+  }
 
   /**
    * The result of creating a footer.

@@ -30,6 +30,13 @@ package com.google.api.services.docs.v1.model;
 public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
+   * Adds a document tab.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddDocumentTabRequest addDocumentTab;
+
+  /**
    * Creates a footer.
    * The value may be {@code null}.
    */
@@ -105,6 +112,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private DeletePositionedObjectRequest deletePositionedObject;
+
+  /**
+   * Deletes a document tab.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteTabRequest deleteTab;
 
   /**
    * Deletes a column from a table.
@@ -233,6 +247,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateDocumentStyleRequest updateDocumentStyle;
 
   /**
+   * Updates the properties of a document tab.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateDocumentTabPropertiesRequest updateDocumentTabProperties;
+
+  /**
    * Updates the paragraph style at the specified range.
    * The value may be {@code null}.
    */
@@ -273,6 +294,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UpdateTextStyleRequest updateTextStyle;
+
+  /**
+   * Adds a document tab.
+   * @return value or {@code null} for none
+   */
+  public AddDocumentTabRequest getAddDocumentTab() {
+    return addDocumentTab;
+  }
+
+  /**
+   * Adds a document tab.
+   * @param addDocumentTab addDocumentTab or {@code null} for none
+   */
+  public Request setAddDocumentTab(AddDocumentTabRequest addDocumentTab) {
+    this.addDocumentTab = addDocumentTab;
+    return this;
+  }
 
   /**
    * Creates a footer.
@@ -458,6 +496,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setDeletePositionedObject(DeletePositionedObjectRequest deletePositionedObject) {
     this.deletePositionedObject = deletePositionedObject;
+    return this;
+  }
+
+  /**
+   * Deletes a document tab.
+   * @return value or {@code null} for none
+   */
+  public DeleteTabRequest getDeleteTab() {
+    return deleteTab;
+  }
+
+  /**
+   * Deletes a document tab.
+   * @param deleteTab deleteTab or {@code null} for none
+   */
+  public Request setDeleteTab(DeleteTabRequest deleteTab) {
+    this.deleteTab = deleteTab;
     return this;
   }
 
@@ -764,6 +819,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateDocumentStyle(UpdateDocumentStyleRequest updateDocumentStyle) {
     this.updateDocumentStyle = updateDocumentStyle;
+    return this;
+  }
+
+  /**
+   * Updates the properties of a document tab.
+   * @return value or {@code null} for none
+   */
+  public UpdateDocumentTabPropertiesRequest getUpdateDocumentTabProperties() {
+    return updateDocumentTabProperties;
+  }
+
+  /**
+   * Updates the properties of a document tab.
+   * @param updateDocumentTabProperties updateDocumentTabProperties or {@code null} for none
+   */
+  public Request setUpdateDocumentTabProperties(UpdateDocumentTabPropertiesRequest updateDocumentTabProperties) {
+    this.updateDocumentTabProperties = updateDocumentTabProperties;
     return this;
   }
 

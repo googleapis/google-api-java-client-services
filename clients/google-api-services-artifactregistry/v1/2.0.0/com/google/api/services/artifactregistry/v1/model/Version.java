@@ -53,6 +53,21 @@ public final class Version extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Output only. Immutable reference for the version, calculated based on the version's content.
+   * Currently we only support dirsum_sha256 hash algorithm. Additional hash algorithms may be added
+   * in the future.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Hash> fingerprints;
+
+  static {
+    // hack to force ProGuard to consider Hash used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Hash.class);
+  }
+
+  /**
    * Output only. Repository-specific Metadata stored against this version. The fields returned are
    * defined by the underlying repository-specific resource. Currently, the resources could be:
    * DockerImage MavenArtifact
@@ -138,6 +153,27 @@ public final class Version extends com.google.api.client.json.GenericJson {
    */
   public Version setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. Immutable reference for the version, calculated based on the version's content.
+   * Currently we only support dirsum_sha256 hash algorithm. Additional hash algorithms may be added
+   * in the future.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Hash> getFingerprints() {
+    return fingerprints;
+  }
+
+  /**
+   * Output only. Immutable reference for the version, calculated based on the version's content.
+   * Currently we only support dirsum_sha256 hash algorithm. Additional hash algorithms may be added
+   * in the future.
+   * @param fingerprints fingerprints or {@code null} for none
+   */
+  public Version setFingerprints(java.util.List<Hash> fingerprints) {
+    this.fingerprints = fingerprints;
     return this;
   }
 

@@ -4692,6 +4692,141 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
+         * Executes a pipeline query.
+         *
+         * Create a request for the method "documents.executePipeline".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link ExecutePipeline#execute()} method to invoke the remote operation.
+         *
+         * @param database Required. Database identifier, in the form `projects/{project}/databases/{database}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.ExecutePipelineRequest}
+         * @return the request
+         */
+        public ExecutePipeline executePipeline(java.lang.String database, com.google.api.services.firestore.v1.model.ExecutePipelineRequest content) throws java.io.IOException {
+          ExecutePipeline result = new ExecutePipeline(database, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExecutePipeline extends FirestoreRequest<com.google.api.services.firestore.v1.model.ExecutePipelineResponse> {
+
+          private static final String REST_PATH = "v1/{+database}/documents:executePipeline";
+
+          private final java.util.regex.Pattern DATABASE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Executes a pipeline query.
+           *
+           * Create a request for the method "documents.executePipeline".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link ExecutePipeline#execute()} method to invoke the remote
+           * operation. <p> {@link ExecutePipeline#initialize(com.google.api.client.googleapis.services.Abst
+           * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param database Required. Database identifier, in the form `projects/{project}/databases/{database}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.ExecutePipelineRequest}
+           * @since 1.13
+           */
+          protected ExecutePipeline(java.lang.String database, com.google.api.services.firestore.v1.model.ExecutePipelineRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.ExecutePipelineResponse.class);
+            this.database = com.google.api.client.util.Preconditions.checkNotNull(database, "Required parameter database must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public ExecutePipeline set$Xgafv(java.lang.String $Xgafv) {
+            return (ExecutePipeline) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExecutePipeline setAccessToken(java.lang.String accessToken) {
+            return (ExecutePipeline) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExecutePipeline setAlt(java.lang.String alt) {
+            return (ExecutePipeline) super.setAlt(alt);
+          }
+
+          @Override
+          public ExecutePipeline setCallback(java.lang.String callback) {
+            return (ExecutePipeline) super.setCallback(callback);
+          }
+
+          @Override
+          public ExecutePipeline setFields(java.lang.String fields) {
+            return (ExecutePipeline) super.setFields(fields);
+          }
+
+          @Override
+          public ExecutePipeline setKey(java.lang.String key) {
+            return (ExecutePipeline) super.setKey(key);
+          }
+
+          @Override
+          public ExecutePipeline setOauthToken(java.lang.String oauthToken) {
+            return (ExecutePipeline) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExecutePipeline setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExecutePipeline) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExecutePipeline setQuotaUser(java.lang.String quotaUser) {
+            return (ExecutePipeline) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExecutePipeline setUploadType(java.lang.String uploadType) {
+            return (ExecutePipeline) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExecutePipeline setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExecutePipeline) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Database identifier, in the form `projects/{project}/databases/{database}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String database;
+
+          /** Required. Database identifier, in the form `projects/{project}/databases/{database}`.
+           */
+          public java.lang.String getDatabase() {
+            return database;
+          }
+
+          /**
+           * Required. Database identifier, in the form `projects/{project}/databases/{database}`.
+           */
+          public ExecutePipeline setDatabase(java.lang.String database) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATABASE_PATTERN.matcher(database).matches(),
+                  "Parameter database must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.database = database;
+            return this;
+          }
+
+          @Override
+          public ExecutePipeline set(String parameterName, Object value) {
+            return (ExecutePipeline) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets a single document.
          *
          * Create a request for the method "documents.get".

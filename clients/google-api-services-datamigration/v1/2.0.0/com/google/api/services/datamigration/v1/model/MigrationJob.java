@@ -166,6 +166,14 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private OracleToPostgresConfig oracleToPostgresConfig;
 
   /**
+   * Optional. A failback replication pointer to the resource name (URI) of the original migration
+   * job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originalMigrationName;
+
+  /**
    * Optional. Data dump parallelism settings used by the migration.
    * The value may be {@code null}.
    */
@@ -178,6 +186,21 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String phase;
+
+  /**
+   * Configuration for heterogeneous failback migrations from **PostgreSQL to SQL Server**.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PostgresToSqlServerConfig postgresToSqlserverConfig;
+
+  /**
+   * Output only. Migration job mode. Migration jobs can be standard forward jobs or failback
+   * migration jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purpose;
 
   /**
    * The details needed to communicate to the source over Reverse SSH tunnel connectivity.
@@ -586,6 +609,25 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. A failback replication pointer to the resource name (URI) of the original migration
+   * job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginalMigrationName() {
+    return originalMigrationName;
+  }
+
+  /**
+   * Optional. A failback replication pointer to the resource name (URI) of the original migration
+   * job.
+   * @param originalMigrationName originalMigrationName or {@code null} for none
+   */
+  public MigrationJob setOriginalMigrationName(java.lang.String originalMigrationName) {
+    this.originalMigrationName = originalMigrationName;
+    return this;
+  }
+
+  /**
    * Optional. Data dump parallelism settings used by the migration.
    * @return value or {@code null} for none
    */
@@ -616,6 +658,42 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   public MigrationJob setPhase(java.lang.String phase) {
     this.phase = phase;
+    return this;
+  }
+
+  /**
+   * Configuration for heterogeneous failback migrations from **PostgreSQL to SQL Server**.
+   * @return value or {@code null} for none
+   */
+  public PostgresToSqlServerConfig getPostgresToSqlserverConfig() {
+    return postgresToSqlserverConfig;
+  }
+
+  /**
+   * Configuration for heterogeneous failback migrations from **PostgreSQL to SQL Server**.
+   * @param postgresToSqlserverConfig postgresToSqlserverConfig or {@code null} for none
+   */
+  public MigrationJob setPostgresToSqlserverConfig(PostgresToSqlServerConfig postgresToSqlserverConfig) {
+    this.postgresToSqlserverConfig = postgresToSqlserverConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Migration job mode. Migration jobs can be standard forward jobs or failback
+   * migration jobs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurpose() {
+    return purpose;
+  }
+
+  /**
+   * Output only. Migration job mode. Migration jobs can be standard forward jobs or failback
+   * migration jobs.
+   * @param purpose purpose or {@code null} for none
+   */
+  public MigrationJob setPurpose(java.lang.String purpose) {
+    this.purpose = purpose;
     return this;
   }
 

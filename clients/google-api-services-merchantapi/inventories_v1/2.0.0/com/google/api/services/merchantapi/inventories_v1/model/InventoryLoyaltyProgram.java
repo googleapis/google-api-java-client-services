@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.merchantapi.products_v1.model;
+package com.google.api.services.merchantapi.inventories_v1.model;
 
 /**
  * A message that represents loyalty program.
@@ -27,7 +27,7 @@ package com.google.api.services.merchantapi.products_v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LoyaltyProgram extends com.google.api.client.json.GenericJson {
+public final class InventoryLoyaltyProgram extends com.google.api.client.json.GenericJson {
 
   /**
    * The cashback that can be used for future purchases.
@@ -50,7 +50,7 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Interval memberPriceEffectiveDate;
+  private Interval memberPriceEffectiveInterval;
 
   /**
    * The price for members of the given tier, that is, the instant discount price. Must be smaller
@@ -63,8 +63,9 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
   /**
    * The label of the loyalty program. This is an internal label that uniquely identifies the
    * relationship between a business entity and a loyalty program entity. The label must be provided
-   * so that the system can associate the assets below (for example, price and points) with a
-   * business. The corresponding program must be linked to the Merchant Center account.
+   * if there are multiple loyalty programs available for the merchant, so that the system can
+   * associate the assets below (for example, price and points) with the correct business. The
+   * corresponding program must be linked to the Merchant Center account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +100,7 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
    * The cashback that can be used for future purchases.
    * @param cashbackForFutureUse cashbackForFutureUse or {@code null} for none
    */
-  public LoyaltyProgram setCashbackForFutureUse(Price cashbackForFutureUse) {
+  public InventoryLoyaltyProgram setCashbackForFutureUse(Price cashbackForFutureUse) {
     this.cashbackForFutureUse = cashbackForFutureUse;
     return this;
   }
@@ -116,7 +117,7 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
    * The amount of loyalty points earned on a purchase.
    * @param loyaltyPoints loyaltyPoints or {@code null} for none
    */
-  public LoyaltyProgram setLoyaltyPoints(java.lang.Long loyaltyPoints) {
+  public InventoryLoyaltyProgram setLoyaltyPoints(java.lang.Long loyaltyPoints) {
     this.loyaltyPoints = loyaltyPoints;
     return this;
   }
@@ -127,18 +128,18 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
    * by a space, comma, or slash.
    * @return value or {@code null} for none
    */
-  public Interval getMemberPriceEffectiveDate() {
-    return memberPriceEffectiveDate;
+  public Interval getMemberPriceEffectiveInterval() {
+    return memberPriceEffectiveInterval;
   }
 
   /**
    * A date range during which the item is eligible for member price. If not specified, the member
    * price is always applicable. The date range is represented by a pair of ISO 8601 dates separated
    * by a space, comma, or slash.
-   * @param memberPriceEffectiveDate memberPriceEffectiveDate or {@code null} for none
+   * @param memberPriceEffectiveInterval memberPriceEffectiveInterval or {@code null} for none
    */
-  public LoyaltyProgram setMemberPriceEffectiveDate(Interval memberPriceEffectiveDate) {
-    this.memberPriceEffectiveDate = memberPriceEffectiveDate;
+  public InventoryLoyaltyProgram setMemberPriceEffectiveInterval(Interval memberPriceEffectiveInterval) {
+    this.memberPriceEffectiveInterval = memberPriceEffectiveInterval;
     return this;
   }
 
@@ -156,7 +157,7 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
    * or equal to the regular price.
    * @param price price or {@code null} for none
    */
-  public LoyaltyProgram setPrice(Price price) {
+  public InventoryLoyaltyProgram setPrice(Price price) {
     this.price = price;
     return this;
   }
@@ -164,8 +165,9 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
   /**
    * The label of the loyalty program. This is an internal label that uniquely identifies the
    * relationship between a business entity and a loyalty program entity. The label must be provided
-   * so that the system can associate the assets below (for example, price and points) with a
-   * business. The corresponding program must be linked to the Merchant Center account.
+   * if there are multiple loyalty programs available for the merchant, so that the system can
+   * associate the assets below (for example, price and points) with the correct business. The
+   * corresponding program must be linked to the Merchant Center account.
    * @return value or {@code null} for none
    */
   public java.lang.String getProgramLabel() {
@@ -175,11 +177,12 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
   /**
    * The label of the loyalty program. This is an internal label that uniquely identifies the
    * relationship between a business entity and a loyalty program entity. The label must be provided
-   * so that the system can associate the assets below (for example, price and points) with a
-   * business. The corresponding program must be linked to the Merchant Center account.
+   * if there are multiple loyalty programs available for the merchant, so that the system can
+   * associate the assets below (for example, price and points) with the correct business. The
+   * corresponding program must be linked to the Merchant Center account.
    * @param programLabel programLabel or {@code null} for none
    */
-  public LoyaltyProgram setProgramLabel(java.lang.String programLabel) {
+  public InventoryLoyaltyProgram setProgramLabel(java.lang.String programLabel) {
     this.programLabel = programLabel;
     return this;
   }
@@ -200,7 +203,7 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
    * the given loyalty tier.
    * @param shippingLabel shippingLabel or {@code null} for none
    */
-  public LoyaltyProgram setShippingLabel(java.lang.String shippingLabel) {
+  public InventoryLoyaltyProgram setShippingLabel(java.lang.String shippingLabel) {
     this.shippingLabel = shippingLabel;
     return this;
   }
@@ -219,19 +222,19 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
    * program.
    * @param tierLabel tierLabel or {@code null} for none
    */
-  public LoyaltyProgram setTierLabel(java.lang.String tierLabel) {
+  public InventoryLoyaltyProgram setTierLabel(java.lang.String tierLabel) {
     this.tierLabel = tierLabel;
     return this;
   }
 
   @Override
-  public LoyaltyProgram set(String fieldName, Object value) {
-    return (LoyaltyProgram) super.set(fieldName, value);
+  public InventoryLoyaltyProgram set(String fieldName, Object value) {
+    return (InventoryLoyaltyProgram) super.set(fieldName, value);
   }
 
   @Override
-  public LoyaltyProgram clone() {
-    return (LoyaltyProgram) super.clone();
+  public InventoryLoyaltyProgram clone() {
+    return (InventoryLoyaltyProgram) super.clone();
   }
 
 }

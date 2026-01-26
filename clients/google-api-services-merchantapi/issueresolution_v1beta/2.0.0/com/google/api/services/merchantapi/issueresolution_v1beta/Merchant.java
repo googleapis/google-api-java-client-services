@@ -905,11 +905,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Start an action. The action can be requested by a business in third-party application. Before the
      * business can request the action, the third-party application needs to show them action specific
-     * content and display a user input form. The action can be successfully started only once all
-     * `required` inputs are provided. If any `required` input is missing, or invalid value was
-     * provided, the service will return 400 error. Validation errors will contain Ids for all
-     * problematic field together with translated, human readable error messages that can be shown to
-     * the user.
+     * content and display a user input form. Access to the `triggeraction` method is restricted to an
+     * allowlist. You can request access using [Trigger action allowlist form](https://docs.google.com/f
+     * orms/d/e/1FAIpQLSfeV_sBW9MBQv9BMTV6JZ1g11PGHLdHsrefca-9h0LmpU7CUg/viewform?usp=sharing). The
+     * action can be successfully started only once all `required` inputs are provided. If any
+     * `required` input is missing, or invalid value was provided, the service will return 400 error.
+     * Validation errors will contain Ids for all problematic field together with translated, human
+     * readable error messages that can be shown to the user.
      *
      * Create a request for the method "issueresolution.triggeraction".
      *
@@ -936,11 +938,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Start an action. The action can be requested by a business in third-party application. Before
        * the business can request the action, the third-party application needs to show them action
-       * specific content and display a user input form. The action can be successfully started only
-       * once all `required` inputs are provided. If any `required` input is missing, or invalid value
-       * was provided, the service will return 400 error. Validation errors will contain Ids for all
-       * problematic field together with translated, human readable error messages that can be shown to
-       * the user.
+       * specific content and display a user input form. Access to the `triggeraction` method is
+       * restricted to an allowlist. You can request access using [Trigger action allowlist form](https:
+       * //docs.google.com/forms/d/e/1FAIpQLSfeV_sBW9MBQv9BMTV6JZ1g11PGHLdHsrefca-9h0LmpU7CUg/viewform?u
+       * sp=sharing). The action can be successfully started only once all `required` inputs are
+       * provided. If any `required` input is missing, or invalid value was provided, the service will
+       * return 400 error. Validation errors will contain Ids for all problematic field together with
+       * translated, human readable error messages that can be shown to the user.
        *
        * Create a request for the method "issueresolution.triggeraction".
        *

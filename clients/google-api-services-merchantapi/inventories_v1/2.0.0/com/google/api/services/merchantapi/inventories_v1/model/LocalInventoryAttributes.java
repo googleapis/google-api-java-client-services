@@ -45,6 +45,26 @@ public final class LocalInventoryAttributes extends com.google.api.client.json.G
   private java.lang.String instoreProductLocation;
 
   /**
+   * Optional. An optional list of loyalty programs containing applicable loyalty member prices for
+   * this product at this store. This field is used to show store-specific member prices on Local
+   * Inventory Ads (LIA). To use this, the loyalty program must be configured in Google Merchant
+   * Center. The benefits provided must match the merchant's website and be clear to members. This
+   * is only applicable for merchants in supported countries. See [Loyalty
+   * program](https://support.google.com/merchants/answer/12922446) for details on supported
+   * countries and loyalty program configuration. For local inventory specific details, see the
+   * [Local inventory data specification](https://support.google.com/merchants/answer/3061342).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InventoryLoyaltyProgram> loyaltyPrograms;
+
+  static {
+    // hack to force ProGuard to consider InventoryLoyaltyProgram used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(InventoryLoyaltyProgram.class);
+  }
+
+  /**
    * Optional. Supported [pickup method](https://support.google.com/merchants/answer/3061342) for
    * this product. Unless the value is `"not supported"`, this field must be submitted together with
    * `pickupSla`.
@@ -125,6 +145,37 @@ public final class LocalInventoryAttributes extends com.google.api.client.json.G
    */
   public LocalInventoryAttributes setInstoreProductLocation(java.lang.String instoreProductLocation) {
     this.instoreProductLocation = instoreProductLocation;
+    return this;
+  }
+
+  /**
+   * Optional. An optional list of loyalty programs containing applicable loyalty member prices for
+   * this product at this store. This field is used to show store-specific member prices on Local
+   * Inventory Ads (LIA). To use this, the loyalty program must be configured in Google Merchant
+   * Center. The benefits provided must match the merchant's website and be clear to members. This
+   * is only applicable for merchants in supported countries. See [Loyalty
+   * program](https://support.google.com/merchants/answer/12922446) for details on supported
+   * countries and loyalty program configuration. For local inventory specific details, see the
+   * [Local inventory data specification](https://support.google.com/merchants/answer/3061342).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InventoryLoyaltyProgram> getLoyaltyPrograms() {
+    return loyaltyPrograms;
+  }
+
+  /**
+   * Optional. An optional list of loyalty programs containing applicable loyalty member prices for
+   * this product at this store. This field is used to show store-specific member prices on Local
+   * Inventory Ads (LIA). To use this, the loyalty program must be configured in Google Merchant
+   * Center. The benefits provided must match the merchant's website and be clear to members. This
+   * is only applicable for merchants in supported countries. See [Loyalty
+   * program](https://support.google.com/merchants/answer/12922446) for details on supported
+   * countries and loyalty program configuration. For local inventory specific details, see the
+   * [Local inventory data specification](https://support.google.com/merchants/answer/3061342).
+   * @param loyaltyPrograms loyaltyPrograms or {@code null} for none
+   */
+  public LocalInventoryAttributes setLoyaltyPrograms(java.util.List<InventoryLoyaltyProgram> loyaltyPrograms) {
+    this.loyaltyPrograms = loyaltyPrograms;
     return this;
   }
 

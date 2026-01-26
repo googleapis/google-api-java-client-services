@@ -60,6 +60,13 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private ErrorReportingPanel errorReportingPanel;
 
   /**
+   * A widget that displays an input field to change the value of a template variable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FilterControl filterControl;
+
+  /**
    * Optional. The widget id. Ids may be made up of alphanumerics, dashes and underscores. Widget
    * ids are optional.
    * The value may be {@code null}.
@@ -218,6 +225,23 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setErrorReportingPanel(ErrorReportingPanel errorReportingPanel) {
     this.errorReportingPanel = errorReportingPanel;
+    return this;
+  }
+
+  /**
+   * A widget that displays an input field to change the value of a template variable.
+   * @return value or {@code null} for none
+   */
+  public FilterControl getFilterControl() {
+    return filterControl;
+  }
+
+  /**
+   * A widget that displays an input field to change the value of a template variable.
+   * @param filterControl filterControl or {@code null} for none
+   */
+  public Widget setFilterControl(FilterControl filterControl) {
+    this.filterControl = filterControl;
     return this;
   }
 

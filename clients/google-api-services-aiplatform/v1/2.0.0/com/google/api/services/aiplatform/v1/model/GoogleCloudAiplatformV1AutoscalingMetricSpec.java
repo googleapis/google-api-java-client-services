@@ -35,7 +35,10 @@ public final class GoogleCloudAiplatformV1AutoscalingMetricSpec extends com.goog
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
    * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
    * `aiplatform.googleapis.com/prediction/online/request_count` *
-   * `pubsub.googleapis.com/subscription/num_undelivered_messages`
+   * `pubsub.googleapis.com/subscription/num_undelivered_messages` *
+   * `prometheus.googleapis.com/vertex_dcgm_fi_dev_gpu_util` *
+   * `prometheus.googleapis.com/vertex_vllm_gpu_cache_usage_perc` *
+   * `prometheus.googleapis.com/vertex_vllm_num_requests_waiting`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +58,10 @@ public final class GoogleCloudAiplatformV1AutoscalingMetricSpec extends com.goog
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
    * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
    * `aiplatform.googleapis.com/prediction/online/request_count` *
-   * `pubsub.googleapis.com/subscription/num_undelivered_messages`
+   * `pubsub.googleapis.com/subscription/num_undelivered_messages` *
+   * `prometheus.googleapis.com/vertex_dcgm_fi_dev_gpu_util` *
+   * `prometheus.googleapis.com/vertex_vllm_gpu_cache_usage_perc` *
+   * `prometheus.googleapis.com/vertex_vllm_num_requests_waiting`
    * @return value or {@code null} for none
    */
   public java.lang.String getMetricName() {
@@ -67,7 +73,10 @@ public final class GoogleCloudAiplatformV1AutoscalingMetricSpec extends com.goog
    * `aiplatform.googleapis.com/prediction/online/accelerator/duty_cycle` *
    * `aiplatform.googleapis.com/prediction/online/cpu/utilization` *
    * `aiplatform.googleapis.com/prediction/online/request_count` *
-   * `pubsub.googleapis.com/subscription/num_undelivered_messages`
+   * `pubsub.googleapis.com/subscription/num_undelivered_messages` *
+   * `prometheus.googleapis.com/vertex_dcgm_fi_dev_gpu_util` *
+   * `prometheus.googleapis.com/vertex_vllm_gpu_cache_usage_perc` *
+   * `prometheus.googleapis.com/vertex_vllm_num_requests_waiting`
    * @param metricName metricName or {@code null} for none
    */
   public GoogleCloudAiplatformV1AutoscalingMetricSpec setMetricName(java.lang.String metricName) {

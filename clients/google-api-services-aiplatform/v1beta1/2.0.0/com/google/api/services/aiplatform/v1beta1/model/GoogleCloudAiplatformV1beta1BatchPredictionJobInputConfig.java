@@ -55,6 +55,13 @@ public final class GoogleCloudAiplatformV1beta1BatchPredictionJobInputConfig ext
   private java.lang.String instancesFormat;
 
   /**
+   * A Vertex Managed Dataset. Currently, only datasets of type Multimodal are supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1VertexMultimodalDatasetSource vertexMultimodalDatasetSource;
+
+  /**
    * The BigQuery location of the input table. The schema of the table should be in the format
    * described by the given context OpenAPI Schema, if one is provided. The table may contain
    * additional columns that are not described by the schema, and they will be ignored.
@@ -108,6 +115,23 @@ public final class GoogleCloudAiplatformV1beta1BatchPredictionJobInputConfig ext
    */
   public GoogleCloudAiplatformV1beta1BatchPredictionJobInputConfig setInstancesFormat(java.lang.String instancesFormat) {
     this.instancesFormat = instancesFormat;
+    return this;
+  }
+
+  /**
+   * A Vertex Managed Dataset. Currently, only datasets of type Multimodal are supported.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VertexMultimodalDatasetSource getVertexMultimodalDatasetSource() {
+    return vertexMultimodalDatasetSource;
+  }
+
+  /**
+   * A Vertex Managed Dataset. Currently, only datasets of type Multimodal are supported.
+   * @param vertexMultimodalDatasetSource vertexMultimodalDatasetSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1BatchPredictionJobInputConfig setVertexMultimodalDatasetSource(GoogleCloudAiplatformV1beta1VertexMultimodalDatasetSource vertexMultimodalDatasetSource) {
+    this.vertexMultimodalDatasetSource = vertexMultimodalDatasetSource;
     return this;
   }
 

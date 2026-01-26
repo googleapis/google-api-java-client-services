@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Represents a customer-managed encryption key spec that can be applied to a top-level resource.
+ * Represents a customer-managed encryption key specification that can be applied to a Vertex AI
+ * resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,20 +31,18 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1EncryptionSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Cloud KMS resource identifier of the customer managed encryption key used to
-   * protect a resource. Has the form: `projects/my-project/locations/my-region/keyRings/my-
-   * kr/cryptoKeys/my-key`. The key needs to be in the same region as where the compute resource is
-   * created.
+   * Required. Resource name of the Cloud KMS key used to protect the resource. The Cloud KMS key
+   * must be in the same region as the resource. It must have the format
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyName;
 
   /**
-   * Required. The Cloud KMS resource identifier of the customer managed encryption key used to
-   * protect a resource. Has the form: `projects/my-project/locations/my-region/keyRings/my-
-   * kr/cryptoKeys/my-key`. The key needs to be in the same region as where the compute resource is
-   * created.
+   * Required. Resource name of the Cloud KMS key used to protect the resource. The Cloud KMS key
+   * must be in the same region as the resource. It must have the format
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -51,10 +50,9 @@ public final class GoogleCloudAiplatformV1beta1EncryptionSpec extends com.google
   }
 
   /**
-   * Required. The Cloud KMS resource identifier of the customer managed encryption key used to
-   * protect a resource. Has the form: `projects/my-project/locations/my-region/keyRings/my-
-   * kr/cryptoKeys/my-key`. The key needs to be in the same region as where the compute resource is
-   * created.
+   * Required. Resource name of the Cloud KMS key used to protect the resource. The Cloud KMS key
+   * must be in the same region as the resource. It must have the format
+   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EncryptionSpec setKmsKeyName(java.lang.String kmsKeyName) {

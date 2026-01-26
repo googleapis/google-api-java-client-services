@@ -17,8 +17,9 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * A vertex represents a 2D point in the image. NOTE: the normalized vertex coordinates are relative
- * to the original image and range from 0 to 1.
+ * Represents a 2D point in the image. Vertex coordinates are normalized to be relative to the
+ * original image dimensions and range from 0 to 1. The origin of the coordinate system (0,0) is the
+ * top-left corner of the image. x increases to the right, and y increases to the bottom.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -31,21 +32,21 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1SchemaVertex extends com.google.api.client.json.GenericJson {
 
   /**
-   * X coordinate.
+   * X coordinate of the vertex, normalized to [0.0, 1.0].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double x;
 
   /**
-   * Y coordinate.
+   * Y coordinate of the vertex, normalized to [0.0, 1.0].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double y;
 
   /**
-   * X coordinate.
+   * X coordinate of the vertex, normalized to [0.0, 1.0].
    * @return value or {@code null} for none
    */
   public java.lang.Double getX() {
@@ -53,7 +54,7 @@ public final class GoogleCloudAiplatformV1beta1SchemaVertex extends com.google.a
   }
 
   /**
-   * X coordinate.
+   * X coordinate of the vertex, normalized to [0.0, 1.0].
    * @param x x or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SchemaVertex setX(java.lang.Double x) {
@@ -62,7 +63,7 @@ public final class GoogleCloudAiplatformV1beta1SchemaVertex extends com.google.a
   }
 
   /**
-   * Y coordinate.
+   * Y coordinate of the vertex, normalized to [0.0, 1.0].
    * @return value or {@code null} for none
    */
   public java.lang.Double getY() {
@@ -70,7 +71,7 @@ public final class GoogleCloudAiplatformV1beta1SchemaVertex extends com.google.a
   }
 
   /**
-   * Y coordinate.
+   * Y coordinate of the vertex, normalized to [0.0, 1.0].
    * @param y y or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SchemaVertex setY(java.lang.Double y) {

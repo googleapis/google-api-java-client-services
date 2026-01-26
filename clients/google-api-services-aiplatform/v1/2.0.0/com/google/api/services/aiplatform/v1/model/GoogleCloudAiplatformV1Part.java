@@ -87,7 +87,9 @@ public final class GoogleCloudAiplatformV1Part extends com.google.api.client.jso
   private GoogleCloudAiplatformV1PartMediaResolution mediaResolution;
 
   /**
-   * Optional. The text content of the part.
+   * Optional. The text content of the part. When sent from the VSCode Gemini Code Assist extension,
+   * references to @mentioned items will be converted to markdown boldface text. For example `@my-
+   * repo` will be converted to and sent as `**my-repo**` by the IDE agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,7 +245,9 @@ public final class GoogleCloudAiplatformV1Part extends com.google.api.client.jso
   }
 
   /**
-   * Optional. The text content of the part.
+   * Optional. The text content of the part. When sent from the VSCode Gemini Code Assist extension,
+   * references to @mentioned items will be converted to markdown boldface text. For example `@my-
+   * repo` will be converted to and sent as `**my-repo**` by the IDE agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -251,7 +255,9 @@ public final class GoogleCloudAiplatformV1Part extends com.google.api.client.jso
   }
 
   /**
-   * Optional. The text content of the part.
+   * Optional. The text content of the part. When sent from the VSCode Gemini Code Assist extension,
+   * references to @mentioned items will be converted to markdown boldface text. For example `@my-
+   * repo` will be converted to and sent as `**my-repo**` by the IDE agent.
    * @param text text or {@code null} for none
    */
   public GoogleCloudAiplatformV1Part setText(java.lang.String text) {

@@ -17,9 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Schema is used to define the format of input/output data. Represents a select subset of an
- * [OpenAPI 3.0 schema object](https://spec.openapis.org/oas/v3.0.3#schema-object). More fields may
- * be added in the future as needed.
+ * Defines the schema of input and output data. This is a subset of the [OpenAPI 3.0 Schema
+ * Object](https://spec.openapis.org/oas/v3.0.3#schema-object).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -32,193 +31,204 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Can either be a boolean or an object; controls the presence of additional properties.
+   * Optional. If `type` is `OBJECT`, specifies how to handle properties not defined in
+   * `properties`. If it is a boolean `false`, no additional properties are allowed. If it is a
+   * schema, additional properties are allowed if they conform to the schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object additionalProperties;
 
   /**
-   * Optional. The value should be validated against any (one or more) of the subschemas in the
-   * list.
+   * Optional. The instance must be valid against any (one or more) of the subschemas listed in
+   * `any_of`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1Schema> anyOf;
 
   /**
-   * Optional. Default value of the data.
+   * Optional. Default value to use if the field is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("default")
   private java.lang.Object default__;
 
   /**
-   * Optional. A map of definitions for use by `ref` Only allowed at the root of the schema.
+   * Optional. `defs` provides a map of schema definitions that can be reused by `ref` elsewhere in
+   * the schema. Only allowed at root level of the schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> defs;
 
   /**
-   * Optional. The description of the data.
+   * Optional. Description of the schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. Possible values of the element of primitive type with enum format. Examples: 1. We
-   * can define direction as : {type:STRING, format:enum, enum:["EAST", NORTH", "SOUTH", "WEST"]} 2.
-   * We can define apartment number as : {type:INTEGER, format:enum, enum:["101", "201", "301"]}
+   * Optional. Possible values of the field. This field can be used to restrict a value to a fixed
+   * set of values. To mark a field as an enum, set `format` to `enum` and provide the list of
+   * possible values in `enum`. For example: 1. To define directions: `{type:STRING, format:enum,
+   * enum:["EAST", "NORTH", "SOUTH", "WEST"]}` 2. To define apartment numbers: `{type:INTEGER,
+   * format:enum, enum:["101", "201", "301"]}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("enum")
   private java.util.List<java.lang.String> enum__;
 
   /**
-   * Optional. Example of the object. Will only populated when the object is the root.
+   * Optional. Example of an instance of this schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object example;
 
   /**
-   * Optional. The format of the data. Supported formats: for NUMBER type: "float", "double" for
-   * INTEGER type: "int32", "int64" for STRING type: "email", "byte", etc
+   * Optional. The format of the data. For `NUMBER` type, format can be `float` or `double`. For
+   * `INTEGER` type, format can be `int32` or `int64`. For `STRING` type, format can be `email`,
+   * `byte`, `date`, `date-time`, `password`, and other formats to further refine the data type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String format;
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.
+   * Optional. If type is `ARRAY`, `items` specifies the schema of elements in the array.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1Schema items;
 
   /**
-   * Optional. Maximum number of the elements for Type.ARRAY.
+   * Optional. If type is `ARRAY`, `max_items` specifies the maximum number of items in an array.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxItems;
 
   /**
-   * Optional. Maximum length of the Type.STRING
+   * Optional. If type is `STRING`, `max_length` specifies the maximum length of the string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxLength;
 
   /**
-   * Optional. Maximum number of the properties for Type.OBJECT.
+   * Optional. If type is `OBJECT`, `max_properties` specifies the maximum number of properties that
+   * can be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxProperties;
 
   /**
-   * Optional. Maximum value of the Type.INTEGER and Type.NUMBER
+   * Optional. If type is `INTEGER` or `NUMBER`, `maximum` specifies the maximum allowed value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double maximum;
 
   /**
-   * Optional. Minimum number of the elements for Type.ARRAY.
+   * Optional. If type is `ARRAY`, `min_items` specifies the minimum number of items in an array.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minItems;
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE STRING Minimum length of the Type.STRING
+   * Optional. If type is `STRING`, `min_length` specifies the minimum length of the string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minLength;
 
   /**
-   * Optional. Minimum number of the properties for Type.OBJECT.
+   * Optional. If type is `OBJECT`, `min_properties` specifies the minimum number of properties that
+   * can be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long minProperties;
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE INTEGER and NUMBER Minimum value of the Type.INTEGER and
-   * Type.NUMBER
+   * Optional. If type is `INTEGER` or `NUMBER`, `minimum` specifies the minimum allowed value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double minimum;
 
   /**
-   * Optional. Indicates if the value may be null.
+   * Optional. Indicates if the value of this field can be null.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean nullable;
 
   /**
-   * Optional. Pattern of the Type.STRING to restrict a string to a regular expression.
+   * Optional. If type is `STRING`, `pattern` specifies a regular expression that the string must
+   * match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pattern;
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.
+   * Optional. If type is `OBJECT`, `properties` is a map of property names to schema definitions
+   * for each property of the object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> properties;
 
   /**
-   * Optional. The order of the properties. Not a standard field in open api spec. Only used to
-   * support the order of the properties.
+   * Optional. Order of properties displayed or used where order matters. This is not a standard
+   * field in OpenAPI specification, but can be used to control the order of properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> propertyOrdering;
 
   /**
-   * Optional. Allows indirect references between schema nodes. The value should be a valid
-   * reference to a child of the root `defs`. For example, the following schema defines a reference
-   * to a schema node named "Pet": type: object properties: pet: ref: #/defs/Pet defs: Pet: type:
-   * object properties: name: type: string The value of the "pet" property is a reference to the
-   * schema node named "Pet". See details in https://json-schema.org/understanding-json-
-   * schema/structuring
+   * Optional. Allows referencing another schema definition to use in place of this schema. The
+   * value must be a valid reference to a schema in `defs`. For example, the following schema
+   * defines a reference to a schema node named "Pet": type: object properties: pet: ref: #/defs/Pet
+   * defs: Pet: type: object properties: name: type: string The value of the "pet" property is a
+   * reference to the schema node named "Pet". See details in https://json-schema.org/understanding-
+   * json-schema/structuring
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ref;
 
   /**
-   * Optional. Required properties of Type.OBJECT.
+   * Optional. If type is `OBJECT`, `required` lists the names of properties that must be present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> required;
 
   /**
-   * Optional. The title of the Schema.
+   * Optional. Title for the schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Optional. The type of the data.
+   * Optional. Data type of the schema field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. Can either be a boolean or an object; controls the presence of additional properties.
+   * Optional. If `type` is `OBJECT`, specifies how to handle properties not defined in
+   * `properties`. If it is a boolean `false`, no additional properties are allowed. If it is a
+   * schema, additional properties are allowed if they conform to the schema.
    * @return value or {@code null} for none
    */
   public java.lang.Object getAdditionalProperties() {
@@ -226,7 +236,9 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Can either be a boolean or an object; controls the presence of additional properties.
+   * Optional. If `type` is `OBJECT`, specifies how to handle properties not defined in
+   * `properties`. If it is a boolean `false`, no additional properties are allowed. If it is a
+   * schema, additional properties are allowed if they conform to the schema.
    * @param additionalProperties additionalProperties or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setAdditionalProperties(java.lang.Object additionalProperties) {
@@ -235,8 +247,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The value should be validated against any (one or more) of the subschemas in the
-   * list.
+   * Optional. The instance must be valid against any (one or more) of the subschemas listed in
+   * `any_of`.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1Schema> getAnyOf() {
@@ -244,8 +256,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The value should be validated against any (one or more) of the subschemas in the
-   * list.
+   * Optional. The instance must be valid against any (one or more) of the subschemas listed in
+   * `any_of`.
    * @param anyOf anyOf or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setAnyOf(java.util.List<GoogleCloudAiplatformV1beta1Schema> anyOf) {
@@ -254,7 +266,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Default value of the data.
+   * Optional. Default value to use if the field is not specified.
    * @return value or {@code null} for none
    */
   public java.lang.Object getDefault() {
@@ -262,7 +274,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Default value of the data.
+   * Optional. Default value to use if the field is not specified.
    * @param default__ default__ or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setDefault(java.lang.Object default__) {
@@ -271,7 +283,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. A map of definitions for use by `ref` Only allowed at the root of the schema.
+   * Optional. `defs` provides a map of schema definitions that can be reused by `ref` elsewhere in
+   * the schema. Only allowed at root level of the schema.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> getDefs() {
@@ -279,7 +292,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. A map of definitions for use by `ref` Only allowed at the root of the schema.
+   * Optional. `defs` provides a map of schema definitions that can be reused by `ref` elsewhere in
+   * the schema. Only allowed at root level of the schema.
    * @param defs defs or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setDefs(java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> defs) {
@@ -288,7 +302,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The description of the data.
+   * Optional. Description of the schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -296,7 +310,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The description of the data.
+   * Optional. Description of the schema.
    * @param description description or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setDescription(java.lang.String description) {
@@ -305,9 +319,11 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Possible values of the element of primitive type with enum format. Examples: 1. We
-   * can define direction as : {type:STRING, format:enum, enum:["EAST", NORTH", "SOUTH", "WEST"]} 2.
-   * We can define apartment number as : {type:INTEGER, format:enum, enum:["101", "201", "301"]}
+   * Optional. Possible values of the field. This field can be used to restrict a value to a fixed
+   * set of values. To mark a field as an enum, set `format` to `enum` and provide the list of
+   * possible values in `enum`. For example: 1. To define directions: `{type:STRING, format:enum,
+   * enum:["EAST", "NORTH", "SOUTH", "WEST"]}` 2. To define apartment numbers: `{type:INTEGER,
+   * format:enum, enum:["101", "201", "301"]}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnum() {
@@ -315,9 +331,11 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Possible values of the element of primitive type with enum format. Examples: 1. We
-   * can define direction as : {type:STRING, format:enum, enum:["EAST", NORTH", "SOUTH", "WEST"]} 2.
-   * We can define apartment number as : {type:INTEGER, format:enum, enum:["101", "201", "301"]}
+   * Optional. Possible values of the field. This field can be used to restrict a value to a fixed
+   * set of values. To mark a field as an enum, set `format` to `enum` and provide the list of
+   * possible values in `enum`. For example: 1. To define directions: `{type:STRING, format:enum,
+   * enum:["EAST", "NORTH", "SOUTH", "WEST"]}` 2. To define apartment numbers: `{type:INTEGER,
+   * format:enum, enum:["101", "201", "301"]}`
    * @param enum__ enum__ or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setEnum(java.util.List<java.lang.String> enum__) {
@@ -326,7 +344,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Example of the object. Will only populated when the object is the root.
+   * Optional. Example of an instance of this schema.
    * @return value or {@code null} for none
    */
   public java.lang.Object getExample() {
@@ -334,7 +352,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Example of the object. Will only populated when the object is the root.
+   * Optional. Example of an instance of this schema.
    * @param example example or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setExample(java.lang.Object example) {
@@ -343,8 +361,9 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The format of the data. Supported formats: for NUMBER type: "float", "double" for
-   * INTEGER type: "int32", "int64" for STRING type: "email", "byte", etc
+   * Optional. The format of the data. For `NUMBER` type, format can be `float` or `double`. For
+   * `INTEGER` type, format can be `int32` or `int64`. For `STRING` type, format can be `email`,
+   * `byte`, `date`, `date-time`, `password`, and other formats to further refine the data type.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormat() {
@@ -352,8 +371,9 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The format of the data. Supported formats: for NUMBER type: "float", "double" for
-   * INTEGER type: "int32", "int64" for STRING type: "email", "byte", etc
+   * Optional. The format of the data. For `NUMBER` type, format can be `float` or `double`. For
+   * `INTEGER` type, format can be `int32` or `int64`. For `STRING` type, format can be `email`,
+   * `byte`, `date`, `date-time`, `password`, and other formats to further refine the data type.
    * @param format format or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setFormat(java.lang.String format) {
@@ -362,7 +382,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.
+   * Optional. If type is `ARRAY`, `items` specifies the schema of elements in the array.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema getItems() {
@@ -370,7 +390,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE ARRAY Schema of the elements of Type.ARRAY.
+   * Optional. If type is `ARRAY`, `items` specifies the schema of elements in the array.
    * @param items items or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setItems(GoogleCloudAiplatformV1beta1Schema items) {
@@ -379,7 +399,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Maximum number of the elements for Type.ARRAY.
+   * Optional. If type is `ARRAY`, `max_items` specifies the maximum number of items in an array.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxItems() {
@@ -387,7 +407,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Maximum number of the elements for Type.ARRAY.
+   * Optional. If type is `ARRAY`, `max_items` specifies the maximum number of items in an array.
    * @param maxItems maxItems or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setMaxItems(java.lang.Long maxItems) {
@@ -396,7 +416,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Maximum length of the Type.STRING
+   * Optional. If type is `STRING`, `max_length` specifies the maximum length of the string.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxLength() {
@@ -404,7 +424,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Maximum length of the Type.STRING
+   * Optional. If type is `STRING`, `max_length` specifies the maximum length of the string.
    * @param maxLength maxLength or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setMaxLength(java.lang.Long maxLength) {
@@ -413,7 +433,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Maximum number of the properties for Type.OBJECT.
+   * Optional. If type is `OBJECT`, `max_properties` specifies the maximum number of properties that
+   * can be provided.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxProperties() {
@@ -421,7 +442,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Maximum number of the properties for Type.OBJECT.
+   * Optional. If type is `OBJECT`, `max_properties` specifies the maximum number of properties that
+   * can be provided.
    * @param maxProperties maxProperties or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setMaxProperties(java.lang.Long maxProperties) {
@@ -430,7 +452,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Maximum value of the Type.INTEGER and Type.NUMBER
+   * Optional. If type is `INTEGER` or `NUMBER`, `maximum` specifies the maximum allowed value.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMaximum() {
@@ -438,7 +460,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Maximum value of the Type.INTEGER and Type.NUMBER
+   * Optional. If type is `INTEGER` or `NUMBER`, `maximum` specifies the maximum allowed value.
    * @param maximum maximum or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setMaximum(java.lang.Double maximum) {
@@ -447,7 +469,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Minimum number of the elements for Type.ARRAY.
+   * Optional. If type is `ARRAY`, `min_items` specifies the minimum number of items in an array.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinItems() {
@@ -455,7 +477,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Minimum number of the elements for Type.ARRAY.
+   * Optional. If type is `ARRAY`, `min_items` specifies the minimum number of items in an array.
    * @param minItems minItems or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setMinItems(java.lang.Long minItems) {
@@ -464,7 +486,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE STRING Minimum length of the Type.STRING
+   * Optional. If type is `STRING`, `min_length` specifies the minimum length of the string.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinLength() {
@@ -472,7 +494,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE STRING Minimum length of the Type.STRING
+   * Optional. If type is `STRING`, `min_length` specifies the minimum length of the string.
    * @param minLength minLength or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setMinLength(java.lang.Long minLength) {
@@ -481,7 +503,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Minimum number of the properties for Type.OBJECT.
+   * Optional. If type is `OBJECT`, `min_properties` specifies the minimum number of properties that
+   * can be provided.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinProperties() {
@@ -489,7 +512,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Minimum number of the properties for Type.OBJECT.
+   * Optional. If type is `OBJECT`, `min_properties` specifies the minimum number of properties that
+   * can be provided.
    * @param minProperties minProperties or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setMinProperties(java.lang.Long minProperties) {
@@ -498,8 +522,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE INTEGER and NUMBER Minimum value of the Type.INTEGER and
-   * Type.NUMBER
+   * Optional. If type is `INTEGER` or `NUMBER`, `minimum` specifies the minimum allowed value.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMinimum() {
@@ -507,8 +530,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE INTEGER and NUMBER Minimum value of the Type.INTEGER and
-   * Type.NUMBER
+   * Optional. If type is `INTEGER` or `NUMBER`, `minimum` specifies the minimum allowed value.
    * @param minimum minimum or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setMinimum(java.lang.Double minimum) {
@@ -517,7 +539,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates if the value may be null.
+   * Optional. Indicates if the value of this field can be null.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNullable() {
@@ -525,7 +547,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Indicates if the value may be null.
+   * Optional. Indicates if the value of this field can be null.
    * @param nullable nullable or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setNullable(java.lang.Boolean nullable) {
@@ -534,7 +556,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Pattern of the Type.STRING to restrict a string to a regular expression.
+   * Optional. If type is `STRING`, `pattern` specifies a regular expression that the string must
+   * match.
    * @return value or {@code null} for none
    */
   public java.lang.String getPattern() {
@@ -542,7 +565,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Pattern of the Type.STRING to restrict a string to a regular expression.
+   * Optional. If type is `STRING`, `pattern` specifies a regular expression that the string must
+   * match.
    * @param pattern pattern or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setPattern(java.lang.String pattern) {
@@ -551,7 +575,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.
+   * Optional. If type is `OBJECT`, `properties` is a map of property names to schema definitions
+   * for each property of the object.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> getProperties() {
@@ -559,7 +584,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. SCHEMA FIELDS FOR TYPE OBJECT Properties of Type.OBJECT.
+   * Optional. If type is `OBJECT`, `properties` is a map of property names to schema definitions
+   * for each property of the object.
    * @param properties properties or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setProperties(java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> properties) {
@@ -568,8 +594,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The order of the properties. Not a standard field in open api spec. Only used to
-   * support the order of the properties.
+   * Optional. Order of properties displayed or used where order matters. This is not a standard
+   * field in OpenAPI specification, but can be used to control the order of properties.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPropertyOrdering() {
@@ -577,8 +603,8 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The order of the properties. Not a standard field in open api spec. Only used to
-   * support the order of the properties.
+   * Optional. Order of properties displayed or used where order matters. This is not a standard
+   * field in OpenAPI specification, but can be used to control the order of properties.
    * @param propertyOrdering propertyOrdering or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setPropertyOrdering(java.util.List<java.lang.String> propertyOrdering) {
@@ -587,12 +613,12 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Allows indirect references between schema nodes. The value should be a valid
-   * reference to a child of the root `defs`. For example, the following schema defines a reference
-   * to a schema node named "Pet": type: object properties: pet: ref: #/defs/Pet defs: Pet: type:
-   * object properties: name: type: string The value of the "pet" property is a reference to the
-   * schema node named "Pet". See details in https://json-schema.org/understanding-json-
-   * schema/structuring
+   * Optional. Allows referencing another schema definition to use in place of this schema. The
+   * value must be a valid reference to a schema in `defs`. For example, the following schema
+   * defines a reference to a schema node named "Pet": type: object properties: pet: ref: #/defs/Pet
+   * defs: Pet: type: object properties: name: type: string The value of the "pet" property is a
+   * reference to the schema node named "Pet". See details in https://json-schema.org/understanding-
+   * json-schema/structuring
    * @return value or {@code null} for none
    */
   public java.lang.String getRef() {
@@ -600,12 +626,12 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Allows indirect references between schema nodes. The value should be a valid
-   * reference to a child of the root `defs`. For example, the following schema defines a reference
-   * to a schema node named "Pet": type: object properties: pet: ref: #/defs/Pet defs: Pet: type:
-   * object properties: name: type: string The value of the "pet" property is a reference to the
-   * schema node named "Pet". See details in https://json-schema.org/understanding-json-
-   * schema/structuring
+   * Optional. Allows referencing another schema definition to use in place of this schema. The
+   * value must be a valid reference to a schema in `defs`. For example, the following schema
+   * defines a reference to a schema node named "Pet": type: object properties: pet: ref: #/defs/Pet
+   * defs: Pet: type: object properties: name: type: string The value of the "pet" property is a
+   * reference to the schema node named "Pet". See details in https://json-schema.org/understanding-
+   * json-schema/structuring
    * @param ref ref or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setRef(java.lang.String ref) {
@@ -614,7 +640,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Required properties of Type.OBJECT.
+   * Optional. If type is `OBJECT`, `required` lists the names of properties that must be present.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRequired() {
@@ -622,7 +648,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Required properties of Type.OBJECT.
+   * Optional. If type is `OBJECT`, `required` lists the names of properties that must be present.
    * @param required required or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setRequired(java.util.List<java.lang.String> required) {
@@ -631,7 +657,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The title of the Schema.
+   * Optional. Title for the schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -639,7 +665,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The title of the Schema.
+   * Optional. Title for the schema.
    * @param title title or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setTitle(java.lang.String title) {
@@ -648,7 +674,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The type of the data.
+   * Optional. Data type of the schema field.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -656,7 +682,7 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. The type of the data.
+   * Optional. Data type of the schema field.
    * @param type type or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setType(java.lang.String type) {

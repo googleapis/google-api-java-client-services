@@ -5963,22 +5963,25 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The visibility of the new file. This parameter is only relevant when the source is not a
-       * native Google Doc and convert=false.
+       * The visibility of the new file. Permissions are still inherited from parent folders. This
+       * parameter is only relevant when the source is not a Google Doc file and when
+       * `convert=false`.
        */
       @com.google.api.client.util.Key
       private java.lang.String visibility;
 
-      /** The visibility of the new file. This parameter is only relevant when the source is not a native
-     Google Doc and convert=false. [default: DEFAULT]
+      /** The visibility of the new file. Permissions are still inherited from parent folders. This parameter
+     is only relevant when the source is not a Google Doc file and when `convert=false`. [default:
+     DEFAULT]
        */
       public java.lang.String getVisibility() {
         return visibility;
       }
 
       /**
-       * The visibility of the new file. This parameter is only relevant when the source is not a
-       * native Google Doc and convert=false.
+       * The visibility of the new file. Permissions are still inherited from parent folders. This
+       * parameter is only relevant when the source is not a Google Doc file and when
+       * `convert=false`.
        */
       public Copy setVisibility(java.lang.String visibility) {
         this.visibility = visibility;
@@ -7771,18 +7774,24 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return useContentAsIndexableText;
       }
 
-      /** The visibility of the new file. This parameter is only relevant when convert=false. */
+      /**
+       * The visibility of the new file. Permissions are still inherited from parent folders. This
+       * parameter is only relevant when `convert=false`.
+       */
       @com.google.api.client.util.Key
       private java.lang.String visibility;
 
-      /** The visibility of the new file. This parameter is only relevant when convert=false. [default:
-     DEFAULT]
+      /** The visibility of the new file. Permissions are still inherited from parent folders. This parameter
+     is only relevant when `convert=false`. [default: DEFAULT]
        */
       public java.lang.String getVisibility() {
         return visibility;
       }
 
-      /** The visibility of the new file. This parameter is only relevant when convert=false. */
+      /**
+       * The visibility of the new file. Permissions are still inherited from parent folders. This
+       * parameter is only relevant when `convert=false`.
+       */
       public Insert setVisibility(java.lang.String visibility) {
         this.visibility = visibility;
         return this;

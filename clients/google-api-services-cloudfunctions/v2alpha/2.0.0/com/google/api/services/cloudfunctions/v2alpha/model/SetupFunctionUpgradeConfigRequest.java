@@ -30,6 +30,20 @@ package com.google.api.services.cloudfunctions.v2alpha.model;
 public final class SetupFunctionUpgradeConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies overrides for the build process.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BuildConfigOverrides buildConfigOverrides;
+
+  /**
+   * Optional. Specifies overrides for the service configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceConfigOverrides serviceConfigOverrides;
+
+  /**
    * Optional. The trigger's service account. The service account must have permission to invoke
    * Cloud Run services, the permission is `run.routes.invoke`. If empty, defaults to the Compute
    * Engine default service account: `{project_number}-compute@developer.gserviceaccount.com`.
@@ -37,6 +51,40 @@ public final class SetupFunctionUpgradeConfigRequest extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerServiceAccount;
+
+  /**
+   * Optional. Specifies overrides for the build process.
+   * @return value or {@code null} for none
+   */
+  public BuildConfigOverrides getBuildConfigOverrides() {
+    return buildConfigOverrides;
+  }
+
+  /**
+   * Optional. Specifies overrides for the build process.
+   * @param buildConfigOverrides buildConfigOverrides or {@code null} for none
+   */
+  public SetupFunctionUpgradeConfigRequest setBuildConfigOverrides(BuildConfigOverrides buildConfigOverrides) {
+    this.buildConfigOverrides = buildConfigOverrides;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies overrides for the service configuration.
+   * @return value or {@code null} for none
+   */
+  public ServiceConfigOverrides getServiceConfigOverrides() {
+    return serviceConfigOverrides;
+  }
+
+  /**
+   * Optional. Specifies overrides for the service configuration.
+   * @param serviceConfigOverrides serviceConfigOverrides or {@code null} for none
+   */
+  public SetupFunctionUpgradeConfigRequest setServiceConfigOverrides(ServiceConfigOverrides serviceConfigOverrides) {
+    this.serviceConfigOverrides = serviceConfigOverrides;
+    return this;
+  }
 
   /**
    * Optional. The trigger's service account. The service account must have permission to invoke

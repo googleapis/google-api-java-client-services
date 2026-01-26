@@ -58,14 +58,14 @@ public final class BackupConfigDetails extends com.google.api.client.json.Generi
   private java.lang.String backupConfigSourceDisplayName;
 
   /**
-   * Backup and DR's Backup Plan specific data.
+   * Google Cloud Backup and DR's Backup Plan specific data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BackupDrPlanConfig backupDrPlanConfig;
 
   /**
-   * Backup and DR's Template specific data.
+   * Google Cloud Backup and DR's Template specific data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,7 +178,7 @@ public final class BackupConfigDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * Backup and DR's Backup Plan specific data.
+   * Google Cloud Backup and DR's Backup Plan specific data.
    * @return value or {@code null} for none
    */
   public BackupDrPlanConfig getBackupDrPlanConfig() {
@@ -186,7 +186,7 @@ public final class BackupConfigDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * Backup and DR's Backup Plan specific data.
+   * Google Cloud Backup and DR's Backup Plan specific data.
    * @param backupDrPlanConfig backupDrPlanConfig or {@code null} for none
    */
   public BackupConfigDetails setBackupDrPlanConfig(BackupDrPlanConfig backupDrPlanConfig) {
@@ -195,7 +195,7 @@ public final class BackupConfigDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * Backup and DR's Template specific data.
+   * Google Cloud Backup and DR's Template specific data.
    * @return value or {@code null} for none
    */
   public BackupDrTemplateConfig getBackupDrTemplateConfig() {
@@ -203,7 +203,7 @@ public final class BackupConfigDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * Backup and DR's Template specific data.
+   * Google Cloud Backup and DR's Template specific data.
    * @param backupDrTemplateConfig backupDrTemplateConfig or {@code null} for none
    */
   public BackupConfigDetails setBackupDrTemplateConfig(BackupDrTemplateConfig backupDrTemplateConfig) {

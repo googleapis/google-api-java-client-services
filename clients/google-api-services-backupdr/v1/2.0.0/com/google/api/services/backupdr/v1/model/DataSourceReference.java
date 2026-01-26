@@ -67,7 +67,7 @@ public final class DataSourceReference extends com.google.api.client.json.Generi
   private java.lang.Long dataSourceBackupCount;
 
   /**
-   * Output only. The GCP resource that the DataSource is associated with.
+   * Output only. The Google Cloud resource that the DataSource is associated with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +177,7 @@ public final class DataSourceReference extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The GCP resource that the DataSource is associated with.
+   * Output only. The Google Cloud resource that the DataSource is associated with.
    * @return value or {@code null} for none
    */
   public DataSourceGcpResourceInfo getDataSourceGcpResourceInfo() {
@@ -185,7 +185,7 @@ public final class DataSourceReference extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The GCP resource that the DataSource is associated with.
+   * Output only. The Google Cloud resource that the DataSource is associated with.
    * @param dataSourceGcpResourceInfo dataSourceGcpResourceInfo or {@code null} for none
    */
   public DataSourceReference setDataSourceGcpResourceInfo(DataSourceGcpResourceInfo dataSourceGcpResourceInfo) {

@@ -17,8 +17,8 @@
 package com.google.api.services.backupdr.v1.model;
 
 /**
- * BackupDrPlanConfig has additional information about Google Cloud Backup and DR's Plan backup
- * configuration.
+ * AlloyDBClusterDataSourceReferenceProperties represents the properties of an AlloyDB cluster that
+ * are stored in the DataSourceReference.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation
@@ -29,40 +29,43 @@ package com.google.api.services.backupdr.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BackupDrPlanConfig extends com.google.api.client.json.GenericJson {
+public final class AlloyDBClusterDataSourceReferenceProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Backup rules of the backup plan resource.
+   * Output only. Name of the AlloyDB cluster backed up by the datasource. Format:
+   * projects/{project}/locations/{location}/clusters/{cluster}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BackupDrPlanRule> backupDrPlanRules;
+  private java.lang.String name;
 
   /**
-   * Backup rules of the backup plan resource.
+   * Output only. Name of the AlloyDB cluster backed up by the datasource. Format:
+   * projects/{project}/locations/{location}/clusters/{cluster}
    * @return value or {@code null} for none
    */
-  public java.util.List<BackupDrPlanRule> getBackupDrPlanRules() {
-    return backupDrPlanRules;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Backup rules of the backup plan resource.
-   * @param backupDrPlanRules backupDrPlanRules or {@code null} for none
+   * Output only. Name of the AlloyDB cluster backed up by the datasource. Format:
+   * projects/{project}/locations/{location}/clusters/{cluster}
+   * @param name name or {@code null} for none
    */
-  public BackupDrPlanConfig setBackupDrPlanRules(java.util.List<BackupDrPlanRule> backupDrPlanRules) {
-    this.backupDrPlanRules = backupDrPlanRules;
+  public AlloyDBClusterDataSourceReferenceProperties setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   @Override
-  public BackupDrPlanConfig set(String fieldName, Object value) {
-    return (BackupDrPlanConfig) super.set(fieldName, value);
+  public AlloyDBClusterDataSourceReferenceProperties set(String fieldName, Object value) {
+    return (AlloyDBClusterDataSourceReferenceProperties) super.set(fieldName, value);
   }
 
   @Override
-  public BackupDrPlanConfig clone() {
-    return (BackupDrPlanConfig) super.clone();
+  public AlloyDBClusterDataSourceReferenceProperties clone() {
+    return (AlloyDBClusterDataSourceReferenceProperties) super.clone();
   }
 
 }

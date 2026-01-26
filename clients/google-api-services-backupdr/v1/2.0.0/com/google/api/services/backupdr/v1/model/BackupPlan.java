@@ -48,8 +48,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String backupVault;
 
   /**
-   * Output only. The Google Cloud Platform Service Account to be used by the BackupVault for taking
-   * backups. Specify the email address of the Backup Vault Service Account.
+   * Output only. The Google Cloud service account to be used by the BackupVault for taking backups.
+   * Specify the email address of the Backup Vault Service Account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. Applicable only for CloudSQL resource_type. Configures how long logs will be stored.
+   * Optional. Applicable only for Cloud SQL resource_type. Configures how long logs will be stored.
    * It is defined in “days”. This value should be greater than or equal to minimum enforced log
    * retention duration of the backup vault.
    * The value may be {@code null}.
@@ -197,8 +197,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Google Cloud Platform Service Account to be used by the BackupVault for taking
-   * backups. Specify the email address of the Backup Vault Service Account.
+   * Output only. The Google Cloud service account to be used by the BackupVault for taking backups.
+   * Specify the email address of the Backup Vault Service Account.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupVaultServiceAccount() {
@@ -206,8 +206,8 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Google Cloud Platform Service Account to be used by the BackupVault for taking
-   * backups. Specify the email address of the Backup Vault Service Account.
+   * Output only. The Google Cloud service account to be used by the BackupVault for taking backups.
+   * Specify the email address of the Backup Vault Service Account.
    * @param backupVaultServiceAccount backupVaultServiceAccount or {@code null} for none
    */
   public BackupPlan setBackupVaultServiceAccount(java.lang.String backupVaultServiceAccount) {
@@ -294,7 +294,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Applicable only for CloudSQL resource_type. Configures how long logs will be stored.
+   * Optional. Applicable only for Cloud SQL resource_type. Configures how long logs will be stored.
    * It is defined in “days”. This value should be greater than or equal to minimum enforced log
    * retention duration of the backup vault.
    * @return value or {@code null} for none
@@ -304,7 +304,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Applicable only for CloudSQL resource_type. Configures how long logs will be stored.
+   * Optional. Applicable only for Cloud SQL resource_type. Configures how long logs will be stored.
    * It is defined in “days”. This value should be greater than or equal to minimum enforced log
    * retention duration of the backup vault.
    * @param logRetentionDays logRetentionDays or {@code null} for none

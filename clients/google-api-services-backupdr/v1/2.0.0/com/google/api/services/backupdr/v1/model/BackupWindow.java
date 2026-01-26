@@ -31,9 +31,9 @@ package com.google.api.services.backupdr.v1.model;
 public final class BackupWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The hour of day (1-24) when the window end for e.g. if value of end hour of day is 10
-   * that mean backup window end time is 10:00. End hour of day should be greater than start hour of
-   * day. 0 <= start_hour_of_day < end_hour_of_day <= 24 End hour of day is not include in backup
+   * Required. The hour of day (1-24) when the window end for example if value of end hour of day is
+   * 10 that mean backup window end time is 10:00. End hour of day should be greater than start hour
+   * of day. 0 <= start_hour_of_day < end_hour_of_day <= 24 End hour of day is not include in backup
    * window that mean if end_hour_of_day= 10 jobs should start before 10:00.
    * The value may be {@code null}.
    */
@@ -41,17 +41,17 @@ public final class BackupWindow extends com.google.api.client.json.GenericJson {
   private java.lang.Integer endHourOfDay;
 
   /**
-   * Required. The hour of day (0-23) when the window starts for e.g. if value of start hour of day
-   * is 6 that mean backup window start at 6:00.
+   * Required. The hour of day (0-23) when the window starts for example if value of start hour of
+   * day is 6 that mean backup window start at 6:00.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer startHourOfDay;
 
   /**
-   * Required. The hour of day (1-24) when the window end for e.g. if value of end hour of day is 10
-   * that mean backup window end time is 10:00. End hour of day should be greater than start hour of
-   * day. 0 <= start_hour_of_day < end_hour_of_day <= 24 End hour of day is not include in backup
+   * Required. The hour of day (1-24) when the window end for example if value of end hour of day is
+   * 10 that mean backup window end time is 10:00. End hour of day should be greater than start hour
+   * of day. 0 <= start_hour_of_day < end_hour_of_day <= 24 End hour of day is not include in backup
    * window that mean if end_hour_of_day= 10 jobs should start before 10:00.
    * @return value or {@code null} for none
    */
@@ -60,9 +60,9 @@ public final class BackupWindow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The hour of day (1-24) when the window end for e.g. if value of end hour of day is 10
-   * that mean backup window end time is 10:00. End hour of day should be greater than start hour of
-   * day. 0 <= start_hour_of_day < end_hour_of_day <= 24 End hour of day is not include in backup
+   * Required. The hour of day (1-24) when the window end for example if value of end hour of day is
+   * 10 that mean backup window end time is 10:00. End hour of day should be greater than start hour
+   * of day. 0 <= start_hour_of_day < end_hour_of_day <= 24 End hour of day is not include in backup
    * window that mean if end_hour_of_day= 10 jobs should start before 10:00.
    * @param endHourOfDay endHourOfDay or {@code null} for none
    */
@@ -72,8 +72,8 @@ public final class BackupWindow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The hour of day (0-23) when the window starts for e.g. if value of start hour of day
-   * is 6 that mean backup window start at 6:00.
+   * Required. The hour of day (0-23) when the window starts for example if value of start hour of
+   * day is 6 that mean backup window start at 6:00.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartHourOfDay() {
@@ -81,8 +81,8 @@ public final class BackupWindow extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The hour of day (0-23) when the window starts for e.g. if value of start hour of day
-   * is 6 that mean backup window start at 6:00.
+   * Required. The hour of day (0-23) when the window starts for example if value of start hour of
+   * day is 6 that mean backup window start at 6:00.
    * @param startHourOfDay startHourOfDay or {@code null} for none
    */
   public BackupWindow setStartHourOfDay(java.lang.Integer startHourOfDay) {

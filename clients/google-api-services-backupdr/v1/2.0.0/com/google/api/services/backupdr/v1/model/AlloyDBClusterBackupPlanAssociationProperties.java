@@ -17,8 +17,7 @@
 package com.google.api.services.backupdr.v1.model;
 
 /**
- * BackupDrPlanConfig has additional information about Google Cloud Backup and DR's Plan backup
- * configuration.
+ * Properties for an AlloyDB cluster backup plan association.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation
@@ -29,40 +28,40 @@ package com.google.api.services.backupdr.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BackupDrPlanConfig extends com.google.api.client.json.GenericJson {
+public final class AlloyDBClusterBackupPlanAssociationProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Backup rules of the backup plan resource.
+   * Output only. The cluster UID of the AlloyDB cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BackupDrPlanRule> backupDrPlanRules;
+  private java.lang.String clusterUid;
 
   /**
-   * Backup rules of the backup plan resource.
+   * Output only. The cluster UID of the AlloyDB cluster.
    * @return value or {@code null} for none
    */
-  public java.util.List<BackupDrPlanRule> getBackupDrPlanRules() {
-    return backupDrPlanRules;
+  public java.lang.String getClusterUid() {
+    return clusterUid;
   }
 
   /**
-   * Backup rules of the backup plan resource.
-   * @param backupDrPlanRules backupDrPlanRules or {@code null} for none
+   * Output only. The cluster UID of the AlloyDB cluster.
+   * @param clusterUid clusterUid or {@code null} for none
    */
-  public BackupDrPlanConfig setBackupDrPlanRules(java.util.List<BackupDrPlanRule> backupDrPlanRules) {
-    this.backupDrPlanRules = backupDrPlanRules;
+  public AlloyDBClusterBackupPlanAssociationProperties setClusterUid(java.lang.String clusterUid) {
+    this.clusterUid = clusterUid;
     return this;
   }
 
   @Override
-  public BackupDrPlanConfig set(String fieldName, Object value) {
-    return (BackupDrPlanConfig) super.set(fieldName, value);
+  public AlloyDBClusterBackupPlanAssociationProperties set(String fieldName, Object value) {
+    return (AlloyDBClusterBackupPlanAssociationProperties) super.set(fieldName, value);
   }
 
   @Override
-  public BackupDrPlanConfig clone() {
-    return (BackupDrPlanConfig) super.clone();
+  public AlloyDBClusterBackupPlanAssociationProperties clone() {
+    return (AlloyDBClusterBackupPlanAssociationProperties) super.clone();
   }
 
 }

@@ -714,8 +714,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The backup plan association project and location in the format
-         *        `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP
-         *        regions, for example **us-central1**.
+         *        `projects/{project_id}/locations/{location}`. In Backup and DR locations map to Google
+         *        Cloud regions, for example **us-central1**.
          * @param content the {@link com.google.api.services.backupdr.v1.model.BackupPlanAssociation}
          * @return the request
          */
@@ -744,8 +744,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The backup plan association project and location in the format
-         *        `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP
-         *        regions, for example **us-central1**.
+         *        `projects/{project_id}/locations/{location}`. In Backup and DR locations map to Google
+         *        Cloud regions, for example **us-central1**.
            * @param content the {@link com.google.api.services.backupdr.v1.model.BackupPlanAssociation}
            * @since 1.13
            */
@@ -816,15 +816,15 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The backup plan association project and location in the format
-           * `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP
-           * regions, for example **us-central1**.
+           * `projects/{project_id}/locations/{location}`. In Backup and DR locations map to Google
+           * Cloud regions, for example **us-central1**.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The backup plan association project and location in the format
-         `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP regions, for
-         example **us-central1**.
+         `projects/{project_id}/locations/{location}`. In Backup and DR locations map to Google Cloud
+         regions, for example **us-central1**.
            */
           public java.lang.String getParent() {
             return parent;
@@ -832,8 +832,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The backup plan association project and location in the format
-           * `projects/{project_id}/locations/{location}`. In Cloud BackupDR locations map to GCP
-           * regions, for example **us-central1**.
+           * `projects/{project_id}/locations/{location}`. In Backup and DR locations map to Google
+           * Cloud regions, for example **us-central1**.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1347,17 +1347,17 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance */
+          /** Required. The type of the Google Cloud resource. Ex: sql.googleapis.com/Instance */
           @com.google.api.client.util.Key
           private java.lang.String resourceType;
 
-          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance
+          /** Required. The type of the Google Cloud resource. Ex: sql.googleapis.com/Instance
            */
           public java.lang.String getResourceType() {
             return resourceType;
           }
 
-          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance */
+          /** Required. The type of the Google Cloud resource. Ex: sql.googleapis.com/Instance */
           public FetchForResourceType setResourceType(java.lang.String resourceType) {
             this.resourceType = resourceType;
             return this;
@@ -1524,9 +1524,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location for which to retrieve backup Plan Associations information, in
-         *        the format `projects/{project_id}/locations/{location}`. In Cloud BackupDR, locations map
-         *        to GCP regions, for example **us-central1**. To retrieve backup plan associations for all
-         *        locations, use "-" for the `{location}` value.
+         *        the format `projects/{project_id}/locations/{location}`. In Backup and DR, locations map
+         *        to Google Cloud regions, for example **us-central1**. To retrieve backup plan associations
+         *        for all locations, use "-" for the `{location}` value.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1553,9 +1553,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location for which to retrieve backup Plan Associations information, in
-         *        the format `projects/{project_id}/locations/{location}`. In Cloud BackupDR, locations map
-         *        to GCP regions, for example **us-central1**. To retrieve backup plan associations for all
-         *        locations, use "-" for the `{location}` value.
+         *        the format `projects/{project_id}/locations/{location}`. In Backup and DR, locations map
+         *        to Google Cloud regions, for example **us-central1**. To retrieve backup plan associations
+         *        for all locations, use "-" for the `{location}` value.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1635,17 +1635,17 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location for which to retrieve backup Plan Associations
-           * information, in the format `projects/{project_id}/locations/{location}`. In Cloud
-           * BackupDR, locations map to GCP regions, for example **us-central1**. To retrieve backup
-           * plan associations for all locations, use "-" for the `{location}` value.
+           * information, in the format `projects/{project_id}/locations/{location}`. In Backup and
+           * DR, locations map to Google Cloud regions, for example **us-central1**. To retrieve
+           * backup plan associations for all locations, use "-" for the `{location}` value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location for which to retrieve backup Plan Associations information, in
-         the format `projects/{project_id}/locations/{location}`. In Cloud BackupDR, locations map to GCP
-         regions, for example **us-central1**. To retrieve backup plan associations for all locations, use
-         "-" for the `{location}` value.
+         the format `projects/{project_id}/locations/{location}`. In Backup and DR, locations map to Google
+         Cloud regions, for example **us-central1**. To retrieve backup plan associations for all locations,
+         use "-" for the `{location}` value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1653,9 +1653,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location for which to retrieve backup Plan Associations
-           * information, in the format `projects/{project_id}/locations/{location}`. In Cloud
-           * BackupDR, locations map to GCP regions, for example **us-central1**. To retrieve backup
-           * plan associations for all locations, use "-" for the `{location}` value.
+           * information, in the format `projects/{project_id}/locations/{location}`. In Backup and
+           * DR, locations map to Google Cloud regions, for example **us-central1**. To retrieve
+           * backup plan associations for all locations, use "-" for the `{location}` value.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2115,8 +2115,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The `BackupPlan` project and location in the format
-         *        `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP regions,
-         *        for example **us-central1**.
+         *        `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map to
+         *        Google Cloud regions, for example **us-central1**.
          * @param content the {@link com.google.api.services.backupdr.v1.model.BackupPlan}
          * @return the request
          */
@@ -2145,8 +2145,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The `BackupPlan` project and location in the format
-         *        `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP regions,
-         *        for example **us-central1**.
+         *        `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map to
+         *        Google Cloud regions, for example **us-central1**.
            * @param content the {@link com.google.api.services.backupdr.v1.model.BackupPlan}
            * @since 1.13
            */
@@ -2217,15 +2217,15 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The `BackupPlan` project and location in the format
-           * `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP
-           * regions, for example **us-central1**.
+           * `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map
+           * to Google Cloud regions, for example **us-central1**.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The `BackupPlan` project and location in the format
-         `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP regions, for
-         example **us-central1**.
+         `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map to Google
+         Cloud regions, for example **us-central1**.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2233,8 +2233,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The `BackupPlan` project and location in the format
-           * `projects/{project}/locations/{location}`. In Cloud BackupDR locations map to GCP
-           * regions, for example **us-central1**.
+           * `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map
+           * to Google Cloud regions, for example **us-central1**.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2657,9 +2657,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location for which to retrieve `BackupPlans` information. Format:
-         *        `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to GCP
-         *        regions, for e.g. **us-central1**. To retrieve backup plans for all locations, use "-" for
-         *        the `{location}` value.
+         *        `projects/{project}/locations/{location}`. In Google Cloud Backup and DR, locations map to
+         *        Google Cloud regions, for example **us-central1**. To retrieve backup plans for all
+         *        locations, use "-" for the `{location}` value.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2686,9 +2686,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location for which to retrieve `BackupPlans` information. Format:
-         *        `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to GCP
-         *        regions, for e.g. **us-central1**. To retrieve backup plans for all locations, use "-" for
-         *        the `{location}` value.
+         *        `projects/{project}/locations/{location}`. In Google Cloud Backup and DR, locations map to
+         *        Google Cloud regions, for example **us-central1**. To retrieve backup plans for all
+         *        locations, use "-" for the `{location}` value.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2768,17 +2768,17 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location for which to retrieve `BackupPlans` information.
-           * Format: `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to
-           * GCP regions, for e.g. **us-central1**. To retrieve backup plans for all locations, use
-           * "-" for the `{location}` value.
+           * Format: `projects/{project}/locations/{location}`. In Google Cloud Backup and DR,
+           * locations map to Google Cloud regions, for example **us-central1**. To retrieve backup
+           * plans for all locations, use "-" for the `{location}` value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location for which to retrieve `BackupPlans` information. Format:
-         `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to GCP regions, for
-         e.g. **us-central1**. To retrieve backup plans for all locations, use "-" for the `{location}`
-         value.
+         `projects/{project}/locations/{location}`. In Google Cloud Backup and DR, locations map to Google
+         Cloud regions, for example **us-central1**. To retrieve backup plans for all locations, use "-" for
+         the `{location}` value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2786,9 +2786,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location for which to retrieve `BackupPlans` information.
-           * Format: `projects/{project}/locations/{location}`. In Cloud BackupDR, locations map to
-           * GCP regions, for e.g. **us-central1**. To retrieve backup plans for all locations, use
-           * "-" for the `{location}` value.
+           * Format: `projects/{project}/locations/{location}`. In Google Cloud Backup and DR,
+           * locations map to Google Cloud regions, for example **us-central1**. To retrieve backup
+           * plans for all locations, use "-" for the `{location}` value.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3288,8 +3288,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The project and location for which to retrieve `BackupPlanRevisions` information. Format:
-           *        `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Cloud BackupDR,
-           *        locations map to GCP regions, for e.g. **us-central1**.
+           *        `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Google Cloud
+           *        Backup and DR, locations map to Google Cloud regions, for example **us-central1**.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3316,8 +3316,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The project and location for which to retrieve `BackupPlanRevisions` information. Format:
-           *        `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Cloud BackupDR,
-           *        locations map to GCP regions, for e.g. **us-central1**.
+           *        `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Google Cloud
+           *        Backup and DR, locations map to Google Cloud regions, for example **us-central1**.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3398,15 +3398,15 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Required. The project and location for which to retrieve `BackupPlanRevisions`
              * information. Format:
-             * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Cloud
-             * BackupDR, locations map to GCP regions, for e.g. **us-central1**.
+             * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Google Cloud
+             * Backup and DR, locations map to Google Cloud regions, for example **us-central1**.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The project and location for which to retrieve `BackupPlanRevisions` information. Format:
-           `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Cloud BackupDR, locations
-           map to GCP regions, for e.g. **us-central1**.
+           `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Google Cloud Backup and DR,
+           locations map to Google Cloud regions, for example **us-central1**.
              */
             public java.lang.String getParent() {
               return parent;
@@ -3415,8 +3415,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             /**
              * Required. The project and location for which to retrieve `BackupPlanRevisions`
              * information. Format:
-             * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Cloud
-             * BackupDR, locations map to GCP regions, for e.g. **us-central1**.
+             * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`. In Google Cloud
+             * Backup and DR, locations map to Google Cloud regions, for example **us-central1**.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -7013,17 +7013,23 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
                 return this;
               }
 
-              /** Required. The type of the GCP resource. Ex: sqladmin.googleapis.com/Instance */
+              /**
+               * Required. The type of the Google Cloud resource. Ex:
+               * sqladmin.googleapis.com/Instance
+               */
               @com.google.api.client.util.Key
               private java.lang.String resourceType;
 
-              /** Required. The type of the GCP resource. Ex: sqladmin.googleapis.com/Instance
+              /** Required. The type of the Google Cloud resource. Ex: sqladmin.googleapis.com/Instance
                */
               public java.lang.String getResourceType() {
                 return resourceType;
               }
 
-              /** Required. The type of the GCP resource. Ex: sqladmin.googleapis.com/Instance */
+              /**
+               * Required. The type of the Google Cloud resource. Ex:
+               * sqladmin.googleapis.com/Instance
+               */
               public FetchForResourceType setResourceType(java.lang.String resourceType) {
                 this.resourceType = resourceType;
                 return this;
@@ -8125,17 +8131,17 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance */
+          /** Required. The type of the Google Cloud resource. Ex: sql.googleapis.com/Instance */
           @com.google.api.client.util.Key
           private java.lang.String resourceType;
 
-          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance
+          /** Required. The type of the Google Cloud resource. Ex: sql.googleapis.com/Instance
            */
           public java.lang.String getResourceType() {
             return resourceType;
           }
 
-          /** Required. The type of the GCP resource. Ex: sql.googleapis.com/Instance */
+          /** Required. The type of the Google Cloud resource. Ex: sql.googleapis.com/Instance */
           public FetchForResourceType setResourceType(java.lang.String resourceType) {
             this.resourceType = resourceType;
             return this;
@@ -9306,9 +9312,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location for which to retrieve management servers information, in the
-         *        format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations map to
-         *        Google Cloud regions, for example **us-central1**. To retrieve management servers for all
-         *        locations, use "-" for the '{location}' value.
+         *        format 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
+         *        locations map to Google Cloud regions, for example **us-central1**. To retrieve management
+         *        servers for all locations, use "-" for the '{location}' value.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -9335,9 +9341,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location for which to retrieve management servers information, in the
-         *        format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations map to
-         *        Google Cloud regions, for example **us-central1**. To retrieve management servers for all
-         *        locations, use "-" for the '{location}' value.
+         *        format 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
+         *        locations map to Google Cloud regions, for example **us-central1**. To retrieve management
+         *        servers for all locations, use "-" for the '{location}' value.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -9417,17 +9423,18 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location for which to retrieve management servers
-           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
-           * BackupDR, locations map to Google Cloud regions, for example **us-central1**. To
-           * retrieve management servers for all locations, use "-" for the '{location}' value.
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Google
+           * Cloud Backup and DR, locations map to Google Cloud regions, for example **us-
+           * central1**. To retrieve management servers for all locations, use "-" for the
+           * '{location}' value.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location for which to retrieve management servers information, in the
-         format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations map to Google
-         Cloud regions, for example **us-central1**. To retrieve management servers for all locations, use
-         "-" for the '{location}' value.
+         format 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR, locations map
+         to Google Cloud regions, for example **us-central1**. To retrieve management servers for all
+         locations, use "-" for the '{location}' value.
            */
           public java.lang.String getParent() {
             return parent;
@@ -9435,9 +9442,10 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location for which to retrieve management servers
-           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
-           * BackupDR, locations map to Google Cloud regions, for example **us-central1**. To
-           * retrieve management servers for all locations, use "-" for the '{location}' value.
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Google
+           * Cloud Backup and DR, locations map to Google Cloud regions, for example **us-
+           * central1**. To retrieve management servers for all locations, use "-" for the
+           * '{location}' value.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -9535,8 +9543,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * operation.
          *
          * @param parent Required. The project and location to be used to check CSS metadata for target project information,
-         *        in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
-         *        map to Google Cloud regions, for example **us-central1**.
+         *        in the format 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
+         *        locations map to Google Cloud regions, for example **us-central1**.
          * @param content the {@link com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest}
          * @return the request
          */
@@ -9565,8 +9573,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * after invoking the constructor. </p>
            *
            * @param parent Required. The project and location to be used to check CSS metadata for target project information,
-         *        in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
-         *        map to Google Cloud regions, for example **us-central1**.
+         *        in the format 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
+         *        locations map to Google Cloud regions, for example **us-central1**.
            * @param content the {@link com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest}
            * @since 1.13
            */
@@ -9637,15 +9645,16 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location to be used to check CSS metadata for target project
-           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
-           * BackupDR, locations map to Google Cloud regions, for example **us-central1**.
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Google
+           * Cloud Backup and DR, locations map to Google Cloud regions, for example **us-
+           * central1**.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location to be used to check CSS metadata for target project information,
-         in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations map to
-         Google Cloud regions, for example **us-central1**.
+         in the format 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
+         locations map to Google Cloud regions, for example **us-central1**.
            */
           public java.lang.String getParent() {
             return parent;
@@ -9653,8 +9662,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location to be used to check CSS metadata for target project
-           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
-           * BackupDR, locations map to Google Cloud regions, for example **us-central1**.
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Google
+           * Cloud Backup and DR, locations map to Google Cloud regions, for example **us-
+           * central1**.
            */
           public MsComplianceMetadata setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -10661,8 +10671,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location for which to retrieve resource backup configs. Format:
-         *        'projects/{project_id}/locations/{location}'. In Cloud Backup and DR, locations map to
-         *        Google Cloud regions, for example **us-central1**.
+         *        'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR, locations map
+         *        to Google Cloud regions, for example **us-central1**.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -10689,8 +10699,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location for which to retrieve resource backup configs. Format:
-         *        'projects/{project_id}/locations/{location}'. In Cloud Backup and DR, locations map to
-         *        Google Cloud regions, for example **us-central1**.
+         *        'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR, locations map
+         *        to Google Cloud regions, for example **us-central1**.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -10770,15 +10780,15 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location for which to retrieve resource backup configs.
-           * Format: 'projects/{project_id}/locations/{location}'. In Cloud Backup and DR, locations
-           * map to Google Cloud regions, for example **us-central1**.
+           * Format: 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
+           * locations map to Google Cloud regions, for example **us-central1**.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location for which to retrieve resource backup configs. Format:
-         'projects/{project_id}/locations/{location}'. In Cloud Backup and DR, locations map to Google Cloud
-         regions, for example **us-central1**.
+         'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR, locations map to
+         Google Cloud regions, for example **us-central1**.
            */
           public java.lang.String getParent() {
             return parent;
@@ -10786,8 +10796,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The project and location for which to retrieve resource backup configs.
-           * Format: 'projects/{project_id}/locations/{location}'. In Cloud Backup and DR, locations
-           * map to Google Cloud regions, for example **us-central1**.
+           * Format: 'projects/{project_id}/locations/{location}'. In Google Cloud Backup and DR,
+           * locations map to Google Cloud regions, for example **us-central1**.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

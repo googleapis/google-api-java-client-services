@@ -17,7 +17,9 @@
 package com.google.api.services.dataform.v1beta1.model;
 
 /**
- * Represents a Dataform Git workspace.
+ * Represents a Dataform TeamFolder. This is a resource that sits at the project level and is used
+ * to organize Repositories and Folders with hierarchical access controls. They provide a team
+ * context and stricter access controls.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataform API. For a detailed explanation see:
@@ -27,30 +29,28 @@ package com.google.api.services.dataform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Workspace extends com.google.api.client.json.GenericJson {
+public final class TeamFolder extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The timestamp of when the workspace was created.
+   * Output only. The timestamp of when the TeamFolder was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. A data encryption state of a Git repository if this Workspace is protected by a
-   * KMS key.
+   * Output only. The IAM principal identifier of the creator of the TeamFolder.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private DataEncryptionState dataEncryptionState;
+  private java.lang.String creatorIamPrincipal;
 
   /**
-   * Optional. If set to true, workspaces will not be moved if its linked Repository is moved.
-   * Instead, it will be deleted.
+   * Required. The TeamFolder's user-friendly name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean disableMoves;
+  private java.lang.String displayName;
 
   /**
    * Output only. All the metadata information that is used internally to serve the resource. For
@@ -61,22 +61,21 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   private java.lang.String internalMetadata;
 
   /**
-   * Identifier. The workspace's name.
+   * Identifier. The TeamFolder's name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Metadata indicating whether this resource is user-scoped. For `Workspace`
-   * resources, the `user_scoped` field is always `true`.
+   * Output only. The timestamp of when the TeamFolder was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PrivateResourceMetadata privateResourceMetadata;
+  private String updateTime;
 
   /**
-   * Output only. The timestamp of when the workspace was created.
+   * Output only. The timestamp of when the TeamFolder was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -84,49 +83,45 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The timestamp of when the workspace was created.
+   * Output only. The timestamp of when the TeamFolder was created.
    * @param createTime createTime or {@code null} for none
    */
-  public Workspace setCreateTime(String createTime) {
+  public TeamFolder setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
 
   /**
-   * Output only. A data encryption state of a Git repository if this Workspace is protected by a
-   * KMS key.
+   * Output only. The IAM principal identifier of the creator of the TeamFolder.
    * @return value or {@code null} for none
    */
-  public DataEncryptionState getDataEncryptionState() {
-    return dataEncryptionState;
+  public java.lang.String getCreatorIamPrincipal() {
+    return creatorIamPrincipal;
   }
 
   /**
-   * Output only. A data encryption state of a Git repository if this Workspace is protected by a
-   * KMS key.
-   * @param dataEncryptionState dataEncryptionState or {@code null} for none
+   * Output only. The IAM principal identifier of the creator of the TeamFolder.
+   * @param creatorIamPrincipal creatorIamPrincipal or {@code null} for none
    */
-  public Workspace setDataEncryptionState(DataEncryptionState dataEncryptionState) {
-    this.dataEncryptionState = dataEncryptionState;
+  public TeamFolder setCreatorIamPrincipal(java.lang.String creatorIamPrincipal) {
+    this.creatorIamPrincipal = creatorIamPrincipal;
     return this;
   }
 
   /**
-   * Optional. If set to true, workspaces will not be moved if its linked Repository is moved.
-   * Instead, it will be deleted.
+   * Required. The TeamFolder's user-friendly name.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getDisableMoves() {
-    return disableMoves;
+  public java.lang.String getDisplayName() {
+    return displayName;
   }
 
   /**
-   * Optional. If set to true, workspaces will not be moved if its linked Repository is moved.
-   * Instead, it will be deleted.
-   * @param disableMoves disableMoves or {@code null} for none
+   * Required. The TeamFolder's user-friendly name.
+   * @param displayName displayName or {@code null} for none
    */
-  public Workspace setDisableMoves(java.lang.Boolean disableMoves) {
-    this.disableMoves = disableMoves;
+  public TeamFolder setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 
@@ -144,13 +139,13 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
    * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
    * @param internalMetadata internalMetadata or {@code null} for none
    */
-  public Workspace setInternalMetadata(java.lang.String internalMetadata) {
+  public TeamFolder setInternalMetadata(java.lang.String internalMetadata) {
     this.internalMetadata = internalMetadata;
     return this;
   }
 
   /**
-   * Identifier. The workspace's name.
+   * Identifier. The TeamFolder's name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -158,41 +153,39 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The workspace's name.
+   * Identifier. The TeamFolder's name.
    * @param name name or {@code null} for none
    */
-  public Workspace setName(java.lang.String name) {
+  public TeamFolder setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Output only. Metadata indicating whether this resource is user-scoped. For `Workspace`
-   * resources, the `user_scoped` field is always `true`.
+   * Output only. The timestamp of when the TeamFolder was last updated.
    * @return value or {@code null} for none
    */
-  public PrivateResourceMetadata getPrivateResourceMetadata() {
-    return privateResourceMetadata;
+  public String getUpdateTime() {
+    return updateTime;
   }
 
   /**
-   * Output only. Metadata indicating whether this resource is user-scoped. For `Workspace`
-   * resources, the `user_scoped` field is always `true`.
-   * @param privateResourceMetadata privateResourceMetadata or {@code null} for none
+   * Output only. The timestamp of when the TeamFolder was last updated.
+   * @param updateTime updateTime or {@code null} for none
    */
-  public Workspace setPrivateResourceMetadata(PrivateResourceMetadata privateResourceMetadata) {
-    this.privateResourceMetadata = privateResourceMetadata;
+  public TeamFolder setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public Workspace set(String fieldName, Object value) {
-    return (Workspace) super.set(fieldName, value);
+  public TeamFolder set(String fieldName, Object value) {
+    return (TeamFolder) super.set(fieldName, value);
   }
 
   @Override
-  public Workspace clone() {
-    return (Workspace) super.clone();
+  public TeamFolder clone() {
+    return (TeamFolder) super.clone();
   }
 
 }

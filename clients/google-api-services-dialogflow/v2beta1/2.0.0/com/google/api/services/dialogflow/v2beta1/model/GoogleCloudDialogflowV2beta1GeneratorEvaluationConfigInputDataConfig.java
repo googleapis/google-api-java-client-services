@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Input data config details
+ * Model definition for GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,64 +30,54 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The distinctive configs for Agent Assist conversations as the conversation source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigAgentAssistInputDataConfig agentAssistInputDataConfig;
 
   /**
-   * The distinctive configs for dataset as the conversation source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigDatasetInputDataConfig datasetInputDataConfig;
 
   /**
-   * Optional. The end timestamp to fetch conversation data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Required. The source type of input data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inputDataSourceType;
 
   /**
-   * Optional. Whether the summary generation is allowed when the pre-existing qualified summaries
-   * are insufficient to cover the sample size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isSummaryGenerationAllowed;
 
   /**
-   * Optional. Desired number of conversation-summary pairs to be evaluated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sampleSize;
 
   /**
-   * Optional. The start timestamp to fetch conversation data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Optional. Option to control whether summaries are generated during evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String summaryGenerationOption;
 
   /**
-   * The distinctive configs for Agent Assist conversations as the conversation source.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigAgentAssistInputDataConfig getAgentAssistInputDataConfig() {
@@ -95,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * The distinctive configs for Agent Assist conversations as the conversation source.
    * @param agentAssistInputDataConfig agentAssistInputDataConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig setAgentAssistInputDataConfig(GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigAgentAssistInputDataConfig agentAssistInputDataConfig) {
@@ -104,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * The distinctive configs for dataset as the conversation source.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigDatasetInputDataConfig getDatasetInputDataConfig() {
@@ -112,7 +100,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * The distinctive configs for dataset as the conversation source.
    * @param datasetInputDataConfig datasetInputDataConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig setDatasetInputDataConfig(GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigDatasetInputDataConfig datasetInputDataConfig) {
@@ -121,7 +108,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. The end timestamp to fetch conversation data.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -129,7 +115,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. The end timestamp to fetch conversation data.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig setEndTime(String endTime) {
@@ -138,7 +123,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Required. The source type of input data.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputDataSourceType() {
@@ -146,7 +130,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Required. The source type of input data.
    * @param inputDataSourceType inputDataSourceType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig setInputDataSourceType(java.lang.String inputDataSourceType) {
@@ -155,8 +138,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. Whether the summary generation is allowed when the pre-existing qualified summaries
-   * are insufficient to cover the sample size.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsSummaryGenerationAllowed() {
@@ -164,8 +145,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. Whether the summary generation is allowed when the pre-existing qualified summaries
-   * are insufficient to cover the sample size.
    * @param isSummaryGenerationAllowed isSummaryGenerationAllowed or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig setIsSummaryGenerationAllowed(java.lang.Boolean isSummaryGenerationAllowed) {
@@ -174,7 +153,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. Desired number of conversation-summary pairs to be evaluated.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleSize() {
@@ -182,7 +160,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. Desired number of conversation-summary pairs to be evaluated.
    * @param sampleSize sampleSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig setSampleSize(java.lang.Integer sampleSize) {
@@ -191,7 +168,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. The start timestamp to fetch conversation data.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -199,7 +175,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. The start timestamp to fetch conversation data.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig setStartTime(String startTime) {
@@ -208,7 +183,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. Option to control whether summaries are generated during evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.String getSummaryGenerationOption() {
@@ -216,7 +190,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDat
   }
 
   /**
-   * Optional. Option to control whether summaries are generated during evaluation.
    * @param summaryGenerationOption summaryGenerationOption or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig setSummaryGenerationOption(java.lang.String summaryGenerationOption) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Metadata for a ConversationDatasets.ImportConversationData operation.
+ * Model definition for GoogleCloudDialogflowV2ImportConversationDataOperationMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,32 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2ImportConversationDataOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the imported conversation dataset. Format:
-   * `projects//locations//conversationDatasets/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationDataset;
 
   /**
-   * Timestamp when import conversation data request was created. The time is measured on server
-   * side.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Partial failures are failures that don't fail the whole long running operation, e.g. single
-   * files that couldn't be read.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleRpcStatus> partialFailures;
 
   /**
-   * The resource name of the imported conversation dataset. Format:
-   * `projects//locations//conversationDatasets/`
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationDataset() {
@@ -63,8 +55,6 @@ public final class GoogleCloudDialogflowV2ImportConversationDataOperationMetadat
   }
 
   /**
-   * The resource name of the imported conversation dataset. Format:
-   * `projects//locations//conversationDatasets/`
    * @param conversationDataset conversationDataset or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportConversationDataOperationMetadata setConversationDataset(java.lang.String conversationDataset) {
@@ -73,8 +63,6 @@ public final class GoogleCloudDialogflowV2ImportConversationDataOperationMetadat
   }
 
   /**
-   * Timestamp when import conversation data request was created. The time is measured on server
-   * side.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -82,8 +70,6 @@ public final class GoogleCloudDialogflowV2ImportConversationDataOperationMetadat
   }
 
   /**
-   * Timestamp when import conversation data request was created. The time is measured on server
-   * side.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportConversationDataOperationMetadata setCreateTime(String createTime) {
@@ -92,8 +78,6 @@ public final class GoogleCloudDialogflowV2ImportConversationDataOperationMetadat
   }
 
   /**
-   * Partial failures are failures that don't fail the whole long running operation, e.g. single
-   * files that couldn't be read.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleRpcStatus> getPartialFailures() {
@@ -101,8 +85,6 @@ public final class GoogleCloudDialogflowV2ImportConversationDataOperationMetadat
   }
 
   /**
-   * Partial failures are failures that don't fail the whole long running operation, e.g. single
-   * files that couldn't be read.
    * @param partialFailures partialFailures or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportConversationDataOperationMetadata setPartialFailures(java.util.List<GoogleRpcStatus> partialFailures) {

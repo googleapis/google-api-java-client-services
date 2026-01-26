@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents the natural language text to be processed.
+ * Model definition for GoogleCloudDialogflowCxV3beta1TextInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1TextInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The UTF-8 encoded natural language text to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Required. The UTF-8 encoded natural language text to be processed.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1TextInput extends com.google.ap
   }
 
   /**
-   * Required. The UTF-8 encoded natural language text to be processed.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TextInput setText(java.lang.String text) {

@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores metadata of the transition to another target playbook. Playbook transition actions exit
- * the caller playbook and enter the target playbook.
+ * Model definition for GoogleCloudDialogflowCxV3beta1PlaybookTransition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,29 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1PlaybookTransition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The display name of the playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * A list of input parameters for the action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> inputActionParameters;
 
   /**
-   * Required. The unique identifier of the playbook. Format:
-   * `projects//locations//agents//playbooks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String playbook;
 
   /**
-   * Output only. The display name of the playbook.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -61,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookTransition extends com.
   }
 
   /**
-   * Output only. The display name of the playbook.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookTransition setDisplayName(java.lang.String displayName) {
@@ -70,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookTransition extends com.
   }
 
   /**
-   * A list of input parameters for the action.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getInputActionParameters() {
@@ -78,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookTransition extends com.
   }
 
   /**
-   * A list of input parameters for the action.
    * @param inputActionParameters inputActionParameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookTransition setInputActionParameters(java.util.Map<String, java.lang.Object> inputActionParameters) {
@@ -87,8 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookTransition extends com.
   }
 
   /**
-   * Required. The unique identifier of the playbook. Format:
-   * `projects//locations//agents//playbooks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaybook() {
@@ -96,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookTransition extends com.
   }
 
   /**
-   * Required. The unique identifier of the playbook. Format:
-   * `projects//locations//agents//playbooks/`.
    * @param playbook playbook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookTransition setPlaybook(java.lang.String playbook) {

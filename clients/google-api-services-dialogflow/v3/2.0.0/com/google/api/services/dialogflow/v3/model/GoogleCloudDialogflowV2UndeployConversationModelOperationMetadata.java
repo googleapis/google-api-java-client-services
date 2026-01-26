@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Metadata for a ConversationModels.UndeployConversationModel operation.
+ * Model definition for GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the conversation model. Format: `projects//conversationModels/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationModel;
 
   /**
-   * Timestamp when the request to undeploy conversation model was submitted. The time is measured
-   * on server side.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The time when the operation finished.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String doneTime;
 
   /**
-   * The resource name of the conversation model. Format: `projects//conversationModels/`
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationModel() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowV2UndeployConversationModelOperationMeta
   }
 
   /**
-   * The resource name of the conversation model. Format: `projects//conversationModels/`
    * @param conversationModel conversationModel or {@code null} for none
    */
   public GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata setConversationModel(java.lang.String conversationModel) {
@@ -69,8 +63,6 @@ public final class GoogleCloudDialogflowV2UndeployConversationModelOperationMeta
   }
 
   /**
-   * Timestamp when the request to undeploy conversation model was submitted. The time is measured
-   * on server side.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -78,8 +70,6 @@ public final class GoogleCloudDialogflowV2UndeployConversationModelOperationMeta
   }
 
   /**
-   * Timestamp when the request to undeploy conversation model was submitted. The time is measured
-   * on server side.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata setCreateTime(String createTime) {
@@ -88,7 +78,6 @@ public final class GoogleCloudDialogflowV2UndeployConversationModelOperationMeta
   }
 
   /**
-   * The time when the operation finished.
    * @return value or {@code null} for none
    */
   public String getDoneTime() {
@@ -96,7 +85,6 @@ public final class GoogleCloudDialogflowV2UndeployConversationModelOperationMeta
   }
 
   /**
-   * The time when the operation finished.
    * @param doneTime doneTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata setDoneTime(String doneTime) {

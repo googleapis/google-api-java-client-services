@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores information about feedback provided by users about a response.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AnswerFeedback.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,31 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AnswerFeedback extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Custom rating from the user about the provided answer, with maximum length of 1024
-   * characters. For example, client could use a customized JSON object to indicate the rating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customRating;
 
   /**
-   * Optional. Rating from user for the specific Dialogflow response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rating;
 
   /**
-   * Optional. In case of thumbs down rating provided, users can optionally provide context about
-   * the rating.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason ratingReason;
 
   /**
-   * Optional. Custom rating from the user about the provided answer, with maximum length of 1024
-   * characters. For example, client could use a customized JSON object to indicate the rating.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomRating() {
@@ -62,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1AnswerFeedback extends com.goog
   }
 
   /**
-   * Optional. Custom rating from the user about the provided answer, with maximum length of 1024
-   * characters. For example, client could use a customized JSON object to indicate the rating.
    * @param customRating customRating or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AnswerFeedback setCustomRating(java.lang.String customRating) {
@@ -72,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1AnswerFeedback extends com.goog
   }
 
   /**
-   * Optional. Rating from user for the specific Dialogflow response.
    * @return value or {@code null} for none
    */
   public java.lang.String getRating() {
@@ -80,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1AnswerFeedback extends com.goog
   }
 
   /**
-   * Optional. Rating from user for the specific Dialogflow response.
    * @param rating rating or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AnswerFeedback setRating(java.lang.String rating) {
@@ -89,8 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1AnswerFeedback extends com.goog
   }
 
   /**
-   * Optional. In case of thumbs down rating provided, users can optionally provide context about
-   * the rating.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason getRatingReason() {
@@ -98,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1AnswerFeedback extends com.goog
   }
 
   /**
-   * Optional. In case of thumbs down rating provided, users can optionally provide context about
-   * the rating.
    * @param ratingReason ratingReason or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AnswerFeedback setRatingReason(GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason ratingReason) {

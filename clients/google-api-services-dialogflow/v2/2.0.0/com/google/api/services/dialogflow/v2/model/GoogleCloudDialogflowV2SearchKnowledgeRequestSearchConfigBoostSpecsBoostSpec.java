@@ -17,9 +17,8 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Boost specification to boost certain documents. A copy of
- * google.cloud.discoveryengine.v1main.BoostSpec, field documentation is available at
- * https://cloud.google.com/generative-ai-app-builder/docs/reference/rest/v1alpha/BoostSpec
+ * Model definition for
+ * GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpec.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,18 +31,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Condition boost specifications. If a document matches multiple conditions in the
-   * specifications, boost scores from these specifications are all applied and combined in a non-
-   * linear way. Maximum number of specifications is 20.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpec> conditionBoostSpecs;
 
   /**
-   * Optional. Condition boost specifications. If a document matches multiple conditions in the
-   * specifications, boost scores from these specifications are all applied and combined in a non-
-   * linear way. Maximum number of specifications is 20.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpec> getConditionBoostSpecs() {
@@ -51,9 +44,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoos
   }
 
   /**
-   * Optional. Condition boost specifications. If a document matches multiple conditions in the
-   * specifications, boost scores from these specifications are all applied and combined in a non-
-   * linear way. Maximum number of specifications is 20.
    * @param conditionBoostSpecs conditionBoostSpecs or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpec setConditionBoostSpecs(java.util.List<GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpec> conditionBoostSpecs) {

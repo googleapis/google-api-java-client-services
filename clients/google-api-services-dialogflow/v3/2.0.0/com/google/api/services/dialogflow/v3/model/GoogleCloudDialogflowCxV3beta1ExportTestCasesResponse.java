@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for TestCases.ExportTestCases.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExportTestCasesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1ExportTestCasesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uncompressed raw byte content for test cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * The URI to a file containing the exported test cases. This field is populated only if `gcs_uri`
-   * is specified in ExportTestCasesRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsUri;
 
   /**
-   * Uncompressed raw byte content for test cases.
    * @see #decodeContent()
    * @return value or {@code null} for none
    */
@@ -54,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExportTestCasesResponse extends
   }
 
   /**
-   * Uncompressed raw byte content for test cases.
+
    * @see #getContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -65,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportTestCasesResponse extends
   }
 
   /**
-   * Uncompressed raw byte content for test cases.
    * @see #encodeContent()
    * @param content content or {@code null} for none
    */
@@ -75,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExportTestCasesResponse extends
   }
 
   /**
-   * Uncompressed raw byte content for test cases.
+
    * @see #setContent()
    *
    * <p>
@@ -90,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportTestCasesResponse extends
   }
 
   /**
-   * The URI to a file containing the exported test cases. This field is populated only if `gcs_uri`
-   * is specified in ExportTestCasesRequest.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -99,8 +92,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportTestCasesResponse extends
   }
 
   /**
-   * The URI to a file containing the exported test cases. This field is populated only if `gcs_uri`
-   * is specified in ExportTestCasesRequest.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportTestCasesResponse setGcsUri(java.lang.String gcsUri) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * UserUtterance represents one message sent by the customer.
+ * Model definition for GoogleCloudDialogflowCxV3beta1UserUtterance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1UserUtterance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Audio input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audio;
 
   /**
-   * Optional. Tokens of the audio input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> audioTokens;
 
   /**
-   * Required. Message content in text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Optional. Audio input.
    * @see #decodeAudio()
    * @return value or {@code null} for none
    */
@@ -60,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3beta1UserUtterance extends com.googl
   }
 
   /**
-   * Optional. Audio input.
+
    * @see #getAudio()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -71,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1UserUtterance extends com.googl
   }
 
   /**
-   * Optional. Audio input.
    * @see #encodeAudio()
    * @param audio audio or {@code null} for none
    */
@@ -81,7 +76,7 @@ public final class GoogleCloudDialogflowCxV3beta1UserUtterance extends com.googl
   }
 
   /**
-   * Optional. Audio input.
+
    * @see #setAudio()
    *
    * <p>
@@ -96,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1UserUtterance extends com.googl
   }
 
   /**
-   * Optional. Tokens of the audio input.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getAudioTokens() {
@@ -104,7 +98,6 @@ public final class GoogleCloudDialogflowCxV3beta1UserUtterance extends com.googl
   }
 
   /**
-   * Optional. Tokens of the audio input.
    * @param audioTokens audioTokens or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1UserUtterance setAudioTokens(java.util.List<java.lang.Integer> audioTokens) {
@@ -113,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1UserUtterance extends com.googl
   }
 
   /**
-   * Required. Message content in text.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -121,7 +113,6 @@ public final class GoogleCloudDialogflowCxV3beta1UserUtterance extends com.googl
   }
 
   /**
-   * Required. Message content in text.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1UserUtterance setText(java.lang.String text) {

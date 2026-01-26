@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Carousel Rich Business Messaging (RBM) rich card. Rich cards allow you to respond to users with
- * more vivid content, e.g. with media and suggestions. If you want to show a single card with more
- * control over the layout, please use RbmStandaloneCard instead.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,7 +30,6 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The cards in the carousel. A carousel must have at least 2 cards and at most 10.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +42,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard exte
   }
 
   /**
-   * Required. The width of the cards in the carousel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cardWidth;
 
   /**
-   * Required. The cards in the carousel. A carousel must have at least 2 cards and at most 10.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent> getCardContents() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard exte
   }
 
   /**
-   * Required. The cards in the carousel. A carousel must have at least 2 cards and at most 10.
    * @param cardContents cardContents or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard setCardContents(java.util.List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent> cardContents) {
@@ -69,7 +63,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard exte
   }
 
   /**
-   * Required. The width of the cards in the carousel.
    * @return value or {@code null} for none
    */
   public java.lang.String getCardWidth() {
@@ -77,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard exte
   }
 
   /**
-   * Required. The width of the cards in the carousel.
    * @param cardWidth cardWidth or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard setCardWidth(java.lang.String cardWidth) {

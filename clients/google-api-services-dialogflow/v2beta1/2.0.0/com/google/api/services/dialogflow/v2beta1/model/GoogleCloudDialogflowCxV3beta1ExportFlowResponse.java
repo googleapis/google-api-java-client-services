@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The response message for Flows.ExportFlow.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExportFlowResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ExportFlowResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Uncompressed raw byte content for flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flowContent;
 
   /**
-   * The URI to a file containing the exported flow. This field is populated only if `flow_uri` is
-   * specified in ExportFlowRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flowUri;
 
   /**
-   * Uncompressed raw byte content for flow.
    * @see #decodeFlowContent()
    * @return value or {@code null} for none
    */
@@ -54,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExportFlowResponse extends com.
   }
 
   /**
-   * Uncompressed raw byte content for flow.
+
    * @see #getFlowContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -65,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportFlowResponse extends com.
   }
 
   /**
-   * Uncompressed raw byte content for flow.
    * @see #encodeFlowContent()
    * @param flowContent flowContent or {@code null} for none
    */
@@ -75,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExportFlowResponse extends com.
   }
 
   /**
-   * Uncompressed raw byte content for flow.
+
    * @see #setFlowContent()
    *
    * <p>
@@ -90,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportFlowResponse extends com.
   }
 
   /**
-   * The URI to a file containing the exported flow. This field is populated only if `flow_uri` is
-   * specified in ExportFlowRequest.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlowUri() {
@@ -99,8 +92,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportFlowResponse extends com.
   }
 
   /**
-   * The URI to a file containing the exported flow. This field is populated only if `flow_uri` is
-   * specified in ExportFlowRequest.
    * @param flowUri flowUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportFlowResponse setFlowUri(java.lang.String flowUri) {

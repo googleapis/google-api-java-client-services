@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Settings of suggestion trigger.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +31,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Do not trigger if last utterance is small talk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean noSmallTalk;
 
   /**
-   * Only trigger suggestion if participant role of last utterance is END_USER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean onlyEndUser;
 
   /**
-   * Do not trigger if last utterance is small talk.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNoSmallTalk() {
@@ -52,7 +50,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * Do not trigger if last utterance is small talk.
    * @param noSmallTalk noSmallTalk or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettings setNoSmallTalk(java.lang.Boolean noSmallTalk) {
@@ -61,7 +58,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * Only trigger suggestion if participant role of last utterance is END_USER.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOnlyEndUser() {
@@ -69,7 +65,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * Only trigger suggestion if participant role of last utterance is END_USER.
    * @param onlyEndUser onlyEndUser or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettings setOnlyEndUser(java.lang.Boolean onlyEndUser) {

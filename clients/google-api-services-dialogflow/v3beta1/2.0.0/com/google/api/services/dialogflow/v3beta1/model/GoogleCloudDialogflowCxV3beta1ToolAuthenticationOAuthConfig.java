@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Config for authentication with OAuth.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,52 +30,42 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The client ID from the OAuth provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientId;
 
   /**
-   * Optional. The client secret from the OAuth provider. If the `secret_version_for_client_secret`
-   * field is set, this field will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientSecret;
 
   /**
-   * Required. OAuth grant types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String oauthGrantType;
 
   /**
-   * Optional. The OAuth scopes to grant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> scopes;
 
   /**
-   * Optional. The name of the SecretManager secret version resource storing the client secret. If
-   * this field is set, the `client_secret` field will be ignored. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretVersionForClientSecret;
 
   /**
-   * Required. The token endpoint in the OAuth provider to exchange for an access token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tokenEndpoint;
 
   /**
-   * Required. The client ID from the OAuth provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -83,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Required. The client ID from the OAuth provider.
    * @param clientId clientId or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setClientId(java.lang.String clientId) {
@@ -92,8 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Optional. The client secret from the OAuth provider. If the `secret_version_for_client_secret`
-   * field is set, this field will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientSecret() {
@@ -101,8 +88,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Optional. The client secret from the OAuth provider. If the `secret_version_for_client_secret`
-   * field is set, this field will be ignored.
    * @param clientSecret clientSecret or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setClientSecret(java.lang.String clientSecret) {
@@ -111,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Required. OAuth grant types.
    * @return value or {@code null} for none
    */
   public java.lang.String getOauthGrantType() {
@@ -119,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Required. OAuth grant types.
    * @param oauthGrantType oauthGrantType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setOauthGrantType(java.lang.String oauthGrantType) {
@@ -128,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Optional. The OAuth scopes to grant.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopes() {
@@ -136,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Optional. The OAuth scopes to grant.
    * @param scopes scopes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setScopes(java.util.List<java.lang.String> scopes) {
@@ -145,9 +126,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Optional. The name of the SecretManager secret version resource storing the client secret. If
-   * this field is set, the `client_secret` field will be ignored. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretVersionForClientSecret() {
@@ -155,9 +133,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Optional. The name of the SecretManager secret version resource storing the client secret. If
-   * this field is set, the `client_secret` field will be ignored. Format:
-   * `projects/{project}/secrets/{secret}/versions/{version}`
    * @param secretVersionForClientSecret secretVersionForClientSecret or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setSecretVersionForClientSecret(java.lang.String secretVersionForClientSecret) {
@@ -166,7 +141,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Required. The token endpoint in the OAuth provider to exchange for an access token.
    * @return value or {@code null} for none
    */
   public java.lang.String getTokenEndpoint() {
@@ -174,7 +148,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Required. The token endpoint in the OAuth provider to exchange for an access token.
    * @param tokenEndpoint tokenEndpoint or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setTokenEndpoint(java.lang.String tokenEndpoint) {

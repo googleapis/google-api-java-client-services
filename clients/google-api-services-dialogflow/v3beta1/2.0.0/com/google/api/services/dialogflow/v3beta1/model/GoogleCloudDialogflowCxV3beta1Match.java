@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents one match result of MatchIntent.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Match.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,63 +30,42 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.client.json.GenericJson {
 
   /**
-   * The confidence of this match. Values range from 0.0 (completely uncertain) to 1.0 (completely
-   * certain). This value is for informational purpose only and is only used to help match the best
-   * intent within the classification threshold. This value may change for the same end-user
-   * expression at any time due to a model retraining or change in implementation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * The event that matched the query. Filled for `EVENT`, `NO_MATCH` and `NO_INPUT` match types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String event;
 
   /**
-   * The Intent that matched the query. Some, not all fields are filled in this message, including
-   * but not limited to: `name` and `display_name`. Only filled for `INTENT` match type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Intent intent;
 
   /**
-   * Type of this Match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matchType;
 
   /**
-   * The collection of parameters extracted from the query. Depending on your protocol or client
-   * library language, this is a map, associative array, symbol table, dictionary, or JSON object
-   * composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value:
-   * parameter name * MapValue type: If parameter's entity type is a composite entity then use map,
-   * otherwise, depending on the parameter value type, it could be one of string, number, boolean,
-   * null, list or map. * MapValue value: If parameter's entity type is a composite entity then use
-   * map from composite entity property names to property values, otherwise, use parameter value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * Final text input which was matched during MatchIntent. This value can be different from
-   * original input sent in request because of spelling correction or other processing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resolvedInput;
 
   /**
-   * The confidence of this match. Values range from 0.0 (completely uncertain) to 1.0 (completely
-   * certain). This value is for informational purpose only and is only used to help match the best
-   * intent within the classification threshold. This value may change for the same end-user
-   * expression at any time due to a model retraining or change in implementation.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -94,10 +73,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * The confidence of this match. Values range from 0.0 (completely uncertain) to 1.0 (completely
-   * certain). This value is for informational purpose only and is only used to help match the best
-   * intent within the classification threshold. This value may change for the same end-user
-   * expression at any time due to a model retraining or change in implementation.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Match setConfidence(java.lang.Float confidence) {
@@ -106,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * The event that matched the query. Filled for `EVENT`, `NO_MATCH` and `NO_INPUT` match types.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvent() {
@@ -114,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * The event that matched the query. Filled for `EVENT`, `NO_MATCH` and `NO_INPUT` match types.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Match setEvent(java.lang.String event) {
@@ -123,8 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * The Intent that matched the query. Some, not all fields are filled in this message, including
-   * but not limited to: `name` and `display_name`. Only filled for `INTENT` match type.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Intent getIntent() {
@@ -132,8 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * The Intent that matched the query. Some, not all fields are filled in this message, including
-   * but not limited to: `name` and `display_name`. Only filled for `INTENT` match type.
    * @param intent intent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Match setIntent(GoogleCloudDialogflowCxV3beta1Intent intent) {
@@ -142,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * Type of this Match.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchType() {
@@ -150,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * Type of this Match.
    * @param matchType matchType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Match setMatchType(java.lang.String matchType) {
@@ -159,13 +126,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * The collection of parameters extracted from the query. Depending on your protocol or client
-   * library language, this is a map, associative array, symbol table, dictionary, or JSON object
-   * composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value:
-   * parameter name * MapValue type: If parameter's entity type is a composite entity then use map,
-   * otherwise, depending on the parameter value type, it could be one of string, number, boolean,
-   * null, list or map. * MapValue value: If parameter's entity type is a composite entity then use
-   * map from composite entity property names to property values, otherwise, use parameter value.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -173,13 +133,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * The collection of parameters extracted from the query. Depending on your protocol or client
-   * library language, this is a map, associative array, symbol table, dictionary, or JSON object
-   * composed of a collection of (MapKey, MapValue) pairs: * MapKey type: string * MapKey value:
-   * parameter name * MapValue type: If parameter's entity type is a composite entity then use map,
-   * otherwise, depending on the parameter value type, it could be one of string, number, boolean,
-   * null, list or map. * MapValue value: If parameter's entity type is a composite entity then use
-   * map from composite entity property names to property values, otherwise, use parameter value.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Match setParameters(java.util.Map<String, java.lang.Object> parameters) {
@@ -188,8 +141,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * Final text input which was matched during MatchIntent. This value can be different from
-   * original input sent in request because of spelling correction or other processing.
    * @return value or {@code null} for none
    */
   public java.lang.String getResolvedInput() {
@@ -197,8 +148,6 @@ public final class GoogleCloudDialogflowCxV3beta1Match extends com.google.api.cl
   }
 
   /**
-   * Final text input which was matched during MatchIntent. This value can be different from
-   * original input sent in request because of spelling correction or other processing.
    * @param resolvedInput resolvedInput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Match setResolvedInput(java.lang.String resolvedInput) {

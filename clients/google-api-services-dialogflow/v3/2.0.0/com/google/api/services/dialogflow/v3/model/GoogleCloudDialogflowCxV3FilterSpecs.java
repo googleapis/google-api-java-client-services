@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Filter specifications for data stores.
+ * Model definition for GoogleCloudDialogflowCxV3FilterSpecs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3FilterSpecs extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Data Stores where the boosting configuration is applied. The full names of the
-   * referenced data stores. Formats:
-   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> dataStores;
 
   /**
-   * Optional. The filter expression to be applied. Expression syntax is documented at
-   * https://cloud.google.com/generative-ai-app-builder/docs/filter-search-metadata#filter-
-   * expression-syntax
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * Optional. Data Stores where the boosting configuration is applied. The full names of the
-   * referenced data stores. Formats:
-   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataStores() {
@@ -60,10 +49,6 @@ public final class GoogleCloudDialogflowCxV3FilterSpecs extends com.google.api.c
   }
 
   /**
-   * Optional. Data Stores where the boosting configuration is applied. The full names of the
-   * referenced data stores. Formats:
-   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * @param dataStores dataStores or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FilterSpecs setDataStores(java.util.List<java.lang.String> dataStores) {
@@ -72,9 +57,6 @@ public final class GoogleCloudDialogflowCxV3FilterSpecs extends com.google.api.c
   }
 
   /**
-   * Optional. The filter expression to be applied. Expression syntax is documented at
-   * https://cloud.google.com/generative-ai-app-builder/docs/filter-search-metadata#filter-
-   * expression-syntax
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -82,9 +64,6 @@ public final class GoogleCloudDialogflowCxV3FilterSpecs extends com.google.api.c
   }
 
   /**
-   * Optional. The filter expression to be applied. Expression syntax is documented at
-   * https://cloud.google.com/generative-ai-app-builder/docs/filter-search-metadata#filter-
-   * expression-syntax
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FilterSpecs setFilter(java.lang.String filter) {

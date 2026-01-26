@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents info card response. If the response contains generative knowledge prediction,
- * Dialogflow will return a payload with Infobot Messenger compatible info card. Otherwise, the info
- * card response is skipped.
+ * Model definition for GoogleCloudDialogflowCxV3ResponseMessageKnowledgeInfoCard.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

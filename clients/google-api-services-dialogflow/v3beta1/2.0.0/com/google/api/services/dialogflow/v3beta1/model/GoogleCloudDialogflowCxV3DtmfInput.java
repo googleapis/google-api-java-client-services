@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents the input for dtmf event.
+ * Model definition for GoogleCloudDialogflowCxV3DtmfInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3DtmfInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dtmf digits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String digits;
 
   /**
-   * The finish digit (if any).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String finishDigit;
 
   /**
-   * The dtmf digits.
    * @return value or {@code null} for none
    */
   public java.lang.String getDigits() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInput extends com.google.api.cli
   }
 
   /**
-   * The dtmf digits.
    * @param digits digits or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DtmfInput setDigits(java.lang.String digits) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInput extends com.google.api.cli
   }
 
   /**
-   * The finish digit (if any).
    * @return value or {@code null} for none
    */
   public java.lang.String getFinishDigit() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInput extends com.google.api.cli
   }
 
   /**
-   * The finish digit (if any).
    * @param finishDigit finishDigit or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DtmfInput setFinishDigit(java.lang.String finishDigit) {

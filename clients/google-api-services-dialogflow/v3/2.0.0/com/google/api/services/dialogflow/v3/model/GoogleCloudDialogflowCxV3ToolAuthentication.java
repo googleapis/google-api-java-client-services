@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Authentication information required for API calls
+ * Model definition for GoogleCloudDialogflowCxV3ToolAuthentication.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,43 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Config for API key auth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolAuthenticationApiKeyConfig apiKeyConfig;
 
   /**
-   * Config for bearer token auth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolAuthenticationBearerTokenConfig bearerTokenConfig;
 
   /**
-   * Config for OAuth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolAuthenticationOAuthConfig oauthConfig;
 
   /**
-   * Configuration for service account authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolAuthenticationServiceAccountAuthConfig serviceAccountAuthConfig;
 
   /**
-   * Config for [Diglogflow service agent](https://cloud.google.com/iam/docs/service-
-   * agents#dialogflow-service-agent) auth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolAuthenticationServiceAgentAuthConfig serviceAgentAuthConfig;
 
   /**
-   * Config for API key auth.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthenticationApiKeyConfig getApiKeyConfig() {
@@ -74,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.googl
   }
 
   /**
-   * Config for API key auth.
    * @param apiKeyConfig apiKeyConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthentication setApiKeyConfig(GoogleCloudDialogflowCxV3ToolAuthenticationApiKeyConfig apiKeyConfig) {
@@ -83,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.googl
   }
 
   /**
-   * Config for bearer token auth.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthenticationBearerTokenConfig getBearerTokenConfig() {
@@ -91,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.googl
   }
 
   /**
-   * Config for bearer token auth.
    * @param bearerTokenConfig bearerTokenConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthentication setBearerTokenConfig(GoogleCloudDialogflowCxV3ToolAuthenticationBearerTokenConfig bearerTokenConfig) {
@@ -100,7 +90,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.googl
   }
 
   /**
-   * Config for OAuth.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthenticationOAuthConfig getOauthConfig() {
@@ -108,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.googl
   }
 
   /**
-   * Config for OAuth.
    * @param oauthConfig oauthConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthentication setOauthConfig(GoogleCloudDialogflowCxV3ToolAuthenticationOAuthConfig oauthConfig) {
@@ -117,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.googl
   }
 
   /**
-   * Configuration for service account authentication.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthenticationServiceAccountAuthConfig getServiceAccountAuthConfig() {
@@ -125,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.googl
   }
 
   /**
-   * Configuration for service account authentication.
    * @param serviceAccountAuthConfig serviceAccountAuthConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthentication setServiceAccountAuthConfig(GoogleCloudDialogflowCxV3ToolAuthenticationServiceAccountAuthConfig serviceAccountAuthConfig) {
@@ -134,8 +120,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.googl
   }
 
   /**
-   * Config for [Diglogflow service agent](https://cloud.google.com/iam/docs/service-
-   * agents#dialogflow-service-agent) auth.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthenticationServiceAgentAuthConfig getServiceAgentAuthConfig() {
@@ -143,8 +127,6 @@ public final class GoogleCloudDialogflowCxV3ToolAuthentication extends com.googl
   }
 
   /**
-   * Config for [Diglogflow service agent](https://cloud.google.com/iam/docs/service-
-   * agents#dialogflow-service-agent) auth.
    * @param serviceAgentAuthConfig serviceAgentAuthConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolAuthentication setServiceAgentAuthConfig(GoogleCloudDialogflowCxV3ToolAuthenticationServiceAgentAuthConfig serviceAgentAuthConfig) {

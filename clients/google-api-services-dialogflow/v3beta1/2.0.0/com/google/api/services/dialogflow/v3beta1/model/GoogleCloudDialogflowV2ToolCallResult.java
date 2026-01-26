@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The result of calling a tool's action.
+ * Model definition for GoogleCloudDialogflowV2ToolCallResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,57 +30,48 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the tool's action associated with this call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Optional. The answer record associated with this tool call result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * Only populated if the response content is utf-8 encoded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * Output only. Create time of the tool call result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The tool call's error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ToolCallResultError error;
 
   /**
-   * Only populated if the response content is not utf-8 encoded. (by definition byte fields are
-   * base64 encoded).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rawContent;
 
   /**
-   * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tool;
 
   /**
-   * Optional. The name of the tool's action associated with this call.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -88,7 +79,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Optional. The name of the tool's action associated with this call.
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolCallResult setAction(java.lang.String action) {
@@ -97,7 +87,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Optional. The answer record associated with this tool call result.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -105,7 +94,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Optional. The answer record associated with this tool call result.
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolCallResult setAnswerRecord(java.lang.String answerRecord) {
@@ -114,7 +102,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Only populated if the response content is utf-8 encoded.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -122,7 +109,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Only populated if the response content is utf-8 encoded.
    * @param content content or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolCallResult setContent(java.lang.String content) {
@@ -131,7 +117,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Output only. Create time of the tool call result.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -139,7 +124,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Output only. Create time of the tool call result.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolCallResult setCreateTime(String createTime) {
@@ -148,7 +132,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * The tool call's error.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolCallResultError getError() {
@@ -156,7 +139,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * The tool call's error.
    * @param error error or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolCallResult setError(GoogleCloudDialogflowV2ToolCallResultError error) {
@@ -165,8 +147,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Only populated if the response content is not utf-8 encoded. (by definition byte fields are
-   * base64 encoded).
    * @see #decodeRawContent()
    * @return value or {@code null} for none
    */
@@ -175,8 +155,7 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Only populated if the response content is not utf-8 encoded. (by definition byte fields are
-   * base64 encoded).
+
    * @see #getRawContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -187,8 +166,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Only populated if the response content is not utf-8 encoded. (by definition byte fields are
-   * base64 encoded).
    * @see #encodeRawContent()
    * @param rawContent rawContent or {@code null} for none
    */
@@ -198,8 +175,7 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Only populated if the response content is not utf-8 encoded. (by definition byte fields are
-   * base64 encoded).
+
    * @see #setRawContent()
    *
    * <p>
@@ -214,7 +190,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTool() {
@@ -222,7 +197,6 @@ public final class GoogleCloudDialogflowV2ToolCallResult extends com.google.api.
   }
 
   /**
-   * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * @param tool tool or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolCallResult setTool(java.lang.String tool) {

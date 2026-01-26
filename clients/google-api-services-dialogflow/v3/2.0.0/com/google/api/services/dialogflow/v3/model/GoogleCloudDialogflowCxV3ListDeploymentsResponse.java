@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for Deployments.ListDeployments.
+ * Model definition for GoogleCloudDialogflowCxV3ListDeploymentsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,9 +30,6 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ListDeploymentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of deployments. There will be a maximum number of items returned based on the
-   * page_size field in the request. The list may in some cases be empty or contain fewer entries
-   * than page_size even if this isn't the last page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,16 +42,12 @@ public final class GoogleCloudDialogflowCxV3ListDeploymentsResponse extends com.
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of deployments. There will be a maximum number of items returned based on the
-   * page_size field in the request. The list may in some cases be empty or contain fewer entries
-   * than page_size even if this isn't the last page.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3Deployment> getDeployments() {
@@ -62,9 +55,6 @@ public final class GoogleCloudDialogflowCxV3ListDeploymentsResponse extends com.
   }
 
   /**
-   * The list of deployments. There will be a maximum number of items returned based on the
-   * page_size field in the request. The list may in some cases be empty or contain fewer entries
-   * than page_size even if this isn't the last page.
    * @param deployments deployments or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ListDeploymentsResponse setDeployments(java.util.List<GoogleCloudDialogflowCxV3Deployment> deployments) {
@@ -73,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3ListDeploymentsResponse extends com.
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -81,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3ListDeploymentsResponse extends com.
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ListDeploymentsResponse setNextPageToken(java.lang.String nextPageToken) {

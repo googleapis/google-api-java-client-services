@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The configuration for model evaluation.
+ * Model definition for GoogleCloudDialogflowV2EvaluationConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Datasets used for evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2InputDataset> datasets;
 
   /**
-   * Configuration for smart compose model evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig smartComposeConfig;
 
   /**
-   * Configuration for smart reply model evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig smartReplyConfig;
 
   /**
-   * Required. Datasets used for evaluation.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2InputDataset> getDatasets() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   }
 
   /**
-   * Required. Datasets used for evaluation.
    * @param datasets datasets or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfig setDatasets(java.util.List<GoogleCloudDialogflowV2InputDataset> datasets) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   }
 
   /**
-   * Configuration for smart compose model evaluation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig getSmartComposeConfig() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   }
 
   /**
-   * Configuration for smart compose model evaluation.
    * @param smartComposeConfig smartComposeConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfig setSmartComposeConfig(GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig smartComposeConfig) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   }
 
   /**
-   * Configuration for smart reply model evaluation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig getSmartReplyConfig() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   }
 
   /**
-   * Configuration for smart reply model evaluation.
    * @param smartReplyConfig smartReplyConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfig setSmartReplyConfig(GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig smartReplyConfig) {

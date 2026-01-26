@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Answer part with citation.
+ * Model definition for GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerPart.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerPart extends com.google.api.client.json.GenericJson {
 
   /**
-   * Citations for this answer part. Indices of `search_snippets`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> supportingIndices;
 
   /**
-   * Substring of the answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Citations for this answer part. Indices of `search_snippets`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getSupportingIndices() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswe
   }
 
   /**
-   * Citations for this answer part. Indices of `search_snippets`.
    * @param supportingIndices supportingIndices or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerPart setSupportingIndices(java.util.List<java.lang.Integer> supportingIndices) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswe
   }
 
   /**
-   * Substring of the answer.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswe
   }
 
   /**
-   * Substring of the answer.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerPart setText(java.lang.String text) {

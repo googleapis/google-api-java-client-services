@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Response message for AnswerRecords.ListAnswerRecords.
+ * Model definition for GoogleCloudDialogflowV2ListAnswerRecordsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ListAnswerRecordsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of answer records.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,16 +42,12 @@ public final class GoogleCloudDialogflowV2ListAnswerRecordsResponse extends com.
   }
 
   /**
-   * A token to retrieve next page of results. Or empty if there are no more results. Pass this
-   * value in the ListAnswerRecordsRequest.page_token field in the subsequent call to
-   * `ListAnswerRecords` method to retrieve the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of answer records.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2AnswerRecord> getAnswerRecords() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowV2ListAnswerRecordsResponse extends com.
   }
 
   /**
-   * The list of answer records.
    * @param answerRecords answerRecords or {@code null} for none
    */
   public GoogleCloudDialogflowV2ListAnswerRecordsResponse setAnswerRecords(java.util.List<GoogleCloudDialogflowV2AnswerRecord> answerRecords) {
@@ -69,9 +63,6 @@ public final class GoogleCloudDialogflowV2ListAnswerRecordsResponse extends com.
   }
 
   /**
-   * A token to retrieve next page of results. Or empty if there are no more results. Pass this
-   * value in the ListAnswerRecordsRequest.page_token field in the subsequent call to
-   * `ListAnswerRecords` method to retrieve the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -79,9 +70,6 @@ public final class GoogleCloudDialogflowV2ListAnswerRecordsResponse extends com.
   }
 
   /**
-   * A token to retrieve next page of results. Or empty if there are no more results. Pass this
-   * value in the ListAnswerRecordsRequest.page_token field in the subsequent call to
-   * `ListAnswerRecords` method to retrieve the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowV2ListAnswerRecordsResponse setNextPageToken(java.lang.String nextPageToken) {

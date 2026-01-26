@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Search snippet details.
+ * Model definition for GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Title of the enclosing document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentTitle;
 
   /**
-   * Uri for the document. Present if specified for the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentUri;
 
   /**
-   * Metadata associated with the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * Text included in the prompt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Title of the enclosing document.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentTitle() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearc
   }
 
   /**
-   * Title of the enclosing document.
    * @param documentTitle documentTitle or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet setDocumentTitle(java.lang.String documentTitle) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearc
   }
 
   /**
-   * Uri for the document. Present if specified for the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentUri() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearc
   }
 
   /**
-   * Uri for the document. Present if specified for the document.
    * @param documentUri documentUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet setDocumentUri(java.lang.String documentUri) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearc
   }
 
   /**
-   * Metadata associated with the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearc
   }
 
   /**
-   * Metadata associated with the document.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearc
   }
 
   /**
-   * Text included in the prompt.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearc
   }
 
   /**
-   * Text included in the prompt.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSearchSnippet setText(java.lang.String text) {

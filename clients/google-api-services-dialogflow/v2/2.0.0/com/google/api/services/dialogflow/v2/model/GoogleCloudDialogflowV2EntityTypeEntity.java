@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * An **entity entry** for an associated entity type.
+ * Model definition for GoogleCloudDialogflowV2EntityTypeEntity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2EntityTypeEntity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A collection of value synonyms. For example, if the entity type is *vegetable*, and
-   * `value` is *scallions*, a synonym could be *green onions*. For `KIND_LIST` entity types: * This
-   * collection must contain exactly one synonym equal to `value`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> synonyms;
 
   /**
-   * Required. The primary value associated with this entity entry. For example, if the entity type
-   * is *vegetable*, the value could be *scallions*. For `KIND_MAP` entity types: * A reference
-   * value to be used in place of synonyms. For `KIND_LIST` entity types: * A string that can
-   * contain references to other entity types (with or without aliases).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Required. A collection of value synonyms. For example, if the entity type is *vegetable*, and
-   * `value` is *scallions*, a synonym could be *green onions*. For `KIND_LIST` entity types: * This
-   * collection must contain exactly one synonym equal to `value`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSynonyms() {
@@ -59,9 +49,6 @@ public final class GoogleCloudDialogflowV2EntityTypeEntity extends com.google.ap
   }
 
   /**
-   * Required. A collection of value synonyms. For example, if the entity type is *vegetable*, and
-   * `value` is *scallions*, a synonym could be *green onions*. For `KIND_LIST` entity types: * This
-   * collection must contain exactly one synonym equal to `value`.
    * @param synonyms synonyms or {@code null} for none
    */
   public GoogleCloudDialogflowV2EntityTypeEntity setSynonyms(java.util.List<java.lang.String> synonyms) {
@@ -70,10 +57,6 @@ public final class GoogleCloudDialogflowV2EntityTypeEntity extends com.google.ap
   }
 
   /**
-   * Required. The primary value associated with this entity entry. For example, if the entity type
-   * is *vegetable*, the value could be *scallions*. For `KIND_MAP` entity types: * A reference
-   * value to be used in place of synonyms. For `KIND_LIST` entity types: * A string that can
-   * contain references to other entity types (with or without aliases).
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -81,10 +64,6 @@ public final class GoogleCloudDialogflowV2EntityTypeEntity extends com.google.ap
   }
 
   /**
-   * Required. The primary value associated with this entity entry. For example, if the entity type
-   * is *vegetable*, the value could be *scallions*. For `KIND_MAP` entity types: * A reference
-   * value to be used in place of synonyms. For `KIND_LIST` entity types: * A string that can
-   * contain references to other entity types (with or without aliases).
    * @param value value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EntityTypeEntity setValue(java.lang.String value) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * AgentUtterance represents one message sent by the agent.
+ * Model definition for GoogleCloudDialogflowCxV3AgentUtterance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3AgentUtterance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Message content in text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Required. Message content in text.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3AgentUtterance extends com.google.ap
   }
 
   /**
-   * Required. Message content in text.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AgentUtterance setText(java.lang.String text) {

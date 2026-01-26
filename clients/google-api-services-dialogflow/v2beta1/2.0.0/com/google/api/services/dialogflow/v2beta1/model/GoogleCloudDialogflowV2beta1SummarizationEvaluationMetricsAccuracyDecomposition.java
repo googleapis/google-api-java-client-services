@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Decomposition details for accuracy.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +31,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The accuracy reasoning of the breakdown point.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accuracyReasoning;
 
   /**
-   * Output only. Whether the breakdown point is accurate or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isAccurate;
 
   /**
-   * Output only. The breakdown point of the summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String point;
 
   /**
-   * Output only. The accuracy reasoning of the breakdown point.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccuracyReasoning() {
@@ -59,7 +56,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAcc
   }
 
   /**
-   * Output only. The accuracy reasoning of the breakdown point.
    * @param accuracyReasoning accuracyReasoning or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition setAccuracyReasoning(java.lang.String accuracyReasoning) {
@@ -68,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAcc
   }
 
   /**
-   * Output only. Whether the breakdown point is accurate or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAccurate() {
@@ -76,7 +71,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAcc
   }
 
   /**
-   * Output only. Whether the breakdown point is accurate or not.
    * @param isAccurate isAccurate or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition setIsAccurate(java.lang.Boolean isAccurate) {
@@ -85,7 +79,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAcc
   }
 
   /**
-   * Output only. The breakdown point of the summary.
    * @return value or {@code null} for none
    */
   public java.lang.String getPoint() {
@@ -93,7 +86,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAcc
   }
 
   /**
-   * Output only. The breakdown point of the summary.
    * @param point point or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition setPoint(java.lang.String point) {

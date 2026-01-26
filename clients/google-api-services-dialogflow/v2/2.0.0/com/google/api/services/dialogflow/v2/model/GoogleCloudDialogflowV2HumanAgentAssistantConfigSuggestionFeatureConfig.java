@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Config for suggestion features.
+ * Model definition for GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,99 +30,78 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configs of custom conversation model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfig conversationModelConfig;
 
   /**
-   * Configs for processing conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfig conversationProcessConfig;
 
   /**
-   * Optional. Disable the logging of search queries sent by human agents. It can prevent those
-   * queries from being stored at answer records. Supported features: KNOWLEDGE_SEARCH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableAgentQueryLogging;
 
   /**
-   * Optional. Enable including conversation context during query answer generation. Supported
-   * features: KNOWLEDGE_SEARCH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableConversationAugmentedQuery;
 
   /**
-   * Automatically iterates all participants and tries to compile suggestions. Supported features:
-   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, KNOWLEDGE_ASSIST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableEventBasedSuggestion;
 
   /**
-   * Optional. Enable query suggestion only. Supported features: KNOWLEDGE_ASSIST
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableQuerySuggestionOnly;
 
   /**
-   * Optional. Enable query suggestion even if we can't find its answer. By default, queries are
-   * suggested only if we find its answer. Supported features: KNOWLEDGE_ASSIST
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableQuerySuggestionWhenNoAnswer;
 
   /**
-   * Optional. Enable returning detailed reasons for suggestion results. For example, with this
-   * field disabled, Knowledge Search feature returns NotFound error when no answer is found for the
-   * input query. Enabling this field will change the behavior to return an OK response with
-   * detailed information indicating the lack of results. Supported features: KNOWLEDGE_SEARCH,
-   * KNOWLEDGE_ASSIST
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableResponseDebugInfo;
 
   /**
-   * Configs of query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig queryConfig;
 
   /**
-   * Optional. Settings for Responsible AI checks. Supported features: KNOWLEDGE_ASSIST
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2RaiSettings raiSettings;
 
   /**
-   * The suggestion feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SuggestionFeature suggestionFeature;
 
   /**
-   * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettings suggestionTriggerSettings;
 
   /**
-   * Configs of custom conversation model.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfig getConversationModelConfig() {
@@ -130,7 +109,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Configs of custom conversation model.
    * @param conversationModelConfig conversationModelConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setConversationModelConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfig conversationModelConfig) {
@@ -139,7 +117,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Configs for processing conversation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfig getConversationProcessConfig() {
@@ -147,7 +124,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Configs for processing conversation.
    * @param conversationProcessConfig conversationProcessConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setConversationProcessConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfig conversationProcessConfig) {
@@ -156,8 +132,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Disable the logging of search queries sent by human agents. It can prevent those
-   * queries from being stored at answer records. Supported features: KNOWLEDGE_SEARCH.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableAgentQueryLogging() {
@@ -165,8 +139,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Disable the logging of search queries sent by human agents. It can prevent those
-   * queries from being stored at answer records. Supported features: KNOWLEDGE_SEARCH.
    * @param disableAgentQueryLogging disableAgentQueryLogging or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setDisableAgentQueryLogging(java.lang.Boolean disableAgentQueryLogging) {
@@ -175,8 +147,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Enable including conversation context during query answer generation. Supported
-   * features: KNOWLEDGE_SEARCH.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConversationAugmentedQuery() {
@@ -184,8 +154,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Enable including conversation context during query answer generation. Supported
-   * features: KNOWLEDGE_SEARCH.
    * @param enableConversationAugmentedQuery enableConversationAugmentedQuery or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setEnableConversationAugmentedQuery(java.lang.Boolean enableConversationAugmentedQuery) {
@@ -194,8 +162,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Automatically iterates all participants and tries to compile suggestions. Supported features:
-   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, KNOWLEDGE_ASSIST.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableEventBasedSuggestion() {
@@ -203,8 +169,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Automatically iterates all participants and tries to compile suggestions. Supported features:
-   * ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST, KNOWLEDGE_ASSIST.
    * @param enableEventBasedSuggestion enableEventBasedSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setEnableEventBasedSuggestion(java.lang.Boolean enableEventBasedSuggestion) {
@@ -213,7 +177,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Enable query suggestion only. Supported features: KNOWLEDGE_ASSIST
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableQuerySuggestionOnly() {
@@ -221,7 +184,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Enable query suggestion only. Supported features: KNOWLEDGE_ASSIST
    * @param enableQuerySuggestionOnly enableQuerySuggestionOnly or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setEnableQuerySuggestionOnly(java.lang.Boolean enableQuerySuggestionOnly) {
@@ -230,8 +192,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Enable query suggestion even if we can't find its answer. By default, queries are
-   * suggested only if we find its answer. Supported features: KNOWLEDGE_ASSIST
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableQuerySuggestionWhenNoAnswer() {
@@ -239,8 +199,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Enable query suggestion even if we can't find its answer. By default, queries are
-   * suggested only if we find its answer. Supported features: KNOWLEDGE_ASSIST
    * @param enableQuerySuggestionWhenNoAnswer enableQuerySuggestionWhenNoAnswer or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setEnableQuerySuggestionWhenNoAnswer(java.lang.Boolean enableQuerySuggestionWhenNoAnswer) {
@@ -249,11 +207,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Enable returning detailed reasons for suggestion results. For example, with this
-   * field disabled, Knowledge Search feature returns NotFound error when no answer is found for the
-   * input query. Enabling this field will change the behavior to return an OK response with
-   * detailed information indicating the lack of results. Supported features: KNOWLEDGE_SEARCH,
-   * KNOWLEDGE_ASSIST
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableResponseDebugInfo() {
@@ -261,11 +214,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Enable returning detailed reasons for suggestion results. For example, with this
-   * field disabled, Knowledge Search feature returns NotFound error when no answer is found for the
-   * input query. Enabling this field will change the behavior to return an OK response with
-   * detailed information indicating the lack of results. Supported features: KNOWLEDGE_SEARCH,
-   * KNOWLEDGE_ASSIST
    * @param enableResponseDebugInfo enableResponseDebugInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setEnableResponseDebugInfo(java.lang.Boolean enableResponseDebugInfo) {
@@ -274,7 +222,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Configs of query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig getQueryConfig() {
@@ -282,7 +229,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Configs of query.
    * @param queryConfig queryConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setQueryConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfig queryConfig) {
@@ -291,7 +237,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Settings for Responsible AI checks. Supported features: KNOWLEDGE_ASSIST
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2RaiSettings getRaiSettings() {
@@ -299,7 +244,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Optional. Settings for Responsible AI checks. Supported features: KNOWLEDGE_ASSIST
    * @param raiSettings raiSettings or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setRaiSettings(GoogleCloudDialogflowV2RaiSettings raiSettings) {
@@ -308,7 +252,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * The suggestion feature.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestionFeature getSuggestionFeature() {
@@ -316,7 +259,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * The suggestion feature.
    * @param suggestionFeature suggestionFeature or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setSuggestionFeature(GoogleCloudDialogflowV2SuggestionFeature suggestionFeature) {
@@ -325,7 +267,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettings getSuggestionTriggerSettings() {
@@ -333,7 +274,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFea
   }
 
   /**
-   * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION and FAQ will use this field.
    * @param suggestionTriggerSettings suggestionTriggerSettings or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig setSuggestionTriggerSettings(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettings suggestionTriggerSettings) {

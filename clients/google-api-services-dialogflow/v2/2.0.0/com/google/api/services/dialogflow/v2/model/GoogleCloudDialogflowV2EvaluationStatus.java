@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * A common evalaution pipeline status.
+ * Model definition for GoogleCloudDialogflowV2EvaluationStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2EvaluationStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. If the value is `false`, it means the evaluation is still in progress. If `true`,
-   * the operation is completed, and either `error` or `response` is available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean done;
 
   /**
-   * Output only. The error result of the evaluation in case of failure in evaluation pipeline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus pipelineStatus;
 
   /**
-   * Output only. If the value is `false`, it means the evaluation is still in progress. If `true`,
-   * the operation is completed, and either `error` or `response` is available.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDone() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowV2EvaluationStatus extends com.google.ap
   }
 
   /**
-   * Output only. If the value is `false`, it means the evaluation is still in progress. If `true`,
-   * the operation is completed, and either `error` or `response` is available.
    * @param done done or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationStatus setDone(java.lang.Boolean done) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowV2EvaluationStatus extends com.google.ap
   }
 
   /**
-   * Output only. The error result of the evaluation in case of failure in evaluation pipeline.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getPipelineStatus() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowV2EvaluationStatus extends com.google.ap
   }
 
   /**
-   * Output only. The error result of the evaluation in case of failure in evaluation pipeline.
    * @param pipelineStatus pipelineStatus or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationStatus setPipelineStatus(GoogleRpcStatus pipelineStatus) {

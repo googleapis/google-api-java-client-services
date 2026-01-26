@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents the natural speech audio to be processed.
+ * Model definition for GoogleCloudDialogflowCxV3AudioInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
-   * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
-   * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
-   * detect intent, `config` must be provided in the first request and `audio` must be provided in
-   * all following requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audio;
 
   /**
-   * Required. Instructs the speech recognizer how to process the speech audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3InputAudioConfig config;
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
-   * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
-   * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
-   * detect intent, `config` must be provided in the first request and `audio` must be provided in
-   * all following requests.
    * @see #decodeAudio()
    * @return value or {@code null} for none
    */
@@ -61,11 +50,7 @@ public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.cl
   }
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
-   * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
-   * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
-   * detect intent, `config` must be provided in the first request and `audio` must be provided in
-   * all following requests.
+
    * @see #getAudio()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -76,11 +61,6 @@ public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.cl
   }
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
-   * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
-   * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
-   * detect intent, `config` must be provided in the first request and `audio` must be provided in
-   * all following requests.
    * @see #encodeAudio()
    * @param audio audio or {@code null} for none
    */
@@ -90,11 +70,7 @@ public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.cl
   }
 
   /**
-   * The natural language speech audio to be processed. A single request can contain up to 2 minutes
-   * of speech audio data. The transcribed text cannot contain more than 256 bytes. For non-
-   * streaming audio detect intent, both `config` and `audio` must be provided. For streaming audio
-   * detect intent, `config` must be provided in the first request and `audio` must be provided in
-   * all following requests.
+
    * @see #setAudio()
    *
    * <p>
@@ -109,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.cl
   }
 
   /**
-   * Required. Instructs the speech recognizer how to process the speech audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InputAudioConfig getConfig() {
@@ -117,7 +92,6 @@ public final class GoogleCloudDialogflowCxV3AudioInput extends com.google.api.cl
   }
 
   /**
-   * Required. Instructs the speech recognizer how to process the speech audio.
    * @param config config or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AudioInput setConfig(GoogleCloudDialogflowCxV3InputAudioConfig config) {

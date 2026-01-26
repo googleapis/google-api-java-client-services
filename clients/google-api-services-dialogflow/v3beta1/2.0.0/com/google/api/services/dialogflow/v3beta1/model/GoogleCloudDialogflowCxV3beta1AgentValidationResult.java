@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The response message for Agents.GetAgentValidationResult.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AgentValidationResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AgentValidationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains all flow validation results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1FlowValidationResult> flowValidationResults;
 
   /**
-   * The unique identifier of the agent validation result. Format:
-   * `projects//locations//agents//validationResult`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Contains all flow validation results.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1FlowValidationResult> getFlowValidationResults() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentValidationResult extends c
   }
 
   /**
-   * Contains all flow validation results.
    * @param flowValidationResults flowValidationResults or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentValidationResult setFlowValidationResults(java.util.List<GoogleCloudDialogflowCxV3beta1FlowValidationResult> flowValidationResults) {
@@ -62,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentValidationResult extends c
   }
 
   /**
-   * The unique identifier of the agent validation result. Format:
-   * `projects//locations//agents//validationResult`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -71,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentValidationResult extends c
   }
 
   /**
-   * The unique identifier of the agent validation result. Format:
-   * `projects//locations//agents//validationResult`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentValidationResult setName(java.lang.String name) {

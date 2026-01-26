@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The type of Human Agent Assistant API suggestion to perform, and the maximum number of results to
- * return for that type. Multiple `Feature` objects can be specified in the `features` list.
+ * Model definition for GoogleCloudDialogflowV2SuggestionFeature.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SuggestionFeature extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of Human Agent Assistant API feature to request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Type of Human Agent Assistant API feature to request.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -46,7 +43,6 @@ public final class GoogleCloudDialogflowV2SuggestionFeature extends com.google.a
   }
 
   /**
-   * Type of Human Agent Assistant API feature to request.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestionFeature setType(java.lang.String type) {

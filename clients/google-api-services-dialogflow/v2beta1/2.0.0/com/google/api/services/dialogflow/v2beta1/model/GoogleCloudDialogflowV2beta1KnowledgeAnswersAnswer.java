@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * An answer from Knowledge Connector.
+ * Model definition for GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,54 +30,36 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The piece of text from the `source` knowledge base document that answers this conversational
-   * query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answer;
 
   /**
-   * The corresponding FAQ question if the answer was extracted from a FAQ Document, empty
-   * otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String faqQuestion;
 
   /**
-   * The system's confidence score that this Knowledge answer is a good match for this
-   * conversational query. The range is from 0.0 (completely uncertain) to 1.0 (completely certain).
-   * Note: The confidence score is likely to vary somewhat (possibly even for identical requests),
-   * as the underlying model is under constant improvement. It may be deprecated in the future. We
-   * recommend using `match_confidence_level` which should be generally more stable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float matchConfidence;
 
   /**
-   * The system's confidence level that this knowledge answer is a good match for this
-   * conversational query. NOTE: The confidence level for a given `` pair may change without notice,
-   * as it depends on models that are constantly being improved. However, it will change less
-   * frequently than the confidence score below, and should be preferred for referencing the quality
-   * of an answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matchConfidenceLevel;
 
   /**
-   * Indicates which Knowledge Document this answer was extracted from. Format:
-   * `projects//knowledgeBases//documents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * The piece of text from the `source` knowledge base document that answers this conversational
-   * query.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswer() {
@@ -85,8 +67,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends co
   }
 
   /**
-   * The piece of text from the `source` knowledge base document that answers this conversational
-   * query.
    * @param answer answer or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer setAnswer(java.lang.String answer) {
@@ -95,8 +75,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends co
   }
 
   /**
-   * The corresponding FAQ question if the answer was extracted from a FAQ Document, empty
-   * otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.String getFaqQuestion() {
@@ -104,8 +82,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends co
   }
 
   /**
-   * The corresponding FAQ question if the answer was extracted from a FAQ Document, empty
-   * otherwise.
    * @param faqQuestion faqQuestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer setFaqQuestion(java.lang.String faqQuestion) {
@@ -114,11 +90,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends co
   }
 
   /**
-   * The system's confidence score that this Knowledge answer is a good match for this
-   * conversational query. The range is from 0.0 (completely uncertain) to 1.0 (completely certain).
-   * Note: The confidence score is likely to vary somewhat (possibly even for identical requests),
-   * as the underlying model is under constant improvement. It may be deprecated in the future. We
-   * recommend using `match_confidence_level` which should be generally more stable.
    * @return value or {@code null} for none
    */
   public java.lang.Float getMatchConfidence() {
@@ -126,11 +97,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends co
   }
 
   /**
-   * The system's confidence score that this Knowledge answer is a good match for this
-   * conversational query. The range is from 0.0 (completely uncertain) to 1.0 (completely certain).
-   * Note: The confidence score is likely to vary somewhat (possibly even for identical requests),
-   * as the underlying model is under constant improvement. It may be deprecated in the future. We
-   * recommend using `match_confidence_level` which should be generally more stable.
    * @param matchConfidence matchConfidence or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer setMatchConfidence(java.lang.Float matchConfidence) {
@@ -139,11 +105,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends co
   }
 
   /**
-   * The system's confidence level that this knowledge answer is a good match for this
-   * conversational query. NOTE: The confidence level for a given `` pair may change without notice,
-   * as it depends on models that are constantly being improved. However, it will change less
-   * frequently than the confidence score below, and should be preferred for referencing the quality
-   * of an answer.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchConfidenceLevel() {
@@ -151,11 +112,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends co
   }
 
   /**
-   * The system's confidence level that this knowledge answer is a good match for this
-   * conversational query. NOTE: The confidence level for a given `` pair may change without notice,
-   * as it depends on models that are constantly being improved. However, it will change less
-   * frequently than the confidence score below, and should be preferred for referencing the quality
-   * of an answer.
    * @param matchConfidenceLevel matchConfidenceLevel or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer setMatchConfidenceLevel(java.lang.String matchConfidenceLevel) {
@@ -164,8 +120,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends co
   }
 
   /**
-   * Indicates which Knowledge Document this answer was extracted from. Format:
-   * `projects//knowledgeBases//documents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -173,8 +127,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer extends co
   }
 
   /**
-   * Indicates which Knowledge Document this answer was extracted from. Format:
-   * `projects//knowledgeBases//documents/`.
    * @param source source or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer setSource(java.lang.String source) {

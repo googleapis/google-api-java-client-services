@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents a part of a training phrase.
+ * Model definition for GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart extends com.google.api.client.json.GenericJson {
 
   /**
-   * The parameter used to annotate this part of the training phrase. This field is required for
-   * annotated parts of the training phrase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parameterId;
 
   /**
-   * Required. The text for this part.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * The parameter used to annotate this part of the training phrase. This field is required for
-   * annotated parts of the training phrase.
    * @return value or {@code null} for none
    */
   public java.lang.String getParameterId() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart extend
   }
 
   /**
-   * The parameter used to annotate this part of the training phrase. This field is required for
-   * annotated parts of the training phrase.
    * @param parameterId parameterId or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart setParameterId(java.lang.String parameterId) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart extend
   }
 
   /**
-   * Required. The text for this part.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart extend
   }
 
   /**
-   * Required. The text for this part.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart setText(java.lang.String text) {

@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Document source settings. Supported features: SMART_REPLY, SMART_COMPOSE.
+ * Model definition for
+ * GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,18 +31,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Knowledge documents to query from. Format:
-   * `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are
-   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> documents;
 
   /**
-   * Required. Knowledge documents to query from. Format:
-   * `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are
-   * supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDocuments() {
@@ -49,9 +44,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
   }
 
   /**
-   * Required. Knowledge documents to query from. Format:
-   * `projects//locations//knowledgeBases//documents/`. Currently, at most 5 documents are
-   * supported.
    * @param documents documents or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySource setDocuments(java.util.List<java.lang.String> documents) {

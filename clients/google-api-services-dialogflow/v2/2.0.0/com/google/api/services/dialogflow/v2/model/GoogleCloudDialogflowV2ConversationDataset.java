@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a conversation dataset that a user imports raw data into. The data inside
- * ConversationDataset can not be changed after ImportConversationData finishes (and calling
- * ImportConversationData on a dataset that already has data is not allowed).
+ * Model definition for GoogleCloudDialogflowV2ConversationDataset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,71 +30,60 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConversationDataset extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The number of conversations this conversation dataset contains.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long conversationCount;
 
   /**
-   * Output only. Metadata set during conversation data import.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ConversationInfo conversationInfo;
 
   /**
-   * Output only. Creation time of this dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The description of the dataset. Maximum of 10000 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The display name of the dataset. Maximum of 64 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. Input configurations set during conversation data import.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2InputConfig inputConfig;
 
   /**
-   * Output only. ConversationDataset resource name. Format:
-   * `projects//locations//conversationDatasets/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Output only. The number of conversations this conversation dataset contains.
    * @return value or {@code null} for none
    */
   public java.lang.Long getConversationCount() {
@@ -104,7 +91,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. The number of conversations this conversation dataset contains.
    * @param conversationCount conversationCount or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationDataset setConversationCount(java.lang.Long conversationCount) {
@@ -113,7 +99,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. Metadata set during conversation data import.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationInfo getConversationInfo() {
@@ -121,7 +106,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. Metadata set during conversation data import.
    * @param conversationInfo conversationInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationDataset setConversationInfo(GoogleCloudDialogflowV2ConversationInfo conversationInfo) {
@@ -130,7 +114,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. Creation time of this dataset.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -138,7 +121,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. Creation time of this dataset.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationDataset setCreateTime(String createTime) {
@@ -147,7 +129,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Optional. The description of the dataset. Maximum of 10000 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -155,7 +136,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Optional. The description of the dataset. Maximum of 10000 bytes.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationDataset setDescription(java.lang.String description) {
@@ -164,7 +144,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Required. The display name of the dataset. Maximum of 64 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -172,7 +151,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Required. The display name of the dataset. Maximum of 64 bytes.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationDataset setDisplayName(java.lang.String displayName) {
@@ -181,7 +159,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. Input configurations set during conversation data import.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2InputConfig getInputConfig() {
@@ -189,7 +166,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. Input configurations set during conversation data import.
    * @param inputConfig inputConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationDataset setInputConfig(GoogleCloudDialogflowV2InputConfig inputConfig) {
@@ -198,8 +174,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. ConversationDataset resource name. Format:
-   * `projects//locations//conversationDatasets/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -207,8 +181,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. ConversationDataset resource name. Format:
-   * `projects//locations//conversationDatasets/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationDataset setName(java.lang.String name) {
@@ -217,7 +189,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the dataset.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -225,7 +196,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the dataset.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationDataset setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -234,7 +204,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the dataset.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -242,7 +211,6 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the dataset.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationDataset setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {

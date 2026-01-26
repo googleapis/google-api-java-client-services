@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Metadata for a ConversationModels.CreateConversationModelEvaluation operation.
+ * Model definition for GoogleCloudDialogflowV2CreateConversationModelEvaluationOperationMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,37 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the conversation model. Format: `projects//locations//conversationModels/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationModel;
 
   /**
-   * The resource name of the conversation model. Format:
-   * `projects//locations//conversationModels//evaluations/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationModelEvaluation;
 
   /**
-   * Timestamp when the request to create conversation model was submitted. The time is measured on
-   * server side.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * State of CreateConversationModel operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The resource name of the conversation model. Format: `projects//locations//conversationModels/`
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationModel() {
@@ -68,7 +61,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationOpera
   }
 
   /**
-   * The resource name of the conversation model. Format: `projects//locations//conversationModels/`
    * @param conversationModel conversationModel or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationModelEvaluationOperationMetadata setConversationModel(java.lang.String conversationModel) {
@@ -77,8 +69,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationOpera
   }
 
   /**
-   * The resource name of the conversation model. Format:
-   * `projects//locations//conversationModels//evaluations/`
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationModelEvaluation() {
@@ -86,8 +76,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationOpera
   }
 
   /**
-   * The resource name of the conversation model. Format:
-   * `projects//locations//conversationModels//evaluations/`
    * @param conversationModelEvaluation conversationModelEvaluation or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationModelEvaluationOperationMetadata setConversationModelEvaluation(java.lang.String conversationModelEvaluation) {
@@ -96,8 +84,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationOpera
   }
 
   /**
-   * Timestamp when the request to create conversation model was submitted. The time is measured on
-   * server side.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -105,8 +91,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationOpera
   }
 
   /**
-   * Timestamp when the request to create conversation model was submitted. The time is measured on
-   * server side.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationModelEvaluationOperationMetadata setCreateTime(String createTime) {
@@ -115,7 +99,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationOpera
   }
 
   /**
-   * State of CreateConversationModel operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -123,7 +106,6 @@ public final class GoogleCloudDialogflowV2CreateConversationModelEvaluationOpera
   }
 
   /**
-   * State of CreateConversationModel operation.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationModelEvaluationOperationMetadata setState(java.lang.String state) {

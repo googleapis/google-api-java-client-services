@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * A span represents a sub execution step of an action.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Span.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp of the completion of the span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String completeTime;
 
   /**
-   * The unordered collection of metrics in this span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,28 +48,24 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * The name of the span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Timestamp of the start of the span.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The metadata tags of the span such as span type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Timestamp of the completion of the span.
    * @return value or {@code null} for none
    */
   public String getCompleteTime() {
@@ -79,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * Timestamp of the completion of the span.
    * @param completeTime completeTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Span setCompleteTime(String completeTime) {
@@ -88,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * The unordered collection of metrics in this span.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1NamedMetric> getMetrics() {
@@ -96,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * The unordered collection of metrics in this span.
    * @param metrics metrics or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Span setMetrics(java.util.List<GoogleCloudDialogflowCxV3beta1NamedMetric> metrics) {
@@ -105,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * The name of the span.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -113,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * The name of the span.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Span setName(java.lang.String name) {
@@ -122,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * Timestamp of the start of the span.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -130,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * Timestamp of the start of the span.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Span setStartTime(String startTime) {
@@ -139,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * The metadata tags of the span such as span type.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -147,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3beta1Span extends com.google.api.cli
   }
 
   /**
-   * The metadata tags of the span such as span type.
    * @param tags tags or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Span setTags(java.util.List<java.lang.String> tags) {

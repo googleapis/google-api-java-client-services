@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Configures speech transcription for ConversationProfile.
+ * Model definition for GoogleCloudDialogflowV2SpeechToTextConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,86 +30,54 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Audio encoding of the audio content to process.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioEncoding;
 
   /**
-   * If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information
-   * about the recognized speech words, e.g. start and end time offsets. If false or unspecified,
-   * Speech doesn't return any word-level information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableWordInfo;
 
   /**
-   * The language of the supplied audio. Dialogflow does not do translations. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language. If not specified, the default language configured at
-   * ConversationProfile is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Which Speech model to select. Select the model best suited to your domain to get best results.
-   * If a model is not explicitly specified, then Dialogflow auto-selects a model based on other
-   * parameters in the SpeechToTextConfig and Agent settings. If enhanced speech model is enabled
-   * for the agent and an enhanced version of the specified model for the language does not exist,
-   * then the speech is recognized using the standard version of the specified model. Refer to
-   * [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-
-   * model) for more details. If you specify a model, the following models typically have the best
-   * performance: - phone_call (best for Agent Assist and telephony) - latest_short (best for
-   * Dialogflow non-telephony) - command_and_search Leave this field unspecified to use [Agent
-   * Speech settings](https://cloud.google.com/dialogflow/cx/docs/concept/agent#settings-speech) for
-   * model selection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
 
   /**
-   * List of names of Cloud Speech phrase sets that are used for transcription. For phrase set
-   * limitations, please refer to [Cloud Speech API quotas and
-   * limits](https://cloud.google.com/speech-to-text/quotas#content).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> phraseSets;
 
   /**
-   * Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
-   * `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in
-   * AnalyzeContentRequest and StreamingAnalyzeContentRequest request. If enhanced model variant is
-   * specified and an enhanced version of the specified model for the language does not exist, then
-   * it would emit an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String speechModelVariant;
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useTimeoutBasedEndpointing;
 
   /**
-   * Audio encoding of the audio content to process.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioEncoding() {
@@ -117,7 +85,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * Audio encoding of the audio content to process.
    * @param audioEncoding audioEncoding or {@code null} for none
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setAudioEncoding(java.lang.String audioEncoding) {
@@ -126,9 +93,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information
-   * about the recognized speech words, e.g. start and end time offsets. If false or unspecified,
-   * Speech doesn't return any word-level information.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableWordInfo() {
@@ -136,9 +100,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information
-   * about the recognized speech words, e.g. start and end time offsets. If false or unspecified,
-   * Speech doesn't return any word-level information.
    * @param enableWordInfo enableWordInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setEnableWordInfo(java.lang.Boolean enableWordInfo) {
@@ -147,11 +108,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * The language of the supplied audio. Dialogflow does not do translations. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language. If not specified, the default language configured at
-   * ConversationProfile is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -159,11 +115,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * The language of the supplied audio. Dialogflow does not do translations. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language. If not specified, the default language configured at
-   * ConversationProfile is used.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setLanguageCode(java.lang.String languageCode) {
@@ -172,17 +123,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * Which Speech model to select. Select the model best suited to your domain to get best results.
-   * If a model is not explicitly specified, then Dialogflow auto-selects a model based on other
-   * parameters in the SpeechToTextConfig and Agent settings. If enhanced speech model is enabled
-   * for the agent and an enhanced version of the specified model for the language does not exist,
-   * then the speech is recognized using the standard version of the specified model. Refer to
-   * [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-
-   * model) for more details. If you specify a model, the following models typically have the best
-   * performance: - phone_call (best for Agent Assist and telephony) - latest_short (best for
-   * Dialogflow non-telephony) - command_and_search Leave this field unspecified to use [Agent
-   * Speech settings](https://cloud.google.com/dialogflow/cx/docs/concept/agent#settings-speech) for
-   * model selection.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -190,17 +130,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * Which Speech model to select. Select the model best suited to your domain to get best results.
-   * If a model is not explicitly specified, then Dialogflow auto-selects a model based on other
-   * parameters in the SpeechToTextConfig and Agent settings. If enhanced speech model is enabled
-   * for the agent and an enhanced version of the specified model for the language does not exist,
-   * then the speech is recognized using the standard version of the specified model. Refer to
-   * [Cloud Speech API documentation](https://cloud.google.com/speech-to-text/docs/basics#select-
-   * model) for more details. If you specify a model, the following models typically have the best
-   * performance: - phone_call (best for Agent Assist and telephony) - latest_short (best for
-   * Dialogflow non-telephony) - command_and_search Leave this field unspecified to use [Agent
-   * Speech settings](https://cloud.google.com/dialogflow/cx/docs/concept/agent#settings-speech) for
-   * model selection.
    * @param model model or {@code null} for none
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setModel(java.lang.String model) {
@@ -209,9 +138,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * List of names of Cloud Speech phrase sets that are used for transcription. For phrase set
-   * limitations, please refer to [Cloud Speech API quotas and
-   * limits](https://cloud.google.com/speech-to-text/quotas#content).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPhraseSets() {
@@ -219,9 +145,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * List of names of Cloud Speech phrase sets that are used for transcription. For phrase set
-   * limitations, please refer to [Cloud Speech API quotas and
-   * limits](https://cloud.google.com/speech-to-text/quotas#content).
    * @param phraseSets phraseSets or {@code null} for none
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setPhraseSets(java.util.List<java.lang.String> phraseSets) {
@@ -230,8 +153,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleRateHertz() {
@@ -239,8 +160,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API
-   * documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * @param sampleRateHertz sampleRateHertz or {@code null} for none
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setSampleRateHertz(java.lang.Integer sampleRateHertz) {
@@ -249,11 +168,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
-   * `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in
-   * AnalyzeContentRequest and StreamingAnalyzeContentRequest request. If enhanced model variant is
-   * specified and an enhanced version of the specified model for the language does not exist, then
-   * it would emit an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpeechModelVariant() {
@@ -261,11 +175,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * The speech model used in speech to text. `SPEECH_MODEL_VARIANT_UNSPECIFIED`,
-   * `USE_BEST_AVAILABLE` will be treated as `USE_ENHANCED`. It can be overridden in
-   * AnalyzeContentRequest and StreamingAnalyzeContentRequest request. If enhanced model variant is
-   * specified and an enhanced version of the specified model for the language does not exist, then
-   * it would emit an error.
    * @param speechModelVariant speechModelVariant or {@code null} for none
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setSpeechModelVariant(java.lang.String speechModelVariant) {
@@ -274,7 +183,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseTimeoutBasedEndpointing() {
@@ -282,7 +190,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
   }
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * @param useTimeoutBasedEndpointing useTimeoutBasedEndpointing or {@code null} for none
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setUseTimeoutBasedEndpointing(java.lang.Boolean useTimeoutBasedEndpointing) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for Conversations.GenerateStatelessSuggestion.
+ * Model definition for GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,9 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A section of ingested context information. The key is the name of the context
-   * reference and the value contains the contents of the context reference. The key is used to
-   * incorporate ingested context references to enhance the generator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,49 +42,36 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Optional. Context of the conversation, including transcripts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ConversationContext conversationContext;
 
   /**
-   * Uncreated generator. It should be a complete generator that includes all information about the
-   * generator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2Generator generator;
 
   /**
-   * The resource name of the existing created generator. Format: `projects//locations//generators/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String generatorName;
 
   /**
-   * Optional. Name of the CX SecuritySettings which is used to redact generated response. If this
-   * field is empty, try to fetch v2 security_settings, which is a project level setting. If this
-   * field is empty and no v2 security_settings set up in this project, no redaction will be done.
-   * Format: `projects//locations//securitySettings/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String securitySettings;
 
   /**
-   * Optional. A list of trigger events. Generator will be triggered only if it's trigger event is
-   * included here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> triggerEvents;
 
   /**
-   * Optional. A section of ingested context information. The key is the name of the context
-   * reference and the value contains the contents of the context reference. The key is used to
-   * incorporate ingested context references to enhance the generator.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> getContextReferences() {
@@ -95,9 +79,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Optional. A section of ingested context information. The key is the name of the context
-   * reference and the value contains the contents of the context reference. The key is used to
-   * incorporate ingested context references to enhance the generator.
    * @param contextReferences contextReferences or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest setContextReferences(java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> contextReferences) {
@@ -106,7 +87,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Optional. Context of the conversation, including transcripts.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContext getConversationContext() {
@@ -114,7 +94,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Optional. Context of the conversation, including transcripts.
    * @param conversationContext conversationContext or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest setConversationContext(GoogleCloudDialogflowV2ConversationContext conversationContext) {
@@ -123,8 +102,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Uncreated generator. It should be a complete generator that includes all information about the
-   * generator.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2Generator getGenerator() {
@@ -132,8 +109,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Uncreated generator. It should be a complete generator that includes all information about the
-   * generator.
    * @param generator generator or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest setGenerator(GoogleCloudDialogflowV2Generator generator) {
@@ -142,7 +117,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * The resource name of the existing created generator. Format: `projects//locations//generators/`
    * @return value or {@code null} for none
    */
   public java.lang.String getGeneratorName() {
@@ -150,7 +124,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * The resource name of the existing created generator. Format: `projects//locations//generators/`
    * @param generatorName generatorName or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest setGeneratorName(java.lang.String generatorName) {
@@ -159,10 +132,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Optional. Name of the CX SecuritySettings which is used to redact generated response. If this
-   * field is empty, try to fetch v2 security_settings, which is a project level setting. If this
-   * field is empty and no v2 security_settings set up in this project, no redaction will be done.
-   * Format: `projects//locations//securitySettings/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecuritySettings() {
@@ -170,10 +139,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Optional. Name of the CX SecuritySettings which is used to redact generated response. If this
-   * field is empty, try to fetch v2 security_settings, which is a project level setting. If this
-   * field is empty and no v2 security_settings set up in this project, no redaction will be done.
-   * Format: `projects//locations//securitySettings/`.
    * @param securitySettings securitySettings or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest setSecuritySettings(java.lang.String securitySettings) {
@@ -182,8 +147,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Optional. A list of trigger events. Generator will be triggered only if it's trigger event is
-   * included here.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTriggerEvents() {
@@ -191,8 +154,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest ext
   }
 
   /**
-   * Optional. A list of trigger events. Generator will be triggered only if it's trigger event is
-   * included here.
    * @param triggerEvents triggerEvents or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSuggestionRequest setTriggerEvents(java.util.List<java.lang.String> triggerEvents) {

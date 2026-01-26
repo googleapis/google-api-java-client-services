@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A type schema object that's specified inline.
+ * Model definition for GoogleCloudDialogflowCxV3InlineSchema.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3InlineSchema extends com.google.api.client.json.GenericJson {
 
   /**
-   * Schema of the elements if this is an ARRAY type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3TypeSchema items;
 
   /**
-   * Data type of the schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Schema of the elements if this is an ARRAY type.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TypeSchema getItems() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3InlineSchema extends com.google.api.
   }
 
   /**
-   * Schema of the elements if this is an ARRAY type.
    * @param items items or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InlineSchema setItems(GoogleCloudDialogflowCxV3TypeSchema items) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3InlineSchema extends com.google.api.
   }
 
   /**
-   * Data type of the schema.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3InlineSchema extends com.google.api.
   }
 
   /**
-   * Data type of the schema.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3InlineSchema setType(java.lang.String type) {

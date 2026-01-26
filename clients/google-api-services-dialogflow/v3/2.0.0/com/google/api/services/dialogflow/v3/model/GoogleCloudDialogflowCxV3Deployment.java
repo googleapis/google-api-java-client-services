@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents a deployment in an environment. A deployment happens when a flow version configured to
- * be active in the environment. You can configure running pre-deployment steps, e.g. running
- * validation test cases, experiment auto-rollout, etc.
+ * Model definition for GoogleCloudDialogflowCxV3Deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,50 +30,42 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * End time of this deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * The name of the flow version for this deployment. Format:
-   * projects//locations//agents//flows//versions/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flowVersion;
 
   /**
-   * The name of the deployment. Format: projects//locations//agents//environments//deployments/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Result of the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3DeploymentResult result;
 
   /**
-   * Start time of this deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * The current state of the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * End time of this deployment.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -83,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * End time of this deployment.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Deployment setEndTime(String endTime) {
@@ -92,8 +81,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * The name of the flow version for this deployment. Format:
-   * projects//locations//agents//flows//versions/.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlowVersion() {
@@ -101,8 +88,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * The name of the flow version for this deployment. Format:
-   * projects//locations//agents//flows//versions/.
    * @param flowVersion flowVersion or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Deployment setFlowVersion(java.lang.String flowVersion) {
@@ -111,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * The name of the deployment. Format: projects//locations//agents//environments//deployments/.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -119,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * The name of the deployment. Format: projects//locations//agents//environments//deployments/.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Deployment setName(java.lang.String name) {
@@ -128,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * Result of the deployment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DeploymentResult getResult() {
@@ -136,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * Result of the deployment.
    * @param result result or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Deployment setResult(GoogleCloudDialogflowCxV3DeploymentResult result) {
@@ -145,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * Start time of this deployment.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -153,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * Start time of this deployment.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Deployment setStartTime(String startTime) {
@@ -162,7 +141,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * The current state of the deployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -170,7 +148,6 @@ public final class GoogleCloudDialogflowCxV3Deployment extends com.google.api.cl
   }
 
   /**
-   * The current state of the deployment.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Deployment setState(java.lang.String state) {

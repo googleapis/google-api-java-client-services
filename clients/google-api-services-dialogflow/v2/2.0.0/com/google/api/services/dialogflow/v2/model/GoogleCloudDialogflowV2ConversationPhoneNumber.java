@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a phone number for telephony integration. It allows for connecting a particular
- * conversation over telephony.
+ * Model definition for GoogleCloudDialogflowV2ConversationPhoneNumber.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConversationPhoneNumber extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Desired country code for the phone number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer countryCode;
 
   /**
-   * Output only. The phone number to connect to this conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
 
   /**
-   * Output only. Desired country code for the phone number.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCountryCode() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumber extends com.go
   }
 
   /**
-   * Output only. Desired country code for the phone number.
    * @param countryCode countryCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationPhoneNumber setCountryCode(java.lang.Integer countryCode) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumber extends com.go
   }
 
   /**
-   * Output only. The phone number to connect to this conversation.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumber extends com.go
   }
 
   /**
-   * Output only. The phone number to connect to this conversation.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationPhoneNumber setPhoneNumber(java.lang.String phoneNumber) {

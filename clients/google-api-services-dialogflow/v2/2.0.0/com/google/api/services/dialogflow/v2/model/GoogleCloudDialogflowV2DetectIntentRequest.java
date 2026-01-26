@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request to detect user's intent.
+ * Model definition for GoogleCloudDialogflowV2DetectIntentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,51 +30,36 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The natural language speech audio to be processed. This field should be populated iff
-   * `query_input` is set to an input audio config. A single request can contain up to 1 minute of
-   * speech audio data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inputAudio;
 
   /**
-   * Instructs the speech synthesizer how to generate the output audio. If this field is not set and
-   * agent-level speech synthesizer is not configured, no output audio is generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2OutputAudioConfig outputAudioConfig;
 
   /**
-   * Mask for output_audio_config indicating which settings in this request-level config should
-   * override speech synthesizer settings defined at agent-level. If unspecified or empty,
-   * output_audio_config replaces the agent-level config in its entirety.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String outputAudioConfigMask;
 
   /**
-   * Required. The input specification. It can be set to: 1. an audio config which instructs the
-   * speech recognizer how to process the speech audio, 2. a conversational query in the form of
-   * text, or 3. an event that specifies which intent to trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2QueryInput queryInput;
 
   /**
-   * The parameters of this query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2QueryParameters queryParams;
 
   /**
-   * The natural language speech audio to be processed. This field should be populated iff
-   * `query_input` is set to an input audio config. A single request can contain up to 1 minute of
-   * speech audio data.
    * @see #decodeInputAudio()
    * @return value or {@code null} for none
    */
@@ -83,9 +68,7 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * The natural language speech audio to be processed. This field should be populated iff
-   * `query_input` is set to an input audio config. A single request can contain up to 1 minute of
-   * speech audio data.
+
    * @see #getInputAudio()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -96,9 +79,6 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * The natural language speech audio to be processed. This field should be populated iff
-   * `query_input` is set to an input audio config. A single request can contain up to 1 minute of
-   * speech audio data.
    * @see #encodeInputAudio()
    * @param inputAudio inputAudio or {@code null} for none
    */
@@ -108,9 +88,7 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * The natural language speech audio to be processed. This field should be populated iff
-   * `query_input` is set to an input audio config. A single request can contain up to 1 minute of
-   * speech audio data.
+
    * @see #setInputAudio()
    *
    * <p>
@@ -125,8 +103,6 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * Instructs the speech synthesizer how to generate the output audio. If this field is not set and
-   * agent-level speech synthesizer is not configured, no output audio is generated.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2OutputAudioConfig getOutputAudioConfig() {
@@ -134,8 +110,6 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * Instructs the speech synthesizer how to generate the output audio. If this field is not set and
-   * agent-level speech synthesizer is not configured, no output audio is generated.
    * @param outputAudioConfig outputAudioConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2DetectIntentRequest setOutputAudioConfig(GoogleCloudDialogflowV2OutputAudioConfig outputAudioConfig) {
@@ -144,9 +118,6 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * Mask for output_audio_config indicating which settings in this request-level config should
-   * override speech synthesizer settings defined at agent-level. If unspecified or empty,
-   * output_audio_config replaces the agent-level config in its entirety.
    * @return value or {@code null} for none
    */
   public String getOutputAudioConfigMask() {
@@ -154,9 +125,6 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * Mask for output_audio_config indicating which settings in this request-level config should
-   * override speech synthesizer settings defined at agent-level. If unspecified or empty,
-   * output_audio_config replaces the agent-level config in its entirety.
    * @param outputAudioConfigMask outputAudioConfigMask or {@code null} for none
    */
   public GoogleCloudDialogflowV2DetectIntentRequest setOutputAudioConfigMask(String outputAudioConfigMask) {
@@ -165,9 +133,6 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * Required. The input specification. It can be set to: 1. an audio config which instructs the
-   * speech recognizer how to process the speech audio, 2. a conversational query in the form of
-   * text, or 3. an event that specifies which intent to trigger.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryInput getQueryInput() {
@@ -175,9 +140,6 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * Required. The input specification. It can be set to: 1. an audio config which instructs the
-   * speech recognizer how to process the speech audio, 2. a conversational query in the form of
-   * text, or 3. an event that specifies which intent to trigger.
    * @param queryInput queryInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2DetectIntentRequest setQueryInput(GoogleCloudDialogflowV2QueryInput queryInput) {
@@ -186,7 +148,6 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * The parameters of this query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryParameters getQueryParams() {
@@ -194,7 +155,6 @@ public final class GoogleCloudDialogflowV2DetectIntentRequest extends com.google
   }
 
   /**
-   * The parameters of this query.
    * @param queryParams queryParams or {@code null} for none
    */
   public GoogleCloudDialogflowV2DetectIntentRequest setQueryParams(GoogleCloudDialogflowV2QueryParameters queryParams) {

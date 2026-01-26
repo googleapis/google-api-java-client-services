@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * A data store connection. It represents a data store in Discovery Engine and the type of the
- * contents it contains.
+ * Model definition for GoogleCloudDialogflowCxV3beta1DataStoreConnection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,34 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1DataStoreConnection extends com.google.api.client.json.GenericJson {
 
   /**
-   * The full name of the referenced data store. Formats:
-   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataStore;
 
   /**
-   * The type of the connected data store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataStoreType;
 
   /**
-   * The document processing mode for the data store connection. Should only be set for PUBLIC_WEB
-   * and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy
-   * mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentProcessingMode;
 
   /**
-   * The full name of the referenced data store. Formats:
-   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * @return value or {@code null} for none
    */
   public java.lang.String getDataStore() {
@@ -66,9 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnection extends com
   }
 
   /**
-   * The full name of the referenced data store. Formats:
-   * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
-   * `projects/{project}/locations/{location}/dataStores/{data_store}`
    * @param dataStore dataStore or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnection setDataStore(java.lang.String dataStore) {
@@ -77,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnection extends com
   }
 
   /**
-   * The type of the connected data store.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataStoreType() {
@@ -85,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnection extends com
   }
 
   /**
-   * The type of the connected data store.
    * @param dataStoreType dataStoreType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnection setDataStoreType(java.lang.String dataStoreType) {
@@ -94,9 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnection extends com
   }
 
   /**
-   * The document processing mode for the data store connection. Should only be set for PUBLIC_WEB
-   * and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy
-   * mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentProcessingMode() {
@@ -104,9 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnection extends com
   }
 
   /**
-   * The document processing mode for the data store connection. Should only be set for PUBLIC_WEB
-   * and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy
-   * mode.
    * @param documentProcessingMode documentProcessingMode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnection setDocumentProcessingMode(java.lang.String documentProcessingMode) {

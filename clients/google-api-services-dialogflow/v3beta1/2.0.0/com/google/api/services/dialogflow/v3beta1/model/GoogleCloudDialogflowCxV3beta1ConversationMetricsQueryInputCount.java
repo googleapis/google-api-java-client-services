@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Count by types of QueryInput of the requests in the conversation.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,42 +30,36 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of AudioInput in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer audioCount;
 
   /**
-   * The number of DtmfInput in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer dtmfCount;
 
   /**
-   * The number of EventInput in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer eventCount;
 
   /**
-   * The number of IntentInput in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer intentCount;
 
   /**
-   * The number of TextInput in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer textCount;
 
   /**
-   * The number of AudioInput in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAudioCount() {
@@ -73,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCo
   }
 
   /**
-   * The number of AudioInput in the conversation.
    * @param audioCount audioCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount setAudioCount(java.lang.Integer audioCount) {
@@ -82,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCo
   }
 
   /**
-   * The number of DtmfInput in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDtmfCount() {
@@ -90,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCo
   }
 
   /**
-   * The number of DtmfInput in the conversation.
    * @param dtmfCount dtmfCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount setDtmfCount(java.lang.Integer dtmfCount) {
@@ -99,7 +90,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCo
   }
 
   /**
-   * The number of EventInput in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEventCount() {
@@ -107,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCo
   }
 
   /**
-   * The number of EventInput in the conversation.
    * @param eventCount eventCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount setEventCount(java.lang.Integer eventCount) {
@@ -116,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCo
   }
 
   /**
-   * The number of IntentInput in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIntentCount() {
@@ -124,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCo
   }
 
   /**
-   * The number of IntentInput in the conversation.
    * @param intentCount intentCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount setIntentCount(java.lang.Integer intentCount) {
@@ -133,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCo
   }
 
   /**
-   * The number of TextInput in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTextCount() {
@@ -141,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCo
   }
 
   /**
-   * The number of TextInput in the conversation.
    * @param textCount textCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationMetricsQueryInputCount setTextCount(java.lang.Integer textCount) {

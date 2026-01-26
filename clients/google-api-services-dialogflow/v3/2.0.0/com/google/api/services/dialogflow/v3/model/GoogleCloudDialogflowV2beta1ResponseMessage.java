@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Response messages from an automated agent.
+ * Model definition for GoogleCloudDialogflowV2beta1ResponseMessage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,51 +30,42 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * A signal that indicates the interaction with the Dialogflow agent has ended.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ResponseMessageEndInteraction endInteraction;
 
   /**
-   * Hands off conversation to a live agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff liveAgentHandoff;
 
   /**
-   * An audio response message composed of both the synthesized Dialogflow agent responses and the
-   * audios hosted in places known to the client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio mixedAudio;
 
   /**
-   * Returns a response containing a custom, platform-specific payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
-   * A signal that the client should transfer the phone call connected to this agent to a third-
-   * party endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall telephonyTransferCall;
 
   /**
-   * Returns a text response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ResponseMessageText text;
 
   /**
-   * A signal that indicates the interaction with the Dialogflow agent has ended.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageEndInteraction getEndInteraction() {
@@ -82,7 +73,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * A signal that indicates the interaction with the Dialogflow agent has ended.
    * @param endInteraction endInteraction or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessage setEndInteraction(GoogleCloudDialogflowV2beta1ResponseMessageEndInteraction endInteraction) {
@@ -91,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * Hands off conversation to a live agent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff getLiveAgentHandoff() {
@@ -99,7 +88,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * Hands off conversation to a live agent.
    * @param liveAgentHandoff liveAgentHandoff or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessage setLiveAgentHandoff(GoogleCloudDialogflowV2beta1ResponseMessageLiveAgentHandoff liveAgentHandoff) {
@@ -108,8 +96,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * An audio response message composed of both the synthesized Dialogflow agent responses and the
-   * audios hosted in places known to the client.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio getMixedAudio() {
@@ -117,8 +103,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * An audio response message composed of both the synthesized Dialogflow agent responses and the
-   * audios hosted in places known to the client.
    * @param mixedAudio mixedAudio or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessage setMixedAudio(GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio mixedAudio) {
@@ -127,7 +111,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * Returns a response containing a custom, platform-specific payload.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -135,7 +118,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * Returns a response containing a custom, platform-specific payload.
    * @param payload payload or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessage setPayload(java.util.Map<String, java.lang.Object> payload) {
@@ -144,8 +126,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * A signal that the client should transfer the phone call connected to this agent to a third-
-   * party endpoint.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall getTelephonyTransferCall() {
@@ -153,8 +133,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * A signal that the client should transfer the phone call connected to this agent to a third-
-   * party endpoint.
    * @param telephonyTransferCall telephonyTransferCall or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessage setTelephonyTransferCall(GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall telephonyTransferCall) {
@@ -163,7 +141,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * Returns a text response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageText getText() {
@@ -171,7 +148,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessage extends com.googl
   }
 
   /**
-   * Returns a text response.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessage setText(GoogleCloudDialogflowV2beta1ResponseMessageText text) {

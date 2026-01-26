@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a single validation error.
+ * Model definition for GoogleCloudDialogflowV2ValidationError.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,38 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ValidationError extends com.google.api.client.json.GenericJson {
 
   /**
-   * The names of the entries that the error is associated with. Format: - `projects//agent`, if the
-   * error is associated with the entire agent. - `projects//agent/intents/`, if the error is
-   * associated with certain intents. - `projects//agent/intents//trainingPhrases/`, if the error is
-   * associated with certain intent training phrases. - `projects//agent/intents//parameters/`, if
-   * the error is associated with certain intent parameters. - `projects//agent/entities/`, if the
-   * error is associated with certain entities.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entries;
 
   /**
-   * The detailed error message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String errorMessage;
 
   /**
-   * The severity of the error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * The names of the entries that the error is associated with. Format: - `projects//agent`, if the
-   * error is associated with the entire agent. - `projects//agent/intents/`, if the error is
-   * associated with certain intents. - `projects//agent/intents//trainingPhrases/`, if the error is
-   * associated with certain intent training phrases. - `projects//agent/intents//parameters/`, if
-   * the error is associated with certain intent parameters. - `projects//agent/entities/`, if the
-   * error is associated with certain entities.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntries() {
@@ -69,12 +55,6 @@ public final class GoogleCloudDialogflowV2ValidationError extends com.google.api
   }
 
   /**
-   * The names of the entries that the error is associated with. Format: - `projects//agent`, if the
-   * error is associated with the entire agent. - `projects//agent/intents/`, if the error is
-   * associated with certain intents. - `projects//agent/intents//trainingPhrases/`, if the error is
-   * associated with certain intent training phrases. - `projects//agent/intents//parameters/`, if
-   * the error is associated with certain intent parameters. - `projects//agent/entities/`, if the
-   * error is associated with certain entities.
    * @param entries entries or {@code null} for none
    */
   public GoogleCloudDialogflowV2ValidationError setEntries(java.util.List<java.lang.String> entries) {
@@ -83,7 +63,6 @@ public final class GoogleCloudDialogflowV2ValidationError extends com.google.api
   }
 
   /**
-   * The detailed error message.
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorMessage() {
@@ -91,7 +70,6 @@ public final class GoogleCloudDialogflowV2ValidationError extends com.google.api
   }
 
   /**
-   * The detailed error message.
    * @param errorMessage errorMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2ValidationError setErrorMessage(java.lang.String errorMessage) {
@@ -100,7 +78,6 @@ public final class GoogleCloudDialogflowV2ValidationError extends com.google.api
   }
 
   /**
-   * The severity of the error.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -108,7 +85,6 @@ public final class GoogleCloudDialogflowV2ValidationError extends com.google.api
   }
 
   /**
-   * The severity of the error.
    * @param severity severity or {@code null} for none
    */
   public GoogleCloudDialogflowV2ValidationError setSeverity(java.lang.String severity) {

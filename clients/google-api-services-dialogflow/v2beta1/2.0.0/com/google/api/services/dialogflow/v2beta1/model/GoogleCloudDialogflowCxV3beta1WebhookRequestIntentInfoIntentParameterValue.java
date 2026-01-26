@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a value for an intent parameter.
+ * Model definition for GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentParameterValue.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentParameterValue extends com.google.api.client.json.GenericJson {
 
   /**
-   * Always present. Original text value extracted from user utterance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String originalValue;
 
   /**
-   * Always present. Structured value for the parameter extracted from user utterance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object resolvedValue;
 
   /**
-   * Always present. Original text value extracted from user utterance.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginalValue() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentP
   }
 
   /**
-   * Always present. Original text value extracted from user utterance.
    * @param originalValue originalValue or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentParameterValue setOriginalValue(java.lang.String originalValue) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentP
   }
 
   /**
-   * Always present. Structured value for the parameter extracted from user utterance.
    * @return value or {@code null} for none
    */
   public java.lang.Object getResolvedValue() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentP
   }
 
   /**
-   * Always present. Structured value for the parameter extracted from user utterance.
    * @param resolvedValue resolvedValue or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentParameterValue setResolvedValue(java.lang.Object resolvedValue) {

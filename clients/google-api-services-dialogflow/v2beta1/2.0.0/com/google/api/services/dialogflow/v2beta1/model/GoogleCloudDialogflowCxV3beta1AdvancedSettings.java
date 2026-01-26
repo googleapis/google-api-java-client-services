@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Hierarchical advanced settings for agent/flow/page/fulfillment/parameter. Settings exposed at
- * lower level overrides the settings exposed at higher level. Overriding occurs at the sub-setting
- * level. For example, the playback_interruption_settings at fulfillment level only overrides the
- * playback_interruption_settings at the agent level, leaving other settings at the agent level
- * unchanged. DTMF settings does not override each other. DTMF settings set at different levels
- * define DTMF detections running in parallel. Hierarchy: Agent->Flow->Page->Fulfillment/Parameter.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AdvancedSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,40 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage
-   * destination. Exposed at the following levels: - Agent level - Flow level
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1GcsDestination audioExportGcsDestination;
 
   /**
-   * Settings for DTMF. Exposed at the following levels: - Agent level - Flow level - Page level -
-   * Parameter level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings dtmfSettings;
 
   /**
-   * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver
-   * logs, and speech logging. Exposed at the following levels: - Agent level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings loggingSettings;
 
   /**
-   * Settings for speech to text detection. Exposed at the following levels: - Agent level - Flow
-   * level - Page level - Parameter level
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings speechSettings;
 
   /**
-   * If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage
-   * destination. Exposed at the following levels: - Agent level - Flow level
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GcsDestination getAudioExportGcsDestination() {
@@ -76,8 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.go
   }
 
   /**
-   * If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage
-   * destination. Exposed at the following levels: - Agent level - Flow level
    * @param audioExportGcsDestination audioExportGcsDestination or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettings setAudioExportGcsDestination(GoogleCloudDialogflowCxV3beta1GcsDestination audioExportGcsDestination) {
@@ -86,8 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.go
   }
 
   /**
-   * Settings for DTMF. Exposed at the following levels: - Agent level - Flow level - Page level -
-   * Parameter level.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings getDtmfSettings() {
@@ -95,8 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.go
   }
 
   /**
-   * Settings for DTMF. Exposed at the following levels: - Agent level - Flow level - Page level -
-   * Parameter level.
    * @param dtmfSettings dtmfSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettings setDtmfSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings dtmfSettings) {
@@ -105,8 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.go
   }
 
   /**
-   * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver
-   * logs, and speech logging. Exposed at the following levels: - Agent level.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings getLoggingSettings() {
@@ -114,8 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.go
   }
 
   /**
-   * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver
-   * logs, and speech logging. Exposed at the following levels: - Agent level.
    * @param loggingSettings loggingSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettings setLoggingSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings loggingSettings) {
@@ -124,8 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.go
   }
 
   /**
-   * Settings for speech to text detection. Exposed at the following levels: - Agent level - Flow
-   * level - Page level - Parameter level
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings getSpeechSettings() {
@@ -133,8 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends com.go
   }
 
   /**
-   * Settings for speech to text detection. Exposed at the following levels: - Agent level - Flow
-   * level - Page level - Parameter level
    * @param speechSettings speechSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AdvancedSettings setSpeechSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings speechSettings) {

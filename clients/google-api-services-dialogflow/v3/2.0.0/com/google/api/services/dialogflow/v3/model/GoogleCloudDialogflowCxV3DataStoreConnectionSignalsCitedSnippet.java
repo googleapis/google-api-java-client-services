@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Snippet cited by the answer generation model.
+ * Model definition for GoogleCloudDialogflowCxV3DataStoreConnectionSignalsCitedSnippet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsCitedSnippet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details of the snippet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSearchSnippet searchSnippet;
 
   /**
-   * Index of the snippet in `search_snippets` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer snippetIndex;
 
   /**
-   * Details of the snippet.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSearchSnippet getSearchSnippet() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsCitedSnipp
   }
 
   /**
-   * Details of the snippet.
    * @param searchSnippet searchSnippet or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DataStoreConnectionSignalsCitedSnippet setSearchSnippet(GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSearchSnippet searchSnippet) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsCitedSnipp
   }
 
   /**
-   * Index of the snippet in `search_snippets` field.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSnippetIndex() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsCitedSnipp
   }
 
   /**
-   * Index of the snippet in `search_snippets` field.
    * @param snippetIndex snippetIndex or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DataStoreConnectionSignalsCitedSnippet setSnippetIndex(java.lang.Integer snippetIndex) {

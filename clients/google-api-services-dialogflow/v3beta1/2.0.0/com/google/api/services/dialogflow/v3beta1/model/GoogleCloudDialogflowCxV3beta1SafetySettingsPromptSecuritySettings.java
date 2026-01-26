@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for prompt security checks.
+ * Model definition for GoogleCloudDialogflowCxV3beta1SafetySettingsPromptSecuritySettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1SafetySettingsPromptSecuritySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Enable prompt security checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enablePromptSecurity;
 
   /**
-   * Optional. Enable prompt security checks.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePromptSecurity() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1SafetySettingsPromptSecuritySet
   }
 
   /**
-   * Optional. Enable prompt security checks.
    * @param enablePromptSecurity enablePromptSecurity or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SafetySettingsPromptSecuritySettings setEnablePromptSecurity(java.lang.Boolean enablePromptSecurity) {

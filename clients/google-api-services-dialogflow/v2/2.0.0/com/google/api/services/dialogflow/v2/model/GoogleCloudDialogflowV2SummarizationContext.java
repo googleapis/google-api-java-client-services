@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Summarization context that customer can configure.
+ * Model definition for GoogleCloudDialogflowV2SummarizationContext.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SummarizationContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. List of few shot examples.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,31 +42,24 @@ public final class GoogleCloudDialogflowV2SummarizationContext extends com.googl
   }
 
   /**
-   * Optional. The target language of the generated summary. The language code for conversation will
-   * be used if this field is empty. Supported 2.0 and later versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputLanguageCode;
 
   /**
-   * Optional. List of sections. Note it contains both predefined section sand customer defined
-   * sections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2SummarizationSection> summarizationSections;
 
   /**
-   * Optional. Version of the feature. If not set, default to latest version. Current candidates are
-   * ["1.0"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Optional. List of few shot examples.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2FewShotExample> getFewShotExamples() {
@@ -75,7 +67,6 @@ public final class GoogleCloudDialogflowV2SummarizationContext extends com.googl
   }
 
   /**
-   * Optional. List of few shot examples.
    * @param fewShotExamples fewShotExamples or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationContext setFewShotExamples(java.util.List<GoogleCloudDialogflowV2FewShotExample> fewShotExamples) {
@@ -84,8 +75,6 @@ public final class GoogleCloudDialogflowV2SummarizationContext extends com.googl
   }
 
   /**
-   * Optional. The target language of the generated summary. The language code for conversation will
-   * be used if this field is empty. Supported 2.0 and later versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputLanguageCode() {
@@ -93,8 +82,6 @@ public final class GoogleCloudDialogflowV2SummarizationContext extends com.googl
   }
 
   /**
-   * Optional. The target language of the generated summary. The language code for conversation will
-   * be used if this field is empty. Supported 2.0 and later versions.
    * @param outputLanguageCode outputLanguageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationContext setOutputLanguageCode(java.lang.String outputLanguageCode) {
@@ -103,8 +90,6 @@ public final class GoogleCloudDialogflowV2SummarizationContext extends com.googl
   }
 
   /**
-   * Optional. List of sections. Note it contains both predefined section sand customer defined
-   * sections.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SummarizationSection> getSummarizationSections() {
@@ -112,8 +97,6 @@ public final class GoogleCloudDialogflowV2SummarizationContext extends com.googl
   }
 
   /**
-   * Optional. List of sections. Note it contains both predefined section sand customer defined
-   * sections.
    * @param summarizationSections summarizationSections or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationContext setSummarizationSections(java.util.List<GoogleCloudDialogflowV2SummarizationSection> summarizationSections) {
@@ -122,8 +105,6 @@ public final class GoogleCloudDialogflowV2SummarizationContext extends com.googl
   }
 
   /**
-   * Optional. Version of the feature. If not set, default to latest version. Current candidates are
-   * ["1.0"].
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -131,8 +112,6 @@ public final class GoogleCloudDialogflowV2SummarizationContext extends com.googl
   }
 
   /**
-   * Optional. Version of the feature. If not set, default to latest version. Current candidates are
-   * ["1.0"].
    * @param version version or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationContext setVersion(java.lang.String version) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The response message for SessionEntityTypes.ListSessionEntityTypes.
+ * Model definition for GoogleCloudDialogflowV2ListSessionEntityTypesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ListSessionEntityTypesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of session entity types. There will be a maximum number of items returned based on the
-   * page_size field in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2SessionEntityType> sessionEntityTypes;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2ListSessionEntityTypesResponse extends
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowV2ListSessionEntityTypesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -62,8 +57,6 @@ public final class GoogleCloudDialogflowV2ListSessionEntityTypesResponse extends
   }
 
   /**
-   * The list of session entity types. There will be a maximum number of items returned based on the
-   * page_size field in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SessionEntityType> getSessionEntityTypes() {
@@ -71,8 +64,6 @@ public final class GoogleCloudDialogflowV2ListSessionEntityTypesResponse extends
   }
 
   /**
-   * The list of session entity types. There will be a maximum number of items returned based on the
-   * page_size field in the request.
    * @param sessionEntityTypes sessionEntityTypes or {@code null} for none
    */
   public GoogleCloudDialogflowV2ListSessionEntityTypesResponse setSessionEntityTypes(java.util.List<GoogleCloudDialogflowV2SessionEntityType> sessionEntityTypes) {

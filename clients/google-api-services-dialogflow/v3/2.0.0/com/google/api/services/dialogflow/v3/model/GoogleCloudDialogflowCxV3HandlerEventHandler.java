@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A handler that is triggered by the specified event.
+ * Model definition for GoogleCloudDialogflowCxV3HandlerEventHandler.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3HandlerEventHandler extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The condition that must be satisfied to trigger this handler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * Required. The name of the event that triggers this handler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String event;
 
   /**
-   * Required. The fulfillment to call when the event occurs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3Fulfillment fulfillment;
 
   /**
-   * Optional. The condition that must be satisfied to trigger this handler.
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3HandlerEventHandler extends com.goog
   }
 
   /**
-   * Optional. The condition that must be satisfied to trigger this handler.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3HandlerEventHandler setCondition(java.lang.String condition) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3HandlerEventHandler extends com.goog
   }
 
   /**
-   * Required. The name of the event that triggers this handler.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvent() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3HandlerEventHandler extends com.goog
   }
 
   /**
-   * Required. The name of the event that triggers this handler.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3HandlerEventHandler setEvent(java.lang.String event) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3HandlerEventHandler extends com.goog
   }
 
   /**
-   * Required. The fulfillment to call when the event occurs.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment getFulfillment() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3HandlerEventHandler extends com.goog
   }
 
   /**
-   * Required. The fulfillment to call when the event occurs.
    * @param fulfillment fulfillment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3HandlerEventHandler setFulfillment(GoogleCloudDialogflowCxV3Fulfillment fulfillment) {

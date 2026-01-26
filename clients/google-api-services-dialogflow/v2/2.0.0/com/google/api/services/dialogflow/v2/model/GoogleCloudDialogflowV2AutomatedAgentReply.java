@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a response from an automated agent.
+ * Model definition for GoogleCloudDialogflowV2AutomatedAgentReply.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,38 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether the partial automated agent reply is interruptible when a later reply message
-   * arrives. e.g. if the agent specified some music as partial response, it can be cancelled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowCancellation;
 
   /**
-   * AutomatedAgentReply type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String automatedAgentReplyType;
 
   /**
-   * The unique identifier of the current Dialogflow CX conversation page. Format:
-   * `projects//locations//agents//flows//pages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cxCurrentPage;
 
   /**
-   * Response of the Dialogflow Sessions.DetectIntent call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2DetectIntentResponse detectIntentResponse;
 
   /**
-   * Indicates whether the partial automated agent reply is interruptible when a later reply message
-   * arrives. e.g. if the agent specified some music as partial response, it can be cancelled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowCancellation() {
@@ -69,8 +61,6 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
   }
 
   /**
-   * Indicates whether the partial automated agent reply is interruptible when a later reply message
-   * arrives. e.g. if the agent specified some music as partial response, it can be cancelled.
    * @param allowCancellation allowCancellation or {@code null} for none
    */
   public GoogleCloudDialogflowV2AutomatedAgentReply setAllowCancellation(java.lang.Boolean allowCancellation) {
@@ -79,7 +69,6 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
   }
 
   /**
-   * AutomatedAgentReply type.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutomatedAgentReplyType() {
@@ -87,7 +76,6 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
   }
 
   /**
-   * AutomatedAgentReply type.
    * @param automatedAgentReplyType automatedAgentReplyType or {@code null} for none
    */
   public GoogleCloudDialogflowV2AutomatedAgentReply setAutomatedAgentReplyType(java.lang.String automatedAgentReplyType) {
@@ -96,8 +84,6 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
   }
 
   /**
-   * The unique identifier of the current Dialogflow CX conversation page. Format:
-   * `projects//locations//agents//flows//pages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCxCurrentPage() {
@@ -105,8 +91,6 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
   }
 
   /**
-   * The unique identifier of the current Dialogflow CX conversation page. Format:
-   * `projects//locations//agents//flows//pages/`.
    * @param cxCurrentPage cxCurrentPage or {@code null} for none
    */
   public GoogleCloudDialogflowV2AutomatedAgentReply setCxCurrentPage(java.lang.String cxCurrentPage) {
@@ -115,7 +99,6 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
   }
 
   /**
-   * Response of the Dialogflow Sessions.DetectIntent call.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2DetectIntentResponse getDetectIntentResponse() {
@@ -123,7 +106,6 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
   }
 
   /**
-   * Response of the Dialogflow Sessions.DetectIntent call.
    * @param detectIntentResponse detectIntentResponse or {@code null} for none
    */
   public GoogleCloudDialogflowV2AutomatedAgentReply setDetectIntentResponse(GoogleCloudDialogflowV2DetectIntentResponse detectIntentResponse) {

@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Snippet Source for a Generative Prediction.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +31,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Metadata of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * Text taken from that URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Title of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * URI the data is sourced from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Metadata of the document.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -66,7 +62,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * Metadata of the document.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -75,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * Text taken from that URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -83,7 +77,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * Text taken from that URI.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet setText(java.lang.String text) {
@@ -92,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * Title of the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -100,7 +92,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * Title of the document.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet setTitle(java.lang.String title) {
@@ -109,7 +100,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * URI the data is sourced from.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -117,7 +107,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * URI the data is sourced from.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet setUri(java.lang.String uri) {

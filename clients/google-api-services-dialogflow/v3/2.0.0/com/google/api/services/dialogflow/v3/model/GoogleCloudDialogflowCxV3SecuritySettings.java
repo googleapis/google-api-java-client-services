@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents the settings related to security issues, such as data redaction and data retention. It
- * may take hours for updates on the settings to propagate to all the related components and take
- * effect.
+ * Model definition for GoogleCloudDialogflowCxV3SecuritySettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,119 +30,72 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Controls audio export settings for post-conversation analytics when ingesting audio to
-   * conversations via Participants.AnalyzeContent or Participants.StreamingAnalyzeContent. If
-   * retention_strategy is set to REMOVE_AFTER_CONVERSATION or audio_export_settings.gcs_bucket is
-   * empty, audio export is disabled. If audio export is enabled, audio is recorded and saved to
-   * audio_export_settings.gcs_bucket, subject to retention policy of
-   * audio_export_settings.gcs_bucket. This setting won't effect audio input for implicit sessions
-   * via Sessions.DetectIntent or Sessions.StreamingDetectIntent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings audioExportSettings;
 
   /**
-   * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define
-   * de-identification configuration for the content. The `DLP De-identify Templates Reader` role is
-   * needed on the Dialogflow service identity service account (has the form `service-
-   * PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty,
-   * Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of
-   * the following formats: `projects//locations//deidentifyTemplates/` OR
-   * `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in
-   * the same region as the `SecuritySettings`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deidentifyTemplate;
 
   /**
-   * Required. The human-readable name of the security settings, unique within the location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Controls conversation exporting settings to Insights after conversation is completed. If
-   * retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter
-   * what you configure here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings insightsExportSettings;
 
   /**
-   * [DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define
-   * inspect base settings. The `DLP Inspect Templates Reader` role is needed on the Dialogflow
-   * service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, we use the default DLP
-   * inspect config. The template name will have one of the following formats:
-   * `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note:
-   * `inspect_template` must be located in the same region as the `SecuritySettings`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inspectTemplate;
 
   /**
-   * Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings
-   * method. SecuritySettingsService.CreateSecuritySettings populates the name automatically.
-   * Format: `projects//locations//securitySettings/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * List of types of data to remove when retention settings triggers purge.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> purgeDataTypes;
 
   /**
-   * Defines the data for which Dialogflow applies redaction. Dialogflow does not redact data that
-   * it does not have access to – for example, Cloud logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String redactionScope;
 
   /**
-   * Strategy that defines how we do redaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String redactionStrategy;
 
   /**
-   * Specifies the retention behavior defined by SecuritySettings.RetentionStrategy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String retentionStrategy;
 
   /**
-   * Retains the data for the specified number of days. User must set a value lower than
-   * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
-   * and use default. Setting a value higher than that has no effect. A missing value or setting to
-   * 0 also means we use default TTL. When data retention configuration is changed, it only applies
-   * to the data created after the change; the TTL of existing data created before the change stays
-   * intact.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer retentionWindowDays;
 
   /**
-   * Controls audio export settings for post-conversation analytics when ingesting audio to
-   * conversations via Participants.AnalyzeContent or Participants.StreamingAnalyzeContent. If
-   * retention_strategy is set to REMOVE_AFTER_CONVERSATION or audio_export_settings.gcs_bucket is
-   * empty, audio export is disabled. If audio export is enabled, audio is recorded and saved to
-   * audio_export_settings.gcs_bucket, subject to retention policy of
-   * audio_export_settings.gcs_bucket. This setting won't effect audio input for implicit sessions
-   * via Sessions.DetectIntent or Sessions.StreamingDetectIntent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings getAudioExportSettings() {
@@ -152,13 +103,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Controls audio export settings for post-conversation analytics when ingesting audio to
-   * conversations via Participants.AnalyzeContent or Participants.StreamingAnalyzeContent. If
-   * retention_strategy is set to REMOVE_AFTER_CONVERSATION or audio_export_settings.gcs_bucket is
-   * empty, audio export is disabled. If audio export is enabled, audio is recorded and saved to
-   * audio_export_settings.gcs_bucket, subject to retention policy of
-   * audio_export_settings.gcs_bucket. This setting won't effect audio input for implicit sessions
-   * via Sessions.DetectIntent or Sessions.StreamingDetectIntent.
    * @param audioExportSettings audioExportSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setAudioExportSettings(GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings audioExportSettings) {
@@ -167,14 +111,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define
-   * de-identification configuration for the content. The `DLP De-identify Templates Reader` role is
-   * needed on the Dialogflow service identity service account (has the form `service-
-   * PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty,
-   * Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of
-   * the following formats: `projects//locations//deidentifyTemplates/` OR
-   * `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in
-   * the same region as the `SecuritySettings`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeidentifyTemplate() {
@@ -182,14 +118,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define
-   * de-identification configuration for the content. The `DLP De-identify Templates Reader` role is
-   * needed on the Dialogflow service identity service account (has the form `service-
-   * PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty,
-   * Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of
-   * the following formats: `projects//locations//deidentifyTemplates/` OR
-   * `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in
-   * the same region as the `SecuritySettings`.
    * @param deidentifyTemplate deidentifyTemplate or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setDeidentifyTemplate(java.lang.String deidentifyTemplate) {
@@ -198,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Required. The human-readable name of the security settings, unique within the location.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -206,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Required. The human-readable name of the security settings, unique within the location.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setDisplayName(java.lang.String displayName) {
@@ -215,9 +141,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Controls conversation exporting settings to Insights after conversation is completed. If
-   * retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter
-   * what you configure here.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings getInsightsExportSettings() {
@@ -225,9 +148,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Controls conversation exporting settings to Insights after conversation is completed. If
-   * retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter
-   * what you configure here.
    * @param insightsExportSettings insightsExportSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setInsightsExportSettings(GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings insightsExportSettings) {
@@ -236,13 +156,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * [DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define
-   * inspect base settings. The `DLP Inspect Templates Reader` role is needed on the Dialogflow
-   * service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, we use the default DLP
-   * inspect config. The template name will have one of the following formats:
-   * `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note:
-   * `inspect_template` must be located in the same region as the `SecuritySettings`.
    * @return value or {@code null} for none
    */
   public java.lang.String getInspectTemplate() {
@@ -250,13 +163,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * [DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define
-   * inspect base settings. The `DLP Inspect Templates Reader` role is needed on the Dialogflow
-   * service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, we use the default DLP
-   * inspect config. The template name will have one of the following formats:
-   * `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note:
-   * `inspect_template` must be located in the same region as the `SecuritySettings`.
    * @param inspectTemplate inspectTemplate or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setInspectTemplate(java.lang.String inspectTemplate) {
@@ -265,9 +171,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings
-   * method. SecuritySettingsService.CreateSecuritySettings populates the name automatically.
-   * Format: `projects//locations//securitySettings/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -275,9 +178,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings
-   * method. SecuritySettingsService.CreateSecuritySettings populates the name automatically.
-   * Format: `projects//locations//securitySettings/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setName(java.lang.String name) {
@@ -286,7 +186,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * List of types of data to remove when retention settings triggers purge.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPurgeDataTypes() {
@@ -294,7 +193,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * List of types of data to remove when retention settings triggers purge.
    * @param purgeDataTypes purgeDataTypes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setPurgeDataTypes(java.util.List<java.lang.String> purgeDataTypes) {
@@ -303,8 +201,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Defines the data for which Dialogflow applies redaction. Dialogflow does not redact data that
-   * it does not have access to – for example, Cloud logging.
    * @return value or {@code null} for none
    */
   public java.lang.String getRedactionScope() {
@@ -312,8 +208,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Defines the data for which Dialogflow applies redaction. Dialogflow does not redact data that
-   * it does not have access to – for example, Cloud logging.
    * @param redactionScope redactionScope or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setRedactionScope(java.lang.String redactionScope) {
@@ -322,7 +216,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Strategy that defines how we do redaction.
    * @return value or {@code null} for none
    */
   public java.lang.String getRedactionStrategy() {
@@ -330,7 +223,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Strategy that defines how we do redaction.
    * @param redactionStrategy redactionStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setRedactionStrategy(java.lang.String redactionStrategy) {
@@ -339,7 +231,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Specifies the retention behavior defined by SecuritySettings.RetentionStrategy.
    * @return value or {@code null} for none
    */
   public java.lang.String getRetentionStrategy() {
@@ -347,7 +238,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Specifies the retention behavior defined by SecuritySettings.RetentionStrategy.
    * @param retentionStrategy retentionStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setRetentionStrategy(java.lang.String retentionStrategy) {
@@ -356,12 +246,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Retains the data for the specified number of days. User must set a value lower than
-   * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
-   * and use default. Setting a value higher than that has no effect. A missing value or setting to
-   * 0 also means we use default TTL. When data retention configuration is changed, it only applies
-   * to the data created after the change; the TTL of existing data created before the change stays
-   * intact.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRetentionWindowDays() {
@@ -369,12 +253,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettings extends com.google.
   }
 
   /**
-   * Retains the data for the specified number of days. User must set a value lower than
-   * Dialogflow's default 365d TTL (30 days for Agent Assist traffic), higher value will be ignored
-   * and use default. Setting a value higher than that has no effect. A missing value or setting to
-   * 0 also means we use default TTL. When data retention configuration is changed, it only applies
-   * to the data created after the change; the TTL of existing data created before the change stays
-   * intact.
    * @param retentionWindowDays retentionWindowDays or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettings setRetentionWindowDays(java.lang.Integer retentionWindowDays) {

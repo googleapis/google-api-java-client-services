@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The response message for SecuritySettings.ListSecuritySettings.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ListSecuritySettingsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ListSecuritySettingsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of security settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1SecuritySettings> securitySettings;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListSecuritySettingsResponse ex
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListSecuritySettingsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListSecuritySettingsResponse ex
   }
 
   /**
-   * The list of security settings.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1SecuritySettings> getSecuritySettings() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListSecuritySettingsResponse ex
   }
 
   /**
-   * The list of security settings.
    * @param securitySettings securitySettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListSecuritySettingsResponse setSecuritySettings(java.util.List<GoogleCloudDialogflowCxV3beta1SecuritySettings> securitySettings) {

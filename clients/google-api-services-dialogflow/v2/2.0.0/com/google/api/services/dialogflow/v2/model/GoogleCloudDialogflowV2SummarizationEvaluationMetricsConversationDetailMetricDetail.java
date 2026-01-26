@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Aggregated result on metric level. This conatins the evaluation results of all the sections.
+ * Model definition for
+ * GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetail.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +31,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Metrics name. e.g. accuracy, adherence, completeness.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metric;
 
   /**
-   * Output only. Aggregated(average) score on this metric across all sections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
 
   /**
-   * Output only. List of section details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetailSectionDetail> sectionDetails;
 
   /**
-   * Output only. Metrics name. e.g. accuracy, adherence, completeness.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetric() {
@@ -59,7 +56,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. Metrics name. e.g. accuracy, adherence, completeness.
    * @param metric metric or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetail setMetric(java.lang.String metric) {
@@ -68,7 +64,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. Aggregated(average) score on this metric across all sections.
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -76,7 +71,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. Aggregated(average) score on this metric across all sections.
    * @param score score or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetail setScore(java.lang.Float score) {
@@ -85,7 +79,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. List of section details.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetailSectionDetail> getSectionDetails() {
@@ -93,7 +86,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. List of section details.
    * @param sectionDetails sectionDetails or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetail setSectionDetails(java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetailSectionDetail> sectionDetails) {

@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Section level result.
+ * Model definition for
+ * GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetailSectionDetail.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,38 +31,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetailSectionDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of evaluation result. The list only contains one kind of the evaluation
-   * result.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsEvaluationResult> evaluationResults;
 
   /**
-   * Output only. Aggregated(average) score on this section across all evaluation results. Either
-   * decompositions or rubrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
 
   /**
-   * Output only. The name of the summary instruction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String section;
 
   /**
-   * Output only. Summary for this section
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sectionSummary;
 
   /**
-   * Output only. List of evaluation result. The list only contains one kind of the evaluation
-   * result.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsEvaluationResult> getEvaluationResults() {
@@ -69,8 +62,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. List of evaluation result. The list only contains one kind of the evaluation
-   * result.
    * @param evaluationResults evaluationResults or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetailSectionDetail setEvaluationResults(java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsEvaluationResult> evaluationResults) {
@@ -79,8 +70,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. Aggregated(average) score on this section across all evaluation results. Either
-   * decompositions or rubrics.
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -88,8 +77,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. Aggregated(average) score on this section across all evaluation results. Either
-   * decompositions or rubrics.
    * @param score score or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetailSectionDetail setScore(java.lang.Float score) {
@@ -98,7 +85,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. The name of the summary instruction.
    * @return value or {@code null} for none
    */
   public java.lang.String getSection() {
@@ -106,7 +92,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. The name of the summary instruction.
    * @param section section or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetailSectionDetail setSection(java.lang.String section) {
@@ -115,7 +100,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. Summary for this section
    * @return value or {@code null} for none
    */
   public java.lang.String getSectionSummary() {
@@ -123,7 +107,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversa
   }
 
   /**
-   * Output only. Summary for this section
    * @param sectionSummary sectionSummary or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsConversationDetailMetricDetailSectionDetail setSectionSummary(java.lang.String sectionSummary) {

@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The playbook import strategy used for resource conflict resolution associated with an
- * ImportPlaybookRequest.
+ * Model definition for GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,34 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies the import strategy used when resolving conflicts with the main playbook.
-   * If not specified, 'CREATE_NEW' is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mainPlaybookImportStrategy;
 
   /**
-   * Optional. Specifies the import strategy used when resolving referenced playbook/flow conflicts.
-   * If not specified, 'CREATE_NEW' is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nestedResourceImportStrategy;
 
   /**
-   * Optional. Specifies the import strategy used when resolving tool conflicts. If not specified,
-   * 'CREATE_NEW' is assumed. This will be applied after the main playbook and nested resource
-   * import strategies, meaning if the playbook that references the tool is skipped, the tool will
-   * also be skipped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String toolImportStrategy;
 
   /**
-   * Optional. Specifies the import strategy used when resolving conflicts with the main playbook.
-   * If not specified, 'CREATE_NEW' is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getMainPlaybookImportStrategy() {
@@ -66,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy extends 
   }
 
   /**
-   * Optional. Specifies the import strategy used when resolving conflicts with the main playbook.
-   * If not specified, 'CREATE_NEW' is assumed.
    * @param mainPlaybookImportStrategy mainPlaybookImportStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy setMainPlaybookImportStrategy(java.lang.String mainPlaybookImportStrategy) {
@@ -76,8 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy extends 
   }
 
   /**
-   * Optional. Specifies the import strategy used when resolving referenced playbook/flow conflicts.
-   * If not specified, 'CREATE_NEW' is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getNestedResourceImportStrategy() {
@@ -85,8 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy extends 
   }
 
   /**
-   * Optional. Specifies the import strategy used when resolving referenced playbook/flow conflicts.
-   * If not specified, 'CREATE_NEW' is assumed.
    * @param nestedResourceImportStrategy nestedResourceImportStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy setNestedResourceImportStrategy(java.lang.String nestedResourceImportStrategy) {
@@ -95,10 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy extends 
   }
 
   /**
-   * Optional. Specifies the import strategy used when resolving tool conflicts. If not specified,
-   * 'CREATE_NEW' is assumed. This will be applied after the main playbook and nested resource
-   * import strategies, meaning if the playbook that references the tool is skipped, the tool will
-   * also be skipped.
    * @return value or {@code null} for none
    */
   public java.lang.String getToolImportStrategy() {
@@ -106,10 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy extends 
   }
 
   /**
-   * Optional. Specifies the import strategy used when resolving tool conflicts. If not specified,
-   * 'CREATE_NEW' is assumed. This will be applied after the main playbook and nested resource
-   * import strategies, meaning if the playbook that references the tool is skipped, the tool will
-   * also be skipped.
    * @param toolImportStrategy toolImportStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookImportStrategy setToolImportStrategy(java.lang.String toolImportStrategy) {

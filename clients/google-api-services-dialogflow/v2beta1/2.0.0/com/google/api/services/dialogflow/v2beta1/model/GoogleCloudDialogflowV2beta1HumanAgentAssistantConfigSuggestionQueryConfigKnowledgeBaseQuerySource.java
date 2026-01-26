@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Knowledge base source settings. Supported features: ARTICLE_SUGGESTION, FAQ.
+ * Model definition for GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKn
+ * owledgeBaseQuerySource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +31,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently,
-   * only one knowledge base is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> knowledgeBases;
 
   /**
-   * Required. Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently,
-   * only one knowledge base is supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getKnowledgeBases() {
@@ -47,8 +44,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * Required. Knowledge bases to query. Format: `projects//locations//knowledgeBases/`. Currently,
-   * only one knowledge base is supported.
    * @param knowledgeBases knowledgeBases or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySource setKnowledgeBases(java.util.List<java.lang.String> knowledgeBases) {

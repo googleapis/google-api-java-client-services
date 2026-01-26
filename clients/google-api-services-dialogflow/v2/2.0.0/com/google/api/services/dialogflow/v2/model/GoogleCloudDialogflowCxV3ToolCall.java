@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a call of a specific tool's action with the specified inputs.
+ * Model definition for GoogleCloudDialogflowCxV3ToolCall.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3ToolCall extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the tool's action associated with this call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Optional. The action's input parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> inputParameters;
 
   /**
-   * Required. The tool associated with this call. Format: `projects//locations//agents//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tool;
 
   /**
-   * Required. The name of the tool's action associated with this call.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3ToolCall extends com.google.api.clie
   }
 
   /**
-   * Required. The name of the tool's action associated with this call.
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolCall setAction(java.lang.String action) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3ToolCall extends com.google.api.clie
   }
 
   /**
-   * Optional. The action's input parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getInputParameters() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3ToolCall extends com.google.api.clie
   }
 
   /**
-   * Optional. The action's input parameters.
    * @param inputParameters inputParameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolCall setInputParameters(java.util.Map<String, java.lang.Object> inputParameters) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3ToolCall extends com.google.api.clie
   }
 
   /**
-   * Required. The tool associated with this call. Format: `projects//locations//agents//tools/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTool() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3ToolCall extends com.google.api.clie
   }
 
   /**
-   * Required. The tool associated with this call. Format: `projects//locations//agents//tools/`.
    * @param tool tool or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolCall setTool(java.lang.String tool) {

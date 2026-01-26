@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for Responsible AI.
+ * Model definition for GoogleCloudDialogflowCxV3SafetySettingsRaiSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3SafetySettingsRaiSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. RAI blocking configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFilter> categoryFilters;
 
   /**
-   * Optional. RAI blocking configurations.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFilter> getCategoryFilters() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3SafetySettingsRaiSettings extends co
   }
 
   /**
-   * Optional. RAI blocking configurations.
    * @param categoryFilters categoryFilters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SafetySettingsRaiSettings setCategoryFilters(java.util.List<GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFilter> categoryFilters) {

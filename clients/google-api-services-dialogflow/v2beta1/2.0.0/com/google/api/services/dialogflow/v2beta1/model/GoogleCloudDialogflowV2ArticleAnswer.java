@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents article answer.
+ * Model definition for GoogleCloudDialogflowV2ArticleAnswer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,50 +30,42 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * Article match confidence. The system's confidence score that this article is a good match for
-   * this conversation, as a value from 0.0 (completely uncertain) to 1.0 (completely certain).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * A map that contains metadata about the answer and the document from which it originates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * Article snippets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> snippets;
 
   /**
-   * The article title.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * The article URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -81,7 +73,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleAnswer setAnswerRecord(java.lang.String answerRecord) {
@@ -90,8 +81,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * Article match confidence. The system's confidence score that this article is a good match for
-   * this conversation, as a value from 0.0 (completely uncertain) to 1.0 (completely certain).
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -99,8 +88,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * Article match confidence. The system's confidence score that this article is a good match for
-   * this conversation, as a value from 0.0 (completely uncertain) to 1.0 (completely certain).
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleAnswer setConfidence(java.lang.Float confidence) {
@@ -109,7 +96,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * A map that contains metadata about the answer and the document from which it originates.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -117,7 +103,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * A map that contains metadata about the answer and the document from which it originates.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleAnswer setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -126,7 +111,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * Article snippets.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSnippets() {
@@ -134,7 +118,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * Article snippets.
    * @param snippets snippets or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleAnswer setSnippets(java.util.List<java.lang.String> snippets) {
@@ -143,7 +126,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * The article title.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -151,7 +133,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * The article title.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleAnswer setTitle(java.lang.String title) {
@@ -160,7 +141,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * The article URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -168,7 +148,6 @@ public final class GoogleCloudDialogflowV2ArticleAnswer extends com.google.api.c
   }
 
   /**
-   * The article URI.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleAnswer setUri(java.lang.String uri) {

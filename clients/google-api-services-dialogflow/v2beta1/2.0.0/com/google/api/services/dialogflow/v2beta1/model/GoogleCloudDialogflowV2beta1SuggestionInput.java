@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the action to take for a tool call that requires confirmation.
+ * Model definition for GoogleCloudDialogflowV2beta1SuggestionInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,53 +30,42 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The type of action to take with the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Required. Format: `projects//locations//answerRecords/` The answer record associated with the
-   * tool call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * The intent to be triggered on V3 agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentInput intentInput;
 
   /**
-   * Parameters to be used for the tool call. If not provided, the tool will be called without any
-   * parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * Optional. Time when the current suggest input is sent. For tool calls, this timestamp (along
-   * with the answer record) will be included in the corresponding tool call result so that it can
-   * be identified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String sendTime;
 
   /**
-   * Optional. If the customer edited the suggestion before using it, include the revised text here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1TextInput textOverride;
 
   /**
-   * Optional. The type of action to take with the tool.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -84,7 +73,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Optional. The type of action to take with the tool.
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionInput setAction(java.lang.String action) {
@@ -93,8 +81,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Required. Format: `projects//locations//answerRecords/` The answer record associated with the
-   * tool call.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -102,8 +88,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Required. Format: `projects//locations//answerRecords/` The answer record associated with the
-   * tool call.
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionInput setAnswerRecord(java.lang.String answerRecord) {
@@ -112,7 +96,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * The intent to be triggered on V3 agent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentInput getIntentInput() {
@@ -120,7 +103,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * The intent to be triggered on V3 agent.
    * @param intentInput intentInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionInput setIntentInput(GoogleCloudDialogflowV2beta1IntentInput intentInput) {
@@ -129,8 +111,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Parameters to be used for the tool call. If not provided, the tool will be called without any
-   * parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -138,8 +118,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Parameters to be used for the tool call. If not provided, the tool will be called without any
-   * parameters.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionInput setParameters(java.util.Map<String, java.lang.Object> parameters) {
@@ -148,9 +126,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Optional. Time when the current suggest input is sent. For tool calls, this timestamp (along
-   * with the answer record) will be included in the corresponding tool call result so that it can
-   * be identified.
    * @return value or {@code null} for none
    */
   public String getSendTime() {
@@ -158,9 +133,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Optional. Time when the current suggest input is sent. For tool calls, this timestamp (along
-   * with the answer record) will be included in the corresponding tool call result so that it can
-   * be identified.
    * @param sendTime sendTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionInput setSendTime(String sendTime) {
@@ -169,7 +141,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Optional. If the customer edited the suggestion before using it, include the revised text here.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1TextInput getTextOverride() {
@@ -177,7 +148,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionInput extends com.googl
   }
 
   /**
-   * Optional. If the customer edited the suggestion before using it, include the revised text here.
    * @param textOverride textOverride or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionInput setTextOverride(GoogleCloudDialogflowV2beta1TextInput textOverride) {

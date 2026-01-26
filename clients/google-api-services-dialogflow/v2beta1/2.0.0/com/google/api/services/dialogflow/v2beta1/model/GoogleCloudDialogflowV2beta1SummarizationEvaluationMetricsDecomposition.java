@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Decomposition details
+ * Model definition for GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsDecomposition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsDecomposition extends com.google.api.client.json.GenericJson {
 
   /**
-   * only available for accuracy metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition accuracyDecomposition;
 
   /**
-   * only available for adherence metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAdherenceDecomposition adherenceDecomposition;
 
   /**
-   * only available for accuracy metric.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition getAccuracyDecomposition() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsDec
   }
 
   /**
-   * only available for accuracy metric.
    * @param accuracyDecomposition accuracyDecomposition or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsDecomposition setAccuracyDecomposition(GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAccuracyDecomposition accuracyDecomposition) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsDec
   }
 
   /**
-   * only available for adherence metric.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAdherenceDecomposition getAdherenceDecomposition() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsDec
   }
 
   /**
-   * only available for adherence metric.
    * @param adherenceDecomposition adherenceDecomposition or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsDecomposition setAdherenceDecomposition(GoogleCloudDialogflowV2beta1SummarizationEvaluationMetricsAdherenceDecomposition adherenceDecomposition) {

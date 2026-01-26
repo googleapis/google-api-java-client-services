@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores metadata of the intent match action.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ActionIntentMatch.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatch extends com.google.api.client.json.GenericJson {
 
   /**
-   * The matched intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent> matchedIntents;
 
   /**
-   * The matched intent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent> getMatchedIntents() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatch extends com.g
   }
 
   /**
-   * The matched intent.
    * @param matchedIntents matchedIntents or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionIntentMatch setMatchedIntents(java.util.List<GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent> matchedIntents) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Input of the playbook.
+ * Model definition for GoogleCloudDialogflowCxV3beta1PlaybookInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1PlaybookInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of input parameters for the action.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> actionParameters;
 
   /**
-   * Optional. Summary string of the preceding conversation for the child playbook invocation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String precedingConversationSummary;
 
   /**
-   * Optional. A list of input parameters for the action.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getActionParameters() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookInput extends com.googl
   }
 
   /**
-   * Optional. A list of input parameters for the action.
    * @param actionParameters actionParameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookInput setActionParameters(java.util.Map<String, java.lang.Object> actionParameters) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookInput extends com.googl
   }
 
   /**
-   * Optional. Summary string of the preceding conversation for the child playbook invocation.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrecedingConversationSummary() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookInput extends com.googl
   }
 
   /**
-   * Optional. Summary string of the preceding conversation for the child playbook invocation.
    * @param precedingConversationSummary precedingConversationSummary or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookInput setPrecedingConversationSummary(java.lang.String precedingConversationSummary) {

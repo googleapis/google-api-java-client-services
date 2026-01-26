@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The flow import strategy used for resource conflict resolution associated with an
- * ImportFlowRequest.
+ * Model definition for GoogleCloudDialogflowCxV3beta1FlowImportStrategy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,20 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1FlowImportStrategy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Global flow import strategy for resource conflict resolution. The import Import
-   * strategy for resource conflict resolution, applied globally throughout the flow. It will be
-   * applied for all display name conflicts in the imported content. If not specified, 'CREATE_NEW'
-   * is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String globalImportStrategy;
 
   /**
-   * Optional. Global flow import strategy for resource conflict resolution. The import Import
-   * strategy for resource conflict resolution, applied globally throughout the flow. It will be
-   * applied for all display name conflicts in the imported content. If not specified, 'CREATE_NEW'
-   * is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getGlobalImportStrategy() {
@@ -52,10 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1FlowImportStrategy extends com.
   }
 
   /**
-   * Optional. Global flow import strategy for resource conflict resolution. The import Import
-   * strategy for resource conflict resolution, applied globally throughout the flow. It will be
-   * applied for all display name conflicts in the imported content. If not specified, 'CREATE_NEW'
-   * is assumed.
    * @param globalImportStrategy globalImportStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FlowImportStrategy setGlobalImportStrategy(java.lang.String globalImportStrategy) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The source or target of a transition.
+ * Model definition for GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNode.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNode extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates a transition to a Flow. Only some fields such as name and displayname will be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Flow flow;
 
   /**
-   * Indicates a transition to a Page. Only some fields such as name and displayname will be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Page page;
 
   /**
-   * Indicates a transition to a Flow. Only some fields such as name and displayname will be set.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Flow getFlow() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNod
   }
 
   /**
-   * Indicates a transition to a Flow. Only some fields such as name and displayname will be set.
    * @param flow flow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNode setFlow(GoogleCloudDialogflowCxV3beta1Flow flow) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNod
   }
 
   /**
-   * Indicates a transition to a Page. Only some fields such as name and displayname will be set.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Page getPage() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNod
   }
 
   /**
-   * Indicates a transition to a Page. Only some fields such as name and displayname will be set.
    * @param page page or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionCoverageTransitionNode setPage(GoogleCloudDialogflowCxV3beta1Page page) {

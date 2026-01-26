@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * A Dialogflow agent is a virtual agent that handles conversations with your end-users. It is a
- * natural language understanding module that understands the nuances of human language. Dialogflow
- * translates end-user text or audio during a conversation to structured data that your apps and
- * services can understand. You design and build a Dialogflow agent to handle the types of
- * conversations required for your system. For more information about agents, see the [Agent
- * guide](https://cloud.google.com/dialogflow/docs/agents-overview).
+ * Model definition for GoogleCloudDialogflowV2beta1Agent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,107 +30,78 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. API version displayed in Dialogflow console. If not specified, V2 API is assumed.
-   * Clients are free to query different service endpoints for different API versions. However, bots
-   * connectors and webhook calls will follow the specified API version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiVersion;
 
   /**
-   * Optional. The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and
-   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
-   * integration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String avatarUri;
 
   /**
-   * Optional. To filter out false positive results and still get variety in matched natural
-   * language inputs for your agent, you can tune the machine learning classification threshold. If
-   * the returned score value is less than the threshold value, then a fallback intent will be
-   * triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-   * values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
-   * default of 0.3 is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float classificationThreshold;
 
   /**
-   * Required. The default language of the agent as a language tag. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. This field cannot be set by the `Update` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String defaultLanguageCode;
 
   /**
-   * Optional. The description of this agent. The maximum length is 500 characters. If exceeded, the
-   * request is rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The name of this agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. Determines whether this agent should log conversation queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableLogging;
 
   /**
-   * Optional. Determines how intents are detected from user queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matchMode;
 
   /**
-   * Required. The project of this agent. Format: `projects/` or `projects//locations/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Optional. The list of all languages supported by this agent (except for the
-   * `default_language_code`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedLanguageCodes;
 
   /**
-   * Optional. The agent tier. If not specified, TIER_STANDARD is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tier;
 
   /**
-   * Required. The time zone of this agent from the [time zone database](https://www.iana.org/time-
-   * zones), e.g., America/New_York, Europe/Paris.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
 
   /**
-   * Optional. API version displayed in Dialogflow console. If not specified, V2 API is assumed.
-   * Clients are free to query different service endpoints for different API versions. However, bots
-   * connectors and webhook calls will follow the specified API version.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -143,9 +109,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. API version displayed in Dialogflow console. If not specified, V2 API is assumed.
-   * Clients are free to query different service endpoints for different API versions. However, bots
-   * connectors and webhook calls will follow the specified API version.
    * @param apiVersion apiVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setApiVersion(java.lang.String apiVersion) {
@@ -154,9 +117,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and
-   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
-   * integration.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvatarUri() {
@@ -164,9 +124,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and
-   * in the self-hosted [Web Demo](https://cloud.google.com/dialogflow/docs/integrations/web-demo)
-   * integration.
    * @param avatarUri avatarUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setAvatarUri(java.lang.String avatarUri) {
@@ -175,12 +132,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. To filter out false positive results and still get variety in matched natural
-   * language inputs for your agent, you can tune the machine learning classification threshold. If
-   * the returned score value is less than the threshold value, then a fallback intent will be
-   * triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-   * values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
-   * default of 0.3 is used.
    * @return value or {@code null} for none
    */
   public java.lang.Float getClassificationThreshold() {
@@ -188,12 +139,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. To filter out false positive results and still get variety in matched natural
-   * language inputs for your agent, you can tune the machine learning classification threshold. If
-   * the returned score value is less than the threshold value, then a fallback intent will be
-   * triggered or, if there are no fallback intents defined, no intent will be triggered. The score
-   * values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the
-   * default of 0.3 is used.
    * @param classificationThreshold classificationThreshold or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setClassificationThreshold(java.lang.Float classificationThreshold) {
@@ -202,9 +147,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Required. The default language of the agent as a language tag. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. This field cannot be set by the `Update` method.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultLanguageCode() {
@@ -212,9 +154,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Required. The default language of the agent as a language tag. See [Language
-   * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
-   * currently supported language codes. This field cannot be set by the `Update` method.
    * @param defaultLanguageCode defaultLanguageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setDefaultLanguageCode(java.lang.String defaultLanguageCode) {
@@ -223,8 +162,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The description of this agent. The maximum length is 500 characters. If exceeded, the
-   * request is rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -232,8 +169,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The description of this agent. The maximum length is 500 characters. If exceeded, the
-   * request is rejected.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setDescription(java.lang.String description) {
@@ -242,7 +177,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Required. The name of this agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -250,7 +184,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Required. The name of this agent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setDisplayName(java.lang.String displayName) {
@@ -259,7 +192,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. Determines whether this agent should log conversation queries.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableLogging() {
@@ -267,7 +199,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. Determines whether this agent should log conversation queries.
    * @param enableLogging enableLogging or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setEnableLogging(java.lang.Boolean enableLogging) {
@@ -276,7 +207,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. Determines how intents are detected from user queries.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchMode() {
@@ -284,7 +214,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. Determines how intents are detected from user queries.
    * @param matchMode matchMode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setMatchMode(java.lang.String matchMode) {
@@ -293,7 +222,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Required. The project of this agent. Format: `projects/` or `projects//locations/`
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -301,7 +229,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Required. The project of this agent. Format: `projects/` or `projects//locations/`
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setParent(java.lang.String parent) {
@@ -310,8 +237,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The list of all languages supported by this agent (except for the
-   * `default_language_code`).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedLanguageCodes() {
@@ -319,8 +244,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The list of all languages supported by this agent (except for the
-   * `default_language_code`).
    * @param supportedLanguageCodes supportedLanguageCodes or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setSupportedLanguageCodes(java.util.List<java.lang.String> supportedLanguageCodes) {
@@ -329,7 +252,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The agent tier. If not specified, TIER_STANDARD is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -337,7 +259,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Optional. The agent tier. If not specified, TIER_STANDARD is assumed.
    * @param tier tier or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setTier(java.lang.String tier) {
@@ -346,8 +267,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Required. The time zone of this agent from the [time zone database](https://www.iana.org/time-
-   * zones), e.g., America/New_York, Europe/Paris.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -355,8 +274,6 @@ public final class GoogleCloudDialogflowV2beta1Agent extends com.google.api.clie
   }
 
   /**
-   * Required. The time zone of this agent from the [time zone database](https://www.iana.org/time-
-   * zones), e.g., America/New_York, Europe/Paris.
    * @param timeZone timeZone or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Agent setTimeZone(java.lang.String timeZone) {

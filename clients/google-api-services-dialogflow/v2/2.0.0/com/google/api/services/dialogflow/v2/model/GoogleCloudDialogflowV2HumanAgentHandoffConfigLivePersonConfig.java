@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Configuration specific to [LivePerson](https://www.liveperson.com).
+ * Model definition for GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountNumber;
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountNumber() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfi
   }
 
   /**
-   * Required. Account number of the LivePerson account to connect. This is the account number you
-   * input at the login page.
    * @param accountNumber accountNumber or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfig setAccountNumber(java.lang.String accountNumber) {

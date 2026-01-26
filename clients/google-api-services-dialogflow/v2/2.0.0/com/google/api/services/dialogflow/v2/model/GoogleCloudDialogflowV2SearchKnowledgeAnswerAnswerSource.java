@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The sources of the answers.
+ * Model definition for GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Metadata associated with the article.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
-   * The relevant snippet of the article.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String snippet;
 
   /**
-   * The title of the article.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * The URI of the article.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Metadata associated with the article.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource exte
   }
 
   /**
-   * Metadata associated with the article.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource exte
   }
 
   /**
-   * The relevant snippet of the article.
    * @return value or {@code null} for none
    */
   public java.lang.String getSnippet() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource exte
   }
 
   /**
-   * The relevant snippet of the article.
    * @param snippet snippet or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource setSnippet(java.lang.String snippet) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource exte
   }
 
   /**
-   * The title of the article.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource exte
   }
 
   /**
-   * The title of the article.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource setTitle(java.lang.String title) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource exte
   }
 
   /**
-   * The URI of the article.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource exte
   }
 
   /**
-   * The URI of the article.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource setUri(java.lang.String uri) {

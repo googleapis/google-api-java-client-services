@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Configuration for tools using Service Directory.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ToolServiceDirectoryConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,18 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ToolServiceDirectoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of [Service Directory](https://cloud.google.com/service-directory) service.
-   * Format: `projects//locations//namespaces//services/`. `LocationID` of the service directory
-   * must be the same as the location of the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * Required. The name of [Service Directory](https://cloud.google.com/service-directory) service.
-   * Format: `projects//locations//namespaces//services/`. `LocationID` of the service directory
-   * must be the same as the location of the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -49,9 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolServiceDirectoryConfig exte
   }
 
   /**
-   * Required. The name of [Service Directory](https://cloud.google.com/service-directory) service.
-   * Format: `projects//locations//namespaces//services/`. `LocationID` of the service directory
-   * must be the same as the location of the agent.
    * @param service service or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolServiceDirectoryConfig setService(java.lang.String service) {

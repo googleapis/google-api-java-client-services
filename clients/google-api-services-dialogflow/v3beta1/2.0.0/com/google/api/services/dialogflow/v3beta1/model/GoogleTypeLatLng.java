@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * An object that represents a latitude/longitude pair. This is expressed as a pair of doubles to
- * represent degrees latitude and degrees longitude. Unless specified otherwise, this object must
- * conform to the WGS84 standard. Values must be within normalized ranges.
+ * Model definition for GoogleTypeLatLng.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleTypeLatLng extends com.google.api.client.json.GenericJson {
 
   /**
-   * The latitude in degrees. It must be in the range [-90.0, +90.0].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double latitude;
 
   /**
-   * The longitude in degrees. It must be in the range [-180.0, +180.0].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double longitude;
 
   /**
-   * The latitude in degrees. It must be in the range [-90.0, +90.0].
    * @return value or {@code null} for none
    */
   public java.lang.Double getLatitude() {
@@ -54,7 +49,6 @@ public final class GoogleTypeLatLng extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The latitude in degrees. It must be in the range [-90.0, +90.0].
    * @param latitude latitude or {@code null} for none
    */
   public GoogleTypeLatLng setLatitude(java.lang.Double latitude) {
@@ -63,7 +57,6 @@ public final class GoogleTypeLatLng extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The longitude in degrees. It must be in the range [-180.0, +180.0].
    * @return value or {@code null} for none
    */
   public java.lang.Double getLongitude() {
@@ -71,7 +64,6 @@ public final class GoogleTypeLatLng extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The longitude in degrees. It must be in the range [-180.0, +180.0].
    * @param longitude longitude or {@code null} for none
    */
   public GoogleTypeLatLng setLongitude(java.lang.Double longitude) {

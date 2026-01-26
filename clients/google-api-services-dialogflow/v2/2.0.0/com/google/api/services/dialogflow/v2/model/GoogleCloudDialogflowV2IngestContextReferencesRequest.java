@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for ConversationsService.IngestContextReferences.
+ * Model definition for GoogleCloudDialogflowV2IngestContextReferencesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,9 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2IngestContextReferencesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The context references to ingest. The key is the name of the context reference and
-   * the value contains the contents of the context reference. The key is used to incorporate
-   * ingested context references to enhance the generator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +42,6 @@ public final class GoogleCloudDialogflowV2IngestContextReferencesRequest extends
   }
 
   /**
-   * Required. The context references to ingest. The key is the name of the context reference and
-   * the value contains the contents of the context reference. The key is used to incorporate
-   * ingested context references to enhance the generator.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> getContextReferences() {
@@ -55,9 +49,6 @@ public final class GoogleCloudDialogflowV2IngestContextReferencesRequest extends
   }
 
   /**
-   * Required. The context references to ingest. The key is the name of the context reference and
-   * the value contains the contents of the context reference. The key is used to incorporate
-   * ingested context references to enhance the generator.
    * @param contextReferences contextReferences or {@code null} for none
    */
   public GoogleCloudDialogflowV2IngestContextReferencesRequest setContextReferences(java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> contextReferences) {

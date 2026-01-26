@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for Participants.SuggestSmartReplies.
+ * Model definition for GoogleCloudDialogflowV2SuggestSmartRepliesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,33 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SuggestSmartRepliesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Max number of messages prior to and including [latest_message] to use as context when compiling
-   * the suggestion. By default 20 and at most 50.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * The current natural language text segment to compile suggestion for. This provides a way for
-   * user to get follow up smart reply suggestion after a smart reply selection, without sending a
-   * text message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2TextInput currentTextInput;
 
   /**
-   * The name of the latest conversation message to compile suggestion for. If empty, it will be the
-   * latest message of the conversation. Format: `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Max number of messages prior to and including [latest_message] to use as context when compiling
-   * the suggestion. By default 20 and at most 50.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -64,8 +55,6 @@ public final class GoogleCloudDialogflowV2SuggestSmartRepliesRequest extends com
   }
 
   /**
-   * Max number of messages prior to and including [latest_message] to use as context when compiling
-   * the suggestion. By default 20 and at most 50.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestSmartRepliesRequest setContextSize(java.lang.Integer contextSize) {
@@ -74,9 +63,6 @@ public final class GoogleCloudDialogflowV2SuggestSmartRepliesRequest extends com
   }
 
   /**
-   * The current natural language text segment to compile suggestion for. This provides a way for
-   * user to get follow up smart reply suggestion after a smart reply selection, without sending a
-   * text message.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextInput getCurrentTextInput() {
@@ -84,9 +70,6 @@ public final class GoogleCloudDialogflowV2SuggestSmartRepliesRequest extends com
   }
 
   /**
-   * The current natural language text segment to compile suggestion for. This provides a way for
-   * user to get follow up smart reply suggestion after a smart reply selection, without sending a
-   * text message.
    * @param currentTextInput currentTextInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestSmartRepliesRequest setCurrentTextInput(GoogleCloudDialogflowV2TextInput currentTextInput) {
@@ -95,8 +78,6 @@ public final class GoogleCloudDialogflowV2SuggestSmartRepliesRequest extends com
   }
 
   /**
-   * The name of the latest conversation message to compile suggestion for. If empty, it will be the
-   * latest message of the conversation. Format: `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -104,8 +85,6 @@ public final class GoogleCloudDialogflowV2SuggestSmartRepliesRequest extends com
   }
 
   /**
-   * The name of the latest conversation message to compile suggestion for. If empty, it will be the
-   * latest message of the conversation. Format: `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestSmartRepliesRequest setLatestMessage(java.lang.String latestMessage) {

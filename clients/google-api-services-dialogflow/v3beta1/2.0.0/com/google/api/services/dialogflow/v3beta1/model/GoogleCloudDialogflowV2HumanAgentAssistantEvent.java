@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents a notification sent to Cloud Pub/Sub subscribers for human agent assistant events in a
- * specific conversation.
+ * Model definition for GoogleCloudDialogflowV2HumanAgentAssistantEvent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,29 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The conversation this notification refers to. Format: `projects//conversations/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversation;
 
   /**
-   * The participant that the suggestion is compiled for. Format:
-   * `projects//conversations//participants/`. It will not be set in legacy workflow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String participant;
 
   /**
-   * The suggestion results payload that this notification refers to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2SuggestionResult> suggestionResults;
 
   /**
-   * The conversation this notification refers to. Format: `projects//conversations/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversation() {
@@ -61,7 +55,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends com.g
   }
 
   /**
-   * The conversation this notification refers to. Format: `projects//conversations/`.
    * @param conversation conversation or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantEvent setConversation(java.lang.String conversation) {
@@ -70,8 +63,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends com.g
   }
 
   /**
-   * The participant that the suggestion is compiled for. Format:
-   * `projects//conversations//participants/`. It will not be set in legacy workflow.
    * @return value or {@code null} for none
    */
   public java.lang.String getParticipant() {
@@ -79,8 +70,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends com.g
   }
 
   /**
-   * The participant that the suggestion is compiled for. Format:
-   * `projects//conversations//participants/`. It will not be set in legacy workflow.
    * @param participant participant or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantEvent setParticipant(java.lang.String participant) {
@@ -89,7 +78,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends com.g
   }
 
   /**
-   * The suggestion results payload that this notification refers to.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SuggestionResult> getSuggestionResults() {
@@ -97,7 +85,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends com.g
   }
 
   /**
-   * The suggestion results payload that this notification refers to.
    * @param suggestionResults suggestionResults or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantEvent setSuggestionResults(java.util.List<GoogleCloudDialogflowV2SuggestionResult> suggestionResults) {

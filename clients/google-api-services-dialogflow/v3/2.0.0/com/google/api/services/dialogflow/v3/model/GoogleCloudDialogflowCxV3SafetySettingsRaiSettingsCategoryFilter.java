@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Configuration of the sensitivity level for blocking an RAI category.
+ * Model definition for GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFilter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * RAI category to configure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String category;
 
   /**
-   * Blocking sensitivity level to configure for the RAI category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filterLevel;
 
   /**
-   * RAI category to configure.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFil
   }
 
   /**
-   * RAI category to configure.
    * @param category category or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFilter setCategory(java.lang.String category) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFil
   }
 
   /**
-   * Blocking sensitivity level to configure for the RAI category.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilterLevel() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFil
   }
 
   /**
-   * Blocking sensitivity level to configure for the RAI category.
    * @param filterLevel filterLevel or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SafetySettingsRaiSettingsCategoryFilter setFilterLevel(java.lang.String filterLevel) {

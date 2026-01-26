@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Contents ingested.
+ * Model definition for GoogleCloudDialogflowV2ConversationContextReferenceContextContent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,38 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConversationContextReferenceContextContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the context content was generated from a tool call, specify the answer record associated
-   * with the tool call. Format: `projects//locations//answerRecords/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * Required. The information ingested in a single request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
 
   /**
-   * Required. The format of the ingested string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentFormat;
 
   /**
-   * Output only. The time when this information was incorporated into the relevant context
-   * reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String ingestionTime;
 
   /**
-   * If the context content was generated from a tool call, specify the answer record associated
-   * with the tool call. Format: `projects//locations//answerRecords/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -69,8 +61,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReferenceContextCon
   }
 
   /**
-   * If the context content was generated from a tool call, specify the answer record associated
-   * with the tool call. Format: `projects//locations//answerRecords/`.
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContextReferenceContextContent setAnswerRecord(java.lang.String answerRecord) {
@@ -79,7 +69,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReferenceContextCon
   }
 
   /**
-   * Required. The information ingested in a single request.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -87,7 +76,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReferenceContextCon
   }
 
   /**
-   * Required. The information ingested in a single request.
    * @param content content or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContextReferenceContextContent setContent(java.lang.String content) {
@@ -96,7 +84,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReferenceContextCon
   }
 
   /**
-   * Required. The format of the ingested string.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentFormat() {
@@ -104,7 +91,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReferenceContextCon
   }
 
   /**
-   * Required. The format of the ingested string.
    * @param contentFormat contentFormat or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContextReferenceContextContent setContentFormat(java.lang.String contentFormat) {
@@ -113,8 +99,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReferenceContextCon
   }
 
   /**
-   * Output only. The time when this information was incorporated into the relevant context
-   * reference.
    * @return value or {@code null} for none
    */
   public String getIngestionTime() {
@@ -122,8 +106,6 @@ public final class GoogleCloudDialogflowV2ConversationContextReferenceContextCon
   }
 
   /**
-   * Output only. The time when this information was incorporated into the relevant context
-   * reference.
    * @param ingestionTime ingestionTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationContextReferenceContextContent setIngestionTime(String ingestionTime) {

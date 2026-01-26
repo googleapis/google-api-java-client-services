@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents the event to trigger.
+ * Model definition for GoogleCloudDialogflowCxV3beta1EventInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1EventInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String event;
 
   /**
-   * Name of the event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvent() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1EventInput extends com.google.a
   }
 
   /**
-   * Name of the event.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EventInput setEvent(java.lang.String event) {

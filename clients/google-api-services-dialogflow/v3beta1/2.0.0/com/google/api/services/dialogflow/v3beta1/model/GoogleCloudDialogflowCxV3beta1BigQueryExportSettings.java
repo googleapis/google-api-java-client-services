@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The settings of BigQuery export.
+ * Model definition for GoogleCloudDialogflowCxV3beta1BigQueryExportSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1BigQueryExportSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The BigQuery table to export. Format: `projects//datasets//tables/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bigqueryTable;
 
   /**
-   * The field to indicate whether the BigQuery export is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * The BigQuery table to export. Format: `projects//datasets//tables/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getBigqueryTable() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1BigQueryExportSettings extends 
   }
 
   /**
-   * The BigQuery table to export. Format: `projects//datasets//tables/`.
    * @param bigqueryTable bigqueryTable or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1BigQueryExportSettings setBigqueryTable(java.lang.String bigqueryTable) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1BigQueryExportSettings extends 
   }
 
   /**
-   * The field to indicate whether the BigQuery export is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1BigQueryExportSettings extends 
   }
 
   /**
-   * The field to indicate whether the BigQuery export is enabled.
    * @param enabled enabled or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1BigQueryExportSettings setEnabled(java.lang.Boolean enabled) {

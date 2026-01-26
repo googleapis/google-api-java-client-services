@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The response message for TestCases.ListTestCases.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ListTestCasesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ListTestCasesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of test cases. There will be a maximum number of items returned based on the page_size
-   * field in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1TestCase> testCases;
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListTestCasesResponse extends c
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListTestCasesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -62,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListTestCasesResponse extends c
   }
 
   /**
-   * The list of test cases. There will be a maximum number of items returned based on the page_size
-   * field in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1TestCase> getTestCases() {
@@ -71,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListTestCasesResponse extends c
   }
 
   /**
-   * The list of test cases. There will be a maximum number of items returned based on the page_size
-   * field in the request.
    * @param testCases testCases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListTestCasesResponse setTestCases(java.util.List<GoogleCloudDialogflowCxV3beta1TestCase> testCases) {

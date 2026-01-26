@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Request of MatchIntent.
+ * Model definition for GoogleCloudDialogflowCxV3MatchIntentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3MatchIntentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Persist session parameter changes from `query_params`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean persistParameterChanges;
 
   /**
-   * Required. The input specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3QueryInput queryInput;
 
   /**
-   * The parameters of this query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3QueryParameters queryParams;
 
   /**
-   * Persist session parameter changes from `query_params`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPersistParameterChanges() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3MatchIntentRequest extends com.googl
   }
 
   /**
-   * Persist session parameter changes from `query_params`.
    * @param persistParameterChanges persistParameterChanges or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3MatchIntentRequest setPersistParameterChanges(java.lang.Boolean persistParameterChanges) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3MatchIntentRequest extends com.googl
   }
 
   /**
-   * Required. The input specification.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput getQueryInput() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3MatchIntentRequest extends com.googl
   }
 
   /**
-   * Required. The input specification.
    * @param queryInput queryInput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3MatchIntentRequest setQueryInput(GoogleCloudDialogflowCxV3QueryInput queryInput) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3MatchIntentRequest extends com.googl
   }
 
   /**
-   * The parameters of this query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryParameters getQueryParams() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3MatchIntentRequest extends com.googl
   }
 
   /**
-   * The parameters of this query.
    * @param queryParams queryParams or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3MatchIntentRequest setQueryParams(GoogleCloudDialogflowCxV3QueryParameters queryParams) {

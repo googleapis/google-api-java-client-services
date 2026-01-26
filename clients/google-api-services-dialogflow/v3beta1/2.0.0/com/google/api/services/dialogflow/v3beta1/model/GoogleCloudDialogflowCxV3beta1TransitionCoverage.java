@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Transition coverage represents the percentage of all possible page transitions (page-level
- * transition routes and event handlers, excluding transition route groups) present within any of a
- * parent's test cases.
+ * Model definition for GoogleCloudDialogflowCxV3beta1TransitionCoverage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1TransitionCoverage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The percent of transitions in the agent that are covered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float coverageScore;
 
   /**
-   * The list of Transitions present in the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition> transitions;
 
   /**
-   * The percent of transitions in the agent that are covered.
    * @return value or {@code null} for none
    */
   public java.lang.Float getCoverageScore() {
@@ -54,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionCoverage extends com.
   }
 
   /**
-   * The percent of transitions in the agent that are covered.
    * @param coverageScore coverageScore or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionCoverage setCoverageScore(java.lang.Float coverageScore) {
@@ -63,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionCoverage extends com.
   }
 
   /**
-   * The list of Transitions present in the agent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition> getTransitions() {
@@ -71,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionCoverage extends com.
   }
 
   /**
-   * The list of Transitions present in the agent.
    * @param transitions transitions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionCoverage setTransitions(java.util.List<GoogleCloudDialogflowCxV3beta1TransitionCoverageTransition> transitions) {

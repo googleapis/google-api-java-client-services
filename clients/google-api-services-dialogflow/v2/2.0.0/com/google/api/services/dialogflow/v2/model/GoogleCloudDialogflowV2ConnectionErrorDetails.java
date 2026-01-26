@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The error details of Sip Trunk connection authentication.
+ * Model definition for GoogleCloudDialogflowV2ConnectionErrorDetails.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ConnectionErrorDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The status of the certificate authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String certificateState;
 
   /**
-   * The error message provided from SIP trunking auth service
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String errorMessage;
 
   /**
-   * Output only. The status of the certificate authentication.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificateState() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2ConnectionErrorDetails extends com.goo
   }
 
   /**
-   * Output only. The status of the certificate authentication.
    * @param certificateState certificateState or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConnectionErrorDetails setCertificateState(java.lang.String certificateState) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2ConnectionErrorDetails extends com.goo
   }
 
   /**
-   * The error message provided from SIP trunking auth service
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorMessage() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2ConnectionErrorDetails extends com.goo
   }
 
   /**
-   * The error message provided from SIP trunking auth service
    * @param errorMessage errorMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConnectionErrorDetails setErrorMessage(java.lang.String errorMessage) {

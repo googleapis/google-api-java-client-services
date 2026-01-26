@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Smart compose specific configuration for evaluation job.
+ * Model definition for GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,25 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The allowlist document resource name. Format: `projects//knowledgeBases//documents/`. Only used
-   * for smart compose model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String allowlistDocument;
 
   /**
-   * Required. The model to be evaluated can return multiple results with confidence score on each
-   * query. These results will be sorted by the descending order of the scores and we only keep the
-   * first max_result_count results as the final results to evaluate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxResultCount;
 
   /**
-   * The allowlist document resource name. Format: `projects//knowledgeBases//documents/`. Only used
-   * for smart compose model.
    * @return value or {@code null} for none
    */
   public java.lang.String getAllowlistDocument() {
@@ -56,8 +49,6 @@ public final class GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig ext
   }
 
   /**
-   * The allowlist document resource name. Format: `projects//knowledgeBases//documents/`. Only used
-   * for smart compose model.
    * @param allowlistDocument allowlistDocument or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig setAllowlistDocument(java.lang.String allowlistDocument) {
@@ -66,9 +57,6 @@ public final class GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig ext
   }
 
   /**
-   * Required. The model to be evaluated can return multiple results with confidence score on each
-   * query. These results will be sorted by the descending order of the scores and we only keep the
-   * first max_result_count results as the final results to evaluate.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxResultCount() {
@@ -76,9 +64,6 @@ public final class GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig ext
   }
 
   /**
-   * Required. The model to be evaluated can return multiple results with confidence score on each
-   * query. These results will be sorted by the descending order of the scores and we only keep the
-   * first max_result_count results as the final results to evaluate.
    * @param maxResultCount maxResultCount or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig setMaxResultCount(java.lang.Integer maxResultCount) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a single followup intent in the chain.
+ * Model definition for GoogleCloudDialogflowV2IntentFollowupIntentInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2IntentFollowupIntentInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique identifier of the followup intent. Format: `projects//agent/intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String followupIntentName;
 
   /**
-   * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentFollowupIntentName;
 
   /**
-   * The unique identifier of the followup intent. Format: `projects//agent/intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFollowupIntentName() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfo extends com.g
   }
 
   /**
-   * The unique identifier of the followup intent. Format: `projects//agent/intents/`.
    * @param followupIntentName followupIntentName or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentFollowupIntentInfo setFollowupIntentName(java.lang.String followupIntentName) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfo extends com.g
   }
 
   /**
-   * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParentFollowupIntentName() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2IntentFollowupIntentInfo extends com.g
   }
 
   /**
-   * The unique identifier of the followup intent's parent. Format: `projects//agent/intents/`.
    * @param parentFollowupIntentName parentFollowupIntentName or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentFollowupIntentInfo setParentFollowupIntentName(java.lang.String parentFollowupIntentName) {

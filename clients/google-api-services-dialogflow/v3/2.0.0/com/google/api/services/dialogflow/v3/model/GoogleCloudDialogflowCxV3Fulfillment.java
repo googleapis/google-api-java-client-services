@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A fulfillment can do one or more of the following actions at the same time: * Generate rich
- * message responses. * Set parameter values. * Call the webhook. Fulfillments can be called at
- * various stages in the Page or Form lifecycle. For example, when a DetectIntentRequest drives a
- * session to enter a new page, the page's entry fulfillment can add a static response to the
- * QueryResult in the returning DetectIntentResponse, call the webhook (for example, to load user
- * data from a database), or both.
+ * Model definition for GoogleCloudDialogflowCxV3Fulfillment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,81 +30,60 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Hierarchical advanced settings for this fulfillment. The settings exposed at the lower level
-   * overrides the settings exposed at the higher level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings;
 
   /**
-   * Conditional cases for this fulfillment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3FulfillmentConditionalCases> conditionalCases;
 
   /**
-   * If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation
-   * fails, the defined responses in the fulfillment will be respected. This flag is only useful for
-   * fulfillments associated with no-match event handlers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableGenerativeFallback;
 
   /**
-   * A list of Generators to be called during this fulfillment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3FulfillmentGeneratorSettings> generators;
 
   /**
-   * The list of rich message responses to present to the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3ResponseMessage> messages;
 
   /**
-   * Whether Dialogflow should return currently queued fulfillment response messages in streaming
-   * APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This
-   * flag only affects streaming API. Responses are still queued and returned once in non-streaming
-   * API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will
-   * be returned. You may only want to apply it to fulfillments that have slow webhooks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean returnPartialResponses;
 
   /**
-   * Set parameter values before executing the webhook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3FulfillmentSetParameterAction> setParameterActions;
 
   /**
-   * The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by
-   * Dialogflow when the associated webhook is called. The tag is typically used by the webhook
-   * service to identify which fulfillment is being called, but it could be used for other purposes.
-   * This field is required if `webhook` is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tag;
 
   /**
-   * The webhook to call. Format: `projects//locations//agents//webhooks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String webhook;
 
   /**
-   * Hierarchical advanced settings for this fulfillment. The settings exposed at the lower level
-   * overrides the settings exposed at the higher level.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AdvancedSettings getAdvancedSettings() {
@@ -117,8 +91,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * Hierarchical advanced settings for this fulfillment. The settings exposed at the lower level
-   * overrides the settings exposed at the higher level.
    * @param advancedSettings advancedSettings or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings) {
@@ -127,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * Conditional cases for this fulfillment.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3FulfillmentConditionalCases> getConditionalCases() {
@@ -135,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * Conditional cases for this fulfillment.
    * @param conditionalCases conditionalCases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setConditionalCases(java.util.List<GoogleCloudDialogflowCxV3FulfillmentConditionalCases> conditionalCases) {
@@ -144,9 +114,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation
-   * fails, the defined responses in the fulfillment will be respected. This flag is only useful for
-   * fulfillments associated with no-match event handlers.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableGenerativeFallback() {
@@ -154,9 +121,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation
-   * fails, the defined responses in the fulfillment will be respected. This flag is only useful for
-   * fulfillments associated with no-match event handlers.
    * @param enableGenerativeFallback enableGenerativeFallback or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setEnableGenerativeFallback(java.lang.Boolean enableGenerativeFallback) {
@@ -165,7 +129,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * A list of Generators to be called during this fulfillment.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3FulfillmentGeneratorSettings> getGenerators() {
@@ -173,7 +136,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * A list of Generators to be called during this fulfillment.
    * @param generators generators or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setGenerators(java.util.List<GoogleCloudDialogflowCxV3FulfillmentGeneratorSettings> generators) {
@@ -182,7 +144,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * The list of rich message responses to present to the user.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3ResponseMessage> getMessages() {
@@ -190,7 +151,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * The list of rich message responses to present to the user.
    * @param messages messages or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setMessages(java.util.List<GoogleCloudDialogflowCxV3ResponseMessage> messages) {
@@ -199,11 +159,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * Whether Dialogflow should return currently queued fulfillment response messages in streaming
-   * APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This
-   * flag only affects streaming API. Responses are still queued and returned once in non-streaming
-   * API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will
-   * be returned. You may only want to apply it to fulfillments that have slow webhooks.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReturnPartialResponses() {
@@ -211,11 +166,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * Whether Dialogflow should return currently queued fulfillment response messages in streaming
-   * APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This
-   * flag only affects streaming API. Responses are still queued and returned once in non-streaming
-   * API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will
-   * be returned. You may only want to apply it to fulfillments that have slow webhooks.
    * @param returnPartialResponses returnPartialResponses or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setReturnPartialResponses(java.lang.Boolean returnPartialResponses) {
@@ -224,7 +174,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * Set parameter values before executing the webhook.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3FulfillmentSetParameterAction> getSetParameterActions() {
@@ -232,7 +181,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * Set parameter values before executing the webhook.
    * @param setParameterActions setParameterActions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setSetParameterActions(java.util.List<GoogleCloudDialogflowCxV3FulfillmentSetParameterAction> setParameterActions) {
@@ -241,10 +189,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by
-   * Dialogflow when the associated webhook is called. The tag is typically used by the webhook
-   * service to identify which fulfillment is being called, but it could be used for other purposes.
-   * This field is required if `webhook` is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -252,10 +196,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * The value of this field will be populated in the WebhookRequest `fulfillmentInfo.tag` field by
-   * Dialogflow when the associated webhook is called. The tag is typically used by the webhook
-   * service to identify which fulfillment is being called, but it could be used for other purposes.
-   * This field is required if `webhook` is specified.
    * @param tag tag or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setTag(java.lang.String tag) {
@@ -264,7 +204,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * The webhook to call. Format: `projects//locations//agents//webhooks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebhook() {
@@ -272,7 +211,6 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
   }
 
   /**
-   * The webhook to call. Format: `projects//locations//agents//webhooks/`.
    * @param webhook webhook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Fulfillment setWebhook(java.lang.String webhook) {

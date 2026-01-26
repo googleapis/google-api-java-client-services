@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the parameters of the conversational query.
+ * Model definition for GoogleCloudDialogflowV2beta1QueryParameters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.google.api.client.json.GenericJson {
 
   /**
-   * The collection of contexts to be activated before this query is executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,94 +42,66 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * The geo location of this conversational query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeLatLng geoLocation;
 
   /**
-   * KnowledgeBases to get alternative results from. If not set, the KnowledgeBases enabled in the
-   * agent (through UI) will be used. Format: `projects//knowledgeBases/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> knowledgeBaseNames;
 
   /**
-   * This field can be used to pass custom data to your webhook. Arbitrary JSON objects are
-   * supported. If supplied, the value is used to populate the
-   * `WebhookRequest.original_detect_intent_request.payload` field sent to your webhook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
-   * The platform of the virtual agent response messages. If not empty, only emits messages from
-   * this platform in the response. Valid values are the enum names of platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platform;
 
   /**
-   * Specifies whether to delete all contexts in the current session before the new ones are
-   * activated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean resetContexts;
 
   /**
-   * Configures the type of sentiment analysis to perform. If not provided, sentiment analysis is
-   * not performed. Note: Sentiment Analysis is only currently available for Essentials Edition
-   * agents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SentimentAnalysisRequestConfig sentimentAnalysisRequestConfig;
 
   /**
-   * Additional session entity types to replace or extend developer entity types with. The entity
-   * synonyms apply to all languages and persist for the session of this query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SessionEntityType> sessionEntityTypes;
 
   /**
-   * For mega agent query, directly specify which sub agents to query. If any specified sub agent is
-   * not linked to the mega agent, an error will be returned. If empty, Dialogflow will decide which
-   * sub agents to query. If specified for a non-mega-agent query, will be silently ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SubAgent> subAgents;
 
   /**
-   * The time zone of this conversational query from the [time zone
-   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not
-   * provided, the time zone specified in agent settings is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
 
   /**
-   * This field can be used to pass HTTP headers for a webhook call. These headers will be sent to
-   * webhook along with the headers that have been configured through Dialogflow web console. The
-   * headers defined within this field will overwrite the headers configured through Dialogflow
-   * console if there is a conflict. Header names are case-insensitive. Google's specified headers
-   * are not allowed. Including: "Host", "Content-Length", "Connection", "From", "User-Agent",
-   * "Accept-Encoding", "If-Modified-Since", "If-None-Match", "X-Forwarded-For", etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> webhookHeaders;
 
   /**
-   * The collection of contexts to be activated before this query is executed.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1Context> getContexts() {
@@ -138,7 +109,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * The collection of contexts to be activated before this query is executed.
    * @param contexts contexts or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setContexts(java.util.List<GoogleCloudDialogflowV2beta1Context> contexts) {
@@ -147,7 +117,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * The geo location of this conversational query.
    * @return value or {@code null} for none
    */
   public GoogleTypeLatLng getGeoLocation() {
@@ -155,7 +124,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * The geo location of this conversational query.
    * @param geoLocation geoLocation or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setGeoLocation(GoogleTypeLatLng geoLocation) {
@@ -164,8 +132,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * KnowledgeBases to get alternative results from. If not set, the KnowledgeBases enabled in the
-   * agent (through UI) will be used. Format: `projects//knowledgeBases/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getKnowledgeBaseNames() {
@@ -173,8 +139,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * KnowledgeBases to get alternative results from. If not set, the KnowledgeBases enabled in the
-   * agent (through UI) will be used. Format: `projects//knowledgeBases/`.
    * @param knowledgeBaseNames knowledgeBaseNames or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setKnowledgeBaseNames(java.util.List<java.lang.String> knowledgeBaseNames) {
@@ -183,9 +147,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * This field can be used to pass custom data to your webhook. Arbitrary JSON objects are
-   * supported. If supplied, the value is used to populate the
-   * `WebhookRequest.original_detect_intent_request.payload` field sent to your webhook.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -193,9 +154,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * This field can be used to pass custom data to your webhook. Arbitrary JSON objects are
-   * supported. If supplied, the value is used to populate the
-   * `WebhookRequest.original_detect_intent_request.payload` field sent to your webhook.
    * @param payload payload or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setPayload(java.util.Map<String, java.lang.Object> payload) {
@@ -204,8 +162,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * The platform of the virtual agent response messages. If not empty, only emits messages from
-   * this platform in the response. Valid values are the enum names of platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatform() {
@@ -213,8 +169,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * The platform of the virtual agent response messages. If not empty, only emits messages from
-   * this platform in the response. Valid values are the enum names of platform.
    * @param platform platform or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setPlatform(java.lang.String platform) {
@@ -223,8 +177,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * Specifies whether to delete all contexts in the current session before the new ones are
-   * activated.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getResetContexts() {
@@ -232,8 +184,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * Specifies whether to delete all contexts in the current session before the new ones are
-   * activated.
    * @param resetContexts resetContexts or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setResetContexts(java.lang.Boolean resetContexts) {
@@ -242,9 +192,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * Configures the type of sentiment analysis to perform. If not provided, sentiment analysis is
-   * not performed. Note: Sentiment Analysis is only currently available for Essentials Edition
-   * agents.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SentimentAnalysisRequestConfig getSentimentAnalysisRequestConfig() {
@@ -252,9 +199,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * Configures the type of sentiment analysis to perform. If not provided, sentiment analysis is
-   * not performed. Note: Sentiment Analysis is only currently available for Essentials Edition
-   * agents.
    * @param sentimentAnalysisRequestConfig sentimentAnalysisRequestConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setSentimentAnalysisRequestConfig(GoogleCloudDialogflowV2beta1SentimentAnalysisRequestConfig sentimentAnalysisRequestConfig) {
@@ -263,8 +207,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * Additional session entity types to replace or extend developer entity types with. The entity
-   * synonyms apply to all languages and persist for the session of this query.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SessionEntityType> getSessionEntityTypes() {
@@ -272,8 +214,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * Additional session entity types to replace or extend developer entity types with. The entity
-   * synonyms apply to all languages and persist for the session of this query.
    * @param sessionEntityTypes sessionEntityTypes or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setSessionEntityTypes(java.util.List<GoogleCloudDialogflowV2beta1SessionEntityType> sessionEntityTypes) {
@@ -282,9 +222,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * For mega agent query, directly specify which sub agents to query. If any specified sub agent is
-   * not linked to the mega agent, an error will be returned. If empty, Dialogflow will decide which
-   * sub agents to query. If specified for a non-mega-agent query, will be silently ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SubAgent> getSubAgents() {
@@ -292,9 +229,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * For mega agent query, directly specify which sub agents to query. If any specified sub agent is
-   * not linked to the mega agent, an error will be returned. If empty, Dialogflow will decide which
-   * sub agents to query. If specified for a non-mega-agent query, will be silently ignored.
    * @param subAgents subAgents or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setSubAgents(java.util.List<GoogleCloudDialogflowV2beta1SubAgent> subAgents) {
@@ -303,9 +237,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * The time zone of this conversational query from the [time zone
-   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not
-   * provided, the time zone specified in agent settings is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -313,9 +244,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * The time zone of this conversational query from the [time zone
-   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. If not
-   * provided, the time zone specified in agent settings is used.
    * @param timeZone timeZone or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setTimeZone(java.lang.String timeZone) {
@@ -324,12 +252,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * This field can be used to pass HTTP headers for a webhook call. These headers will be sent to
-   * webhook along with the headers that have been configured through Dialogflow web console. The
-   * headers defined within this field will overwrite the headers configured through Dialogflow
-   * console if there is a conflict. Header names are case-insensitive. Google's specified headers
-   * are not allowed. Including: "Host", "Content-Length", "Connection", "From", "User-Agent",
-   * "Accept-Encoding", "If-Modified-Since", "If-None-Match", "X-Forwarded-For", etc.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getWebhookHeaders() {
@@ -337,12 +259,6 @@ public final class GoogleCloudDialogflowV2beta1QueryParameters extends com.googl
   }
 
   /**
-   * This field can be used to pass HTTP headers for a webhook call. These headers will be sent to
-   * webhook along with the headers that have been configured through Dialogflow web console. The
-   * headers defined within this field will overwrite the headers configured through Dialogflow
-   * console if there is a conflict. Header names are case-insensitive. Google's specified headers
-   * are not allowed. Including: "Host", "Content-Length", "Connection", "From", "User-Agent",
-   * "Accept-Encoding", "If-Modified-Since", "If-None-Match", "X-Forwarded-For", etc.
    * @param webhookHeaders webhookHeaders or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryParameters setWebhookHeaders(java.util.Map<String, java.lang.String> webhookHeaders) {

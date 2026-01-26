@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for Conversations.GenerateSuggestions.
+ * Model definition for GoogleCloudDialogflowV2GenerateSuggestionsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2GenerateSuggestionsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the latest conversation message for which the request is triggered.
-   * Format: `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Optional. A list of trigger events. Only generators configured in the conversation_profile
-   * whose trigger_event is listed here will be triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> triggerEvents;
 
   /**
-   * Optional. The name of the latest conversation message for which the request is triggered.
-   * Format: `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowV2GenerateSuggestionsRequest extends com
   }
 
   /**
-   * Optional. The name of the latest conversation message for which the request is triggered.
-   * Format: `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateSuggestionsRequest setLatestMessage(java.lang.String latestMessage) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowV2GenerateSuggestionsRequest extends com
   }
 
   /**
-   * Optional. A list of trigger events. Only generators configured in the conversation_profile
-   * whose trigger_event is listed here will be triggered.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTriggerEvents() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowV2GenerateSuggestionsRequest extends com
   }
 
   /**
-   * Optional. A list of trigger events. Only generators configured in the conversation_profile
-   * whose trigger_event is listed here will be triggered.
    * @param triggerEvents triggerEvents or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateSuggestionsRequest setTriggerEvents(java.util.List<java.lang.String> triggerEvents) {

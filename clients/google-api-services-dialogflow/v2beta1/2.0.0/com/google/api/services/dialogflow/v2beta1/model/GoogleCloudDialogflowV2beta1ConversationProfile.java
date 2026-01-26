@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Defines the services to connect to incoming Dialogflow conversations.
+ * Model definition for GoogleCloudDialogflowV2beta1ConversationProfile.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,132 +30,102 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration for an automated agent to use with this profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1AutomatedAgentConfig automatedAgentConfig;
 
   /**
-   * Output only. Create time of the conversation profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Required. Human readable name for this profile. Max length 1024 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Configuration for agent assistance to use with this profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig humanAgentAssistantConfig;
 
   /**
-   * Configuration for connecting to a live agent. Currently, this feature is not general available,
-   * please contact Google to get access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfig humanAgentHandoffConfig;
 
   /**
-   * Language code for the conversation profile. If not specified, the language is en-US. Language
-   * at ConversationProfile should be set for all non en-us languages. This should be a
-   * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Configuration for logging conversation lifecycle events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1LoggingConfig loggingConfig;
 
   /**
-   * The unique identifier of this conversation profile. Format:
-   * `projects//locations//conversationProfiles/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Configuration for publishing new message events. Event will be sent in format of
-   * ConversationEvent
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1NotificationConfig newMessageEventNotificationConfig;
 
   /**
-   * Optional. Configuration for publishing transcription intermediate results. Event will be sent
-   * in format of ConversationEvent. If configured, the following information will be populated as
-   * ConversationEvent Pub/Sub message attributes: - "participant_id" - "participant_role" -
-   * "message_id"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1NotificationConfig newRecognitionResultNotificationConfig;
 
   /**
-   * Configuration for publishing conversation lifecycle events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1NotificationConfig notificationConfig;
 
   /**
-   * Name of the CX SecuritySettings reference for the agent. Format:
-   * `projects//locations//securitySettings/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String securitySettings;
 
   /**
-   * Settings for speech transcription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SpeechToTextConfig sttConfig;
 
   /**
-   * The time zone of this conversational profile from the [time zone
-   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to
-   * America/New_York.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
 
   /**
-   * Configuration for Text-to-Speech synthesization. Used by Phone Gateway to specify
-   * synthesization options. If agent defines synthesization options as well, agent settings
-   * overrides the option here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig ttsConfig;
 
   /**
-   * Output only. Update time of the conversation profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Configuration for an automated agent to use with this profile.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentConfig getAutomatedAgentConfig() {
@@ -163,7 +133,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for an automated agent to use with this profile.
    * @param automatedAgentConfig automatedAgentConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setAutomatedAgentConfig(GoogleCloudDialogflowV2beta1AutomatedAgentConfig automatedAgentConfig) {
@@ -172,7 +141,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Output only. Create time of the conversation profile.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -180,7 +148,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Output only. Create time of the conversation profile.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setCreateTime(String createTime) {
@@ -189,7 +156,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Required. Human readable name for this profile. Max length 1024 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -197,7 +163,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Required. Human readable name for this profile. Max length 1024 bytes.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setDisplayName(java.lang.String displayName) {
@@ -206,7 +171,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for agent assistance to use with this profile.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig getHumanAgentAssistantConfig() {
@@ -214,7 +178,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for agent assistance to use with this profile.
    * @param humanAgentAssistantConfig humanAgentAssistantConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setHumanAgentAssistantConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfig humanAgentAssistantConfig) {
@@ -223,8 +186,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for connecting to a live agent. Currently, this feature is not general available,
-   * please contact Google to get access.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfig getHumanAgentHandoffConfig() {
@@ -232,8 +193,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for connecting to a live agent. Currently, this feature is not general available,
-   * please contact Google to get access.
    * @param humanAgentHandoffConfig humanAgentHandoffConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setHumanAgentHandoffConfig(GoogleCloudDialogflowV2beta1HumanAgentHandoffConfig humanAgentHandoffConfig) {
@@ -242,9 +201,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Language code for the conversation profile. If not specified, the language is en-US. Language
-   * at ConversationProfile should be set for all non en-us languages. This should be a
-   * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -252,9 +208,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Language code for the conversation profile. If not specified, the language is en-US. Language
-   * at ConversationProfile should be set for all non en-us languages. This should be a
-   * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setLanguageCode(java.lang.String languageCode) {
@@ -263,7 +216,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for logging conversation lifecycle events.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1LoggingConfig getLoggingConfig() {
@@ -271,7 +223,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for logging conversation lifecycle events.
    * @param loggingConfig loggingConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setLoggingConfig(GoogleCloudDialogflowV2beta1LoggingConfig loggingConfig) {
@@ -280,8 +231,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * The unique identifier of this conversation profile. Format:
-   * `projects//locations//conversationProfiles/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -289,8 +238,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * The unique identifier of this conversation profile. Format:
-   * `projects//locations//conversationProfiles/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setName(java.lang.String name) {
@@ -299,8 +246,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for publishing new message events. Event will be sent in format of
-   * ConversationEvent
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1NotificationConfig getNewMessageEventNotificationConfig() {
@@ -308,8 +253,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for publishing new message events. Event will be sent in format of
-   * ConversationEvent
    * @param newMessageEventNotificationConfig newMessageEventNotificationConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setNewMessageEventNotificationConfig(GoogleCloudDialogflowV2beta1NotificationConfig newMessageEventNotificationConfig) {
@@ -318,10 +261,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Optional. Configuration for publishing transcription intermediate results. Event will be sent
-   * in format of ConversationEvent. If configured, the following information will be populated as
-   * ConversationEvent Pub/Sub message attributes: - "participant_id" - "participant_role" -
-   * "message_id"
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1NotificationConfig getNewRecognitionResultNotificationConfig() {
@@ -329,10 +268,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Optional. Configuration for publishing transcription intermediate results. Event will be sent
-   * in format of ConversationEvent. If configured, the following information will be populated as
-   * ConversationEvent Pub/Sub message attributes: - "participant_id" - "participant_role" -
-   * "message_id"
    * @param newRecognitionResultNotificationConfig newRecognitionResultNotificationConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setNewRecognitionResultNotificationConfig(GoogleCloudDialogflowV2beta1NotificationConfig newRecognitionResultNotificationConfig) {
@@ -341,7 +276,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for publishing conversation lifecycle events.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1NotificationConfig getNotificationConfig() {
@@ -349,7 +283,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for publishing conversation lifecycle events.
    * @param notificationConfig notificationConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setNotificationConfig(GoogleCloudDialogflowV2beta1NotificationConfig notificationConfig) {
@@ -358,8 +291,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Name of the CX SecuritySettings reference for the agent. Format:
-   * `projects//locations//securitySettings/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecuritySettings() {
@@ -367,8 +298,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Name of the CX SecuritySettings reference for the agent. Format:
-   * `projects//locations//securitySettings/`.
    * @param securitySettings securitySettings or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setSecuritySettings(java.lang.String securitySettings) {
@@ -377,7 +306,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Settings for speech transcription.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SpeechToTextConfig getSttConfig() {
@@ -385,7 +313,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Settings for speech transcription.
    * @param sttConfig sttConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setSttConfig(GoogleCloudDialogflowV2beta1SpeechToTextConfig sttConfig) {
@@ -394,9 +321,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * The time zone of this conversational profile from the [time zone
-   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to
-   * America/New_York.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -404,9 +328,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * The time zone of this conversational profile from the [time zone
-   * database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to
-   * America/New_York.
    * @param timeZone timeZone or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setTimeZone(java.lang.String timeZone) {
@@ -415,9 +336,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for Text-to-Speech synthesization. Used by Phone Gateway to specify
-   * synthesization options. If agent defines synthesization options as well, agent settings
-   * overrides the option here.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig getTtsConfig() {
@@ -425,9 +343,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Configuration for Text-to-Speech synthesization. Used by Phone Gateway to specify
-   * synthesization options. If agent defines synthesization options as well, agent settings
-   * overrides the option here.
    * @param ttsConfig ttsConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setTtsConfig(GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig ttsConfig) {
@@ -436,7 +351,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Output only. Update time of the conversation profile.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -444,7 +358,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   }
 
   /**
-   * Output only. Update time of the conversation profile.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setUpdateTime(String updateTime) {

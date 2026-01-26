@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Agent Coaching context that customer can configure.
+ * Model definition for GoogleCloudDialogflowV2beta1AgentCoachingContext.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,37 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1AgentCoachingContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Customized instructions for agent coaching.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1AgentCoachingInstruction> instructions;
 
   /**
-   * Optional. Output language code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputLanguageCode;
 
   /**
-   * Optional. The overarching guidance for the agent coaching. This should be set only for v1.5 and
-   * later versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String overarchingGuidance;
 
   /**
-   * Optional. Version of the feature. If not set, default to latest version. Current candidates are
-   * ["2.5"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Optional. Customized instructions for agent coaching.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1AgentCoachingInstruction> getInstructions() {
@@ -68,7 +61,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingContext extends com.
   }
 
   /**
-   * Optional. Customized instructions for agent coaching.
    * @param instructions instructions or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingContext setInstructions(java.util.List<GoogleCloudDialogflowV2beta1AgentCoachingInstruction> instructions) {
@@ -77,7 +69,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingContext extends com.
   }
 
   /**
-   * Optional. Output language code.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputLanguageCode() {
@@ -85,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingContext extends com.
   }
 
   /**
-   * Optional. Output language code.
    * @param outputLanguageCode outputLanguageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingContext setOutputLanguageCode(java.lang.String outputLanguageCode) {
@@ -94,8 +84,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingContext extends com.
   }
 
   /**
-   * Optional. The overarching guidance for the agent coaching. This should be set only for v1.5 and
-   * later versions.
    * @return value or {@code null} for none
    */
   public java.lang.String getOverarchingGuidance() {
@@ -103,8 +91,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingContext extends com.
   }
 
   /**
-   * Optional. The overarching guidance for the agent coaching. This should be set only for v1.5 and
-   * later versions.
    * @param overarchingGuidance overarchingGuidance or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingContext setOverarchingGuidance(java.lang.String overarchingGuidance) {
@@ -113,8 +99,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingContext extends com.
   }
 
   /**
-   * Optional. Version of the feature. If not set, default to latest version. Current candidates are
-   * ["2.5"].
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -122,8 +106,6 @@ public final class GoogleCloudDialogflowV2beta1AgentCoachingContext extends com.
   }
 
   /**
-   * Optional. Version of the feature. If not set, default to latest version. Current candidates are
-   * ["2.5"].
    * @param version version or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentCoachingContext setVersion(java.lang.String version) {

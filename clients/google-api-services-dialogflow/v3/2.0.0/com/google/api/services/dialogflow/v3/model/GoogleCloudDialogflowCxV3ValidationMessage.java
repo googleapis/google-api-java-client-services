@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Agent/flow validation message.
+ * Model definition for GoogleCloudDialogflowCxV3ValidationMessage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The message detail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String detail;
 
   /**
-   * The resource names of the resources where the message is found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,28 +48,24 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * The type of the resources where the message is found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
 
   /**
-   * The names of the resources where the message is found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resources;
 
   /**
-   * Indicates the severity of the message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * The message detail.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetail() {
@@ -79,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * The message detail.
    * @param detail detail or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ValidationMessage setDetail(java.lang.String detail) {
@@ -88,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * The resource names of the resources where the message is found.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3ResourceName> getResourceNames() {
@@ -96,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * The resource names of the resources where the message is found.
    * @param resourceNames resourceNames or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ValidationMessage setResourceNames(java.util.List<GoogleCloudDialogflowCxV3ResourceName> resourceNames) {
@@ -105,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * The type of the resources where the message is found.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -113,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * The type of the resources where the message is found.
    * @param resourceType resourceType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ValidationMessage setResourceType(java.lang.String resourceType) {
@@ -122,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * The names of the resources where the message is found.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -130,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * The names of the resources where the message is found.
    * @param resources resources or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ValidationMessage setResources(java.util.List<java.lang.String> resources) {
@@ -139,7 +126,6 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * Indicates the severity of the message.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -147,7 +133,6 @@ public final class GoogleCloudDialogflowCxV3ValidationMessage extends com.google
   }
 
   /**
-   * Indicates the severity of the message.
    * @param severity severity or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ValidationMessage setSeverity(java.lang.String severity) {

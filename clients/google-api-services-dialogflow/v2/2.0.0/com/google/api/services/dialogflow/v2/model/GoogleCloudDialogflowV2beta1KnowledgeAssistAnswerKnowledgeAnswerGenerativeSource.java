@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Details about source of Generative answer.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +31,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * All snippets used for this Generative Prediction, with their source URI and data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet> snippets;
 
   /**
-   * All snippets used for this Generative Prediction, with their source URI and data.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet> getSnippets() {
@@ -45,7 +44,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * All snippets used for this Generative Prediction, with their source URI and data.
    * @param snippets snippets or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource setSnippets(java.util.List<GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet> snippets) {

@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents an interaction between an end user and a Dialogflow CX agent using V3
- * (Streaming)DetectIntent API, or an interaction between an end user and a Dialogflow CX agent
- * using V2 (Streaming)AnalyzeContent API.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ConversationInteraction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,74 +30,60 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Answer feedback for the final response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AnswerFeedback answerFeedback;
 
   /**
-   * The time that the interaction was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Missing transition predicted for the interaction. This field is set only if the interaction
-   * match type was no-match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingTransition missingTransition;
 
   /**
-   * The partial responses of the interaction. Empty if there is no partial response in the
-   * interaction. See the partial response documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1DetectIntentResponse> partialResponses;
 
   /**
-   * The request of the interaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1DetectIntentRequest request;
 
   /**
-   * The input text or the transcript of the input audio in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestUtterances;
 
   /**
-   * The final response of the interaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1DetectIntentResponse response;
 
   /**
-   * The output text or the transcript of the output audio in the responses. If multiple output
-   * messages are returned, they will be concatenated into one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseUtterances;
 
   /**
-   * Metrics associated with different processing steps. Names and number of steps depend on the
-   * request and can change without a notice.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics> stepMetrics;
 
   /**
-   * Answer feedback for the final response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AnswerFeedback getAnswerFeedback() {
@@ -107,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * Answer feedback for the final response.
    * @param answerFeedback answerFeedback or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setAnswerFeedback(GoogleCloudDialogflowCxV3beta1AnswerFeedback answerFeedback) {
@@ -116,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The time that the interaction was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -124,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The time that the interaction was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setCreateTime(String createTime) {
@@ -133,8 +114,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * Missing transition predicted for the interaction. This field is set only if the interaction
-   * match type was no-match.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingTransition getMissingTransition() {
@@ -142,8 +121,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * Missing transition predicted for the interaction. This field is set only if the interaction
-   * match type was no-match.
    * @param missingTransition missingTransition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setMissingTransition(GoogleCloudDialogflowCxV3beta1ConversationInteractionMissingTransition missingTransition) {
@@ -152,8 +129,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The partial responses of the interaction. Empty if there is no partial response in the
-   * interaction. See the partial response documentation.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1DetectIntentResponse> getPartialResponses() {
@@ -161,8 +136,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The partial responses of the interaction. Empty if there is no partial response in the
-   * interaction. See the partial response documentation.
    * @param partialResponses partialResponses or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setPartialResponses(java.util.List<GoogleCloudDialogflowCxV3beta1DetectIntentResponse> partialResponses) {
@@ -171,7 +144,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The request of the interaction.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DetectIntentRequest getRequest() {
@@ -179,7 +151,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The request of the interaction.
    * @param request request or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setRequest(GoogleCloudDialogflowCxV3beta1DetectIntentRequest request) {
@@ -188,7 +159,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The input text or the transcript of the input audio in the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestUtterances() {
@@ -196,7 +166,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The input text or the transcript of the input audio in the request.
    * @param requestUtterances requestUtterances or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setRequestUtterances(java.lang.String requestUtterances) {
@@ -205,7 +174,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The final response of the interaction.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DetectIntentResponse getResponse() {
@@ -213,7 +181,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The final response of the interaction.
    * @param response response or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setResponse(GoogleCloudDialogflowCxV3beta1DetectIntentResponse response) {
@@ -222,8 +189,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The output text or the transcript of the output audio in the responses. If multiple output
-   * messages are returned, they will be concatenated into one.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseUtterances() {
@@ -231,8 +196,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * The output text or the transcript of the output audio in the responses. If multiple output
-   * messages are returned, they will be concatenated into one.
    * @param responseUtterances responseUtterances or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setResponseUtterances(java.lang.String responseUtterances) {
@@ -241,8 +204,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * Metrics associated with different processing steps. Names and number of steps depend on the
-   * request and can change without a notice.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics> getStepMetrics() {
@@ -250,8 +211,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
   }
 
   /**
-   * Metrics associated with different processing steps. Names and number of steps depend on the
-   * request and can change without a notice.
    * @param stepMetrics stepMetrics or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setStepMetrics(java.util.List<GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics> stepMetrics) {

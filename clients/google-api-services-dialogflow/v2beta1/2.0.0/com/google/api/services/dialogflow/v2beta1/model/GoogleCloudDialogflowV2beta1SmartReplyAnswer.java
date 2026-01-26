@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a smart reply answer.
+ * Model definition for GoogleCloudDialogflowV2beta1SmartReplyAnswer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SmartReplyAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * Smart reply confidence. The system's confidence score that this reply is a good match for this
-   * conversation, as a value from 0.0 (completely uncertain) to 1.0 (completely certain).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * The content of the reply.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reply;
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1SmartReplyAnswer extends com.goog
   }
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SmartReplyAnswer setAnswerRecord(java.lang.String answerRecord) {
@@ -69,8 +63,6 @@ public final class GoogleCloudDialogflowV2beta1SmartReplyAnswer extends com.goog
   }
 
   /**
-   * Smart reply confidence. The system's confidence score that this reply is a good match for this
-   * conversation, as a value from 0.0 (completely uncertain) to 1.0 (completely certain).
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -78,8 +70,6 @@ public final class GoogleCloudDialogflowV2beta1SmartReplyAnswer extends com.goog
   }
 
   /**
-   * Smart reply confidence. The system's confidence score that this reply is a good match for this
-   * conversation, as a value from 0.0 (completely uncertain) to 1.0 (completely certain).
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SmartReplyAnswer setConfidence(java.lang.Float confidence) {
@@ -88,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1SmartReplyAnswer extends com.goog
   }
 
   /**
-   * The content of the reply.
    * @return value or {@code null} for none
    */
   public java.lang.String getReply() {
@@ -96,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1SmartReplyAnswer extends com.goog
   }
 
   /**
-   * The content of the reply.
    * @param reply reply or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SmartReplyAnswer setReply(java.lang.String reply) {

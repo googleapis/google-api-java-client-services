@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A transition route specifies a intent that can be matched and/or a data condition that can be
- * evaluated during a session. When a specified transition is matched, the following actions are
- * taken in order: * If there is a `trigger_fulfillment` associated with the transition, it will be
- * called. * If there is a `target_page` associated with the transition, the session will transition
- * into the specified page. * If there is a `target_flow` associated with the transition, the
- * session will transition into the specified flow.
+ * Model definition for GoogleCloudDialogflowCxV3beta1TransitionRoute.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,66 +30,48 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.google.api.client.json.GenericJson {
 
   /**
-   * The condition to evaluate against form parameters or session parameters. See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of
-   * `intent` or `condition` must be specified. When both `intent` and `condition` are specified,
-   * the transition can only happen when both are fulfilled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * Optional. The description of the transition route. The maximum length is 500 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates
-   * that the transition can only happen when the given intent is matched. At least one of `intent`
-   * or `condition` must be specified. When both `intent` and `condition` are specified, the
-   * transition can only happen when both are fulfilled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intent;
 
   /**
-   * Output only. The unique identifier of this transition route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetFlow;
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetPage;
 
   /**
-   * The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment`
-   * and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Fulfillment triggerFulfillment;
 
   /**
-   * The condition to evaluate against form parameters or session parameters. See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of
-   * `intent` or `condition` must be specified. When both `intent` and `condition` are specified,
-   * the transition can only happen when both are fulfilled.
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -102,10 +79,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * The condition to evaluate against form parameters or session parameters. See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition). At least one of
-   * `intent` or `condition` must be specified. When both `intent` and `condition` are specified,
-   * the transition can only happen when both are fulfilled.
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRoute setCondition(java.lang.String condition) {
@@ -114,7 +87,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * Optional. The description of the transition route. The maximum length is 500 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -122,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * Optional. The description of the transition route. The maximum length is 500 characters.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRoute setDescription(java.lang.String description) {
@@ -131,10 +102,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates
-   * that the transition can only happen when the given intent is matched. At least one of `intent`
-   * or `condition` must be specified. When both `intent` and `condition` are specified, the
-   * transition can only happen when both are fulfilled.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntent() {
@@ -142,10 +109,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * The unique identifier of an Intent. Format: `projects//locations//agents//intents/`. Indicates
-   * that the transition can only happen when the given intent is matched. At least one of `intent`
-   * or `condition` must be specified. When both `intent` and `condition` are specified, the
-   * transition can only happen when both are fulfilled.
    * @param intent intent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRoute setIntent(java.lang.String intent) {
@@ -154,7 +117,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * Output only. The unique identifier of this transition route.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -162,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * Output only. The unique identifier of this transition route.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRoute setName(java.lang.String name) {
@@ -171,7 +132,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetFlow() {
@@ -179,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * @param targetFlow targetFlow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRoute setTargetFlow(java.lang.String targetFlow) {
@@ -188,7 +147,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetPage() {
@@ -196,7 +154,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * @param targetPage targetPage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRoute setTargetPage(java.lang.String targetPage) {
@@ -205,8 +162,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment`
-   * and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Fulfillment getTriggerFulfillment() {
@@ -214,8 +169,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRoute extends com.goo
   }
 
   /**
-   * The fulfillment to call when the condition is satisfied. At least one of `trigger_fulfillment`
-   * and `target` must be specified. When both are defined, `trigger_fulfillment` is executed first.
    * @param triggerFulfillment triggerFulfillment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRoute setTriggerFulfillment(GoogleCloudDialogflowCxV3beta1Fulfillment triggerFulfillment) {

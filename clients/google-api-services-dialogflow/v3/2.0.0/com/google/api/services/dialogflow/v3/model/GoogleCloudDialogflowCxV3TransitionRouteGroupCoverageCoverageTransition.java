@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A transition coverage in a transition route group.
+ * Model definition for GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverageTransition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverageTransition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the transition route is covered by at least one of the agent's test cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean covered;
 
   /**
-   * Intent route or condition route.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3TransitionRoute transitionRoute;
 
   /**
-   * Whether the transition route is covered by at least one of the agent's test cases.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCovered() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverage
   }
 
   /**
-   * Whether the transition route is covered by at least one of the agent's test cases.
    * @param covered covered or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverageTransition setCovered(java.lang.Boolean covered) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverage
   }
 
   /**
-   * Intent route or condition route.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionRoute getTransitionRoute() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverage
   }
 
   /**
-   * Intent route or condition route.
    * @param transitionRoute transitionRoute or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionRouteGroupCoverageCoverageTransition setTransitionRoute(GoogleCloudDialogflowCxV3TransitionRoute transitionRoute) {

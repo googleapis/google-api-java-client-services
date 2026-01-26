@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for end user personalization.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,20 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Default end user metadata, used when processing DetectIntent requests. Recommended to
-   * be filled as a template instead of hard-coded value, for example { "age": "$session.params.age"
-   * }. The data will be merged with the QueryParameters.end_user_metadata in
-   * DetectIntentRequest.query_params during query processing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> defaultEndUserMetadata;
 
   /**
-   * Optional. Default end user metadata, used when processing DetectIntent requests. Recommended to
-   * be filled as a template instead of hard-coded value, for example { "age": "$session.params.age"
-   * }. The data will be merged with the QueryParameters.end_user_metadata in
-   * DetectIntentRequest.query_params during query processing.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getDefaultEndUserMetadata() {
@@ -51,10 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings ex
   }
 
   /**
-   * Optional. Default end user metadata, used when processing DetectIntent requests. Recommended to
-   * be filled as a template instead of hard-coded value, for example { "age": "$session.params.age"
-   * }. The data will be merged with the QueryParameters.end_user_metadata in
-   * DetectIntentRequest.query_params during query processing.
    * @param defaultEndUserMetadata defaultEndUserMetadata or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentPersonalizationSettings setDefaultEndUserMetadata(java.util.Map<String, java.lang.Object> defaultEndUserMetadata) {

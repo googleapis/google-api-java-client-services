@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Request message for Documents.ReloadDocument.
+ * Model definition for GoogleCloudDialogflowV2ReloadDocumentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,32 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ReloadDocumentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The path of gcs source file for reloading document content. For now, only gcs uri is
-   * supported. For documents stored in Google Cloud Storage, these URIs must have the form `gs:`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contentUri;
 
   /**
-   * Optional. Whether to import custom metadata from Google Cloud Storage. Only valid when the
-   * document source is Google Cloud Storage URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean importGcsCustomMetadata;
 
   /**
-   * Optional. When enabled, the reload request is to apply partial update to the smart messaging
-   * allowlist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean smartMessagingPartialUpdate;
 
   /**
-   * Optional. The path of gcs source file for reloading document content. For now, only gcs uri is
-   * supported. For documents stored in Google Cloud Storage, these URIs must have the form `gs:`.
    * @return value or {@code null} for none
    */
   public java.lang.String getContentUri() {
@@ -63,8 +55,6 @@ public final class GoogleCloudDialogflowV2ReloadDocumentRequest extends com.goog
   }
 
   /**
-   * Optional. The path of gcs source file for reloading document content. For now, only gcs uri is
-   * supported. For documents stored in Google Cloud Storage, these URIs must have the form `gs:`.
    * @param contentUri contentUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2ReloadDocumentRequest setContentUri(java.lang.String contentUri) {
@@ -73,8 +63,6 @@ public final class GoogleCloudDialogflowV2ReloadDocumentRequest extends com.goog
   }
 
   /**
-   * Optional. Whether to import custom metadata from Google Cloud Storage. Only valid when the
-   * document source is Google Cloud Storage URI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImportGcsCustomMetadata() {
@@ -82,8 +70,6 @@ public final class GoogleCloudDialogflowV2ReloadDocumentRequest extends com.goog
   }
 
   /**
-   * Optional. Whether to import custom metadata from Google Cloud Storage. Only valid when the
-   * document source is Google Cloud Storage URI.
    * @param importGcsCustomMetadata importGcsCustomMetadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2ReloadDocumentRequest setImportGcsCustomMetadata(java.lang.Boolean importGcsCustomMetadata) {
@@ -92,8 +78,6 @@ public final class GoogleCloudDialogflowV2ReloadDocumentRequest extends com.goog
   }
 
   /**
-   * Optional. When enabled, the reload request is to apply partial update to the smart messaging
-   * allowlist.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSmartMessagingPartialUpdate() {
@@ -101,8 +85,6 @@ public final class GoogleCloudDialogflowV2ReloadDocumentRequest extends com.goog
   }
 
   /**
-   * Optional. When enabled, the reload request is to apply partial update to the smart messaging
-   * allowlist.
    * @param smartMessagingPartialUpdate smartMessagingPartialUpdate or {@code null} for none
    */
   public GoogleCloudDialogflowV2ReloadDocumentRequest setSmartMessagingPartialUpdate(java.lang.Boolean smartMessagingPartialUpdate) {

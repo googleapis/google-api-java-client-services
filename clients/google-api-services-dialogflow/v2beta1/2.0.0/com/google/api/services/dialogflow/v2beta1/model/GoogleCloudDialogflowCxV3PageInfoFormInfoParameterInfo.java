@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents parameter information.
+ * Model definition for GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,50 +30,36 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Always present for WebhookRequest. Required for WebhookResponse. The human-readable name of the
-   * parameter, unique within the form. This field cannot be modified by the webhook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional for WebhookRequest. Ignored for WebhookResponse. Indicates if the parameter value was
-   * just collected on the last conversation turn.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean justCollected;
 
   /**
-   * Optional for both WebhookRequest and WebhookResponse. Indicates whether the parameter is
-   * required. Optional parameters will not trigger prompts; however, they are filled if the user
-   * specifies them. Required parameters must be filled before form filling concludes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean required;
 
   /**
-   * Always present for WebhookRequest. Required for WebhookResponse. The state of the parameter.
-   * This field can be set to INVALID by the webhook to invalidate the parameter; other values set
-   * by the webhook will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional for both WebhookRequest and WebhookResponse. The value of the parameter. This field
-   * can be set by the webhook to change the parameter value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object value;
 
   /**
-   * Always present for WebhookRequest. Required for WebhookResponse. The human-readable name of the
-   * parameter, unique within the form. This field cannot be modified by the webhook.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -81,8 +67,6 @@ public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extend
   }
 
   /**
-   * Always present for WebhookRequest. Required for WebhookResponse. The human-readable name of the
-   * parameter, unique within the form. This field cannot be modified by the webhook.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo setDisplayName(java.lang.String displayName) {
@@ -91,8 +75,6 @@ public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extend
   }
 
   /**
-   * Optional for WebhookRequest. Ignored for WebhookResponse. Indicates if the parameter value was
-   * just collected on the last conversation turn.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getJustCollected() {
@@ -100,8 +82,6 @@ public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extend
   }
 
   /**
-   * Optional for WebhookRequest. Ignored for WebhookResponse. Indicates if the parameter value was
-   * just collected on the last conversation turn.
    * @param justCollected justCollected or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo setJustCollected(java.lang.Boolean justCollected) {
@@ -110,9 +90,6 @@ public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extend
   }
 
   /**
-   * Optional for both WebhookRequest and WebhookResponse. Indicates whether the parameter is
-   * required. Optional parameters will not trigger prompts; however, they are filled if the user
-   * specifies them. Required parameters must be filled before form filling concludes.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequired() {
@@ -120,9 +97,6 @@ public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extend
   }
 
   /**
-   * Optional for both WebhookRequest and WebhookResponse. Indicates whether the parameter is
-   * required. Optional parameters will not trigger prompts; however, they are filled if the user
-   * specifies them. Required parameters must be filled before form filling concludes.
    * @param required required or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo setRequired(java.lang.Boolean required) {
@@ -131,9 +105,6 @@ public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extend
   }
 
   /**
-   * Always present for WebhookRequest. Required for WebhookResponse. The state of the parameter.
-   * This field can be set to INVALID by the webhook to invalidate the parameter; other values set
-   * by the webhook will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -141,9 +112,6 @@ public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extend
   }
 
   /**
-   * Always present for WebhookRequest. Required for WebhookResponse. The state of the parameter.
-   * This field can be set to INVALID by the webhook to invalidate the parameter; other values set
-   * by the webhook will be ignored.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo setState(java.lang.String state) {
@@ -152,8 +120,6 @@ public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extend
   }
 
   /**
-   * Optional for both WebhookRequest and WebhookResponse. The value of the parameter. This field
-   * can be set by the webhook to change the parameter value.
    * @return value or {@code null} for none
    */
   public java.lang.Object getValue() {
@@ -161,8 +127,6 @@ public final class GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo extend
   }
 
   /**
-   * Optional for both WebhookRequest and WebhookResponse. The value of the parameter. This field
-   * can be set by the webhook to change the parameter value.
    * @param value value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo setValue(java.lang.Object value) {

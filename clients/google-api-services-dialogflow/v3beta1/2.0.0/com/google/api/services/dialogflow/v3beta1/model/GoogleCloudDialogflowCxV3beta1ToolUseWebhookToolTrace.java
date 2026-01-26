@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The tracing information for the webhook tool.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The tag of the webhook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String webhookTag;
 
   /**
-   * Optional. The url of the webhook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String webhookUri;
 
   /**
-   * Optional. The tag of the webhook.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebhookTag() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace extends
   }
 
   /**
-   * Optional. The tag of the webhook.
    * @param webhookTag webhookTag or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace setWebhookTag(java.lang.String webhookTag) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace extends
   }
 
   /**
-   * Optional. The url of the webhook.
    * @return value or {@code null} for none
    */
   public java.lang.String getWebhookUri() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace extends
   }
 
   /**
-   * Optional. The url of the webhook.
    * @param webhookUri webhookUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace setWebhookUri(java.lang.String webhookUri) {

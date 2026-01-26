@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents a custom placeholder in the prompt text.
+ * Model definition for GoogleCloudDialogflowCxV3GeneratorPlaceholder.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3GeneratorPlaceholder extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unique ID used to map custom placeholder to parameters in fulfillment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Custom placeholder value in the prompt text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Unique ID used to map custom placeholder to parameters in fulfillment.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorPlaceholder extends com.goo
   }
 
   /**
-   * Unique ID used to map custom placeholder to parameters in fulfillment.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GeneratorPlaceholder setId(java.lang.String id) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorPlaceholder extends com.goo
   }
 
   /**
-   * Custom placeholder value in the prompt text.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorPlaceholder extends com.goo
   }
 
   /**
-   * Custom placeholder value in the prompt text.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GeneratorPlaceholder setName(java.lang.String name) {

@@ -17,10 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the query input. It can contain one of: 1. A conversational query in the form of text.
- * 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be
- * processed. 4. An event to be triggered. 5. DTMF digits to invoke an intent and fill in parameter
- * value. 6. The results of a tool executed by the client.
+ * Model definition for GoogleCloudDialogflowCxV3QueryInput.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -33,59 +30,48 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * The natural language speech audio to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3AudioInput audio;
 
   /**
-   * The DTMF event to be handled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3DtmfInput dtmf;
 
   /**
-   * The event to be triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3EventInput event;
 
   /**
-   * The intent to be triggered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3IntentInput intent;
 
   /**
-   * Required. The language of the input. See [Language
-   * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * The natural language text to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3TextInput text;
 
   /**
-   * The results of a tool executed by the client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ToolCallResult toolCallResult;
 
   /**
-   * The natural language speech audio to be processed.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AudioInput getAudio() {
@@ -93,7 +79,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The natural language speech audio to be processed.
    * @param audio audio or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput setAudio(GoogleCloudDialogflowCxV3AudioInput audio) {
@@ -102,7 +87,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The DTMF event to be handled.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DtmfInput getDtmf() {
@@ -110,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The DTMF event to be handled.
    * @param dtmf dtmf or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput setDtmf(GoogleCloudDialogflowCxV3DtmfInput dtmf) {
@@ -119,7 +102,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The event to be triggered.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3EventInput getEvent() {
@@ -127,7 +109,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The event to be triggered.
    * @param event event or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput setEvent(GoogleCloudDialogflowCxV3EventInput event) {
@@ -136,7 +117,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The intent to be triggered.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3IntentInput getIntent() {
@@ -144,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The intent to be triggered.
    * @param intent intent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput setIntent(GoogleCloudDialogflowCxV3IntentInput intent) {
@@ -153,10 +132,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * Required. The language of the input. See [Language
-   * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -164,10 +139,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * Required. The language of the input. See [Language
-   * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
-   * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput setLanguageCode(java.lang.String languageCode) {
@@ -176,7 +147,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The natural language text to be processed.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TextInput getText() {
@@ -184,7 +154,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The natural language text to be processed.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput setText(GoogleCloudDialogflowCxV3TextInput text) {
@@ -193,7 +162,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The results of a tool executed by the client.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ToolCallResult getToolCallResult() {
@@ -201,7 +169,6 @@ public final class GoogleCloudDialogflowCxV3QueryInput extends com.google.api.cl
   }
 
   /**
-   * The results of a tool executed by the client.
    * @param toolCallResult toolCallResult or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryInput setToolCallResult(GoogleCloudDialogflowCxV3ToolCallResult toolCallResult) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A TransitionRouteGroup represents a group of `TransitionRoutes` to be used by a Page.
+ * Model definition for GoogleCloudDialogflowCxV3TransitionRouteGroup.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3TransitionRouteGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The human-readable name of the transition route group, unique within the flow. The
-   * display name can be no longer than 30 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The unique identifier of the transition route group.
-   * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-   * `projects//locations//agents//flows//transitionRouteGroups/` .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Transition routes associated with the TransitionRouteGroup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +54,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroup extends com.goo
   }
 
   /**
-   * Required. The human-readable name of the transition route group, unique within the flow. The
-   * display name can be no longer than 30 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -69,8 +61,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroup extends com.goo
   }
 
   /**
-   * Required. The human-readable name of the transition route group, unique within the flow. The
-   * display name can be no longer than 30 characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionRouteGroup setDisplayName(java.lang.String displayName) {
@@ -79,9 +69,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroup extends com.goo
   }
 
   /**
-   * The unique identifier of the transition route group.
-   * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-   * `projects//locations//agents//flows//transitionRouteGroups/` .
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -89,9 +76,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroup extends com.goo
   }
 
   /**
-   * The unique identifier of the transition route group.
-   * TransitionRouteGroups.CreateTransitionRouteGroup populates the name automatically. Format:
-   * `projects//locations//agents//flows//transitionRouteGroups/` .
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionRouteGroup setName(java.lang.String name) {
@@ -100,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroup extends com.goo
   }
 
   /**
-   * Transition routes associated with the TransitionRouteGroup.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3TransitionRoute> getTransitionRoutes() {
@@ -108,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteGroup extends com.goo
   }
 
   /**
-   * Transition routes associated with the TransitionRouteGroup.
    * @param transitionRoutes transitionRoutes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionRouteGroup setTransitionRoutes(java.util.List<GoogleCloudDialogflowCxV3TransitionRoute> transitionRoutes) {

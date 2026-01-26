@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Metadata for initializing a location-level encryption specification.
+ * Model definition for GoogleCloudDialogflowV2InitializeEncryptionSpecMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2InitializeEncryptionSpecMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The original request for initialization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2InitializeEncryptionSpecRequest request;
 
   /**
-   * Output only. The original request for initialization.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2InitializeEncryptionSpecRequest getRequest() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2InitializeEncryptionSpecMetadata exten
   }
 
   /**
-   * Output only. The original request for initialization.
    * @param request request or {@code null} for none
    */
   public GoogleCloudDialogflowV2InitializeEncryptionSpecMetadata setRequest(GoogleCloudDialogflowV2InitializeEncryptionSpecRequest request) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for Conversations.SearchKnowledge.
+ * Model definition for GoogleCloudDialogflowV2SearchKnowledgeRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,90 +30,66 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The conversation (between human agent and end user) where the search request is
-   * triggered. Format: `projects//locations//conversations/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversation;
 
   /**
-   * Required. The conversation profile used to configure the search. Format:
-   * `projects//locations//conversationProfiles/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationProfile;
 
   /**
-   * Optional. Information about the end-user to improve the relevance and accuracy of generative
-   * answers. This will be interpreted and used by a language model, so, for good results, the data
-   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
-   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
-   * Pixel Tablet"} ] } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> endUserMetadata;
 
   /**
-   * Optional. Whether to search the query exactly without query rewrite.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean exactSearch;
 
   /**
-   * Optional. The name of the latest conversation message when the request is triggered. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Required. The parent resource contains the conversation profile Format: 'projects/' or
-   * `projects//locations/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Required. The natural language text query for knowledge search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2TextInput query;
 
   /**
-   * Optional. The source of the query in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String querySource;
 
   /**
-   * Optional. Configuration specific to search queries with data stores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfig searchConfig;
 
   /**
-   * Required. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
-   * ID retrieved from conversation profile or on its own to identify a search session. The search
-   * history of the same session will impact the search result. It's up to the API caller to choose
-   * an appropriate `Session ID`. It can be a random number or some type of session identifiers
-   * (preferably hashed). The length must not exceed 36 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sessionId;
 
   /**
-   * Optional. The conversation (between human agent and end user) where the search request is
-   * triggered. Format: `projects//locations//conversations/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversation() {
@@ -121,8 +97,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. The conversation (between human agent and end user) where the search request is
-   * triggered. Format: `projects//locations//conversations/`.
    * @param conversation conversation or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setConversation(java.lang.String conversation) {
@@ -131,8 +105,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Required. The conversation profile used to configure the search. Format:
-   * `projects//locations//conversationProfiles/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationProfile() {
@@ -140,8 +112,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Required. The conversation profile used to configure the search. Format:
-   * `projects//locations//conversationProfiles/`.
    * @param conversationProfile conversationProfile or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setConversationProfile(java.lang.String conversationProfile) {
@@ -150,11 +120,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. Information about the end-user to improve the relevance and accuracy of generative
-   * answers. This will be interpreted and used by a language model, so, for good results, the data
-   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
-   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
-   * Pixel Tablet"} ] } ```
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getEndUserMetadata() {
@@ -162,11 +127,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. Information about the end-user to improve the relevance and accuracy of generative
-   * answers. This will be interpreted and used by a language model, so, for good results, the data
-   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
-   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
-   * Pixel Tablet"} ] } ```
    * @param endUserMetadata endUserMetadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setEndUserMetadata(java.util.Map<String, java.lang.Object> endUserMetadata) {
@@ -175,7 +135,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. Whether to search the query exactly without query rewrite.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExactSearch() {
@@ -183,7 +142,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. Whether to search the query exactly without query rewrite.
    * @param exactSearch exactSearch or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setExactSearch(java.lang.Boolean exactSearch) {
@@ -192,8 +150,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. The name of the latest conversation message when the request is triggered. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -201,8 +157,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. The name of the latest conversation message when the request is triggered. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setLatestMessage(java.lang.String latestMessage) {
@@ -211,8 +165,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Required. The parent resource contains the conversation profile Format: 'projects/' or
-   * `projects//locations/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -220,8 +172,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Required. The parent resource contains the conversation profile Format: 'projects/' or
-   * `projects//locations/`.
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setParent(java.lang.String parent) {
@@ -230,7 +180,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Required. The natural language text query for knowledge search.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextInput getQuery() {
@@ -238,7 +187,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Required. The natural language text query for knowledge search.
    * @param query query or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setQuery(GoogleCloudDialogflowV2TextInput query) {
@@ -247,7 +195,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. The source of the query in the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuerySource() {
@@ -255,7 +202,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. The source of the query in the request.
    * @param querySource querySource or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setQuerySource(java.lang.String querySource) {
@@ -264,7 +210,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. Configuration specific to search queries with data stores.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfig getSearchConfig() {
@@ -272,7 +217,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Optional. Configuration specific to search queries with data stores.
    * @param searchConfig searchConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setSearchConfig(GoogleCloudDialogflowV2SearchKnowledgeRequestSearchConfig searchConfig) {
@@ -281,11 +225,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Required. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
-   * ID retrieved from conversation profile or on its own to identify a search session. The search
-   * history of the same session will impact the search result. It's up to the API caller to choose
-   * an appropriate `Session ID`. It can be a random number or some type of session identifiers
-   * (preferably hashed). The length must not exceed 36 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionId() {
@@ -293,11 +232,6 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeRequest extends com.goo
   }
 
   /**
-   * Required. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
-   * ID retrieved from conversation profile or on its own to identify a search session. The search
-   * history of the same session will impact the search result. It's up to the API caller to choose
-   * an appropriate `Session ID`. It can be a random number or some type of session identifiers
-   * (preferably hashed). The length must not exceed 36 characters.
    * @param sessionId sessionId or {@code null} for none
    */
   public GoogleCloudDialogflowV2SearchKnowledgeRequest setSessionId(java.lang.String sessionId) {

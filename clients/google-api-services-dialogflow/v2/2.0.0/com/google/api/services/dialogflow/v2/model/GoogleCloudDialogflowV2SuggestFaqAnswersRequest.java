@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for Participants.SuggestFaqAnswers.
+ * Model definition for GoogleCloudDialogflowV2SuggestFaqAnswersRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,31 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SuggestFaqAnswersRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Parameters for a human assist query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams;
 
   /**
-   * Optional. Max number of messages prior to and including [latest_message] to use as context when
-   * compiling the suggestion. By default 20 and at most 50.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * Optional. The name of the latest conversation message to compile suggestion for. If empty, it
-   * will be the latest message of the conversation. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * Parameters for a human assist query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AssistQueryParameters getAssistQueryParams() {
@@ -62,7 +55,6 @@ public final class GoogleCloudDialogflowV2SuggestFaqAnswersRequest extends com.g
   }
 
   /**
-   * Parameters for a human assist query.
    * @param assistQueryParams assistQueryParams or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestFaqAnswersRequest setAssistQueryParams(GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams) {
@@ -71,8 +63,6 @@ public final class GoogleCloudDialogflowV2SuggestFaqAnswersRequest extends com.g
   }
 
   /**
-   * Optional. Max number of messages prior to and including [latest_message] to use as context when
-   * compiling the suggestion. By default 20 and at most 50.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -80,8 +70,6 @@ public final class GoogleCloudDialogflowV2SuggestFaqAnswersRequest extends com.g
   }
 
   /**
-   * Optional. Max number of messages prior to and including [latest_message] to use as context when
-   * compiling the suggestion. By default 20 and at most 50.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestFaqAnswersRequest setContextSize(java.lang.Integer contextSize) {
@@ -90,9 +78,6 @@ public final class GoogleCloudDialogflowV2SuggestFaqAnswersRequest extends com.g
   }
 
   /**
-   * Optional. The name of the latest conversation message to compile suggestion for. If empty, it
-   * will be the latest message of the conversation. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -100,9 +85,6 @@ public final class GoogleCloudDialogflowV2SuggestFaqAnswersRequest extends com.g
   }
 
   /**
-   * Optional. The name of the latest conversation message to compile suggestion for. If empty, it
-   * will be the latest message of the conversation. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2SuggestFaqAnswersRequest setLatestMessage(java.lang.String latestMessage) {

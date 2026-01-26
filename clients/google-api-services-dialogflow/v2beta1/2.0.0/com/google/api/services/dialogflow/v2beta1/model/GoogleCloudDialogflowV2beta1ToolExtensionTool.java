@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * An ExtensionTool is a way to use Vertex Extensions as a tool.
+ * Model definition for GoogleCloudDialogflowV2beta1ToolExtensionTool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ToolExtensionTool extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full name of the referenced vertex extension. Format:
-   * `projects/{project}/locations/{location}/extensions/{extension}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The full name of the referenced vertex extension. Format:
-   * `projects/{project}/locations/{location}/extensions/{extension}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2beta1ToolExtensionTool extends com.goo
   }
 
   /**
-   * Required. The full name of the referenced vertex extension. Format:
-   * `projects/{project}/locations/{location}/extensions/{extension}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolExtensionTool setName(java.lang.String name) {

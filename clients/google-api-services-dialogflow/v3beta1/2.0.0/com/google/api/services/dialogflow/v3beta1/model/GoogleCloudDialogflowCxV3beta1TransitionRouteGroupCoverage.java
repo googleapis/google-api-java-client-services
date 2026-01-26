@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Transition route group coverage represents the percentage of all possible transition routes
- * present within any of a parent's test cases. The results are grouped by the transition route
- * group.
+ * Model definition for GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The percent of transition routes in all the transition route groups that are covered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float coverageScore;
 
   /**
-   * Transition route group coverages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage> coverages;
 
   /**
-   * The percent of transition routes in all the transition route groups that are covered.
    * @return value or {@code null} for none
    */
   public java.lang.Float getCoverageScore() {
@@ -54,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverage ex
   }
 
   /**
-   * The percent of transition routes in all the transition route groups that are covered.
    * @param coverageScore coverageScore or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverage setCoverageScore(java.lang.Float coverageScore) {
@@ -63,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverage ex
   }
 
   /**
-   * Transition route group coverages.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage> getCoverages() {
@@ -71,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverage ex
   }
 
   /**
-   * Transition route group coverages.
    * @param coverages coverages or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverage setCoverages(java.util.List<GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage> coverages) {

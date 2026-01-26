@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Diagnostic info related to the answer generation model call.
+ * Model definition for
+ * GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerGenerationModelCallSignals.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +31,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerGenerationModelCallSignals extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the generative model. For example, "gemini-ultra", "gemini-pro", "gemini-1.5-flash"
-   * etc. Defaults to "Other" if the model is unknown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
 
   /**
-   * Output of the generative model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String modelOutput;
 
   /**
-   * Prompt as sent to the model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String renderedPrompt;
 
   /**
-   * Name of the generative model. For example, "gemini-ultra", "gemini-pro", "gemini-1.5-flash"
-   * etc. Defaults to "Other" if the model is unknown.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -61,8 +56,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswe
   }
 
   /**
-   * Name of the generative model. For example, "gemini-ultra", "gemini-pro", "gemini-1.5-flash"
-   * etc. Defaults to "Other" if the model is unknown.
    * @param model model or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerGenerationModelCallSignals setModel(java.lang.String model) {
@@ -71,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswe
   }
 
   /**
-   * Output of the generative model.
    * @return value or {@code null} for none
    */
   public java.lang.String getModelOutput() {
@@ -79,7 +71,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswe
   }
 
   /**
-   * Output of the generative model.
    * @param modelOutput modelOutput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerGenerationModelCallSignals setModelOutput(java.lang.String modelOutput) {
@@ -88,7 +79,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswe
   }
 
   /**
-   * Prompt as sent to the model.
    * @return value or {@code null} for none
    */
   public java.lang.String getRenderedPrompt() {
@@ -96,7 +86,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswe
   }
 
   /**
-   * Prompt as sent to the model.
    * @param renderedPrompt renderedPrompt or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsAnswerGenerationModelCallSignals setRenderedPrompt(java.lang.String renderedPrompt) {

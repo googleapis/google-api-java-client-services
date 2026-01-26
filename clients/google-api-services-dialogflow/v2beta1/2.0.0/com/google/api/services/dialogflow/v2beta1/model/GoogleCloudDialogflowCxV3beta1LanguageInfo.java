@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the language information of the request.
+ * Model definition for GoogleCloudDialogflowCxV3beta1LanguageInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1LanguageInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The confidence score of the detected language between 0 and 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidenceScore;
 
   /**
-   * The language code specified in the original request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inputLanguageCode;
 
   /**
-   * The language code detected for this request based on the user conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resolvedLanguageCode;
 
   /**
-   * The confidence score of the detected language between 0 and 1.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidenceScore() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1LanguageInfo extends com.google
   }
 
   /**
-   * The confidence score of the detected language between 0 and 1.
    * @param confidenceScore confidenceScore or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LanguageInfo setConfidenceScore(java.lang.Float confidenceScore) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1LanguageInfo extends com.google
   }
 
   /**
-   * The language code specified in the original request.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputLanguageCode() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1LanguageInfo extends com.google
   }
 
   /**
-   * The language code specified in the original request.
    * @param inputLanguageCode inputLanguageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LanguageInfo setInputLanguageCode(java.lang.String inputLanguageCode) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1LanguageInfo extends com.google
   }
 
   /**
-   * The language code detected for this request based on the user conversation.
    * @return value or {@code null} for none
    */
   public java.lang.String getResolvedLanguageCode() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1LanguageInfo extends com.google
   }
 
   /**
-   * The language code detected for this request based on the user conversation.
    * @param resolvedLanguageCode resolvedLanguageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LanguageInfo setResolvedLanguageCode(java.lang.String resolvedLanguageCode) {

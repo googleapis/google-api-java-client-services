@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Configuration for a specific RAI category.
+ * Model definition for GoogleCloudDialogflowV2beta1RaiSettingsRaiCategoryConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1RaiSettingsRaiCategoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The RAI category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String category;
 
   /**
-   * Optional. The sensitivity level for this category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sensitivityLevel;
 
   /**
-   * Optional. The RAI category.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1RaiSettingsRaiCategoryConfig exte
   }
 
   /**
-   * Optional. The RAI category.
    * @param category category or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1RaiSettingsRaiCategoryConfig setCategory(java.lang.String category) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1RaiSettingsRaiCategoryConfig exte
   }
 
   /**
-   * Optional. The sensitivity level for this category.
    * @return value or {@code null} for none
    */
   public java.lang.String getSensitivityLevel() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1RaiSettingsRaiCategoryConfig exte
   }
 
   /**
-   * Optional. The sensitivity level for this category.
    * @param sensitivityLevel sensitivityLevel or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1RaiSettingsRaiCategoryConfig setSensitivityLevel(java.lang.String sensitivityLevel) {

@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Example represents a sample execution of the playbook in the conversation. An example consists of
- * a list of ordered actions performed by end user or Dialogflow agent according the playbook
- * instructions to fulfill the task.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Example.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,7 +30,6 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ordered list of actions performed by the end user and the Dialogflow agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,81 +42,66 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Required. Example's output state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationState;
 
   /**
-   * Output only. The timestamp of initial example creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The high level concise description of the example. The max number of characters is
-   * 200.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The display name of the example.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. The language code of the example. If not specified, the agent's default language is
-   * used. Note: languages must be enabled in the agent before they can be used. Note: example's
-   * language code is not currently used in dialogflow agents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * The unique identifier of the playbook example. Format:
-   * `projects//locations//agents//playbooks//examples/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The input to the playbook in the example.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1PlaybookInput playbookInput;
 
   /**
-   * Optional. The output of the playbook in the example.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1PlaybookOutput playbookOutput;
 
   /**
-   * Output only. Estimated number of tokes current example takes when sent to the LLM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long tokenCount;
 
   /**
-   * Output only. Last time the example was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Required. The ordered list of actions performed by the end user and the Dialogflow agent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1Action> getActions() {
@@ -127,7 +109,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Required. The ordered list of actions performed by the end user and the Dialogflow agent.
    * @param actions actions or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setActions(java.util.List<GoogleCloudDialogflowCxV3beta1Action> actions) {
@@ -136,7 +117,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Required. Example's output state.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationState() {
@@ -144,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Required. Example's output state.
    * @param conversationState conversationState or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setConversationState(java.lang.String conversationState) {
@@ -153,7 +132,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Output only. The timestamp of initial example creation.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -161,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Output only. The timestamp of initial example creation.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setCreateTime(String createTime) {
@@ -170,8 +147,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Optional. The high level concise description of the example. The max number of characters is
-   * 200.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -179,8 +154,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Optional. The high level concise description of the example. The max number of characters is
-   * 200.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setDescription(java.lang.String description) {
@@ -189,7 +162,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Required. The display name of the example.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -197,7 +169,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Required. The display name of the example.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setDisplayName(java.lang.String displayName) {
@@ -206,9 +177,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Optional. The language code of the example. If not specified, the agent's default language is
-   * used. Note: languages must be enabled in the agent before they can be used. Note: example's
-   * language code is not currently used in dialogflow agents.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -216,9 +184,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Optional. The language code of the example. If not specified, the agent's default language is
-   * used. Note: languages must be enabled in the agent before they can be used. Note: example's
-   * language code is not currently used in dialogflow agents.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setLanguageCode(java.lang.String languageCode) {
@@ -227,8 +192,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * The unique identifier of the playbook example. Format:
-   * `projects//locations//agents//playbooks//examples/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -236,8 +199,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * The unique identifier of the playbook example. Format:
-   * `projects//locations//agents//playbooks//examples/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setName(java.lang.String name) {
@@ -246,7 +207,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Optional. The input to the playbook in the example.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookInput getPlaybookInput() {
@@ -254,7 +214,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Optional. The input to the playbook in the example.
    * @param playbookInput playbookInput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setPlaybookInput(GoogleCloudDialogflowCxV3beta1PlaybookInput playbookInput) {
@@ -263,7 +222,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Optional. The output of the playbook in the example.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookOutput getPlaybookOutput() {
@@ -271,7 +229,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Optional. The output of the playbook in the example.
    * @param playbookOutput playbookOutput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setPlaybookOutput(GoogleCloudDialogflowCxV3beta1PlaybookOutput playbookOutput) {
@@ -280,7 +237,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Output only. Estimated number of tokes current example takes when sent to the LLM.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTokenCount() {
@@ -288,7 +244,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Output only. Estimated number of tokes current example takes when sent to the LLM.
    * @param tokenCount tokenCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setTokenCount(java.lang.Long tokenCount) {
@@ -297,7 +252,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Output only. Last time the example was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -305,7 +259,6 @@ public final class GoogleCloudDialogflowCxV3beta1Example extends com.google.api.
   }
 
   /**
-   * Output only. Last time the example was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Example setUpdateTime(String updateTime) {

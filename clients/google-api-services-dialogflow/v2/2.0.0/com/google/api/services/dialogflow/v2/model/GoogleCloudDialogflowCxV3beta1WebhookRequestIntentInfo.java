@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents intent information communicated to the webhook.
+ * Model definition for GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,40 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The confidence of the matched intent. Values range from 0.0 (completely uncertain) to 1.0
-   * (completely certain).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * Always present. The display name of the last matched intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Always present. The unique identifier of the last matched intent. Format:
-   * `projects//locations//agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastMatchedIntent;
 
   /**
-   * Parameters identified as a result of intent matching. This is a map of the name of the
-   * identified parameter to the value of the parameter identified from the user's utterance. All
-   * parameters defined in the matched intent that are identified will be surfaced here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentParameterValue> parameters;
 
   /**
-   * The confidence of the matched intent. Values range from 0.0 (completely uncertain) to 1.0
-   * (completely certain).
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -71,8 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo extend
   }
 
   /**
-   * The confidence of the matched intent. Values range from 0.0 (completely uncertain) to 1.0
-   * (completely certain).
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo setConfidence(java.lang.Float confidence) {
@@ -81,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo extend
   }
 
   /**
-   * Always present. The display name of the last matched intent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -89,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo extend
   }
 
   /**
-   * Always present. The display name of the last matched intent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo setDisplayName(java.lang.String displayName) {
@@ -98,8 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo extend
   }
 
   /**
-   * Always present. The unique identifier of the last matched intent. Format:
-   * `projects//locations//agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastMatchedIntent() {
@@ -107,8 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo extend
   }
 
   /**
-   * Always present. The unique identifier of the last matched intent. Format:
-   * `projects//locations//agents//intents/`.
    * @param lastMatchedIntent lastMatchedIntent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo setLastMatchedIntent(java.lang.String lastMatchedIntent) {
@@ -117,9 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo extend
   }
 
   /**
-   * Parameters identified as a result of intent matching. This is a map of the name of the
-   * identified parameter to the value of the parameter identified from the user's utterance. All
-   * parameters defined in the matched intent that are identified will be surfaced here.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentParameterValue> getParameters() {
@@ -127,9 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo extend
   }
 
   /**
-   * Parameters identified as a result of intent matching. This is a map of the name of the
-   * identified parameter to the value of the parameter identified from the user's utterance. All
-   * parameters defined in the matched intent that are identified will be surfaced here.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo setParameters(java.util.Map<String, GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfoIntentParameterValue> parameters) {

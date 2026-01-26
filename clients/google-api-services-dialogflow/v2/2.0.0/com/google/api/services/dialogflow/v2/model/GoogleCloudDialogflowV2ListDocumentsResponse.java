@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Response message for Documents.ListDocuments.
+ * Model definition for GoogleCloudDialogflowV2ListDocumentsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ListDocumentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of documents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +42,12 @@ public final class GoogleCloudDialogflowV2ListDocumentsResponse extends com.goog
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of documents.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2Document> getDocuments() {
@@ -58,7 +55,6 @@ public final class GoogleCloudDialogflowV2ListDocumentsResponse extends com.goog
   }
 
   /**
-   * The list of documents.
    * @param documents documents or {@code null} for none
    */
   public GoogleCloudDialogflowV2ListDocumentsResponse setDocuments(java.util.List<GoogleCloudDialogflowV2Document> documents) {
@@ -67,7 +63,6 @@ public final class GoogleCloudDialogflowV2ListDocumentsResponse extends com.goog
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -75,7 +70,6 @@ public final class GoogleCloudDialogflowV2ListDocumentsResponse extends com.goog
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowV2ListDocumentsResponse setNextPageToken(java.lang.String nextPageToken) {

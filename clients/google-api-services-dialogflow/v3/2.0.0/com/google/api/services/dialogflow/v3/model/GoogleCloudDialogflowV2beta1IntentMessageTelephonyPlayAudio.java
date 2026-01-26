@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Plays audio from a file in Telephony Gateway.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. URI to a Google Cloud Storage object containing the audio to play, e.g.,
-   * "gs://bucket/object". The object must contain a single channel (mono) of linear PCM audio (2
-   * bytes / sample) at 8kHz. This object must be readable by the `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` service account where is the number of the Telephony
-   * Gateway project (usually the same as the Dialogflow agent project). If the Google Cloud Storage
-   * bucket is in the Telephony Gateway project, this permission is added by default when enabling
-   * the Dialogflow V2 API. For audio from other sources, consider using the
-   * `TelephonySynthesizeSpeech` message with SSML.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioUri;
 
   /**
-   * Required. URI to a Google Cloud Storage object containing the audio to play, e.g.,
-   * "gs://bucket/object". The object must contain a single channel (mono) of linear PCM audio (2
-   * bytes / sample) at 8kHz. This object must be readable by the `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` service account where is the number of the Telephony
-   * Gateway project (usually the same as the Dialogflow agent project). If the Google Cloud Storage
-   * bucket is in the Telephony Gateway project, this permission is added by default when enabling
-   * the Dialogflow V2 API. For audio from other sources, consider using the
-   * `TelephonySynthesizeSpeech` message with SSML.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioUri() {
@@ -59,14 +43,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio e
   }
 
   /**
-   * Required. URI to a Google Cloud Storage object containing the audio to play, e.g.,
-   * "gs://bucket/object". The object must contain a single channel (mono) of linear PCM audio (2
-   * bytes / sample) at 8kHz. This object must be readable by the `service-@gcp-sa-
-   * dialogflow.iam.gserviceaccount.com` service account where is the number of the Telephony
-   * Gateway project (usually the same as the Dialogflow agent project). If the Google Cloud Storage
-   * bucket is in the Telephony Gateway project, this permission is added by default when enabling
-   * the Dialogflow V2 API. For audio from other sources, consider using the
-   * `TelephonySynthesizeSpeech` message with SSML.
    * @param audioUri audioUri or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio setAudioUri(java.lang.String audioUri) {

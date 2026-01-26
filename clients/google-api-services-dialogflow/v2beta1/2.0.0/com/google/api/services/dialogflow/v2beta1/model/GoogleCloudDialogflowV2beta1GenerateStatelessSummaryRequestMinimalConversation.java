@@ -17,8 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The minimum amount of information required to generate a Summary without having a Conversation
- * resource created.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequestMinimalConversation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,20 +31,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequestMinimalConversation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The messages that the Summary will be generated from. It is expected that this
-   * message content is already redacted and does not contain any PII. Required fields: {content,
-   * language_code, participant, participant_role} Optional fields: {send_time} If send_time is not
-   * provided, then the messages must be provided in chronological order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1Message> messages;
 
   /**
-   * Required. The messages that the Summary will be generated from. It is expected that this
-   * message content is already redacted and does not contain any PII. Required fields: {content,
-   * language_code, participant, participant_role} Optional fields: {send_time} If send_time is not
-   * provided, then the messages must be provided in chronological order.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1Message> getMessages() {
@@ -52,10 +44,6 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequestMi
   }
 
   /**
-   * Required. The messages that the Summary will be generated from. It is expected that this
-   * message content is already redacted and does not contain any PII. Required fields: {content,
-   * language_code, participant, participant_role} Optional fields: {send_time} If send_time is not
-   * provided, then the messages must be provided in chronological order.
    * @param messages messages or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSummaryRequestMinimalConversation setMessages(java.util.List<GoogleCloudDialogflowV2beta1Message> messages) {

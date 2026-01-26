@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Row of TableCard.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessageTableCardRow.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. List of cells that make up this row.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +42,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRow extends
   }
 
   /**
-   * Optional. Whether to add a visual divider after this row.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dividerAfter;
 
   /**
-   * Optional. List of cells that make up this row.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCell> getCells() {
@@ -58,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRow extends
   }
 
   /**
-   * Optional. List of cells that make up this row.
    * @param cells cells or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTableCardRow setCells(java.util.List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCell> cells) {
@@ -67,7 +63,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRow extends
   }
 
   /**
-   * Optional. Whether to add a visual divider after this row.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDividerAfter() {
@@ -75,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRow extends
   }
 
   /**
-   * Optional. Whether to add a visual divider after this row.
    * @param dividerAfter dividerAfter or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTableCardRow setDividerAfter(java.lang.Boolean dividerAfter) {

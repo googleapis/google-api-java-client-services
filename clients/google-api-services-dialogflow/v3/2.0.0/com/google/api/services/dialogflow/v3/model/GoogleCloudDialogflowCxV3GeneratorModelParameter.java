@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Parameters to be passed to the LLM. If not set, default values will be used.
+ * Model definition for GoogleCloudDialogflowCxV3GeneratorModelParameter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,41 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3GeneratorModelParameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum number of tokens to generate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxDecodeSteps;
 
   /**
-   * The temperature used for sampling. Temperature sampling occurs after both topP and topK have
-   * been applied. Valid range: [0.0, 1.0] Low temperature = less random. High temperature = more
-   * random.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float temperature;
 
   /**
-   * If set, the sampling process in each step is limited to the top_k tokens with highest
-   * probabilities. Valid range: [1, 40] or 1000+. Small topK = less random. Large topK = more
-   * random.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer topK;
 
   /**
-   * If set, only the tokens comprising the top top_p probability mass are considered. If both top_p
-   * and top_k are set, top_p will be used for further refining candidates selected with top_k.
-   * Valid range: (0.0, 1.0]. Small topP = less random. Large topP = more random.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float topP;
 
   /**
-   * The maximum number of tokens to generate.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxDecodeSteps() {
@@ -72,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorModelParameter extends com.
   }
 
   /**
-   * The maximum number of tokens to generate.
    * @param maxDecodeSteps maxDecodeSteps or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GeneratorModelParameter setMaxDecodeSteps(java.lang.Integer maxDecodeSteps) {
@@ -81,9 +69,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorModelParameter extends com.
   }
 
   /**
-   * The temperature used for sampling. Temperature sampling occurs after both topP and topK have
-   * been applied. Valid range: [0.0, 1.0] Low temperature = less random. High temperature = more
-   * random.
    * @return value or {@code null} for none
    */
   public java.lang.Float getTemperature() {
@@ -91,9 +76,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorModelParameter extends com.
   }
 
   /**
-   * The temperature used for sampling. Temperature sampling occurs after both topP and topK have
-   * been applied. Valid range: [0.0, 1.0] Low temperature = less random. High temperature = more
-   * random.
    * @param temperature temperature or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GeneratorModelParameter setTemperature(java.lang.Float temperature) {
@@ -102,9 +84,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorModelParameter extends com.
   }
 
   /**
-   * If set, the sampling process in each step is limited to the top_k tokens with highest
-   * probabilities. Valid range: [1, 40] or 1000+. Small topK = less random. Large topK = more
-   * random.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTopK() {
@@ -112,9 +91,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorModelParameter extends com.
   }
 
   /**
-   * If set, the sampling process in each step is limited to the top_k tokens with highest
-   * probabilities. Valid range: [1, 40] or 1000+. Small topK = less random. Large topK = more
-   * random.
    * @param topK topK or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GeneratorModelParameter setTopK(java.lang.Integer topK) {
@@ -123,9 +99,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorModelParameter extends com.
   }
 
   /**
-   * If set, only the tokens comprising the top top_p probability mass are considered. If both top_p
-   * and top_k are set, top_p will be used for further refining candidates selected with top_k.
-   * Valid range: (0.0, 1.0]. Small topP = less random. Large topP = more random.
    * @return value or {@code null} for none
    */
   public java.lang.Float getTopP() {
@@ -133,9 +106,6 @@ public final class GoogleCloudDialogflowCxV3GeneratorModelParameter extends com.
   }
 
   /**
-   * If set, only the tokens comprising the top top_p probability mass are considered. If both top_p
-   * and top_k are set, top_p will be used for further refining candidates selected with top_k.
-   * Valid range: (0.0, 1.0]. Small topP = less random. Large topP = more random.
    * @param topP topP or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3GeneratorModelParameter setTopP(java.lang.Float topP) {

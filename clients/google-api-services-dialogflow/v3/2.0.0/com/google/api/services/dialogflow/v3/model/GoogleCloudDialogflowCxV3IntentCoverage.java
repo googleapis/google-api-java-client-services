@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Intent coverage represents the percentage of all possible intents in the agent that are triggered
- * in any of a parent's test cases.
+ * Model definition for GoogleCloudDialogflowCxV3IntentCoverage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3IntentCoverage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The percent of intents in the agent that are covered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float coverageScore;
 
   /**
-   * The list of Intents present in the agent
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3IntentCoverageIntent> intents;
 
   /**
-   * The percent of intents in the agent that are covered.
    * @return value or {@code null} for none
    */
   public java.lang.Float getCoverageScore() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3IntentCoverage extends com.google.ap
   }
 
   /**
-   * The percent of intents in the agent that are covered.
    * @param coverageScore coverageScore or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3IntentCoverage setCoverageScore(java.lang.Float coverageScore) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3IntentCoverage extends com.google.ap
   }
 
   /**
-   * The list of Intents present in the agent
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3IntentCoverageIntent> getIntents() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3IntentCoverage extends com.google.ap
   }
 
   /**
-   * The list of Intents present in the agent
    * @param intents intents or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3IntentCoverage setIntents(java.util.List<GoogleCloudDialogflowCxV3IntentCoverageIntent> intents) {

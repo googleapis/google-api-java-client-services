@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents an example that the agent is trained on to identify the intent.
+ * Model definition for GoogleCloudDialogflowCxV3IntentTrainingPhrase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,36 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3IntentTrainingPhrase extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The unique identifier of the training phrase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Required. The ordered list of training phrase parts. The parts are concatenated in order to
-   * form the training phrase. Note: The API does not automatically annotate training phrases like
-   * the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so
-   * the training phrase is well formatted when the parts are concatenated. If the training phrase
-   * does not need to be annotated with parameters, you just need a single part with only the
-   * Part.text field set. If you want to annotate the training phrase, you must create multiple
-   * parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to
-   * a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that
-   * you want to annotate, and the `parameter_id` field is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePart> parts;
 
   /**
-   * Indicates how many times this example was added to the intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer repeatCount;
 
   /**
-   * Output only. The unique identifier of the training phrase.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -67,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrase extends com.goo
   }
 
   /**
-   * Output only. The unique identifier of the training phrase.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3IntentTrainingPhrase setId(java.lang.String id) {
@@ -76,15 +63,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrase extends com.goo
   }
 
   /**
-   * Required. The ordered list of training phrase parts. The parts are concatenated in order to
-   * form the training phrase. Note: The API does not automatically annotate training phrases like
-   * the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so
-   * the training phrase is well formatted when the parts are concatenated. If the training phrase
-   * does not need to be annotated with parameters, you just need a single part with only the
-   * Part.text field set. If you want to annotate the training phrase, you must create multiple
-   * parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to
-   * a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that
-   * you want to annotate, and the `parameter_id` field is set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePart> getParts() {
@@ -92,15 +70,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrase extends com.goo
   }
 
   /**
-   * Required. The ordered list of training phrase parts. The parts are concatenated in order to
-   * form the training phrase. Note: The API does not automatically annotate training phrases like
-   * the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so
-   * the training phrase is well formatted when the parts are concatenated. If the training phrase
-   * does not need to be annotated with parameters, you just need a single part with only the
-   * Part.text field set. If you want to annotate the training phrase, you must create multiple
-   * parts, where the fields of each part are populated in one of two ways: - `Part.text` is set to
-   * a part of the phrase that has no parameters. - `Part.text` is set to a part of the phrase that
-   * you want to annotate, and the `parameter_id` field is set.
    * @param parts parts or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3IntentTrainingPhrase setParts(java.util.List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePart> parts) {
@@ -109,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrase extends com.goo
   }
 
   /**
-   * Indicates how many times this example was added to the intent.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRepeatCount() {
@@ -117,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrase extends com.goo
   }
 
   /**
-   * Indicates how many times this example was added to the intent.
    * @param repeatCount repeatCount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3IntentTrainingPhrase setRepeatCount(java.lang.Integer repeatCount) {

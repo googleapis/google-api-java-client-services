@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Feedback for conversation summarization.
+ * Model definition for GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp when composing of the summary starts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Timestamp when the summary was submitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String submitTime;
 
   /**
-   * Text of actual submitted summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String summaryText;
 
   /**
-   * Optional. Actual text sections of submitted summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> textSections;
 
   /**
-   * Timestamp when composing of the summary starts.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFee
   }
 
   /**
-   * Timestamp when composing of the summary starts.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback setStartTime(String startTime) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFee
   }
 
   /**
-   * Timestamp when the summary was submitted.
    * @return value or {@code null} for none
    */
   public String getSubmitTime() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFee
   }
 
   /**
-   * Timestamp when the summary was submitted.
    * @param submitTime submitTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback setSubmitTime(String submitTime) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFee
   }
 
   /**
-   * Text of actual submitted summary.
    * @return value or {@code null} for none
    */
   public java.lang.String getSummaryText() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFee
   }
 
   /**
-   * Text of actual submitted summary.
    * @param summaryText summaryText or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback setSummaryText(java.lang.String summaryText) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFee
   }
 
   /**
-   * Optional. Actual text sections of submitted summary.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTextSections() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFee
   }
 
   /**
-   * Optional. Actual text sections of submitted summary.
    * @param textSections textSections or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback setTextSections(java.util.Map<String, java.lang.String> textSections) {

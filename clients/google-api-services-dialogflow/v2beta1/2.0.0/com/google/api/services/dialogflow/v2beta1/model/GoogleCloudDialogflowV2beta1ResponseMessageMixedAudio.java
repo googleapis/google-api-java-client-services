@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents an audio message that is composed of both segments synthesized from the Dialogflow
- * agent prompts and ones hosted externally at the specified URIs.
+ * Model definition for GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio extends com.google.api.client.json.GenericJson {
 
   /**
-   * Segments this audio response is composed of.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1ResponseMessageMixedAudioSegment> segments;
 
   /**
-   * Segments this audio response is composed of.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1ResponseMessageMixedAudioSegment> getSegments() {
@@ -46,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio extends
   }
 
   /**
-   * Segments this audio response is composed of.
    * @param segments segments or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio setSegments(java.util.List<GoogleCloudDialogflowV2beta1ResponseMessageMixedAudioSegment> segments) {

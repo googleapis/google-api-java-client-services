@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Conflicting resources detected during the import process. Only filled when REPORT_CONFLICT is set
- * in the request and there are conflicts in the display names.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConflictingResources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConflictingResources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Display names of conflicting entities.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entityDisplayNames;
 
   /**
-   * Display names of conflicting entity types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entityTypeDisplayNames;
 
   /**
-   * Display names of conflicting entities.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntityDisplayNames() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConfli
   }
 
   /**
-   * Display names of conflicting entities.
    * @param entityDisplayNames entityDisplayNames or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConflictingResources setEntityDisplayNames(java.util.List<java.lang.String> entityDisplayNames) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConfli
   }
 
   /**
-   * Display names of conflicting entity types.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntityTypeDisplayNames() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConfli
   }
 
   /**
-   * Display names of conflicting entity types.
    * @param entityTypeDisplayNames entityTypeDisplayNames or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ImportEntityTypesResponseConflictingResources setEntityTypeDisplayNames(java.util.List<java.lang.String> entityTypeDisplayNames) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The description of differences between original and replayed agent output.
+ * Model definition for GoogleCloudDialogflowCxV3TestRunDifference.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3TestRunDifference extends com.google.api.client.json.GenericJson {
 
   /**
-   * A human readable description of the diff, showing the actual output vs expected output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The type of diff.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * A human readable description of the diff, showing the actual output vs expected output.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3TestRunDifference extends com.google
   }
 
   /**
-   * A human readable description of the diff, showing the actual output vs expected output.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TestRunDifference setDescription(java.lang.String description) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3TestRunDifference extends com.google
   }
 
   /**
-   * The type of diff.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3TestRunDifference extends com.google
   }
 
   /**
-   * The type of diff.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TestRunDifference setType(java.lang.String type) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The response message for Participants.CompileSuggestion.
+ * Model definition for GoogleCloudDialogflowV2beta1CompileSuggestionResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,33 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1CompileSuggestionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of messages prior to and including latest_message to compile the suggestion. It may be
-   * smaller than the CompileSuggestionRequest.context_size field in the request if there aren't
-   * that many messages in the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer contextSize;
 
   /**
-   * The name of the latest conversation message used to compile suggestion for. Format:
-   * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String latestMessage;
 
   /**
-   * The compiled suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1Suggestion suggestion;
 
   /**
-   * Number of messages prior to and including latest_message to compile the suggestion. It may be
-   * smaller than the CompileSuggestionRequest.context_size field in the request if there aren't
-   * that many messages in the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getContextSize() {
@@ -64,9 +55,6 @@ public final class GoogleCloudDialogflowV2beta1CompileSuggestionResponse extends
   }
 
   /**
-   * Number of messages prior to and including latest_message to compile the suggestion. It may be
-   * smaller than the CompileSuggestionRequest.context_size field in the request if there aren't
-   * that many messages in the conversation.
    * @param contextSize contextSize or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CompileSuggestionResponse setContextSize(java.lang.Integer contextSize) {
@@ -75,8 +63,6 @@ public final class GoogleCloudDialogflowV2beta1CompileSuggestionResponse extends
   }
 
   /**
-   * The name of the latest conversation message used to compile suggestion for. Format:
-   * `projects//locations//conversations//messages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestMessage() {
@@ -84,8 +70,6 @@ public final class GoogleCloudDialogflowV2beta1CompileSuggestionResponse extends
   }
 
   /**
-   * The name of the latest conversation message used to compile suggestion for. Format:
-   * `projects//locations//conversations//messages/`.
    * @param latestMessage latestMessage or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CompileSuggestionResponse setLatestMessage(java.lang.String latestMessage) {
@@ -94,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1CompileSuggestionResponse extends
   }
 
   /**
-   * The compiled suggestion.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Suggestion getSuggestion() {
@@ -102,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1CompileSuggestionResponse extends
   }
 
   /**
-   * The compiled suggestion.
    * @param suggestion suggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CompileSuggestionResponse setSuggestion(GoogleCloudDialogflowV2beta1Suggestion suggestion) {

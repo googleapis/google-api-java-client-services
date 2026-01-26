@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings for LLM models.
+ * Model definition for GoogleCloudDialogflowCxV3beta1LlmModelSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1LlmModelSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The selected LLM model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
 
   /**
-   * Generative model parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters parameters;
 
   /**
-   * The custom prompt to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String promptText;
 
   /**
-   * The selected LLM model.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettings extends com.go
   }
 
   /**
-   * The selected LLM model.
    * @param model model or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettings setModel(java.lang.String model) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettings extends com.go
   }
 
   /**
-   * Generative model parameters.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters getParameters() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettings extends com.go
   }
 
   /**
-   * Generative model parameters.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettings setParameters(GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters parameters) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettings extends com.go
   }
 
   /**
-   * The custom prompt to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getPromptText() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettings extends com.go
   }
 
   /**
-   * The custom prompt to use.
    * @param promptText promptText or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettings setPromptText(java.lang.String promptText) {

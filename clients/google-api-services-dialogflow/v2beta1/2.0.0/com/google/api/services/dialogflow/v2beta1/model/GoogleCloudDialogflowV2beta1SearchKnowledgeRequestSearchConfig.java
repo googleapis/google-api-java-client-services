@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Configuration specific to search queries with data stores.
+ * Model definition for GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Boost specifications for data stores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecs> boostSpecs;
 
   /**
-   * Optional. Filter specification for data store queries. Maps from datastore name to the filter
-   * expression for that datastore. Do not specify more than one FilterSpecs for each datastore
-   * name. If multiple FilterSpecs are provided for the same datastore name, the behavior is
-   * undefined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigFilterSpecs> filterSpecs;
 
   /**
-   * Optional. Boost specifications for data stores.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecs> getBoostSpecs() {
@@ -55,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. Boost specifications for data stores.
    * @param boostSpecs boostSpecs or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfig setBoostSpecs(java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecs> boostSpecs) {
@@ -64,10 +57,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. Filter specification for data store queries. Maps from datastore name to the filter
-   * expression for that datastore. Do not specify more than one FilterSpecs for each datastore
-   * name. If multiple FilterSpecs are provided for the same datastore name, the behavior is
-   * undefined.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigFilterSpecs> getFilterSpecs() {
@@ -75,10 +64,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. Filter specification for data store queries. Maps from datastore name to the filter
-   * expression for that datastore. Do not specify more than one FilterSpecs for each datastore
-   * name. If multiple FilterSpecs are provided for the same datastore name, the behavior is
-   * undefined.
    * @param filterSpecs filterSpecs or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfig setFilterSpecs(java.util.List<GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigFilterSpecs> filterSpecs) {

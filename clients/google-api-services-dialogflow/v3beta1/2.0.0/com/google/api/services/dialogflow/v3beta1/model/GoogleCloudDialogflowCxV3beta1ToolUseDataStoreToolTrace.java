@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The tracing information for the data store tool.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ToolUseDataStoreToolTrace.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ToolUseDataStoreToolTrace extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Data store connection feature output signals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals dataStoreConnectionSignals;
 
   /**
-   * Optional. Data store connection feature output signals.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals getDataStoreConnectionSignals() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolUseDataStoreToolTrace exten
   }
 
   /**
-   * Optional. Data store connection feature output signals.
    * @param dataStoreConnectionSignals dataStoreConnectionSignals or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolUseDataStoreToolTrace setDataStoreConnectionSignals(GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals dataStoreConnectionSignals) {

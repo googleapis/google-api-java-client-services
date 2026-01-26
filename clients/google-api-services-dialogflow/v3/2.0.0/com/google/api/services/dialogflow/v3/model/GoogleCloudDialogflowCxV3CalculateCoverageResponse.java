@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for TestCases.CalculateCoverage.
+ * Model definition for GoogleCloudDialogflowCxV3CalculateCoverageResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3CalculateCoverageResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The agent to calculate coverage for. Format: `projects//locations//agents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agent;
 
   /**
-   * Intent coverage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3IntentCoverage intentCoverage;
 
   /**
-   * Transition route group coverage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3TransitionRouteGroupCoverage routeGroupCoverage;
 
   /**
-   * Transition (excluding transition route groups) coverage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3TransitionCoverage transitionCoverage;
 
   /**
-   * The agent to calculate coverage for. Format: `projects//locations//agents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgent() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3CalculateCoverageResponse extends co
   }
 
   /**
-   * The agent to calculate coverage for. Format: `projects//locations//agents/`.
    * @param agent agent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3CalculateCoverageResponse setAgent(java.lang.String agent) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3CalculateCoverageResponse extends co
   }
 
   /**
-   * Intent coverage.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3IntentCoverage getIntentCoverage() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3CalculateCoverageResponse extends co
   }
 
   /**
-   * Intent coverage.
    * @param intentCoverage intentCoverage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3CalculateCoverageResponse setIntentCoverage(GoogleCloudDialogflowCxV3IntentCoverage intentCoverage) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3CalculateCoverageResponse extends co
   }
 
   /**
-   * Transition route group coverage.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionRouteGroupCoverage getRouteGroupCoverage() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3CalculateCoverageResponse extends co
   }
 
   /**
-   * Transition route group coverage.
    * @param routeGroupCoverage routeGroupCoverage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3CalculateCoverageResponse setRouteGroupCoverage(GoogleCloudDialogflowCxV3TransitionRouteGroupCoverage routeGroupCoverage) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3CalculateCoverageResponse extends co
   }
 
   /**
-   * Transition (excluding transition route groups) coverage.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TransitionCoverage getTransitionCoverage() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3CalculateCoverageResponse extends co
   }
 
   /**
-   * Transition (excluding transition route groups) coverage.
    * @param transitionCoverage transitionCoverage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3CalculateCoverageResponse setTransitionCoverage(GoogleCloudDialogflowCxV3TransitionCoverage transitionCoverage) {

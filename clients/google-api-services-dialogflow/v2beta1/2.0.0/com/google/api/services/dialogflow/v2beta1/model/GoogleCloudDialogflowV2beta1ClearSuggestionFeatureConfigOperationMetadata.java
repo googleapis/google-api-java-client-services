@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Metadata for a ConversationProfile.ClearSuggestionFeatureConfig operation.
+ * Model definition for GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOperationMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,38 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the conversation profile. Format:
-   * `projects//locations//conversationProfiles/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationProfile;
 
   /**
-   * Timestamp whe the request was created. The time is measured on server side.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Required. The participant role to remove the suggestion feature config. Only HUMAN_AGENT or
-   * END_USER can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String participantRole;
 
   /**
-   * Required. The type of the suggestion feature to remove.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String suggestionFeatureType;
 
   /**
-   * The resource name of the conversation profile. Format:
-   * `projects//locations//conversationProfiles/`
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationProfile() {
@@ -69,8 +61,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOpera
   }
 
   /**
-   * The resource name of the conversation profile. Format:
-   * `projects//locations//conversationProfiles/`
    * @param conversationProfile conversationProfile or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOperationMetadata setConversationProfile(java.lang.String conversationProfile) {
@@ -79,7 +69,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOpera
   }
 
   /**
-   * Timestamp whe the request was created. The time is measured on server side.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -87,7 +76,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOpera
   }
 
   /**
-   * Timestamp whe the request was created. The time is measured on server side.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOperationMetadata setCreateTime(String createTime) {
@@ -96,8 +84,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOpera
   }
 
   /**
-   * Required. The participant role to remove the suggestion feature config. Only HUMAN_AGENT or
-   * END_USER can be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getParticipantRole() {
@@ -105,8 +91,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOpera
   }
 
   /**
-   * Required. The participant role to remove the suggestion feature config. Only HUMAN_AGENT or
-   * END_USER can be used.
    * @param participantRole participantRole or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOperationMetadata setParticipantRole(java.lang.String participantRole) {
@@ -115,7 +99,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOpera
   }
 
   /**
-   * Required. The type of the suggestion feature to remove.
    * @return value or {@code null} for none
    */
   public java.lang.String getSuggestionFeatureType() {
@@ -123,7 +106,6 @@ public final class GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOpera
   }
 
   /**
-   * Required. The type of the suggestion feature to remove.
    * @param suggestionFeatureType suggestionFeatureType or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ClearSuggestionFeatureConfigOperationMetadata setSuggestionFeatureType(java.lang.String suggestionFeatureType) {

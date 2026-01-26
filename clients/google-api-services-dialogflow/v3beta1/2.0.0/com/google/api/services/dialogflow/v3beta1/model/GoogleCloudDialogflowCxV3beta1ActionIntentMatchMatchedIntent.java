@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores the matched intent, which is the result of the intent match action.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The display name of the matched intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The generative fallback response of the matched intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> generativeFallback;
 
   /**
-   * The ID of the matched intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intentId;
 
   /**
-   * The score of the matched intent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
 
   /**
-   * The display name of the matched intent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent 
   }
 
   /**
-   * The display name of the matched intent.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent setDisplayName(java.lang.String displayName) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent 
   }
 
   /**
-   * The generative fallback response of the matched intent.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getGenerativeFallback() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent 
   }
 
   /**
-   * The generative fallback response of the matched intent.
    * @param generativeFallback generativeFallback or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent setGenerativeFallback(java.util.Map<String, java.lang.Object> generativeFallback) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent 
   }
 
   /**
-   * The ID of the matched intent.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntentId() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent 
   }
 
   /**
-   * The ID of the matched intent.
    * @param intentId intentId or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent setIntentId(java.lang.String intentId) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent 
   }
 
   /**
-   * The score of the matched intent.
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent 
   }
 
   /**
-   * The score of the matched intent.
    * @param score score or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ActionIntentMatchMatchedIntent setScore(java.lang.Float score) {

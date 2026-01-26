@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Changelogs represents a change made to a given agent.
+ * Model definition for GoogleCloudDialogflowCxV3beta1Changelog.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,63 +30,54 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.api.client.json.GenericJson {
 
   /**
-   * The action of the change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * The timestamp of the change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * The affected resource display name of the change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The affected language code of the change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * The unique identifier of the changelog. Format: `projects//locations//agents//changelogs/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The affected resource name of the change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resource;
 
   /**
-   * The affected resource type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Email address of the authenticated user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userEmail;
 
   /**
-   * The action of the change.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -94,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The action of the change.
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Changelog setAction(java.lang.String action) {
@@ -103,7 +93,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The timestamp of the change.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -111,7 +100,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The timestamp of the change.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Changelog setCreateTime(String createTime) {
@@ -120,7 +108,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The affected resource display name of the change.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -128,7 +115,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The affected resource display name of the change.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Changelog setDisplayName(java.lang.String displayName) {
@@ -137,7 +123,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The affected language code of the change.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -145,7 +130,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The affected language code of the change.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Changelog setLanguageCode(java.lang.String languageCode) {
@@ -154,7 +138,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The unique identifier of the changelog. Format: `projects//locations//agents//changelogs/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -162,7 +145,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The unique identifier of the changelog. Format: `projects//locations//agents//changelogs/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Changelog setName(java.lang.String name) {
@@ -171,7 +153,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The affected resource name of the change.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -179,7 +160,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The affected resource name of the change.
    * @param resource resource or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Changelog setResource(java.lang.String resource) {
@@ -188,7 +168,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The affected resource type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -196,7 +175,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * The affected resource type.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Changelog setType(java.lang.String type) {
@@ -205,7 +183,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * Email address of the authenticated user.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserEmail() {
@@ -213,7 +190,6 @@ public final class GoogleCloudDialogflowCxV3beta1Changelog extends com.google.ap
   }
 
   /**
-   * Email address of the authenticated user.
    * @param userEmail userEmail or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Changelog setUserEmail(java.lang.String userEmail) {

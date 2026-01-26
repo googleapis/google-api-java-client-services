@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Evaluation metrics when retrieving `n` smart replies with the model.
+ * Model definition for GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,25 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of retrieved smart replies. For example, when `n` is 3, this evaluation contains metrics
-   * for when Dialogflow retrieves 3 smart replies with the model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer n;
 
   /**
-   * Defined as `number of queries whose top n smart replies have at least one similar (token match
-   * similarity above the defined threshold) reply as the real reply` divided by `number of queries
-   * with at least one smart reply`. Value ranges from 0.0 to 1.0 inclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float recall;
 
   /**
-   * Number of retrieved smart replies. For example, when `n` is 3, this evaluation contains metrics
-   * for when Dialogflow retrieves 3 smart replies with the model.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getN() {
@@ -56,8 +49,6 @@ public final class GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics extends c
   }
 
   /**
-   * Number of retrieved smart replies. For example, when `n` is 3, this evaluation contains metrics
-   * for when Dialogflow retrieves 3 smart replies with the model.
    * @param n n or {@code null} for none
    */
   public GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics setN(java.lang.Integer n) {
@@ -66,9 +57,6 @@ public final class GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics extends c
   }
 
   /**
-   * Defined as `number of queries whose top n smart replies have at least one similar (token match
-   * similarity above the defined threshold) reply as the real reply` divided by `number of queries
-   * with at least one smart reply`. Value ranges from 0.0 to 1.0 inclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Float getRecall() {
@@ -76,9 +64,6 @@ public final class GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics extends c
   }
 
   /**
-   * Defined as `number of queries whose top n smart replies have at least one similar (token match
-   * similarity above the defined threshold) reply as the real reply` divided by `number of queries
-   * with at least one smart reply`. Value ranges from 0.0 to 1.0 inclusive.
    * @param recall recall or {@code null} for none
    */
   public GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics setRecall(java.lang.Float recall) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents configurations for a test case.
+ * Model definition for GoogleCloudDialogflowCxV3beta1TestConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,34 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1TestConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one
-   * of `flow` and `page` should be set to indicate the starting point of the test case. If neither
-   * is set, the test case will start with start page on the default start flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flow;
 
   /**
-   * The page to start the test case with. Format: `projects//locations//agents//flows//pages/`.
-   * Only one of `flow` and `page` should be set to indicate the starting point of the test case. If
-   * neither is set, the test case will start with start page on the default start flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String page;
 
   /**
-   * Session parameters to be compared when calculating differences.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> trackingParameters;
 
   /**
-   * Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one
-   * of `flow` and `page` should be set to indicate the starting point of the test case. If neither
-   * is set, the test case will start with start page on the default start flow.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlow() {
@@ -65,9 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfig extends com.google.a
   }
 
   /**
-   * Flow name to start the test case with. Format: `projects//locations//agents//flows/`. Only one
-   * of `flow` and `page` should be set to indicate the starting point of the test case. If neither
-   * is set, the test case will start with start page on the default start flow.
    * @param flow flow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TestConfig setFlow(java.lang.String flow) {
@@ -76,9 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfig extends com.google.a
   }
 
   /**
-   * The page to start the test case with. Format: `projects//locations//agents//flows//pages/`.
-   * Only one of `flow` and `page` should be set to indicate the starting point of the test case. If
-   * neither is set, the test case will start with start page on the default start flow.
    * @return value or {@code null} for none
    */
   public java.lang.String getPage() {
@@ -86,9 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfig extends com.google.a
   }
 
   /**
-   * The page to start the test case with. Format: `projects//locations//agents//flows//pages/`.
-   * Only one of `flow` and `page` should be set to indicate the starting point of the test case. If
-   * neither is set, the test case will start with start page on the default start flow.
    * @param page page or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TestConfig setPage(java.lang.String page) {
@@ -97,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfig extends com.google.a
   }
 
   /**
-   * Session parameters to be compared when calculating differences.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTrackingParameters() {
@@ -105,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfig extends com.google.a
   }
 
   /**
-   * Session parameters to be compared when calculating differences.
    * @param trackingParameters trackingParameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TestConfig setTrackingParameters(java.util.List<java.lang.String> trackingParameters) {

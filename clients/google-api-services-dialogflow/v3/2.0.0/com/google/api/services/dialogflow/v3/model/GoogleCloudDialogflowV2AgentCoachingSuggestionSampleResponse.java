@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Sample response that the agent can use. This could be based on applicable instructions and
- * ingested data from other systems.
+ * Model definition for GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,28 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Duplicate check result for the sample response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentCoachingSuggestionDuplicateCheckResult duplicateCheckResult;
 
   /**
-   * Optional. Sample response for Agent in text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseText;
 
   /**
-   * Output only. Sources for the Sample Response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentCoachingSuggestionSources sources;
 
   /**
-   * Output only. Duplicate check result for the sample response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionDuplicateCheckResult getDuplicateCheckResult() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse 
   }
 
   /**
-   * Output only. Duplicate check result for the sample response.
    * @param duplicateCheckResult duplicateCheckResult or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse setDuplicateCheckResult(GoogleCloudDialogflowV2AgentCoachingSuggestionDuplicateCheckResult duplicateCheckResult) {
@@ -69,7 +63,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse 
   }
 
   /**
-   * Optional. Sample response for Agent in text.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseText() {
@@ -77,7 +70,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse 
   }
 
   /**
-   * Optional. Sample response for Agent in text.
    * @param responseText responseText or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse setResponseText(java.lang.String responseText) {
@@ -86,7 +78,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse 
   }
 
   /**
-   * Output only. Sources for the Sample Response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionSources getSources() {
@@ -94,7 +85,6 @@ public final class GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse 
   }
 
   /**
-   * Output only. Sources for the Sample Response.
    * @param sources sources or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestionSampleResponse setSources(GoogleCloudDialogflowV2AgentCoachingSuggestionSources sources) {

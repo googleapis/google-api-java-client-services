@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents the result of querying a Knowledge base.
+ * Model definition for GoogleCloudDialogflowV2beta1KnowledgeAnswers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1KnowledgeAnswers extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of answers from Knowledge Connector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer> answers;
 
   /**
-   * A list of answers from Knowledge Connector.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer> getAnswers() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAnswers extends com.goog
   }
 
   /**
-   * A list of answers from Knowledge Connector.
    * @param answers answers or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAnswers setAnswers(java.util.List<GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer> answers) {

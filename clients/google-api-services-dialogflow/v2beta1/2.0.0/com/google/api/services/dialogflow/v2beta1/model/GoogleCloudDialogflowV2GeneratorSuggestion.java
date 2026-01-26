@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Suggestion generated using a Generator.
+ * Model definition for GoogleCloudDialogflowV2GeneratorSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Suggestion to coach the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentCoachingSuggestion agentCoachingSuggestion;
 
   /**
-   * Optional. Free form suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2FreeFormSuggestion freeFormSuggestion;
 
   /**
-   * Optional. Suggested summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SummarySuggestion summarySuggestion;
 
   /**
-   * Optional. List of request and response for tool calls executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo> toolCallInfo;
 
   /**
-   * Optional. Suggestion to coach the agent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentCoachingSuggestion getAgentCoachingSuggestion() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google
   }
 
   /**
-   * Optional. Suggestion to coach the agent.
    * @param agentCoachingSuggestion agentCoachingSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestion setAgentCoachingSuggestion(GoogleCloudDialogflowV2AgentCoachingSuggestion agentCoachingSuggestion) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google
   }
 
   /**
-   * Optional. Free form suggestion.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2FreeFormSuggestion getFreeFormSuggestion() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google
   }
 
   /**
-   * Optional. Free form suggestion.
    * @param freeFormSuggestion freeFormSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestion setFreeFormSuggestion(GoogleCloudDialogflowV2FreeFormSuggestion freeFormSuggestion) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google
   }
 
   /**
-   * Optional. Suggested summary.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarySuggestion getSummarySuggestion() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google
   }
 
   /**
-   * Optional. Suggested summary.
    * @param summarySuggestion summarySuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestion setSummarySuggestion(GoogleCloudDialogflowV2SummarySuggestion summarySuggestion) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google
   }
 
   /**
-   * Optional. List of request and response for tool calls executed.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo> getToolCallInfo() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestion extends com.google
   }
 
   /**
-   * Optional. List of request and response for tool calls executed.
    * @param toolCallInfo toolCallInfo or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestion setToolCallInfo(java.util.List<GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo> toolCallInfo) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores extra information about why users provided thumbs down rating.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Additional feedback about the rating. This field can be populated without choosing a
-   * predefined `reason`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String feedback;
 
   /**
-   * Optional. Custom reason labels for thumbs down rating provided by the user. The maximum number
-   * of labels allowed is 10 and the maximum length of a single label is 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> reasonLabels;
 
   /**
-   * Optional. Additional feedback about the rating. This field can be populated without choosing a
-   * predefined `reason`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedback() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason exte
   }
 
   /**
-   * Optional. Additional feedback about the rating. This field can be populated without choosing a
-   * predefined `reason`.
    * @param feedback feedback or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason setFeedback(java.lang.String feedback) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason exte
   }
 
   /**
-   * Optional. Custom reason labels for thumbs down rating provided by the user. The maximum number
-   * of labels allowed is 10 and the maximum length of a single label is 128 characters.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReasonLabels() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason exte
   }
 
   /**
-   * Optional. Custom reason labels for thumbs down rating provided by the user. The maximum number
-   * of labels allowed is 10 and the maximum length of a single label is 128 characters.
    * @param reasonLabels reasonLabels or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AnswerFeedbackRatingReason setReasonLabels(java.util.List<java.lang.String> reasonLabels) {

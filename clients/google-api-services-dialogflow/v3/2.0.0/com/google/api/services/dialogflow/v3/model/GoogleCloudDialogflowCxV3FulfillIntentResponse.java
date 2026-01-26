@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Response of FulfillIntent
+ * Model definition for GoogleCloudDialogflowCxV3FulfillIntentResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,46 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputAudio;
 
   /**
-   * The config used by the speech synthesizer to generate the output audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig;
 
   /**
-   * The result of the conversational query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3QueryResult queryResult;
 
   /**
-   * Output only. The unique identifier of the response. It can be used to locate a response in the
-   * training example set or for reporting issues.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseId;
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
    * @see #decodeOutputAudio()
    * @return value or {@code null} for none
    */
@@ -78,12 +62,7 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.go
   }
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
+
    * @see #getOutputAudio()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -94,12 +73,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.go
   }
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
    * @see #encodeOutputAudio()
    * @param outputAudio outputAudio or {@code null} for none
    */
@@ -109,12 +82,7 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.go
   }
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
+
    * @see #setOutputAudio()
    *
    * <p>
@@ -129,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.go
   }
 
   /**
-   * The config used by the speech synthesizer to generate the output audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3OutputAudioConfig getOutputAudioConfig() {
@@ -137,7 +104,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.go
   }
 
   /**
-   * The config used by the speech synthesizer to generate the output audio.
    * @param outputAudioConfig outputAudioConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillIntentResponse setOutputAudioConfig(GoogleCloudDialogflowCxV3OutputAudioConfig outputAudioConfig) {
@@ -146,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.go
   }
 
   /**
-   * The result of the conversational query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3QueryResult getQueryResult() {
@@ -154,7 +119,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.go
   }
 
   /**
-   * The result of the conversational query.
    * @param queryResult queryResult or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillIntentResponse setQueryResult(GoogleCloudDialogflowCxV3QueryResult queryResult) {
@@ -163,8 +127,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.go
   }
 
   /**
-   * Output only. The unique identifier of the response. It can be used to locate a response in the
-   * training example set or for reporting issues.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseId() {
@@ -172,8 +134,6 @@ public final class GoogleCloudDialogflowCxV3FulfillIntentResponse extends com.go
   }
 
   /**
-   * Output only. The unique identifier of the response. It can be used to locate a response in the
-   * training example set or for reporting issues.
    * @param responseId responseId or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillIntentResponse setResponseId(java.lang.String responseId) {

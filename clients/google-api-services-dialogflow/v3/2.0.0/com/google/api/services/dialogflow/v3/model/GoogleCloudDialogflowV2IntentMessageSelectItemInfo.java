@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Additional info about the select item for when it is triggered in a dialog.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageSelectItemInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A unique key that will be sent back to the agent if this response is given.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Optional. A list of synonyms that can also be used to trigger this item in dialog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> synonyms;
 
   /**
-   * Required. A unique key that will be sent back to the agent if this response is given.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfo extends co
   }
 
   /**
-   * Required. A unique key that will be sent back to the agent if this response is given.
    * @param key key or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageSelectItemInfo setKey(java.lang.String key) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfo extends co
   }
 
   /**
-   * Optional. A list of synonyms that can also be used to trigger this item in dialog.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSynonyms() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfo extends co
   }
 
   /**
-   * Optional. A list of synonyms that can also be used to trigger this item in dialog.
    * @param synonyms synonyms or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageSelectItemInfo setSynonyms(java.util.List<java.lang.String> synonyms) {

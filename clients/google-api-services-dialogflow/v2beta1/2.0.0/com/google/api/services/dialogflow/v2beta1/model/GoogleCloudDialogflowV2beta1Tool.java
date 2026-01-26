@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents a tool.
+ * Model definition for GoogleCloudDialogflowV2beta1Tool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,108 +30,84 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Confirmation requirement for the actions. Each key is an action name in the
-   * action_schemas. If an action's confirmation requirement is unspecified (either the key is not
-   * present, or its value is CONFIRMATION_REQUIREMENT_UNSPECIFIED), the requirement is inferred
-   * from the action's method_type - confirmation is not required if and only if method_type is GET.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> actionConfirmationRequirement;
 
   /**
-   * Integration connectors tool specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ToolConnectorTool connectorSpec;
 
   /**
-   * Output only. Creation time of this tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. A human readable description of the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. A human readable short name of the tool, to be shown on the UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Vertex extension tool specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ToolExtensionTool extensionSpec;
 
   /**
-   * Client side executed function specification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ToolFunctionTool functionSpec;
 
   /**
-   * Output only. Identifier. The resource name of the tool. Format: `projects//locations//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * OpenAPI tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1ToolOpenApiTool openApiSpec;
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the tool. If the
-   * field is absent, it means the status is unknown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the tool. If the
-   * field is absent, it means the status is unknown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Required. A human readable short name of the tool, which should be unique within the project.
-   * It should only contain letters, numbers, and underscores, and it will be used by LLM to
-   * identify the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String toolKey;
 
   /**
-   * Output only. Update time of this tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. Confirmation requirement for the actions. Each key is an action name in the
-   * action_schemas. If an action's confirmation requirement is unspecified (either the key is not
-   * present, or its value is CONFIRMATION_REQUIREMENT_UNSPECIFIED), the requirement is inferred
-   * from the action's method_type - confirmation is not required if and only if method_type is GET.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getActionConfirmationRequirement() {
@@ -139,10 +115,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Optional. Confirmation requirement for the actions. Each key is an action name in the
-   * action_schemas. If an action's confirmation requirement is unspecified (either the key is not
-   * present, or its value is CONFIRMATION_REQUIREMENT_UNSPECIFIED), the requirement is inferred
-   * from the action's method_type - confirmation is not required if and only if method_type is GET.
    * @param actionConfirmationRequirement actionConfirmationRequirement or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setActionConfirmationRequirement(java.util.Map<String, java.lang.String> actionConfirmationRequirement) {
@@ -151,7 +123,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Integration connectors tool specification.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolConnectorTool getConnectorSpec() {
@@ -159,7 +130,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Integration connectors tool specification.
    * @param connectorSpec connectorSpec or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setConnectorSpec(GoogleCloudDialogflowV2beta1ToolConnectorTool connectorSpec) {
@@ -168,7 +138,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. Creation time of this tool.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -176,7 +145,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. Creation time of this tool.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setCreateTime(String createTime) {
@@ -185,7 +153,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Optional. A human readable description of the tool.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -193,7 +160,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Optional. A human readable description of the tool.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setDescription(java.lang.String description) {
@@ -202,7 +168,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Optional. A human readable short name of the tool, to be shown on the UI.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -210,7 +175,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Optional. A human readable short name of the tool, to be shown on the UI.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setDisplayName(java.lang.String displayName) {
@@ -219,7 +183,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Vertex extension tool specification.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolExtensionTool getExtensionSpec() {
@@ -227,7 +190,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Vertex extension tool specification.
    * @param extensionSpec extensionSpec or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setExtensionSpec(GoogleCloudDialogflowV2beta1ToolExtensionTool extensionSpec) {
@@ -236,7 +198,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Client side executed function specification.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolFunctionTool getFunctionSpec() {
@@ -244,7 +205,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Client side executed function specification.
    * @param functionSpec functionSpec or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setFunctionSpec(GoogleCloudDialogflowV2beta1ToolFunctionTool functionSpec) {
@@ -253,7 +213,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. Identifier. The resource name of the tool. Format: `projects//locations//tools/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -261,7 +220,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. Identifier. The resource name of the tool. Format: `projects//locations//tools/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setName(java.lang.String name) {
@@ -270,7 +228,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * OpenAPI tool.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolOpenApiTool getOpenApiSpec() {
@@ -278,7 +235,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * OpenAPI tool.
    * @param openApiSpec openApiSpec or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setOpenApiSpec(GoogleCloudDialogflowV2beta1ToolOpenApiTool openApiSpec) {
@@ -287,8 +243,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the tool. If the
-   * field is absent, it means the status is unknown.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -296,8 +250,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the tool. If the
-   * field is absent, it means the status is unknown.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -306,8 +258,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the tool. If the
-   * field is absent, it means the status is unknown.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -315,8 +265,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the tool. If the
-   * field is absent, it means the status is unknown.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -325,9 +273,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Required. A human readable short name of the tool, which should be unique within the project.
-   * It should only contain letters, numbers, and underscores, and it will be used by LLM to
-   * identify the tool.
    * @return value or {@code null} for none
    */
   public java.lang.String getToolKey() {
@@ -335,9 +280,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Required. A human readable short name of the tool, which should be unique within the project.
-   * It should only contain letters, numbers, and underscores, and it will be used by LLM to
-   * identify the tool.
    * @param toolKey toolKey or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setToolKey(java.lang.String toolKey) {
@@ -346,7 +288,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. Update time of this tool.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -354,7 +295,6 @@ public final class GoogleCloudDialogflowV2beta1Tool extends com.google.api.clien
   }
 
   /**
-   * Output only. Update time of this tool.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Tool setUpdateTime(String updateTime) {

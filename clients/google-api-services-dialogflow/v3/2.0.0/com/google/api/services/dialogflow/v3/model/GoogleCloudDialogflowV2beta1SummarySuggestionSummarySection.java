@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A component of the generated summary.
+ * Model definition for GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Name of the section.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String section;
 
   /**
-   * Required. Summary text for the section.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String summary;
 
   /**
-   * Required. Name of the section.
    * @return value or {@code null} for none
    */
   public java.lang.String getSection() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection e
   }
 
   /**
-   * Required. Name of the section.
    * @param section section or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection setSection(java.lang.String section) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection e
   }
 
   /**
-   * Required. Summary text for the section.
    * @return value or {@code null} for none
    */
   public java.lang.String getSummary() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection e
   }
 
   /**
-   * Required. Summary text for the section.
    * @param summary summary or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SummarySuggestionSummarySection setSummary(java.lang.String summary) {

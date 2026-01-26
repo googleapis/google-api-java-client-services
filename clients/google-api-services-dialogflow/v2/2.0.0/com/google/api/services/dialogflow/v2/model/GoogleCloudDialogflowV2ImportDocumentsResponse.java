@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Response message for Documents.ImportDocuments.
+ * Model definition for GoogleCloudDialogflowV2ImportDocumentsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ImportDocumentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Includes details about skipped documents or any other warnings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleRpcStatus> warnings;
 
   /**
-   * Includes details about skipped documents or any other warnings.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleRpcStatus> getWarnings() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentsResponse extends com.go
   }
 
   /**
-   * Includes details about skipped documents or any other warnings.
    * @param warnings warnings or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportDocumentsResponse setWarnings(java.util.List<GoogleRpcStatus> warnings) {

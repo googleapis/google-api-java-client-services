@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Metrics of each processing step.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Processing latency of the step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String latency;
 
   /**
-   * Name of the request processing step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Processing latency of the step.
    * @return value or {@code null} for none
    */
   public String getLatency() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetr
   }
 
   /**
-   * Processing latency of the step.
    * @param latency latency or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics setLatency(String latency) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetr
   }
 
   /**
-   * Name of the request processing step.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetr
   }
 
   /**
-   * Name of the request processing step.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics setName(java.lang.String name) {

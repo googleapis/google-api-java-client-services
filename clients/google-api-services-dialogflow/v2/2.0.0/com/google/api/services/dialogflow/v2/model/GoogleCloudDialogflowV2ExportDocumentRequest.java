@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Request message for Documents.ExportDocument.
+ * Model definition for GoogleCloudDialogflowV2ExportDocumentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ExportDocumentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * When enabled, export the full content of the document including empirical probability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean exportFullContent;
 
   /**
-   * Cloud Storage file path to export the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GcsDestination gcsDestination;
 
   /**
-   * When enabled, export the smart messaging allowlist document for partial update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean smartMessagingPartialUpdate;
 
   /**
-   * When enabled, export the full content of the document including empirical probability.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExportFullContent() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2ExportDocumentRequest extends com.goog
   }
 
   /**
-   * When enabled, export the full content of the document including empirical probability.
    * @param exportFullContent exportFullContent or {@code null} for none
    */
   public GoogleCloudDialogflowV2ExportDocumentRequest setExportFullContent(java.lang.Boolean exportFullContent) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowV2ExportDocumentRequest extends com.goog
   }
 
   /**
-   * Cloud Storage file path to export the document.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2GcsDestination getGcsDestination() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowV2ExportDocumentRequest extends com.goog
   }
 
   /**
-   * Cloud Storage file path to export the document.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public GoogleCloudDialogflowV2ExportDocumentRequest setGcsDestination(GoogleCloudDialogflowV2GcsDestination gcsDestination) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowV2ExportDocumentRequest extends com.goog
   }
 
   /**
-   * When enabled, export the smart messaging allowlist document for partial update.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSmartMessagingPartialUpdate() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowV2ExportDocumentRequest extends com.goog
   }
 
   /**
-   * When enabled, export the smart messaging allowlist document for partial update.
    * @param smartMessagingPartialUpdate smartMessagingPartialUpdate or {@code null} for none
    */
   public GoogleCloudDialogflowV2ExportDocumentRequest setSmartMessagingPartialUpdate(java.lang.Boolean smartMessagingPartialUpdate) {

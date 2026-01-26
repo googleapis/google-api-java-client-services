@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The response message for Conversations.GenerateStatelessSuggestion.
+ * Model definition for GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Generated suggestion for a conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion;
 
   /**
-   * Required. Generated suggestion for a conversation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestion getGeneratorSuggestion() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse ex
   }
 
   /**
-   * Required. Generated suggestion for a conversation.
    * @param generatorSuggestion generatorSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2GenerateStatelessSuggestionResponse setGeneratorSuggestion(GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion) {

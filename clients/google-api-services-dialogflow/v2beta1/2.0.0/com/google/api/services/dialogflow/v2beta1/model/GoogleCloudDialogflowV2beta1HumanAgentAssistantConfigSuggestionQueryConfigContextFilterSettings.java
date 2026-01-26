@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Settings that determine how to filter recent conversation context when generating suggestions.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +31,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set to true, the last message from virtual agent (hand off message) and the message before
-   * it (trigger message of hand off) are dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dropHandoffMessages;
 
   /**
-   * If set to true, all messages from ivr stage are dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dropIvrMessages;
 
   /**
-   * If set to true, all messages from virtual agent are dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dropVirtualAgentMessages;
 
   /**
-   * If set to true, the last message from virtual agent (hand off message) and the message before
-   * it (trigger message of hand off) are dropped.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDropHandoffMessages() {
@@ -61,8 +56,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * If set to true, the last message from virtual agent (hand off message) and the message before
-   * it (trigger message of hand off) are dropped.
    * @param dropHandoffMessages dropHandoffMessages or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings setDropHandoffMessages(java.lang.Boolean dropHandoffMessages) {
@@ -71,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * If set to true, all messages from ivr stage are dropped.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDropIvrMessages() {
@@ -79,7 +71,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * If set to true, all messages from ivr stage are dropped.
    * @param dropIvrMessages dropIvrMessages or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings setDropIvrMessages(java.lang.Boolean dropIvrMessages) {
@@ -88,7 +79,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * If set to true, all messages from virtual agent are dropped.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDropVirtualAgentMessages() {
@@ -96,7 +86,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
   }
 
   /**
-   * If set to true, all messages from virtual agent are dropped.
    * @param dropVirtualAgentMessages dropVirtualAgentMessages or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettings setDropVirtualAgentMessages(java.lang.Boolean dropVirtualAgentMessages) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for EntityTypes.BatchDeleteEntities.
+ * Model definition for GoogleCloudDialogflowV2BatchDeleteEntitiesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,25 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2BatchDeleteEntitiesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The reference `values` of the entities to delete. Note that these are not fully-
-   * qualified names, i.e. they don't start with `projects/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entityValues;
 
   /**
-   * Optional. The language used to access language-specific data. If not specified, the agent's
-   * default language is used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Required. The reference `values` of the entities to delete. Note that these are not fully-
-   * qualified names, i.e. they don't start with `projects/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntityValues() {
@@ -56,8 +49,6 @@ public final class GoogleCloudDialogflowV2BatchDeleteEntitiesRequest extends com
   }
 
   /**
-   * Required. The reference `values` of the entities to delete. Note that these are not fully-
-   * qualified names, i.e. they don't start with `projects/`.
    * @param entityValues entityValues or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchDeleteEntitiesRequest setEntityValues(java.util.List<java.lang.String> entityValues) {
@@ -66,9 +57,6 @@ public final class GoogleCloudDialogflowV2BatchDeleteEntitiesRequest extends com
   }
 
   /**
-   * Optional. The language used to access language-specific data. If not specified, the agent's
-   * default language is used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -76,9 +64,6 @@ public final class GoogleCloudDialogflowV2BatchDeleteEntitiesRequest extends com
   }
 
   /**
-   * Optional. The language used to access language-specific data. If not specified, the agent's
-   * default language is used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchDeleteEntitiesRequest setLanguageCode(java.lang.String languageCode) {

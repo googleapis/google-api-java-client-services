@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A FallbackPrompt is a way to provide specifications for the Data Store fallback prompt when
- * generating responses.
+ * Model definition for GoogleCloudDialogflowCxV3ToolDataStoreToolFallbackPrompt.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

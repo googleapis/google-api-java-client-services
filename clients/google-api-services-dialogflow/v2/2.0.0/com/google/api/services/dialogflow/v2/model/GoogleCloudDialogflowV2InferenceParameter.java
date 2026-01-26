@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The parameters of inference.
+ * Model definition for GoogleCloudDialogflowV2InferenceParameter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,49 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2InferenceParameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Maximum number of the output tokens for the generator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxOutputTokens;
 
   /**
-   * Optional. Controls the randomness of LLM predictions. Low temperature = less random. High
-   * temperature = more random. If unset (or 0), uses a default value of 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double temperature;
 
   /**
-   * Optional. Top-k changes how the model selects tokens for output. A top-k of 1 means the
-   * selected token is the most probable among all tokens in the model's vocabulary (also called
-   * greedy decoding), while a top-k of 3 means that the next token is selected from among the 3
-   * most probable tokens (using temperature). For each token selection step, the top K tokens with
-   * the highest probabilities are sampled. Then tokens are further filtered based on topP with the
-   * final token selected using temperature sampling. Specify a lower value for less random
-   * responses and a higher value for more random responses. Acceptable value is [1, 40], default to
-   * 40.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer topK;
 
   /**
-   * Optional. Top-p changes how the model selects tokens for output. Tokens are selected from most
-   * K (see topK parameter) probable to least until the sum of their probabilities equals the top-p
-   * value. For example, if tokens A, B, and C have a probability of 0.3, 0.2, and 0.1 and the top-p
-   * value is 0.5, then the model will select either A or B as the next token (using temperature)
-   * and doesn't consider C. The default top-p value is 0.95. Specify a lower value for less random
-   * responses and a higher value for more random responses. Acceptable value is [0.0, 1.0], default
-   * to 0.95.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double topP;
 
   /**
-   * Optional. Maximum number of the output tokens for the generator.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxOutputTokens() {
@@ -80,7 +61,6 @@ public final class GoogleCloudDialogflowV2InferenceParameter extends com.google.
   }
 
   /**
-   * Optional. Maximum number of the output tokens for the generator.
    * @param maxOutputTokens maxOutputTokens or {@code null} for none
    */
   public GoogleCloudDialogflowV2InferenceParameter setMaxOutputTokens(java.lang.Integer maxOutputTokens) {
@@ -89,8 +69,6 @@ public final class GoogleCloudDialogflowV2InferenceParameter extends com.google.
   }
 
   /**
-   * Optional. Controls the randomness of LLM predictions. Low temperature = less random. High
-   * temperature = more random. If unset (or 0), uses a default value of 0.
    * @return value or {@code null} for none
    */
   public java.lang.Double getTemperature() {
@@ -98,8 +76,6 @@ public final class GoogleCloudDialogflowV2InferenceParameter extends com.google.
   }
 
   /**
-   * Optional. Controls the randomness of LLM predictions. Low temperature = less random. High
-   * temperature = more random. If unset (or 0), uses a default value of 0.
    * @param temperature temperature or {@code null} for none
    */
   public GoogleCloudDialogflowV2InferenceParameter setTemperature(java.lang.Double temperature) {
@@ -108,14 +84,6 @@ public final class GoogleCloudDialogflowV2InferenceParameter extends com.google.
   }
 
   /**
-   * Optional. Top-k changes how the model selects tokens for output. A top-k of 1 means the
-   * selected token is the most probable among all tokens in the model's vocabulary (also called
-   * greedy decoding), while a top-k of 3 means that the next token is selected from among the 3
-   * most probable tokens (using temperature). For each token selection step, the top K tokens with
-   * the highest probabilities are sampled. Then tokens are further filtered based on topP with the
-   * final token selected using temperature sampling. Specify a lower value for less random
-   * responses and a higher value for more random responses. Acceptable value is [1, 40], default to
-   * 40.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTopK() {
@@ -123,14 +91,6 @@ public final class GoogleCloudDialogflowV2InferenceParameter extends com.google.
   }
 
   /**
-   * Optional. Top-k changes how the model selects tokens for output. A top-k of 1 means the
-   * selected token is the most probable among all tokens in the model's vocabulary (also called
-   * greedy decoding), while a top-k of 3 means that the next token is selected from among the 3
-   * most probable tokens (using temperature). For each token selection step, the top K tokens with
-   * the highest probabilities are sampled. Then tokens are further filtered based on topP with the
-   * final token selected using temperature sampling. Specify a lower value for less random
-   * responses and a higher value for more random responses. Acceptable value is [1, 40], default to
-   * 40.
    * @param topK topK or {@code null} for none
    */
   public GoogleCloudDialogflowV2InferenceParameter setTopK(java.lang.Integer topK) {
@@ -139,13 +99,6 @@ public final class GoogleCloudDialogflowV2InferenceParameter extends com.google.
   }
 
   /**
-   * Optional. Top-p changes how the model selects tokens for output. Tokens are selected from most
-   * K (see topK parameter) probable to least until the sum of their probabilities equals the top-p
-   * value. For example, if tokens A, B, and C have a probability of 0.3, 0.2, and 0.1 and the top-p
-   * value is 0.5, then the model will select either A or B as the next token (using temperature)
-   * and doesn't consider C. The default top-p value is 0.95. Specify a lower value for less random
-   * responses and a higher value for more random responses. Acceptable value is [0.0, 1.0], default
-   * to 0.95.
    * @return value or {@code null} for none
    */
   public java.lang.Double getTopP() {
@@ -153,13 +106,6 @@ public final class GoogleCloudDialogflowV2InferenceParameter extends com.google.
   }
 
   /**
-   * Optional. Top-p changes how the model selects tokens for output. Tokens are selected from most
-   * K (see topK parameter) probable to least until the sum of their probabilities equals the top-p
-   * value. For example, if tokens A, B, and C have a probability of 0.3, 0.2, and 0.1 and the top-p
-   * value is 0.5, then the model will select either A or B as the next token (using temperature)
-   * and doesn't consider C. The default top-p value is 0.95. Specify a lower value for less random
-   * responses and a higher value for more random responses. Acceptable value is [0.0, 1.0], default
-   * to 0.95.
    * @param topP topP or {@code null} for none
    */
   public GoogleCloudDialogflowV2InferenceParameter setTopP(java.lang.Double topP) {

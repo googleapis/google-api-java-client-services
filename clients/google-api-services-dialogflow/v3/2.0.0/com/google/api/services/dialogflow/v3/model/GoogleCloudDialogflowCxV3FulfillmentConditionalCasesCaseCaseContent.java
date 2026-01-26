@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The list of messages or conditional cases to activate for this case.
+ * Model definition for GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional cases to be evaluated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3FulfillmentConditionalCases additionalCases;
 
   /**
-   * Returned message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ResponseMessage message;
 
   /**
-   * Additional cases to be evaluated.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillmentConditionalCases getAdditionalCases() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
   }
 
   /**
-   * Additional cases to be evaluated.
    * @param additionalCases additionalCases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent setAdditionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCases additionalCases) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
   }
 
   /**
-   * Returned message.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessage getMessage() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseC
   }
 
   /**
-   * Returned message.
    * @param message message or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent setMessage(GoogleCloudDialogflowCxV3ResponseMessage message) {

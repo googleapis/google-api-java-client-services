@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The Knowledge Connector settings for this page or flow. This includes information such as the
- * attached Knowledge Bases, and the way to execute fulfillment.
+ * Model definition for GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,7 +30,6 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. List of related data store connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,38 +42,30 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * Whether Knowledge Connector is enabled or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetFlow;
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetPage;
 
   /**
-   * The fulfillment to be triggered. When the answers from the Knowledge Connector are selected by
-   * Dialogflow, you can utitlize the request scoped parameter `$request.knowledge.answers`
-   * (contains up to the 5 highest confidence answers) and `$request.knowledge.questions` (contains
-   * the corresponding questions) to construct the fulfillment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Fulfillment triggerFulfillment;
 
   /**
-   * Optional. List of related data store connections.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnection> getDataStoreConnections() {
@@ -83,7 +73,6 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * Optional. List of related data store connections.
    * @param dataStoreConnections dataStoreConnections or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings setDataStoreConnections(java.util.List<GoogleCloudDialogflowCxV3beta1DataStoreConnection> dataStoreConnections) {
@@ -92,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * Whether Knowledge Connector is enabled or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -100,7 +88,6 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * Whether Knowledge Connector is enabled or not.
    * @param enabled enabled or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings setEnabled(java.lang.Boolean enabled) {
@@ -109,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetFlow() {
@@ -117,7 +103,6 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * The target flow to transition to. Format: `projects//locations//agents//flows/`.
    * @param targetFlow targetFlow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings setTargetFlow(java.lang.String targetFlow) {
@@ -126,7 +111,6 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetPage() {
@@ -134,7 +118,6 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * The target page to transition to. Format: `projects//locations//agents//flows//pages/`.
    * @param targetPage targetPage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings setTargetPage(java.lang.String targetPage) {
@@ -143,10 +126,6 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * The fulfillment to be triggered. When the answers from the Knowledge Connector are selected by
-   * Dialogflow, you can utitlize the request scoped parameter `$request.knowledge.answers`
-   * (contains up to the 5 highest confidence answers) and `$request.knowledge.questions` (contains
-   * the corresponding questions) to construct the fulfillment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Fulfillment getTriggerFulfillment() {
@@ -154,10 +133,6 @@ public final class GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings exte
   }
 
   /**
-   * The fulfillment to be triggered. When the answers from the Knowledge Connector are selected by
-   * Dialogflow, you can utitlize the request scoped parameter `$request.knowledge.answers`
-   * (contains up to the 5 highest confidence answers) and `$request.knowledge.questions` (contains
-   * the corresponding questions) to construct the fulfillment.
    * @param triggerFulfillment triggerFulfillment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings setTriggerFulfillment(GoogleCloudDialogflowCxV3beta1Fulfillment triggerFulfillment) {

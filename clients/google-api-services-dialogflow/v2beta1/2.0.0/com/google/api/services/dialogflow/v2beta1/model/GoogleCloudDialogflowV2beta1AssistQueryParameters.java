@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents the parameters of human assist query.
+ * Model definition for GoogleCloudDialogflowV2beta1AssistQueryParameters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1AssistQueryParameters extends com.google.api.client.json.GenericJson {
 
   /**
-   * Key-value filters on the metadata of documents returned by article suggestion. If specified,
-   * article suggestion only returns suggested documents that match all filters in their
-   * Document.metadata. Multiple values for a metadata key should be concatenated by comma. For
-   * example, filters to match all documents that have 'US' or 'CA' in their market metadata values
-   * and 'agent' in their user metadata values will be ``` documents_metadata_filters { key:
-   * "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> documentsMetadataFilters;
 
   /**
-   * Key-value filters on the metadata of documents returned by article suggestion. If specified,
-   * article suggestion only returns suggested documents that match all filters in their
-   * Document.metadata. Multiple values for a metadata key should be concatenated by comma. For
-   * example, filters to match all documents that have 'US' or 'CA' in their market metadata values
-   * and 'agent' in their user metadata values will be ``` documents_metadata_filters { key:
-   * "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getDocumentsMetadataFilters() {
@@ -55,12 +43,6 @@ public final class GoogleCloudDialogflowV2beta1AssistQueryParameters extends com
   }
 
   /**
-   * Key-value filters on the metadata of documents returned by article suggestion. If specified,
-   * article suggestion only returns suggested documents that match all filters in their
-   * Document.metadata. Multiple values for a metadata key should be concatenated by comma. For
-   * example, filters to match all documents that have 'US' or 'CA' in their market metadata values
-   * and 'agent' in their user metadata values will be ``` documents_metadata_filters { key:
-   * "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" } ```
    * @param documentsMetadataFilters documentsMetadataFilters or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AssistQueryParameters setDocumentsMetadataFilters(java.util.Map<String, java.lang.String> documentsMetadataFilters) {

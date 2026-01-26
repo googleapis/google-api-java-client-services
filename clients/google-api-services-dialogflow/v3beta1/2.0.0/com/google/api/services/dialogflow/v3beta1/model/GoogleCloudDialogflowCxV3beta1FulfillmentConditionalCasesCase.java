@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Each case has a Boolean condition. When it is evaluated to be True, the corresponding messages
- * will be selected and evaluated recursively.
+ * Model definition for GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,23 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of case content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContent> caseContent;
 
   /**
-   * The condition to activate and select this case. Empty means the condition is always true. The
-   * condition is evaluated against form parameters or session parameters. See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * A list of case content.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContent> getCaseContent() {
@@ -55,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
   }
 
   /**
-   * A list of case content.
    * @param caseContent caseContent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase setCaseContent(java.util.List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContent> caseContent) {
@@ -64,9 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
   }
 
   /**
-   * The condition to activate and select this case. Empty means the condition is always true. The
-   * condition is evaluated against form parameters or session parameters. See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -74,9 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
   }
 
   /**
-   * The condition to activate and select this case. Empty means the condition is always true. The
-   * condition is evaluated against form parameters or session parameters. See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase setCondition(java.lang.String condition) {

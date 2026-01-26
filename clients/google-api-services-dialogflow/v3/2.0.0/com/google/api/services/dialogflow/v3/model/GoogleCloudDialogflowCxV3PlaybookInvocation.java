@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Stores metadata of the invocation of a child playbook.
+ * Model definition for GoogleCloudDialogflowCxV3PlaybookInvocation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,43 +30,36 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The display name of the playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. The unique identifier of the playbook. Format:
-   * `projects//locations//agents//playbooks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String playbook;
 
   /**
-   * Optional. Input of the child playbook invocation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3PlaybookInput playbookInput;
 
   /**
-   * Optional. Output of the child playbook invocation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3PlaybookOutput playbookOutput;
 
   /**
-   * Required. Playbook invocation's output state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String playbookState;
 
   /**
-   * Output only. The display name of the playbook.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -74,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.googl
   }
 
   /**
-   * Output only. The display name of the playbook.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookInvocation setDisplayName(java.lang.String displayName) {
@@ -83,8 +75,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.googl
   }
 
   /**
-   * Required. The unique identifier of the playbook. Format:
-   * `projects//locations//agents//playbooks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaybook() {
@@ -92,8 +82,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.googl
   }
 
   /**
-   * Required. The unique identifier of the playbook. Format:
-   * `projects//locations//agents//playbooks/`.
    * @param playbook playbook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookInvocation setPlaybook(java.lang.String playbook) {
@@ -102,7 +90,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.googl
   }
 
   /**
-   * Optional. Input of the child playbook invocation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookInput getPlaybookInput() {
@@ -110,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.googl
   }
 
   /**
-   * Optional. Input of the child playbook invocation.
    * @param playbookInput playbookInput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookInvocation setPlaybookInput(GoogleCloudDialogflowCxV3PlaybookInput playbookInput) {
@@ -119,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.googl
   }
 
   /**
-   * Optional. Output of the child playbook invocation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookOutput getPlaybookOutput() {
@@ -127,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.googl
   }
 
   /**
-   * Optional. Output of the child playbook invocation.
    * @param playbookOutput playbookOutput or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookInvocation setPlaybookOutput(GoogleCloudDialogflowCxV3PlaybookOutput playbookOutput) {
@@ -136,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.googl
   }
 
   /**
-   * Required. Playbook invocation's output state.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaybookState() {
@@ -144,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3PlaybookInvocation extends com.googl
   }
 
   /**
-   * Required. Playbook invocation's output state.
    * @param playbookState playbookState or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookInvocation setPlaybookState(java.lang.String playbookState) {

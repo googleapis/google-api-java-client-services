@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * A session represents a conversation between a Dialogflow agent and an end-user. You can create
- * special entities, called session entities, during a session. Session entities can extend or
- * replace custom entity types and only exist during the session that they were created for. All
- * session data, including session entities, is stored by Dialogflow for 20 minutes. For more
- * information, see the [session entity guide](https://cloud.google.com/dialogflow/docs/entities-
- * session).
+ * Model definition for GoogleCloudDialogflowV2SessionEntityType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,7 +30,6 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The collection of entities associated with this session entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,27 +42,18 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   }
 
   /**
-   * Required. Indicates whether the additional data should override or supplement the custom entity
-   * type definition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityOverrideMode;
 
   /**
-   * Required. The unique identifier of this session entity type. Format:
-   * `projects//agent/sessions//entityTypes/`, or
-   * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not
-   * specified, we assume default 'draft' environment. If `User ID` is not specified, we assume
-   * default '-' user. `` must be the display name of an existing entity type in the same agent that
-   * will be overridden or supplemented.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The collection of entities associated with this session entity type.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> getEntities() {
@@ -76,7 +61,6 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   }
 
   /**
-   * Required. The collection of entities associated with this session entity type.
    * @param entities entities or {@code null} for none
    */
   public GoogleCloudDialogflowV2SessionEntityType setEntities(java.util.List<GoogleCloudDialogflowV2EntityTypeEntity> entities) {
@@ -85,8 +69,6 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   }
 
   /**
-   * Required. Indicates whether the additional data should override or supplement the custom entity
-   * type definition.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityOverrideMode() {
@@ -94,8 +76,6 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   }
 
   /**
-   * Required. Indicates whether the additional data should override or supplement the custom entity
-   * type definition.
    * @param entityOverrideMode entityOverrideMode or {@code null} for none
    */
   public GoogleCloudDialogflowV2SessionEntityType setEntityOverrideMode(java.lang.String entityOverrideMode) {
@@ -104,12 +84,6 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   }
 
   /**
-   * Required. The unique identifier of this session entity type. Format:
-   * `projects//agent/sessions//entityTypes/`, or
-   * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not
-   * specified, we assume default 'draft' environment. If `User ID` is not specified, we assume
-   * default '-' user. `` must be the display name of an existing entity type in the same agent that
-   * will be overridden or supplemented.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -117,12 +91,6 @@ public final class GoogleCloudDialogflowV2SessionEntityType extends com.google.a
   }
 
   /**
-   * Required. The unique identifier of this session entity type. Format:
-   * `projects//agent/sessions//entityTypes/`, or
-   * `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not
-   * specified, we assume default 'draft' environment. If `User ID` is not specified, we assume
-   * default '-' user. `` must be the display name of an existing entity type in the same agent that
-   * will be overridden or supplemented.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2SessionEntityType setName(java.lang.String name) {

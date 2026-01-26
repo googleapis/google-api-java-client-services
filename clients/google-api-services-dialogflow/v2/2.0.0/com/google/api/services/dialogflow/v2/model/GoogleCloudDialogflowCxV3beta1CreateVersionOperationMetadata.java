@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Metadata associated with the long running operation for Versions.CreateVersion.
+ * Model definition for GoogleCloudDialogflowCxV3beta1CreateVersionOperationMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3beta1CreateVersionOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the created version. Format: `projects//locations//agents//flows//versions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Name of the created version. Format: `projects//locations//agents//flows//versions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1CreateVersionOperationMetadata 
   }
 
   /**
-   * Name of the created version. Format: `projects//locations//agents//flows//versions/`.
    * @param version version or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1CreateVersionOperationMetadata setVersion(java.lang.String version) {

@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Configuration for authentication using a service account.
+ * Model definition for
+ * GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceServiceAccountAuthConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +31,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceServiceAccountAuthConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The email address of the service account used to authenticate the webhook call.
-   * Dialogflow uses this service account to exchange an access token and the access token is then
-   * sent in the `Authorization` header of the webhook request. The service account must have the
-   * `roles/iam.serviceAccountTokenCreator` role granted to the [Dialogflow service
-   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * Required. The email address of the service account used to authenticate the webhook call.
-   * Dialogflow uses this service account to exchange an access token and the access token is then
-   * sent in the `Authorization` header of the webhook request. The service account must have the
-   * `roles/iam.serviceAccountTokenCreator` role granted to the [Dialogflow service
-   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent).
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -53,11 +44,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceService
   }
 
   /**
-   * Required. The email address of the service account used to authenticate the webhook call.
-   * Dialogflow uses this service account to exchange an access token and the access token is then
-   * sent in the `Authorization` header of the webhook request. The service account must have the
-   * `roles/iam.serviceAccountTokenCreator` role granted to the [Dialogflow service
-   * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent).
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceServiceAccountAuthConfig setServiceAccount(java.lang.String serviceAccount) {

@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The request message to create one Message. Currently it is only used in
- * BatchCreateMessagesRequest.
+ * Model definition for GoogleCloudDialogflowV2beta1CreateMessageRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,22 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1CreateMessageRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The message to create. Message.participant is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1Message message;
 
   /**
-   * Required. Resource identifier of the conversation to create message. Format:
-   * `projects//locations//conversations/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Required. The message to create. Message.participant is required.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message getMessage() {
@@ -54,7 +49,6 @@ public final class GoogleCloudDialogflowV2beta1CreateMessageRequest extends com.
   }
 
   /**
-   * Required. The message to create. Message.participant is required.
    * @param message message or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CreateMessageRequest setMessage(GoogleCloudDialogflowV2beta1Message message) {
@@ -63,8 +57,6 @@ public final class GoogleCloudDialogflowV2beta1CreateMessageRequest extends com.
   }
 
   /**
-   * Required. Resource identifier of the conversation to create message. Format:
-   * `projects//locations//conversations/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -72,8 +64,6 @@ public final class GoogleCloudDialogflowV2beta1CreateMessageRequest extends com.
   }
 
   /**
-   * Required. Resource identifier of the conversation to create message. Format:
-   * `projects//locations//conversations/`.
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CreateMessageRequest setParent(java.lang.String parent) {

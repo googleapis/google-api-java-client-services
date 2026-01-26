@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The message in the response that indicates the parameters of DTMF.
+ * Model definition for GoogleCloudDialogflowV2DtmfParameters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2DtmfParameters extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether DTMF input can be handled in the next request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean acceptsDtmfInput;
 
   /**
-   * Indicates whether DTMF input can be handled in the next request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAcceptsDtmfInput() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2DtmfParameters extends com.google.api.
   }
 
   /**
-   * Indicates whether DTMF input can be handled in the next request.
    * @param acceptsDtmfInput acceptsDtmfInput or {@code null} for none
    */
   public GoogleCloudDialogflowV2DtmfParameters setAcceptsDtmfInput(java.lang.Boolean acceptsDtmfInput) {

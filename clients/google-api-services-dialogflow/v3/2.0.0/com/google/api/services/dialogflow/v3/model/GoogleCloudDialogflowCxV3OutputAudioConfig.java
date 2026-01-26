@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Instructs the speech synthesizer how to generate the output audio content.
+ * Model definition for GoogleCloudDialogflowCxV3OutputAudioConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,32 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3OutputAudioConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Audio encoding of the synthesized audio content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioEncoding;
 
   /**
-   * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the
-   * synthesizer will use the default sample rate based on the audio encoding. If this is different
-   * from the voice's natural sample rate, then the synthesizer will honor this request by
-   * converting to the desired sample rate (which might result in worse audio quality).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * Optional. Configuration of how speech should be synthesized. If not specified,
-   * Agent.text_to_speech_settings is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3SynthesizeSpeechConfig synthesizeSpeechConfig;
 
   /**
-   * Required. Audio encoding of the synthesized audio content.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioEncoding() {
@@ -63,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3OutputAudioConfig extends com.google
   }
 
   /**
-   * Required. Audio encoding of the synthesized audio content.
    * @param audioEncoding audioEncoding or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3OutputAudioConfig setAudioEncoding(java.lang.String audioEncoding) {
@@ -72,10 +63,6 @@ public final class GoogleCloudDialogflowCxV3OutputAudioConfig extends com.google
   }
 
   /**
-   * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the
-   * synthesizer will use the default sample rate based on the audio encoding. If this is different
-   * from the voice's natural sample rate, then the synthesizer will honor this request by
-   * converting to the desired sample rate (which might result in worse audio quality).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleRateHertz() {
@@ -83,10 +70,6 @@ public final class GoogleCloudDialogflowCxV3OutputAudioConfig extends com.google
   }
 
   /**
-   * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the
-   * synthesizer will use the default sample rate based on the audio encoding. If this is different
-   * from the voice's natural sample rate, then the synthesizer will honor this request by
-   * converting to the desired sample rate (which might result in worse audio quality).
    * @param sampleRateHertz sampleRateHertz or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3OutputAudioConfig setSampleRateHertz(java.lang.Integer sampleRateHertz) {
@@ -95,8 +78,6 @@ public final class GoogleCloudDialogflowCxV3OutputAudioConfig extends com.google
   }
 
   /**
-   * Optional. Configuration of how speech should be synthesized. If not specified,
-   * Agent.text_to_speech_settings is applied.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SynthesizeSpeechConfig getSynthesizeSpeechConfig() {
@@ -104,8 +85,6 @@ public final class GoogleCloudDialogflowCxV3OutputAudioConfig extends com.google
   }
 
   /**
-   * Optional. Configuration of how speech should be synthesized. If not specified,
-   * Agent.text_to_speech_settings is applied.
    * @param synthesizeSpeechConfig synthesizeSpeechConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3OutputAudioConfig setSynthesizeSpeechConfig(GoogleCloudDialogflowCxV3SynthesizeSpeechConfig synthesizeSpeechConfig) {

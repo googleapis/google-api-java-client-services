@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Collection of all signals that were extracted for a single turn of the conversation.
+ * Model definition for GoogleCloudDialogflowV3alpha1TurnSignals.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,86 +30,72 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether agent responded with LiveAgentHandoff fulfillment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean agentEscalated;
 
   /**
-   * Whether user was using DTMF input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dtmfUsed;
 
   /**
-   * Failure reasons of the turn.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> failureReasons;
 
   /**
-   * Whether NLU predicted NO_MATCH.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean noMatch;
 
   /**
-   * Whether user provided no input.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean noUserInput;
 
   /**
-   * Whether turn resulted in End Session page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reachedEndPage;
 
   /**
-   * Sentiment magnitude of the user utterance if
-   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float sentimentMagnitude;
 
   /**
-   * Sentiment score of the user utterance if
-   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float sentimentScore;
 
   /**
-   * Whether agent has triggered the event corresponding to user abandoning the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean triggeredAbandonmentEvent;
 
   /**
-   * Whether user was specifically asking for a live agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean userEscalated;
 
   /**
-   * Human-readable statuses of the webhooks triggered during this turn.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> webhookStatuses;
 
   /**
-   * Whether agent responded with LiveAgentHandoff fulfillment.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAgentEscalated() {
@@ -117,7 +103,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether agent responded with LiveAgentHandoff fulfillment.
    * @param agentEscalated agentEscalated or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setAgentEscalated(java.lang.Boolean agentEscalated) {
@@ -126,7 +111,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether user was using DTMF input.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDtmfUsed() {
@@ -134,7 +118,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether user was using DTMF input.
    * @param dtmfUsed dtmfUsed or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setDtmfUsed(java.lang.Boolean dtmfUsed) {
@@ -143,7 +126,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Failure reasons of the turn.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFailureReasons() {
@@ -151,7 +133,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Failure reasons of the turn.
    * @param failureReasons failureReasons or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setFailureReasons(java.util.List<java.lang.String> failureReasons) {
@@ -160,7 +141,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether NLU predicted NO_MATCH.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNoMatch() {
@@ -168,7 +148,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether NLU predicted NO_MATCH.
    * @param noMatch noMatch or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setNoMatch(java.lang.Boolean noMatch) {
@@ -177,7 +156,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether user provided no input.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNoUserInput() {
@@ -185,7 +163,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether user provided no input.
    * @param noUserInput noUserInput or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setNoUserInput(java.lang.Boolean noUserInput) {
@@ -194,7 +171,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether turn resulted in End Session page.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReachedEndPage() {
@@ -202,7 +178,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether turn resulted in End Session page.
    * @param reachedEndPage reachedEndPage or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setReachedEndPage(java.lang.Boolean reachedEndPage) {
@@ -211,8 +186,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Sentiment magnitude of the user utterance if
-   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Float getSentimentMagnitude() {
@@ -220,8 +193,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Sentiment magnitude of the user utterance if
-   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
    * @param sentimentMagnitude sentimentMagnitude or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setSentimentMagnitude(java.lang.Float sentimentMagnitude) {
@@ -230,8 +201,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Sentiment score of the user utterance if
-   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Float getSentimentScore() {
@@ -239,8 +208,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Sentiment score of the user utterance if
-   * [sentiment](https://cloud.google.com/dialogflow/cx/docs/concept/sentiment) was enabled.
    * @param sentimentScore sentimentScore or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setSentimentScore(java.lang.Float sentimentScore) {
@@ -249,7 +216,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether agent has triggered the event corresponding to user abandoning the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTriggeredAbandonmentEvent() {
@@ -257,7 +223,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether agent has triggered the event corresponding to user abandoning the conversation.
    * @param triggeredAbandonmentEvent triggeredAbandonmentEvent or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setTriggeredAbandonmentEvent(java.lang.Boolean triggeredAbandonmentEvent) {
@@ -266,7 +231,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether user was specifically asking for a live agent.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUserEscalated() {
@@ -274,7 +238,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Whether user was specifically asking for a live agent.
    * @param userEscalated userEscalated or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setUserEscalated(java.lang.Boolean userEscalated) {
@@ -283,7 +246,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Human-readable statuses of the webhooks triggered during this turn.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getWebhookStatuses() {
@@ -291,7 +253,6 @@ public final class GoogleCloudDialogflowV3alpha1TurnSignals extends com.google.a
   }
 
   /**
-   * Human-readable statuses of the webhooks triggered during this turn.
    * @param webhookStatuses webhookStatuses or {@code null} for none
    */
   public GoogleCloudDialogflowV3alpha1TurnSignals setWebhookStatuses(java.util.List<java.lang.String> webhookStatuses) {

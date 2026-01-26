@@ -17,10 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * A form is a data model that groups related parameters that can be collected from the user. The
- * process in which the agent prompts the user and collects parameter values from the user is called
- * form filling. A form can be added to a page. When form filling is done, the filled parameters
- * will be written to the session.
+ * Model definition for GoogleCloudDialogflowCxV3Form.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -33,14 +30,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3Form extends com.google.api.client.json.GenericJson {
 
   /**
-   * Parameters to collect from the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3FormParameter> parameters;
 
   /**
-   * Parameters to collect from the user.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3FormParameter> getParameters() {
@@ -48,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3Form extends com.google.api.client.j
   }
 
   /**
-   * Parameters to collect from the user.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Form setParameters(java.util.List<GoogleCloudDialogflowCxV3FormParameter> parameters) {

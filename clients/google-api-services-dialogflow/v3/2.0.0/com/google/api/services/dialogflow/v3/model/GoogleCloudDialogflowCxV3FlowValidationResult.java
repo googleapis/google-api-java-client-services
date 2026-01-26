@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for Flows.GetFlowValidationResult.
+ * Model definition for GoogleCloudDialogflowCxV3FlowValidationResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3FlowValidationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique identifier of the flow validation result. Format:
-   * `projects//locations//agents//flows//validationResult`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Last time the flow was validated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Contains all validation messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3ValidationMessage> validationMessages;
 
   /**
-   * The unique identifier of the flow validation result. Format:
-   * `projects//locations//agents//flows//validationResult`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -61,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3FlowValidationResult extends com.goo
   }
 
   /**
-   * The unique identifier of the flow validation result. Format:
-   * `projects//locations//agents//flows//validationResult`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowValidationResult setName(java.lang.String name) {
@@ -71,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3FlowValidationResult extends com.goo
   }
 
   /**
-   * Last time the flow was validated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -79,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3FlowValidationResult extends com.goo
   }
 
   /**
-   * Last time the flow was validated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowValidationResult setUpdateTime(String updateTime) {
@@ -88,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3FlowValidationResult extends com.goo
   }
 
   /**
-   * Contains all validation messages.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3ValidationMessage> getValidationMessages() {
@@ -96,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3FlowValidationResult extends com.goo
   }
 
   /**
-   * Contains all validation messages.
    * @param validationMessages validationMessages or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowValidationResult setValidationMessages(java.util.List<GoogleCloudDialogflowCxV3ValidationMessage> validationMessages) {

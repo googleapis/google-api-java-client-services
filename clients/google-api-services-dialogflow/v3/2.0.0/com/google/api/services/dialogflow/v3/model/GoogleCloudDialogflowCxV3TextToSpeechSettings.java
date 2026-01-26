@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings related to speech synthesizing.
+ * Model definition for GoogleCloudDialogflowCxV3TextToSpeechSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,13 +30,6 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3TextToSpeechSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration of how speech should be synthesized, mapping from language
-   * (https://cloud.google.com/dialogflow/cx/docs/reference/language) to SynthesizeSpeechConfig.
-   * These settings affect: - The [phone
-   * gateway](https://cloud.google.com/dialogflow/cx/docs/concept/integration/phone-gateway)
-   * synthesize configuration set via Agent.text_to_speech_settings. - How speech is synthesized
-   * when invoking session APIs. Agent.text_to_speech_settings only applies if
-   * OutputAudioConfig.synthesize_speech_config is not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,13 +42,6 @@ public final class GoogleCloudDialogflowCxV3TextToSpeechSettings extends com.goo
   }
 
   /**
-   * Configuration of how speech should be synthesized, mapping from language
-   * (https://cloud.google.com/dialogflow/cx/docs/reference/language) to SynthesizeSpeechConfig.
-   * These settings affect: - The [phone
-   * gateway](https://cloud.google.com/dialogflow/cx/docs/concept/integration/phone-gateway)
-   * synthesize configuration set via Agent.text_to_speech_settings. - How speech is synthesized
-   * when invoking session APIs. Agent.text_to_speech_settings only applies if
-   * OutputAudioConfig.synthesize_speech_config is not specified.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDialogflowCxV3SynthesizeSpeechConfig> getSynthesizeSpeechConfigs() {
@@ -63,13 +49,6 @@ public final class GoogleCloudDialogflowCxV3TextToSpeechSettings extends com.goo
   }
 
   /**
-   * Configuration of how speech should be synthesized, mapping from language
-   * (https://cloud.google.com/dialogflow/cx/docs/reference/language) to SynthesizeSpeechConfig.
-   * These settings affect: - The [phone
-   * gateway](https://cloud.google.com/dialogflow/cx/docs/concept/integration/phone-gateway)
-   * synthesize configuration set via Agent.text_to_speech_settings. - How speech is synthesized
-   * when invoking session APIs. Agent.text_to_speech_settings only applies if
-   * OutputAudioConfig.synthesize_speech_config is not specified.
    * @param synthesizeSpeechConfigs synthesizeSpeechConfigs or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TextToSpeechSettings setSynthesizeSpeechConfigs(java.util.Map<String, GoogleCloudDialogflowCxV3SynthesizeSpeechConfig> synthesizeSpeechConfigs) {

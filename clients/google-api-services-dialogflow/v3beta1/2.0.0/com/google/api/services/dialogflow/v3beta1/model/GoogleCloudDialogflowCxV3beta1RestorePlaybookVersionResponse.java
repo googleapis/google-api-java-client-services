@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The response message for Playbooks.RestorePlaybookVersion.
+ * Model definition for GoogleCloudDialogflowCxV3beta1RestorePlaybookVersionResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1RestorePlaybookVersionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The updated playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Playbook playbook;
 
   /**
-   * The updated playbook.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Playbook getPlaybook() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1RestorePlaybookVersionResponse 
   }
 
   /**
-   * The updated playbook.
    * @param playbook playbook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RestorePlaybookVersionResponse setPlaybook(GoogleCloudDialogflowCxV3beta1Playbook playbook) {

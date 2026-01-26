@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents configuration for a [Service Directory](https://cloud.google.com/service-directory)
- * service.
+ * Model definition for GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,23 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Generic Service configuration of this webhook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1WebhookGenericWebService genericWebService;
 
   /**
-   * Required. The name of [Service Directory](https://cloud.google.com/service-directory) service.
-   * Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory
-   * must be the same as the location of the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * Generic Service configuration of this webhook.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookGenericWebService getGenericWebService() {
@@ -55,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig e
   }
 
   /**
-   * Generic Service configuration of this webhook.
    * @param genericWebService genericWebService or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig setGenericWebService(GoogleCloudDialogflowCxV3beta1WebhookGenericWebService genericWebService) {
@@ -64,9 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig e
   }
 
   /**
-   * Required. The name of [Service Directory](https://cloud.google.com/service-directory) service.
-   * Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory
-   * must be the same as the location of the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -74,9 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig e
   }
 
   /**
-   * Required. The name of [Service Directory](https://cloud.google.com/service-directory) service.
-   * Format: `projects//locations//namespaces//services/`. `Location ID` of the service directory
-   * must be the same as the location of the agent.
    * @param service service or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig setService(java.lang.String service) {

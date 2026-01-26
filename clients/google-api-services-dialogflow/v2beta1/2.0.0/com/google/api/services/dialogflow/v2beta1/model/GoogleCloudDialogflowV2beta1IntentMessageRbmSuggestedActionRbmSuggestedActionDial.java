@@ -17,8 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Opens the user's default dialer app with the specified phone number but does not dial
- * automatically.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,18 +31,12 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The phone number to fill in the default dialer app. This field should be in
-   * [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of a correctly formatted phone
-   * number: +15556767888.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
 
   /**
-   * Required. The phone number to fill in the default dialer app. This field should be in
-   * [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of a correctly formatted phone
-   * number: +15556767888.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -50,9 +44,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
   }
 
   /**
-   * Required. The phone number to fill in the default dialer app. This field should be in
-   * [E.164](https://en.wikipedia.org/wiki/E.164) format. An example of a correctly formatted phone
-   * number: +15556767888.
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial setPhoneNumber(java.lang.String phoneNumber) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents a notification sent to Pub/Sub subscribers for conversation lifecycle events.
+ * Model definition for GoogleCloudDialogflowV2beta1ConversationEvent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,45 +30,36 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The unique identifier of the conversation this notification refers to. Format:
-   * `projects//conversations/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversation;
 
   /**
-   * Optional. More detailed information about an error. Only set for type
-   * UNRECOVERABLE_ERROR_IN_PHONE_CALL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus errorStatus;
 
   /**
-   * Payload of NEW_MESSAGE event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1Message newMessagePayload;
 
   /**
-   * Payload of NEW_RECOGNITION_RESULT event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1StreamingRecognitionResult newRecognitionResultPayload;
 
   /**
-   * Required. The type of the event that this notification refers to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required. The unique identifier of the conversation this notification refers to. Format:
-   * `projects//conversations/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversation() {
@@ -76,8 +67,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   }
 
   /**
-   * Required. The unique identifier of the conversation this notification refers to. Format:
-   * `projects//conversations/`.
    * @param conversation conversation or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationEvent setConversation(java.lang.String conversation) {
@@ -86,8 +75,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   }
 
   /**
-   * Optional. More detailed information about an error. Only set for type
-   * UNRECOVERABLE_ERROR_IN_PHONE_CALL.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getErrorStatus() {
@@ -95,8 +82,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   }
 
   /**
-   * Optional. More detailed information about an error. Only set for type
-   * UNRECOVERABLE_ERROR_IN_PHONE_CALL.
    * @param errorStatus errorStatus or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationEvent setErrorStatus(GoogleRpcStatus errorStatus) {
@@ -105,7 +90,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   }
 
   /**
-   * Payload of NEW_MESSAGE event.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message getNewMessagePayload() {
@@ -113,7 +97,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   }
 
   /**
-   * Payload of NEW_MESSAGE event.
    * @param newMessagePayload newMessagePayload or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationEvent setNewMessagePayload(GoogleCloudDialogflowV2beta1Message newMessagePayload) {
@@ -122,7 +105,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   }
 
   /**
-   * Payload of NEW_RECOGNITION_RESULT event.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1StreamingRecognitionResult getNewRecognitionResultPayload() {
@@ -130,7 +112,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   }
 
   /**
-   * Payload of NEW_RECOGNITION_RESULT event.
    * @param newRecognitionResultPayload newRecognitionResultPayload or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationEvent setNewRecognitionResultPayload(GoogleCloudDialogflowV2beta1StreamingRecognitionResult newRecognitionResultPayload) {
@@ -139,7 +120,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   }
 
   /**
-   * Required. The type of the event that this notification refers to.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -147,7 +127,6 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   }
 
   /**
-   * Required. The type of the event that this notification refers to.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ConversationEvent setType(java.lang.String type) {

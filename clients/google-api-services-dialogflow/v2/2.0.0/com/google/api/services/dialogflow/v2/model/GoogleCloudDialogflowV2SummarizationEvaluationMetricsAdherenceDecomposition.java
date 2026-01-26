@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Decomposition details for adherence.
+ * Model definition for GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenceDecomposition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenceDecomposition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The adherence reasoning of the breakdown point.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adherenceReasoning;
 
   /**
-   * Output only. Whether the breakdown point is adherent or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isAdherent;
 
   /**
-   * Output only. The breakdown point of the given instructions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String point;
 
   /**
-   * Output only. The adherence reasoning of the breakdown point.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdherenceReasoning() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenc
   }
 
   /**
-   * Output only. The adherence reasoning of the breakdown point.
    * @param adherenceReasoning adherenceReasoning or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenceDecomposition setAdherenceReasoning(java.lang.String adherenceReasoning) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenc
   }
 
   /**
-   * Output only. Whether the breakdown point is adherent or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAdherent() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenc
   }
 
   /**
-   * Output only. Whether the breakdown point is adherent or not.
    * @param isAdherent isAdherent or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenceDecomposition setIsAdherent(java.lang.Boolean isAdherent) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenc
   }
 
   /**
-   * Output only. The breakdown point of the given instructions.
    * @return value or {@code null} for none
    */
   public java.lang.String getPoint() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenc
   }
 
   /**
-   * Output only. The breakdown point of the given instructions.
    * @param point point or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsAdherenceDecomposition setPoint(java.lang.String point) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * A named metric is a metric with name, value and unit.
+ * Model definition for GoogleCloudDialogflowCxV3beta1NamedMetric.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1NamedMetric extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The unit in which this metric is reported. Follows [The Unified Code for Units of
-   * Measure](https://unitsofmeasure.org/ucum.html) standard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String unit;
 
   /**
-   * The value of the metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Object value;
 
   /**
-   * The name of the metric.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1NamedMetric extends com.google.
   }
 
   /**
-   * The name of the metric.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1NamedMetric setName(java.lang.String name) {
@@ -69,8 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1NamedMetric extends com.google.
   }
 
   /**
-   * The unit in which this metric is reported. Follows [The Unified Code for Units of
-   * Measure](https://unitsofmeasure.org/ucum.html) standard.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnit() {
@@ -78,8 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1NamedMetric extends com.google.
   }
 
   /**
-   * The unit in which this metric is reported. Follows [The Unified Code for Units of
-   * Measure](https://unitsofmeasure.org/ucum.html) standard.
    * @param unit unit or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1NamedMetric setUnit(java.lang.String unit) {
@@ -88,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1NamedMetric extends com.google.
   }
 
   /**
-   * The value of the metric.
    * @return value or {@code null} for none
    */
   public java.lang.Object getValue() {
@@ -96,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1NamedMetric extends com.google.
   }
 
   /**
-   * The value of the metric.
    * @param value value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1NamedMetric setValue(java.lang.Object value) {

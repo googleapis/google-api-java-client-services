@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The message returned from the DetectIntent method.
+ * Model definition for GoogleCloudDialogflowCxV3beta1DetectIntentResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,57 +30,42 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether the partial response can be cancelled when a later response arrives. e.g. if
-   * the agent specified some music as partial response, it can be cancelled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowCancellation;
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputAudio;
 
   /**
-   * The config used by the speech synthesizer to generate the output audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1OutputAudioConfig outputAudioConfig;
 
   /**
-   * The result of the conversational query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1QueryResult queryResult;
 
   /**
-   * Output only. The unique identifier of the response. It can be used to locate a response in the
-   * training example set or for reporting issues.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseId;
 
   /**
-   * Response type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseType;
 
   /**
-   * Indicates whether the partial response can be cancelled when a later response arrives. e.g. if
-   * the agent specified some music as partial response, it can be cancelled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowCancellation() {
@@ -88,8 +73,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * Indicates whether the partial response can be cancelled when a later response arrives. e.g. if
-   * the agent specified some music as partial response, it can be cancelled.
    * @param allowCancellation allowCancellation or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DetectIntentResponse setAllowCancellation(java.lang.Boolean allowCancellation) {
@@ -98,12 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
    * @see #decodeOutputAudio()
    * @return value or {@code null} for none
    */
@@ -112,12 +89,7 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
+
    * @see #getOutputAudio()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -128,12 +100,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
    * @see #encodeOutputAudio()
    * @param outputAudio outputAudio or {@code null} for none
    */
@@ -143,12 +109,7 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * The audio data bytes encoded as specified in the request. Note: The output audio is generated
-   * based on the values of default platform text responses found in the
-   * `query_result.response_messages` field. If multiple default text responses exist, they will be
-   * concatenated when generating audio. If no default platform text responses exist, the generated
-   * audio content will be empty. In some scenarios, multiple output audio fields may be present in
-   * the response structure. In these cases, only the top-most-level audio output has content.
+
    * @see #setOutputAudio()
    *
    * <p>
@@ -163,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * The config used by the speech synthesizer to generate the output audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1OutputAudioConfig getOutputAudioConfig() {
@@ -171,7 +131,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * The config used by the speech synthesizer to generate the output audio.
    * @param outputAudioConfig outputAudioConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DetectIntentResponse setOutputAudioConfig(GoogleCloudDialogflowCxV3beta1OutputAudioConfig outputAudioConfig) {
@@ -180,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * The result of the conversational query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryResult getQueryResult() {
@@ -188,7 +146,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * The result of the conversational query.
    * @param queryResult queryResult or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DetectIntentResponse setQueryResult(GoogleCloudDialogflowCxV3beta1QueryResult queryResult) {
@@ -197,8 +154,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * Output only. The unique identifier of the response. It can be used to locate a response in the
-   * training example set or for reporting issues.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseId() {
@@ -206,8 +161,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * Output only. The unique identifier of the response. It can be used to locate a response in the
-   * training example set or for reporting issues.
    * @param responseId responseId or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DetectIntentResponse setResponseId(java.lang.String responseId) {
@@ -216,7 +169,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * Response type.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseType() {
@@ -224,7 +176,6 @@ public final class GoogleCloudDialogflowCxV3beta1DetectIntentResponse extends co
   }
 
   /**
-   * Response type.
    * @param responseType responseType or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DetectIntentResponse setResponseType(java.lang.String responseType) {

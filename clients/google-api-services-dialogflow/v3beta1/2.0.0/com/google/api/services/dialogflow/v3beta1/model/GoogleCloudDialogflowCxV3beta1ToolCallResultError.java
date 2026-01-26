@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * An error produced by the tool call.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ToolCallResultError.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ToolCallResultError extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The error message of the function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * Optional. The error message of the function.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolCallResultError extends com
   }
 
   /**
-   * Optional. The error message of the function.
    * @param message message or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolCallResultError setMessage(java.lang.String message) {

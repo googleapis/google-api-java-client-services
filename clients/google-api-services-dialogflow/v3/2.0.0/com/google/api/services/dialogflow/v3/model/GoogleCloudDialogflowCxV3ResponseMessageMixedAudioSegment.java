@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents one segment of audio.
+ * Model definition for GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,32 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether the playback of this segment can be interrupted by the end user's speech
-   * and the client should then start the next Dialogflow request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowPlaybackInterruption;
 
   /**
-   * Raw audio synthesized from the Dialogflow agent's response using the output config specified in
-   * the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audio;
 
   /**
-   * Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not
-   * impose any validation on it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Output only. Whether the playback of this segment can be interrupted by the end user's speech
-   * and the client should then start the next Dialogflow request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowPlaybackInterruption() {
@@ -63,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment ext
   }
 
   /**
-   * Output only. Whether the playback of this segment can be interrupted by the end user's speech
-   * and the client should then start the next Dialogflow request.
    * @param allowPlaybackInterruption allowPlaybackInterruption or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment setAllowPlaybackInterruption(java.lang.Boolean allowPlaybackInterruption) {
@@ -73,8 +63,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment ext
   }
 
   /**
-   * Raw audio synthesized from the Dialogflow agent's response using the output config specified in
-   * the request.
    * @see #decodeAudio()
    * @return value or {@code null} for none
    */
@@ -83,8 +71,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment ext
   }
 
   /**
-   * Raw audio synthesized from the Dialogflow agent's response using the output config specified in
-   * the request.
+
    * @see #getAudio()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -95,8 +82,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment ext
   }
 
   /**
-   * Raw audio synthesized from the Dialogflow agent's response using the output config specified in
-   * the request.
    * @see #encodeAudio()
    * @param audio audio or {@code null} for none
    */
@@ -106,8 +91,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment ext
   }
 
   /**
-   * Raw audio synthesized from the Dialogflow agent's response using the output config specified in
-   * the request.
+
    * @see #setAudio()
    *
    * <p>
@@ -122,8 +106,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment ext
   }
 
   /**
-   * Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not
-   * impose any validation on it.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -131,8 +113,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment ext
   }
 
   /**
-   * Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not
-   * impose any validation on it.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegment setUri(java.lang.String uri) {

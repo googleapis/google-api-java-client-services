@@ -17,13 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * You can create multiple versions of your agent and publish them to separate environments. When
- * you edit an agent, you are editing the draft agent. At any point, you can save the draft agent as
- * an agent version, which is an immutable snapshot of your agent. When you save the draft agent, it
- * is published to the default environment. When you create agent versions, you can publish them to
- * custom environments. You can create a variety of custom environments for: - testing - development
- * - production - etc. For more information, see the [versions and environments
- * guide](https://cloud.google.com/dialogflow/docs/agents-versions).
+ * Model definition for GoogleCloudDialogflowV2Environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -36,63 +30,48 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2Environment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The agent version loaded into this environment. Supported formats: -
-   * `projects//agent/versions/` - `projects//locations//agent/versions/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String agentVersion;
 
   /**
-   * Optional. The developer-provided description for this environment. The maximum length is 500
-   * characters. If exceeded, the request is rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. The fulfillment settings to use for this environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2Fulfillment fulfillment;
 
   /**
-   * Output only. The unique identifier of this agent environment. Supported formats: -
-   * `projects//agent/environments/` - `projects//locations//agent/environments/` The environment ID
-   * for the default environment is `-`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The state of this environment. This field is read-only, i.e., it cannot be set by
-   * create and update methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. Text to speech settings for this environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2TextToSpeechSettings textToSpeechSettings;
 
   /**
-   * Output only. The last update time of this environment. This field is read-only, i.e., it cannot
-   * be set by create and update methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. The agent version loaded into this environment. Supported formats: -
-   * `projects//agent/versions/` - `projects//locations//agent/versions/`
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentVersion() {
@@ -100,8 +79,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Optional. The agent version loaded into this environment. Supported formats: -
-   * `projects//agent/versions/` - `projects//locations//agent/versions/`
    * @param agentVersion agentVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2Environment setAgentVersion(java.lang.String agentVersion) {
@@ -110,8 +87,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Optional. The developer-provided description for this environment. The maximum length is 500
-   * characters. If exceeded, the request is rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -119,8 +94,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Optional. The developer-provided description for this environment. The maximum length is 500
-   * characters. If exceeded, the request is rejected.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2Environment setDescription(java.lang.String description) {
@@ -129,7 +102,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Optional. The fulfillment settings to use for this environment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2Fulfillment getFulfillment() {
@@ -137,7 +109,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Optional. The fulfillment settings to use for this environment.
    * @param fulfillment fulfillment or {@code null} for none
    */
   public GoogleCloudDialogflowV2Environment setFulfillment(GoogleCloudDialogflowV2Fulfillment fulfillment) {
@@ -146,9 +117,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Output only. The unique identifier of this agent environment. Supported formats: -
-   * `projects//agent/environments/` - `projects//locations//agent/environments/` The environment ID
-   * for the default environment is `-`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -156,9 +124,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Output only. The unique identifier of this agent environment. Supported formats: -
-   * `projects//agent/environments/` - `projects//locations//agent/environments/` The environment ID
-   * for the default environment is `-`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2Environment setName(java.lang.String name) {
@@ -167,8 +132,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Output only. The state of this environment. This field is read-only, i.e., it cannot be set by
-   * create and update methods.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -176,8 +139,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Output only. The state of this environment. This field is read-only, i.e., it cannot be set by
-   * create and update methods.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowV2Environment setState(java.lang.String state) {
@@ -186,7 +147,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Optional. Text to speech settings for this environment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2TextToSpeechSettings getTextToSpeechSettings() {
@@ -194,7 +154,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Optional. Text to speech settings for this environment.
    * @param textToSpeechSettings textToSpeechSettings or {@code null} for none
    */
   public GoogleCloudDialogflowV2Environment setTextToSpeechSettings(GoogleCloudDialogflowV2TextToSpeechSettings textToSpeechSettings) {
@@ -203,8 +162,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Output only. The last update time of this environment. This field is read-only, i.e., it cannot
-   * be set by create and update methods.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -212,8 +169,6 @@ public final class GoogleCloudDialogflowV2Environment extends com.google.api.cli
   }
 
   /**
-   * Output only. The last update time of this environment. This field is read-only, i.e., it cannot
-   * be set by create and update methods.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2Environment setUpdateTime(String updateTime) {

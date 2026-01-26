@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * SipTrunk is the resource that represents a SIP trunk to connect to Google Telephony platform SIP
- * trunking service.
+ * Model definition for GoogleCloudDialogflowV2SipTrunk.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,7 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SipTrunk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Connections of the SIP trunk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,29 +42,24 @@ public final class GoogleCloudDialogflowV2SipTrunk extends com.google.api.client
   }
 
   /**
-   * Optional. Human readable alias for this trunk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. The expected hostnames in the peer certificate from partner that is used for TLS
-   * authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> expectedHostname;
 
   /**
-   * Identifier. The unique identifier of the SIP trunk. Format: `projects//locations//sipTrunks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Connections of the SIP trunk.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2Connection> getConnections() {
@@ -74,7 +67,6 @@ public final class GoogleCloudDialogflowV2SipTrunk extends com.google.api.client
   }
 
   /**
-   * Output only. Connections of the SIP trunk.
    * @param connections connections or {@code null} for none
    */
   public GoogleCloudDialogflowV2SipTrunk setConnections(java.util.List<GoogleCloudDialogflowV2Connection> connections) {
@@ -83,7 +75,6 @@ public final class GoogleCloudDialogflowV2SipTrunk extends com.google.api.client
   }
 
   /**
-   * Optional. Human readable alias for this trunk.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -91,7 +82,6 @@ public final class GoogleCloudDialogflowV2SipTrunk extends com.google.api.client
   }
 
   /**
-   * Optional. Human readable alias for this trunk.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2SipTrunk setDisplayName(java.lang.String displayName) {
@@ -100,8 +90,6 @@ public final class GoogleCloudDialogflowV2SipTrunk extends com.google.api.client
   }
 
   /**
-   * Required. The expected hostnames in the peer certificate from partner that is used for TLS
-   * authentication.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExpectedHostname() {
@@ -109,8 +97,6 @@ public final class GoogleCloudDialogflowV2SipTrunk extends com.google.api.client
   }
 
   /**
-   * Required. The expected hostnames in the peer certificate from partner that is used for TLS
-   * authentication.
    * @param expectedHostname expectedHostname or {@code null} for none
    */
   public GoogleCloudDialogflowV2SipTrunk setExpectedHostname(java.util.List<java.lang.String> expectedHostname) {
@@ -119,7 +105,6 @@ public final class GoogleCloudDialogflowV2SipTrunk extends com.google.api.client
   }
 
   /**
-   * Identifier. The unique identifier of the SIP trunk. Format: `projects//locations//sipTrunks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -127,7 +112,6 @@ public final class GoogleCloudDialogflowV2SipTrunk extends com.google.api.client
   }
 
   /**
-   * Identifier. The unique identifier of the SIP trunk. Format: `projects//locations//sipTrunks/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2SipTrunk setName(java.lang.String name) {

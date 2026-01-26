@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Instructs the speech synthesizer on how to generate the output audio content. If this audio
- * config is supplied in a request, it overrides all existing text-to-speech settings applied to the
- * agent.
+ * Model definition for GoogleCloudDialogflowV2OutputAudioConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,31 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2OutputAudioConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Audio encoding of the synthesized audio content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioEncoding;
 
   /**
-   * The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will
-   * use the default sample rate based on the audio encoding. If this is different from the voice's
-   * natural sample rate, then the synthesizer will honor this request by converting to the desired
-   * sample rate (which might result in worse audio quality).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * Configuration of how speech should be synthesized.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SynthesizeSpeechConfig synthesizeSpeechConfig;
 
   /**
-   * Required. Audio encoding of the synthesized audio content.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioEncoding() {
@@ -64,7 +55,6 @@ public final class GoogleCloudDialogflowV2OutputAudioConfig extends com.google.a
   }
 
   /**
-   * Required. Audio encoding of the synthesized audio content.
    * @param audioEncoding audioEncoding or {@code null} for none
    */
   public GoogleCloudDialogflowV2OutputAudioConfig setAudioEncoding(java.lang.String audioEncoding) {
@@ -73,10 +63,6 @@ public final class GoogleCloudDialogflowV2OutputAudioConfig extends com.google.a
   }
 
   /**
-   * The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will
-   * use the default sample rate based on the audio encoding. If this is different from the voice's
-   * natural sample rate, then the synthesizer will honor this request by converting to the desired
-   * sample rate (which might result in worse audio quality).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSampleRateHertz() {
@@ -84,10 +70,6 @@ public final class GoogleCloudDialogflowV2OutputAudioConfig extends com.google.a
   }
 
   /**
-   * The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will
-   * use the default sample rate based on the audio encoding. If this is different from the voice's
-   * natural sample rate, then the synthesizer will honor this request by converting to the desired
-   * sample rate (which might result in worse audio quality).
    * @param sampleRateHertz sampleRateHertz or {@code null} for none
    */
   public GoogleCloudDialogflowV2OutputAudioConfig setSampleRateHertz(java.lang.Integer sampleRateHertz) {
@@ -96,7 +78,6 @@ public final class GoogleCloudDialogflowV2OutputAudioConfig extends com.google.a
   }
 
   /**
-   * Configuration of how speech should be synthesized.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SynthesizeSpeechConfig getSynthesizeSpeechConfig() {
@@ -104,7 +85,6 @@ public final class GoogleCloudDialogflowV2OutputAudioConfig extends com.google.a
   }
 
   /**
-   * Configuration of how speech should be synthesized.
    * @param synthesizeSpeechConfig synthesizeSpeechConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2OutputAudioConfig setSynthesizeSpeechConfig(GoogleCloudDialogflowV2SynthesizeSpeechConfig synthesizeSpeechConfig) {

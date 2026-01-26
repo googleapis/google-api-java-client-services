@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Request message for Documents.ReloadDocument.
+ * Model definition for GoogleCloudDialogflowV2beta1ReloadDocumentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ReloadDocumentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The path for a Cloud Storage source file for reloading document content. If not provided, the
-   * Document's existing source will be reloaded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1GcsSource gcsSource;
 
   /**
-   * Whether to import custom metadata from Google Cloud Storage. Only valid when the document
-   * source is Google Cloud Storage URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean importGcsCustomMetadata;
 
   /**
-   * The path for a Cloud Storage source file for reloading document content. If not provided, the
-   * Document's existing source will be reloaded.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GcsSource getGcsSource() {
@@ -55,8 +49,6 @@ public final class GoogleCloudDialogflowV2beta1ReloadDocumentRequest extends com
   }
 
   /**
-   * The path for a Cloud Storage source file for reloading document content. If not provided, the
-   * Document's existing source will be reloaded.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ReloadDocumentRequest setGcsSource(GoogleCloudDialogflowV2beta1GcsSource gcsSource) {
@@ -65,8 +57,6 @@ public final class GoogleCloudDialogflowV2beta1ReloadDocumentRequest extends com
   }
 
   /**
-   * Whether to import custom metadata from Google Cloud Storage. Only valid when the document
-   * source is Google Cloud Storage URI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImportGcsCustomMetadata() {
@@ -74,8 +64,6 @@ public final class GoogleCloudDialogflowV2beta1ReloadDocumentRequest extends com
   }
 
   /**
-   * Whether to import custom metadata from Google Cloud Storage. Only valid when the document
-   * source is Google Cloud Storage URI.
    * @param importGcsCustomMetadata importGcsCustomMetadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ReloadDocumentRequest setImportGcsCustomMetadata(java.lang.Boolean importGcsCustomMetadata) {

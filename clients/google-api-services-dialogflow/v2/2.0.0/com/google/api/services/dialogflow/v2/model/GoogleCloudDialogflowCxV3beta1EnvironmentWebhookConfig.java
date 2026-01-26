@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Configuration for webhooks.
+ * Model definition for GoogleCloudDialogflowCxV3beta1EnvironmentWebhookConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3beta1EnvironmentWebhookConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of webhooks to override for the agent environment. The webhook must exist in the
-   * agent. You can override fields in `generic_web_service` and `service_directory`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1Webhook> webhookOverrides;
 
   /**
-   * The list of webhooks to override for the agent environment. The webhook must exist in the
-   * agent. You can override fields in `generic_web_service` and `service_directory`.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1Webhook> getWebhookOverrides() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentWebhookConfig extend
   }
 
   /**
-   * The list of webhooks to override for the agent environment. The webhook must exist in the
-   * agent. You can override fields in `generic_web_service` and `service_directory`.
    * @param webhookOverrides webhookOverrides or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EnvironmentWebhookConfig setWebhookOverrides(java.util.List<GoogleCloudDialogflowCxV3beta1Webhook> webhookOverrides) {

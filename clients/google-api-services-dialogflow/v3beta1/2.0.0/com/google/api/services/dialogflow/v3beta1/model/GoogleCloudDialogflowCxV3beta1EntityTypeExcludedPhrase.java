@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * An excluded entity phrase that should not be matched.
+ * Model definition for GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhrase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhrase extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The word or phrase to be excluded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Required. The word or phrase to be excluded.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhrase extend
   }
 
   /**
-   * Required. The word or phrase to be excluded.
    * @param value value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhrase setValue(java.lang.String value) {

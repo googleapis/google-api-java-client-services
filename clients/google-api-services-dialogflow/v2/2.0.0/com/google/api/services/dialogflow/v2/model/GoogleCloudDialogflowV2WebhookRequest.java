@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for a webhook call.
+ * Model definition for GoogleCloudDialogflowV2WebhookRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,41 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The contents of the original request that was passed to `[Streaming]DetectIntent`
-   * call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2OriginalDetectIntentRequest originalDetectIntentRequest;
 
   /**
-   * The result of the conversational query or event processing. Contains the same value as
-   * `[Streaming]DetectIntentResponse.query_result`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2QueryResult queryResult;
 
   /**
-   * The unique identifier of the response. Contains the same value as
-   * `[Streaming]DetectIntentResponse.response_id`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String responseId;
 
   /**
-   * The unique identifier of detectIntent request session. Can be used to identify end-user inside
-   * webhook implementation. Format: `projects//agent/sessions/`, or
-   * `projects//agent/environments//users//sessions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String session;
 
   /**
-   * Optional. The contents of the original request that was passed to `[Streaming]DetectIntent`
-   * call.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2OriginalDetectIntentRequest getOriginalDetectIntentRequest() {
@@ -72,8 +61,6 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
   }
 
   /**
-   * Optional. The contents of the original request that was passed to `[Streaming]DetectIntent`
-   * call.
    * @param originalDetectIntentRequest originalDetectIntentRequest or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookRequest setOriginalDetectIntentRequest(GoogleCloudDialogflowV2OriginalDetectIntentRequest originalDetectIntentRequest) {
@@ -82,8 +69,6 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
   }
 
   /**
-   * The result of the conversational query or event processing. Contains the same value as
-   * `[Streaming]DetectIntentResponse.query_result`.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2QueryResult getQueryResult() {
@@ -91,8 +76,6 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
   }
 
   /**
-   * The result of the conversational query or event processing. Contains the same value as
-   * `[Streaming]DetectIntentResponse.query_result`.
    * @param queryResult queryResult or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookRequest setQueryResult(GoogleCloudDialogflowV2QueryResult queryResult) {
@@ -101,8 +84,6 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
   }
 
   /**
-   * The unique identifier of the response. Contains the same value as
-   * `[Streaming]DetectIntentResponse.response_id`.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseId() {
@@ -110,8 +91,6 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
   }
 
   /**
-   * The unique identifier of the response. Contains the same value as
-   * `[Streaming]DetectIntentResponse.response_id`.
    * @param responseId responseId or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookRequest setResponseId(java.lang.String responseId) {
@@ -120,9 +99,6 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
   }
 
   /**
-   * The unique identifier of detectIntent request session. Can be used to identify end-user inside
-   * webhook implementation. Format: `projects//agent/sessions/`, or
-   * `projects//agent/environments//users//sessions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSession() {
@@ -130,9 +106,6 @@ public final class GoogleCloudDialogflowV2WebhookRequest extends com.google.api.
   }
 
   /**
-   * The unique identifier of detectIntent request session. Can be used to identify end-user inside
-   * webhook implementation. Format: `projects//agent/sessions/`, or
-   * `projects//agent/environments//users//sessions/`.
    * @param session session or {@code null} for none
    */
   public GoogleCloudDialogflowV2WebhookRequest setSession(java.lang.String session) {

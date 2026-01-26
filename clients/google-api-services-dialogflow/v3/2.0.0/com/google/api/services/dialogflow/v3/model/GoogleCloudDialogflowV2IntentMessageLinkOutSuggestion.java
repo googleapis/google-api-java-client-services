@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The suggestion chip message that allows the user to jump out to the app or website associated
- * with this agent.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the app or site this chip is linking to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationName;
 
   /**
-   * Required. The URI of the app or site to open when the user taps the suggestion chip.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. The name of the app or site this chip is linking to.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationName() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion extends
   }
 
   /**
-   * Required. The name of the app or site this chip is linking to.
    * @param destinationName destinationName or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion setDestinationName(java.lang.String destinationName) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion extends
   }
 
   /**
-   * Required. The URI of the app or site to open when the user taps the suggestion chip.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion extends
   }
 
   /**
-   * Required. The URI of the app or site to open when the user taps the suggestion chip.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion setUri(java.lang.String uri) {

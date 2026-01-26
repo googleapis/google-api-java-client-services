@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents an answer from Knowledge. Currently supports FAQ and Generative answers.
+ * Model definition for GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The piece of text from the `source` that answers this suggested query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerText;
 
   /**
-   * Populated if the prediction came from FAQ.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerFaqSource faqSource;
 
   /**
-   * Populated if the prediction was Generative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource generativeSource;
 
   /**
-   * The piece of text from the `source` that answers this suggested query.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerText() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * The piece of text from the `source` that answers this suggested query.
    * @param answerText answerText or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer setAnswerText(java.lang.String answerText) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * Populated if the prediction came from FAQ.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerFaqSource getFaqSource() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * Populated if the prediction came from FAQ.
    * @param faqSource faqSource or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer setFaqSource(GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerFaqSource faqSource) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * Populated if the prediction was Generative.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource getGenerativeSource() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAns
   }
 
   /**
-   * Populated if the prediction was Generative.
    * @param generativeSource generativeSource or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer setGenerativeSource(GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource generativeSource) {

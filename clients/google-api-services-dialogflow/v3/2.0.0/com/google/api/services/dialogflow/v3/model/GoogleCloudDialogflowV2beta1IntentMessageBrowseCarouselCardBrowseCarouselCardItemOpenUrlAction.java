@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Actions on Google action to open a given url.
+ * Model definition for
+ * GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,22 +31,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening
-   * via web browser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String urlTypeHint;
 
   /**
-   * Required. URL
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -53,7 +50,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Required. URL
    * @param url url or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction setUrl(java.lang.String url) {
@@ -62,8 +58,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening
-   * via web browser.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlTypeHint() {
@@ -71,8 +65,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
   }
 
   /**
-   * Optional. Specifies the type of viewer that is used when opening the URL. Defaults to opening
-   * via web browser.
    * @param urlTypeHint urlTypeHint or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction setUrlTypeHint(java.lang.String urlTypeHint) {

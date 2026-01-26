@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Corresponds to the `Response` field in the Dialogflow console.
+ * Model definition for GoogleCloudDialogflowV2beta1IntentMessage.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,155 +30,132 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Displays a basic card for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageBasicCard basicCard;
 
   /**
-   * Browse carousel card for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard browseCarouselCard;
 
   /**
-   * Displays a card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageCard card;
 
   /**
-   * Displays a carousel card for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect carouselSelect;
 
   /**
-   * Displays an image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageImage image;
 
   /**
-   * Displays a link out suggestion chip for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion linkOutSuggestion;
 
   /**
-   * Displays a list card for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageListSelect listSelect;
 
   /**
-   * The media content card for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageMediaContent mediaContent;
 
   /**
-   * A custom platform-specific response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
-   * Optional. The platform that this message is intended for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platform;
 
   /**
-   * Displays quick replies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageQuickReplies quickReplies;
 
   /**
-   * Rich Business Messaging (RBM) carousel rich card response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard rbmCarouselRichCard;
 
   /**
-   * Standalone Rich Business Messaging (RBM) rich card response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard rbmStandaloneRichCard;
 
   /**
-   * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded
-   * versions of SMS. See https://jibe.google.com/business-messaging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageRbmText rbmText;
 
   /**
-   * Returns a voice or text-only response for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses simpleResponses;
 
   /**
-   * Displays suggestion chips for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageSuggestions suggestions;
 
   /**
-   * Table card for Actions on Google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageTableCard tableCard;
 
   /**
-   * Plays audio from a file in Telephony Gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio telephonyPlayAudio;
 
   /**
-   * Synthesizes speech in Telephony Gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech telephonySynthesizeSpeech;
 
   /**
-   * Transfers the call in Telephony Gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall telephonyTransferCall;
 
   /**
-   * Returns a text response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentMessageText text;
 
   /**
-   * Displays a basic card for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBasicCard getBasicCard() {
@@ -186,7 +163,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays a basic card for Actions on Google.
    * @param basicCard basicCard or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setBasicCard(GoogleCloudDialogflowV2beta1IntentMessageBasicCard basicCard) {
@@ -195,7 +171,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Browse carousel card for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard getBrowseCarouselCard() {
@@ -203,7 +178,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Browse carousel card for Actions on Google.
    * @param browseCarouselCard browseCarouselCard or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setBrowseCarouselCard(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard browseCarouselCard) {
@@ -212,7 +186,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays a card.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageCard getCard() {
@@ -220,7 +193,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays a card.
    * @param card card or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setCard(GoogleCloudDialogflowV2beta1IntentMessageCard card) {
@@ -229,7 +201,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays a carousel card for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect getCarouselSelect() {
@@ -237,7 +208,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays a carousel card for Actions on Google.
    * @param carouselSelect carouselSelect or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setCarouselSelect(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect carouselSelect) {
@@ -246,7 +216,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays an image.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageImage getImage() {
@@ -254,7 +223,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays an image.
    * @param image image or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setImage(GoogleCloudDialogflowV2beta1IntentMessageImage image) {
@@ -263,7 +231,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays a link out suggestion chip for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion getLinkOutSuggestion() {
@@ -271,7 +238,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays a link out suggestion chip for Actions on Google.
    * @param linkOutSuggestion linkOutSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setLinkOutSuggestion(GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion linkOutSuggestion) {
@@ -280,7 +246,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays a list card for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageListSelect getListSelect() {
@@ -288,7 +253,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays a list card for Actions on Google.
    * @param listSelect listSelect or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setListSelect(GoogleCloudDialogflowV2beta1IntentMessageListSelect listSelect) {
@@ -297,7 +261,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * The media content card for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageMediaContent getMediaContent() {
@@ -305,7 +268,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * The media content card for Actions on Google.
    * @param mediaContent mediaContent or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setMediaContent(GoogleCloudDialogflowV2beta1IntentMessageMediaContent mediaContent) {
@@ -314,7 +276,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * A custom platform-specific response.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -322,7 +283,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * A custom platform-specific response.
    * @param payload payload or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setPayload(java.util.Map<String, java.lang.Object> payload) {
@@ -331,7 +291,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Optional. The platform that this message is intended for.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatform() {
@@ -339,7 +298,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Optional. The platform that this message is intended for.
    * @param platform platform or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setPlatform(java.lang.String platform) {
@@ -348,7 +306,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays quick replies.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageQuickReplies getQuickReplies() {
@@ -356,7 +313,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays quick replies.
    * @param quickReplies quickReplies or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setQuickReplies(GoogleCloudDialogflowV2beta1IntentMessageQuickReplies quickReplies) {
@@ -365,7 +321,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Rich Business Messaging (RBM) carousel rich card response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard getRbmCarouselRichCard() {
@@ -373,7 +328,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Rich Business Messaging (RBM) carousel rich card response.
    * @param rbmCarouselRichCard rbmCarouselRichCard or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setRbmCarouselRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard rbmCarouselRichCard) {
@@ -382,7 +336,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Standalone Rich Business Messaging (RBM) rich card response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard getRbmStandaloneRichCard() {
@@ -390,7 +343,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Standalone Rich Business Messaging (RBM) rich card response.
    * @param rbmStandaloneRichCard rbmStandaloneRichCard or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setRbmStandaloneRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard rbmStandaloneRichCard) {
@@ -399,8 +351,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded
-   * versions of SMS. See https://jibe.google.com/business-messaging.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageRbmText getRbmText() {
@@ -408,8 +358,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Rich Business Messaging (RBM) text response. RBM allows businesses to send enriched and branded
-   * versions of SMS. See https://jibe.google.com/business-messaging.
    * @param rbmText rbmText or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setRbmText(GoogleCloudDialogflowV2beta1IntentMessageRbmText rbmText) {
@@ -418,7 +366,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Returns a voice or text-only response for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses getSimpleResponses() {
@@ -426,7 +373,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Returns a voice or text-only response for Actions on Google.
    * @param simpleResponses simpleResponses or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setSimpleResponses(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses simpleResponses) {
@@ -435,7 +381,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays suggestion chips for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageSuggestions getSuggestions() {
@@ -443,7 +388,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Displays suggestion chips for Actions on Google.
    * @param suggestions suggestions or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setSuggestions(GoogleCloudDialogflowV2beta1IntentMessageSuggestions suggestions) {
@@ -452,7 +396,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Table card for Actions on Google.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTableCard getTableCard() {
@@ -460,7 +403,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Table card for Actions on Google.
    * @param tableCard tableCard or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setTableCard(GoogleCloudDialogflowV2beta1IntentMessageTableCard tableCard) {
@@ -469,7 +411,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Plays audio from a file in Telephony Gateway.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio getTelephonyPlayAudio() {
@@ -477,7 +418,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Plays audio from a file in Telephony Gateway.
    * @param telephonyPlayAudio telephonyPlayAudio or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setTelephonyPlayAudio(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio telephonyPlayAudio) {
@@ -486,7 +426,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Synthesizes speech in Telephony Gateway.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech getTelephonySynthesizeSpeech() {
@@ -494,7 +433,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Synthesizes speech in Telephony Gateway.
    * @param telephonySynthesizeSpeech telephonySynthesizeSpeech or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setTelephonySynthesizeSpeech(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech telephonySynthesizeSpeech) {
@@ -503,7 +441,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Transfers the call in Telephony Gateway.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall getTelephonyTransferCall() {
@@ -511,7 +448,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Transfers the call in Telephony Gateway.
    * @param telephonyTransferCall telephonyTransferCall or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setTelephonyTransferCall(GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall telephonyTransferCall) {
@@ -520,7 +456,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Returns a text response.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessageText getText() {
@@ -528,7 +463,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessage extends com.google.
   }
 
   /**
-   * Returns a text response.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentMessage setText(GoogleCloudDialogflowV2beta1IntentMessageText text) {

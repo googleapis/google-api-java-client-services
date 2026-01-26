@@ -17,9 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The sentiment, such as positive/negative feeling or association, for a unit of analysis, such as
- * the query text. See: https://cloud.google.com/natural-
- * language/docs/basics#interpreting_sentiment_analysis_values for how to interpret the result.
+ * Model definition for GoogleCloudDialogflowV2beta1Sentiment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -32,23 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1Sentiment extends com.google.api.client.json.GenericJson {
 
   /**
-   * A non-negative number in the [0, +inf) range, which represents the absolute magnitude of
-   * sentiment, regardless of score (positive or negative).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float magnitude;
 
   /**
-   * Sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
 
   /**
-   * A non-negative number in the [0, +inf) range, which represents the absolute magnitude of
-   * sentiment, regardless of score (positive or negative).
    * @return value or {@code null} for none
    */
   public java.lang.Float getMagnitude() {
@@ -56,8 +49,6 @@ public final class GoogleCloudDialogflowV2beta1Sentiment extends com.google.api.
   }
 
   /**
-   * A non-negative number in the [0, +inf) range, which represents the absolute magnitude of
-   * sentiment, regardless of score (positive or negative).
    * @param magnitude magnitude or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Sentiment setMagnitude(java.lang.Float magnitude) {
@@ -66,7 +57,6 @@ public final class GoogleCloudDialogflowV2beta1Sentiment extends com.google.api.
   }
 
   /**
-   * Sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -74,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1Sentiment extends com.google.api.
   }
 
   /**
-   * Sentiment score between -1.0 (negative sentiment) and 1.0 (positive sentiment).
    * @param score score or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Sentiment setScore(java.lang.Float score) {

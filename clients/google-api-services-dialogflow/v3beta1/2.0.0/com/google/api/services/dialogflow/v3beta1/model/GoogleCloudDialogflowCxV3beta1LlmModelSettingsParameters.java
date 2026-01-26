@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Generative model parameters to control the model behavior.
+ * Model definition for GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,31 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters extends com.google.api.client.json.GenericJson {
 
   /**
-   * The input token limit. This setting is currently only supported by playbooks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inputTokenLimit;
 
   /**
-   * The output token limit. This setting is currently only supported by playbooks. Only one of
-   * output_token_limit and max_output_tokens is allowed to be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputTokenLimit;
 
   /**
-   * The temperature used for sampling during response generation. Value ranges from 0 to 1.
-   * Temperature controls the degree of randomness in token selection. Lower temperature means less
-   * randomness, while higher temperature means more randomness. Valid range: [0.0, 1.0]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float temperature;
 
   /**
-   * The input token limit. This setting is currently only supported by playbooks.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputTokenLimit() {
@@ -62,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters exte
   }
 
   /**
-   * The input token limit. This setting is currently only supported by playbooks.
    * @param inputTokenLimit inputTokenLimit or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters setInputTokenLimit(java.lang.String inputTokenLimit) {
@@ -71,8 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters exte
   }
 
   /**
-   * The output token limit. This setting is currently only supported by playbooks. Only one of
-   * output_token_limit and max_output_tokens is allowed to be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputTokenLimit() {
@@ -80,8 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters exte
   }
 
   /**
-   * The output token limit. This setting is currently only supported by playbooks. Only one of
-   * output_token_limit and max_output_tokens is allowed to be set.
    * @param outputTokenLimit outputTokenLimit or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters setOutputTokenLimit(java.lang.String outputTokenLimit) {
@@ -90,9 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters exte
   }
 
   /**
-   * The temperature used for sampling during response generation. Value ranges from 0 to 1.
-   * Temperature controls the degree of randomness in token selection. Lower temperature means less
-   * randomness, while higher temperature means more randomness. Valid range: [0.0, 1.0]
    * @return value or {@code null} for none
    */
   public java.lang.Float getTemperature() {
@@ -100,9 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters exte
   }
 
   /**
-   * The temperature used for sampling during response generation. Value ranges from 0 to 1.
-   * Temperature controls the degree of randomness in token selection. Lower temperature means less
-   * randomness, while higher temperature means more randomness. Valid range: [0.0, 1.0]
    * @param temperature temperature or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1LlmModelSettingsParameters setTemperature(java.lang.Float temperature) {

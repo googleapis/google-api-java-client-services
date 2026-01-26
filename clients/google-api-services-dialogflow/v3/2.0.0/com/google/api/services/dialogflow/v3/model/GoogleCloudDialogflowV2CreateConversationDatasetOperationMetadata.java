@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Metadata for CreateConversationDataset.
+ * Model definition for GoogleCloudDialogflowV2CreateConversationDatasetOperationMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2CreateConversationDatasetOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the conversation dataset that will be created. Format:
-   * `projects//locations//conversationDatasets/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String conversationDataset;
 
   /**
-   * The resource name of the conversation dataset that will be created. Format:
-   * `projects//locations//conversationDatasets/`
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationDataset() {
@@ -47,8 +43,6 @@ public final class GoogleCloudDialogflowV2CreateConversationDatasetOperationMeta
   }
 
   /**
-   * The resource name of the conversation dataset that will be created. Format:
-   * `projects//locations//conversationDatasets/`
    * @param conversationDataset conversationDataset or {@code null} for none
    */
   public GoogleCloudDialogflowV2CreateConversationDatasetOperationMetadata setConversationDataset(java.lang.String conversationDataset) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * The response message for Participants.AnalyzeContent.
+ * Model definition for GoogleCloudDialogflowV2beta1AnalyzeContentResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,76 +30,48 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Only set if a Dialogflow automated agent has responded. Note that:
-   * AutomatedAgentReply.detect_intent_response.output_audio and
-   * AutomatedAgentReply.detect_intent_response.output_audio_config are always empty, use
-   * reply_audio instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1AutomatedAgentReply automatedAgentReply;
 
   /**
-   * Indicates the parameters of DTMF.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1DtmfParameters dtmfParameters;
 
   /**
-   * The suggestions for end user. The order is the same as
-   * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.end_user_suggestion_config. Same as human_agent_suggestion_results,
-   * any failure of Agent Assist features will not lead to the overall failure of an AnalyzeContent
-   * API call. Instead, the features will fail silently with the error field set in the
-   * corresponding SuggestionResult.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SuggestionResult> endUserSuggestionResults;
 
   /**
-   * The suggestions for most recent human agent. The order is the same as
-   * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.human_agent_suggestion_config. Note that any failure of Agent Assist
-   * features will not lead to the overall failure of an AnalyzeContent API call. Instead, the
-   * features will fail silently with the error field set in the corresponding SuggestionResult.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SuggestionResult> humanAgentSuggestionResults;
 
   /**
-   * Output only. Message analyzed by CCAI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1Message message;
 
   /**
-   * Optional. The audio data bytes encoded as specified in the request. This field is set if: -
-   * `reply_audio_config` was specified in the request, or - The automated agent responded with
-   * audio to play to the user. In such case, `reply_audio.config` contains settings used to
-   * synthesize the speech. In some scenarios, multiple output audio fields may be present in the
-   * response structure. In these cases, only the top-most-level audio output has content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1OutputAudio replyAudio;
 
   /**
-   * Output only. The output text content. This field is set if the automated agent responded with
-   * text to show to the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String replyText;
 
   /**
-   * Optional. Only set if a Dialogflow automated agent has responded. Note that:
-   * AutomatedAgentReply.detect_intent_response.output_audio and
-   * AutomatedAgentReply.detect_intent_response.output_audio_config are always empty, use
-   * reply_audio instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentReply getAutomatedAgentReply() {
@@ -107,10 +79,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * Optional. Only set if a Dialogflow automated agent has responded. Note that:
-   * AutomatedAgentReply.detect_intent_response.output_audio and
-   * AutomatedAgentReply.detect_intent_response.output_audio_config are always empty, use
-   * reply_audio instead.
    * @param automatedAgentReply automatedAgentReply or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentResponse setAutomatedAgentReply(GoogleCloudDialogflowV2beta1AutomatedAgentReply automatedAgentReply) {
@@ -119,7 +87,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * Indicates the parameters of DTMF.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1DtmfParameters getDtmfParameters() {
@@ -127,7 +94,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * Indicates the parameters of DTMF.
    * @param dtmfParameters dtmfParameters or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentResponse setDtmfParameters(GoogleCloudDialogflowV2beta1DtmfParameters dtmfParameters) {
@@ -136,12 +102,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * The suggestions for end user. The order is the same as
-   * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.end_user_suggestion_config. Same as human_agent_suggestion_results,
-   * any failure of Agent Assist features will not lead to the overall failure of an AnalyzeContent
-   * API call. Instead, the features will fail silently with the error field set in the
-   * corresponding SuggestionResult.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SuggestionResult> getEndUserSuggestionResults() {
@@ -149,12 +109,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * The suggestions for end user. The order is the same as
-   * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.end_user_suggestion_config. Same as human_agent_suggestion_results,
-   * any failure of Agent Assist features will not lead to the overall failure of an AnalyzeContent
-   * API call. Instead, the features will fail silently with the error field set in the
-   * corresponding SuggestionResult.
    * @param endUserSuggestionResults endUserSuggestionResults or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentResponse setEndUserSuggestionResults(java.util.List<GoogleCloudDialogflowV2beta1SuggestionResult> endUserSuggestionResults) {
@@ -163,11 +117,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * The suggestions for most recent human agent. The order is the same as
-   * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.human_agent_suggestion_config. Note that any failure of Agent Assist
-   * features will not lead to the overall failure of an AnalyzeContent API call. Instead, the
-   * features will fail silently with the error field set in the corresponding SuggestionResult.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1SuggestionResult> getHumanAgentSuggestionResults() {
@@ -175,11 +124,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * The suggestions for most recent human agent. The order is the same as
-   * HumanAgentAssistantConfig.SuggestionConfig.feature_configs of
-   * HumanAgentAssistantConfig.human_agent_suggestion_config. Note that any failure of Agent Assist
-   * features will not lead to the overall failure of an AnalyzeContent API call. Instead, the
-   * features will fail silently with the error field set in the corresponding SuggestionResult.
    * @param humanAgentSuggestionResults humanAgentSuggestionResults or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentResponse setHumanAgentSuggestionResults(java.util.List<GoogleCloudDialogflowV2beta1SuggestionResult> humanAgentSuggestionResults) {
@@ -188,7 +132,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * Output only. Message analyzed by CCAI.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message getMessage() {
@@ -196,7 +139,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * Output only. Message analyzed by CCAI.
    * @param message message or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentResponse setMessage(GoogleCloudDialogflowV2beta1Message message) {
@@ -205,11 +147,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * Optional. The audio data bytes encoded as specified in the request. This field is set if: -
-   * `reply_audio_config` was specified in the request, or - The automated agent responded with
-   * audio to play to the user. In such case, `reply_audio.config` contains settings used to
-   * synthesize the speech. In some scenarios, multiple output audio fields may be present in the
-   * response structure. In these cases, only the top-most-level audio output has content.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1OutputAudio getReplyAudio() {
@@ -217,11 +154,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * Optional. The audio data bytes encoded as specified in the request. This field is set if: -
-   * `reply_audio_config` was specified in the request, or - The automated agent responded with
-   * audio to play to the user. In such case, `reply_audio.config` contains settings used to
-   * synthesize the speech. In some scenarios, multiple output audio fields may be present in the
-   * response structure. In these cases, only the top-most-level audio output has content.
    * @param replyAudio replyAudio or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentResponse setReplyAudio(GoogleCloudDialogflowV2beta1OutputAudio replyAudio) {
@@ -230,8 +162,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * Output only. The output text content. This field is set if the automated agent responded with
-   * text to show to the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplyText() {
@@ -239,8 +169,6 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentResponse extends co
   }
 
   /**
-   * Output only. The output text content. This field is set if the automated agent responded with
-   * text to show to the user.
    * @param replyText replyText or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentResponse setReplyText(java.lang.String replyText) {

@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Boost applies to documents which match a condition.
+ * Model definition for GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoos
+ * tSpecConditionBoostSpec.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,47 +31,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Strength of the condition boost, which should be in [-1, 1]. Negative boost means
-   * demotion. Default is 0.0. Setting to 1.0 gives the document a big promotion. However, it does
-   * not necessarily mean that the boosted document will be the top result at all times, nor that
-   * other documents will be excluded. Results could still be shown even when none of them matches
-   * the condition. And results that are significantly more relevant to the search query can still
-   * trump your heavily favored but irrelevant documents. Setting to -1.0 gives the document a big
-   * demotion. However, results that are deeply relevant might still be shown. The document will
-   * have an upstream battle to get a fairly high ranking, but it is not blocked out completely.
-   * Setting to 0.0 means no boost applied. The boosting condition is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float boost;
 
   /**
-   * Optional. Complex specification for custom ranking based on customer defined attribute value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpec boostControlSpec;
 
   /**
-   * Optional. An expression which specifies a boost condition. The syntax and supported fields are
-   * the same as a filter expression. Examples: * To boost documents with document ID "doc_1" or
-   * "doc_2", and color "Red" or "Blue": * (id: ANY("doc_1", "doc_2")) AND (color:
-   * ANY("Red","Blue"))
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String condition;
 
   /**
-   * Optional. Strength of the condition boost, which should be in [-1, 1]. Negative boost means
-   * demotion. Default is 0.0. Setting to 1.0 gives the document a big promotion. However, it does
-   * not necessarily mean that the boosted document will be the top result at all times, nor that
-   * other documents will be excluded. Results could still be shown even when none of them matches
-   * the condition. And results that are significantly more relevant to the search query can still
-   * trump your heavily favored but irrelevant documents. Setting to -1.0 gives the document a big
-   * demotion. However, results that are deeply relevant might still be shown. The document will
-   * have an upstream battle to get a fairly high ranking, but it is not blocked out completely.
-   * Setting to 0.0 means no boost applied. The boosting condition is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Float getBoost() {
@@ -78,15 +56,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. Strength of the condition boost, which should be in [-1, 1]. Negative boost means
-   * demotion. Default is 0.0. Setting to 1.0 gives the document a big promotion. However, it does
-   * not necessarily mean that the boosted document will be the top result at all times, nor that
-   * other documents will be excluded. Results could still be shown even when none of them matches
-   * the condition. And results that are significantly more relevant to the search query can still
-   * trump your heavily favored but irrelevant documents. Setting to -1.0 gives the document a big
-   * demotion. However, results that are deeply relevant might still be shown. The document will
-   * have an upstream battle to get a fairly high ranking, but it is not blocked out completely.
-   * Setting to 0.0 means no boost applied. The boosting condition is ignored.
    * @param boost boost or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpec setBoost(java.lang.Float boost) {
@@ -95,7 +64,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. Complex specification for custom ranking based on customer defined attribute value.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpec getBoostControlSpec() {
@@ -103,7 +71,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. Complex specification for custom ranking based on customer defined attribute value.
    * @param boostControlSpec boostControlSpec or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpec setBoostControlSpec(GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpecBoostControlSpec boostControlSpec) {
@@ -112,10 +79,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. An expression which specifies a boost condition. The syntax and supported fields are
-   * the same as a filter expression. Examples: * To boost documents with document ID "doc_1" or
-   * "doc_2", and color "Red" or "Blue": * (id: ANY("doc_1", "doc_2")) AND (color:
-   * ANY("Red","Blue"))
    * @return value or {@code null} for none
    */
   public java.lang.String getCondition() {
@@ -123,10 +86,6 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfi
   }
 
   /**
-   * Optional. An expression which specifies a boost condition. The syntax and supported fields are
-   * the same as a filter expression. Examples: * To boost documents with document ID "doc_1" or
-   * "doc_2", and color "Red" or "Blue": * (id: ANY("doc_1", "doc_2")) AND (color:
-   * ANY("Red","Blue"))
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfigBoostSpecsBoostSpecConditionBoostSpec setCondition(java.lang.String condition) {

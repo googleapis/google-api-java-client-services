@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Request and response for a tool call.
+ * Model definition for GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Request for a tool call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ToolCall toolCall;
 
   /**
-   * Required. Response for a tool call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ToolCallResult toolCallResult;
 
   /**
-   * Required. Request for a tool call.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolCall getToolCall() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo extend
   }
 
   /**
-   * Required. Request for a tool call.
    * @param toolCall toolCall or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo setToolCall(GoogleCloudDialogflowV2ToolCall toolCall) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo extend
   }
 
   /**
-   * Required. Response for a tool call.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolCallResult getToolCallResult() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo extend
   }
 
   /**
-   * Required. Response for a tool call.
    * @param toolCallResult toolCallResult or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo setToolCallResult(GoogleCloudDialogflowV2ToolCallResult toolCallResult) {

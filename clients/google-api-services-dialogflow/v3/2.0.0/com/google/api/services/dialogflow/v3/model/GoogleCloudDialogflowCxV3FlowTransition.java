@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Stores metadata of the transition to a target CX flow. Flow transition actions exit the caller
- * playbook and enter the child flow.
+ * Model definition for GoogleCloudDialogflowCxV3FlowTransition.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3FlowTransition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The display name of the flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. The unique identifier of the flow. Format: `projects//locations//agents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flow;
 
   /**
-   * Output only. The display name of the flow.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -53,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3FlowTransition extends com.google.ap
   }
 
   /**
-   * Output only. The display name of the flow.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowTransition setDisplayName(java.lang.String displayName) {
@@ -62,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3FlowTransition extends com.google.ap
   }
 
   /**
-   * Required. The unique identifier of the flow. Format: `projects//locations//agents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlow() {
@@ -70,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3FlowTransition extends com.google.ap
   }
 
   /**
-   * Required. The unique identifier of the flow. Format: `projects//locations//agents/`.
    * @param flow flow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3FlowTransition setFlow(java.lang.String flow) {

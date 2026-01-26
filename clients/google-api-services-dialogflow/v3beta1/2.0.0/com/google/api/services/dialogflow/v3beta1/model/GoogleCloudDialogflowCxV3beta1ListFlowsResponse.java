@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The response message for Flows.ListFlows.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ListFlowsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,8 +30,6 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ListFlowsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of flows. There will be a maximum number of items returned based on the page_size
-   * field in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +42,12 @@ public final class GoogleCloudDialogflowCxV3beta1ListFlowsResponse extends com.g
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of flows. There will be a maximum number of items returned based on the page_size
-   * field in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1Flow> getFlows() {
@@ -60,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListFlowsResponse extends com.g
   }
 
   /**
-   * The list of flows. There will be a maximum number of items returned based on the page_size
-   * field in the request.
    * @param flows flows or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListFlowsResponse setFlows(java.util.List<GoogleCloudDialogflowCxV3beta1Flow> flows) {
@@ -70,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListFlowsResponse extends com.g
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1ListFlowsResponse extends com.g
   }
 
   /**
-   * Token to retrieve the next page of results, or empty if there are no more results in the list.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ListFlowsResponse setNextPageToken(java.lang.String nextPageToken) {

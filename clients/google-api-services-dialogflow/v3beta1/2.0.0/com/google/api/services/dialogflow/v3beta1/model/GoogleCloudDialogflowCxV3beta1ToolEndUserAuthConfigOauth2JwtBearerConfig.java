@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * JWT Profile Oauth 2.0 Authorization Grant authentication configuration.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtBearerConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtBearerConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Client key value or parameter name to pass it through.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientKey;
 
   /**
-   * Required. Issuer value or parameter name to pass it through.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String issuer;
 
   /**
-   * Required. Subject value or parameter name to pass it through.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subject;
 
   /**
-   * Required. Client key value or parameter name to pass it through.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientKey() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtB
   }
 
   /**
-   * Required. Client key value or parameter name to pass it through.
    * @param clientKey clientKey or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtBearerConfig setClientKey(java.lang.String clientKey) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtB
   }
 
   /**
-   * Required. Issuer value or parameter name to pass it through.
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuer() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtB
   }
 
   /**
-   * Required. Issuer value or parameter name to pass it through.
    * @param issuer issuer or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtBearerConfig setIssuer(java.lang.String issuer) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtB
   }
 
   /**
-   * Required. Subject value or parameter name to pass it through.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubject() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtB
   }
 
   /**
-   * Required. Subject value or parameter name to pass it through.
    * @param subject subject or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolEndUserAuthConfigOauth2JwtBearerConfig setSubject(java.lang.String subject) {

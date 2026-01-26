@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Column properties for TableCard.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageColumnProperties.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2IntentMessageColumnProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Column heading.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String header;
 
   /**
-   * Optional. Defines text alignment for all cells in this column.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String horizontalAlignment;
 
   /**
-   * Required. Column heading.
    * @return value or {@code null} for none
    */
   public java.lang.String getHeader() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnProperties extends 
   }
 
   /**
-   * Required. Column heading.
    * @param header header or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageColumnProperties setHeader(java.lang.String header) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnProperties extends 
   }
 
   /**
-   * Optional. Defines text alignment for all cells in this column.
    * @return value or {@code null} for none
    */
   public java.lang.String getHorizontalAlignment() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnProperties extends 
   }
 
   /**
-   * Optional. Defines text alignment for all cells in this column.
    * @param horizontalAlignment horizontalAlignment or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageColumnProperties setHorizontalAlignment(java.lang.String horizontalAlignment) {

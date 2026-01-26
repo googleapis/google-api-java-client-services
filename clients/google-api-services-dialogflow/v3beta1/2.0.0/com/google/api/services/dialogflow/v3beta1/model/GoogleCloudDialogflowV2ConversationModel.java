@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Represents a conversation model.
+ * Model definition for GoogleCloudDialogflowV2ConversationModel.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,80 +30,66 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2ConversationModel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Metadata for article suggestion models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ArticleSuggestionModelMetadata articleSuggestionModelMetadata;
 
   /**
-   * Output only. Creation time of this model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Required. Datasets used to create model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2InputDataset> datasets;
 
   /**
-   * Required. The display name of the model. At most 64 bytes long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Language code for the conversation model. If not specified, the language is en-US. Language at
-   * ConversationModel should be set for all non en-us languages. This should be a
-   * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * ConversationModel resource name. Format: `projects//conversationModels/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Metadata for smart reply models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SmartReplyModelMetadata smartReplyModelMetadata;
 
   /**
-   * Output only. State of the model. A model can only serve prediction requests after it gets
-   * deployed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Metadata for article suggestion models.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleSuggestionModelMetadata getArticleSuggestionModelMetadata() {
@@ -111,7 +97,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Metadata for article suggestion models.
    * @param articleSuggestionModelMetadata articleSuggestionModelMetadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setArticleSuggestionModelMetadata(GoogleCloudDialogflowV2ArticleSuggestionModelMetadata articleSuggestionModelMetadata) {
@@ -120,7 +105,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Output only. Creation time of this model.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -128,7 +112,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Output only. Creation time of this model.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setCreateTime(String createTime) {
@@ -137,7 +120,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Required. Datasets used to create model.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2InputDataset> getDatasets() {
@@ -145,7 +127,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Required. Datasets used to create model.
    * @param datasets datasets or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setDatasets(java.util.List<GoogleCloudDialogflowV2InputDataset> datasets) {
@@ -154,7 +135,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Required. The display name of the model. At most 64 bytes long.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -162,7 +142,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Required. The display name of the model. At most 64 bytes long.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setDisplayName(java.lang.String displayName) {
@@ -171,9 +150,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Language code for the conversation model. If not specified, the language is en-US. Language at
-   * ConversationModel should be set for all non en-us languages. This should be a
-   * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -181,9 +157,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Language code for the conversation model. If not specified, the language is en-US. Language at
-   * ConversationModel should be set for all non en-us languages. This should be a
-   * [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setLanguageCode(java.lang.String languageCode) {
@@ -192,7 +165,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * ConversationModel resource name. Format: `projects//conversationModels/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -200,7 +172,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * ConversationModel resource name. Format: `projects//conversationModels/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setName(java.lang.String name) {
@@ -209,7 +180,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the model.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -217,7 +187,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the model.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -226,7 +195,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the model.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -234,7 +202,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the model.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -243,7 +210,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Metadata for smart reply models.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SmartReplyModelMetadata getSmartReplyModelMetadata() {
@@ -251,7 +217,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Metadata for smart reply models.
    * @param smartReplyModelMetadata smartReplyModelMetadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setSmartReplyModelMetadata(GoogleCloudDialogflowV2SmartReplyModelMetadata smartReplyModelMetadata) {
@@ -260,8 +225,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Output only. State of the model. A model can only serve prediction requests after it gets
-   * deployed.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -269,8 +232,6 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   }
 
   /**
-   * Output only. State of the model. A model can only serve prediction requests after it gets
-   * deployed.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDialogflowV2ConversationModel setState(java.lang.String state) {

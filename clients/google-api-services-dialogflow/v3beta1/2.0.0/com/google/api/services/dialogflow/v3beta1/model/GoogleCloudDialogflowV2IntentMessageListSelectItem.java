@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * An item in the list.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageListSelectItem.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2IntentMessageListSelectItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The main text describing the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. The image to display.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageImage image;
 
   /**
-   * Required. Additional information about this option.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageSelectItemInfo info;
 
   /**
-   * Required. The title of the list item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Optional. The main text describing the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItem extends co
   }
 
   /**
-   * Optional. The main text describing the item.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageListSelectItem setDescription(java.lang.String description) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItem extends co
   }
 
   /**
-   * Optional. The image to display.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageImage getImage() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItem extends co
   }
 
   /**
-   * Optional. The image to display.
    * @param image image or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageListSelectItem setImage(GoogleCloudDialogflowV2IntentMessageImage image) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItem extends co
   }
 
   /**
-   * Required. Additional information about this option.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageSelectItemInfo getInfo() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItem extends co
   }
 
   /**
-   * Required. Additional information about this option.
    * @param info info or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageListSelectItem setInfo(GoogleCloudDialogflowV2IntentMessageSelectItemInfo info) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItem extends co
   }
 
   /**
-   * Required. The title of the list item.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectItem extends co
   }
 
   /**
-   * Required. The title of the list item.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageListSelectItem setTitle(java.lang.String title) {

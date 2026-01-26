@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Configuration for analyses to run on each conversation message.
+ * Model definition for GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,37 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable entity extraction in conversation messages on [agent assist
-   * stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If
-   * unspecified, defaults to false. Currently, this feature is not general available, please
-   * contact Google to get access.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableEntityExtraction;
 
   /**
-   * Enable sentiment analysis in conversation messages on [agent assist
-   * stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If
-   * unspecified, defaults to false. Sentiment analysis inspects user input and identifies the
-   * prevailing subjective opinion, especially to determine a user's attitude as positive, negative,
-   * or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For
-   * Participants.StreamingAnalyzeContent method, result will be in
-   * StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For
-   * Participants.AnalyzeContent method, result will be in
-   * AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method,
-   * result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification
-   * is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableSentimentAnalysis;
 
   /**
-   * Enable entity extraction in conversation messages on [agent assist
-   * stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If
-   * unspecified, defaults to false. Currently, this feature is not general available, please
-   * contact Google to get access.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableSentimentAnalysisV3;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableEntityExtraction() {
@@ -68,10 +55,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
   }
 
   /**
-   * Enable entity extraction in conversation messages on [agent assist
-   * stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If
-   * unspecified, defaults to false. Currently, this feature is not general available, please
-   * contact Google to get access.
    * @param enableEntityExtraction enableEntityExtraction or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig setEnableEntityExtraction(java.lang.Boolean enableEntityExtraction) {
@@ -80,17 +63,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
   }
 
   /**
-   * Enable sentiment analysis in conversation messages on [agent assist
-   * stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If
-   * unspecified, defaults to false. Sentiment analysis inspects user input and identifies the
-   * prevailing subjective opinion, especially to determine a user's attitude as positive, negative,
-   * or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For
-   * Participants.StreamingAnalyzeContent method, result will be in
-   * StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For
-   * Participants.AnalyzeContent method, result will be in
-   * AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method,
-   * result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification
-   * is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableSentimentAnalysis() {
@@ -98,21 +70,25 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
   }
 
   /**
-   * Enable sentiment analysis in conversation messages on [agent assist
-   * stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If
-   * unspecified, defaults to false. Sentiment analysis inspects user input and identifies the
-   * prevailing subjective opinion, especially to determine a user's attitude as positive, negative,
-   * or neutral: https://cloud.google.com/natural-language/docs/basics#sentiment_analysis For
-   * Participants.StreamingAnalyzeContent method, result will be in
-   * StreamingAnalyzeContentResponse.message.SentimentAnalysisResult. For
-   * Participants.AnalyzeContent method, result will be in
-   * AnalyzeContentResponse.message.SentimentAnalysisResult For Conversations.ListMessages method,
-   * result will be in ListMessagesResponse.messages.SentimentAnalysisResult If Pub/Sub notification
-   * is configured, result will be in ConversationEvent.new_message_payload.SentimentAnalysisResult.
    * @param enableSentimentAnalysis enableSentimentAnalysis or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig setEnableSentimentAnalysis(java.lang.Boolean enableSentimentAnalysis) {
     this.enableSentimentAnalysis = enableSentimentAnalysis;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableSentimentAnalysisV3() {
+    return enableSentimentAnalysisV3;
+  }
+
+  /**
+   * @param enableSentimentAnalysisV3 enableSentimentAnalysisV3 or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfig setEnableSentimentAnalysisV3(java.lang.Boolean enableSentimentAnalysisV3) {
+    this.enableSentimentAnalysisV3 = enableSentimentAnalysisV3;
     return this;
   }
 

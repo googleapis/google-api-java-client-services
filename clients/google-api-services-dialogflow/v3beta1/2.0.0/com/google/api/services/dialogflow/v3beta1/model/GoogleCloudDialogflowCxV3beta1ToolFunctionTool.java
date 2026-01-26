@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * A Function tool describes the functions to be invoked on the client side.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ToolFunctionTool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,27 +30,18 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ToolFunctionTool extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to describe the input of
-   * the function. This input is a JSON object that contains the function's parameters as properties
-   * of the object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> inputSchema;
 
   /**
-   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to describe the output of
-   * the function. This output is a JSON object that contains the function's parameters as
-   * properties of the object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> outputSchema;
 
   /**
-   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to describe the input of
-   * the function. This input is a JSON object that contains the function's parameters as properties
-   * of the object.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getInputSchema() {
@@ -58,9 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolFunctionTool extends com.go
   }
 
   /**
-   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to describe the input of
-   * the function. This input is a JSON object that contains the function's parameters as properties
-   * of the object.
    * @param inputSchema inputSchema or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolFunctionTool setInputSchema(java.util.Map<String, java.lang.Object> inputSchema) {
@@ -69,9 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolFunctionTool extends com.go
   }
 
   /**
-   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to describe the output of
-   * the function. This output is a JSON object that contains the function's parameters as
-   * properties of the object.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getOutputSchema() {
@@ -79,9 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1ToolFunctionTool extends com.go
   }
 
   /**
-   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to describe the output of
-   * the function. This output is a JSON object that contains the function's parameters as
-   * properties of the object.
    * @param outputSchema outputSchema or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolFunctionTool setOutputSchema(java.util.Map<String, java.lang.Object> outputSchema) {

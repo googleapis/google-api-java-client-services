@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * A text or ssml response that is preferentially used for TTS output audio synthesis, as described
- * in the comment on the ResponseMessage message.
+ * Model definition for GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,31 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether the playback of this message can be interrupted by the end user's speech
-   * and the client can then starts the next Dialogflow request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowPlaybackInterruption;
 
   /**
-   * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-
-   * speech/docs/ssml).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ssml;
 
   /**
-   * The raw text to be synthesized.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * Output only. Whether the playback of this message can be interrupted by the end user's speech
-   * and the client can then starts the next Dialogflow request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowPlaybackInterruption() {
@@ -63,8 +55,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText exten
   }
 
   /**
-   * Output only. Whether the playback of this message can be interrupted by the end user's speech
-   * and the client can then starts the next Dialogflow request.
    * @param allowPlaybackInterruption allowPlaybackInterruption or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText setAllowPlaybackInterruption(java.lang.Boolean allowPlaybackInterruption) {
@@ -73,8 +63,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText exten
   }
 
   /**
-   * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-
-   * speech/docs/ssml).
    * @return value or {@code null} for none
    */
   public java.lang.String getSsml() {
@@ -82,8 +70,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText exten
   }
 
   /**
-   * The SSML text to be synthesized. For more information, see [SSML](/speech/text-to-
-   * speech/docs/ssml).
    * @param ssml ssml or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText setSsml(java.lang.String ssml) {
@@ -92,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText exten
   }
 
   /**
-   * The raw text to be synthesized.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -100,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText exten
   }
 
   /**
-   * The raw text to be synthesized.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText setText(java.lang.String text) {

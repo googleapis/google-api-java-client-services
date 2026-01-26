@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Response of MatchIntent.
+ * Model definition for GoogleCloudDialogflowCxV3beta1MatchIntentResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,16 +30,12 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The current Page. Some, not all fields are filled in this message, including but not limited to
-   * `name` and `display_name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1Page currentPage;
 
   /**
-   * Match results, if more than one, ordered descendingly by the confidence we have that the
-   * particular intent matches the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,38 +48,30 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * If natural language text was provided as input, this field will contain a copy of the text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
 
   /**
-   * If natural language speech audio was provided as input, this field will contain the transcript
-   * for the audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transcript;
 
   /**
-   * If an event was provided as input, this field will contain a copy of the event name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerEvent;
 
   /**
-   * If an intent was provided as input, this field will contain a copy of the intent identifier.
-   * Format: `projects//locations//agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String triggerIntent;
 
   /**
-   * The current Page. Some, not all fields are filled in this message, including but not limited to
-   * `name` and `display_name`.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Page getCurrentPage() {
@@ -91,8 +79,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * The current Page. Some, not all fields are filled in this message, including but not limited to
-   * `name` and `display_name`.
    * @param currentPage currentPage or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1MatchIntentResponse setCurrentPage(GoogleCloudDialogflowCxV3beta1Page currentPage) {
@@ -101,8 +87,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * Match results, if more than one, ordered descendingly by the confidence we have that the
-   * particular intent matches the query.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1Match> getMatches() {
@@ -110,8 +94,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * Match results, if more than one, ordered descendingly by the confidence we have that the
-   * particular intent matches the query.
    * @param matches matches or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1MatchIntentResponse setMatches(java.util.List<GoogleCloudDialogflowCxV3beta1Match> matches) {
@@ -120,7 +102,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * If natural language text was provided as input, this field will contain a copy of the text.
    * @return value or {@code null} for none
    */
   public java.lang.String getText() {
@@ -128,7 +109,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * If natural language text was provided as input, this field will contain a copy of the text.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1MatchIntentResponse setText(java.lang.String text) {
@@ -137,8 +117,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * If natural language speech audio was provided as input, this field will contain the transcript
-   * for the audio.
    * @return value or {@code null} for none
    */
   public java.lang.String getTranscript() {
@@ -146,8 +124,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * If natural language speech audio was provided as input, this field will contain the transcript
-   * for the audio.
    * @param transcript transcript or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1MatchIntentResponse setTranscript(java.lang.String transcript) {
@@ -156,7 +132,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * If an event was provided as input, this field will contain a copy of the event name.
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerEvent() {
@@ -164,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * If an event was provided as input, this field will contain a copy of the event name.
    * @param triggerEvent triggerEvent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1MatchIntentResponse setTriggerEvent(java.lang.String triggerEvent) {
@@ -173,8 +147,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * If an intent was provided as input, this field will contain a copy of the intent identifier.
-   * Format: `projects//locations//agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerIntent() {
@@ -182,8 +154,6 @@ public final class GoogleCloudDialogflowCxV3beta1MatchIntentResponse extends com
   }
 
   /**
-   * If an intent was provided as input, this field will contain a copy of the intent identifier.
-   * Format: `projects//locations//agents//intents/`.
    * @param triggerIntent triggerIntent or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1MatchIntentResponse setTriggerIntent(java.lang.String triggerIntent) {

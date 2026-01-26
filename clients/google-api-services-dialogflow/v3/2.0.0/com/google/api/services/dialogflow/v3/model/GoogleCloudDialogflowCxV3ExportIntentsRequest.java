@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for Intents.ExportIntents.
+ * Model definition for GoogleCloudDialogflowCxV3ExportIntentsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,39 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ExportIntentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The data format of the exported intents. If not specified, `BLOB` is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataFormat;
 
   /**
-   * Required. The name of the intents to export. Format: `projects//locations//agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> intents;
 
   /**
-   * Optional. The option to return the serialized intents inline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean intentsContentInline;
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * intents to. The format of this URI must be `gs:`. Dialogflow performs a write operation for the
-   * Cloud Storage object on the caller's behalf, so your request authentication must have write
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String intentsUri;
 
   /**
-   * Optional. The data format of the exported intents. If not specified, `BLOB` is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataFormat() {
@@ -70,7 +61,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsRequest extends com.goo
   }
 
   /**
-   * Optional. The data format of the exported intents. If not specified, `BLOB` is assumed.
    * @param dataFormat dataFormat or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportIntentsRequest setDataFormat(java.lang.String dataFormat) {
@@ -79,7 +69,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsRequest extends com.goo
   }
 
   /**
-   * Required. The name of the intents to export. Format: `projects//locations//agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIntents() {
@@ -87,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsRequest extends com.goo
   }
 
   /**
-   * Required. The name of the intents to export. Format: `projects//locations//agents//intents/`.
    * @param intents intents or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportIntentsRequest setIntents(java.util.List<java.lang.String> intents) {
@@ -96,7 +84,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsRequest extends com.goo
   }
 
   /**
-   * Optional. The option to return the serialized intents inline.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIntentsContentInline() {
@@ -104,7 +91,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsRequest extends com.goo
   }
 
   /**
-   * Optional. The option to return the serialized intents inline.
    * @param intentsContentInline intentsContentInline or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportIntentsRequest setIntentsContentInline(java.lang.Boolean intentsContentInline) {
@@ -113,11 +99,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsRequest extends com.goo
   }
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * intents to. The format of this URI must be `gs:`. Dialogflow performs a write operation for the
-   * Cloud Storage object on the caller's behalf, so your request authentication must have write
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getIntentsUri() {
@@ -125,11 +106,6 @@ public final class GoogleCloudDialogflowCxV3ExportIntentsRequest extends com.goo
   }
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * intents to. The format of this URI must be `gs:`. Dialogflow performs a write operation for the
-   * Cloud Storage object on the caller's behalf, so your request authentication must have write
-   * permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param intentsUri intentsUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExportIntentsRequest setIntentsUri(java.lang.String intentsUri) {

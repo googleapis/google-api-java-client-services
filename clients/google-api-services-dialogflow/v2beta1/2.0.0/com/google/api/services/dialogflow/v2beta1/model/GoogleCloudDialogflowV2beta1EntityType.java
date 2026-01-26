@@ -17,13 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Each intent parameter has a type, called the entity type, which dictates exactly how data from an
- * end-user expression is extracted. Dialogflow provides predefined system entities that can match
- * many common types of data. For example, there are system entities for matching dates, times,
- * colors, email addresses, and so on. You can also create your own custom entities for matching
- * custom data. For example, you could define a vegetable entity that can match the types of
- * vegetables available for purchase with a grocery store agent. For more information, see the
- * [Entity guide](https://cloud.google.com/dialogflow/docs/entities-overview).
+ * Model definition for GoogleCloudDialogflowV2beta1EntityType.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -36,51 +30,42 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates whether the entity type can be automatically expanded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String autoExpansionMode;
 
   /**
-   * Required. The name of the entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. Enables fuzzy entity extraction during classification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableFuzzyExtraction;
 
   /**
-   * Optional. The collection of entity entries associated with the entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1EntityTypeEntity> entities;
 
   /**
-   * Required. Indicates the kind of entity type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and
-   * EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/`
-   * - `projects//locations//agent/entityTypes/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. Indicates whether the entity type can be automatically expanded.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoExpansionMode() {
@@ -88,7 +73,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Optional. Indicates whether the entity type can be automatically expanded.
    * @param autoExpansionMode autoExpansionMode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EntityType setAutoExpansionMode(java.lang.String autoExpansionMode) {
@@ -97,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Required. The name of the entity type.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -105,7 +88,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Required. The name of the entity type.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EntityType setDisplayName(java.lang.String displayName) {
@@ -114,7 +96,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Optional. Enables fuzzy entity extraction during classification.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableFuzzyExtraction() {
@@ -122,7 +103,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Optional. Enables fuzzy entity extraction during classification.
    * @param enableFuzzyExtraction enableFuzzyExtraction or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EntityType setEnableFuzzyExtraction(java.lang.Boolean enableFuzzyExtraction) {
@@ -131,7 +111,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Optional. The collection of entity entries associated with the entity type.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2beta1EntityTypeEntity> getEntities() {
@@ -139,7 +118,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Optional. The collection of entity entries associated with the entity type.
    * @param entities entities or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EntityType setEntities(java.util.List<GoogleCloudDialogflowV2beta1EntityTypeEntity> entities) {
@@ -148,7 +126,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Required. Indicates the kind of entity type.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -156,7 +133,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * Required. Indicates the kind of entity type.
    * @param kind kind or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EntityType setKind(java.lang.String kind) {
@@ -165,9 +141,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and
-   * EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/`
-   * - `projects//locations//agent/entityTypes/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -175,9 +148,6 @@ public final class GoogleCloudDialogflowV2beta1EntityType extends com.google.api
   }
 
   /**
-   * The unique identifier of the entity type. Required for EntityTypes.UpdateEntityType and
-   * EntityTypes.BatchUpdateEntityTypes methods. Supported formats: - `projects//agent/entityTypes/`
-   * - `projects//locations//agent/entityTypes/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1EntityType setName(java.lang.String name) {

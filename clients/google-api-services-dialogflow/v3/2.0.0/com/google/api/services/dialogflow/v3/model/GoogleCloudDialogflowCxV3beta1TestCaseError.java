@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Error info for importing a test.
+ * Model definition for GoogleCloudDialogflowCxV3beta1TestCaseError.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1TestCaseError extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status associated with the test case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus status;
 
   /**
-   * The test case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1TestCase testCase;
 
   /**
-   * The status associated with the test case.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getStatus() {
@@ -52,7 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseError extends com.googl
   }
 
   /**
-   * The status associated with the test case.
    * @param status status or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TestCaseError setStatus(GoogleRpcStatus status) {
@@ -61,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseError extends com.googl
   }
 
   /**
-   * The test case.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TestCase getTestCase() {
@@ -69,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseError extends com.googl
   }
 
   /**
-   * The test case.
    * @param testCase testCase or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TestCaseError setTestCase(GoogleCloudDialogflowCxV3beta1TestCase testCase) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The response message for Versions.CompareVersions.
+ * Model definition for GoogleCloudDialogflowCxV3beta1CompareVersionsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1CompareVersionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * JSON representation of the base version content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String baseVersionContentJson;
 
   /**
-   * The timestamp when the two version compares.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String compareTime;
 
   /**
-   * JSON representation of the target version content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetVersionContentJson;
 
   /**
-   * JSON representation of the base version content.
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseVersionContentJson() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1CompareVersionsResponse extends
   }
 
   /**
-   * JSON representation of the base version content.
    * @param baseVersionContentJson baseVersionContentJson or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1CompareVersionsResponse setBaseVersionContentJson(java.lang.String baseVersionContentJson) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1CompareVersionsResponse extends
   }
 
   /**
-   * The timestamp when the two version compares.
    * @return value or {@code null} for none
    */
   public String getCompareTime() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1CompareVersionsResponse extends
   }
 
   /**
-   * The timestamp when the two version compares.
    * @param compareTime compareTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1CompareVersionsResponse setCompareTime(String compareTime) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1CompareVersionsResponse extends
   }
 
   /**
-   * JSON representation of the target version content.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetVersionContentJson() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1CompareVersionsResponse extends
   }
 
   /**
-   * JSON representation of the target version content.
    * @param targetVersionContentJson targetVersionContentJson or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1CompareVersionsResponse setTargetVersionContentJson(java.lang.String targetVersionContentJson) {

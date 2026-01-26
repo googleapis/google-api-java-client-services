@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the result of annotation for the message.
+ * Model definition for GoogleCloudDialogflowV2MessageAnnotation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,15 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2MessageAnnotation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether the text message contains entities.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean containEntities;
 
   /**
-   * The collection of annotated message parts ordered by their position in the message. You can
-   * recover the annotated message by concatenating [AnnotatedMessagePart.text].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +48,6 @@ public final class GoogleCloudDialogflowV2MessageAnnotation extends com.google.a
   }
 
   /**
-   * Indicates whether the text message contains entities.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getContainEntities() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2MessageAnnotation extends com.google.a
   }
 
   /**
-   * Indicates whether the text message contains entities.
    * @param containEntities containEntities or {@code null} for none
    */
   public GoogleCloudDialogflowV2MessageAnnotation setContainEntities(java.lang.Boolean containEntities) {
@@ -68,8 +63,6 @@ public final class GoogleCloudDialogflowV2MessageAnnotation extends com.google.a
   }
 
   /**
-   * The collection of annotated message parts ordered by their position in the message. You can
-   * recover the annotated message by concatenating [AnnotatedMessagePart.text].
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2AnnotatedMessagePart> getParts() {
@@ -77,8 +70,6 @@ public final class GoogleCloudDialogflowV2MessageAnnotation extends com.google.a
   }
 
   /**
-   * The collection of annotated message parts ordered by their position in the message. You can
-   * recover the annotated message by concatenating [AnnotatedMessagePart.text].
    * @param parts parts or {@code null} for none
    */
   public GoogleCloudDialogflowV2MessageAnnotation setParts(java.util.List<GoogleCloudDialogflowV2AnnotatedMessagePart> parts) {

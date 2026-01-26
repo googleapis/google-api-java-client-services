@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The response message for Intents.ImportIntents.
+ * Model definition for GoogleCloudDialogflowCxV3ImportIntentsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ImportIntentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Info which resources have conflicts when REPORT_CONFLICT merge_option is set in
-   * ImportIntentsRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3ImportIntentsResponseConflictingResources conflictingResources;
 
   /**
-   * The unique identifier of the imported intents. Format: `projects//locations//agents//intents/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> intents;
 
   /**
-   * Info which resources have conflicts when REPORT_CONFLICT merge_option is set in
-   * ImportIntentsRequest.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportIntentsResponseConflictingResources getConflictingResources() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3ImportIntentsResponse extends com.go
   }
 
   /**
-   * Info which resources have conflicts when REPORT_CONFLICT merge_option is set in
-   * ImportIntentsRequest.
    * @param conflictingResources conflictingResources or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportIntentsResponse setConflictingResources(GoogleCloudDialogflowCxV3ImportIntentsResponseConflictingResources conflictingResources) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3ImportIntentsResponse extends com.go
   }
 
   /**
-   * The unique identifier of the imported intents. Format: `projects//locations//agents//intents/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIntents() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3ImportIntentsResponse extends com.go
   }
 
   /**
-   * The unique identifier of the imported intents. Format: `projects//locations//agents//intents/`.
    * @param intents intents or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportIntentsResponse setIntents(java.util.List<java.lang.String> intents) {

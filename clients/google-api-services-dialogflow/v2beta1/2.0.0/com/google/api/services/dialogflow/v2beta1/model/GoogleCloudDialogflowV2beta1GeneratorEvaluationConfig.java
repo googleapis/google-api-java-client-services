@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Generator evaluation input config.
+ * Model definition for GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The config/source of input data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig inputDataConfig;
 
   /**
-   * Required. The output Cloud Storage bucket path to store eval files, e.g.
-   * per_summary_accuracy_score report. This path is provided by customer and files stored in it are
-   * visible to customer, no internal data should be stored in this path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputGcsBucketPath;
 
   /**
-   * Evaluation configs for summarization generator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigSummarizationConfig summarizationConfig;
 
   /**
-   * Required. The config/source of input data.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig getInputDataConfig() {
@@ -61,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig extends
   }
 
   /**
-   * Required. The config/source of input data.
    * @param inputDataConfig inputDataConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig setInputDataConfig(GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigInputDataConfig inputDataConfig) {
@@ -70,9 +63,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig extends
   }
 
   /**
-   * Required. The output Cloud Storage bucket path to store eval files, e.g.
-   * per_summary_accuracy_score report. This path is provided by customer and files stored in it are
-   * visible to customer, no internal data should be stored in this path.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputGcsBucketPath() {
@@ -80,9 +70,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig extends
   }
 
   /**
-   * Required. The output Cloud Storage bucket path to store eval files, e.g.
-   * per_summary_accuracy_score report. This path is provided by customer and files stored in it are
-   * visible to customer, no internal data should be stored in this path.
    * @param outputGcsBucketPath outputGcsBucketPath or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig setOutputGcsBucketPath(java.lang.String outputGcsBucketPath) {
@@ -91,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig extends
   }
 
   /**
-   * Evaluation configs for summarization generator.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigSummarizationConfig getSummarizationConfig() {
@@ -99,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig extends
   }
 
   /**
-   * Evaluation configs for summarization generator.
    * @param summarizationConfig summarizationConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GeneratorEvaluationConfig setSummarizationConfig(GoogleCloudDialogflowV2beta1GeneratorEvaluationConfigSummarizationConfig summarizationConfig) {

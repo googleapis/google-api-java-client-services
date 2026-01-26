@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Configuration of a Connection operation for the tool to use.
+ * Model definition for GoogleCloudDialogflowV2ToolConnectorToolAction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,37 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ToolConnectorToolAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * ID of a Connection action for the tool to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectionActionId;
 
   /**
-   * Entity operation configuration for the tool to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation entityOperation;
 
   /**
-   * Optional. Entity fields to use as inputs for the operation. If no fields are specified, all
-   * fields of the Entity will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> inputFields;
 
   /**
-   * Optional. Entity fields to return from the operation. If no fields are specified, all fields of
-   * the Entity will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> outputFields;
 
   /**
-   * ID of a Connection action for the tool to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnectionActionId() {
@@ -68,7 +61,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolAction extends com.go
   }
 
   /**
-   * ID of a Connection action for the tool to use.
    * @param connectionActionId connectionActionId or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolConnectorToolAction setConnectionActionId(java.lang.String connectionActionId) {
@@ -77,7 +69,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolAction extends com.go
   }
 
   /**
-   * Entity operation configuration for the tool to use.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation getEntityOperation() {
@@ -85,7 +76,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolAction extends com.go
   }
 
   /**
-   * Entity operation configuration for the tool to use.
    * @param entityOperation entityOperation or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolConnectorToolAction setEntityOperation(GoogleCloudDialogflowV2ToolConnectorToolActionEntityOperation entityOperation) {
@@ -94,8 +84,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolAction extends com.go
   }
 
   /**
-   * Optional. Entity fields to use as inputs for the operation. If no fields are specified, all
-   * fields of the Entity will be used.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInputFields() {
@@ -103,8 +91,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolAction extends com.go
   }
 
   /**
-   * Optional. Entity fields to use as inputs for the operation. If no fields are specified, all
-   * fields of the Entity will be used.
    * @param inputFields inputFields or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolConnectorToolAction setInputFields(java.util.List<java.lang.String> inputFields) {
@@ -113,8 +99,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolAction extends com.go
   }
 
   /**
-   * Optional. Entity fields to return from the operation. If no fields are specified, all fields of
-   * the Entity will be returned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOutputFields() {
@@ -122,8 +106,6 @@ public final class GoogleCloudDialogflowV2ToolConnectorToolAction extends com.go
   }
 
   /**
-   * Optional. Entity fields to return from the operation. If no fields are specified, all fields of
-   * the Entity will be returned.
    * @param outputFields outputFields or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolConnectorToolAction setOutputFields(java.util.List<java.lang.String> outputFields) {

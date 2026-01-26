@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Request message for Documents.ImportDocuments.
+ * Model definition for GoogleCloudDialogflowV2ImportDocumentsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ImportDocumentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Document template used for importing all the documents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2ImportDocumentTemplate documentTemplate;
 
   /**
-   * Optional. The Google Cloud Storage location for the documents. The path can include a wildcard.
-   * These URIs may have the forms `gs:`. `gs:.`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GcsSources gcsSource;
 
   /**
-   * Whether to import custom metadata from Google Cloud Storage. Only valid when the document
-   * source is Google Cloud Storage URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean importGcsCustomMetadata;
 
   /**
-   * Required. Document template used for importing all the documents.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportDocumentTemplate getDocumentTemplate() {
@@ -61,7 +55,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentsRequest extends com.goo
   }
 
   /**
-   * Required. Document template used for importing all the documents.
    * @param documentTemplate documentTemplate or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportDocumentsRequest setDocumentTemplate(GoogleCloudDialogflowV2ImportDocumentTemplate documentTemplate) {
@@ -70,8 +63,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentsRequest extends com.goo
   }
 
   /**
-   * Optional. The Google Cloud Storage location for the documents. The path can include a wildcard.
-   * These URIs may have the forms `gs:`. `gs:.`.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2GcsSources getGcsSource() {
@@ -79,8 +70,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentsRequest extends com.goo
   }
 
   /**
-   * Optional. The Google Cloud Storage location for the documents. The path can include a wildcard.
-   * These URIs may have the forms `gs:`. `gs:.`.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportDocumentsRequest setGcsSource(GoogleCloudDialogflowV2GcsSources gcsSource) {
@@ -89,8 +78,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentsRequest extends com.goo
   }
 
   /**
-   * Whether to import custom metadata from Google Cloud Storage. Only valid when the document
-   * source is Google Cloud Storage URI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getImportGcsCustomMetadata() {
@@ -98,8 +85,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentsRequest extends com.goo
   }
 
   /**
-   * Whether to import custom metadata from Google Cloud Storage. Only valid when the document
-   * source is Google Cloud Storage URI.
    * @param importGcsCustomMetadata importGcsCustomMetadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportDocumentsRequest setImportGcsCustomMetadata(java.lang.Boolean importGcsCustomMetadata) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents a Dialogflow assist answer.
+ * Model definition for GoogleCloudDialogflowV2beta1DialogflowAssistAnswer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * An intent suggestion generated from conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1IntentSuggestion intentSuggestion;
 
   /**
-   * Result from v2 agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1QueryResult queryResult;
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends co
   }
 
   /**
-   * The name of answer record, in the format of "projects//locations//answerRecords/"
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1DialogflowAssistAnswer setAnswerRecord(java.lang.String answerRecord) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends co
   }
 
   /**
-   * An intent suggestion generated from conversation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1IntentSuggestion getIntentSuggestion() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends co
   }
 
   /**
-   * An intent suggestion generated from conversation.
    * @param intentSuggestion intentSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1DialogflowAssistAnswer setIntentSuggestion(GoogleCloudDialogflowV2beta1IntentSuggestion intentSuggestion) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends co
   }
 
   /**
-   * Result from v2 agent.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1QueryResult getQueryResult() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends co
   }
 
   /**
-   * Result from v2 agent.
    * @param queryResult queryResult or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1DialogflowAssistAnswer setQueryResult(GoogleCloudDialogflowV2beta1QueryResult queryResult) {

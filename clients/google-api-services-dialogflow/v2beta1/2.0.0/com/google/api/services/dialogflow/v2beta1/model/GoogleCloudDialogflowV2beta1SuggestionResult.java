@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * One response of different type of suggestion response which is used in the response of
- * Participants.AnalyzeContent and Participants.AnalyzeContent, as well as HumanAgentAssistantEvent.
+ * Model definition for GoogleCloudDialogflowV2beta1SuggestionResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,63 +30,54 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Error status if the request failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus error;
 
   /**
-   * Suggestions generated using generators triggered by customer or agent messages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse generateSuggestionsResponse;
 
   /**
-   * SuggestArticlesResponse if request is for ARTICLE_SUGGESTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SuggestArticlesResponse suggestArticlesResponse;
 
   /**
-   * SuggestDialogflowAssistsResponse if request is for DIALOGFLOW_ASSIST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestDialogflowAssistsResponse;
 
   /**
-   * SuggestDialogflowAssistsResponse if request is for ENTITY_EXTRACTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestEntityExtractionResponse;
 
   /**
-   * SuggestFaqAnswersResponse if request is for FAQ_ANSWER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse suggestFaqAnswersResponse;
 
   /**
-   * SuggestKnowledgeAssistResponse if request is for KNOWLEDGE_ASSIST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse suggestKnowledgeAssistResponse;
 
   /**
-   * SuggestSmartRepliesResponse if request is for SMART_REPLY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SuggestSmartRepliesResponse suggestSmartRepliesResponse;
 
   /**
-   * Error status if the request failed.
    * @return value or {@code null} for none
    */
   public GoogleRpcStatus getError() {
@@ -95,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * Error status if the request failed.
    * @param error error or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setError(GoogleRpcStatus error) {
@@ -104,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * Suggestions generated using generators triggered by customer or agent messages.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse getGenerateSuggestionsResponse() {
@@ -112,7 +100,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * Suggestions generated using generators triggered by customer or agent messages.
    * @param generateSuggestionsResponse generateSuggestionsResponse or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setGenerateSuggestionsResponse(GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse generateSuggestionsResponse) {
@@ -121,7 +108,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestArticlesResponse if request is for ARTICLE_SUGGESTION.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestArticlesResponse getSuggestArticlesResponse() {
@@ -129,7 +115,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestArticlesResponse if request is for ARTICLE_SUGGESTION.
    * @param suggestArticlesResponse suggestArticlesResponse or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestArticlesResponse(GoogleCloudDialogflowV2beta1SuggestArticlesResponse suggestArticlesResponse) {
@@ -138,7 +123,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestDialogflowAssistsResponse if request is for DIALOGFLOW_ASSIST.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse getSuggestDialogflowAssistsResponse() {
@@ -146,7 +130,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestDialogflowAssistsResponse if request is for DIALOGFLOW_ASSIST.
    * @param suggestDialogflowAssistsResponse suggestDialogflowAssistsResponse or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestDialogflowAssistsResponse(GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestDialogflowAssistsResponse) {
@@ -155,7 +138,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestDialogflowAssistsResponse if request is for ENTITY_EXTRACTION.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse getSuggestEntityExtractionResponse() {
@@ -163,7 +145,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestDialogflowAssistsResponse if request is for ENTITY_EXTRACTION.
    * @param suggestEntityExtractionResponse suggestEntityExtractionResponse or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestEntityExtractionResponse(GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse suggestEntityExtractionResponse) {
@@ -172,7 +153,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestFaqAnswersResponse if request is for FAQ_ANSWER.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse getSuggestFaqAnswersResponse() {
@@ -180,7 +160,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestFaqAnswersResponse if request is for FAQ_ANSWER.
    * @param suggestFaqAnswersResponse suggestFaqAnswersResponse or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestFaqAnswersResponse(GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse suggestFaqAnswersResponse) {
@@ -189,7 +168,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestKnowledgeAssistResponse if request is for KNOWLEDGE_ASSIST.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse getSuggestKnowledgeAssistResponse() {
@@ -197,7 +175,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestKnowledgeAssistResponse if request is for KNOWLEDGE_ASSIST.
    * @param suggestKnowledgeAssistResponse suggestKnowledgeAssistResponse or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestKnowledgeAssistResponse(GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistResponse suggestKnowledgeAssistResponse) {
@@ -206,7 +183,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestSmartRepliesResponse if request is for SMART_REPLY.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestSmartRepliesResponse getSuggestSmartRepliesResponse() {
@@ -214,7 +190,6 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   }
 
   /**
-   * SuggestSmartRepliesResponse if request is for SMART_REPLY.
    * @param suggestSmartRepliesResponse suggestSmartRepliesResponse or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setSuggestSmartRepliesResponse(GoogleCloudDialogflowV2beta1SuggestSmartRepliesResponse suggestSmartRepliesResponse) {

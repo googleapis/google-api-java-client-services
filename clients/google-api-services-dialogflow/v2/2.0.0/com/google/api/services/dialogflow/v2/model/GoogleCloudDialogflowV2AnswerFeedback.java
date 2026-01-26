@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents feedback the customer has about the quality & correctness of a certain answer in a
- * conversation.
+ * Model definition for GoogleCloudDialogflowV2AnswerFeedback.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,52 +30,42 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.client.json.GenericJson {
 
   /**
-   * Detail feedback of agent assist suggestions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2AgentAssistantFeedback agentAssistantDetailFeedback;
 
   /**
-   * Time when the answer/item was clicked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String clickTime;
 
   /**
-   * Indicates whether the answer/item was clicked by the human agent or not. Default to false. For
-   * knowledge search and knowledge assist, the answer record is considered to be clicked if the
-   * answer was copied or any URI was clicked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean clicked;
 
   /**
-   * The correctness level of the specific answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String correctnessLevel;
 
   /**
-   * Time when the answer/item was displayed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String displayTime;
 
   /**
-   * Indicates whether the answer/item was displayed to the human agent in the agent desktop UI.
-   * Default to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean displayed;
 
   /**
-   * Detail feedback of agent assist suggestions.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AgentAssistantFeedback getAgentAssistantDetailFeedback() {
@@ -84,7 +73,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * Detail feedback of agent assist suggestions.
    * @param agentAssistantDetailFeedback agentAssistantDetailFeedback or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerFeedback setAgentAssistantDetailFeedback(GoogleCloudDialogflowV2AgentAssistantFeedback agentAssistantDetailFeedback) {
@@ -93,7 +81,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * Time when the answer/item was clicked.
    * @return value or {@code null} for none
    */
   public String getClickTime() {
@@ -101,7 +88,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * Time when the answer/item was clicked.
    * @param clickTime clickTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerFeedback setClickTime(String clickTime) {
@@ -110,9 +96,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * Indicates whether the answer/item was clicked by the human agent or not. Default to false. For
-   * knowledge search and knowledge assist, the answer record is considered to be clicked if the
-   * answer was copied or any URI was clicked.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getClicked() {
@@ -120,9 +103,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * Indicates whether the answer/item was clicked by the human agent or not. Default to false. For
-   * knowledge search and knowledge assist, the answer record is considered to be clicked if the
-   * answer was copied or any URI was clicked.
    * @param clicked clicked or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerFeedback setClicked(java.lang.Boolean clicked) {
@@ -131,7 +111,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * The correctness level of the specific answer.
    * @return value or {@code null} for none
    */
   public java.lang.String getCorrectnessLevel() {
@@ -139,7 +118,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * The correctness level of the specific answer.
    * @param correctnessLevel correctnessLevel or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerFeedback setCorrectnessLevel(java.lang.String correctnessLevel) {
@@ -148,7 +126,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * Time when the answer/item was displayed.
    * @return value or {@code null} for none
    */
   public String getDisplayTime() {
@@ -156,7 +133,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * Time when the answer/item was displayed.
    * @param displayTime displayTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerFeedback setDisplayTime(String displayTime) {
@@ -165,8 +141,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * Indicates whether the answer/item was displayed to the human agent in the agent desktop UI.
-   * Default to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisplayed() {
@@ -174,8 +148,6 @@ public final class GoogleCloudDialogflowV2AnswerFeedback extends com.google.api.
   }
 
   /**
-   * Indicates whether the answer/item was displayed to the human agent in the agent desktop UI.
-   * Default to false.
    * @param displayed displayed or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnswerFeedback setDisplayed(java.lang.Boolean displayed) {

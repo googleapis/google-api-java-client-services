@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the output of agent validation.
+ * Model definition for GoogleCloudDialogflowV2ValidationResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ValidationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains all validation errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +42,6 @@ public final class GoogleCloudDialogflowV2ValidationResult extends com.google.ap
   }
 
   /**
-   * Contains all validation errors.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2ValidationError> getValidationErrors() {
@@ -51,7 +49,6 @@ public final class GoogleCloudDialogflowV2ValidationResult extends com.google.ap
   }
 
   /**
-   * Contains all validation errors.
    * @param validationErrors validationErrors or {@code null} for none
    */
   public GoogleCloudDialogflowV2ValidationResult setValidationErrors(java.util.List<GoogleCloudDialogflowV2ValidationError> validationErrors) {

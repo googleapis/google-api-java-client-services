@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The request message for Playbooks.ImportPlaybook.
+ * Model definition for GoogleCloudDialogflowCxV3ImportPlaybookRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies the import strategy used when resolving resource conflicts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3PlaybookImportStrategy importStrategy;
 
   /**
-   * Uncompressed raw byte content for playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String playbookContent;
 
   /**
-   * [Dialogflow access control] (https://cloud.google.com/dialogflow/cx/docs/concept/access-
-   * control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String playbookUri;
 
   /**
-   * Optional. Specifies the import strategy used when resolving resource conflicts.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3PlaybookImportStrategy getImportStrategy() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends com.go
   }
 
   /**
-   * Optional. Specifies the import strategy used when resolving resource conflicts.
    * @param importStrategy importStrategy or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportPlaybookRequest setImportStrategy(GoogleCloudDialogflowCxV3PlaybookImportStrategy importStrategy) {
@@ -69,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends com.go
   }
 
   /**
-   * Uncompressed raw byte content for playbook.
    * @see #decodePlaybookContent()
    * @return value or {@code null} for none
    */
@@ -78,7 +71,7 @@ public final class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends com.go
   }
 
   /**
-   * Uncompressed raw byte content for playbook.
+
    * @see #getPlaybookContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -89,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends com.go
   }
 
   /**
-   * Uncompressed raw byte content for playbook.
    * @see #encodePlaybookContent()
    * @param playbookContent playbookContent or {@code null} for none
    */
@@ -99,7 +91,7 @@ public final class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends com.go
   }
 
   /**
-   * Uncompressed raw byte content for playbook.
+
    * @see #setPlaybookContent()
    *
    * <p>
@@ -114,8 +106,6 @@ public final class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends com.go
   }
 
   /**
-   * [Dialogflow access control] (https://cloud.google.com/dialogflow/cx/docs/concept/access-
-   * control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaybookUri() {
@@ -123,8 +113,6 @@ public final class GoogleCloudDialogflowCxV3ImportPlaybookRequest extends com.go
   }
 
   /**
-   * [Dialogflow access control] (https://cloud.google.com/dialogflow/cx/docs/concept/access-
-   * control#storage).
    * @param playbookUri playbookUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ImportPlaybookRequest setPlaybookUri(java.lang.String playbookUri) {

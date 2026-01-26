@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Settings of integration with GitHub.
+ * Model definition for GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,42 +30,36 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The access token used to authenticate the access to the GitHub repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessToken;
 
   /**
-   * A list of branches configured to be used from Dialogflow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> branches;
 
   /**
-   * The unique repository display name for the GitHub repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The GitHub repository URI related to the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String repositoryUri;
 
   /**
-   * The branch of the GitHub repository tracked for this agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingBranch;
 
   /**
-   * The access token used to authenticate the access to the GitHub repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessToken() {
@@ -73,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGith
   }
 
   /**
-   * The access token used to authenticate the access to the GitHub repository.
    * @param accessToken accessToken or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings setAccessToken(java.lang.String accessToken) {
@@ -82,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGith
   }
 
   /**
-   * A list of branches configured to be used from Dialogflow.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBranches() {
@@ -90,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGith
   }
 
   /**
-   * A list of branches configured to be used from Dialogflow.
    * @param branches branches or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings setBranches(java.util.List<java.lang.String> branches) {
@@ -99,7 +90,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGith
   }
 
   /**
-   * The unique repository display name for the GitHub repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -107,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGith
   }
 
   /**
-   * The unique repository display name for the GitHub repository.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings setDisplayName(java.lang.String displayName) {
@@ -116,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGith
   }
 
   /**
-   * The GitHub repository URI related to the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getRepositoryUri() {
@@ -124,7 +112,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGith
   }
 
   /**
-   * The GitHub repository URI related to the agent.
    * @param repositoryUri repositoryUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings setRepositoryUri(java.lang.String repositoryUri) {
@@ -133,7 +120,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGith
   }
 
   /**
-   * The branch of the GitHub repository tracked for this agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingBranch() {
@@ -141,7 +127,6 @@ public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGith
   }
 
   /**
-   * The branch of the GitHub repository tracked for this agent.
    * @param trackingBranch trackingBranch or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings setTrackingBranch(java.lang.String trackingBranch) {

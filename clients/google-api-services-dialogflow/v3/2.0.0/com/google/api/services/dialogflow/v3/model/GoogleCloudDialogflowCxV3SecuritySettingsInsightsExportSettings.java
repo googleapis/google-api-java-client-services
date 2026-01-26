@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Settings for exporting conversations to [Insights](https://cloud.google.com/contact-
- * center/insights/docs).
+ * Model definition for GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,16 +30,12 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * If enabled, we will automatically exports conversations to Insights and Insights runs its
-   * analyzers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableInsightsExport;
 
   /**
-   * If enabled, we will automatically exports conversations to Insights and Insights runs its
-   * analyzers.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableInsightsExport() {
@@ -48,8 +43,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
   }
 
   /**
-   * If enabled, we will automatically exports conversations to Insights and Insights runs its
-   * analyzers.
    * @param enableInsightsExport enableInsightsExport or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings setEnableInsightsExport(java.lang.Boolean enableInsightsExport) {

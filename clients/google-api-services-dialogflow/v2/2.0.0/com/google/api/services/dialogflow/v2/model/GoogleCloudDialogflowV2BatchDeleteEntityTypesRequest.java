@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The request message for EntityTypes.BatchDeleteEntityTypes.
+ * Model definition for GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The names entity types to delete. All names must point to the same agent as `parent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entityTypeNames;
 
   /**
-   * Required. The names entity types to delete. All names must point to the same agent as `parent`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntityTypeNames() {
@@ -45,7 +43,6 @@ public final class GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest extends 
   }
 
   /**
-   * Required. The names entity types to delete. All names must point to the same agent as `parent`.
    * @param entityTypeNames entityTypeNames or {@code null} for none
    */
   public GoogleCloudDialogflowV2BatchDeleteEntityTypesRequest setEntityTypeNames(java.util.List<java.lang.String> entityTypeNames) {

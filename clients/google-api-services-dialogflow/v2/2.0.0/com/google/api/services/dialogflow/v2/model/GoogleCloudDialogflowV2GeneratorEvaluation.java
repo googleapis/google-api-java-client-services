@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents evaluation result of a generator.
+ * Model definition for GoogleCloudDialogflowV2GeneratorEvaluation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,85 +30,66 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Completion time of this generator evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String completeTime;
 
   /**
-   * Output only. Creation time of this generator evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The display name of the generator evaluation. At most 64 bytes long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. The result status of the evaluation pipeline. Provides the status information
-   * including if the evaluation is still in progress, completed or failed with certain error and
-   * user actionable message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2EvaluationStatus evaluationStatus;
 
   /**
-   * Required. The configuration of the evaluation task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GeneratorEvaluationConfig generatorEvaluationConfig;
 
   /**
-   * Required. The initial generator that was used when creating this evaluation. This is a copy of
-   * the generator read from storage when creating the evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2Generator initialGenerator;
 
   /**
-   * Output only. Identifier. The resource name of the evaluation. Format:
-   * `projects//locations//generators// evaluations/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the model. The field
-   * is an aggregated value of ZI status of its underlying dependencies. See more details in
-   * go/zicy-resource-placement#resource-status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the model. The
-   * field is an aggregated value of ZS status of its underlying dependencies. See more details in
-   * go/zicy-resource-placement#resource-status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Output only. Only available when the summarization generator is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SummarizationEvaluationMetrics summarizationMetrics;
 
   /**
-   * Output only. Completion time of this generator evaluation.
    * @return value or {@code null} for none
    */
   public String getCompleteTime() {
@@ -116,7 +97,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. Completion time of this generator evaluation.
    * @param completeTime completeTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setCompleteTime(String completeTime) {
@@ -125,7 +105,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. Creation time of this generator evaluation.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -133,7 +112,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. Creation time of this generator evaluation.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setCreateTime(String createTime) {
@@ -142,7 +120,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Optional. The display name of the generator evaluation. At most 64 bytes long.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -150,7 +127,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Optional. The display name of the generator evaluation. At most 64 bytes long.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setDisplayName(java.lang.String displayName) {
@@ -159,9 +135,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. The result status of the evaluation pipeline. Provides the status information
-   * including if the evaluation is still in progress, completed or failed with certain error and
-   * user actionable message.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationStatus getEvaluationStatus() {
@@ -169,9 +142,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. The result status of the evaluation pipeline. Provides the status information
-   * including if the evaluation is still in progress, completed or failed with certain error and
-   * user actionable message.
    * @param evaluationStatus evaluationStatus or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setEvaluationStatus(GoogleCloudDialogflowV2EvaluationStatus evaluationStatus) {
@@ -180,7 +150,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Required. The configuration of the evaluation task.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluationConfig getGeneratorEvaluationConfig() {
@@ -188,7 +157,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Required. The configuration of the evaluation task.
    * @param generatorEvaluationConfig generatorEvaluationConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setGeneratorEvaluationConfig(GoogleCloudDialogflowV2GeneratorEvaluationConfig generatorEvaluationConfig) {
@@ -197,8 +165,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Required. The initial generator that was used when creating this evaluation. This is a copy of
-   * the generator read from storage when creating the evaluation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2Generator getInitialGenerator() {
@@ -206,8 +172,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Required. The initial generator that was used when creating this evaluation. This is a copy of
-   * the generator read from storage when creating the evaluation.
    * @param initialGenerator initialGenerator or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setInitialGenerator(GoogleCloudDialogflowV2Generator initialGenerator) {
@@ -216,8 +180,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. Identifier. The resource name of the evaluation. Format:
-   * `projects//locations//generators// evaluations/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -225,8 +187,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. Identifier. The resource name of the evaluation. Format:
-   * `projects//locations//generators// evaluations/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setName(java.lang.String name) {
@@ -235,9 +195,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the model. The field
-   * is an aggregated value of ZI status of its underlying dependencies. See more details in
-   * go/zicy-resource-placement#resource-status
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -245,9 +202,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Isolation status of the model. The field
-   * is an aggregated value of ZI status of its underlying dependencies. See more details in
-   * go/zicy-resource-placement#resource-status
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -256,9 +210,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the model. The
-   * field is an aggregated value of ZS status of its underlying dependencies. See more details in
-   * go/zicy-resource-placement#resource-status
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -266,9 +217,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. A read only boolean field reflecting Zone Separation status of the model. The
-   * field is an aggregated value of ZS status of its underlying dependencies. See more details in
-   * go/zicy-resource-placement#resource-status
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -277,7 +225,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. Only available when the summarization generator is provided.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetrics getSummarizationMetrics() {
@@ -285,7 +232,6 @@ public final class GoogleCloudDialogflowV2GeneratorEvaluation extends com.google
   }
 
   /**
-   * Output only. Only available when the summarization generator is provided.
    * @param summarizationMetrics summarizationMetrics or {@code null} for none
    */
   public GoogleCloudDialogflowV2GeneratorEvaluation setSummarizationMetrics(GoogleCloudDialogflowV2SummarizationEvaluationMetrics summarizationMetrics) {

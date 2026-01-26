@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The template used for importing documents.
+ * Model definition for GoogleCloudDialogflowV2ImportDocumentTemplate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ImportDocumentTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The knowledge type of document content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> knowledgeTypes;
 
   /**
-   * Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested use cases
-   * include storing a document's title, an external URL distinct from the document's content_uri,
-   * etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * Required. The MIME type of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * Required. The knowledge type of document content.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getKnowledgeTypes() {
@@ -61,7 +55,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentTemplate extends com.goo
   }
 
   /**
-   * Required. The knowledge type of document content.
    * @param knowledgeTypes knowledgeTypes or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportDocumentTemplate setKnowledgeTypes(java.util.List<java.lang.String> knowledgeTypes) {
@@ -70,9 +63,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentTemplate extends com.goo
   }
 
   /**
-   * Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested use cases
-   * include storing a document's title, an external URL distinct from the document's content_uri,
-   * etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getMetadata() {
@@ -80,9 +70,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentTemplate extends com.goo
   }
 
   /**
-   * Metadata for the document. The metadata supports arbitrary key-value pairs. Suggested use cases
-   * include storing a document's title, an external URL distinct from the document's content_uri,
-   * etc. The max size of a `key` or a `value` of the metadata is 1024 bytes.
    * @param metadata metadata or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportDocumentTemplate setMetadata(java.util.Map<String, java.lang.String> metadata) {
@@ -91,7 +78,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentTemplate extends com.goo
   }
 
   /**
-   * Required. The MIME type of the document.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -99,7 +85,6 @@ public final class GoogleCloudDialogflowV2ImportDocumentTemplate extends com.goo
   }
 
   /**
-   * Required. The MIME type of the document.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudDialogflowV2ImportDocumentTemplate setMimeType(java.lang.String mimeType) {

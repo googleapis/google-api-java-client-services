@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Evaluation result per conversation(&summary), metric and section.
+ * Model definition for
+ * GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummarizationEvaluationResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,7 +31,6 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummarizationEvaluationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of decompostion details
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. List of evaluation results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,42 +55,36 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. metric name, e.g. accuracy, completeness, adherence, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metric;
 
   /**
-   * Output only. score calculated from decompositions
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
 
   /**
-   * Output only. section/task name, e.g. action, situation, etc
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String section;
 
   /**
-   * Output only. Summary of this section
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sectionSummary;
 
   /**
-   * Output only. conversation session id
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sessionId;
 
   /**
-   * Output only. List of decompostion details
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsDecomposition> getDecompositions() {
@@ -99,7 +92,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. List of decompostion details
    * @param decompositions decompositions or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummarizationEvaluationResult setDecompositions(java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsDecomposition> decompositions) {
@@ -108,7 +100,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. List of evaluation results.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsEvaluationResult> getEvaluationResults() {
@@ -116,7 +107,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. List of evaluation results.
    * @param evaluationResults evaluationResults or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummarizationEvaluationResult setEvaluationResults(java.util.List<GoogleCloudDialogflowV2SummarizationEvaluationMetricsEvaluationResult> evaluationResults) {
@@ -125,7 +115,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. metric name, e.g. accuracy, completeness, adherence, etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetric() {
@@ -133,7 +122,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. metric name, e.g. accuracy, completeness, adherence, etc.
    * @param metric metric or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummarizationEvaluationResult setMetric(java.lang.String metric) {
@@ -142,7 +130,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. score calculated from decompositions
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -150,7 +137,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. score calculated from decompositions
    * @param score score or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummarizationEvaluationResult setScore(java.lang.Float score) {
@@ -159,7 +145,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. section/task name, e.g. action, situation, etc
    * @return value or {@code null} for none
    */
   public java.lang.String getSection() {
@@ -167,7 +152,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. section/task name, e.g. action, situation, etc
    * @param section section or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummarizationEvaluationResult setSection(java.lang.String section) {
@@ -176,7 +160,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. Summary of this section
    * @return value or {@code null} for none
    */
   public java.lang.String getSectionSummary() {
@@ -184,7 +167,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. Summary of this section
    * @param sectionSummary sectionSummary or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummarizationEvaluationResult setSectionSummary(java.lang.String sectionSummary) {
@@ -193,7 +175,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. conversation session id
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionId() {
@@ -201,7 +182,6 @@ public final class GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummariz
   }
 
   /**
-   * Output only. conversation session id
    * @param sessionId sessionId or {@code null} for none
    */
   public GoogleCloudDialogflowV2SummarizationEvaluationMetricsSummarizationEvaluationResult setSessionId(java.lang.String sessionId) {

@@ -17,12 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents an environment for an agent. You can create multiple versions of your agent and
- * publish them to separate environments. When you edit an agent, you are editing the draft agent.
- * At any point, you can save the draft agent as an agent version, which is an immutable snapshot of
- * your agent. When you save the draft agent, it is published to the default environment. When you
- * create agent versions, you can publish them to custom environments. You can create a variety of
- * custom environments for testing, development, production, etc.
+ * Model definition for GoogleCloudDialogflowCxV3Environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -35,60 +30,48 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The human-readable description of the environment. The maximum length is 500 characters. If
-   * exceeded, the request is rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The human-readable name of the environment (unique in an agent). Limit of 64
-   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The name of the environment. Format: `projects//locations//agents//environments/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The test cases config for continuous tests of this environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig testCasesConfig;
 
   /**
-   * Output only. Update time of this environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * A list of configurations for flow versions. You should include version configs for all flows
-   * that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3EnvironmentVersionConfig> versionConfigs;
 
   /**
-   * The webhook configuration for this environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3EnvironmentWebhookConfig webhookConfig;
 
   /**
-   * The human-readable description of the environment. The maximum length is 500 characters. If
-   * exceeded, the request is rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -96,8 +79,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * The human-readable description of the environment. The maximum length is 500 characters. If
-   * exceeded, the request is rejected.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Environment setDescription(java.lang.String description) {
@@ -106,8 +87,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * Required. The human-readable name of the environment (unique in an agent). Limit of 64
-   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -115,8 +94,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * Required. The human-readable name of the environment (unique in an agent). Limit of 64
-   * characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Environment setDisplayName(java.lang.String displayName) {
@@ -125,7 +102,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * The name of the environment. Format: `projects//locations//agents//environments/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -133,7 +109,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * The name of the environment. Format: `projects//locations//agents//environments/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Environment setName(java.lang.String name) {
@@ -142,7 +117,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * The test cases config for continuous tests of this environment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig getTestCasesConfig() {
@@ -150,7 +124,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * The test cases config for continuous tests of this environment.
    * @param testCasesConfig testCasesConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Environment setTestCasesConfig(GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig testCasesConfig) {
@@ -159,7 +132,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * Output only. Update time of this environment.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -167,7 +139,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * Output only. Update time of this environment.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Environment setUpdateTime(String updateTime) {
@@ -176,8 +147,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * A list of configurations for flow versions. You should include version configs for all flows
-   * that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3EnvironmentVersionConfig> getVersionConfigs() {
@@ -185,8 +154,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * A list of configurations for flow versions. You should include version configs for all flows
-   * that are reachable from `Start Flow` in the agent. Otherwise, an error will be returned.
    * @param versionConfigs versionConfigs or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Environment setVersionConfigs(java.util.List<GoogleCloudDialogflowCxV3EnvironmentVersionConfig> versionConfigs) {
@@ -195,7 +162,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * The webhook configuration for this environment.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3EnvironmentWebhookConfig getWebhookConfig() {
@@ -203,7 +169,6 @@ public final class GoogleCloudDialogflowCxV3Environment extends com.google.api.c
   }
 
   /**
-   * The webhook configuration for this environment.
    * @param webhookConfig webhookConfig or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Environment setWebhookConfig(GoogleCloudDialogflowCxV3EnvironmentWebhookConfig webhookConfig) {

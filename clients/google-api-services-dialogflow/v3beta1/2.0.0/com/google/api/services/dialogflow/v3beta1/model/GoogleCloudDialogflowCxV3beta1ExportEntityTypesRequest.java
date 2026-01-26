@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The request message for EntityTypes.ExportEntityTypes.
+ * Model definition for GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,51 +30,36 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The data format of the exported entity types. If not specified, `BLOB` is assumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataFormat;
 
   /**
-   * Required. The name of the entity types to export. Format:
-   * `projects//locations//agents//entityTypes/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entityTypes;
 
   /**
-   * Optional. The option to return the serialized entity types inline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean entityTypesContentInline;
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * entity types to. The format of this URI must be `gs:`. Dialogflow performs a write operation
-   * for the Cloud Storage object on the caller's behalf, so your request authentication must have
-   * write permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityTypesUri;
 
   /**
-   * Optional. The language to retrieve the entity type for. The following fields are language
-   * dependent: * `EntityType.entities.value` * `EntityType.entities.synonyms` *
-   * `EntityType.excluded_phrases.value` If not specified, all language dependent fields will be
-   * retrieved. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
-   * Optional. The data format of the exported entity types. If not specified, `BLOB` is assumed.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataFormat() {
@@ -82,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extend
   }
 
   /**
-   * Optional. The data format of the exported entity types. If not specified, `BLOB` is assumed.
    * @param dataFormat dataFormat or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest setDataFormat(java.lang.String dataFormat) {
@@ -91,8 +75,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extend
   }
 
   /**
-   * Required. The name of the entity types to export. Format:
-   * `projects//locations//agents//entityTypes/`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntityTypes() {
@@ -100,8 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extend
   }
 
   /**
-   * Required. The name of the entity types to export. Format:
-   * `projects//locations//agents//entityTypes/`.
    * @param entityTypes entityTypes or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest setEntityTypes(java.util.List<java.lang.String> entityTypes) {
@@ -110,7 +90,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extend
   }
 
   /**
-   * Optional. The option to return the serialized entity types inline.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEntityTypesContentInline() {
@@ -118,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extend
   }
 
   /**
-   * Optional. The option to return the serialized entity types inline.
    * @param entityTypesContentInline entityTypesContentInline or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest setEntityTypesContentInline(java.lang.Boolean entityTypesContentInline) {
@@ -127,11 +105,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extend
   }
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * entity types to. The format of this URI must be `gs:`. Dialogflow performs a write operation
-   * for the Cloud Storage object on the caller's behalf, so your request authentication must have
-   * write permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityTypesUri() {
@@ -139,11 +112,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extend
   }
 
   /**
-   * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to export the
-   * entity types to. The format of this URI must be `gs:`. Dialogflow performs a write operation
-   * for the Cloud Storage object on the caller's behalf, so your request authentication must have
-   * write permissions for the object. For more information, see [Dialogflow access
-   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-control#storage).
    * @param entityTypesUri entityTypesUri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest setEntityTypesUri(java.lang.String entityTypesUri) {
@@ -152,11 +120,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extend
   }
 
   /**
-   * Optional. The language to retrieve the entity type for. The following fields are language
-   * dependent: * `EntityType.entities.value` * `EntityType.entities.synonyms` *
-   * `EntityType.excluded_phrases.value` If not specified, all language dependent fields will be
-   * retrieved. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -164,11 +127,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest extend
   }
 
   /**
-   * Optional. The language to retrieve the entity type for. The following fields are language
-   * dependent: * `EntityType.entities.value` * `EntityType.entities.synonyms` *
-   * `EntityType.excluded_phrases.value` If not specified, all language dependent fields will be
-   * retrieved. [Many languages](https://cloud.google.com/dialogflow/docs/reference/language) are
-   * supported. Note: languages must be enabled in the agent before they can be used.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ExportEntityTypesRequest setLanguageCode(java.lang.String languageCode) {

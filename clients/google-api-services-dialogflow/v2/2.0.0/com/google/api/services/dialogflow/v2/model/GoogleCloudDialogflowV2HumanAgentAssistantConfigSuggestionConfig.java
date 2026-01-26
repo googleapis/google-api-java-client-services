@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Detail human agent assistant config.
+ * Model definition for GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,74 +30,48 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. When disable_high_latency_features_sync_delivery is true and using the AnalyzeContent
-   * API, we will not deliver the responses from high latency features in the API response. The
-   * human_agent_assistant_config.notification_config must be configured and
-   * enable_event_based_suggestion must be set to true to receive the responses from high latency
-   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableHighLatencyFeaturesSyncDelivery;
 
   /**
-   * Optional. If true, enable asynchronous execution of tools.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableAsyncToolCall;
 
   /**
-   * Configuration of different suggestion features. One feature can have only one config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig> featureConfigs;
 
   /**
-   * Optional. List of various generator resource names used in the conversation profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> generators;
 
   /**
-   * If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event
-   * based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers
-   * as soon as we get new suggestion. Different type of suggestions based on the same context will
-   * be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If
-   * `group_suggestion_responses` set to true. All the suggestions to the same participant based on
-   * the same context will be grouped into a single Pub/Sub event or
-   * StreamingAnalyzeContentResponse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean groupSuggestionResponses;
 
   /**
-   * Optional. Enable skipping event based suggestion if the suggestion is empty. For example, with
-   * this field disabled, Knowledge Assist feature sends a Pub/Sub message when there are no
-   * suggestions. Enabling this field will change the behavior to skip the Pub/Sub message in this
-   * situation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean skipEmptyEventBasedSuggestion;
 
   /**
-   * Optional. If true, use unredacted transcript data (Supported features: AI_COACH) and use
-   * unredacted ingested context (Supported features: All Agent Assist features)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useUnredactedConversationData;
 
   /**
-   * Optional. When disable_high_latency_features_sync_delivery is true and using the AnalyzeContent
-   * API, we will not deliver the responses from high latency features in the API response. The
-   * human_agent_assistant_config.notification_config must be configured and
-   * enable_event_based_suggestion must be set to true to receive the responses from high latency
-   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisableHighLatencyFeaturesSyncDelivery() {
@@ -105,11 +79,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Optional. When disable_high_latency_features_sync_delivery is true and using the AnalyzeContent
-   * API, we will not deliver the responses from high latency features in the API response. The
-   * human_agent_assistant_config.notification_config must be configured and
-   * enable_event_based_suggestion must be set to true to receive the responses from high latency
-   * features in Pub/Sub. High latency feature(s): KNOWLEDGE_ASSIST
    * @param disableHighLatencyFeaturesSyncDelivery disableHighLatencyFeaturesSyncDelivery or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setDisableHighLatencyFeaturesSyncDelivery(java.lang.Boolean disableHighLatencyFeaturesSyncDelivery) {
@@ -118,7 +87,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Optional. If true, enable asynchronous execution of tools.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableAsyncToolCall() {
@@ -126,7 +94,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Optional. If true, enable asynchronous execution of tools.
    * @param enableAsyncToolCall enableAsyncToolCall or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setEnableAsyncToolCall(java.lang.Boolean enableAsyncToolCall) {
@@ -135,7 +102,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Configuration of different suggestion features. One feature can have only one config.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig> getFeatureConfigs() {
@@ -143,7 +109,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Configuration of different suggestion features. One feature can have only one config.
    * @param featureConfigs featureConfigs or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setFeatureConfigs(java.util.List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfig> featureConfigs) {
@@ -152,7 +117,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Optional. List of various generator resource names used in the conversation profile.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGenerators() {
@@ -160,7 +124,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Optional. List of various generator resource names used in the conversation profile.
    * @param generators generators or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setGenerators(java.util.List<java.lang.String> generators) {
@@ -169,13 +132,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event
-   * based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers
-   * as soon as we get new suggestion. Different type of suggestions based on the same context will
-   * be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If
-   * `group_suggestion_responses` set to true. All the suggestions to the same participant based on
-   * the same context will be grouped into a single Pub/Sub event or
-   * StreamingAnalyzeContentResponse.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGroupSuggestionResponses() {
@@ -183,13 +139,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * If `group_suggestion_responses` is false, and there are multiple `feature_configs` in `event
-   * based suggestion` or StreamingAnalyzeContent, we will try to deliver suggestions to customers
-   * as soon as we get new suggestion. Different type of suggestions based on the same context will
-   * be in separate Pub/Sub event or `StreamingAnalyzeContentResponse`. If
-   * `group_suggestion_responses` set to true. All the suggestions to the same participant based on
-   * the same context will be grouped into a single Pub/Sub event or
-   * StreamingAnalyzeContentResponse.
    * @param groupSuggestionResponses groupSuggestionResponses or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setGroupSuggestionResponses(java.lang.Boolean groupSuggestionResponses) {
@@ -198,10 +147,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Optional. Enable skipping event based suggestion if the suggestion is empty. For example, with
-   * this field disabled, Knowledge Assist feature sends a Pub/Sub message when there are no
-   * suggestions. Enabling this field will change the behavior to skip the Pub/Sub message in this
-   * situation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipEmptyEventBasedSuggestion() {
@@ -209,10 +154,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Optional. Enable skipping event based suggestion if the suggestion is empty. For example, with
-   * this field disabled, Knowledge Assist feature sends a Pub/Sub message when there are no
-   * suggestions. Enabling this field will change the behavior to skip the Pub/Sub message in this
-   * situation.
    * @param skipEmptyEventBasedSuggestion skipEmptyEventBasedSuggestion or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setSkipEmptyEventBasedSuggestion(java.lang.Boolean skipEmptyEventBasedSuggestion) {
@@ -221,8 +162,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Optional. If true, use unredacted transcript data (Supported features: AI_COACH) and use
-   * unredacted ingested context (Supported features: All Agent Assist features)
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseUnredactedConversationData() {
@@ -230,8 +169,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
   }
 
   /**
-   * Optional. If true, use unredacted transcript data (Supported features: AI_COACH) and use
-   * unredacted ingested context (Supported features: All Agent Assist features)
    * @param useUnredactedConversationData useUnredactedConversationData or {@code null} for none
    */
   public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfig setUseUnredactedConversationData(java.lang.Boolean useUnredactedConversationData) {

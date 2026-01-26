@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * The configuration for auto rollout.
+ * Model definition for GoogleCloudDialogflowCxV3beta1RolloutConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1RolloutConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The conditions that are used to evaluate the failure of a rollout step. If not specified, no
-   * rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the
-   * [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String failureCondition;
 
   /**
-   * The conditions that are used to evaluate the success of a rollout step. If not specified, all
-   * rollout steps will proceed to the next one unless failure conditions are met. E.g.
-   * "containment_rate > 60% AND callback_rate < 20%". See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rolloutCondition;
 
   /**
-   * Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep> rolloutSteps;
 
   /**
-   * The conditions that are used to evaluate the failure of a rollout step. If not specified, no
-   * rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the
-   * [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * @return value or {@code null} for none
    */
   public java.lang.String getFailureCondition() {
@@ -66,9 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfig extends com.googl
   }
 
   /**
-   * The conditions that are used to evaluate the failure of a rollout step. If not specified, no
-   * rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the
-   * [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * @param failureCondition failureCondition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RolloutConfig setFailureCondition(java.lang.String failureCondition) {
@@ -77,10 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfig extends com.googl
   }
 
   /**
-   * The conditions that are used to evaluate the success of a rollout step. If not specified, all
-   * rollout steps will proceed to the next one unless failure conditions are met. E.g.
-   * "containment_rate > 60% AND callback_rate < 20%". See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * @return value or {@code null} for none
    */
   public java.lang.String getRolloutCondition() {
@@ -88,10 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfig extends com.googl
   }
 
   /**
-   * The conditions that are used to evaluate the success of a rollout step. If not specified, all
-   * rollout steps will proceed to the next one unless failure conditions are met. E.g.
-   * "containment_rate > 60% AND callback_rate < 20%". See the [conditions
-   * reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
    * @param rolloutCondition rolloutCondition or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RolloutConfig setRolloutCondition(java.lang.String rolloutCondition) {
@@ -100,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfig extends com.googl
   }
 
   /**
-   * Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep> getRolloutSteps() {
@@ -108,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfig extends com.googl
   }
 
   /**
-   * Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
    * @param rolloutSteps rolloutSteps or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1RolloutConfig setRolloutSteps(java.util.List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep> rolloutSteps) {

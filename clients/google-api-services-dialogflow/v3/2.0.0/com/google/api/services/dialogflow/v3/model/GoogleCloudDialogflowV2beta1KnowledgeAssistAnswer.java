@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Represents a Knowledge Assist answer.
+ * Model definition for GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,30 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the answer record. Format: `projects//locations//answer Records/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String answerRecord;
 
   /**
-   * The query suggested based on the context. Suggestion is made only if it is different from the
-   * previous suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo knowledgeAssistDebugInfo;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuery suggestedQuery;
 
   /**
-   * The answer generated for the suggested query. Whether or not an answer is generated depends on
-   * how confident we are about the generated query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer suggestedQueryAnswer;
 
   /**
-   * The name of the answer record. Format: `projects//locations//answer Records/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAnswerRecord() {
@@ -61,7 +61,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends com
   }
 
   /**
-   * The name of the answer record. Format: `projects//locations//answer Records/`.
    * @param answerRecord answerRecord or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer setAnswerRecord(java.lang.String answerRecord) {
@@ -70,8 +69,21 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends com
   }
 
   /**
-   * The query suggested based on the context. Suggestion is made only if it is different from the
-   * previous suggestion.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo getKnowledgeAssistDebugInfo() {
+    return knowledgeAssistDebugInfo;
+  }
+
+  /**
+   * @param knowledgeAssistDebugInfo knowledgeAssistDebugInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer setKnowledgeAssistDebugInfo(GoogleCloudDialogflowV2beta1KnowledgeAssistDebugInfo knowledgeAssistDebugInfo) {
+    this.knowledgeAssistDebugInfo = knowledgeAssistDebugInfo;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuery getSuggestedQuery() {
@@ -79,8 +91,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends com
   }
 
   /**
-   * The query suggested based on the context. Suggestion is made only if it is different from the
-   * previous suggestion.
    * @param suggestedQuery suggestedQuery or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer setSuggestedQuery(GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerSuggestedQuery suggestedQuery) {
@@ -89,8 +99,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends com
   }
 
   /**
-   * The answer generated for the suggested query. Whether or not an answer is generated depends on
-   * how confident we are about the generated query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer getSuggestedQueryAnswer() {
@@ -98,8 +106,6 @@ public final class GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer extends com
   }
 
   /**
-   * The answer generated for the suggested query. Whether or not an answer is generated depends on
-   * how confident we are about the generated query.
    * @param suggestedQueryAnswer suggestedQueryAnswer or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1KnowledgeAssistAnswer setSuggestedQueryAnswer(GoogleCloudDialogflowV2beta1KnowledgeAssistAnswerKnowledgeAnswer suggestedQueryAnswer) {

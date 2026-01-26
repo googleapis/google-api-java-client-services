@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Represents the contents of the original request that was passed to the `[Streaming]DetectIntent`
- * call.
+ * Model definition for GoogleCloudDialogflowV2OriginalDetectIntentRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,39 +30,24 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2OriginalDetectIntentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. This field is set to the value of the `QueryParameters.payload` field passed in the
-   * request. Some integrations that query a Dialogflow agent may provide additional information in
-   * the payload. In particular, for the Dialogflow Phone Gateway integration, this field has the
-   * form: { "telephony": { "caller_id": "+18558363987" } } Note: The caller ID field (`caller_id`)
-   * will be redacted for Trial Edition agents and populated with the caller ID in [E.164
-   * format](https://en.wikipedia.org/wiki/E.164) for Essentials Edition agents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
-   * The source of this request, e.g., `google`, `facebook`, `slack`. It is set by Dialogflow-owned
-   * servers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * Optional. The version of the protocol used for this request. This field is AoG-specific.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Optional. This field is set to the value of the `QueryParameters.payload` field passed in the
-   * request. Some integrations that query a Dialogflow agent may provide additional information in
-   * the payload. In particular, for the Dialogflow Phone Gateway integration, this field has the
-   * form: { "telephony": { "caller_id": "+18558363987" } } Note: The caller ID field (`caller_id`)
-   * will be redacted for Trial Edition agents and populated with the caller ID in [E.164
-   * format](https://en.wikipedia.org/wiki/E.164) for Essentials Edition agents.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -71,12 +55,6 @@ public final class GoogleCloudDialogflowV2OriginalDetectIntentRequest extends co
   }
 
   /**
-   * Optional. This field is set to the value of the `QueryParameters.payload` field passed in the
-   * request. Some integrations that query a Dialogflow agent may provide additional information in
-   * the payload. In particular, for the Dialogflow Phone Gateway integration, this field has the
-   * form: { "telephony": { "caller_id": "+18558363987" } } Note: The caller ID field (`caller_id`)
-   * will be redacted for Trial Edition agents and populated with the caller ID in [E.164
-   * format](https://en.wikipedia.org/wiki/E.164) for Essentials Edition agents.
    * @param payload payload or {@code null} for none
    */
   public GoogleCloudDialogflowV2OriginalDetectIntentRequest setPayload(java.util.Map<String, java.lang.Object> payload) {
@@ -85,8 +63,6 @@ public final class GoogleCloudDialogflowV2OriginalDetectIntentRequest extends co
   }
 
   /**
-   * The source of this request, e.g., `google`, `facebook`, `slack`. It is set by Dialogflow-owned
-   * servers.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -94,8 +70,6 @@ public final class GoogleCloudDialogflowV2OriginalDetectIntentRequest extends co
   }
 
   /**
-   * The source of this request, e.g., `google`, `facebook`, `slack`. It is set by Dialogflow-owned
-   * servers.
    * @param source source or {@code null} for none
    */
   public GoogleCloudDialogflowV2OriginalDetectIntentRequest setSource(java.lang.String source) {
@@ -104,7 +78,6 @@ public final class GoogleCloudDialogflowV2OriginalDetectIntentRequest extends co
   }
 
   /**
-   * Optional. The version of the protocol used for this request. This field is AoG-specific.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -112,7 +85,6 @@ public final class GoogleCloudDialogflowV2OriginalDetectIntentRequest extends co
   }
 
   /**
-   * Optional. The version of the protocol used for this request. This field is AoG-specific.
    * @param version version or {@code null} for none
    */
   public GoogleCloudDialogflowV2OriginalDetectIntentRequest setVersion(java.lang.String version) {

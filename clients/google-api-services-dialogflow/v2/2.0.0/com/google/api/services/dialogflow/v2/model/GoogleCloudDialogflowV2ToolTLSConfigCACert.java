@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * The CA certificate.
+ * Model definition for GoogleCloudDialogflowV2ToolTLSConfigCACert.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,34 +30,18 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2ToolTLSConfigCACert extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The allowed custom CA certificates (in DER format) for HTTPS verification. This
-   * overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use
-   * Google's default trust store to verify certificates. N.B. Make sure the HTTPS server
-   * certificates are signed with "subject alt name". For instance a certificate can be self-signed
-   * using the following command, ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
-   * example.com.key \ -out example.com.crt \ -extfile <(printf
-   * "\nsubjectAltName='DNS:www.example.com'") ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cert;
 
   /**
-   * Required. The name of the allowed custom CA certificates. This can be used to disambiguate the
-   * custom CA certificates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. The allowed custom CA certificates (in DER format) for HTTPS verification. This
-   * overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use
-   * Google's default trust store to verify certificates. N.B. Make sure the HTTPS server
-   * certificates are signed with "subject alt name". For instance a certificate can be self-signed
-   * using the following command, ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
-   * example.com.key \ -out example.com.crt \ -extfile <(printf
-   * "\nsubjectAltName='DNS:www.example.com'") ```
    * @see #decodeCert()
    * @return value or {@code null} for none
    */
@@ -66,13 +50,7 @@ public final class GoogleCloudDialogflowV2ToolTLSConfigCACert extends com.google
   }
 
   /**
-   * Required. The allowed custom CA certificates (in DER format) for HTTPS verification. This
-   * overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use
-   * Google's default trust store to verify certificates. N.B. Make sure the HTTPS server
-   * certificates are signed with "subject alt name". For instance a certificate can be self-signed
-   * using the following command, ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
-   * example.com.key \ -out example.com.crt \ -extfile <(printf
-   * "\nsubjectAltName='DNS:www.example.com'") ```
+
    * @see #getCert()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -83,13 +61,6 @@ public final class GoogleCloudDialogflowV2ToolTLSConfigCACert extends com.google
   }
 
   /**
-   * Required. The allowed custom CA certificates (in DER format) for HTTPS verification. This
-   * overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use
-   * Google's default trust store to verify certificates. N.B. Make sure the HTTPS server
-   * certificates are signed with "subject alt name". For instance a certificate can be self-signed
-   * using the following command, ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
-   * example.com.key \ -out example.com.crt \ -extfile <(printf
-   * "\nsubjectAltName='DNS:www.example.com'") ```
    * @see #encodeCert()
    * @param cert cert or {@code null} for none
    */
@@ -99,13 +70,7 @@ public final class GoogleCloudDialogflowV2ToolTLSConfigCACert extends com.google
   }
 
   /**
-   * Required. The allowed custom CA certificates (in DER format) for HTTPS verification. This
-   * overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use
-   * Google's default trust store to verify certificates. N.B. Make sure the HTTPS server
-   * certificates are signed with "subject alt name". For instance a certificate can be self-signed
-   * using the following command, ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
-   * example.com.key \ -out example.com.crt \ -extfile <(printf
-   * "\nsubjectAltName='DNS:www.example.com'") ```
+
    * @see #setCert()
    *
    * <p>
@@ -120,8 +85,6 @@ public final class GoogleCloudDialogflowV2ToolTLSConfigCACert extends com.google
   }
 
   /**
-   * Required. The name of the allowed custom CA certificates. This can be used to disambiguate the
-   * custom CA certificates.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -129,8 +92,6 @@ public final class GoogleCloudDialogflowV2ToolTLSConfigCACert extends com.google
   }
 
   /**
-   * Required. The name of the allowed custom CA certificates. This can be used to disambiguate the
-   * custom CA certificates.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDialogflowV2ToolTLSConfigCACert setDisplayName(java.lang.String displayName) {

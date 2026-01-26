@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Information for a word recognized by the speech recognizer.
+ * Model definition for GoogleCloudDialogflowV2beta1SpeechWordInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,43 +30,30 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowV2beta1SpeechWordInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Speech confidence between 0.0 and 1.0 for this word. A higher number indicates an estimated
-   * greater likelihood that the recognized word is correct. The default of 0.0 is a sentinel value
-   * indicating that confidence was not set. This field is not guaranteed to be fully stable over
-   * time for the same audio input. Users should also not rely on it to always be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float confidence;
 
   /**
-   * Time offset relative to the beginning of the audio that corresponds to the end of the spoken
-   * word. This is an experimental feature and the accuracy of the time offset can vary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endOffset;
 
   /**
-   * Time offset relative to the beginning of the audio that corresponds to the start of the spoken
-   * word. This is an experimental feature and the accuracy of the time offset can vary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startOffset;
 
   /**
-   * The word this info is for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String word;
 
   /**
-   * The Speech confidence between 0.0 and 1.0 for this word. A higher number indicates an estimated
-   * greater likelihood that the recognized word is correct. The default of 0.0 is a sentinel value
-   * indicating that confidence was not set. This field is not guaranteed to be fully stable over
-   * time for the same audio input. Users should also not rely on it to always be provided.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConfidence() {
@@ -74,10 +61,6 @@ public final class GoogleCloudDialogflowV2beta1SpeechWordInfo extends com.google
   }
 
   /**
-   * The Speech confidence between 0.0 and 1.0 for this word. A higher number indicates an estimated
-   * greater likelihood that the recognized word is correct. The default of 0.0 is a sentinel value
-   * indicating that confidence was not set. This field is not guaranteed to be fully stable over
-   * time for the same audio input. Users should also not rely on it to always be provided.
    * @param confidence confidence or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SpeechWordInfo setConfidence(java.lang.Float confidence) {
@@ -86,8 +69,6 @@ public final class GoogleCloudDialogflowV2beta1SpeechWordInfo extends com.google
   }
 
   /**
-   * Time offset relative to the beginning of the audio that corresponds to the end of the spoken
-   * word. This is an experimental feature and the accuracy of the time offset can vary.
    * @return value or {@code null} for none
    */
   public String getEndOffset() {
@@ -95,8 +76,6 @@ public final class GoogleCloudDialogflowV2beta1SpeechWordInfo extends com.google
   }
 
   /**
-   * Time offset relative to the beginning of the audio that corresponds to the end of the spoken
-   * word. This is an experimental feature and the accuracy of the time offset can vary.
    * @param endOffset endOffset or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SpeechWordInfo setEndOffset(String endOffset) {
@@ -105,8 +84,6 @@ public final class GoogleCloudDialogflowV2beta1SpeechWordInfo extends com.google
   }
 
   /**
-   * Time offset relative to the beginning of the audio that corresponds to the start of the spoken
-   * word. This is an experimental feature and the accuracy of the time offset can vary.
    * @return value or {@code null} for none
    */
   public String getStartOffset() {
@@ -114,8 +91,6 @@ public final class GoogleCloudDialogflowV2beta1SpeechWordInfo extends com.google
   }
 
   /**
-   * Time offset relative to the beginning of the audio that corresponds to the start of the spoken
-   * word. This is an experimental feature and the accuracy of the time offset can vary.
    * @param startOffset startOffset or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SpeechWordInfo setStartOffset(String startOffset) {
@@ -124,7 +99,6 @@ public final class GoogleCloudDialogflowV2beta1SpeechWordInfo extends com.google
   }
 
   /**
-   * The word this info is for.
    * @return value or {@code null} for none
    */
   public java.lang.String getWord() {
@@ -132,7 +106,6 @@ public final class GoogleCloudDialogflowV2beta1SpeechWordInfo extends com.google
   }
 
   /**
-   * The word this info is for.
    * @param word word or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SpeechWordInfo setWord(java.lang.String word) {

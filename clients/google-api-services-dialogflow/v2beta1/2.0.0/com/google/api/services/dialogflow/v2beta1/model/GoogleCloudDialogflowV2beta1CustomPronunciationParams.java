@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Pronunciation customization for a phrase.
+ * Model definition for GoogleCloudDialogflowV2beta1CustomPronunciationParams.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1CustomPronunciationParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * The phonetic encoding of the phrase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneticEncoding;
 
   /**
-   * The phrase to which the customization is applied. The phrase can be multiple words, such as
-   * proper nouns, but shouldn't span the length of the sentence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phrase;
 
   /**
-   * The pronunciation of the phrase. This must be in the phonetic encoding specified above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pronunciation;
 
   /**
-   * The phonetic encoding of the phrase.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneticEncoding() {
@@ -60,7 +55,6 @@ public final class GoogleCloudDialogflowV2beta1CustomPronunciationParams extends
   }
 
   /**
-   * The phonetic encoding of the phrase.
    * @param phoneticEncoding phoneticEncoding or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CustomPronunciationParams setPhoneticEncoding(java.lang.String phoneticEncoding) {
@@ -69,8 +63,6 @@ public final class GoogleCloudDialogflowV2beta1CustomPronunciationParams extends
   }
 
   /**
-   * The phrase to which the customization is applied. The phrase can be multiple words, such as
-   * proper nouns, but shouldn't span the length of the sentence.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhrase() {
@@ -78,8 +70,6 @@ public final class GoogleCloudDialogflowV2beta1CustomPronunciationParams extends
   }
 
   /**
-   * The phrase to which the customization is applied. The phrase can be multiple words, such as
-   * proper nouns, but shouldn't span the length of the sentence.
    * @param phrase phrase or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CustomPronunciationParams setPhrase(java.lang.String phrase) {
@@ -88,7 +78,6 @@ public final class GoogleCloudDialogflowV2beta1CustomPronunciationParams extends
   }
 
   /**
-   * The pronunciation of the phrase. This must be in the phonetic encoding specified above.
    * @return value or {@code null} for none
    */
   public java.lang.String getPronunciation() {
@@ -96,7 +85,6 @@ public final class GoogleCloudDialogflowV2beta1CustomPronunciationParams extends
   }
 
   /**
-   * The pronunciation of the phrase. This must be in the phonetic encoding specified above.
    * @param pronunciation pronunciation or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1CustomPronunciationParams setPronunciation(java.lang.String pronunciation) {

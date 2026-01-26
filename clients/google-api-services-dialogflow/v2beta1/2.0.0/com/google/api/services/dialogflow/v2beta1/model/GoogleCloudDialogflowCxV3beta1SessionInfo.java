@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * Represents session information communicated to and from the webhook.
+ * Model definition for GoogleCloudDialogflowCxV3beta1SessionInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,30 +30,18 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1SessionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional for WebhookRequest. Optional for WebhookResponse. All parameters collected from forms
-   * and intents during the session. Parameters can be created, updated, or removed by the webhook.
-   * To remove a parameter from the session, the webhook should explicitly set the parameter value
-   * to null in WebhookResponse. The map is keyed by parameters' display names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * Always present for WebhookRequest. Ignored for WebhookResponse. The unique identifier of the
-   * session. This field can be used by the webhook to identify a session. Format:
-   * `projects//locations//agents//sessions/` or
-   * `projects//locations//agents//environments//sessions/` if environment is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String session;
 
   /**
-   * Optional for WebhookRequest. Optional for WebhookResponse. All parameters collected from forms
-   * and intents during the session. Parameters can be created, updated, or removed by the webhook.
-   * To remove a parameter from the session, the webhook should explicitly set the parameter value
-   * to null in WebhookResponse. The map is keyed by parameters' display names.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -61,10 +49,6 @@ public final class GoogleCloudDialogflowCxV3beta1SessionInfo extends com.google.
   }
 
   /**
-   * Optional for WebhookRequest. Optional for WebhookResponse. All parameters collected from forms
-   * and intents during the session. Parameters can be created, updated, or removed by the webhook.
-   * To remove a parameter from the session, the webhook should explicitly set the parameter value
-   * to null in WebhookResponse. The map is keyed by parameters' display names.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SessionInfo setParameters(java.util.Map<String, java.lang.Object> parameters) {
@@ -73,10 +57,6 @@ public final class GoogleCloudDialogflowCxV3beta1SessionInfo extends com.google.
   }
 
   /**
-   * Always present for WebhookRequest. Ignored for WebhookResponse. The unique identifier of the
-   * session. This field can be used by the webhook to identify a session. Format:
-   * `projects//locations//agents//sessions/` or
-   * `projects//locations//agents//environments//sessions/` if environment is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getSession() {
@@ -84,10 +64,6 @@ public final class GoogleCloudDialogflowCxV3beta1SessionInfo extends com.google.
   }
 
   /**
-   * Always present for WebhookRequest. Ignored for WebhookResponse. The unique identifier of the
-   * session. This field can be used by the webhook to identify a session. Format:
-   * `projects//locations//agents//sessions/` or
-   * `projects//locations//agents//environments//sessions/` if environment is specified.
    * @param session session or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1SessionInfo setSession(java.lang.String session) {

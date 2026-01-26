@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Safety check results.
+ * Model definition for GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafetySignals.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,28 +30,24 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafetySignals extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies banned phrase match subject.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String bannedPhraseMatch;
 
   /**
-   * Safety decision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String decision;
 
   /**
-   * The matched banned phrase if there was a match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matchedBannedPhrase;
 
   /**
-   * Specifies banned phrase match subject.
    * @return value or {@code null} for none
    */
   public java.lang.String getBannedPhraseMatch() {
@@ -59,7 +55,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafet
   }
 
   /**
-   * Specifies banned phrase match subject.
    * @param bannedPhraseMatch bannedPhraseMatch or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafetySignals setBannedPhraseMatch(java.lang.String bannedPhraseMatch) {
@@ -68,7 +63,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafet
   }
 
   /**
-   * Safety decision.
    * @return value or {@code null} for none
    */
   public java.lang.String getDecision() {
@@ -76,7 +70,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafet
   }
 
   /**
-   * Safety decision.
    * @param decision decision or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafetySignals setDecision(java.lang.String decision) {
@@ -85,7 +78,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafet
   }
 
   /**
-   * The matched banned phrase if there was a match.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchedBannedPhrase() {
@@ -93,7 +85,6 @@ public final class GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafet
   }
 
   /**
-   * The matched banned phrase if there was a match.
    * @param matchedBannedPhrase matchedBannedPhrase or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignalsSafetySignals setMatchedBannedPhrase(java.lang.String matchedBannedPhrase) {

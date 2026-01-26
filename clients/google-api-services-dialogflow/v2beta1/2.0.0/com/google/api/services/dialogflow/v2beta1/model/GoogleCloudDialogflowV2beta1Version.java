@@ -17,13 +17,7 @@
 package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
- * You can create multiple versions of your agent and publish them to separate environments. When
- * you edit an agent, you are editing the draft agent. At any point, you can save the draft agent as
- * an agent version, which is an immutable snapshot of your agent. When you save the draft agent, it
- * is published to the default environment. When you create agent versions, you can publish them to
- * custom environments. You can create a variety of custom environments for: - testing - development
- * - production - etc. For more information, see the [versions and environments
- * guide](https://cloud.google.com/dialogflow/docs/agents-versions).
+ * Model definition for GoogleCloudDialogflowV2beta1Version.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -36,47 +30,36 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The creation time of this version. This field is read-only, i.e., it cannot be set
-   * by create and update methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The developer-provided description of this version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Output only. The unique identifier of this agent version. Supported formats: -
-   * `projects//agent/versions/` - `projects//locations//agent/versions/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The status of this version. This field is read-only and cannot be set by create
-   * and update methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. The sequential number of this version. This field is read-only which means it
-   * cannot be set by create and update methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer versionNumber;
 
   /**
-   * Output only. The creation time of this version. This field is read-only, i.e., it cannot be set
-   * by create and update methods.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -84,8 +67,6 @@ public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.cl
   }
 
   /**
-   * Output only. The creation time of this version. This field is read-only, i.e., it cannot be set
-   * by create and update methods.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Version setCreateTime(String createTime) {
@@ -94,7 +75,6 @@ public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.cl
   }
 
   /**
-   * Optional. The developer-provided description of this version.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -102,7 +82,6 @@ public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.cl
   }
 
   /**
-   * Optional. The developer-provided description of this version.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Version setDescription(java.lang.String description) {
@@ -111,8 +90,6 @@ public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.cl
   }
 
   /**
-   * Output only. The unique identifier of this agent version. Supported formats: -
-   * `projects//agent/versions/` - `projects//locations//agent/versions/`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -120,8 +97,6 @@ public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.cl
   }
 
   /**
-   * Output only. The unique identifier of this agent version. Supported formats: -
-   * `projects//agent/versions/` - `projects//locations//agent/versions/`
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Version setName(java.lang.String name) {
@@ -130,8 +105,6 @@ public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.cl
   }
 
   /**
-   * Output only. The status of this version. This field is read-only and cannot be set by create
-   * and update methods.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -139,8 +112,6 @@ public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.cl
   }
 
   /**
-   * Output only. The status of this version. This field is read-only and cannot be set by create
-   * and update methods.
    * @param status status or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Version setStatus(java.lang.String status) {
@@ -149,8 +120,6 @@ public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.cl
   }
 
   /**
-   * Output only. The sequential number of this version. This field is read-only which means it
-   * cannot be set by create and update methods.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersionNumber() {
@@ -158,8 +127,6 @@ public final class GoogleCloudDialogflowV2beta1Version extends com.google.api.cl
   }
 
   /**
-   * Output only. The sequential number of this version. This field is read-only which means it
-   * cannot be set by create and update methods.
    * @param versionNumber versionNumber or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Version setVersionNumber(java.lang.Integer versionNumber) {

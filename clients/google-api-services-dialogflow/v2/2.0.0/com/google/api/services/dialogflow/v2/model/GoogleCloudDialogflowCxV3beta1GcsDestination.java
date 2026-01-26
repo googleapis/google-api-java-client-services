@@ -17,8 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * Google Cloud Storage location for a Dialogflow operation that writes or exports objects (e.g.
- * exported agent or transcripts) outside of Dialogflow.
+ * Model definition for GoogleCloudDialogflowCxV3beta1GcsDestination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -31,18 +30,12 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowCxV3beta1GcsDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The Google Cloud Storage URI for the exported objects. A URI is of the form:
-   * `gs://bucket/object-name-or-prefix` Whether a full object name, or just a prefix, its usage
-   * depends on the Dialogflow operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. The Google Cloud Storage URI for the exported objects. A URI is of the form:
-   * `gs://bucket/object-name-or-prefix` Whether a full object name, or just a prefix, its usage
-   * depends on the Dialogflow operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -50,9 +43,6 @@ public final class GoogleCloudDialogflowCxV3beta1GcsDestination extends com.goog
   }
 
   /**
-   * Required. The Google Cloud Storage URI for the exported objects. A URI is of the form:
-   * `gs://bucket/object-name-or-prefix` Whether a full object name, or just a prefix, its usage
-   * depends on the Dialogflow operation.
    * @param uri uri or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1GcsDestination setUri(java.lang.String uri) {

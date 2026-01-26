@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * The inference result which includes an objective metric to optimize and the confidence interval.
+ * Model definition for GoogleCloudDialogflowCxV3ExperimentResult.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3ExperimentResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The last time the experiment's stats data was updated. Will have default value if stats have
-   * never been computed for this experiment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastUpdateTime;
 
   /**
-   * Version variants and metrics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics> versionMetrics;
 
   /**
-   * The last time the experiment's stats data was updated. Will have default value if stats have
-   * never been computed for this experiment.
    * @return value or {@code null} for none
    */
   public String getLastUpdateTime() {
@@ -54,8 +49,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResult extends com.google.
   }
 
   /**
-   * The last time the experiment's stats data was updated. Will have default value if stats have
-   * never been computed for this experiment.
    * @param lastUpdateTime lastUpdateTime or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResult setLastUpdateTime(String lastUpdateTime) {
@@ -64,7 +57,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResult extends com.google.
   }
 
   /**
-   * Version variants and metrics.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics> getVersionMetrics() {
@@ -72,7 +64,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResult extends com.google.
   }
 
   /**
-   * Version variants and metrics.
    * @param versionMetrics versionMetrics or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3ExperimentResult setVersionMetrics(java.util.List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics> versionMetrics) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v2.model;
 
 /**
- * An item in the carousel.
+ * Model definition for GoogleCloudDialogflowV2IntentMessageCarouselSelectItem.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -30,35 +30,30 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The body text of the card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. The image to display.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageImage image;
 
   /**
-   * Required. Additional info about the option item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2IntentMessageSelectItemInfo info;
 
   /**
-   * Required. Title of the carousel item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Optional. The body text of the card.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -66,7 +61,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extend
   }
 
   /**
-   * Optional. The body text of the card.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCarouselSelectItem setDescription(java.lang.String description) {
@@ -75,7 +69,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extend
   }
 
   /**
-   * Optional. The image to display.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageImage getImage() {
@@ -83,7 +76,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extend
   }
 
   /**
-   * Optional. The image to display.
    * @param image image or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCarouselSelectItem setImage(GoogleCloudDialogflowV2IntentMessageImage image) {
@@ -92,7 +84,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extend
   }
 
   /**
-   * Required. Additional info about the option item.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageSelectItemInfo getInfo() {
@@ -100,7 +91,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extend
   }
 
   /**
-   * Required. Additional info about the option item.
    * @param info info or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCarouselSelectItem setInfo(GoogleCloudDialogflowV2IntentMessageSelectItemInfo info) {
@@ -109,7 +99,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extend
   }
 
   /**
-   * Required. Title of the carousel item.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -117,7 +106,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extend
   }
 
   /**
-   * Required. Title of the carousel item.
    * @param title title or {@code null} for none
    */
   public GoogleCloudDialogflowV2IntentMessageCarouselSelectItem setTitle(java.lang.String title) {

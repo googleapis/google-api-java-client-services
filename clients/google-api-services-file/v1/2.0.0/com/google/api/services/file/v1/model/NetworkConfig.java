@@ -47,8 +47,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> ipAddresses;
 
   /**
-   * Internet protocol versions for which the instance has IP addresses assigned. For this version,
-   * only MODE_IPV4 is supported.
+   * Internet protocol versions for which the instance has IP addresses assigned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,8 +129,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Internet protocol versions for which the instance has IP addresses assigned. For this version,
-   * only MODE_IPV4 is supported.
+   * Internet protocol versions for which the instance has IP addresses assigned.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getModes() {
@@ -139,8 +137,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Internet protocol versions for which the instance has IP addresses assigned. For this version,
-   * only MODE_IPV4 is supported.
+   * Internet protocol versions for which the instance has IP addresses assigned.
    * @param modes modes or {@code null} for none
    */
   public NetworkConfig setModes(java.util.List<java.lang.String> modes) {

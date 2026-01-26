@@ -41,11 +41,19 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Output only. AppHub application metadata associated with the destination application. This is
    * only populated if the log represented "edge"-like data (such as for VPC flow logs) with a
-   * source and destination.
+   * destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AppHub apphubDestination;
+
+  /**
+   * Output only. AppHub application metadata associated with the source application. This is only
+   * populated if the log represented "edge"-like data (such as for VPC flow logs) with a source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppHub apphubSource;
 
   /**
    * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups
@@ -87,7 +95,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A map of key, value pairs that provides additional information about the log entry.
    * The labels can be user-defined or system-defined.User-defined labels are arbitrary key, value
-   * pairs that you can use to classify logs.System-defined labels are defined by GCP services for
+   * pairs that you can use to classify logs.System-defined labels are defined by cloud services for
    * platform logs. They have two components - a service namespace component and the attribute name.
    * For example: compute.googleapis.com/resource_name.Cloud Logging truncates label keys that
    * exceed 512 B and label values that exceed 64 KB upon their associated log entry being written.
@@ -267,7 +275,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Output only. AppHub application metadata associated with the destination application. This is
    * only populated if the log represented "edge"-like data (such as for VPC flow logs) with a
-   * source and destination.
+   * destination.
    * @return value or {@code null} for none
    */
   public AppHub getApphubDestination() {
@@ -277,11 +285,30 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Output only. AppHub application metadata associated with the destination application. This is
    * only populated if the log represented "edge"-like data (such as for VPC flow logs) with a
-   * source and destination.
+   * destination.
    * @param apphubDestination apphubDestination or {@code null} for none
    */
   public LogEntry setApphubDestination(AppHub apphubDestination) {
     this.apphubDestination = apphubDestination;
+    return this;
+  }
+
+  /**
+   * Output only. AppHub application metadata associated with the source application. This is only
+   * populated if the log represented "edge"-like data (such as for VPC flow logs) with a source.
+   * @return value or {@code null} for none
+   */
+  public AppHub getApphubSource() {
+    return apphubSource;
+  }
+
+  /**
+   * Output only. AppHub application metadata associated with the source application. This is only
+   * populated if the log represented "edge"-like data (such as for VPC flow logs) with a source.
+   * @param apphubSource apphubSource or {@code null} for none
+   */
+  public LogEntry setApphubSource(AppHub apphubSource) {
+    this.apphubSource = apphubSource;
     return this;
   }
 
@@ -374,7 +401,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A map of key, value pairs that provides additional information about the log entry.
    * The labels can be user-defined or system-defined.User-defined labels are arbitrary key, value
-   * pairs that you can use to classify logs.System-defined labels are defined by GCP services for
+   * pairs that you can use to classify logs.System-defined labels are defined by cloud services for
    * platform logs. They have two components - a service namespace component and the attribute name.
    * For example: compute.googleapis.com/resource_name.Cloud Logging truncates label keys that
    * exceed 512 B and label values that exceed 64 KB upon their associated log entry being written.
@@ -388,7 +415,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Optional. A map of key, value pairs that provides additional information about the log entry.
    * The labels can be user-defined or system-defined.User-defined labels are arbitrary key, value
-   * pairs that you can use to classify logs.System-defined labels are defined by GCP services for
+   * pairs that you can use to classify logs.System-defined labels are defined by cloud services for
    * platform logs. They have two components - a service namespace component and the attribute name.
    * For example: compute.googleapis.com/resource_name.Cloud Logging truncates label keys that
    * exceed 512 B and label values that exceed 64 KB upon their associated log entry being written.

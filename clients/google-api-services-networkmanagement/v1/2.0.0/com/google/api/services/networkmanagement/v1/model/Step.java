@@ -139,6 +139,20 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private GKEMasterInfo gkeMaster;
 
   /**
+   * Display information of a Google Kubernetes Engine Pod.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkePodInfo gkePod;
+
+  /**
+   * Display information of a Google-managed service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleManagedServiceInfo googleManagedService;
+
+  /**
    * Display information of a Google service
    * The value may be {@code null}.
    */
@@ -165,6 +179,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private InterconnectAttachmentInfo interconnectAttachment;
+
+  /**
+   * Display information of the reason why GKE Pod IP masquerading was skipped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IpMasqueradingSkippedInfo ipMasqueradingSkipped;
 
   /**
    * Display information of the load balancers. Deprecated in favor of the
@@ -540,6 +561,40 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Display information of a Google Kubernetes Engine Pod.
+   * @return value or {@code null} for none
+   */
+  public GkePodInfo getGkePod() {
+    return gkePod;
+  }
+
+  /**
+   * Display information of a Google Kubernetes Engine Pod.
+   * @param gkePod gkePod or {@code null} for none
+   */
+  public Step setGkePod(GkePodInfo gkePod) {
+    this.gkePod = gkePod;
+    return this;
+  }
+
+  /**
+   * Display information of a Google-managed service.
+   * @return value or {@code null} for none
+   */
+  public GoogleManagedServiceInfo getGoogleManagedService() {
+    return googleManagedService;
+  }
+
+  /**
+   * Display information of a Google-managed service.
+   * @param googleManagedService googleManagedService or {@code null} for none
+   */
+  public Step setGoogleManagedService(GoogleManagedServiceInfo googleManagedService) {
+    this.googleManagedService = googleManagedService;
+    return this;
+  }
+
+  /**
    * Display information of a Google service
    * @return value or {@code null} for none
    */
@@ -604,6 +659,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setInterconnectAttachment(InterconnectAttachmentInfo interconnectAttachment) {
     this.interconnectAttachment = interconnectAttachment;
+    return this;
+  }
+
+  /**
+   * Display information of the reason why GKE Pod IP masquerading was skipped.
+   * @return value or {@code null} for none
+   */
+  public IpMasqueradingSkippedInfo getIpMasqueradingSkipped() {
+    return ipMasqueradingSkipped;
+  }
+
+  /**
+   * Display information of the reason why GKE Pod IP masquerading was skipped.
+   * @param ipMasqueradingSkipped ipMasqueradingSkipped or {@code null} for none
+   */
+  public Step setIpMasqueradingSkipped(IpMasqueradingSkippedInfo ipMasqueradingSkipped) {
+    this.ipMasqueradingSkipped = ipMasqueradingSkipped;
     return this;
   }
 

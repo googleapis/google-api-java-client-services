@@ -143,15 +143,15 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String loadBalancerType;
 
   /**
-   * A VPC network URI.
+   * A VPC network URI. Used according to the `network_type`. Relevant only for the source
+   * endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Type of the network where the endpoint is located. Applicable only to source endpoint, as
-   * destination network type can be inferred from the source.
+   * Type of the network where the endpoint is located. Relevant only for the source endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,12 +165,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.Integer port;
 
   /**
-   * Project ID where the endpoint is located. The project ID can be derived from the URI if you
-   * provide a endpoint or network URI. The following are two cases where you may need to provide
-   * the project ID: 1. Only the IP address is specified, and the IP address is within a Google
-   * Cloud project. 2. When you are using Shared VPC and the IP address that you provide is from the
-   * service project. In this case, the network that the IP address resides in is defined in the
-   * host project.
+   * Endpoint project ID. Used according to the `network_type`. Relevant only for the source
+   * endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -459,7 +455,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A VPC network URI.
+   * A VPC network URI. Used according to the `network_type`. Relevant only for the source
+   * endpoints.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -467,7 +464,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A VPC network URI.
+   * A VPC network URI. Used according to the `network_type`. Relevant only for the source
+   * endpoints.
    * @param network network or {@code null} for none
    */
   public Endpoint setNetwork(java.lang.String network) {
@@ -476,8 +474,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the network where the endpoint is located. Applicable only to source endpoint, as
-   * destination network type can be inferred from the source.
+   * Type of the network where the endpoint is located. Relevant only for the source endpoints.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkType() {
@@ -485,8 +482,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the network where the endpoint is located. Applicable only to source endpoint, as
-   * destination network type can be inferred from the source.
+   * Type of the network where the endpoint is located. Relevant only for the source endpoints.
    * @param networkType networkType or {@code null} for none
    */
   public Endpoint setNetworkType(java.lang.String networkType) {
@@ -512,12 +508,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Project ID where the endpoint is located. The project ID can be derived from the URI if you
-   * provide a endpoint or network URI. The following are two cases where you may need to provide
-   * the project ID: 1. Only the IP address is specified, and the IP address is within a Google
-   * Cloud project. 2. When you are using Shared VPC and the IP address that you provide is from the
-   * service project. In this case, the network that the IP address resides in is defined in the
-   * host project.
+   * Endpoint project ID. Used according to the `network_type`. Relevant only for the source
+   * endpoints.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -525,12 +517,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Project ID where the endpoint is located. The project ID can be derived from the URI if you
-   * provide a endpoint or network URI. The following are two cases where you may need to provide
-   * the project ID: 1. Only the IP address is specified, and the IP address is within a Google
-   * Cloud project. 2. When you are using Shared VPC and the IP address that you provide is from the
-   * service project. In this case, the network that the IP address resides in is defined in the
-   * host project.
+   * Endpoint project ID. Used according to the `network_type`. Relevant only for the source
+   * endpoints.
    * @param projectId projectId or {@code null} for none
    */
   public Endpoint setProjectId(java.lang.String projectId) {

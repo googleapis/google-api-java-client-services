@@ -35,6 +35,15 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class SystemUpdate extends com.google.api.client.json.GenericJson {
 
   /**
+   * If this is greater than zero, then this is the number of days after a pending update becoming
+   * available that a device can remain compliant, without taking the update. Has no effect
+   * otherwise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer allowedDaysWithoutUpdate;
+
+  /**
    * If the type is WINDOWED, the end of the maintenance window, measured as the number of minutes
    * after midnight in device's local time. This value must be between 0 and 1439, inclusive. If
    * this value is less than start_minutes, then the maintenance window spans midnight. If the
@@ -74,6 +83,27 @@ public final class SystemUpdate extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * If this is greater than zero, then this is the number of days after a pending update becoming
+   * available that a device can remain compliant, without taking the update. Has no effect
+   * otherwise.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAllowedDaysWithoutUpdate() {
+    return allowedDaysWithoutUpdate;
+  }
+
+  /**
+   * If this is greater than zero, then this is the number of days after a pending update becoming
+   * available that a device can remain compliant, without taking the update. Has no effect
+   * otherwise.
+   * @param allowedDaysWithoutUpdate allowedDaysWithoutUpdate or {@code null} for none
+   */
+  public SystemUpdate setAllowedDaysWithoutUpdate(java.lang.Integer allowedDaysWithoutUpdate) {
+    this.allowedDaysWithoutUpdate = allowedDaysWithoutUpdate;
+    return this;
+  }
 
   /**
    * If the type is WINDOWED, the end of the maintenance window, measured as the number of minutes

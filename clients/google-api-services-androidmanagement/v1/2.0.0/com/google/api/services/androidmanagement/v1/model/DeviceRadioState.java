@@ -59,6 +59,13 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   private java.lang.String ultraWidebandState;
 
   /**
+   * Optional. Controls whether the user is allowed to add eSIM profiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userInitiatedAddEsimSettings;
+
+  /**
    * Controls current state of Wi-Fi and if user can change its state.
    * The value may be {@code null}.
    */
@@ -130,6 +137,23 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
    */
   public DeviceRadioState setUltraWidebandState(java.lang.String ultraWidebandState) {
     this.ultraWidebandState = ultraWidebandState;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether the user is allowed to add eSIM profiles.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserInitiatedAddEsimSettings() {
+    return userInitiatedAddEsimSettings;
+  }
+
+  /**
+   * Optional. Controls whether the user is allowed to add eSIM profiles.
+   * @param userInitiatedAddEsimSettings userInitiatedAddEsimSettings or {@code null} for none
+   */
+  public DeviceRadioState setUserInitiatedAddEsimSettings(java.lang.String userInitiatedAddEsimSettings) {
+    this.userInitiatedAddEsimSettings = userInitiatedAddEsimSettings;
     return this;
   }
 

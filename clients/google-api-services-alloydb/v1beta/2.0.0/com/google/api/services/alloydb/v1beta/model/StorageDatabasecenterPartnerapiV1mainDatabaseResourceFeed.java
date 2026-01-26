@@ -38,13 +38,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
   private StorageDatabasecenterPartnerapiV1mainBackupDRMetadata backupdrMetadata;
 
   /**
-   * For BigQuery resource metadata.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private StorageDatabasecenterPartnerapiV1mainBigQueryResourceMetadata bigqueryResourceMetadata;
-
-  /**
    * Config based signal data is used to ingest signals that are generated based on the
    * configuration of the database resource.
    * The value may be {@code null}.
@@ -129,23 +122,6 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed ext
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setBackupdrMetadata(StorageDatabasecenterPartnerapiV1mainBackupDRMetadata backupdrMetadata) {
     this.backupdrMetadata = backupdrMetadata;
-    return this;
-  }
-
-  /**
-   * For BigQuery resource metadata.
-   * @return value or {@code null} for none
-   */
-  public StorageDatabasecenterPartnerapiV1mainBigQueryResourceMetadata getBigqueryResourceMetadata() {
-    return bigqueryResourceMetadata;
-  }
-
-  /**
-   * For BigQuery resource metadata.
-   * @param bigqueryResourceMetadata bigqueryResourceMetadata or {@code null} for none
-   */
-  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed setBigqueryResourceMetadata(StorageDatabasecenterPartnerapiV1mainBigQueryResourceMetadata bigqueryResourceMetadata) {
-    this.bigqueryResourceMetadata = bigqueryResourceMetadata;
     return this;
   }
 

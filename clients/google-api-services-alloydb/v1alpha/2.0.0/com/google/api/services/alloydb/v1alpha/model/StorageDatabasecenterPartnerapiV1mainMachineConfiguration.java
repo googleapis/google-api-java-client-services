@@ -30,12 +30,26 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Baseline slots for BigQuery Reservations. Baseline slots are in increments of 50.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long baselineSlots;
+
+  /**
    * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482) add proto validations
    * again after bug fix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer cpuCount;
+
+  /**
+   * Optional. Max slots for BigQuery Reservations. Max slots are in increments of 50.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxReservationSlots;
 
   /**
    * Memory size in bytes. TODO(b/342344482) add proto validations again after bug fix.
@@ -59,6 +73,23 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
   private java.lang.Double vcpuCount;
 
   /**
+   * Optional. Baseline slots for BigQuery Reservations. Baseline slots are in increments of 50.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getBaselineSlots() {
+    return baselineSlots;
+  }
+
+  /**
+   * Optional. Baseline slots for BigQuery Reservations. Baseline slots are in increments of 50.
+   * @param baselineSlots baselineSlots or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setBaselineSlots(java.lang.Long baselineSlots) {
+    this.baselineSlots = baselineSlots;
+    return this;
+  }
+
+  /**
    * The number of CPUs. Deprecated. Use vcpu_count instead. TODO(b/342344482) add proto validations
    * again after bug fix.
    * @return value or {@code null} for none
@@ -74,6 +105,23 @@ public final class StorageDatabasecenterPartnerapiV1mainMachineConfiguration ext
    */
   public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setCpuCount(java.lang.Integer cpuCount) {
     this.cpuCount = cpuCount;
+    return this;
+  }
+
+  /**
+   * Optional. Max slots for BigQuery Reservations. Max slots are in increments of 50.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxReservationSlots() {
+    return maxReservationSlots;
+  }
+
+  /**
+   * Optional. Max slots for BigQuery Reservations. Max slots are in increments of 50.
+   * @param maxReservationSlots maxReservationSlots or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainMachineConfiguration setMaxReservationSlots(java.lang.Long maxReservationSlots) {
+    this.maxReservationSlots = maxReservationSlots;
     return this;
   }
 

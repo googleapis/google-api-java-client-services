@@ -38,6 +38,28 @@ public final class RegionalInventoryAttributes extends com.google.api.client.jso
   private java.lang.String availability;
 
   /**
+   * Optional. An optional list of loyalty programs containing applicable loyalty member prices for
+   * this product in this region. This field is used to show region-specific member prices on
+   * Product Listing Ads (PLA). To use this, the loyalty program must be configured in Google
+   * Merchant Center, and the merchant must be using the Regional Availability and Pricing (RAAP)
+   * feature. The benefits provided must match the merchant's website and be clear to members. This
+   * is only applicable for merchants in supported countries. See [Loyalty
+   * program](https://support.google.com/merchants/answer/12922446) for details on supported
+   * countries and loyalty program configuration. Also see [Regional availability and
+   * pricing](https://support.google.com/merchants/answer/14644124) and [How to set up regional
+   * member pricing](https://support.google.com/merchants/answer/16388178) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InventoryLoyaltyProgram> loyaltyPrograms;
+
+  static {
+    // hack to force ProGuard to consider InventoryLoyaltyProgram used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(InventoryLoyaltyProgram.class);
+  }
+
+  /**
    * Optional. Price of the product in this region.
    * The value may be {@code null}.
    */
@@ -75,6 +97,41 @@ public final class RegionalInventoryAttributes extends com.google.api.client.jso
    */
   public RegionalInventoryAttributes setAvailability(java.lang.String availability) {
     this.availability = availability;
+    return this;
+  }
+
+  /**
+   * Optional. An optional list of loyalty programs containing applicable loyalty member prices for
+   * this product in this region. This field is used to show region-specific member prices on
+   * Product Listing Ads (PLA). To use this, the loyalty program must be configured in Google
+   * Merchant Center, and the merchant must be using the Regional Availability and Pricing (RAAP)
+   * feature. The benefits provided must match the merchant's website and be clear to members. This
+   * is only applicable for merchants in supported countries. See [Loyalty
+   * program](https://support.google.com/merchants/answer/12922446) for details on supported
+   * countries and loyalty program configuration. Also see [Regional availability and
+   * pricing](https://support.google.com/merchants/answer/14644124) and [How to set up regional
+   * member pricing](https://support.google.com/merchants/answer/16388178) for more information.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InventoryLoyaltyProgram> getLoyaltyPrograms() {
+    return loyaltyPrograms;
+  }
+
+  /**
+   * Optional. An optional list of loyalty programs containing applicable loyalty member prices for
+   * this product in this region. This field is used to show region-specific member prices on
+   * Product Listing Ads (PLA). To use this, the loyalty program must be configured in Google
+   * Merchant Center, and the merchant must be using the Regional Availability and Pricing (RAAP)
+   * feature. The benefits provided must match the merchant's website and be clear to members. This
+   * is only applicable for merchants in supported countries. See [Loyalty
+   * program](https://support.google.com/merchants/answer/12922446) for details on supported
+   * countries and loyalty program configuration. Also see [Regional availability and
+   * pricing](https://support.google.com/merchants/answer/14644124) and [How to set up regional
+   * member pricing](https://support.google.com/merchants/answer/16388178) for more information.
+   * @param loyaltyPrograms loyaltyPrograms or {@code null} for none
+   */
+  public RegionalInventoryAttributes setLoyaltyPrograms(java.util.List<InventoryLoyaltyProgram> loyaltyPrograms) {
+    this.loyaltyPrograms = loyaltyPrograms;
     return this;
   }
 

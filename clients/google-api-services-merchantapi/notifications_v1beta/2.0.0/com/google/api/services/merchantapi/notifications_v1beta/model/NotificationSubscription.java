@@ -17,7 +17,9 @@
 package com.google.api.services.merchantapi.notifications_v1beta.model;
 
 /**
- * Represents a notification subscription owned by a Merchant account.
+ * Represents a notification subscription owned by a Merchant account. See [Decode
+ * notifications](/merchant/api/guides/accounts/notifications#decode_notifications) for information
+ * on how to decode the notification payload and how to interpret its contents.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

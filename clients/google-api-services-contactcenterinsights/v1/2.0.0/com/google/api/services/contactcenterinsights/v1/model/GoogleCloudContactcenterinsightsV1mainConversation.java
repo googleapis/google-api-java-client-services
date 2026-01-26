@@ -45,6 +45,13 @@ public final class GoogleCloudContactcenterinsightsV1mainConversation extends co
   private GoogleCloudContactcenterinsightsV1mainConversationCallMetadata callMetadata;
 
   /**
+   * Output only. Info for correlating across conversations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1mainConversationCorrelationInfo correlationInfo;
+
+  /**
    * Output only. The time at which the conversation was created.
    * The value may be {@code null}.
    */
@@ -111,7 +118,7 @@ public final class GoogleCloudContactcenterinsightsV1mainConversation extends co
   private GoogleCloudContactcenterinsightsV1mainConversationSummarizationSuggestionData latestSummary;
 
   /**
-   * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
+   * Immutable. The conversation medium.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,6 +228,23 @@ public final class GoogleCloudContactcenterinsightsV1mainConversation extends co
    */
   public GoogleCloudContactcenterinsightsV1mainConversation setCallMetadata(GoogleCloudContactcenterinsightsV1mainConversationCallMetadata callMetadata) {
     this.callMetadata = callMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Info for correlating across conversations.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainConversationCorrelationInfo getCorrelationInfo() {
+    return correlationInfo;
+  }
+
+  /**
+   * Output only. Info for correlating across conversations.
+   * @param correlationInfo correlationInfo or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainConversation setCorrelationInfo(GoogleCloudContactcenterinsightsV1mainConversationCorrelationInfo correlationInfo) {
+    this.correlationInfo = correlationInfo;
     return this;
   }
 
@@ -384,7 +408,7 @@ public final class GoogleCloudContactcenterinsightsV1mainConversation extends co
   }
 
   /**
-   * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
+   * Immutable. The conversation medium.
    * @return value or {@code null} for none
    */
   public java.lang.String getMedium() {
@@ -392,7 +416,7 @@ public final class GoogleCloudContactcenterinsightsV1mainConversation extends co
   }
 
   /**
-   * Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
+   * Immutable. The conversation medium.
    * @param medium medium or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1mainConversation setMedium(java.lang.String medium) {

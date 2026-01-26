@@ -31,6 +31,91 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure extends com.google.api.client.json.GenericJson {
 
   /**
+   * The number of conversations that were assigned to an AA human supervisor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer aaSupervisorAssignedConversationsCount;
+
+  /**
+   * The number of conversations that were dropped, i.e. escalated but not assigned to an AA human
+   * supervisor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer aaSupervisorDroppedConversationsCount;
+
+  /**
+   * The number of conversations that were escalated to an AA human supervisor for intervention.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer aaSupervisorEscalatedConversationsCount;
+
+  /**
+   * The number of conversations scanned by the AA human supervisor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer aaSupervisorMonitoredConversationsCount;
+
+  /**
+   * The number of conversations transferred to a human agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer aaSupervisorTransferredToHumanAgentConvCount;
+
+  /**
+   * Count of agent messages that triggered an Ai Coach Suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer aiCoachSuggestionAgentMessageTriggerCount;
+
+  /**
+   * Count of Ai Coach Suggestion that has been used by agents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer aiCoachSuggestionAgentUsageCount;
+
+  /**
+   * Proportion of Ai Coach Suggestion that has been used by agents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double aiCoachSuggestionAgentUsageRatio;
+
+  /**
+   * Count of customer messages that triggered an Ai Coach Suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer aiCoachSuggestionCustomerMessageTriggerCount;
+
+  /**
+   * Proportion of customer messages that triggered an Ai Coach Suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double aiCoachSuggestionCustomerMessageTriggerRatio;
+
+  /**
+   * Count of end_of_utterance trigger event messages that triggered an Ai Coach Suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer aiCoachSuggestionMessageTriggerCount;
+
+  /**
+   * Proportion of end_of_utterance trigger event messages that triggered an Ai Coach Suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double aiCoachSuggestionMessageTriggerRatio;
+
+  /**
    * The average agent's sentiment score.
    * The value may be {@code null}.
    */
@@ -84,11 +169,66 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseS
   private java.lang.Float averageSilencePercentage;
 
   /**
+   * Average edit distance of the summarization suggestions. Edit distance (also called as
+   * levenshtein distance) is calculated by summing up number of insertions, deletions and
+   * substitutions required to transform the summization feedback to the original summary
+   * suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double averageSummarizationSuggestionEditDistance;
+
+  /**
+   * Normalized Average edit distance of the summarization suggestions. Edit distance (also called
+   * as levenshtein distance) is calculated by summing up number of insertions, deletions and
+   * substitutions required to transform the summization feedback to the original summary
+   * suggestion. Normalized edit distance is the average of (edit distance / summary length).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double averageSummarizationSuggestionNormalizedEditDistance;
+
+  /**
    * The average turn count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float averageTurnCount;
+
+  /**
+   * The exponential moving average of the sentiment score of client turns in the conversation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double avgConversationClientTurnSentimentEma;
+
+  /**
+   * The number of conversations that were contained.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer containedConversationCount;
+
+  /**
+   * The percentage of conversations that were contained.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double containedConversationRatio;
+
+  /**
+   * Count of conversations that has Ai Coach Suggestions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer conversationAiCoachSuggestionCount;
+
+  /**
+   * Proportion of conversations that has Ai Coach Suggestions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversationAiCoachSuggestionRatio;
 
   /**
    * The conversation count.
@@ -98,11 +238,415 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseS
   private java.lang.Integer conversationCount;
 
   /**
+   * Proportion of conversations that had a suggested summary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversationSuggestedSummaryRatio;
+
+  /**
+   * The agent message count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer conversationTotalAgentMessageCount;
+
+  /**
+   * The customer message count.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer conversationTotalCustomerMessageCount;
+
+  /**
+   * The average latency of conversational agents' audio in audio out latency per interaction. This
+   * is computed as the average of the all the interactions' audio in audio out latencies in a
+   * conversation and averaged across conversations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversationalAgentsAverageAudioInAudioOutLatency;
+
+  /**
+   * The average latency of conversational agents' latency per interaction. This is computed as the
+   * average of the all the iteractions' end to end latencies in a conversation and averaged across
+   * conversations. The e2e latency is the time between the end of the user utterance and the start
+   * of the agent utterance on the interaction level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversationalAgentsAverageEndToEndLatency;
+
+  /**
+   * The average latency of conversational agents' LLM call latency per interaction. This is
+   * computed as the average of the all the interactions LLM call latencies in a conversation and
+   * averaged across conversations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversationalAgentsAverageLlmCallLatency;
+
+  /**
+   * The macro average latency of conversational agents' TTS latency per interaction. This is
+   * computed as the average of the all the interactions' TTS latencies in a conversation and
+   * averaged across conversations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double conversationalAgentsAverageTtsLatency;
+
+  /**
+   * Average latency of dialogflow webhook calls.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dialogflowAverageWebhookLatency;
+
+  /**
+   * count of conversations that was handed off from virtual agent to human agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dialogflowConversationsEscalationCount;
+
+  /**
+   * Proportion of conversations that was handed off from virtual agent to human agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dialogflowConversationsEscalationRatio;
+
+  /**
+   * Proportion of dialogflow interactions that has empty input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dialogflowInteractionsNoInputRatio;
+
+  /**
+   * Proportion of dialogflow interactions that has no intent match for the input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dialogflowInteractionsNoMatchRatio;
+
+  /**
+   * Proportion of dialogflow webhook calls that failed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dialogflowWebhookFailureRatio;
+
+  /**
+   * Proportion of dialogflow webhook calls that timed out.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dialogflowWebhookTimeoutRatio;
+
+  /**
+   * Proportion of knowledge assist (Proactive Generative Knowledge Assist) queries that had
+   * negative feedback.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double knowledgeAssistNegativeFeedbackRatio;
+
+  /**
+   * Proportion of knowledge assist (Proactive Generative Knowledge Assist) queries that had
+   * positive feedback.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double knowledgeAssistPositiveFeedbackRatio;
+
+  /**
+   * Count of knowledge assist results (Proactive Generative Knowledge Assist) shown to the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer knowledgeAssistResultCount;
+
+  /**
+   * Proportion of knowledge assist (Proactive Generative Knowledge Assist) queries that had a URL
+   * clicked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double knowledgeAssistUriClickRatio;
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries made by the agent compared
+   * to the total number of knowledge search queries made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double knowledgeSearchAgentQuerySourceRatio;
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries that had negative
+   * feedback.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double knowledgeSearchNegativeFeedbackRatio;
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries that had positive
+   * feedback.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double knowledgeSearchPositiveFeedbackRatio;
+
+  /**
+   * Count of knowledge search results (Generative Knowledge Assist) shown to the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer knowledgeSearchResultCount;
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries suggested compared to the
+   * total number of knowledge search queries made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double knowledgeSearchSuggestedQuerySourceRatio;
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries that had a URL clicked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double knowledgeSearchUriClickRatio;
+
+  /**
    * Average QA normalized score for all the tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasureQaTagScore> qaTagScores;
+
+  /**
+   * Proportion of summarization suggestions that were manually edited.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double summarizationSuggestionEditRatio;
+
+  /**
+   * Count of summarization suggestions results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer summarizationSuggestionResultCount;
+
+  /**
+   * The number of conversations that were assigned to an AA human supervisor.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAaSupervisorAssignedConversationsCount() {
+    return aaSupervisorAssignedConversationsCount;
+  }
+
+  /**
+   * The number of conversations that were assigned to an AA human supervisor.
+   * @param aaSupervisorAssignedConversationsCount aaSupervisorAssignedConversationsCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAaSupervisorAssignedConversationsCount(java.lang.Integer aaSupervisorAssignedConversationsCount) {
+    this.aaSupervisorAssignedConversationsCount = aaSupervisorAssignedConversationsCount;
+    return this;
+  }
+
+  /**
+   * The number of conversations that were dropped, i.e. escalated but not assigned to an AA human
+   * supervisor.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAaSupervisorDroppedConversationsCount() {
+    return aaSupervisorDroppedConversationsCount;
+  }
+
+  /**
+   * The number of conversations that were dropped, i.e. escalated but not assigned to an AA human
+   * supervisor.
+   * @param aaSupervisorDroppedConversationsCount aaSupervisorDroppedConversationsCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAaSupervisorDroppedConversationsCount(java.lang.Integer aaSupervisorDroppedConversationsCount) {
+    this.aaSupervisorDroppedConversationsCount = aaSupervisorDroppedConversationsCount;
+    return this;
+  }
+
+  /**
+   * The number of conversations that were escalated to an AA human supervisor for intervention.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAaSupervisorEscalatedConversationsCount() {
+    return aaSupervisorEscalatedConversationsCount;
+  }
+
+  /**
+   * The number of conversations that were escalated to an AA human supervisor for intervention.
+   * @param aaSupervisorEscalatedConversationsCount aaSupervisorEscalatedConversationsCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAaSupervisorEscalatedConversationsCount(java.lang.Integer aaSupervisorEscalatedConversationsCount) {
+    this.aaSupervisorEscalatedConversationsCount = aaSupervisorEscalatedConversationsCount;
+    return this;
+  }
+
+  /**
+   * The number of conversations scanned by the AA human supervisor.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAaSupervisorMonitoredConversationsCount() {
+    return aaSupervisorMonitoredConversationsCount;
+  }
+
+  /**
+   * The number of conversations scanned by the AA human supervisor.
+   * @param aaSupervisorMonitoredConversationsCount aaSupervisorMonitoredConversationsCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAaSupervisorMonitoredConversationsCount(java.lang.Integer aaSupervisorMonitoredConversationsCount) {
+    this.aaSupervisorMonitoredConversationsCount = aaSupervisorMonitoredConversationsCount;
+    return this;
+  }
+
+  /**
+   * The number of conversations transferred to a human agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAaSupervisorTransferredToHumanAgentConvCount() {
+    return aaSupervisorTransferredToHumanAgentConvCount;
+  }
+
+  /**
+   * The number of conversations transferred to a human agent.
+   * @param aaSupervisorTransferredToHumanAgentConvCount aaSupervisorTransferredToHumanAgentConvCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAaSupervisorTransferredToHumanAgentConvCount(java.lang.Integer aaSupervisorTransferredToHumanAgentConvCount) {
+    this.aaSupervisorTransferredToHumanAgentConvCount = aaSupervisorTransferredToHumanAgentConvCount;
+    return this;
+  }
+
+  /**
+   * Count of agent messages that triggered an Ai Coach Suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAiCoachSuggestionAgentMessageTriggerCount() {
+    return aiCoachSuggestionAgentMessageTriggerCount;
+  }
+
+  /**
+   * Count of agent messages that triggered an Ai Coach Suggestion.
+   * @param aiCoachSuggestionAgentMessageTriggerCount aiCoachSuggestionAgentMessageTriggerCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAiCoachSuggestionAgentMessageTriggerCount(java.lang.Integer aiCoachSuggestionAgentMessageTriggerCount) {
+    this.aiCoachSuggestionAgentMessageTriggerCount = aiCoachSuggestionAgentMessageTriggerCount;
+    return this;
+  }
+
+  /**
+   * Count of Ai Coach Suggestion that has been used by agents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAiCoachSuggestionAgentUsageCount() {
+    return aiCoachSuggestionAgentUsageCount;
+  }
+
+  /**
+   * Count of Ai Coach Suggestion that has been used by agents.
+   * @param aiCoachSuggestionAgentUsageCount aiCoachSuggestionAgentUsageCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAiCoachSuggestionAgentUsageCount(java.lang.Integer aiCoachSuggestionAgentUsageCount) {
+    this.aiCoachSuggestionAgentUsageCount = aiCoachSuggestionAgentUsageCount;
+    return this;
+  }
+
+  /**
+   * Proportion of Ai Coach Suggestion that has been used by agents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAiCoachSuggestionAgentUsageRatio() {
+    return aiCoachSuggestionAgentUsageRatio;
+  }
+
+  /**
+   * Proportion of Ai Coach Suggestion that has been used by agents.
+   * @param aiCoachSuggestionAgentUsageRatio aiCoachSuggestionAgentUsageRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAiCoachSuggestionAgentUsageRatio(java.lang.Double aiCoachSuggestionAgentUsageRatio) {
+    this.aiCoachSuggestionAgentUsageRatio = aiCoachSuggestionAgentUsageRatio;
+    return this;
+  }
+
+  /**
+   * Count of customer messages that triggered an Ai Coach Suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAiCoachSuggestionCustomerMessageTriggerCount() {
+    return aiCoachSuggestionCustomerMessageTriggerCount;
+  }
+
+  /**
+   * Count of customer messages that triggered an Ai Coach Suggestion.
+   * @param aiCoachSuggestionCustomerMessageTriggerCount aiCoachSuggestionCustomerMessageTriggerCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAiCoachSuggestionCustomerMessageTriggerCount(java.lang.Integer aiCoachSuggestionCustomerMessageTriggerCount) {
+    this.aiCoachSuggestionCustomerMessageTriggerCount = aiCoachSuggestionCustomerMessageTriggerCount;
+    return this;
+  }
+
+  /**
+   * Proportion of customer messages that triggered an Ai Coach Suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAiCoachSuggestionCustomerMessageTriggerRatio() {
+    return aiCoachSuggestionCustomerMessageTriggerRatio;
+  }
+
+  /**
+   * Proportion of customer messages that triggered an Ai Coach Suggestion.
+   * @param aiCoachSuggestionCustomerMessageTriggerRatio aiCoachSuggestionCustomerMessageTriggerRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAiCoachSuggestionCustomerMessageTriggerRatio(java.lang.Double aiCoachSuggestionCustomerMessageTriggerRatio) {
+    this.aiCoachSuggestionCustomerMessageTriggerRatio = aiCoachSuggestionCustomerMessageTriggerRatio;
+    return this;
+  }
+
+  /**
+   * Count of end_of_utterance trigger event messages that triggered an Ai Coach Suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAiCoachSuggestionMessageTriggerCount() {
+    return aiCoachSuggestionMessageTriggerCount;
+  }
+
+  /**
+   * Count of end_of_utterance trigger event messages that triggered an Ai Coach Suggestion.
+   * @param aiCoachSuggestionMessageTriggerCount aiCoachSuggestionMessageTriggerCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAiCoachSuggestionMessageTriggerCount(java.lang.Integer aiCoachSuggestionMessageTriggerCount) {
+    this.aiCoachSuggestionMessageTriggerCount = aiCoachSuggestionMessageTriggerCount;
+    return this;
+  }
+
+  /**
+   * Proportion of end_of_utterance trigger event messages that triggered an Ai Coach Suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAiCoachSuggestionMessageTriggerRatio() {
+    return aiCoachSuggestionMessageTriggerRatio;
+  }
+
+  /**
+   * Proportion of end_of_utterance trigger event messages that triggered an Ai Coach Suggestion.
+   * @param aiCoachSuggestionMessageTriggerRatio aiCoachSuggestionMessageTriggerRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAiCoachSuggestionMessageTriggerRatio(java.lang.Double aiCoachSuggestionMessageTriggerRatio) {
+    this.aiCoachSuggestionMessageTriggerRatio = aiCoachSuggestionMessageTriggerRatio;
+    return this;
+  }
 
   /**
    * The average agent's sentiment score.
@@ -232,6 +776,52 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseS
   }
 
   /**
+   * Average edit distance of the summarization suggestions. Edit distance (also called as
+   * levenshtein distance) is calculated by summing up number of insertions, deletions and
+   * substitutions required to transform the summization feedback to the original summary
+   * suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAverageSummarizationSuggestionEditDistance() {
+    return averageSummarizationSuggestionEditDistance;
+  }
+
+  /**
+   * Average edit distance of the summarization suggestions. Edit distance (also called as
+   * levenshtein distance) is calculated by summing up number of insertions, deletions and
+   * substitutions required to transform the summization feedback to the original summary
+   * suggestion.
+   * @param averageSummarizationSuggestionEditDistance averageSummarizationSuggestionEditDistance or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAverageSummarizationSuggestionEditDistance(java.lang.Double averageSummarizationSuggestionEditDistance) {
+    this.averageSummarizationSuggestionEditDistance = averageSummarizationSuggestionEditDistance;
+    return this;
+  }
+
+  /**
+   * Normalized Average edit distance of the summarization suggestions. Edit distance (also called
+   * as levenshtein distance) is calculated by summing up number of insertions, deletions and
+   * substitutions required to transform the summization feedback to the original summary
+   * suggestion. Normalized edit distance is the average of (edit distance / summary length).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAverageSummarizationSuggestionNormalizedEditDistance() {
+    return averageSummarizationSuggestionNormalizedEditDistance;
+  }
+
+  /**
+   * Normalized Average edit distance of the summarization suggestions. Edit distance (also called
+   * as levenshtein distance) is calculated by summing up number of insertions, deletions and
+   * substitutions required to transform the summization feedback to the original summary
+   * suggestion. Normalized edit distance is the average of (edit distance / summary length).
+   * @param averageSummarizationSuggestionNormalizedEditDistance averageSummarizationSuggestionNormalizedEditDistance or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAverageSummarizationSuggestionNormalizedEditDistance(java.lang.Double averageSummarizationSuggestionNormalizedEditDistance) {
+    this.averageSummarizationSuggestionNormalizedEditDistance = averageSummarizationSuggestionNormalizedEditDistance;
+    return this;
+  }
+
+  /**
    * The average turn count.
    * @return value or {@code null} for none
    */
@@ -245,6 +835,91 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseS
    */
   public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAverageTurnCount(java.lang.Float averageTurnCount) {
     this.averageTurnCount = averageTurnCount;
+    return this;
+  }
+
+  /**
+   * The exponential moving average of the sentiment score of client turns in the conversation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getAvgConversationClientTurnSentimentEma() {
+    return avgConversationClientTurnSentimentEma;
+  }
+
+  /**
+   * The exponential moving average of the sentiment score of client turns in the conversation.
+   * @param avgConversationClientTurnSentimentEma avgConversationClientTurnSentimentEma or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setAvgConversationClientTurnSentimentEma(java.lang.Double avgConversationClientTurnSentimentEma) {
+    this.avgConversationClientTurnSentimentEma = avgConversationClientTurnSentimentEma;
+    return this;
+  }
+
+  /**
+   * The number of conversations that were contained.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getContainedConversationCount() {
+    return containedConversationCount;
+  }
+
+  /**
+   * The number of conversations that were contained.
+   * @param containedConversationCount containedConversationCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setContainedConversationCount(java.lang.Integer containedConversationCount) {
+    this.containedConversationCount = containedConversationCount;
+    return this;
+  }
+
+  /**
+   * The percentage of conversations that were contained.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getContainedConversationRatio() {
+    return containedConversationRatio;
+  }
+
+  /**
+   * The percentage of conversations that were contained.
+   * @param containedConversationRatio containedConversationRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setContainedConversationRatio(java.lang.Double containedConversationRatio) {
+    this.containedConversationRatio = containedConversationRatio;
+    return this;
+  }
+
+  /**
+   * Count of conversations that has Ai Coach Suggestions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getConversationAiCoachSuggestionCount() {
+    return conversationAiCoachSuggestionCount;
+  }
+
+  /**
+   * Count of conversations that has Ai Coach Suggestions.
+   * @param conversationAiCoachSuggestionCount conversationAiCoachSuggestionCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setConversationAiCoachSuggestionCount(java.lang.Integer conversationAiCoachSuggestionCount) {
+    this.conversationAiCoachSuggestionCount = conversationAiCoachSuggestionCount;
+    return this;
+  }
+
+  /**
+   * Proportion of conversations that has Ai Coach Suggestions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversationAiCoachSuggestionRatio() {
+    return conversationAiCoachSuggestionRatio;
+  }
+
+  /**
+   * Proportion of conversations that has Ai Coach Suggestions.
+   * @param conversationAiCoachSuggestionRatio conversationAiCoachSuggestionRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setConversationAiCoachSuggestionRatio(java.lang.Double conversationAiCoachSuggestionRatio) {
+    this.conversationAiCoachSuggestionRatio = conversationAiCoachSuggestionRatio;
     return this;
   }
 
@@ -266,6 +941,446 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseS
   }
 
   /**
+   * Proportion of conversations that had a suggested summary.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversationSuggestedSummaryRatio() {
+    return conversationSuggestedSummaryRatio;
+  }
+
+  /**
+   * Proportion of conversations that had a suggested summary.
+   * @param conversationSuggestedSummaryRatio conversationSuggestedSummaryRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setConversationSuggestedSummaryRatio(java.lang.Double conversationSuggestedSummaryRatio) {
+    this.conversationSuggestedSummaryRatio = conversationSuggestedSummaryRatio;
+    return this;
+  }
+
+  /**
+   * The agent message count.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getConversationTotalAgentMessageCount() {
+    return conversationTotalAgentMessageCount;
+  }
+
+  /**
+   * The agent message count.
+   * @param conversationTotalAgentMessageCount conversationTotalAgentMessageCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setConversationTotalAgentMessageCount(java.lang.Integer conversationTotalAgentMessageCount) {
+    this.conversationTotalAgentMessageCount = conversationTotalAgentMessageCount;
+    return this;
+  }
+
+  /**
+   * The customer message count.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getConversationTotalCustomerMessageCount() {
+    return conversationTotalCustomerMessageCount;
+  }
+
+  /**
+   * The customer message count.
+   * @param conversationTotalCustomerMessageCount conversationTotalCustomerMessageCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setConversationTotalCustomerMessageCount(java.lang.Integer conversationTotalCustomerMessageCount) {
+    this.conversationTotalCustomerMessageCount = conversationTotalCustomerMessageCount;
+    return this;
+  }
+
+  /**
+   * The average latency of conversational agents' audio in audio out latency per interaction. This
+   * is computed as the average of the all the interactions' audio in audio out latencies in a
+   * conversation and averaged across conversations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversationalAgentsAverageAudioInAudioOutLatency() {
+    return conversationalAgentsAverageAudioInAudioOutLatency;
+  }
+
+  /**
+   * The average latency of conversational agents' audio in audio out latency per interaction. This
+   * is computed as the average of the all the interactions' audio in audio out latencies in a
+   * conversation and averaged across conversations.
+   * @param conversationalAgentsAverageAudioInAudioOutLatency conversationalAgentsAverageAudioInAudioOutLatency or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setConversationalAgentsAverageAudioInAudioOutLatency(java.lang.Double conversationalAgentsAverageAudioInAudioOutLatency) {
+    this.conversationalAgentsAverageAudioInAudioOutLatency = conversationalAgentsAverageAudioInAudioOutLatency;
+    return this;
+  }
+
+  /**
+   * The average latency of conversational agents' latency per interaction. This is computed as the
+   * average of the all the iteractions' end to end latencies in a conversation and averaged across
+   * conversations. The e2e latency is the time between the end of the user utterance and the start
+   * of the agent utterance on the interaction level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversationalAgentsAverageEndToEndLatency() {
+    return conversationalAgentsAverageEndToEndLatency;
+  }
+
+  /**
+   * The average latency of conversational agents' latency per interaction. This is computed as the
+   * average of the all the iteractions' end to end latencies in a conversation and averaged across
+   * conversations. The e2e latency is the time between the end of the user utterance and the start
+   * of the agent utterance on the interaction level.
+   * @param conversationalAgentsAverageEndToEndLatency conversationalAgentsAverageEndToEndLatency or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setConversationalAgentsAverageEndToEndLatency(java.lang.Double conversationalAgentsAverageEndToEndLatency) {
+    this.conversationalAgentsAverageEndToEndLatency = conversationalAgentsAverageEndToEndLatency;
+    return this;
+  }
+
+  /**
+   * The average latency of conversational agents' LLM call latency per interaction. This is
+   * computed as the average of the all the interactions LLM call latencies in a conversation and
+   * averaged across conversations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversationalAgentsAverageLlmCallLatency() {
+    return conversationalAgentsAverageLlmCallLatency;
+  }
+
+  /**
+   * The average latency of conversational agents' LLM call latency per interaction. This is
+   * computed as the average of the all the interactions LLM call latencies in a conversation and
+   * averaged across conversations.
+   * @param conversationalAgentsAverageLlmCallLatency conversationalAgentsAverageLlmCallLatency or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setConversationalAgentsAverageLlmCallLatency(java.lang.Double conversationalAgentsAverageLlmCallLatency) {
+    this.conversationalAgentsAverageLlmCallLatency = conversationalAgentsAverageLlmCallLatency;
+    return this;
+  }
+
+  /**
+   * The macro average latency of conversational agents' TTS latency per interaction. This is
+   * computed as the average of the all the interactions' TTS latencies in a conversation and
+   * averaged across conversations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getConversationalAgentsAverageTtsLatency() {
+    return conversationalAgentsAverageTtsLatency;
+  }
+
+  /**
+   * The macro average latency of conversational agents' TTS latency per interaction. This is
+   * computed as the average of the all the interactions' TTS latencies in a conversation and
+   * averaged across conversations.
+   * @param conversationalAgentsAverageTtsLatency conversationalAgentsAverageTtsLatency or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setConversationalAgentsAverageTtsLatency(java.lang.Double conversationalAgentsAverageTtsLatency) {
+    this.conversationalAgentsAverageTtsLatency = conversationalAgentsAverageTtsLatency;
+    return this;
+  }
+
+  /**
+   * Average latency of dialogflow webhook calls.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDialogflowAverageWebhookLatency() {
+    return dialogflowAverageWebhookLatency;
+  }
+
+  /**
+   * Average latency of dialogflow webhook calls.
+   * @param dialogflowAverageWebhookLatency dialogflowAverageWebhookLatency or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setDialogflowAverageWebhookLatency(java.lang.Double dialogflowAverageWebhookLatency) {
+    this.dialogflowAverageWebhookLatency = dialogflowAverageWebhookLatency;
+    return this;
+  }
+
+  /**
+   * count of conversations that was handed off from virtual agent to human agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDialogflowConversationsEscalationCount() {
+    return dialogflowConversationsEscalationCount;
+  }
+
+  /**
+   * count of conversations that was handed off from virtual agent to human agent.
+   * @param dialogflowConversationsEscalationCount dialogflowConversationsEscalationCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setDialogflowConversationsEscalationCount(java.lang.Double dialogflowConversationsEscalationCount) {
+    this.dialogflowConversationsEscalationCount = dialogflowConversationsEscalationCount;
+    return this;
+  }
+
+  /**
+   * Proportion of conversations that was handed off from virtual agent to human agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDialogflowConversationsEscalationRatio() {
+    return dialogflowConversationsEscalationRatio;
+  }
+
+  /**
+   * Proportion of conversations that was handed off from virtual agent to human agent.
+   * @param dialogflowConversationsEscalationRatio dialogflowConversationsEscalationRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setDialogflowConversationsEscalationRatio(java.lang.Double dialogflowConversationsEscalationRatio) {
+    this.dialogflowConversationsEscalationRatio = dialogflowConversationsEscalationRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of dialogflow interactions that has empty input.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDialogflowInteractionsNoInputRatio() {
+    return dialogflowInteractionsNoInputRatio;
+  }
+
+  /**
+   * Proportion of dialogflow interactions that has empty input.
+   * @param dialogflowInteractionsNoInputRatio dialogflowInteractionsNoInputRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setDialogflowInteractionsNoInputRatio(java.lang.Double dialogflowInteractionsNoInputRatio) {
+    this.dialogflowInteractionsNoInputRatio = dialogflowInteractionsNoInputRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of dialogflow interactions that has no intent match for the input.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDialogflowInteractionsNoMatchRatio() {
+    return dialogflowInteractionsNoMatchRatio;
+  }
+
+  /**
+   * Proportion of dialogflow interactions that has no intent match for the input.
+   * @param dialogflowInteractionsNoMatchRatio dialogflowInteractionsNoMatchRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setDialogflowInteractionsNoMatchRatio(java.lang.Double dialogflowInteractionsNoMatchRatio) {
+    this.dialogflowInteractionsNoMatchRatio = dialogflowInteractionsNoMatchRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of dialogflow webhook calls that failed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDialogflowWebhookFailureRatio() {
+    return dialogflowWebhookFailureRatio;
+  }
+
+  /**
+   * Proportion of dialogflow webhook calls that failed.
+   * @param dialogflowWebhookFailureRatio dialogflowWebhookFailureRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setDialogflowWebhookFailureRatio(java.lang.Double dialogflowWebhookFailureRatio) {
+    this.dialogflowWebhookFailureRatio = dialogflowWebhookFailureRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of dialogflow webhook calls that timed out.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDialogflowWebhookTimeoutRatio() {
+    return dialogflowWebhookTimeoutRatio;
+  }
+
+  /**
+   * Proportion of dialogflow webhook calls that timed out.
+   * @param dialogflowWebhookTimeoutRatio dialogflowWebhookTimeoutRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setDialogflowWebhookTimeoutRatio(java.lang.Double dialogflowWebhookTimeoutRatio) {
+    this.dialogflowWebhookTimeoutRatio = dialogflowWebhookTimeoutRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of knowledge assist (Proactive Generative Knowledge Assist) queries that had
+   * negative feedback.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getKnowledgeAssistNegativeFeedbackRatio() {
+    return knowledgeAssistNegativeFeedbackRatio;
+  }
+
+  /**
+   * Proportion of knowledge assist (Proactive Generative Knowledge Assist) queries that had
+   * negative feedback.
+   * @param knowledgeAssistNegativeFeedbackRatio knowledgeAssistNegativeFeedbackRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeAssistNegativeFeedbackRatio(java.lang.Double knowledgeAssistNegativeFeedbackRatio) {
+    this.knowledgeAssistNegativeFeedbackRatio = knowledgeAssistNegativeFeedbackRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of knowledge assist (Proactive Generative Knowledge Assist) queries that had
+   * positive feedback.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getKnowledgeAssistPositiveFeedbackRatio() {
+    return knowledgeAssistPositiveFeedbackRatio;
+  }
+
+  /**
+   * Proportion of knowledge assist (Proactive Generative Knowledge Assist) queries that had
+   * positive feedback.
+   * @param knowledgeAssistPositiveFeedbackRatio knowledgeAssistPositiveFeedbackRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeAssistPositiveFeedbackRatio(java.lang.Double knowledgeAssistPositiveFeedbackRatio) {
+    this.knowledgeAssistPositiveFeedbackRatio = knowledgeAssistPositiveFeedbackRatio;
+    return this;
+  }
+
+  /**
+   * Count of knowledge assist results (Proactive Generative Knowledge Assist) shown to the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getKnowledgeAssistResultCount() {
+    return knowledgeAssistResultCount;
+  }
+
+  /**
+   * Count of knowledge assist results (Proactive Generative Knowledge Assist) shown to the user.
+   * @param knowledgeAssistResultCount knowledgeAssistResultCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeAssistResultCount(java.lang.Integer knowledgeAssistResultCount) {
+    this.knowledgeAssistResultCount = knowledgeAssistResultCount;
+    return this;
+  }
+
+  /**
+   * Proportion of knowledge assist (Proactive Generative Knowledge Assist) queries that had a URL
+   * clicked.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getKnowledgeAssistUriClickRatio() {
+    return knowledgeAssistUriClickRatio;
+  }
+
+  /**
+   * Proportion of knowledge assist (Proactive Generative Knowledge Assist) queries that had a URL
+   * clicked.
+   * @param knowledgeAssistUriClickRatio knowledgeAssistUriClickRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeAssistUriClickRatio(java.lang.Double knowledgeAssistUriClickRatio) {
+    this.knowledgeAssistUriClickRatio = knowledgeAssistUriClickRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries made by the agent compared
+   * to the total number of knowledge search queries made.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getKnowledgeSearchAgentQuerySourceRatio() {
+    return knowledgeSearchAgentQuerySourceRatio;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries made by the agent compared
+   * to the total number of knowledge search queries made.
+   * @param knowledgeSearchAgentQuerySourceRatio knowledgeSearchAgentQuerySourceRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeSearchAgentQuerySourceRatio(java.lang.Double knowledgeSearchAgentQuerySourceRatio) {
+    this.knowledgeSearchAgentQuerySourceRatio = knowledgeSearchAgentQuerySourceRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries that had negative
+   * feedback.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getKnowledgeSearchNegativeFeedbackRatio() {
+    return knowledgeSearchNegativeFeedbackRatio;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries that had negative
+   * feedback.
+   * @param knowledgeSearchNegativeFeedbackRatio knowledgeSearchNegativeFeedbackRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeSearchNegativeFeedbackRatio(java.lang.Double knowledgeSearchNegativeFeedbackRatio) {
+    this.knowledgeSearchNegativeFeedbackRatio = knowledgeSearchNegativeFeedbackRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries that had positive
+   * feedback.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getKnowledgeSearchPositiveFeedbackRatio() {
+    return knowledgeSearchPositiveFeedbackRatio;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries that had positive
+   * feedback.
+   * @param knowledgeSearchPositiveFeedbackRatio knowledgeSearchPositiveFeedbackRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeSearchPositiveFeedbackRatio(java.lang.Double knowledgeSearchPositiveFeedbackRatio) {
+    this.knowledgeSearchPositiveFeedbackRatio = knowledgeSearchPositiveFeedbackRatio;
+    return this;
+  }
+
+  /**
+   * Count of knowledge search results (Generative Knowledge Assist) shown to the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getKnowledgeSearchResultCount() {
+    return knowledgeSearchResultCount;
+  }
+
+  /**
+   * Count of knowledge search results (Generative Knowledge Assist) shown to the user.
+   * @param knowledgeSearchResultCount knowledgeSearchResultCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeSearchResultCount(java.lang.Integer knowledgeSearchResultCount) {
+    this.knowledgeSearchResultCount = knowledgeSearchResultCount;
+    return this;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries suggested compared to the
+   * total number of knowledge search queries made.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getKnowledgeSearchSuggestedQuerySourceRatio() {
+    return knowledgeSearchSuggestedQuerySourceRatio;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries suggested compared to the
+   * total number of knowledge search queries made.
+   * @param knowledgeSearchSuggestedQuerySourceRatio knowledgeSearchSuggestedQuerySourceRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeSearchSuggestedQuerySourceRatio(java.lang.Double knowledgeSearchSuggestedQuerySourceRatio) {
+    this.knowledgeSearchSuggestedQuerySourceRatio = knowledgeSearchSuggestedQuerySourceRatio;
+    return this;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries that had a URL clicked.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getKnowledgeSearchUriClickRatio() {
+    return knowledgeSearchUriClickRatio;
+  }
+
+  /**
+   * Proportion of knowledge search (Generative Knowledge Assist) queries that had a URL clicked.
+   * @param knowledgeSearchUriClickRatio knowledgeSearchUriClickRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setKnowledgeSearchUriClickRatio(java.lang.Double knowledgeSearchUriClickRatio) {
+    this.knowledgeSearchUriClickRatio = knowledgeSearchUriClickRatio;
+    return this;
+  }
+
+  /**
    * Average QA normalized score for all the tags.
    * @return value or {@code null} for none
    */
@@ -279,6 +1394,40 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseS
    */
   public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setQaTagScores(java.util.List<GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasureQaTagScore> qaTagScores) {
     this.qaTagScores = qaTagScores;
+    return this;
+  }
+
+  /**
+   * Proportion of summarization suggestions that were manually edited.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getSummarizationSuggestionEditRatio() {
+    return summarizationSuggestionEditRatio;
+  }
+
+  /**
+   * Proportion of summarization suggestions that were manually edited.
+   * @param summarizationSuggestionEditRatio summarizationSuggestionEditRatio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setSummarizationSuggestionEditRatio(java.lang.Double summarizationSuggestionEditRatio) {
+    this.summarizationSuggestionEditRatio = summarizationSuggestionEditRatio;
+    return this;
+  }
+
+  /**
+   * Count of summarization suggestions results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSummarizationSuggestionResultCount() {
+    return summarizationSuggestionResultCount;
+  }
+
+  /**
+   * Count of summarization suggestions results.
+   * @param summarizationSuggestionResultCount summarizationSuggestionResultCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1QueryMetricsResponseSliceDataPointConversationMeasure setSummarizationSuggestionResultCount(java.lang.Integer summarizationSuggestionResultCount) {
+    this.summarizationSuggestionResultCount = summarizationSuggestionResultCount;
     return this;
   }
 

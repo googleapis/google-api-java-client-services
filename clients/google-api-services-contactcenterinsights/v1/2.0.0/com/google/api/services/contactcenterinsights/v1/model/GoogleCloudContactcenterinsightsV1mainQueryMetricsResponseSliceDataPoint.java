@@ -38,6 +38,13 @@ public final class GoogleCloudContactcenterinsightsV1mainQueryMetricsResponseSli
   private GoogleCloudContactcenterinsightsV1mainQueryMetricsResponseSliceDataPointConversationMeasure conversationMeasure;
 
   /**
+   * The measure related to dialogflow interactions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1mainQueryMetricsResponseSliceDataPointDialogflowInteractionMeasure dialogflowInteractionMeasure;
+
+  /**
    * The interval that this data point represents. * If this is the total data point, the interval
    * is [starting create time, ending create time) from the request. * If this a data point from the
    * time series, the interval is [time, time + time granularity from the request).
@@ -60,6 +67,23 @@ public final class GoogleCloudContactcenterinsightsV1mainQueryMetricsResponseSli
    */
   public GoogleCloudContactcenterinsightsV1mainQueryMetricsResponseSliceDataPoint setConversationMeasure(GoogleCloudContactcenterinsightsV1mainQueryMetricsResponseSliceDataPointConversationMeasure conversationMeasure) {
     this.conversationMeasure = conversationMeasure;
+    return this;
+  }
+
+  /**
+   * The measure related to dialogflow interactions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainQueryMetricsResponseSliceDataPointDialogflowInteractionMeasure getDialogflowInteractionMeasure() {
+    return dialogflowInteractionMeasure;
+  }
+
+  /**
+   * The measure related to dialogflow interactions.
+   * @param dialogflowInteractionMeasure dialogflowInteractionMeasure or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainQueryMetricsResponseSliceDataPoint setDialogflowInteractionMeasure(GoogleCloudContactcenterinsightsV1mainQueryMetricsResponseSliceDataPointDialogflowInteractionMeasure dialogflowInteractionMeasure) {
+    this.dialogflowInteractionMeasure = dialogflowInteractionMeasure;
     return this;
   }
 

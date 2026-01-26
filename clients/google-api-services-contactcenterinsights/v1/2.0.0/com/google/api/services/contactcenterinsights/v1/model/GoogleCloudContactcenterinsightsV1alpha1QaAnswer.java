@@ -31,14 +31,17 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1alpha1QaAnswer extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of all individual answers given to the question.
+   * Lists all answer sources containing one or more answer values of a specific source type, e.g.,
+   * all system-generated answer sources, or all manual edit answer sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerSource> answerSources;
 
   /**
-   * The main answer value, incorporating any manual edits if they exist.
+   * The answer value from this source. This field is populated by default, unless the question has
+   * a selection strategy configured to return multiple answer values, in which case `answer_values`
+   * will be populated instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +77,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QaAnswer extends com.
   private java.util.List<java.lang.String> tags;
 
   /**
-   * List of all individual answers given to the question.
+   * Lists all answer sources containing one or more answer values of a specific source type, e.g.,
+   * all system-generated answer sources, or all manual edit answer sources.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerSource> getAnswerSources() {
@@ -82,7 +86,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QaAnswer extends com.
   }
 
   /**
-   * List of all individual answers given to the question.
+   * Lists all answer sources containing one or more answer values of a specific source type, e.g.,
+   * all system-generated answer sources, or all manual edit answer sources.
    * @param answerSources answerSources or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1QaAnswer setAnswerSources(java.util.List<GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerSource> answerSources) {
@@ -91,7 +96,9 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QaAnswer extends com.
   }
 
   /**
-   * The main answer value, incorporating any manual edits if they exist.
+   * The answer value from this source. This field is populated by default, unless the question has
+   * a selection strategy configured to return multiple answer values, in which case `answer_values`
+   * will be populated instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue getAnswerValue() {
@@ -99,7 +106,9 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QaAnswer extends com.
   }
 
   /**
-   * The main answer value, incorporating any manual edits if they exist.
+   * The answer value from this source. This field is populated by default, unless the question has
+   * a selection strategy configured to return multiple answer values, in which case `answer_values`
+   * will be populated instead.
    * @param answerValue answerValue or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1QaAnswer setAnswerValue(GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue answerValue) {

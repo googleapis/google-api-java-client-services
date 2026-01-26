@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.firebasedataconnect.v1.model;
+package com.google.api.services.firebasedataconnect.v1beta.model;
 
 /**
- * A data source that backs Firebase Data Connect services.
+ * Settings for HTTP GraphQL server webhook.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Data Connect API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.firebasedataconnect.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Datasource extends com.google.api.client.json.GenericJson {
+public final class HttpGraphql extends com.google.api.client.json.GenericJson {
 
   /**
-   * HTTP GraphQL server webhook configurations.
+   * Optional. Timeout duration for the HTTP request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private HttpGraphql httpGraphql;
+  private String timeout;
 
   /**
-   * PostgreSQL configurations.
+   * Required. The endpoint of the HTTP GraphQL server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private PostgreSql postgresql;
+  private java.lang.String uri;
 
   /**
-   * HTTP GraphQL server webhook configurations.
+   * Optional. Timeout duration for the HTTP request.
    * @return value or {@code null} for none
    */
-  public HttpGraphql getHttpGraphql() {
-    return httpGraphql;
+  public String getTimeout() {
+    return timeout;
   }
 
   /**
-   * HTTP GraphQL server webhook configurations.
-   * @param httpGraphql httpGraphql or {@code null} for none
+   * Optional. Timeout duration for the HTTP request.
+   * @param timeout timeout or {@code null} for none
    */
-  public Datasource setHttpGraphql(HttpGraphql httpGraphql) {
-    this.httpGraphql = httpGraphql;
+  public HttpGraphql setTimeout(String timeout) {
+    this.timeout = timeout;
     return this;
   }
 
   /**
-   * PostgreSQL configurations.
+   * Required. The endpoint of the HTTP GraphQL server.
    * @return value or {@code null} for none
    */
-  public PostgreSql getPostgresql() {
-    return postgresql;
+  public java.lang.String getUri() {
+    return uri;
   }
 
   /**
-   * PostgreSQL configurations.
-   * @param postgresql postgresql or {@code null} for none
+   * Required. The endpoint of the HTTP GraphQL server.
+   * @param uri uri or {@code null} for none
    */
-  public Datasource setPostgresql(PostgreSql postgresql) {
-    this.postgresql = postgresql;
+  public HttpGraphql setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 
   @Override
-  public Datasource set(String fieldName, Object value) {
-    return (Datasource) super.set(fieldName, value);
+  public HttpGraphql set(String fieldName, Object value) {
+    return (HttpGraphql) super.set(fieldName, value);
   }
 
   @Override
-  public Datasource clone() {
-    return (Datasource) super.clone();
+  public HttpGraphql clone() {
+    return (HttpGraphql) super.clone();
   }
 
 }

@@ -31,11 +31,35 @@ package com.google.api.services.firebasedataconnect.v1beta.model;
 public final class Datasource extends com.google.api.client.json.GenericJson {
 
   /**
+   * HTTP GraphQL server webhook configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HttpGraphql httpGraphql;
+
+  /**
    * PostgreSQL configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PostgreSql postgresql;
+
+  /**
+   * HTTP GraphQL server webhook configurations.
+   * @return value or {@code null} for none
+   */
+  public HttpGraphql getHttpGraphql() {
+    return httpGraphql;
+  }
+
+  /**
+   * HTTP GraphQL server webhook configurations.
+   * @param httpGraphql httpGraphql or {@code null} for none
+   */
+  public Datasource setHttpGraphql(HttpGraphql httpGraphql) {
+    this.httpGraphql = httpGraphql;
+    return this;
+  }
 
   /**
    * PostgreSQL configurations.

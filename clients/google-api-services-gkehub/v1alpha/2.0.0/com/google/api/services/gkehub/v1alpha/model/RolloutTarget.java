@@ -31,9 +31,8 @@ public final class RolloutTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Output only. The resource link of the Cluster resource upgraded in this Rollout. It
-   * is formatted as: projects//locations//clusters/. I.e. for GKE clusters, it is formatted as:
-   * //container.googleapis.com/projects//locations//clusters/. For GDCE, it is formatted as:
-   * //edgecontainer.googleapis.com/projects//locations//clusters/.
+   * is formatted as:
+   * `//{api_service}/projects/{project_number}/locations/{location}/clusters/{cluster_name}`. .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +40,8 @@ public final class RolloutTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Output only. The resource link of the NodePool resource upgraded in this Rollout. It
-   * is formatted as: projects//locations//clusters//nodePools/.
+   * is formatted as: `//{api_service}/projects/{project_number}/locations/{location}/clusters/{clus
+   * ter_name}/nodePools/{node_pool_name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +70,8 @@ public final class RolloutTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Output only. The resource link of the Cluster resource upgraded in this Rollout. It
-   * is formatted as: projects//locations//clusters/. I.e. for GKE clusters, it is formatted as:
-   * //container.googleapis.com/projects//locations//clusters/. For GDCE, it is formatted as:
-   * //edgecontainer.googleapis.com/projects//locations//clusters/.
+   * is formatted as:
+   * `//{api_service}/projects/{project_number}/locations/{location}/clusters/{cluster_name}`. .
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -81,9 +80,8 @@ public final class RolloutTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Output only. The resource link of the Cluster resource upgraded in this Rollout. It
-   * is formatted as: projects//locations//clusters/. I.e. for GKE clusters, it is formatted as:
-   * //container.googleapis.com/projects//locations//clusters/. For GDCE, it is formatted as:
-   * //edgecontainer.googleapis.com/projects//locations//clusters/.
+   * is formatted as:
+   * `//{api_service}/projects/{project_number}/locations/{location}/clusters/{cluster_name}`. .
    * @param cluster cluster or {@code null} for none
    */
   public RolloutTarget setCluster(java.lang.String cluster) {
@@ -93,7 +91,8 @@ public final class RolloutTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Output only. The resource link of the NodePool resource upgraded in this Rollout. It
-   * is formatted as: projects//locations//clusters//nodePools/.
+   * is formatted as: `//{api_service}/projects/{project_number}/locations/{location}/clusters/{clus
+   * ter_name}/nodePools/{node_pool_name}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNodePool() {
@@ -102,7 +101,8 @@ public final class RolloutTarget extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Output only. The resource link of the NodePool resource upgraded in this Rollout. It
-   * is formatted as: projects//locations//clusters//nodePools/.
+   * is formatted as: `//{api_service}/projects/{project_number}/locations/{location}/clusters/{clus
+   * ter_name}/nodePools/{node_pool_name}`.
    * @param nodePool nodePool or {@code null} for none
    */
   public RolloutTarget setNodePool(java.lang.String nodePool) {

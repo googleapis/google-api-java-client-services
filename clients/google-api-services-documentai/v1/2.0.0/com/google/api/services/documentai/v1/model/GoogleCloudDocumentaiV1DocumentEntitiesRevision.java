@@ -45,6 +45,13 @@ public final class GoogleCloudDocumentaiV1DocumentEntitiesRevision extends com.g
   private GoogleCloudDocumentaiV1DocumentEntityValidationOutput entityValidationOutput;
 
   /**
+   * Optional. The history of this revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1DocumentProvenance provenance;
+
+  /**
    * The revision id.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class GoogleCloudDocumentaiV1DocumentEntitiesRevision extends com.g
    */
   public GoogleCloudDocumentaiV1DocumentEntitiesRevision setEntityValidationOutput(GoogleCloudDocumentaiV1DocumentEntityValidationOutput entityValidationOutput) {
     this.entityValidationOutput = entityValidationOutput;
+    return this;
+  }
+
+  /**
+   * Optional. The history of this revision.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentProvenance getProvenance() {
+    return provenance;
+  }
+
+  /**
+   * Optional. The history of this revision.
+   * @param provenance provenance or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentEntitiesRevision setProvenance(GoogleCloudDocumentaiV1DocumentProvenance provenance) {
+    this.provenance = provenance;
     return this;
   }
 

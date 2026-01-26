@@ -32,6 +32,13 @@ package com.google.api.services.backupdr.v1.model;
 public final class BackupPlanAssociation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. AlloyDB cluster's backup plan association properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AlloyDBClusterBackupPlanAssociationProperties alloydbClusterBackupPlanAssociationProperties;
+
+  /**
    * Required. Resource name of backup plan which needs to be applied on workload. Format:
    * projects/{project}/locations/{location}/backupPlans/{backupPlanId}
    * The value may be {@code null}.
@@ -79,6 +86,13 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   private java.lang.String dataSource;
 
   /**
+   * Output only. Filestore instance's backup plan association properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FilestoreInstanceBackupPlanAssociationProperties filestoreInstanceBackupPlanAssociationProperties;
+
+  /**
    * Output only. Identifier. The resource name of BackupPlanAssociation in below format Format :
    * projects/{project}/locations/{location}/backupPlanAssociations/{backupPlanAssociationId}
    * The value may be {@code null}.
@@ -123,6 +137,23 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. AlloyDB cluster's backup plan association properties.
+   * @return value or {@code null} for none
+   */
+  public AlloyDBClusterBackupPlanAssociationProperties getAlloydbClusterBackupPlanAssociationProperties() {
+    return alloydbClusterBackupPlanAssociationProperties;
+  }
+
+  /**
+   * Output only. AlloyDB cluster's backup plan association properties.
+   * @param alloydbClusterBackupPlanAssociationProperties alloydbClusterBackupPlanAssociationProperties or {@code null} for none
+   */
+  public BackupPlanAssociation setAlloydbClusterBackupPlanAssociationProperties(AlloyDBClusterBackupPlanAssociationProperties alloydbClusterBackupPlanAssociationProperties) {
+    this.alloydbClusterBackupPlanAssociationProperties = alloydbClusterBackupPlanAssociationProperties;
+    return this;
+  }
 
   /**
    * Required. Resource name of backup plan which needs to be applied on workload. Format:
@@ -233,6 +264,23 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
    */
   public BackupPlanAssociation setDataSource(java.lang.String dataSource) {
     this.dataSource = dataSource;
+    return this;
+  }
+
+  /**
+   * Output only. Filestore instance's backup plan association properties.
+   * @return value or {@code null} for none
+   */
+  public FilestoreInstanceBackupPlanAssociationProperties getFilestoreInstanceBackupPlanAssociationProperties() {
+    return filestoreInstanceBackupPlanAssociationProperties;
+  }
+
+  /**
+   * Output only. Filestore instance's backup plan association properties.
+   * @param filestoreInstanceBackupPlanAssociationProperties filestoreInstanceBackupPlanAssociationProperties or {@code null} for none
+   */
+  public BackupPlanAssociation setFilestoreInstanceBackupPlanAssociationProperties(FilestoreInstanceBackupPlanAssociationProperties filestoreInstanceBackupPlanAssociationProperties) {
+    this.filestoreInstanceBackupPlanAssociationProperties = filestoreInstanceBackupPlanAssociationProperties;
     return this;
   }
 

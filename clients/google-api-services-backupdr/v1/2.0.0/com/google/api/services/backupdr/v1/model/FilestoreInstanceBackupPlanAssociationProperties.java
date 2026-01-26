@@ -17,8 +17,7 @@
 package com.google.api.services.backupdr.v1.model;
 
 /**
- * BackupDrPlanConfig has additional information about Google Cloud Backup and DR's Plan backup
- * configuration.
+ * Filestore instance's BPA properties.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation
@@ -29,40 +28,40 @@ package com.google.api.services.backupdr.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BackupDrPlanConfig extends com.google.api.client.json.GenericJson {
+public final class FilestoreInstanceBackupPlanAssociationProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Backup rules of the backup plan resource.
+   * Output only. The time when the instance was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<BackupDrPlanRule> backupDrPlanRules;
+  private String instanceCreateTime;
 
   /**
-   * Backup rules of the backup plan resource.
+   * Output only. The time when the instance was created.
    * @return value or {@code null} for none
    */
-  public java.util.List<BackupDrPlanRule> getBackupDrPlanRules() {
-    return backupDrPlanRules;
+  public String getInstanceCreateTime() {
+    return instanceCreateTime;
   }
 
   /**
-   * Backup rules of the backup plan resource.
-   * @param backupDrPlanRules backupDrPlanRules or {@code null} for none
+   * Output only. The time when the instance was created.
+   * @param instanceCreateTime instanceCreateTime or {@code null} for none
    */
-  public BackupDrPlanConfig setBackupDrPlanRules(java.util.List<BackupDrPlanRule> backupDrPlanRules) {
-    this.backupDrPlanRules = backupDrPlanRules;
+  public FilestoreInstanceBackupPlanAssociationProperties setInstanceCreateTime(String instanceCreateTime) {
+    this.instanceCreateTime = instanceCreateTime;
     return this;
   }
 
   @Override
-  public BackupDrPlanConfig set(String fieldName, Object value) {
-    return (BackupDrPlanConfig) super.set(fieldName, value);
+  public FilestoreInstanceBackupPlanAssociationProperties set(String fieldName, Object value) {
+    return (FilestoreInstanceBackupPlanAssociationProperties) super.set(fieldName, value);
   }
 
   @Override
-  public BackupDrPlanConfig clone() {
-    return (BackupDrPlanConfig) super.clone();
+  public FilestoreInstanceBackupPlanAssociationProperties clone() {
+    return (FilestoreInstanceBackupPlanAssociationProperties) super.clone();
   }
 
 }

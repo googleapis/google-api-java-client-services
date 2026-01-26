@@ -31,7 +31,7 @@ package com.google.api.services.backupdr.v1.model;
 public final class FetchMsComplianceMetadataResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ms compliance metadata of the target project, if the project is an assured workloads
+   * The ms compliance metadata of the target project, if the project is an Assured Workloads
    * project, values will be true, otherwise false.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class FetchMsComplianceMetadataResponse extends com.google.api.clie
   private java.lang.Boolean isAssuredWorkload;
 
   /**
-   * The ms compliance metadata of the target project, if the project is an assured workloads
+   * The ms compliance metadata of the target project, if the project is an Assured Workloads
    * project, values will be true, otherwise false.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class FetchMsComplianceMetadataResponse extends com.google.api.clie
   }
 
   /**
-   * The ms compliance metadata of the target project, if the project is an assured workloads
+   * The ms compliance metadata of the target project, if the project is an Assured Workloads
    * project, values will be true, otherwise false.
    * @param isAssuredWorkload isAssuredWorkload or {@code null} for none
    */

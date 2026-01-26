@@ -17,7 +17,7 @@
 package com.google.api.services.backupdr.v1.model;
 
 /**
- * The GCP resource that the DataSource is associated with.
+ * The Google Cloud resource that the DataSource is associated with.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation
@@ -31,6 +31,13 @@ package com.google.api.services.backupdr.v1.model;
 public final class DataSourceGcpResourceInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The properties of the AlloyDB cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AlloyDBClusterDataSourceReferenceProperties alloyDbClusterProperties;
+
+  /**
    * Output only. The properties of the Cloud SQL instance.
    * The value may be {@code null}.
    */
@@ -38,7 +45,7 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
   private CloudSqlInstanceDataSourceReferenceProperties cloudSqlInstanceProperties;
 
   /**
-   * Output only. The resource name of the GCP resource. Ex:
+   * Output only. The resource name of the Google Cloud resource. Ex:
    * projects/{project}/zones/{zone}/instances/{instance}
    * The value may be {@code null}.
    */
@@ -46,18 +53,35 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
   private java.lang.String gcpResourcename;
 
   /**
-   * Output only. The location of the GCP resource. Ex: //"global"/"unspecified"
+   * Output only. The location of the Google Cloud resource. Ex: //"global"/"unspecified"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String location;
 
   /**
-   * Output only. The type of the GCP resource. Ex: compute.googleapis.com/Instance
+   * Output only. The type of the Google Cloud resource. Ex: compute.googleapis.com/Instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Output only. The properties of the AlloyDB cluster.
+   * @return value or {@code null} for none
+   */
+  public AlloyDBClusterDataSourceReferenceProperties getAlloyDbClusterProperties() {
+    return alloyDbClusterProperties;
+  }
+
+  /**
+   * Output only. The properties of the AlloyDB cluster.
+   * @param alloyDbClusterProperties alloyDbClusterProperties or {@code null} for none
+   */
+  public DataSourceGcpResourceInfo setAlloyDbClusterProperties(AlloyDBClusterDataSourceReferenceProperties alloyDbClusterProperties) {
+    this.alloyDbClusterProperties = alloyDbClusterProperties;
+    return this;
+  }
 
   /**
    * Output only. The properties of the Cloud SQL instance.
@@ -77,7 +101,7 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The resource name of the GCP resource. Ex:
+   * Output only. The resource name of the Google Cloud resource. Ex:
    * projects/{project}/zones/{zone}/instances/{instance}
    * @return value or {@code null} for none
    */
@@ -86,7 +110,7 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The resource name of the GCP resource. Ex:
+   * Output only. The resource name of the Google Cloud resource. Ex:
    * projects/{project}/zones/{zone}/instances/{instance}
    * @param gcpResourcename gcpResourcename or {@code null} for none
    */
@@ -96,7 +120,7 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The location of the GCP resource. Ex: //"global"/"unspecified"
+   * Output only. The location of the Google Cloud resource. Ex: //"global"/"unspecified"
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -104,7 +128,7 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The location of the GCP resource. Ex: //"global"/"unspecified"
+   * Output only. The location of the Google Cloud resource. Ex: //"global"/"unspecified"
    * @param location location or {@code null} for none
    */
   public DataSourceGcpResourceInfo setLocation(java.lang.String location) {
@@ -113,7 +137,7 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The type of the GCP resource. Ex: compute.googleapis.com/Instance
+   * Output only. The type of the Google Cloud resource. Ex: compute.googleapis.com/Instance
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -121,7 +145,7 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The type of the GCP resource. Ex: compute.googleapis.com/Instance
+   * Output only. The type of the Google Cloud resource. Ex: compute.googleapis.com/Instance
    * @param type type or {@code null} for none
    */
   public DataSourceGcpResourceInfo setType(java.lang.String type) {

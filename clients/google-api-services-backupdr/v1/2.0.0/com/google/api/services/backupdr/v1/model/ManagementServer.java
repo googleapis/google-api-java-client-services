@@ -92,9 +92,9 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   private java.util.List<NetworkConfig> networks;
 
   /**
-   * Output only. The OAuth 2.0 client id is required to make API calls to the BackupDR instance API
-   * of this ManagementServer. This is the value that should be provided in the 'aud' field of the
-   * OIDC ID Token (see openid specification https://openid.net/specs/openid-connect-
+   * Output only. The OAuth 2.0 client id is required to make API calls to the Backup and DR
+   * instance API of this ManagementServer. This is the value that should be provided in the 'aud'
+   * field of the OIDC ID Token (see openid specification https://openid.net/specs/openid-connect-
    * core-1_0.html#IDToken).
    * The value may be {@code null}.
    */
@@ -298,9 +298,9 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The OAuth 2.0 client id is required to make API calls to the BackupDR instance API
-   * of this ManagementServer. This is the value that should be provided in the 'aud' field of the
-   * OIDC ID Token (see openid specification https://openid.net/specs/openid-connect-
+   * Output only. The OAuth 2.0 client id is required to make API calls to the Backup and DR
+   * instance API of this ManagementServer. This is the value that should be provided in the 'aud'
+   * field of the OIDC ID Token (see openid specification https://openid.net/specs/openid-connect-
    * core-1_0.html#IDToken).
    * @return value or {@code null} for none
    */
@@ -309,9 +309,9 @@ public final class ManagementServer extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The OAuth 2.0 client id is required to make API calls to the BackupDR instance API
-   * of this ManagementServer. This is the value that should be provided in the 'aud' field of the
-   * OIDC ID Token (see openid specification https://openid.net/specs/openid-connect-
+   * Output only. The OAuth 2.0 client id is required to make API calls to the Backup and DR
+   * instance API of this ManagementServer. This is the value that should be provided in the 'aud'
+   * field of the OIDC ID Token (see openid specification https://openid.net/specs/openid-connect-
    * core-1_0.html#IDToken).
    * @param oauth2ClientId oauth2ClientId or {@code null} for none
    */

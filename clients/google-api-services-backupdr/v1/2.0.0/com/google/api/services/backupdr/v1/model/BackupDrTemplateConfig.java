@@ -17,8 +17,7 @@
 package com.google.api.services.backupdr.v1.model;
 
 /**
- * BackupDrTemplateConfig has additional information about Backup and DR's Template backup
- * configuration.
+ * Provides additional information about Google Cloud Backup and DR's Template backup configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation

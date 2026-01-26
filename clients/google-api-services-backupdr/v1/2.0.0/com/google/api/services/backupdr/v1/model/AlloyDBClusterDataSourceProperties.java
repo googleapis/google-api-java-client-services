@@ -32,11 +32,43 @@ package com.google.api.services.backupdr.v1.model;
 public final class AlloyDBClusterDataSourceProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The cluster UID of the AlloyDB cluster backed up by the datasource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterUid;
+
+  /**
    * Output only. Name of the AlloyDB cluster backed up by the datasource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Point in time recovery windows. The order is guaranteed to be ascending by start
+   * time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AlloyDbPitrWindow> pitrWindows;
+
+  /**
+   * Output only. The cluster UID of the AlloyDB cluster backed up by the datasource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterUid() {
+    return clusterUid;
+  }
+
+  /**
+   * Output only. The cluster UID of the AlloyDB cluster backed up by the datasource.
+   * @param clusterUid clusterUid or {@code null} for none
+   */
+  public AlloyDBClusterDataSourceProperties setClusterUid(java.lang.String clusterUid) {
+    this.clusterUid = clusterUid;
+    return this;
+  }
 
   /**
    * Output only. Name of the AlloyDB cluster backed up by the datasource.
@@ -52,6 +84,25 @@ public final class AlloyDBClusterDataSourceProperties extends com.google.api.cli
    */
   public AlloyDBClusterDataSourceProperties setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Point in time recovery windows. The order is guaranteed to be ascending by start
+   * time.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AlloyDbPitrWindow> getPitrWindows() {
+    return pitrWindows;
+  }
+
+  /**
+   * Output only. Point in time recovery windows. The order is guaranteed to be ascending by start
+   * time.
+   * @param pitrWindows pitrWindows or {@code null} for none
+   */
+  public AlloyDBClusterDataSourceProperties setPitrWindows(java.util.List<AlloyDbPitrWindow> pitrWindows) {
+    this.pitrWindows = pitrWindows;
     return this;
   }
 

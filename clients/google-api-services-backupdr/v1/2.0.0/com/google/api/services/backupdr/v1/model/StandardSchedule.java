@@ -92,7 +92,7 @@ public final class StandardSchedule extends com.google.api.client.json.GenericJs
    * Required. The time zone to be used when interpreting the schedule. The value of this field must
    * be a time zone name from the IANA tz database. See
    * https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the list of valid timezone
-   * names. For e.g., Europe/Paris.
+   * names. For example, Europe/Paris.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,7 +245,7 @@ public final class StandardSchedule extends com.google.api.client.json.GenericJs
    * Required. The time zone to be used when interpreting the schedule. The value of this field must
    * be a time zone name from the IANA tz database. See
    * https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the list of valid timezone
-   * names. For e.g., Europe/Paris.
+   * names. For example, Europe/Paris.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -256,7 +256,7 @@ public final class StandardSchedule extends com.google.api.client.json.GenericJs
    * Required. The time zone to be used when interpreting the schedule. The value of this field must
    * be a time zone name from the IANA tz database. See
    * https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the list of valid timezone
-   * names. For e.g., Europe/Paris.
+   * names. For example, Europe/Paris.
    * @param timeZone timeZone or {@code null} for none
    */
   public StandardSchedule setTimeZone(java.lang.String timeZone) {

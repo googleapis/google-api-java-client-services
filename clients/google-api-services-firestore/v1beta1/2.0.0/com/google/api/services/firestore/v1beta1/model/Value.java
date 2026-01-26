@@ -60,6 +60,23 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.Double doubleValue;
 
   /**
+   * Value which references a field. This is considered relative (vs absolute) since it only refers
+   * to a field and not a field within a particular document. **Requires:** * Must follow field
+   * reference limitations. * Not allowed to be used when writing documents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fieldReferenceValue;
+
+  /**
+   * A value that represents an unevaluated expression. **Requires:** * Not allowed to be used when
+   * writing documents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Function functionValue;
+
+  /**
    * A geo point value representing a point on the surface of Earth.
    * The value may be {@code null}.
    */
@@ -86,6 +103,14 @@ public final class Value extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String nullValue;
+
+  /**
+   * A value that represents an unevaluated pipeline. **Requires:** * Not allowed to be used when
+   * writing documents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Pipeline pipelineValue;
 
   /**
    * A reference to a document. For example:
@@ -214,6 +239,46 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Value which references a field. This is considered relative (vs absolute) since it only refers
+   * to a field and not a field within a particular document. **Requires:** * Must follow field
+   * reference limitations. * Not allowed to be used when writing documents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFieldReferenceValue() {
+    return fieldReferenceValue;
+  }
+
+  /**
+   * Value which references a field. This is considered relative (vs absolute) since it only refers
+   * to a field and not a field within a particular document. **Requires:** * Must follow field
+   * reference limitations. * Not allowed to be used when writing documents.
+   * @param fieldReferenceValue fieldReferenceValue or {@code null} for none
+   */
+  public Value setFieldReferenceValue(java.lang.String fieldReferenceValue) {
+    this.fieldReferenceValue = fieldReferenceValue;
+    return this;
+  }
+
+  /**
+   * A value that represents an unevaluated expression. **Requires:** * Not allowed to be used when
+   * writing documents.
+   * @return value or {@code null} for none
+   */
+  public Function getFunctionValue() {
+    return functionValue;
+  }
+
+  /**
+   * A value that represents an unevaluated expression. **Requires:** * Not allowed to be used when
+   * writing documents.
+   * @param functionValue functionValue or {@code null} for none
+   */
+  public Value setFunctionValue(Function functionValue) {
+    this.functionValue = functionValue;
+    return this;
+  }
+
+  /**
    * A geo point value representing a point on the surface of Earth.
    * @return value or {@code null} for none
    */
@@ -278,6 +343,25 @@ public final class Value extends com.google.api.client.json.GenericJson {
    */
   public Value setNullValue(java.lang.String nullValue) {
     this.nullValue = nullValue;
+    return this;
+  }
+
+  /**
+   * A value that represents an unevaluated pipeline. **Requires:** * Not allowed to be used when
+   * writing documents.
+   * @return value or {@code null} for none
+   */
+  public Pipeline getPipelineValue() {
+    return pipelineValue;
+  }
+
+  /**
+   * A value that represents an unevaluated pipeline. **Requires:** * Not allowed to be used when
+   * writing documents.
+   * @param pipelineValue pipelineValue or {@code null} for none
+   */
+  public Value setPipelineValue(Pipeline pipelineValue) {
+    this.pipelineValue = pipelineValue;
     return this;
   }
 

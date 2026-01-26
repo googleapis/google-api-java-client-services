@@ -44,7 +44,9 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private GoogleFirestoreAdminV1CmekConfig cmekConfig;
 
   /**
-   * The concurrency control mode to use for this database.
+   * The concurrency control mode to use for this database. If unspecified in a CreateDatabase
+   * request, this will default based on the database edition: Optimistic for Enterprise and
+   * Pessimistic for all other databases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -259,7 +261,9 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The concurrency control mode to use for this database.
+   * The concurrency control mode to use for this database. If unspecified in a CreateDatabase
+   * request, this will default based on the database edition: Optimistic for Enterprise and
+   * Pessimistic for all other databases.
    * @return value or {@code null} for none
    */
   public java.lang.String getConcurrencyMode() {
@@ -267,7 +271,9 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The concurrency control mode to use for this database.
+   * The concurrency control mode to use for this database. If unspecified in a CreateDatabase
+   * request, this will default based on the database edition: Optimistic for Enterprise and
+   * Pessimistic for all other databases.
    * @param concurrencyMode concurrencyMode or {@code null} for none
    */
   public GoogleFirestoreAdminV1Database setConcurrencyMode(java.lang.String concurrencyMode) {

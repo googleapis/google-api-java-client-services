@@ -318,33 +318,33 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           return this;
         }
 
-        /** Maximum number of IPs to return. */
+        /** Optional. Maximum number of IPs to return. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** Maximum number of IPs to return.
+        /** Optional. Maximum number of IPs to return.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
-        /** Maximum number of IPs to return. */
+        /** Optional. Maximum number of IPs to return. */
         public FetchStaticIps setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
           return this;
         }
 
-        /** A page token, received from a previous `FetchStaticIps` call. */
+        /** Optional. A page token, received from a previous `FetchStaticIps` call. */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `FetchStaticIps` call.
+        /** Optional. A page token, received from a previous `FetchStaticIps` call.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
-        /** A page token, received from a previous `FetchStaticIps` call. */
+        /** Optional. A page token, received from a previous `FetchStaticIps` call. */
         public FetchStaticIps setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
           return this;
@@ -1614,9 +1614,9 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A filter expression that filters connection profiles listed in the response. The
-           * expression must specify the field name, a comparison operator, and the value that you
-           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * Optional. A filter expression that filters connection profiles listed in the response.
+           * The expression must specify the field name, a comparison operator, and the value that
+           * you want to use for filtering. The value must be a string, a number, or a boolean. The
            * comparison operator must be either =, !=, >, or <. For example, list connection
            * profiles created this year by specifying **createTime %gt;
            * 2020-01-01T00:00:00.000000000Z**. You can also filter nested fields. For example, you
@@ -1626,22 +1626,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** A filter expression that filters connection profiles listed in the response. The expression must
-         specify the field name, a comparison operator, and the value that you want to use for filtering.
-         The value must be a string, a number, or a boolean. The comparison operator must be either =, !=,
-         >, or <. For example, list connection profiles created this year by specifying **createTime %gt;
-         2020-01-01T00:00:00.000000000Z**. You can also filter nested fields. For example, you could specify
-         **mySql.username = %lt;my_username%gt;** to list all connection profiles configured to connect with
-         a specific username.
+          /** Optional. A filter expression that filters connection profiles listed in the response. The
+         expression must specify the field name, a comparison operator, and the value that you want to use
+         for filtering. The value must be a string, a number, or a boolean. The comparison operator must be
+         either =, !=, >, or <. For example, list connection profiles created this year by specifying
+         **createTime %gt; 2020-01-01T00:00:00.000000000Z**. You can also filter nested fields. For example,
+         you could specify **mySql.username = %lt;my_username%gt;** to list all connection profiles
+         configured to connect with a specific username.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * A filter expression that filters connection profiles listed in the response. The
-           * expression must specify the field name, a comparison operator, and the value that you
-           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * Optional. A filter expression that filters connection profiles listed in the response.
+           * The expression must specify the field name, a comparison operator, and the value that
+           * you want to use for filtering. The value must be a string, a number, or a boolean. The
            * comparison operator must be either =, !=, >, or <. For example, list connection
            * profiles created this year by specifying **createTime %gt;
            * 2020-01-01T00:00:00.000000000Z**. You can also filter nested fields. For example, you
@@ -1653,17 +1653,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return this;
           }
 
-          /** A comma-separated list of fields to order results according to. */
+          /** Optional. A comma-separated list of fields to order results according to. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** A comma-separated list of fields to order results according to.
+          /** Optional. A comma-separated list of fields to order results according to.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** A comma-separated list of fields to order results according to. */
+          /** Optional. A comma-separated list of fields to order results according to. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -1696,24 +1696,24 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A page token, received from a previous `ListConnectionProfiles` call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * Optional. A page token, received from a previous `ListConnectionProfiles` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
            * `ListConnectionProfiles` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListConnectionProfiles` call. Provide this to retrieve the
-         subsequent page. When paginating, all other parameters provided to `ListConnectionProfiles` must
-         match the call that provided the page token.
+          /** Optional. A page token, received from a previous `ListConnectionProfiles` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListConnectionProfiles` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * A page token, received from a previous `ListConnectionProfiles` call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * Optional. A page token, received from a previous `ListConnectionProfiles` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
            * `ListConnectionProfiles` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
@@ -2843,28 +2843,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
-         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
-         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
-         length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+         same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+         The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -3001,22 +3001,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Force delete the conversion workspace, even if there's a running migration that is
-           * using the workspace.
+           * Optional. Force delete the conversion workspace, even if there's a running migration
+           * that is using the workspace.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** Force delete the conversion workspace, even if there's a running migration that is using the
-         workspace.
+          /** Optional. Force delete the conversion workspace, even if there's a running migration that is using
+         the workspace.
            */
           public java.lang.Boolean getForce() {
             return force;
           }
 
           /**
-           * Force delete the conversion workspace, even if there's a running migration that is
-           * using the workspace.
+           * Optional. Force delete the conversion workspace, even if there's a running migration
+           * that is using the workspace.
            */
           public Delete setForce(java.lang.Boolean force) {
             this.force = force;
@@ -3024,28 +3024,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
-         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
-         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
-         length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+         same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+         The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -4005,11 +4005,11 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A filter expression that filters conversion workspaces listed in the response. The
-           * expression must specify the field name, a comparison operator, and the value that you
-           * want to use for filtering. The value must be a string, a number, or a boolean. The
-           * comparison operator must be either =, !=, >, or <. For example, list conversion
-           * workspaces created this year by specifying **createTime %gt;
+           * Optional. A filter expression that filters conversion workspaces listed in the
+           * response. The expression must specify the field name, a comparison operator, and the
+           * value that you want to use for filtering. The value must be a string, a number, or a
+           * boolean. The comparison operator must be either =, !=, >, or <. For example, list
+           * conversion workspaces created this year by specifying **createTime %gt;
            * 2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you
            * could specify **source.version = "12.c.1"** to select all conversion workspaces with
            * source database version equal to 12.c.1.
@@ -4017,24 +4017,24 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** A filter expression that filters conversion workspaces listed in the response. The expression must
-         specify the field name, a comparison operator, and the value that you want to use for filtering.
-         The value must be a string, a number, or a boolean. The comparison operator must be either =, !=,
-         >, or <. For example, list conversion workspaces created this year by specifying **createTime %gt;
-         2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you could specify
-         **source.version = "12.c.1"** to select all conversion workspaces with source database version
-         equal to 12.c.1.
+          /** Optional. A filter expression that filters conversion workspaces listed in the response. The
+         expression must specify the field name, a comparison operator, and the value that you want to use
+         for filtering. The value must be a string, a number, or a boolean. The comparison operator must be
+         either =, !=, >, or <. For example, list conversion workspaces created this year by specifying
+         **createTime %gt; 2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example,
+         you could specify **source.version = "12.c.1"** to select all conversion workspaces with source
+         database version equal to 12.c.1.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * A filter expression that filters conversion workspaces listed in the response. The
-           * expression must specify the field name, a comparison operator, and the value that you
-           * want to use for filtering. The value must be a string, a number, or a boolean. The
-           * comparison operator must be either =, !=, >, or <. For example, list conversion
-           * workspaces created this year by specifying **createTime %gt;
+           * Optional. A filter expression that filters conversion workspaces listed in the
+           * response. The expression must specify the field name, a comparison operator, and the
+           * value that you want to use for filtering. The value must be a string, a number, or a
+           * boolean. The comparison operator must be either =, !=, >, or <. For example, list
+           * conversion workspaces created this year by specifying **createTime %gt;
            * 2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you
            * could specify **source.version = "12.c.1"** to select all conversion workspaces with
            * source database version equal to 12.c.1.
@@ -4045,22 +4045,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * The maximum number of conversion workspaces to return. The service may return fewer
-           * than this value. If unspecified, at most 50 sets are returned.
+           * Optional. The maximum number of conversion workspaces to return. The service may return
+           * fewer than this value. If unspecified, at most 50 sets are returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of conversion workspaces to return. The service may return fewer than this
-         value. If unspecified, at most 50 sets are returned.
+          /** Optional. The maximum number of conversion workspaces to return. The service may return fewer than
+         this value. If unspecified, at most 50 sets are returned.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of conversion workspaces to return. The service may return fewer
-           * than this value. If unspecified, at most 50 sets are returned.
+           * Optional. The maximum number of conversion workspaces to return. The service may return
+           * fewer than this value. If unspecified, at most 50 sets are returned.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -4068,28 +4068,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * The nextPageToken value received in the previous call to conversionWorkspaces.list,
-           * used in the subsequent request to retrieve the next page of results. On first call this
-           * should be left blank. When paginating, all other parameters provided to
-           * conversionWorkspaces.list must match the call that provided the page token.
+           * Optional. The nextPageToken value received in the previous call to
+           * conversionWorkspaces.list, used in the subsequent request to retrieve the next page of
+           * results. On first call this should be left blank. When paginating, all other parameters
+           * provided to conversionWorkspaces.list must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The nextPageToken value received in the previous call to conversionWorkspaces.list, used in the
-         subsequent request to retrieve the next page of results. On first call this should be left blank.
-         When paginating, all other parameters provided to conversionWorkspaces.list must match the call
-         that provided the page token.
+          /** Optional. The nextPageToken value received in the previous call to conversionWorkspaces.list, used
+         in the subsequent request to retrieve the next page of results. On first call this should be left
+         blank. When paginating, all other parameters provided to conversionWorkspaces.list must match the
+         call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The nextPageToken value received in the previous call to conversionWorkspaces.list,
-           * used in the subsequent request to retrieve the next page of results. On first call this
-           * should be left blank. When paginating, all other parameters provided to
-           * conversionWorkspaces.list must match the call that provided the page token.
+           * Optional. The nextPageToken value received in the previous call to
+           * conversionWorkspaces.list, used in the subsequent request to retrieve the next page of
+           * results. On first call this should be left blank. When paginating, all other parameters
+           * provided to conversionWorkspaces.list must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -4237,28 +4237,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
-         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
-         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
-         length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+         same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+         The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -5246,28 +5246,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             }
 
             /**
-             * A unique ID used to identify the request. If the server receives two requests with
-             * the same ID, then the second request is ignored. It is recommended to always set this
-             * value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
-             * underscores (_), and hyphens (-). The maximum length is 40 characters.
+             * Optional. A unique ID used to identify the request. If the server receives two
+             * requests with the same ID, then the second request is ignored. It is recommended to
+             * always set this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers
+             * (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
              */
             @com.google.api.client.util.Key
             private java.lang.String requestId;
 
-            /** A unique ID used to identify the request. If the server receives two requests with the same ID,
-           then the second request is ignored. It is recommended to always set this value to a UUID. The ID
-           must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
-           length is 40 characters.
+            /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+           same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+           The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+           maximum length is 40 characters.
              */
             public java.lang.String getRequestId() {
               return requestId;
             }
 
             /**
-             * A unique ID used to identify the request. If the server receives two requests with
-             * the same ID, then the second request is ignored. It is recommended to always set this
-             * value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
-             * underscores (_), and hyphens (-). The maximum length is 40 characters.
+             * Optional. A unique ID used to identify the request. If the server receives two
+             * requests with the same ID, then the second request is ignored. It is recommended to
+             * always set this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers
+             * (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
              */
             public Create setRequestId(java.lang.String requestId) {
               this.requestId = requestId;
@@ -5884,19 +5884,21 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             }
 
             /**
-             * The maximum number of rules to return. The service may return fewer than this value.
+             * Optional. The maximum number of rules to return. The service may return fewer than
+             * this value.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of rules to return. The service may return fewer than this value.
+            /** Optional. The maximum number of rules to return. The service may return fewer than this value.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of rules to return. The service may return fewer than this value.
+             * Optional. The maximum number of rules to return. The service may return fewer than
+             * this value.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -5904,27 +5906,27 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             }
 
             /**
-             * The nextPageToken value received in the previous call to mappingRules.list, used in
-             * the subsequent request to retrieve the next page of results. On first call this
-             * should be left blank. When paginating, all other parameters provided to
+             * Optional. The nextPageToken value received in the previous call to mappingRules.list,
+             * used in the subsequent request to retrieve the next page of results. On first call
+             * this should be left blank. When paginating, all other parameters provided to
              * mappingRules.list must match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The nextPageToken value received in the previous call to mappingRules.list, used in the subsequent
-           request to retrieve the next page of results. On first call this should be left blank. When
-           paginating, all other parameters provided to mappingRules.list must match the call that provided
-           the page token.
+            /** Optional. The nextPageToken value received in the previous call to mappingRules.list, used in the
+           subsequent request to retrieve the next page of results. On first call this should be left blank.
+           When paginating, all other parameters provided to mappingRules.list must match the call that
+           provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * The nextPageToken value received in the previous call to mappingRules.list, used in
-             * the subsequent request to retrieve the next page of results. On first call this
-             * should be left blank. When paginating, all other parameters provided to
+             * Optional. The nextPageToken value received in the previous call to mappingRules.list,
+             * used in the subsequent request to retrieve the next page of results. On first call
+             * this should be left blank. When paginating, all other parameters provided to
              * mappingRules.list must match the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
@@ -6261,22 +6263,24 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * The destination CloudSQL connection profile is always deleted with the migration job.
-           * In case of force delete, the destination CloudSQL replica database is also deleted.
+           * Optional. The destination CloudSQL connection profile is always deleted with the
+           * migration job. In case of force delete, the destination CloudSQL replica database is
+           * also deleted.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean force;
 
-          /** The destination CloudSQL connection profile is always deleted with the migration job. In case of
-         force delete, the destination CloudSQL replica database is also deleted.
+          /** Optional. The destination CloudSQL connection profile is always deleted with the migration job. In
+         case of force delete, the destination CloudSQL replica database is also deleted.
            */
           public java.lang.Boolean getForce() {
             return force;
           }
 
           /**
-           * The destination CloudSQL connection profile is always deleted with the migration job.
-           * In case of force delete, the destination CloudSQL replica database is also deleted.
+           * Optional. The destination CloudSQL connection profile is always deleted with the
+           * migration job. In case of force delete, the destination CloudSQL replica database is
+           * also deleted.
            */
           public Delete setForce(java.lang.Boolean force) {
             this.force = force;
@@ -6284,28 +6288,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
-         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
-         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
-         length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+         same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+         The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -6327,7 +6331,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
          * This request holds the parameters needed by the datamigration server.  After setting any optional
          * parameters, call the {@link DemoteDestination#execute()} method to invoke the remote operation.
          *
-         * @param name Name of the migration job resource to demote its destination.
+         * @param name Required. Name of the migration job resource to demote its destination.
          * @param content the {@link com.google.api.services.datamigration.v1.model.DemoteDestinationRequest}
          * @return the request
          */
@@ -6357,7 +6361,7 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
            * stractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Name of the migration job resource to demote its destination.
+           * @param name Required. Name of the migration job resource to demote its destination.
            * @param content the {@link com.google.api.services.datamigration.v1.model.DemoteDestinationRequest}
            * @since 1.13
            */
@@ -6426,17 +6430,17 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return (DemoteDestination) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Name of the migration job resource to demote its destination. */
+          /** Required. Name of the migration job resource to demote its destination. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Name of the migration job resource to demote its destination.
+          /** Required. Name of the migration job resource to demote its destination.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Name of the migration job resource to demote its destination. */
+          /** Required. Name of the migration job resource to demote its destination. */
           public DemoteDestination setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -7334,39 +7338,39 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A filter expression that filters migration jobs listed in the response. The expression
-           * must specify the field name, a comparison operator, and the value that you want to use
-           * for filtering. The value must be a string, a number, or a boolean. The comparison
-           * operator must be either =, !=, >, or <. For example, list migration jobs created this
-           * year by specifying **createTime %gt; 2020-01-01T00:00:00.000000000Z.** You can also
-           * filter nested fields. For example, you could specify **reverseSshConnectivity.vmIp =
-           * "1.2.3.4"** to select all migration jobs connecting through the specific SSH tunnel
-           * bastion.
+           * Optional. A filter expression that filters migration jobs listed in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * comparison operator must be either =, !=, >, or <. For example, list migration jobs
+           * created this year by specifying **createTime %gt; 2020-01-01T00:00:00.000000000Z.** You
+           * can also filter nested fields. For example, you could specify
+           * **reverseSshConnectivity.vmIp = "1.2.3.4"** to select all migration jobs connecting
+           * through the specific SSH tunnel bastion.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** A filter expression that filters migration jobs listed in the response. The expression must specify
-         the field name, a comparison operator, and the value that you want to use for filtering. The value
-         must be a string, a number, or a boolean. The comparison operator must be either =, !=, >, or <.
-         For example, list migration jobs created this year by specifying **createTime %gt;
-         2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example, you could specify
-         **reverseSshConnectivity.vmIp = "1.2.3.4"** to select all migration jobs connecting through the
-         specific SSH tunnel bastion.
+          /** Optional. A filter expression that filters migration jobs listed in the response. The expression
+         must specify the field name, a comparison operator, and the value that you want to use for
+         filtering. The value must be a string, a number, or a boolean. The comparison operator must be
+         either =, !=, >, or <. For example, list migration jobs created this year by specifying
+         **createTime %gt; 2020-01-01T00:00:00.000000000Z.** You can also filter nested fields. For example,
+         you could specify **reverseSshConnectivity.vmIp = "1.2.3.4"** to select all migration jobs
+         connecting through the specific SSH tunnel bastion.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * A filter expression that filters migration jobs listed in the response. The expression
-           * must specify the field name, a comparison operator, and the value that you want to use
-           * for filtering. The value must be a string, a number, or a boolean. The comparison
-           * operator must be either =, !=, >, or <. For example, list migration jobs created this
-           * year by specifying **createTime %gt; 2020-01-01T00:00:00.000000000Z.** You can also
-           * filter nested fields. For example, you could specify **reverseSshConnectivity.vmIp =
-           * "1.2.3.4"** to select all migration jobs connecting through the specific SSH tunnel
-           * bastion.
+           * Optional. A filter expression that filters migration jobs listed in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * comparison operator must be either =, !=, >, or <. For example, list migration jobs
+           * created this year by specifying **createTime %gt; 2020-01-01T00:00:00.000000000Z.** You
+           * can also filter nested fields. For example, you could specify
+           * **reverseSshConnectivity.vmIp = "1.2.3.4"** to select all migration jobs connecting
+           * through the specific SSH tunnel bastion.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -7374,22 +7378,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Sort the results based on the migration job name. Valid values are: "name", "name asc",
-           * and "name desc".
+           * Optional. Sort the results based on the migration job name. Valid values are: "name",
+           * "name asc", and "name desc".
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Sort the results based on the migration job name. Valid values are: "name", "name asc", and "name
-         desc".
+          /** Optional. Sort the results based on the migration job name. Valid values are: "name", "name asc",
+         and "name desc".
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
           /**
-           * Sort the results based on the migration job name. Valid values are: "name", "name asc",
-           * and "name desc".
+           * Optional. Sort the results based on the migration job name. Valid values are: "name",
+           * "name asc", and "name desc".
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
@@ -7397,25 +7401,25 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * The maximum number of migration jobs to return. The service may return fewer than this
-           * value. If unspecified, at most 50 migration jobs will be returned. The maximum value is
-           * 1000; values above 1000 are coerced to 1000.
+           * Optional. The maximum number of migration jobs to return. The service may return fewer
+           * than this value. If unspecified, at most 50 migration jobs will be returned. The
+           * maximum value is 1000; values above 1000 are coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of migration jobs to return. The service may return fewer than this value. If
-         unspecified, at most 50 migration jobs will be returned. The maximum value is 1000; values above
-         1000 are coerced to 1000.
+          /** Optional. The maximum number of migration jobs to return. The service may return fewer than this
+         value. If unspecified, at most 50 migration jobs will be returned. The maximum value is 1000;
+         values above 1000 are coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of migration jobs to return. The service may return fewer than this
-           * value. If unspecified, at most 50 migration jobs will be returned. The maximum value is
-           * 1000; values above 1000 are coerced to 1000.
+           * Optional. The maximum number of migration jobs to return. The service may return fewer
+           * than this value. If unspecified, at most 50 migration jobs will be returned. The
+           * maximum value is 1000; values above 1000 are coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -7423,28 +7427,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * The nextPageToken value received in the previous call to migrationJobs.list, used in
-           * the subsequent request to retrieve the next page of results. On first call this should
-           * be left blank. When paginating, all other parameters provided to migrationJobs.list
-           * must match the call that provided the page token.
+           * Optional. The nextPageToken value received in the previous call to migrationJobs.list,
+           * used in the subsequent request to retrieve the next page of results. On first call this
+           * should be left blank. When paginating, all other parameters provided to
+           * migrationJobs.list must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The nextPageToken value received in the previous call to migrationJobs.list, used in the subsequent
-         request to retrieve the next page of results. On first call this should be left blank. When
-         paginating, all other parameters provided to migrationJobs.list must match the call that provided
-         the page token.
+          /** Optional. The nextPageToken value received in the previous call to migrationJobs.list, used in the
+         subsequent request to retrieve the next page of results. On first call this should be left blank.
+         When paginating, all other parameters provided to migrationJobs.list must match the call that
+         provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The nextPageToken value received in the previous call to migrationJobs.list, used in
-           * the subsequent request to retrieve the next page of results. On first call this should
-           * be left blank. When paginating, all other parameters provided to migrationJobs.list
-           * must match the call that provided the page token.
+           * Optional. The nextPageToken value received in the previous call to migrationJobs.list,
+           * used in the subsequent request to retrieve the next page of results. On first call this
+           * should be left blank. When paginating, all other parameters provided to
+           * migrationJobs.list must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -7592,28 +7596,28 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** A unique ID used to identify the request. If the server receives two requests with the same ID,
-         then the second request is ignored. It is recommended to always set this value to a UUID. The ID
-         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
-         length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the server receives two requests with the
+         same ID, then the second request is ignored. It is recommended to always set this value to a UUID.
+         The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The
+         maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * A unique ID used to identify the request. If the server receives two requests with the
-           * same ID, then the second request is ignored. It is recommended to always set this value
-           * to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
-           * and hyphens (-). The maximum length is 40 characters.
+           * Optional. A unique ID used to identify the request. If the server receives two requests
+           * with the same ID, then the second request is ignored. It is recommended to always set
+           * this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9),
+           * underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -9229,22 +9233,22 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             }
 
             /**
-             * Maximum number of objects to return. Default is 50. The maximum value is 1000; values
-             * above 1000 will be coerced to 1000.
+             * Optional. Maximum number of objects to return. Default is 50. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Maximum number of objects to return. Default is 50. The maximum value is 1000; values above 1000
-           will be coerced to 1000.
+            /** Optional. Maximum number of objects to return. Default is 50. The maximum value is 1000; values
+           above 1000 will be coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Maximum number of objects to return. Default is 50. The maximum value is 1000; values
-             * above 1000 will be coerced to 1000.
+             * Optional. Maximum number of objects to return. Default is 50. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -9252,15 +9256,16 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             }
 
             /**
-             * Page token received from a previous `ListMigrationJObObjectsRequest` call. Provide
-             * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListMigrationJobObjectsRequest` must match the call that provided the page token.
+             * Optional. Page token received from a previous `ListMigrationJObObjectsRequest` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListMigrationJobObjectsRequest` must match the call that provided the
+             * page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Page token received from a previous `ListMigrationJObObjectsRequest` call. Provide this to retrieve
-           the subsequent page. When paginating, all other parameters provided to
+            /** Optional. Page token received from a previous `ListMigrationJObObjectsRequest` call. Provide this
+           to retrieve the subsequent page. When paginating, all other parameters provided to
            `ListMigrationJobObjectsRequest` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
@@ -9268,9 +9273,10 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             }
 
             /**
-             * Page token received from a previous `ListMigrationJObObjectsRequest` call. Provide
-             * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListMigrationJobObjectsRequest` must match the call that provided the page token.
+             * Optional. Page token received from a previous `ListMigrationJObObjectsRequest` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListMigrationJobObjectsRequest` must match the call that provided the
+             * page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -11235,9 +11241,9 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * A filter expression that filters private connections listed in the response. The
-           * expression must specify the field name, a comparison operator, and the value that you
-           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * Optional. A filter expression that filters private connections listed in the response.
+           * The expression must specify the field name, a comparison operator, and the value that
+           * you want to use for filtering. The value must be a string, a number, or a boolean. The
            * comparison operator must be either =, !=, >, or <. For example, list private
            * connections created this year by specifying **createTime %gt;
            * 2021-01-01T00:00:00.000000000Z**.
@@ -11245,20 +11251,20 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** A filter expression that filters private connections listed in the response. The expression must
-         specify the field name, a comparison operator, and the value that you want to use for filtering.
-         The value must be a string, a number, or a boolean. The comparison operator must be either =, !=,
-         >, or <. For example, list private connections created this year by specifying **createTime %gt;
-         2021-01-01T00:00:00.000000000Z**.
+          /** Optional. A filter expression that filters private connections listed in the response. The
+         expression must specify the field name, a comparison operator, and the value that you want to use
+         for filtering. The value must be a string, a number, or a boolean. The comparison operator must be
+         either =, !=, >, or <. For example, list private connections created this year by specifying
+         **createTime %gt; 2021-01-01T00:00:00.000000000Z**.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * A filter expression that filters private connections listed in the response. The
-           * expression must specify the field name, a comparison operator, and the value that you
-           * want to use for filtering. The value must be a string, a number, or a boolean. The
+           * Optional. A filter expression that filters private connections listed in the response.
+           * The expression must specify the field name, a comparison operator, and the value that
+           * you want to use for filtering. The value must be a string, a number, or a boolean. The
            * comparison operator must be either =, !=, >, or <. For example, list private
            * connections created this year by specifying **createTime %gt;
            * 2021-01-01T00:00:00.000000000Z**.
@@ -11268,41 +11274,41 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return this;
           }
 
-          /** Order by fields for the result. */
+          /** Optional. Order by fields for the result. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Order by fields for the result.
+          /** Optional. Order by fields for the result.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Order by fields for the result. */
+          /** Optional. Order by fields for the result. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
           /**
-           * Maximum number of private connections to return. If unspecified, at most 50 private
-           * connections that are returned. The maximum value is 1000; values above 1000 are coerced
-           * to 1000.
+           * Optional. Maximum number of private connections to return. If unspecified, at most 50
+           * private connections that are returned. The maximum value is 1000; values above 1000 are
+           * coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of private connections to return. If unspecified, at most 50 private connections
-         that are returned. The maximum value is 1000; values above 1000 are coerced to 1000.
+          /** Optional. Maximum number of private connections to return. If unspecified, at most 50 private
+         connections that are returned. The maximum value is 1000; values above 1000 are coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Maximum number of private connections to return. If unspecified, at most 50 private
-           * connections that are returned. The maximum value is 1000; values above 1000 are coerced
-           * to 1000.
+           * Optional. Maximum number of private connections to return. If unspecified, at most 50
+           * private connections that are returned. The maximum value is 1000; values above 1000 are
+           * coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -11310,24 +11316,24 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
 
           /**
-           * Page token received from a previous `ListPrivateConnections` call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * Optional. Page token received from a previous `ListPrivateConnections` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
            * `ListPrivateConnections` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Page token received from a previous `ListPrivateConnections` call. Provide this to retrieve the
-         subsequent page. When paginating, all other parameters provided to `ListPrivateConnections` must
-         match the call that provided the page token.
+          /** Optional. Page token received from a previous `ListPrivateConnections` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListPrivateConnections` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Page token received from a previous `ListPrivateConnections` call. Provide this to
-           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * Optional. Page token received from a previous `ListPrivateConnections` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
            * `ListPrivateConnections` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {

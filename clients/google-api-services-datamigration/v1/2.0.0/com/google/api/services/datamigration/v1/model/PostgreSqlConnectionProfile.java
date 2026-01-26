@@ -54,6 +54,13 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
   private java.lang.String database;
 
   /**
+   * Forward SSH tunnel connectivity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ForwardSshTunnelConnectivity forwardSshConnectivity;
+
+  /**
    * Required. The IP or hostname of the source PostgreSQL database.
    * The value may be {@code null}.
    */
@@ -90,6 +97,13 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Private connectivity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateConnectivity privateConnectivity;
 
   /**
    * Private service connect connectivity.
@@ -172,6 +186,23 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
    */
   public PostgreSqlConnectionProfile setDatabase(java.lang.String database) {
     this.database = database;
+    return this;
+  }
+
+  /**
+   * Forward SSH tunnel connectivity.
+   * @return value or {@code null} for none
+   */
+  public ForwardSshTunnelConnectivity getForwardSshConnectivity() {
+    return forwardSshConnectivity;
+  }
+
+  /**
+   * Forward SSH tunnel connectivity.
+   * @param forwardSshConnectivity forwardSshConnectivity or {@code null} for none
+   */
+  public PostgreSqlConnectionProfile setForwardSshConnectivity(ForwardSshTunnelConnectivity forwardSshConnectivity) {
+    this.forwardSshConnectivity = forwardSshConnectivity;
     return this;
   }
 
@@ -263,6 +294,23 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
    */
   public PostgreSqlConnectionProfile setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Private connectivity.
+   * @return value or {@code null} for none
+   */
+  public PrivateConnectivity getPrivateConnectivity() {
+    return privateConnectivity;
+  }
+
+  /**
+   * Private connectivity.
+   * @param privateConnectivity privateConnectivity or {@code null} for none
+   */
+  public PostgreSqlConnectionProfile setPrivateConnectivity(PrivateConnectivity privateConnectivity) {
+    this.privateConnectivity = privateConnectivity;
     return this;
   }
 

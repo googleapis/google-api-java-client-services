@@ -54,8 +54,8 @@ public final class ApplyConversionWorkspaceRequest extends com.google.api.client
   private java.lang.Boolean dryRun;
 
   /**
-   * Filter which entities to apply. Leaving this field empty will apply all of the entities.
-   * Supports Google AIP 160 based filtering.
+   * Optional. Filter which entities to apply. Leaving this field empty will apply all of the
+   * entities. Supports Google AIP 160 based filtering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class ApplyConversionWorkspaceRequest extends com.google.api.client
   }
 
   /**
-   * Filter which entities to apply. Leaving this field empty will apply all of the entities.
-   * Supports Google AIP 160 based filtering.
+   * Optional. Filter which entities to apply. Leaving this field empty will apply all of the
+   * entities. Supports Google AIP 160 based filtering.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -126,8 +126,8 @@ public final class ApplyConversionWorkspaceRequest extends com.google.api.client
   }
 
   /**
-   * Filter which entities to apply. Leaving this field empty will apply all of the entities.
-   * Supports Google AIP 160 based filtering.
+   * Optional. Filter which entities to apply. Leaving this field empty will apply all of the
+   * entities. Supports Google AIP 160 based filtering.
    * @param filter filter or {@code null} for none
    */
   public ApplyConversionWorkspaceRequest setFilter(java.lang.String filter) {

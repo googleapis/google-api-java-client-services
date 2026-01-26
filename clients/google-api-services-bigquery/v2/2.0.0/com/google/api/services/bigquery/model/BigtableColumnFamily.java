@@ -47,8 +47,10 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   /**
    * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
-   * encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific
-   * column by listing that column in 'columns' and specifying an encoding for it.
+   * encoded using HBase Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in combination with JSON type.
+   * This can be overridden for a specific column by listing that column in 'columns' and specifying
+   * an encoding for it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,6 +71,14 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean onlyReadLatest;
+
+  /**
+   * Optional. Protobuf-specific configurations, only takes effect when the encoding is
+   * PROTO_BINARY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigtableProtoConfig protoConfig;
 
   /**
    * Optional. The type to convert the value in cells of this column family. The values are expected
@@ -105,8 +115,10 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   /**
    * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
-   * encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific
-   * column by listing that column in 'columns' and specifying an encoding for it.
+   * encoded using HBase Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in combination with JSON type.
+   * This can be overridden for a specific column by listing that column in 'columns' and specifying
+   * an encoding for it.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncoding() {
@@ -116,8 +128,10 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
   /**
    * Optional. The encoding of the values when the type is not STRING. Acceptable encoding values
    * are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are
-   * encoded using HBase Bytes.toBytes family of functions. This can be overridden for a specific
-   * column by listing that column in 'columns' and specifying an encoding for it.
+   * encoded using HBase Bytes.toBytes family of functions. PROTO_BINARY - indicates values are
+   * encoded using serialized proto messages. This can only be used in combination with JSON type.
+   * This can be overridden for a specific column by listing that column in 'columns' and specifying
+   * an encoding for it.
    * @param encoding encoding or {@code null} for none
    */
   public BigtableColumnFamily setEncoding(java.lang.String encoding) {
@@ -160,6 +174,25 @@ public final class BigtableColumnFamily extends com.google.api.client.json.Gener
    */
   public BigtableColumnFamily setOnlyReadLatest(java.lang.Boolean onlyReadLatest) {
     this.onlyReadLatest = onlyReadLatest;
+    return this;
+  }
+
+  /**
+   * Optional. Protobuf-specific configurations, only takes effect when the encoding is
+   * PROTO_BINARY.
+   * @return value or {@code null} for none
+   */
+  public BigtableProtoConfig getProtoConfig() {
+    return protoConfig;
+  }
+
+  /**
+   * Optional. Protobuf-specific configurations, only takes effect when the encoding is
+   * PROTO_BINARY.
+   * @param protoConfig protoConfig or {@code null} for none
+   */
+  public BigtableColumnFamily setProtoConfig(BigtableProtoConfig protoConfig) {
+    this.protoConfig = protoConfig;
     return this;
   }
 

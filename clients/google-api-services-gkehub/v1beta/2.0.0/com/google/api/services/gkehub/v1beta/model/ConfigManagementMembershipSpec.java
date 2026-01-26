@@ -66,7 +66,8 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   private ConfigManagementHierarchyControllerConfig hierarchyController;
 
   /**
-   * Optional. Enables automatic Feature management.
+   * Optional. Deprecated: From version 1.21.0, automatic Feature management is unavailable, and
+   * Config Sync only supports manual upgrades.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +172,8 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Optional. Enables automatic Feature management.
+   * Optional. Deprecated: From version 1.21.0, automatic Feature management is unavailable, and
+   * Config Sync only supports manual upgrades.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagement() {
@@ -179,7 +181,8 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Optional. Enables automatic Feature management.
+   * Optional. Deprecated: From version 1.21.0, automatic Feature management is unavailable, and
+   * Config Sync only supports manual upgrades.
    * @param management management or {@code null} for none
    */
   public ConfigManagementMembershipSpec setManagement(java.lang.String management) {

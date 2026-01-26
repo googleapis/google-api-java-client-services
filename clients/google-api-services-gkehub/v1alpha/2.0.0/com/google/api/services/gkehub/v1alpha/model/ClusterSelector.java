@@ -30,14 +30,16 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ClusterSelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * The label selector must be a valid CEL (go/cel) expression which evaluates resource.labels.
+   * Optional. A valid CEL (Common Expression Language) expression which evaluates
+   * `resource.labels`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String labelSelector;
 
   /**
-   * The label selector must be a valid CEL (go/cel) expression which evaluates resource.labels.
+   * Optional. A valid CEL (Common Expression Language) expression which evaluates
+   * `resource.labels`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabelSelector() {
@@ -45,7 +47,8 @@ public final class ClusterSelector extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The label selector must be a valid CEL (go/cel) expression which evaluates resource.labels.
+   * Optional. A valid CEL (Common Expression Language) expression which evaluates
+   * `resource.labels`.
    * @param labelSelector labelSelector or {@code null} for none
    */
   public ClusterSelector setLabelSelector(java.lang.String labelSelector) {

@@ -111,8 +111,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Immutable. The full, unique resource name of the rollout sequence that initiatied
    * this Rollout. In the format of
-   * `projects/{project}/locations/global/rolloutSequences/{rollout_sequence}`. Empty for user
-   * initiated rollouts.
+   * `projects/{project}/locations/global/rolloutSequences/{rollout_sequence}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +125,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private Schedule schedule;
 
   /**
-   * Output only. The stages of the Rollout. Note: this is only populated for google-initiated
-   * rollouts.
+   * Output only. The stages of the Rollout.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +162,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Optional. Config for version upgrade of clusters. Note: Currently for GDCE clusters only.
+   * Optional. Config for version upgrade of clusters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -349,8 +347,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Immutable. The full, unique resource name of the rollout sequence that initiatied
    * this Rollout. In the format of
-   * `projects/{project}/locations/global/rolloutSequences/{rollout_sequence}`. Empty for user
-   * initiated rollouts.
+   * `projects/{project}/locations/global/rolloutSequences/{rollout_sequence}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRolloutSequence() {
@@ -360,8 +357,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Immutable. The full, unique resource name of the rollout sequence that initiatied
    * this Rollout. In the format of
-   * `projects/{project}/locations/global/rolloutSequences/{rollout_sequence}`. Empty for user
-   * initiated rollouts.
+   * `projects/{project}/locations/global/rolloutSequences/{rollout_sequence}`.
    * @param rolloutSequence rolloutSequence or {@code null} for none
    */
   public Rollout setRolloutSequence(java.lang.String rolloutSequence) {
@@ -387,8 +383,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The stages of the Rollout. Note: this is only populated for google-initiated
-   * rollouts.
+   * Output only. The stages of the Rollout.
    * @return value or {@code null} for none
    */
   public java.util.List<RolloutStage> getStages() {
@@ -396,8 +391,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The stages of the Rollout. Note: this is only populated for google-initiated
-   * rollouts.
+   * Output only. The stages of the Rollout.
    * @param stages stages or {@code null} for none
    */
   public Rollout setStages(java.util.List<RolloutStage> stages) {
@@ -478,7 +472,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Config for version upgrade of clusters. Note: Currently for GDCE clusters only.
+   * Optional. Config for version upgrade of clusters.
    * @return value or {@code null} for none
    */
   public VersionUpgrade getVersionUpgrade() {
@@ -486,7 +480,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Config for version upgrade of clusters. Note: Currently for GDCE clusters only.
+   * Optional. Config for version upgrade of clusters.
    * @param versionUpgrade versionUpgrade or {@code null} for none
    */
   public Rollout setVersionUpgrade(VersionUpgrade versionUpgrade) {

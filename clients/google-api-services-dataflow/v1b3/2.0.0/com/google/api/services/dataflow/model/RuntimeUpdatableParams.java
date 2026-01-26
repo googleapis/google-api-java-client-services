@@ -31,6 +31,14 @@ package com.google.api.services.dataflow.model;
 public final class RuntimeUpdatableParams extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The backlog threshold duration in seconds for autoscaling. Value must be non-
+   * negative.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String acceptableBacklogDuration;
+
+  /**
    * The maximum number of workers to cap autoscaling at. This field is currently only supported for
    * Streaming Engine jobs.
    * The value may be {@code null}.
@@ -55,6 +63,25 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.Double workerUtilizationHint;
+
+  /**
+   * Optional. The backlog threshold duration in seconds for autoscaling. Value must be non-
+   * negative.
+   * @return value or {@code null} for none
+   */
+  public String getAcceptableBacklogDuration() {
+    return acceptableBacklogDuration;
+  }
+
+  /**
+   * Optional. The backlog threshold duration in seconds for autoscaling. Value must be non-
+   * negative.
+   * @param acceptableBacklogDuration acceptableBacklogDuration or {@code null} for none
+   */
+  public RuntimeUpdatableParams setAcceptableBacklogDuration(String acceptableBacklogDuration) {
+    this.acceptableBacklogDuration = acceptableBacklogDuration;
+    return this;
+  }
 
   /**
    * The maximum number of workers to cap autoscaling at. This field is currently only supported for

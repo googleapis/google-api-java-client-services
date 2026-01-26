@@ -72,6 +72,13 @@ public final class StreamingConfigTask extends com.google.api.client.json.Generi
   }
 
   /**
+   * Optional. The state tag encoding format version for streaming engine jobs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer streamingEngineStateTagEncodingVersion;
+
+  /**
    * Map from user step names to state families.
    * The value may be {@code null}.
    */
@@ -192,6 +199,23 @@ public final class StreamingConfigTask extends com.google.api.client.json.Generi
    */
   public StreamingConfigTask setStreamingComputationConfigs(java.util.List<StreamingComputationConfig> streamingComputationConfigs) {
     this.streamingComputationConfigs = streamingComputationConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. The state tag encoding format version for streaming engine jobs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getStreamingEngineStateTagEncodingVersion() {
+    return streamingEngineStateTagEncodingVersion;
+  }
+
+  /**
+   * Optional. The state tag encoding format version for streaming engine jobs.
+   * @param streamingEngineStateTagEncodingVersion streamingEngineStateTagEncodingVersion or {@code null} for none
+   */
+  public StreamingConfigTask setStreamingEngineStateTagEncodingVersion(java.lang.Integer streamingEngineStateTagEncodingVersion) {
+    this.streamingEngineStateTagEncodingVersion = streamingEngineStateTagEncodingVersion;
     return this;
   }
 

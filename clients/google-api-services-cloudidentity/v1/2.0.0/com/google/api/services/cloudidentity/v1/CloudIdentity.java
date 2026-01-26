@@ -3169,9 +3169,9 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple properties
        * are provided, only DeviceUsers having all of these properties are considered as matches - i.e.
        * the query behaves like an AND. Different platforms require different amounts of information from
-       * the caller to ensure that the DeviceUser is uniquely identified. - iOS: Specifying the 'partner'
-       * and 'ios_device_id' fields is required. - Android: Specifying the 'android_id' field is required.
-       * - Desktop: Specifying the 'raw_resource_id' field is required.
+       * the caller to ensure that the DeviceUser is uniquely identified. - iOS: If either the `partner`
+       * or `ios_device_id` field is provided, then both fields are required. - Android: Specifying the
+       * `android_id` field is required. - Desktop: Specifying the `raw_resource_id` field is required.
        *
        * Create a request for the method "deviceUsers.lookup".
        *
@@ -3200,9 +3200,10 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
          * with the scope: https://www.googleapis.com/auth/cloud-identity.devices.lookup If multiple
          * properties are provided, only DeviceUsers having all of these properties are considered as
          * matches - i.e. the query behaves like an AND. Different platforms require different amounts of
-         * information from the caller to ensure that the DeviceUser is uniquely identified. - iOS:
-         * Specifying the 'partner' and 'ios_device_id' fields is required. - Android: Specifying the
-         * 'android_id' field is required. - Desktop: Specifying the 'raw_resource_id' field is required.
+         * information from the caller to ensure that the DeviceUser is uniquely identified. - iOS: If
+         * either the `partner` or `ios_device_id` field is provided, then both fields are required. -
+         * Android: Specifying the `android_id` field is required. - Desktop: Specifying the
+         * `raw_resource_id` field is required.
          *
          * Create a request for the method "deviceUsers.lookup".
          *

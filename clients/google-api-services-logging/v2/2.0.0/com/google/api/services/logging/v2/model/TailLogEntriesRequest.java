@@ -39,7 +39,10 @@ public final class TailLogEntriesRequest extends com.google.api.client.json.Gene
   private String bufferWindow;
 
   /**
-   * Optional. Only log entries that match the filter are returned. An empty filter matches all log
+   * Optional. A filter that chooses which log entries to return. For more information, see Logging
+   * query language
+   * (https://{$universe.dns_names.final_documentation_domain}/logging/docs/view/logging-query-
+   * language).Only log entries that match the filter are returned. An empty filter matches all log
    * entries in the resources listed in resource_names. Referencing a parent resource that is not
    * listed in resource_names will cause the filter to return no results. The maximum length of a
    * filter is 20,000 characters.
@@ -83,7 +86,10 @@ public final class TailLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Only log entries that match the filter are returned. An empty filter matches all log
+   * Optional. A filter that chooses which log entries to return. For more information, see Logging
+   * query language
+   * (https://{$universe.dns_names.final_documentation_domain}/logging/docs/view/logging-query-
+   * language).Only log entries that match the filter are returned. An empty filter matches all log
    * entries in the resources listed in resource_names. Referencing a parent resource that is not
    * listed in resource_names will cause the filter to return no results. The maximum length of a
    * filter is 20,000 characters.
@@ -94,7 +100,10 @@ public final class TailLogEntriesRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Only log entries that match the filter are returned. An empty filter matches all log
+   * Optional. A filter that chooses which log entries to return. For more information, see Logging
+   * query language
+   * (https://{$universe.dns_names.final_documentation_domain}/logging/docs/view/logging-query-
+   * language).Only log entries that match the filter are returned. An empty filter matches all log
    * entries in the resources listed in resource_names. Referencing a parent resource that is not
    * listed in resource_names will cause the filter to return no results. The maximum length of a
    * filter is 20,000 characters.

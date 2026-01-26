@@ -3216,6 +3216,29 @@ public class ManagedKafka extends com.google.api.client.googleapis.services.json
             }
 
             /**
+             * Optional. Filter expression for the result. Only supports filtering by topic name as
+             * a key in the `topics` map.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter expression for the result. Only supports filtering by topic name as a key in the
+           `topics` map.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter expression for the result. Only supports filtering by topic name as
+             * a key in the `topics` map.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
              * Optional. The maximum number of consumer groups to return. The service may return
              * fewer than this value. If unset or zero, all consumer groups for the parent is
              * returned.

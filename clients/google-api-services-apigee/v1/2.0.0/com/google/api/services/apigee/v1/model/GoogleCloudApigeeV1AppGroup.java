@@ -74,6 +74,13 @@ public final class GoogleCloudApigeeV1AppGroup extends com.google.api.client.jso
   private java.lang.String displayName;
 
   /**
+   * Optional. Email of the AppGroup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String email;
+
+  /**
    * Output only. Modified time as milliseconds since epoch.
    * The value may be {@code null}.
    */
@@ -202,6 +209,23 @@ public final class GoogleCloudApigeeV1AppGroup extends com.google.api.client.jso
    */
   public GoogleCloudApigeeV1AppGroup setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Email of the AppGroup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmail() {
+    return email;
+  }
+
+  /**
+   * Optional. Email of the AppGroup.
+   * @param email email or {@code null} for none
+   */
+  public GoogleCloudApigeeV1AppGroup setEmail(java.lang.String email) {
+    this.email = email;
     return this;
   }
 

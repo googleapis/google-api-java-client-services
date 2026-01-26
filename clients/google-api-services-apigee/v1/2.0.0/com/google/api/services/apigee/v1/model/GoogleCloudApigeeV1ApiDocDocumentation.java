@@ -30,6 +30,13 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1ApiDocDocumentation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. AsyncAPI Specification documentation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1AsyncApiDocumentation asyncApiDocumentation;
+
+  /**
    * Optional. GraphQL documentation.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudApigeeV1ApiDocDocumentation extends com.google.api
    */
   @com.google.api.client.util.Key
   private GoogleCloudApigeeV1OASDocumentation oasDocumentation;
+
+  /**
+   * Optional. AsyncAPI Specification documentation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1AsyncApiDocumentation getAsyncApiDocumentation() {
+    return asyncApiDocumentation;
+  }
+
+  /**
+   * Optional. AsyncAPI Specification documentation.
+   * @param asyncApiDocumentation asyncApiDocumentation or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiDocDocumentation setAsyncApiDocumentation(GoogleCloudApigeeV1AsyncApiDocumentation asyncApiDocumentation) {
+    this.asyncApiDocumentation = asyncApiDocumentation;
+    return this;
+  }
 
   /**
    * Optional. GraphQL documentation.

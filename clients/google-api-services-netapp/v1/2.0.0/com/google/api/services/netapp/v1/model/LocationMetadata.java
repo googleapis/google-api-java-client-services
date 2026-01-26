@@ -30,6 +30,13 @@ package com.google.api.services.netapp.v1.model;
 public final class LocationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Indicates if the location has ONTAP Proxy support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasOntapProxy;
+
+  /**
    * Output only. Indicates if the location has VCP support.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedServiceLevels;
+
+  /**
+   * Output only. Indicates if the location has ONTAP Proxy support.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasOntapProxy() {
+    return hasOntapProxy;
+  }
+
+  /**
+   * Output only. Indicates if the location has ONTAP Proxy support.
+   * @param hasOntapProxy hasOntapProxy or {@code null} for none
+   */
+  public LocationMetadata setHasOntapProxy(java.lang.Boolean hasOntapProxy) {
+    this.hasOntapProxy = hasOntapProxy;
+    return this;
+  }
 
   /**
    * Output only. Indicates if the location has VCP support.

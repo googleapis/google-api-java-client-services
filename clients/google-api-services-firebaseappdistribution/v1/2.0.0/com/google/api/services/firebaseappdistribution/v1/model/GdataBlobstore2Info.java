@@ -70,6 +70,15 @@ public final class GdataBlobstore2Info extends com.google.api.client.json.Generi
   private java.lang.String readToken;
 
   /**
+   * A serialized Object Fragment List Creation Info passed from Bigstore -> Scotty for a GCS
+   * upload. This field must never be consumed outside of Bigstore, and is not applicable to non-GCS
+   * media uploads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uploadFragmentListCreationInfo;
+
+  /**
    * Metadata passed from Blobstore -> Scotty for a new GCS upload. This is a signed, serialized
    * blobstore2.BlobMetadataContainer proto which must never be consumed outside of Bigstore, and is
    * not applicable to non-GCS media uploads.
@@ -230,6 +239,59 @@ public final class GdataBlobstore2Info extends com.google.api.client.json.Generi
    */
   public GdataBlobstore2Info setReadToken(java.lang.String readToken) {
     this.readToken = readToken;
+    return this;
+  }
+
+  /**
+   * A serialized Object Fragment List Creation Info passed from Bigstore -> Scotty for a GCS
+   * upload. This field must never be consumed outside of Bigstore, and is not applicable to non-GCS
+   * media uploads.
+   * @see #decodeUploadFragmentListCreationInfo()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUploadFragmentListCreationInfo() {
+    return uploadFragmentListCreationInfo;
+  }
+
+  /**
+   * A serialized Object Fragment List Creation Info passed from Bigstore -> Scotty for a GCS
+   * upload. This field must never be consumed outside of Bigstore, and is not applicable to non-GCS
+   * media uploads.
+   * @see #getUploadFragmentListCreationInfo()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeUploadFragmentListCreationInfo() {
+    return com.google.api.client.util.Base64.decodeBase64(uploadFragmentListCreationInfo);
+  }
+
+  /**
+   * A serialized Object Fragment List Creation Info passed from Bigstore -> Scotty for a GCS
+   * upload. This field must never be consumed outside of Bigstore, and is not applicable to non-GCS
+   * media uploads.
+   * @see #encodeUploadFragmentListCreationInfo()
+   * @param uploadFragmentListCreationInfo uploadFragmentListCreationInfo or {@code null} for none
+   */
+  public GdataBlobstore2Info setUploadFragmentListCreationInfo(java.lang.String uploadFragmentListCreationInfo) {
+    this.uploadFragmentListCreationInfo = uploadFragmentListCreationInfo;
+    return this;
+  }
+
+  /**
+   * A serialized Object Fragment List Creation Info passed from Bigstore -> Scotty for a GCS
+   * upload. This field must never be consumed outside of Bigstore, and is not applicable to non-GCS
+   * media uploads.
+   * @see #setUploadFragmentListCreationInfo()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GdataBlobstore2Info encodeUploadFragmentListCreationInfo(byte[] uploadFragmentListCreationInfo) {
+    this.uploadFragmentListCreationInfo = com.google.api.client.util.Base64.encodeBase64URLSafeString(uploadFragmentListCreationInfo);
     return this;
   }
 

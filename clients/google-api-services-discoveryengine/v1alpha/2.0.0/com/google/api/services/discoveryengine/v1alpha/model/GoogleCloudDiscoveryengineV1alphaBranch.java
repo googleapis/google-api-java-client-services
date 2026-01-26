@@ -30,8 +30,8 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaBranch extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Stistics describing a branch. This field is not populated in BranchView.BASIC
-   * view.
+   * Output only. Statistics describing a branch. This field is not populated in
+   * BranchView.BRANCH_VIEW_BASIC view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class GoogleCloudDiscoveryengineV1alphaBranch extends com.google.ap
   private java.lang.String name;
 
   /**
-   * Output only. Stistics describing a branch. This field is not populated in BranchView.BASIC
-   * view.
+   * Output only. Statistics describing a branch. This field is not populated in
+   * BranchView.BRANCH_VIEW_BASIC view.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaBranchBranchStats getBranchStats() {
@@ -78,8 +78,8 @@ public final class GoogleCloudDiscoveryengineV1alphaBranch extends com.google.ap
   }
 
   /**
-   * Output only. Stistics describing a branch. This field is not populated in BranchView.BASIC
-   * view.
+   * Output only. Statistics describing a branch. This field is not populated in
+   * BranchView.BRANCH_VIEW_BASIC view.
    * @param branchStats branchStats or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaBranch setBranchStats(GoogleCloudDiscoveryengineV1alphaBranchBranchStats branchStats) {

@@ -111,9 +111,9 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `disable-agent-sharing` * `disable-image-generation` *
-   * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-
-   * google-drive-upload`
+   * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-agent-
+   * sharing` * `disable-image-generation` * `disable-video-generation` * `disable-onedrive-upload`
+   * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,6 +127,14 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String industryVertical;
+
+  /**
+   * Optional. Configurations for the Knowledge Graph. Only applicable if solution_type is
+   * SOLUTION_TYPE_SEARCH.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1EngineKnowledgeGraphConfig knowledgeGraphConfig;
 
   /**
    * Configurations for the Media Engine. Only applicable on the data stores with solution_type
@@ -369,9 +377,9 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `disable-agent-sharing` * `disable-image-generation` *
-   * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-
-   * google-drive-upload`
+   * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-agent-
+   * sharing` * `disable-image-generation` * `disable-video-generation` * `disable-onedrive-upload`
+   * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -383,9 +391,9 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing` * `personalization-memory` * `disable-agent-sharing` * `disable-image-generation` *
-   * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-
-   * google-drive-upload`
+   * sharing` * `personalization-memory` * `personalization-suggested-highlights` * `disable-agent-
+   * sharing` * `disable-image-generation` * `disable-video-generation` * `disable-onedrive-upload`
+   * * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Engine setFeatures(java.util.Map<String, java.lang.String> features) {
@@ -411,6 +419,25 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    */
   public GoogleCloudDiscoveryengineV1Engine setIndustryVertical(java.lang.String industryVertical) {
     this.industryVertical = industryVertical;
+    return this;
+  }
+
+  /**
+   * Optional. Configurations for the Knowledge Graph. Only applicable if solution_type is
+   * SOLUTION_TYPE_SEARCH.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1EngineKnowledgeGraphConfig getKnowledgeGraphConfig() {
+    return knowledgeGraphConfig;
+  }
+
+  /**
+   * Optional. Configurations for the Knowledge Graph. Only applicable if solution_type is
+   * SOLUTION_TYPE_SEARCH.
+   * @param knowledgeGraphConfig knowledgeGraphConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setKnowledgeGraphConfig(GoogleCloudDiscoveryengineV1EngineKnowledgeGraphConfig knowledgeGraphConfig) {
+    this.knowledgeGraphConfig = knowledgeGraphConfig;
     return this;
   }
 

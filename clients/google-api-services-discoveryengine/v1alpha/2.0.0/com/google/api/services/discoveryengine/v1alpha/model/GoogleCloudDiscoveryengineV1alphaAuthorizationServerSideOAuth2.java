@@ -55,7 +55,17 @@ public final class GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth
   private java.lang.String clientSecret;
 
   /**
-   * Required. The scopes to request. Example: `https://www.googleapis.com/auth/calendar.events`
+   * Optional. Whether to enable PKCE verification.
+   * https://datatracker.ietf.org/doc/html/rfc7636#section-3.1/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pkceVerificationEnabled;
+
+  /**
+   * Optional. The scopes to request. Example: `https://www.googleapis.com/auth/calendar.events` If
+   * omitted, no additional scopes are requested beyond those required by the authorization uri. If
+   * set, it will overwrite the scopes in the authorization uri when acquiring user authorization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +138,28 @@ public final class GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth
   }
 
   /**
-   * Required. The scopes to request. Example: `https://www.googleapis.com/auth/calendar.events`
+   * Optional. Whether to enable PKCE verification.
+   * https://datatracker.ietf.org/doc/html/rfc7636#section-3.1/
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPkceVerificationEnabled() {
+    return pkceVerificationEnabled;
+  }
+
+  /**
+   * Optional. Whether to enable PKCE verification.
+   * https://datatracker.ietf.org/doc/html/rfc7636#section-3.1/
+   * @param pkceVerificationEnabled pkceVerificationEnabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth2 setPkceVerificationEnabled(java.lang.Boolean pkceVerificationEnabled) {
+    this.pkceVerificationEnabled = pkceVerificationEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. The scopes to request. Example: `https://www.googleapis.com/auth/calendar.events` If
+   * omitted, no additional scopes are requested beyond those required by the authorization uri. If
+   * set, it will overwrite the scopes in the authorization uri when acquiring user authorization.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopes() {
@@ -136,7 +167,9 @@ public final class GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth
   }
 
   /**
-   * Required. The scopes to request. Example: `https://www.googleapis.com/auth/calendar.events`
+   * Optional. The scopes to request. Example: `https://www.googleapis.com/auth/calendar.events` If
+   * omitted, no additional scopes are requested beyond those required by the authorization uri. If
+   * set, it will overwrite the scopes in the authorization uri when acquiring user authorization.
    * @param scopes scopes or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth2 setScopes(java.util.List<java.lang.String> scopes) {

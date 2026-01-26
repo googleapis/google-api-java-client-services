@@ -55,6 +55,13 @@ public final class GoogleCloudDiscoveryengineV1SearchResponse extends com.google
   private java.util.List<GoogleCloudDiscoveryengineV1SearchResponseFacet> facets;
 
   /**
+   * Output only. Natural language query understanding information for the returned results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1SearchResponseNaturalLanguageQueryUnderstandingInfo naturalLanguageQueryUnderstandingInfo;
+
+  /**
    * A token that can be sent as SearchRequest.page_token to retrieve the next page. If this field
    * is omitted, there are no subsequent pages.
    * The value may be {@code null}.
@@ -184,6 +191,23 @@ public final class GoogleCloudDiscoveryengineV1SearchResponse extends com.google
    */
   public GoogleCloudDiscoveryengineV1SearchResponse setFacets(java.util.List<GoogleCloudDiscoveryengineV1SearchResponseFacet> facets) {
     this.facets = facets;
+    return this;
+  }
+
+  /**
+   * Output only. Natural language query understanding information for the returned results.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchResponseNaturalLanguageQueryUnderstandingInfo getNaturalLanguageQueryUnderstandingInfo() {
+    return naturalLanguageQueryUnderstandingInfo;
+  }
+
+  /**
+   * Output only. Natural language query understanding information for the returned results.
+   * @param naturalLanguageQueryUnderstandingInfo naturalLanguageQueryUnderstandingInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchResponse setNaturalLanguageQueryUnderstandingInfo(GoogleCloudDiscoveryengineV1SearchResponseNaturalLanguageQueryUnderstandingInfo naturalLanguageQueryUnderstandingInfo) {
+    this.naturalLanguageQueryUnderstandingInfo = naturalLanguageQueryUnderstandingInfo;
     return this;
   }
 

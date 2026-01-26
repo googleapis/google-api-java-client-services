@@ -1076,17 +1076,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Optional. The list of fields to update. Supported fields: * `customer_provided_config` */
+      /**
+       * Optional. The list of fields to update. Supported fields: * `customer_provided_config` *
+       * `customer_provided_config.notebooklm_config.observability_config`
+       */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Optional. The list of fields to update. Supported fields: * `customer_provided_config`
+      /** Optional. The list of fields to update. Supported fields: * `customer_provided_config` *
+     `customer_provided_config.notebooklm_config.observability_config`
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** Optional. The list of fields to update. Supported fields: * `customer_provided_config` */
+      /**
+       * Optional. The list of fields to update. Supported fields: * `customer_provided_config` *
+       * `customer_provided_config.notebooklm_config.observability_config`
+       */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -5699,23 +5706,24 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Indicates which fields in the provided DataConnector to update. Supported field paths
-           * include: - refresh_interval - params - auto_run_disabled - action_config -
-           * action_config.action_params - action_config.service_name - destination_configs -
-           * blocking_reasons - sync_mode - incremental_sync_disabled - incremental_refresh_interval
-           * Note: Support for these fields may vary depending on the connector type. For example,
-           * not all connectors support `destination_configs`. If an unsupported or unknown field
-           * path is provided, the request will return an INVALID_ARGUMENT error.
+           * include: - `refresh_interval` - `params` - `auto_run_disabled` - `action_config` -
+           * `action_config.action_params` - `action_config.service_name` - `destination_configs` -
+           * `blocking_reasons` - `sync_mode` - `incremental_sync_disabled` -
+           * `incremental_refresh_interval` - `data_protection_policy` Note: Support for these
+           * fields may vary depending on the connector type. For example, not all connectors
+           * support `destination_configs`. If an unsupported or unknown field path is provided, the
+           * request will return an INVALID_ARGUMENT error.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Indicates which fields in the provided DataConnector to update. Supported field paths include: -
-         refresh_interval - params - auto_run_disabled - action_config - action_config.action_params -
-         action_config.service_name - destination_configs - blocking_reasons - sync_mode -
-         incremental_sync_disabled - incremental_refresh_interval Note: Support for these fields may vary
-         depending on the connector type. For example, not all connectors support `destination_configs`. If
-         an unsupported or unknown field path is provided, the request will return an INVALID_ARGUMENT
-         error.
+         `refresh_interval` - `params` - `auto_run_disabled` - `action_config` -
+         `action_config.action_params` - `action_config.service_name` - `destination_configs` -
+         `blocking_reasons` - `sync_mode` - `incremental_sync_disabled` - `incremental_refresh_interval` -
+         `data_protection_policy` Note: Support for these fields may vary depending on the connector type.
+         For example, not all connectors support `destination_configs`. If an unsupported or unknown field
+         path is provided, the request will return an INVALID_ARGUMENT error.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -5723,12 +5731,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
           /**
            * Indicates which fields in the provided DataConnector to update. Supported field paths
-           * include: - refresh_interval - params - auto_run_disabled - action_config -
-           * action_config.action_params - action_config.service_name - destination_configs -
-           * blocking_reasons - sync_mode - incremental_sync_disabled - incremental_refresh_interval
-           * Note: Support for these fields may vary depending on the connector type. For example,
-           * not all connectors support `destination_configs`. If an unsupported or unknown field
-           * path is provided, the request will return an INVALID_ARGUMENT error.
+           * include: - `refresh_interval` - `params` - `auto_run_disabled` - `action_config` -
+           * `action_config.action_params` - `action_config.service_name` - `destination_configs` -
+           * `blocking_reasons` - `sync_mode` - `incremental_sync_disabled` -
+           * `incremental_refresh_interval` - `data_protection_policy` Note: Support for these
+           * fields may vary depending on the connector type. For example, not all connectors
+           * support `destination_configs`. If an unsupported or unknown field path is provided, the
+           * request will return an INVALID_ARGUMENT error.
            */
           public UpdateDataConnector setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -6973,6 +6982,175 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         public class DataStores {
 
           /**
+           * Adds a group of patient IDs as a patient filter for the data store. Patient filters are empty by
+           * default when a data store is created, and are stored in a separate table. The data store must
+           * first be created, and must be a healthcare data store. The filter group must be a FHIR resource
+           * name of type Group, and the filter will be constructed from the direct members of the group which
+           * are Patient resources.
+           *
+           * Create a request for the method "dataStores.addPatientFilter".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link AddPatientFilter#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param dataStore Required. Full resource name of DataStore, such as
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+           *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+           *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore
+           *        already has a patient filter, an ALREADY_EXISTS error will be returned.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAddPatientFilterRequest}
+           * @return the request
+           */
+          public AddPatientFilter addPatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAddPatientFilterRequest content) throws java.io.IOException {
+            AddPatientFilter result = new AddPatientFilter(dataStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AddPatientFilter extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+dataStore}:addPatientFilter";
+
+            private final java.util.regex.Pattern DATA_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Adds a group of patient IDs as a patient filter for the data store. Patient filters are empty
+             * by default when a data store is created, and are stored in a separate table. The data store
+             * must first be created, and must be a healthcare data store. The filter group must be a FHIR
+             * resource name of type Group, and the filter will be constructed from the direct members of the
+             * group which are Patient resources.
+             *
+             * Create a request for the method "dataStores.addPatientFilter".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link AddPatientFilter#execute()} method to invoke the remote
+             * operation. <p> {@link AddPatientFilter#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param dataStore Required. Full resource name of DataStore, such as
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+           *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+           *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore
+           *        already has a patient filter, an ALREADY_EXISTS error will be returned.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAddPatientFilterRequest}
+             * @since 1.13
+             */
+            protected AddPatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAddPatientFilterRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public AddPatientFilter set$Xgafv(java.lang.String $Xgafv) {
+              return (AddPatientFilter) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AddPatientFilter setAccessToken(java.lang.String accessToken) {
+              return (AddPatientFilter) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AddPatientFilter setAlt(java.lang.String alt) {
+              return (AddPatientFilter) super.setAlt(alt);
+            }
+
+            @Override
+            public AddPatientFilter setCallback(java.lang.String callback) {
+              return (AddPatientFilter) super.setCallback(callback);
+            }
+
+            @Override
+            public AddPatientFilter setFields(java.lang.String fields) {
+              return (AddPatientFilter) super.setFields(fields);
+            }
+
+            @Override
+            public AddPatientFilter setKey(java.lang.String key) {
+              return (AddPatientFilter) super.setKey(key);
+            }
+
+            @Override
+            public AddPatientFilter setOauthToken(java.lang.String oauthToken) {
+              return (AddPatientFilter) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AddPatientFilter setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AddPatientFilter) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AddPatientFilter setQuotaUser(java.lang.String quotaUser) {
+              return (AddPatientFilter) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AddPatientFilter setUploadType(java.lang.String uploadType) {
+              return (AddPatientFilter) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AddPatientFilter setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AddPatientFilter) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of DataStore, such as `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does
+             * not have permission to access the DataStore, regardless of whether or not it exists,
+             * a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+             * NOT_FOUND error is returned. If the requested DataStore already has a patient filter,
+             * an ALREADY_EXISTS error will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataStore;
+
+            /** Required. Full resource name of DataStore, such as
+           `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+           If the caller does not have permission to access the DataStore, regardless of whether or not it
+           exists, a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           NOT_FOUND error is returned. If the requested DataStore already has a patient filter, an
+           ALREADY_EXISTS error will be returned.
+             */
+            public java.lang.String getDataStore() {
+              return dataStore;
+            }
+
+            /**
+             * Required. Full resource name of DataStore, such as `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does
+             * not have permission to access the DataStore, regardless of whether or not it exists,
+             * a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+             * NOT_FOUND error is returned. If the requested DataStore already has a patient filter,
+             * an ALREADY_EXISTS error will be returned.
+             */
+            public AddPatientFilter setDataStore(java.lang.String dataStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+              this.dataStore = dataStore;
+              return this;
+            }
+
+            @Override
+            public AddPatientFilter set(String parameterName, Object value) {
+              return (AddPatientFilter) super.set(parameterName, value);
+            }
+          }
+          /**
            * Completes the specified user input with keyword suggestions.
            *
            * Create a request for the method "dataStores.completeQuery".
@@ -7670,6 +7848,173 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes the entire patient filter for the data store. Patient filters are empty by default when a
+           * data store is created, and are stored in a separate table. The data store must first be created,
+           * and must be a healthcare data store. This method will fail if the data store does not have a
+           * patient filter.
+           *
+           * Create a request for the method "dataStores.deletePatientFilter".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link DeletePatientFilter#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param dataStore Required. Full resource name of DataStore, such as
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+           *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+           *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore does
+           *        not have a patient filter, a NOT_FOUND error will be returned.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDeletePatientFiltersRequest}
+           * @return the request
+           */
+          public DeletePatientFilter deletePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDeletePatientFiltersRequest content) throws java.io.IOException {
+            DeletePatientFilter result = new DeletePatientFilter(dataStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DeletePatientFilter extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+dataStore}:deletePatientFilter";
+
+            private final java.util.regex.Pattern DATA_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Deletes the entire patient filter for the data store. Patient filters are empty by default when
+             * a data store is created, and are stored in a separate table. The data store must first be
+             * created, and must be a healthcare data store. This method will fail if the data store does not
+             * have a patient filter.
+             *
+             * Create a request for the method "dataStores.deletePatientFilter".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link DeletePatientFilter#execute()} method to invoke the remote
+             * operation. <p> {@link DeletePatientFilter#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param dataStore Required. Full resource name of DataStore, such as
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+           *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+           *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore does
+           *        not have a patient filter, a NOT_FOUND error will be returned.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDeletePatientFiltersRequest}
+             * @since 1.13
+             */
+            protected DeletePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDeletePatientFiltersRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public DeletePatientFilter set$Xgafv(java.lang.String $Xgafv) {
+              return (DeletePatientFilter) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DeletePatientFilter setAccessToken(java.lang.String accessToken) {
+              return (DeletePatientFilter) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DeletePatientFilter setAlt(java.lang.String alt) {
+              return (DeletePatientFilter) super.setAlt(alt);
+            }
+
+            @Override
+            public DeletePatientFilter setCallback(java.lang.String callback) {
+              return (DeletePatientFilter) super.setCallback(callback);
+            }
+
+            @Override
+            public DeletePatientFilter setFields(java.lang.String fields) {
+              return (DeletePatientFilter) super.setFields(fields);
+            }
+
+            @Override
+            public DeletePatientFilter setKey(java.lang.String key) {
+              return (DeletePatientFilter) super.setKey(key);
+            }
+
+            @Override
+            public DeletePatientFilter setOauthToken(java.lang.String oauthToken) {
+              return (DeletePatientFilter) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DeletePatientFilter setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DeletePatientFilter) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DeletePatientFilter setQuotaUser(java.lang.String quotaUser) {
+              return (DeletePatientFilter) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DeletePatientFilter setUploadType(java.lang.String uploadType) {
+              return (DeletePatientFilter) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DeletePatientFilter setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DeletePatientFilter) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of DataStore, such as `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does
+             * not have permission to access the DataStore, regardless of whether or not it exists,
+             * a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+             * NOT_FOUND error is returned. If the requested DataStore does not have a patient
+             * filter, a NOT_FOUND error will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataStore;
+
+            /** Required. Full resource name of DataStore, such as
+           `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+           If the caller does not have permission to access the DataStore, regardless of whether or not it
+           exists, a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           NOT_FOUND error is returned. If the requested DataStore does not have a patient filter, a NOT_FOUND
+           error will be returned.
+             */
+            public java.lang.String getDataStore() {
+              return dataStore;
+            }
+
+            /**
+             * Required. Full resource name of DataStore, such as `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does
+             * not have permission to access the DataStore, regardless of whether or not it exists,
+             * a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+             * NOT_FOUND error is returned. If the requested DataStore does not have a patient
+             * filter, a NOT_FOUND error will be returned.
+             */
+            public DeletePatientFilter setDataStore(java.lang.String dataStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+              this.dataStore = dataStore;
+              return this;
+            }
+
+            @Override
+            public DeletePatientFilter set(String parameterName, Object value) {
+              return (DeletePatientFilter) super.set(parameterName, value);
             }
           }
           /**
@@ -8549,6 +8894,348 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Removes a group of patient IDs from the patient filter for the data store. Patient filters are
+           * empty by default when a data store is created, and are stored in a separate table. The data store
+           * must first be created, and must be a healthcare data store. This method will fail if the data
+           * store does not have a patient filter. The filter group must be a FHIR resource name of type
+           * Group, and the list of patient IDs to remove will be constructed from the direct members of the
+           * group which are Patient resources.
+           *
+           * Create a request for the method "dataStores.removePatientFilter".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link RemovePatientFilter#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param dataStore Required. Full resource name of DataStore, such as
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+           *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+           *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore does
+           *        not have a patient filter, a NOT_FOUND error will be returned
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRemovePatientFilterRequest}
+           * @return the request
+           */
+          public RemovePatientFilter removePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRemovePatientFilterRequest content) throws java.io.IOException {
+            RemovePatientFilter result = new RemovePatientFilter(dataStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class RemovePatientFilter extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+dataStore}:removePatientFilter";
+
+            private final java.util.regex.Pattern DATA_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Removes a group of patient IDs from the patient filter for the data store. Patient filters are
+             * empty by default when a data store is created, and are stored in a separate table. The data
+             * store must first be created, and must be a healthcare data store. This method will fail if the
+             * data store does not have a patient filter. The filter group must be a FHIR resource name of
+             * type Group, and the list of patient IDs to remove will be constructed from the direct members
+             * of the group which are Patient resources.
+             *
+             * Create a request for the method "dataStores.removePatientFilter".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link RemovePatientFilter#execute()} method to invoke the remote
+             * operation. <p> {@link RemovePatientFilter#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param dataStore Required. Full resource name of DataStore, such as
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+           *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+           *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore does
+           *        not have a patient filter, a NOT_FOUND error will be returned
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRemovePatientFilterRequest}
+             * @since 1.13
+             */
+            protected RemovePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRemovePatientFilterRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public RemovePatientFilter set$Xgafv(java.lang.String $Xgafv) {
+              return (RemovePatientFilter) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public RemovePatientFilter setAccessToken(java.lang.String accessToken) {
+              return (RemovePatientFilter) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public RemovePatientFilter setAlt(java.lang.String alt) {
+              return (RemovePatientFilter) super.setAlt(alt);
+            }
+
+            @Override
+            public RemovePatientFilter setCallback(java.lang.String callback) {
+              return (RemovePatientFilter) super.setCallback(callback);
+            }
+
+            @Override
+            public RemovePatientFilter setFields(java.lang.String fields) {
+              return (RemovePatientFilter) super.setFields(fields);
+            }
+
+            @Override
+            public RemovePatientFilter setKey(java.lang.String key) {
+              return (RemovePatientFilter) super.setKey(key);
+            }
+
+            @Override
+            public RemovePatientFilter setOauthToken(java.lang.String oauthToken) {
+              return (RemovePatientFilter) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public RemovePatientFilter setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (RemovePatientFilter) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public RemovePatientFilter setQuotaUser(java.lang.String quotaUser) {
+              return (RemovePatientFilter) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public RemovePatientFilter setUploadType(java.lang.String uploadType) {
+              return (RemovePatientFilter) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public RemovePatientFilter setUploadProtocol(java.lang.String uploadProtocol) {
+              return (RemovePatientFilter) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of DataStore, such as `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does
+             * not have permission to access the DataStore, regardless of whether or not it exists,
+             * a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+             * NOT_FOUND error is returned. If the requested DataStore does not have a patient
+             * filter, a NOT_FOUND error will be returned
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataStore;
+
+            /** Required. Full resource name of DataStore, such as
+           `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+           If the caller does not have permission to access the DataStore, regardless of whether or not it
+           exists, a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           NOT_FOUND error is returned. If the requested DataStore does not have a patient filter, a NOT_FOUND
+           error will be returned
+             */
+            public java.lang.String getDataStore() {
+              return dataStore;
+            }
+
+            /**
+             * Required. Full resource name of DataStore, such as `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does
+             * not have permission to access the DataStore, regardless of whether or not it exists,
+             * a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+             * NOT_FOUND error is returned. If the requested DataStore does not have a patient
+             * filter, a NOT_FOUND error will be returned
+             */
+            public RemovePatientFilter setDataStore(java.lang.String dataStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+              this.dataStore = dataStore;
+              return this;
+            }
+
+            @Override
+            public RemovePatientFilter set(String parameterName, Object value) {
+              return (RemovePatientFilter) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Replaces the patient filter for the data store. This method is essentially a combination of
+           * DeletePatientFilters and AddPatientFilter. Patient filters are empty by default when a data store
+           * is created, and are stored in a separate table. The data store must first be created, and must be
+           * a healthcare data store. This method will fail if the data store does not have a patient filter.
+           * The filter group must be a FHIR resource name of type Group, and the new filter will be
+           * constructed from the direct members of the group which are Patient resources.
+           *
+           * Create a request for the method "dataStores.replacePatientFilter".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link ReplacePatientFilter#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param dataStore Required. Full resource name of DataStore, such as
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+           *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+           *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore
+           *        already has a patient filter, an ALREADY_EXISTS error will be returned.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReplacePatientFilterRequest}
+           * @return the request
+           */
+          public ReplacePatientFilter replacePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReplacePatientFilterRequest content) throws java.io.IOException {
+            ReplacePatientFilter result = new ReplacePatientFilter(dataStore, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ReplacePatientFilter extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1alpha/{+dataStore}:replacePatientFilter";
+
+            private final java.util.regex.Pattern DATA_STORE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+
+            /**
+             * Replaces the patient filter for the data store. This method is essentially a combination of
+             * DeletePatientFilters and AddPatientFilter. Patient filters are empty by default when a data
+             * store is created, and are stored in a separate table. The data store must first be created, and
+             * must be a healthcare data store. This method will fail if the data store does not have a
+             * patient filter. The filter group must be a FHIR resource name of type Group, and the new filter
+             * will be constructed from the direct members of the group which are Patient resources.
+             *
+             * Create a request for the method "dataStores.replacePatientFilter".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link ReplacePatientFilter#execute()} method to invoke the
+             * remote operation. <p> {@link ReplacePatientFilter#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param dataStore Required. Full resource name of DataStore, such as
+           *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+           *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+           *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+           *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore
+           *        already has a patient filter, an ALREADY_EXISTS error will be returned.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReplacePatientFilterRequest}
+             * @since 1.13
+             */
+            protected ReplacePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReplacePatientFilterRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+              this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public ReplacePatientFilter set$Xgafv(java.lang.String $Xgafv) {
+              return (ReplacePatientFilter) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ReplacePatientFilter setAccessToken(java.lang.String accessToken) {
+              return (ReplacePatientFilter) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ReplacePatientFilter setAlt(java.lang.String alt) {
+              return (ReplacePatientFilter) super.setAlt(alt);
+            }
+
+            @Override
+            public ReplacePatientFilter setCallback(java.lang.String callback) {
+              return (ReplacePatientFilter) super.setCallback(callback);
+            }
+
+            @Override
+            public ReplacePatientFilter setFields(java.lang.String fields) {
+              return (ReplacePatientFilter) super.setFields(fields);
+            }
+
+            @Override
+            public ReplacePatientFilter setKey(java.lang.String key) {
+              return (ReplacePatientFilter) super.setKey(key);
+            }
+
+            @Override
+            public ReplacePatientFilter setOauthToken(java.lang.String oauthToken) {
+              return (ReplacePatientFilter) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ReplacePatientFilter setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ReplacePatientFilter) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ReplacePatientFilter setQuotaUser(java.lang.String quotaUser) {
+              return (ReplacePatientFilter) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ReplacePatientFilter setUploadType(java.lang.String uploadType) {
+              return (ReplacePatientFilter) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ReplacePatientFilter setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ReplacePatientFilter) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Full resource name of DataStore, such as `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does
+             * not have permission to access the DataStore, regardless of whether or not it exists,
+             * a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+             * NOT_FOUND error is returned. If the requested DataStore already has a patient filter,
+             * an ALREADY_EXISTS error will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String dataStore;
+
+            /** Required. Full resource name of DataStore, such as
+           `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+           If the caller does not have permission to access the DataStore, regardless of whether or not it
+           exists, a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           NOT_FOUND error is returned. If the requested DataStore already has a patient filter, an
+           ALREADY_EXISTS error will be returned.
+             */
+            public java.lang.String getDataStore() {
+              return dataStore;
+            }
+
+            /**
+             * Required. Full resource name of DataStore, such as `projects/{project}/locations/{loc
+             * ation}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does
+             * not have permission to access the DataStore, regardless of whether or not it exists,
+             * a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+             * NOT_FOUND error is returned. If the requested DataStore already has a patient filter,
+             * an ALREADY_EXISTS error will be returned.
+             */
+            public ReplacePatientFilter setDataStore(java.lang.String dataStore) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                    "Parameter dataStore must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
+              }
+              this.dataStore = dataStore;
+              return this;
+            }
+
+            @Override
+            public ReplacePatientFilter set(String parameterName, Object value) {
+              return (ReplacePatientFilter) super.set(parameterName, value);
+            }
+          }
+          /**
            * Trains a custom model.
            *
            * Create a request for the method "dataStores.trainCustomModel".
@@ -9229,21 +9916,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
-               * unspecified.
+               * The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC
+               * if unspecified.
                */
               @com.google.api.client.util.Key
               private java.lang.String view;
 
-              /** The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if unspecified.
+              /** The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC if unspecified.
                */
               public java.lang.String getView() {
                 return view;
               }
 
               /**
-               * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
-               * unspecified.
+               * The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC
+               * if unspecified.
                */
               public Get setView(java.lang.String view) {
                 this.view = view;
@@ -9389,21 +10076,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
-               * unspecified.
+               * The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC
+               * if unspecified.
                */
               @com.google.api.client.util.Key
               private java.lang.String view;
 
-              /** The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if unspecified.
+              /** The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC if unspecified.
                */
               public java.lang.String getView() {
                 return view;
               }
 
               /**
-               * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
-               * unspecified.
+               * The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC
+               * if unspecified.
                */
               public List setView(java.lang.String view) {
                 this.view = view;
@@ -26371,14 +27058,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Optional. Maximum number of AgentViewss to return. If unspecified, defaults to 100.
+               * Optional. Maximum number of AgentViews to return. If unspecified, defaults to 100.
                * The maximum allowed value is 1000; anything above that will be coerced down to
                * 1000.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Optional. Maximum number of AgentViewss to return. If unspecified, defaults to 100. The maximum
+              /** Optional. Maximum number of AgentViews to return. If unspecified, defaults to 100. The maximum
              allowed value is 1000; anything above that will be coerced down to 1000.
                */
               public java.lang.Integer getPageSize() {
@@ -26386,7 +27073,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * Optional. Maximum number of AgentViewss to return. If unspecified, defaults to 100.
+               * Optional. Maximum number of AgentViews to return. If unspecified, defaults to 100.
                * The maximum allowed value is 1000; anything above that will be coerced down to
                * 1000.
                */
@@ -27208,6 +27895,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   return this;
                 }
 
+                /**
+                 * Optional. The Revision ID of the Agent to disable. If not specified, the latest
+                 * revision will be disabled.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String revisionId;
+
+                /** Optional. The Revision ID of the Agent to disable. If not specified, the latest revision will be
+               disabled.
+                 */
+                public java.lang.String getRevisionId() {
+                  return revisionId;
+                }
+
+                /**
+                 * Optional. The Revision ID of the Agent to disable. If not specified, the latest
+                 * revision will be disabled.
+                 */
+                public DisableAgent setRevisionId(java.lang.String revisionId) {
+                  this.revisionId = revisionId;
+                  return this;
+                }
+
                 @Override
                 public DisableAgent set(String parameterName, Object value) {
                   return (DisableAgent) super.set(parameterName, value);
@@ -27348,6 +28058,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                         "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
                   }
                   this.name = name;
+                  return this;
+                }
+
+                /**
+                 * Optional. The Revision ID of the Agent to enable. If not specified, the latest
+                 * revision will be enabled.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String revisionId;
+
+                /** Optional. The Revision ID of the Agent to enable. If not specified, the latest revision will be
+               enabled.
+                 */
+                public java.lang.String getRevisionId() {
+                  return revisionId;
+                }
+
+                /**
+                 * Optional. The Revision ID of the Agent to enable. If not specified, the latest
+                 * revision will be enabled.
+                 */
+                public EnableAgent setRevisionId(java.lang.String revisionId) {
+                  this.revisionId = revisionId;
                   return this;
                 }
 
@@ -36633,6 +37366,175 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       public class DataStores {
 
         /**
+         * Adds a group of patient IDs as a patient filter for the data store. Patient filters are empty by
+         * default when a data store is created, and are stored in a separate table. The data store must
+         * first be created, and must be a healthcare data store. The filter group must be a FHIR resource
+         * name of type Group, and the filter will be constructed from the direct members of the group which
+         * are Patient resources.
+         *
+         * Create a request for the method "dataStores.addPatientFilter".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link AddPatientFilter#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param dataStore Required. Full resource name of DataStore, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+         *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+         *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+         *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore
+         *        already has a patient filter, an ALREADY_EXISTS error will be returned.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAddPatientFilterRequest}
+         * @return the request
+         */
+        public AddPatientFilter addPatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAddPatientFilterRequest content) throws java.io.IOException {
+          AddPatientFilter result = new AddPatientFilter(dataStore, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AddPatientFilter extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1alpha/{+dataStore}:addPatientFilter";
+
+          private final java.util.regex.Pattern DATA_STORE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+
+          /**
+           * Adds a group of patient IDs as a patient filter for the data store. Patient filters are empty
+           * by default when a data store is created, and are stored in a separate table. The data store
+           * must first be created, and must be a healthcare data store. The filter group must be a FHIR
+           * resource name of type Group, and the filter will be constructed from the direct members of the
+           * group which are Patient resources.
+           *
+           * Create a request for the method "dataStores.addPatientFilter".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link AddPatientFilter#execute()} method to invoke the remote
+           * operation. <p> {@link AddPatientFilter#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param dataStore Required. Full resource name of DataStore, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+         *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+         *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+         *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore
+         *        already has a patient filter, an ALREADY_EXISTS error will be returned.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAddPatientFilterRequest}
+           * @since 1.13
+           */
+          protected AddPatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAddPatientFilterRequest content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+            this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                  "Parameter dataStore must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+            }
+          }
+
+          @Override
+          public AddPatientFilter set$Xgafv(java.lang.String $Xgafv) {
+            return (AddPatientFilter) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AddPatientFilter setAccessToken(java.lang.String accessToken) {
+            return (AddPatientFilter) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AddPatientFilter setAlt(java.lang.String alt) {
+            return (AddPatientFilter) super.setAlt(alt);
+          }
+
+          @Override
+          public AddPatientFilter setCallback(java.lang.String callback) {
+            return (AddPatientFilter) super.setCallback(callback);
+          }
+
+          @Override
+          public AddPatientFilter setFields(java.lang.String fields) {
+            return (AddPatientFilter) super.setFields(fields);
+          }
+
+          @Override
+          public AddPatientFilter setKey(java.lang.String key) {
+            return (AddPatientFilter) super.setKey(key);
+          }
+
+          @Override
+          public AddPatientFilter setOauthToken(java.lang.String oauthToken) {
+            return (AddPatientFilter) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AddPatientFilter setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AddPatientFilter) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AddPatientFilter setQuotaUser(java.lang.String quotaUser) {
+            return (AddPatientFilter) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AddPatientFilter setUploadType(java.lang.String uploadType) {
+            return (AddPatientFilter) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AddPatientFilter setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AddPatientFilter) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of DataStore, such as `projects/{project}/locations/{locat
+           * ion}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does not
+           * have permission to access the DataStore, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           * NOT_FOUND error is returned. If the requested DataStore already has a patient filter,
+           * an ALREADY_EXISTS error will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dataStore;
+
+          /** Required. Full resource name of DataStore, such as
+         `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+         If the caller does not have permission to access the DataStore, regardless of whether or not it
+         exists, a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+         NOT_FOUND error is returned. If the requested DataStore already has a patient filter, an
+         ALREADY_EXISTS error will be returned.
+           */
+          public java.lang.String getDataStore() {
+            return dataStore;
+          }
+
+          /**
+           * Required. Full resource name of DataStore, such as `projects/{project}/locations/{locat
+           * ion}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does not
+           * have permission to access the DataStore, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           * NOT_FOUND error is returned. If the requested DataStore already has a patient filter,
+           * an ALREADY_EXISTS error will be returned.
+           */
+          public AddPatientFilter setDataStore(java.lang.String dataStore) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                  "Parameter dataStore must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+            }
+            this.dataStore = dataStore;
+            return this;
+          }
+
+          @Override
+          public AddPatientFilter set(String parameterName, Object value) {
+            return (AddPatientFilter) super.set(parameterName, value);
+          }
+        }
+        /**
          * Completes the specified user input with keyword suggestions.
          *
          * Create a request for the method "dataStores.completeQuery".
@@ -37328,6 +38230,173 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes the entire patient filter for the data store. Patient filters are empty by default when a
+         * data store is created, and are stored in a separate table. The data store must first be created,
+         * and must be a healthcare data store. This method will fail if the data store does not have a
+         * patient filter.
+         *
+         * Create a request for the method "dataStores.deletePatientFilter".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link DeletePatientFilter#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param dataStore Required. Full resource name of DataStore, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+         *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+         *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+         *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore does
+         *        not have a patient filter, a NOT_FOUND error will be returned.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDeletePatientFiltersRequest}
+         * @return the request
+         */
+        public DeletePatientFilter deletePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDeletePatientFiltersRequest content) throws java.io.IOException {
+          DeletePatientFilter result = new DeletePatientFilter(dataStore, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DeletePatientFilter extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1alpha/{+dataStore}:deletePatientFilter";
+
+          private final java.util.regex.Pattern DATA_STORE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+
+          /**
+           * Deletes the entire patient filter for the data store. Patient filters are empty by default when
+           * a data store is created, and are stored in a separate table. The data store must first be
+           * created, and must be a healthcare data store. This method will fail if the data store does not
+           * have a patient filter.
+           *
+           * Create a request for the method "dataStores.deletePatientFilter".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link DeletePatientFilter#execute()} method to invoke the remote
+           * operation. <p> {@link DeletePatientFilter#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param dataStore Required. Full resource name of DataStore, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+         *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+         *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+         *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore does
+         *        not have a patient filter, a NOT_FOUND error will be returned.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDeletePatientFiltersRequest}
+           * @since 1.13
+           */
+          protected DeletePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDeletePatientFiltersRequest content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+            this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                  "Parameter dataStore must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+            }
+          }
+
+          @Override
+          public DeletePatientFilter set$Xgafv(java.lang.String $Xgafv) {
+            return (DeletePatientFilter) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DeletePatientFilter setAccessToken(java.lang.String accessToken) {
+            return (DeletePatientFilter) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DeletePatientFilter setAlt(java.lang.String alt) {
+            return (DeletePatientFilter) super.setAlt(alt);
+          }
+
+          @Override
+          public DeletePatientFilter setCallback(java.lang.String callback) {
+            return (DeletePatientFilter) super.setCallback(callback);
+          }
+
+          @Override
+          public DeletePatientFilter setFields(java.lang.String fields) {
+            return (DeletePatientFilter) super.setFields(fields);
+          }
+
+          @Override
+          public DeletePatientFilter setKey(java.lang.String key) {
+            return (DeletePatientFilter) super.setKey(key);
+          }
+
+          @Override
+          public DeletePatientFilter setOauthToken(java.lang.String oauthToken) {
+            return (DeletePatientFilter) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DeletePatientFilter setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DeletePatientFilter) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DeletePatientFilter setQuotaUser(java.lang.String quotaUser) {
+            return (DeletePatientFilter) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DeletePatientFilter setUploadType(java.lang.String uploadType) {
+            return (DeletePatientFilter) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DeletePatientFilter setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DeletePatientFilter) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of DataStore, such as `projects/{project}/locations/{locat
+           * ion}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does not
+           * have permission to access the DataStore, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           * NOT_FOUND error is returned. If the requested DataStore does not have a patient filter,
+           * a NOT_FOUND error will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dataStore;
+
+          /** Required. Full resource name of DataStore, such as
+         `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+         If the caller does not have permission to access the DataStore, regardless of whether or not it
+         exists, a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+         NOT_FOUND error is returned. If the requested DataStore does not have a patient filter, a NOT_FOUND
+         error will be returned.
+           */
+          public java.lang.String getDataStore() {
+            return dataStore;
+          }
+
+          /**
+           * Required. Full resource name of DataStore, such as `projects/{project}/locations/{locat
+           * ion}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does not
+           * have permission to access the DataStore, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           * NOT_FOUND error is returned. If the requested DataStore does not have a patient filter,
+           * a NOT_FOUND error will be returned.
+           */
+          public DeletePatientFilter setDataStore(java.lang.String dataStore) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                  "Parameter dataStore must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+            }
+            this.dataStore = dataStore;
+            return this;
+          }
+
+          @Override
+          public DeletePatientFilter set(String parameterName, Object value) {
+            return (DeletePatientFilter) super.set(parameterName, value);
           }
         }
         /**
@@ -38205,6 +39274,348 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
         }
         /**
+         * Removes a group of patient IDs from the patient filter for the data store. Patient filters are
+         * empty by default when a data store is created, and are stored in a separate table. The data store
+         * must first be created, and must be a healthcare data store. This method will fail if the data
+         * store does not have a patient filter. The filter group must be a FHIR resource name of type
+         * Group, and the list of patient IDs to remove will be constructed from the direct members of the
+         * group which are Patient resources.
+         *
+         * Create a request for the method "dataStores.removePatientFilter".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link RemovePatientFilter#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param dataStore Required. Full resource name of DataStore, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+         *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+         *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+         *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore does
+         *        not have a patient filter, a NOT_FOUND error will be returned
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRemovePatientFilterRequest}
+         * @return the request
+         */
+        public RemovePatientFilter removePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRemovePatientFilterRequest content) throws java.io.IOException {
+          RemovePatientFilter result = new RemovePatientFilter(dataStore, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RemovePatientFilter extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1alpha/{+dataStore}:removePatientFilter";
+
+          private final java.util.regex.Pattern DATA_STORE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+
+          /**
+           * Removes a group of patient IDs from the patient filter for the data store. Patient filters are
+           * empty by default when a data store is created, and are stored in a separate table. The data
+           * store must first be created, and must be a healthcare data store. This method will fail if the
+           * data store does not have a patient filter. The filter group must be a FHIR resource name of
+           * type Group, and the list of patient IDs to remove will be constructed from the direct members
+           * of the group which are Patient resources.
+           *
+           * Create a request for the method "dataStores.removePatientFilter".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link RemovePatientFilter#execute()} method to invoke the remote
+           * operation. <p> {@link RemovePatientFilter#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param dataStore Required. Full resource name of DataStore, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+         *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+         *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+         *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore does
+         *        not have a patient filter, a NOT_FOUND error will be returned
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRemovePatientFilterRequest}
+           * @since 1.13
+           */
+          protected RemovePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaRemovePatientFilterRequest content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+            this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                  "Parameter dataStore must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+            }
+          }
+
+          @Override
+          public RemovePatientFilter set$Xgafv(java.lang.String $Xgafv) {
+            return (RemovePatientFilter) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RemovePatientFilter setAccessToken(java.lang.String accessToken) {
+            return (RemovePatientFilter) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RemovePatientFilter setAlt(java.lang.String alt) {
+            return (RemovePatientFilter) super.setAlt(alt);
+          }
+
+          @Override
+          public RemovePatientFilter setCallback(java.lang.String callback) {
+            return (RemovePatientFilter) super.setCallback(callback);
+          }
+
+          @Override
+          public RemovePatientFilter setFields(java.lang.String fields) {
+            return (RemovePatientFilter) super.setFields(fields);
+          }
+
+          @Override
+          public RemovePatientFilter setKey(java.lang.String key) {
+            return (RemovePatientFilter) super.setKey(key);
+          }
+
+          @Override
+          public RemovePatientFilter setOauthToken(java.lang.String oauthToken) {
+            return (RemovePatientFilter) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RemovePatientFilter setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RemovePatientFilter) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RemovePatientFilter setQuotaUser(java.lang.String quotaUser) {
+            return (RemovePatientFilter) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RemovePatientFilter setUploadType(java.lang.String uploadType) {
+            return (RemovePatientFilter) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RemovePatientFilter setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RemovePatientFilter) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of DataStore, such as `projects/{project}/locations/{locat
+           * ion}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does not
+           * have permission to access the DataStore, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           * NOT_FOUND error is returned. If the requested DataStore does not have a patient filter,
+           * a NOT_FOUND error will be returned
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dataStore;
+
+          /** Required. Full resource name of DataStore, such as
+         `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+         If the caller does not have permission to access the DataStore, regardless of whether or not it
+         exists, a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+         NOT_FOUND error is returned. If the requested DataStore does not have a patient filter, a NOT_FOUND
+         error will be returned
+           */
+          public java.lang.String getDataStore() {
+            return dataStore;
+          }
+
+          /**
+           * Required. Full resource name of DataStore, such as `projects/{project}/locations/{locat
+           * ion}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does not
+           * have permission to access the DataStore, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           * NOT_FOUND error is returned. If the requested DataStore does not have a patient filter,
+           * a NOT_FOUND error will be returned
+           */
+          public RemovePatientFilter setDataStore(java.lang.String dataStore) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                  "Parameter dataStore must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+            }
+            this.dataStore = dataStore;
+            return this;
+          }
+
+          @Override
+          public RemovePatientFilter set(String parameterName, Object value) {
+            return (RemovePatientFilter) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Replaces the patient filter for the data store. This method is essentially a combination of
+         * DeletePatientFilters and AddPatientFilter. Patient filters are empty by default when a data store
+         * is created, and are stored in a separate table. The data store must first be created, and must be
+         * a healthcare data store. This method will fail if the data store does not have a patient filter.
+         * The filter group must be a FHIR resource name of type Group, and the new filter will be
+         * constructed from the direct members of the group which are Patient resources.
+         *
+         * Create a request for the method "dataStores.replacePatientFilter".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link ReplacePatientFilter#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param dataStore Required. Full resource name of DataStore, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+         *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+         *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+         *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore
+         *        already has a patient filter, an ALREADY_EXISTS error will be returned.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReplacePatientFilterRequest}
+         * @return the request
+         */
+        public ReplacePatientFilter replacePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReplacePatientFilterRequest content) throws java.io.IOException {
+          ReplacePatientFilter result = new ReplacePatientFilter(dataStore, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ReplacePatientFilter extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1alpha/{+dataStore}:replacePatientFilter";
+
+          private final java.util.regex.Pattern DATA_STORE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+
+          /**
+           * Replaces the patient filter for the data store. This method is essentially a combination of
+           * DeletePatientFilters and AddPatientFilter. Patient filters are empty by default when a data
+           * store is created, and are stored in a separate table. The data store must first be created, and
+           * must be a healthcare data store. This method will fail if the data store does not have a
+           * patient filter. The filter group must be a FHIR resource name of type Group, and the new filter
+           * will be constructed from the direct members of the group which are Patient resources.
+           *
+           * Create a request for the method "dataStores.replacePatientFilter".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link ReplacePatientFilter#execute()} method to invoke the
+           * remote operation. <p> {@link ReplacePatientFilter#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param dataStore Required. Full resource name of DataStore, such as
+         *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
+         *        e_id}`. If the caller does not have permission to access the DataStore, regardless of
+         *        whether or not it exists, a PERMISSION_DENIED error is returned. If the requested
+         *        DataStore does not exist, a NOT_FOUND error is returned. If the requested DataStore
+         *        already has a patient filter, an ALREADY_EXISTS error will be returned.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReplacePatientFilterRequest}
+           * @since 1.13
+           */
+          protected ReplacePatientFilter(java.lang.String dataStore, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaReplacePatientFilterRequest content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+            this.dataStore = com.google.api.client.util.Preconditions.checkNotNull(dataStore, "Required parameter dataStore must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                  "Parameter dataStore must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+            }
+          }
+
+          @Override
+          public ReplacePatientFilter set$Xgafv(java.lang.String $Xgafv) {
+            return (ReplacePatientFilter) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ReplacePatientFilter setAccessToken(java.lang.String accessToken) {
+            return (ReplacePatientFilter) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ReplacePatientFilter setAlt(java.lang.String alt) {
+            return (ReplacePatientFilter) super.setAlt(alt);
+          }
+
+          @Override
+          public ReplacePatientFilter setCallback(java.lang.String callback) {
+            return (ReplacePatientFilter) super.setCallback(callback);
+          }
+
+          @Override
+          public ReplacePatientFilter setFields(java.lang.String fields) {
+            return (ReplacePatientFilter) super.setFields(fields);
+          }
+
+          @Override
+          public ReplacePatientFilter setKey(java.lang.String key) {
+            return (ReplacePatientFilter) super.setKey(key);
+          }
+
+          @Override
+          public ReplacePatientFilter setOauthToken(java.lang.String oauthToken) {
+            return (ReplacePatientFilter) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ReplacePatientFilter setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ReplacePatientFilter) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ReplacePatientFilter setQuotaUser(java.lang.String quotaUser) {
+            return (ReplacePatientFilter) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ReplacePatientFilter setUploadType(java.lang.String uploadType) {
+            return (ReplacePatientFilter) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ReplacePatientFilter setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ReplacePatientFilter) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Full resource name of DataStore, such as `projects/{project}/locations/{locat
+           * ion}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does not
+           * have permission to access the DataStore, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           * NOT_FOUND error is returned. If the requested DataStore already has a patient filter,
+           * an ALREADY_EXISTS error will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String dataStore;
+
+          /** Required. Full resource name of DataStore, such as
+         `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+         If the caller does not have permission to access the DataStore, regardless of whether or not it
+         exists, a PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+         NOT_FOUND error is returned. If the requested DataStore already has a patient filter, an
+         ALREADY_EXISTS error will be returned.
+           */
+          public java.lang.String getDataStore() {
+            return dataStore;
+          }
+
+          /**
+           * Required. Full resource name of DataStore, such as `projects/{project}/locations/{locat
+           * ion}/collections/{collection_id}/dataStores/{data_store_id}`. If the caller does not
+           * have permission to access the DataStore, regardless of whether or not it exists, a
+           * PERMISSION_DENIED error is returned. If the requested DataStore does not exist, a
+           * NOT_FOUND error is returned. If the requested DataStore already has a patient filter,
+           * an ALREADY_EXISTS error will be returned.
+           */
+          public ReplacePatientFilter setDataStore(java.lang.String dataStore) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(DATA_STORE_PATTERN.matcher(dataStore).matches(),
+                  "Parameter dataStore must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
+            }
+            this.dataStore = dataStore;
+            return this;
+          }
+
+          @Override
+          public ReplacePatientFilter set(String parameterName, Object value) {
+            return (ReplacePatientFilter) super.set(parameterName, value);
+          }
+        }
+        /**
          * Updates the DocumentProcessingConfig. DocumentProcessingConfig is a singleon resource of
          * DataStore. It's empty when DataStore is created. The first call to this method will set up
          * DocumentProcessingConfig.
@@ -38739,20 +40150,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+             * The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC if
              * unspecified.
              */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if unspecified.
+            /** The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC if unspecified.
              */
             public java.lang.String getView() {
               return view;
             }
 
             /**
-             * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+             * The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC if
              * unspecified.
              */
             public Get setView(java.lang.String view) {
@@ -38899,20 +40310,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+             * The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC if
              * unspecified.
              */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if unspecified.
+            /** The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC if unspecified.
              */
             public java.lang.String getView() {
               return view;
             }
 
             /**
-             * The view to apply to the returned Branch. Defaults to Branch.BranchView.BASIC if
+             * The view to apply to the returned Branch. Defaults to BranchView.BRANCH_VIEW_BASIC if
              * unspecified.
              */
             public List setView(java.lang.String view) {

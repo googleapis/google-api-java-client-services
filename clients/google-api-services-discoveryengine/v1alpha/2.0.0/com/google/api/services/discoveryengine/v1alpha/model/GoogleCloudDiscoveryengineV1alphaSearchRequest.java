@@ -198,13 +198,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * Optional. The categories associated with a category page. Must be set for category navigation
    * queries to achieve good search quality. The format should be the same as
-   * UserEvent.PageInfo.page_category. This field is the equivalent of the query for browse
-   * (navigation) queries. It's used by the browse model when the query is empty. If the field is
-   * empty, it will not be used by the browse model. If the field contains more than one element,
-   * only the first element will be used. To represent full path of a category, use '>' character to
-   * separate different hierarchies. If '>' is part of the category name, replace it with other
-   * character(s). For example, `Graphics Cards > RTX>4090 > Founders Edition` where "RTX > 4090"
-   * represents one level, can be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
+   * PageInfo.page_category. This field is the equivalent of the query for browse (navigation)
+   * queries. It's used by the browse model when the query is empty. If the field is empty, it will
+   * not be used by the browse model. If the field contains more than one element, only the first
+   * element will be used. To represent full path of a category, use '>' character to separate
+   * different hierarchies. If '>' is part of the category name, replace it with other character(s).
+   * For example, `Graphics Cards > RTX>4090 > Founders Edition` where "RTX > 4090" represents one
+   * level, can be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -857,13 +857,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * Optional. The categories associated with a category page. Must be set for category navigation
    * queries to achieve good search quality. The format should be the same as
-   * UserEvent.PageInfo.page_category. This field is the equivalent of the query for browse
-   * (navigation) queries. It's used by the browse model when the query is empty. If the field is
-   * empty, it will not be used by the browse model. If the field contains more than one element,
-   * only the first element will be used. To represent full path of a category, use '>' character to
-   * separate different hierarchies. If '>' is part of the category name, replace it with other
-   * character(s). For example, `Graphics Cards > RTX>4090 > Founders Edition` where "RTX > 4090"
-   * represents one level, can be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
+   * PageInfo.page_category. This field is the equivalent of the query for browse (navigation)
+   * queries. It's used by the browse model when the query is empty. If the field is empty, it will
+   * not be used by the browse model. If the field contains more than one element, only the first
+   * element will be used. To represent full path of a category, use '>' character to separate
+   * different hierarchies. If '>' is part of the category name, replace it with other character(s).
+   * For example, `Graphics Cards > RTX>4090 > Founders Edition` where "RTX > 4090" represents one
+   * level, can be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPageCategories() {
@@ -873,13 +873,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * Optional. The categories associated with a category page. Must be set for category navigation
    * queries to achieve good search quality. The format should be the same as
-   * UserEvent.PageInfo.page_category. This field is the equivalent of the query for browse
-   * (navigation) queries. It's used by the browse model when the query is empty. If the field is
-   * empty, it will not be used by the browse model. If the field contains more than one element,
-   * only the first element will be used. To represent full path of a category, use '>' character to
-   * separate different hierarchies. If '>' is part of the category name, replace it with other
-   * character(s). For example, `Graphics Cards > RTX>4090 > Founders Edition` where "RTX > 4090"
-   * represents one level, can be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
+   * PageInfo.page_category. This field is the equivalent of the query for browse (navigation)
+   * queries. It's used by the browse model when the query is empty. If the field is empty, it will
+   * not be used by the browse model. If the field contains more than one element, only the first
+   * element will be used. To represent full path of a category, use '>' character to separate
+   * different hierarchies. If '>' is part of the category name, replace it with other character(s).
+   * For example, `Graphics Cards > RTX>4090 > Founders Edition` where "RTX > 4090" represents one
+   * level, can be rewritten as `Graphics Cards > RTX_4090 > Founders Edition`
    * @param pageCategories pageCategories or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setPageCategories(java.util.List<java.lang.String> pageCategories) {

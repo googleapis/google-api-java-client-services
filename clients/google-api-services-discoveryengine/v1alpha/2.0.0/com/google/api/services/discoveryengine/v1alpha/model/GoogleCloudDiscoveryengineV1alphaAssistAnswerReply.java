@@ -39,8 +39,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswerReply extends co
   /**
    * Output only. When set, uniquely identifies a reply within the `AssistAnswer` resource. During
    * an AssistantService.StreamAssist call, multiple `Reply` messages with the same ID can occur
-   * within the response stream (across multiple AssistantService.StreamAssistResponse messages).
-   * These represent parts of a single `Reply` message in the final `AssistAnswer` resource.
+   * within the response stream (across multiple StreamAssistResponse messages). These represent
+   * parts of a single `Reply` message in the final `AssistAnswer` resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswerReply extends co
   /**
    * Output only. When set, uniquely identifies a reply within the `AssistAnswer` resource. During
    * an AssistantService.StreamAssist call, multiple `Reply` messages with the same ID can occur
-   * within the response stream (across multiple AssistantService.StreamAssistResponse messages).
-   * These represent parts of a single `Reply` message in the final `AssistAnswer` resource.
+   * within the response stream (across multiple StreamAssistResponse messages). These represent
+   * parts of a single `Reply` message in the final `AssistAnswer` resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplyId() {
@@ -77,8 +77,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswerReply extends co
   /**
    * Output only. When set, uniquely identifies a reply within the `AssistAnswer` resource. During
    * an AssistantService.StreamAssist call, multiple `Reply` messages with the same ID can occur
-   * within the response stream (across multiple AssistantService.StreamAssistResponse messages).
-   * These represent parts of a single `Reply` message in the final `AssistAnswer` resource.
+   * within the response stream (across multiple StreamAssistResponse messages). These represent
+   * parts of a single `Reply` message in the final `AssistAnswer` resource.
    * @param replyId replyId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAssistAnswerReply setReplyId(java.lang.String replyId) {

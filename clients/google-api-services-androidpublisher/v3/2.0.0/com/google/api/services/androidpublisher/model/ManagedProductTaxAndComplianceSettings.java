@@ -59,6 +59,13 @@ public final class ManagedProductTaxAndComplianceSettings extends com.google.api
   private java.lang.String productTaxCategoryCode;
 
   /**
+   * Regional age rating information. Currently this field is only supported for region code `US`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RegionalProductAgeRatingInfo> regionalProductAgeRatingInfos;
+
+  /**
    * A mapping from region code to tax rate details. The keys are region codes as defined by
    * Unicode's "CLDR".
    * The value may be {@code null}.
@@ -128,6 +135,23 @@ public final class ManagedProductTaxAndComplianceSettings extends com.google.api
    */
   public ManagedProductTaxAndComplianceSettings setProductTaxCategoryCode(java.lang.String productTaxCategoryCode) {
     this.productTaxCategoryCode = productTaxCategoryCode;
+    return this;
+  }
+
+  /**
+   * Regional age rating information. Currently this field is only supported for region code `US`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RegionalProductAgeRatingInfo> getRegionalProductAgeRatingInfos() {
+    return regionalProductAgeRatingInfos;
+  }
+
+  /**
+   * Regional age rating information. Currently this field is only supported for region code `US`.
+   * @param regionalProductAgeRatingInfos regionalProductAgeRatingInfos or {@code null} for none
+   */
+  public ManagedProductTaxAndComplianceSettings setRegionalProductAgeRatingInfos(java.util.List<RegionalProductAgeRatingInfo> regionalProductAgeRatingInfos) {
+    this.regionalProductAgeRatingInfos = regionalProductAgeRatingInfos;
     return this;
   }
 

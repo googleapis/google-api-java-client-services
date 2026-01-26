@@ -31,8 +31,8 @@ package com.google.api.services.androidpublisher.model;
 public final class LineItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * Item's listed price on Play Store, this may or may not include tax. Excludes any discounts or
-   * promotions.
+   * Item's listed price on Play Store, this may or may not include tax. Excludes Google-funded
+   * discounts only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private Money total;
 
   /**
-   * Item's listed price on Play Store, this may or may not include tax. Excludes any discounts or
-   * promotions.
+   * Item's listed price on Play Store, this may or may not include tax. Excludes Google-funded
+   * discounts only.
    * @return value or {@code null} for none
    */
   public Money getListingPrice() {
@@ -98,8 +98,8 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Item's listed price on Play Store, this may or may not include tax. Excludes any discounts or
-   * promotions.
+   * Item's listed price on Play Store, this may or may not include tax. Excludes Google-funded
+   * discounts only.
    * @param listingPrice listingPrice or {@code null} for none
    */
   public LineItem setListingPrice(Money listingPrice) {

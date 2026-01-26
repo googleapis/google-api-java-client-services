@@ -59,6 +59,19 @@ public final class SubscriptionTaxAndComplianceSettings extends com.google.api.c
   private java.lang.String productTaxCategoryCode;
 
   /**
+   * Regional age rating information. Currently this field is only supported for region code `US`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RegionalProductAgeRatingInfo> regionalProductAgeRatingInfos;
+
+  static {
+    // hack to force ProGuard to consider RegionalProductAgeRatingInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RegionalProductAgeRatingInfo.class);
+  }
+
+  /**
    * A mapping from region code to tax rate details. The keys are region codes as defined by
    * Unicode's "CLDR".
    * The value may be {@code null}.
@@ -134,6 +147,23 @@ public final class SubscriptionTaxAndComplianceSettings extends com.google.api.c
    */
   public SubscriptionTaxAndComplianceSettings setProductTaxCategoryCode(java.lang.String productTaxCategoryCode) {
     this.productTaxCategoryCode = productTaxCategoryCode;
+    return this;
+  }
+
+  /**
+   * Regional age rating information. Currently this field is only supported for region code `US`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RegionalProductAgeRatingInfo> getRegionalProductAgeRatingInfos() {
+    return regionalProductAgeRatingInfos;
+  }
+
+  /**
+   * Regional age rating information. Currently this field is only supported for region code `US`.
+   * @param regionalProductAgeRatingInfos regionalProductAgeRatingInfos or {@code null} for none
+   */
+  public SubscriptionTaxAndComplianceSettings setRegionalProductAgeRatingInfos(java.util.List<RegionalProductAgeRatingInfo> regionalProductAgeRatingInfos) {
+    this.regionalProductAgeRatingInfos = regionalProductAgeRatingInfos;
     return this;
   }
 

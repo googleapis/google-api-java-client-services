@@ -34,12 +34,39 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1mainSpeechConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether to disable word time offsets. If true, the `enable_word_time_offsets` field in the
+   * recognition config will be set to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableWordTimeOffsets;
+
+  /**
    * The fully-qualified Speech Recognizer resource name. Format:
    * `projects/{project_id}/locations/{location}/recognizer/{recognizer}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String speechRecognizer;
+
+  /**
+   * Whether to disable word time offsets. If true, the `enable_word_time_offsets` field in the
+   * recognition config will be set to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableWordTimeOffsets() {
+    return disableWordTimeOffsets;
+  }
+
+  /**
+   * Whether to disable word time offsets. If true, the `enable_word_time_offsets` field in the
+   * recognition config will be set to false.
+   * @param disableWordTimeOffsets disableWordTimeOffsets or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainSpeechConfig setDisableWordTimeOffsets(java.lang.Boolean disableWordTimeOffsets) {
+    this.disableWordTimeOffsets = disableWordTimeOffsets;
+    return this;
+  }
 
   /**
    * The fully-qualified Speech Recognizer resource name. Format:

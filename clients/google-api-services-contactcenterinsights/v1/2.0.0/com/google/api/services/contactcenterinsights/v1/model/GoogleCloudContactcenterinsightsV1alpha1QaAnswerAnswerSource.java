@@ -32,7 +32,9 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The answer value from this source.
+   * The answer value from this source. This field is populated by default, unless the question has
+   * a selection strategy configured to return multiple answer values, in which case `answer_values`
+   * will be populated instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +48,9 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerSource 
   private java.lang.String sourceType;
 
   /**
-   * The answer value from this source.
+   * The answer value from this source. This field is populated by default, unless the question has
+   * a selection strategy configured to return multiple answer values, in which case `answer_values`
+   * will be populated instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue getAnswerValue() {
@@ -54,7 +58,9 @@ public final class GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerSource 
   }
 
   /**
-   * The answer value from this source.
+   * The answer value from this source. This field is populated by default, unless the question has
+   * a selection strategy configured to return multiple answer values, in which case `answer_values`
+   * will be populated instead.
    * @param answerValue answerValue or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerSource setAnswerValue(GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue answerValue) {

@@ -92,6 +92,13 @@ public final class GoogleCloudContactcenterinsightsV1QaQuestion extends com.goog
   private GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig predefinedQuestionConfig;
 
   /**
+   * Options for configuring the data used to generate the QA question.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1QaQuestionQaQuestionDataOptions qaQuestionDataOptions;
+
+  /**
    * Question text. E.g., "Did the agent greet the customer?"
    * The value may be {@code null}.
    */
@@ -275,6 +282,23 @@ public final class GoogleCloudContactcenterinsightsV1QaQuestion extends com.goog
    */
   public GoogleCloudContactcenterinsightsV1QaQuestion setPredefinedQuestionConfig(GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig predefinedQuestionConfig) {
     this.predefinedQuestionConfig = predefinedQuestionConfig;
+    return this;
+  }
+
+  /**
+   * Options for configuring the data used to generate the QA question.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaQuestionQaQuestionDataOptions getQaQuestionDataOptions() {
+    return qaQuestionDataOptions;
+  }
+
+  /**
+   * Options for configuring the data used to generate the QA question.
+   * @param qaQuestionDataOptions qaQuestionDataOptions or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaQuestion setQaQuestionDataOptions(GoogleCloudContactcenterinsightsV1QaQuestionQaQuestionDataOptions qaQuestionDataOptions) {
+    this.qaQuestionDataOptions = qaQuestionDataOptions;
     return this;
   }
 

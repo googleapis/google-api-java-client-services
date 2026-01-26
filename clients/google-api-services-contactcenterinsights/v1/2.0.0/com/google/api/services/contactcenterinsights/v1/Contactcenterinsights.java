@@ -574,6 +574,155 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
         }
       }
       /**
+       * Gets correlation config.
+       *
+       * Create a request for the method "locations.getCorrelationConfig".
+       *
+       * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+       * optional parameters, call the {@link GetCorrelationConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the correlation config resource to get. Format:
+       *        projects/{project}/locations/{location}/correlationConfig
+       * @return the request
+       */
+      public GetCorrelationConfig getCorrelationConfig(java.lang.String name) throws java.io.IOException {
+        GetCorrelationConfig result = new GetCorrelationConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetCorrelationConfig extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1CorrelationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/correlationConfig$");
+
+        /**
+         * Gets correlation config.
+         *
+         * Create a request for the method "locations.getCorrelationConfig".
+         *
+         * This request holds the parameters needed by the the contactcenterinsights server.  After
+         * setting any optional parameters, call the {@link GetCorrelationConfig#execute()} method to
+         * invoke the remote operation. <p> {@link GetCorrelationConfig#initialize(com.google.api.client.g
+         * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the correlation config resource to get. Format:
+       *        projects/{project}/locations/{location}/correlationConfig
+         * @since 1.13
+         */
+        protected GetCorrelationConfig(java.lang.String name) {
+          super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1CorrelationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/correlationConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetCorrelationConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetCorrelationConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetCorrelationConfig setAccessToken(java.lang.String accessToken) {
+          return (GetCorrelationConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetCorrelationConfig setAlt(java.lang.String alt) {
+          return (GetCorrelationConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetCorrelationConfig setCallback(java.lang.String callback) {
+          return (GetCorrelationConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetCorrelationConfig setFields(java.lang.String fields) {
+          return (GetCorrelationConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetCorrelationConfig setKey(java.lang.String key) {
+          return (GetCorrelationConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetCorrelationConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetCorrelationConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetCorrelationConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetCorrelationConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetCorrelationConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetCorrelationConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetCorrelationConfig setUploadType(java.lang.String uploadType) {
+          return (GetCorrelationConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetCorrelationConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetCorrelationConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the correlation config resource to get. Format:
+         * projects/{project}/locations/{location}/correlationConfig
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the correlation config resource to get. Format:
+       projects/{project}/locations/{location}/correlationConfig
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the correlation config resource to get. Format:
+         * projects/{project}/locations/{location}/correlationConfig
+         */
+        public GetCorrelationConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/correlationConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetCorrelationConfig set(String parameterName, Object value) {
+          return (GetCorrelationConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets location-level encryption key specification.
        *
        * Create a request for the method "locations.getEncryptionSpec".
@@ -1353,6 +1502,301 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
         @Override
         public QueryPerformanceOverview set(String parameterName, Object value) {
           return (QueryPerformanceOverview) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Tests correlation config on a conversation.
+       *
+       * Create a request for the method "locations.testCorrelationConfig".
+       *
+       * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+       * optional parameters, call the {@link TestCorrelationConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param location Required. The location to test correlation config. Format: projects/{project}/locations/{location}
+       * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestCorrelationConfigRequest}
+       * @return the request
+       */
+      public TestCorrelationConfig testCorrelationConfig(java.lang.String location, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestCorrelationConfigRequest content) throws java.io.IOException {
+        TestCorrelationConfig result = new TestCorrelationConfig(location, content);
+        initialize(result);
+        return result;
+      }
+
+      public class TestCorrelationConfig extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+location}:testCorrelationConfig";
+
+        private final java.util.regex.Pattern LOCATION_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Tests correlation config on a conversation.
+         *
+         * Create a request for the method "locations.testCorrelationConfig".
+         *
+         * This request holds the parameters needed by the the contactcenterinsights server.  After
+         * setting any optional parameters, call the {@link TestCorrelationConfig#execute()} method to
+         * invoke the remote operation. <p> {@link TestCorrelationConfig#initialize(com.google.api.client.
+         * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param location Required. The location to test correlation config. Format: projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestCorrelationConfigRequest}
+         * @since 1.13
+         */
+        protected TestCorrelationConfig(java.lang.String location, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestCorrelationConfigRequest content) {
+          super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+          this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public TestCorrelationConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (TestCorrelationConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public TestCorrelationConfig setAccessToken(java.lang.String accessToken) {
+          return (TestCorrelationConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public TestCorrelationConfig setAlt(java.lang.String alt) {
+          return (TestCorrelationConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public TestCorrelationConfig setCallback(java.lang.String callback) {
+          return (TestCorrelationConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public TestCorrelationConfig setFields(java.lang.String fields) {
+          return (TestCorrelationConfig) super.setFields(fields);
+        }
+
+        @Override
+        public TestCorrelationConfig setKey(java.lang.String key) {
+          return (TestCorrelationConfig) super.setKey(key);
+        }
+
+        @Override
+        public TestCorrelationConfig setOauthToken(java.lang.String oauthToken) {
+          return (TestCorrelationConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public TestCorrelationConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (TestCorrelationConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public TestCorrelationConfig setQuotaUser(java.lang.String quotaUser) {
+          return (TestCorrelationConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public TestCorrelationConfig setUploadType(java.lang.String uploadType) {
+          return (TestCorrelationConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public TestCorrelationConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (TestCorrelationConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The location to test correlation config. Format:
+         * projects/{project}/locations/{location}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Required. The location to test correlation config. Format: projects/{project}/locations/{location}
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /**
+         * Required. The location to test correlation config. Format:
+         * projects/{project}/locations/{location}
+         */
+        public TestCorrelationConfig setLocation(java.lang.String location) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(LOCATION_PATTERN.matcher(location).matches(),
+                "Parameter location must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.location = location;
+          return this;
+        }
+
+        @Override
+        public TestCorrelationConfig set(String parameterName, Object value) {
+          return (TestCorrelationConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates correlation config.
+       *
+       * Create a request for the method "locations.updateCorrelationConfig".
+       *
+       * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+       * optional parameters, call the {@link UpdateCorrelationConfig#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Immutable. Identifier. The resource name of the correlation config. Format:
+       *        projects/{project}/locations/{location}/correlationConfig
+       * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1CorrelationConfig}
+       * @return the request
+       */
+      public UpdateCorrelationConfig updateCorrelationConfig(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1CorrelationConfig content) throws java.io.IOException {
+        UpdateCorrelationConfig result = new UpdateCorrelationConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateCorrelationConfig extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1CorrelationConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/correlationConfig$");
+
+        /**
+         * Updates correlation config.
+         *
+         * Create a request for the method "locations.updateCorrelationConfig".
+         *
+         * This request holds the parameters needed by the the contactcenterinsights server.  After
+         * setting any optional parameters, call the {@link UpdateCorrelationConfig#execute()} method to
+         * invoke the remote operation. <p> {@link UpdateCorrelationConfig#initialize(com.google.api.clien
+         * t.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Immutable. Identifier. The resource name of the correlation config. Format:
+       *        projects/{project}/locations/{location}/correlationConfig
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1CorrelationConfig}
+         * @since 1.13
+         */
+        protected UpdateCorrelationConfig(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1CorrelationConfig content) {
+          super(Contactcenterinsights.this, "PATCH", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1CorrelationConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/correlationConfig$");
+          }
+        }
+
+        @Override
+        public UpdateCorrelationConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateCorrelationConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateCorrelationConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setAlt(java.lang.String alt) {
+          return (UpdateCorrelationConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setCallback(java.lang.String callback) {
+          return (UpdateCorrelationConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setFields(java.lang.String fields) {
+          return (UpdateCorrelationConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setKey(java.lang.String key) {
+          return (UpdateCorrelationConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateCorrelationConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateCorrelationConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateCorrelationConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateCorrelationConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateCorrelationConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateCorrelationConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Immutable. Identifier. The resource name of the correlation config. Format:
+         * projects/{project}/locations/{location}/correlationConfig
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Immutable. Identifier. The resource name of the correlation config. Format:
+       projects/{project}/locations/{location}/correlationConfig
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Immutable. Identifier. The resource name of the correlation config. Format:
+         * projects/{project}/locations/{location}/correlationConfig
+         */
+        public UpdateCorrelationConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/correlationConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The list of fields to be updated. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The list of fields to be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The list of fields to be updated. */
+        public UpdateCorrelationConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateCorrelationConfig set(String parameterName, Object value) {
+          return (UpdateCorrelationConfig) super.set(parameterName, value);
         }
       }
       /**
@@ -6198,6 +6642,146 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
               }
             }
             /**
+             * Gets the signed URI for the audio for the given conversation.
+             *
+             * Create a request for the method "conversations.generateSignedAudio".
+             *
+             * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+             * optional parameters, call the {@link GenerateSignedAudio#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param name Required. The name of the conversation to sign.
+             * @return the request
+             */
+            public GenerateSignedAudio generateSignedAudio(java.lang.String name) throws java.io.IOException {
+              GenerateSignedAudio result = new GenerateSignedAudio(name);
+              initialize(result);
+              return result;
+            }
+
+            public class GenerateSignedAudio extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1GenerateConversationSignedAudioResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:generateSignedAudio";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+$");
+
+              /**
+               * Gets the signed URI for the audio for the given conversation.
+               *
+               * Create a request for the method "conversations.generateSignedAudio".
+               *
+               * This request holds the parameters needed by the the contactcenterinsights server.  After
+               * setting any optional parameters, call the {@link GenerateSignedAudio#execute()} method to
+               * invoke the remote operation. <p> {@link GenerateSignedAudio#initialize(com.google.api.client.go
+               * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+               * immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the conversation to sign.
+               * @since 1.13
+               */
+              protected GenerateSignedAudio(java.lang.String name) {
+                super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1GenerateConversationSignedAudioResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public GenerateSignedAudio set$Xgafv(java.lang.String $Xgafv) {
+                return (GenerateSignedAudio) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public GenerateSignedAudio setAccessToken(java.lang.String accessToken) {
+                return (GenerateSignedAudio) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public GenerateSignedAudio setAlt(java.lang.String alt) {
+                return (GenerateSignedAudio) super.setAlt(alt);
+              }
+
+              @Override
+              public GenerateSignedAudio setCallback(java.lang.String callback) {
+                return (GenerateSignedAudio) super.setCallback(callback);
+              }
+
+              @Override
+              public GenerateSignedAudio setFields(java.lang.String fields) {
+                return (GenerateSignedAudio) super.setFields(fields);
+              }
+
+              @Override
+              public GenerateSignedAudio setKey(java.lang.String key) {
+                return (GenerateSignedAudio) super.setKey(key);
+              }
+
+              @Override
+              public GenerateSignedAudio setOauthToken(java.lang.String oauthToken) {
+                return (GenerateSignedAudio) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public GenerateSignedAudio setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (GenerateSignedAudio) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public GenerateSignedAudio setQuotaUser(java.lang.String quotaUser) {
+                return (GenerateSignedAudio) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public GenerateSignedAudio setUploadType(java.lang.String uploadType) {
+                return (GenerateSignedAudio) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public GenerateSignedAudio setUploadProtocol(java.lang.String uploadProtocol) {
+                return (GenerateSignedAudio) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the conversation to sign. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the conversation to sign.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the conversation to sign. */
+              public GenerateSignedAudio setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+/conversations/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public GenerateSignedAudio set(String parameterName, Object value) {
+                return (GenerateSignedAudio) super.set(parameterName, value);
+              }
+            }
+            /**
              * Gets a conversation.
              *
              * Create a request for the method "conversations.get".
@@ -9679,6 +10263,960 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
         }
       }
       /**
+       * An accessor for creating requests from the AutoLabelingRules collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Contactcenterinsights contactcenterinsights = new Contactcenterinsights(...);}
+       *   {@code Contactcenterinsights.AutoLabelingRules.List request = contactcenterinsights.autoLabelingRules().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AutoLabelingRules autoLabelingRules() {
+        return new AutoLabelingRules();
+      }
+
+      /**
+       * The "autoLabelingRules" collection of methods.
+       */
+      public class AutoLabelingRules {
+
+        /**
+         * Creates an auto labeling rule.
+         *
+         * Create a request for the method "autoLabelingRules.create".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location to create the auto labeling rule in. Format:
+         *        projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule> {
+
+          private static final String REST_PATH = "v1/{+parent}/autoLabelingRules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates an auto labeling rule.
+           *
+           * Create a request for the method "autoLabelingRules.create".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location to create the auto labeling rule in. Format:
+         *        projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location to create the auto labeling rule in. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location to create the auto labeling rule in. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location to create the auto labeling rule in. Format:
+           * projects/{project}/locations/{location}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the auto labeling rule, which will become the final
+           * component of the auto labeling rule's resource name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String autoLabelingRuleId;
+
+          /** Required. The ID to use for the auto labeling rule, which will become the final component of the
+         auto labeling rule's resource name.
+           */
+          public java.lang.String getAutoLabelingRuleId() {
+            return autoLabelingRuleId;
+          }
+
+          /**
+           * Required. The ID to use for the auto labeling rule, which will become the final
+           * component of the auto labeling rule's resource name.
+           */
+          public Create setAutoLabelingRuleId(java.lang.String autoLabelingRuleId) {
+            this.autoLabelingRuleId = autoLabelingRuleId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an auto labeling rule.
+         *
+         * Create a request for the method "autoLabelingRules.delete".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the auto labeling rule to delete. Format:
+         *        projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoLabelingRules/[^/]+$");
+
+          /**
+           * Deletes an auto labeling rule.
+           *
+           * Create a request for the method "autoLabelingRules.delete".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the auto labeling rule to delete. Format:
+         *        projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Contactcenterinsights.this, "DELETE", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoLabelingRules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the auto labeling rule to delete. Format:
+           * projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the auto labeling rule to delete. Format:
+         projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the auto labeling rule to delete. Format:
+           * projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoLabelingRules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets an auto labeling rule.
+         *
+         * Create a request for the method "autoLabelingRules.get".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the auto labeling rule to get. Format:
+         *        projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoLabelingRules/[^/]+$");
+
+          /**
+           * Gets an auto labeling rule.
+           *
+           * Create a request for the method "autoLabelingRules.get".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the auto labeling rule to get. Format:
+         *        projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoLabelingRules/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the auto labeling rule to get. Format:
+           * projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the auto labeling rule to get. Format:
+         projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the auto labeling rule to get. Format:
+           * projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoLabelingRules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists auto labeling rules.
+         *
+         * Create a request for the method "autoLabelingRules.list".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location to list auto labeling rules from. Format:
+         *        projects/{project}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListAutoLabelingRulesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/autoLabelingRules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists auto labeling rules.
+           *
+           * Create a request for the method "autoLabelingRules.list".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location to list auto labeling rules from. Format:
+         *        projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListAutoLabelingRulesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location to list auto labeling rules from. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location to list auto labeling rules from. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location to list auto labeling rules from. Format:
+           * projects/{project}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of auto labeling rules to return in a single response. If
+           * unspecified, at most 100 rules will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of auto labeling rules to return in a single response. If unspecified,
+         at most 100 rules will be returned. The maximum value is 1000; values above 1000 will be coerced to
+         1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of auto labeling rules to return in a single response. If
+           * unspecified, at most 100 rules will be returned. The maximum value is 1000; values
+           * above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The next_page_token value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The next_page_token value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The next_page_token value returned from a previous List request, if any. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an auto labeling rule.
+         *
+         * Create a request for the method "autoLabelingRules.patch".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the auto-labeling rule. Format:
+         *        projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoLabelingRules/[^/]+$");
+
+          /**
+           * Updates an auto labeling rule.
+           *
+           * Create a request for the method "autoLabelingRules.patch".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the auto-labeling rule. Format:
+         *        projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule content) {
+            super(Contactcenterinsights.this, "PATCH", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1AutoLabelingRule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoLabelingRules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the auto-labeling rule. Format:
+           * projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the auto-labeling rule. Format:
+         projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the auto-labeling rule. Format:
+           * projects/{project}/locations/{location}/autoLabelingRules/{auto_labeling_rule}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoLabelingRules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. The list of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. The list of fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Tests auto labeling rules against a conversation.
+         *
+         * Create a request for the method "autoLabelingRules.test".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Test#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent project and location. Format: projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestAutoLabelingRuleRequest}
+         * @return the request
+         */
+        public Test test(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestAutoLabelingRuleRequest content) throws java.io.IOException {
+          Test result = new Test(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Test extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestAutoLabelingRuleResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/autoLabelingRules:test";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Tests auto labeling rules against a conversation.
+           *
+           * Create a request for the method "autoLabelingRules.test".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Test#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Test#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent project and location. Format: projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestAutoLabelingRuleRequest}
+           * @since 1.13
+           */
+          protected Test(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestAutoLabelingRuleRequest content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1TestAutoLabelingRuleResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Test set$Xgafv(java.lang.String $Xgafv) {
+            return (Test) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Test setAccessToken(java.lang.String accessToken) {
+            return (Test) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Test setAlt(java.lang.String alt) {
+            return (Test) super.setAlt(alt);
+          }
+
+          @Override
+          public Test setCallback(java.lang.String callback) {
+            return (Test) super.setCallback(callback);
+          }
+
+          @Override
+          public Test setFields(java.lang.String fields) {
+            return (Test) super.setFields(fields);
+          }
+
+          @Override
+          public Test setKey(java.lang.String key) {
+            return (Test) super.setKey(key);
+          }
+
+          @Override
+          public Test setOauthToken(java.lang.String oauthToken) {
+            return (Test) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Test setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Test) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Test setQuotaUser(java.lang.String quotaUser) {
+            return (Test) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Test setUploadType(java.lang.String uploadType) {
+            return (Test) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Test setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Test) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent project and location. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent project and location. Format: projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent project and location. Format:
+           * projects/{project}/locations/{location}
+           */
+          public Test setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Test set(String parameterName, Object value) {
+            return (Test) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Conversations collection.
        *
        * <p>The typical use is:</p>
@@ -10447,6 +11985,146 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
         }
         /**
+         * Gets the signed URI for the audio for the given conversation.
+         *
+         * Create a request for the method "conversations.generateSignedAudio".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link GenerateSignedAudio#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name of the conversation to sign.
+         * @return the request
+         */
+        public GenerateSignedAudio generateSignedAudio(java.lang.String name) throws java.io.IOException {
+          GenerateSignedAudio result = new GenerateSignedAudio(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateSignedAudio extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1GenerateConversationSignedAudioResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:generateSignedAudio";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+
+          /**
+           * Gets the signed URI for the audio for the given conversation.
+           *
+           * Create a request for the method "conversations.generateSignedAudio".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link GenerateSignedAudio#execute()} method to
+           * invoke the remote operation. <p> {@link GenerateSignedAudio#initialize(com.google.api.client.go
+           * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the conversation to sign.
+           * @since 1.13
+           */
+          protected GenerateSignedAudio(java.lang.String name) {
+            super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1GenerateConversationSignedAudioResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GenerateSignedAudio set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateSignedAudio) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateSignedAudio setAccessToken(java.lang.String accessToken) {
+            return (GenerateSignedAudio) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateSignedAudio setAlt(java.lang.String alt) {
+            return (GenerateSignedAudio) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateSignedAudio setCallback(java.lang.String callback) {
+            return (GenerateSignedAudio) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateSignedAudio setFields(java.lang.String fields) {
+            return (GenerateSignedAudio) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateSignedAudio setKey(java.lang.String key) {
+            return (GenerateSignedAudio) super.setKey(key);
+          }
+
+          @Override
+          public GenerateSignedAudio setOauthToken(java.lang.String oauthToken) {
+            return (GenerateSignedAudio) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateSignedAudio setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateSignedAudio) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateSignedAudio setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateSignedAudio) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateSignedAudio setUploadType(java.lang.String uploadType) {
+            return (GenerateSignedAudio) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateSignedAudio setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateSignedAudio) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the conversation to sign. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the conversation to sign.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the conversation to sign. */
+          public GenerateSignedAudio setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateSignedAudio set(String parameterName, Object value) {
+            return (GenerateSignedAudio) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets a conversation.
          *
          * Create a request for the method "conversations.get".
@@ -11153,6 +12831,26 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
            */
           public Patch setAllowMissing(java.lang.Boolean allowMissing) {
             this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, the conversation will be updated with auto labeling results.
+           */
+          @com.google.api.client.util.Key("conversationAutoLabelingUpdateConfig.allowAutoLabelingUpdate")
+          private java.lang.Boolean conversationAutoLabelingUpdateConfigAllowAutoLabelingUpdate;
+
+          /** Optional. If set to true, the conversation will be updated with auto labeling results.
+           */
+          public java.lang.Boolean getConversationAutoLabelingUpdateConfigAllowAutoLabelingUpdate() {
+            return conversationAutoLabelingUpdateConfigAllowAutoLabelingUpdate;
+          }
+
+          /**
+           * Optional. If set to true, the conversation will be updated with auto labeling results.
+           */
+          public Patch setConversationAutoLabelingUpdateConfigAllowAutoLabelingUpdate(java.lang.Boolean conversationAutoLabelingUpdateConfigAllowAutoLabelingUpdate) {
+            this.conversationAutoLabelingUpdateConfigAllowAutoLabelingUpdate = conversationAutoLabelingUpdateConfigAllowAutoLabelingUpdate;
             return this;
           }
 
@@ -16652,6 +18350,146 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the signed URI for the audio for the given conversation.
+           *
+           * Create a request for the method "conversations.generateSignedAudio".
+           *
+           * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+           * optional parameters, call the {@link GenerateSignedAudio#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name of the conversation to sign.
+           * @return the request
+           */
+          public GenerateSignedAudio generateSignedAudio(java.lang.String name) throws java.io.IOException {
+            GenerateSignedAudio result = new GenerateSignedAudio(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GenerateSignedAudio extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1GenerateConversationSignedAudioResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:generateSignedAudio";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+$");
+
+            /**
+             * Gets the signed URI for the audio for the given conversation.
+             *
+             * Create a request for the method "conversations.generateSignedAudio".
+             *
+             * This request holds the parameters needed by the the contactcenterinsights server.  After
+             * setting any optional parameters, call the {@link GenerateSignedAudio#execute()} method to
+             * invoke the remote operation. <p> {@link GenerateSignedAudio#initialize(com.google.api.client.go
+             * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the conversation to sign.
+             * @since 1.13
+             */
+            protected GenerateSignedAudio(java.lang.String name) {
+              super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1GenerateConversationSignedAudioResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GenerateSignedAudio set$Xgafv(java.lang.String $Xgafv) {
+              return (GenerateSignedAudio) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GenerateSignedAudio setAccessToken(java.lang.String accessToken) {
+              return (GenerateSignedAudio) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GenerateSignedAudio setAlt(java.lang.String alt) {
+              return (GenerateSignedAudio) super.setAlt(alt);
+            }
+
+            @Override
+            public GenerateSignedAudio setCallback(java.lang.String callback) {
+              return (GenerateSignedAudio) super.setCallback(callback);
+            }
+
+            @Override
+            public GenerateSignedAudio setFields(java.lang.String fields) {
+              return (GenerateSignedAudio) super.setFields(fields);
+            }
+
+            @Override
+            public GenerateSignedAudio setKey(java.lang.String key) {
+              return (GenerateSignedAudio) super.setKey(key);
+            }
+
+            @Override
+            public GenerateSignedAudio setOauthToken(java.lang.String oauthToken) {
+              return (GenerateSignedAudio) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GenerateSignedAudio setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GenerateSignedAudio) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GenerateSignedAudio setQuotaUser(java.lang.String quotaUser) {
+              return (GenerateSignedAudio) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GenerateSignedAudio setUploadType(java.lang.String uploadType) {
+              return (GenerateSignedAudio) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GenerateSignedAudio setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GenerateSignedAudio) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the conversation to sign. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the conversation to sign.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the conversation to sign. */
+            public GenerateSignedAudio setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/conversations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public GenerateSignedAudio set(String parameterName, Object value) {
+              return (GenerateSignedAudio) super.set(parameterName, value);
             }
           }
           /**

@@ -136,7 +136,8 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    * [Duration](https://protobuf.dev/reference/protobuf/google.protobuf/#duration). Queues created
    * by Cloud Tasks have a default `task_ttl` of 31 days. . Queues created by queue.yaml/xml have a
    * fixed `task_ttl` of the maximum duration, because there is a [storage
-   * quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues.
+   * quota](https://docs.cloud.google.com/appengine/docs/standard/quotas#Task_Queue) for these
+   * queues.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -396,7 +397,8 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    * [Duration](https://protobuf.dev/reference/protobuf/google.protobuf/#duration). Queues created
    * by Cloud Tasks have a default `task_ttl` of 31 days. . Queues created by queue.yaml/xml have a
    * fixed `task_ttl` of the maximum duration, because there is a [storage
-   * quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues.
+   * quota](https://docs.cloud.google.com/appengine/docs/standard/quotas#Task_Queue) for these
+   * queues.
    * @return value or {@code null} for none
    */
   public String getTaskTtl() {
@@ -412,7 +414,8 @@ public final class Queue extends com.google.api.client.json.GenericJson {
    * [Duration](https://protobuf.dev/reference/protobuf/google.protobuf/#duration). Queues created
    * by Cloud Tasks have a default `task_ttl` of 31 days. . Queues created by queue.yaml/xml have a
    * fixed `task_ttl` of the maximum duration, because there is a [storage
-   * quota](https://cloud.google.com/appengine/quotas#Task_Queue) for these queues.
+   * quota](https://docs.cloud.google.com/appengine/docs/standard/quotas#Task_Queue) for these
+   * queues.
    * @param taskTtl taskTtl or {@code null} for none
    */
   public Queue setTaskTtl(String taskTtl) {

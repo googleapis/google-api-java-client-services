@@ -43,7 +43,7 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   private DataSource source;
 
   /**
-   * Only applies to [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * Only applies to [`settings.datasources.patch`](https://developers.google.com/workspace/cloud-
    * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to control which fields
    * to update. Example field paths: `name`, `displayName`. * If `update_mask` is non-empty, then
    * only the fields specified in the `update_mask` are updated. * If you specify a field in the
@@ -87,7 +87,7 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Only applies to [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * Only applies to [`settings.datasources.patch`](https://developers.google.com/workspace/cloud-
    * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to control which fields
    * to update. Example field paths: `name`, `displayName`. * If `update_mask` is non-empty, then
    * only the fields specified in the `update_mask` are updated. * If you specify a field in the
@@ -100,7 +100,7 @@ public final class UpdateDataSourceRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Only applies to [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * Only applies to [`settings.datasources.patch`](https://developers.google.com/workspace/cloud-
    * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to control which fields
    * to update. Example field paths: `name`, `displayName`. * If `update_mask` is non-empty, then
    * only the fields specified in the `update_mask` are updated. * If you specify a field in the

@@ -101,7 +101,7 @@ public final class Item extends com.google.api.client.json.GenericJson {
    * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
    * is less than or equal to the version of the currently indexed item. The maximum length for this
    * field is 1024 bytes. For information on how item version affects the deletion process, refer to
-   * [Handle revisions after manual deletes](https://developers.google.com/cloud-
+   * [Handle revisions after manual deletes](https://developers.google.com/workspace/cloud-
    * search/docs/guides/operations).
    * The value may be {@code null}.
    */
@@ -299,7 +299,7 @@ public final class Item extends com.google.api.client.json.GenericJson {
    * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
    * is less than or equal to the version of the currently indexed item. The maximum length for this
    * field is 1024 bytes. For information on how item version affects the deletion process, refer to
-   * [Handle revisions after manual deletes](https://developers.google.com/cloud-
+   * [Handle revisions after manual deletes](https://developers.google.com/workspace/cloud-
    * search/docs/guides/operations).
    * @see #decodeVersion()
    * @return value or {@code null} for none
@@ -314,7 +314,7 @@ public final class Item extends com.google.api.client.json.GenericJson {
    * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
    * is less than or equal to the version of the currently indexed item. The maximum length for this
    * field is 1024 bytes. For information on how item version affects the deletion process, refer to
-   * [Handle revisions after manual deletes](https://developers.google.com/cloud-
+   * [Handle revisions after manual deletes](https://developers.google.com/workspace/cloud-
    * search/docs/guides/operations).
    * @see #getVersion()
    * @return Base64 decoded value or {@code null} for none
@@ -331,7 +331,7 @@ public final class Item extends com.google.api.client.json.GenericJson {
    * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
    * is less than or equal to the version of the currently indexed item. The maximum length for this
    * field is 1024 bytes. For information on how item version affects the deletion process, refer to
-   * [Handle revisions after manual deletes](https://developers.google.com/cloud-
+   * [Handle revisions after manual deletes](https://developers.google.com/workspace/cloud-
    * search/docs/guides/operations).
    * @see #encodeVersion()
    * @param version version or {@code null} for none
@@ -347,7 +347,7 @@ public final class Item extends com.google.api.client.json.GenericJson {
    * ordering. Cloud Search Indexing won't index or delete any queued item with a version value that
    * is less than or equal to the version of the currently indexed item. The maximum length for this
    * field is 1024 bytes. For information on how item version affects the deletion process, refer to
-   * [Handle revisions after manual deletes](https://developers.google.com/cloud-
+   * [Handle revisions after manual deletes](https://developers.google.com/workspace/cloud-
    * search/docs/guides/operations).
    * @see #setVersion()
    *

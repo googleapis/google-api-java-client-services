@@ -78,6 +78,15 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private ConfidentialNodes confidentialNodes;
 
   /**
+   * Consolidation delay defines duration after which the Cluster Autoscaler can scale down
+   * underutilized nodes. If not set, nodes are scaled down by default behavior, i.e. according to
+   * the chosen autoscaling profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String consolidationDelay;
+
+  /**
    * Parameters for containerd customization.
    * The value may be {@code null}.
    */
@@ -514,6 +523,27 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setConfidentialNodes(ConfidentialNodes confidentialNodes) {
     this.confidentialNodes = confidentialNodes;
+    return this;
+  }
+
+  /**
+   * Consolidation delay defines duration after which the Cluster Autoscaler can scale down
+   * underutilized nodes. If not set, nodes are scaled down by default behavior, i.e. according to
+   * the chosen autoscaling profile.
+   * @return value or {@code null} for none
+   */
+  public String getConsolidationDelay() {
+    return consolidationDelay;
+  }
+
+  /**
+   * Consolidation delay defines duration after which the Cluster Autoscaler can scale down
+   * underutilized nodes. If not set, nodes are scaled down by default behavior, i.e. according to
+   * the chosen autoscaling profile.
+   * @param consolidationDelay consolidationDelay or {@code null} for none
+   */
+  public NodeConfig setConsolidationDelay(String consolidationDelay) {
+    this.consolidationDelay = consolidationDelay;
     return this;
   }
 

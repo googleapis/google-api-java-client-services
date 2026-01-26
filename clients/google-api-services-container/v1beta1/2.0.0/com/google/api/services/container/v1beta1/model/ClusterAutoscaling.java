@@ -33,6 +33,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class ClusterAutoscaling extends com.google.api.client.json.GenericJson {
 
   /**
+   * Autopilot general profile for the cluster, which defines the configuration for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autopilotGeneralProfile;
+
+  /**
    * The list of Google Compute Engine
    * [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes
    * can be created by NAP.
@@ -75,6 +82,23 @@ public final class ClusterAutoscaling extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.List<ResourceLimit> resourceLimits;
+
+  /**
+   * Autopilot general profile for the cluster, which defines the configuration for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutopilotGeneralProfile() {
+    return autopilotGeneralProfile;
+  }
+
+  /**
+   * Autopilot general profile for the cluster, which defines the configuration for the cluster.
+   * @param autopilotGeneralProfile autopilotGeneralProfile or {@code null} for none
+   */
+  public ClusterAutoscaling setAutopilotGeneralProfile(java.lang.String autopilotGeneralProfile) {
+    this.autopilotGeneralProfile = autopilotGeneralProfile;
+    return this;
+  }
 
   /**
    * The list of Google Compute Engine

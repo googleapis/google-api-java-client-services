@@ -110,6 +110,21 @@ public class DataPortabilityScopes {
   /** Move a copy of the maps you created in My Maps. */
   public static final String DATAPORTABILITY_MYMAPS_MAPS = "https://www.googleapis.com/auth/dataportability.mymaps.maps";
 
+  /** Copy Nest camera event data. */
+  public static final String DATAPORTABILITY_NEST_CAMERA_EVENT = "https://www.googleapis.com/auth/dataportability.nest.camera_event";
+
+  /** Copy Nest camera feature data. */
+  public static final String DATAPORTABILITY_NEST_CAMERA_FEATURE = "https://www.googleapis.com/auth/dataportability.nest.camera_feature";
+
+  /** Copy Nest camera footage. */
+  public static final String DATAPORTABILITY_NEST_CAMERA_VIDEO = "https://www.googleapis.com/auth/dataportability.nest.camera_video";
+
+  /** Copy your Nest Store and Nest Renew billing and payment information. */
+  public static final String DATAPORTABILITY_NEST_STORE = "https://www.googleapis.com/auth/dataportability.nest.store";
+
+  /** Copy your Nest user information. */
+  public static final String DATAPORTABILITY_NEST_USER = "https://www.googleapis.com/auth/dataportability.nest.user";
+
   /** Move a copy of your food purchase and reservation activity. */
   public static final String DATAPORTABILITY_ORDER_RESERVE_PURCHASES_RESERVATIONS = "https://www.googleapis.com/auth/dataportability.order_reserve.purchases_reservations";
 
@@ -260,6 +275,11 @@ public class DataPortabilityScopes {
     set.add(DATAPORTABILITY_MYACTIVITY_SHOPPING);
     set.add(DATAPORTABILITY_MYACTIVITY_YOUTUBE);
     set.add(DATAPORTABILITY_MYMAPS_MAPS);
+    set.add(DATAPORTABILITY_NEST_CAMERA_EVENT);
+    set.add(DATAPORTABILITY_NEST_CAMERA_FEATURE);
+    set.add(DATAPORTABILITY_NEST_CAMERA_VIDEO);
+    set.add(DATAPORTABILITY_NEST_STORE);
+    set.add(DATAPORTABILITY_NEST_USER);
     set.add(DATAPORTABILITY_ORDER_RESERVE_PURCHASES_RESERVATIONS);
     set.add(DATAPORTABILITY_PLAY_DEVICES);
     set.add(DATAPORTABILITY_PLAY_GROUPING);

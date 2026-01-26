@@ -37,7 +37,7 @@ public final class Selinux extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enabled;
 
   /**
-   * SELinux mode enforcing / permissive.
+   * SELinux mode disabled / enforcing / permissive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class Selinux extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SELinux mode enforcing / permissive.
+   * SELinux mode disabled / enforcing / permissive.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -69,7 +69,7 @@ public final class Selinux extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * SELinux mode enforcing / permissive.
+   * SELinux mode disabled / enforcing / permissive.
    * @param mode mode or {@code null} for none
    */
   public Selinux setMode(java.lang.String mode) {

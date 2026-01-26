@@ -62,9 +62,9 @@ public final class V2Key extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Output only. A checksum computed by the server based on the current value of the Key resource.
-   * This may be sent on update and delete requests to ensure the client has an up-to-date value
-   * before proceeding. See https://google.aip.dev/154.
+   * A checksum computed by the server based on the current value of the Key resource. This may be
+   * sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding. See https://google.aip.dev/154.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,9 +194,9 @@ public final class V2Key extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A checksum computed by the server based on the current value of the Key resource.
-   * This may be sent on update and delete requests to ensure the client has an up-to-date value
-   * before proceeding. See https://google.aip.dev/154.
+   * A checksum computed by the server based on the current value of the Key resource. This may be
+   * sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding. See https://google.aip.dev/154.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -204,9 +204,9 @@ public final class V2Key extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A checksum computed by the server based on the current value of the Key resource.
-   * This may be sent on update and delete requests to ensure the client has an up-to-date value
-   * before proceeding. See https://google.aip.dev/154.
+   * A checksum computed by the server based on the current value of the Key resource. This may be
+   * sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding. See https://google.aip.dev/154.
    * @param etag etag or {@code null} for none
    */
   public V2Key setEtag(java.lang.String etag) {

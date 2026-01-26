@@ -30,11 +30,35 @@ package com.google.api.services.directory.model;
 public final class DirectoryUsersCreateGuestRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Immutable ID of the Google Workspace account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customer;
+
+  /**
    * Immutable. External email of the guest user being created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryGuestEmail;
+
+  /**
+   * Optional. Immutable ID of the Google Workspace account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomer() {
+    return customer;
+  }
+
+  /**
+   * Optional. Immutable ID of the Google Workspace account.
+   * @param customer customer or {@code null} for none
+   */
+  public DirectoryUsersCreateGuestRequest setCustomer(java.lang.String customer) {
+    this.customer = customer;
+    return this;
+  }
 
   /**
    * Immutable. External email of the guest user being created.

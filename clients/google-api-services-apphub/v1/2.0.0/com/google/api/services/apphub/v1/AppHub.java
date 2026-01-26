@@ -463,7 +463,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link GetBoundary#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the boundary to retrieve. Format:
-       *        projects/{project}/locations/{location}/boundary
+       *        `projects/{project}/locations/{location}/boundary`.
        * @return the request
        */
       public GetBoundary getBoundary(java.lang.String name) throws java.io.IOException {
@@ -491,7 +491,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the boundary to retrieve. Format:
-       *        projects/{project}/locations/{location}/boundary
+       *        `projects/{project}/locations/{location}/boundary`.
          * @since 1.13
          */
         protected GetBoundary(java.lang.String name) {
@@ -571,13 +571,13 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Required. The name of the boundary to retrieve. Format:
-         * projects/{project}/locations/{location}/boundary
+         * `projects/{project}/locations/{location}/boundary`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the boundary to retrieve. Format:
-       projects/{project}/locations/{location}/boundary
+       `projects/{project}/locations/{location}/boundary`.
          */
         public java.lang.String getName() {
           return name;
@@ -585,7 +585,7 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Required. The name of the boundary to retrieve. Format:
-         * projects/{project}/locations/{location}/boundary
+         * `projects/{project}/locations/{location}/boundary`.
          */
         public GetBoundary setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5816,8 +5816,9 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the apphub server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Schema resource name Format: projects//locations//extendedMetadataSchemas/ could be
-         *        "apphub.googleapis.com/Name"
+         * @param name Required. Schema resource name. Format:
+         *        `projects/{project}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema
+         *        }`. `{extended_metadata_schema}` has the format `"apphub.googleapis.com/{SchemaName}"`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -5843,8 +5844,9 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Schema resource name Format: projects//locations//extendedMetadataSchemas/ could be
-         *        "apphub.googleapis.com/Name"
+           * @param name Required. Schema resource name. Format:
+         *        `projects/{project}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema
+         *        }`. `{extended_metadata_schema}` has the format `"apphub.googleapis.com/{SchemaName}"`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -5923,22 +5925,25 @@ public class AppHub extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Required. Schema resource name Format: projects//locations//extendedMetadataSchemas/
-           * could be "apphub.googleapis.com/Name"
+           * Required. Schema resource name. Format: `projects/{project}/locations/{location}/extend
+           * edMetadataSchemas/{extended_metadata_schema}`. `{extended_metadata_schema}` has the
+           * format `"apphub.googleapis.com/{SchemaName}"`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Schema resource name Format: projects//locations//extendedMetadataSchemas/ could be
-         "apphub.googleapis.com/Name"
+          /** Required. Schema resource name. Format:
+         `projects/{project}/locations/{location}/extendedMetadataSchemas/{extended_metadata_schema}`.
+         `{extended_metadata_schema}` has the format `"apphub.googleapis.com/{SchemaName}"`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. Schema resource name Format: projects//locations//extendedMetadataSchemas/
-           * could be "apphub.googleapis.com/Name"
+           * Required. Schema resource name. Format: `projects/{project}/locations/{location}/extend
+           * edMetadataSchemas/{extended_metadata_schema}`. `{extended_metadata_schema}` has the
+           * format `"apphub.googleapis.com/{SchemaName}"`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

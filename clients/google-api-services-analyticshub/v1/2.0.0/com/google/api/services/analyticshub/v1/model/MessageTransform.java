@@ -30,7 +30,8 @@ package com.google.api.services.analyticshub.v1.model;
 public final class MessageTransform extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. AI Inference.
+   * Optional. AI Inference. Specifies the Vertex AI endpoint that inference requests built from the
+   * Pub/Sub message data and provided parameters will be sent to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +61,8 @@ public final class MessageTransform extends com.google.api.client.json.GenericJs
   private JavaScriptUDF javascriptUdf;
 
   /**
-   * Optional. AI Inference.
+   * Optional. AI Inference. Specifies the Vertex AI endpoint that inference requests built from the
+   * Pub/Sub message data and provided parameters will be sent to.
    * @return value or {@code null} for none
    */
   public AIInference getAiInference() {
@@ -68,7 +70,8 @@ public final class MessageTransform extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. AI Inference.
+   * Optional. AI Inference. Specifies the Vertex AI endpoint that inference requests built from the
+   * Pub/Sub message data and provided parameters will be sent to.
    * @param aiInference aiInference or {@code null} for none
    */
   public MessageTransform setAiInference(AIInference aiInference) {

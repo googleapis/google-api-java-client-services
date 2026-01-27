@@ -12941,8 +12941,9 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the cloudkms server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the location associated with the SingleTenantHsmInstanceProposals to
-           *        list, in the format `projects/locations/singleTenantHsmInstances`.
+           * @param parent Required. The resource name of the single tenant HSM instance associated with the
+           *        SingleTenantHsmInstanceProposals to list, in the format
+           *        `projects/locations/singleTenantHsmInstances`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -12968,8 +12969,9 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the location associated with the SingleTenantHsmInstanceProposals to
-           *        list, in the format `projects/locations/singleTenantHsmInstances`.
+             * @param parent Required. The resource name of the single tenant HSM instance associated with the
+           *        SingleTenantHsmInstanceProposals to list, in the format
+           *        `projects/locations/singleTenantHsmInstances`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -13048,22 +13050,23 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Required. The resource name of the location associated with the
+             * Required. The resource name of the single tenant HSM instance associated with the
              * SingleTenantHsmInstanceProposals to list, in the format
              * `projects/locations/singleTenantHsmInstances`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The resource name of the location associated with the SingleTenantHsmInstanceProposals to
-           list, in the format `projects/locations/singleTenantHsmInstances`.
+            /** Required. The resource name of the single tenant HSM instance associated with the
+           SingleTenantHsmInstanceProposals to list, in the format
+           `projects/locations/singleTenantHsmInstances`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The resource name of the location associated with the
+             * Required. The resource name of the single tenant HSM instance associated with the
              * SingleTenantHsmInstanceProposals to list, in the format
              * `projects/locations/singleTenantHsmInstances`.
              */

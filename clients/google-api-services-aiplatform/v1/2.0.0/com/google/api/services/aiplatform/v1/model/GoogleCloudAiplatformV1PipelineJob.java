@@ -109,7 +109,9 @@ public final class GoogleCloudAiplatformV1PipelineJob extends com.google.api.cli
   private java.lang.String network;
 
   /**
-   * The spec of the pipeline.
+   * A compiled definition of a pipeline, represented as a `JSON` object. Defines the structure of
+   * the pipeline, including its components, tasks, and parameters. This specification is generated
+   * by compiling a pipeline function defined in `Python` using the `Kubeflow Pipelines SDK`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -389,7 +391,9 @@ public final class GoogleCloudAiplatformV1PipelineJob extends com.google.api.cli
   }
 
   /**
-   * The spec of the pipeline.
+   * A compiled definition of a pipeline, represented as a `JSON` object. Defines the structure of
+   * the pipeline, including its components, tasks, and parameters. This specification is generated
+   * by compiling a pipeline function defined in `Python` using the `Kubeflow Pipelines SDK`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPipelineSpec() {
@@ -397,7 +401,9 @@ public final class GoogleCloudAiplatformV1PipelineJob extends com.google.api.cli
   }
 
   /**
-   * The spec of the pipeline.
+   * A compiled definition of a pipeline, represented as a `JSON` object. Defines the structure of
+   * the pipeline, including its components, tasks, and parameters. This specification is generated
+   * by compiling a pipeline function defined in `Python` using the `Kubeflow Pipelines SDK`.
    * @param pipelineSpec pipelineSpec or {@code null} for none
    */
   public GoogleCloudAiplatformV1PipelineJob setPipelineSpec(java.util.Map<String, java.lang.Object> pipelineSpec) {

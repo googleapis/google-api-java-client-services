@@ -164,7 +164,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * ManagedProperty values supported by the app. Each field name in the managed configuration must
    * match the key field of the ManagedProperty. The field value must be compatible with the type of
    * the ManagedProperty: *type* *JSON value* BOOL true or false STRING string INTEGER number CHOICE
-   * string MULTISELECT array of strings HIDDEN string BUNDLE_ARRAY array of objects
+   * string MULTISELECT array of strings HIDDEN string BUNDLE_ARRAY array of objects Note: string
+   * values cannot be longer than 65535 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -572,7 +573,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * ManagedProperty values supported by the app. Each field name in the managed configuration must
    * match the key field of the ManagedProperty. The field value must be compatible with the type of
    * the ManagedProperty: *type* *JSON value* BOOL true or false STRING string INTEGER number CHOICE
-   * string MULTISELECT array of strings HIDDEN string BUNDLE_ARRAY array of objects
+   * string MULTISELECT array of strings HIDDEN string BUNDLE_ARRAY array of objects Note: string
+   * values cannot be longer than 65535 characters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getManagedConfiguration() {
@@ -584,7 +586,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    * ManagedProperty values supported by the app. Each field name in the managed configuration must
    * match the key field of the ManagedProperty. The field value must be compatible with the type of
    * the ManagedProperty: *type* *JSON value* BOOL true or false STRING string INTEGER number CHOICE
-   * string MULTISELECT array of strings HIDDEN string BUNDLE_ARRAY array of objects
+   * string MULTISELECT array of strings HIDDEN string BUNDLE_ARRAY array of objects Note: string
+   * values cannot be longer than 65535 characters.
    * @param managedConfiguration managedConfiguration or {@code null} for none
    */
   public ApplicationPolicy setManagedConfiguration(java.util.Map<String, java.lang.Object> managedConfiguration) {

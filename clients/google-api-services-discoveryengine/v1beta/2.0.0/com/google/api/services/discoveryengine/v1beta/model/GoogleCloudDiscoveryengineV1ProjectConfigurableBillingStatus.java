@@ -50,11 +50,37 @@ public final class GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus 
   private java.lang.Long effectiveSearchQpmThreshold;
 
   /**
+   * Output only. The earliest next update time for the indexing core subscription threshold. This
+   * is based on the next_update_time returned by the underlying Cloud Billing Subscription V3 API.
+   * This field is populated only if an update indexing core subscription threshold request is
+   * succeeded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String indexingCoreThresholdNextUpdateTime;
+
+  /**
+   * Output only. The earliest next update time for the search QPM subscription threshold. This is
+   * based on the next_update_time returned by the underlying Cloud Billing Subscription V3 API.
+   * This field is populated only if an update QPM subscription threshold request is succeeded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String searchQpmThresholdNextUpdateTime;
+
+  /**
    * Optional. The start time of the currently active billing subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
+
+  /**
+   * Output only. The latest terminate effective time of search qpm and indexing core subscriptions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String terminateTime;
 
   /**
    * Optional. The currently effective Indexing Core threshold. This is the threshold against which
@@ -95,6 +121,50 @@ public final class GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus 
   }
 
   /**
+   * Output only. The earliest next update time for the indexing core subscription threshold. This
+   * is based on the next_update_time returned by the underlying Cloud Billing Subscription V3 API.
+   * This field is populated only if an update indexing core subscription threshold request is
+   * succeeded.
+   * @return value or {@code null} for none
+   */
+  public String getIndexingCoreThresholdNextUpdateTime() {
+    return indexingCoreThresholdNextUpdateTime;
+  }
+
+  /**
+   * Output only. The earliest next update time for the indexing core subscription threshold. This
+   * is based on the next_update_time returned by the underlying Cloud Billing Subscription V3 API.
+   * This field is populated only if an update indexing core subscription threshold request is
+   * succeeded.
+   * @param indexingCoreThresholdNextUpdateTime indexingCoreThresholdNextUpdateTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus setIndexingCoreThresholdNextUpdateTime(String indexingCoreThresholdNextUpdateTime) {
+    this.indexingCoreThresholdNextUpdateTime = indexingCoreThresholdNextUpdateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The earliest next update time for the search QPM subscription threshold. This is
+   * based on the next_update_time returned by the underlying Cloud Billing Subscription V3 API.
+   * This field is populated only if an update QPM subscription threshold request is succeeded.
+   * @return value or {@code null} for none
+   */
+  public String getSearchQpmThresholdNextUpdateTime() {
+    return searchQpmThresholdNextUpdateTime;
+  }
+
+  /**
+   * Output only. The earliest next update time for the search QPM subscription threshold. This is
+   * based on the next_update_time returned by the underlying Cloud Billing Subscription V3 API.
+   * This field is populated only if an update QPM subscription threshold request is succeeded.
+   * @param searchQpmThresholdNextUpdateTime searchQpmThresholdNextUpdateTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus setSearchQpmThresholdNextUpdateTime(String searchQpmThresholdNextUpdateTime) {
+    this.searchQpmThresholdNextUpdateTime = searchQpmThresholdNextUpdateTime;
+    return this;
+  }
+
+  /**
    * Optional. The start time of the currently active billing subscription.
    * @return value or {@code null} for none
    */
@@ -108,6 +178,23 @@ public final class GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus 
    */
   public GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * Output only. The latest terminate effective time of search qpm and indexing core subscriptions.
+   * @return value or {@code null} for none
+   */
+  public String getTerminateTime() {
+    return terminateTime;
+  }
+
+  /**
+   * Output only. The latest terminate effective time of search qpm and indexing core subscriptions.
+   * @param terminateTime terminateTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus setTerminateTime(String terminateTime) {
+    this.terminateTime = terminateTime;
     return this;
   }
 

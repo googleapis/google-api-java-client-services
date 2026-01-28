@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1.model;
 
 /**
- * Specification to boost suggestions based on the condtion of the suggestion.
+ * Specification to boost suggestions based on the condition of the suggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

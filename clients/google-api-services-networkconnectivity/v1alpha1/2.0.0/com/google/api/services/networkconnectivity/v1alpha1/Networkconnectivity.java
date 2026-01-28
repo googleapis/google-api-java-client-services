@@ -2932,7 +2932,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the networkconnectivity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The name of an internal range. Format:
+         * @param name Identifier. The name of an internal range. Format:
          *        projects/{project}/locations/{location}/internalRanges/{internal_range} See:
          *        https://google.aip.dev/122#fields-representing-resource-names
          * @param content the {@link com.google.api.services.networkconnectivity.v1alpha1.model.InternalRange}
@@ -2962,7 +2962,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The name of an internal range. Format:
+           * @param name Identifier. The name of an internal range. Format:
          *        projects/{project}/locations/{location}/internalRanges/{internal_range} See:
          *        https://google.aip.dev/122#fields-representing-resource-names
            * @param content the {@link com.google.api.services.networkconnectivity.v1alpha1.model.InternalRange}
@@ -3034,14 +3034,14 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Immutable. The name of an internal range. Format:
+           * Identifier. The name of an internal range. Format:
            * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
            * https://google.aip.dev/122#fields-representing-resource-names
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The name of an internal range. Format:
+          /** Identifier. The name of an internal range. Format:
          projects/{project}/locations/{location}/internalRanges/{internal_range} See:
          https://google.aip.dev/122#fields-representing-resource-names
            */
@@ -3050,7 +3050,7 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Immutable. The name of an internal range. Format:
+           * Identifier. The name of an internal range. Format:
            * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
            * https://google.aip.dev/122#fields-representing-resource-names
            */

@@ -41,7 +41,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private AllocationOptions allocationOptions;
 
   /**
-   * Time when the internal range was created.
+   * Output only. Time when the internal range was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> targetCidrRange;
 
   /**
-   * Time when the internal range was updated.
+   * Output only. Time when the internal range was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Time when the internal range was created.
+   * Output only. Time when the internal range was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -203,7 +203,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Time when the internal range was created.
+   * Output only. Time when the internal range was created.
    * @param createTime createTime or {@code null} for none
    */
   public InternalRange setCreateTime(String createTime) {
@@ -454,7 +454,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Time when the internal range was updated.
+   * Output only. Time when the internal range was updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -462,7 +462,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Time when the internal range was updated.
+   * Output only. Time when the internal range was updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public InternalRange setUpdateTime(String updateTime) {

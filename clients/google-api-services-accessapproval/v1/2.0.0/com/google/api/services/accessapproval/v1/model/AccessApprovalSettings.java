@@ -50,6 +50,13 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.lang.Boolean ancestorHasActiveKeyVersion;
 
   /**
+   * Output only. Field to differentiate ancestor enrolled services from locally enrolled services.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EnrolledService> ancestorsEnrolledServices;
+
+  /**
    * Optional. Policy configuration for Access Approval that sets the operating mode. The available
    * policies are Transparency, Streamlined Support, and Approval Required.
    * The value may be {@code null}.
@@ -203,6 +210,23 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   public AccessApprovalSettings setAncestorHasActiveKeyVersion(java.lang.Boolean ancestorHasActiveKeyVersion) {
     this.ancestorHasActiveKeyVersion = ancestorHasActiveKeyVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Field to differentiate ancestor enrolled services from locally enrolled services.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EnrolledService> getAncestorsEnrolledServices() {
+    return ancestorsEnrolledServices;
+  }
+
+  /**
+   * Output only. Field to differentiate ancestor enrolled services from locally enrolled services.
+   * @param ancestorsEnrolledServices ancestorsEnrolledServices or {@code null} for none
+   */
+  public AccessApprovalSettings setAncestorsEnrolledServices(java.util.List<EnrolledService> ancestorsEnrolledServices) {
+    this.ancestorsEnrolledServices = ancestorsEnrolledServices;
     return this;
   }
 

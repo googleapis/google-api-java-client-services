@@ -37,8 +37,8 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   private AutotuningConfig autotuningConfig;
 
   /**
-   * Optional. Cohort identifier. Identifies families of the workloads having the same shape, e.g.
-   * daily ETL jobs.
+   * Optional. Cohort identifier. Identifies families of the workloads that have the same shape, for
+   * example, daily ETL jobs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +92,8 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Cohort identifier. Identifies families of the workloads having the same shape, e.g.
-   * daily ETL jobs.
+   * Optional. Cohort identifier. Identifies families of the workloads that have the same shape, for
+   * example, daily ETL jobs.
    * @return value or {@code null} for none
    */
   public java.lang.String getCohort() {
@@ -101,8 +101,8 @@ public final class RuntimeConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Cohort identifier. Identifies families of the workloads having the same shape, e.g.
-   * daily ETL jobs.
+   * Optional. Cohort identifier. Identifies families of the workloads that have the same shape, for
+   * example, daily ETL jobs.
    * @param cohort cohort or {@code null} for none
    */
   public RuntimeConfig setCohort(java.lang.String cohort) {

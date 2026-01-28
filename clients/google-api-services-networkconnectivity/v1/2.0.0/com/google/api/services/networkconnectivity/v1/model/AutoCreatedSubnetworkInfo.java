@@ -31,6 +31,14 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class AutoCreatedSubnetworkInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Indicates whether the subnetwork is delinked from the Service Connection Policy.
+   * Only set if the subnetwork mode is AUTO_CREATED during creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean delinked;
+
+  /**
    * Output only. URI of the automatically created Internal Range. Only set if the subnetwork mode
    * is AUTO_CREATED during creation.
    * The value may be {@code null}.
@@ -61,6 +69,25 @@ public final class AutoCreatedSubnetworkInfo extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetworkRef;
+
+  /**
+   * Output only. Indicates whether the subnetwork is delinked from the Service Connection Policy.
+   * Only set if the subnetwork mode is AUTO_CREATED during creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDelinked() {
+    return delinked;
+  }
+
+  /**
+   * Output only. Indicates whether the subnetwork is delinked from the Service Connection Policy.
+   * Only set if the subnetwork mode is AUTO_CREATED during creation.
+   * @param delinked delinked or {@code null} for none
+   */
+  public AutoCreatedSubnetworkInfo setDelinked(java.lang.Boolean delinked) {
+    this.delinked = delinked;
+    return this;
+  }
 
   /**
    * Output only. URI of the automatically created Internal Range. Only set if the subnetwork mode

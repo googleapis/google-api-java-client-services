@@ -54,7 +54,7 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
   /**
    * Optional. The ratio of Google internal dataset to use in the training mixture, in range of `[0,
    * 1)`. If `0.2`, it means 20% of Google internal dataset and 80% of user dataset will be used for
-   * training.
+   * training. If not set, the default value is 0.1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
   /**
    * Optional. The ratio of Google internal dataset to use in the training mixture, in range of `[0,
    * 1)`. If `0.2`, it means 20% of Google internal dataset and 80% of user dataset will be used for
-   * training.
+   * training. If not set, the default value is 0.1.
    * @return value or {@code null} for none
    */
   public java.lang.Double getVeoDataMixtureRatio() {
@@ -126,7 +126,7 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
   /**
    * Optional. The ratio of Google internal dataset to use in the training mixture, in range of `[0,
    * 1)`. If `0.2`, it means 20% of Google internal dataset and 80% of user dataset will be used for
-   * training.
+   * training. If not set, the default value is 0.1.
    * @param veoDataMixtureRatio veoDataMixtureRatio or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1VeoHyperParameters setVeoDataMixtureRatio(java.lang.Double veoDataMixtureRatio) {

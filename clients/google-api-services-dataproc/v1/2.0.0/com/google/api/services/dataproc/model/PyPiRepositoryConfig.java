@@ -30,14 +30,14 @@ package com.google.api.services.dataproc.model;
 public final class PyPiRepositoryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. PyPi repository address
+   * Optional. The PyPi repository address. Note: This field is not available for batch workloads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pypiRepository;
 
   /**
-   * Optional. PyPi repository address
+   * Optional. The PyPi repository address. Note: This field is not available for batch workloads.
    * @return value or {@code null} for none
    */
   public java.lang.String getPypiRepository() {
@@ -45,7 +45,7 @@ public final class PyPiRepositoryConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. PyPi repository address
+   * Optional. The PyPi repository address. Note: This field is not available for batch workloads.
    * @param pypiRepository pypiRepository or {@code null} for none
    */
   public PyPiRepositoryConfig setPypiRepository(java.lang.String pypiRepository) {

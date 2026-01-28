@@ -125,6 +125,20 @@ public final class SparkWrapperObject extends com.google.api.client.json.Generic
   private ResourceProfileInfo resourceProfileInfo;
 
   /**
+   * Spark Connect Execution Info
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SparkConnectExecutionInfo sparkConnectExecutionInfo;
+
+  /**
+   * Spark Connect Session Info
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SparkConnectSessionInfo sparkConnectSessionInfo;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -402,6 +416,40 @@ public final class SparkWrapperObject extends com.google.api.client.json.Generic
    */
   public SparkWrapperObject setResourceProfileInfo(ResourceProfileInfo resourceProfileInfo) {
     this.resourceProfileInfo = resourceProfileInfo;
+    return this;
+  }
+
+  /**
+   * Spark Connect Execution Info
+   * @return value or {@code null} for none
+   */
+  public SparkConnectExecutionInfo getSparkConnectExecutionInfo() {
+    return sparkConnectExecutionInfo;
+  }
+
+  /**
+   * Spark Connect Execution Info
+   * @param sparkConnectExecutionInfo sparkConnectExecutionInfo or {@code null} for none
+   */
+  public SparkWrapperObject setSparkConnectExecutionInfo(SparkConnectExecutionInfo sparkConnectExecutionInfo) {
+    this.sparkConnectExecutionInfo = sparkConnectExecutionInfo;
+    return this;
+  }
+
+  /**
+   * Spark Connect Session Info
+   * @return value or {@code null} for none
+   */
+  public SparkConnectSessionInfo getSparkConnectSessionInfo() {
+    return sparkConnectSessionInfo;
+  }
+
+  /**
+   * Spark Connect Session Info
+   * @param sparkConnectSessionInfo sparkConnectSessionInfo or {@code null} for none
+   */
+  public SparkWrapperObject setSparkConnectSessionInfo(SparkConnectSessionInfo sparkConnectSessionInfo) {
+    this.sparkConnectSessionInfo = sparkConnectSessionInfo;
     return this;
   }
 

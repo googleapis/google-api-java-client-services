@@ -54,6 +54,38 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
   private String disabledTime;
 
   /**
+   * Optional. A list of file paths patterns to exclude from triggering a rollout. Patterns in this
+   * list take precedence over required_paths. **Note**: All paths must be in the ignored_paths in
+   * order for the rollout to be skipped. Limited to 100 paths. Example: ignored_paths: { pattern:
+   * "foo/bar/excluded” type: GLOB }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Path> ignoredPaths;
+
+  static {
+    // hack to force ProGuard to consider Path used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Path.class);
+  }
+
+  /**
+   * Optional. A list of file paths patterns that trigger a build and rollout if at least one of the
+   * changed files in the commit are present in this list. This field is optional; the rollout
+   * policy will default to triggering on all paths if not populated. Limited to 100 paths. Example:
+   * “required_paths: { pattern: "foo/bar” type: GLOB }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Path> requiredPaths;
+
+  static {
+    // hack to force ProGuard to consider Path used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Path.class);
+  }
+
+  /**
    * If set, specifies a branch that triggers a new build to be started with this policy. Otherwise,
    * no automatic rollouts will happen.
    * @return value or {@code null} for none
@@ -105,6 +137,52 @@ public final class RolloutPolicy extends com.google.api.client.json.GenericJson 
    */
   public RolloutPolicy setDisabledTime(String disabledTime) {
     this.disabledTime = disabledTime;
+    return this;
+  }
+
+  /**
+   * Optional. A list of file paths patterns to exclude from triggering a rollout. Patterns in this
+   * list take precedence over required_paths. **Note**: All paths must be in the ignored_paths in
+   * order for the rollout to be skipped. Limited to 100 paths. Example: ignored_paths: { pattern:
+   * "foo/bar/excluded” type: GLOB }
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Path> getIgnoredPaths() {
+    return ignoredPaths;
+  }
+
+  /**
+   * Optional. A list of file paths patterns to exclude from triggering a rollout. Patterns in this
+   * list take precedence over required_paths. **Note**: All paths must be in the ignored_paths in
+   * order for the rollout to be skipped. Limited to 100 paths. Example: ignored_paths: { pattern:
+   * "foo/bar/excluded” type: GLOB }
+   * @param ignoredPaths ignoredPaths or {@code null} for none
+   */
+  public RolloutPolicy setIgnoredPaths(java.util.List<Path> ignoredPaths) {
+    this.ignoredPaths = ignoredPaths;
+    return this;
+  }
+
+  /**
+   * Optional. A list of file paths patterns that trigger a build and rollout if at least one of the
+   * changed files in the commit are present in this list. This field is optional; the rollout
+   * policy will default to triggering on all paths if not populated. Limited to 100 paths. Example:
+   * “required_paths: { pattern: "foo/bar” type: GLOB }
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Path> getRequiredPaths() {
+    return requiredPaths;
+  }
+
+  /**
+   * Optional. A list of file paths patterns that trigger a build and rollout if at least one of the
+   * changed files in the commit are present in this list. This field is optional; the rollout
+   * policy will default to triggering on all paths if not populated. Limited to 100 paths. Example:
+   * “required_paths: { pattern: "foo/bar” type: GLOB }
+   * @param requiredPaths requiredPaths or {@code null} for none
+   */
+  public RolloutPolicy setRequiredPaths(java.util.List<Path> requiredPaths) {
+    this.requiredPaths = requiredPaths;
     return this;
   }
 

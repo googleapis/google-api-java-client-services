@@ -58,11 +58,25 @@ public final class GoogleCloudNotebooklmV1alphaFailureReason extends com.google.
   private GoogleCloudNotebooklmV1alphaFailureReasonIngestionError ingestionError;
 
   /**
+   * Indicates that the source MIME type is blocked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaFailureReasonMimeTypeBlocked mimeTypeBlocked;
+
+  /**
    * Indicates that the source is paywalled and cannot be ingested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudNotebooklmV1alphaFailureReasonPaywallError paywallError;
+
+  /**
+   * Indicates that the policy check failed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudNotebooklmV1alphaFailureReasonPolicyCheckFailed policyCheckFailed;
 
   /**
    * Indicates that the source is empty.
@@ -182,6 +196,23 @@ public final class GoogleCloudNotebooklmV1alphaFailureReason extends com.google.
   }
 
   /**
+   * Indicates that the source MIME type is blocked.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaFailureReasonMimeTypeBlocked getMimeTypeBlocked() {
+    return mimeTypeBlocked;
+  }
+
+  /**
+   * Indicates that the source MIME type is blocked.
+   * @param mimeTypeBlocked mimeTypeBlocked or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaFailureReason setMimeTypeBlocked(GoogleCloudNotebooklmV1alphaFailureReasonMimeTypeBlocked mimeTypeBlocked) {
+    this.mimeTypeBlocked = mimeTypeBlocked;
+    return this;
+  }
+
+  /**
    * Indicates that the source is paywalled and cannot be ingested.
    * @return value or {@code null} for none
    */
@@ -195,6 +226,23 @@ public final class GoogleCloudNotebooklmV1alphaFailureReason extends com.google.
    */
   public GoogleCloudNotebooklmV1alphaFailureReason setPaywallError(GoogleCloudNotebooklmV1alphaFailureReasonPaywallError paywallError) {
     this.paywallError = paywallError;
+    return this;
+  }
+
+  /**
+   * Indicates that the policy check failed.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaFailureReasonPolicyCheckFailed getPolicyCheckFailed() {
+    return policyCheckFailed;
+  }
+
+  /**
+   * Indicates that the policy check failed.
+   * @param policyCheckFailed policyCheckFailed or {@code null} for none
+   */
+  public GoogleCloudNotebooklmV1alphaFailureReason setPolicyCheckFailed(GoogleCloudNotebooklmV1alphaFailureReasonPolicyCheckFailed policyCheckFailed) {
+    this.policyCheckFailed = policyCheckFailed;
     return this;
   }
 

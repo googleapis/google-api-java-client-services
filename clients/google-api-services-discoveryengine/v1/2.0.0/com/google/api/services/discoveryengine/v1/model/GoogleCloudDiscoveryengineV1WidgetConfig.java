@@ -263,6 +263,13 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfig extends com.google.a
   private java.lang.String name;
 
   /**
+   * Output only. The nodes associated with the Widget Config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigNode> nodes;
+
+  /**
    * The type of snippet to display in UCS widget. - RESULT_DISPLAY_TYPE_UNSPECIFIED for existing
    * users. - SNIPPET for new non-enterprise search users. - EXTRACTIVE_ANSWER for new enterprise
    * search users.
@@ -857,6 +864,23 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfig extends com.google.a
    */
   public GoogleCloudDiscoveryengineV1WidgetConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The nodes associated with the Widget Config.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigNode> getNodes() {
+    return nodes;
+  }
+
+  /**
+   * Output only. The nodes associated with the Widget Config.
+   * @param nodes nodes or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfig setNodes(java.util.List<GoogleCloudDiscoveryengineV1WidgetConfigNode> nodes) {
+    this.nodes = nodes;
     return this;
   }
 

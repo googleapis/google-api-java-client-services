@@ -99,13 +99,6 @@ public final class GoogleCloudDiscoveryengineV1alphaAgentView extends com.google
   private java.lang.String name;
 
   /**
-   * Output only. The display name of the agent owner.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String ownerDisplayName;
-
-  /**
    * The reason why the agent was rejected. Only set if the state is PRIVATE, and got there via
    * rejection.
    * The value may be {@code null}.
@@ -317,23 +310,6 @@ public final class GoogleCloudDiscoveryengineV1alphaAgentView extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaAgentView setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * Output only. The display name of the agent owner.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getOwnerDisplayName() {
-    return ownerDisplayName;
-  }
-
-  /**
-   * Output only. The display name of the agent owner.
-   * @param ownerDisplayName ownerDisplayName or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaAgentView setOwnerDisplayName(java.lang.String ownerDisplayName) {
-    this.ownerDisplayName = ownerDisplayName;
     return this;
   }
 

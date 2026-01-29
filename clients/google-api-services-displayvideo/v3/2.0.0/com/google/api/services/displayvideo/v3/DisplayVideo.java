@@ -1471,7 +1471,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param advertiserId Required. The ID of the advertiser this ad group ad belongs to.
-       * @param adGroupAdId Required. The ID of the ad group ad to fetch.
+       * @param adGroupAdId Required. The ID of the ad to fetch.
        * @return the request
        */
       public Get get(java.lang.Long advertiserId, java.lang.Long adGroupAdId) throws java.io.IOException {
@@ -1501,7 +1501,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param advertiserId Required. The ID of the advertiser this ad group ad belongs to.
-         * @param adGroupAdId Required. The ID of the ad group ad to fetch.
+         * @param adGroupAdId Required. The ID of the ad to fetch.
          * @since 1.13
          */
         protected Get(java.lang.Long advertiserId, java.lang.Long adGroupAdId) {
@@ -1591,17 +1591,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** Required. The ID of the ad group ad to fetch. */
+        /** Required. The ID of the ad to fetch. */
         @com.google.api.client.util.Key
         private java.lang.Long adGroupAdId;
 
-        /** Required. The ID of the ad group ad to fetch.
+        /** Required. The ID of the ad to fetch.
          */
         public java.lang.Long getAdGroupAdId() {
           return adGroupAdId;
         }
 
-        /** Required. The ID of the ad group ad to fetch. */
+        /** Required. The ID of the ad to fetch. */
         public Get setAdGroupAdId(java.lang.Long adGroupAdId) {
           this.adGroupAdId = adGroupAdId;
           return this;
@@ -1620,7 +1620,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the displayvideo server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param advertiserId Required. The ID of the advertiser the ad groups belongs to.
+       * @param advertiserId Required. The ID of the advertiser the ads belong to.
        * @return the request
        */
       public List list(java.lang.Long advertiserId) throws java.io.IOException {
@@ -1646,7 +1646,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param advertiserId Required. The ID of the advertiser the ad groups belongs to.
+         * @param advertiserId Required. The ID of the advertiser the ads belong to.
          * @since 1.13
          */
         protected List(java.lang.Long advertiserId) {
@@ -1719,45 +1719,45 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The ID of the advertiser the ad groups belongs to. */
+        /** Required. The ID of the advertiser the ads belong to. */
         @com.google.api.client.util.Key
         private java.lang.Long advertiserId;
 
-        /** Required. The ID of the advertiser the ad groups belongs to.
+        /** Required. The ID of the advertiser the ads belong to.
          */
         public java.lang.Long getAdvertiserId() {
           return advertiserId;
         }
 
-        /** Required. The ID of the advertiser the ad groups belongs to. */
+        /** Required. The ID of the advertiser the ads belong to. */
         public List setAdvertiserId(java.lang.Long advertiserId) {
           this.advertiserId = advertiserId;
           return this;
         }
 
         /**
-         * Optional. Allows filtering by custom ad group ad fields. Supported syntax: * Filter
-         * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * `AND` and `OR`. A sequence of restrictions implicitly uses `AND`. * A restriction has the
-         * form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator.
-         * Supported fields: * `adGroupId` * `displayName` * `entityStatus` * `adGroupAdId`
-         * Examples: * All ad group ads under an ad group: `adGroupId="1234"` * All ad group ads
-         * under an ad group with an entityStatus of `ENTITY_STATUS_ACTIVE` or
-         * `ENTITY_STATUS_PAUSED`: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
-         * entityStatus="ENTITY_STATUS_PAUSED") AND adGroupId="12345"` The length of this field
-         * should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
-         * video/api/guides/how-tos/filters) guide for more information.
+         * Optional. Allows filtering by ad group ad fields. Supported syntax: * Filter expressions
+         * are made up of one or more restrictions. * Restrictions can be combined by `AND` and
+         * `OR`. A sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+         * `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported
+         * fields: * `adGroupId` * `displayName` * `entityStatus` * `adGroupAdId` Examples: * All ad
+         * group ads under an ad group: `adGroupId="1234"` * All ad group ads under an ad group with
+         * an entityStatus of `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`:
+         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
+         * adGroupId="12345"` The length of this field should be no more than 500 characters.
+         * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+         * for more information.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Allows filtering by custom ad group ad fields. Supported syntax: * Filter expressions are
-       made up of one or more restrictions. * Restrictions can be combined by `AND` and `OR`. A sequence
-       of restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator}
-       {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: * `adGroupId` *
-       `displayName` * `entityStatus` * `adGroupAdId` Examples: * All ad group ads under an ad group:
-       `adGroupId="1234"` * All ad group ads under an ad group with an entityStatus of
-       `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
+        /** Optional. Allows filtering by ad group ad fields. Supported syntax: * Filter expressions are made
+       up of one or more restrictions. * Restrictions can be combined by `AND` and `OR`. A sequence of
+       restrictions implicitly uses `AND`. * A restriction has the form of `{field} {operator} {value}`. *
+       All fields must use the `EQUALS (=)` operator. Supported fields: * `adGroupId` * `displayName` *
+       `entityStatus` * `adGroupAdId` Examples: * All ad group ads under an ad group: `adGroupId="1234"` *
+       All ad group ads under an ad group with an entityStatus of `ENTITY_STATUS_ACTIVE` or
+       `ENTITY_STATUS_PAUSED`: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
        entityStatus="ENTITY_STATUS_PAUSED") AND adGroupId="12345"` The length of this field should be no
        more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-
        tos/filters) guide for more information.
@@ -1767,17 +1767,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. Allows filtering by custom ad group ad fields. Supported syntax: * Filter
-         * expressions are made up of one or more restrictions. * Restrictions can be combined by
-         * `AND` and `OR`. A sequence of restrictions implicitly uses `AND`. * A restriction has the
-         * form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator.
-         * Supported fields: * `adGroupId` * `displayName` * `entityStatus` * `adGroupAdId`
-         * Examples: * All ad group ads under an ad group: `adGroupId="1234"` * All ad group ads
-         * under an ad group with an entityStatus of `ENTITY_STATUS_ACTIVE` or
-         * `ENTITY_STATUS_PAUSED`: `(entityStatus="ENTITY_STATUS_ACTIVE" OR
-         * entityStatus="ENTITY_STATUS_PAUSED") AND adGroupId="12345"` The length of this field
-         * should be no more than 500 characters. Reference our [filter `LIST` requests](/display-
-         * video/api/guides/how-tos/filters) guide for more information.
+         * Optional. Allows filtering by ad group ad fields. Supported syntax: * Filter expressions
+         * are made up of one or more restrictions. * Restrictions can be combined by `AND` and
+         * `OR`. A sequence of restrictions implicitly uses `AND`. * A restriction has the form of
+         * `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported
+         * fields: * `adGroupId` * `displayName` * `entityStatus` * `adGroupAdId` Examples: * All ad
+         * group ads under an ad group: `adGroupId="1234"` * All ad group ads under an ad group with
+         * an entityStatus of `ENTITY_STATUS_ACTIVE` or `ENTITY_STATUS_PAUSED`:
+         * `(entityStatus="ENTITY_STATUS_ACTIVE" OR entityStatus="ENTITY_STATUS_PAUSED") AND
+         * adGroupId="12345"` The length of this field should be no more than 500 characters.
+         * Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide
+         * for more information.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

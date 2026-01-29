@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v4.model;
 public final class ListAdGroupAdsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of ad group ads. This list will be absent if empty.
+   * The list of ads. This list will be absent if empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class ListAdGroupAdsResponse extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
-   * The list of ad group ads. This list will be absent if empty.
+   * The list of ads. This list will be absent if empty.
    * @return value or {@code null} for none
    */
   public java.util.List<AdGroupAd> getAdGroupAds() {
@@ -60,7 +60,7 @@ public final class ListAdGroupAdsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The list of ad group ads. This list will be absent if empty.
+   * The list of ads. This list will be absent if empty.
    * @param adGroupAds adGroupAds or {@code null} for none
    */
   public ListAdGroupAdsResponse setAdGroupAds(java.util.List<AdGroupAd> adGroupAds) {

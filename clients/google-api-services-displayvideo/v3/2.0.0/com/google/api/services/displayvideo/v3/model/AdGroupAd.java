@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AdGroupAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique ID of the ad. Assigned by the system.
+   * Output only. The unique ID of the ad. Assigned by the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -48,7 +48,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private java.lang.Long adGroupId;
 
   /**
-   * The policy approval status of the ad.
+   * Output only. The policy approval status of the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private java.util.List<AdUrl> adUrls;
 
   /**
-   * The unique ID of the advertiser the ad belongs to.
+   * Output only. The unique ID of the advertiser the ad belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -123,7 +123,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private MastheadAd mastheadAd;
 
   /**
-   * The resource name of the ad.
+   * Output only. The resource name of the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +155,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private VideoPerformanceAd videoPerformanceAd;
 
   /**
-   * The unique ID of the ad. Assigned by the system.
+   * Output only. The unique ID of the ad. Assigned by the system.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdGroupAdId() {
@@ -163,7 +163,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the ad. Assigned by the system.
+   * Output only. The unique ID of the ad. Assigned by the system.
    * @param adGroupAdId adGroupAdId or {@code null} for none
    */
   public AdGroupAd setAdGroupAdId(java.lang.Long adGroupAdId) {
@@ -195,7 +195,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The policy approval status of the ad.
+   * Output only. The policy approval status of the ad.
    * @return value or {@code null} for none
    */
   public AdPolicy getAdPolicy() {
@@ -203,7 +203,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The policy approval status of the ad.
+   * Output only. The policy approval status of the ad.
    * @param adPolicy adPolicy or {@code null} for none
    */
   public AdGroupAd setAdPolicy(AdPolicy adPolicy) {
@@ -229,7 +229,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the advertiser the ad belongs to.
+   * Output only. The unique ID of the advertiser the ad belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdvertiserId() {
@@ -237,7 +237,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the advertiser the ad belongs to.
+   * Output only. The unique ID of the advertiser the ad belongs to.
    * @param advertiserId advertiserId or {@code null} for none
    */
   public AdGroupAd setAdvertiserId(java.lang.Long advertiserId) {
@@ -375,7 +375,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the ad.
+   * Output only. The resource name of the ad.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -383,7 +383,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the ad.
+   * Output only. The resource name of the ad.
    * @param name name or {@code null} for none
    */
   public AdGroupAd setName(java.lang.String name) {

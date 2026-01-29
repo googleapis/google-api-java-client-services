@@ -136,15 +136,17 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.String loadBalancerType;
 
   /**
-   * A VPC network URI. Used according to the `network_type`. Relevant only for the source
-   * endpoints.
+   * A VPC network URI. For source endpoints, used according to the `network_type`. For destination
+   * endpoints, used only when the source is an external IP address endpoint, and the destination is
+   * an internal IP address endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Type of the network where the endpoint is located. Relevant only for the source endpoints.
+   * For source endpoints, type of the network where the endpoint is located. Not relevant for
+   * destination endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +160,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.lang.Integer port;
 
   /**
-   * Endpoint project ID. Used according to the `network_type`. Relevant only for the source
-   * endpoints.
+   * For source endpoints, endpoint project ID. Used according to the `network_type`. Not relevant
+   * for destination endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -431,8 +433,9 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A VPC network URI. Used according to the `network_type`. Relevant only for the source
-   * endpoints.
+   * A VPC network URI. For source endpoints, used according to the `network_type`. For destination
+   * endpoints, used only when the source is an external IP address endpoint, and the destination is
+   * an internal IP address endpoint.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -440,8 +443,9 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A VPC network URI. Used according to the `network_type`. Relevant only for the source
-   * endpoints.
+   * A VPC network URI. For source endpoints, used according to the `network_type`. For destination
+   * endpoints, used only when the source is an external IP address endpoint, and the destination is
+   * an internal IP address endpoint.
    * @param network network or {@code null} for none
    */
   public Endpoint setNetwork(java.lang.String network) {
@@ -450,7 +454,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the network where the endpoint is located. Relevant only for the source endpoints.
+   * For source endpoints, type of the network where the endpoint is located. Not relevant for
+   * destination endpoints.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkType() {
@@ -458,7 +463,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of the network where the endpoint is located. Relevant only for the source endpoints.
+   * For source endpoints, type of the network where the endpoint is located. Not relevant for
+   * destination endpoints.
    * @param networkType networkType or {@code null} for none
    */
   public Endpoint setNetworkType(java.lang.String networkType) {
@@ -484,8 +490,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Endpoint project ID. Used according to the `network_type`. Relevant only for the source
-   * endpoints.
+   * For source endpoints, endpoint project ID. Used according to the `network_type`. Not relevant
+   * for destination endpoints.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -493,8 +499,8 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Endpoint project ID. Used according to the `network_type`. Relevant only for the source
-   * endpoints.
+   * For source endpoints, endpoint project ID. Used according to the `network_type`. Not relevant
+   * for destination endpoints.
    * @param projectId projectId or {@code null} for none
    */
   public Endpoint setProjectId(java.lang.String projectId) {

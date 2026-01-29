@@ -62,8 +62,9 @@ public final class DeploymentEvent extends com.google.api.client.json.GenericJso
   private String deployTime;
 
   /**
-   * Identifier. The name of the DeploymentEvent. This name is provided by DCI. Format: projects/{pr
-   * oject}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+   * Identifier. The name of the DeploymentEvent. This name is provided by Developer Connect
+   * insights. Format: projects/{project}/locations/{location}/insightsConfigs/{insights_config}/dep
+   * loymentEvents/{uuid}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,8 +169,9 @@ public final class DeploymentEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifier. The name of the DeploymentEvent. This name is provided by DCI. Format: projects/{pr
-   * oject}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+   * Identifier. The name of the DeploymentEvent. This name is provided by Developer Connect
+   * insights. Format: projects/{project}/locations/{location}/insightsConfigs/{insights_config}/dep
+   * loymentEvents/{uuid}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -177,8 +179,9 @@ public final class DeploymentEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifier. The name of the DeploymentEvent. This name is provided by DCI. Format: projects/{pr
-   * oject}/locations/{location}/insightsConfigs/{insights_config}/deploymentEvents/{uuid}
+   * Identifier. The name of the DeploymentEvent. This name is provided by Developer Connect
+   * insights. Format: projects/{project}/locations/{location}/insightsConfigs/{insights_config}/dep
+   * loymentEvents/{uuid}
    * @param name name or {@code null} for none
    */
   public DeploymentEvent setName(java.lang.String name) {

@@ -17,7 +17,7 @@
 package com.google.api.services.developerconnect.v1.model;
 
 /**
- * Projects represents the projects to track with the InsightsConfig.
+ * Bearer token authentication with a token.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Developer Connect API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.developerconnect.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Projects extends com.google.api.client.json.GenericJson {
+public final class BearerTokenAuthentication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The project IDs. Format: {project}
+   * Optional. The token SecretManager secret version to authenticate as.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> projectIds;
+  private java.lang.String tokenSecretVersion;
 
   /**
-   * Optional. The project IDs. Format: {project}
+   * Optional. The token SecretManager secret version to authenticate as.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getProjectIds() {
-    return projectIds;
+  public java.lang.String getTokenSecretVersion() {
+    return tokenSecretVersion;
   }
 
   /**
-   * Optional. The project IDs. Format: {project}
-   * @param projectIds projectIds or {@code null} for none
+   * Optional. The token SecretManager secret version to authenticate as.
+   * @param tokenSecretVersion tokenSecretVersion or {@code null} for none
    */
-  public Projects setProjectIds(java.util.List<java.lang.String> projectIds) {
-    this.projectIds = projectIds;
+  public BearerTokenAuthentication setTokenSecretVersion(java.lang.String tokenSecretVersion) {
+    this.tokenSecretVersion = tokenSecretVersion;
     return this;
   }
 
   @Override
-  public Projects set(String fieldName, Object value) {
-    return (Projects) super.set(fieldName, value);
+  public BearerTokenAuthentication set(String fieldName, Object value) {
+    return (BearerTokenAuthentication) super.set(fieldName, value);
   }
 
   @Override
-  public Projects clone() {
-    return (Projects) super.clone();
+  public BearerTokenAuthentication clone() {
+    return (BearerTokenAuthentication) super.clone();
   }
 
 }

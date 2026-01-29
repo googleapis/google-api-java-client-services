@@ -45,15 +45,14 @@ public final class StartOAuthResponse extends com.google.api.client.json.Generic
   private java.lang.String clientId;
 
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.1 Follow http://shortn/_WFYl6U0NyC to
-   * include it in the AutoCodeURL.
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String codeChallenge;
 
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +114,7 @@ public final class StartOAuthResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.1 Follow http://shortn/_WFYl6U0NyC to
-   * include it in the AutoCodeURL.
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.1
    * @return value or {@code null} for none
    */
   public java.lang.String getCodeChallenge() {
@@ -124,8 +122,7 @@ public final class StartOAuthResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.1 Follow http://shortn/_WFYl6U0NyC to
-   * include it in the AutoCodeURL.
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.1
    * @param codeChallenge codeChallenge or {@code null} for none
    */
   public StartOAuthResponse setCodeChallenge(java.lang.String codeChallenge) {
@@ -134,7 +131,7 @@ public final class StartOAuthResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
    * @return value or {@code null} for none
    */
   public java.lang.String getCodeChallengeMethod() {
@@ -142,7 +139,7 @@ public final class StartOAuthResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
+   * Please refer to https://datatracker.ietf.org/doc/html/rfc7636#section-4.2
    * @param codeChallengeMethod codeChallengeMethod or {@code null} for none
    */
   public StartOAuthResponse setCodeChallengeMethod(java.lang.String codeChallengeMethod) {

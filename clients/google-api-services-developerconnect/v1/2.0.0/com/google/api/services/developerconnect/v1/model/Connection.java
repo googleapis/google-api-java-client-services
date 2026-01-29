@@ -127,6 +127,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private GitLabEnterpriseConfig gitlabEnterpriseConfig;
 
   /**
+   * Optional. Configuration for connections to an HTTP service provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenericHTTPEndpointConfig httpConfig;
+
+  /**
    * Output only. Installation state of the Connection.
    * The value may be {@code null}.
    */
@@ -154,6 +161,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
+
+  /**
+   * Configuration for connections to an instance of Secure Source Manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecureSourceManagerInstanceConfig secureSourceManagerInstanceConfig;
 
   /**
    * Output only. A system-assigned unique identifier for the Connection.
@@ -401,6 +415,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Configuration for connections to an HTTP service provider.
+   * @return value or {@code null} for none
+   */
+  public GenericHTTPEndpointConfig getHttpConfig() {
+    return httpConfig;
+  }
+
+  /**
+   * Optional. Configuration for connections to an HTTP service provider.
+   * @param httpConfig httpConfig or {@code null} for none
+   */
+  public Connection setHttpConfig(GenericHTTPEndpointConfig httpConfig) {
+    this.httpConfig = httpConfig;
+    return this;
+  }
+
+  /**
    * Output only. Installation state of the Connection.
    * @return value or {@code null} for none
    */
@@ -467,6 +498,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Configuration for connections to an instance of Secure Source Manager.
+   * @return value or {@code null} for none
+   */
+  public SecureSourceManagerInstanceConfig getSecureSourceManagerInstanceConfig() {
+    return secureSourceManagerInstanceConfig;
+  }
+
+  /**
+   * Configuration for connections to an instance of Secure Source Manager.
+   * @param secureSourceManagerInstanceConfig secureSourceManagerInstanceConfig or {@code null} for none
+   */
+  public Connection setSecureSourceManagerInstanceConfig(SecureSourceManagerInstanceConfig secureSourceManagerInstanceConfig) {
+    this.secureSourceManagerInstanceConfig = secureSourceManagerInstanceConfig;
     return this;
   }
 

@@ -10790,7 +10790,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name of the pool.
+         * @param name Identifier. The resource name of the pool.
          * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPool}
          * @return the request
          */
@@ -10817,7 +10817,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name of the pool.
+           * @param name Identifier. The resource name of the pool.
            * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPool}
            * @since 1.13
            */
@@ -10886,17 +10886,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. The resource name of the pool. */
+          /** Identifier. The resource name of the pool. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name of the pool.
+          /** Identifier. The resource name of the pool.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. The resource name of the pool. */
+          /** Identifier. The resource name of the pool. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12012,7 +12012,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The resource name of the namespace.
+           * @param name Identifier. The resource name of the namespace.
            * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace}
            * @return the request
            */
@@ -12039,7 +12039,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The resource name of the namespace.
+             * @param name Identifier. The resource name of the namespace.
              * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace}
              * @since 1.13
              */
@@ -12108,17 +12108,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Output only. The resource name of the namespace. */
+            /** Identifier. The resource name of the namespace. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The resource name of the namespace.
+            /** Identifier. The resource name of the namespace.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Output only. The resource name of the namespace. */
+            /** Identifier. The resource name of the namespace. */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -13319,7 +13319,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * This request holds the parameters needed by the iam server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Output only. The resource name of the managed identity.
+             * @param name Identifier. The resource name of the managed identity.
              * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity}
              * @return the request
              */
@@ -13346,7 +13346,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Output only. The resource name of the managed identity.
+               * @param name Identifier. The resource name of the managed identity.
                * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity}
                * @since 1.13
                */
@@ -13415,17 +13415,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
                 return (Patch) super.setUploadProtocol(uploadProtocol);
               }
 
-              /** Output only. The resource name of the managed identity. */
+              /** Identifier. The resource name of the managed identity. */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Output only. The resource name of the managed identity.
+              /** Identifier. The resource name of the managed identity.
                */
               public java.lang.String getName() {
                 return name;
               }
 
-              /** Output only. The resource name of the managed identity. */
+              /** Identifier. The resource name of the managed identity. */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15205,7 +15205,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * This request holds the parameters needed by the iam server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. The resource name of the provider.
+           * @param name Identifier. The resource name of the provider.
            * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider}
            * @return the request
            */
@@ -15232,7 +15232,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. The resource name of the provider.
+             * @param name Identifier. The resource name of the provider.
              * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolProvider}
              * @since 1.13
              */
@@ -15301,17 +15301,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               return (Patch) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Output only. The resource name of the provider. */
+            /** Identifier. The resource name of the provider. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. The resource name of the provider.
+            /** Identifier. The resource name of the provider.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Output only. The resource name of the provider. */
+            /** Identifier. The resource name of the provider. */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

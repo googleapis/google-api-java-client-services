@@ -54,7 +54,7 @@ public final class WorkloadIdentityPoolManagedIdentity extends com.google.api.cl
   private String expireTime;
 
   /**
-   * Output only. The resource name of the managed identity.
+   * Identifier. The resource name of the managed identity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +123,7 @@ public final class WorkloadIdentityPoolManagedIdentity extends com.google.api.cl
   }
 
   /**
-   * Output only. The resource name of the managed identity.
+   * Identifier. The resource name of the managed identity.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -131,7 +131,7 @@ public final class WorkloadIdentityPoolManagedIdentity extends com.google.api.cl
   }
 
   /**
-   * Output only. The resource name of the managed identity.
+   * Identifier. The resource name of the managed identity.
    * @param name name or {@code null} for none
    */
   public WorkloadIdentityPoolManagedIdentity setName(java.lang.String name) {

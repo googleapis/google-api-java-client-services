@@ -85,7 +85,7 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   private java.lang.String mode;
 
   /**
-   * Output only. The resource name of the pool.
+   * Identifier. The resource name of the pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +226,7 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The resource name of the pool.
+   * Identifier. The resource name of the pool.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -234,7 +234,7 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The resource name of the pool.
+   * Identifier. The resource name of the pool.
    * @param name name or {@code null} for none
    */
   public WorkloadIdentityPool setName(java.lang.String name) {

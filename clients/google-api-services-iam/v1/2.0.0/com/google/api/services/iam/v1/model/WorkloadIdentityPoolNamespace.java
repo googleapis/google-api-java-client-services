@@ -55,7 +55,7 @@ public final class WorkloadIdentityPoolNamespace extends com.google.api.client.j
   private String expireTime;
 
   /**
-   * Output only. The resource name of the namespace.
+   * Identifier. The resource name of the namespace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +131,7 @@ public final class WorkloadIdentityPoolNamespace extends com.google.api.client.j
   }
 
   /**
-   * Output only. The resource name of the namespace.
+   * Identifier. The resource name of the namespace.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -139,7 +139,7 @@ public final class WorkloadIdentityPoolNamespace extends com.google.api.client.j
   }
 
   /**
-   * Output only. The resource name of the namespace.
+   * Identifier. The resource name of the namespace.
    * @param name name or {@code null} for none
    */
   public WorkloadIdentityPoolNamespace setName(java.lang.String name) {

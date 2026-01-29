@@ -606,7 +606,7 @@
           "type": "string"
         },
         "uri": {
-          "description": "The uri of the Cloud Storage object. It's the same uri that is used by\ngsutil. For example: \"gs://bucket_name/object_name\". See [Viewing and\nEditing Object\nMetadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)\nfor more information.",
+          "description": "The uri of the Cloud Storage object. It's the same uri that is used by\ngcloud storage. For example: \"gs://bucket_name/object_name\". See [Viewing and\nEditing Object\nMetadata](https://cloud.google.com/storage/docs/viewing-editing-metadata)\nfor more information.",
           "type": "string"
         }
       },

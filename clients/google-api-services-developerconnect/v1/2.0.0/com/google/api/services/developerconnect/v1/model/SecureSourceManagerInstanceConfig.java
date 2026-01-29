@@ -17,7 +17,7 @@
 package com.google.api.services.developerconnect.v1.model;
 
 /**
- * Projects represents the projects to track with the InsightsConfig.
+ * Configuration for connections to SSM instance
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Developer Connect API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.developerconnect.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Projects extends com.google.api.client.json.GenericJson {
+public final class SecureSourceManagerInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The project IDs. Format: {project}
+   * Required. Immutable. SSM instance resource, formatted as `projects/locations/instances`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> projectIds;
+  private java.lang.String instance;
 
   /**
-   * Optional. The project IDs. Format: {project}
+   * Required. Immutable. SSM instance resource, formatted as `projects/locations/instances`
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getProjectIds() {
-    return projectIds;
+  public java.lang.String getInstance() {
+    return instance;
   }
 
   /**
-   * Optional. The project IDs. Format: {project}
-   * @param projectIds projectIds or {@code null} for none
+   * Required. Immutable. SSM instance resource, formatted as `projects/locations/instances`
+   * @param instance instance or {@code null} for none
    */
-  public Projects setProjectIds(java.util.List<java.lang.String> projectIds) {
-    this.projectIds = projectIds;
+  public SecureSourceManagerInstanceConfig setInstance(java.lang.String instance) {
+    this.instance = instance;
     return this;
   }
 
   @Override
-  public Projects set(String fieldName, Object value) {
-    return (Projects) super.set(fieldName, value);
+  public SecureSourceManagerInstanceConfig set(String fieldName, Object value) {
+    return (SecureSourceManagerInstanceConfig) super.set(fieldName, value);
   }
 
   @Override
-  public Projects clone() {
-    return (Projects) super.clone();
+  public SecureSourceManagerInstanceConfig clone() {
+    return (SecureSourceManagerInstanceConfig) super.clone();
   }
 
 }

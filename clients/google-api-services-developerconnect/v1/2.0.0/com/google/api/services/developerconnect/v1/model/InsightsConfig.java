@@ -18,7 +18,7 @@ package com.google.api.services.developerconnect.v1.model;
 
 /**
  * The InsightsConfig resource is the core configuration object to capture events from your Software
- * Development Lifecycle. It acts as the central hub for managing how Developer connect understands
+ * Development Lifecycle. It acts as the central hub for managing how Developer Connect understands
  * your application, its runtime environments, and the artifacts deployed within them.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -93,7 +93,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * Optional. The GCP projects to track with the InsightsConfig.
+   * Optional. The projects to track with the InsightsConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,7 +260,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The GCP projects to track with the InsightsConfig.
+   * Optional. The projects to track with the InsightsConfig.
    * @return value or {@code null} for none
    */
   public Projects getProjects() {
@@ -268,7 +268,7 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The GCP projects to track with the InsightsConfig.
+   * Optional. The projects to track with the InsightsConfig.
    * @param projects projects or {@code null} for none
    */
   public InsightsConfig setProjects(Projects projects) {

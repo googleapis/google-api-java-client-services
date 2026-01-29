@@ -67,6 +67,13 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
   private java.lang.String installationUri;
 
   /**
+   * Optional. Immutable. GitHub Enterprise organization in which the GitHub App is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String organization;
+
+  /**
    * Optional. SecretManager resource containing the private key of the GitHub App, formatted as
    * `projects/secrets/versions` or `projects/locations/secrets/versions` (if regional secrets are
    * supported in that location).
@@ -192,6 +199,23 @@ public final class GitHubEnterpriseConfig extends com.google.api.client.json.Gen
    */
   public GitHubEnterpriseConfig setInstallationUri(java.lang.String installationUri) {
     this.installationUri = installationUri;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. GitHub Enterprise organization in which the GitHub App is created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrganization() {
+    return organization;
+  }
+
+  /**
+   * Optional. Immutable. GitHub Enterprise organization in which the GitHub App is created.
+   * @param organization organization or {@code null} for none
+   */
+  public GitHubEnterpriseConfig setOrganization(java.lang.String organization) {
+    this.organization = organization;
     return this;
   }
 

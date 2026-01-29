@@ -78,7 +78,7 @@ public final class AccountConnector extends com.google.api.client.json.GenericJs
   private java.lang.String oauthStartUri;
 
   /**
-   * Provider OAuth config.
+   * Optional. Provider OAuth config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,7 +200,7 @@ public final class AccountConnector extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Provider OAuth config.
+   * Optional. Provider OAuth config.
    * @return value or {@code null} for none
    */
   public ProviderOAuthConfig getProviderOauthConfig() {
@@ -208,7 +208,7 @@ public final class AccountConnector extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Provider OAuth config.
+   * Optional. Provider OAuth config.
    * @param providerOauthConfig providerOauthConfig or {@code null} for none
    */
   public AccountConnector setProviderOauthConfig(ProviderOAuthConfig providerOauthConfig) {

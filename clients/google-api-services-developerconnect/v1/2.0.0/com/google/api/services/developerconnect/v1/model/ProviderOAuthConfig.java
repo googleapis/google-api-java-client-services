@@ -39,7 +39,7 @@ public final class ProviderOAuthConfig extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> scopes;
 
   /**
-   * Immutable. Developer Connect provided OAuth.
+   * Optional. Immutable. Developer Connect provided OAuth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class ProviderOAuthConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Immutable. Developer Connect provided OAuth.
+   * Optional. Immutable. Developer Connect provided OAuth.
    * @return value or {@code null} for none
    */
   public java.lang.String getSystemProviderId() {
@@ -73,7 +73,7 @@ public final class ProviderOAuthConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Immutable. Developer Connect provided OAuth.
+   * Optional. Immutable. Developer Connect provided OAuth.
    * @param systemProviderId systemProviderId or {@code null} for none
    */
   public ProviderOAuthConfig setSystemProviderId(java.lang.String systemProviderId) {

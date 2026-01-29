@@ -49,7 +49,7 @@ public final class WorkloadIdentityPoolProviderKey extends com.google.api.client
   private KeyData keyData;
 
   /**
-   * Output only. The resource name of the key.
+   * Identifier. The resource name of the key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class WorkloadIdentityPoolProviderKey extends com.google.api.client
   }
 
   /**
-   * Output only. The resource name of the key.
+   * Identifier. The resource name of the key.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -116,7 +116,7 @@ public final class WorkloadIdentityPoolProviderKey extends com.google.api.client
   }
 
   /**
-   * Output only. The resource name of the key.
+   * Identifier. The resource name of the key.
    * @param name name or {@code null} for none
    */
   public WorkloadIdentityPoolProviderKey setName(java.lang.String name) {

@@ -31,7 +31,8 @@ package com.google.api.services.metastore.v1beta.model;
 public final class LocationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Possible configurations supported if the current region is a custom region.
+   * Deprecated: Use a single region service instead. Possible configurations supported if the
+   * current region is a custom region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The multi-region metadata if the current region is a multi-region.
+   * Deprecated: Use a single region service instead. The multi-region metadata if the current
+   * region is a multi-region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +68,8 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Possible configurations supported if the current region is a custom region.
+   * Deprecated: Use a single region service instead. Possible configurations supported if the
+   * current region is a custom region.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomRegionMetadata> getCustomRegionMetadata() {
@@ -74,7 +77,8 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Possible configurations supported if the current region is a custom region.
+   * Deprecated: Use a single region service instead. Possible configurations supported if the
+   * current region is a custom region.
    * @param customRegionMetadata customRegionMetadata or {@code null} for none
    */
   public LocationMetadata setCustomRegionMetadata(java.util.List<CustomRegionMetadata> customRegionMetadata) {
@@ -83,7 +87,8 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The multi-region metadata if the current region is a multi-region.
+   * Deprecated: Use a single region service instead. The multi-region metadata if the current
+   * region is a multi-region.
    * @return value or {@code null} for none
    */
   public MultiRegionMetadata getMultiRegionMetadata() {
@@ -91,7 +96,8 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The multi-region metadata if the current region is a multi-region.
+   * Deprecated: Use a single region service instead. The multi-region metadata if the current
+   * region is a multi-region.
    * @param multiRegionMetadata multiRegionMetadata or {@code null} for none
    */
   public LocationMetadata setMultiRegionMetadata(MultiRegionMetadata multiRegionMetadata) {

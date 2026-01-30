@@ -46,6 +46,15 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
   private CanceledStateContext canceledStateContext;
 
   /**
+   * Entity tag representing the current state of the subscription. The developer will provide this
+   * etag for subscription actions. This etag is always present for auto-renewing and prepaid
+   * subscriptions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * User account identifier in the third-party service.
    * The value may be {@code null}.
    */
@@ -182,6 +191,27 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
    */
   public SubscriptionPurchaseV2 setCanceledStateContext(CanceledStateContext canceledStateContext) {
     this.canceledStateContext = canceledStateContext;
+    return this;
+  }
+
+  /**
+   * Entity tag representing the current state of the subscription. The developer will provide this
+   * etag for subscription actions. This etag is always present for auto-renewing and prepaid
+   * subscriptions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Entity tag representing the current state of the subscription. The developer will provide this
+   * etag for subscription actions. This etag is always present for auto-renewing and prepaid
+   * subscriptions.
+   * @param etag etag or {@code null} for none
+   */
+  public SubscriptionPurchaseV2 setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

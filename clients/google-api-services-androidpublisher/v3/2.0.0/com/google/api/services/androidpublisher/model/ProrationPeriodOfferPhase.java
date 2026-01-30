@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Representation of a single country where the contents of a track can be made available.
+ * Details about proration period offer phase.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -28,40 +28,43 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TrackTargetedCountry extends com.google.api.client.json.GenericJson {
+public final class ProrationPeriodOfferPhase extends com.google.api.client.json.GenericJson {
 
   /**
-   * The country that can be targeted, as a two-letter CLDR code.
+   * The original offer phase type before the proration period. Only set when the proration period
+   * is updated from an existing offer phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String countryCode;
+  private java.lang.String originalOfferPhaseType;
 
   /**
-   * The country that can be targeted, as a two-letter CLDR code.
+   * The original offer phase type before the proration period. Only set when the proration period
+   * is updated from an existing offer phase.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCountryCode() {
-    return countryCode;
+  public java.lang.String getOriginalOfferPhaseType() {
+    return originalOfferPhaseType;
   }
 
   /**
-   * The country that can be targeted, as a two-letter CLDR code.
-   * @param countryCode countryCode or {@code null} for none
+   * The original offer phase type before the proration period. Only set when the proration period
+   * is updated from an existing offer phase.
+   * @param originalOfferPhaseType originalOfferPhaseType or {@code null} for none
    */
-  public TrackTargetedCountry setCountryCode(java.lang.String countryCode) {
-    this.countryCode = countryCode;
+  public ProrationPeriodOfferPhase setOriginalOfferPhaseType(java.lang.String originalOfferPhaseType) {
+    this.originalOfferPhaseType = originalOfferPhaseType;
     return this;
   }
 
   @Override
-  public TrackTargetedCountry set(String fieldName, Object value) {
-    return (TrackTargetedCountry) super.set(fieldName, value);
+  public ProrationPeriodOfferPhase set(String fieldName, Object value) {
+    return (ProrationPeriodOfferPhase) super.set(fieldName, value);
   }
 
   @Override
-  public TrackTargetedCountry clone() {
-    return (TrackTargetedCountry) super.clone();
+  public ProrationPeriodOfferPhase clone() {
+    return (ProrationPeriodOfferPhase) super.clone();
   }
 
 }

@@ -21056,6 +21056,156 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Defers the renewal of a subscription.
+       *
+       * Create a request for the method "subscriptionsv2.defer".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Defer#execute()} method to invoke the remote operation.
+       *
+       * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+       * @param token Required. The token provided to the user's device when the subscription was purchased.
+       * @param content the {@link com.google.api.services.androidpublisher.model.DeferSubscriptionPurchaseRequest}
+       * @return the request
+       */
+      public Defer defer(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.DeferSubscriptionPurchaseRequest content) throws java.io.IOException {
+        Defer result = new Defer(packageName, token, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Defer extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.DeferSubscriptionPurchaseResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}:defer";
+
+        /**
+         * Defers the renewal of a subscription.
+         *
+         * Create a request for the method "subscriptionsv2.defer".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Defer#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Defer#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+         * @param token Required. The token provided to the user's device when the subscription was purchased.
+         * @param content the {@link com.google.api.services.androidpublisher.model.DeferSubscriptionPurchaseRequest}
+         * @since 1.13
+         */
+        protected Defer(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.DeferSubscriptionPurchaseRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.DeferSubscriptionPurchaseResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public Defer set$Xgafv(java.lang.String $Xgafv) {
+          return (Defer) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Defer setAccessToken(java.lang.String accessToken) {
+          return (Defer) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Defer setAlt(java.lang.String alt) {
+          return (Defer) super.setAlt(alt);
+        }
+
+        @Override
+        public Defer setCallback(java.lang.String callback) {
+          return (Defer) super.setCallback(callback);
+        }
+
+        @Override
+        public Defer setFields(java.lang.String fields) {
+          return (Defer) super.setFields(fields);
+        }
+
+        @Override
+        public Defer setKey(java.lang.String key) {
+          return (Defer) super.setKey(key);
+        }
+
+        @Override
+        public Defer setOauthToken(java.lang.String oauthToken) {
+          return (Defer) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Defer setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Defer) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Defer setQuotaUser(java.lang.String quotaUser) {
+          return (Defer) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Defer setUploadType(java.lang.String uploadType) {
+          return (Defer) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Defer setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Defer) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The package of the application for which this subscription was purchased (for example,
+       'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        public Defer setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public Defer setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Defer set(String parameterName, Object value) {
+          return (Defer) super.set(parameterName, value);
+        }
+      }
+      /**
        * Get metadata about a subscription
        *
        * Create a request for the method "subscriptionsv2.get".

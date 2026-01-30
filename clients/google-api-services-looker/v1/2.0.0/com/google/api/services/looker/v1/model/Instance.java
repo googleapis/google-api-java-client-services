@@ -38,6 +38,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private AdminSettings adminSettings;
 
   /**
+   * Optional. Indicates whether catalog integration is enabled for the Looker instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean catalogIntegrationEnabled;
+
+  /**
    * Optional. Storage class of the instance.
    * The value may be {@code null}.
    */
@@ -252,11 +259,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String softDeleteReason;
+
+  /**
    * Output only. The state of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. The time when the Looker instance was suspended (soft deleted).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String suspendedTime;
 
   /**
    * Output only. The time when the Looker instance was last updated.
@@ -286,6 +307,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setAdminSettings(AdminSettings adminSettings) {
     this.adminSettings = adminSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether catalog integration is enabled for the Looker instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCatalogIntegrationEnabled() {
+    return catalogIntegrationEnabled;
+  }
+
+  /**
+   * Optional. Indicates whether catalog integration is enabled for the Looker instance.
+   * @param catalogIntegrationEnabled catalogIntegrationEnabled or {@code null} for none
+   */
+  public Instance setCatalogIntegrationEnabled(java.lang.Boolean catalogIntegrationEnabled) {
+    this.catalogIntegrationEnabled = catalogIntegrationEnabled;
     return this;
   }
 
@@ -808,6 +846,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSoftDeleteReason() {
+    return softDeleteReason;
+  }
+
+  /**
+   * Output only. The reason for the instance being in a soft-deleted state.
+   * @param softDeleteReason softDeleteReason or {@code null} for none
+   */
+  public Instance setSoftDeleteReason(java.lang.String softDeleteReason) {
+    this.softDeleteReason = softDeleteReason;
+    return this;
+  }
+
+  /**
    * Output only. The state of the instance.
    * @return value or {@code null} for none
    */
@@ -821,6 +876,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the Looker instance was suspended (soft deleted).
+   * @return value or {@code null} for none
+   */
+  public String getSuspendedTime() {
+    return suspendedTime;
+  }
+
+  /**
+   * Output only. The time when the Looker instance was suspended (soft deleted).
+   * @param suspendedTime suspendedTime or {@code null} for none
+   */
+  public Instance setSuspendedTime(String suspendedTime) {
+    this.suspendedTime = suspendedTime;
     return this;
   }
 

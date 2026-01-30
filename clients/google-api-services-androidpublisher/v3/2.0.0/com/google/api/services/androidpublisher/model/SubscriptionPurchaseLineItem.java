@@ -83,6 +83,13 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
   private OfferDetails offerDetails;
 
   /**
+   * Current offer phase details for this item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OfferPhase offerPhase;
+
+  /**
    * The item is prepaid.
    * The value may be {@code null}.
    */
@@ -225,6 +232,23 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
    */
   public SubscriptionPurchaseLineItem setOfferDetails(OfferDetails offerDetails) {
     this.offerDetails = offerDetails;
+    return this;
+  }
+
+  /**
+   * Current offer phase details for this item.
+   * @return value or {@code null} for none
+   */
+  public OfferPhase getOfferPhase() {
+    return offerPhase;
+  }
+
+  /**
+   * Current offer phase details for this item.
+   * @param offerPhase offerPhase or {@code null} for none
+   */
+  public SubscriptionPurchaseLineItem setOfferPhase(OfferPhase offerPhase) {
+    this.offerPhase = offerPhase;
     return this;
   }
 

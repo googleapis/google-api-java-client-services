@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Representation of a single country where the contents of a track can be made available.
+ * Response for the v2 purchases.subscriptions.defer API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -28,40 +28,40 @@ package com.google.api.services.androidpublisher.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TrackTargetedCountry extends com.google.api.client.json.GenericJson {
+public final class DeferSubscriptionPurchaseResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The country that can be targeted, as a two-letter CLDR code.
+   * The new expiry time for each subscription items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String countryCode;
+  private java.util.List<ItemExpiryTimeDetails> itemExpiryTimeDetails;
 
   /**
-   * The country that can be targeted, as a two-letter CLDR code.
+   * The new expiry time for each subscription items.
    * @return value or {@code null} for none
    */
-  public java.lang.String getCountryCode() {
-    return countryCode;
+  public java.util.List<ItemExpiryTimeDetails> getItemExpiryTimeDetails() {
+    return itemExpiryTimeDetails;
   }
 
   /**
-   * The country that can be targeted, as a two-letter CLDR code.
-   * @param countryCode countryCode or {@code null} for none
+   * The new expiry time for each subscription items.
+   * @param itemExpiryTimeDetails itemExpiryTimeDetails or {@code null} for none
    */
-  public TrackTargetedCountry setCountryCode(java.lang.String countryCode) {
-    this.countryCode = countryCode;
+  public DeferSubscriptionPurchaseResponse setItemExpiryTimeDetails(java.util.List<ItemExpiryTimeDetails> itemExpiryTimeDetails) {
+    this.itemExpiryTimeDetails = itemExpiryTimeDetails;
     return this;
   }
 
   @Override
-  public TrackTargetedCountry set(String fieldName, Object value) {
-    return (TrackTargetedCountry) super.set(fieldName, value);
+  public DeferSubscriptionPurchaseResponse set(String fieldName, Object value) {
+    return (DeferSubscriptionPurchaseResponse) super.set(fieldName, value);
   }
 
   @Override
-  public TrackTargetedCountry clone() {
-    return (TrackTargetedCountry) super.clone();
+  public DeferSubscriptionPurchaseResponse clone() {
+    return (DeferSubscriptionPurchaseResponse) super.clone();
   }
 
 }

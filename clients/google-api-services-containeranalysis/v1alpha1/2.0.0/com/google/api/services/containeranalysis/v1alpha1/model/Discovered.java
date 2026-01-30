@@ -96,6 +96,13 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
   private String lastScanTime;
 
   /**
+   * Optional. The last time vulnerability scan results changed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastVulnerabilityUpdateTime;
+
+  /**
    * Output only. An operation that indicates the status of the current scan. This field is
    * deprecated, do not use.
    * The value may be {@code null}.
@@ -271,6 +278,23 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
    */
   public Discovered setLastScanTime(String lastScanTime) {
     this.lastScanTime = lastScanTime;
+    return this;
+  }
+
+  /**
+   * Optional. The last time vulnerability scan results changed.
+   * @return value or {@code null} for none
+   */
+  public String getLastVulnerabilityUpdateTime() {
+    return lastVulnerabilityUpdateTime;
+  }
+
+  /**
+   * Optional. The last time vulnerability scan results changed.
+   * @param lastVulnerabilityUpdateTime lastVulnerabilityUpdateTime or {@code null} for none
+   */
+  public Discovered setLastVulnerabilityUpdateTime(String lastVulnerabilityUpdateTime) {
+    this.lastVulnerabilityUpdateTime = lastVulnerabilityUpdateTime;
     return this;
   }
 

@@ -1863,6 +1863,137 @@ public class Looker extends com.google.api.client.googleapis.services.json.Abstr
             return (Restore) super.set(parameterName, value);
           }
         }
+        /**
+         * Undeletes Looker instance.
+         *
+         * Create a request for the method "instances.undelete".
+         *
+         * This request holds the parameters needed by the looker server.  After setting any optional
+         * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: projects/{project}/locations/{location}/instances/{instance}
+         * @param content the {@link com.google.api.services.looker.v1.model.UndeleteInstanceRequest}
+         * @return the request
+         */
+        public Undelete undelete(java.lang.String name, com.google.api.services.looker.v1.model.UndeleteInstanceRequest content) throws java.io.IOException {
+          Undelete result = new Undelete(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Undelete extends LookerRequest<com.google.api.services.looker.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:undelete";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Undeletes Looker instance.
+           *
+           * Create a request for the method "instances.undelete".
+           *
+           * This request holds the parameters needed by the the looker server.  After setting any optional
+           * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: projects/{project}/locations/{location}/instances/{instance}
+           * @param content the {@link com.google.api.services.looker.v1.model.UndeleteInstanceRequest}
+           * @since 1.13
+           */
+          protected Undelete(java.lang.String name, com.google.api.services.looker.v1.model.UndeleteInstanceRequest content) {
+            super(Looker.this, "POST", REST_PATH, content, com.google.api.services.looker.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Undelete set$Xgafv(java.lang.String $Xgafv) {
+            return (Undelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Undelete setAccessToken(java.lang.String accessToken) {
+            return (Undelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Undelete setAlt(java.lang.String alt) {
+            return (Undelete) super.setAlt(alt);
+          }
+
+          @Override
+          public Undelete setCallback(java.lang.String callback) {
+            return (Undelete) super.setCallback(callback);
+          }
+
+          @Override
+          public Undelete setFields(java.lang.String fields) {
+            return (Undelete) super.setFields(fields);
+          }
+
+          @Override
+          public Undelete setKey(java.lang.String key) {
+            return (Undelete) super.setKey(key);
+          }
+
+          @Override
+          public Undelete setOauthToken(java.lang.String oauthToken) {
+            return (Undelete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Undelete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Undelete setQuotaUser(java.lang.String quotaUser) {
+            return (Undelete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Undelete setUploadType(java.lang.String uploadType) {
+            return (Undelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Undelete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Format: projects/{project}/locations/{location}/instances/{instance} */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: projects/{project}/locations/{location}/instances/{instance}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Format: projects/{project}/locations/{location}/instances/{instance} */
+          public Undelete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Undelete set(String parameterName, Object value) {
+            return (Undelete) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Backups collection.

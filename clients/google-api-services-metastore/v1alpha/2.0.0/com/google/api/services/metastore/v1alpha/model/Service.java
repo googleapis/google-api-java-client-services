@@ -113,7 +113,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private MetadataManagementActivity metadataManagementActivity;
 
   /**
-   * Optional. Specifies the multi-region configuration information for the Hive metastore service.
+   * Optional. Deprecated: Use a single region service instead. Specifies the multi-region
+   * configuration information for the Hive metastore service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -420,7 +421,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies the multi-region configuration information for the Hive metastore service.
+   * Optional. Deprecated: Use a single region service instead. Specifies the multi-region
+   * configuration information for the Hive metastore service.
    * @return value or {@code null} for none
    */
   public MultiRegionConfig getMultiRegionConfig() {
@@ -428,7 +430,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies the multi-region configuration information for the Hive metastore service.
+   * Optional. Deprecated: Use a single region service instead. Specifies the multi-region
+   * configuration information for the Hive metastore service.
    * @param multiRegionConfig multiRegionConfig or {@code null} for none
    */
   public Service setMultiRegionConfig(MultiRegionConfig multiRegionConfig) {

@@ -17,8 +17,8 @@
 package com.google.api.services.metastore.v1beta.model;
 
 /**
- * A gRPC client must install all root CA certificates to connect to a multi-regional Dataproc
- * Metastore service and achieve failover.
+ * Deprecated: Use a single region service instead. A gRPC client must install all root CA
+ * certificates to connect to a multi-regional Dataproc Metastore service and achieve failover.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation
@@ -32,21 +32,24 @@ package com.google.api.services.metastore.v1beta.model;
 public final class RootCACertificate extends com.google.api.client.json.GenericJson {
 
   /**
-   * The root CA certificate in PEM format. The maximum length is 65536 bytes.
+   * Deprecated: Use a single region service instead. The root CA certificate in PEM format. The
+   * maximum length is 65536 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String certificate;
 
   /**
-   * The certificate expiration time in timestamp format.
+   * Deprecated: Use a single region service instead. The certificate expiration time in timestamp
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expirationTime;
 
   /**
-   * The root CA certificate in PEM format. The maximum length is 65536 bytes.
+   * Deprecated: Use a single region service instead. The root CA certificate in PEM format. The
+   * maximum length is 65536 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertificate() {
@@ -54,7 +57,8 @@ public final class RootCACertificate extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The root CA certificate in PEM format. The maximum length is 65536 bytes.
+   * Deprecated: Use a single region service instead. The root CA certificate in PEM format. The
+   * maximum length is 65536 bytes.
    * @param certificate certificate or {@code null} for none
    */
   public RootCACertificate setCertificate(java.lang.String certificate) {
@@ -63,7 +67,8 @@ public final class RootCACertificate extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The certificate expiration time in timestamp format.
+   * Deprecated: Use a single region service instead. The certificate expiration time in timestamp
+   * format.
    * @return value or {@code null} for none
    */
   public String getExpirationTime() {
@@ -71,7 +76,8 @@ public final class RootCACertificate extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The certificate expiration time in timestamp format.
+   * Deprecated: Use a single region service instead. The certificate expiration time in timestamp
+   * format.
    * @param expirationTime expirationTime or {@code null} for none
    */
   public RootCACertificate setExpirationTime(String expirationTime) {

@@ -17,9 +17,9 @@
 package com.google.api.services.metastore.v1alpha.model;
 
 /**
- * The metadata for the multi-region that includes the constituent regions. The metadata is only
- * populated if the region is multi-region. For single region or custom dual region, it will be
- * empty.
+ * Deprecated: Use a single region service instead. The metadata for the multi-region that includes
+ * the constituent regions. The metadata is only populated if the region is multi-region. For single
+ * region or custom dual region, it will be empty.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation

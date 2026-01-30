@@ -17,7 +17,8 @@
 package com.google.api.services.metastore.v1alpha.model;
 
 /**
- * The multi-region config for the Dataproc Metastore service.
+ * Deprecated: Use a single region service instead. The multi-region config for the Dataproc
+ * Metastore service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation
@@ -31,22 +32,23 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class MultiRegionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The list of root CA certificates that a gRPC client uses to connect to a multi-
-   * regional Dataproc Metastore service.
+   * Output only. Deprecated: Use a single region service instead. The list of root CA certificates
+   * that a gRPC client uses to connect to a multi-regional Dataproc Metastore service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RootCACertificate> certificates;
 
   /**
+   * Immutable. Deprecated: Use a single region service instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomRegionConfig customRegionConfig;
 
   /**
-   * Output only. The list of root CA certificates that a gRPC client uses to connect to a multi-
-   * regional Dataproc Metastore service.
+   * Output only. Deprecated: Use a single region service instead. The list of root CA certificates
+   * that a gRPC client uses to connect to a multi-regional Dataproc Metastore service.
    * @return value or {@code null} for none
    */
   public java.util.List<RootCACertificate> getCertificates() {
@@ -54,8 +56,8 @@ public final class MultiRegionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The list of root CA certificates that a gRPC client uses to connect to a multi-
-   * regional Dataproc Metastore service.
+   * Output only. Deprecated: Use a single region service instead. The list of root CA certificates
+   * that a gRPC client uses to connect to a multi-regional Dataproc Metastore service.
    * @param certificates certificates or {@code null} for none
    */
   public MultiRegionConfig setCertificates(java.util.List<RootCACertificate> certificates) {
@@ -64,6 +66,7 @@ public final class MultiRegionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Immutable. Deprecated: Use a single region service instead.
    * @return value or {@code null} for none
    */
   public CustomRegionConfig getCustomRegionConfig() {
@@ -71,6 +74,7 @@ public final class MultiRegionConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Immutable. Deprecated: Use a single region service instead.
    * @param customRegionConfig customRegionConfig or {@code null} for none
    */
   public MultiRegionConfig setCustomRegionConfig(CustomRegionConfig customRegionConfig) {

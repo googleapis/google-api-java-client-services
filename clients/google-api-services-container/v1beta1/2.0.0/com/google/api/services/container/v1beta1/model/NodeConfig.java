@@ -164,6 +164,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private GcfsConfig gcfsConfig;
 
   /**
+   * The configuration for GPU Direct
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GPUDirectConfig gpuDirectConfig;
+
+  /**
    * Enable or disable gvnic on the node pool.
    * The value may be {@code null}.
    */
@@ -728,6 +735,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setGcfsConfig(GcfsConfig gcfsConfig) {
     this.gcfsConfig = gcfsConfig;
+    return this;
+  }
+
+  /**
+   * The configuration for GPU Direct
+   * @return value or {@code null} for none
+   */
+  public GPUDirectConfig getGpuDirectConfig() {
+    return gpuDirectConfig;
+  }
+
+  /**
+   * The configuration for GPU Direct
+   * @param gpuDirectConfig gpuDirectConfig or {@code null} for none
+   */
+  public NodeConfig setGpuDirectConfig(GPUDirectConfig gpuDirectConfig) {
+    this.gpuDirectConfig = gpuDirectConfig;
     return this;
   }
 

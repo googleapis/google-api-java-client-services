@@ -54,6 +54,13 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
   private NodeKernelModuleLoading nodeKernelModuleLoading;
 
   /**
+   * Optional. Enables and configures swap space on nodes. If omitted, swap is disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SwapConfig swapConfig;
+
+  /**
    * The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. The
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.rmem_default net.core.wmem_default
@@ -148,6 +155,23 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   public LinuxNodeConfig setNodeKernelModuleLoading(NodeKernelModuleLoading nodeKernelModuleLoading) {
     this.nodeKernelModuleLoading = nodeKernelModuleLoading;
+    return this;
+  }
+
+  /**
+   * Optional. Enables and configures swap space on nodes. If omitted, swap is disabled.
+   * @return value or {@code null} for none
+   */
+  public SwapConfig getSwapConfig() {
+    return swapConfig;
+  }
+
+  /**
+   * Optional. Enables and configures swap space on nodes. If omitted, swap is disabled.
+   * @param swapConfig swapConfig or {@code null} for none
+   */
+  public LinuxNodeConfig setSwapConfig(SwapConfig swapConfig) {
+    this.swapConfig = swapConfig;
     return this;
   }
 

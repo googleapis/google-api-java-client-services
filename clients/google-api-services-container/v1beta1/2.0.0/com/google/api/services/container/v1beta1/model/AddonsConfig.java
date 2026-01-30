@@ -167,6 +167,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private RayOperatorConfig rayOperatorConfig;
 
   /**
+   * Optional. Configuration for the slice controller add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SliceControllerConfig sliceControllerConfig;
+
+  /**
    * Optional. Configuration for the StatefulHA add-on.
    * The value may be {@code null}.
    */
@@ -494,6 +501,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setRayOperatorConfig(RayOperatorConfig rayOperatorConfig) {
     this.rayOperatorConfig = rayOperatorConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the slice controller add-on.
+   * @return value or {@code null} for none
+   */
+  public SliceControllerConfig getSliceControllerConfig() {
+    return sliceControllerConfig;
+  }
+
+  /**
+   * Optional. Configuration for the slice controller add-on.
+   * @param sliceControllerConfig sliceControllerConfig or {@code null} for none
+   */
+  public AddonsConfig setSliceControllerConfig(SliceControllerConfig sliceControllerConfig) {
+    this.sliceControllerConfig = sliceControllerConfig;
     return this;
   }
 

@@ -37,6 +37,15 @@ public final class GoogleCloudDataplexV1DataDocumentationSpec extends com.google
   private java.lang.Boolean catalogPublishingEnabled;
 
   /**
+   * Optional. Specifies which components of the data documentation to generate. Any component that
+   * is required to generate the specified components will also be generated. If no generation scope
+   * is specified, all available documentation components will be generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> generationScopes;
+
+  /**
    * Optional. Whether to publish result to Dataplex Catalog.
    * @return value or {@code null} for none
    */
@@ -50,6 +59,27 @@ public final class GoogleCloudDataplexV1DataDocumentationSpec extends com.google
    */
   public GoogleCloudDataplexV1DataDocumentationSpec setCatalogPublishingEnabled(java.lang.Boolean catalogPublishingEnabled) {
     this.catalogPublishingEnabled = catalogPublishingEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies which components of the data documentation to generate. Any component that
+   * is required to generate the specified components will also be generated. If no generation scope
+   * is specified, all available documentation components will be generated.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGenerationScopes() {
+    return generationScopes;
+  }
+
+  /**
+   * Optional. Specifies which components of the data documentation to generate. Any component that
+   * is required to generate the specified components will also be generated. If no generation scope
+   * is specified, all available documentation components will be generated.
+   * @param generationScopes generationScopes or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationSpec setGenerationScopes(java.util.List<java.lang.String> generationScopes) {
+    this.generationScopes = generationScopes;
     return this;
   }
 

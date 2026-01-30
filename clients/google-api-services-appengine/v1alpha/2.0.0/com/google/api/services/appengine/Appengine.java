@@ -2166,7 +2166,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+       * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+       * locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -2187,7 +2190,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1alpha/apps/{appsId}/locations";
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+         * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+         * locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -2943,7 +2949,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+       * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+       * locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -2964,7 +2973,10 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "v1alpha/projects/{projectsId}/locations";
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+         * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+         * locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *

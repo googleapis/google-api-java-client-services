@@ -204,7 +204,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * Optional. An id corresponding to a place, such as a store id or region id. When specified, we
    * use the price from the local inventory with the matching product's LocalInventory.place_id for
-   * revenue optimization.
+   * revenue optimization. Note, the currency of the local inventory's price must match the currency
+   * of the product's price.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -723,7 +724,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * Optional. An id corresponding to a place, such as a store id or region id. When specified, we
    * use the price from the local inventory with the matching product's LocalInventory.place_id for
-   * revenue optimization.
+   * revenue optimization. Note, the currency of the local inventory's price must match the currency
+   * of the product's price.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaceId() {
@@ -733,7 +735,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * Optional. An id corresponding to a place, such as a store id or region id. When specified, we
    * use the price from the local inventory with the matching product's LocalInventory.place_id for
-   * revenue optimization.
+   * revenue optimization. Note, the currency of the local inventory's price must match the currency
+   * of the product's price.
    * @param placeId placeId or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequest setPlaceId(java.lang.String placeId) {

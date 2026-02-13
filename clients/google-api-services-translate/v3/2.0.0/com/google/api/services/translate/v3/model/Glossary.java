@@ -74,7 +74,7 @@ public final class Glossary extends com.google.api.client.json.GenericJson {
   private LanguageCodePair languagePair;
 
   /**
-   * Required. The resource name of the glossary. Glossary names have the form `projects/{project-
+   * Identifier. The resource name of the glossary. Glossary names have the form `projects/{project-
    * number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
    * The value may be {@code null}.
    */
@@ -193,7 +193,7 @@ public final class Glossary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the glossary. Glossary names have the form `projects/{project-
+   * Identifier. The resource name of the glossary. Glossary names have the form `projects/{project-
    * number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
    * @return value or {@code null} for none
    */
@@ -202,7 +202,7 @@ public final class Glossary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the glossary. Glossary names have the form `projects/{project-
+   * Identifier. The resource name of the glossary. Glossary names have the form `projects/{project-
    * number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
    * @param name name or {@code null} for none
    */

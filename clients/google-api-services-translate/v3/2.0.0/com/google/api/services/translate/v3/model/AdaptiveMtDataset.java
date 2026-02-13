@@ -53,7 +53,7 @@ public final class AdaptiveMtDataset extends com.google.api.client.json.GenericJ
   private java.lang.Integer exampleCount;
 
   /**
-   * Required. The resource name of the dataset, in form of `projects/{project-number-or-
+   * Identifier. The resource name of the dataset, in form of `projects/{project-number-or-
    * id}/locations/{location_id}/adaptiveMtDatasets/{dataset_id}`
    * The value may be {@code null}.
    */
@@ -135,7 +135,7 @@ public final class AdaptiveMtDataset extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The resource name of the dataset, in form of `projects/{project-number-or-
+   * Identifier. The resource name of the dataset, in form of `projects/{project-number-or-
    * id}/locations/{location_id}/adaptiveMtDatasets/{dataset_id}`
    * @return value or {@code null} for none
    */
@@ -144,7 +144,7 @@ public final class AdaptiveMtDataset extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The resource name of the dataset, in form of `projects/{project-number-or-
+   * Identifier. The resource name of the dataset, in form of `projects/{project-number-or-
    * id}/locations/{location_id}/adaptiveMtDatasets/{dataset_id}`
    * @param name name or {@code null} for none
    */

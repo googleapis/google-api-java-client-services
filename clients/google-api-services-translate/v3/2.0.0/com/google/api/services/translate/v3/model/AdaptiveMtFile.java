@@ -52,7 +52,7 @@ public final class AdaptiveMtFile extends com.google.api.client.json.GenericJson
   private java.lang.Integer entryCount;
 
   /**
-   * Required. The resource name of the file, in form of `projects/{project-number-or-
+   * Identifier. The resource name of the file, in form of `projects/{project-number-or-
    * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
    * The value may be {@code null}.
    */
@@ -118,7 +118,7 @@ public final class AdaptiveMtFile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The resource name of the file, in form of `projects/{project-number-or-
+   * Identifier. The resource name of the file, in form of `projects/{project-number-or-
    * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
    * @return value or {@code null} for none
    */
@@ -127,7 +127,7 @@ public final class AdaptiveMtFile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The resource name of the file, in form of `projects/{project-number-or-
+   * Identifier. The resource name of the file, in form of `projects/{project-number-or-
    * id}/locations/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}`
    * @param name name or {@code null} for none
    */

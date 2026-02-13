@@ -38,6 +38,13 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
   private java.lang.String content;
 
   /**
+   * Optional. The document configuration of the input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DocumentInputConfig documentInputConfig;
+
+  /**
    * Optional. The labels with user-defined metadata for the request. Label keys and values can be
    * no longer than 63 characters (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed. Label values are
@@ -80,6 +87,23 @@ public final class DetectLanguageRequest extends com.google.api.client.json.Gene
    */
   public DetectLanguageRequest setContent(java.lang.String content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Optional. The document configuration of the input.
+   * @return value or {@code null} for none
+   */
+  public DocumentInputConfig getDocumentInputConfig() {
+    return documentInputConfig;
+  }
+
+  /**
+   * Optional. The document configuration of the input.
+   * @param documentInputConfig documentInputConfig or {@code null} for none
+   */
+  public DetectLanguageRequest setDocumentInputConfig(DocumentInputConfig documentInputConfig) {
+    this.documentInputConfig = documentInputConfig;
     return this;
   }
 

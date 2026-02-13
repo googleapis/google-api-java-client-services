@@ -77,14 +77,16 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   private OutputConfig outputConfig;
 
   /**
-   * Required. Source language code.
+   * Required. Source language code. Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceLanguageCode;
 
   /**
-   * Required. Specify up to 10 language codes here.
+   * Required. Specify up to 10 language codes here. Supported language codes are listed in
+   * [Language Support](https://cloud.google.com/translate/docs/languages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +200,8 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Source language code.
+   * Required. Source language code. Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceLanguageCode() {
@@ -206,7 +209,8 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Source language code.
+   * Required. Source language code. Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    * @param sourceLanguageCode sourceLanguageCode or {@code null} for none
    */
   public BatchTranslateTextRequest setSourceLanguageCode(java.lang.String sourceLanguageCode) {
@@ -215,7 +219,8 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Specify up to 10 language codes here.
+   * Required. Specify up to 10 language codes here. Supported language codes are listed in
+   * [Language Support](https://cloud.google.com/translate/docs/languages).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetLanguageCodes() {
@@ -223,7 +228,8 @@ public final class BatchTranslateTextRequest extends com.google.api.client.json.
   }
 
   /**
-   * Required. Specify up to 10 language codes here.
+   * Required. Specify up to 10 language codes here. Supported language codes are listed in
+   * [Language Support](https://cloud.google.com/translate/docs/languages).
    * @param targetLanguageCodes targetLanguageCodes or {@code null} for none
    */
   public BatchTranslateTextRequest setTargetLanguageCodes(java.util.List<java.lang.String> targetLanguageCodes) {

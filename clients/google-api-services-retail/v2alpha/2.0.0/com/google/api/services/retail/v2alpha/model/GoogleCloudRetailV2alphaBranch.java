@@ -62,7 +62,7 @@ public final class GoogleCloudRetailV2alphaBranch extends com.google.api.client.
 
   /**
    * Output only. Statistics for number of products in the branch, provided for different scopes.
-   * This field is not populated in BranchView.BASIC view.
+   * This field is not populated in BranchView.BRANCH_VIEW_BASIC view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GoogleCloudRetailV2alphaBranch extends com.google.api.client.
   /**
    * Output only. The quality metrics measured among products of this branch. See
    * QualityMetric.requirement_key for supported metrics. Metrics could be missing if failed to
-   * retrieve. This field is not populated in BranchView.BASIC view.
+   * retrieve. This field is not populated in BranchView.BRANCH_VIEW_BASIC view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class GoogleCloudRetailV2alphaBranch extends com.google.api.client.
 
   /**
    * Output only. Statistics for number of products in the branch, provided for different scopes.
-   * This field is not populated in BranchView.BASIC view.
+   * This field is not populated in BranchView.BRANCH_VIEW_BASIC view.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2alphaBranchProductCountStatistic> getProductCountStats() {
@@ -160,7 +160,7 @@ public final class GoogleCloudRetailV2alphaBranch extends com.google.api.client.
 
   /**
    * Output only. Statistics for number of products in the branch, provided for different scopes.
-   * This field is not populated in BranchView.BASIC view.
+   * This field is not populated in BranchView.BRANCH_VIEW_BASIC view.
    * @param productCountStats productCountStats or {@code null} for none
    */
   public GoogleCloudRetailV2alphaBranch setProductCountStats(java.util.List<GoogleCloudRetailV2alphaBranchProductCountStatistic> productCountStats) {
@@ -171,7 +171,7 @@ public final class GoogleCloudRetailV2alphaBranch extends com.google.api.client.
   /**
    * Output only. The quality metrics measured among products of this branch. See
    * QualityMetric.requirement_key for supported metrics. Metrics could be missing if failed to
-   * retrieve. This field is not populated in BranchView.BASIC view.
+   * retrieve. This field is not populated in BranchView.BRANCH_VIEW_BASIC view.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2alphaBranchQualityMetric> getQualityMetrics() {
@@ -181,7 +181,7 @@ public final class GoogleCloudRetailV2alphaBranch extends com.google.api.client.
   /**
    * Output only. The quality metrics measured among products of this branch. See
    * QualityMetric.requirement_key for supported metrics. Metrics could be missing if failed to
-   * retrieve. This field is not populated in BranchView.BASIC view.
+   * retrieve. This field is not populated in BranchView.BRANCH_VIEW_BASIC view.
    * @param qualityMetrics qualityMetrics or {@code null} for none
    */
   public GoogleCloudRetailV2alphaBranch setQualityMetrics(java.util.List<GoogleCloudRetailV2alphaBranchQualityMetric> qualityMetrics) {

@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2SearchRequestConversationalSearchSpecUserA
 
   /**
    * This field specifies the selected attributes during the conversational search. This should be a
-   * subset of ConversationalSearchResult.suggested_answers.
+   * subset of SearchResponse.ConversationalSearchResult.suggested_answers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class GoogleCloudRetailV2SearchRequestConversationalSearchSpecUserA
 
   /**
    * This field specifies the selected attributes during the conversational search. This should be a
-   * subset of ConversationalSearchResult.suggested_answers.
+   * subset of SearchResponse.ConversationalSearchResult.suggested_answers.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2SearchRequestConversationalSearchSpecUserAnswerSelectedAnswer getSelectedAnswer() {
@@ -57,7 +57,7 @@ public final class GoogleCloudRetailV2SearchRequestConversationalSearchSpecUserA
 
   /**
    * This field specifies the selected attributes during the conversational search. This should be a
-   * subset of ConversationalSearchResult.suggested_answers.
+   * subset of SearchResponse.ConversationalSearchResult.suggested_answers.
    * @param selectedAnswer selectedAnswer or {@code null} for none
    */
   public GoogleCloudRetailV2SearchRequestConversationalSearchSpecUserAnswer setSelectedAnswer(GoogleCloudRetailV2SearchRequestConversationalSearchSpecUserAnswerSelectedAnswer selectedAnswer) {

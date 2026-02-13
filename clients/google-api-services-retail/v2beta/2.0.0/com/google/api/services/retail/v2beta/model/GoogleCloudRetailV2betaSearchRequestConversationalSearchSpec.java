@@ -33,7 +33,8 @@ public final class GoogleCloudRetailV2betaSearchRequestConversationalSearchSpec 
   /**
    * This field specifies the conversation id, which maintains the state of the conversation between
    * client side and server side. Use the value from the previous
-   * ConversationalSearchResult.conversation_id. For the initial request, this should be empty.
+   * SearchResponse.ConversationalSearchResult.conversation_id. For the initial request, this should
+   * be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,8 @@ public final class GoogleCloudRetailV2betaSearchRequestConversationalSearchSpec 
   /**
    * This field specifies the conversation id, which maintains the state of the conversation between
    * client side and server side. Use the value from the previous
-   * ConversationalSearchResult.conversation_id. For the initial request, this should be empty.
+   * SearchResponse.ConversationalSearchResult.conversation_id. For the initial request, this should
+   * be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getConversationId() {
@@ -69,7 +71,8 @@ public final class GoogleCloudRetailV2betaSearchRequestConversationalSearchSpec 
   /**
    * This field specifies the conversation id, which maintains the state of the conversation between
    * client side and server side. Use the value from the previous
-   * ConversationalSearchResult.conversation_id. For the initial request, this should be empty.
+   * SearchResponse.ConversationalSearchResult.conversation_id. For the initial request, this should
+   * be empty.
    * @param conversationId conversationId or {@code null} for none
    */
   public GoogleCloudRetailV2betaSearchRequestConversationalSearchSpec setConversationId(java.lang.String conversationId) {

@@ -17,7 +17,7 @@
 package com.google.api.services.storagebatchoperations.v1.model;
 
 /**
- * The Storage Batch Operations Job description.
+ * BucketOperation represents a bucket-level breakdown of a Job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Batch Operations API. For a detailed
@@ -28,31 +28,31 @@ package com.google.api.services.storagebatchoperations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Job extends com.google.api.client.json.GenericJson {
+public final class BucketOperation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies a list of buckets and their objects to be transformed.
+   * The bucket name of the objects to be transformed in the BucketOperation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private BucketList bucketList;
+  private java.lang.String bucketName;
 
   /**
-   * Output only. The time that the job was completed.
+   * Output only. The time that the BucketOperation was completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String completeTime;
 
   /**
-   * Output only. Information about the progress of the job.
+   * Output only. Information about the progress of the bucket operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Counters counters;
 
   /**
-   * Output only. The time that the job was created.
+   * Output only. The time that the BucketOperation was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,59 +66,33 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private DeleteObject deleteObject;
 
   /**
-   * Optional. A description provided by the user for the job. Its max length is 1024 bytes when
-   * Unicode-encoded.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String description;
-
-  /**
-   * Optional. If true, the job will run in dry run mode, returning the total object count and, if
-   * the object configuration is a prefix list, the bytes found from source. No transformations will
-   * be performed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean dryRun;
-
-  /**
    * Output only. Summarizes errors encountered with sample error log entries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ErrorSummary> errorSummaries;
 
-  static {
-    // hack to force ProGuard to consider ErrorSummary used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ErrorSummary.class);
-  }
-
   /**
-   * Output only. If true, this Job operates on multiple buckets. Multibucket jobs are subject to
-   * different quota limits than single-bucket jobs.
+   * Specifies objects in a manifest file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean isMultiBucketJob;
+  private Manifest manifest;
 
   /**
-   * Optional. Logging configuration.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private LoggingConfig loggingConfig;
-
-  /**
-   * Identifier. The resource name of the Job. job_id is unique within the project, that is either
-   * set by the customer or defined by the service. Format:
-   * projects/{project}/locations/global/jobs/{job_id} . For example:
-   * "projects/123456/locations/global/jobs/job01".
+   * Identifier. The resource name of the BucketOperation. This is defined by the service. Format:
+   * projects/{project}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Specifies objects matching a prefix set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrefixList prefixList;
 
   /**
    * Updates object metadata. Allows updating fixed-key and custom metadata and fixed-key metadata
@@ -144,38 +118,38 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private RewriteObject rewriteObject;
 
   /**
-   * Output only. The time that the job was scheduled.
+   * Output only. The time that the BucketOperation was started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String scheduleTime;
+  private String startTime;
 
   /**
-   * Output only. State of the job.
+   * Output only. State of the BucketOperation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Specifies a list of buckets and their objects to be transformed.
+   * The bucket name of the objects to be transformed in the BucketOperation.
    * @return value or {@code null} for none
    */
-  public BucketList getBucketList() {
-    return bucketList;
+  public java.lang.String getBucketName() {
+    return bucketName;
   }
 
   /**
-   * Specifies a list of buckets and their objects to be transformed.
-   * @param bucketList bucketList or {@code null} for none
+   * The bucket name of the objects to be transformed in the BucketOperation.
+   * @param bucketName bucketName or {@code null} for none
    */
-  public Job setBucketList(BucketList bucketList) {
-    this.bucketList = bucketList;
+  public BucketOperation setBucketName(java.lang.String bucketName) {
+    this.bucketName = bucketName;
     return this;
   }
 
   /**
-   * Output only. The time that the job was completed.
+   * Output only. The time that the BucketOperation was completed.
    * @return value or {@code null} for none
    */
   public String getCompleteTime() {
@@ -183,16 +157,16 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time that the job was completed.
+   * Output only. The time that the BucketOperation was completed.
    * @param completeTime completeTime or {@code null} for none
    */
-  public Job setCompleteTime(String completeTime) {
+  public BucketOperation setCompleteTime(String completeTime) {
     this.completeTime = completeTime;
     return this;
   }
 
   /**
-   * Output only. Information about the progress of the job.
+   * Output only. Information about the progress of the bucket operation.
    * @return value or {@code null} for none
    */
   public Counters getCounters() {
@@ -200,16 +174,16 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Information about the progress of the job.
+   * Output only. Information about the progress of the bucket operation.
    * @param counters counters or {@code null} for none
    */
-  public Job setCounters(Counters counters) {
+  public BucketOperation setCounters(Counters counters) {
     this.counters = counters;
     return this;
   }
 
   /**
-   * Output only. The time that the job was created.
+   * Output only. The time that the BucketOperation was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -217,10 +191,10 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time that the job was created.
+   * Output only. The time that the BucketOperation was created.
    * @param createTime createTime or {@code null} for none
    */
-  public Job setCreateTime(String createTime) {
+  public BucketOperation setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -237,48 +211,8 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Delete objects.
    * @param deleteObject deleteObject or {@code null} for none
    */
-  public Job setDeleteObject(DeleteObject deleteObject) {
+  public BucketOperation setDeleteObject(DeleteObject deleteObject) {
     this.deleteObject = deleteObject;
-    return this;
-  }
-
-  /**
-   * Optional. A description provided by the user for the job. Its max length is 1024 bytes when
-   * Unicode-encoded.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDescription() {
-    return description;
-  }
-
-  /**
-   * Optional. A description provided by the user for the job. Its max length is 1024 bytes when
-   * Unicode-encoded.
-   * @param description description or {@code null} for none
-   */
-  public Job setDescription(java.lang.String description) {
-    this.description = description;
-    return this;
-  }
-
-  /**
-   * Optional. If true, the job will run in dry run mode, returning the total object count and, if
-   * the object configuration is a prefix list, the bytes found from source. No transformations will
-   * be performed.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDryRun() {
-    return dryRun;
-  }
-
-  /**
-   * Optional. If true, the job will run in dry run mode, returning the total object count and, if
-   * the object configuration is a prefix list, the bytes found from source. No transformations will
-   * be performed.
-   * @param dryRun dryRun or {@code null} for none
-   */
-  public Job setDryRun(java.lang.Boolean dryRun) {
-    this.dryRun = dryRun;
     return this;
   }
 
@@ -294,52 +228,31 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Output only. Summarizes errors encountered with sample error log entries.
    * @param errorSummaries errorSummaries or {@code null} for none
    */
-  public Job setErrorSummaries(java.util.List<ErrorSummary> errorSummaries) {
+  public BucketOperation setErrorSummaries(java.util.List<ErrorSummary> errorSummaries) {
     this.errorSummaries = errorSummaries;
     return this;
   }
 
   /**
-   * Output only. If true, this Job operates on multiple buckets. Multibucket jobs are subject to
-   * different quota limits than single-bucket jobs.
+   * Specifies objects in a manifest file.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getIsMultiBucketJob() {
-    return isMultiBucketJob;
+  public Manifest getManifest() {
+    return manifest;
   }
 
   /**
-   * Output only. If true, this Job operates on multiple buckets. Multibucket jobs are subject to
-   * different quota limits than single-bucket jobs.
-   * @param isMultiBucketJob isMultiBucketJob or {@code null} for none
+   * Specifies objects in a manifest file.
+   * @param manifest manifest or {@code null} for none
    */
-  public Job setIsMultiBucketJob(java.lang.Boolean isMultiBucketJob) {
-    this.isMultiBucketJob = isMultiBucketJob;
+  public BucketOperation setManifest(Manifest manifest) {
+    this.manifest = manifest;
     return this;
   }
 
   /**
-   * Optional. Logging configuration.
-   * @return value or {@code null} for none
-   */
-  public LoggingConfig getLoggingConfig() {
-    return loggingConfig;
-  }
-
-  /**
-   * Optional. Logging configuration.
-   * @param loggingConfig loggingConfig or {@code null} for none
-   */
-  public Job setLoggingConfig(LoggingConfig loggingConfig) {
-    this.loggingConfig = loggingConfig;
-    return this;
-  }
-
-  /**
-   * Identifier. The resource name of the Job. job_id is unique within the project, that is either
-   * set by the customer or defined by the service. Format:
-   * projects/{project}/locations/global/jobs/{job_id} . For example:
-   * "projects/123456/locations/global/jobs/job01".
+   * Identifier. The resource name of the BucketOperation. This is defined by the service. Format:
+   * projects/{project}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -347,14 +260,29 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the Job. job_id is unique within the project, that is either
-   * set by the customer or defined by the service. Format:
-   * projects/{project}/locations/global/jobs/{job_id} . For example:
-   * "projects/123456/locations/global/jobs/job01".
+   * Identifier. The resource name of the BucketOperation. This is defined by the service. Format:
+   * projects/{project}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation}.
    * @param name name or {@code null} for none
    */
-  public Job setName(java.lang.String name) {
+  public BucketOperation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Specifies objects matching a prefix set.
+   * @return value or {@code null} for none
+   */
+  public PrefixList getPrefixList() {
+    return prefixList;
+  }
+
+  /**
+   * Specifies objects matching a prefix set.
+   * @param prefixList prefixList or {@code null} for none
+   */
+  public BucketOperation setPrefixList(PrefixList prefixList) {
+    this.prefixList = prefixList;
     return this;
   }
 
@@ -374,7 +302,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Custom-Time.
    * @param putMetadata putMetadata or {@code null} for none
    */
-  public Job setPutMetadata(PutMetadata putMetadata) {
+  public BucketOperation setPutMetadata(PutMetadata putMetadata) {
     this.putMetadata = putMetadata;
     return this;
   }
@@ -391,7 +319,7 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Changes object hold status.
    * @param putObjectHold putObjectHold or {@code null} for none
    */
-  public Job setPutObjectHold(PutObjectHold putObjectHold) {
+  public BucketOperation setPutObjectHold(PutObjectHold putObjectHold) {
     this.putObjectHold = putObjectHold;
     return this;
   }
@@ -408,30 +336,30 @@ public final class Job extends com.google.api.client.json.GenericJson {
    * Rewrite the object and updates metadata like KMS key.
    * @param rewriteObject rewriteObject or {@code null} for none
    */
-  public Job setRewriteObject(RewriteObject rewriteObject) {
+  public BucketOperation setRewriteObject(RewriteObject rewriteObject) {
     this.rewriteObject = rewriteObject;
     return this;
   }
 
   /**
-   * Output only. The time that the job was scheduled.
+   * Output only. The time that the BucketOperation was started.
    * @return value or {@code null} for none
    */
-  public String getScheduleTime() {
-    return scheduleTime;
+  public String getStartTime() {
+    return startTime;
   }
 
   /**
-   * Output only. The time that the job was scheduled.
-   * @param scheduleTime scheduleTime or {@code null} for none
+   * Output only. The time that the BucketOperation was started.
+   * @param startTime startTime or {@code null} for none
    */
-  public Job setScheduleTime(String scheduleTime) {
-    this.scheduleTime = scheduleTime;
+  public BucketOperation setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 
   /**
-   * Output only. State of the job.
+   * Output only. State of the BucketOperation.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -439,22 +367,22 @@ public final class Job extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. State of the job.
+   * Output only. State of the BucketOperation.
    * @param state state or {@code null} for none
    */
-  public Job setState(java.lang.String state) {
+  public BucketOperation setState(java.lang.String state) {
     this.state = state;
     return this;
   }
 
   @Override
-  public Job set(String fieldName, Object value) {
-    return (Job) super.set(fieldName, value);
+  public BucketOperation set(String fieldName, Object value) {
+    return (BucketOperation) super.set(fieldName, value);
   }
 
   @Override
-  public Job clone() {
-    return (Job) super.clone();
+  public BucketOperation clone() {
+    return (BucketOperation) super.clone();
   }
 
 }

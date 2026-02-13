@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * Revision is an immutable snapshot of code and configuration. A revision references one or more
- * container images. Revisions are created by updates to a Service.
+ * Instance represents the configuration of a single Instance, which references a container image
+ * which is run to completion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -28,45 +28,51 @@ package com.google.api.services.run.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Revision extends com.google.api.client.json.GenericJson {
+public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API version for this call such as "serving.knative.dev/v1".
+   * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
+   * should convert recognized schemas to the latest internal value, and may reject unrecognized
+   * values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiVersion;
 
   /**
-   * The kind of this resource, in this case "Revision".
+   * Optional. Kind is a string value representing the REST resource this object represents. Servers
+   * may infer this from the endpoint the client submits requests to. Cannot be updated. In
+   * CamelCase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Metadata associated with this Revision, including name, namespace, labels, and annotations.
+   * Optional. Standard object's metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ObjectMeta metadata;
 
   /**
-   * Spec holds the desired state of the Revision (from the client).
+   * Optional. Specification of the desired behavior of a Instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private RevisionSpec spec;
+  private InstanceSpec spec;
 
   /**
-   * Status communicates the observed state of the Revision (from the controller).
+   * Output only. Current status of a Instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private RevisionStatus status;
+  private InstanceStatus status;
 
   /**
-   * The API version for this call such as "serving.knative.dev/v1".
+   * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
+   * should convert recognized schemas to the latest internal value, and may reject unrecognized
+   * values.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiVersion() {
@@ -74,16 +80,20 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The API version for this call such as "serving.knative.dev/v1".
+   * Optional. APIVersion defines the versioned schema of this representation of an object. Servers
+   * should convert recognized schemas to the latest internal value, and may reject unrecognized
+   * values.
    * @param apiVersion apiVersion or {@code null} for none
    */
-  public Revision setApiVersion(java.lang.String apiVersion) {
+  public Instance setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
     return this;
   }
 
   /**
-   * The kind of this resource, in this case "Revision".
+   * Optional. Kind is a string value representing the REST resource this object represents. Servers
+   * may infer this from the endpoint the client submits requests to. Cannot be updated. In
+   * CamelCase.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -91,16 +101,18 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The kind of this resource, in this case "Revision".
+   * Optional. Kind is a string value representing the REST resource this object represents. Servers
+   * may infer this from the endpoint the client submits requests to. Cannot be updated. In
+   * CamelCase.
    * @param kind kind or {@code null} for none
    */
-  public Revision setKind(java.lang.String kind) {
+  public Instance setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
 
   /**
-   * Metadata associated with this Revision, including name, namespace, labels, and annotations.
+   * Optional. Standard object's metadata.
    * @return value or {@code null} for none
    */
   public ObjectMeta getMetadata() {
@@ -108,56 +120,56 @@ public final class Revision extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata associated with this Revision, including name, namespace, labels, and annotations.
+   * Optional. Standard object's metadata.
    * @param metadata metadata or {@code null} for none
    */
-  public Revision setMetadata(ObjectMeta metadata) {
+  public Instance setMetadata(ObjectMeta metadata) {
     this.metadata = metadata;
     return this;
   }
 
   /**
-   * Spec holds the desired state of the Revision (from the client).
+   * Optional. Specification of the desired behavior of a Instance.
    * @return value or {@code null} for none
    */
-  public RevisionSpec getSpec() {
+  public InstanceSpec getSpec() {
     return spec;
   }
 
   /**
-   * Spec holds the desired state of the Revision (from the client).
+   * Optional. Specification of the desired behavior of a Instance.
    * @param spec spec or {@code null} for none
    */
-  public Revision setSpec(RevisionSpec spec) {
+  public Instance setSpec(InstanceSpec spec) {
     this.spec = spec;
     return this;
   }
 
   /**
-   * Status communicates the observed state of the Revision (from the controller).
+   * Output only. Current status of a Instance.
    * @return value or {@code null} for none
    */
-  public RevisionStatus getStatus() {
+  public InstanceStatus getStatus() {
     return status;
   }
 
   /**
-   * Status communicates the observed state of the Revision (from the controller).
+   * Output only. Current status of a Instance.
    * @param status status or {@code null} for none
    */
-  public Revision setStatus(RevisionStatus status) {
+  public Instance setStatus(InstanceStatus status) {
     this.status = status;
     return this;
   }
 
   @Override
-  public Revision set(String fieldName, Object value) {
-    return (Revision) super.set(fieldName, value);
+  public Instance set(String fieldName, Object value) {
+    return (Instance) super.set(fieldName, value);
   }
 
   @Override
-  public Revision clone() {
-    return (Revision) super.clone();
+  public Instance clone() {
+    return (Instance) super.clone();
   }
 
 }

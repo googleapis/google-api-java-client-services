@@ -39,9 +39,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.lang.Integer containerConcurrency;
 
   /**
-   * Required. Containers holds the list which define the units of execution for this Revision. In
-   * the context of a Revision, we disallow a number of fields on this Container, including: name
-   * and lifecycle.
+   * Required. Containers holds the list which define the units of execution for this Revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,9 +132,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Containers holds the list which define the units of execution for this Revision. In
-   * the context of a Revision, we disallow a number of fields on this Container, including: name
-   * and lifecycle.
+   * Required. Containers holds the list which define the units of execution for this Revision.
    * @return value or {@code null} for none
    */
   public java.util.List<Container> getContainers() {
@@ -144,9 +140,7 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Containers holds the list which define the units of execution for this Revision. In
-   * the context of a Revision, we disallow a number of fields on this Container, including: name
-   * and lifecycle.
+   * Required. Containers holds the list which define the units of execution for this Revision.
    * @param containers containers or {@code null} for none
    */
   public RevisionSpec setContainers(java.util.List<Container> containers) {

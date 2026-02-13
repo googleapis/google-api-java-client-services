@@ -30,6 +30,20 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Determines a threshold for concurrency utilization before scaling begins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float concurrencyUtilization;
+
+  /**
+   * Optional. Determines a threshold for CPU utilization before scaling begins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float cpuUtilization;
+
+  /**
    * Optional. Maximum number of serving instances that this resource should have. When unspecified,
    * the field is set to the server default value of 100. For more information see
    * https://cloud.google.com/run/docs/configuring/max-instances
@@ -44,6 +58,40 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minInstanceCount;
+
+  /**
+   * Optional. Determines a threshold for concurrency utilization before scaling begins.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getConcurrencyUtilization() {
+    return concurrencyUtilization;
+  }
+
+  /**
+   * Optional. Determines a threshold for concurrency utilization before scaling begins.
+   * @param concurrencyUtilization concurrencyUtilization or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionScaling setConcurrencyUtilization(java.lang.Float concurrencyUtilization) {
+    this.concurrencyUtilization = concurrencyUtilization;
+    return this;
+  }
+
+  /**
+   * Optional. Determines a threshold for CPU utilization before scaling begins.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getCpuUtilization() {
+    return cpuUtilization;
+  }
+
+  /**
+   * Optional. Determines a threshold for CPU utilization before scaling begins.
+   * @param cpuUtilization cpuUtilization or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionScaling setCpuUtilization(java.lang.Float cpuUtilization) {
+    this.cpuUtilization = cpuUtilization;
+    return this;
+  }
 
   /**
    * Optional. Maximum number of serving instances that this resource should have. When unspecified,

@@ -43,6 +43,20 @@ public final class GoogleCloudRunV2WorkerPoolRevisionTemplate extends com.google
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Optional. Arbitrary identifier for the API client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String client;
+
+  /**
+   * Optional. Arbitrary version identifier for the API client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientVersion;
+
+  /**
    * Holds list of the containers that defines the unit of execution for this Revision.
    * The value may be {@code null}.
    */
@@ -176,6 +190,40 @@ public final class GoogleCloudRunV2WorkerPoolRevisionTemplate extends com.google
    */
   public GoogleCloudRunV2WorkerPoolRevisionTemplate setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Optional. Arbitrary identifier for the API client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClient() {
+    return client;
+  }
+
+  /**
+   * Optional. Arbitrary identifier for the API client.
+   * @param client client or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkerPoolRevisionTemplate setClient(java.lang.String client) {
+    this.client = client;
+    return this;
+  }
+
+  /**
+   * Optional. Arbitrary version identifier for the API client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientVersion() {
+    return clientVersion;
+  }
+
+  /**
+   * Optional. Arbitrary version identifier for the API client.
+   * @param clientVersion clientVersion or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkerPoolRevisionTemplate setClientVersion(java.lang.String clientVersion) {
+    this.clientVersion = clientVersion;
     return this;
   }
 

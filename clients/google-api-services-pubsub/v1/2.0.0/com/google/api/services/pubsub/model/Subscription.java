@@ -51,7 +51,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Information about the associated Analytics Hub subscription. Only set if the
-   * subscritpion is created by Analytics Hub.
+   * subscription is created by Analytics Hub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,9 +225,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> tags;
 
   /**
-   * Required. Identifier. The name of the topic from which this subscription is receiving messages.
-   * Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-
-   * topic_` if the topic has been deleted.
+   * Required. The name of the topic from which this subscription is receiving messages. Format is
+   * `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the
+   * topic has been deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,7 +285,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Information about the associated Analytics Hub subscription. Only set if the
-   * subscritpion is created by Analytics Hub.
+   * subscription is created by Analytics Hub.
    * @return value or {@code null} for none
    */
   public AnalyticsHubSubscriptionInfo getAnalyticsHubSubscriptionInfo() {
@@ -294,7 +294,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Information about the associated Analytics Hub subscription. Only set if the
-   * subscritpion is created by Analytics Hub.
+   * subscription is created by Analytics Hub.
    * @param analyticsHubSubscriptionInfo analyticsHubSubscriptionInfo or {@code null} for none
    */
   public Subscription setAnalyticsHubSubscriptionInfo(AnalyticsHubSubscriptionInfo analyticsHubSubscriptionInfo) {
@@ -676,9 +676,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier. The name of the topic from which this subscription is receiving messages.
-   * Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-
-   * topic_` if the topic has been deleted.
+   * Required. The name of the topic from which this subscription is receiving messages. Format is
+   * `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the
+   * topic has been deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopic() {
@@ -686,9 +686,9 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Identifier. The name of the topic from which this subscription is receiving messages.
-   * Format is `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-
-   * topic_` if the topic has been deleted.
+   * Required. The name of the topic from which this subscription is receiving messages. Format is
+   * `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the
+   * topic has been deleted.
    * @param topic topic or {@code null} for none
    */
   public Subscription setTopic(java.lang.String topic) {

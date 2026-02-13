@@ -30,6 +30,15 @@ package com.google.api.services.sqladmin.model;
 public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies the name of the application that is making the request. This field is used
+   * for telemetry. Only alphanumeric characters, dashes, and underscores are allowed. The maximum
+   * length is 32 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String application;
+
+  /**
    * Optional. When set to true, the API caller identity associated with the request is used for
    * database authentication. The API caller must be an IAM user in the database.
    * The value may be {@code null}.
@@ -74,6 +83,27 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String user;
+
+  /**
+   * Optional. Specifies the name of the application that is making the request. This field is used
+   * for telemetry. Only alphanumeric characters, dashes, and underscores are allowed. The maximum
+   * length is 32 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApplication() {
+    return application;
+  }
+
+  /**
+   * Optional. Specifies the name of the application that is making the request. This field is used
+   * for telemetry. Only alphanumeric characters, dashes, and underscores are allowed. The maximum
+   * length is 32 characters.
+   * @param application application or {@code null} for none
+   */
+  public ExecuteSqlPayload setApplication(java.lang.String application) {
+    this.application = application;
+    return this;
+  }
 
   /**
    * Optional. When set to true, the API caller identity associated with the request is used for

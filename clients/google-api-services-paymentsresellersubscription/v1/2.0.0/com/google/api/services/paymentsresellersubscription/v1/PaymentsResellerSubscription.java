@@ -103,7 +103,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -175,7 +175,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
       /**
        * Currently, it doesn't support **YouTube** products. Retrieves the products that can be resold by
-       * the partner. It should be autenticated with a service account.
+       * the partner. It should be authenticated with a service account.
        *
        * Create a request for the method "products.list".
        *
@@ -201,7 +201,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Currently, it doesn't support **YouTube** products. Retrieves the products that can be resold
-         * by the partner. It should be autenticated with a service account.
+         * by the partner. It should be authenticated with a service account.
          *
          * Create a request for the method "products.list".
          *
@@ -430,7 +430,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
     public class Promotions {
 
       /**
-       * Currently, it is only enabeld for **YouTube**. Finds eligible promotions for the current user.
+       * Currently, it is only enabled for **YouTube**. Finds eligible promotions for the current user.
        * The API requires user authorization via OAuth. The bare minimum oauth scope `openid` is
        * sufficient, which will skip the consent screen.
        *
@@ -458,7 +458,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
             java.util.regex.Pattern.compile("^partners/[^/]+$");
 
         /**
-         * Currently, it is only enabeld for **YouTube**. Finds eligible promotions for the current user.
+         * Currently, it is only enabled for **YouTube**. Finds eligible promotions for the current user.
          * The API requires user authorization via OAuth. The bare minimum oauth scope `openid` is
          * sufficient, which will skip the consent screen.
          *
@@ -567,7 +567,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
       }
       /**
        * Currently, it doesn't support **YouTube** promotions. Retrieves the promotions, such as free
-       * trial, that can be used by the partner. It should be autenticated with a service account.
+       * trial, that can be used by the partner. It should be authenticated with a service account.
        *
        * Create a request for the method "promotions.list".
        *
@@ -593,7 +593,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Currently, it doesn't support **YouTube** promotions. Retrieves the promotions, such as free
-         * trial, that can be used by the partner. It should be autenticated with a service account.
+         * trial, that can be used by the partner. It should be authenticated with a service account.
          *
          * Create a request for the method "promotions.list".
          *
@@ -747,15 +747,15 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Optional. The maximum number of promotions to return. The service may return fewer than
-         * this value. If unspecified, at most 50 products will be returned. The maximum value is
+         * this value. If unspecified, at most 50 promotions will be returned. The maximum value is
          * 1000; values above 1000 will be coerced to 1000.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The maximum number of promotions to return. The service may return fewer than this value.
-       If unspecified, at most 50 products will be returned. The maximum value is 1000; values above 1000
-       will be coerced to 1000.
+       If unspecified, at most 50 promotions will be returned. The maximum value is 1000; values above
+       1000 will be coerced to 1000.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -763,7 +763,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Optional. The maximum number of promotions to return. The service may return fewer than
-         * this value. If unspecified, at most 50 products will be returned. The maximum value is
+         * this value. If unspecified, at most 50 promotions will be returned. The maximum value is
          * 1000; values above 1000 will be coerced to 1000.
          */
         public List setPageSize(java.lang.Integer pageSize) {
@@ -1109,15 +1109,15 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Required. Identifies the subscription resource on the Partner side. The value is
-         * restricted to 63 ASCII characters at the maximum. If a subscription was previously
-         * created with the same subscription_id, we will directly return that one.
+         * restricted to 63 ASCII characters at the maximum. If a subscription with the same ID
+         * already exists, the creation fails with an `ALREADY_EXISTS` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String subscriptionId;
 
         /** Required. Identifies the subscription resource on the Partner side. The value is restricted to 63
-       ASCII characters at the maximum. If a subscription was previously created with the same
-       subscription_id, we will directly return that one.
+       ASCII characters at the maximum. If a subscription with the same ID already exists, the creation
+       fails with an `ALREADY_EXISTS` error.
          */
         public java.lang.String getSubscriptionId() {
           return subscriptionId;
@@ -1125,8 +1125,8 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Required. Identifies the subscription resource on the Partner side. The value is
-         * restricted to 63 ASCII characters at the maximum. If a subscription was previously
-         * created with the same subscription_id, we will directly return that one.
+         * restricted to 63 ASCII characters at the maximum. If a subscription with the same ID
+         * already exists, the creation fails with an `ALREADY_EXISTS` error.
          */
         public Create setSubscriptionId(java.lang.String subscriptionId) {
           this.subscriptionId = subscriptionId;
@@ -1753,15 +1753,15 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Required. Identifies the subscription resource on the Partner side. The value is
-         * restricted to 63 ASCII characters at the maximum. If a subscription was previously
-         * created with the same subscription_id, we will directly return that one.
+         * restricted to 63 ASCII characters at the maximum. If a subscription with the same ID
+         * already exists, the creation fails with an `ALREADY_EXISTS` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String subscriptionId;
 
         /** Required. Identifies the subscription resource on the Partner side. The value is restricted to 63
-       ASCII characters at the maximum. If a subscription was previously created with the same
-       subscription_id, we will directly return that one.
+       ASCII characters at the maximum. If a subscription with the same ID already exists, the creation
+       fails with an `ALREADY_EXISTS` error.
          */
         public java.lang.String getSubscriptionId() {
           return subscriptionId;
@@ -1769,8 +1769,8 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
 
         /**
          * Required. Identifies the subscription resource on the Partner side. The value is
-         * restricted to 63 ASCII characters at the maximum. If a subscription was previously
-         * created with the same subscription_id, we will directly return that one.
+         * restricted to 63 ASCII characters at the maximum. If a subscription with the same ID
+         * already exists, the creation fails with an `ALREADY_EXISTS` error.
          */
         public Provision setSubscriptionId(java.lang.String subscriptionId) {
           this.subscriptionId = subscriptionId;
@@ -2239,7 +2239,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
       public class LineItems {
 
         /**
-         * Updates a line item of a subscription. It should be autenticated with a service account.
+         * Updates a line item of a subscription. It should be authenticated with a service account.
          *
          * Create a request for the method "lineItems.patch".
          *
@@ -2266,7 +2266,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
               java.util.regex.Pattern.compile("^partners/[^/]+/subscriptions/[^/]+/lineItems/[^/]+$");
 
           /**
-           * Updates a line item of a subscription. It should be autenticated with a service account.
+           * Updates a line item of a subscription. It should be authenticated with a service account.
            *
            * Create a request for the method "lineItems.patch".
            *
@@ -2603,8 +2603,7 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

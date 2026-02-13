@@ -103,7 +103,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -312,7 +312,10 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -336,7 +339,10 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -2194,9 +2200,9 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -2204,10 +2210,11 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -2215,9 +2222,9 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -2786,8 +2793,7 @@ public class CertificateAuthorityService extends com.google.api.client.googleapi
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

@@ -41,37 +41,37 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
 public final class GooglePlayDeveloperReportingV1beta1TimelineSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of the aggregation period of the datapoints in the timeline. Intervals are identified by
-   * the date and time at the start of the interval.
+   * Optional. Type of the aggregation period of the datapoints in the timeline. Intervals are
+   * identified by the date and time at the start of the interval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String aggregationPeriod;
 
   /**
-   * Ending datapoint of the timeline (exclusive). See start_time for restrictions. The timezone of
-   * the end point must match the timezone of the start point.
+   * Optional. Ending datapoint of the timeline (exclusive). See start_time for restrictions. The
+   * timezone of the end point must match the timezone of the start point.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDateTime endTime;
 
   /**
-   * Starting datapoint of the timeline (inclusive). Must be aligned to the aggregation period as
-   * follows: * HOURLY: the 'minutes', 'seconds' and 'nanos' fields must be unset. The time_zone can
-   * be left unset (defaults to UTC) or set explicitly to "UTC". Setting any other utc_offset or
-   * timezone id will result in a validation error. * DAILY: the 'hours', 'minutes', 'seconds' and
-   * 'nanos' fields must be unset. Different metric sets support different timezones. It can be left
-   * unset to use the default timezone specified by the metric set. The timezone of the end point
-   * must match the timezone of the start point.
+   * Optional. Starting datapoint of the timeline (inclusive). Must be aligned to the aggregation
+   * period as follows: * HOURLY: the 'minutes', 'seconds' and 'nanos' fields must be unset. The
+   * time_zone can be left unset (defaults to UTC) or set explicitly to "UTC". Setting any other
+   * utc_offset or timezone id will result in a validation error. * DAILY: the 'hours', 'minutes',
+   * 'seconds' and 'nanos' fields must be unset. Different metric sets support different timezones.
+   * It can be left unset to use the default timezone specified by the metric set. The timezone of
+   * the end point must match the timezone of the start point.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDateTime startTime;
 
   /**
-   * Type of the aggregation period of the datapoints in the timeline. Intervals are identified by
-   * the date and time at the start of the interval.
+   * Optional. Type of the aggregation period of the datapoints in the timeline. Intervals are
+   * identified by the date and time at the start of the interval.
    * @return value or {@code null} for none
    */
   public java.lang.String getAggregationPeriod() {
@@ -79,8 +79,8 @@ public final class GooglePlayDeveloperReportingV1beta1TimelineSpec extends com.g
   }
 
   /**
-   * Type of the aggregation period of the datapoints in the timeline. Intervals are identified by
-   * the date and time at the start of the interval.
+   * Optional. Type of the aggregation period of the datapoints in the timeline. Intervals are
+   * identified by the date and time at the start of the interval.
    * @param aggregationPeriod aggregationPeriod or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1TimelineSpec setAggregationPeriod(java.lang.String aggregationPeriod) {
@@ -89,8 +89,8 @@ public final class GooglePlayDeveloperReportingV1beta1TimelineSpec extends com.g
   }
 
   /**
-   * Ending datapoint of the timeline (exclusive). See start_time for restrictions. The timezone of
-   * the end point must match the timezone of the start point.
+   * Optional. Ending datapoint of the timeline (exclusive). See start_time for restrictions. The
+   * timezone of the end point must match the timezone of the start point.
    * @return value or {@code null} for none
    */
   public GoogleTypeDateTime getEndTime() {
@@ -98,8 +98,8 @@ public final class GooglePlayDeveloperReportingV1beta1TimelineSpec extends com.g
   }
 
   /**
-   * Ending datapoint of the timeline (exclusive). See start_time for restrictions. The timezone of
-   * the end point must match the timezone of the start point.
+   * Optional. Ending datapoint of the timeline (exclusive). See start_time for restrictions. The
+   * timezone of the end point must match the timezone of the start point.
    * @param endTime endTime or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1TimelineSpec setEndTime(GoogleTypeDateTime endTime) {
@@ -108,13 +108,13 @@ public final class GooglePlayDeveloperReportingV1beta1TimelineSpec extends com.g
   }
 
   /**
-   * Starting datapoint of the timeline (inclusive). Must be aligned to the aggregation period as
-   * follows: * HOURLY: the 'minutes', 'seconds' and 'nanos' fields must be unset. The time_zone can
-   * be left unset (defaults to UTC) or set explicitly to "UTC". Setting any other utc_offset or
-   * timezone id will result in a validation error. * DAILY: the 'hours', 'minutes', 'seconds' and
-   * 'nanos' fields must be unset. Different metric sets support different timezones. It can be left
-   * unset to use the default timezone specified by the metric set. The timezone of the end point
-   * must match the timezone of the start point.
+   * Optional. Starting datapoint of the timeline (inclusive). Must be aligned to the aggregation
+   * period as follows: * HOURLY: the 'minutes', 'seconds' and 'nanos' fields must be unset. The
+   * time_zone can be left unset (defaults to UTC) or set explicitly to "UTC". Setting any other
+   * utc_offset or timezone id will result in a validation error. * DAILY: the 'hours', 'minutes',
+   * 'seconds' and 'nanos' fields must be unset. Different metric sets support different timezones.
+   * It can be left unset to use the default timezone specified by the metric set. The timezone of
+   * the end point must match the timezone of the start point.
    * @return value or {@code null} for none
    */
   public GoogleTypeDateTime getStartTime() {
@@ -122,13 +122,13 @@ public final class GooglePlayDeveloperReportingV1beta1TimelineSpec extends com.g
   }
 
   /**
-   * Starting datapoint of the timeline (inclusive). Must be aligned to the aggregation period as
-   * follows: * HOURLY: the 'minutes', 'seconds' and 'nanos' fields must be unset. The time_zone can
-   * be left unset (defaults to UTC) or set explicitly to "UTC". Setting any other utc_offset or
-   * timezone id will result in a validation error. * DAILY: the 'hours', 'minutes', 'seconds' and
-   * 'nanos' fields must be unset. Different metric sets support different timezones. It can be left
-   * unset to use the default timezone specified by the metric set. The timezone of the end point
-   * must match the timezone of the start point.
+   * Optional. Starting datapoint of the timeline (inclusive). Must be aligned to the aggregation
+   * period as follows: * HOURLY: the 'minutes', 'seconds' and 'nanos' fields must be unset. The
+   * time_zone can be left unset (defaults to UTC) or set explicitly to "UTC". Setting any other
+   * utc_offset or timezone id will result in a validation error. * DAILY: the 'hours', 'minutes',
+   * 'seconds' and 'nanos' fields must be unset. Different metric sets support different timezones.
+   * It can be left unset to use the default timezone specified by the metric set. The timezone of
+   * the end point must match the timezone of the start point.
    * @param startTime startTime or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1TimelineSpec setStartTime(GoogleTypeDateTime startTime) {

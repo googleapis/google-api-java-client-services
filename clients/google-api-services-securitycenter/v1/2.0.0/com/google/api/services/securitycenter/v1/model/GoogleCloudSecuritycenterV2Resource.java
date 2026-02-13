@@ -31,6 +31,27 @@ package com.google.api.services.securitycenter.v1.model;
 public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.client.json.GenericJson {
 
   /**
+   * The ADC application associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2AdcApplication adcApplication;
+
+  /**
+   * The ADC template associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2AdcApplicationTemplateRevision adcApplicationTemplate;
+
+  /**
+   * The ADC shared template associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2AdcSharedTemplateRevision adcSharedTemplate;
+
+  /**
    * The App Hub application this resource belongs to.
    * The value may be {@code null}.
    */
@@ -120,6 +141,57 @@ public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The ADC application associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AdcApplication getAdcApplication() {
+    return adcApplication;
+  }
+
+  /**
+   * The ADC application associated with the finding.
+   * @param adcApplication adcApplication or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Resource setAdcApplication(GoogleCloudSecuritycenterV2AdcApplication adcApplication) {
+    this.adcApplication = adcApplication;
+    return this;
+  }
+
+  /**
+   * The ADC template associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AdcApplicationTemplateRevision getAdcApplicationTemplate() {
+    return adcApplicationTemplate;
+  }
+
+  /**
+   * The ADC template associated with the finding.
+   * @param adcApplicationTemplate adcApplicationTemplate or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Resource setAdcApplicationTemplate(GoogleCloudSecuritycenterV2AdcApplicationTemplateRevision adcApplicationTemplate) {
+    this.adcApplicationTemplate = adcApplicationTemplate;
+    return this;
+  }
+
+  /**
+   * The ADC shared template associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AdcSharedTemplateRevision getAdcSharedTemplate() {
+    return adcSharedTemplate;
+  }
+
+  /**
+   * The ADC shared template associated with the finding.
+   * @param adcSharedTemplate adcSharedTemplate or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Resource setAdcSharedTemplate(GoogleCloudSecuritycenterV2AdcSharedTemplateRevision adcSharedTemplate) {
+    this.adcSharedTemplate = adcSharedTemplate;
+    return this;
+  }
 
   /**
    * The App Hub application this resource belongs to.

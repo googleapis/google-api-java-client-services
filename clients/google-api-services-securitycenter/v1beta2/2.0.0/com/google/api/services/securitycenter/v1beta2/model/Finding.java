@@ -63,6 +63,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Application application;
 
   /**
+   * ArtifactGuardPolicies associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArtifactGuardPolicies artifactGuardPolicies;
+
+  /**
    * The results of an attack path simulation relevant to this finding.
    * The value may be {@code null}.
    */
@@ -502,6 +509,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String resourceName;
 
   /**
+   * Secret associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Secret secret;
+
+  /**
    * Output only. User specified security marks. These marks are entirely managed by the user and
    * come from the SecurityMarks resource that belongs to the finding.
    * The value may be {@code null}.
@@ -631,6 +645,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setApplication(Application application) {
     this.application = application;
+    return this;
+  }
+
+  /**
+   * ArtifactGuardPolicies associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public ArtifactGuardPolicies getArtifactGuardPolicies() {
+    return artifactGuardPolicies;
+  }
+
+  /**
+   * ArtifactGuardPolicies associated with the finding.
+   * @param artifactGuardPolicies artifactGuardPolicies or {@code null} for none
+   */
+  public Finding setArtifactGuardPolicies(ArtifactGuardPolicies artifactGuardPolicies) {
+    this.artifactGuardPolicies = artifactGuardPolicies;
     return this;
   }
 
@@ -1563,6 +1594,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * Secret associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public Secret getSecret() {
+    return secret;
+  }
+
+  /**
+   * Secret associated with the finding.
+   * @param secret secret or {@code null} for none
+   */
+  public Finding setSecret(Secret secret) {
+    this.secret = secret;
     return this;
   }
 

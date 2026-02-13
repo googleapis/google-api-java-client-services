@@ -46,6 +46,20 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   private java.lang.Integer cancelledCount;
 
   /**
+   * Output only. Arbitrary identifier for the API client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String client;
+
+  /**
+   * Output only. Arbitrary version identifier for the API client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientVersion;
+
+  /**
    * Output only. Represents time when the execution was completed. It is not guaranteed to be set
    * in happens-before order across separate operations.
    * The value may be {@code null}.
@@ -144,7 +158,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    * Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
    * `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For
    * example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level
-   * features are were, this field will be BETA.
+   * features are used, this field will be BETA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -290,6 +304,40 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Execution setCancelledCount(java.lang.Integer cancelledCount) {
     this.cancelledCount = cancelledCount;
+    return this;
+  }
+
+  /**
+   * Output only. Arbitrary identifier for the API client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClient() {
+    return client;
+  }
+
+  /**
+   * Output only. Arbitrary identifier for the API client.
+   * @param client client or {@code null} for none
+   */
+  public GoogleCloudRunV2Execution setClient(java.lang.String client) {
+    this.client = client;
+    return this;
+  }
+
+  /**
+   * Output only. Arbitrary version identifier for the API client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientVersion() {
+    return clientVersion;
+  }
+
+  /**
+   * Output only. Arbitrary version identifier for the API client.
+   * @param clientVersion clientVersion or {@code null} for none
+   */
+  public GoogleCloudRunV2Execution setClientVersion(java.lang.String clientVersion) {
+    this.clientVersion = clientVersion;
     return this;
   }
 
@@ -507,7 +555,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    * Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
    * `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For
    * example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level
-   * features are were, this field will be BETA.
+   * features are used, this field will be BETA.
    * @return value or {@code null} for none
    */
   public java.lang.String getLaunchStage() {
@@ -519,7 +567,7 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    * Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
    * `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For
    * example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level
-   * features are were, this field will be BETA.
+   * features are used, this field will be BETA.
    * @param launchStage launchStage or {@code null} for none
    */
   public GoogleCloudRunV2Execution setLaunchStage(java.lang.String launchStage) {

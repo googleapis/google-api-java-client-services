@@ -103,7 +103,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -972,6 +972,1011 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
       }
       /**
+       * An accessor for creating requests from the Instances collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Instances.List request = run.instances().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Instances instances() {
+        return new Instances();
+      }
+
+      /**
+       * The "instances" collection of methods.
+       */
+      public class Instances {
+
+        /**
+         * Creates an Instance.
+         *
+         * Create a request for the method "instances.create".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Instance}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2Instance content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+parent}/instances";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates an Instance.
+           *
+           * Create a request for the method "instances.create".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2Instance}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2Instance content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /**
+
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The unique identifier for the Instance. It must begin with letter, and cannot
+           * end with hyphen; must contain fewer than 50 characters. The name of the instance
+           * becomes {parent}/instances/{instance_id}. If not provided, the server will generate a
+           * unique `instance_id`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String instanceId;
+
+          /** Optional. The unique identifier for the Instance. It must begin with letter, and cannot end with
+         hyphen; must contain fewer than 50 characters. The name of the instance becomes
+         {parent}/instances/{instance_id}. If not provided, the server will generate a unique `instance_id`.
+           */
+          public java.lang.String getInstanceId() {
+            return instanceId;
+          }
+
+          /**
+           * Optional. The unique identifier for the Instance. It must begin with letter, and cannot
+           * end with hyphen; must contain fewer than 50 characters. The name of the instance
+           * becomes {parent}/instances/{instance_id}. If not provided, the server will generate a
+           * unique `instance_id`.
+           */
+          public Create setInstanceId(java.lang.String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+          }
+
+          /**
+           * Optional. Indicates that the request should be validated and default values populated,
+           * without persisting the request or creating any resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Indicates that the request should be validated and default values populated, without
+         persisting the request or creating any resources.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Indicates that the request should be validated and default values populated,
+           * without persisting the request or creating any resources.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a Instance
+         *
+         * Create a request for the method "instances.delete".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Deletes a Instance
+           *
+           * Create a request for the method "instances.delete".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /**
+
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. A system-generated fingerprint for this version of the resource. May be used
+           * to detect modification conflict during updates.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. A system-generated fingerprint for this version of the resource. May be used to detect
+         modification conflict during updates.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. A system-generated fingerprint for this version of the resource. May be used
+           * to detect modification conflict during updates.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Optional. Indicates that the request should be validated without actually deleting any
+           * resources.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Indicates that the request should be validated without actually deleting any resources.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Indicates that the request should be validated without actually deleting any
+           * resources.
+           */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a Instance
+         *
+         * Create a request for the method "instances.get".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2Instance> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Gets a Instance
+           *
+           * Create a request for the method "instances.get".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2Instance.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /**
+
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Instances. Results are sorted by creation time, descending.
+         *
+         * Create a request for the method "instances.list".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location and project to list resources on. Format:
+         *        projects/{project}/locations/{location}, where {project} can be project id or number.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2ListInstancesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/instances";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Instances. Results are sorted by creation time, descending.
+           *
+           * Create a request for the method "instances.list".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location and project to list resources on. Format:
+         *        projects/{project}/locations/{location}, where {project} can be project id or number.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v2.model.GoogleCloudRunV2ListInstancesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location and project to list resources on. Format:
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location and project to list resources on. Format:
+         projects/{project}/locations/{location}, where {project} can be project id or number.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location and project to list resources on. Format:
+           * projects/{project}/locations/{location}, where {project} can be project id or number.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Maximum number of Instances to return in this call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of Instances to return in this call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Maximum number of Instances to return in this call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token received from a previous call to ListInstances. All other
+           * parameters must match.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token received from a previous call to ListInstances. All other parameters must
+         match.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token received from a previous call to ListInstances. All other
+           * parameters must match.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. If true, returns deleted (but unexpired) resources along with active ones.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showDeleted;
+
+          /** Optional. If true, returns deleted (but unexpired) resources along with active ones.
+           */
+          public java.lang.Boolean getShowDeleted() {
+            return showDeleted;
+          }
+
+          /**
+           * Optional. If true, returns deleted (but unexpired) resources along with active ones.
+           */
+          public List setShowDeleted(java.lang.Boolean showDeleted) {
+            this.showDeleted = showDeleted;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Starts an Instance.
+         *
+         * Create a request for the method "instances.start".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Start#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Instance to stop. Format:
+         *        `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can be
+         *        project id or number.
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2StartInstanceRequest}
+         * @return the request
+         */
+        public Start start(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2StartInstanceRequest content) throws java.io.IOException {
+          Start result = new Start(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Start extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:start";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Starts an Instance.
+           *
+           * Create a request for the method "instances.start".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Start#execute()} method to invoke the remote operation. <p> {@link
+           * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Instance to stop. Format:
+         *        `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can be
+         *        project id or number.
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2StartInstanceRequest}
+           * @since 1.13
+           */
+          protected Start(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2StartInstanceRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Start set$Xgafv(java.lang.String $Xgafv) {
+            return (Start) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Start setAccessToken(java.lang.String accessToken) {
+            return (Start) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Start setAlt(java.lang.String alt) {
+            return (Start) super.setAlt(alt);
+          }
+
+          @Override
+          public Start setCallback(java.lang.String callback) {
+            return (Start) super.setCallback(callback);
+          }
+
+          @Override
+          public Start setFields(java.lang.String fields) {
+            return (Start) super.setFields(fields);
+          }
+
+          @Override
+          public Start setKey(java.lang.String key) {
+            return (Start) super.setKey(key);
+          }
+
+          @Override
+          public Start setOauthToken(java.lang.String oauthToken) {
+            return (Start) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Start) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Start setQuotaUser(java.lang.String quotaUser) {
+            return (Start) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Start setUploadType(java.lang.String uploadType) {
+            return (Start) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Start setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Start) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Instance to stop. Format:
+           * `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can
+           * be project id or number.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Instance to stop. Format:
+         `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can be project id
+         or number.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Instance to stop. Format:
+           * `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can
+           * be project id or number.
+           */
+          public Start setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Start set(String parameterName, Object value) {
+            return (Start) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Stops an Instance.
+         *
+         * Create a request for the method "instances.stop".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Instance to stop. Format:
+         *        `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can be
+         *        project id or number.
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2StopInstanceRequest}
+         * @return the request
+         */
+        public Stop stop(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2StopInstanceRequest content) throws java.io.IOException {
+          Stop result = new Stop(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Stop extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:stop";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Stops an Instance.
+           *
+           * Create a request for the method "instances.stop".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Stop#execute()} method to invoke the remote operation. <p> {@link
+           * Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Instance to stop. Format:
+         *        `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can be
+         *        project id or number.
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2StopInstanceRequest}
+           * @since 1.13
+           */
+          protected Stop(java.lang.String name, com.google.api.services.run.v2.model.GoogleCloudRunV2StopInstanceRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public Stop set$Xgafv(java.lang.String $Xgafv) {
+            return (Stop) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Stop setAccessToken(java.lang.String accessToken) {
+            return (Stop) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Stop setAlt(java.lang.String alt) {
+            return (Stop) super.setAlt(alt);
+          }
+
+          @Override
+          public Stop setCallback(java.lang.String callback) {
+            return (Stop) super.setCallback(callback);
+          }
+
+          @Override
+          public Stop setFields(java.lang.String fields) {
+            return (Stop) super.setFields(fields);
+          }
+
+          @Override
+          public Stop setKey(java.lang.String key) {
+            return (Stop) super.setKey(key);
+          }
+
+          @Override
+          public Stop setOauthToken(java.lang.String oauthToken) {
+            return (Stop) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Stop) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Stop setQuotaUser(java.lang.String quotaUser) {
+            return (Stop) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Stop setUploadType(java.lang.String uploadType) {
+            return (Stop) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Stop) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Instance to stop. Format:
+           * `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can
+           * be project id or number.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Instance to stop. Format:
+         `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can be project id
+         or number.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Instance to stop. Format:
+           * `projects/{project}/locations/{location}/instances/{instance}`, where `{project}` can
+           * be project id or number.
+           */
+          public Stop setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Stop set(String parameterName, Object value) {
+            return (Stop) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Jobs collection.
        *
        * <p>The typical use is:</p>
@@ -1126,21 +2131,22 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The unique identifier for the Job. The name of the job becomes
-           * {parent}/jobs/{job_id}.
+           * Optional. The unique identifier for the Job. The name of the job becomes
+           * {parent}/jobs/{job_id}. If not provided, the server will generate a unique `job_id`.
            */
           @com.google.api.client.util.Key
           private java.lang.String jobId;
 
-          /** Required. The unique identifier for the Job. The name of the job becomes {parent}/jobs/{job_id}.
+          /** Optional. The unique identifier for the Job. The name of the job becomes {parent}/jobs/{job_id}. If
+         not provided, the server will generate a unique `job_id`.
            */
           public java.lang.String getJobId() {
             return jobId;
           }
 
           /**
-           * Required. The unique identifier for the Job. The name of the job becomes
-           * {parent}/jobs/{job_id}.
+           * Optional. The unique identifier for the Job. The name of the job becomes
+           * {parent}/jobs/{job_id}. If not provided, the server will generate a unique `job_id`.
            */
           public Create setJobId(java.lang.String jobId) {
             this.jobId = jobId;
@@ -4658,25 +5664,27 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The unique identifier for the Service. It must begin with letter, and cannot
+           * Optional. The unique identifier for the Service. It must begin with letter, and cannot
            * end with hyphen; must contain fewer than 50 characters. The name of the service becomes
-           * {parent}/services/{service_id}.
+           * {parent}/services/{service_id}. If not provided, the server will generate a unique
+           * `service_id`.
            */
           @com.google.api.client.util.Key
           private java.lang.String serviceId;
 
-          /** Required. The unique identifier for the Service. It must begin with letter, and cannot end with
+          /** Optional. The unique identifier for the Service. It must begin with letter, and cannot end with
          hyphen; must contain fewer than 50 characters. The name of the service becomes
-         {parent}/services/{service_id}.
+         {parent}/services/{service_id}. If not provided, the server will generate a unique `service_id`.
            */
           public java.lang.String getServiceId() {
             return serviceId;
           }
 
           /**
-           * Required. The unique identifier for the Service. It must begin with letter, and cannot
+           * Optional. The unique identifier for the Service. It must begin with letter, and cannot
            * end with hyphen; must contain fewer than 50 characters. The name of the service becomes
-           * {parent}/services/{service_id}.
+           * {parent}/services/{service_id}. If not provided, the server will generate a unique
+           * `service_id`.
            */
           public Create setServiceId(java.lang.String serviceId) {
             this.serviceId = serviceId;
@@ -6895,25 +7903,28 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The unique identifier for the WorkerPool. It must begin with letter, and
+           * Optional. The unique identifier for the WorkerPool. It must begin with letter, and
            * cannot end with hyphen; must contain fewer than 50 characters. The name of the worker
-           * pool becomes `{parent}/workerPools/{worker_pool_id}`.
+           * pool becomes `{parent}/workerPools/{worker_pool_id}`. If not provided, the server will
+           * generate a unique `worker_pool_id`.
            */
           @com.google.api.client.util.Key
           private java.lang.String workerPoolId;
 
-          /** Required. The unique identifier for the WorkerPool. It must begin with letter, and cannot end with
+          /** Optional. The unique identifier for the WorkerPool. It must begin with letter, and cannot end with
          hyphen; must contain fewer than 50 characters. The name of the worker pool becomes
-         `{parent}/workerPools/{worker_pool_id}`.
+         `{parent}/workerPools/{worker_pool_id}`. If not provided, the server will generate a unique
+         `worker_pool_id`.
            */
           public java.lang.String getWorkerPoolId() {
             return workerPoolId;
           }
 
           /**
-           * Required. The unique identifier for the WorkerPool. It must begin with letter, and
+           * Optional. The unique identifier for the WorkerPool. It must begin with letter, and
            * cannot end with hyphen; must contain fewer than 50 characters. The name of the worker
-           * pool becomes `{parent}/workerPools/{worker_pool_id}`.
+           * pool becomes `{parent}/workerPools/{worker_pool_id}`. If not provided, the server will
+           * generate a unique `worker_pool_id`.
            */
           public Create setWorkerPoolId(java.lang.String workerPoolId) {
             this.workerPoolId = workerPoolId;
@@ -8806,8 +9817,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

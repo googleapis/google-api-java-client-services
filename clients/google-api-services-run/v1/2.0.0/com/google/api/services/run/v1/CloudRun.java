@@ -103,7 +103,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -2399,6 +2399,1068 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Instances collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRun run = new CloudRun(...);}
+     *   {@code CloudRun.Instances.List request = run.instances().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Instances instances() {
+      return new Instances();
+    }
+
+    /**
+     * The "instances" collection of methods.
+     */
+    public class Instances {
+
+      /**
+       * Create a Instance.
+       *
+       * Create a request for the method "instances.create".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The namespace in which the Instance should be created. Replace {namespace} with the
+       *        project ID or number. It takes the form namespaces/{namespace}. For example:
+       *        namespaces/PROJECT_ID
+       * @param content the {@link com.google.api.services.run.v1.model.Instance}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.run.v1.model.Instance content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.Instance> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+parent}/instances";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Create a Instance.
+         *
+         * Create a request for the method "instances.create".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The namespace in which the Instance should be created. Replace {namespace} with the
+       *        project ID or number. It takes the form namespaces/{namespace}. For example:
+       *        namespaces/PROJECT_ID
+         * @param content the {@link com.google.api.services.run.v1.model.Instance}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.run.v1.model.Instance content) {
+          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Instance.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The namespace in which the Instance should be created. Replace {namespace} with
+         * the project ID or number. It takes the form namespaces/{namespace}. For example:
+         * namespaces/PROJECT_ID
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The namespace in which the Instance should be created. Replace {namespace} with the
+       project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The namespace in which the Instance should be created. Replace {namespace} with
+         * the project ID or number. It takes the form namespaces/{namespace}. For example:
+         * namespaces/PROJECT_ID
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Delete a Instance.
+       *
+       * Create a request for the method "instances.delete".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Instance to delete. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/instances/[^/]+$");
+
+        /**
+         * Delete a Instance.
+         *
+         * Create a request for the method "instances.delete".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Instance to delete. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Instance to delete. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Instance to delete. Replace {namespace} with the project ID or number. It
+       takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Instance to delete. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. Cloud Run currently ignores this parameter. */
+        @com.google.api.client.util.Key
+        private java.lang.String apiVersion;
+
+        /** Optional. Cloud Run currently ignores this parameter.
+         */
+        public java.lang.String getApiVersion() {
+          return apiVersion;
+        }
+
+        /** Optional. Cloud Run currently ignores this parameter. */
+        public Delete setApiVersion(java.lang.String apiVersion) {
+          this.apiVersion = apiVersion;
+          return this;
+        }
+
+        /** Optional. Cloud Run currently ignores this parameter. */
+        @com.google.api.client.util.Key
+        private java.lang.String kind;
+
+        /** Optional. Cloud Run currently ignores this parameter.
+         */
+        public java.lang.String getKind() {
+          return kind;
+        }
+
+        /** Optional. Cloud Run currently ignores this parameter. */
+        public Delete setKind(java.lang.String kind) {
+          this.kind = kind;
+          return this;
+        }
+
+        /**
+         * Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this
+         * setting, and deletes in the background. Please see
+         * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+         * information.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String propagationPolicy;
+
+        /** Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this setting, and
+       deletes in the background. Please see kubernetes.io/docs/concepts/workloads/controllers/garbage-
+       collection/ for more information.
+         */
+        public java.lang.String getPropagationPolicy() {
+          return propagationPolicy;
+        }
+
+        /**
+         * Optional. Specifies the propagation policy of delete. Cloud Run currently ignores this
+         * setting, and deletes in the background. Please see
+         * kubernetes.io/docs/concepts/workloads/controllers/garbage-collection/ for more
+         * information.
+         */
+        public Delete setPropagationPolicy(java.lang.String propagationPolicy) {
+          this.propagationPolicy = propagationPolicy;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get an Instance.
+       *
+       * Create a request for the method "instances.get".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Instance to retrieve. It takes the form
+       *        namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional.
+       *        Replace {namespace} with the project ID or number.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudRunRequest<com.google.api.services.run.v1.model.Instance> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/instances/[^/]+$");
+
+        /**
+         * Get an Instance.
+         *
+         * Create a request for the method "instances.get".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Instance to retrieve. It takes the form
+       *        namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional.
+       *        Replace {namespace} with the project ID or number.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.Instance.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Instance to retrieve. It takes the form
+         * namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional.
+         * Replace {namespace} with the project ID or number.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Instance to retrieve. It takes the form
+       namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional. Replace
+       {namespace} with the project ID or number.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Instance to retrieve. It takes the form
+         * namespaces/{namespace}/instances/{Instance_name} and the `endpoint` must be regional.
+         * Replace {namespace} with the project ID or number.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List Instances. Results are sorted by creation time, descending.
+       *
+       * Create a request for the method "instances.list".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The namespace from which the Instances should be listed. Replace {namespace} with the
+       *        project ID or number. It takes the form namespaces/{namespace}. For example:
+       *        namespaces/PROJECT_ID
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudRunRequest<com.google.api.services.run.v1.model.ListInstancesResponse> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+parent}/instances";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * List Instances. Results are sorted by creation time, descending.
+         *
+         * Create a request for the method "instances.list".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The namespace from which the Instances should be listed. Replace {namespace} with the
+       *        project ID or number. It takes the form namespaces/{namespace}. For example:
+       *        namespaces/PROJECT_ID
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.ListInstancesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The namespace from which the Instances should be listed. Replace {namespace}
+         * with the project ID or number. It takes the form namespaces/{namespace}. For example:
+         * namespaces/PROJECT_ID
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The namespace from which the Instances should be listed. Replace {namespace} with the
+       project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The namespace from which the Instances should be listed. Replace {namespace}
+         * with the project ID or number. It takes the form namespaces/{namespace}. For example:
+         * namespaces/PROJECT_ID
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Optional. Optional encoded string to continue paging. */
+        @com.google.api.client.util.Key("continue")
+        private java.lang.String continue__;
+
+        /** Optional. Optional encoded string to continue paging.
+         */
+        public java.lang.String getContinue() {
+          return continue__;
+        }
+
+        /** Optional. Optional encoded string to continue paging. */
+        public List setContinue(java.lang.String continue__) {
+          this.continue__ = continue__;
+          return this;
+        }
+
+        /** Optional. Not supported by Cloud Run. */
+        @com.google.api.client.util.Key
+        private java.lang.String fieldSelector;
+
+        /** Optional. Not supported by Cloud Run.
+         */
+        public java.lang.String getFieldSelector() {
+          return fieldSelector;
+        }
+
+        /** Optional. Not supported by Cloud Run. */
+        public List setFieldSelector(java.lang.String fieldSelector) {
+          this.fieldSelector = fieldSelector;
+          return this;
+        }
+
+        /** Optional. Not supported by Cloud Run. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean includeUninitialized;
+
+        /** Optional. Not supported by Cloud Run.
+         */
+        public java.lang.Boolean getIncludeUninitialized() {
+          return includeUninitialized;
+        }
+
+        /** Optional. Not supported by Cloud Run. */
+        public List setIncludeUninitialized(java.lang.Boolean includeUninitialized) {
+          this.includeUninitialized = includeUninitialized;
+          return this;
+        }
+
+        /**
+         * Optional. Allows to filter resources based on a label. Supported operations are =, !=,
+         * exists, in, and notIn.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String labelSelector;
+
+        /** Optional. Allows to filter resources based on a label. Supported operations are =, !=, exists, in,
+       and notIn.
+         */
+        public java.lang.String getLabelSelector() {
+          return labelSelector;
+        }
+
+        /**
+         * Optional. Allows to filter resources based on a label. Supported operations are =, !=,
+         * exists, in, and notIn.
+         */
+        public List setLabelSelector(java.lang.String labelSelector) {
+          this.labelSelector = labelSelector;
+          return this;
+        }
+
+        /** Optional. The maximum number of records that should be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer limit;
+
+        /** Optional. The maximum number of records that should be returned.
+         */
+        public java.lang.Integer getLimit() {
+          return limit;
+        }
+
+        /** Optional. The maximum number of records that should be returned. */
+        public List setLimit(java.lang.Integer limit) {
+          this.limit = limit;
+          return this;
+        }
+
+        /** Optional. Not supported by Cloud Run. */
+        @com.google.api.client.util.Key
+        private java.lang.String resourceVersion;
+
+        /** Optional. Not supported by Cloud Run.
+         */
+        public java.lang.String getResourceVersion() {
+          return resourceVersion;
+        }
+
+        /** Optional. Not supported by Cloud Run. */
+        public List setResourceVersion(java.lang.String resourceVersion) {
+          this.resourceVersion = resourceVersion;
+          return this;
+        }
+
+        /** Optional. Not supported by Cloud Run. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean watch;
+
+        /** Optional. Not supported by Cloud Run.
+         */
+        public java.lang.Boolean getWatch() {
+          return watch;
+        }
+
+        /** Optional. Not supported by Cloud Run. */
+        public List setWatch(java.lang.Boolean watch) {
+          this.watch = watch;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Start an Instance which has been stopped.
+       *
+       * Create a request for the method "instances.start".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Start#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Instance to run. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+       * @param content the {@link com.google.api.services.run.v1.model.StartInstanceRequest}
+       * @return the request
+       */
+      public Start start(java.lang.String name, com.google.api.services.run.v1.model.StartInstanceRequest content) throws java.io.IOException {
+        Start result = new Start(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Start extends CloudRunRequest<com.google.api.services.run.v1.model.Instance> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+name}:start";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/instances/[^/]+$");
+
+        /**
+         * Start an Instance which has been stopped.
+         *
+         * Create a request for the method "instances.start".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Start#execute()} method to invoke the remote operation. <p> {@link
+         * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Instance to run. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * @param content the {@link com.google.api.services.run.v1.model.StartInstanceRequest}
+         * @since 1.13
+         */
+        protected Start(java.lang.String name, com.google.api.services.run.v1.model.StartInstanceRequest content) {
+          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Instance.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+        }
+
+        @Override
+        public Start set$Xgafv(java.lang.String $Xgafv) {
+          return (Start) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Start setAccessToken(java.lang.String accessToken) {
+          return (Start) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Start setAlt(java.lang.String alt) {
+          return (Start) super.setAlt(alt);
+        }
+
+        @Override
+        public Start setCallback(java.lang.String callback) {
+          return (Start) super.setCallback(callback);
+        }
+
+        @Override
+        public Start setFields(java.lang.String fields) {
+          return (Start) super.setFields(fields);
+        }
+
+        @Override
+        public Start setKey(java.lang.String key) {
+          return (Start) super.setKey(key);
+        }
+
+        @Override
+        public Start setOauthToken(java.lang.String oauthToken) {
+          return (Start) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Start) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Start setQuotaUser(java.lang.String quotaUser) {
+          return (Start) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Start setUploadType(java.lang.String uploadType) {
+          return (Start) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Start setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Start) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Instance to run. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Instance to run. Replace {namespace} with the project ID or number. It
+       takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Instance to run. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public Start setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Start set(String parameterName, Object value) {
+          return (Start) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Stop an Instance that is running.
+       *
+       * Create a request for the method "instances.stop".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Instance to run. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+       * @param content the {@link com.google.api.services.run.v1.model.StopInstanceRequest}
+       * @return the request
+       */
+      public Stop stop(java.lang.String name, com.google.api.services.run.v1.model.StopInstanceRequest content) throws java.io.IOException {
+        Stop result = new Stop(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Stop extends CloudRunRequest<com.google.api.services.run.v1.model.Instance> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+name}:stop";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/instances/[^/]+$");
+
+        /**
+         * Stop an Instance that is running.
+         *
+         * Create a request for the method "instances.stop".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Stop#execute()} method to invoke the remote operation. <p> {@link
+         * Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Instance to run. Replace {namespace} with the project ID or number. It
+       *        takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * @param content the {@link com.google.api.services.run.v1.model.StopInstanceRequest}
+         * @since 1.13
+         */
+        protected Stop(java.lang.String name, com.google.api.services.run.v1.model.StopInstanceRequest content) {
+          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Instance.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+        }
+
+        @Override
+        public Stop set$Xgafv(java.lang.String $Xgafv) {
+          return (Stop) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Stop setAccessToken(java.lang.String accessToken) {
+          return (Stop) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Stop setAlt(java.lang.String alt) {
+          return (Stop) super.setAlt(alt);
+        }
+
+        @Override
+        public Stop setCallback(java.lang.String callback) {
+          return (Stop) super.setCallback(callback);
+        }
+
+        @Override
+        public Stop setFields(java.lang.String fields) {
+          return (Stop) super.setFields(fields);
+        }
+
+        @Override
+        public Stop setKey(java.lang.String key) {
+          return (Stop) super.setKey(key);
+        }
+
+        @Override
+        public Stop setOauthToken(java.lang.String oauthToken) {
+          return (Stop) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Stop) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Stop setQuotaUser(java.lang.String quotaUser) {
+          return (Stop) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Stop setUploadType(java.lang.String uploadType) {
+          return (Stop) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Stop) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Instance to run. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Instance to run. Replace {namespace} with the project ID or number. It
+       takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Instance to run. Replace {namespace} with the project ID or
+         * number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public Stop setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Stop set(String parameterName, Object value) {
+          return (Stop) super.set(parameterName, value);
         }
       }
 
@@ -7288,7 +8350,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -7312,7 +8377,10 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -8990,6 +10058,518 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the Instances collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.Instances.List request = run.instances().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Instances instances() {
+        return new Instances();
+      }
+
+      /**
+       * The "instances" collection of methods.
+       */
+      public class Instances {
+
+        /**
+         * Get the IAM Access Control policy currently in effect for the given instance. This result does
+         * not include any inherited policies.
+         *
+         * Create a request for the method "instances.getIamPolicy".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends CloudRunRequest<com.google.api.services.run.v1.model.Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Get the IAM Access Control policy currently in effect for the given instance. This result does
+           * not include any inherited policies.
+           *
+           * Create a request for the method "instances.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the IAM Access control policy for the specified instance. Overwrites any existing policy.
+         *
+         * Create a request for the method "instances.setIamPolicy".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.run.v1.model.SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.run.v1.model.SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends CloudRunRequest<com.google.api.services.run.v1.model.Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Sets the IAM Access control policy for the specified instance. Overwrites any existing policy.
+           *
+           * Create a request for the method "instances.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.run.v1.model.SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.run.v1.model.SetIamPolicyRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has on the specified instance. There are no permissions
+         * required for making this API call.
+         *
+         * Create a request for the method "instances.testIamPermissions".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.run.v1.model.TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.run.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends CloudRunRequest<com.google.api.services.run.v1.model.TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has on the specified instance. There are no permissions
+           * required for making this API call.
+           *
+           * Create a request for the method "instances.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.run.v1.model.TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.run.v1.model.TestIamPermissionsRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
           }
         }
 
@@ -13419,8 +14999,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

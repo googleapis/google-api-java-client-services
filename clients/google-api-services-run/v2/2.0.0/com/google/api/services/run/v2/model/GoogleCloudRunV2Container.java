@@ -108,6 +108,13 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.util.List<GoogleCloudRunV2ContainerPort> ports;
 
   /**
+   * Readiness probe to be used for health checks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2Probe readinessProbe;
+
+  /**
    * Compute Resource requirements by this container.
    * The value may be {@code null}.
    */
@@ -324,6 +331,23 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Container setPorts(java.util.List<GoogleCloudRunV2ContainerPort> ports) {
     this.ports = ports;
+    return this;
+  }
+
+  /**
+   * Readiness probe to be used for health checks.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2Probe getReadinessProbe() {
+    return readinessProbe;
+  }
+
+  /**
+   * Readiness probe to be used for health checks.
+   * @param readinessProbe readinessProbe or {@code null} for none
+   */
+  public GoogleCloudRunV2Container setReadinessProbe(GoogleCloudRunV2Probe readinessProbe) {
+    this.readinessProbe = readinessProbe;
     return this;
   }
 

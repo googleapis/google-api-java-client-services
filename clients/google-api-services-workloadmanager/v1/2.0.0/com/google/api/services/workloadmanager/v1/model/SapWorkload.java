@@ -30,21 +30,21 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapWorkload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. the acsc componment
+   * Output only. application component
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SapComponent application;
 
   /**
-   * Output only. the architecture
+   * Output only. The architecture.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String architecture;
 
   /**
-   * Output only. the database componment
+   * Output only. database component
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class SapWorkload extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
-   * Output only. the products on this workload.
+   * Output only. The products on this workload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class SapWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the acsc componment
+   * Output only. application component
    * @return value or {@code null} for none
    */
   public SapComponent getApplication() {
@@ -79,7 +79,7 @@ public final class SapWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the acsc componment
+   * Output only. application component
    * @param application application or {@code null} for none
    */
   public SapWorkload setApplication(SapComponent application) {
@@ -88,7 +88,7 @@ public final class SapWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the architecture
+   * Output only. The architecture.
    * @return value or {@code null} for none
    */
   public java.lang.String getArchitecture() {
@@ -96,7 +96,7 @@ public final class SapWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the architecture
+   * Output only. The architecture.
    * @param architecture architecture or {@code null} for none
    */
   public SapWorkload setArchitecture(java.lang.String architecture) {
@@ -105,7 +105,7 @@ public final class SapWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the database componment
+   * Output only. database component
    * @return value or {@code null} for none
    */
   public SapComponent getDatabase() {
@@ -113,7 +113,7 @@ public final class SapWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the database componment
+   * Output only. database component
    * @param database database or {@code null} for none
    */
   public SapWorkload setDatabase(SapComponent database) {
@@ -139,7 +139,7 @@ public final class SapWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the products on this workload.
+   * Output only. The products on this workload.
    * @return value or {@code null} for none
    */
   public java.util.List<Product> getProducts() {
@@ -147,7 +147,7 @@ public final class SapWorkload extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the products on this workload.
+   * Output only. The products on this workload.
    * @param products products or {@code null} for none
    */
   public SapWorkload setProducts(java.util.List<Product> products) {

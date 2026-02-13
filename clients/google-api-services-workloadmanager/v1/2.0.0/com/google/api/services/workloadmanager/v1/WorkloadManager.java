@@ -103,7 +103,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -312,7 +312,10 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -336,7 +339,10 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -558,6 +564,144 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
       public class Discoveredprofiles {
 
         /**
+         * Gets details of a discovered workload profile.
+         *
+         * Create a request for the method "discoveredprofiles.get".
+         *
+         * This request holds the parameters needed by the workloadmanager server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends WorkloadManagerRequest<com.google.api.services.workloadmanager.v1.model.WorkloadProfile> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveredprofiles/[^/]+$");
+
+          /**
+           * Gets details of a discovered workload profile.
+           *
+           * Create a request for the method "discoveredprofiles.get".
+           *
+           * This request holds the parameters needed by the the workloadmanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(WorkloadManager.this, "GET", REST_PATH, null, com.google.api.services.workloadmanager.v1.model.WorkloadProfile.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveredprofiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/discoveredprofiles/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * List discovered workload profiles
          *
          * Create a request for the method "discoveredprofiles.list".
@@ -751,6 +895,166 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
           }
         }
 
+        /**
+         * An accessor for creating requests from the Health collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code WorkloadManager workloadmanager = new WorkloadManager(...);}
+         *   {@code WorkloadManager.Health.List request = workloadmanager.health().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Health health() {
+          return new Health();
+        }
+
+        /**
+         * The "health" collection of methods.
+         */
+        public class Health {
+
+          /**
+           * Get the health of a discovered workload profile.
+           *
+           * Create a request for the method "health.get".
+           *
+           * This request holds the parameters needed by the workloadmanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends WorkloadManagerRequest<com.google.api.services.workloadmanager.v1.model.WorkloadProfileHealth> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/discoveredprofiles/[^/]+/health/[^/]+$");
+
+            /**
+             * Get the health of a discovered workload profile.
+             *
+             * Create a request for the method "health.get".
+             *
+             * This request holds the parameters needed by the the workloadmanager server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(WorkloadManager.this, "GET", REST_PATH, null, com.google.api.services.workloadmanager.v1.model.WorkloadProfileHealth.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/discoveredprofiles/[^/]+/health/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/discoveredprofiles/[^/]+/health/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Evaluations collection.
@@ -4175,8 +4479,7 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

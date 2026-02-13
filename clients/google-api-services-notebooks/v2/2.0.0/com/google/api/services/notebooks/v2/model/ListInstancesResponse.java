@@ -50,8 +50,9 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
-   * Locations that could not be reached. For example, ['us-west1-a', 'us-central1-b']. A
-   * ListInstancesResponse will only contain either instances or unreachables,
+   * Unordered list. Locations that could not be reached. For example,
+   * ['projects/{project_id}/locations/us-west1-a', 'projects/{project_id}/locations/us-
+   * central1-b']. A ListInstancesResponse will only contain either instances or unreachables,
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +93,9 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * Locations that could not be reached. For example, ['us-west1-a', 'us-central1-b']. A
-   * ListInstancesResponse will only contain either instances or unreachables,
+   * Unordered list. Locations that could not be reached. For example,
+   * ['projects/{project_id}/locations/us-west1-a', 'projects/{project_id}/locations/us-
+   * central1-b']. A ListInstancesResponse will only contain either instances or unreachables,
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -101,8 +103,9 @@ public final class ListInstancesResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * Locations that could not be reached. For example, ['us-west1-a', 'us-central1-b']. A
-   * ListInstancesResponse will only contain either instances or unreachables,
+   * Unordered list. Locations that could not be reached. For example,
+   * ['projects/{project_id}/locations/us-west1-a', 'projects/{project_id}/locations/us-
+   * central1-b']. A ListInstancesResponse will only contain either instances or unreachables,
    * @param unreachable unreachable or {@code null} for none
    */
   public ListInstancesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

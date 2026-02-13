@@ -68,7 +68,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String productType;
 
   /**
-   * Output only. 2-letter ISO region code where the product is available in. Ex. "US" Please refers
+   * Output only. 2-letter ISO region code where the product is available in. Ex. "US" Please refer
    * to: https://en.wikipedia.org/wiki/ISO_3166-1
    * The value may be {@code null}.
    */
@@ -185,7 +185,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. 2-letter ISO region code where the product is available in. Ex. "US" Please refers
+   * Output only. 2-letter ISO region code where the product is available in. Ex. "US" Please refer
    * to: https://en.wikipedia.org/wiki/ISO_3166-1
    * @return value or {@code null} for none
    */
@@ -194,7 +194,7 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. 2-letter ISO region code where the product is available in. Ex. "US" Please refers
+   * Output only. 2-letter ISO region code where the product is available in. Ex. "US" Please refer
    * to: https://en.wikipedia.org/wiki/ISO_3166-1
    * @param regionCodes regionCodes or {@code null} for none
    */

@@ -103,7 +103,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -2315,7 +2315,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Name of the pretargeting configuration to get. Format:
-       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       *        bidders/{bidderAccountId}/pretargetingConfigs/{configId}
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2342,7 +2342,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Name of the pretargeting configuration to get. Format:
-       *        bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       *        bidders/{bidderAccountId}/pretargetingConfigs/{configId}
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2422,13 +2422,13 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Name of the pretargeting configuration to get. Format:
-         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * bidders/{bidderAccountId}/pretargetingConfigs/{configId}
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Name of the pretargeting configuration to get. Format:
-       bidders/{bidderAccountId}/pretargetingConfig/{configId}
+       bidders/{bidderAccountId}/pretargetingConfigs/{configId}
          */
         public java.lang.String getName() {
           return name;
@@ -2436,7 +2436,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
 
         /**
          * Required. Name of the pretargeting configuration to get. Format:
-         * bidders/{bidderAccountId}/pretargetingConfig/{configId}
+         * bidders/{bidderAccountId}/pretargetingConfigs/{configId}
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6512,8 +6512,7 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

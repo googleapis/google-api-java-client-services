@@ -31,6 +31,14 @@ package com.google.api.services.texttospeech.v1.model;
 public final class AdvancedVoiceOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, textnorm will be applied to text input. This feature is enabled by default.
+   * Only applies for Gemini TTS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableTextnorm;
+
+  /**
    * Only for Journey voices. If false, the synthesis is context aware and has a higher latency.
    * The value may be {@code null}.
    */
@@ -45,6 +53,25 @@ public final class AdvancedVoiceOptions extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean relaxSafetyFilters;
+
+  /**
+   * Optional. If true, textnorm will be applied to text input. This feature is enabled by default.
+   * Only applies for Gemini TTS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableTextnorm() {
+    return enableTextnorm;
+  }
+
+  /**
+   * Optional. If true, textnorm will be applied to text input. This feature is enabled by default.
+   * Only applies for Gemini TTS.
+   * @param enableTextnorm enableTextnorm or {@code null} for none
+   */
+  public AdvancedVoiceOptions setEnableTextnorm(java.lang.Boolean enableTextnorm) {
+    this.enableTextnorm = enableTextnorm;
+    return this;
+  }
 
   /**
    * Only for Journey voices. If false, the synthesis is context aware and has a higher latency.

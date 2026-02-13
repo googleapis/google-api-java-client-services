@@ -31,14 +31,16 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class SwitchoverAutonomousDatabaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The peer database name to switch over to.
+   * Optional. The peer database name to switch over to. Required for cross-region standby, and must
+   * be omitted for in-region Data Guard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerAutonomousDatabase;
 
   /**
-   * Required. The peer database name to switch over to.
+   * Optional. The peer database name to switch over to. Required for cross-region standby, and must
+   * be omitted for in-region Data Guard.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerAutonomousDatabase() {
@@ -46,7 +48,8 @@ public final class SwitchoverAutonomousDatabaseRequest extends com.google.api.cl
   }
 
   /**
-   * Required. The peer database name to switch over to.
+   * Optional. The peer database name to switch over to. Required for cross-region standby, and must
+   * be omitted for in-region Data Guard.
    * @param peerAutonomousDatabase peerAutonomousDatabase or {@code null} for none
    */
   public SwitchoverAutonomousDatabaseRequest setPeerAutonomousDatabase(java.lang.String peerAutonomousDatabase) {

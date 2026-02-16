@@ -66,6 +66,16 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec ex
   private java.lang.String filter;
 
   /**
+   * Optional. The maximum number of results to retrieve from this data store. If not specified, it
+   * will use the SearchRequest.num_results_per_data_store if provided, otherwise there is no limit.
+   * If both this field and SearchRequest.num_results_per_data_store are specified, this field will
+   * be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numResults;
+
+  /**
    * Optional. Boost specification to boost certain documents. For more information on boosting, see
    * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
    * @return value or {@code null} for none
@@ -144,6 +154,29 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec ex
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec setFilter(java.lang.String filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum number of results to retrieve from this data store. If not specified, it
+   * will use the SearchRequest.num_results_per_data_store if provided, otherwise there is no limit.
+   * If both this field and SearchRequest.num_results_per_data_store are specified, this field will
+   * be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumResults() {
+    return numResults;
+  }
+
+  /**
+   * Optional. The maximum number of results to retrieve from this data store. If not specified, it
+   * will use the SearchRequest.num_results_per_data_store if provided, otherwise there is no limit.
+   * If both this field and SearchRequest.num_results_per_data_store are specified, this field will
+   * be used.
+   * @param numResults numResults or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec setNumResults(java.lang.Integer numResults) {
+    this.numResults = numResults;
     return this;
   }
 

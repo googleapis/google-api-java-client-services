@@ -168,6 +168,13 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
   private java.lang.String name;
 
   /**
+   * Optional. Observability config for the engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaObservabilityConfig observabilityConfig;
+
+  /**
    * Configurations for the Search Engine. Only applicable if solution_type is SOLUTION_TYPE_SEARCH.
    * The value may be {@code null}.
    */
@@ -509,6 +516,23 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1betaEngine setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Observability config for the engine.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaObservabilityConfig getObservabilityConfig() {
+    return observabilityConfig;
+  }
+
+  /**
+   * Optional. Observability config for the engine.
+   * @param observabilityConfig observabilityConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaEngine setObservabilityConfig(GoogleCloudDiscoveryengineV1betaObservabilityConfig observabilityConfig) {
+    this.observabilityConfig = observabilityConfig;
     return this;
   }
 

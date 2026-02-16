@@ -59,6 +59,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig ex
   private java.lang.String languageCode;
 
   /**
+   * Optional. The region code used of the user that subscribed to the alert policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regionCode;
+
+  /**
    * Optional. The enrollment state of each alert.
    * @return value or {@code null} for none
    */
@@ -123,6 +130,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig ex
    */
   public GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Optional. The region code used of the user that subscribed to the alert policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegionCode() {
+    return regionCode;
+  }
+
+  /**
+   * Optional. The region code used of the user that subscribed to the alert policy.
+   * @param regionCode regionCode or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfig setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 

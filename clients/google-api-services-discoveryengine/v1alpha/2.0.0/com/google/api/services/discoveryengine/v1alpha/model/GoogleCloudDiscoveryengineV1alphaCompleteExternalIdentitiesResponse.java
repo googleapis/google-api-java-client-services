@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Response message for the AgentService.GetAgentView method.
+ * Response message for CompletionService.CompleteExternalIdentities.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The data for displaying an Agent.
+   * The list of external identities that match the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1alphaAgentView agentView;
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaExternalIdentity> externalIdentities;
 
   /**
-   * The data for displaying an Agent.
+   * The list of external identities that match the query.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaAgentView getAgentView() {
-    return agentView;
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaExternalIdentity> getExternalIdentities() {
+    return externalIdentities;
   }
 
   /**
-   * The data for displaying an Agent.
-   * @param agentView agentView or {@code null} for none
+   * The list of external identities that match the query.
+   * @param externalIdentities externalIdentities or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse setAgentView(GoogleCloudDiscoveryengineV1alphaAgentView agentView) {
-    this.agentView = agentView;
+  public GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse setExternalIdentities(java.util.List<GoogleCloudDiscoveryengineV1alphaExternalIdentity> externalIdentities) {
+    this.externalIdentities = externalIdentities;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse clone() {
-    return (GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse clone() {
+    return (GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse) super.clone();
   }
 
 }

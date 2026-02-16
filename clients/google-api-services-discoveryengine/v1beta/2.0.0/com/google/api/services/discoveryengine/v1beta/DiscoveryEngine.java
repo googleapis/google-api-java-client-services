@@ -103,7 +103,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -17381,7 +17381,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         public class Engines {
 
           /**
-           * Creates a Engine.
+           * Creates an Engine.
            *
            * Create a request for the method "engines.create".
            *
@@ -17407,7 +17407,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+$");
 
             /**
-             * Creates a Engine.
+             * Creates an Engine.
              *
              * Create a request for the method "engines.create".
              *
@@ -17549,7 +17549,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Deletes a Engine.
+           * Deletes an Engine.
            *
            * Create a request for the method "engines.delete".
            *
@@ -17577,7 +17577,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
 
             /**
-             * Deletes a Engine.
+             * Deletes an Engine.
              *
              * Create a request for the method "engines.delete".
              *
@@ -17702,7 +17702,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Gets a Engine.
+           * Gets an Engine.
            *
            * Create a request for the method "engines.get".
            *
@@ -17727,7 +17727,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
 
             /**
-             * Gets a Engine.
+             * Gets an Engine.
              *
              * Create a request for the method "engines.get".
              *
@@ -17846,6 +17846,207 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the IAM access control policy for an Engine. A `NOT_FOUND` error is returned if the resource
+           * does not exist. An empty policy is returned if the resource exists but does not have a policy set
+           * on it.
+           *
+           * Create a request for the method "engines.getIamPolicy".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @return the request
+           */
+          public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+            GetIamPolicy result = new GetIamPolicy(resource);
+            initialize(result);
+            return result;
+          }
+
+          public class GetIamPolicy extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleIamV1Policy> {
+
+            private static final String REST_PATH = "v1beta/{+resource}:getIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+            /**
+             * Gets the IAM access control policy for an Engine. A `NOT_FOUND` error is returned if the
+             * resource does not exist. An empty policy is returned if the resource exists but does not have a
+             * policy set on it.
+             *
+             * Create a request for the method "engines.getIamPolicy".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @since 1.13
+             */
+            protected GetIamPolicy(java.lang.String resource) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1beta.model.GoogleIamV1Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (GetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (GetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetIamPolicy setAlt(java.lang.String alt) {
+              return (GetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public GetIamPolicy setCallback(java.lang.String callback) {
+              return (GetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public GetIamPolicy setFields(java.lang.String fields) {
+              return (GetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public GetIamPolicy setKey(java.lang.String key) {
+              return (GetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (GetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (GetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (GetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being requested. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public GetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            @com.google.api.client.util.Key("options.requestedPolicyVersion")
+            private java.lang.Integer optionsRequestedPolicyVersion;
+
+            /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+           and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+           conditional role bindings must specify version 3. Policies with no conditional role bindings may
+           specify any valid value or leave the field unset. The policy in the response might use the policy
+           version that you specified, or it might use a lower policy version. For example, if you specify
+           version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+           which resources support conditions in their IAM policies, see the [IAM
+           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public java.lang.Integer getOptionsRequestedPolicyVersion() {
+              return optionsRequestedPolicyVersion;
+            }
+
+            /**
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+              this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+              return this;
+            }
+
+            @Override
+            public GetIamPolicy set(String parameterName, Object value) {
+              return (GetIamPolicy) super.set(parameterName, value);
             }
           }
           /**
@@ -18226,7 +18427,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Pauses the training of an existing engine. Only applicable if SolutionType is
+           * Pauses the training of an existing Engine. Only applicable if SolutionType is
            * SOLUTION_TYPE_RECOMMENDATION.
            *
            * Create a request for the method "engines.pause".
@@ -18253,7 +18454,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
 
             /**
-             * Pauses the training of an existing engine. Only applicable if SolutionType is
+             * Pauses the training of an existing Engine. Only applicable if SolutionType is
              * SOLUTION_TYPE_RECOMMENDATION.
              *
              * Create a request for the method "engines.pause".
@@ -18368,7 +18569,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Resumes the training of an existing engine. Only applicable if SolutionType is
+           * Resumes the training of an existing Engine. Only applicable if SolutionType is
            * SOLUTION_TYPE_RECOMMENDATION.
            *
            * Create a request for the method "engines.resume".
@@ -18395,7 +18596,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
 
             /**
-             * Resumes the training of an existing engine. Only applicable if SolutionType is
+             * Resumes the training of an existing Engine. Only applicable if SolutionType is
              * SOLUTION_TYPE_RECOMMENDATION.
              *
              * Create a request for the method "engines.resume".
@@ -18510,7 +18711,161 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Tunes an existing engine. Only applicable if SolutionType is SOLUTION_TYPE_RECOMMENDATION.
+           * Sets the IAM access control policy for an Engine. A `NOT_FOUND` error is returned if the resource
+           * does not exist. **Important:** When setting a policy directly on an Engine resource, the only
+           * recommended roles in the bindings are: `roles/discoveryengine.user` and
+           * `roles/discoveryengine.agentspaceUser`. Attempting to grant any other role will result in a
+           * warning in logging.
+           *
+           * Create a request for the method "engines.setIamPolicy".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleIamV1SetIamPolicyRequest}
+           * @return the request
+           */
+          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.discoveryengine.v1beta.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
+            SetIamPolicy result = new SetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetIamPolicy extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1beta.model.GoogleIamV1Policy> {
+
+            private static final String REST_PATH = "v1beta/{+resource}:setIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+            /**
+             * Sets the IAM access control policy for an Engine. A `NOT_FOUND` error is returned if the
+             * resource does not exist. **Important:** When setting a policy directly on an Engine resource,
+             * the only recommended roles in the bindings are: `roles/discoveryengine.user` and
+             * `roles/discoveryengine.agentspaceUser`. Attempting to grant any other role will result in a
+             * warning in logging.
+             *
+             * Create a request for the method "engines.setIamPolicy".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleIamV1SetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected SetIamPolicy(java.lang.String resource, com.google.api.services.discoveryengine.v1beta.model.GoogleIamV1SetIamPolicyRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1beta.model.GoogleIamV1Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (SetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (SetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetIamPolicy setAlt(java.lang.String alt) {
+              return (SetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public SetIamPolicy setCallback(java.lang.String callback) {
+              return (SetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public SetIamPolicy setFields(java.lang.String fields) {
+              return (SetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public SetIamPolicy setKey(java.lang.String key) {
+              return (SetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (SetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (SetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (SetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being specified. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public SetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetIamPolicy set(String parameterName, Object value) {
+              return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Tunes an existing Engine. Only applicable if SolutionType is SOLUTION_TYPE_RECOMMENDATION.
            *
            * Create a request for the method "engines.tune".
            *
@@ -18536,7 +18891,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
 
             /**
-             * Tunes an existing engine. Only applicable if SolutionType is SOLUTION_TYPE_RECOMMENDATION.
+             * Tunes an existing Engine. Only applicable if SolutionType is SOLUTION_TYPE_RECOMMENDATION.
              *
              * Create a request for the method "engines.tune".
              *
@@ -46796,8 +47151,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

@@ -17,7 +17,8 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * A suggested prompt for the agent, to be shown on the agent landing page.
+ * Specifies a Sensitive Data Protection (https://cloud.google.com/sensitive-data-
+ * protection/docs/sensitive-data-protection-overview) policy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,43 +28,40 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The text of the suggested prompt. The language of this is either Agent.language_code,
-   * or ListAvailableAgentViewsRequest.language_code if translations are enabled.
+   * Optional. The Sensitive Data Protection content policy resource name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String text;
+  private java.lang.String policy;
 
   /**
-   * Required. The text of the suggested prompt. The language of this is either Agent.language_code,
-   * or ListAvailableAgentViewsRequest.language_code if translations are enabled.
+   * Optional. The Sensitive Data Protection content policy resource name.
    * @return value or {@code null} for none
    */
-  public java.lang.String getText() {
-    return text;
+  public java.lang.String getPolicy() {
+    return policy;
   }
 
   /**
-   * Required. The text of the suggested prompt. The language of this is either Agent.language_code,
-   * or ListAvailableAgentViewsRequest.language_code if translations are enabled.
-   * @param text text or {@code null} for none
+   * Optional. The Sensitive Data Protection content policy resource name.
+   * @param policy policy or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt setText(java.lang.String text) {
-    this.text = text;
+  public GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy setPolicy(java.lang.String policy) {
+    this.policy = policy;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt clone() {
-    return (GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy clone() {
+    return (GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy) super.clone();
   }
 
 }

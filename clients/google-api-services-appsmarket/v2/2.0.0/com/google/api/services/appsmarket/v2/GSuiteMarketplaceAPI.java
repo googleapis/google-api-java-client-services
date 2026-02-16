@@ -103,7 +103,7 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -154,15 +154,17 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
   public class CustomerLicense {
 
     /**
-     * Gets the status of a license for a customer to determine if they have access for a given app.
+     * Gets the customer's licensing status to determine if they have access to a given app. For more
+     * information, see [Getting app installation and licensing
+     * details](https://developers.google.com/workspace/marketplace/example-calls-marketplace-api).
      *
      * Create a request for the method "customerLicense.get".
      *
      * This request holds the parameters needed by the appsmarket server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param applicationId Application Id
-     * @param customerId Customer Id
+     * @param applicationId The ID of the application.
+     * @param customerId The ID of the customer.
      * @return the request
      */
     public Get get(java.lang.String applicationId, java.lang.String customerId) throws java.io.IOException {
@@ -176,7 +178,9 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "appsmarket/v2/customerLicense/{applicationId}/{customerId}";
 
       /**
-       * Gets the status of a license for a customer to determine if they have access for a given app.
+       * Gets the customer's licensing status to determine if they have access to a given app. For more
+       * information, see [Getting app installation and licensing
+       * details](https://developers.google.com/workspace/marketplace/example-calls-marketplace-api).
        *
        * Create a request for the method "customerLicense.get".
        *
@@ -185,8 +189,8 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param applicationId Application Id
-       * @param customerId Customer Id
+       * @param applicationId The ID of the application.
+       * @param customerId The ID of the customer.
        * @since 1.13
        */
       protected Get(java.lang.String applicationId, java.lang.String customerId) {
@@ -260,33 +264,33 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Application Id */
+      /** The ID of the application. */
       @com.google.api.client.util.Key
       private java.lang.String applicationId;
 
-      /** Application Id
+      /** The ID of the application.
        */
       public java.lang.String getApplicationId() {
         return applicationId;
       }
 
-      /** Application Id */
+      /** The ID of the application. */
       public Get setApplicationId(java.lang.String applicationId) {
         this.applicationId = applicationId;
         return this;
       }
 
-      /** Customer Id */
+      /** The ID of the customer. */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
-      /** Customer Id
+      /** The ID of the customer.
        */
       public java.lang.String getCustomerId() {
         return customerId;
       }
 
-      /** Customer Id */
+      /** The ID of the customer. */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
         return this;
@@ -321,15 +325,17 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
   public class UserLicense {
 
     /**
-     * Gets the user's licensing status for their permission to use a given app.
+     * Gets the user's licensing status to determine if they have permission to use a given app. For
+     * more information, see [Getting app installation and licensing
+     * details](https://developers.google.com/workspace/marketplace/example-calls-marketplace-api).
      *
      * Create a request for the method "userLicense.get".
      *
      * This request holds the parameters needed by the appsmarket server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param applicationId Application Id
-     * @param userId User Id
+     * @param applicationId The ID of the application.
+     * @param userId The ID of the user.
      * @return the request
      */
     public Get get(java.lang.String applicationId, java.lang.String userId) throws java.io.IOException {
@@ -343,7 +349,9 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "appsmarket/v2/userLicense/{applicationId}/{userId}";
 
       /**
-       * Gets the user's licensing status for their permission to use a given app.
+       * Gets the user's licensing status to determine if they have permission to use a given app. For
+       * more information, see [Getting app installation and licensing
+       * details](https://developers.google.com/workspace/marketplace/example-calls-marketplace-api).
        *
        * Create a request for the method "userLicense.get".
        *
@@ -352,8 +360,8 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param applicationId Application Id
-       * @param userId User Id
+       * @param applicationId The ID of the application.
+       * @param userId The ID of the user.
        * @since 1.13
        */
       protected Get(java.lang.String applicationId, java.lang.String userId) {
@@ -427,33 +435,33 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Application Id */
+      /** The ID of the application. */
       @com.google.api.client.util.Key
       private java.lang.String applicationId;
 
-      /** Application Id
+      /** The ID of the application.
        */
       public java.lang.String getApplicationId() {
         return applicationId;
       }
 
-      /** Application Id */
+      /** The ID of the application. */
       public Get setApplicationId(java.lang.String applicationId) {
         this.applicationId = applicationId;
         return this;
       }
 
-      /** User Id */
+      /** The ID of the user. */
       @com.google.api.client.util.Key
       private java.lang.String userId;
 
-      /** User Id
+      /** The ID of the user.
        */
       public java.lang.String getUserId() {
         return userId;
       }
 
-      /** User Id */
+      /** The ID of the user. */
       public Get setUserId(java.lang.String userId) {
         this.userId = userId;
         return this;
@@ -499,8 +507,7 @@ public class GSuiteMarketplaceAPI extends com.google.api.client.googleapis.servi
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

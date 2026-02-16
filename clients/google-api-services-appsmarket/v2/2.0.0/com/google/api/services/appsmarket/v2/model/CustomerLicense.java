@@ -59,7 +59,7 @@ public final class CustomerLicense extends com.google.api.client.json.GenericJso
   private java.lang.String id;
 
   /**
-   * The type of API resource. This is always appsmarket#customerLicense.
+   * The type of API resource. This is always `appsmarket#customerLicense`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class CustomerLicense extends com.google.api.client.json.GenericJso
 
   /**
    * The customer's license status. One of: - `ACTIVE`: The customer has a valid license. -
-   * `UNLICENSED`: There is no license: either this customer has never installed your application,
-   * or else has deleted it.
+   * `UNLICENSED`: There is no license. Either this customer has never installed your application or
+   * has deleted it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class CustomerLicense extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of API resource. This is always appsmarket#customerLicense.
+   * The type of API resource. This is always `appsmarket#customerLicense`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -151,7 +151,7 @@ public final class CustomerLicense extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The type of API resource. This is always appsmarket#customerLicense.
+   * The type of API resource. This is always `appsmarket#customerLicense`.
    * @param kind kind or {@code null} for none
    */
   public CustomerLicense setKind(java.lang.String kind) {
@@ -161,8 +161,8 @@ public final class CustomerLicense extends com.google.api.client.json.GenericJso
 
   /**
    * The customer's license status. One of: - `ACTIVE`: The customer has a valid license. -
-   * `UNLICENSED`: There is no license: either this customer has never installed your application,
-   * or else has deleted it.
+   * `UNLICENSED`: There is no license. Either this customer has never installed your application or
+   * has deleted it.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -171,8 +171,8 @@ public final class CustomerLicense extends com.google.api.client.json.GenericJso
 
   /**
    * The customer's license status. One of: - `ACTIVE`: The customer has a valid license. -
-   * `UNLICENSED`: There is no license: either this customer has never installed your application,
-   * or else has deleted it.
+   * `UNLICENSED`: There is no license. Either this customer has never installed your application or
+   * has deleted it.
    * @param state state or {@code null} for none
    */
   public CustomerLicense setState(java.lang.String state) {

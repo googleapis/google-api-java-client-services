@@ -38,6 +38,17 @@ public final class ConvertRegionPricesRequest extends com.google.api.client.json
   private Money price;
 
   /**
+   * Optional. Product tax category code in context. Product tax category determines the transaction
+   * tax rates applied to the product that will be factored into the price calculation. If not set,
+   * tax rates for the default product tax category will be used. Refer to the [Help Center
+   * article](https://support.google.com/googleplay/android-developer/answer/16408159) for more
+   * information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String productTaxCategoryCode;
+
+  /**
    * The intital price to convert other regions from. Tax exclusive.
    * @return value or {@code null} for none
    */
@@ -51,6 +62,31 @@ public final class ConvertRegionPricesRequest extends com.google.api.client.json
    */
   public ConvertRegionPricesRequest setPrice(Money price) {
     this.price = price;
+    return this;
+  }
+
+  /**
+   * Optional. Product tax category code in context. Product tax category determines the transaction
+   * tax rates applied to the product that will be factored into the price calculation. If not set,
+   * tax rates for the default product tax category will be used. Refer to the [Help Center
+   * article](https://support.google.com/googleplay/android-developer/answer/16408159) for more
+   * information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProductTaxCategoryCode() {
+    return productTaxCategoryCode;
+  }
+
+  /**
+   * Optional. Product tax category code in context. Product tax category determines the transaction
+   * tax rates applied to the product that will be factored into the price calculation. If not set,
+   * tax rates for the default product tax category will be used. Refer to the [Help Center
+   * article](https://support.google.com/googleplay/android-developer/answer/16408159) for more
+   * information.
+   * @param productTaxCategoryCode productTaxCategoryCode or {@code null} for none
+   */
+  public ConvertRegionPricesRequest setProductTaxCategoryCode(java.lang.String productTaxCategoryCode) {
+    this.productTaxCategoryCode = productTaxCategoryCode;
     return this;
   }
 

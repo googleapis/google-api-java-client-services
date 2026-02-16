@@ -31,81 +31,82 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AdGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * The format of the ads in the ad group.
+   * Required. The format of the ads in the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adGroupFormat;
 
   /**
-   * The unique ID of the ad group. Assigned by the system.
+   * Output only. The unique ID of the ad group. Assigned by the system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long adGroupId;
 
   /**
-   * The unique ID of the advertiser the ad group belongs to.
+   * Output only. The unique ID of the advertiser the ad group belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long advertiserId;
 
   /**
-   * The bidding strategy used by the ad group. Only the youtubeAndPartnersBid field can be used in
-   * the bidding strategy.
+   * Optional. The bidding strategy used by the ad group. Only the youtubeAndPartnersBid and
+   * demandGenBid field can be used in the bidding strategy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BiddingStrategy bidStrategy;
 
   /**
-   * The display name of the ad group. Must be UTF-8 encoded with a maximum size of 255 bytes.
+   * Required. The display name of the ad group. Must be UTF-8 encoded with a maximum size of 255
+   * bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Controls whether or not the ad group can spend its budget and bid on inventory. If the ad
-   * group's parent line item is not active, the ad group can't spend its budget even if its own
-   * status is `ENTITY_STATUS_ACTIVE`.
+   * Required. Controls whether or not the ad group can spend its budget and bid on inventory. If
+   * the ad group's parent line item is not active, the ad group can't spend its budget even if its
+   * own status is `ENTITY_STATUS_ACTIVE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityStatus;
 
   /**
-   * The unique ID of the line item that the ad group belongs to.
+   * Required. The unique ID of the line item that the ad group belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long lineItemId;
 
   /**
-   * The resource name of the ad group.
+   * Output only. Identifier. The resource name of the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The settings of the product feed in this ad group.
+   * Optional. The settings of the product feed in this ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ProductFeedData productFeedData;
 
   /**
-   * The [optimized targeting](//support.google.com/displayvideo/answer/12060859) settings of the ad
-   * group.
+   * Optional. The [optimized targeting](//support.google.com/displayvideo/answer/12060859) settings
+   * of the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TargetingExpansionConfig targetingExpansion;
 
   /**
-   * The format of the ads in the ad group.
+   * Required. The format of the ads in the ad group.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdGroupFormat() {
@@ -113,7 +114,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The format of the ads in the ad group.
+   * Required. The format of the ads in the ad group.
    * @param adGroupFormat adGroupFormat or {@code null} for none
    */
   public AdGroup setAdGroupFormat(java.lang.String adGroupFormat) {
@@ -122,7 +123,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the ad group. Assigned by the system.
+   * Output only. The unique ID of the ad group. Assigned by the system.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdGroupId() {
@@ -130,7 +131,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the ad group. Assigned by the system.
+   * Output only. The unique ID of the ad group. Assigned by the system.
    * @param adGroupId adGroupId or {@code null} for none
    */
   public AdGroup setAdGroupId(java.lang.Long adGroupId) {
@@ -139,7 +140,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the advertiser the ad group belongs to.
+   * Output only. The unique ID of the advertiser the ad group belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdvertiserId() {
@@ -147,7 +148,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the advertiser the ad group belongs to.
+   * Output only. The unique ID of the advertiser the ad group belongs to.
    * @param advertiserId advertiserId or {@code null} for none
    */
   public AdGroup setAdvertiserId(java.lang.Long advertiserId) {
@@ -156,8 +157,8 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bidding strategy used by the ad group. Only the youtubeAndPartnersBid field can be used in
-   * the bidding strategy.
+   * Optional. The bidding strategy used by the ad group. Only the youtubeAndPartnersBid and
+   * demandGenBid field can be used in the bidding strategy.
    * @return value or {@code null} for none
    */
   public BiddingStrategy getBidStrategy() {
@@ -165,8 +166,8 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bidding strategy used by the ad group. Only the youtubeAndPartnersBid field can be used in
-   * the bidding strategy.
+   * Optional. The bidding strategy used by the ad group. Only the youtubeAndPartnersBid and
+   * demandGenBid field can be used in the bidding strategy.
    * @param bidStrategy bidStrategy or {@code null} for none
    */
   public AdGroup setBidStrategy(BiddingStrategy bidStrategy) {
@@ -175,7 +176,8 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the ad group. Must be UTF-8 encoded with a maximum size of 255 bytes.
+   * Required. The display name of the ad group. Must be UTF-8 encoded with a maximum size of 255
+   * bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -183,7 +185,8 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the ad group. Must be UTF-8 encoded with a maximum size of 255 bytes.
+   * Required. The display name of the ad group. Must be UTF-8 encoded with a maximum size of 255
+   * bytes.
    * @param displayName displayName or {@code null} for none
    */
   public AdGroup setDisplayName(java.lang.String displayName) {
@@ -192,9 +195,9 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls whether or not the ad group can spend its budget and bid on inventory. If the ad
-   * group's parent line item is not active, the ad group can't spend its budget even if its own
-   * status is `ENTITY_STATUS_ACTIVE`.
+   * Required. Controls whether or not the ad group can spend its budget and bid on inventory. If
+   * the ad group's parent line item is not active, the ad group can't spend its budget even if its
+   * own status is `ENTITY_STATUS_ACTIVE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityStatus() {
@@ -202,9 +205,9 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls whether or not the ad group can spend its budget and bid on inventory. If the ad
-   * group's parent line item is not active, the ad group can't spend its budget even if its own
-   * status is `ENTITY_STATUS_ACTIVE`.
+   * Required. Controls whether or not the ad group can spend its budget and bid on inventory. If
+   * the ad group's parent line item is not active, the ad group can't spend its budget even if its
+   * own status is `ENTITY_STATUS_ACTIVE`.
    * @param entityStatus entityStatus or {@code null} for none
    */
   public AdGroup setEntityStatus(java.lang.String entityStatus) {
@@ -213,7 +216,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the line item that the ad group belongs to.
+   * Required. The unique ID of the line item that the ad group belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLineItemId() {
@@ -221,7 +224,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the line item that the ad group belongs to.
+   * Required. The unique ID of the line item that the ad group belongs to.
    * @param lineItemId lineItemId or {@code null} for none
    */
   public AdGroup setLineItemId(java.lang.Long lineItemId) {
@@ -230,7 +233,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the ad group.
+   * Output only. Identifier. The resource name of the ad group.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -238,7 +241,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the ad group.
+   * Output only. Identifier. The resource name of the ad group.
    * @param name name or {@code null} for none
    */
   public AdGroup setName(java.lang.String name) {
@@ -247,7 +250,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The settings of the product feed in this ad group.
+   * Optional. The settings of the product feed in this ad group.
    * @return value or {@code null} for none
    */
   public ProductFeedData getProductFeedData() {
@@ -255,7 +258,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The settings of the product feed in this ad group.
+   * Optional. The settings of the product feed in this ad group.
    * @param productFeedData productFeedData or {@code null} for none
    */
   public AdGroup setProductFeedData(ProductFeedData productFeedData) {
@@ -264,8 +267,8 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [optimized targeting](//support.google.com/displayvideo/answer/12060859) settings of the ad
-   * group.
+   * Optional. The [optimized targeting](//support.google.com/displayvideo/answer/12060859) settings
+   * of the ad group.
    * @return value or {@code null} for none
    */
   public TargetingExpansionConfig getTargetingExpansion() {
@@ -273,8 +276,8 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The [optimized targeting](//support.google.com/displayvideo/answer/12060859) settings of the ad
-   * group.
+   * Optional. The [optimized targeting](//support.google.com/displayvideo/answer/12060859) settings
+   * of the ad group.
    * @param targetingExpansion targetingExpansion or {@code null} for none
    */
   public AdGroup setTargetingExpansion(TargetingExpansionConfig targetingExpansion) {

@@ -38,10 +38,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private java.lang.Long adGroupAdId;
 
   /**
-   * The unique ID of the ad group that the ad belongs to. *Caution*: Parent ad groups for Demand
-   * Gen ads are not currently retrieveable using `advertisers.adGroups.list` or
-   * `advertisers.adGroups.get`. Demand Gen ads can be identified by the absence of the `ad_details`
-   * union field.
+   * Required. The unique ID of the ad group that the ad belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -55,7 +52,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private AdPolicy adPolicy;
 
   /**
-   * List of URLs used by the ad.
+   * Output only. List of URLs used by the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,44 +66,45 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private java.lang.Long advertiserId;
 
   /**
-   * Details of an [audio ad](//support.google.com/displayvideo/answer/6274216) used for reach
-   * marketing objectives.
+   * Output only. Details of an [audio ad](//support.google.com/displayvideo/answer/6274216) used
+   * for reach marketing objectives.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AudioAd audioAd;
 
   /**
-   * Details of a [non-skippable short video ad](//support.google.com/displayvideo/answer/6274216),
-   * equal to or less than 6 seconds, used for reach.
+   * Output only. Details of a [non-skippable short video
+   * ad](//support.google.com/displayvideo/answer/6274216), equal to or less than 6 seconds, used
+   * for reach.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BumperAd bumperAd;
 
   /**
-   * The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
+   * Required. The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Details of an ad sourced from a Display & Video 360 creative.
+   * Output only. Details of an ad sourced from a Display & Video 360 creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DisplayVideoSourceAd displayVideoSourceAd;
 
   /**
-   * The entity status of the ad.
+   * Required. The entity status of the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityStatus;
 
   /**
-   * Details of an [in-stream ad skippable after 5
+   * Output only. Details of an [in-stream ad skippable after 5
    * seconds](//support.google.com/displayvideo/answer/6274216), used for brand awareness or reach
    * marketing objectives.
    * The value may be {@code null}.
@@ -115,7 +113,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private InStreamAd inStreamAd;
 
   /**
-   * Details of an [ad served on the YouTube Home feed](//support.google.com/google-
+   * Output only. Details of an [ad served on the YouTube Home feed](//support.google.com/google-
    * ads/answer/9709826).
    * The value may be {@code null}.
    */
@@ -130,7 +128,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Details of a [non-skippable short in-stream video
+   * Output only. Details of a [non-skippable short in-stream video
    * ad](//support.google.com/displayvideo/answer/6274216), between 6 and 15 seconds, used for reach
    * marketing objectives.
    * The value may be {@code null}.
@@ -139,15 +137,15 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private NonSkippableAd nonSkippableAd;
 
   /**
-   * Details of an [ad promoting a video](//support.google.com/displayvideo/answer/6274216) that
-   * shows in places of discovery.
+   * Output only. Details of an [ad promoting a
+   * video](//support.google.com/displayvideo/answer/6274216) that shows in places of discovery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VideoDiscoveryAd videoDiscoverAd;
 
   /**
-   * Details of an [ad used in a video action campaign](//support.google.com/google-
+   * Output only. Details of an [ad used in a video action campaign](//support.google.com/google-
    * ads/answer/10147229) to drive actions to the business, service or product.
    * The value may be {@code null}.
    */
@@ -172,10 +170,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the ad group that the ad belongs to. *Caution*: Parent ad groups for Demand
-   * Gen ads are not currently retrieveable using `advertisers.adGroups.list` or
-   * `advertisers.adGroups.get`. Demand Gen ads can be identified by the absence of the `ad_details`
-   * union field.
+   * Required. The unique ID of the ad group that the ad belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdGroupId() {
@@ -183,10 +178,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique ID of the ad group that the ad belongs to. *Caution*: Parent ad groups for Demand
-   * Gen ads are not currently retrieveable using `advertisers.adGroups.list` or
-   * `advertisers.adGroups.get`. Demand Gen ads can be identified by the absence of the `ad_details`
-   * union field.
+   * Required. The unique ID of the ad group that the ad belongs to.
    * @param adGroupId adGroupId or {@code null} for none
    */
   public AdGroupAd setAdGroupId(java.lang.Long adGroupId) {
@@ -212,7 +204,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of URLs used by the ad.
+   * Output only. List of URLs used by the ad.
    * @return value or {@code null} for none
    */
   public java.util.List<AdUrl> getAdUrls() {
@@ -220,7 +212,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of URLs used by the ad.
+   * Output only. List of URLs used by the ad.
    * @param adUrls adUrls or {@code null} for none
    */
   public AdGroupAd setAdUrls(java.util.List<AdUrl> adUrls) {
@@ -246,8 +238,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [audio ad](//support.google.com/displayvideo/answer/6274216) used for reach
-   * marketing objectives.
+   * Output only. Details of an [audio ad](//support.google.com/displayvideo/answer/6274216) used
+   * for reach marketing objectives.
    * @return value or {@code null} for none
    */
   public AudioAd getAudioAd() {
@@ -255,8 +247,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [audio ad](//support.google.com/displayvideo/answer/6274216) used for reach
-   * marketing objectives.
+   * Output only. Details of an [audio ad](//support.google.com/displayvideo/answer/6274216) used
+   * for reach marketing objectives.
    * @param audioAd audioAd or {@code null} for none
    */
   public AdGroupAd setAudioAd(AudioAd audioAd) {
@@ -265,8 +257,9 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of a [non-skippable short video ad](//support.google.com/displayvideo/answer/6274216),
-   * equal to or less than 6 seconds, used for reach.
+   * Output only. Details of a [non-skippable short video
+   * ad](//support.google.com/displayvideo/answer/6274216), equal to or less than 6 seconds, used
+   * for reach.
    * @return value or {@code null} for none
    */
   public BumperAd getBumperAd() {
@@ -274,8 +267,9 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of a [non-skippable short video ad](//support.google.com/displayvideo/answer/6274216),
-   * equal to or less than 6 seconds, used for reach.
+   * Output only. Details of a [non-skippable short video
+   * ad](//support.google.com/displayvideo/answer/6274216), equal to or less than 6 seconds, used
+   * for reach.
    * @param bumperAd bumperAd or {@code null} for none
    */
   public AdGroupAd setBumperAd(BumperAd bumperAd) {
@@ -284,7 +278,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
+   * Required. The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -292,7 +286,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
+   * Required. The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
    * @param displayName displayName or {@code null} for none
    */
   public AdGroupAd setDisplayName(java.lang.String displayName) {
@@ -301,7 +295,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an ad sourced from a Display & Video 360 creative.
+   * Output only. Details of an ad sourced from a Display & Video 360 creative.
    * @return value or {@code null} for none
    */
   public DisplayVideoSourceAd getDisplayVideoSourceAd() {
@@ -309,7 +303,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an ad sourced from a Display & Video 360 creative.
+   * Output only. Details of an ad sourced from a Display & Video 360 creative.
    * @param displayVideoSourceAd displayVideoSourceAd or {@code null} for none
    */
   public AdGroupAd setDisplayVideoSourceAd(DisplayVideoSourceAd displayVideoSourceAd) {
@@ -318,7 +312,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The entity status of the ad.
+   * Required. The entity status of the ad.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityStatus() {
@@ -326,7 +320,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The entity status of the ad.
+   * Required. The entity status of the ad.
    * @param entityStatus entityStatus or {@code null} for none
    */
   public AdGroupAd setEntityStatus(java.lang.String entityStatus) {
@@ -335,7 +329,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [in-stream ad skippable after 5
+   * Output only. Details of an [in-stream ad skippable after 5
    * seconds](//support.google.com/displayvideo/answer/6274216), used for brand awareness or reach
    * marketing objectives.
    * @return value or {@code null} for none
@@ -345,7 +339,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [in-stream ad skippable after 5
+   * Output only. Details of an [in-stream ad skippable after 5
    * seconds](//support.google.com/displayvideo/answer/6274216), used for brand awareness or reach
    * marketing objectives.
    * @param inStreamAd inStreamAd or {@code null} for none
@@ -356,7 +350,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [ad served on the YouTube Home feed](//support.google.com/google-
+   * Output only. Details of an [ad served on the YouTube Home feed](//support.google.com/google-
    * ads/answer/9709826).
    * @return value or {@code null} for none
    */
@@ -365,7 +359,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [ad served on the YouTube Home feed](//support.google.com/google-
+   * Output only. Details of an [ad served on the YouTube Home feed](//support.google.com/google-
    * ads/answer/9709826).
    * @param mastheadAd mastheadAd or {@code null} for none
    */
@@ -392,7 +386,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of a [non-skippable short in-stream video
+   * Output only. Details of a [non-skippable short in-stream video
    * ad](//support.google.com/displayvideo/answer/6274216), between 6 and 15 seconds, used for reach
    * marketing objectives.
    * @return value or {@code null} for none
@@ -402,7 +396,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of a [non-skippable short in-stream video
+   * Output only. Details of a [non-skippable short in-stream video
    * ad](//support.google.com/displayvideo/answer/6274216), between 6 and 15 seconds, used for reach
    * marketing objectives.
    * @param nonSkippableAd nonSkippableAd or {@code null} for none
@@ -413,8 +407,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [ad promoting a video](//support.google.com/displayvideo/answer/6274216) that
-   * shows in places of discovery.
+   * Output only. Details of an [ad promoting a
+   * video](//support.google.com/displayvideo/answer/6274216) that shows in places of discovery.
    * @return value or {@code null} for none
    */
   public VideoDiscoveryAd getVideoDiscoverAd() {
@@ -422,8 +416,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [ad promoting a video](//support.google.com/displayvideo/answer/6274216) that
-   * shows in places of discovery.
+   * Output only. Details of an [ad promoting a
+   * video](//support.google.com/displayvideo/answer/6274216) that shows in places of discovery.
    * @param videoDiscoverAd videoDiscoverAd or {@code null} for none
    */
   public AdGroupAd setVideoDiscoverAd(VideoDiscoveryAd videoDiscoverAd) {
@@ -432,7 +426,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [ad used in a video action campaign](//support.google.com/google-
+   * Output only. Details of an [ad used in a video action campaign](//support.google.com/google-
    * ads/answer/10147229) to drive actions to the business, service or product.
    * @return value or {@code null} for none
    */
@@ -441,7 +435,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details of an [ad used in a video action campaign](//support.google.com/google-
+   * Output only. Details of an [ad used in a video action campaign](//support.google.com/google-
    * ads/answer/10147229) to drive actions to the business, service or product.
    * @param videoPerformanceAd videoPerformanceAd or {@code null} for none
    */

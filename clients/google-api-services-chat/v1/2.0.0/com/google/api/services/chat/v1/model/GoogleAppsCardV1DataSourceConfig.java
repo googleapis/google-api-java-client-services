@@ -31,6 +31,14 @@ package com.google.api.services.chat.v1.model;
 public final class GoogleAppsCardV1DataSourceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * The minimum number of characters the user must enter before this data provider is triggered
+   * (i.e., before it starts returning results).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minCharactersTrigger;
+
+  /**
    * The data is from a Google Workspace application.
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class GoogleAppsCardV1DataSourceConfig extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private GoogleAppsCardV1Action remoteDataSource;
+
+  /**
+   * The minimum number of characters the user must enter before this data provider is triggered
+   * (i.e., before it starts returning results).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinCharactersTrigger() {
+    return minCharactersTrigger;
+  }
+
+  /**
+   * The minimum number of characters the user must enter before this data provider is triggered
+   * (i.e., before it starts returning results).
+   * @param minCharactersTrigger minCharactersTrigger or {@code null} for none
+   */
+  public GoogleAppsCardV1DataSourceConfig setMinCharactersTrigger(java.lang.Integer minCharactersTrigger) {
+    this.minCharactersTrigger = minCharactersTrigger;
+    return this;
+  }
 
   /**
    * The data is from a Google Workspace application.

@@ -103,7 +103,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -157,8 +157,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * organization.See Configure CMEK for Cloud Logging
+     * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "billingAccounts.getCmekSettings".
      *
@@ -191,8 +191,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * organization.See Configure CMEK for Cloud Logging
+       * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "billingAccounts.getCmekSettings".
        *
@@ -336,7 +336,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
      * projects, folders, organizations, and billing accounts.See View default resource settings for
-     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for more
      * information.
      *
      * Create a request for the method "billingAccounts.getSettings".
@@ -366,8 +366,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
        * projects, folders, organizations, and billing accounts.See View default resource settings for
-       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
-       * information.
+       * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for
+       * more information.
        *
        * Create a request for the method "billingAccounts.getSettings".
        *
@@ -1544,7 +1544,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+       * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+       * locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -1568,7 +1571,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^billingAccounts/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+         * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+         * locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -6711,9 +6717,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *
          * @param name Output only. Resource name of the saved query.In the format:
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
-         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
-         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
-         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         *        supported locations, see Supported Regions
+         *        (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+         *        query is created, the location cannot be changed.If the user doesn't provide a QUERY_ID,
+         *        the system will generate an alphanumeric ID.
          * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
          * @return the request
          */
@@ -6742,9 +6749,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param name Output only. Resource name of the saved query.In the format:
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
-         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
-         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
-         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         *        supported locations, see Supported Regions
+         *        (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+         *        query is created, the location cannot be changed.If the user doesn't provide a QUERY_ID,
+         *        the system will generate an alphanumeric ID.
            * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
            * @since 1.13
            */
@@ -6817,8 +6825,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Output only. Resource name of the saved query.In the format:
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
            * supported locations, see Supported Regions
-           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
-           * query is created, the location cannot be changed.If the user doesn't provide a
+           * (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the
+           * saved query is created, the location cannot be changed.If the user doesn't provide a
            * QUERY_ID, the system will generate an alphanumeric ID.
            */
           @com.google.api.client.util.Key
@@ -6826,7 +6834,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /** Output only. Resource name of the saved query.In the format:
          "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
-         locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
+         locations, see Supported Regions (https://docs.cloud.google.com/logging/docs/region-support#bucket-
          regions)After the saved query is created, the location cannot be changed.If the user doesn't
          provide a QUERY_ID, the system will generate an alphanumeric ID.
            */
@@ -6838,8 +6846,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Output only. Resource name of the saved query.In the format:
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
            * supported locations, see Supported Regions
-           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
-           * query is created, the location cannot be changed.If the user doesn't provide a
+           * (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the
+           * saved query is created, the location cannot be changed.If the user doesn't provide a
            * QUERY_ID, the system will generate an alphanumeric ID.
            */
           public Patch setName(java.lang.String name) {
@@ -7522,9 +7530,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
-         * account-types#service-agents) used by the sinks with the same parent. For more
-         * information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent
+         * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the
+         * sinks with the same parent. For more information, see writer_identity in LogSink.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -7535,8 +7543,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        writer identities to this API. The sink's destination must be in the same project as the sink
        itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
        organization, then the value of writer_identity will be a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
-       same parent. For more information, see writer_identity in LogSink.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks
+       with the same parent. For more information, see writer_identity in LogSink.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -7549,9 +7557,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
-         * account-types#service-agents) used by the sinks with the same parent. For more
-         * information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent
+         * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the
+         * sinks with the same parent. For more information, see writer_identity in LogSink.
          */
         public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -8299,9 +8307,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -8311,8 +8319,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
        true, then writer_identity is changed to a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
-       is an error if the old value is true and the new value is set to false or defaulted to false.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       Logging. It is an error if the old value is true and the new value is set to false or defaulted to
+       false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -8324,9 +8333,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         public Patch setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -8568,9 +8577,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -8580,8 +8589,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
        true, then writer_identity is changed to a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
-       is an error if the old value is true and the new value is set to false or defaulted to false.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       Logging. It is an error if the old value is true and the new value is set to false or defaulted to
+       false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -8593,9 +8603,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -9992,8 +10002,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * organization.See Configure CMEK for Cloud Logging
+     * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "folders.getCmekSettings".
      *
@@ -10026,8 +10036,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * organization.See Configure CMEK for Cloud Logging
+       * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "folders.getCmekSettings".
        *
@@ -10171,7 +10181,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
      * projects, folders, organizations, and billing accounts.See View default resource settings for
-     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for more
      * information.
      *
      * Create a request for the method "folders.getSettings".
@@ -10201,8 +10211,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
        * projects, folders, organizations, and billing accounts.See View default resource settings for
-       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
-       * information.
+       * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for
+       * more information.
        *
        * Create a request for the method "folders.getSettings".
        *
@@ -10340,7 +10350,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * kms_key_name is invalid. The associated service account doesn't have the required
      * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
      * disabled.See Configure default settings for organizations and folders
-     * (https://cloud.google.com/logging/docs/default-settings) for more information.
+     * (https://docs.cloud.google.com/logging/docs/default-settings) for more information.
      *
      * Create a request for the method "folders.updateSettings".
      *
@@ -10373,7 +10383,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * kms_key_name is invalid. The associated service account doesn't have the required
        * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
        * disabled.See Configure default settings for organizations and folders
-       * (https://cloud.google.com/logging/docs/default-settings) for more information.
+       * (https://docs.cloud.google.com/logging/docs/default-settings) for more information.
        *
        * Create a request for the method "folders.updateSettings".
        *
@@ -11561,7 +11571,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+       * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+       * locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -11585,7 +11598,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^folders/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+         * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+         * locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -18057,9 +18073,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *
          * @param name Output only. Resource name of the saved query.In the format:
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
-         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
-         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
-         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         *        supported locations, see Supported Regions
+         *        (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+         *        query is created, the location cannot be changed.If the user doesn't provide a QUERY_ID,
+         *        the system will generate an alphanumeric ID.
          * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
          * @return the request
          */
@@ -18088,9 +18105,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param name Output only. Resource name of the saved query.In the format:
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
-         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
-         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
-         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         *        supported locations, see Supported Regions
+         *        (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+         *        query is created, the location cannot be changed.If the user doesn't provide a QUERY_ID,
+         *        the system will generate an alphanumeric ID.
            * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
            * @since 1.13
            */
@@ -18163,8 +18181,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Output only. Resource name of the saved query.In the format:
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
            * supported locations, see Supported Regions
-           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
-           * query is created, the location cannot be changed.If the user doesn't provide a
+           * (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the
+           * saved query is created, the location cannot be changed.If the user doesn't provide a
            * QUERY_ID, the system will generate an alphanumeric ID.
            */
           @com.google.api.client.util.Key
@@ -18172,7 +18190,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /** Output only. Resource name of the saved query.In the format:
          "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
-         locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
+         locations, see Supported Regions (https://docs.cloud.google.com/logging/docs/region-support#bucket-
          regions)After the saved query is created, the location cannot be changed.If the user doesn't
          provide a QUERY_ID, the system will generate an alphanumeric ID.
            */
@@ -18184,8 +18202,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Output only. Resource name of the saved query.In the format:
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
            * supported locations, see Supported Regions
-           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
-           * query is created, the location cannot be changed.If the user doesn't provide a
+           * (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the
+           * saved query is created, the location cannot be changed.If the user doesn't provide a
            * QUERY_ID, the system will generate an alphanumeric ID.
            */
           public Patch setName(java.lang.String name) {
@@ -18868,9 +18886,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
-         * account-types#service-agents) used by the sinks with the same parent. For more
-         * information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent
+         * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the
+         * sinks with the same parent. For more information, see writer_identity in LogSink.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -18881,8 +18899,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        writer identities to this API. The sink's destination must be in the same project as the sink
        itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
        organization, then the value of writer_identity will be a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
-       same parent. For more information, see writer_identity in LogSink.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks
+       with the same parent. For more information, see writer_identity in LogSink.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -18895,9 +18913,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
-         * account-types#service-agents) used by the sinks with the same parent. For more
-         * information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent
+         * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the
+         * sinks with the same parent. For more information, see writer_identity in LogSink.
          */
         public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -19645,9 +19663,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -19657,8 +19675,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
        true, then writer_identity is changed to a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
-       is an error if the old value is true and the new value is set to false or defaulted to false.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       Logging. It is an error if the old value is true and the new value is set to false or defaulted to
+       false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -19670,9 +19689,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         public Patch setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -19914,9 +19933,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -19926,8 +19945,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
        true, then writer_identity is changed to a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
-       is an error if the old value is true and the new value is set to false or defaulted to false.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       Logging. It is an error if the old value is true and the new value is set to false or defaulted to
+       false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -19939,9 +19959,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -20158,7 +20178,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Lists information about the supported locations for this service.
+     * Lists information about the supported locations for this service. This method can be called in
+     * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+     * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+     * locations as well as private or other locations specifically visible to the project.
      *
      * Create a request for the method "locations.list".
      *
@@ -20182,7 +20205,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("^[^/]+/[^/]+$");
 
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+       * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+       * locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -25035,8 +25061,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * organization.See Configure CMEK for Cloud Logging
+     * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "organizations.getCmekSettings".
      *
@@ -25069,8 +25095,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * organization.See Configure CMEK for Cloud Logging
+       * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "organizations.getCmekSettings".
        *
@@ -25214,7 +25240,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
      * projects, folders, organizations, and billing accounts.See View default resource settings for
-     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for more
      * information.
      *
      * Create a request for the method "organizations.getSettings".
@@ -25244,8 +25270,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
        * projects, folders, organizations, and billing accounts.See View default resource settings for
-       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
-       * information.
+       * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for
+       * more information.
        *
        * Create a request for the method "organizations.getSettings".
        *
@@ -25381,8 +25407,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * projects and folders in the Google Cloud organization.UpdateCmekSettings fails when any of the
      * following are true: The value of kms_key_name is invalid. The associated service account doesn't
      * have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to
-     * the key is disabled.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * the key is disabled.See Configure CMEK for Cloud Logging
+     * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "organizations.updateCmekSettings".
      *
@@ -25417,8 +25443,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * projects and folders in the Google Cloud organization.UpdateCmekSettings fails when any of the
        * following are true: The value of kms_key_name is invalid. The associated service account
        * doesn't have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key.
-       * Access to the key is disabled.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * Access to the key is disabled.See Configure CMEK for Cloud Logging
+       * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "organizations.updateCmekSettings".
        *
@@ -25580,7 +25606,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * kms_key_name is invalid. The associated service account doesn't have the required
      * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
      * disabled.See Configure default settings for organizations and folders
-     * (https://cloud.google.com/logging/docs/default-settings) for more information.
+     * (https://docs.cloud.google.com/logging/docs/default-settings) for more information.
      *
      * Create a request for the method "organizations.updateSettings".
      *
@@ -25613,7 +25639,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * kms_key_name is invalid. The associated service account doesn't have the required
        * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
        * disabled.See Configure default settings for organizations and folders
-       * (https://cloud.google.com/logging/docs/default-settings) for more information.
+       * (https://docs.cloud.google.com/logging/docs/default-settings) for more information.
        *
        * Create a request for the method "organizations.updateSettings".
        *
@@ -26801,7 +26827,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+       * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+       * locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -26825,7 +26854,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+         * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+         * locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -33297,9 +33329,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *
          * @param name Output only. Resource name of the saved query.In the format:
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
-         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
-         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
-         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         *        supported locations, see Supported Regions
+         *        (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+         *        query is created, the location cannot be changed.If the user doesn't provide a QUERY_ID,
+         *        the system will generate an alphanumeric ID.
          * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
          * @return the request
          */
@@ -33328,9 +33361,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param name Output only. Resource name of the saved query.In the format:
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
-         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
-         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
-         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         *        supported locations, see Supported Regions
+         *        (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+         *        query is created, the location cannot be changed.If the user doesn't provide a QUERY_ID,
+         *        the system will generate an alphanumeric ID.
            * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
            * @since 1.13
            */
@@ -33403,8 +33437,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Output only. Resource name of the saved query.In the format:
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
            * supported locations, see Supported Regions
-           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
-           * query is created, the location cannot be changed.If the user doesn't provide a
+           * (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the
+           * saved query is created, the location cannot be changed.If the user doesn't provide a
            * QUERY_ID, the system will generate an alphanumeric ID.
            */
           @com.google.api.client.util.Key
@@ -33412,7 +33446,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /** Output only. Resource name of the saved query.In the format:
          "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
-         locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
+         locations, see Supported Regions (https://docs.cloud.google.com/logging/docs/region-support#bucket-
          regions)After the saved query is created, the location cannot be changed.If the user doesn't
          provide a QUERY_ID, the system will generate an alphanumeric ID.
            */
@@ -33424,8 +33458,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Output only. Resource name of the saved query.In the format:
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
            * supported locations, see Supported Regions
-           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
-           * query is created, the location cannot be changed.If the user doesn't provide a
+           * (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the
+           * saved query is created, the location cannot be changed.If the user doesn't provide a
            * QUERY_ID, the system will generate an alphanumeric ID.
            */
           public Patch setName(java.lang.String name) {
@@ -34108,9 +34142,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
-         * account-types#service-agents) used by the sinks with the same parent. For more
-         * information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent
+         * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the
+         * sinks with the same parent. For more information, see writer_identity in LogSink.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -34121,8 +34155,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        writer identities to this API. The sink's destination must be in the same project as the sink
        itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
        organization, then the value of writer_identity will be a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
-       same parent. For more information, see writer_identity in LogSink.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks
+       with the same parent. For more information, see writer_identity in LogSink.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -34135,9 +34169,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
-         * account-types#service-agents) used by the sinks with the same parent. For more
-         * information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent
+         * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the
+         * sinks with the same parent. For more information, see writer_identity in LogSink.
          */
         public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -34885,9 +34919,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -34897,8 +34931,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
        true, then writer_identity is changed to a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
-       is an error if the old value is true and the new value is set to false or defaulted to false.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       Logging. It is an error if the old value is true and the new value is set to false or defaulted to
+       false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -34910,9 +34945,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         public Patch setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -35154,9 +35189,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -35166,8 +35201,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
        true, then writer_identity is changed to a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
-       is an error if the old value is true and the new value is set to false or defaulted to false.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       Logging. It is an error if the old value is true and the new value is set to false or defaulted to
+       false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -35179,9 +35215,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -35263,8 +35299,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * organization.See Configure CMEK for Cloud Logging
+     * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "projects.getCmekSettings".
      *
@@ -35297,8 +35333,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * organization.See Configure CMEK for Cloud Logging
+       * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "projects.getCmekSettings".
        *
@@ -35442,7 +35478,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
      * projects, folders, organizations, and billing accounts.See View default resource settings for
-     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for more
      * information.
      *
      * Create a request for the method "projects.getSettings".
@@ -35472,8 +35508,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
        * projects, folders, organizations, and billing accounts.See View default resource settings for
-       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
-       * information.
+       * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for
+       * more information.
        *
        * Create a request for the method "projects.getSettings".
        *
@@ -36650,7 +36686,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+       * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+       * locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -36674,7 +36713,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: List all public locations: Use the path GET /v1/locations. List project-visible
+         * locations: Use the path GET /v1/projects/{project_id}/locations. This may include public
+         * locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -43146,9 +43188,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *
          * @param name Output only. Resource name of the saved query.In the format:
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
-         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
-         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
-         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         *        supported locations, see Supported Regions
+         *        (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+         *        query is created, the location cannot be changed.If the user doesn't provide a QUERY_ID,
+         *        the system will generate an alphanumeric ID.
          * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
          * @return the request
          */
@@ -43177,9 +43220,10 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param name Output only. Resource name of the saved query.In the format:
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
-         *        supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
-         *        support#bucket-regions)After the saved query is created, the location cannot be changed.If
-         *        the user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
+         *        supported locations, see Supported Regions
+         *        (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
+         *        query is created, the location cannot be changed.If the user doesn't provide a QUERY_ID,
+         *        the system will generate an alphanumeric ID.
            * @param content the {@link com.google.api.services.logging.v2.model.SavedQuery}
            * @since 1.13
            */
@@ -43252,8 +43296,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Output only. Resource name of the saved query.In the format:
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
            * supported locations, see Supported Regions
-           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
-           * query is created, the location cannot be changed.If the user doesn't provide a
+           * (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the
+           * saved query is created, the location cannot be changed.If the user doesn't provide a
            * QUERY_ID, the system will generate an alphanumeric ID.
            */
           @com.google.api.client.util.Key
@@ -43261,7 +43305,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
 
           /** Output only. Resource name of the saved query.In the format:
          "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
-         locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
+         locations, see Supported Regions (https://docs.cloud.google.com/logging/docs/region-support#bucket-
          regions)After the saved query is created, the location cannot be changed.If the user doesn't
          provide a QUERY_ID, the system will generate an alphanumeric ID.
            */
@@ -43273,8 +43317,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            * Output only. Resource name of the saved query.In the format:
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of
            * supported locations, see Supported Regions
-           * (https://cloud.google.com/logging/docs/region-support#bucket-regions)After the saved
-           * query is created, the location cannot be changed.If the user doesn't provide a
+           * (https://docs.cloud.google.com/logging/docs/region-support#bucket-regions)After the
+           * saved query is created, the location cannot be changed.If the user doesn't provide a
            * QUERY_ID, the system will generate an alphanumeric ID.
            */
           public Patch setName(java.lang.String name) {
@@ -44732,9 +44776,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
-         * account-types#service-agents) used by the sinks with the same parent. For more
-         * information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent
+         * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the
+         * sinks with the same parent. For more information, see writer_identity in LogSink.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -44745,8 +44789,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        writer identities to this API. The sink's destination must be in the same project as the sink
        itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
        organization, then the value of writer_identity will be a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
-       same parent. For more information, see writer_identity in LogSink.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks
+       with the same parent. For more information, see writer_identity in LogSink.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -44759,9 +44803,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * Cloud Logging before the addition of writer identities to this API. The sink's
          * destination must be in the same project as the sink itself.If this field is set to true,
          * or if the sink is owned by a non-project resource such as an organization, then the value
-         * of writer_identity will be a service agent (https://cloud.google.com/iam/docs/service-
-         * account-types#service-agents) used by the sinks with the same parent. For more
-         * information, see writer_identity in LogSink.
+         * of writer_identity will be a service agent
+         * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the
+         * sinks with the same parent. For more information, see writer_identity in LogSink.
          */
         public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -45509,9 +45553,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -45521,8 +45565,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
        true, then writer_identity is changed to a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
-       is an error if the old value is true and the new value is set to false or defaulted to false.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       Logging. It is an error if the old value is true and the new value is set to false or defaulted to
+       false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -45534,9 +45579,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         public Patch setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -45778,9 +45823,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean uniqueWriterIdentity;
@@ -45790,8 +45835,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        values of this field: If the old and new values of this field are both false or both true, then
        there is no change to the sink's writer_identity. If the old value is false and the new value is
        true, then writer_identity is changed to a service agent
-       (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
-       is an error if the old value is true and the new value is set to false or defaulted to false.
+       (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+       Logging. It is an error if the old value is true and the new value is set to false or defaulted to
+       false.
          */
         public java.lang.Boolean getUniqueWriterIdentity() {
           return uniqueWriterIdentity;
@@ -45803,9 +45849,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          * the old and new values of this field: If the old and new values of this field are both
          * false or both true, then there is no change to the sink's writer_identity. If the old
          * value is false and the new value is true, then writer_identity is changed to a service
-         * agent (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by
-         * Cloud Logging. It is an error if the old value is true and the new value is set to false
-         * or defaulted to false.
+         * agent (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned
+         * by Cloud Logging. It is an error if the old value is true and the new value is set to
+         * false or defaulted to false.
          */
         public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
           this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -46062,9 +46108,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Logging before the addition of writer identities to this API. The sink's destination must
        * be in the same project as the sink itself.If this field is set to true, or if the sink is
        * owned by a non-project resource such as an organization, then the value of writer_identity
-       * will be a service agent (https://cloud.google.com/iam/docs/service-account-types#service-
-       * agents) used by the sinks with the same parent. For more information, see writer_identity
-       * in LogSink.
+       * will be a service agent (https://docs.cloud.google.com/iam/docs/service-account-
+       * types#service-agents) used by the sinks with the same parent. For more information, see
+       * writer_identity in LogSink.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean uniqueWriterIdentity;
@@ -46075,8 +46121,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      writer identities to this API. The sink's destination must be in the same project as the sink
      itself.If this field is set to true, or if the sink is owned by a non-project resource such as an
      organization, then the value of writer_identity will be a service agent
-     (https://cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks with the
-     same parent. For more information, see writer_identity in LogSink.
+     (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) used by the sinks
+     with the same parent. For more information, see writer_identity in LogSink.
        */
       public java.lang.Boolean getUniqueWriterIdentity() {
         return uniqueWriterIdentity;
@@ -46089,9 +46135,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Logging before the addition of writer identities to this API. The sink's destination must
        * be in the same project as the sink itself.If this field is set to true, or if the sink is
        * owned by a non-project resource such as an organization, then the value of writer_identity
-       * will be a service agent (https://cloud.google.com/iam/docs/service-account-types#service-
-       * agents) used by the sinks with the same parent. For more information, see writer_identity
-       * in LogSink.
+       * will be a service agent (https://docs.cloud.google.com/iam/docs/service-account-
+       * types#service-agents) used by the sinks with the same parent. For more information, see
+       * writer_identity in LogSink.
        */
       public Create setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
         this.uniqueWriterIdentity = uniqueWriterIdentity;
@@ -46839,8 +46885,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * the old and new values of this field: If the old and new values of this field are both
        * false or both true, then there is no change to the sink's writer_identity. If the old value
        * is false and the new value is true, then writer_identity is changed to a service agent
-       * (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
-       * Logging. It is an error if the old value is true and the new value is set to false or
+       * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+       * Cloud Logging. It is an error if the old value is true and the new value is set to false or
        * defaulted to false.
        */
       @com.google.api.client.util.Key
@@ -46851,8 +46897,9 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      values of this field: If the old and new values of this field are both false or both true, then
      there is no change to the sink's writer_identity. If the old value is false and the new value is
      true, then writer_identity is changed to a service agent
-     (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud Logging. It
-     is an error if the old value is true and the new value is set to false or defaulted to false.
+     (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
+     Logging. It is an error if the old value is true and the new value is set to false or defaulted to
+     false.
        */
       public java.lang.Boolean getUniqueWriterIdentity() {
         return uniqueWriterIdentity;
@@ -46864,8 +46911,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * the old and new values of this field: If the old and new values of this field are both
        * false or both true, then there is no change to the sink's writer_identity. If the old value
        * is false and the new value is true, then writer_identity is changed to a service agent
-       * (https://cloud.google.com/iam/docs/service-account-types#service-agents) owned by Cloud
-       * Logging. It is an error if the old value is true and the new value is set to false or
+       * (https://docs.cloud.google.com/iam/docs/service-account-types#service-agents) owned by
+       * Cloud Logging. It is an error if the old value is true and the new value is set to false or
        * defaulted to false.
        */
       public Update setUniqueWriterIdentity(java.lang.Boolean uniqueWriterIdentity) {
@@ -46945,8 +46992,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
      * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
      * configured for an organization, it applies to all projects and folders in the Google Cloud
-     * organization.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * organization.See Configure CMEK for Cloud Logging
+     * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "v2.getCmekSettings".
      *
@@ -46979,8 +47026,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * Gets the Logging CMEK settings for the given resource.Note: CMEK for the Log Router can be
        * configured for Google Cloud projects, folders, organizations, and billing accounts. Once
        * configured for an organization, it applies to all projects and folders in the Google Cloud
-       * organization.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * organization.See Configure CMEK for Cloud Logging
+       * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "v2.getCmekSettings".
        *
@@ -47124,7 +47171,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
     /**
      * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
      * projects, folders, organizations, and billing accounts.See View default resource settings for
-     * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
+     * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for more
      * information.
      *
      * Create a request for the method "v2.getSettings".
@@ -47154,8 +47201,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       /**
        * Gets the settings for the given resource.Note: Settings can be retrieved for Google Cloud
        * projects, folders, organizations, and billing accounts.See View default resource settings for
-       * Logging (https://cloud.google.com/logging/docs/default-settings#view-org-settings) for more
-       * information.
+       * Logging (https://docs.cloud.google.com/logging/docs/default-settings#view-org-settings) for
+       * more information.
        *
        * Create a request for the method "v2.getSettings".
        *
@@ -47291,8 +47338,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * projects and folders in the Google Cloud organization.UpdateCmekSettings fails when any of the
      * following are true: The value of kms_key_name is invalid. The associated service account doesn't
      * have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to
-     * the key is disabled.See Enabling CMEK for Log Router
-     * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+     * the key is disabled.See Configure CMEK for Cloud Logging
+     * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
      *
      * Create a request for the method "v2.updateCmekSettings".
      *
@@ -47327,8 +47374,8 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * projects and folders in the Google Cloud organization.UpdateCmekSettings fails when any of the
        * following are true: The value of kms_key_name is invalid. The associated service account
        * doesn't have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key.
-       * Access to the key is disabled.See Enabling CMEK for Log Router
-       * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more information.
+       * Access to the key is disabled.See Configure CMEK for Cloud Logging
+       * (https://docs.cloud.google.com/logging/docs/routing/managed-encryption) for more information.
        *
        * Create a request for the method "v2.updateCmekSettings".
        *
@@ -47490,7 +47537,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      * kms_key_name is invalid. The associated service account doesn't have the required
      * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
      * disabled.See Configure default settings for organizations and folders
-     * (https://cloud.google.com/logging/docs/default-settings) for more information.
+     * (https://docs.cloud.google.com/logging/docs/default-settings) for more information.
      *
      * Create a request for the method "v2.updateSettings".
      *
@@ -47523,7 +47570,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
        * kms_key_name is invalid. The associated service account doesn't have the required
        * roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the key. Access to the key is
        * disabled.See Configure default settings for organizations and folders
-       * (https://cloud.google.com/logging/docs/default-settings) for more information.
+       * (https://docs.cloud.google.com/logging/docs/default-settings) for more information.
        *
        * Create a request for the method "v2.updateSettings".
        *
@@ -47699,8 +47746,7 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

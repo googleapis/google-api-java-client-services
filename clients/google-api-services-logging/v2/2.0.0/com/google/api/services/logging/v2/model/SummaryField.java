@@ -18,8 +18,8 @@ package com.google.api.services.logging.v2.model;
 
 /**
  * A field from the LogEntry that is added to the summary line
- * (https://cloud.google.com/logging/docs/view/logs-explorer-interface#add-summary-fields) for a
- * query in the Logs Explorer.
+ * (https://docs.cloud.google.com/logging/docs/view/logs-explorer-interface#preferences) for a query
+ * in the Logs Explorer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:

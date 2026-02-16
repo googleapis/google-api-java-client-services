@@ -56,11 +56,12 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disabled;
 
   /**
-   * Required. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries)
-   * that matches the log entries to be excluded. By using the sample function
-   * (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than
-   * 100% of the matching log entries.For example, the following query matches 99% of low-severity
-   * log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity
+   * Required. An advanced logs filter (https://docs.cloud.google.com/logging/docs/view/building-
+   * queries#queries-by-expression) that matches the log entries to be excluded. By using the sample
+   * function (https://docs.cloud.google.com/logging/docs/view/logging-query-language#sample), you
+   * can exclude less than 100% of the matching log entries.For example, the following query matches
+   * 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket
+   * severity
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,11 +140,12 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries)
-   * that matches the log entries to be excluded. By using the sample function
-   * (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than
-   * 100% of the matching log entries.For example, the following query matches 99% of low-severity
-   * log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity
+   * Required. An advanced logs filter (https://docs.cloud.google.com/logging/docs/view/building-
+   * queries#queries-by-expression) that matches the log entries to be excluded. By using the sample
+   * function (https://docs.cloud.google.com/logging/docs/view/logging-query-language#sample), you
+   * can exclude less than 100% of the matching log entries.For example, the following query matches
+   * 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket
+   * severity
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -151,11 +153,12 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-queries)
-   * that matches the log entries to be excluded. By using the sample function
-   * (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you can exclude less than
-   * 100% of the matching log entries.For example, the following query matches 99% of low-severity
-   * log entries from Google Cloud Storage buckets:resource.type=gcs_bucket severity
+   * Required. An advanced logs filter (https://docs.cloud.google.com/logging/docs/view/building-
+   * queries#queries-by-expression) that matches the log entries to be excluded. By using the sample
+   * function (https://docs.cloud.google.com/logging/docs/view/logging-query-language#sample), you
+   * can exclude less than 100% of the matching log entries.For example, the following query matches
+   * 99% of low-severity log entries from Google Cloud Storage buckets:resource.type=gcs_bucket
+   * severity
    * @param filter filter or {@code null} for none
    */
   public LogExclusion setFilter(java.lang.String filter) {

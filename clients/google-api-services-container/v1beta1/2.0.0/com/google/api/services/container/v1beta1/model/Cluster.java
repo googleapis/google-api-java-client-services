@@ -98,6 +98,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ClusterTelemetry clusterTelemetry;
 
   /**
+   * Optional. Deprecated: Compliance Posture is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Enable/Disable Compliance Posture features for the cluster.
    * The value may be {@code null}.
    */
@@ -659,7 +661,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private SecretSyncConfig secretSyncConfig;
 
   /**
-   * Enable/Disable Security Posture API features for the cluster.
+   * Optional. Enable/Disable Security Posture API features for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -937,6 +939,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Deprecated: Compliance Posture is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Enable/Disable Compliance Posture features for the cluster.
    * @return value or {@code null} for none
    */
@@ -945,6 +949,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Deprecated: Compliance Posture is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Enable/Disable Compliance Posture features for the cluster.
    * @param compliancePostureConfig compliancePostureConfig or {@code null} for none
    */
@@ -2263,7 +2269,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable/Disable Security Posture API features for the cluster.
+   * Optional. Enable/Disable Security Posture API features for the cluster.
    * @return value or {@code null} for none
    */
   public SecurityPostureConfig getSecurityPostureConfig() {
@@ -2271,7 +2277,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enable/Disable Security Posture API features for the cluster.
+   * Optional. Enable/Disable Security Posture API features for the cluster.
    * @param securityPostureConfig securityPostureConfig or {@code null} for none
    */
   public Cluster setSecurityPostureConfig(SecurityPostureConfig securityPostureConfig) {

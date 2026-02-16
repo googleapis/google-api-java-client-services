@@ -31,6 +31,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class MaintenancePolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The upgrade disruption budget for the cluster control plane.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DisruptionBudget disruptionBudget;
+
+  /**
    * A hash identifying the version of this policy, so that updates to fields of the policy won't
    * accidentally undo intermediate changes (and so that users of the API unaware of some fields
    * won't accidentally remove other fields). Make a `get()` request to the cluster to get the
@@ -46,6 +53,23 @@ public final class MaintenancePolicy extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private MaintenanceWindow window;
+
+  /**
+   * Optional. The upgrade disruption budget for the cluster control plane.
+   * @return value or {@code null} for none
+   */
+  public DisruptionBudget getDisruptionBudget() {
+    return disruptionBudget;
+  }
+
+  /**
+   * Optional. The upgrade disruption budget for the cluster control plane.
+   * @param disruptionBudget disruptionBudget or {@code null} for none
+   */
+  public MaintenancePolicy setDisruptionBudget(DisruptionBudget disruptionBudget) {
+    this.disruptionBudget = disruptionBudget;
+    return this;
+  }
 
   /**
    * A hash identifying the version of this policy, so that updates to fields of the policy won't

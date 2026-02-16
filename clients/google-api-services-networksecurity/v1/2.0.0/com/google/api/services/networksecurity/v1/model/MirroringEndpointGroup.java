@@ -104,6 +104,13 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private java.lang.String state;
 
   /**
+   * Immutable. The type of the endpoint group. If left unspecified, defaults to DIRECT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Output only. The timestamp when the resource was most recently updated. See
    * https://google.aip.dev/148#timestamps.
    * The value may be {@code null}.
@@ -277,6 +284,23 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    */
   public MirroringEndpointGroup setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Immutable. The type of the endpoint group. If left unspecified, defaults to DIRECT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Immutable. The type of the endpoint group. If left unspecified, defaults to DIRECT.
+   * @param type type or {@code null} for none
+   */
+  public MirroringEndpointGroup setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

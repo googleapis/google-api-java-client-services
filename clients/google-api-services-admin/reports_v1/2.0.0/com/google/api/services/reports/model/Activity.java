@@ -550,6 +550,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     private java.util.List<java.lang.String> resourceIds;
 
     /**
+     * Status of the event. Note: Not all events have status.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private ActivityEventsStatus status;
+
+    /**
      * Type of event. The Google Workspace service or feature that an administrator changes is
      * identified in the `type` property which identifies an event using the `eventName` property. For
      * a full list of the API's `type` categories, see the list of event names for various
@@ -621,6 +628,23 @@ public final class Activity extends com.google.api.client.json.GenericJson {
      */
     public Events setResourceIds(java.util.List<java.lang.String> resourceIds) {
       this.resourceIds = resourceIds;
+      return this;
+    }
+
+    /**
+     * Status of the event. Note: Not all events have status.
+     * @return value or {@code null} for none
+     */
+    public ActivityEventsStatus getStatus() {
+      return status;
+    }
+
+    /**
+     * Status of the event. Note: Not all events have status.
+     * @param status status or {@code null} for none
+     */
+    public Events setStatus(ActivityEventsStatus status) {
+      this.status = status;
       return this;
     }
 

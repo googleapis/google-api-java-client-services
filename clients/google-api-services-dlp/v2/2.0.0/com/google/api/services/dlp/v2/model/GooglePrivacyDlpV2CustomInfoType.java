@@ -33,7 +33,8 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
 
   /**
    * Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in
-   * order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+   * order that they are specified. Not supported for the `surrogate_type`,
+   * `metadata_key_value_expression`, and `prompt` CustomInfoType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
 
   /**
    * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It
-   * still can be used for rules matching.
+   * still can be used for rules matching. Not supported for the `metadata_key_value_expression` and
+   * `prompt` CustomInfoType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +108,8 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
 
   /**
    * Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in
-   * order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+   * order that they are specified. Not supported for the `surrogate_type`,
+   * `metadata_key_value_expression`, and `prompt` CustomInfoType.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2DetectionRule> getDetectionRules() {
@@ -115,7 +118,8 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
 
   /**
    * Set of detection rules to apply to all findings of this CustomInfoType. Rules are applied in
-   * order that they are specified. Not supported for the `surrogate_type` CustomInfoType.
+   * order that they are specified. Not supported for the `surrogate_type`,
+   * `metadata_key_value_expression`, and `prompt` CustomInfoType.
    * @param detectionRules detectionRules or {@code null} for none
    */
   public GooglePrivacyDlpV2CustomInfoType setDetectionRules(java.util.List<GooglePrivacyDlpV2DetectionRule> detectionRules) {
@@ -142,7 +146,8 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
 
   /**
    * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It
-   * still can be used for rules matching.
+   * still can be used for rules matching. Not supported for the `metadata_key_value_expression` and
+   * `prompt` CustomInfoType.
    * @return value or {@code null} for none
    */
   public java.lang.String getExclusionType() {
@@ -151,7 +156,8 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
 
   /**
    * If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It
-   * still can be used for rules matching.
+   * still can be used for rules matching. Not supported for the `metadata_key_value_expression` and
+   * `prompt` CustomInfoType.
    * @param exclusionType exclusionType or {@code null} for none
    */
   public GooglePrivacyDlpV2CustomInfoType setExclusionType(java.lang.String exclusionType) {

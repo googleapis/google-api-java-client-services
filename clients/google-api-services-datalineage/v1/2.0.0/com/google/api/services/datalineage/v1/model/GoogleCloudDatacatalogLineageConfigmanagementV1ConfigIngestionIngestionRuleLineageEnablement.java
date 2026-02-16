@@ -31,16 +31,16 @@ package com.google.api.services.datalineage.v1.model;
 public final class GoogleCloudDatacatalogLineageConfigmanagementV1ConfigIngestionIngestionRuleLineageEnablement extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Required. If true, ingestion of lineage should be enabled. If false, it should be
-   * disabled. If unspecified, the system default value is used.
+   * Optional. If true, ingestion of lineage should be enabled. If false, it should be disabled. If
+   * unspecified, the system default value is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Optional. Required. If true, ingestion of lineage should be enabled. If false, it should be
-   * disabled. If unspecified, the system default value is used.
+   * Optional. If true, ingestion of lineage should be enabled. If false, it should be disabled. If
+   * unspecified, the system default value is used.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -48,8 +48,8 @@ public final class GoogleCloudDatacatalogLineageConfigmanagementV1ConfigIngestio
   }
 
   /**
-   * Optional. Required. If true, ingestion of lineage should be enabled. If false, it should be
-   * disabled. If unspecified, the system default value is used.
+   * Optional. If true, ingestion of lineage should be enabled. If false, it should be disabled. If
+   * unspecified, the system default value is used.
    * @param enabled enabled or {@code null} for none
    */
   public GoogleCloudDatacatalogLineageConfigmanagementV1ConfigIngestionIngestionRuleLineageEnablement setEnabled(java.lang.Boolean enabled) {

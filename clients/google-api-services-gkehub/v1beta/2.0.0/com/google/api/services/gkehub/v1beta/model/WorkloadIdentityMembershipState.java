@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1alpha.model;
+package com.google.api.services.gkehub.v1beta.model;
 
 /**
  * **WorkloadIdentity**: The membership-specific state for WorkloadIdentity feature.

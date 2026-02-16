@@ -31,11 +31,12 @@ package com.google.api.services.gkehub.v1.model;
 public final class ConfigManagementMembershipSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The user-specified cluster name used by Config Sync cluster-name-selector annotation
-   * or ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
-   * cluster's fleet membership name is used by Config Sync cluster-name-selector annotation or
-   * ClusterSelector. Set this field if a name different from the cluster's fleet membership name is
-   * used by Config Sync cluster-name-selector annotation or ClusterSelector.
+   * Optional. User-specified cluster name used by the Config Sync cluster-name-selector annotation
+   * or ClusterSelector object, for applying configs to only a subset of clusters. Read more about
+   * the cluster-name-selector annotation and ClusterSelector object at
+   * https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/how-to/cluster-scoped-
+   * objects#limiting-configs. Only set this field if a name different from the cluster's fleet
+   * membership name is used by the Config Sync cluster-name-selector annotation or ClusterSelector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,18 +76,22 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   private ConfigManagementPolicyController policyController;
 
   /**
-   * Optional. Version of ACM installed.
+   * Optional. Version of Config Sync to install. Defaults to the latest supported Config Sync
+   * version if the config_sync field is enabled. See supported versions at
+   * https://cloud.google.com/kubernetes-engine/config-sync/docs/get-support-config-
+   * sync#version_support_policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Optional. The user-specified cluster name used by Config Sync cluster-name-selector annotation
-   * or ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
-   * cluster's fleet membership name is used by Config Sync cluster-name-selector annotation or
-   * ClusterSelector. Set this field if a name different from the cluster's fleet membership name is
-   * used by Config Sync cluster-name-selector annotation or ClusterSelector.
+   * Optional. User-specified cluster name used by the Config Sync cluster-name-selector annotation
+   * or ClusterSelector object, for applying configs to only a subset of clusters. Read more about
+   * the cluster-name-selector annotation and ClusterSelector object at
+   * https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/how-to/cluster-scoped-
+   * objects#limiting-configs. Only set this field if a name different from the cluster's fleet
+   * membership name is used by the Config Sync cluster-name-selector annotation or ClusterSelector.
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -94,11 +99,12 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Optional. The user-specified cluster name used by Config Sync cluster-name-selector annotation
-   * or ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
-   * cluster's fleet membership name is used by Config Sync cluster-name-selector annotation or
-   * ClusterSelector. Set this field if a name different from the cluster's fleet membership name is
-   * used by Config Sync cluster-name-selector annotation or ClusterSelector.
+   * Optional. User-specified cluster name used by the Config Sync cluster-name-selector annotation
+   * or ClusterSelector object, for applying configs to only a subset of clusters. Read more about
+   * the cluster-name-selector annotation and ClusterSelector object at
+   * https://docs.cloud.google.com/kubernetes-engine/config-sync/docs/how-to/cluster-scoped-
+   * objects#limiting-configs. Only set this field if a name different from the cluster's fleet
+   * membership name is used by the Config Sync cluster-name-selector annotation or ClusterSelector.
    * @param cluster cluster or {@code null} for none
    */
   public ConfigManagementMembershipSpec setCluster(java.lang.String cluster) {
@@ -185,7 +191,10 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Optional. Version of ACM installed.
+   * Optional. Version of Config Sync to install. Defaults to the latest supported Config Sync
+   * version if the config_sync field is enabled. See supported versions at
+   * https://cloud.google.com/kubernetes-engine/config-sync/docs/get-support-config-
+   * sync#version_support_policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -193,7 +202,10 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Optional. Version of ACM installed.
+   * Optional. Version of Config Sync to install. Defaults to the latest supported Config Sync
+   * version if the config_sync field is enabled. See supported versions at
+   * https://cloud.google.com/kubernetes-engine/config-sync/docs/get-support-config-
+   * sync#version_support_policy.
    * @param version version or {@code null} for none
    */
   public ConfigManagementMembershipSpec setVersion(java.lang.String version) {

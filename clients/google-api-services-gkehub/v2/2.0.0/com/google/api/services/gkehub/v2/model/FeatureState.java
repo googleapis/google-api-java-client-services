@@ -94,6 +94,13 @@ public final class FeatureState extends com.google.api.client.json.GenericJson {
   private State state;
 
   /**
+   * Workload Identity state
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadIdentityState workloadidentity;
+
+  /**
    * Appdevexperience specific state.
    * @return value or {@code null} for none
    */
@@ -243,6 +250,23 @@ public final class FeatureState extends com.google.api.client.json.GenericJson {
    */
   public FeatureState setState(State state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Workload Identity state
+   * @return value or {@code null} for none
+   */
+  public WorkloadIdentityState getWorkloadidentity() {
+    return workloadidentity;
+  }
+
+  /**
+   * Workload Identity state
+   * @param workloadidentity workloadidentity or {@code null} for none
+   */
+  public FeatureState setWorkloadidentity(WorkloadIdentityState workloadidentity) {
+    this.workloadidentity = workloadidentity;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class SetTagsRequest extends com.google.api.client.json.GenericJson
   private java.lang.String etag;
 
   /**
+   * Required. The full resource name of the service resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Optional. A unique identifier for this request. Must be a valid UUID. This request is only
    * idempotent if a `request_id` is provided.
    * The value may be {@code null}.
@@ -70,6 +77,23 @@ public final class SetTagsRequest extends com.google.api.client.json.GenericJson
    */
   public SetTagsRequest setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Required. The full resource name of the service resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Required. The full resource name of the service resource.
+   * @param name name or {@code null} for none
+   */
+  public SetTagsRequest setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

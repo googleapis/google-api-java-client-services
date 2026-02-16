@@ -17,8 +17,9 @@
 package com.google.api.services.androidmanagement.v1.model;
 
 /**
- * Telephony information associated with a given SIM card on the device. Only supported on fully
- * managed devices starting from Android API level 23.
+ * Telephony information associated with a given SIM card on the device. This is supported for all
+ * SIM cards on fully managed devices on Android 6 and above. In addition, this is supported for
+ * admin-added eSIMs on all devices for Android 15 and above.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation
@@ -33,8 +34,8 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Activation state of the SIM card on the device. This is applicable for eSIMs only.
-   * This is supported on all devices for API level 35 and above. This is always
-   * ACTIVATION_STATE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * This is supported on all devices for Android 15 and above. This is always
+   * ACTIVATION_STATE_UNSPECIFIED for physical SIMs and for devices below Android 15.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,8 +50,8 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The configuration mode of the SIM card on the device. This is applicable for eSIMs
-   * only. This is supported on all devices for API level 35 and above. This is always
-   * CONFIG_MODE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * only. This is supported on all devices for Android 15 and above. This is always
+   * CONFIG_MODE_UNSPECIFIED for physical SIMs and for devices below Android 15.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +73,8 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Activation state of the SIM card on the device. This is applicable for eSIMs only.
-   * This is supported on all devices for API level 35 and above. This is always
-   * ACTIVATION_STATE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * This is supported on all devices for Android 15 and above. This is always
+   * ACTIVATION_STATE_UNSPECIFIED for physical SIMs and for devices below Android 15.
    * @return value or {@code null} for none
    */
   public java.lang.String getActivationState() {
@@ -82,8 +83,8 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Activation state of the SIM card on the device. This is applicable for eSIMs only.
-   * This is supported on all devices for API level 35 and above. This is always
-   * ACTIVATION_STATE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * This is supported on all devices for Android 15 and above. This is always
+   * ACTIVATION_STATE_UNSPECIFIED for physical SIMs and for devices below Android 15.
    * @param activationState activationState or {@code null} for none
    */
   public TelephonyInfo setActivationState(java.lang.String activationState) {
@@ -110,8 +111,8 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The configuration mode of the SIM card on the device. This is applicable for eSIMs
-   * only. This is supported on all devices for API level 35 and above. This is always
-   * CONFIG_MODE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * only. This is supported on all devices for Android 15 and above. This is always
+   * CONFIG_MODE_UNSPECIFIED for physical SIMs and for devices below Android 15.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigMode() {
@@ -120,8 +121,8 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The configuration mode of the SIM card on the device. This is applicable for eSIMs
-   * only. This is supported on all devices for API level 35 and above. This is always
-   * CONFIG_MODE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * only. This is supported on all devices for Android 15 and above. This is always
+   * CONFIG_MODE_UNSPECIFIED for physical SIMs and for devices below Android 15.
    * @param configMode configMode or {@code null} for none
    */
   public TelephonyInfo setConfigMode(java.lang.String configMode) {

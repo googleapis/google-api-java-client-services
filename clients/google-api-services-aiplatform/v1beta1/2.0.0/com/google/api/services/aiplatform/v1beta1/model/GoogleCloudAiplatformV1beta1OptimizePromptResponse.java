@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1OptimizePromptResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The optimized prompt content.
+   * Output only. The optimized prompt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1Content content;
 
   /**
-   * Output only. The optimized prompt content.
+   * Output only. The optimized prompt.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Content getContent() {
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1beta1OptimizePromptResponse extends co
   }
 
   /**
-   * Output only. The optimized prompt content.
+   * Output only. The optimized prompt.
    * @param content content or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OptimizePromptResponse setContent(GoogleCloudAiplatformV1beta1Content content) {

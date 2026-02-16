@@ -30,6 +30,15 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1CandidateResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Represents the complete execution trace of a multi-turn conversation, which can
+   * involve single or multiple agents. This field is used to provide the full output of an agent's
+   * run, including all turns and events, for direct evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AgentData agentData;
+
+  /**
    * Required. The name of the candidate that produced the response.
    * The value may be {@code null}.
    */
@@ -57,6 +66,27 @@ public final class GoogleCloudAiplatformV1beta1CandidateResponse extends com.goo
    */
   @com.google.api.client.util.Key
   private java.lang.Object value;
+
+  /**
+   * Optional. Represents the complete execution trace of a multi-turn conversation, which can
+   * involve single or multiple agents. This field is used to provide the full output of an agent's
+   * run, including all turns and events, for direct evaluation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentData getAgentData() {
+    return agentData;
+  }
+
+  /**
+   * Optional. Represents the complete execution trace of a multi-turn conversation, which can
+   * involve single or multiple agents. This field is used to provide the full output of an agent's
+   * run, including all turns and events, for direct evaluation.
+   * @param agentData agentData or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CandidateResponse setAgentData(GoogleCloudAiplatformV1beta1AgentData agentData) {
+    this.agentData = agentData;
+    return this;
+  }
 
   /**
    * Required. The name of the candidate that produced the response.

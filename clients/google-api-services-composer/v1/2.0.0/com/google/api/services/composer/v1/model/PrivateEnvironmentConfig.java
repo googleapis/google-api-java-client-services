@@ -80,7 +80,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   /**
    * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
    * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer
-   * environments in versions composer-1.*.*-airflow-*.*.*.
+   * environments in versions composer-1.*.*-airflow-*.*.*. This field is going to be deprecated.
+   * Use `networking_type` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,7 +242,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   /**
    * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
    * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer
-   * environments in versions composer-1.*.*-airflow-*.*.*.
+   * environments in versions composer-1.*.*-airflow-*.*.*. This field is going to be deprecated.
+   * Use `networking_type` instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePrivateEnvironment() {
@@ -251,7 +253,8 @@ public final class PrivateEnvironmentConfig extends com.google.api.client.json.G
   /**
    * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set
    * to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer
-   * environments in versions composer-1.*.*-airflow-*.*.*.
+   * environments in versions composer-1.*.*-airflow-*.*.*. This field is going to be deprecated.
+   * Use `networking_type` instead.
    * @param enablePrivateEnvironment enablePrivateEnvironment or {@code null} for none
    */
   public PrivateEnvironmentConfig setEnablePrivateEnvironment(java.lang.Boolean enablePrivateEnvironment) {

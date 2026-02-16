@@ -17,8 +17,7 @@
 package com.google.api.services.logging.v2.model;
 
 /**
- * Describes an analytics query that can be run in the Log Analytics page of Google Cloud
- * console.Preview: This is a preview feature and may be subject to change before final release.
+ * Describes a query that can be run in Log Analytics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Logging API. For a detailed explanation see:
@@ -31,16 +30,48 @@ package com.google.api.services.logging.v2.model;
 public final class OpsAnalyticsQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A logs analytics SQL query, which generally follows BigQuery format.This is the SQL
-   * query that appears in the Log Analytics UI's query editor.
+   * Optional. A query builder configuration used in Log Analytics.If both query_builder and
+   * sql_query_text fields are set, then the sql_query_text will be used, if its non-empty. At least
+   * one of the two fields must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueryBuilderConfig queryBuilder;
+
+  /**
+   * Optional. A Log Analytics SQL query in text format.If both sql_query_text and query_builder
+   * fields are set, then the sql_query_text will be used, if its non-empty. At least one of the two
+   * fields must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sqlQueryText;
 
   /**
-   * Required. A logs analytics SQL query, which generally follows BigQuery format.This is the SQL
-   * query that appears in the Log Analytics UI's query editor.
+   * Optional. A query builder configuration used in Log Analytics.If both query_builder and
+   * sql_query_text fields are set, then the sql_query_text will be used, if its non-empty. At least
+   * one of the two fields must be set.
+   * @return value or {@code null} for none
+   */
+  public QueryBuilderConfig getQueryBuilder() {
+    return queryBuilder;
+  }
+
+  /**
+   * Optional. A query builder configuration used in Log Analytics.If both query_builder and
+   * sql_query_text fields are set, then the sql_query_text will be used, if its non-empty. At least
+   * one of the two fields must be set.
+   * @param queryBuilder queryBuilder or {@code null} for none
+   */
+  public OpsAnalyticsQuery setQueryBuilder(QueryBuilderConfig queryBuilder) {
+    this.queryBuilder = queryBuilder;
+    return this;
+  }
+
+  /**
+   * Optional. A Log Analytics SQL query in text format.If both sql_query_text and query_builder
+   * fields are set, then the sql_query_text will be used, if its non-empty. At least one of the two
+   * fields must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSqlQueryText() {
@@ -48,8 +79,9 @@ public final class OpsAnalyticsQuery extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. A logs analytics SQL query, which generally follows BigQuery format.This is the SQL
-   * query that appears in the Log Analytics UI's query editor.
+   * Optional. A Log Analytics SQL query in text format.If both sql_query_text and query_builder
+   * fields are set, then the sql_query_text will be used, if its non-empty. At least one of the two
+   * fields must be set.
    * @param sqlQueryText sqlQueryText or {@code null} for none
    */
   public OpsAnalyticsQuery setSqlQueryText(java.lang.String sqlQueryText) {

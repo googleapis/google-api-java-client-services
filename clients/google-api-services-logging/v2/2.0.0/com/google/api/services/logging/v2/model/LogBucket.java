@@ -93,9 +93,9 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The resource name of the bucket.For example:projects/my-
    * project/locations/global/buckets/my-bucketFor a list of supported locations, see Supported
-   * Regions (https://cloud.google.com/logging/docs/region-support)For the location of global it is
-   * unspecified where log entries are actually stored.After a bucket has been created, the location
-   * cannot be changed.
+   * Regions (https://docs.cloud.google.com/logging/docs/region-support)For the location of global
+   * it is unspecified where log entries are actually stored.After a bucket has been created, the
+   * location cannot be changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -261,9 +261,9 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The resource name of the bucket.For example:projects/my-
    * project/locations/global/buckets/my-bucketFor a list of supported locations, see Supported
-   * Regions (https://cloud.google.com/logging/docs/region-support)For the location of global it is
-   * unspecified where log entries are actually stored.After a bucket has been created, the location
-   * cannot be changed.
+   * Regions (https://docs.cloud.google.com/logging/docs/region-support)For the location of global
+   * it is unspecified where log entries are actually stored.After a bucket has been created, the
+   * location cannot be changed.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -273,9 +273,9 @@ public final class LogBucket extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The resource name of the bucket.For example:projects/my-
    * project/locations/global/buckets/my-bucketFor a list of supported locations, see Supported
-   * Regions (https://cloud.google.com/logging/docs/region-support)For the location of global it is
-   * unspecified where log entries are actually stored.After a bucket has been created, the location
-   * cannot be changed.
+   * Regions (https://docs.cloud.google.com/logging/docs/region-support)For the location of global
+   * it is unspecified where log entries are actually stored.After a bucket has been created, the
+   * location cannot be changed.
    * @param name name or {@code null} for none
    */
   public LogBucket setName(java.lang.String name) {

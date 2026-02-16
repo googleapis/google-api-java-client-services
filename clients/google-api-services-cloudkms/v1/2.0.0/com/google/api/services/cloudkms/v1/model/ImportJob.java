@@ -64,7 +64,8 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
    * Immutable. The resource name of the backend environment where the key material for the wrapping
    * key resides and where all related cryptographic operations are performed. Currently, this field
    * is only populated for keys stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and
-   * may apply to additional ProtectionLevels in the future.
+   * may apply to additional ProtectionLevels in the future. Supported resources: *
+   * `"projects/locations/singleTenantHsmInstances"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +175,8 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
    * Immutable. The resource name of the backend environment where the key material for the wrapping
    * key resides and where all related cryptographic operations are performed. Currently, this field
    * is only populated for keys stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and
-   * may apply to additional ProtectionLevels in the future.
+   * may apply to additional ProtectionLevels in the future. Supported resources: *
+   * `"projects/locations/singleTenantHsmInstances"`
    * @return value or {@code null} for none
    */
   public java.lang.String getCryptoKeyBackend() {
@@ -185,7 +187,8 @@ public final class ImportJob extends com.google.api.client.json.GenericJson {
    * Immutable. The resource name of the backend environment where the key material for the wrapping
    * key resides and where all related cryptographic operations are performed. Currently, this field
    * is only populated for keys stored in HSM_SINGLE_TENANT. Note, this list is non-exhaustive and
-   * may apply to additional ProtectionLevels in the future.
+   * may apply to additional ProtectionLevels in the future. Supported resources: *
+   * `"projects/locations/singleTenantHsmInstances"`
    * @param cryptoKeyBackend cryptoKeyBackend or {@code null} for none
    */
   public ImportJob setCryptoKeyBackend(java.lang.String cryptoKeyBackend) {

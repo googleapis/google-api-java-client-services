@@ -55,8 +55,8 @@ public final class SlurmOrchestrator extends com.google.api.client.json.GenericJ
   private SlurmLoginNodes loginNodes;
 
   /**
-   * Required. Configuration of Slurm nodesets, which define groups of compute resources that can be
-   * used by Slurm. At least one compute node is required.
+   * Optional. Compute resource configuration for the Slurm nodesets in your cluster. If not
+   * specified, the cluster won't create any nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,9 @@ public final class SlurmOrchestrator extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Configuration of Slurm partitions, which group one or more nodesets. Acts as a queue
-   * against which jobs can be submitted. At least one partition is required.
+   * Optional. Configuration for the Slurm partitions in your cluster. Each partition can contain
+   * one or more nodesets, and you can submit separate jobs on each partition. If you don't specify
+   * at least one partition in your cluster, you can't submit jobs to the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,8 +143,8 @@ public final class SlurmOrchestrator extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Configuration of Slurm nodesets, which define groups of compute resources that can be
-   * used by Slurm. At least one compute node is required.
+   * Optional. Compute resource configuration for the Slurm nodesets in your cluster. If not
+   * specified, the cluster won't create any nodes.
    * @return value or {@code null} for none
    */
   public java.util.List<SlurmNodeSet> getNodeSets() {
@@ -151,8 +152,8 @@ public final class SlurmOrchestrator extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Configuration of Slurm nodesets, which define groups of compute resources that can be
-   * used by Slurm. At least one compute node is required.
+   * Optional. Compute resource configuration for the Slurm nodesets in your cluster. If not
+   * specified, the cluster won't create any nodes.
    * @param nodeSets nodeSets or {@code null} for none
    */
   public SlurmOrchestrator setNodeSets(java.util.List<SlurmNodeSet> nodeSets) {
@@ -161,8 +162,9 @@ public final class SlurmOrchestrator extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Configuration of Slurm partitions, which group one or more nodesets. Acts as a queue
-   * against which jobs can be submitted. At least one partition is required.
+   * Optional. Configuration for the Slurm partitions in your cluster. Each partition can contain
+   * one or more nodesets, and you can submit separate jobs on each partition. If you don't specify
+   * at least one partition in your cluster, you can't submit jobs to the cluster.
    * @return value or {@code null} for none
    */
   public java.util.List<SlurmPartition> getPartitions() {
@@ -170,8 +172,9 @@ public final class SlurmOrchestrator extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Configuration of Slurm partitions, which group one or more nodesets. Acts as a queue
-   * against which jobs can be submitted. At least one partition is required.
+   * Optional. Configuration for the Slurm partitions in your cluster. Each partition can contain
+   * one or more nodesets, and you can submit separate jobs on each partition. If you don't specify
+   * at least one partition in your cluster, you can't submit jobs to the cluster.
    * @param partitions partitions or {@code null} for none
    */
   public SlurmOrchestrator setPartitions(java.util.List<SlurmPartition> partitions) {

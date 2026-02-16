@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gmailpostmastertools.v1beta1;
+package com.google.api.services.gmailpostmastertools.v2;
 
 /**
- * Service definition for PostmasterTools (v1beta1).
+ * Service definition for PostmasterTools (v2).
  *
  * <p>
  * The Postmaster Tools API is a RESTful API that provides programmatic access to email traffic metrics (like spam reports, delivery errors etc) otherwise available through the Gmail Postmaster Tools UI currently.
@@ -134,6 +134,130 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the DomainStats collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code PostmasterTools gmailpostmastertools = new PostmasterTools(...);}
+   *   {@code PostmasterTools.DomainStats.List request = gmailpostmastertools.domainStats().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public DomainStats domainStats() {
+    return new DomainStats();
+  }
+
+  /**
+   * The "domainStats" collection of methods.
+   */
+  public class DomainStats {
+
+    /**
+     * Executes a batch of QueryDomainStats requests for multiple domains. Returns PERMISSION_DENIED if
+     * you don't have permission to access DomainStats for any of the requested domains.
+     *
+     * Create a request for the method "domainStats.batchQuery".
+     *
+     * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+     * optional parameters, call the {@link BatchQuery#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.BatchQueryDomainStatsRequest}
+     * @return the request
+     */
+    public BatchQuery batchQuery(com.google.api.services.gmailpostmastertools.v2.model.BatchQueryDomainStatsRequest content) throws java.io.IOException {
+      BatchQuery result = new BatchQuery(content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchQuery extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.BatchQueryDomainStatsResponse> {
+
+      private static final String REST_PATH = "v2/domainStats:batchQuery";
+
+      /**
+       * Executes a batch of QueryDomainStats requests for multiple domains. Returns PERMISSION_DENIED
+       * if you don't have permission to access DomainStats for any of the requested domains.
+       *
+       * Create a request for the method "domainStats.batchQuery".
+       *
+       * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+       * any optional parameters, call the {@link BatchQuery#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * BatchQuery#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.BatchQueryDomainStatsRequest}
+       * @since 1.13
+       */
+      protected BatchQuery(com.google.api.services.gmailpostmastertools.v2.model.BatchQueryDomainStatsRequest content) {
+        super(PostmasterTools.this, "POST", REST_PATH, content, com.google.api.services.gmailpostmastertools.v2.model.BatchQueryDomainStatsResponse.class);
+      }
+
+      @Override
+      public BatchQuery set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchQuery) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchQuery setAccessToken(java.lang.String accessToken) {
+        return (BatchQuery) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchQuery setAlt(java.lang.String alt) {
+        return (BatchQuery) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchQuery setCallback(java.lang.String callback) {
+        return (BatchQuery) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchQuery setFields(java.lang.String fields) {
+        return (BatchQuery) super.setFields(fields);
+      }
+
+      @Override
+      public BatchQuery setKey(java.lang.String key) {
+        return (BatchQuery) super.setKey(key);
+      }
+
+      @Override
+      public BatchQuery setOauthToken(java.lang.String oauthToken) {
+        return (BatchQuery) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchQuery setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchQuery) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchQuery setQuotaUser(java.lang.String quotaUser) {
+        return (BatchQuery) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchQuery setUploadType(java.lang.String uploadType) {
+        return (BatchQuery) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchQuery setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchQuery) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public BatchQuery set(String parameterName, Object value) {
+        return (BatchQuery) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Domains collection.
    *
    * <p>The typical use is:</p>
@@ -154,15 +278,17 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
   public class Domains {
 
     /**
-     * Gets a specific domain registered by the client. Returns NOT_FOUND if the domain does not exist.
+     * Retrieves detailed information about a domain registered by you. Returns NOT_FOUND if the domain
+     * is not registered by you. Domain represents the metadata of a domain that has been registered
+     * within the system and linked to a user.
      *
      * Create a request for the method "domains.get".
      *
      * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name of the domain. It should have the form `domains/{domain_name}`, where domain_name
-     *        is the fully qualified domain name.
+     * @param name Required. The resource name of the domain. Format: `domains/{domain_name}`, where domain_name is the
+     *        fully qualified domain name (i.e., mymail.mydomain.com).
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -171,16 +297,17 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
       return result;
     }
 
-    public class Get extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v1beta1.model.Domain> {
+    public class Get extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.Domain> {
 
-      private static final String REST_PATH = "v1beta1/{+name}";
+      private static final String REST_PATH = "v2/{+name}";
 
       private final java.util.regex.Pattern NAME_PATTERN =
           java.util.regex.Pattern.compile("^domains/[^/]+$");
 
       /**
-       * Gets a specific domain registered by the client. Returns NOT_FOUND if the domain does not
-       * exist.
+       * Retrieves detailed information about a domain registered by you. Returns NOT_FOUND if the
+       * domain is not registered by you. Domain represents the metadata of a domain that has been
+       * registered within the system and linked to a user.
        *
        * Create a request for the method "domains.get".
        *
@@ -190,12 +317,12 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name of the domain. It should have the form `domains/{domain_name}`, where domain_name
-     *        is the fully qualified domain name.
+       * @param name Required. The resource name of the domain. Format: `domains/{domain_name}`, where domain_name is the
+     *        fully qualified domain name (i.e., mymail.mydomain.com).
        * @since 1.13
        */
       protected Get(java.lang.String name) {
-        super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v1beta1.model.Domain.class);
+        super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v2.model.Domain.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -270,22 +397,22 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * The resource name of the domain. It should have the form `domains/{domain_name}`, where
-       * domain_name is the fully qualified domain name.
+       * Required. The resource name of the domain. Format: `domains/{domain_name}`, where
+       * domain_name is the fully qualified domain name (i.e., mymail.mydomain.com).
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name of the domain. It should have the form `domains/{domain_name}`, where domain_name
-     is the fully qualified domain name.
+      /** Required. The resource name of the domain. Format: `domains/{domain_name}`, where domain_name is
+     the fully qualified domain name (i.e., mymail.mydomain.com).
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * The resource name of the domain. It should have the form `domains/{domain_name}`, where
-       * domain_name is the fully qualified domain name.
+       * Required. The resource name of the domain. Format: `domains/{domain_name}`, where
+       * domain_name is the fully qualified domain name (i.e., mymail.mydomain.com).
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -303,9 +430,160 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Lists the domains that have been registered by the client. The order of domains in the response
-     * is unspecified and non-deterministic. Newly created domains will not necessarily be added to the
-     * end of this list.
+     * Retrieves the compliance status for a given domain. Returns PERMISSION_DENIED if you don't have
+     * permission to access compliance status for the domain.
+     *
+     * Create a request for the method "domains.getComplianceStatus".
+     *
+     * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
+     * optional parameters, call the {@link GetComplianceStatus#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The resource name of the domain's compliance status to retrieve. Format:
+     *        `domains/{domain_id}/complianceStatus`.
+     * @return the request
+     */
+    public GetComplianceStatus getComplianceStatus(java.lang.String name) throws java.io.IOException {
+      GetComplianceStatus result = new GetComplianceStatus(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetComplianceStatus extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.DomainComplianceStatus> {
+
+      private static final String REST_PATH = "v2/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^domains/[^/]+/complianceStatus$");
+
+      /**
+       * Retrieves the compliance status for a given domain. Returns PERMISSION_DENIED if you don't have
+       * permission to access compliance status for the domain.
+       *
+       * Create a request for the method "domains.getComplianceStatus".
+       *
+       * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
+       * any optional parameters, call the {@link GetComplianceStatus#execute()} method to invoke the
+       * remote operation. <p> {@link GetComplianceStatus#initialize(com.google.api.client.googleapis.se
+       * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the domain's compliance status to retrieve. Format:
+     *        `domains/{domain_id}/complianceStatus`.
+       * @since 1.13
+       */
+      protected GetComplianceStatus(java.lang.String name) {
+        super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v2.model.DomainComplianceStatus.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^domains/[^/]+/complianceStatus$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetComplianceStatus set$Xgafv(java.lang.String $Xgafv) {
+        return (GetComplianceStatus) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetComplianceStatus setAccessToken(java.lang.String accessToken) {
+        return (GetComplianceStatus) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetComplianceStatus setAlt(java.lang.String alt) {
+        return (GetComplianceStatus) super.setAlt(alt);
+      }
+
+      @Override
+      public GetComplianceStatus setCallback(java.lang.String callback) {
+        return (GetComplianceStatus) super.setCallback(callback);
+      }
+
+      @Override
+      public GetComplianceStatus setFields(java.lang.String fields) {
+        return (GetComplianceStatus) super.setFields(fields);
+      }
+
+      @Override
+      public GetComplianceStatus setKey(java.lang.String key) {
+        return (GetComplianceStatus) super.setKey(key);
+      }
+
+      @Override
+      public GetComplianceStatus setOauthToken(java.lang.String oauthToken) {
+        return (GetComplianceStatus) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetComplianceStatus setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetComplianceStatus) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetComplianceStatus setQuotaUser(java.lang.String quotaUser) {
+        return (GetComplianceStatus) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetComplianceStatus setUploadType(java.lang.String uploadType) {
+        return (GetComplianceStatus) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetComplianceStatus setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetComplianceStatus) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the domain's compliance status to retrieve. Format:
+       * `domains/{domain_id}/complianceStatus`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the domain's compliance status to retrieve. Format:
+     `domains/{domain_id}/complianceStatus`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the domain's compliance status to retrieve. Format:
+       * `domains/{domain_id}/complianceStatus`.
+       */
+      public GetComplianceStatus setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^domains/[^/]+/complianceStatus$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetComplianceStatus set(String parameterName, Object value) {
+        return (GetComplianceStatus) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a list of all domains registered by you, along with their corresponding metadata. The
+     * order of domains in the response is unspecified and non-deterministic. Newly registered domains
+     * will not necessarily be added to the end of this list.
      *
      * Create a request for the method "domains.list".
      *
@@ -320,14 +598,14 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
       return result;
     }
 
-    public class List extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v1beta1.model.ListDomainsResponse> {
+    public class List extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.ListDomainsResponse> {
 
-      private static final String REST_PATH = "v1beta1/domains";
+      private static final String REST_PATH = "v2/domains";
 
       /**
-       * Lists the domains that have been registered by the client. The order of domains in the response
-       * is unspecified and non-deterministic. Newly created domains will not necessarily be added to
-       * the end of this list.
+       * Retrieves a list of all domains registered by you, along with their corresponding metadata. The
+       * order of domains in the response is unspecified and non-deterministic. Newly registered domains
+       * will not necessarily be added to the end of this list.
        *
        * Create a request for the method "domains.list".
        *
@@ -340,7 +618,7 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
        * @since 1.13
        */
       protected List() {
-        super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v1beta1.model.ListDomainsResponse.class);
+        super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v2.model.ListDomainsResponse.class);
       }
 
       @Override
@@ -409,48 +687,41 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
       }
 
       /**
-       * Requested page size. Server may return fewer domains than requested. If unspecified, server
-       * will pick an appropriate default.
+       * Optional. Requested page size. Server may return fewer domains than requested. If
+       * unspecified, the default value for this field is 10. The maximum value for this field is
+       * 200.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Requested page size. Server may return fewer domains than requested. If unspecified, server will
-     pick an appropriate default.
+      /** Optional. Requested page size. Server may return fewer domains than requested. If unspecified, the
+     default value for this field is 10. The maximum value for this field is 200.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Requested page size. Server may return fewer domains than requested. If unspecified, server
-       * will pick an appropriate default.
+       * Optional. Requested page size. Server may return fewer domains than requested. If
+       * unspecified, the default value for this field is 10. The maximum value for this field is
+       * 200.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
         return this;
       }
 
-      /**
-       * The next_page_token value returned from a previous List request, if any. This is the value
-       * of ListDomainsResponse.next_page_token returned from the previous call to `ListDomains`
-       * method.
-       */
+      /** Optional. The next_page_token value returned from a previous List request, if any. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** The next_page_token value returned from a previous List request, if any. This is the value of
-     ListDomainsResponse.next_page_token returned from the previous call to `ListDomains` method.
+      /** Optional. The next_page_token value returned from a previous List request, if any.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /**
-       * The next_page_token value returned from a previous List request, if any. This is the value
-       * of ListDomainsResponse.next_page_token returned from the previous call to `ListDomains`
-       * method.
-       */
+      /** Optional. The next_page_token value returned from a previous List request, if any. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -463,219 +734,71 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
     }
 
     /**
-     * An accessor for creating requests from the TrafficStats collection.
+     * An accessor for creating requests from the DomainStats collection.
      *
      * <p>The typical use is:</p>
      * <pre>
      *   {@code PostmasterTools gmailpostmastertools = new PostmasterTools(...);}
-     *   {@code PostmasterTools.TrafficStats.List request = gmailpostmastertools.trafficStats().list(parameters ...)}
+     *   {@code PostmasterTools.DomainStats.List request = gmailpostmastertools.domainStats().list(parameters ...)}
      * </pre>
      *
      * @return the resource collection
      */
-    public TrafficStats trafficStats() {
-      return new TrafficStats();
+    public DomainStats domainStats() {
+      return new DomainStats();
     }
 
     /**
-     * The "trafficStats" collection of methods.
+     * The "domainStats" collection of methods.
      */
-    public class TrafficStats {
+    public class DomainStats {
 
       /**
-       * Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does
-       * not have permission to access TrafficStats for the domain.
+       * Retrieves a list of domain statistics for a given domain and time period. Returns statistics only
+       * for dates where data is available. Returns PERMISSION_DENIED if you don't have permission to
+       * access DomainStats for the domain.
        *
-       * Create a request for the method "trafficStats.get".
+       * Create a request for the method "domainStats.query".
        *
        * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
-       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the traffic statistics to get. E.g.,
-       *        domains/mymail.mydomain.com/trafficStats/20160807.
+       * @param parent Required. The parent resource name where the stats are queried. Format: domains/{domain}
+       * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.QueryDomainStatsRequest}
        * @return the request
        */
-      public Get get(java.lang.String name) throws java.io.IOException {
-        Get result = new Get(name);
+      public Query query(java.lang.String parent, com.google.api.services.gmailpostmastertools.v2.model.QueryDomainStatsRequest content) throws java.io.IOException {
+        Query result = new Query(parent, content);
         initialize(result);
         return result;
       }
 
-      public class Get extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v1beta1.model.TrafficStats> {
+      public class Query extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v2.model.QueryDomainStatsResponse> {
 
-        private static final String REST_PATH = "v1beta1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^domains/[^/]+/trafficStats/[^/]+$");
-
-        /**
-         * Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does
-         * not have permission to access TrafficStats for the domain.
-         *
-         * Create a request for the method "trafficStats.get".
-         *
-         * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
-         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-         * called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The resource name of the traffic statistics to get. E.g.,
-       *        domains/mymail.mydomain.com/trafficStats/20160807.
-         * @since 1.13
-         */
-        protected Get(java.lang.String name) {
-          super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v1beta1.model.TrafficStats.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^domains/[^/]+/trafficStats/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public Get set$Xgafv(java.lang.String $Xgafv) {
-          return (Get) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Get setAlt(java.lang.String alt) {
-          return (Get) super.setAlt(alt);
-        }
-
-        @Override
-        public Get setCallback(java.lang.String callback) {
-          return (Get) super.setCallback(callback);
-        }
-
-        @Override
-        public Get setFields(java.lang.String fields) {
-          return (Get) super.setFields(fields);
-        }
-
-        @Override
-        public Get setKey(java.lang.String key) {
-          return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Get) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Get setQuotaUser(java.lang.String quotaUser) {
-          return (Get) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Get setUploadType(java.lang.String uploadType) {
-          return (Get) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Get setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Get) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /**
-         * The resource name of the traffic statistics to get. E.g.,
-         * domains/mymail.mydomain.com/trafficStats/20160807.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The resource name of the traffic statistics to get. E.g.,
-       domains/mymail.mydomain.com/trafficStats/20160807.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /**
-         * The resource name of the traffic statistics to get. E.g.,
-         * domains/mymail.mydomain.com/trafficStats/20160807.
-         */
-        public Get setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^domains/[^/]+/trafficStats/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Get set(String parameterName, Object value) {
-          return (Get) super.set(parameterName, value);
-        }
-      }
-      /**
-       * List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have
-       * permission to access TrafficStats for the domain.
-       *
-       * Create a request for the method "trafficStats.list".
-       *
-       * This request holds the parameters needed by the gmailpostmastertools server.  After setting any
-       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
-       *
-       * @param parent The resource name of the domain whose traffic statistics we'd like to list. It should have the form
-       *        `domains/{domain_name}`, where domain_name is the fully qualified domain name.
-       * @return the request
-       */
-      public List list(java.lang.String parent) throws java.io.IOException {
-        List result = new List(parent);
-        initialize(result);
-        return result;
-      }
-
-      public class List extends PostmasterToolsRequest<com.google.api.services.gmailpostmastertools.v1beta1.model.ListTrafficStatsResponse> {
-
-        private static final String REST_PATH = "v1beta1/{+parent}/trafficStats";
+        private static final String REST_PATH = "v2/{+parent}/domainStats:query";
 
         private final java.util.regex.Pattern PARENT_PATTERN =
             java.util.regex.Pattern.compile("^domains/[^/]+$");
 
         /**
-         * List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have
-         * permission to access TrafficStats for the domain.
+         * Retrieves a list of domain statistics for a given domain and time period. Returns statistics
+         * only for dates where data is available. Returns PERMISSION_DENIED if you don't have permission
+         * to access DomainStats for the domain.
          *
-         * Create a request for the method "trafficStats.list".
+         * Create a request for the method "domainStats.query".
          *
          * This request holds the parameters needed by the the gmailpostmastertools server.  After setting
-         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
-         * called to initialize this instance immediately after invoking the constructor. </p>
+         * any optional parameters, call the {@link Query#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The resource name of the domain whose traffic statistics we'd like to list. It should have the form
-       *        `domains/{domain_name}`, where domain_name is the fully qualified domain name.
+         * @param parent Required. The parent resource name where the stats are queried. Format: domains/{domain}
+         * @param content the {@link com.google.api.services.gmailpostmastertools.v2.model.QueryDomainStatsRequest}
          * @since 1.13
          */
-        protected List(java.lang.String parent) {
-          super(PostmasterTools.this, "GET", REST_PATH, null, com.google.api.services.gmailpostmastertools.v1beta1.model.ListTrafficStatsResponse.class);
+        protected Query(java.lang.String parent, com.google.api.services.gmailpostmastertools.v2.model.QueryDomainStatsRequest content) {
+          super(PostmasterTools.this, "POST", REST_PATH, content, com.google.api.services.gmailpostmastertools.v2.model.QueryDomainStatsResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -685,91 +808,76 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
         }
 
         @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
         }
 
         @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
         }
 
         @Override
-        public List set$Xgafv(java.lang.String $Xgafv) {
-          return (List) super.set$Xgafv($Xgafv);
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
         }
 
         @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
         }
 
         @Override
-        public List setAlt(java.lang.String alt) {
-          return (List) super.setAlt(alt);
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
         }
 
         @Override
-        public List setCallback(java.lang.String callback) {
-          return (List) super.setCallback(callback);
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
         }
 
         @Override
-        public List setFields(java.lang.String fields) {
-          return (List) super.setFields(fields);
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
         }
 
         @Override
-        public List setKey(java.lang.String key) {
-          return (List) super.setKey(key);
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
         }
 
         @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
         }
 
         @Override
-        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (List) super.setPrettyPrint(prettyPrint);
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
         }
 
         @Override
-        public List setQuotaUser(java.lang.String quotaUser) {
-          return (List) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public List setUploadType(java.lang.String uploadType) {
-          return (List) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public List setUploadProtocol(java.lang.String uploadProtocol) {
-          return (List) super.setUploadProtocol(uploadProtocol);
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
-         * The resource name of the domain whose traffic statistics we'd like to list. It should
-         * have the form `domains/{domain_name}`, where domain_name is the fully qualified domain
-         * name.
+         * Required. The parent resource name where the stats are queried. Format: domains/{domain}
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The resource name of the domain whose traffic statistics we'd like to list. It should have the form
-       `domains/{domain_name}`, where domain_name is the fully qualified domain name.
+        /** Required. The parent resource name where the stats are queried. Format: domains/{domain}
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * The resource name of the domain whose traffic statistics we'd like to list. It should
-         * have the form `domains/{domain_name}`, where domain_name is the fully qualified domain
-         * name.
+         * Required. The parent resource name where the stats are queried. Format: domains/{domain}
          */
-        public List setParent(java.lang.String parent) {
+        public Query setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                 "Parameter parent must conform to the pattern " +
@@ -779,176 +887,9 @@ public class PostmasterTools extends com.google.api.client.googleapis.services.j
           return this;
         }
 
-        /**
-         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
-         * year by itself or a year and month where the day isn't significant.
-         */
-        @com.google.api.client.util.Key("endDate.day")
-        private java.lang.Integer endDateDay;
-
-        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
-       itself or a year and month where the day isn't significant.
-         */
-        public java.lang.Integer getEndDateDay() {
-          return endDateDay;
-        }
-
-        /**
-         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
-         * year by itself or a year and month where the day isn't significant.
-         */
-        public List setEndDateDay(java.lang.Integer endDateDay) {
-          this.endDateDay = endDateDay;
-          return this;
-        }
-
-        /**
-         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        @com.google.api.client.util.Key("endDate.month")
-        private java.lang.Integer endDateMonth;
-
-        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        public java.lang.Integer getEndDateMonth() {
-          return endDateMonth;
-        }
-
-        /**
-         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        public List setEndDateMonth(java.lang.Integer endDateMonth) {
-          this.endDateMonth = endDateMonth;
-          return this;
-        }
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
-        @com.google.api.client.util.Key("endDate.year")
-        private java.lang.Integer endDateYear;
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
-         */
-        public java.lang.Integer getEndDateYear() {
-          return endDateYear;
-        }
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
-        public List setEndDateYear(java.lang.Integer endDateYear) {
-          this.endDateYear = endDateYear;
-          return this;
-        }
-
-        /**
-         * Requested page size. Server may return fewer TrafficStats than requested. If unspecified,
-         * server will pick an appropriate default.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** Requested page size. Server may return fewer TrafficStats than requested. If unspecified, server
-       will pick an appropriate default.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /**
-         * Requested page size. Server may return fewer TrafficStats than requested. If unspecified,
-         * server will pick an appropriate default.
-         */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /**
-         * The next_page_token value returned from a previous List request, if any. This is the
-         * value of ListTrafficStatsResponse.next_page_token returned from the previous call to
-         * `ListTrafficStats` method.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The next_page_token value returned from a previous List request, if any. This is the value of
-       ListTrafficStatsResponse.next_page_token returned from the previous call to `ListTrafficStats`
-       method.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /**
-         * The next_page_token value returned from a previous List request, if any. This is the
-         * value of ListTrafficStatsResponse.next_page_token returned from the previous call to
-         * `ListTrafficStats` method.
-         */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
-         * year by itself or a year and month where the day isn't significant.
-         */
-        @com.google.api.client.util.Key("startDate.day")
-        private java.lang.Integer startDateDay;
-
-        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
-       itself or a year and month where the day isn't significant.
-         */
-        public java.lang.Integer getStartDateDay() {
-          return startDateDay;
-        }
-
-        /**
-         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
-         * year by itself or a year and month where the day isn't significant.
-         */
-        public List setStartDateDay(java.lang.Integer startDateDay) {
-          this.startDateDay = startDateDay;
-          return this;
-        }
-
-        /**
-         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        @com.google.api.client.util.Key("startDate.month")
-        private java.lang.Integer startDateMonth;
-
-        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        public java.lang.Integer getStartDateMonth() {
-          return startDateMonth;
-        }
-
-        /**
-         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
-         */
-        public List setStartDateMonth(java.lang.Integer startDateMonth) {
-          this.startDateMonth = startDateMonth;
-          return this;
-        }
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
-        @com.google.api.client.util.Key("startDate.year")
-        private java.lang.Integer startDateYear;
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
-         */
-        public java.lang.Integer getStartDateYear() {
-          return startDateYear;
-        }
-
-        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
-        public List setStartDateYear(java.lang.Integer startDateYear) {
-          this.startDateYear = startDateYear;
-          return this;
-        }
-
         @Override
-        public List set(String parameterName, Object value) {
-          return (List) super.set(parameterName, value);
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
         }
       }
 

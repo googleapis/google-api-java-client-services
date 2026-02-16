@@ -103,7 +103,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -379,6 +379,35 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setActorIpAddress(java.lang.String actorIpAddress) {
         this.actorIpAddress = actorIpAddress;
+        return this;
+      }
+
+      /**
+       * Optional. Used to filter on the `oAuthClientId` field present in
+       * [`ApplicationInfo`](#applicationinfo) message. **Usage** ```
+       * GET...&applicationInfoFilter=oAuthClientId="clientId"
+       * GET...&applicationInfoFilter=oAuthClientId=%22clientId%22 ```
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String applicationInfoFilter;
+
+      /** Optional. Used to filter on the `oAuthClientId` field present in
+     [`ApplicationInfo`](#applicationinfo) message. **Usage** ```
+     GET...&applicationInfoFilter=oAuthClientId="clientId"
+     GET...&applicationInfoFilter=oAuthClientId=%22clientId%22 ```
+       */
+      public java.lang.String getApplicationInfoFilter() {
+        return applicationInfoFilter;
+      }
+
+      /**
+       * Optional. Used to filter on the `oAuthClientId` field present in
+       * [`ApplicationInfo`](#applicationinfo) message. **Usage** ```
+       * GET...&applicationInfoFilter=oAuthClientId="clientId"
+       * GET...&applicationInfoFilter=oAuthClientId=%22clientId%22 ```
+       */
+      public List setApplicationInfoFilter(java.lang.String applicationInfoFilter) {
+        this.applicationInfoFilter = applicationInfoFilter;
         return this;
       }
 
@@ -662,6 +691,32 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Optional. Used to filter on the `regionCode` field present in [`NetworkInfo`](#networkinfo)
+       * message. **Usage** ``` GET...&networkInfoFilter=regionCode="IN"
+       * GET...&networkInfoFilter=regionCode=%22IN%22 ```
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String networkInfoFilter;
+
+      /** Optional. Used to filter on the `regionCode` field present in [`NetworkInfo`](#networkinfo)
+     message. **Usage** ``` GET...&networkInfoFilter=regionCode="IN"
+     GET...&networkInfoFilter=regionCode=%22IN%22 ```
+       */
+      public java.lang.String getNetworkInfoFilter() {
+        return networkInfoFilter;
+      }
+
+      /**
+       * Optional. Used to filter on the `regionCode` field present in [`NetworkInfo`](#networkinfo)
+       * message. **Usage** ``` GET...&networkInfoFilter=regionCode="IN"
+       * GET...&networkInfoFilter=regionCode=%22IN%22 ```
+       */
+      public List setNetworkInfoFilter(java.lang.String networkInfoFilter) {
+        this.networkInfoFilter = networkInfoFilter;
+        return this;
+      }
+
+      /**
        * ID of the organizational unit to report on. Activity records will be shown only for users
        * who belong to the specified organizational unit. Data before Dec 17, 2018 doesn't appear in
        * the filtered results.
@@ -868,6 +923,31 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
               "(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d)T(\\d\\d):(\\d\\d):(\\d\\d)(?:\\.(\\d+))?(?:(Z)|([-+])(\\d\\d):(\\d\\d))");
         }
         this.startTime = startTime;
+        return this;
+      }
+
+      /**
+       * Optional. Used to filter on the `statusCode` field present in [`Status`](#status) message.
+       * **Usage** ``` GET...&statusFilter=statusCode="200" GET...&statusFilter=statusCode=%22200%22
+       * ```
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String statusFilter;
+
+      /** Optional. Used to filter on the `statusCode` field present in [`Status`](#status) message.
+     **Usage** ``` GET...&statusFilter=statusCode="200" GET...&statusFilter=statusCode=%22200%22 ```
+       */
+      public java.lang.String getStatusFilter() {
+        return statusFilter;
+      }
+
+      /**
+       * Optional. Used to filter on the `statusCode` field present in [`Status`](#status) message.
+       * **Usage** ``` GET...&statusFilter=statusCode="200" GET...&statusFilter=statusCode=%22200%22
+       * ```
+       */
+      public List setStatusFilter(java.lang.String statusFilter) {
+        this.statusFilter = statusFilter;
         return this;
       }
 
@@ -2848,8 +2928,7 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

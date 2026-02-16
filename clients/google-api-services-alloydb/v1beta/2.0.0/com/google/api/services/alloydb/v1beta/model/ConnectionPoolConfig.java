@@ -30,21 +30,6 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class ConnectionPoolConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Deprecated. Use 'flags' instead. The default pool size. Defaults to 20. Note: This
-   * field should not be added to client libraries if not present already.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String defaultPoolSize;
-
-  /**
-   * Optional. Deprecated; Prefer 'enabled' as this will be removed soon.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enable;
-
-  /**
    * Optional. Whether to enable Managed Connection Pool (MCP).
    * The value may be {@code null}.
    */
@@ -59,119 +44,11 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   private java.util.Map<String, java.lang.String> flags;
 
   /**
-   * Optional. Deprecated. Use 'flags' instead. The list of startup parameters to ignore. Defaults
-   * to ["extra_float_digits"] Note: This field should not be added to client libraries if not
-   * present already.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> ignoreStartupParameters;
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of client connections allowed.
-   * Note: This field should not be added to client libraries if not present already.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String maxClientConn;
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of prepared statements allowed.
-   * MCP makes sure that any statement prepared by a client, up to this limit, is available on the
-   * backing server connection in transaction and statement pooling mode. Even if the statement was
-   * originally prepared on another server connection. Defaults to 0. Note: This field should not be
-   * added to client libraries if not present already.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String maxPreparedStatements;
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The minimum pool size. Defaults to 0. Note: This
-   * field should not be added to client libraries if not present already.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String minPoolSize;
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The pool mode. Defaults to `POOL_MODE_TRANSACTION`.
-   * Note: This field should not be added to client libraries if not present already.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String poolMode;
-
-  /**
    * Output only. The number of running poolers per instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer poolerCount;
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of seconds queries are allowed to
-   * spend waiting for execution. If the query is not assigned to a server during that time, the
-   * client is disconnected. 0 disables. Note: This field should not be added to client libraries if
-   * not present already.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String queryWaitTimeout;
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of seconds a server is allowed to
-   * be idle before it is disconnected. 0 disables. Note: This field should not be added to client
-   * libraries if not present already.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String serverIdleTimeout;
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The list of users that are allowed to connect to the
-   * MCP stats console. The users must exist in the database. Note: This field should not be added
-   * to client libraries if not present already.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> statsUsers;
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The default pool size. Defaults to 20. Note: This
-   * field should not be added to client libraries if not present already.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDefaultPoolSize() {
-    return defaultPoolSize;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The default pool size. Defaults to 20. Note: This
-   * field should not be added to client libraries if not present already.
-   * @param defaultPoolSize defaultPoolSize or {@code null} for none
-   */
-  public ConnectionPoolConfig setDefaultPoolSize(java.lang.String defaultPoolSize) {
-    this.defaultPoolSize = defaultPoolSize;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated; Prefer 'enabled' as this will be removed soon.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnable() {
-    return enable;
-  }
-
-  /**
-   * Optional. Deprecated; Prefer 'enabled' as this will be removed soon.
-   * @param enable enable or {@code null} for none
-   */
-  public ConnectionPoolConfig setEnable(java.lang.Boolean enable) {
-    this.enable = enable;
-    return this;
-  }
 
   /**
    * Optional. Whether to enable Managed Connection Pool (MCP).
@@ -208,109 +85,6 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Deprecated. Use 'flags' instead. The list of startup parameters to ignore. Defaults
-   * to ["extra_float_digits"] Note: This field should not be added to client libraries if not
-   * present already.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getIgnoreStartupParameters() {
-    return ignoreStartupParameters;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The list of startup parameters to ignore. Defaults
-   * to ["extra_float_digits"] Note: This field should not be added to client libraries if not
-   * present already.
-   * @param ignoreStartupParameters ignoreStartupParameters or {@code null} for none
-   */
-  public ConnectionPoolConfig setIgnoreStartupParameters(java.util.List<java.lang.String> ignoreStartupParameters) {
-    this.ignoreStartupParameters = ignoreStartupParameters;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of client connections allowed.
-   * Note: This field should not be added to client libraries if not present already.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMaxClientConn() {
-    return maxClientConn;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of client connections allowed.
-   * Note: This field should not be added to client libraries if not present already.
-   * @param maxClientConn maxClientConn or {@code null} for none
-   */
-  public ConnectionPoolConfig setMaxClientConn(java.lang.String maxClientConn) {
-    this.maxClientConn = maxClientConn;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of prepared statements allowed.
-   * MCP makes sure that any statement prepared by a client, up to this limit, is available on the
-   * backing server connection in transaction and statement pooling mode. Even if the statement was
-   * originally prepared on another server connection. Defaults to 0. Note: This field should not be
-   * added to client libraries if not present already.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMaxPreparedStatements() {
-    return maxPreparedStatements;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of prepared statements allowed.
-   * MCP makes sure that any statement prepared by a client, up to this limit, is available on the
-   * backing server connection in transaction and statement pooling mode. Even if the statement was
-   * originally prepared on another server connection. Defaults to 0. Note: This field should not be
-   * added to client libraries if not present already.
-   * @param maxPreparedStatements maxPreparedStatements or {@code null} for none
-   */
-  public ConnectionPoolConfig setMaxPreparedStatements(java.lang.String maxPreparedStatements) {
-    this.maxPreparedStatements = maxPreparedStatements;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The minimum pool size. Defaults to 0. Note: This
-   * field should not be added to client libraries if not present already.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMinPoolSize() {
-    return minPoolSize;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The minimum pool size. Defaults to 0. Note: This
-   * field should not be added to client libraries if not present already.
-   * @param minPoolSize minPoolSize or {@code null} for none
-   */
-  public ConnectionPoolConfig setMinPoolSize(java.lang.String minPoolSize) {
-    this.minPoolSize = minPoolSize;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The pool mode. Defaults to `POOL_MODE_TRANSACTION`.
-   * Note: This field should not be added to client libraries if not present already.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPoolMode() {
-    return poolMode;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The pool mode. Defaults to `POOL_MODE_TRANSACTION`.
-   * Note: This field should not be added to client libraries if not present already.
-   * @param poolMode poolMode or {@code null} for none
-   */
-  public ConnectionPoolConfig setPoolMode(java.lang.String poolMode) {
-    this.poolMode = poolMode;
-    return this;
-  }
-
-  /**
    * Output only. The number of running poolers per instance.
    * @return value or {@code null} for none
    */
@@ -324,71 +98,6 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
    */
   public ConnectionPoolConfig setPoolerCount(java.lang.Integer poolerCount) {
     this.poolerCount = poolerCount;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of seconds queries are allowed to
-   * spend waiting for execution. If the query is not assigned to a server during that time, the
-   * client is disconnected. 0 disables. Note: This field should not be added to client libraries if
-   * not present already.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getQueryWaitTimeout() {
-    return queryWaitTimeout;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of seconds queries are allowed to
-   * spend waiting for execution. If the query is not assigned to a server during that time, the
-   * client is disconnected. 0 disables. Note: This field should not be added to client libraries if
-   * not present already.
-   * @param queryWaitTimeout queryWaitTimeout or {@code null} for none
-   */
-  public ConnectionPoolConfig setQueryWaitTimeout(java.lang.String queryWaitTimeout) {
-    this.queryWaitTimeout = queryWaitTimeout;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of seconds a server is allowed to
-   * be idle before it is disconnected. 0 disables. Note: This field should not be added to client
-   * libraries if not present already.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getServerIdleTimeout() {
-    return serverIdleTimeout;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The maximum number of seconds a server is allowed to
-   * be idle before it is disconnected. 0 disables. Note: This field should not be added to client
-   * libraries if not present already.
-   * @param serverIdleTimeout serverIdleTimeout or {@code null} for none
-   */
-  public ConnectionPoolConfig setServerIdleTimeout(java.lang.String serverIdleTimeout) {
-    this.serverIdleTimeout = serverIdleTimeout;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The list of users that are allowed to connect to the
-   * MCP stats console. The users must exist in the database. Note: This field should not be added
-   * to client libraries if not present already.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getStatsUsers() {
-    return statsUsers;
-  }
-
-  /**
-   * Optional. Deprecated. Use 'flags' instead. The list of users that are allowed to connect to the
-   * MCP stats console. The users must exist in the database. Note: This field should not be added
-   * to client libraries if not present already.
-   * @param statsUsers statsUsers or {@code null} for none
-   */
-  public ConnectionPoolConfig setStatsUsers(java.util.List<java.lang.String> statsUsers) {
-    this.statsUsers = statsUsers;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 30
+ * Common model for database resource instance metadata. Next ID: 31
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -183,6 +183,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceContainer;
+
+  /**
+   * Optional. List of resource flags for the database resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StorageDatabasecenterPartnerapiV1mainResourceFlags> resourceFlags;
 
   /**
    * Required. Different from DatabaseResourceId.unique_id, a resource name can be reused over time.
@@ -600,6 +607,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setResourceContainer(java.lang.String resourceContainer) {
     this.resourceContainer = resourceContainer;
+    return this;
+  }
+
+  /**
+   * Optional. List of resource flags for the database resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StorageDatabasecenterPartnerapiV1mainResourceFlags> getResourceFlags() {
+    return resourceFlags;
+  }
+
+  /**
+   * Optional. List of resource flags for the database resource.
+   * @param resourceFlags resourceFlags or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setResourceFlags(java.util.List<StorageDatabasecenterPartnerapiV1mainResourceFlags> resourceFlags) {
+    this.resourceFlags = resourceFlags;
     return this;
   }
 

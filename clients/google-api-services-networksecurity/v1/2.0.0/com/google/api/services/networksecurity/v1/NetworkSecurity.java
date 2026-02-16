@@ -103,7 +103,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -1787,7 +1787,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class FirewallEndpoints {
 
         /**
-         * Creates a new FirewallEndpoint in a given project and location.
+         * Creates a new FirewallEndpoint in a given organization and location.
          *
          * Create a request for the method "firewallEndpoints.create".
          *
@@ -1812,7 +1812,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new FirewallEndpoint in a given project and location.
+           * Creates a new FirewallEndpoint in a given organization and location.
            *
            * Create a request for the method "firewallEndpoints.create".
            *
@@ -1984,7 +1984,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single Endpoint.
+         * Deletes a single org Endpoint.
          *
          * Create a request for the method "firewallEndpoints.delete".
          *
@@ -2008,7 +2008,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Deletes a single Endpoint.
+           * Deletes a single org Endpoint.
            *
            * Create a request for the method "firewallEndpoints.delete".
            *
@@ -2156,7 +2156,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single Endpoint.
+         * Gets details of a single org Endpoint.
          *
          * Create a request for the method "firewallEndpoints.get".
          *
@@ -2180,7 +2180,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Gets details of a single Endpoint.
+           * Gets details of a single org Endpoint.
            *
            * Create a request for the method "firewallEndpoints.get".
            *
@@ -2294,7 +2294,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists FirewallEndpoints in a given project and location.
+         * Lists FirewallEndpoints in a given organization and location.
          *
          * Create a request for the method "firewallEndpoints.list".
          *
@@ -2318,7 +2318,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists FirewallEndpoints in a given project and location.
+           * Lists FirewallEndpoints in a given organization and location.
            *
            * Create a request for the method "firewallEndpoints.list".
            *
@@ -2503,7 +2503,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Update a single Endpoint.
+         * Update a single org Endpoint.
          *
          * Create a request for the method "firewallEndpoints.patch".
          *
@@ -2528,7 +2528,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Update a single Endpoint.
+           * Update a single org Endpoint.
            *
            * Create a request for the method "firewallEndpoints.patch".
            *
@@ -4009,32 +4009,32 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Maximum number of SecurityProfileGroups to return per call. */
+          /** Optional. Maximum number of SecurityProfileGroups to return per call. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of SecurityProfileGroups to return per call.
+          /** Optional. Maximum number of SecurityProfileGroups to return per call.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of SecurityProfileGroups to return per call. */
+          /** Optional. Maximum number of SecurityProfileGroups to return per call. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The value returned by the last `ListSecurityProfileGroupsResponse` Indicates that this
-           * is a continuation of a prior `ListSecurityProfileGroups` call, and that the system
-           * should return the next page of data.
+           * Optional. The value returned by the last `ListSecurityProfileGroupsResponse` Indicates
+           * that this is a continuation of a prior `ListSecurityProfileGroups` call, and that the
+           * system should return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListSecurityProfileGroupsResponse` Indicates that this is a
-         continuation of a prior `ListSecurityProfileGroups` call, and that the system should return the
+          /** Optional. The value returned by the last `ListSecurityProfileGroupsResponse` Indicates that this is
+         a continuation of a prior `ListSecurityProfileGroups` call, and that the system should return the
          next page of data.
            */
           public java.lang.String getPageToken() {
@@ -4042,9 +4042,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The value returned by the last `ListSecurityProfileGroupsResponse` Indicates that this
-           * is a continuation of a prior `ListSecurityProfileGroups` call, and that the system
-           * should return the next page of data.
+           * Optional. The value returned by the last `ListSecurityProfileGroupsResponse` Indicates
+           * that this is a continuation of a prior `ListSecurityProfileGroups` call, and that the
+           * system should return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -4867,41 +4867,42 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Maximum number of SecurityProfiles to return per call. */
+          /** Optional. Maximum number of SecurityProfiles to return per call. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of SecurityProfiles to return per call.
+          /** Optional. Maximum number of SecurityProfiles to return per call.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Maximum number of SecurityProfiles to return per call. */
+          /** Optional. Maximum number of SecurityProfiles to return per call. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * The value returned by the last `ListSecurityProfilesResponse` Indicates that this is a
-           * continuation of a prior `ListSecurityProfiles` call, and that the system should return
-           * the next page of data.
+           * Optional. The value returned by the last `ListSecurityProfilesResponse` Indicates that
+           * this is a continuation of a prior `ListSecurityProfiles` call, and that the system
+           * should return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListSecurityProfilesResponse` Indicates that this is a continuation
-         of a prior `ListSecurityProfiles` call, and that the system should return the next page of data.
+          /** Optional. The value returned by the last `ListSecurityProfilesResponse` Indicates that this is a
+         continuation of a prior `ListSecurityProfiles` call, and that the system should return the next
+         page of data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The value returned by the last `ListSecurityProfilesResponse` Indicates that this is a
-           * continuation of a prior `ListSecurityProfiles` call, and that the system should return
-           * the next page of data.
+           * Optional. The value returned by the last `ListSecurityProfilesResponse` Indicates that
+           * this is a continuation of a prior `ListSecurityProfiles` call, and that the system
+           * should return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -5265,7 +5266,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -5289,7 +5293,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -14525,7 +14532,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single Endpoint.
+         * Deletes a single project Endpoint.
          *
          * Create a request for the method "firewallEndpoints.delete".
          *
@@ -14549,7 +14556,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Deletes a single Endpoint.
+           * Deletes a single project Endpoint.
            *
            * Create a request for the method "firewallEndpoints.delete".
            *
@@ -14697,7 +14704,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single Endpoint.
+         * Gets details of a single project Endpoint.
          *
          * Create a request for the method "firewallEndpoints.get".
          *
@@ -14721,7 +14728,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Gets details of a single Endpoint.
+           * Gets details of a single project Endpoint.
            *
            * Create a request for the method "firewallEndpoints.get".
            *
@@ -15044,7 +15051,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Update a single Endpoint.
+         * Update a single project Endpoint.
          *
          * Create a request for the method "firewallEndpoints.patch".
          *
@@ -15069,7 +15076,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Update a single Endpoint.
+           * Update a single project Endpoint.
            *
            * Create a request for the method "firewallEndpoints.patch".
            *
@@ -28283,8 +28290,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

@@ -30,21 +30,21 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1OptimizePromptRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The content to optimize.
+   * Required. The content of the prompt to optimize.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1Content content;
 
   /**
-   * Optional. The optimization strategy for prompt optimization.
+   * Optional. The optimization strategy to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String optimizationTarget;
 
   /**
-   * Required. The content to optimize.
+   * Required. The content of the prompt to optimize.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Content getContent() {
@@ -52,7 +52,7 @@ public final class GoogleCloudAiplatformV1beta1OptimizePromptRequest extends com
   }
 
   /**
-   * Required. The content to optimize.
+   * Required. The content of the prompt to optimize.
    * @param content content or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OptimizePromptRequest setContent(GoogleCloudAiplatformV1beta1Content content) {
@@ -61,7 +61,7 @@ public final class GoogleCloudAiplatformV1beta1OptimizePromptRequest extends com
   }
 
   /**
-   * Optional. The optimization strategy for prompt optimization.
+   * Optional. The optimization strategy to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getOptimizationTarget() {
@@ -69,7 +69,7 @@ public final class GoogleCloudAiplatformV1beta1OptimizePromptRequest extends com
   }
 
   /**
-   * Optional. The optimization strategy for prompt optimization.
+   * Optional. The optimization strategy to use.
    * @param optimizationTarget optimizationTarget or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OptimizePromptRequest setOptimizationTarget(java.lang.String optimizationTarget) {

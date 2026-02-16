@@ -101,7 +101,7 @@ public final class ResourceBackupConfig extends com.google.api.client.json.Gener
   /**
    * Output only. Whether the target resource is protected by a backup vault. This is true if the
    * backup_configs_details is not empty and any of the ResourceBackupConfig.backup_configs_details
-   * has a backup configuration with BackupConfigDetails.backup_vault set. set.
+   * has a backup configuration with BackupConfigDetails.backup_vault set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +258,7 @@ public final class ResourceBackupConfig extends com.google.api.client.json.Gener
   /**
    * Output only. Whether the target resource is protected by a backup vault. This is true if the
    * backup_configs_details is not empty and any of the ResourceBackupConfig.backup_configs_details
-   * has a backup configuration with BackupConfigDetails.backup_vault set. set.
+   * has a backup configuration with BackupConfigDetails.backup_vault set.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVaulted() {
@@ -268,7 +268,7 @@ public final class ResourceBackupConfig extends com.google.api.client.json.Gener
   /**
    * Output only. Whether the target resource is protected by a backup vault. This is true if the
    * backup_configs_details is not empty and any of the ResourceBackupConfig.backup_configs_details
-   * has a backup configuration with BackupConfigDetails.backup_vault set. set.
+   * has a backup configuration with BackupConfigDetails.backup_vault set.
    * @param vaulted vaulted or {@code null} for none
    */
   public ResourceBackupConfig setVaulted(java.lang.Boolean vaulted) {

@@ -142,9 +142,10 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client extendedAttributesOauth2Client;
 
   /**
-   * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
-   * This should be used when users can't get the desired claims in authentication credentials.
-   * Currently, this configuration is only supported with OIDC protocol.
+   * Optional. Defines the configuration for the OAuth 2.0 client that is used to get the additional
+   * user attributes in a separate backchannel call to the identity provider. This should be used
+   * when users can't get the required claims in authentication credentials. Currently, the OAuth
+   * 2.0 protocol is the only supported authorization method for this backchannel call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -437,9 +438,10 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
-   * This should be used when users can't get the desired claims in authentication credentials.
-   * Currently, this configuration is only supported with OIDC protocol.
+   * Optional. Defines the configuration for the OAuth 2.0 client that is used to get the additional
+   * user attributes in a separate backchannel call to the identity provider. This should be used
+   * when users can't get the required claims in authentication credentials. Currently, the OAuth
+   * 2.0 protocol is the only supported authorization method for this backchannel call.
    * @return value or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client getExtraAttributesOauth2Client() {
@@ -447,9 +449,10 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
-   * This should be used when users can't get the desired claims in authentication credentials.
-   * Currently, this configuration is only supported with OIDC protocol.
+   * Optional. Defines the configuration for the OAuth 2.0 client that is used to get the additional
+   * user attributes in a separate backchannel call to the identity provider. This should be used
+   * when users can't get the required claims in authentication credentials. Currently, the OAuth
+   * 2.0 protocol is the only supported authorization method for this backchannel call.
    * @param extraAttributesOauth2Client extraAttributesOauth2Client or {@code null} for none
    */
   public WorkforcePoolProvider setExtraAttributesOauth2Client(GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client extraAttributesOauth2Client) {

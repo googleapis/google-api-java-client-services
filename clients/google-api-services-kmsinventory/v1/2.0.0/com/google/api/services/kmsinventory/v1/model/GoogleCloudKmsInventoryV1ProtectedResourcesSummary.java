@@ -18,7 +18,7 @@ package com.google.api.services.kmsinventory.v1.model;
 
 /**
  * Aggregate information about the resources protected by a Cloud KMS key in the same Cloud
- * organization as the key.
+ * organization/project as the key.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the KMS Inventory API. For a detailed explanation see:
@@ -73,6 +73,15 @@ public final class GoogleCloudKmsInventoryV1ProtectedResourcesSummary extends co
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.Map<String, java.lang.Long> resourceTypes;
+
+  /**
+   * Warning messages for the state of response ProtectedResourcesSummary For example, if the
+   * organization service account is not configured, INSUFFICIENT_PERMISSIONS_PARTIAL_DATA warning
+   * will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudKmsInventoryV1Warning> warnings;
 
   /**
    * The number of resources protected by the key grouped by Cloud product.
@@ -177,6 +186,27 @@ public final class GoogleCloudKmsInventoryV1ProtectedResourcesSummary extends co
    */
   public GoogleCloudKmsInventoryV1ProtectedResourcesSummary setResourceTypes(java.util.Map<String, java.lang.Long> resourceTypes) {
     this.resourceTypes = resourceTypes;
+    return this;
+  }
+
+  /**
+   * Warning messages for the state of response ProtectedResourcesSummary For example, if the
+   * organization service account is not configured, INSUFFICIENT_PERMISSIONS_PARTIAL_DATA warning
+   * will be returned.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudKmsInventoryV1Warning> getWarnings() {
+    return warnings;
+  }
+
+  /**
+   * Warning messages for the state of response ProtectedResourcesSummary For example, if the
+   * organization service account is not configured, INSUFFICIENT_PERMISSIONS_PARTIAL_DATA warning
+   * will be returned.
+   * @param warnings warnings or {@code null} for none
+   */
+  public GoogleCloudKmsInventoryV1ProtectedResourcesSummary setWarnings(java.util.List<GoogleCloudKmsInventoryV1Warning> warnings) {
+    this.warnings = warnings;
     return this;
   }
 

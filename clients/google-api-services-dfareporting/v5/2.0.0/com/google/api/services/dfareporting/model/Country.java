@@ -66,6 +66,13 @@ public final class Country extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean sslEnabled;
 
   /**
+   * Output only. The TV data providers supported in this country.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tvDataProviders;
+
+  /**
    * Country code.
    * @return value or {@code null} for none
    */
@@ -147,6 +154,23 @@ public final class Country extends com.google.api.client.json.GenericJson {
    */
   public Country setSslEnabled(java.lang.Boolean sslEnabled) {
     this.sslEnabled = sslEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. The TV data providers supported in this country.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTvDataProviders() {
+    return tvDataProviders;
+  }
+
+  /**
+   * Output only. The TV data providers supported in this country.
+   * @param tvDataProviders tvDataProviders or {@code null} for none
+   */
+  public Country setTvDataProviders(java.util.List<java.lang.String> tvDataProviders) {
+    this.tvDataProviders = tvDataProviders;
     return this;
   }
 

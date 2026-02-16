@@ -32,7 +32,7 @@ public final class ApplicationSigningKeyCert extends com.google.api.client.json.
 
   /**
    * Required. The SHA-256 hash value of the signing key certificate of the app. This must be a
-   * valid SHA-256 hash value, i.e. 32 bytes. Otherwise, the policy is rejected.
+   * valid SHA-256 hash value, i.e. 32 bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class ApplicationSigningKeyCert extends com.google.api.client.json.
 
   /**
    * Required. The SHA-256 hash value of the signing key certificate of the app. This must be a
-   * valid SHA-256 hash value, i.e. 32 bytes. Otherwise, the policy is rejected.
+   * valid SHA-256 hash value, i.e. 32 bytes.
    * @see #decodeSigningKeyCertFingerprintSha256()
    * @return value or {@code null} for none
    */
@@ -50,7 +50,7 @@ public final class ApplicationSigningKeyCert extends com.google.api.client.json.
 
   /**
    * Required. The SHA-256 hash value of the signing key certificate of the app. This must be a
-   * valid SHA-256 hash value, i.e. 32 bytes. Otherwise, the policy is rejected.
+   * valid SHA-256 hash value, i.e. 32 bytes.
    * @see #getSigningKeyCertFingerprintSha256()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -62,7 +62,7 @@ public final class ApplicationSigningKeyCert extends com.google.api.client.json.
 
   /**
    * Required. The SHA-256 hash value of the signing key certificate of the app. This must be a
-   * valid SHA-256 hash value, i.e. 32 bytes. Otherwise, the policy is rejected.
+   * valid SHA-256 hash value, i.e. 32 bytes.
    * @see #encodeSigningKeyCertFingerprintSha256()
    * @param signingKeyCertFingerprintSha256 signingKeyCertFingerprintSha256 or {@code null} for none
    */
@@ -73,7 +73,7 @@ public final class ApplicationSigningKeyCert extends com.google.api.client.json.
 
   /**
    * Required. The SHA-256 hash value of the signing key certificate of the app. This must be a
-   * valid SHA-256 hash value, i.e. 32 bytes. Otherwise, the policy is rejected.
+   * valid SHA-256 hash value, i.e. 32 bytes.
    * @see #setSigningKeyCertFingerprintSha256()
    *
    * <p>

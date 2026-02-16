@@ -81,6 +81,13 @@ public final class GoogleCloudDocumentaiV1Evaluation extends com.google.api.clie
   private java.lang.String name;
 
   /**
+   * Contains all revisions of the evaluation, excluding the latest one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1EvaluationEvaluationRevision> revisions;
+
+  /**
    * Metrics for all the entities in aggregate.
    * @return value or {@code null} for none
    */
@@ -198,6 +205,23 @@ public final class GoogleCloudDocumentaiV1Evaluation extends com.google.api.clie
    */
   public GoogleCloudDocumentaiV1Evaluation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Contains all revisions of the evaluation, excluding the latest one.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1EvaluationEvaluationRevision> getRevisions() {
+    return revisions;
+  }
+
+  /**
+   * Contains all revisions of the evaluation, excluding the latest one.
+   * @param revisions revisions or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1Evaluation setRevisions(java.util.List<GoogleCloudDocumentaiV1EvaluationEvaluationRevision> revisions) {
+    this.revisions = revisions;
     return this;
   }
 

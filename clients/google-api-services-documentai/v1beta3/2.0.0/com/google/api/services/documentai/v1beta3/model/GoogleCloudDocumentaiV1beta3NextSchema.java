@@ -45,7 +45,7 @@ public final class GoogleCloudDocumentaiV1beta3NextSchema extends com.google.api
   private java.lang.String displayName;
 
   /**
-   * Optional. The GCP labels for the Schema.
+   * Optional. The {{gcp_name_short}} labels for the Schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class GoogleCloudDocumentaiV1beta3NextSchema extends com.google.api
   }
 
   /**
-   * Optional. The GCP labels for the Schema.
+   * Optional. The {{gcp_name_short}} labels for the Schema.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -109,7 +109,7 @@ public final class GoogleCloudDocumentaiV1beta3NextSchema extends com.google.api
   }
 
   /**
-   * Optional. The GCP labels for the Schema.
+   * Optional. The {{gcp_name_short}} labels for the Schema.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3NextSchema setLabels(java.util.Map<String, java.lang.String> labels) {

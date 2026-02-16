@@ -37,7 +37,7 @@ public final class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidat
   private CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule childAlignmentRule;
 
   /**
-   * Description of the validation rule. This has no use but for documentation
+   * Description of the validation rule. This has no use but for documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidat
   }
 
   /**
-   * Description of the validation rule. This has no use but for documentation
+   * Description of the validation rule. This has no use but for documentation.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -105,7 +105,7 @@ public final class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidat
   }
 
   /**
-   * Description of the validation rule. This has no use but for documentation
+   * Description of the validation rule. This has no use but for documentation.
    * @param description description or {@code null} for none
    */
   public CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule setDescription(java.lang.String description) {

@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1EvaluationMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * The calculated f1 score.
+   * The calculated F1 score.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class GoogleCloudDocumentaiV1EvaluationMetrics extends com.google.a
   private java.lang.Integer truePositivesCount;
 
   /**
-   * The calculated f1 score.
+   * The calculated F1 score.
    * @return value or {@code null} for none
    */
   public java.lang.Float getF1Score() {
@@ -116,7 +116,7 @@ public final class GoogleCloudDocumentaiV1EvaluationMetrics extends com.google.a
   }
 
   /**
-   * The calculated f1 score.
+   * The calculated F1 score.
    * @param f1Score f1Score or {@code null} for none
    */
   public GoogleCloudDocumentaiV1EvaluationMetrics setF1Score(java.lang.Float f1Score) {

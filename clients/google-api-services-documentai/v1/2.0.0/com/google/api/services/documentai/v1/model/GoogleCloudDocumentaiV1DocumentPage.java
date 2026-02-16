@@ -148,7 +148,7 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   private java.util.List<GoogleCloudDocumentaiV1DocumentPageMatrix> transforms;
 
   /**
-   * A list of detected non-text visual elements e.g. checkbox, signature etc. on the page.
+   * A list of detected non-text visual elements, for example, checkbox, signature etc. on the page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -437,7 +437,7 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   }
 
   /**
-   * A list of detected non-text visual elements e.g. checkbox, signature etc. on the page.
+   * A list of detected non-text visual elements, for example, checkbox, signature etc. on the page.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiV1DocumentPageVisualElement> getVisualElements() {
@@ -445,7 +445,7 @@ public final class GoogleCloudDocumentaiV1DocumentPage extends com.google.api.cl
   }
 
   /**
-   * A list of detected non-text visual elements e.g. checkbox, signature etc. on the page.
+   * A list of detected non-text visual elements, for example, checkbox, signature etc. on the page.
    * @param visualElements visualElements or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPage setVisualElements(java.util.List<GoogleCloudDocumentaiV1DocumentPageVisualElement> visualElements) {

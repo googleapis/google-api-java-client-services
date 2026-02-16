@@ -17,8 +17,9 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * Represents a blob asset. It's used to store the content of the inline blob in this document, e.g.
- * image bytes, such that it can be referenced by other fields in the document via asset id.
+ * Represents a blob asset. It's used to store the content of the inline blob in this document, for
+ * example, image bytes, such that it can be referenced by other fields in the document via asset
+ * ID.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation
@@ -39,7 +40,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentBlobAsset extends com.goo
   private java.lang.String assetId;
 
   /**
-   * Optional. The content of the blob asset, e.g. image bytes.
+   * Optional. The content of the blob asset, for example, image bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +72,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentBlobAsset extends com.goo
   }
 
   /**
-   * Optional. The content of the blob asset, e.g. image bytes.
+   * Optional. The content of the blob asset, for example, image bytes.
    * @see #decodeContent()
    * @return value or {@code null} for none
    */
@@ -80,7 +81,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentBlobAsset extends com.goo
   }
 
   /**
-   * Optional. The content of the blob asset, e.g. image bytes.
+   * Optional. The content of the blob asset, for example, image bytes.
    * @see #getContent()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -91,7 +92,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentBlobAsset extends com.goo
   }
 
   /**
-   * Optional. The content of the blob asset, e.g. image bytes.
+   * Optional. The content of the blob asset, for example, image bytes.
    * @see #encodeContent()
    * @param content content or {@code null} for none
    */
@@ -101,7 +102,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentBlobAsset extends com.goo
   }
 
   /**
-   * Optional. The content of the blob asset, e.g. image bytes.
+   * Optional. The content of the blob asset, for example, image bytes.
    * @see #setContent()
    *
    * <p>

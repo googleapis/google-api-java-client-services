@@ -68,14 +68,6 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Optional. A lightweight indexing source with low latency and high reliability, but lacking
-   * advanced features like CMEK and content-based search.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig spannerIndexingConfig;
-
-  /**
    * Required. State of the dataset. Ignored when updating dataset.
    * The value may be {@code null}.
    */
@@ -176,25 +168,6 @@ public final class GoogleCloudDocumentaiV1beta3Dataset extends com.google.api.cl
    */
   public GoogleCloudDocumentaiV1beta3Dataset setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
-    return this;
-  }
-
-  /**
-   * Optional. A lightweight indexing source with low latency and high reliability, but lacking
-   * advanced features like CMEK and content-based search.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig getSpannerIndexingConfig() {
-    return spannerIndexingConfig;
-  }
-
-  /**
-   * Optional. A lightweight indexing source with low latency and high reliability, but lacking
-   * advanced features like CMEK and content-based search.
-   * @param spannerIndexingConfig spannerIndexingConfig or {@code null} for none
-   */
-  public GoogleCloudDocumentaiV1beta3Dataset setSpannerIndexingConfig(GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig spannerIndexingConfig) {
-    this.spannerIndexingConfig = spannerIndexingConfig;
     return this;
   }
 

@@ -75,6 +75,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   private java.lang.String customerDomainPrefix;
 
   /**
+   * Output only. Timestamp in UTC of when this resource was soft-deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
+
+  /**
    * Required. A user friendly name for the ContactCenter.
    * The value may be {@code null}.
    */
@@ -87,6 +94,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private Early early;
+
+  /**
+   * Output only. Timestamp in UTC of when this resource is considered expired.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expireTime;
 
   /**
    * Optional. Feature configuration to populate the feature flags.
@@ -143,6 +157,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> privateComponents;
+
+  /**
+   * Output only. Timestamp in UTC of when this resource is going to be hard-deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String purgeTime;
 
   /**
    * Output only. UJET release version, unique for each new release.
@@ -293,6 +314,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Output only. Timestamp in UTC of when this resource was soft-deleted.
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * Output only. Timestamp in UTC of when this resource was soft-deleted.
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public ContactCenter setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
+    return this;
+  }
+
+  /**
    * Required. A user friendly name for the ContactCenter.
    * @return value or {@code null} for none
    */
@@ -323,6 +361,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   public ContactCenter setEarly(Early early) {
     this.early = early;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp in UTC of when this resource is considered expired.
+   * @return value or {@code null} for none
+   */
+  public String getExpireTime() {
+    return expireTime;
+  }
+
+  /**
+   * Output only. Timestamp in UTC of when this resource is considered expired.
+   * @param expireTime expireTime or {@code null} for none
+   */
+  public ContactCenter setExpireTime(String expireTime) {
+    this.expireTime = expireTime;
     return this;
   }
 
@@ -459,6 +514,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   public ContactCenter setPrivateComponents(java.util.List<java.lang.String> privateComponents) {
     this.privateComponents = privateComponents;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp in UTC of when this resource is going to be hard-deleted.
+   * @return value or {@code null} for none
+   */
+  public String getPurgeTime() {
+    return purgeTime;
+  }
+
+  /**
+   * Output only. Timestamp in UTC of when this resource is going to be hard-deleted.
+   * @param purgeTime purgeTime or {@code null} for none
+   */
+  public ContactCenter setPurgeTime(String purgeTime) {
+    this.purgeTime = purgeTime;
     return this;
   }
 

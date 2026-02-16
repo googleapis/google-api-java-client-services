@@ -31,12 +31,39 @@ package com.google.api.services.datafusion.v1beta1.model;
 public final class LoggingConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Option to enable the InstanceV2 logging for this instance. This field is supported
+   * only in CDF patch revision versions 6.11.1.1 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableInstanceV2Logs;
+
+  /**
    * Optional. Option to determine whether instance logs should be written to Cloud Logging. By
    * default, instance logs are written to Cloud Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean instanceCloudLoggingDisabled;
+
+  /**
+   * Optional. Option to enable the InstanceV2 logging for this instance. This field is supported
+   * only in CDF patch revision versions 6.11.1.1 and above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableInstanceV2Logs() {
+    return enableInstanceV2Logs;
+  }
+
+  /**
+   * Optional. Option to enable the InstanceV2 logging for this instance. This field is supported
+   * only in CDF patch revision versions 6.11.1.1 and above.
+   * @param enableInstanceV2Logs enableInstanceV2Logs or {@code null} for none
+   */
+  public LoggingConfig setEnableInstanceV2Logs(java.lang.Boolean enableInstanceV2Logs) {
+    this.enableInstanceV2Logs = enableInstanceV2Logs;
+    return this;
+  }
 
   /**
    * Optional. Option to determine whether instance logs should be written to Cloud Logging. By

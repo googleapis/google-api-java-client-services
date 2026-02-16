@@ -53,7 +53,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   private java.lang.String mentionId;
 
   /**
-   * Optional. Text value of the entity e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value of the entity, for example, `1600 Amphitheatre Pkwy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
 
   /**
    * Optional. Normalized entity value. Absent if the extracted value could not be converted or the
-   * type (e.g. address) is not supported for certain parsers. This field is also only populated for
-   * certain supported document types.
+   * type (for example, address) is not supported for certain parsers. This field is also only
+   * populated for certain supported document types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   private GoogleCloudDocumentaiV1beta3DocumentTextAnchor textAnchor;
 
   /**
-   * Required. Entity type from a schema e.g. `Address`.
+   * Required. Entity type from a schema, for example, `Address`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +171,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   }
 
   /**
-   * Optional. Text value of the entity e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value of the entity, for example, `1600 Amphitheatre Pkwy`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMentionText() {
@@ -179,7 +179,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   }
 
   /**
-   * Optional. Text value of the entity e.g. `1600 Amphitheatre Pkwy`.
+   * Optional. Text value of the entity, for example, `1600 Amphitheatre Pkwy`.
    * @param mentionText mentionText or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentEntity setMentionText(java.lang.String mentionText) {
@@ -206,8 +206,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
 
   /**
    * Optional. Normalized entity value. Absent if the extracted value could not be converted or the
-   * type (e.g. address) is not supported for certain parsers. This field is also only populated for
-   * certain supported document types.
+   * type (for example, address) is not supported for certain parsers. This field is also only
+   * populated for certain supported document types.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue getNormalizedValue() {
@@ -216,8 +216,8 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
 
   /**
    * Optional. Normalized entity value. Absent if the extracted value could not be converted or the
-   * type (e.g. address) is not supported for certain parsers. This field is also only populated for
-   * certain supported document types.
+   * type (for example, address) is not supported for certain parsers. This field is also only
+   * populated for certain supported document types.
    * @param normalizedValue normalizedValue or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentEntity setNormalizedValue(GoogleCloudDocumentaiV1beta3DocumentEntityNormalizedValue normalizedValue) {
@@ -315,7 +315,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   }
 
   /**
-   * Required. Entity type from a schema e.g. `Address`.
+   * Required. Entity type from a schema, for example, `Address`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -323,7 +323,7 @@ public final class GoogleCloudDocumentaiV1beta3DocumentEntity extends com.google
   }
 
   /**
-   * Required. Entity type from a schema e.g. `Address`.
+   * Required. Entity type from a schema, for example, `Address`.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3DocumentEntity setType(java.lang.String type) {

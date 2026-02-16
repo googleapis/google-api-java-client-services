@@ -70,7 +70,7 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
   private java.util.List<GoogleCloudDocumentaiV1DocumentEntity> entities;
 
   /**
-   * The entity revision id that `document.entities` field is based on. If this field is set and
+   * The entity revision ID that `document.entities` field is based on. If this field is set and
    * `entities_revisions` is not empty, the entities in `document.entities` field are the entities
    * in the entity revision with this id and `document.entity_validation_output` field is the
    * `entity_validation_output` field in this entity revision.
@@ -292,7 +292,7 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
   }
 
   /**
-   * The entity revision id that `document.entities` field is based on. If this field is set and
+   * The entity revision ID that `document.entities` field is based on. If this field is set and
    * `entities_revisions` is not empty, the entities in `document.entities` field are the entities
    * in the entity revision with this id and `document.entity_validation_output` field is the
    * `entity_validation_output` field in this entity revision.
@@ -303,7 +303,7 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
   }
 
   /**
-   * The entity revision id that `document.entities` field is based on. If this field is set and
+   * The entity revision ID that `document.entities` field is based on. If this field is set and
    * `entities_revisions` is not empty, the entities in `document.entities` field are the entities
    * in the entity revision with this id and `document.entity_validation_output` field is the
    * `entity_validation_output` field in this entity revision.

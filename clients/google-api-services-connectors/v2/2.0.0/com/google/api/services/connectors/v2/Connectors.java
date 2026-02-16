@@ -103,7 +103,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -776,6 +776,295 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           @Override
           public ExecuteSqlQuery set(String parameterName, Object value) {
             return (ExecuteSqlQuery) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Generate toolspec override for the given list of toolNames.
+         *
+         * Create a request for the method "connections.generateConnectionToolspecOverride".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link GenerateConnectionToolspecOverride#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. Resource name of the Connection. Format:
+         *        projects/{project}/locations/{location}/connections/{connection}
+         * @param content the {@link com.google.api.services.connectors.v2.model.GenerateCustomToolspecRequest}
+         * @return the request
+         */
+        public GenerateConnectionToolspecOverride generateConnectionToolspecOverride(java.lang.String name, com.google.api.services.connectors.v2.model.GenerateCustomToolspecRequest content) throws java.io.IOException {
+          GenerateConnectionToolspecOverride result = new GenerateConnectionToolspecOverride(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateConnectionToolspecOverride extends ConnectorsRequest<com.google.api.services.connectors.v2.model.GenerateCustomToolspecResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:generateConnectionToolspecOverride";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * Generate toolspec override for the given list of toolNames.
+           *
+           * Create a request for the method "connections.generateConnectionToolspecOverride".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link GenerateConnectionToolspecOverride#execute()} method to
+           * invoke the remote operation. <p> {@link GenerateConnectionToolspecOverride#initialize(com.googl
+           * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+           * this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the Connection. Format:
+         *        projects/{project}/locations/{location}/connections/{connection}
+           * @param content the {@link com.google.api.services.connectors.v2.model.GenerateCustomToolspecRequest}
+           * @since 1.13
+           */
+          protected GenerateConnectionToolspecOverride(java.lang.String name, com.google.api.services.connectors.v2.model.GenerateCustomToolspecRequest content) {
+            super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v2.model.GenerateCustomToolspecResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateConnectionToolspecOverride) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setAccessToken(java.lang.String accessToken) {
+            return (GenerateConnectionToolspecOverride) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setAlt(java.lang.String alt) {
+            return (GenerateConnectionToolspecOverride) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setCallback(java.lang.String callback) {
+            return (GenerateConnectionToolspecOverride) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setFields(java.lang.String fields) {
+            return (GenerateConnectionToolspecOverride) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setKey(java.lang.String key) {
+            return (GenerateConnectionToolspecOverride) super.setKey(key);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setOauthToken(java.lang.String oauthToken) {
+            return (GenerateConnectionToolspecOverride) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateConnectionToolspecOverride) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateConnectionToolspecOverride) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setUploadType(java.lang.String uploadType) {
+            return (GenerateConnectionToolspecOverride) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateConnectionToolspecOverride) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the Connection. Format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the Connection. Format:
+         projects/{project}/locations/{location}/connections/{connection}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the Connection. Format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          public GenerateConnectionToolspecOverride setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateConnectionToolspecOverride set(String parameterName, Object value) {
+            return (GenerateConnectionToolspecOverride) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists custom tool names.
+         *
+         * Create a request for the method "connections.listCustomToolNames".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link ListCustomToolNames#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the Connection. Format:
+         *        projects/{project}/locations/{location}/connections/{connection}
+         * @return the request
+         */
+        public ListCustomToolNames listCustomToolNames(java.lang.String name) throws java.io.IOException {
+          ListCustomToolNames result = new ListCustomToolNames(name);
+          initialize(result);
+          return result;
+        }
+
+        public class ListCustomToolNames extends ConnectorsRequest<com.google.api.services.connectors.v2.model.ListCustomToolNamesResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:listCustomToolNames";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * Lists custom tool names.
+           *
+           * Create a request for the method "connections.listCustomToolNames".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link ListCustomToolNames#execute()} method to invoke the remote
+           * operation. <p> {@link ListCustomToolNames#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the Connection. Format:
+         *        projects/{project}/locations/{location}/connections/{connection}
+           * @since 1.13
+           */
+          protected ListCustomToolNames(java.lang.String name) {
+            super(Connectors.this, "GET", REST_PATH, null, com.google.api.services.connectors.v2.model.ListCustomToolNamesResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public ListCustomToolNames set$Xgafv(java.lang.String $Xgafv) {
+            return (ListCustomToolNames) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ListCustomToolNames setAccessToken(java.lang.String accessToken) {
+            return (ListCustomToolNames) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ListCustomToolNames setAlt(java.lang.String alt) {
+            return (ListCustomToolNames) super.setAlt(alt);
+          }
+
+          @Override
+          public ListCustomToolNames setCallback(java.lang.String callback) {
+            return (ListCustomToolNames) super.setCallback(callback);
+          }
+
+          @Override
+          public ListCustomToolNames setFields(java.lang.String fields) {
+            return (ListCustomToolNames) super.setFields(fields);
+          }
+
+          @Override
+          public ListCustomToolNames setKey(java.lang.String key) {
+            return (ListCustomToolNames) super.setKey(key);
+          }
+
+          @Override
+          public ListCustomToolNames setOauthToken(java.lang.String oauthToken) {
+            return (ListCustomToolNames) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ListCustomToolNames setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ListCustomToolNames) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ListCustomToolNames setQuotaUser(java.lang.String quotaUser) {
+            return (ListCustomToolNames) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ListCustomToolNames setUploadType(java.lang.String uploadType) {
+            return (ListCustomToolNames) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ListCustomToolNames setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ListCustomToolNames) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the Connection. Format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the Connection. Format:
+         projects/{project}/locations/{location}/connections/{connection}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the Connection. Format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          public ListCustomToolNames setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ListCustomToolNames set(String parameterName, Object value) {
+            return (ListCustomToolNames) super.set(parameterName, value);
           }
         }
         /**
@@ -4408,8 +4697,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

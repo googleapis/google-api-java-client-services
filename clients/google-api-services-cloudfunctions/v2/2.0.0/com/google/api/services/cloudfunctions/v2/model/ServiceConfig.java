@@ -67,6 +67,28 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String binaryAuthorizationPolicy;
 
   /**
+   * Optional. Egress settings for direct VPC. If not provided, it defaults to
+   * VPC_EGRESS_PRIVATE_RANGES_ONLY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String directVpcEgress;
+
+  /**
+   * Optional. The Direct VPC network interface for the Cloud Function. Currently only a single
+   * Direct VPC is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DirectVpcNetworkInterface> directVpcNetworkInterface;
+
+  static {
+    // hack to force ProGuard to consider DirectVpcNetworkInterface used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DirectVpcNetworkInterface.class);
+  }
+
+  /**
    * Environment variables that shall be available during function execution.
    * The value may be {@code null}.
    */
@@ -282,6 +304,44 @@ public final class ServiceConfig extends com.google.api.client.json.GenericJson 
    */
   public ServiceConfig setBinaryAuthorizationPolicy(java.lang.String binaryAuthorizationPolicy) {
     this.binaryAuthorizationPolicy = binaryAuthorizationPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Egress settings for direct VPC. If not provided, it defaults to
+   * VPC_EGRESS_PRIVATE_RANGES_ONLY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDirectVpcEgress() {
+    return directVpcEgress;
+  }
+
+  /**
+   * Optional. Egress settings for direct VPC. If not provided, it defaults to
+   * VPC_EGRESS_PRIVATE_RANGES_ONLY.
+   * @param directVpcEgress directVpcEgress or {@code null} for none
+   */
+  public ServiceConfig setDirectVpcEgress(java.lang.String directVpcEgress) {
+    this.directVpcEgress = directVpcEgress;
+    return this;
+  }
+
+  /**
+   * Optional. The Direct VPC network interface for the Cloud Function. Currently only a single
+   * Direct VPC is supported.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DirectVpcNetworkInterface> getDirectVpcNetworkInterface() {
+    return directVpcNetworkInterface;
+  }
+
+  /**
+   * Optional. The Direct VPC network interface for the Cloud Function. Currently only a single
+   * Direct VPC is supported.
+   * @param directVpcNetworkInterface directVpcNetworkInterface or {@code null} for none
+   */
+  public ServiceConfig setDirectVpcNetworkInterface(java.util.List<DirectVpcNetworkInterface> directVpcNetworkInterface) {
+    this.directVpcNetworkInterface = directVpcNetworkInterface;
     return this;
   }
 

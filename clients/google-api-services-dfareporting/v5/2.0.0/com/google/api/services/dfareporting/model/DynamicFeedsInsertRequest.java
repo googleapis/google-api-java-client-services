@@ -18,8 +18,8 @@ package com.google.api.services.dfareporting.model;
 
 /**
  * Dynamic profile ID is required for dynamic feed insert as the current GPA API only can create a
- * dynamic feed under profile context,even though the dynnamic feed itself don't need the dynamic
- * profile id. See
+ * dynamic feed under profile context,even though the dynamic feed itself don't need the dynamic
+ * profile id.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation

@@ -103,7 +103,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -16591,7 +16591,8 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Retransforms a dynamic feed.
+     * Retransforms a dynamic feed. Only draft feeds can be retransformed (i.e. the feed has not been
+     * published).
      *
      * Create a request for the method "dynamicFeeds.retransform".
      *
@@ -16615,7 +16616,8 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Retransforms a dynamic feed.
+       * Retransforms a dynamic feed. Only draft feeds can be retransformed (i.e. the feed has not been
+       * published).
        *
        * Create a request for the method "dynamicFeeds.retransform".
        *
@@ -16710,7 +16712,8 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Updates a new dynamic feed.
+     * Updates a new dynamic feed. For draft feeds, only Element can be updated. For published feeds,
+     * only FeedSchedule can be updated. Other fields will be ignored.
      *
      * Create a request for the method "dynamicFeeds.update".
      *
@@ -16731,7 +16734,8 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "studio/dynamicFeeds";
 
       /**
-       * Updates a new dynamic feed.
+       * Updates a new dynamic feed. For draft feeds, only Element can be updated. For published feeds,
+       * only FeedSchedule can be updated. Other fields will be ignored.
        *
        * Create a request for the method "dynamicFeeds.update".
        *
@@ -16832,7 +16836,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
   public class DynamicProfiles {
 
     /**
-     * Generates code for a dynamic profile.
+     * Generates code for a dynamic profile, which will need unescaping.
      *
      * Create a request for the method "dynamicProfiles.generateCode".
      *
@@ -16856,7 +16860,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+$");
 
       /**
-       * Generates code for a dynamic profile.
+       * Generates code for a dynamic profile, which will need unescaping.
        *
        * Create a request for the method "dynamicProfiles.generateCode".
        *
@@ -34639,6 +34643,38 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Optional. Country Dart ID. If not specified, defaults to 256 (US). */
+      @com.google.api.client.util.Key
+      private java.lang.Long countryDartId;
+
+      /** Optional. Country Dart ID. If not specified, defaults to 256 (US).
+       */
+      public java.lang.Long getCountryDartId() {
+        return countryDartId;
+      }
+
+      /** Optional. Country Dart ID. If not specified, defaults to 256 (US). */
+      public Get setCountryDartId(java.lang.Long countryDartId) {
+        this.countryDartId = countryDartId;
+        return this;
+      }
+
+      /** Optional. TV data provider. If not specified, defaults to `COMSCORE_NATIONAL_US`. */
+      @com.google.api.client.util.Key
+      private java.lang.String tvDataProvider;
+
+      /** Optional. TV data provider. If not specified, defaults to `COMSCORE_NATIONAL_US`.
+       */
+      public java.lang.String getTvDataProvider() {
+        return tvDataProvider;
+      }
+
+      /** Optional. TV data provider. If not specified, defaults to `COMSCORE_NATIONAL_US`. */
+      public Get setTvDataProvider(java.lang.String tvDataProvider) {
+        this.tvDataProvider = tvDataProvider;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -34806,6 +34842,22 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /** Optional. Country Dart ID. If not specified, defaults to 256 (US). */
+      @com.google.api.client.util.Key
+      private java.lang.Long countryDartId;
+
+      /** Optional. Country Dart ID. If not specified, defaults to 256 (US).
+       */
+      public java.lang.Long getCountryDartId() {
+        return countryDartId;
+      }
+
+      /** Optional. Country Dart ID. If not specified, defaults to 256 (US). */
+      public List setCountryDartId(java.lang.Long countryDartId) {
+        this.countryDartId = countryDartId;
+        return this;
+      }
+
       /**
        * Required. Search string to filter the list of TV campaign summaries. Matches any substring.
        * Required field.
@@ -34826,6 +34878,22 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
        */
       public List setName(java.lang.String name) {
         this.name = name;
+        return this;
+      }
+
+      /** Optional. TV data provider. If not specified, defaults to `COMSCORE_NATIONAL_US`. */
+      @com.google.api.client.util.Key
+      private java.lang.String tvDataProvider;
+
+      /** Optional. TV data provider. If not specified, defaults to `COMSCORE_NATIONAL_US`.
+       */
+      public java.lang.String getTvDataProvider() {
+        return tvDataProvider;
+      }
+
+      /** Optional. TV data provider. If not specified, defaults to `COMSCORE_NATIONAL_US`. */
+      public List setTvDataProvider(java.lang.String tvDataProvider) {
+        this.tvDataProvider = tvDataProvider;
         return this;
       }
 
@@ -37010,8 +37078,7 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

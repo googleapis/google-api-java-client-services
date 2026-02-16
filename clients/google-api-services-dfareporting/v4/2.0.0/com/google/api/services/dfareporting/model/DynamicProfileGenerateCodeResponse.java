@@ -31,14 +31,14 @@ package com.google.api.services.dfareporting.model;
 public final class DynamicProfileGenerateCodeResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Generated code for the dynamic profile.
+   * Generated code for the dynamic profile. The code will need to be unescaped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * Generated code for the dynamic profile.
+   * Generated code for the dynamic profile. The code will need to be unescaped.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -46,7 +46,7 @@ public final class DynamicProfileGenerateCodeResponse extends com.google.api.cli
   }
 
   /**
-   * Generated code for the dynamic profile.
+   * Generated code for the dynamic profile. The code will need to be unescaped.
    * @param code code or {@code null} for none
    */
   public DynamicProfileGenerateCodeResponse setCode(java.lang.String code) {

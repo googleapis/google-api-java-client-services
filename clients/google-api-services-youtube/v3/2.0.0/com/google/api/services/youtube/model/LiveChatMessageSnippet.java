@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Next ID: 34
+ * Next ID: 35
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -58,6 +58,13 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private LiveChatFanFundingEventDetails fanFundingEventDetails;
+
+  /**
+   * Details about the gift event, this is only set if the type is 'giftEvent'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LiveChatGiftDetails giftDetails;
 
   /**
    * Details about the Gift Membership Received event, this is only set if the type is
@@ -231,6 +238,23 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
    */
   public LiveChatMessageSnippet setFanFundingEventDetails(LiveChatFanFundingEventDetails fanFundingEventDetails) {
     this.fanFundingEventDetails = fanFundingEventDetails;
+    return this;
+  }
+
+  /**
+   * Details about the gift event, this is only set if the type is 'giftEvent'.
+   * @return value or {@code null} for none
+   */
+  public LiveChatGiftDetails getGiftDetails() {
+    return giftDetails;
+  }
+
+  /**
+   * Details about the gift event, this is only set if the type is 'giftEvent'.
+   * @param giftDetails giftDetails or {@code null} for none
+   */
+  public LiveChatMessageSnippet setGiftDetails(LiveChatGiftDetails giftDetails) {
+    this.giftDetails = giftDetails;
     return this;
   }
 

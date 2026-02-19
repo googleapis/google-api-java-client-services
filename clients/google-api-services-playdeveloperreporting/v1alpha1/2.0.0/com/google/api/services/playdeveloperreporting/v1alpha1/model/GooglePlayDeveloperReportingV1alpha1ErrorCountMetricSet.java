@@ -71,7 +71,7 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorCountMetricSet exten
   private GooglePlayDeveloperReportingV1alpha1FreshnessInfo freshnessInfo;
 
   /**
-   * The resource name. Format: apps/{app}/errorCountMetricSet
+   * Identifier. The resource name. Format: apps/{app}/errorCountMetricSet
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorCountMetricSet exten
   }
 
   /**
-   * The resource name. Format: apps/{app}/errorCountMetricSet
+   * Identifier. The resource name. Format: apps/{app}/errorCountMetricSet
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,7 +103,7 @@ public final class GooglePlayDeveloperReportingV1alpha1ErrorCountMetricSet exten
   }
 
   /**
-   * The resource name. Format: apps/{app}/errorCountMetricSet
+   * Identifier. The resource name. Format: apps/{app}/errorCountMetricSet
    * @param name name or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1ErrorCountMetricSet setName(java.lang.String name) {

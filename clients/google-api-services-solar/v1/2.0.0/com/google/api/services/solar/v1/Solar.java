@@ -103,7 +103,7 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -289,17 +289,30 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Optional. Specifies the pre-GA features to enable. */
+      /**
+       * Optional. Specifies the pre-GA experiments to enable. Requests using this field are
+       * classified as a pre-GA offering under the [Google Maps Platform Service Specific
+       * Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). See [launch stage
+       * descriptions](https://cloud.google.com/maps-platform/terms/launch-stages) for more details.
+       */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> experiments;
 
-      /** Optional. Specifies the pre-GA features to enable.
+      /** Optional. Specifies the pre-GA experiments to enable. Requests using this field are classified as a
+     pre-GA offering under the [Google Maps Platform Service Specific
+     Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). See [launch stage
+     descriptions](https://cloud.google.com/maps-platform/terms/launch-stages) for more details.
        */
       public java.util.List<java.lang.String> getExperiments() {
         return experiments;
       }
 
-      /** Optional. Specifies the pre-GA features to enable. */
+      /**
+       * Optional. Specifies the pre-GA experiments to enable. Requests using this field are
+       * classified as a pre-GA offering under the [Google Maps Platform Service Specific
+       * Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). See [launch stage
+       * descriptions](https://cloud.google.com/maps-platform/terms/launch-stages) for more details.
+       */
       public FindClosest setExperiments(java.util.List<java.lang.String> experiments) {
         this.experiments = experiments;
         return this;
@@ -525,17 +538,32 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Optional. Specifies the pre-GA experiments to enable. */
+      /**
+       * Optional. Specifies the pre-GA experiments to enable. Requests using this field are
+       * classified as a pre-GA offering under the [Google Maps Platform Service Specific
+       * Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). See [launch stage
+       * descriptions]( https://cloud.google.com/maps-platform/terms/launch-stages) for more
+       * details.
+       */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> experiments;
 
-      /** Optional. Specifies the pre-GA experiments to enable.
+      /** Optional. Specifies the pre-GA experiments to enable. Requests using this field are classified as a
+     pre-GA offering under the [Google Maps Platform Service Specific
+     Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). See [launch stage
+     descriptions]( https://cloud.google.com/maps-platform/terms/launch-stages) for more details.
        */
       public java.util.List<java.lang.String> getExperiments() {
         return experiments;
       }
 
-      /** Optional. Specifies the pre-GA experiments to enable. */
+      /**
+       * Optional. Specifies the pre-GA experiments to enable. Requests using this field are
+       * classified as a pre-GA offering under the [Google Maps Platform Service Specific
+       * Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). See [launch stage
+       * descriptions]( https://cloud.google.com/maps-platform/terms/launch-stages) for more
+       * details.
+       */
       public Get setExperiments(java.util.List<java.lang.String> experiments) {
         this.experiments = experiments;
         return this;
@@ -863,8 +891,7 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

@@ -45,7 +45,8 @@ public final class GoogleCloudRetailV2alphaExportAnalyticsMetricsRequest extends
   private java.lang.String filter;
 
   /**
-   * Required. The output location of the data.
+   * Required. The output location of the data. Only `bigquery_destination` is supported, and
+   * `bigquery_destination.table_type` must be set to `view`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +84,8 @@ public final class GoogleCloudRetailV2alphaExportAnalyticsMetricsRequest extends
   }
 
   /**
-   * Required. The output location of the data.
+   * Required. The output location of the data. Only `bigquery_destination` is supported, and
+   * `bigquery_destination.table_type` must be set to `view`.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaOutputConfig getOutputConfig() {
@@ -91,7 +93,8 @@ public final class GoogleCloudRetailV2alphaExportAnalyticsMetricsRequest extends
   }
 
   /**
-   * Required. The output location of the data.
+   * Required. The output location of the data. Only `bigquery_destination` is supported, and
+   * `bigquery_destination.table_type` must be set to `view`.
    * @param outputConfig outputConfig or {@code null} for none
    */
   public GoogleCloudRetailV2alphaExportAnalyticsMetricsRequest setOutputConfig(GoogleCloudRetailV2alphaOutputConfig outputConfig) {

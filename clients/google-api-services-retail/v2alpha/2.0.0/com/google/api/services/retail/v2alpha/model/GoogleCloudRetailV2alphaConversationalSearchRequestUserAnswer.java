@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2alphaConversationalSearchRequestUserAnswer
 
   /**
    * Optional. This field specifies the selected answer during the conversational search. This
-   * should be a subset of ConversationalSearchResponse.followup_question.suggested_answers.
+   * should be a subset of ConversationalSearchResponse.FollowupQuestion.SuggestedAnswer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class GoogleCloudRetailV2alphaConversationalSearchRequestUserAnswer
 
   /**
    * Optional. This field specifies the selected answer during the conversational search. This
-   * should be a subset of ConversationalSearchResponse.followup_question.suggested_answers.
+   * should be a subset of ConversationalSearchResponse.FollowupQuestion.SuggestedAnswer.
    * @return value or {@code null} for none
    */
   public GoogleCloudRetailV2alphaConversationalSearchRequestUserAnswerSelectedAnswer getSelectedAnswer() {
@@ -57,7 +57,7 @@ public final class GoogleCloudRetailV2alphaConversationalSearchRequestUserAnswer
 
   /**
    * Optional. This field specifies the selected answer during the conversational search. This
-   * should be a subset of ConversationalSearchResponse.followup_question.suggested_answers.
+   * should be a subset of ConversationalSearchResponse.FollowupQuestion.SuggestedAnswer.
    * @param selectedAnswer selectedAnswer or {@code null} for none
    */
   public GoogleCloudRetailV2alphaConversationalSearchRequestUserAnswer setSelectedAnswer(GoogleCloudRetailV2alphaConversationalSearchRequestUserAnswerSelectedAnswer selectedAnswer) {

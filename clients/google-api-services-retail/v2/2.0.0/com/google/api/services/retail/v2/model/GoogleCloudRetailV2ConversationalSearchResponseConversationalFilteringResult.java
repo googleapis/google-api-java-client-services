@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2ConversationalSearchResponseConversational
   /**
    * This is the incremental additional filters implied from the current user answer. User should
    * add the suggested addition filters to the previous
-   * ConversationalSearchRequest.search_params.filter and SearchRequest.filter, and use the merged
+   * ConversationalSearchRequest.SearchParams.filter and SearchRequest.filter, and use the merged
    * filter in the follow up requests.
    * The value may be {@code null}.
    */
@@ -51,7 +51,7 @@ public final class GoogleCloudRetailV2ConversationalSearchResponseConversational
   /**
    * This is the incremental additional filters implied from the current user answer. User should
    * add the suggested addition filters to the previous
-   * ConversationalSearchRequest.search_params.filter and SearchRequest.filter, and use the merged
+   * ConversationalSearchRequest.SearchParams.filter and SearchRequest.filter, and use the merged
    * filter in the follow up requests.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class GoogleCloudRetailV2ConversationalSearchResponseConversational
   /**
    * This is the incremental additional filters implied from the current user answer. User should
    * add the suggested addition filters to the previous
-   * ConversationalSearchRequest.search_params.filter and SearchRequest.filter, and use the merged
+   * ConversationalSearchRequest.SearchParams.filter and SearchRequest.filter, and use the merged
    * filter in the follow up requests.
    * @param additionalFilter additionalFilter or {@code null} for none
    */

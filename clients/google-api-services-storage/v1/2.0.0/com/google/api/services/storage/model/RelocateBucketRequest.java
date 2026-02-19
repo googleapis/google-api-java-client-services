@@ -38,6 +38,14 @@ public final class RelocateBucketRequest extends com.google.api.client.json.Gene
   private DestinationCustomPlacementConfig destinationCustomPlacementConfig;
 
   /**
+   * Resource name of a Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-
+   * kr/cryptoKeys/my-key. If set, is used to encrypt all objects in the destination bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destinationKmsKeyName;
+
+  /**
    * The new location the bucket will be relocated to.
    * The value may be {@code null}.
    */
@@ -65,6 +73,25 @@ public final class RelocateBucketRequest extends com.google.api.client.json.Gene
    */
   public RelocateBucketRequest setDestinationCustomPlacementConfig(DestinationCustomPlacementConfig destinationCustomPlacementConfig) {
     this.destinationCustomPlacementConfig = destinationCustomPlacementConfig;
+    return this;
+  }
+
+  /**
+   * Resource name of a Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-
+   * kr/cryptoKeys/my-key. If set, is used to encrypt all objects in the destination bucket.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestinationKmsKeyName() {
+    return destinationKmsKeyName;
+  }
+
+  /**
+   * Resource name of a Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-
+   * kr/cryptoKeys/my-key. If set, is used to encrypt all objects in the destination bucket.
+   * @param destinationKmsKeyName destinationKmsKeyName or {@code null} for none
+   */
+  public RelocateBucketRequest setDestinationKmsKeyName(java.lang.String destinationKmsKeyName) {
+    this.destinationKmsKeyName = destinationKmsKeyName;
     return this;
   }
 

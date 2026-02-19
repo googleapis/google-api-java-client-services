@@ -103,7 +103,7 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -1565,7 +1565,8 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Modifies linked offer objects for the event ticket object with the given ID.
+     * Deprecated: Use Auto Linked Passes instead. Modifies linked offer objects for the event ticket
+     * object with the given ID.
      *
      * Create a request for the method "eventticketobject.modifylinkedofferobjects".
      *
@@ -1591,7 +1592,8 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "walletobjects/v1/eventTicketObject/{resourceId}/modifyLinkedOfferObjects";
 
       /**
-       * Modifies linked offer objects for the event ticket object with the given ID.
+       * Deprecated: Use Auto Linked Passes instead. Modifies linked offer objects for the event ticket
+       * object with the given ID.
        *
        * Create a request for the method "eventticketobject.modifylinkedofferobjects".
        *
@@ -9251,7 +9253,8 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
       }
     }
     /**
-     * Modifies linked offer objects for the loyalty object with the given ID.
+     * Deprecated: Use Auto Linked Passes instead. Modifies linked offer objects for the loyalty object
+     * with the given ID.
      *
      * Create a request for the method "loyaltyobject.modifylinkedofferobjects".
      *
@@ -9277,7 +9280,8 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
       private static final String REST_PATH = "walletobjects/v1/loyaltyObject/{resourceId}/modifyLinkedOfferObjects";
 
       /**
-       * Modifies linked offer objects for the loyalty object with the given ID.
+       * Deprecated: Use Auto Linked Passes instead. Modifies linked offer objects for the loyalty
+       * object with the given ID.
        *
        * Create a request for the method "loyaltyobject.modifylinkedofferobjects".
        *
@@ -14063,8 +14067,7 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

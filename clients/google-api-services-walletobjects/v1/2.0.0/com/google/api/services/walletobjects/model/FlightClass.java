@@ -374,8 +374,8 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
   private java.util.List<TextModuleData> textModulesData;
 
   /**
-   * Optional value added module data. Maximum of ten on the class. For a pass only ten will be
-   * displayed, prioritizing those from the object.
+   * Optional value added module data. Maximum of fifteen on the class. For a pass only fifteen will
+   * be displayed, prioritizing those from the object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1205,8 +1205,8 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional value added module data. Maximum of ten on the class. For a pass only ten will be
-   * displayed, prioritizing those from the object.
+   * Optional value added module data. Maximum of fifteen on the class. For a pass only fifteen will
+   * be displayed, prioritizing those from the object.
    * @return value or {@code null} for none
    */
   public java.util.List<ValueAddedModuleData> getValueAddedModuleData() {
@@ -1214,8 +1214,8 @@ public final class FlightClass extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional value added module data. Maximum of ten on the class. For a pass only ten will be
-   * displayed, prioritizing those from the object.
+   * Optional value added module data. Maximum of fifteen on the class. For a pass only fifteen will
+   * be displayed, prioritizing those from the object.
    * @param valueAddedModuleData valueAddedModuleData or {@code null} for none
    */
   public FlightClass setValueAddedModuleData(java.util.List<ValueAddedModuleData> valueAddedModuleData) {

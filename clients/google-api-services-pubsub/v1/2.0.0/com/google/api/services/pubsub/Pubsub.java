@@ -103,7 +103,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -2280,8 +2280,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Identifier. User-provided name for this snapshot. If the name is not provided in the
-       *        request, the server will assign a random name for this snapshot on the same project as the
+       * @param name Required. User-provided name for this snapshot. If the name is not provided in the request, the
+       *        server will assign a random name for this snapshot on the same project as the
        *        subscription. Note that for REST API requests, you must specify a name. See the [resource
        *        name rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). Format is
        *        `projects/{project}/snapshots/{snap}`.
@@ -2322,8 +2322,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Identifier. User-provided name for this snapshot. If the name is not provided in the
-       *        request, the server will assign a random name for this snapshot on the same project as the
+         * @param name Required. User-provided name for this snapshot. If the name is not provided in the request, the
+       *        server will assign a random name for this snapshot on the same project as the
        *        subscription. Note that for REST API requests, you must specify a name. See the [resource
        *        name rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). Format is
        *        `projects/{project}/snapshots/{snap}`.
@@ -2396,18 +2396,18 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. User-provided name for this snapshot. If the name is not provided
-         * in the request, the server will assign a random name for this snapshot on the same
-         * project as the subscription. Note that for REST API requests, you must specify a name.
-         * See the [resource name rules](https://cloud.google.com/pubsub/docs/pubsub-
-         * basics#resource_names). Format is `projects/{project}/snapshots/{snap}`.
+         * Required. User-provided name for this snapshot. If the name is not provided in the
+         * request, the server will assign a random name for this snapshot on the same project as
+         * the subscription. Note that for REST API requests, you must specify a name. See the
+         * [resource name rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+         * Format is `projects/{project}/snapshots/{snap}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Identifier. User-provided name for this snapshot. If the name is not provided in the
-       request, the server will assign a random name for this snapshot on the same project as the
-       subscription. Note that for REST API requests, you must specify a name. See the [resource name
+        /** Required. User-provided name for this snapshot. If the name is not provided in the request, the
+       server will assign a random name for this snapshot on the same project as the subscription. Note
+       that for REST API requests, you must specify a name. See the [resource name
        rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names). Format is
        `projects/{project}/snapshots/{snap}`.
          */
@@ -2416,11 +2416,11 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. User-provided name for this snapshot. If the name is not provided
-         * in the request, the server will assign a random name for this snapshot on the same
-         * project as the subscription. Note that for REST API requests, you must specify a name.
-         * See the [resource name rules](https://cloud.google.com/pubsub/docs/pubsub-
-         * basics#resource_names). Format is `projects/{project}/snapshots/{snap}`.
+         * Required. User-provided name for this snapshot. If the name is not provided in the
+         * request, the server will assign a random name for this snapshot on the same project as
+         * the subscription. Note that for REST API requests, you must specify a name. See the
+         * [resource name rules](https://cloud.google.com/pubsub/docs/pubsub-basics#resource_names).
+         * Format is `projects/{project}/snapshots/{snap}`.
          */
         public Create setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2451,8 +2451,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param snapshot Required. Identifier. The name of the snapshot to delete. Format is
-       *        `projects/{project}/snapshots/{snap}`.
+       * @param snapshot Required. The name of the snapshot to delete. Format is `projects/{project}/snapshots/{snap}`.
        * @return the request
        */
       public Delete delete(java.lang.String snapshot) throws java.io.IOException {
@@ -2484,8 +2483,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param snapshot Required. Identifier. The name of the snapshot to delete. Format is
-       *        `projects/{project}/snapshots/{snap}`.
+         * @param snapshot Required. The name of the snapshot to delete. Format is `projects/{project}/snapshots/{snap}`.
          * @since 1.13
          */
         protected Delete(java.lang.String snapshot) {
@@ -2554,21 +2552,20 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The name of the snapshot to delete. Format is
+         * Required. The name of the snapshot to delete. Format is
          * `projects/{project}/snapshots/{snap}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String snapshot;
 
-        /** Required. Identifier. The name of the snapshot to delete. Format is
-       `projects/{project}/snapshots/{snap}`.
+        /** Required. The name of the snapshot to delete. Format is `projects/{project}/snapshots/{snap}`.
          */
         public java.lang.String getSnapshot() {
           return snapshot;
         }
 
         /**
-         * Required. Identifier. The name of the snapshot to delete. Format is
+         * Required. The name of the snapshot to delete. Format is
          * `projects/{project}/snapshots/{snap}`.
          */
         public Delete setSnapshot(java.lang.String snapshot) {
@@ -2597,8 +2594,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param snapshot Required. Identifier. The name of the snapshot to get. Format is
-       *        `projects/{project}/snapshots/{snap}`.
+       * @param snapshot Required. The name of the snapshot to get. Format is `projects/{project}/snapshots/{snap}`.
        * @return the request
        */
       public Get get(java.lang.String snapshot) throws java.io.IOException {
@@ -2627,8 +2623,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param snapshot Required. Identifier. The name of the snapshot to get. Format is
-       *        `projects/{project}/snapshots/{snap}`.
+         * @param snapshot Required. The name of the snapshot to get. Format is `projects/{project}/snapshots/{snap}`.
          * @since 1.13
          */
         protected Get(java.lang.String snapshot) {
@@ -2707,21 +2702,20 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The name of the snapshot to get. Format is
+         * Required. The name of the snapshot to get. Format is
          * `projects/{project}/snapshots/{snap}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String snapshot;
 
-        /** Required. Identifier. The name of the snapshot to get. Format is
-       `projects/{project}/snapshots/{snap}`.
+        /** Required. The name of the snapshot to get. Format is `projects/{project}/snapshots/{snap}`.
          */
         public java.lang.String getSnapshot() {
           return snapshot;
         }
 
         /**
-         * Required. Identifier. The name of the snapshot to get. Format is
+         * Required. The name of the snapshot to get. Format is
          * `projects/{project}/snapshots/{snap}`.
          */
         public Get setSnapshot(java.lang.String snapshot) {
@@ -2948,8 +2942,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param project Required. Identifier. The name of the project in which to list snapshots. Format is
-       *        `projects/{project-id}`.
+       * @param project Required. The name of the project in which to list snapshots. Format is `projects/{project-id}`.
        * @return the request
        */
       public List list(java.lang.String project) throws java.io.IOException {
@@ -2978,8 +2971,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param project Required. Identifier. The name of the project in which to list snapshots. Format is
-       *        `projects/{project-id}`.
+         * @param project Required. The name of the project in which to list snapshots. Format is `projects/{project-id}`.
          * @since 1.13
          */
         protected List(java.lang.String project) {
@@ -3058,21 +3050,20 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The name of the project in which to list snapshots. Format is
+         * Required. The name of the project in which to list snapshots. Format is
          * `projects/{project-id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String project;
 
-        /** Required. Identifier. The name of the project in which to list snapshots. Format is
-       `projects/{project-id}`.
+        /** Required. The name of the project in which to list snapshots. Format is `projects/{project-id}`.
          */
         public java.lang.String getProject() {
           return project;
         }
 
         /**
-         * Required. Identifier. The name of the project in which to list snapshots. Format is
+         * Required. The name of the project in which to list snapshots. Format is
          * `projects/{project-id}`.
          */
         public List setProject(java.lang.String project) {
@@ -3913,8 +3904,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param subscription Required. Identifier. The subscription to delete. Format is
-       *        `projects/{project}/subscriptions/{sub}`.
+       * @param subscription Required. The subscription to delete. Format is `projects/{project}/subscriptions/{sub}`.
        * @return the request
        */
       public Delete delete(java.lang.String subscription) throws java.io.IOException {
@@ -3943,8 +3933,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param subscription Required. Identifier. The subscription to delete. Format is
-       *        `projects/{project}/subscriptions/{sub}`.
+         * @param subscription Required. The subscription to delete. Format is `projects/{project}/subscriptions/{sub}`.
          * @since 1.13
          */
         protected Delete(java.lang.String subscription) {
@@ -4013,22 +4002,19 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The subscription to delete. Format is
-         * `projects/{project}/subscriptions/{sub}`.
+         * Required. The subscription to delete. Format is `projects/{project}/subscriptions/{sub}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String subscription;
 
-        /** Required. Identifier. The subscription to delete. Format is
-       `projects/{project}/subscriptions/{sub}`.
+        /** Required. The subscription to delete. Format is `projects/{project}/subscriptions/{sub}`.
          */
         public java.lang.String getSubscription() {
           return subscription;
         }
 
         /**
-         * Required. Identifier. The subscription to delete. Format is
-         * `projects/{project}/subscriptions/{sub}`.
+         * Required. The subscription to delete. Format is `projects/{project}/subscriptions/{sub}`.
          */
         public Delete setSubscription(java.lang.String subscription) {
           if (!getSuppressPatternChecks()) {
@@ -4191,8 +4177,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param subscription Required. Identifier. The name of the subscription to get. Format is
-       *        `projects/{project}/subscriptions/{sub}`.
+       * @param subscription Required. The name of the subscription to get. Format is `projects/{project}/subscriptions/{sub}`.
        * @return the request
        */
       public Get get(java.lang.String subscription) throws java.io.IOException {
@@ -4218,8 +4203,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param subscription Required. Identifier. The name of the subscription to get. Format is
-       *        `projects/{project}/subscriptions/{sub}`.
+         * @param subscription Required. The name of the subscription to get. Format is `projects/{project}/subscriptions/{sub}`.
          * @since 1.13
          */
         protected Get(java.lang.String subscription) {
@@ -4298,21 +4282,20 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The name of the subscription to get. Format is
+         * Required. The name of the subscription to get. Format is
          * `projects/{project}/subscriptions/{sub}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String subscription;
 
-        /** Required. Identifier. The name of the subscription to get. Format is
-       `projects/{project}/subscriptions/{sub}`.
+        /** Required. The name of the subscription to get. Format is `projects/{project}/subscriptions/{sub}`.
          */
         public java.lang.String getSubscription() {
           return subscription;
         }
 
         /**
-         * Required. Identifier. The name of the subscription to get. Format is
+         * Required. The name of the subscription to get. Format is
          * `projects/{project}/subscriptions/{sub}`.
          */
         public Get setSubscription(java.lang.String subscription) {
@@ -4536,8 +4519,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param project Required. Identifier. The name of the project in which to list subscriptions. Format is
-       *        `projects/{project-id}`.
+       * @param project Required. The name of the project in which to list subscriptions. Format is `projects/{project-id}`.
        * @return the request
        */
       public List list(java.lang.String project) throws java.io.IOException {
@@ -4563,8 +4545,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param project Required. Identifier. The name of the project in which to list subscriptions. Format is
-       *        `projects/{project-id}`.
+         * @param project Required. The name of the project in which to list subscriptions. Format is `projects/{project-id}`.
          * @since 1.13
          */
         protected List(java.lang.String project) {
@@ -4643,21 +4624,21 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The name of the project in which to list subscriptions. Format is
+         * Required. The name of the project in which to list subscriptions. Format is
          * `projects/{project-id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String project;
 
-        /** Required. Identifier. The name of the project in which to list subscriptions. Format is
-       `projects/{project-id}`.
+        /** Required. The name of the project in which to list subscriptions. Format is `projects/{project-
+       id}`.
          */
         public java.lang.String getProject() {
           return project;
         }
 
         /**
-         * Required. Identifier. The name of the project in which to list subscriptions. Format is
+         * Required. The name of the project in which to list subscriptions. Format is
          * `projects/{project-id}`.
          */
         public List setProject(java.lang.String project) {
@@ -5923,7 +5904,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param topic Required. Identifier. Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.
+       * @param topic Required. Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.
        * @return the request
        */
       public Delete delete(java.lang.String topic) throws java.io.IOException {
@@ -5952,7 +5933,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param topic Required. Identifier. Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.
+         * @param topic Required. Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.
          * @since 1.13
          */
         protected Delete(java.lang.String topic) {
@@ -6021,21 +6002,19 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. Name of the topic to delete. Format is
-         * `projects/{project}/topics/{topic}`.
+         * Required. Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String topic;
 
-        /** Required. Identifier. Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.
+        /** Required. Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.
          */
         public java.lang.String getTopic() {
           return topic;
         }
 
         /**
-         * Required. Identifier. Name of the topic to delete. Format is
-         * `projects/{project}/topics/{topic}`.
+         * Required. Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.
          */
         public Delete setTopic(java.lang.String topic) {
           if (!getSuppressPatternChecks()) {
@@ -6060,7 +6039,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param topic Required. Identifier. The name of the topic to get. Format is `projects/{project}/topics/{topic}`.
+       * @param topic Required. The name of the topic to get. Format is `projects/{project}/topics/{topic}`.
        * @return the request
        */
       public Get get(java.lang.String topic) throws java.io.IOException {
@@ -6086,7 +6065,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param topic Required. Identifier. The name of the topic to get. Format is `projects/{project}/topics/{topic}`.
+         * @param topic Required. The name of the topic to get. Format is `projects/{project}/topics/{topic}`.
          * @since 1.13
          */
         protected Get(java.lang.String topic) {
@@ -6165,21 +6144,19 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The name of the topic to get. Format is
-         * `projects/{project}/topics/{topic}`.
+         * Required. The name of the topic to get. Format is `projects/{project}/topics/{topic}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String topic;
 
-        /** Required. Identifier. The name of the topic to get. Format is `projects/{project}/topics/{topic}`.
+        /** Required. The name of the topic to get. Format is `projects/{project}/topics/{topic}`.
          */
         public java.lang.String getTopic() {
           return topic;
         }
 
         /**
-         * Required. Identifier. The name of the topic to get. Format is
-         * `projects/{project}/topics/{topic}`.
+         * Required. The name of the topic to get. Format is `projects/{project}/topics/{topic}`.
          */
         public Get setTopic(java.lang.String topic) {
           if (!getSuppressPatternChecks()) {
@@ -6402,8 +6379,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param project Required. Identifier. The name of the project in which to list topics. Format is `projects/{project-
-       *        id}`.
+       * @param project Required. The name of the project in which to list topics. Format is `projects/{project-id}`.
        * @return the request
        */
       public List list(java.lang.String project) throws java.io.IOException {
@@ -6429,8 +6405,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param project Required. Identifier. The name of the project in which to list topics. Format is `projects/{project-
-       *        id}`.
+         * @param project Required. The name of the project in which to list topics. Format is `projects/{project-id}`.
          * @since 1.13
          */
         protected List(java.lang.String project) {
@@ -6509,22 +6484,21 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The name of the project in which to list topics. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to list topics. Format is `projects/{project-
+         * id}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String project;
 
-        /** Required. Identifier. The name of the project in which to list topics. Format is
-       `projects/{project-id}`.
+        /** Required. The name of the project in which to list topics. Format is `projects/{project-id}`.
          */
         public java.lang.String getProject() {
           return project;
         }
 
         /**
-         * Required. Identifier. The name of the project in which to list topics. Format is
-         * `projects/{project-id}`.
+         * Required. The name of the project in which to list topics. Format is `projects/{project-
+         * id}`.
          */
         public List setProject(java.lang.String project) {
           if (!getSuppressPatternChecks()) {
@@ -6746,7 +6720,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
        * This request holds the parameters needed by the pubsub server.  After setting any optional
        * parameters, call the {@link Publish#execute()} method to invoke the remote operation.
        *
-       * @param topic Required. Identifier. The messages in the request will be published on this topic. Format is
+       * @param topic Required. The messages in the request will be published on this topic. Format is
        *        `projects/{project}/topics/{topic}`.
        * @param content the {@link com.google.api.services.pubsub.model.PublishRequest}
        * @return the request
@@ -6775,7 +6749,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
          * Publish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param topic Required. Identifier. The messages in the request will be published on this topic. Format is
+         * @param topic Required. The messages in the request will be published on this topic. Format is
        *        `projects/{project}/topics/{topic}`.
          * @param content the {@link com.google.api.services.pubsub.model.PublishRequest}
          * @since 1.13
@@ -6846,13 +6820,13 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The messages in the request will be published on this topic. Format
-         * is `projects/{project}/topics/{topic}`.
+         * Required. The messages in the request will be published on this topic. Format is
+         * `projects/{project}/topics/{topic}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String topic;
 
-        /** Required. Identifier. The messages in the request will be published on this topic. Format is
+        /** Required. The messages in the request will be published on this topic. Format is
        `projects/{project}/topics/{topic}`.
          */
         public java.lang.String getTopic() {
@@ -6860,8 +6834,8 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Required. Identifier. The messages in the request will be published on this topic. Format
-         * is `projects/{project}/topics/{topic}`.
+         * Required. The messages in the request will be published on this topic. Format is
+         * `projects/{project}/topics/{topic}`.
          */
         public Publish setTopic(java.lang.String topic) {
           if (!getSuppressPatternChecks()) {
@@ -7640,8 +7614,7 @@ public class Pubsub extends com.google.api.client.googleapis.services.json.Abstr
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

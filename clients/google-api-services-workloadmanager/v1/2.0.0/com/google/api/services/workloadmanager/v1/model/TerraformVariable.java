@@ -17,7 +17,9 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Database Properties.
+ * In order to align with Infra Manager dependency, we create the same TerraformVariable message to
+ * represent a Terraform input variable, by following Infra Manager's API documentation:
+ * https://cloud.google.com/infrastructure-manager/docs/reference/rest A Terraform input variable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,64 +29,40 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DatabaseProperties extends com.google.api.client.json.GenericJson {
+public final class TerraformVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Backup properties.
+   * Optional. Input variable value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private BackupProperties backupProperties;
+  private java.lang.Object inputValue;
 
   /**
-   * Output only. Type of the database. `HANA`, `DB2`, etc.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String databaseType;
-
-  /**
-   * Output only. Backup properties.
+   * Optional. Input variable value.
    * @return value or {@code null} for none
    */
-  public BackupProperties getBackupProperties() {
-    return backupProperties;
+  public java.lang.Object getInputValue() {
+    return inputValue;
   }
 
   /**
-   * Output only. Backup properties.
-   * @param backupProperties backupProperties or {@code null} for none
+   * Optional. Input variable value.
+   * @param inputValue inputValue or {@code null} for none
    */
-  public DatabaseProperties setBackupProperties(BackupProperties backupProperties) {
-    this.backupProperties = backupProperties;
-    return this;
-  }
-
-  /**
-   * Output only. Type of the database. `HANA`, `DB2`, etc.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDatabaseType() {
-    return databaseType;
-  }
-
-  /**
-   * Output only. Type of the database. `HANA`, `DB2`, etc.
-   * @param databaseType databaseType or {@code null} for none
-   */
-  public DatabaseProperties setDatabaseType(java.lang.String databaseType) {
-    this.databaseType = databaseType;
+  public TerraformVariable setInputValue(java.lang.Object inputValue) {
+    this.inputValue = inputValue;
     return this;
   }
 
   @Override
-  public DatabaseProperties set(String fieldName, Object value) {
-    return (DatabaseProperties) super.set(fieldName, value);
+  public TerraformVariable set(String fieldName, Object value) {
+    return (TerraformVariable) super.set(fieldName, value);
   }
 
   @Override
-  public DatabaseProperties clone() {
-    return (DatabaseProperties) super.clone();
+  public TerraformVariable clone() {
+    return (TerraformVariable) super.clone();
   }
 
 }

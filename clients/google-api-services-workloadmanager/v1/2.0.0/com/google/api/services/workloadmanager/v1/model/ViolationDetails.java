@@ -37,11 +37,24 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   private java.lang.String asset;
 
   /**
-   * Details of the violation. TODO(b/452163887)
+   * Details of the violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> observed;
+
+  /**
+   * Output only. The rule output of the violation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RuleOutput> ruleOutput;
+
+  static {
+    // hack to force ProGuard to consider RuleOutput used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RuleOutput.class);
+  }
 
   /**
    * The service account associated with the resource.
@@ -68,7 +81,7 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Details of the violation. TODO(b/452163887)
+   * Details of the violation.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getObserved() {
@@ -76,11 +89,28 @@ public final class ViolationDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Details of the violation. TODO(b/452163887)
+   * Details of the violation.
    * @param observed observed or {@code null} for none
    */
   public ViolationDetails setObserved(java.util.Map<String, java.lang.String> observed) {
     this.observed = observed;
+    return this;
+  }
+
+  /**
+   * Output only. The rule output of the violation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RuleOutput> getRuleOutput() {
+    return ruleOutput;
+  }
+
+  /**
+   * Output only. The rule output of the violation.
+   * @param ruleOutput ruleOutput or {@code null} for none
+   */
+  public ViolationDetails setRuleOutput(java.util.List<RuleOutput> ruleOutput) {
+    this.ruleOutput = ruleOutput;
     return this;
   }
 

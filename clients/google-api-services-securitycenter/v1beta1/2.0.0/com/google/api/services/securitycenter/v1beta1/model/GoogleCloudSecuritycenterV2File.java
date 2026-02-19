@@ -46,6 +46,13 @@ public final class GoogleCloudSecuritycenterV2File extends com.google.api.client
   private GoogleCloudSecuritycenterV2DiskPath diskPath;
 
   /**
+   * The load state of the file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileLoadState;
+
+  /**
    * The length in bytes of the file prefix that was hashed. If hashed_size == size, any hashes
    * reported represent the entire file.
    * The value may be {@code null}.
@@ -120,6 +127,23 @@ public final class GoogleCloudSecuritycenterV2File extends com.google.api.client
    */
   public GoogleCloudSecuritycenterV2File setDiskPath(GoogleCloudSecuritycenterV2DiskPath diskPath) {
     this.diskPath = diskPath;
+    return this;
+  }
+
+  /**
+   * The load state of the file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileLoadState() {
+    return fileLoadState;
+  }
+
+  /**
+   * The load state of the file.
+   * @param fileLoadState fileLoadState or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2File setFileLoadState(java.lang.String fileLoadState) {
+    this.fileLoadState = fileLoadState;
     return this;
   }
 

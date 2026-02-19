@@ -17,7 +17,9 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Contains dynamic feed information.
+ * *Beta:* This API resource is available only to a very limited number of customers. If you'd like
+ * to use this resource, please reach out to your Google sales representative. Contains dynamic feed
+ * information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation

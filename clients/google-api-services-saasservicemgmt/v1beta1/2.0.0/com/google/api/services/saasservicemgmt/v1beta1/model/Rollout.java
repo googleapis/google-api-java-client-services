@@ -57,6 +57,14 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
+
+  /**
    * Optional. Output only. Output only snapshot of the effective unit filter at Rollout start time.
    * Contains a CEL(https://github.com/google/cel-spec) expression consisting of a conjunction of
    * Rollout.unit_filter and RolloutKind.unit_filter. This field captures the filter applied by the
@@ -271,6 +279,25 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public Rollout setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
     return this;
   }
 

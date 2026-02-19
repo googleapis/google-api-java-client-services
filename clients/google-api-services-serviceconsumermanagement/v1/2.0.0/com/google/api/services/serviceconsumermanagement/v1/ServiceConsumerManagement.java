@@ -103,7 +103,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -756,9 +756,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
       /**
        * When set to `true`, operations that are reachable are returned as normal, and those that
-       * are unreachable are returned in the [ListOperationsResponse.unreachable] field. This can
-       * only be `true` when reading across collections e.g. when `parent` is set to
-       * `"projects/example/locations/-"`. This field is not by default supported and will result in
+       * are unreachable are returned in the ListOperationsResponse.unreachable field. This can only
+       * be `true` when reading across collections. For example, when `parent` is set to
+       * `"projects/example/locations/-"`. This field is not supported by default and will result in
        * an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
        * product specific documentation.
        */
@@ -766,10 +766,11 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
       private java.lang.Boolean returnPartialSuccess;
 
       /** When set to `true`, operations that are reachable are returned as normal, and those that are
-     unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-     when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-     field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-     explicitly documented otherwise in service or product specific documentation.
+     unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+     when reading across collections. For example, when `parent` is set to
+     `"projects/example/locations/-"`. This field is not supported by default and will result in an
+     `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+     documentation.
        */
       public java.lang.Boolean getReturnPartialSuccess() {
         return returnPartialSuccess;
@@ -777,9 +778,9 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
       /**
        * When set to `true`, operations that are reachable are returned as normal, and those that
-       * are unreachable are returned in the [ListOperationsResponse.unreachable] field. This can
-       * only be `true` when reading across collections e.g. when `parent` is set to
-       * `"projects/example/locations/-"`. This field is not by default supported and will result in
+       * are unreachable are returned in the ListOperationsResponse.unreachable field. This can only
+       * be `true` when reading across collections. For example, when `parent` is set to
+       * `"projects/example/locations/-"`. This field is not supported by default and will result in
        * an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
        * product specific documentation.
        */
@@ -961,15 +962,15 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
       /**
        * Optional. The maximum number of results returned by this request. Currently, the default
-       * maximum is set to 1000. If `page_size` isn't provided or the size provided is a number
-       * larger than 1000, it's automatically set to 1000.
+       * maximum is set to 256. If `page_size` <= 256, the request proceeds. Else, the request fails
+       * with an `TU_INVALID_PAGE_SIZE` error.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The maximum number of results returned by this request. Currently, the default maximum is
-     set to 1000. If `page_size` isn't provided or the size provided is a number larger than 1000, it's
-     automatically set to 1000.
+     set to 256. If `page_size` <= 256, the request proceeds. Else, the request fails with an
+     `TU_INVALID_PAGE_SIZE` error.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -977,8 +978,8 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
 
       /**
        * Optional. The maximum number of results returned by this request. Currently, the default
-       * maximum is set to 1000. If `page_size` isn't provided or the size provided is a number
-       * larger than 1000, it's automatically set to 1000.
+       * maximum is set to 256. If `page_size` <= 256, the request proceeds. Else, the request fails
+       * with an `TU_INVALID_PAGE_SIZE` error.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -2543,8 +2544,7 @@ public class ServiceConsumerManagement extends com.google.api.client.googleapis.
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

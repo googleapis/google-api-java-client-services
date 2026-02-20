@@ -44,14 +44,6 @@ public final class GoogleCloudRecommenderV1Impact extends com.google.api.client.
   private GoogleCloudRecommenderV1CostProjection costProjection;
 
   /**
-   * If populated, the impact contains multiple components. In this case, the top-level impact
-   * contains aggregated values and each component contains per-service details.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudRecommenderV1Impact> impactComponents;
-
-  /**
    * Use with CategoryType.RELIABILITY
    * The value may be {@code null}.
    */
@@ -110,25 +102,6 @@ public final class GoogleCloudRecommenderV1Impact extends com.google.api.client.
    */
   public GoogleCloudRecommenderV1Impact setCostProjection(GoogleCloudRecommenderV1CostProjection costProjection) {
     this.costProjection = costProjection;
-    return this;
-  }
-
-  /**
-   * If populated, the impact contains multiple components. In this case, the top-level impact
-   * contains aggregated values and each component contains per-service details.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudRecommenderV1Impact> getImpactComponents() {
-    return impactComponents;
-  }
-
-  /**
-   * If populated, the impact contains multiple components. In this case, the top-level impact
-   * contains aggregated values and each component contains per-service details.
-   * @param impactComponents impactComponents or {@code null} for none
-   */
-  public GoogleCloudRecommenderV1Impact setImpactComponents(java.util.List<GoogleCloudRecommenderV1Impact> impactComponents) {
-    this.impactComponents = impactComponents;
     return this;
   }
 

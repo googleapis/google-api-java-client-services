@@ -60,9 +60,9 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Resource name of the saved query.In the format:
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
-   * locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
-   * regions)After the saved query is created, the location cannot be changed.If the user doesn't
-   * provide a QUERY_ID, the system will generate an alphanumeric ID.
+   * locations, see Supported Regions (https://docs.cloud.google.com/logging/docs/region-
+   * support#bucket-regions)After the saved query is created, the location cannot be changed.If the
+   * user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,9 +160,9 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Resource name of the saved query.In the format:
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
-   * locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
-   * regions)After the saved query is created, the location cannot be changed.If the user doesn't
-   * provide a QUERY_ID, the system will generate an alphanumeric ID.
+   * locations, see Supported Regions (https://docs.cloud.google.com/logging/docs/region-
+   * support#bucket-regions)After the saved query is created, the location cannot be changed.If the
+   * user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -172,9 +172,9 @@ public final class SavedQuery extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Resource name of the saved query.In the format:
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/savedQueries/[QUERY_ID]" For a list of supported
-   * locations, see Supported Regions (https://cloud.google.com/logging/docs/region-support#bucket-
-   * regions)After the saved query is created, the location cannot be changed.If the user doesn't
-   * provide a QUERY_ID, the system will generate an alphanumeric ID.
+   * locations, see Supported Regions (https://docs.cloud.google.com/logging/docs/region-
+   * support#bucket-regions)After the saved query is created, the location cannot be changed.If the
+   * user doesn't provide a QUERY_ID, the system will generate an alphanumeric ID.
    * @param name name or {@code null} for none
    */
   public SavedQuery setName(java.lang.String name) {

@@ -30,10 +30,10 @@ package com.google.api.services.spanner.v1.model;
 public final class PartitionQueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * It isn't always possible for Cloud Spanner to infer the right SQL type from a JSON value. For
-   * example, values of type `BYTES` and values of type `STRING` both appear in params as JSON
-   * strings. In these cases, `param_types` can be used to specify the exact SQL type for some or
-   * all of the SQL query parameters. See the definition of Type for more information about SQL
+   * Optional. It isn't always possible for Cloud Spanner to infer the right SQL type from a JSON
+   * value. For example, values of type `BYTES` and values of type `STRING` both appear in params as
+   * JSON strings. In these cases, `param_types` can be used to specify the exact SQL type for some
+   * or all of the SQL query parameters. See the definition of Type for more information about SQL
    * types.
    * The value may be {@code null}.
    */
@@ -41,12 +41,12 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   private java.util.Map<String, Type> paramTypes;
 
   /**
-   * Parameter names and values that bind to placeholders in the SQL string. A parameter placeholder
-   * consists of the `@` character followed by the parameter name (for example, `@firstName`).
-   * Parameter names can contain letters, numbers, and underscores. Parameters can appear anywhere
-   * that a literal value is expected. The same parameter name can be used more than once, for
-   * example: `"WHERE id > @msg_id AND id < @msg_id + 100"` It's an error to execute a SQL statement
-   * with unbound parameters.
+   * Optional. Parameter names and values that bind to placeholders in the SQL string. A parameter
+   * placeholder consists of the `@` character followed by the parameter name (for example,
+   * `@firstName`). Parameter names can contain letters, numbers, and underscores. Parameters can
+   * appear anywhere that a literal value is expected. The same parameter name can be used more than
+   * once, for example: `"WHERE id > @msg_id AND id < @msg_id + 100"` It's an error to execute a SQL
+   * statement with unbound parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,10 +82,10 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   private TransactionSelector transaction;
 
   /**
-   * It isn't always possible for Cloud Spanner to infer the right SQL type from a JSON value. For
-   * example, values of type `BYTES` and values of type `STRING` both appear in params as JSON
-   * strings. In these cases, `param_types` can be used to specify the exact SQL type for some or
-   * all of the SQL query parameters. See the definition of Type for more information about SQL
+   * Optional. It isn't always possible for Cloud Spanner to infer the right SQL type from a JSON
+   * value. For example, values of type `BYTES` and values of type `STRING` both appear in params as
+   * JSON strings. In these cases, `param_types` can be used to specify the exact SQL type for some
+   * or all of the SQL query parameters. See the definition of Type for more information about SQL
    * types.
    * @return value or {@code null} for none
    */
@@ -94,10 +94,10 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * It isn't always possible for Cloud Spanner to infer the right SQL type from a JSON value. For
-   * example, values of type `BYTES` and values of type `STRING` both appear in params as JSON
-   * strings. In these cases, `param_types` can be used to specify the exact SQL type for some or
-   * all of the SQL query parameters. See the definition of Type for more information about SQL
+   * Optional. It isn't always possible for Cloud Spanner to infer the right SQL type from a JSON
+   * value. For example, values of type `BYTES` and values of type `STRING` both appear in params as
+   * JSON strings. In these cases, `param_types` can be used to specify the exact SQL type for some
+   * or all of the SQL query parameters. See the definition of Type for more information about SQL
    * types.
    * @param paramTypes paramTypes or {@code null} for none
    */
@@ -107,12 +107,12 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Parameter names and values that bind to placeholders in the SQL string. A parameter placeholder
-   * consists of the `@` character followed by the parameter name (for example, `@firstName`).
-   * Parameter names can contain letters, numbers, and underscores. Parameters can appear anywhere
-   * that a literal value is expected. The same parameter name can be used more than once, for
-   * example: `"WHERE id > @msg_id AND id < @msg_id + 100"` It's an error to execute a SQL statement
-   * with unbound parameters.
+   * Optional. Parameter names and values that bind to placeholders in the SQL string. A parameter
+   * placeholder consists of the `@` character followed by the parameter name (for example,
+   * `@firstName`). Parameter names can contain letters, numbers, and underscores. Parameters can
+   * appear anywhere that a literal value is expected. The same parameter name can be used more than
+   * once, for example: `"WHERE id > @msg_id AND id < @msg_id + 100"` It's an error to execute a SQL
+   * statement with unbound parameters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParams() {
@@ -120,12 +120,12 @@ public final class PartitionQueryRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Parameter names and values that bind to placeholders in the SQL string. A parameter placeholder
-   * consists of the `@` character followed by the parameter name (for example, `@firstName`).
-   * Parameter names can contain letters, numbers, and underscores. Parameters can appear anywhere
-   * that a literal value is expected. The same parameter name can be used more than once, for
-   * example: `"WHERE id > @msg_id AND id < @msg_id + 100"` It's an error to execute a SQL statement
-   * with unbound parameters.
+   * Optional. Parameter names and values that bind to placeholders in the SQL string. A parameter
+   * placeholder consists of the `@` character followed by the parameter name (for example,
+   * `@firstName`). Parameter names can contain letters, numbers, and underscores. Parameters can
+   * appear anywhere that a literal value is expected. The same parameter name can be used more than
+   * once, for example: `"WHERE id > @msg_id AND id < @msg_id + 100"` It's an error to execute a SQL
+   * statement with unbound parameters.
    * @param params params or {@code null} for none
    */
   public PartitionQueryRequest setParams(java.util.Map<String, java.lang.Object> params) {

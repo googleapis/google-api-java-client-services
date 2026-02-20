@@ -146,13 +146,6 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private GkePodInfo gkePod;
 
   /**
-   * Display information of a Google-managed service.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleManagedServiceInfo googleManagedService;
-
-  /**
    * Display information of a Google service
    * The value may be {@code null}.
    */
@@ -574,23 +567,6 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setGkePod(GkePodInfo gkePod) {
     this.gkePod = gkePod;
-    return this;
-  }
-
-  /**
-   * Display information of a Google-managed service.
-   * @return value or {@code null} for none
-   */
-  public GoogleManagedServiceInfo getGoogleManagedService() {
-    return googleManagedService;
-  }
-
-  /**
-   * Display information of a Google-managed service.
-   * @param googleManagedService googleManagedService or {@code null} for none
-   */
-  public Step setGoogleManagedService(GoogleManagedServiceInfo googleManagedService) {
-    this.googleManagedService = googleManagedService;
     return this;
   }
 

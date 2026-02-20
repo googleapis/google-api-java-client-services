@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.policytroubleshooter.v1;
+package com.google.api.services.policytroubleshooter.v3beta;
 
 /**
- * Service definition for PolicyTroubleshooter (v1).
+ * Service definition for PolicyTroubleshooter (v3beta).
  *
  * <p>
  * 
@@ -155,7 +155,7 @@ public class PolicyTroubleshooter extends com.google.api.client.googleapis.servi
 
     /**
      * Checks whether a principal has a specific permission for a specific resource, and explains why
-     * the principal does or does not have that permission.
+     * the principal does or doesn't have that permission.
      *
      * Create a request for the method "iam.troubleshoot".
      *
@@ -163,22 +163,22 @@ public class PolicyTroubleshooter extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link Troubleshoot#execute()} method to invoke the remote
      * operation.
      *
-     * @param content the {@link com.google.api.services.policytroubleshooter.v1.model.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest}
+     * @param content the {@link com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyRequest}
      * @return the request
      */
-    public Troubleshoot troubleshoot(com.google.api.services.policytroubleshooter.v1.model.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest content) throws java.io.IOException {
+    public Troubleshoot troubleshoot(com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyRequest content) throws java.io.IOException {
       Troubleshoot result = new Troubleshoot(content);
       initialize(result);
       return result;
     }
 
-    public class Troubleshoot extends PolicyTroubleshooterRequest<com.google.api.services.policytroubleshooter.v1.model.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse> {
+    public class Troubleshoot extends PolicyTroubleshooterRequest<com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyResponse> {
 
-      private static final String REST_PATH = "v1/iam:troubleshoot";
+      private static final String REST_PATH = "v3beta/iam:troubleshoot";
 
       /**
        * Checks whether a principal has a specific permission for a specific resource, and explains why
-       * the principal does or does not have that permission.
+       * the principal does or doesn't have that permission.
        *
        * Create a request for the method "iam.troubleshoot".
        *
@@ -188,11 +188,11 @@ public class PolicyTroubleshooter extends com.google.api.client.googleapis.servi
        * Troubleshoot#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param content the {@link com.google.api.services.policytroubleshooter.v1.model.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest}
+       * @param content the {@link com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyRequest}
        * @since 1.13
        */
-      protected Troubleshoot(com.google.api.services.policytroubleshooter.v1.model.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest content) {
-        super(PolicyTroubleshooter.this, "POST", REST_PATH, content, com.google.api.services.policytroubleshooter.v1.model.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyResponse.class);
+      protected Troubleshoot(com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyRequest content) {
+        super(PolicyTroubleshooter.this, "POST", REST_PATH, content, com.google.api.services.policytroubleshooter.v3beta.model.GoogleCloudPolicytroubleshooterIamV3betaTroubleshootIamPolicyResponse.class);
       }
 
       @Override

@@ -17,7 +17,9 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Contains studio creative information.
+ * *Beta:* This API resource is available only to a very limited number of customers. If you'd like
+ * to use this resource, please reach out to your Google sales representative. Contains studio
+ * creative information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation
@@ -38,7 +40,7 @@ public final class StudioCreative extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.Long> assetIds;
 
   /**
-   * Backup image asset ID of this studio creative.
+   * Backup image asset ID of this studio creative. It is a required field on insertion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -141,7 +143,7 @@ public final class StudioCreative extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Backup image asset ID of this studio creative.
+   * Backup image asset ID of this studio creative. It is a required field on insertion.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBackupImageAssetId() {
@@ -149,7 +151,7 @@ public final class StudioCreative extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Backup image asset ID of this studio creative.
+   * Backup image asset ID of this studio creative. It is a required field on insertion.
    * @param backupImageAssetId backupImageAssetId or {@code null} for none
    */
   public StudioCreative setBackupImageAssetId(java.lang.Long backupImageAssetId) {

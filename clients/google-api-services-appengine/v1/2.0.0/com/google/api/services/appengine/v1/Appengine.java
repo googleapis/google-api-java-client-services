@@ -103,7 +103,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -10485,6 +10485,240 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
                   return (Debug) super.set(parameterName, value);
                 }
               }
+              /**
+               * Stops a running instance.The instance might be automatically recreated based on the scaling
+               * settings of the version. For more information, see "How Instances are Managed" (standard
+               * environment (https://cloud.google.com/appengine/docs/standard/python/how-instances-are-managed) |
+               * flexible environment (https://cloud.google.com/appengine/docs/flexible/python/how-instances-are-
+               * managed)).To ensure that instances are not re-created and avoid getting billed, you can stop all
+               * instances within the target version by changing the serving status of the version to STOPPED with
+               * the apps.services.versions.patch (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions/patch) method.
+               *
+               * Create a request for the method "instances.delete".
+               *
+               * This request holds the parameters needed by the appengine server.  After setting any optional
+               * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               *
+               * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+               *        apps/myapp/services/default/versions/v1/instances/instance-1.
+               * @param locationsId Part of `name`. See documentation of `projectsId`.
+               * @param applicationsId Part of `name`. See documentation of `projectsId`.
+               * @param servicesId Part of `name`. See documentation of `projectsId`.
+               * @param versionsId Part of `name`. See documentation of `projectsId`.
+               * @param instancesId Part of `name`. See documentation of `projectsId`.
+               * @return the request
+               */
+              public Delete delete(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String servicesId, java.lang.String versionsId, java.lang.String instancesId) throws java.io.IOException {
+                Delete result = new Delete(projectsId, locationsId, applicationsId, servicesId, versionsId, instancesId);
+                initialize(result);
+                return result;
+              }
+
+              public class Delete extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
+
+                private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/services/{servicesId}/versions/{versionsId}/instances/{instancesId}";
+
+                /**
+                 * Stops a running instance.The instance might be automatically recreated based on the scaling
+                 * settings of the version. For more information, see "How Instances are Managed" (standard
+                 * environment (https://cloud.google.com/appengine/docs/standard/python/how-instances-are-managed)
+                 * | flexible environment (https://cloud.google.com/appengine/docs/flexible/python/how-instances-
+                 * are-managed)).To ensure that instances are not re-created and avoid getting billed, you can
+                 * stop all instances within the target version by changing the serving status of the version to
+                 * STOPPED with the apps.services.versions.patch (https://cloud.google.com/appengine/docs/admin-
+                 * api/reference/rest/v1/apps.services.versions/patch) method.
+                 *
+                 * Create a request for the method "instances.delete".
+                 *
+                 * This request holds the parameters needed by the the appengine server.  After setting any
+                 * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param projectsId Part of `name`. Required. Name of the resource requested. Example:
+               *        apps/myapp/services/default/versions/v1/instances/instance-1.
+                 * @param locationsId Part of `name`. See documentation of `projectsId`.
+                 * @param applicationsId Part of `name`. See documentation of `projectsId`.
+                 * @param servicesId Part of `name`. See documentation of `projectsId`.
+                 * @param versionsId Part of `name`. See documentation of `projectsId`.
+                 * @param instancesId Part of `name`. See documentation of `projectsId`.
+                 * @since 1.13
+                 */
+                protected Delete(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String servicesId, java.lang.String versionsId, java.lang.String instancesId) {
+                  super(Appengine.this, "DELETE", REST_PATH, null, com.google.api.services.appengine.v1.model.Operation.class);
+                  this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+                  this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+                  this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+                  this.servicesId = com.google.api.client.util.Preconditions.checkNotNull(servicesId, "Required parameter servicesId must be specified.");
+                  this.versionsId = com.google.api.client.util.Preconditions.checkNotNull(versionsId, "Required parameter versionsId must be specified.");
+                  this.instancesId = com.google.api.client.util.Preconditions.checkNotNull(instancesId, "Required parameter instancesId must be specified.");
+                }
+
+                @Override
+                public Delete set$Xgafv(java.lang.String $Xgafv) {
+                  return (Delete) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Delete setAccessToken(java.lang.String accessToken) {
+                  return (Delete) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Delete setAlt(java.lang.String alt) {
+                  return (Delete) super.setAlt(alt);
+                }
+
+                @Override
+                public Delete setCallback(java.lang.String callback) {
+                  return (Delete) super.setCallback(callback);
+                }
+
+                @Override
+                public Delete setFields(java.lang.String fields) {
+                  return (Delete) super.setFields(fields);
+                }
+
+                @Override
+                public Delete setKey(java.lang.String key) {
+                  return (Delete) super.setKey(key);
+                }
+
+                @Override
+                public Delete setOauthToken(java.lang.String oauthToken) {
+                  return (Delete) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Delete) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Delete setQuotaUser(java.lang.String quotaUser) {
+                  return (Delete) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Delete setUploadType(java.lang.String uploadType) {
+                  return (Delete) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Delete) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Part of `name`. Required. Name of the resource requested. Example:
+                 * apps/myapp/services/default/versions/v1/instances/instance-1.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String projectsId;
+
+                /** Part of `name`. Required. Name of the resource requested. Example:
+               apps/myapp/services/default/versions/v1/instances/instance-1.
+                 */
+                public java.lang.String getProjectsId() {
+                  return projectsId;
+                }
+
+                /**
+                 * Part of `name`. Required. Name of the resource requested. Example:
+                 * apps/myapp/services/default/versions/v1/instances/instance-1.
+                 */
+                public Delete setProjectsId(java.lang.String projectsId) {
+                  this.projectsId = projectsId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String locationsId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getLocationsId() {
+                  return locationsId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Delete setLocationsId(java.lang.String locationsId) {
+                  this.locationsId = locationsId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String applicationsId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getApplicationsId() {
+                  return applicationsId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Delete setApplicationsId(java.lang.String applicationsId) {
+                  this.applicationsId = applicationsId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String servicesId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getServicesId() {
+                  return servicesId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Delete setServicesId(java.lang.String servicesId) {
+                  this.servicesId = servicesId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String versionsId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getVersionsId() {
+                  return versionsId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Delete setVersionsId(java.lang.String versionsId) {
+                  this.versionsId = versionsId;
+                  return this;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                @com.google.api.client.util.Key
+                private java.lang.String instancesId;
+
+                /** Part of `name`. See documentation of `projectsId`.
+                 */
+                public java.lang.String getInstancesId() {
+                  return instancesId;
+                }
+
+                /** Part of `name`. See documentation of `projectsId`. */
+                public Delete setInstancesId(java.lang.String instancesId) {
+                  this.instancesId = instancesId;
+                  return this;
+                }
+
+                @Override
+                public Delete set(String parameterName, Object value) {
+                  return (Delete) super.set(parameterName, value);
+                }
+              }
 
             }
           }
@@ -10525,8 +10759,7 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

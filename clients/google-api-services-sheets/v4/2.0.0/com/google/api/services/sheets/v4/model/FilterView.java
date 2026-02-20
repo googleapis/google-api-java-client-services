@@ -17,7 +17,8 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * A filter view.
+ * A filter view. For more information, see [Manage data visibility with
+ * filters](https://developers.google.com/workspace/sheets/api/guides/filters).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -44,7 +45,7 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The filter criteria for showing/hiding values per column. Both criteria and filter_specs are
+   * The filter criteria for showing or hiding values per column. Both criteria and filter_specs are
    * populated in responses. If both fields are specified in an update request, this field takes
    * precedence.
    * The value may be {@code null}.
@@ -66,16 +67,16 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   private java.lang.Integer filterViewId;
 
   /**
-   * The named range this filter view is backed by, if any. When writing, only one of range or
-   * named_range_id or table_id may be set.
+   * The named range this filter view is backed by, if any. When writing, only one of range,
+   * named_range_id, or table_id may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String namedRangeId;
 
   /**
-   * The range this filter view covers. When writing, only one of range or named_range_id or
-   * table_id may be set.
+   * The range this filter view covers. When writing, only one of range, named_range_id, or table_id
+   * may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +91,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   private java.util.List<SortSpec> sortSpecs;
 
   /**
-   * The table this filter view is backed by, if any. When writing, only one of range or
-   * named_range_id or table_id may be set.
+   * The table this filter view is backed by, if any. When writing, only one of range,
+   * named_range_id, or table_id may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +125,7 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The filter criteria for showing/hiding values per column. Both criteria and filter_specs are
+   * The filter criteria for showing or hiding values per column. Both criteria and filter_specs are
    * populated in responses. If both fields are specified in an update request, this field takes
    * precedence.
    * @return value or {@code null} for none
@@ -134,7 +135,7 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The filter criteria for showing/hiding values per column. Both criteria and filter_specs are
+   * The filter criteria for showing or hiding values per column. Both criteria and filter_specs are
    * populated in responses. If both fields are specified in an update request, this field takes
    * precedence.
    * @param filterSpecs filterSpecs or {@code null} for none
@@ -162,8 +163,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named range this filter view is backed by, if any. When writing, only one of range or
-   * named_range_id or table_id may be set.
+   * The named range this filter view is backed by, if any. When writing, only one of range,
+   * named_range_id, or table_id may be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamedRangeId() {
@@ -171,8 +172,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The named range this filter view is backed by, if any. When writing, only one of range or
-   * named_range_id or table_id may be set.
+   * The named range this filter view is backed by, if any. When writing, only one of range,
+   * named_range_id, or table_id may be set.
    * @param namedRangeId namedRangeId or {@code null} for none
    */
   public FilterView setNamedRangeId(java.lang.String namedRangeId) {
@@ -181,8 +182,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range this filter view covers. When writing, only one of range or named_range_id or
-   * table_id may be set.
+   * The range this filter view covers. When writing, only one of range, named_range_id, or table_id
+   * may be set.
    * @return value or {@code null} for none
    */
   public GridRange getRange() {
@@ -190,8 +191,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range this filter view covers. When writing, only one of range or named_range_id or
-   * table_id may be set.
+   * The range this filter view covers. When writing, only one of range, named_range_id, or table_id
+   * may be set.
    * @param range range or {@code null} for none
    */
   public FilterView setRange(GridRange range) {
@@ -219,8 +220,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The table this filter view is backed by, if any. When writing, only one of range or
-   * named_range_id or table_id may be set.
+   * The table this filter view is backed by, if any. When writing, only one of range,
+   * named_range_id, or table_id may be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableId() {
@@ -228,8 +229,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The table this filter view is backed by, if any. When writing, only one of range or
-   * named_range_id or table_id may be set.
+   * The table this filter view is backed by, if any. When writing, only one of range,
+   * named_range_id, or table_id may be set.
    * @param tableId tableId or {@code null} for none
    */
   public FilterView setTableId(java.lang.String tableId) {

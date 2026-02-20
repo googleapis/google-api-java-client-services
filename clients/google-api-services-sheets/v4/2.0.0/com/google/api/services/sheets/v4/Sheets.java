@@ -103,7 +103,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -590,16 +590,18 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
-     * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. This method
+     * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. For more
+     * information, see [Read, write, and search
+     * metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). This method
      * differs from GetSpreadsheet in that it allows selecting which subsets of spreadsheet data to
      * return by specifying a dataFilters parameter. Multiple DataFilters can be specified. Specifying
      * one or more data filters returns the portions of the spreadsheet that intersect ranges matched by
-     * any of the filters. By default, data within grids is not returned. You can include grid data one
-     * of 2 ways: * Specify a [field
+     * any of the filters. By default, data within grids is not returned. You can include grid data in
+     * one of two ways: * Specify a [field
      * mask](https://developers.google.com/workspace/sheets/api/guides/field-masks) listing your desired
-     * fields using the `fields` URL parameter in HTTP * Set the includeGridData parameter to true. If a
-     * field mask is set, the `includeGridData` parameter is ignored For large spreadsheets, as a best
-     * practice, retrieve only the specific spreadsheet fields that you want.
+     * fields using the `fields` URL parameter in HTTP. * Set the includeGridData parameter to `true`.
+     * If a field mask is set, the `includeGridData` parameter is ignored. For large spreadsheets, as a
+     * best practice, retrieve only the specific spreadsheet fields that you want.
      *
      * Create a request for the method "spreadsheets.getByDataFilter".
      *
@@ -621,15 +623,17 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       private static final String REST_PATH = "v4/spreadsheets/{spreadsheetId}:getByDataFilter";
 
       /**
-       * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. This
-       * method differs from GetSpreadsheet in that it allows selecting which subsets of spreadsheet
-       * data to return by specifying a dataFilters parameter. Multiple DataFilters can be specified.
-       * Specifying one or more data filters returns the portions of the spreadsheet that intersect
-       * ranges matched by any of the filters. By default, data within grids is not returned. You can
-       * include grid data one of 2 ways: * Specify a [field
+       * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. For more
+       * information, see [Read, write, and search
+       * metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). This method
+       * differs from GetSpreadsheet in that it allows selecting which subsets of spreadsheet data to
+       * return by specifying a dataFilters parameter. Multiple DataFilters can be specified. Specifying
+       * one or more data filters returns the portions of the spreadsheet that intersect ranges matched
+       * by any of the filters. By default, data within grids is not returned. You can include grid data
+       * in one of two ways: * Specify a [field
        * mask](https://developers.google.com/workspace/sheets/api/guides/field-masks) listing your
-       * desired fields using the `fields` URL parameter in HTTP * Set the includeGridData parameter to
-       * true. If a field mask is set, the `includeGridData` parameter is ignored For large
+       * desired fields using the `fields` URL parameter in HTTP. * Set the includeGridData parameter to
+       * `true`. If a field mask is set, the `includeGridData` parameter is ignored. For large
        * spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you want.
        *
        * Create a request for the method "spreadsheets.getByDataFilter".
@@ -748,7 +752,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * Returns the developer metadata with the specified ID. The caller must specify the spreadsheet ID
-       * and the developer metadata's unique metadataId.
+       * and the developer metadata's unique metadataId. For more information, see [Read, write, and
+       * search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
        *
        * Create a request for the method "developerMetadata.get".
        *
@@ -771,7 +776,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Returns the developer metadata with the specified ID. The caller must specify the spreadsheet
-         * ID and the developer metadata's unique metadataId.
+         * ID and the developer metadata's unique metadataId. For more information, see [Read, write, and
+         * search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
          *
          * Create a request for the method "developerMetadata.get".
          *
@@ -893,10 +899,12 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Returns all developer metadata matching the specified DataFilter. If the provided DataFilter
-       * represents a DeveloperMetadataLookup object, this will return all DeveloperMetadata entries
-       * selected by it. If the DataFilter represents a location in a spreadsheet, this will return all
-       * developer metadata associated with locations intersecting that region.
+       * Returns all developer metadata matching the specified DataFilter. For more information, see
+       * [Read, write, and search
+       * metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). If the provided
+       * DataFilter represents a DeveloperMetadataLookup object, this will return all DeveloperMetadata
+       * entries selected by it. If the DataFilter represents a location in a spreadsheet, this will
+       * return all developer metadata associated with locations intersecting that region.
        *
        * Create a request for the method "developerMetadata.search".
        *
@@ -918,10 +926,12 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         private static final String REST_PATH = "v4/spreadsheets/{spreadsheetId}/developerMetadata:search";
 
         /**
-         * Returns all developer metadata matching the specified DataFilter. If the provided DataFilter
-         * represents a DeveloperMetadataLookup object, this will return all DeveloperMetadata entries
-         * selected by it. If the DataFilter represents a location in a spreadsheet, this will return all
-         * developer metadata associated with locations intersecting that region.
+         * Returns all developer metadata matching the specified DataFilter. For more information, see
+         * [Read, write, and search
+         * metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). If the provided
+         * DataFilter represents a DeveloperMetadataLookup object, this will return all DeveloperMetadata
+         * entries selected by it. If the DataFilter represents a location in a spreadsheet, this will
+         * return all developer metadata associated with locations intersecting that region.
          *
          * Create a request for the method "developerMetadata.search".
          *
@@ -1591,10 +1601,11 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet
-       * ID and one or more DataFilters. Ranges matching any of the specified data filters will be
-       * cleared. Only values are cleared -- all other properties of the cell (such as formatting, data
-       * validation, etc..) are kept.
+       * Clears one or more ranges of values from a spreadsheet. For more information, see [Read, write,
+       * and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). The
+       * caller must specify the spreadsheet ID and one or more DataFilters. Ranges matching any of the
+       * specified data filters will be cleared. Only values are cleared -- all other properties of the
+       * cell (such as formatting, data validation, etc.) are kept.
        *
        * Create a request for the method "values.batchClearByDataFilter".
        *
@@ -1617,10 +1628,11 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         private static final String REST_PATH = "v4/spreadsheets/{spreadsheetId}/values:batchClearByDataFilter";
 
         /**
-         * Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet
-         * ID and one or more DataFilters. Ranges matching any of the specified data filters will be
-         * cleared. Only values are cleared -- all other properties of the cell (such as formatting, data
-         * validation, etc..) are kept.
+         * Clears one or more ranges of values from a spreadsheet. For more information, see [Read, write,
+         * and search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). The
+         * caller must specify the spreadsheet ID and one or more DataFilters. Ranges matching any of the
+         * specified data filters will be cleared. Only values are cleared -- all other properties of the
+         * cell (such as formatting, data validation, etc.) are kept.
          *
          * Create a request for the method "values.batchClearByDataFilter".
          *
@@ -1947,7 +1959,9 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Returns one or more ranges of values that match the specified data filters. The caller must
+       * Returns one or more ranges of values that match the specified data filters. For more information,
+       * see [Read, write, and search
+       * metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). The caller must
        * specify the spreadsheet ID and one or more DataFilters. Ranges that match any of the data filters
        * in the request will be returned.
        *
@@ -1972,7 +1986,9 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         private static final String REST_PATH = "v4/spreadsheets/{spreadsheetId}/values:batchGetByDataFilter";
 
         /**
-         * Returns one or more ranges of values that match the specified data filters. The caller must
+         * Returns one or more ranges of values that match the specified data filters. For more
+         * information, see [Read, write, and search
+         * metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). The caller must
          * specify the spreadsheet ID and one or more DataFilters. Ranges that match any of the data
          * filters in the request will be returned.
          *
@@ -2190,8 +2206,9 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Sets values in one or more ranges of a spreadsheet. The caller must specify the spreadsheet ID, a
-       * valueInputOption, and one or more DataFilterValueRanges.
+       * Sets values in one or more ranges of a spreadsheet. For more information, see [Read, write, and
+       * search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). The caller
+       * must specify the spreadsheet ID, a valueInputOption, and one or more DataFilterValueRanges.
        *
        * Create a request for the method "values.batchUpdateByDataFilter".
        *
@@ -2214,8 +2231,10 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         private static final String REST_PATH = "v4/spreadsheets/{spreadsheetId}/values:batchUpdateByDataFilter";
 
         /**
-         * Sets values in one or more ranges of a spreadsheet. The caller must specify the spreadsheet ID,
-         * a valueInputOption, and one or more DataFilterValueRanges.
+         * Sets values in one or more ranges of a spreadsheet. For more information, see [Read, write, and
+         * search metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). The
+         * caller must specify the spreadsheet ID, a valueInputOption, and one or more
+         * DataFilterValueRanges.
          *
          * Create a request for the method "values.batchUpdateByDataFilter".
          *
@@ -2979,8 +2998,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

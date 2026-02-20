@@ -17,7 +17,8 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The default filter associated with a sheet.
+ * The default filter associated with a sheet. For more information, see [Manage data visibility
+ * with filters](https://developers.google.com/workspace/sheets/api/guides/filters).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

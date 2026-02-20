@@ -103,7 +103,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -452,7 +452,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
      * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
      * @return the request
      */
@@ -484,7 +485,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
        * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
        * @since 1.13
        */
@@ -555,12 +557,13 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * `folders/{FOLDER_NUMBER}/autokeyConfig` or `projects/{PROJECT_NUMBER}/autokeyConfig`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     `projects/{PROJECT_NUMBER}/autokeyConfig`.
        */
       public java.lang.String getName() {
         return name;
@@ -568,7 +571,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * `folders/{FOLDER_NUMBER}/autokeyConfig` or `projects/{PROJECT_NUMBER}/autokeyConfig`.
        */
       public UpdateAutokeyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1858,7 +1861,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link UpdateAutokeyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+     * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
      * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
      * @return the request
      */
@@ -1890,7 +1894,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * @param name Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     *        `projects/{PROJECT_NUMBER}/autokeyConfig`.
        * @param content the {@link com.google.api.services.cloudkms.v1.model.AutokeyConfig}
        * @since 1.13
        */
@@ -1961,12 +1966,13 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * `folders/{FOLDER_NUMBER}/autokeyConfig` or `projects/{PROJECT_NUMBER}/autokeyConfig`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+      /** Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+     `projects/{PROJECT_NUMBER}/autokeyConfig`.
        */
       public java.lang.String getName() {
         return name;
@@ -1974,7 +1980,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Identifier. Name of the AutokeyConfig resource, e.g.
-       * `folders/{FOLDER_NUMBER}/autokeyConfig`
+       * `folders/{FOLDER_NUMBER}/autokeyConfig` or `projects/{PROJECT_NUMBER}/autokeyConfig`.
        */
       public UpdateAutokeyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -2603,7 +2609,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -2627,7 +2636,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -6835,6 +6847,139 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Permanently deletes the given CryptoKey. All child CryptoKeyVersions must have been previously
+           * deleted using KeyManagementService.DeleteCryptoKeyVersion. The specified crypto key will be
+           * immediately and permanently deleted upon calling this method. This action cannot be undone.
+           *
+           * Create a request for the method "cryptoKeys.delete".
+           *
+           * This request holds the parameters needed by the cloudkms server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the CryptoKey to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
+
+            /**
+             * Permanently deletes the given CryptoKey. All child CryptoKeyVersions must have been previously
+             * deleted using KeyManagementService.DeleteCryptoKeyVersion. The specified crypto key will be
+             * immediately and permanently deleted upon calling this method. This action cannot be undone.
+             *
+             * Create a request for the method "cryptoKeys.delete".
+             *
+             * This request holds the parameters needed by the the cloudkms server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the CryptoKey to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudKMS.this, "DELETE", REST_PATH, null, com.google.api.services.cloudkms.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the CryptoKey to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the CryptoKey to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the CryptoKey to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
            * Encrypts data, so that it can only be recovered by a call to Decrypt. The CryptoKey.purpose must
            * be ENCRYPT_DECRYPT.
            *
@@ -8712,6 +8857,143 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
               @Override
               public Decapsulate set(String parameterName, Object value) {
                 return (Decapsulate) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Permanently deletes the given CryptoKeyVersion. Only possible if the version has not been
+             * previously imported and if its state is one of DESTROYED, IMPORT_FAILED, or GENERATION_FAILED.
+             * Successfully imported CryptoKeyVersions cannot be deleted at this time. The specified version
+             * will be immediately and permanently deleted upon calling this method. This action cannot be
+             * undone.
+             *
+             * Create a request for the method "cryptoKeyVersions.delete".
+             *
+             * This request holds the parameters needed by the cloudkms server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the CryptoKeyVersion to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+
+              /**
+               * Permanently deletes the given CryptoKeyVersion. Only possible if the version has not been
+               * previously imported and if its state is one of DESTROYED, IMPORT_FAILED, or GENERATION_FAILED.
+               * Successfully imported CryptoKeyVersions cannot be deleted at this time. The specified version
+               * will be immediately and permanently deleted upon calling this method. This action cannot be
+               * undone.
+               *
+               * Create a request for the method "cryptoKeyVersions.delete".
+               *
+               * This request holds the parameters needed by the the cloudkms server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the CryptoKeyVersion to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudKMS.this, "DELETE", REST_PATH, null, com.google.api.services.cloudkms.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the CryptoKeyVersion to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the CryptoKeyVersion to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the CryptoKeyVersion to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+/cryptoKeys/[^/]+/cryptoKeyVersions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
               }
             }
             /**
@@ -11619,6 +11901,369 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       }
       /**
+       * An accessor for creating requests from the RetiredResources collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudKMS cloudkms = new CloudKMS(...);}
+       *   {@code CloudKMS.RetiredResources.List request = cloudkms.retiredResources().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RetiredResources retiredResources() {
+        return new RetiredResources();
+      }
+
+      /**
+       * The "retiredResources" collection of methods.
+       */
+      public class RetiredResources {
+
+        /**
+         * Retrieves a specific RetiredResource resource, which represents the record of a deleted
+         * CryptoKey.
+         *
+         * Create a request for the method "retiredResources.get".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the RetiredResource to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.RetiredResource> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/retiredResources/[^/]+$");
+
+          /**
+           * Retrieves a specific RetiredResource resource, which represents the record of a deleted
+           * CryptoKey.
+           *
+           * Create a request for the method "retiredResources.get".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the RetiredResource to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.RetiredResource.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/retiredResources/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the RetiredResource to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the RetiredResource to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the RetiredResource to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/retiredResources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the RetiredResources which are the records of deleted CryptoKeys. RetiredResources prevent
+         * the reuse of these resource names after deletion.
+         *
+         * Create a request for the method "retiredResources.list".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project-specific location holding the RetiredResources, in the format
+         *        `projects/locations`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ListRetiredResourcesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/retiredResources";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the RetiredResources which are the records of deleted CryptoKeys. RetiredResources
+           * prevent the reuse of these resource names after deletion.
+           *
+           * Create a request for the method "retiredResources.list".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project-specific location holding the RetiredResources, in the format
+         *        `projects/locations`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.ListRetiredResourcesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project-specific location holding the RetiredResources, in the format
+           * `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project-specific location holding the RetiredResources, in the format
+         `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project-specific location holding the RetiredResources, in the format
+           * `projects/locations`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Optional limit on the number of RetiredResources to be included in the
+           * response. Further RetiredResources can subsequently be obtained by including the
+           * ListRetiredResourcesResponse.next_page_token in a subsequent request. If unspecified,
+           * the server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Optional limit on the number of RetiredResources to be included in the response. Further
+         RetiredResources can subsequently be obtained by including the
+         ListRetiredResourcesResponse.next_page_token in a subsequent request. If unspecified, the server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Optional limit on the number of RetiredResources to be included in the
+           * response. Further RetiredResources can subsequently be obtained by including the
+           * ListRetiredResourcesResponse.next_page_token in a subsequent request. If unspecified,
+           * the server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Optional pagination token, returned earlier via
+           * ListRetiredResourcesResponse.next_page_token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Optional pagination token, returned earlier via
+         ListRetiredResourcesResponse.next_page_token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Optional pagination token, returned earlier via
+           * ListRetiredResourcesResponse.next_page_token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the SingleTenantHsmInstances collection.
        *
        * <p>The typical use is:</p>
@@ -13251,8 +13896,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

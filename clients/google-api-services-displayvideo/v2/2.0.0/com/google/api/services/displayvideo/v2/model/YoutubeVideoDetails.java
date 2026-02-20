@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v2.model;
 public final class YoutubeVideoDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The YouTube video ID which can be searched on YouTube webpage.
+   * Output only. The YouTube video ID which can be searched on YouTube webpage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,14 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   private java.lang.String unavailableReason;
 
   /**
-   * The YouTube video ID which can be searched on YouTube webpage.
+   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long videoAssetId;
+
+  /**
+   * Output only. The YouTube video ID which can be searched on YouTube webpage.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -53,7 +60,7 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The YouTube video ID which can be searched on YouTube webpage.
+   * Output only. The YouTube video ID which can be searched on YouTube webpage.
    * @param id id or {@code null} for none
    */
   public YoutubeVideoDetails setId(java.lang.String id) {
@@ -75,6 +82,23 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
    */
   public YoutubeVideoDetails setUnavailableReason(java.lang.String unavailableReason) {
     this.unavailableReason = unavailableReason;
+    return this;
+  }
+
+  /**
+   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVideoAssetId() {
+    return videoAssetId;
+  }
+
+  /**
+   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   * @param videoAssetId videoAssetId or {@code null} for none
+   */
+  public YoutubeVideoDetails setVideoAssetId(java.lang.Long videoAssetId) {
+    this.videoAssetId = videoAssetId;
     return this;
   }
 

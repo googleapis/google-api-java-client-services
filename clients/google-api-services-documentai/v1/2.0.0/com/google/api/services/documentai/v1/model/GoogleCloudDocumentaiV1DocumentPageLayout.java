@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageLayout extends com.google.
   private GoogleCloudDocumentaiV1BoundingPoly boundingPoly;
 
   /**
-   * Confidence of the current Layout within context of the object this layout is for. e.g.
+   * Confidence of the current Layout within context of the object this layout is for. For example,
    * confidence can be for a single token, a table, a visual element, etc. depending on context.
    * Range `[0, 1]`.
    * The value may be {@code null}.
@@ -78,7 +78,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageLayout extends com.google.
   }
 
   /**
-   * Confidence of the current Layout within context of the object this layout is for. e.g.
+   * Confidence of the current Layout within context of the object this layout is for. For example,
    * confidence can be for a single token, a table, a visual element, etc. depending on context.
    * Range `[0, 1]`.
    * @return value or {@code null} for none
@@ -88,7 +88,7 @@ public final class GoogleCloudDocumentaiV1DocumentPageLayout extends com.google.
   }
 
   /**
-   * Confidence of the current Layout within context of the object this layout is for. e.g.
+   * Confidence of the current Layout within context of the object this layout is for. For example,
    * confidence can be for a single token, a table, a visual element, etc. depending on context.
    * Range `[0, 1]`.
    * @param confidence confidence or {@code null} for none

@@ -32,8 +32,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkin
 
   /**
    * Optional. The percentile of cosine dissimilarity that must be exceeded between a group of
-   * tokens and the next. The smaller this number is, the more chunks will be generated. THIS FIELD
-   * IS NOT YET USED.
+   * tokens and the next. The smaller this number is, the more chunks will be generated. **Note:**
+   * This field is not yet used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkin
   private java.lang.Boolean includeAncestorHeadings;
 
   /**
-   * Optional. The number of tokens to group together when evaluating semantic similarity. THIS
-   * FIELD IS NOT YET USED.
+   * Optional. The number of tokens to group together when evaluating semantic similarity. **Note:**
+   * This field is not yet used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkin
 
   /**
    * Optional. The percentile of cosine dissimilarity that must be exceeded between a group of
-   * tokens and the next. The smaller this number is, the more chunks will be generated. THIS FIELD
-   * IS NOT YET USED.
+   * tokens and the next. The smaller this number is, the more chunks will be generated. **Note:**
+   * This field is not yet used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBreakpointPercentileThreshold() {
@@ -73,8 +73,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkin
 
   /**
    * Optional. The percentile of cosine dissimilarity that must be exceeded between a group of
-   * tokens and the next. The smaller this number is, the more chunks will be generated. THIS FIELD
-   * IS NOT YET USED.
+   * tokens and the next. The smaller this number is, the more chunks will be generated. **Note:**
+   * This field is not yet used.
    * @param breakpointPercentileThreshold breakpointPercentileThreshold or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkingConfig setBreakpointPercentileThreshold(java.lang.Integer breakpointPercentileThreshold) {
@@ -117,8 +117,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkin
   }
 
   /**
-   * Optional. The number of tokens to group together when evaluating semantic similarity. THIS
-   * FIELD IS NOT YET USED.
+   * Optional. The number of tokens to group together when evaluating semantic similarity. **Note:**
+   * This field is not yet used.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSemanticChunkingGroupSize() {
@@ -126,8 +126,8 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkin
   }
 
   /**
-   * Optional. The number of tokens to group together when evaluating semantic similarity. THIS
-   * FIELD IS NOT YET USED.
+   * Optional. The number of tokens to group together when evaluating semantic similarity. **Note:**
+   * This field is not yet used.
    * @param semanticChunkingGroupSize semanticChunkingGroupSize or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkingConfig setSemanticChunkingGroupSize(java.lang.Boolean semanticChunkingGroupSize) {

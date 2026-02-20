@@ -31,7 +31,7 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1DocumentRevisionHumanReview extends com.google.api.client.json.GenericJson {
 
   /**
-   * Human review state. e.g. `requested`, `succeeded`, `rejected`.
+   * Human review state. For example, `requested`, `succeeded`, `rejected`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class GoogleCloudDocumentaiV1DocumentRevisionHumanReview extends co
   private java.lang.String stateMessage;
 
   /**
-   * Human review state. e.g. `requested`, `succeeded`, `rejected`.
+   * Human review state. For example, `requested`, `succeeded`, `rejected`.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -54,7 +54,7 @@ public final class GoogleCloudDocumentaiV1DocumentRevisionHumanReview extends co
   }
 
   /**
-   * Human review state. e.g. `requested`, `succeeded`, `rejected`.
+   * Human review state. For example, `requested`, `succeeded`, `rejected`.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentRevisionHumanReview setState(java.lang.String state) {

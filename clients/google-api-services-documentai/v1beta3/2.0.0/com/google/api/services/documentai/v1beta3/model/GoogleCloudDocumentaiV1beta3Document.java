@@ -34,8 +34,8 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
 
   /**
    * Optional. The blob assets in this document. This is used to store the content of the inline
-   * blobs in this document, e.g. image bytes, such that it can be referenced by other fields in the
-   * document via asset id.
+   * blobs in this document, for example, image bytes, such that it can be referenced by other
+   * fields in the document via asset id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   private java.util.List<GoogleCloudDocumentaiV1beta3DocumentEntity> entities;
 
   /**
-   * The entity revision id that `document.entities` field is based on. If this field is set and
+   * The entity revision ID that `document.entities` field is based on. If this field is set and
    * `entities_revisions` is not empty, the entities in `document.entities` field are the entities
    * in the entity revision with this id and `document.entity_validation_output` field is the
    * `entity_validation_output` field in this entity revision.
@@ -183,8 +183,8 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
 
   /**
    * Optional. The blob assets in this document. This is used to store the content of the inline
-   * blobs in this document, e.g. image bytes, such that it can be referenced by other fields in the
-   * document via asset id.
+   * blobs in this document, for example, image bytes, such that it can be referenced by other
+   * fields in the document via asset id.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDocumentaiV1beta3DocumentBlobAsset> getBlobAssets() {
@@ -193,8 +193,8 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
 
   /**
    * Optional. The blob assets in this document. This is used to store the content of the inline
-   * blobs in this document, e.g. image bytes, such that it can be referenced by other fields in the
-   * document via asset id.
+   * blobs in this document, for example, image bytes, such that it can be referenced by other
+   * fields in the document via asset id.
    * @param blobAssets blobAssets or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3Document setBlobAssets(java.util.List<GoogleCloudDocumentaiV1beta3DocumentBlobAsset> blobAssets) {
@@ -322,7 +322,7 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   }
 
   /**
-   * The entity revision id that `document.entities` field is based on. If this field is set and
+   * The entity revision ID that `document.entities` field is based on. If this field is set and
    * `entities_revisions` is not empty, the entities in `document.entities` field are the entities
    * in the entity revision with this id and `document.entity_validation_output` field is the
    * `entity_validation_output` field in this entity revision.
@@ -333,7 +333,7 @@ public final class GoogleCloudDocumentaiV1beta3Document extends com.google.api.c
   }
 
   /**
-   * The entity revision id that `document.entities` field is based on. If this field is set and
+   * The entity revision ID that `document.entities` field is based on. If this field is set and
    * `entities_revisions` is not empty, the entities in `document.entities` field are the entities
    * in the entity revision with this id and `document.entity_validation_output` field is the
    * `entity_validation_output` field in this entity revision.

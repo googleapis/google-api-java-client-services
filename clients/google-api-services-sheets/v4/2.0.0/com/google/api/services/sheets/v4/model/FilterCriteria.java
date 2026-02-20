@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Criteria for showing/hiding rows in a filter or filter view.
+ * Criteria for showing or hiding rows in a filter or filter view.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -30,8 +30,8 @@ package com.google.api.services.sheets.v4.model;
 public final class FilterCriteria extends com.google.api.client.json.GenericJson {
 
   /**
-   * A condition that must be true for values to be shown. (This does not override hidden_values --
-   * if a value is listed there, it will still be hidden.)
+   * A condition that must be `true` for values to be shown. (This does not override hidden_values
+   * -- if a value is listed there, it will still be hidden.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +79,8 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   private ColorStyle visibleForegroundColorStyle;
 
   /**
-   * A condition that must be true for values to be shown. (This does not override hidden_values --
-   * if a value is listed there, it will still be hidden.)
+   * A condition that must be `true` for values to be shown. (This does not override hidden_values
+   * -- if a value is listed there, it will still be hidden.)
    * @return value or {@code null} for none
    */
   public BooleanCondition getCondition() {
@@ -88,8 +88,8 @@ public final class FilterCriteria extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A condition that must be true for values to be shown. (This does not override hidden_values --
-   * if a value is listed there, it will still be hidden.)
+   * A condition that must be `true` for values to be shown. (This does not override hidden_values
+   * -- if a value is listed there, it will still be hidden.)
    * @param condition condition or {@code null} for none
    */
   public FilterCriteria setCondition(BooleanCondition condition) {

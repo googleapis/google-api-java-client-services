@@ -32,8 +32,8 @@ public final class BatchClearValuesByDataFilterResponse extends com.google.api.c
   /**
    * The ranges that were cleared, in [A1
    * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). If the
-   * requests are for an unbounded range or a ranger larger than the bounds of the sheet, this is
-   * the actual ranges that were cleared, bounded to the sheet's limits.
+   * requests are for an unbounded range or a range larger than the bounds of the sheet, this is the
+   * actual ranges that were cleared, bounded to the sheet's limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,8 +49,8 @@ public final class BatchClearValuesByDataFilterResponse extends com.google.api.c
   /**
    * The ranges that were cleared, in [A1
    * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). If the
-   * requests are for an unbounded range or a ranger larger than the bounds of the sheet, this is
-   * the actual ranges that were cleared, bounded to the sheet's limits.
+   * requests are for an unbounded range or a range larger than the bounds of the sheet, this is the
+   * actual ranges that were cleared, bounded to the sheet's limits.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getClearedRanges() {
@@ -60,8 +60,8 @@ public final class BatchClearValuesByDataFilterResponse extends com.google.api.c
   /**
    * The ranges that were cleared, in [A1
    * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). If the
-   * requests are for an unbounded range or a ranger larger than the bounds of the sheet, this is
-   * the actual ranges that were cleared, bounded to the sheet's limits.
+   * requests are for an unbounded range or a range larger than the bounds of the sheet, this is the
+   * actual ranges that were cleared, bounded to the sheet's limits.
    * @param clearedRanges clearedRanges or {@code null} for none
    */
   public BatchClearValuesByDataFilterResponse setClearedRanges(java.util.List<java.lang.String> clearedRanges) {

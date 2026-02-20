@@ -31,8 +31,8 @@ public final class BatchClearValuesResponse extends com.google.api.client.json.G
 
   /**
    * The ranges that were cleared, in A1 notation. If the requests are for an unbounded range or a
-   * ranger larger than the bounds of the sheet, this is the actual ranges that were cleared,
-   * bounded to the sheet's limits.
+   * range larger than the bounds of the sheet, this is the actual ranges that were cleared, bounded
+   * to the sheet's limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class BatchClearValuesResponse extends com.google.api.client.json.G
 
   /**
    * The ranges that were cleared, in A1 notation. If the requests are for an unbounded range or a
-   * ranger larger than the bounds of the sheet, this is the actual ranges that were cleared,
-   * bounded to the sheet's limits.
+   * range larger than the bounds of the sheet, this is the actual ranges that were cleared, bounded
+   * to the sheet's limits.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getClearedRanges() {
@@ -57,8 +57,8 @@ public final class BatchClearValuesResponse extends com.google.api.client.json.G
 
   /**
    * The ranges that were cleared, in A1 notation. If the requests are for an unbounded range or a
-   * ranger larger than the bounds of the sheet, this is the actual ranges that were cleared,
-   * bounded to the sheet's limits.
+   * range larger than the bounds of the sheet, this is the actual ranges that were cleared, bounded
+   * to the sheet's limits.
    * @param clearedRanges clearedRanges or {@code null} for none
    */
   public BatchClearValuesResponse setClearedRanges(java.util.List<java.lang.String> clearedRanges) {

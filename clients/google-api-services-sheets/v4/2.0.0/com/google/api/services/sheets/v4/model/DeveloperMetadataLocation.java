@@ -31,7 +31,7 @@ public final class DeveloperMetadataLocation extends com.google.api.client.json.
 
   /**
    * Represents the row or column when metadata is associated with a dimension. The specified
-   * DimensionRange must represent a single row or column; it cannot be unbounded or span multiple
+   * DimensionRange must represent a single row or column. It cannot be unbounded or span multiple
    * rows or columns.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class DeveloperMetadataLocation extends com.google.api.client.json.
 
   /**
    * Represents the row or column when metadata is associated with a dimension. The specified
-   * DimensionRange must represent a single row or column; it cannot be unbounded or span multiple
+   * DimensionRange must represent a single row or column. It cannot be unbounded or span multiple
    * rows or columns.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class DeveloperMetadataLocation extends com.google.api.client.json.
 
   /**
    * Represents the row or column when metadata is associated with a dimension. The specified
-   * DimensionRange must represent a single row or column; it cannot be unbounded or span multiple
+   * DimensionRange must represent a single row or column. It cannot be unbounded or span multiple
    * rows or columns.
    * @param dimensionRange dimensionRange or {@code null} for none
    */

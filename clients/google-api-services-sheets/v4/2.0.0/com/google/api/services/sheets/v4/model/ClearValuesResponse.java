@@ -31,7 +31,7 @@ public final class ClearValuesResponse extends com.google.api.client.json.Generi
 
   /**
    * The range (in A1 notation) that was cleared. (If the request was for an unbounded range or a
-   * ranger larger than the bounds of the sheet, this will be the actual range that was cleared,
+   * range larger than the bounds of the sheet, this will be the actual range that was cleared,
    * bounded to the sheet's limits.)
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class ClearValuesResponse extends com.google.api.client.json.Generi
 
   /**
    * The range (in A1 notation) that was cleared. (If the request was for an unbounded range or a
-   * ranger larger than the bounds of the sheet, this will be the actual range that was cleared,
+   * range larger than the bounds of the sheet, this will be the actual range that was cleared,
    * bounded to the sheet's limits.)
    * @return value or {@code null} for none
    */
@@ -57,7 +57,7 @@ public final class ClearValuesResponse extends com.google.api.client.json.Generi
 
   /**
    * The range (in A1 notation) that was cleared. (If the request was for an unbounded range or a
-   * ranger larger than the bounds of the sheet, this will be the actual range that was cleared,
+   * range larger than the bounds of the sheet, this will be the actual range that was cleared,
    * bounded to the sheet's limits.)
    * @param clearedRange clearedRange or {@code null} for none
    */

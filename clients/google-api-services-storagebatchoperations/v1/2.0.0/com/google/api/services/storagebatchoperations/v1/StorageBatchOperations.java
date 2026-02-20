@@ -103,7 +103,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -313,7 +313,10 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -337,7 +340,10 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -1021,6 +1027,34 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
           }
 
           /**
+           * Optional. If set to true, any child bucket operations of the job will also be deleted.
+           * Highly recommended to be set to true by all clients. Users cannot mutate bucket
+           * operations directly, so only the jobs.delete permission is required to delete a job
+           * (and its child bucket operations).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any child bucket operations of the job will also be deleted. Highly
+         recommended to be set to true by all clients. Users cannot mutate bucket operations directly, so
+         only the jobs.delete permission is required to delete a job (and its child bucket operations).
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any child bucket operations of the job will also be deleted.
+           * Highly recommended to be set to true by all clients. Users cannot mutate bucket
+           * operations directly, so only the jobs.delete permission is required to delete a job
+           * (and its child bucket operations).
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID in
            * case you need to retry your request. Requests with same `request_id` will be ignored
            * for at least 60 minutes since the first request. The request ID must be a valid UUID
@@ -1408,6 +1442,381 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
           }
         }
 
+        /**
+         * An accessor for creating requests from the BucketOperations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code StorageBatchOperations storagebatchoperations = new StorageBatchOperations(...);}
+         *   {@code StorageBatchOperations.BucketOperations.List request = storagebatchoperations.bucketOperations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public BucketOperations bucketOperations() {
+          return new BucketOperations();
+        }
+
+        /**
+         * The "bucketOperations" collection of methods.
+         */
+        public class BucketOperations {
+
+          /**
+           * Gets a BucketOperation.
+           *
+           * Create a request for the method "bucketOperations.get".
+           *
+           * This request holds the parameters needed by the storagebatchoperations server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. `name` of the bucket operation to retrieve. Format:
+           *        projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id
+           *        }.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends StorageBatchOperationsRequest<com.google.api.services.storagebatchoperations.v1.model.BucketOperation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+/bucketOperations/[^/]+$");
+
+            /**
+             * Gets a BucketOperation.
+             *
+             * Create a request for the method "bucketOperations.get".
+             *
+             * This request holds the parameters needed by the the storagebatchoperations server.  After
+             * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. `name` of the bucket operation to retrieve. Format:
+           *        projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id
+           *        }.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(StorageBatchOperations.this, "GET", REST_PATH, null, com.google.api.services.storagebatchoperations.v1.model.BucketOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/bucketOperations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. `name` of the bucket operation to retrieve. Format: projects/{project_id}/l
+             * ocations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. `name` of the bucket operation to retrieve. Format:
+           projects/{project_id}/locations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. `name` of the bucket operation to retrieve. Format: projects/{project_id}/l
+             * ocations/global/jobs/{job_id}/bucketOperations/{bucket_operation_id}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+/bucketOperations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists BucketOperations in a given project and job.
+           *
+           * Create a request for the method "bucketOperations.list".
+           *
+           * This request holds the parameters needed by the storagebatchoperations server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends StorageBatchOperationsRequest<com.google.api.services.storagebatchoperations.v1.model.ListBucketOperationsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/bucketOperations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+
+            /**
+             * Lists BucketOperations in a given project and job.
+             *
+             * Create a request for the method "bucketOperations.list".
+             *
+             * This request holds the parameters needed by the the storagebatchoperations server.  After
+             * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(StorageBatchOperations.this, "GET", REST_PATH, null, com.google.api.services.storagebatchoperations.v1.model.ListBucketOperationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Format: projects/{project_id}/locations/global/jobs/{job_id}. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Format: projects/{project_id}/locations/global/jobs/{job_id}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Format: projects/{project_id}/locations/global/jobs/{job_id}. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/jobs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Filters results as defined by https://google.aip.dev/160. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filters results as defined by https://google.aip.dev/160.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Filters results as defined by https://google.aip.dev/160. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Field to sort by. Supported fields are name, create_time. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Field to sort by. Supported fields are name, create_time.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Field to sort by. Supported fields are name, create_time. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /** Optional. The list page size. Default page size is 100. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The list page size. Default page size is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. The list page size. Default page size is 100. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. The list page token. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The list page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. The list page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Operations collection.
@@ -2107,8 +2516,7 @@ public class StorageBatchOperations extends com.google.api.client.googleapis.ser
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

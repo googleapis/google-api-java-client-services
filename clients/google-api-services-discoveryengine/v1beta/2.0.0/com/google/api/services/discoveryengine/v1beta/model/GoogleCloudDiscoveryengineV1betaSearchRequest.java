@@ -157,6 +157,14 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
   private GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec;
 
   /**
+   * Optional. The maximum number of results to retrieve from each data store. If not specified, it
+   * will use the SearchRequest.DataStoreSpec.num_results if provided, otherwise there is no limit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer numResultsPerDataStore;
+
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Documents deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an `INVALID_ARGUMENT` is
@@ -744,6 +752,25 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequest extends com.goo
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequest setNaturalLanguageQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec naturalLanguageQueryUnderstandingSpec) {
     this.naturalLanguageQueryUnderstandingSpec = naturalLanguageQueryUnderstandingSpec;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum number of results to retrieve from each data store. If not specified, it
+   * will use the SearchRequest.DataStoreSpec.num_results if provided, otherwise there is no limit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNumResultsPerDataStore() {
+    return numResultsPerDataStore;
+  }
+
+  /**
+   * Optional. The maximum number of results to retrieve from each data store. If not specified, it
+   * will use the SearchRequest.DataStoreSpec.num_results if provided, otherwise there is no limit.
+   * @param numResultsPerDataStore numResultsPerDataStore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequest setNumResultsPerDataStore(java.lang.Integer numResultsPerDataStore) {
+    this.numResultsPerDataStore = numResultsPerDataStore;
     return this;
   }
 

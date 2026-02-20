@@ -122,6 +122,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private String createTime;
 
   /**
+   * Optional. Specifies the data protection policy for the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy dataProtectionPolicy;
+
+  /**
    * Required. The name of the data source. Supported values: `salesforce`, `jira`, `confluence`,
    * `bigquery`.
    * The value may be {@code null}.
@@ -547,6 +554,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the data protection policy for the connector.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy getDataProtectionPolicy() {
+    return dataProtectionPolicy;
+  }
+
+  /**
+   * Optional. Specifies the data protection policy for the connector.
+   * @param dataProtectionPolicy dataProtectionPolicy or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setDataProtectionPolicy(GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy dataProtectionPolicy) {
+    this.dataProtectionPolicy = dataProtectionPolicy;
     return this;
   }
 

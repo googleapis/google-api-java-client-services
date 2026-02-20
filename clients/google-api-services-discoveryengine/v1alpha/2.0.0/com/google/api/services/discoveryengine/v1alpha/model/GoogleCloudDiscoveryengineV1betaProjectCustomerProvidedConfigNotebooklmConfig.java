@@ -30,11 +30,25 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies the data protection policy for NotebookLM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigDataProtectionPolicy dataProtectionPolicy;
+
+  /**
    * Model Armor configuration to be used for sanitizing user prompts and LLM responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig modelArmorConfig;
+
+  /**
+   * Optional. Observability config for NotebookLM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaObservabilityConfig observabilityConfig;
 
   /**
    * Optional. Whether to disable the notebook sharing feature for the project. Default to false if
@@ -43,6 +57,23 @@ public final class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfig
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean optOutNotebookSharing;
+
+  /**
+   * Optional. Specifies the data protection policy for NotebookLM.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigDataProtectionPolicy getDataProtectionPolicy() {
+    return dataProtectionPolicy;
+  }
+
+  /**
+   * Optional. Specifies the data protection policy for NotebookLM.
+   * @param dataProtectionPolicy dataProtectionPolicy or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig setDataProtectionPolicy(GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigDataProtectionPolicy dataProtectionPolicy) {
+    this.dataProtectionPolicy = dataProtectionPolicy;
+    return this;
+  }
 
   /**
    * Model Armor configuration to be used for sanitizing user prompts and LLM responses.
@@ -58,6 +89,23 @@ public final class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfig
    */
   public GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig setModelArmorConfig(GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig modelArmorConfig) {
     this.modelArmorConfig = modelArmorConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Observability config for NotebookLM.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaObservabilityConfig getObservabilityConfig() {
+    return observabilityConfig;
+  }
+
+  /**
+   * Optional. Observability config for NotebookLM.
+   * @param observabilityConfig observabilityConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig setObservabilityConfig(GoogleCloudDiscoveryengineV1betaObservabilityConfig observabilityConfig) {
+    this.observabilityConfig = observabilityConfig;
     return this;
   }
 

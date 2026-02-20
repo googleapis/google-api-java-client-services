@@ -31,6 +31,13 @@ package com.google.api.services.smartdevicemanagement.v1.model;
 public final class GoogleHomeEnterpriseSdmV1Device extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The GHP device ID of the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ghpName;
+
+  /**
    * Required. The resource name of the device. For example: "enterprises/XYZ/devices/123".
    * The value may be {@code null}.
    */
@@ -59,6 +66,23 @@ public final class GoogleHomeEnterpriseSdmV1Device extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Output only. The GHP device ID of the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGhpName() {
+    return ghpName;
+  }
+
+  /**
+   * Output only. The GHP device ID of the device.
+   * @param ghpName ghpName or {@code null} for none
+   */
+  public GoogleHomeEnterpriseSdmV1Device setGhpName(java.lang.String ghpName) {
+    this.ghpName = ghpName;
+    return this;
+  }
 
   /**
    * Required. The resource name of the device. For example: "enterprises/XYZ/devices/123".

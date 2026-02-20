@@ -38,6 +38,14 @@ public final class CloudRunRenderMetadata extends com.google.api.client.json.Gen
   private java.lang.String service;
 
   /**
+   * Output only. The name of the Cloud Run Worker Pool in the rendered manifest. Format is
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerPool;
+
+  /**
    * Output only. The name of the Cloud Run Service in the rendered manifest. Format is
    * `projects/{project}/locations/{location}/services/{service}`.
    * @return value or {@code null} for none
@@ -53,6 +61,25 @@ public final class CloudRunRenderMetadata extends com.google.api.client.json.Gen
    */
   public CloudRunRenderMetadata setService(java.lang.String service) {
     this.service = service;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the Cloud Run Worker Pool in the rendered manifest. Format is
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerPool() {
+    return workerPool;
+  }
+
+  /**
+   * Output only. The name of the Cloud Run Worker Pool in the rendered manifest. Format is
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   * @param workerPool workerPool or {@code null} for none
+   */
+  public CloudRunRenderMetadata setWorkerPool(java.lang.String workerPool) {
+    this.workerPool = workerPool;
     return this;
   }
 

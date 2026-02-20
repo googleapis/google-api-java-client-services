@@ -103,6 +103,13 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   private String updateTime;
 
   /**
+   * The URL filtering configuration for the SecurityProfile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UrlFilteringProfile urlFilteringProfile;
+
+  /**
    * Output only. Resource creation timestamp.
    * @return value or {@code null} for none
    */
@@ -275,6 +282,23 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
    */
   public SecurityProfile setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * The URL filtering configuration for the SecurityProfile.
+   * @return value or {@code null} for none
+   */
+  public UrlFilteringProfile getUrlFilteringProfile() {
+    return urlFilteringProfile;
+  }
+
+  /**
+   * The URL filtering configuration for the SecurityProfile.
+   * @param urlFilteringProfile urlFilteringProfile or {@code null} for none
+   */
+  public SecurityProfile setUrlFilteringProfile(UrlFilteringProfile urlFilteringProfile) {
+    this.urlFilteringProfile = urlFilteringProfile;
     return this;
   }
 

@@ -52,6 +52,14 @@ public final class SendMessageRequest extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.Object> metadata;
 
   /**
+   * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+   * release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tenant;
+
+  /**
    * Configuration for the send request.
    * @return value or {@code null} for none
    */
@@ -99,6 +107,25 @@ public final class SendMessageRequest extends com.google.api.client.json.Generic
    */
   public SendMessageRequest setMetadata(java.util.Map<String, java.lang.Object> metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+   * release.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTenant() {
+    return tenant;
+  }
+
+  /**
+   * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+   * release.
+   * @param tenant tenant or {@code null} for none
+   */
+  public SendMessageRequest setTenant(java.lang.String tenant) {
+    this.tenant = tenant;
     return this;
   }
 

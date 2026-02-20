@@ -70,6 +70,13 @@ public final class GdataBlobstore2Info extends com.google.api.client.json.Generi
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String uploadFragmentListCreationInfo;
+
+  /**
+   * gdata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String uploadMetadataContainer;
 
   /**
@@ -210,6 +217,51 @@ public final class GdataBlobstore2Info extends com.google.api.client.json.Generi
    */
   public GdataBlobstore2Info setReadToken(java.lang.String readToken) {
     this.readToken = readToken;
+    return this;
+  }
+
+  /**
+   * gdata
+   * @see #decodeUploadFragmentListCreationInfo()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUploadFragmentListCreationInfo() {
+    return uploadFragmentListCreationInfo;
+  }
+
+  /**
+   * gdata
+   * @see #getUploadFragmentListCreationInfo()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeUploadFragmentListCreationInfo() {
+    return com.google.api.client.util.Base64.decodeBase64(uploadFragmentListCreationInfo);
+  }
+
+  /**
+   * gdata
+   * @see #encodeUploadFragmentListCreationInfo()
+   * @param uploadFragmentListCreationInfo uploadFragmentListCreationInfo or {@code null} for none
+   */
+  public GdataBlobstore2Info setUploadFragmentListCreationInfo(java.lang.String uploadFragmentListCreationInfo) {
+    this.uploadFragmentListCreationInfo = uploadFragmentListCreationInfo;
+    return this;
+  }
+
+  /**
+   * gdata
+   * @see #setUploadFragmentListCreationInfo()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GdataBlobstore2Info encodeUploadFragmentListCreationInfo(byte[] uploadFragmentListCreationInfo) {
+    this.uploadFragmentListCreationInfo = com.google.api.client.util.Base64.encodeBase64URLSafeString(uploadFragmentListCreationInfo);
     return this;
   }
 

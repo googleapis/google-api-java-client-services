@@ -131,7 +131,12 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Configuration for network endpoints. If this is empty, then an endpoint with the same name as
-   * the service is automatically generated to service all defined APIs.
+   * the service is automatically generated to service all defined APIs. WARNING: Defining any
+   * entries in the `endpoints` list disables the automatic generation of default endpoint
+   * variations (e.g., `{service}.clients6.google.com`, `content-{service}.googleapis.com`, and mTLS
+   * variants like `{service}.mtls.googleapis.com`). To retain these default variations, you are
+   * required to explicitly include your main service endpoint (e.g., `myservice.googleapis.com`) in
+   * this list alongside any other custom endpoints (like REP, GFE, etc.).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -210,7 +215,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines the monitored resources used by this service. This is required by the
-   * Service.monitoring and Service.logging configurations.
+   * `Service.monitoring` and `Service.logging` configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -494,7 +499,12 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Configuration for network endpoints. If this is empty, then an endpoint with the same name as
-   * the service is automatically generated to service all defined APIs.
+   * the service is automatically generated to service all defined APIs. WARNING: Defining any
+   * entries in the `endpoints` list disables the automatic generation of default endpoint
+   * variations (e.g., `{service}.clients6.google.com`, `content-{service}.googleapis.com`, and mTLS
+   * variants like `{service}.mtls.googleapis.com`). To retain these default variations, you are
+   * required to explicitly include your main service endpoint (e.g., `myservice.googleapis.com`) in
+   * this list alongside any other custom endpoints (like REP, GFE, etc.).
    * @return value or {@code null} for none
    */
   public java.util.List<Endpoint> getEndpoints() {
@@ -503,7 +513,12 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Configuration for network endpoints. If this is empty, then an endpoint with the same name as
-   * the service is automatically generated to service all defined APIs.
+   * the service is automatically generated to service all defined APIs. WARNING: Defining any
+   * entries in the `endpoints` list disables the automatic generation of default endpoint
+   * variations (e.g., `{service}.clients6.google.com`, `content-{service}.googleapis.com`, and mTLS
+   * variants like `{service}.mtls.googleapis.com`). To retain these default variations, you are
+   * required to explicitly include your main service endpoint (e.g., `myservice.googleapis.com`) in
+   * this list alongside any other custom endpoints (like REP, GFE, etc.).
    * @param endpoints endpoints or {@code null} for none
    */
   public Service setEndpoints(java.util.List<Endpoint> endpoints) {
@@ -625,7 +640,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines the monitored resources used by this service. This is required by the
-   * Service.monitoring and Service.logging configurations.
+   * `Service.monitoring` and `Service.logging` configurations.
    * @return value or {@code null} for none
    */
   public java.util.List<MonitoredResourceDescriptor> getMonitoredResources() {
@@ -634,7 +649,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
 
   /**
    * Defines the monitored resources used by this service. This is required by the
-   * Service.monitoring and Service.logging configurations.
+   * `Service.monitoring` and `Service.logging` configurations.
    * @param monitoredResources monitoredResources or {@code null} for none
    */
   public Service setMonitoredResources(java.util.List<MonitoredResourceDescriptor> monitoredResources) {

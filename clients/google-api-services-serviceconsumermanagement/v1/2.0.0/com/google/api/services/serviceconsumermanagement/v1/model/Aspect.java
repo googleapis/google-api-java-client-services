@@ -39,6 +39,13 @@ public final class Aspect extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Optional. Rules of the Configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AspectRule> rules;
+
+  /**
    * Content of the configuration. The underlying schema should be defined by Aspect owners as
    * protobuf message under `google/api/configaspects/proto`.
    * The value may be {@code null}.
@@ -60,6 +67,23 @@ public final class Aspect extends com.google.api.client.json.GenericJson {
    */
   public Aspect setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Optional. Rules of the Configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AspectRule> getRules() {
+    return rules;
+  }
+
+  /**
+   * Optional. Rules of the Configuration.
+   * @param rules rules or {@code null} for none
+   */
+  public Aspect setRules(java.util.List<AspectRule> rules) {
+    this.rules = rules;
     return this;
   }
 

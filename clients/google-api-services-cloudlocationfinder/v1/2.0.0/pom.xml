@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudlocationfinder</artifactId>
-  <version>v1-rev20251022-2.0.0</version>
-  <name>Cloud Location Finder API v1-rev20251022-2.0.0</name>
+  <version>v1-rev20260128-2.0.0</version>
+  <name>Cloud Location Finder API v1-rev20260128-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

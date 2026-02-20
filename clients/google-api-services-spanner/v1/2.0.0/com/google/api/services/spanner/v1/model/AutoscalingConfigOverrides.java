@@ -48,6 +48,43 @@ public final class AutoscalingConfigOverrides extends com.google.api.client.json
   private java.lang.Integer autoscalingTargetHighPriorityCpuUtilizationPercent;
 
   /**
+   * Optional. If specified, overrides the autoscaling target `total_cpu_utilization_percent` in the
+   * top-level autoscaling configuration for the selected replicas.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer autoscalingTargetTotalCpuUtilizationPercent;
+
+  /**
+   * Optional. If true, disables high priority CPU autoscaling for the selected replicas and ignores
+   * high_priority_cpu_utilization_percent in the top-level autoscaling configuration. When setting
+   * this field to true, setting autoscaling_target_high_priority_cpu_utilization_percent field to a
+   * non-zero value for the same replica is not supported. If false, the
+   * autoscaling_target_high_priority_cpu_utilization_percent field in the replica will be used if
+   * set to a non-zero value. Otherwise, the high_priority_cpu_utilization_percent field in the top-
+   * level autoscaling configuration will be used. Setting both
+   * disable_high_priority_cpu_autoscaling and disable_total_cpu_autoscaling to true for the same
+   * replica is not supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableHighPriorityCpuAutoscaling;
+
+  /**
+   * Optional. If true, disables total CPU autoscaling for the selected replicas and ignores
+   * total_cpu_utilization_percent in the top-level autoscaling configuration. When setting this
+   * field to true, setting autoscaling_target_total_cpu_utilization_percent field to a non-zero
+   * value for the same replica is not supported. If false, the
+   * autoscaling_target_total_cpu_utilization_percent field in the replica will be used if set to a
+   * non-zero value. Otherwise, the total_cpu_utilization_percent field in the top-level autoscaling
+   * configuration will be used. Setting both disable_high_priority_cpu_autoscaling and
+   * disable_total_cpu_autoscaling to true for the same replica is not supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableTotalCpuAutoscaling;
+
+  /**
    * Optional. If specified, overrides the min/max limit in the top-level autoscaling configuration
    * for the selected replicas.
    * @return value or {@code null} for none
@@ -82,6 +119,89 @@ public final class AutoscalingConfigOverrides extends com.google.api.client.json
    */
   public AutoscalingConfigOverrides setAutoscalingTargetHighPriorityCpuUtilizationPercent(java.lang.Integer autoscalingTargetHighPriorityCpuUtilizationPercent) {
     this.autoscalingTargetHighPriorityCpuUtilizationPercent = autoscalingTargetHighPriorityCpuUtilizationPercent;
+    return this;
+  }
+
+  /**
+   * Optional. If specified, overrides the autoscaling target `total_cpu_utilization_percent` in the
+   * top-level autoscaling configuration for the selected replicas.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAutoscalingTargetTotalCpuUtilizationPercent() {
+    return autoscalingTargetTotalCpuUtilizationPercent;
+  }
+
+  /**
+   * Optional. If specified, overrides the autoscaling target `total_cpu_utilization_percent` in the
+   * top-level autoscaling configuration for the selected replicas.
+   * @param autoscalingTargetTotalCpuUtilizationPercent autoscalingTargetTotalCpuUtilizationPercent or {@code null} for none
+   */
+  public AutoscalingConfigOverrides setAutoscalingTargetTotalCpuUtilizationPercent(java.lang.Integer autoscalingTargetTotalCpuUtilizationPercent) {
+    this.autoscalingTargetTotalCpuUtilizationPercent = autoscalingTargetTotalCpuUtilizationPercent;
+    return this;
+  }
+
+  /**
+   * Optional. If true, disables high priority CPU autoscaling for the selected replicas and ignores
+   * high_priority_cpu_utilization_percent in the top-level autoscaling configuration. When setting
+   * this field to true, setting autoscaling_target_high_priority_cpu_utilization_percent field to a
+   * non-zero value for the same replica is not supported. If false, the
+   * autoscaling_target_high_priority_cpu_utilization_percent field in the replica will be used if
+   * set to a non-zero value. Otherwise, the high_priority_cpu_utilization_percent field in the top-
+   * level autoscaling configuration will be used. Setting both
+   * disable_high_priority_cpu_autoscaling and disable_total_cpu_autoscaling to true for the same
+   * replica is not supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableHighPriorityCpuAutoscaling() {
+    return disableHighPriorityCpuAutoscaling;
+  }
+
+  /**
+   * Optional. If true, disables high priority CPU autoscaling for the selected replicas and ignores
+   * high_priority_cpu_utilization_percent in the top-level autoscaling configuration. When setting
+   * this field to true, setting autoscaling_target_high_priority_cpu_utilization_percent field to a
+   * non-zero value for the same replica is not supported. If false, the
+   * autoscaling_target_high_priority_cpu_utilization_percent field in the replica will be used if
+   * set to a non-zero value. Otherwise, the high_priority_cpu_utilization_percent field in the top-
+   * level autoscaling configuration will be used. Setting both
+   * disable_high_priority_cpu_autoscaling and disable_total_cpu_autoscaling to true for the same
+   * replica is not supported.
+   * @param disableHighPriorityCpuAutoscaling disableHighPriorityCpuAutoscaling or {@code null} for none
+   */
+  public AutoscalingConfigOverrides setDisableHighPriorityCpuAutoscaling(java.lang.Boolean disableHighPriorityCpuAutoscaling) {
+    this.disableHighPriorityCpuAutoscaling = disableHighPriorityCpuAutoscaling;
+    return this;
+  }
+
+  /**
+   * Optional. If true, disables total CPU autoscaling for the selected replicas and ignores
+   * total_cpu_utilization_percent in the top-level autoscaling configuration. When setting this
+   * field to true, setting autoscaling_target_total_cpu_utilization_percent field to a non-zero
+   * value for the same replica is not supported. If false, the
+   * autoscaling_target_total_cpu_utilization_percent field in the replica will be used if set to a
+   * non-zero value. Otherwise, the total_cpu_utilization_percent field in the top-level autoscaling
+   * configuration will be used. Setting both disable_high_priority_cpu_autoscaling and
+   * disable_total_cpu_autoscaling to true for the same replica is not supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableTotalCpuAutoscaling() {
+    return disableTotalCpuAutoscaling;
+  }
+
+  /**
+   * Optional. If true, disables total CPU autoscaling for the selected replicas and ignores
+   * total_cpu_utilization_percent in the top-level autoscaling configuration. When setting this
+   * field to true, setting autoscaling_target_total_cpu_utilization_percent field to a non-zero
+   * value for the same replica is not supported. If false, the
+   * autoscaling_target_total_cpu_utilization_percent field in the replica will be used if set to a
+   * non-zero value. Otherwise, the total_cpu_utilization_percent field in the top-level autoscaling
+   * configuration will be used. Setting both disable_high_priority_cpu_autoscaling and
+   * disable_total_cpu_autoscaling to true for the same replica is not supported.
+   * @param disableTotalCpuAutoscaling disableTotalCpuAutoscaling or {@code null} for none
+   */
+  public AutoscalingConfigOverrides setDisableTotalCpuAutoscaling(java.lang.Boolean disableTotalCpuAutoscaling) {
+    this.disableTotalCpuAutoscaling = disableTotalCpuAutoscaling;
     return this;
   }
 

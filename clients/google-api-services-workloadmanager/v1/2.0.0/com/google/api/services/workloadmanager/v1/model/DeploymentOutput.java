@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Database Properties.
+ * Message for output of deployment resource
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DatabaseProperties extends com.google.api.client.json.GenericJson {
+public final class DeploymentOutput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Backup properties.
+   * name of the resource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private BackupProperties backupProperties;
+  private java.lang.String name;
 
   /**
-   * Output only. Type of the database. `HANA`, `DB2`, etc.
+   * type of the resource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String databaseType;
+  private java.lang.String type;
 
   /**
-   * Output only. Backup properties.
+   * name of the resource
    * @return value or {@code null} for none
    */
-  public BackupProperties getBackupProperties() {
-    return backupProperties;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Output only. Backup properties.
-   * @param backupProperties backupProperties or {@code null} for none
+   * name of the resource
+   * @param name name or {@code null} for none
    */
-  public DatabaseProperties setBackupProperties(BackupProperties backupProperties) {
-    this.backupProperties = backupProperties;
+  public DeploymentOutput setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * Output only. Type of the database. `HANA`, `DB2`, etc.
+   * type of the resource
    * @return value or {@code null} for none
    */
-  public java.lang.String getDatabaseType() {
-    return databaseType;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * Output only. Type of the database. `HANA`, `DB2`, etc.
-   * @param databaseType databaseType or {@code null} for none
+   * type of the resource
+   * @param type type or {@code null} for none
    */
-  public DatabaseProperties setDatabaseType(java.lang.String databaseType) {
-    this.databaseType = databaseType;
+  public DeploymentOutput setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public DatabaseProperties set(String fieldName, Object value) {
-    return (DatabaseProperties) super.set(fieldName, value);
+  public DeploymentOutput set(String fieldName, Object value) {
+    return (DeploymentOutput) super.set(fieldName, value);
   }
 
   @Override
-  public DatabaseProperties clone() {
-    return (DatabaseProperties) super.clone();
+  public DeploymentOutput clone() {
+    return (DeploymentOutput) super.clone();
   }
 
 }

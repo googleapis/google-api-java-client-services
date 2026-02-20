@@ -50,6 +50,13 @@ public final class QuotaInfo extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Integer> quotaConsumed;
 
   /**
+   * Output only. Indicates the state of the quota extraction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String quotaExtractionState;
+
+  /**
    * Quota metrics to indicate the usage. Depending on the check request, one or more of the
    * following metrics will be included: 1. For rate quota, per quota group or per quota metric
    * incremental usage will be specified using the following delta metric:
@@ -112,6 +119,23 @@ public final class QuotaInfo extends com.google.api.client.json.GenericJson {
    */
   public QuotaInfo setQuotaConsumed(java.util.Map<String, java.lang.Integer> quotaConsumed) {
     this.quotaConsumed = quotaConsumed;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates the state of the quota extraction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuotaExtractionState() {
+    return quotaExtractionState;
+  }
+
+  /**
+   * Output only. Indicates the state of the quota extraction.
+   * @param quotaExtractionState quotaExtractionState or {@code null} for none
+   */
+  public QuotaInfo setQuotaExtractionState(java.lang.String quotaExtractionState) {
+    this.quotaExtractionState = quotaExtractionState;
     return this;
   }
 

@@ -65,6 +65,24 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
   private java.lang.String destinationInstanceName;
 
   /**
+   * Optional. The fully qualified URI of the VPC network to which the cloned instance will be
+   * connected via Private Services Access for private IP. For example:`projects/my-network-
+   * project/global/networks/my-network`. This field is only required for cross-project cloning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destinationNetwork;
+
+  /**
+   * Optional. The project ID of the destination project where the cloned instance will be created.
+   * To perform a cross-project clone, this field is required. If not specified, the clone is
+   * created in the same project as the source instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destinationProject;
+
+  /**
    * This is always `sql#cloneContext`.
    * The value may be {@code null}.
    */
@@ -189,6 +207,48 @@ public final class CloneContext extends com.google.api.client.json.GenericJson {
    */
   public CloneContext setDestinationInstanceName(java.lang.String destinationInstanceName) {
     this.destinationInstanceName = destinationInstanceName;
+    return this;
+  }
+
+  /**
+   * Optional. The fully qualified URI of the VPC network to which the cloned instance will be
+   * connected via Private Services Access for private IP. For example:`projects/my-network-
+   * project/global/networks/my-network`. This field is only required for cross-project cloning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestinationNetwork() {
+    return destinationNetwork;
+  }
+
+  /**
+   * Optional. The fully qualified URI of the VPC network to which the cloned instance will be
+   * connected via Private Services Access for private IP. For example:`projects/my-network-
+   * project/global/networks/my-network`. This field is only required for cross-project cloning.
+   * @param destinationNetwork destinationNetwork or {@code null} for none
+   */
+  public CloneContext setDestinationNetwork(java.lang.String destinationNetwork) {
+    this.destinationNetwork = destinationNetwork;
+    return this;
+  }
+
+  /**
+   * Optional. The project ID of the destination project where the cloned instance will be created.
+   * To perform a cross-project clone, this field is required. If not specified, the clone is
+   * created in the same project as the source instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestinationProject() {
+    return destinationProject;
+  }
+
+  /**
+   * Optional. The project ID of the destination project where the cloned instance will be created.
+   * To perform a cross-project clone, this field is required. If not specified, the clone is
+   * created in the same project as the source instance.
+   * @param destinationProject destinationProject or {@code null} for none
+   */
+  public CloneContext setDestinationProject(java.lang.String destinationProject) {
+    this.destinationProject = destinationProject;
     return this;
   }
 

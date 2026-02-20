@@ -44,11 +44,18 @@ public final class DnsNameMapping extends com.google.api.client.json.GenericJson
   private java.lang.String dnsScope;
 
   /**
-   * The DNS name.
+   * Output only. The DNS name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The manager for this DNS record.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recordManager;
 
   /**
    * Output only. The connection type of the DNS name.
@@ -85,7 +92,7 @@ public final class DnsNameMapping extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The DNS name.
+   * Output only. The DNS name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -93,11 +100,28 @@ public final class DnsNameMapping extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The DNS name.
+   * Output only. The DNS name.
    * @param name name or {@code null} for none
    */
   public DnsNameMapping setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The manager for this DNS record.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecordManager() {
+    return recordManager;
+  }
+
+  /**
+   * Output only. The manager for this DNS record.
+   * @param recordManager recordManager or {@code null} for none
+   */
+  public DnsNameMapping setRecordManager(java.lang.String recordManager) {
+    this.recordManager = recordManager;
     return this;
   }
 

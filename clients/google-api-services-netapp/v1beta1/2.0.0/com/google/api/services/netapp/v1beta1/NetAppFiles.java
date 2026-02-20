@@ -103,7 +103,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -7618,6 +7618,630 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
         }
 
+        /**
+         * An accessor for creating requests from the Ontap collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code NetAppFiles netapp = new NetAppFiles(...);}
+         *   {@code NetAppFiles.Ontap.List request = netapp.ontap().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Ontap ontap() {
+          return new Ontap();
+        }
+
+        /**
+         * The "ontap" collection of methods.
+         */
+        public class Ontap {
+
+          /**
+           * `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the `StoragePool` cluster.
+           *
+           * Create a request for the method "ontap.executeOntapDelete".
+           *
+           * This request holds the parameters needed by the netapp server.  After setting any optional
+           * parameters, call the {@link ExecuteOntapDelete#execute()} method to invoke the remote operation.
+           *
+           * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           *        `projects/123456789/locations/us-central1/storagePools/my-storage-
+           *        pool/ontap/api/storage/volumes`.
+           * @return the request
+           */
+          public ExecuteOntapDelete executeOntapDelete(java.lang.String ontapPath) throws java.io.IOException {
+            ExecuteOntapDelete result = new ExecuteOntapDelete(ontapPath);
+            initialize(result);
+            return result;
+          }
+
+          public class ExecuteOntapDelete extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.ExecuteOntapDeleteResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+ontapPath}";
+
+            private final java.util.regex.Pattern ONTAP_PATH_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+
+            /**
+             * `ExecuteOntapDelete` dispatches the ONTAP `DELETE` request to the `StoragePool` cluster.
+             *
+             * Create a request for the method "ontap.executeOntapDelete".
+             *
+             * This request holds the parameters needed by the the netapp server.  After setting any optional
+             * parameters, call the {@link ExecuteOntapDelete#execute()} method to invoke the remote
+             * operation. <p> {@link ExecuteOntapDelete#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           *        `projects/123456789/locations/us-central1/storagePools/my-storage-
+           *        pool/ontap/api/storage/volumes`.
+             * @since 1.13
+             */
+            protected ExecuteOntapDelete(java.lang.String ontapPath) {
+              super(NetAppFiles.this, "DELETE", REST_PATH, null, com.google.api.services.netapp.v1beta1.model.ExecuteOntapDeleteResponse.class);
+              this.ontapPath = com.google.api.client.util.Preconditions.checkNotNull(ontapPath, "Required parameter ontapPath must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ONTAP_PATH_PATTERN.matcher(ontapPath).matches(),
+                    "Parameter ontapPath must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+              }
+            }
+
+            @Override
+            public ExecuteOntapDelete set$Xgafv(java.lang.String $Xgafv) {
+              return (ExecuteOntapDelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExecuteOntapDelete setAccessToken(java.lang.String accessToken) {
+              return (ExecuteOntapDelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExecuteOntapDelete setAlt(java.lang.String alt) {
+              return (ExecuteOntapDelete) super.setAlt(alt);
+            }
+
+            @Override
+            public ExecuteOntapDelete setCallback(java.lang.String callback) {
+              return (ExecuteOntapDelete) super.setCallback(callback);
+            }
+
+            @Override
+            public ExecuteOntapDelete setFields(java.lang.String fields) {
+              return (ExecuteOntapDelete) super.setFields(fields);
+            }
+
+            @Override
+            public ExecuteOntapDelete setKey(java.lang.String key) {
+              return (ExecuteOntapDelete) super.setKey(key);
+            }
+
+            @Override
+            public ExecuteOntapDelete setOauthToken(java.lang.String oauthToken) {
+              return (ExecuteOntapDelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExecuteOntapDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExecuteOntapDelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExecuteOntapDelete setQuotaUser(java.lang.String quotaUser) {
+              return (ExecuteOntapDelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExecuteOntapDelete setUploadType(java.lang.String uploadType) {
+              return (ExecuteOntapDelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExecuteOntapDelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExecuteOntapDelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
+             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
+             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * pool/ontap/api/storage/volumes`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String ontapPath;
+
+            /** Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{lo
+           cation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           `projects/123456789/locations/us-central1/storagePools/my-storage-pool/ontap/api/storage/volumes`.
+             */
+            public java.lang.String getOntapPath() {
+              return ontapPath;
+            }
+
+            /**
+             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
+             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
+             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * pool/ontap/api/storage/volumes`.
+             */
+            public ExecuteOntapDelete setOntapPath(java.lang.String ontapPath) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ONTAP_PATH_PATTERN.matcher(ontapPath).matches(),
+                    "Parameter ontapPath must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+              }
+              this.ontapPath = ontapPath;
+              return this;
+            }
+
+            @Override
+            public ExecuteOntapDelete set(String parameterName, Object value) {
+              return (ExecuteOntapDelete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * `ExecuteOntapGet` dispatches the ONTAP `GET` request to the `StoragePool` cluster.
+           *
+           * Create a request for the method "ontap.executeOntapGet".
+           *
+           * This request holds the parameters needed by the netapp server.  After setting any optional
+           * parameters, call the {@link ExecuteOntapGet#execute()} method to invoke the remote operation.
+           *
+           * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           *        `projects/123456789/locations/us-central1/storagePools/my-storage-
+           *        pool/ontap/api/storage/volumes`.
+           * @return the request
+           */
+          public ExecuteOntapGet executeOntapGet(java.lang.String ontapPath) throws java.io.IOException {
+            ExecuteOntapGet result = new ExecuteOntapGet(ontapPath);
+            initialize(result);
+            return result;
+          }
+
+          public class ExecuteOntapGet extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.ExecuteOntapGetResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+ontapPath}";
+
+            private final java.util.regex.Pattern ONTAP_PATH_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+
+            /**
+             * `ExecuteOntapGet` dispatches the ONTAP `GET` request to the `StoragePool` cluster.
+             *
+             * Create a request for the method "ontap.executeOntapGet".
+             *
+             * This request holds the parameters needed by the the netapp server.  After setting any optional
+             * parameters, call the {@link ExecuteOntapGet#execute()} method to invoke the remote operation.
+             * <p> {@link ExecuteOntapGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+             * lientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           *        `projects/123456789/locations/us-central1/storagePools/my-storage-
+           *        pool/ontap/api/storage/volumes`.
+             * @since 1.13
+             */
+            protected ExecuteOntapGet(java.lang.String ontapPath) {
+              super(NetAppFiles.this, "GET", REST_PATH, null, com.google.api.services.netapp.v1beta1.model.ExecuteOntapGetResponse.class);
+              this.ontapPath = com.google.api.client.util.Preconditions.checkNotNull(ontapPath, "Required parameter ontapPath must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ONTAP_PATH_PATTERN.matcher(ontapPath).matches(),
+                    "Parameter ontapPath must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public ExecuteOntapGet set$Xgafv(java.lang.String $Xgafv) {
+              return (ExecuteOntapGet) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExecuteOntapGet setAccessToken(java.lang.String accessToken) {
+              return (ExecuteOntapGet) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExecuteOntapGet setAlt(java.lang.String alt) {
+              return (ExecuteOntapGet) super.setAlt(alt);
+            }
+
+            @Override
+            public ExecuteOntapGet setCallback(java.lang.String callback) {
+              return (ExecuteOntapGet) super.setCallback(callback);
+            }
+
+            @Override
+            public ExecuteOntapGet setFields(java.lang.String fields) {
+              return (ExecuteOntapGet) super.setFields(fields);
+            }
+
+            @Override
+            public ExecuteOntapGet setKey(java.lang.String key) {
+              return (ExecuteOntapGet) super.setKey(key);
+            }
+
+            @Override
+            public ExecuteOntapGet setOauthToken(java.lang.String oauthToken) {
+              return (ExecuteOntapGet) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExecuteOntapGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExecuteOntapGet) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExecuteOntapGet setQuotaUser(java.lang.String quotaUser) {
+              return (ExecuteOntapGet) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExecuteOntapGet setUploadType(java.lang.String uploadType) {
+              return (ExecuteOntapGet) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExecuteOntapGet setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExecuteOntapGet) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
+             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
+             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * pool/ontap/api/storage/volumes`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String ontapPath;
+
+            /** Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{lo
+           cation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           `projects/123456789/locations/us-central1/storagePools/my-storage-pool/ontap/api/storage/volumes`.
+             */
+            public java.lang.String getOntapPath() {
+              return ontapPath;
+            }
+
+            /**
+             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
+             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
+             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * pool/ontap/api/storage/volumes`.
+             */
+            public ExecuteOntapGet setOntapPath(java.lang.String ontapPath) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ONTAP_PATH_PATTERN.matcher(ontapPath).matches(),
+                    "Parameter ontapPath must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+              }
+              this.ontapPath = ontapPath;
+              return this;
+            }
+
+            @Override
+            public ExecuteOntapGet set(String parameterName, Object value) {
+              return (ExecuteOntapGet) super.set(parameterName, value);
+            }
+          }
+          /**
+           * `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the `StoragePool` cluster.
+           *
+           * Create a request for the method "ontap.executeOntapPatch".
+           *
+           * This request holds the parameters needed by the netapp server.  After setting any optional
+           * parameters, call the {@link ExecuteOntapPatch#execute()} method to invoke the remote operation.
+           *
+           * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           *        `projects/123456789/locations/us-central1/storagePools/my-storage-
+           *        pool/ontap/api/storage/volumes`.
+           * @param content the {@link com.google.api.services.netapp.v1beta1.model.ExecuteOntapPatchRequest}
+           * @return the request
+           */
+          public ExecuteOntapPatch executeOntapPatch(java.lang.String ontapPath, com.google.api.services.netapp.v1beta1.model.ExecuteOntapPatchRequest content) throws java.io.IOException {
+            ExecuteOntapPatch result = new ExecuteOntapPatch(ontapPath, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ExecuteOntapPatch extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.ExecuteOntapPatchResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+ontapPath}";
+
+            private final java.util.regex.Pattern ONTAP_PATH_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+
+            /**
+             * `ExecuteOntapPatch` dispatches the ONTAP `PATCH` request to the `StoragePool` cluster.
+             *
+             * Create a request for the method "ontap.executeOntapPatch".
+             *
+             * This request holds the parameters needed by the the netapp server.  After setting any optional
+             * parameters, call the {@link ExecuteOntapPatch#execute()} method to invoke the remote operation.
+             * <p> {@link ExecuteOntapPatch#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+             * eClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           *        `projects/123456789/locations/us-central1/storagePools/my-storage-
+           *        pool/ontap/api/storage/volumes`.
+             * @param content the {@link com.google.api.services.netapp.v1beta1.model.ExecuteOntapPatchRequest}
+             * @since 1.13
+             */
+            protected ExecuteOntapPatch(java.lang.String ontapPath, com.google.api.services.netapp.v1beta1.model.ExecuteOntapPatchRequest content) {
+              super(NetAppFiles.this, "PATCH", REST_PATH, content, com.google.api.services.netapp.v1beta1.model.ExecuteOntapPatchResponse.class);
+              this.ontapPath = com.google.api.client.util.Preconditions.checkNotNull(ontapPath, "Required parameter ontapPath must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ONTAP_PATH_PATTERN.matcher(ontapPath).matches(),
+                    "Parameter ontapPath must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+              }
+            }
+
+            @Override
+            public ExecuteOntapPatch set$Xgafv(java.lang.String $Xgafv) {
+              return (ExecuteOntapPatch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExecuteOntapPatch setAccessToken(java.lang.String accessToken) {
+              return (ExecuteOntapPatch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExecuteOntapPatch setAlt(java.lang.String alt) {
+              return (ExecuteOntapPatch) super.setAlt(alt);
+            }
+
+            @Override
+            public ExecuteOntapPatch setCallback(java.lang.String callback) {
+              return (ExecuteOntapPatch) super.setCallback(callback);
+            }
+
+            @Override
+            public ExecuteOntapPatch setFields(java.lang.String fields) {
+              return (ExecuteOntapPatch) super.setFields(fields);
+            }
+
+            @Override
+            public ExecuteOntapPatch setKey(java.lang.String key) {
+              return (ExecuteOntapPatch) super.setKey(key);
+            }
+
+            @Override
+            public ExecuteOntapPatch setOauthToken(java.lang.String oauthToken) {
+              return (ExecuteOntapPatch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExecuteOntapPatch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExecuteOntapPatch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExecuteOntapPatch setQuotaUser(java.lang.String quotaUser) {
+              return (ExecuteOntapPatch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExecuteOntapPatch setUploadType(java.lang.String uploadType) {
+              return (ExecuteOntapPatch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExecuteOntapPatch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExecuteOntapPatch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
+             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
+             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * pool/ontap/api/storage/volumes`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String ontapPath;
+
+            /** Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{lo
+           cation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           `projects/123456789/locations/us-central1/storagePools/my-storage-pool/ontap/api/storage/volumes`.
+             */
+            public java.lang.String getOntapPath() {
+              return ontapPath;
+            }
+
+            /**
+             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
+             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
+             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * pool/ontap/api/storage/volumes`.
+             */
+            public ExecuteOntapPatch setOntapPath(java.lang.String ontapPath) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ONTAP_PATH_PATTERN.matcher(ontapPath).matches(),
+                    "Parameter ontapPath must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+              }
+              this.ontapPath = ontapPath;
+              return this;
+            }
+
+            @Override
+            public ExecuteOntapPatch set(String parameterName, Object value) {
+              return (ExecuteOntapPatch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * `ExecuteOntapPost` dispatches the ONTAP `POST` request to the `StoragePool` cluster.
+           *
+           * Create a request for the method "ontap.executeOntapPost".
+           *
+           * This request holds the parameters needed by the netapp server.  After setting any optional
+           * parameters, call the {@link ExecuteOntapPost#execute()} method to invoke the remote operation.
+           *
+           * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           *        `projects/123456789/locations/us-central1/storagePools/my-storage-
+           *        pool/ontap/api/storage/volumes`.
+           * @param content the {@link com.google.api.services.netapp.v1beta1.model.ExecuteOntapPostRequest}
+           * @return the request
+           */
+          public ExecuteOntapPost executeOntapPost(java.lang.String ontapPath, com.google.api.services.netapp.v1beta1.model.ExecuteOntapPostRequest content) throws java.io.IOException {
+            ExecuteOntapPost result = new ExecuteOntapPost(ontapPath, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ExecuteOntapPost extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.ExecuteOntapPostResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+ontapPath}";
+
+            private final java.util.regex.Pattern ONTAP_PATH_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+
+            /**
+             * `ExecuteOntapPost` dispatches the ONTAP `POST` request to the `StoragePool` cluster.
+             *
+             * Create a request for the method "ontap.executeOntapPost".
+             *
+             * This request holds the parameters needed by the the netapp server.  After setting any optional
+             * parameters, call the {@link ExecuteOntapPost#execute()} method to invoke the remote operation.
+             * <p> {@link ExecuteOntapPost#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+             * ClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param ontapPath Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{loc
+           *        ation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           *        `projects/123456789/locations/us-central1/storagePools/my-storage-
+           *        pool/ontap/api/storage/volumes`.
+             * @param content the {@link com.google.api.services.netapp.v1beta1.model.ExecuteOntapPostRequest}
+             * @since 1.13
+             */
+            protected ExecuteOntapPost(java.lang.String ontapPath, com.google.api.services.netapp.v1beta1.model.ExecuteOntapPostRequest content) {
+              super(NetAppFiles.this, "POST", REST_PATH, content, com.google.api.services.netapp.v1beta1.model.ExecuteOntapPostResponse.class);
+              this.ontapPath = com.google.api.client.util.Preconditions.checkNotNull(ontapPath, "Required parameter ontapPath must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ONTAP_PATH_PATTERN.matcher(ontapPath).matches(),
+                    "Parameter ontapPath must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+              }
+            }
+
+            @Override
+            public ExecuteOntapPost set$Xgafv(java.lang.String $Xgafv) {
+              return (ExecuteOntapPost) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExecuteOntapPost setAccessToken(java.lang.String accessToken) {
+              return (ExecuteOntapPost) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExecuteOntapPost setAlt(java.lang.String alt) {
+              return (ExecuteOntapPost) super.setAlt(alt);
+            }
+
+            @Override
+            public ExecuteOntapPost setCallback(java.lang.String callback) {
+              return (ExecuteOntapPost) super.setCallback(callback);
+            }
+
+            @Override
+            public ExecuteOntapPost setFields(java.lang.String fields) {
+              return (ExecuteOntapPost) super.setFields(fields);
+            }
+
+            @Override
+            public ExecuteOntapPost setKey(java.lang.String key) {
+              return (ExecuteOntapPost) super.setKey(key);
+            }
+
+            @Override
+            public ExecuteOntapPost setOauthToken(java.lang.String oauthToken) {
+              return (ExecuteOntapPost) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExecuteOntapPost setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExecuteOntapPost) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExecuteOntapPost setQuotaUser(java.lang.String quotaUser) {
+              return (ExecuteOntapPost) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExecuteOntapPost setUploadType(java.lang.String uploadType) {
+              return (ExecuteOntapPost) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExecuteOntapPost setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExecuteOntapPost) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
+             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
+             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * pool/ontap/api/storage/volumes`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String ontapPath;
+
+            /** Required. The resource path of the ONTAP resource. Format: `projects/{project_number}/locations/{lo
+           cation_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`. For example:
+           `projects/123456789/locations/us-central1/storagePools/my-storage-pool/ontap/api/storage/volumes`.
+             */
+            public java.lang.String getOntapPath() {
+              return ontapPath;
+            }
+
+            /**
+             * Required. The resource path of the ONTAP resource. Format: `projects/{project_number}
+             * /locations/{location_id}/storagePools/{storage_pool_id}/ontap/{ontap_resource_path}`.
+             * For example: `projects/123456789/locations/us-central1/storagePools/my-storage-
+             * pool/ontap/api/storage/volumes`.
+             */
+            public ExecuteOntapPost setOntapPath(java.lang.String ontapPath) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ONTAP_PATH_PATTERN.matcher(ontapPath).matches(),
+                    "Parameter ontapPath must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/storagePools/[^/]+/ontap/.*$");
+              }
+              this.ontapPath = ontapPath;
+              return this;
+            }
+
+            @Override
+            public ExecuteOntapPost set(String parameterName, Object value) {
+              return (ExecuteOntapPost) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Volumes collection.
@@ -12143,8 +12767,7 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

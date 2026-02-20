@@ -103,7 +103,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -1824,10 +1824,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique ID used to identify the request. If the service receives two
-           * CreateBatchRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.d
-           * ataproc.v1#google.cloud.dataproc.v1.CreateBatchRequest)s with the same request_id, the
-           * second request is ignored and the Operation that corresponds to the first Batch created
-           * and stored in the backend is returned.Recommendation: Set this value to a UUID
+           * CreateBatchRequests with the same request_id, the second request is ignored and the
+           * operation that corresponds to the first Batch created and stored in the backend is
+           * returned.Recommendation: Set this value to a UUID
            * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain
            * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
            * length is 40 characters.
@@ -1835,13 +1834,11 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A unique ID used to identify the request. If the service receives two CreateBatchRequest
-         (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.datapro
-         c.v1.CreateBatchRequest)s with the same request_id, the second request is ignored and the Operation
-         that corresponds to the first Batch created and stored in the backend is returned.Recommendation:
-         Set this value to a UUID (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value
-         must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
-         length is 40 characters.
+          /** Optional. A unique ID used to identify the request. If the service receives two CreateBatchRequests
+         with the same request_id, the second request is ignored and the operation that corresponds to the
+         first Batch created and stored in the backend is returned.Recommendation: Set this value to a UUID
+         (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain only letters
+         (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -1849,10 +1846,9 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. A unique ID used to identify the request. If the service receives two
-           * CreateBatchRequest (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.d
-           * ataproc.v1#google.cloud.dataproc.v1.CreateBatchRequest)s with the same request_id, the
-           * second request is ignored and the Operation that corresponds to the first Batch created
-           * and stored in the backend is returned.Recommendation: Set this value to a UUID
+           * CreateBatchRequests with the same request_id, the second request is ignored and the
+           * operation that corresponds to the first Batch created and stored in the backend is
+           * returned.Recommendation: Set this value to a UUID
            * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value must contain
            * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum
            * length is 40 characters.
@@ -24106,8 +24102,7 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

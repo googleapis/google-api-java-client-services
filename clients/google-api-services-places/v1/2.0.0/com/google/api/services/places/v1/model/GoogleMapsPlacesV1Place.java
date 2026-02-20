@@ -228,6 +228,16 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleMapsPlacesV1PlaceGoogleMapsLinks googleMapsLinks;
 
   /**
+   * The type label of the place on Google Maps, localized to the request language if applicable,
+   * for example, "Restaurant", "Cafe", "Airport", etc. The type label may be different from the
+   * primary type display name and may not be a supported type in [Places API Place Types
+   * table](https://developers.google.com/maps/documentation/places/web-service/place-types).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeLocalizedText googleMapsTypeLabel;
+
+  /**
    * A URL providing more information about this place.
    * The value may be {@code null}.
    */
@@ -1090,6 +1100,29 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setGoogleMapsLinks(GoogleMapsPlacesV1PlaceGoogleMapsLinks googleMapsLinks) {
     this.googleMapsLinks = googleMapsLinks;
+    return this;
+  }
+
+  /**
+   * The type label of the place on Google Maps, localized to the request language if applicable,
+   * for example, "Restaurant", "Cafe", "Airport", etc. The type label may be different from the
+   * primary type display name and may not be a supported type in [Places API Place Types
+   * table](https://developers.google.com/maps/documentation/places/web-service/place-types).
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeLocalizedText getGoogleMapsTypeLabel() {
+    return googleMapsTypeLabel;
+  }
+
+  /**
+   * The type label of the place on Google Maps, localized to the request language if applicable,
+   * for example, "Restaurant", "Cafe", "Airport", etc. The type label may be different from the
+   * primary type display name and may not be a supported type in [Places API Place Types
+   * table](https://developers.google.com/maps/documentation/places/web-service/place-types).
+   * @param googleMapsTypeLabel googleMapsTypeLabel or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setGoogleMapsTypeLabel(GoogleTypeLocalizedText googleMapsTypeLabel) {
+    this.googleMapsTypeLabel = googleMapsTypeLabel;
     return this;
   }
 

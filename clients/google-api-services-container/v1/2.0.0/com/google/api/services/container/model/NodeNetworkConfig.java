@@ -140,10 +140,12 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   /**
    * Optional. The subnetwork name/path for the node pool. Format:
    * projects/{project}/regions/{region}/subnetworks/{subnetwork} If the cluster is associated with
-   * multiple subnetworks, the subnetwork can be either: 1. A user supplied subnetwork name/full
-   * path during node pool creation. Example1: my-subnet Example2: projects/gke-project/regions/us-
-   * central1/subnetworks/my-subnet 2. A subnetwork path picked based on the IP utilization during
-   * node pool creation and is immutable.
+   * multiple subnetworks, the subnetwork can be either: - A user supplied subnetwork name during
+   * node pool creation (e.g., `my-subnet`). The name must be between 1 and 63 characters long,
+   * start with a letter, contain only letters, numbers, and hyphens, and end with a letter or a
+   * number. - A full subnetwork path during node pool creation, such as `projects/gke-
+   * project/regions/us-central1/subnetworks/my-subnet` - A subnetwork path picked based on the IP
+   * utilization during node pool creation and is immutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -372,10 +374,12 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   /**
    * Optional. The subnetwork name/path for the node pool. Format:
    * projects/{project}/regions/{region}/subnetworks/{subnetwork} If the cluster is associated with
-   * multiple subnetworks, the subnetwork can be either: 1. A user supplied subnetwork name/full
-   * path during node pool creation. Example1: my-subnet Example2: projects/gke-project/regions/us-
-   * central1/subnetworks/my-subnet 2. A subnetwork path picked based on the IP utilization during
-   * node pool creation and is immutable.
+   * multiple subnetworks, the subnetwork can be either: - A user supplied subnetwork name during
+   * node pool creation (e.g., `my-subnet`). The name must be between 1 and 63 characters long,
+   * start with a letter, contain only letters, numbers, and hyphens, and end with a letter or a
+   * number. - A full subnetwork path during node pool creation, such as `projects/gke-
+   * project/regions/us-central1/subnetworks/my-subnet` - A subnetwork path picked based on the IP
+   * utilization during node pool creation and is immutable.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -385,10 +389,12 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   /**
    * Optional. The subnetwork name/path for the node pool. Format:
    * projects/{project}/regions/{region}/subnetworks/{subnetwork} If the cluster is associated with
-   * multiple subnetworks, the subnetwork can be either: 1. A user supplied subnetwork name/full
-   * path during node pool creation. Example1: my-subnet Example2: projects/gke-project/regions/us-
-   * central1/subnetworks/my-subnet 2. A subnetwork path picked based on the IP utilization during
-   * node pool creation and is immutable.
+   * multiple subnetworks, the subnetwork can be either: - A user supplied subnetwork name during
+   * node pool creation (e.g., `my-subnet`). The name must be between 1 and 63 characters long,
+   * start with a letter, contain only letters, numbers, and hyphens, and end with a letter or a
+   * number. - A full subnetwork path during node pool creation, such as `projects/gke-
+   * project/regions/us-central1/subnetworks/my-subnet` - A subnetwork path picked based on the IP
+   * utilization during node pool creation and is immutable.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public NodeNetworkConfig setSubnetwork(java.lang.String subnetwork) {

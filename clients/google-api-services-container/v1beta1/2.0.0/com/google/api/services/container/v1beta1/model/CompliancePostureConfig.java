@@ -17,6 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
+ * Deprecated: Compliance Posture is no longer supported. For more details, see
+ * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
  * CompliancePostureConfig defines the settings needed to enable/disable features for the Compliance
  * Posture.
  *

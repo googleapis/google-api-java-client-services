@@ -53,7 +53,7 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Provides telephony information associated with each SIM card on the device. Only supported on
-   * fully managed devices starting from Android API level 23.
+   * fully managed devices starting from Android 6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Provides telephony information associated with each SIM card on the device. Only supported on
-   * fully managed devices starting from Android API level 23.
+   * fully managed devices starting from Android 6.
    * @return value or {@code null} for none
    */
   public java.util.List<TelephonyInfo> getTelephonyInfos() {
@@ -128,7 +128,7 @@ public final class NetworkInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * Provides telephony information associated with each SIM card on the device. Only supported on
-   * fully managed devices starting from Android API level 23.
+   * fully managed devices starting from Android 6.
    * @param telephonyInfos telephonyInfos or {@code null} for none
    */
   public NetworkInfo setTelephonyInfos(java.util.List<TelephonyInfo> telephonyInfos) {

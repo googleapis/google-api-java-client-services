@@ -29,36 +29,6 @@ package com.google.api.services.firestore.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleFirestoreAdminV1LocationMetadata extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The storage placements available in the location. When the location represents a Standard
-   * Managed Multi-Region (SMMR) like "us", this field lists the available Google-Managed Multi-
-   * Regions (GMMRs) within it, such as "nam5" or "eur3".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> availableStoragePlacements;
-
-  /**
-   * The storage placements available in the location. When the location represents a Standard
-   * Managed Multi-Region (SMMR) like "us", this field lists the available Google-Managed Multi-
-   * Regions (GMMRs) within it, such as "nam5" or "eur3".
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAvailableStoragePlacements() {
-    return availableStoragePlacements;
-  }
-
-  /**
-   * The storage placements available in the location. When the location represents a Standard
-   * Managed Multi-Region (SMMR) like "us", this field lists the available Google-Managed Multi-
-   * Regions (GMMRs) within it, such as "nam5" or "eur3".
-   * @param availableStoragePlacements availableStoragePlacements or {@code null} for none
-   */
-  public GoogleFirestoreAdminV1LocationMetadata setAvailableStoragePlacements(java.util.List<java.lang.String> availableStoragePlacements) {
-    this.availableStoragePlacements = availableStoragePlacements;
-    return this;
-  }
-
   @Override
   public GoogleFirestoreAdminV1LocationMetadata set(String fieldName, Object value) {
     return (GoogleFirestoreAdminV1LocationMetadata) super.set(fieldName, value);

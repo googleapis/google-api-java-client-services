@@ -30,11 +30,44 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A field containing instructions from the developer for the agent.
+   * Optional. Unique identifier of the agent. This ID is used to refer to this agent, e.g., in
+   * AgentEvent.author, or in the `sub_agents` field. It must be unique within the `agents` map.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentId;
+
+  /**
+   * Optional. The type or class of the agent (e.g., "LlmAgent", "RouterAgent", "ToolUseAgent").
+   * Useful for the autorater to understand the expected behavior of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentType;
+
+  /**
+   * Optional. A high-level description of the agent's role and responsibilities. Critical for
+   * evaluating if the agent is routing tasks correctly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
+   * Optional. Contains instructions from the developer for the agent. Can be static or a dynamic
+   * prompt template used with the `AgentEvent.state_delta` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData developerInstruction;
+
+  /**
+   * Optional. The list of valid agent IDs (names) that this agent can delegate to. This defines the
+   * directed edges in the agent system graph topology.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> subAgents;
 
   /**
    * List of tools.
@@ -52,7 +85,65 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig ext
   private java.lang.String toolsText;
 
   /**
-   * Optional. A field containing instructions from the developer for the agent.
+   * Optional. Unique identifier of the agent. This ID is used to refer to this agent, e.g., in
+   * AgentEvent.author, or in the `sub_agents` field. It must be unique within the `agents` map.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentId() {
+    return agentId;
+  }
+
+  /**
+   * Optional. Unique identifier of the agent. This ID is used to refer to this agent, e.g., in
+   * AgentEvent.author, or in the `sub_agents` field. It must be unique within the `agents` map.
+   * @param agentId agentId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setAgentId(java.lang.String agentId) {
+    this.agentId = agentId;
+    return this;
+  }
+
+  /**
+   * Optional. The type or class of the agent (e.g., "LlmAgent", "RouterAgent", "ToolUseAgent").
+   * Useful for the autorater to understand the expected behavior of the agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentType() {
+    return agentType;
+  }
+
+  /**
+   * Optional. The type or class of the agent (e.g., "LlmAgent", "RouterAgent", "ToolUseAgent").
+   * Useful for the autorater to understand the expected behavior of the agent.
+   * @param agentType agentType or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setAgentType(java.lang.String agentType) {
+    this.agentType = agentType;
+    return this;
+  }
+
+  /**
+   * Optional. A high-level description of the agent's role and responsibilities. Critical for
+   * evaluating if the agent is routing tasks correctly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. A high-level description of the agent's role and responsibilities. Critical for
+   * evaluating if the agent is routing tasks correctly.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setDescription(java.lang.String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Contains instructions from the developer for the agent. Can be static or a dynamic
+   * prompt template used with the `AgentEvent.state_delta` field.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData getDeveloperInstruction() {
@@ -60,11 +151,31 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig ext
   }
 
   /**
-   * Optional. A field containing instructions from the developer for the agent.
+   * Optional. Contains instructions from the developer for the agent. Can be static or a dynamic
+   * prompt template used with the `AgentEvent.state_delta` field.
    * @param developerInstruction developerInstruction or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setDeveloperInstruction(GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData developerInstruction) {
     this.developerInstruction = developerInstruction;
+    return this;
+  }
+
+  /**
+   * Optional. The list of valid agent IDs (names) that this agent can delegate to. This defines the
+   * directed edges in the agent system graph topology.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSubAgents() {
+    return subAgents;
+  }
+
+  /**
+   * Optional. The list of valid agent IDs (names) that this agent can delegate to. This defines the
+   * directed edges in the agent system graph topology.
+   * @param subAgents subAgents or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setSubAgents(java.util.List<java.lang.String> subAgents) {
+    this.subAgents = subAgents;
     return this;
   }
 

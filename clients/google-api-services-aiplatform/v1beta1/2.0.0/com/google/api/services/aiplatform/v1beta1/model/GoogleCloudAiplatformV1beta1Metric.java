@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1Metric extends com.google.api.cli
   private GoogleCloudAiplatformV1beta1BleuSpec bleuSpec;
 
   /**
+   * Spec for a computation based metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ComputationBasedMetricSpec computationBasedMetricSpec;
+
+  /**
    * Spec for Custom Code Execution metric.
    * The value may be {@code null}.
    */
@@ -123,6 +130,23 @@ public final class GoogleCloudAiplatformV1beta1Metric extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Metric setBleuSpec(GoogleCloudAiplatformV1beta1BleuSpec bleuSpec) {
     this.bleuSpec = bleuSpec;
+    return this;
+  }
+
+  /**
+   * Spec for a computation based metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ComputationBasedMetricSpec getComputationBasedMetricSpec() {
+    return computationBasedMetricSpec;
+  }
+
+  /**
+   * Spec for a computation based metric.
+   * @param computationBasedMetricSpec computationBasedMetricSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Metric setComputationBasedMetricSpec(GoogleCloudAiplatformV1beta1ComputationBasedMetricSpec computationBasedMetricSpec) {
+    this.computationBasedMetricSpec = computationBasedMetricSpec;
     return this;
   }
 

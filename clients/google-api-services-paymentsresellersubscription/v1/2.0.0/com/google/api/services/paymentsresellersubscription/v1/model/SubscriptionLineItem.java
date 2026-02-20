@@ -103,8 +103,8 @@ public final class SubscriptionLineItem extends com.google.api.client.json.Gener
   private SubscriptionLineItemOneTimeRecurrenceDetails oneTimeRecurrenceDetails;
 
   /**
-   * Required. Product resource name that identifies one the line item The format is
-   * 'partners/{partner_id}/products/{product_id}'.
+   * Required. Product resource name that identifies the product associated with this line item. The
+   * format is 'partners/{partner_id}/products/{product_id}'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -303,8 +303,8 @@ public final class SubscriptionLineItem extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Product resource name that identifies one the line item The format is
-   * 'partners/{partner_id}/products/{product_id}'.
+   * Required. Product resource name that identifies the product associated with this line item. The
+   * format is 'partners/{partner_id}/products/{product_id}'.
    * @return value or {@code null} for none
    */
   public java.lang.String getProduct() {
@@ -312,8 +312,8 @@ public final class SubscriptionLineItem extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Product resource name that identifies one the line item The format is
-   * 'partners/{partner_id}/products/{product_id}'.
+   * Required. Product resource name that identifies the product associated with this line item. The
+   * format is 'partners/{partner_id}/products/{product_id}'.
    * @param product product or {@code null} for none
    */
   public SubscriptionLineItem setProduct(java.lang.String product) {

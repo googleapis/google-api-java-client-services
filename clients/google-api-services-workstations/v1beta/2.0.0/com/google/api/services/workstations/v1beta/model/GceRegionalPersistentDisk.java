@@ -36,6 +36,17 @@ package com.google.api.services.workstations.v1beta.model;
 public final class GceRegionalPersistentDisk extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Number of seconds to wait after initially creating or subsequently shutting down the
+   * workstation before converting its disk into a snapshot. This generally saves costs at the
+   * expense of greater startup time on next workstation start, as the service will need to create a
+   * disk from the archival snapshot. A value of `"0s"` indicates that the disk will never be
+   * archived.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String archiveTimeout;
+
+  /**
    * Optional. The [type of the persistent disk](https://cloud.google.com/compute/docs/disks#disk-
    * types) for the home directory. Defaults to `"pd-standard"`.
    * The value may be {@code null}.
@@ -77,6 +88,31 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceSnapshot;
+
+  /**
+   * Optional. Number of seconds to wait after initially creating or subsequently shutting down the
+   * workstation before converting its disk into a snapshot. This generally saves costs at the
+   * expense of greater startup time on next workstation start, as the service will need to create a
+   * disk from the archival snapshot. A value of `"0s"` indicates that the disk will never be
+   * archived.
+   * @return value or {@code null} for none
+   */
+  public String getArchiveTimeout() {
+    return archiveTimeout;
+  }
+
+  /**
+   * Optional. Number of seconds to wait after initially creating or subsequently shutting down the
+   * workstation before converting its disk into a snapshot. This generally saves costs at the
+   * expense of greater startup time on next workstation start, as the service will need to create a
+   * disk from the archival snapshot. A value of `"0s"` indicates that the disk will never be
+   * archived.
+   * @param archiveTimeout archiveTimeout or {@code null} for none
+   */
+  public GceRegionalPersistentDisk setArchiveTimeout(String archiveTimeout) {
+    this.archiveTimeout = archiveTimeout;
+    return this;
+  }
 
   /**
    * Optional. The [type of the persistent disk](https://cloud.google.com/compute/docs/disks#disk-

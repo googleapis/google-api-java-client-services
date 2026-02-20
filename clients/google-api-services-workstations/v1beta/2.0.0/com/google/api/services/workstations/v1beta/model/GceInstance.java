@@ -199,9 +199,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    * name}/{object-name}. If specifying a startup script, the service account must have [Permission
    * to access the bucket and script file in Cloud
    * Storage](https://cloud.google.com/storage/docs/access-control/iam-permissions). Otherwise, the
-   * script must be publicly accessible. Note that the service regularly updates the OS version
-   * used, and it is the responsibility of the user to ensure the script stays compatible with the
-   * OS version.
+   * script must be publicly accessible. Note that the service regularly updates the OS version of
+   * the host VM, and it is the responsibility of the user to ensure the script stays compatible
+   * with the OS version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -580,9 +580,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    * name}/{object-name}. If specifying a startup script, the service account must have [Permission
    * to access the bucket and script file in Cloud
    * Storage](https://cloud.google.com/storage/docs/access-control/iam-permissions). Otherwise, the
-   * script must be publicly accessible. Note that the service regularly updates the OS version
-   * used, and it is the responsibility of the user to ensure the script stays compatible with the
-   * OS version.
+   * script must be publicly accessible. Note that the service regularly updates the OS version of
+   * the host VM, and it is the responsibility of the user to ensure the script stays compatible
+   * with the OS version.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartupScriptUri() {
@@ -595,9 +595,9 @@ public final class GceInstance extends com.google.api.client.json.GenericJson {
    * name}/{object-name}. If specifying a startup script, the service account must have [Permission
    * to access the bucket and script file in Cloud
    * Storage](https://cloud.google.com/storage/docs/access-control/iam-permissions). Otherwise, the
-   * script must be publicly accessible. Note that the service regularly updates the OS version
-   * used, and it is the responsibility of the user to ensure the script stays compatible with the
-   * OS version.
+   * script must be publicly accessible. Note that the service regularly updates the OS version of
+   * the host VM, and it is the responsibility of the user to ensure the script stays compatible
+   * with the OS version.
    * @param startupScriptUri startupScriptUri or {@code null} for none
    */
   public GceInstance setStartupScriptUri(java.lang.String startupScriptUri) {

@@ -38,9 +38,9 @@ public final class AdaptiveMtSentence extends com.google.api.client.json.Generic
   private String createTime;
 
   /**
-   * Required. The resource name of the file, in form of `projects/{project-number-or-id}/locations/
-   * {location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}/adaptiveMtSentences/{sentence
-   * }`
+   * Identifier. The resource name of the file, in form of `projects/{project-number-or-id}/location
+   * s/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}/adaptiveMtSentences/{senten
+   * ce}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,9 +85,9 @@ public final class AdaptiveMtSentence extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The resource name of the file, in form of `projects/{project-number-or-id}/locations/
-   * {location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}/adaptiveMtSentences/{sentence
-   * }`
+   * Identifier. The resource name of the file, in form of `projects/{project-number-or-id}/location
+   * s/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}/adaptiveMtSentences/{senten
+   * ce}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -95,9 +95,9 @@ public final class AdaptiveMtSentence extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The resource name of the file, in form of `projects/{project-number-or-id}/locations/
-   * {location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}/adaptiveMtSentences/{sentence
-   * }`
+   * Identifier. The resource name of the file, in form of `projects/{project-number-or-id}/location
+   * s/{location_id}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}/adaptiveMtSentences/{senten
+   * ce}`
    * @param name name or {@code null} for none
    */
   public AdaptiveMtSentence setName(java.lang.String name) {

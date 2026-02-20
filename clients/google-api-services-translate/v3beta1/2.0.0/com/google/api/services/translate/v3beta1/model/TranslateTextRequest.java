@@ -81,7 +81,8 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Optional. The BCP-47 language code of the input text if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in Language Support. If the source language isn't
+   * Latn". Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages). If the source language isn't
    * specified, the API attempts to identify the source language automatically and returns the
    * source language within the response.
    * The value may be {@code null}.
@@ -91,7 +92,7 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The BCP-47 language code to use for translation of the input text, set to one of the
-   * language codes listed in Language Support.
+   * language codes listed in [Language Support](https://cloud.google.com/translate/docs/languages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,7 +213,8 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Optional. The BCP-47 language code of the input text if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in Language Support. If the source language isn't
+   * Latn". Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages). If the source language isn't
    * specified, the API attempts to identify the source language automatically and returns the
    * source language within the response.
    * @return value or {@code null} for none
@@ -223,7 +225,8 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Optional. The BCP-47 language code of the input text if known, for example, "en-US" or "sr-
-   * Latn". Supported language codes are listed in Language Support. If the source language isn't
+   * Latn". Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages). If the source language isn't
    * specified, the API attempts to identify the source language automatically and returns the
    * source language within the response.
    * @param sourceLanguageCode sourceLanguageCode or {@code null} for none
@@ -235,7 +238,7 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The BCP-47 language code to use for translation of the input text, set to one of the
-   * language codes listed in Language Support.
+   * language codes listed in [Language Support](https://cloud.google.com/translate/docs/languages).
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetLanguageCode() {
@@ -244,7 +247,7 @@ public final class TranslateTextRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. The BCP-47 language code to use for translation of the input text, set to one of the
-   * language codes listed in Language Support.
+   * language codes listed in [Language Support](https://cloud.google.com/translate/docs/languages).
    * @param targetLanguageCode targetLanguageCode or {@code null} for none
    */
   public TranslateTextRequest setTargetLanguageCode(java.lang.String targetLanguageCode) {

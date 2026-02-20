@@ -46,7 +46,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.Double allocatedStorageSizeTb;
 
   /**
-   * Optional. The list of allowlisted IP addresses for the Autonomous Database.
+   * Optional. Immutable. The list of allowlisted IP addresses for the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,22 +86,22 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.util.List<java.lang.String> availableUpgradeVersions;
 
   /**
-   * Optional. The retention period for the Autonomous Database. This field is specified in days,
-   * can range from 1 day to 60 days, and has a default value of 60 days.
+   * Optional. Immutable. The retention period for the Autonomous Database. This field is specified
+   * in days, can range from 1 day to 60 days, and has a default value of 60 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer backupRetentionPeriodDays;
 
   /**
-   * Optional. The character set for the Autonomous Database. The default is AL32UTF8.
+   * Optional. Immutable. The character set for the Autonomous Database. The default is AL32UTF8.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String characterSet;
 
   /**
-   * Optional. The number of compute servers for the Autonomous Database.
+   * Optional. Immutable. The number of compute servers for the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,14 +122,14 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private AutonomousDatabaseConnectionUrls connectionUrls;
 
   /**
-   * Optional. The number of CPU cores to be made available to the database.
+   * Optional. Immutable. The number of CPU cores to be made available to the database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer cpuCoreCount;
 
   /**
-   * Optional. The list of customer contacts.
+   * Optional. Immutable. The list of customer contacts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,14 +151,14 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.String dataSafeState;
 
   /**
-   * Optional. The size of the data stored in the database, in gigabytes.
+   * Optional. Immutable. The size of the data stored in the database, in gigabytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer dataStorageSizeGb;
 
   /**
-   * Optional. The size of the data stored in the database, in terabytes.
+   * Optional. Immutable. The size of the data stored in the database, in terabytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,21 +172,21 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.String databaseManagementState;
 
   /**
-   * Optional. The edition of the Autonomous Databases.
+   * Optional. Immutable. The edition of the Autonomous Databases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dbEdition;
 
   /**
-   * Optional. The Oracle Database version for the Autonomous Database.
+   * Optional. Immutable. The Oracle Database version for the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dbVersion;
 
   /**
-   * Required. The workload type of the Autonomous Database.
+   * Required. Immutable. The workload type of the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,8 +224,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private String failedDataRecoveryDuration;
 
   /**
-   * Optional. This field indicates if auto scaling is enabled for the Autonomous Database CPU core
-   * count.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for the Autonomous
+   * Database CPU core count.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,14 +240,15 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.Boolean isLocalDataGuardEnabled;
 
   /**
-   * Optional. This field indicates if auto scaling is enabled for the Autonomous Database storage.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for the Autonomous
+   * Database storage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isStorageAutoScalingEnabled;
 
   /**
-   * Required. The license type used for the Autonomous Database.
+   * Required. Immutable. The license type used for the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,7 +299,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private String maintenanceEndTime;
 
   /**
-   * Optional. The maintenance schedule of the Autonomous Database.
+   * Optional. Immutable. The maintenance schedule of the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -319,14 +320,15 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.Integer memoryTableGbs;
 
   /**
-   * Optional. This field specifies if the Autonomous Database requires mTLS connections.
+   * Optional. Immutable. This field specifies if the Autonomous Database requires mTLS connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean mtlsConnectionRequired;
 
   /**
-   * Optional. The national character set for the Autonomous Database. The default is AL16UTF16.
+   * Optional. Immutable. The national character set for the Autonomous Database. The default is
+   * AL16UTF16.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -391,14 +393,14 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.String privateEndpoint;
 
   /**
-   * Optional. The private endpoint IP address for the Autonomous Database.
+   * Optional. Immutable. The private endpoint IP address for the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String privateEndpointIp;
 
   /**
-   * Optional. The private endpoint label for the Autonomous Database.
+   * Optional. Immutable. The private endpoint label for the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -433,7 +435,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.util.List<ScheduledOperationDetails> scheduledOperationDetails;
 
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault secret.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -484,7 +486,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.Integer usedDataStorageSizeTbs;
 
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -527,7 +529,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The list of allowlisted IP addresses for the Autonomous Database.
+   * Optional. Immutable. The list of allowlisted IP addresses for the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowlistedIps() {
@@ -535,7 +537,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The list of allowlisted IP addresses for the Autonomous Database.
+   * Optional. Immutable. The list of allowlisted IP addresses for the Autonomous Database.
    * @param allowlistedIps allowlistedIps or {@code null} for none
    */
   public AutonomousDatabaseProperties setAllowlistedIps(java.util.List<java.lang.String> allowlistedIps) {
@@ -622,8 +624,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The retention period for the Autonomous Database. This field is specified in days,
-   * can range from 1 day to 60 days, and has a default value of 60 days.
+   * Optional. Immutable. The retention period for the Autonomous Database. This field is specified
+   * in days, can range from 1 day to 60 days, and has a default value of 60 days.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBackupRetentionPeriodDays() {
@@ -631,8 +633,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The retention period for the Autonomous Database. This field is specified in days,
-   * can range from 1 day to 60 days, and has a default value of 60 days.
+   * Optional. Immutable. The retention period for the Autonomous Database. This field is specified
+   * in days, can range from 1 day to 60 days, and has a default value of 60 days.
    * @param backupRetentionPeriodDays backupRetentionPeriodDays or {@code null} for none
    */
   public AutonomousDatabaseProperties setBackupRetentionPeriodDays(java.lang.Integer backupRetentionPeriodDays) {
@@ -641,7 +643,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The character set for the Autonomous Database. The default is AL32UTF8.
+   * Optional. Immutable. The character set for the Autonomous Database. The default is AL32UTF8.
    * @return value or {@code null} for none
    */
   public java.lang.String getCharacterSet() {
@@ -649,7 +651,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The character set for the Autonomous Database. The default is AL32UTF8.
+   * Optional. Immutable. The character set for the Autonomous Database. The default is AL32UTF8.
    * @param characterSet characterSet or {@code null} for none
    */
   public AutonomousDatabaseProperties setCharacterSet(java.lang.String characterSet) {
@@ -658,7 +660,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The number of compute servers for the Autonomous Database.
+   * Optional. Immutable. The number of compute servers for the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.lang.Float getComputeCount() {
@@ -666,7 +668,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The number of compute servers for the Autonomous Database.
+   * Optional. Immutable. The number of compute servers for the Autonomous Database.
    * @param computeCount computeCount or {@code null} for none
    */
   public AutonomousDatabaseProperties setComputeCount(java.lang.Float computeCount) {
@@ -709,7 +711,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The number of CPU cores to be made available to the database.
+   * Optional. Immutable. The number of CPU cores to be made available to the database.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCpuCoreCount() {
@@ -717,7 +719,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The number of CPU cores to be made available to the database.
+   * Optional. Immutable. The number of CPU cores to be made available to the database.
    * @param cpuCoreCount cpuCoreCount or {@code null} for none
    */
   public AutonomousDatabaseProperties setCpuCoreCount(java.lang.Integer cpuCoreCount) {
@@ -726,7 +728,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The list of customer contacts.
+   * Optional. Immutable. The list of customer contacts.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomerContact> getCustomerContacts() {
@@ -734,7 +736,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The list of customer contacts.
+   * Optional. Immutable. The list of customer contacts.
    * @param customerContacts customerContacts or {@code null} for none
    */
   public AutonomousDatabaseProperties setCustomerContacts(java.util.List<CustomerContact> customerContacts) {
@@ -779,7 +781,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The size of the data stored in the database, in gigabytes.
+   * Optional. Immutable. The size of the data stored in the database, in gigabytes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDataStorageSizeGb() {
@@ -787,7 +789,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The size of the data stored in the database, in gigabytes.
+   * Optional. Immutable. The size of the data stored in the database, in gigabytes.
    * @param dataStorageSizeGb dataStorageSizeGb or {@code null} for none
    */
   public AutonomousDatabaseProperties setDataStorageSizeGb(java.lang.Integer dataStorageSizeGb) {
@@ -796,7 +798,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The size of the data stored in the database, in terabytes.
+   * Optional. Immutable. The size of the data stored in the database, in terabytes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDataStorageSizeTb() {
@@ -804,7 +806,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The size of the data stored in the database, in terabytes.
+   * Optional. Immutable. The size of the data stored in the database, in terabytes.
    * @param dataStorageSizeTb dataStorageSizeTb or {@code null} for none
    */
   public AutonomousDatabaseProperties setDataStorageSizeTb(java.lang.Integer dataStorageSizeTb) {
@@ -830,7 +832,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The edition of the Autonomous Databases.
+   * Optional. Immutable. The edition of the Autonomous Databases.
    * @return value or {@code null} for none
    */
   public java.lang.String getDbEdition() {
@@ -838,7 +840,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The edition of the Autonomous Databases.
+   * Optional. Immutable. The edition of the Autonomous Databases.
    * @param dbEdition dbEdition or {@code null} for none
    */
   public AutonomousDatabaseProperties setDbEdition(java.lang.String dbEdition) {
@@ -847,7 +849,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The Oracle Database version for the Autonomous Database.
+   * Optional. Immutable. The Oracle Database version for the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.lang.String getDbVersion() {
@@ -855,7 +857,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The Oracle Database version for the Autonomous Database.
+   * Optional. Immutable. The Oracle Database version for the Autonomous Database.
    * @param dbVersion dbVersion or {@code null} for none
    */
   public AutonomousDatabaseProperties setDbVersion(java.lang.String dbVersion) {
@@ -864,7 +866,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Required. The workload type of the Autonomous Database.
+   * Required. Immutable. The workload type of the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.lang.String getDbWorkload() {
@@ -872,7 +874,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Required. The workload type of the Autonomous Database.
+   * Required. Immutable. The workload type of the Autonomous Database.
    * @param dbWorkload dbWorkload or {@code null} for none
    */
   public AutonomousDatabaseProperties setDbWorkload(java.lang.String dbWorkload) {
@@ -955,8 +957,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. This field indicates if auto scaling is enabled for the Autonomous Database CPU core
-   * count.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for the Autonomous
+   * Database CPU core count.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAutoScalingEnabled() {
@@ -964,8 +966,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. This field indicates if auto scaling is enabled for the Autonomous Database CPU core
-   * count.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for the Autonomous
+   * Database CPU core count.
    * @param isAutoScalingEnabled isAutoScalingEnabled or {@code null} for none
    */
   public AutonomousDatabaseProperties setIsAutoScalingEnabled(java.lang.Boolean isAutoScalingEnabled) {
@@ -993,7 +995,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. This field indicates if auto scaling is enabled for the Autonomous Database storage.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for the Autonomous
+   * Database storage.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsStorageAutoScalingEnabled() {
@@ -1001,7 +1004,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. This field indicates if auto scaling is enabled for the Autonomous Database storage.
+   * Optional. Immutable. This field indicates if auto scaling is enabled for the Autonomous
+   * Database storage.
    * @param isStorageAutoScalingEnabled isStorageAutoScalingEnabled or {@code null} for none
    */
   public AutonomousDatabaseProperties setIsStorageAutoScalingEnabled(java.lang.Boolean isStorageAutoScalingEnabled) {
@@ -1010,7 +1014,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Required. The license type used for the Autonomous Database.
+   * Required. Immutable. The license type used for the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.lang.String getLicenseType() {
@@ -1018,7 +1022,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Required. The license type used for the Autonomous Database.
+   * Required. Immutable. The license type used for the Autonomous Database.
    * @param licenseType licenseType or {@code null} for none
    */
   public AutonomousDatabaseProperties setLicenseType(java.lang.String licenseType) {
@@ -1133,7 +1137,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The maintenance schedule of the Autonomous Database.
+   * Optional. Immutable. The maintenance schedule of the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaintenanceScheduleType() {
@@ -1141,7 +1145,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The maintenance schedule of the Autonomous Database.
+   * Optional. Immutable. The maintenance schedule of the Autonomous Database.
    * @param maintenanceScheduleType maintenanceScheduleType or {@code null} for none
    */
   public AutonomousDatabaseProperties setMaintenanceScheduleType(java.lang.String maintenanceScheduleType) {
@@ -1184,7 +1188,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. This field specifies if the Autonomous Database requires mTLS connections.
+   * Optional. Immutable. This field specifies if the Autonomous Database requires mTLS connections.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMtlsConnectionRequired() {
@@ -1192,7 +1196,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. This field specifies if the Autonomous Database requires mTLS connections.
+   * Optional. Immutable. This field specifies if the Autonomous Database requires mTLS connections.
    * @param mtlsConnectionRequired mtlsConnectionRequired or {@code null} for none
    */
   public AutonomousDatabaseProperties setMtlsConnectionRequired(java.lang.Boolean mtlsConnectionRequired) {
@@ -1201,7 +1205,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The national character set for the Autonomous Database. The default is AL16UTF16.
+   * Optional. Immutable. The national character set for the Autonomous Database. The default is
+   * AL16UTF16.
    * @return value or {@code null} for none
    */
   public java.lang.String getNCharacterSet() {
@@ -1209,7 +1214,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The national character set for the Autonomous Database. The default is AL16UTF16.
+   * Optional. Immutable. The national character set for the Autonomous Database. The default is
+   * AL16UTF16.
    * @param nCharacterSet nCharacterSet or {@code null} for none
    */
   public AutonomousDatabaseProperties setNCharacterSet(java.lang.String nCharacterSet) {
@@ -1358,7 +1364,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The private endpoint IP address for the Autonomous Database.
+   * Optional. Immutable. The private endpoint IP address for the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateEndpointIp() {
@@ -1366,7 +1372,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The private endpoint IP address for the Autonomous Database.
+   * Optional. Immutable. The private endpoint IP address for the Autonomous Database.
    * @param privateEndpointIp privateEndpointIp or {@code null} for none
    */
   public AutonomousDatabaseProperties setPrivateEndpointIp(java.lang.String privateEndpointIp) {
@@ -1375,7 +1381,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The private endpoint label for the Autonomous Database.
+   * Optional. Immutable. The private endpoint label for the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateEndpointLabel() {
@@ -1383,7 +1389,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The private endpoint label for the Autonomous Database.
+   * Optional. Immutable. The private endpoint label for the Autonomous Database.
    * @param privateEndpointLabel privateEndpointLabel or {@code null} for none
    */
   public AutonomousDatabaseProperties setPrivateEndpointLabel(java.lang.String privateEndpointLabel) {
@@ -1460,7 +1466,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault secret.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault secret.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretId() {
@@ -1468,7 +1474,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault secret.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault secret.
    * @param secretId secretId or {@code null} for none
    */
   public AutonomousDatabaseProperties setSecretId(java.lang.String secretId) {
@@ -1583,7 +1589,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault.
    * @return value or {@code null} for none
    */
   public java.lang.String getVaultId() {
@@ -1591,7 +1597,7 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Optional. The ID of the Oracle Cloud Infrastructure vault.
+   * Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault.
    * @param vaultId vaultId or {@code null} for none
    */
   public AutonomousDatabaseProperties setVaultId(java.lang.String vaultId) {

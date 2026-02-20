@@ -103,7 +103,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -5308,6 +5308,158 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Deletes a folder recursively. Only applicable to buckets with hierarchical namespace enabled.
+     *
+     * Create a request for the method "folders.deleteRecursive".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link DeleteRecursive#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which the folder resides.
+     * @param folder Name of a folder.
+     * @return the request
+     */
+    public DeleteRecursive deleteRecursive(java.lang.String bucket, java.lang.String folder) throws java.io.IOException {
+      DeleteRecursive result = new DeleteRecursive(bucket, folder);
+      initialize(result);
+      return result;
+    }
+
+    public class DeleteRecursive extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/folders/{folder}/deleteRecursive";
+
+      /**
+       * Deletes a folder recursively. Only applicable to buckets with hierarchical namespace enabled.
+       *
+       * Create a request for the method "folders.deleteRecursive".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link DeleteRecursive#execute()} method to invoke the remote operation.
+       * <p> {@link DeleteRecursive#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+       * lientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param bucket Name of the bucket in which the folder resides.
+       * @param folder Name of a folder.
+       * @since 1.13
+       */
+      protected DeleteRecursive(java.lang.String bucket, java.lang.String folder) {
+        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+      }
+
+      @Override
+      public DeleteRecursive setAlt(java.lang.String alt) {
+        return (DeleteRecursive) super.setAlt(alt);
+      }
+
+      @Override
+      public DeleteRecursive setFields(java.lang.String fields) {
+        return (DeleteRecursive) super.setFields(fields);
+      }
+
+      @Override
+      public DeleteRecursive setKey(java.lang.String key) {
+        return (DeleteRecursive) super.setKey(key);
+      }
+
+      @Override
+      public DeleteRecursive setOauthToken(java.lang.String oauthToken) {
+        return (DeleteRecursive) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DeleteRecursive setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DeleteRecursive) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DeleteRecursive setQuotaUser(java.lang.String quotaUser) {
+        return (DeleteRecursive) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DeleteRecursive setUploadType(java.lang.String uploadType) {
+        return (DeleteRecursive) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DeleteRecursive setUserIp(java.lang.String userIp) {
+        return (DeleteRecursive) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which the folder resides. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which the folder resides.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which the folder resides. */
+      public DeleteRecursive setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** Name of a folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Name of a folder.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Name of a folder. */
+      public DeleteRecursive setFolder(java.lang.String folder) {
+        this.folder = folder;
+        return this;
+      }
+
+      /** If set, only deletes the folder if its metageneration matches this value. */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationMatch;
+
+      /** If set, only deletes the folder if its metageneration matches this value.
+       */
+      public java.lang.Long getIfMetagenerationMatch() {
+        return ifMetagenerationMatch;
+      }
+
+      /** If set, only deletes the folder if its metageneration matches this value. */
+      public DeleteRecursive setIfMetagenerationMatch(java.lang.Long ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+      }
+
+      /** If set, only deletes the folder if its metageneration does not match this value. */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationNotMatch;
+
+      /** If set, only deletes the folder if its metageneration does not match this value.
+       */
+      public java.lang.Long getIfMetagenerationNotMatch() {
+        return ifMetagenerationNotMatch;
+      }
+
+      /** If set, only deletes the folder if its metageneration does not match this value. */
+      public DeleteRecursive setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+      }
+
+      @Override
+      public DeleteRecursive set(String parameterName, Object value) {
+        return (DeleteRecursive) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns metadata for the specified folder. Only applicable to buckets with hierarchical namespace
      * enabled.
      *
@@ -9180,6 +9332,29 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Specifies which groups of Object Contexts from the source object(s) should be dropped from
+       * the destination object.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> dropContextGroups;
+
+      /** Specifies which groups of Object Contexts from the source object(s) should be dropped from the
+     destination object.
+       */
+      public java.util.List<java.lang.String> getDropContextGroups() {
+        return dropContextGroups;
+      }
+
+      /**
+       * Specifies which groups of Object Contexts from the source object(s) should be dropped from
+       * the destination object.
+       */
+      public Compose setDropContextGroups(java.util.List<java.lang.String> dropContextGroups) {
+        this.dropContextGroups = dropContextGroups;
+        return this;
+      }
+
+      /**
        * Makes the operation conditional on whether the object's current generation matches the
        * given value. Setting to 0 makes the operation succeed only if there are no live versions of
        * the object.
@@ -12717,6 +12892,29 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Specifies which groups of Object Contexts from the source object should be dropped from the
+       * destination object.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> dropContextGroups;
+
+      /** Specifies which groups of Object Contexts from the source object should be dropped from the
+     destination object.
+       */
+      public java.util.List<java.lang.String> getDropContextGroups() {
+        return dropContextGroups;
+      }
+
+      /**
+       * Specifies which groups of Object Contexts from the source object should be dropped from the
+       * destination object.
+       */
+      public Rewrite setDropContextGroups(java.util.List<java.lang.String> dropContextGroups) {
+        this.dropContextGroups = dropContextGroups;
+        return this;
+      }
+
+      /**
        * Makes the operation conditional on whether the object's current generation matches the
        * given value. Setting to 0 makes the operation succeed only if there are no live versions of
        * the object.
@@ -15636,8 +15834,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

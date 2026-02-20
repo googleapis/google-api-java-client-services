@@ -118,7 +118,7 @@ public final class DataLayers extends com.google.api.client.json.GenericJson {
   private java.lang.String monthlyFluxUrl;
 
   /**
-   * The URL for an image of RGB data (aerial photo) of the region.
+   * The URL for an image of RGB data (aerial or satellite photo) of the region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -313,7 +313,7 @@ public final class DataLayers extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL for an image of RGB data (aerial photo) of the region.
+   * The URL for an image of RGB data (aerial or satellite photo) of the region.
    * @return value or {@code null} for none
    */
   public java.lang.String getRgbUrl() {
@@ -321,7 +321,7 @@ public final class DataLayers extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL for an image of RGB data (aerial photo) of the region.
+   * The URL for an image of RGB data (aerial or satellite photo) of the region.
    * @param rgbUrl rgbUrl or {@code null} for none
    */
   public DataLayers setRgbUrl(java.lang.String rgbUrl) {

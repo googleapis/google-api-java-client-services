@@ -31,17 +31,17 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
 public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Dimensions to slice the metrics by. **Supported dimensions:** * `apiLevel` (string): the API
-   * level of Android that was running on the user's device, e.g., 26. * `versionCode` (int64):
-   * version of the app that was running on the user's device. * `deviceModel` (string): unique
-   * identifier of the user's device model. The form of the identifier is 'deviceBrand/device',
-   * where deviceBrand corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g.,
-   * google/coral. * `deviceBrand` (string): unique identifier of the user's device brand, e.g.,
-   * google. * `deviceType` (string): the type (also known as form factor) of the user's device,
-   * e.g., PHONE. * `countryCode` (string): the country or region of the user's device based on
-   * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+   * Optional. Dimensions to slice the metrics by. **Supported dimensions:** * `apiLevel` (string):
+   * the API level of Android that was running on the user's device, e.g., 26. * `versionCode`
+   * (int64): version of the app that was running on the user's device. * `deviceModel` (string):
+   * unique identifier of the user's device model. The form of the identifier is
+   * 'deviceBrand/device', where deviceBrand corresponds to Build.BRAND and device corresponds to
+   * Build.DEVICE, e.g., google/coral. * `deviceBrand` (string): unique identifier of the user's
+   * device brand, e.g., google. * `deviceType` (string): the type (also known as form factor) of
+   * the user's device, e.g., PHONE. * `countryCode` (string): the country or region of the user's
+   * device based on their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the
+   * United States). * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB,
+   * etc.). * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -59,7 +59,7 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   private java.util.List<java.lang.String> dimensions;
 
   /**
-   * Filters to apply to data. The filtering expression follows
+   * Optional. Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by equality of all
    * breakdown dimensions.
    * The value may be {@code null}.
@@ -68,8 +68,8 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   private java.lang.String filter;
 
   /**
-   * Metrics to aggregate. **Supported metrics:** * `crashRate` (`google.type.Decimal`): Percentage
-   * of distinct users in the aggregation period that experienced at least one crash. *
+   * Optional. Metrics to aggregate. **Supported metrics:** * `crashRate` (`google.type.Decimal`):
+   * Percentage of distinct users in the aggregation period that experienced at least one crash. *
    * `crashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
    * last 7 days. The daily values are weighted by the count of distinct users for the day. *
    * `crashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
@@ -97,57 +97,58 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   private java.util.List<java.lang.String> metrics;
 
   /**
-   * Maximum size of the returned data. If unspecified, at most 1000 rows will be returned. The
-   * maximum value is 100,000; values above 100,000 will be coerced to 100,000.
+   * Optional. Maximum size of the returned data. If unspecified, at most 1000 rows will be
+   * returned. The maximum value is 100,000; values above 100,000 will be coerced to 100,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pageSize;
 
   /**
-   * A page token, received from a previous call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to the request must match the call that provided the
-   * page token.
+   * Optional. A page token, received from a previous call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to the request must match the call that
+   * provided the page token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pageToken;
 
   /**
-   * Specification of the timeline aggregation parameters. **Supported aggregation periods:** *
-   * DAILY: metrics are aggregated in calendar date intervals. Due to historical constraints, the
-   * default and only supported timezone is `America/Los_Angeles`. * HOURLY: metrics are aggregated
-   * in hourly intervals. The default and only supported timezone is `UTC`.
+   * Optional. Specification of the timeline aggregation parameters. **Supported aggregation
+   * periods:** * DAILY: metrics are aggregated in calendar date intervals. Due to historical
+   * constraints, the default and only supported timezone is `America/Los_Angeles`. * HOURLY:
+   * metrics are aggregated in hourly intervals. The default and only supported timezone is `UTC`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePlayDeveloperReportingV1beta1TimelineSpec timelineSpec;
 
   /**
-   * User view to select. The output data will correspond to the selected view. **Supported
-   * values:** * `OS_PUBLIC` To select data from all publicly released Android versions. This is the
-   * default. Supports all the above dimensions. * `APP_TESTERS` To select data from users who have
-   * opted in to be testers. Supports all the above dimensions. * `OS_BETA` To select data from beta
-   * android versions only, excluding data from released android versions. Only the following
-   * dimensions are supported: * `versionCode` (int64): version of the app that was running on the
-   * user's device. * `osBuild` (string): OS build of the user's device, e.g., "T1B2.220916.004".
+   * Optional. User view to select. The output data will correspond to the selected view.
+   * **Supported values:** * `OS_PUBLIC` To select data from all publicly released Android versions.
+   * This is the default. Supports all the above dimensions. * `APP_TESTERS` To select data from
+   * users who have opted in to be testers. Supports all the above dimensions. * `OS_BETA` To select
+   * data from beta android versions only, excluding data from released android versions. Only the
+   * following dimensions are supported: * `versionCode` (int64): version of the app that was
+   * running on the user's device. * `osBuild` (string): OS build of the user's device, e.g.,
+   * "T1B2.220916.004".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userCohort;
 
   /**
-   * Dimensions to slice the metrics by. **Supported dimensions:** * `apiLevel` (string): the API
-   * level of Android that was running on the user's device, e.g., 26. * `versionCode` (int64):
-   * version of the app that was running on the user's device. * `deviceModel` (string): unique
-   * identifier of the user's device model. The form of the identifier is 'deviceBrand/device',
-   * where deviceBrand corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g.,
-   * google/coral. * `deviceBrand` (string): unique identifier of the user's device brand, e.g.,
-   * google. * `deviceType` (string): the type (also known as form factor) of the user's device,
-   * e.g., PHONE. * `countryCode` (string): the country or region of the user's device based on
-   * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+   * Optional. Dimensions to slice the metrics by. **Supported dimensions:** * `apiLevel` (string):
+   * the API level of Android that was running on the user's device, e.g., 26. * `versionCode`
+   * (int64): version of the app that was running on the user's device. * `deviceModel` (string):
+   * unique identifier of the user's device model. The form of the identifier is
+   * 'deviceBrand/device', where deviceBrand corresponds to Build.BRAND and device corresponds to
+   * Build.DEVICE, e.g., google/coral. * `deviceBrand` (string): unique identifier of the user's
+   * device brand, e.g., google. * `deviceType` (string): the type (also known as form factor) of
+   * the user's device, e.g., PHONE. * `countryCode` (string): the country or region of the user's
+   * device based on their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the
+   * United States). * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB,
+   * etc.). * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -166,17 +167,17 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * Dimensions to slice the metrics by. **Supported dimensions:** * `apiLevel` (string): the API
-   * level of Android that was running on the user's device, e.g., 26. * `versionCode` (int64):
-   * version of the app that was running on the user's device. * `deviceModel` (string): unique
-   * identifier of the user's device model. The form of the identifier is 'deviceBrand/device',
-   * where deviceBrand corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g.,
-   * google/coral. * `deviceBrand` (string): unique identifier of the user's device brand, e.g.,
-   * google. * `deviceType` (string): the type (also known as form factor) of the user's device,
-   * e.g., PHONE. * `countryCode` (string): the country or region of the user's device based on
-   * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
-   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+   * Optional. Dimensions to slice the metrics by. **Supported dimensions:** * `apiLevel` (string):
+   * the API level of Android that was running on the user's device, e.g., 26. * `versionCode`
+   * (int64): version of the app that was running on the user's device. * `deviceModel` (string):
+   * unique identifier of the user's device model. The form of the identifier is
+   * 'deviceBrand/device', where deviceBrand corresponds to Build.BRAND and device corresponds to
+   * Build.DEVICE, e.g., google/coral. * `deviceBrand` (string): unique identifier of the user's
+   * device brand, e.g., google. * `deviceType` (string): the type (also known as form factor) of
+   * the user's device, e.g., PHONE. * `countryCode` (string): the country or region of the user's
+   * device based on their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the
+   * United States). * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB,
+   * etc.). * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -196,7 +197,7 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * Filters to apply to data. The filtering expression follows
+   * Optional. Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by equality of all
    * breakdown dimensions.
    * @return value or {@code null} for none
@@ -206,7 +207,7 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * Filters to apply to data. The filtering expression follows
+   * Optional. Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by equality of all
    * breakdown dimensions.
    * @param filter filter or {@code null} for none
@@ -217,8 +218,8 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * Metrics to aggregate. **Supported metrics:** * `crashRate` (`google.type.Decimal`): Percentage
-   * of distinct users in the aggregation period that experienced at least one crash. *
+   * Optional. Metrics to aggregate. **Supported metrics:** * `crashRate` (`google.type.Decimal`):
+   * Percentage of distinct users in the aggregation period that experienced at least one crash. *
    * `crashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
    * last 7 days. The daily values are weighted by the count of distinct users for the day. *
    * `crashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
@@ -247,8 +248,8 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * Metrics to aggregate. **Supported metrics:** * `crashRate` (`google.type.Decimal`): Percentage
-   * of distinct users in the aggregation period that experienced at least one crash. *
+   * Optional. Metrics to aggregate. **Supported metrics:** * `crashRate` (`google.type.Decimal`):
+   * Percentage of distinct users in the aggregation period that experienced at least one crash. *
    * `crashRate7dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
    * last 7 days. The daily values are weighted by the count of distinct users for the day. *
    * `crashRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of `crashRate` in the
@@ -278,8 +279,8 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * Maximum size of the returned data. If unspecified, at most 1000 rows will be returned. The
-   * maximum value is 100,000; values above 100,000 will be coerced to 100,000.
+   * Optional. Maximum size of the returned data. If unspecified, at most 1000 rows will be
+   * returned. The maximum value is 100,000; values above 100,000 will be coerced to 100,000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -287,8 +288,8 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * Maximum size of the returned data. If unspecified, at most 1000 rows will be returned. The
-   * maximum value is 100,000; values above 100,000 will be coerced to 100,000.
+   * Optional. Maximum size of the returned data. If unspecified, at most 1000 rows will be
+   * returned. The maximum value is 100,000; values above 100,000 will be coerced to 100,000.
    * @param pageSize pageSize or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest setPageSize(java.lang.Integer pageSize) {
@@ -297,9 +298,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * A page token, received from a previous call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to the request must match the call that provided the
-   * page token.
+   * Optional. A page token, received from a previous call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to the request must match the call that
+   * provided the page token.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -307,9 +308,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * A page token, received from a previous call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to the request must match the call that provided the
-   * page token.
+   * Optional. A page token, received from a previous call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to the request must match the call that
+   * provided the page token.
    * @param pageToken pageToken or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest setPageToken(java.lang.String pageToken) {
@@ -318,10 +319,10 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * Specification of the timeline aggregation parameters. **Supported aggregation periods:** *
-   * DAILY: metrics are aggregated in calendar date intervals. Due to historical constraints, the
-   * default and only supported timezone is `America/Los_Angeles`. * HOURLY: metrics are aggregated
-   * in hourly intervals. The default and only supported timezone is `UTC`.
+   * Optional. Specification of the timeline aggregation parameters. **Supported aggregation
+   * periods:** * DAILY: metrics are aggregated in calendar date intervals. Due to historical
+   * constraints, the default and only supported timezone is `America/Los_Angeles`. * HOURLY:
+   * metrics are aggregated in hourly intervals. The default and only supported timezone is `UTC`.
    * @return value or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1TimelineSpec getTimelineSpec() {
@@ -329,10 +330,10 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * Specification of the timeline aggregation parameters. **Supported aggregation periods:** *
-   * DAILY: metrics are aggregated in calendar date intervals. Due to historical constraints, the
-   * default and only supported timezone is `America/Los_Angeles`. * HOURLY: metrics are aggregated
-   * in hourly intervals. The default and only supported timezone is `UTC`.
+   * Optional. Specification of the timeline aggregation parameters. **Supported aggregation
+   * periods:** * DAILY: metrics are aggregated in calendar date intervals. Due to historical
+   * constraints, the default and only supported timezone is `America/Los_Angeles`. * HOURLY:
+   * metrics are aggregated in hourly intervals. The default and only supported timezone is `UTC`.
    * @param timelineSpec timelineSpec or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest setTimelineSpec(GooglePlayDeveloperReportingV1beta1TimelineSpec timelineSpec) {
@@ -341,13 +342,14 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * User view to select. The output data will correspond to the selected view. **Supported
-   * values:** * `OS_PUBLIC` To select data from all publicly released Android versions. This is the
-   * default. Supports all the above dimensions. * `APP_TESTERS` To select data from users who have
-   * opted in to be testers. Supports all the above dimensions. * `OS_BETA` To select data from beta
-   * android versions only, excluding data from released android versions. Only the following
-   * dimensions are supported: * `versionCode` (int64): version of the app that was running on the
-   * user's device. * `osBuild` (string): OS build of the user's device, e.g., "T1B2.220916.004".
+   * Optional. User view to select. The output data will correspond to the selected view.
+   * **Supported values:** * `OS_PUBLIC` To select data from all publicly released Android versions.
+   * This is the default. Supports all the above dimensions. * `APP_TESTERS` To select data from
+   * users who have opted in to be testers. Supports all the above dimensions. * `OS_BETA` To select
+   * data from beta android versions only, excluding data from released android versions. Only the
+   * following dimensions are supported: * `versionCode` (int64): version of the app that was
+   * running on the user's device. * `osBuild` (string): OS build of the user's device, e.g.,
+   * "T1B2.220916.004".
    * @return value or {@code null} for none
    */
   public java.lang.String getUserCohort() {
@@ -355,13 +357,14 @@ public final class GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetReq
   }
 
   /**
-   * User view to select. The output data will correspond to the selected view. **Supported
-   * values:** * `OS_PUBLIC` To select data from all publicly released Android versions. This is the
-   * default. Supports all the above dimensions. * `APP_TESTERS` To select data from users who have
-   * opted in to be testers. Supports all the above dimensions. * `OS_BETA` To select data from beta
-   * android versions only, excluding data from released android versions. Only the following
-   * dimensions are supported: * `versionCode` (int64): version of the app that was running on the
-   * user's device. * `osBuild` (string): OS build of the user's device, e.g., "T1B2.220916.004".
+   * Optional. User view to select. The output data will correspond to the selected view.
+   * **Supported values:** * `OS_PUBLIC` To select data from all publicly released Android versions.
+   * This is the default. Supports all the above dimensions. * `APP_TESTERS` To select data from
+   * users who have opted in to be testers. Supports all the above dimensions. * `OS_BETA` To select
+   * data from beta android versions only, excluding data from released android versions. Only the
+   * following dimensions are supported: * `versionCode` (int64): version of the app that was
+   * running on the user's device. * `osBuild` (string): OS build of the user's device, e.g.,
+   * "T1B2.220916.004".
    * @param userCohort userCohort or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QueryCrashRateMetricSetRequest setUserCohort(java.lang.String userCohort) {

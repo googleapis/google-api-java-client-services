@@ -31,14 +31,14 @@ package com.google.api.services.playdeveloperreporting.v1alpha1.model;
 public final class GooglePlayDeveloperReportingV1alpha1AppVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Numeric version code of the app version (set by the app's developer).
+   * Optional. Numeric version code of the app version (set by the app's developer).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long versionCode;
 
   /**
-   * Numeric version code of the app version (set by the app's developer).
+   * Optional. Numeric version code of the app version (set by the app's developer).
    * @return value or {@code null} for none
    */
   public java.lang.Long getVersionCode() {
@@ -46,7 +46,7 @@ public final class GooglePlayDeveloperReportingV1alpha1AppVersion extends com.go
   }
 
   /**
-   * Numeric version code of the app version (set by the app's developer).
+   * Optional. Numeric version code of the app version (set by the app's developer).
    * @param versionCode versionCode or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1AppVersion setVersionCode(java.lang.Long versionCode) {

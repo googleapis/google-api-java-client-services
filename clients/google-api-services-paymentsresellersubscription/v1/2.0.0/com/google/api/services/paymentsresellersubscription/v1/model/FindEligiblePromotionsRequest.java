@@ -46,17 +46,17 @@ public final class FindEligiblePromotionsRequest extends com.google.api.client.j
 
   /**
    * Optional. The maximum number of promotions to return. The service may return fewer than this
-   * value. If unspecified, at most 50 products will be returned. The maximum value is 1000; values
-   * above 1000 will be coerced to 1000.
+   * value. If unspecified, at most 50 promotions will be returned. The maximum value is 1000;
+   * values above 1000 will be coerced to 1000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pageSize;
 
   /**
-   * Optional. A page token, received from a previous `ListPromotions` call. Provide this to
+   * Optional. A page token, received from a previous `FindEligiblePromotions` call. Provide this to
    * retrieve the subsequent page. When paginating, all other parameters provided to
-   * `ListPromotions` must match the call that provided the page token.
+   * `FindEligiblePromotions` must match the call that provided the page token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +95,8 @@ public final class FindEligiblePromotionsRequest extends com.google.api.client.j
 
   /**
    * Optional. The maximum number of promotions to return. The service may return fewer than this
-   * value. If unspecified, at most 50 products will be returned. The maximum value is 1000; values
-   * above 1000 will be coerced to 1000.
+   * value. If unspecified, at most 50 promotions will be returned. The maximum value is 1000;
+   * values above 1000 will be coerced to 1000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -105,8 +105,8 @@ public final class FindEligiblePromotionsRequest extends com.google.api.client.j
 
   /**
    * Optional. The maximum number of promotions to return. The service may return fewer than this
-   * value. If unspecified, at most 50 products will be returned. The maximum value is 1000; values
-   * above 1000 will be coerced to 1000.
+   * value. If unspecified, at most 50 promotions will be returned. The maximum value is 1000;
+   * values above 1000 will be coerced to 1000.
    * @param pageSize pageSize or {@code null} for none
    */
   public FindEligiblePromotionsRequest setPageSize(java.lang.Integer pageSize) {
@@ -115,9 +115,9 @@ public final class FindEligiblePromotionsRequest extends com.google.api.client.j
   }
 
   /**
-   * Optional. A page token, received from a previous `ListPromotions` call. Provide this to
+   * Optional. A page token, received from a previous `FindEligiblePromotions` call. Provide this to
    * retrieve the subsequent page. When paginating, all other parameters provided to
-   * `ListPromotions` must match the call that provided the page token.
+   * `FindEligiblePromotions` must match the call that provided the page token.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -125,9 +125,9 @@ public final class FindEligiblePromotionsRequest extends com.google.api.client.j
   }
 
   /**
-   * Optional. A page token, received from a previous `ListPromotions` call. Provide this to
+   * Optional. A page token, received from a previous `FindEligiblePromotions` call. Provide this to
    * retrieve the subsequent page. When paginating, all other parameters provided to
-   * `ListPromotions` must match the call that provided the page token.
+   * `FindEligiblePromotions` must match the call that provided the page token.
    * @param pageToken pageToken or {@code null} for none
    */
   public FindEligiblePromotionsRequest setPageToken(java.lang.String pageToken) {

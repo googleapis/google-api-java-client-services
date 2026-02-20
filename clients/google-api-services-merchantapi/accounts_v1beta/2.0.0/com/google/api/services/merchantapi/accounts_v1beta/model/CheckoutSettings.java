@@ -57,9 +57,9 @@ public final class CheckoutSettings extends com.google.api.client.json.GenericJs
   private UriSettings effectiveUriSettings;
 
   /**
-   * Optional. The destinations (also known as [Marketing
+   * Optional. Required for the create operation. The destinations (also known as [Marketing
    * methods](https://support.google.com/merchants/answer/15130232)) to which the checkout program
-   * applies, valid destination values are `SHOPPING_ADS`, `FREE_LISTINGS`
+   * applies. Valid destination values are `SHOPPING_ADS` and `FREE_LISTINGS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,9 +162,9 @@ public final class CheckoutSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The destinations (also known as [Marketing
+   * Optional. Required for the create operation. The destinations (also known as [Marketing
    * methods](https://support.google.com/merchants/answer/15130232)) to which the checkout program
-   * applies, valid destination values are `SHOPPING_ADS`, `FREE_LISTINGS`
+   * applies. Valid destination values are `SHOPPING_ADS` and `FREE_LISTINGS`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEligibleDestinations() {
@@ -172,9 +172,9 @@ public final class CheckoutSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The destinations (also known as [Marketing
+   * Optional. Required for the create operation. The destinations (also known as [Marketing
    * methods](https://support.google.com/merchants/answer/15130232)) to which the checkout program
-   * applies, valid destination values are `SHOPPING_ADS`, `FREE_LISTINGS`
+   * applies. Valid destination values are `SHOPPING_ADS` and `FREE_LISTINGS`.
    * @param eligibleDestinations eligibleDestinations or {@code null} for none
    */
   public CheckoutSettings setEligibleDestinations(java.util.List<java.lang.String> eligibleDestinations) {

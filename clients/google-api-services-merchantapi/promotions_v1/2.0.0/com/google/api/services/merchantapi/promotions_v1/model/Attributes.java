@@ -52,6 +52,25 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String couponValueType;
 
   /**
+   * Optional. The custom redemption restriction for the promotion. If the `redemption_restriction`
+   * field is set to `CUSTOM`, this field must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customRedemptionRestriction;
+
+  /**
+   * Optional. Event applicability for this promotion. When present, this field indicates you are
+   * creating a [sales
+   * event](https://support.google.com/merchants/answer/15523289?hl=en&sjid=11099988466404504696-NC)
+   * and not a product promotion. Exactly one of `product_applicability` or `event_applicability`
+   * must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventApplicability;
+
+  /**
    * Optional. [Free gift description](https://support.google.com/merchants/answer/13847245?ref_topi
    * c=13773355&sjid=17642868584668136159-NC) for the promotion.
    * The value may be {@code null}.
@@ -88,6 +107,16 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long getThisQuantityDiscounted;
+
+  /**
+   * Optional. A list of Google product categories for this promotion. Set if `EventApplicability`
+   * is `SPECIFIC_CATEGORIES`. Up to 5 product categories can be specified. For more details on
+   * eligible values for product categories, checkout the `google_product_category` attribute in the
+   * [Promotion data specification](https://support.google.com/merchants/answer/2906014?hl=en).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> googleProductCategories;
 
   /**
    * Optional. Product filter by [item group ID](https://support.google.com/merchants/answer/1383729
@@ -143,6 +172,14 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String longTitle;
 
   /**
+   * Optional. The maximum monetary discount a customer can receive for the promotion. This field is
+   * only supported with the `Percent off` coupon value type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price maxDiscountAmount;
+
+  /**
    * Optional. [Minimum purchase amount](https://support.google.com/merchants/answer/13837705?ref_to
    * pic=13773355&sjid=17642868584668136159-NC) for the promotion.
    * The value may be {@code null}.
@@ -183,6 +220,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.Long percentOff;
 
   /**
+   * Optional. Applicability of the promotion to either all products or [only specific products](htt
+   * ps://support.google.com/merchants/answer/6396257?ref_topic=6396150&sjid=17642868584668136159-NC
+   * ). Exactly one of `product_applicability` or `event_applicability` must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -241,6 +281,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String promotionUrl;
+
+  /**
+   * Optional. A restriction customers must meet before they can redeem the promotion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String redemptionRestriction;
 
   /**
    * Optional. Whether the promotion applies to [all stores, or only specified
@@ -322,6 +369,50 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setCouponValueType(java.lang.String couponValueType) {
     this.couponValueType = couponValueType;
+    return this;
+  }
+
+  /**
+   * Optional. The custom redemption restriction for the promotion. If the `redemption_restriction`
+   * field is set to `CUSTOM`, this field must be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomRedemptionRestriction() {
+    return customRedemptionRestriction;
+  }
+
+  /**
+   * Optional. The custom redemption restriction for the promotion. If the `redemption_restriction`
+   * field is set to `CUSTOM`, this field must be set.
+   * @param customRedemptionRestriction customRedemptionRestriction or {@code null} for none
+   */
+  public Attributes setCustomRedemptionRestriction(java.lang.String customRedemptionRestriction) {
+    this.customRedemptionRestriction = customRedemptionRestriction;
+    return this;
+  }
+
+  /**
+   * Optional. Event applicability for this promotion. When present, this field indicates you are
+   * creating a [sales
+   * event](https://support.google.com/merchants/answer/15523289?hl=en&sjid=11099988466404504696-NC)
+   * and not a product promotion. Exactly one of `product_applicability` or `event_applicability`
+   * must be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventApplicability() {
+    return eventApplicability;
+  }
+
+  /**
+   * Optional. Event applicability for this promotion. When present, this field indicates you are
+   * creating a [sales
+   * event](https://support.google.com/merchants/answer/15523289?hl=en&sjid=11099988466404504696-NC)
+   * and not a product promotion. Exactly one of `product_applicability` or `event_applicability`
+   * must be set.
+   * @param eventApplicability eventApplicability or {@code null} for none
+   */
+  public Attributes setEventApplicability(java.lang.String eventApplicability) {
+    this.eventApplicability = eventApplicability;
     return this;
   }
 
@@ -413,6 +504,29 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setGetThisQuantityDiscounted(java.lang.Long getThisQuantityDiscounted) {
     this.getThisQuantityDiscounted = getThisQuantityDiscounted;
+    return this;
+  }
+
+  /**
+   * Optional. A list of Google product categories for this promotion. Set if `EventApplicability`
+   * is `SPECIFIC_CATEGORIES`. Up to 5 product categories can be specified. For more details on
+   * eligible values for product categories, checkout the `google_product_category` attribute in the
+   * [Promotion data specification](https://support.google.com/merchants/answer/2906014?hl=en).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGoogleProductCategories() {
+    return googleProductCategories;
+  }
+
+  /**
+   * Optional. A list of Google product categories for this promotion. Set if `EventApplicability`
+   * is `SPECIFIC_CATEGORIES`. Up to 5 product categories can be specified. For more details on
+   * eligible values for product categories, checkout the `google_product_category` attribute in the
+   * [Promotion data specification](https://support.google.com/merchants/answer/2906014?hl=en).
+   * @param googleProductCategories googleProductCategories or {@code null} for none
+   */
+  public Attributes setGoogleProductCategories(java.util.List<java.lang.String> googleProductCategories) {
+    this.googleProductCategories = googleProductCategories;
     return this;
   }
 
@@ -544,6 +658,25 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The maximum monetary discount a customer can receive for the promotion. This field is
+   * only supported with the `Percent off` coupon value type.
+   * @return value or {@code null} for none
+   */
+  public Price getMaxDiscountAmount() {
+    return maxDiscountAmount;
+  }
+
+  /**
+   * Optional. The maximum monetary discount a customer can receive for the promotion. This field is
+   * only supported with the `Percent off` coupon value type.
+   * @param maxDiscountAmount maxDiscountAmount or {@code null} for none
+   */
+  public Attributes setMaxDiscountAmount(Price maxDiscountAmount) {
+    this.maxDiscountAmount = maxDiscountAmount;
+    return this;
+  }
+
+  /**
    * Optional. [Minimum purchase amount](https://support.google.com/merchants/answer/13837705?ref_to
    * pic=13773355&sjid=17642868584668136159-NC) for the promotion.
    * @return value or {@code null} for none
@@ -639,6 +772,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Applicability of the promotion to either all products or [only specific products](htt
+   * ps://support.google.com/merchants/answer/6396257?ref_topic=6396150&sjid=17642868584668136159-NC
+   * ). Exactly one of `product_applicability` or `event_applicability` must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductApplicability() {
@@ -646,6 +782,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Applicability of the promotion to either all products or [only specific products](htt
+   * ps://support.google.com/merchants/answer/6396257?ref_topic=6396150&sjid=17642868584668136159-NC
+   * ). Exactly one of `product_applicability` or `event_applicability` must be set.
    * @param productApplicability productApplicability or {@code null} for none
    */
   public Attributes setProductApplicability(java.lang.String productApplicability) {
@@ -776,6 +915,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setPromotionUrl(java.lang.String promotionUrl) {
     this.promotionUrl = promotionUrl;
+    return this;
+  }
+
+  /**
+   * Optional. A restriction customers must meet before they can redeem the promotion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRedemptionRestriction() {
+    return redemptionRestriction;
+  }
+
+  /**
+   * Optional. A restriction customers must meet before they can redeem the promotion.
+   * @param redemptionRestriction redemptionRestriction or {@code null} for none
+   */
+  public Attributes setRedemptionRestriction(java.lang.String redemptionRestriction) {
+    this.redemptionRestriction = redemptionRestriction;
     return this;
   }
 

@@ -43,8 +43,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.Long accountId;
 
   /**
-   * Required. A human-readable name of the account. See [store
-   * name](https://support.google.com/merchants/answer/160556) and [business
+   * Required. A human-readable name of the account. Don't use punctuation, capitalization, or non-
+   * alphanumeric symbols such as the "/" or "_" symbols. See [Adding a business
    * name](https://support.google.com/merchants/answer/12159159) for more information.
    * The value may be {@code null}.
    */
@@ -109,8 +109,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A human-readable name of the account. See [store
-   * name](https://support.google.com/merchants/answer/160556) and [business
+   * Required. A human-readable name of the account. Don't use punctuation, capitalization, or non-
+   * alphanumeric symbols such as the "/" or "_" symbols. See [Adding a business
    * name](https://support.google.com/merchants/answer/12159159) for more information.
    * @return value or {@code null} for none
    */
@@ -119,8 +119,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A human-readable name of the account. See [store
-   * name](https://support.google.com/merchants/answer/160556) and [business
+   * Required. A human-readable name of the account. Don't use punctuation, capitalization, or non-
+   * alphanumeric symbols such as the "/" or "_" symbols. See [Adding a business
    * name](https://support.google.com/merchants/answer/12159159) for more information.
    * @param accountName accountName or {@code null} for none
    */

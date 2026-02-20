@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * Selector for clusters.
+ * **WorkloadIdentity**: Global feature specification.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,43 +27,46 @@ package com.google.api.services.gkehub.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ClusterSelector extends com.google.api.client.json.GenericJson {
+public final class WorkloadIdentityFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A valid CEL (Common Expression Language) expression which evaluates
-   * `resource.labels`.
+   * Pool to be used for Workload Identity. This pool in trust-domain mode is used with Fleet
+   * Tenancy, so that sameness can be enforced. ex:
+   * projects/example/locations/global/workloadidentitypools/custompool
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String labelSelector;
+  private java.lang.String scopeTenancyPool;
 
   /**
-   * Required. A valid CEL (Common Expression Language) expression which evaluates
-   * `resource.labels`.
+   * Pool to be used for Workload Identity. This pool in trust-domain mode is used with Fleet
+   * Tenancy, so that sameness can be enforced. ex:
+   * projects/example/locations/global/workloadidentitypools/custompool
    * @return value or {@code null} for none
    */
-  public java.lang.String getLabelSelector() {
-    return labelSelector;
+  public java.lang.String getScopeTenancyPool() {
+    return scopeTenancyPool;
   }
 
   /**
-   * Required. A valid CEL (Common Expression Language) expression which evaluates
-   * `resource.labels`.
-   * @param labelSelector labelSelector or {@code null} for none
+   * Pool to be used for Workload Identity. This pool in trust-domain mode is used with Fleet
+   * Tenancy, so that sameness can be enforced. ex:
+   * projects/example/locations/global/workloadidentitypools/custompool
+   * @param scopeTenancyPool scopeTenancyPool or {@code null} for none
    */
-  public ClusterSelector setLabelSelector(java.lang.String labelSelector) {
-    this.labelSelector = labelSelector;
+  public WorkloadIdentityFeatureSpec setScopeTenancyPool(java.lang.String scopeTenancyPool) {
+    this.scopeTenancyPool = scopeTenancyPool;
     return this;
   }
 
   @Override
-  public ClusterSelector set(String fieldName, Object value) {
-    return (ClusterSelector) super.set(fieldName, value);
+  public WorkloadIdentityFeatureSpec set(String fieldName, Object value) {
+    return (WorkloadIdentityFeatureSpec) super.set(fieldName, value);
   }
 
   @Override
-  public ClusterSelector clone() {
-    return (ClusterSelector) super.clone();
+  public WorkloadIdentityFeatureSpec clone() {
+    return (WorkloadIdentityFeatureSpec) super.clone();
   }
 
 }

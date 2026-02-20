@@ -31,7 +31,7 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * gcpServiceAccount.
+   * `gcpserviceaccount`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   private java.lang.String policyDir;
 
   /**
-   * Required. Type of secret configured for access to the OCI repo. Must be one of gcenode,
-   * gcpserviceaccount, k8sserviceaccount or none. The validation of this is case-sensitive.
+   * Required. Type of secret configured for access to the OCI repo. Must be one of `gcenode`,
+   * `gcpserviceaccount`, `k8sserviceaccount` or `none`. The validation of this is case-sensitive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * gcpServiceAccount.
+   * `gcpserviceaccount`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpServiceAccountEmail() {
@@ -79,7 +79,7 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * gcpServiceAccount.
+   * `gcpserviceaccount`.
    * @param gcpServiceAccountEmail gcpServiceAccountEmail or {@code null} for none
    */
   public ConfigManagementOciConfig setGcpServiceAccountEmail(java.lang.String gcpServiceAccountEmail) {
@@ -107,8 +107,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * Required. Type of secret configured for access to the OCI repo. Must be one of gcenode,
-   * gcpserviceaccount, k8sserviceaccount or none. The validation of this is case-sensitive.
+   * Required. Type of secret configured for access to the OCI repo. Must be one of `gcenode`,
+   * `gcpserviceaccount`, `k8sserviceaccount` or `none`. The validation of this is case-sensitive.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretType() {
@@ -116,8 +116,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * Required. Type of secret configured for access to the OCI repo. Must be one of gcenode,
-   * gcpserviceaccount, k8sserviceaccount or none. The validation of this is case-sensitive.
+   * Required. Type of secret configured for access to the OCI repo. Must be one of `gcenode`,
+   * `gcpserviceaccount`, `k8sserviceaccount` or `none`. The validation of this is case-sensitive.
    * @param secretType secretType or {@code null} for none
    */
   public ConfigManagementOciConfig setSecretType(java.lang.String secretType) {

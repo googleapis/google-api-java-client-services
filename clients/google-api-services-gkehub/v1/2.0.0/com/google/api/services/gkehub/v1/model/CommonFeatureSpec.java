@@ -72,6 +72,13 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private RBACRoleBindingActuationFeatureSpec rbacrolebindingactuation;
 
   /**
+   * Workload Identity feature spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadIdentityFeatureSpec workloadidentity;
+
+  /**
    * Appdevexperience specific spec.
    * @return value or {@code null} for none
    */
@@ -170,6 +177,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setRbacrolebindingactuation(RBACRoleBindingActuationFeatureSpec rbacrolebindingactuation) {
     this.rbacrolebindingactuation = rbacrolebindingactuation;
+    return this;
+  }
+
+  /**
+   * Workload Identity feature spec.
+   * @return value or {@code null} for none
+   */
+  public WorkloadIdentityFeatureSpec getWorkloadidentity() {
+    return workloadidentity;
+  }
+
+  /**
+   * Workload Identity feature spec.
+   * @param workloadidentity workloadidentity or {@code null} for none
+   */
+  public CommonFeatureSpec setWorkloadidentity(WorkloadIdentityFeatureSpec workloadidentity) {
+    this.workloadidentity = workloadidentity;
     return this;
   }
 

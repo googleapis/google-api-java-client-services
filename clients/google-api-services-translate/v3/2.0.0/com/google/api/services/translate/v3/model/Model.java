@@ -39,7 +39,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The dataset from which the model is trained, in form of `projects/{project-number-or-
+   * Required. The dataset from which the model is trained, in form of `projects/{project-number-or-
    * id}/locations/{location_id}/datasets/{dataset_id}`
    * The value may be {@code null}.
    */
@@ -124,7 +124,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dataset from which the model is trained, in form of `projects/{project-number-or-
+   * Required. The dataset from which the model is trained, in form of `projects/{project-number-or-
    * id}/locations/{location_id}/datasets/{dataset_id}`
    * @return value or {@code null} for none
    */
@@ -133,7 +133,7 @@ public final class Model extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dataset from which the model is trained, in form of `projects/{project-number-or-
+   * Required. The dataset from which the model is trained, in form of `projects/{project-number-or-
    * id}/locations/{location_id}/datasets/{dataset_id}`
    * @param dataset dataset or {@code null} for none
    */

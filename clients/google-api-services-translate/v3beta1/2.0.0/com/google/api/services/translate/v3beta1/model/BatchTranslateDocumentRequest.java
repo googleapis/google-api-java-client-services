@@ -109,6 +109,13 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   private BatchDocumentOutputConfig outputConfig;
 
   /**
+   * Optional. If true, only native pdf pages will be translated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pdfNativeOnly;
+
+  /**
    * Required. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
    * Latn". Supported language codes are listed in [Language
    * Support](https://cloud.google.com/translate/docs/languages).
@@ -119,7 +126,8 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
 
   /**
    * Required. The BCP-47 language code to use for translation of the input document. Specify up to
-   * 10 language codes here.
+   * 10 language codes here. Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -294,6 +302,23 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
   }
 
   /**
+   * Optional. If true, only native pdf pages will be translated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPdfNativeOnly() {
+    return pdfNativeOnly;
+  }
+
+  /**
+   * Optional. If true, only native pdf pages will be translated.
+   * @param pdfNativeOnly pdfNativeOnly or {@code null} for none
+   */
+  public BatchTranslateDocumentRequest setPdfNativeOnly(java.lang.Boolean pdfNativeOnly) {
+    this.pdfNativeOnly = pdfNativeOnly;
+    return this;
+  }
+
+  /**
    * Required. The BCP-47 language code of the input document if known, for example, "en-US" or "sr-
    * Latn". Supported language codes are listed in [Language
    * Support](https://cloud.google.com/translate/docs/languages).
@@ -316,7 +341,8 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
 
   /**
    * Required. The BCP-47 language code to use for translation of the input document. Specify up to
-   * 10 language codes here.
+   * 10 language codes here. Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTargetLanguageCodes() {
@@ -325,7 +351,8 @@ public final class BatchTranslateDocumentRequest extends com.google.api.client.j
 
   /**
    * Required. The BCP-47 language code to use for translation of the input document. Specify up to
-   * 10 language codes here.
+   * 10 language codes here. Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages).
    * @param targetLanguageCodes targetLanguageCodes or {@code null} for none
    */
   public BatchTranslateDocumentRequest setTargetLanguageCodes(java.util.List<java.lang.String> targetLanguageCodes) {

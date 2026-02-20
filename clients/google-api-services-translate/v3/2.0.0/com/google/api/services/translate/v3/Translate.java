@@ -103,7 +103,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -1838,7 +1838,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -1862,7 +1865,10 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -1971,22 +1977,22 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. A list of extra location types that should be used as conditions for controlling the
-       visibility of the locations.
+        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
+       otherwise. This is primarily for internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. A list of extra location types that should be used as conditions for
-         * controlling the visibility of the locations.
+         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
+         * documented otherwise. This is primarily for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -2060,6 +2066,151 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Refines the input translated text to improve the quality.
+       *
+       * Create a request for the method "locations.refineText".
+       *
+       * This request holds the parameters needed by the translate server.  After setting any optional
+       * parameters, call the {@link RefineText#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
+       *        `projects/{project-number-or-id}/locations/{location-id}`. For global calls, use
+       *        `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+       * @param content the {@link com.google.api.services.translate.v3.model.RefineTextRequest}
+       * @return the request
+       */
+      public RefineText refineText(java.lang.String parent, com.google.api.services.translate.v3.model.RefineTextRequest content) throws java.io.IOException {
+        RefineText result = new RefineText(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RefineText extends TranslateRequest<com.google.api.services.translate.v3.model.RefineTextResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}:refineText";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Refines the input translated text to improve the quality.
+         *
+         * Create a request for the method "locations.refineText".
+         *
+         * This request holds the parameters needed by the the translate server.  After setting any
+         * optional parameters, call the {@link RefineText#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * RefineText#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Project or location to make a call. Must refer to a caller's project. Format:
+       *        `projects/{project-number-or-id}/locations/{location-id}`. For global calls, use
+       *        `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+         * @param content the {@link com.google.api.services.translate.v3.model.RefineTextRequest}
+         * @since 1.13
+         */
+        protected RefineText(java.lang.String parent, com.google.api.services.translate.v3.model.RefineTextRequest content) {
+          super(Translate.this, "POST", REST_PATH, content, com.google.api.services.translate.v3.model.RefineTextResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public RefineText set$Xgafv(java.lang.String $Xgafv) {
+          return (RefineText) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RefineText setAccessToken(java.lang.String accessToken) {
+          return (RefineText) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RefineText setAlt(java.lang.String alt) {
+          return (RefineText) super.setAlt(alt);
+        }
+
+        @Override
+        public RefineText setCallback(java.lang.String callback) {
+          return (RefineText) super.setCallback(callback);
+        }
+
+        @Override
+        public RefineText setFields(java.lang.String fields) {
+          return (RefineText) super.setFields(fields);
+        }
+
+        @Override
+        public RefineText setKey(java.lang.String key) {
+          return (RefineText) super.setKey(key);
+        }
+
+        @Override
+        public RefineText setOauthToken(java.lang.String oauthToken) {
+          return (RefineText) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RefineText setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RefineText) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RefineText setQuotaUser(java.lang.String quotaUser) {
+          return (RefineText) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RefineText setUploadType(java.lang.String uploadType) {
+          return (RefineText) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RefineText setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RefineText) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Project or location to make a call. Must refer to a caller's project. Format:
+         * `projects/{project-number-or-id}/locations/{location-id}`. For global calls, use
+         * `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Project or location to make a call. Must refer to a caller's project. Format:
+       `projects/{project-number-or-id}/locations/{location-id}`. For global calls, use
+       `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Project or location to make a call. Must refer to a caller's project. Format:
+         * `projects/{project-number-or-id}/locations/{location-id}`. For global calls, use
+         * `projects/{project-number-or-id}/locations/global` or `projects/{project-number-or-id}`.
+         */
+        public RefineText setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public RefineText set(String parameterName, Object value) {
+          return (RefineText) super.set(parameterName, value);
         }
       }
       /**
@@ -3656,7 +3807,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the translate server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the project from which to list the Adaptive MT files.
+           * @param parent Required. The resource name of the dataset from which to list the Adaptive MT files.
            *        `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
            * @return the request
            */
@@ -3683,7 +3834,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the project from which to list the Adaptive MT files.
+             * @param parent Required. The resource name of the dataset from which to list the Adaptive MT files.
            *        `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
              * @since 1.13
              */
@@ -3763,13 +3914,13 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. The resource name of the project from which to list the Adaptive MT files.
+             * Required. The resource name of the dataset from which to list the Adaptive MT files.
              * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The resource name of the project from which to list the Adaptive MT files.
+            /** Required. The resource name of the dataset from which to list the Adaptive MT files.
            `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
              */
             public java.lang.String getParent() {
@@ -3777,7 +3928,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. The resource name of the project from which to list the Adaptive MT files.
+             * Required. The resource name of the dataset from which to list the Adaptive MT files.
              * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
              */
             public List setParent(java.lang.String parent) {
@@ -3868,7 +4019,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
              * This request holds the parameters needed by the translate server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The resource name of the project from which to list the Adaptive MT files. The following
+             * @param parent Required. The resource name of the Adaptive MT file from which to list the sentences. The following
              *        format lists all sentences under a file. `projects/{project}/locations/{location}/adaptive
              *        MtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format lists all sentences
              *        within a dataset. `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
@@ -3897,7 +4048,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The resource name of the project from which to list the Adaptive MT files. The following
+               * @param parent Required. The resource name of the Adaptive MT file from which to list the sentences. The following
              *        format lists all sentences under a file. `projects/{project}/locations/{location}/adaptive
              *        MtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format lists all sentences
              *        within a dataset. `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
@@ -3979,16 +4130,16 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
               }
 
               /**
-               * Required. The resource name of the project from which to list the Adaptive MT
-               * files. The following format lists all sentences under a file. `projects/{project}/l
-               * ocations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
+               * Required. The resource name of the Adaptive MT file from which to list the
+               * sentences. The following format lists all sentences under a file. `projects/{projec
+               * t}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
                * following format lists all sentences within a dataset.
                * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The resource name of the project from which to list the Adaptive MT files. The following
+              /** Required. The resource name of the Adaptive MT file from which to list the sentences. The following
              format lists all sentences under a file.
              `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
              following format lists all sentences within a dataset.
@@ -3999,9 +4150,9 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
               }
 
               /**
-               * Required. The resource name of the project from which to list the Adaptive MT
-               * files. The following format lists all sentences under a file. `projects/{project}/l
-               * ocations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
+               * Required. The resource name of the Adaptive MT file from which to list the
+               * sentences. The following format lists all sentences under a file. `projects/{projec
+               * t}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
                * following format lists all sentences within a dataset.
                * `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
                */
@@ -4094,7 +4245,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * This request holds the parameters needed by the translate server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The resource name of the project from which to list the Adaptive MT files. The following
+           * @param parent Required. The resource name of the Adaptive MT file from which to list the sentences. The following
            *        format lists all sentences under a file. `projects/{project}/locations/{location}/adaptive
            *        MtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format lists all sentences
            *        within a dataset. `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
@@ -4123,7 +4274,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The resource name of the project from which to list the Adaptive MT files. The following
+             * @param parent Required. The resource name of the Adaptive MT file from which to list the sentences. The following
            *        format lists all sentences under a file. `projects/{project}/locations/{location}/adaptive
            *        MtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format lists all sentences
            *        within a dataset. `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}`
@@ -4205,7 +4356,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. The resource name of the project from which to list the Adaptive MT files.
+             * Required. The resource name of the Adaptive MT file from which to list the sentences.
              * The following format lists all sentences under a file. `projects/{project}/locations/
              * {location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format
              * lists all sentences within a dataset.
@@ -4214,7 +4365,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The resource name of the project from which to list the Adaptive MT files. The following
+            /** Required. The resource name of the Adaptive MT file from which to list the sentences. The following
            format lists all sentences under a file.
            `projects/{project}/locations/{location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The
            following format lists all sentences within a dataset.
@@ -4225,7 +4376,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. The resource name of the project from which to list the Adaptive MT files.
+             * Required. The resource name of the Adaptive MT file from which to list the sentences.
              * The following format lists all sentences under a file. `projects/{project}/locations/
              * {location}/adaptiveMtDatasets/{dataset}/adaptiveMtFiles/{file}` The following format
              * lists all sentences within a dataset.
@@ -6085,8 +6236,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the translate server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the glossary. Glossary names have the form `projects/{project-number-
-         *        or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+         * @param name Identifier. The resource name of the glossary. Glossary names have the form `projects/{project-
+         *        number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
          * @param content the {@link com.google.api.services.translate.v3.model.Glossary}
          * @return the request
          */
@@ -6115,8 +6266,8 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the glossary. Glossary names have the form `projects/{project-number-
-         *        or-id}/locations/{location-id}/glossaries/{glossary-id}`.
+           * @param name Identifier. The resource name of the glossary. Glossary names have the form `projects/{project-
+         *        number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
            * @param content the {@link com.google.api.services.translate.v3.model.Glossary}
            * @since 1.13
            */
@@ -6186,13 +6337,13 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The resource name of the glossary. Glossary names have the form
+           * Identifier. The resource name of the glossary. Glossary names have the form
            * `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the glossary. Glossary names have the form `projects/{project-
+          /** Identifier. The resource name of the glossary. Glossary names have the form `projects/{project-
          number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
            */
           public java.lang.String getName() {
@@ -6200,7 +6351,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The resource name of the glossary. Glossary names have the form
+           * Identifier. The resource name of the glossary. Glossary names have the form
            * `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
            */
           public Patch setName(java.lang.String name) {
@@ -6213,17 +6364,23 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** The list of fields to be updated. Currently only `display_name` and 'input_config' */
+          /**
+           * The list of fields to be updated. Currently, only `display_name` and `input_config` are
+           * supported.
+           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to be updated. Currently only `display_name` and 'input_config'
+          /** The list of fields to be updated. Currently, only `display_name` and `input_config` are supported.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to be updated. Currently only `display_name` and 'input_config' */
+          /**
+           * The list of fields to be updated. Currently, only `display_name` and `input_config` are
+           * supported.
+           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -8228,6 +8385,41 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** When set to `true`, operations that are reachable are returned as normal, and those that are
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * When set to `true`, operations that are reachable are returned as normal, and those
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
+           * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
+           * service or product specific documentation.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -8412,8 +8604,7 @@ public class Translate extends com.google.api.client.googleapis.services.json.Ab
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

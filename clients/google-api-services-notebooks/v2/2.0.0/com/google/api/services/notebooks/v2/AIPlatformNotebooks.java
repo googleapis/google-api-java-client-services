@@ -103,7 +103,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -312,7 +312,10 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -336,7 +339,10 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -1913,7 +1919,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the notebooks server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Format: `parent=projects/{project_id}/locations/{location}`
+         * @param parent Required. The parent of the instance. Formats: - `projects/{project_id}/locations/{location}` to
+         *        list instances in a specific zone. - `projects/{project_id}/locations/-` to list instances
+         *        in all locations.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1939,7 +1947,9 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Format: `parent=projects/{project_id}/locations/{location}`
+           * @param parent Required. The parent of the instance. Formats: - `projects/{project_id}/locations/{location}` to
+         *        list instances in a specific zone. - `projects/{project_id}/locations/-` to list instances
+         *        in all locations.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2017,17 +2027,27 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Format: `parent=projects/{project_id}/locations/{location}` */
+          /**
+           * Required. The parent of the instance. Formats: -
+           * `projects/{project_id}/locations/{location}` to list instances in a specific zone. -
+           * `projects/{project_id}/locations/-` to list instances in all locations.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Format: `parent=projects/{project_id}/locations/{location}`
+          /** Required. The parent of the instance. Formats: - `projects/{project_id}/locations/{location}` to
+         list instances in a specific zone. - `projects/{project_id}/locations/-` to list instances in all
+         locations.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Format: `parent=projects/{project_id}/locations/{location}` */
+          /**
+           * Required. The parent of the instance. Formats: -
+           * `projects/{project_id}/locations/{location}` to list instances in a specific zone. -
+           * `projects/{project_id}/locations/-` to list instances in all locations.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4545,8 +4565,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

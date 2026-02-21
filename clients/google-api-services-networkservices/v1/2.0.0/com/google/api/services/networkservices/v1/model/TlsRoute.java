@@ -92,6 +92,15 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * Optional. TargetProxies defines a list of TargetTcpProxies this TlsRoute is attached to, as one
+   * of the routing rules to route the requests served by the TargetTcpProxy. Each TargetTcpProxy
+   * reference should match the pattern: `projects/locations/targetTcpProxies/`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> targetProxies;
+
+  /**
    * Output only. The timestamp when the resource was updated.
    * The value may be {@code null}.
    */
@@ -243,6 +252,27 @@ public final class TlsRoute extends com.google.api.client.json.GenericJson {
    */
   public TlsRoute setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Optional. TargetProxies defines a list of TargetTcpProxies this TlsRoute is attached to, as one
+   * of the routing rules to route the requests served by the TargetTcpProxy. Each TargetTcpProxy
+   * reference should match the pattern: `projects/locations/targetTcpProxies/`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTargetProxies() {
+    return targetProxies;
+  }
+
+  /**
+   * Optional. TargetProxies defines a list of TargetTcpProxies this TlsRoute is attached to, as one
+   * of the routing rules to route the requests served by the TargetTcpProxy. Each TargetTcpProxy
+   * reference should match the pattern: `projects/locations/targetTcpProxies/`
+   * @param targetProxies targetProxies or {@code null} for none
+   */
+  public TlsRoute setTargetProxies(java.util.List<java.lang.String> targetProxies) {
+    this.targetProxies = targetProxies;
     return this;
   }
 

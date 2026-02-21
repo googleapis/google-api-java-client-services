@@ -31,14 +31,16 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class FailoverAutonomousDatabaseRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The peer database name to fail over to.
+   * Optional. The peer database name to fail over to. Required for cross-region standby, and must
+   * be omitted for in-region Data Guard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerAutonomousDatabase;
 
   /**
-   * Required. The peer database name to fail over to.
+   * Optional. The peer database name to fail over to. Required for cross-region standby, and must
+   * be omitted for in-region Data Guard.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerAutonomousDatabase() {
@@ -46,7 +48,8 @@ public final class FailoverAutonomousDatabaseRequest extends com.google.api.clie
   }
 
   /**
-   * Required. The peer database name to fail over to.
+   * Optional. The peer database name to fail over to. Required for cross-region standby, and must
+   * be omitted for in-region Data Guard.
    * @param peerAutonomousDatabase peerAutonomousDatabase or {@code null} for none
    */
   public FailoverAutonomousDatabaseRequest setPeerAutonomousDatabase(java.lang.String peerAutonomousDatabase) {

@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Maintenance Event
+ * Active directory details
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,113 +27,113 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class UpcomingMaintenanceEvent extends com.google.api.client.json.GenericJson {
+public final class ActiveDirectory extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. End time
+   * Optional. DNS IP address
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String endTime;
+  private java.lang.String dnsAddress;
 
   /**
-   * Optional. Maintenance status
+   * Optional. human readable form of a domain such as “google.com”.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String maintenanceStatus;
+  private java.lang.String domain;
 
   /**
-   * Optional. Instance maintenance behavior. Could be `MIGRATE` or `TERMINATE`.
+   * Optional. domain username
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String onHostMaintenance;
+  private java.lang.String domainUsername;
 
   /**
-   * Optional. Start time
+   * Required. secret_manager_secret
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String startTime;
+  private java.lang.String secretManagerSecret;
 
   /**
-   * Optional. Type
+   * Required. active directory type
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. End time
+   * Optional. DNS IP address
    * @return value or {@code null} for none
    */
-  public String getEndTime() {
-    return endTime;
+  public java.lang.String getDnsAddress() {
+    return dnsAddress;
   }
 
   /**
-   * Optional. End time
-   * @param endTime endTime or {@code null} for none
+   * Optional. DNS IP address
+   * @param dnsAddress dnsAddress or {@code null} for none
    */
-  public UpcomingMaintenanceEvent setEndTime(String endTime) {
-    this.endTime = endTime;
+  public ActiveDirectory setDnsAddress(java.lang.String dnsAddress) {
+    this.dnsAddress = dnsAddress;
     return this;
   }
 
   /**
-   * Optional. Maintenance status
+   * Optional. human readable form of a domain such as “google.com”.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMaintenanceStatus() {
-    return maintenanceStatus;
+  public java.lang.String getDomain() {
+    return domain;
   }
 
   /**
-   * Optional. Maintenance status
-   * @param maintenanceStatus maintenanceStatus or {@code null} for none
+   * Optional. human readable form of a domain such as “google.com”.
+   * @param domain domain or {@code null} for none
    */
-  public UpcomingMaintenanceEvent setMaintenanceStatus(java.lang.String maintenanceStatus) {
-    this.maintenanceStatus = maintenanceStatus;
+  public ActiveDirectory setDomain(java.lang.String domain) {
+    this.domain = domain;
     return this;
   }
 
   /**
-   * Optional. Instance maintenance behavior. Could be `MIGRATE` or `TERMINATE`.
+   * Optional. domain username
    * @return value or {@code null} for none
    */
-  public java.lang.String getOnHostMaintenance() {
-    return onHostMaintenance;
+  public java.lang.String getDomainUsername() {
+    return domainUsername;
   }
 
   /**
-   * Optional. Instance maintenance behavior. Could be `MIGRATE` or `TERMINATE`.
-   * @param onHostMaintenance onHostMaintenance or {@code null} for none
+   * Optional. domain username
+   * @param domainUsername domainUsername or {@code null} for none
    */
-  public UpcomingMaintenanceEvent setOnHostMaintenance(java.lang.String onHostMaintenance) {
-    this.onHostMaintenance = onHostMaintenance;
+  public ActiveDirectory setDomainUsername(java.lang.String domainUsername) {
+    this.domainUsername = domainUsername;
     return this;
   }
 
   /**
-   * Optional. Start time
+   * Required. secret_manager_secret
    * @return value or {@code null} for none
    */
-  public String getStartTime() {
-    return startTime;
+  public java.lang.String getSecretManagerSecret() {
+    return secretManagerSecret;
   }
 
   /**
-   * Optional. Start time
-   * @param startTime startTime or {@code null} for none
+   * Required. secret_manager_secret
+   * @param secretManagerSecret secretManagerSecret or {@code null} for none
    */
-  public UpcomingMaintenanceEvent setStartTime(String startTime) {
-    this.startTime = startTime;
+  public ActiveDirectory setSecretManagerSecret(java.lang.String secretManagerSecret) {
+    this.secretManagerSecret = secretManagerSecret;
     return this;
   }
 
   /**
-   * Optional. Type
+   * Required. active directory type
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -141,22 +141,22 @@ public final class UpcomingMaintenanceEvent extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Type
+   * Required. active directory type
    * @param type type or {@code null} for none
    */
-  public UpcomingMaintenanceEvent setType(java.lang.String type) {
+  public ActiveDirectory setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public UpcomingMaintenanceEvent set(String fieldName, Object value) {
-    return (UpcomingMaintenanceEvent) super.set(fieldName, value);
+  public ActiveDirectory set(String fieldName, Object value) {
+    return (ActiveDirectory) super.set(fieldName, value);
   }
 
   @Override
-  public UpcomingMaintenanceEvent clone() {
-    return (UpcomingMaintenanceEvent) super.clone();
+  public ActiveDirectory clone() {
+    return (ActiveDirectory) super.clone();
   }
 
 }

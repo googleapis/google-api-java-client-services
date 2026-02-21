@@ -30,9 +30,9 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ExternalDataSources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The asset type of the external data source this can be one of go/cai-asset-types to
-   * override the default asset type or it can be a custom type defined by the user custom type must
-   * match the asset type in the rule
+   * Required. The asset type of the external data source. This can be a supported Cloud Asset
+   * Inventory asset type (see https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+   * to override the default asset type, or it can be a custom type defined by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +61,9 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   private java.lang.String uri;
 
   /**
-   * Required. The asset type of the external data source this can be one of go/cai-asset-types to
-   * override the default asset type or it can be a custom type defined by the user custom type must
-   * match the asset type in the rule
+   * Required. The asset type of the external data source. This can be a supported Cloud Asset
+   * Inventory asset type (see https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+   * to override the default asset type, or it can be a custom type defined by the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -71,9 +71,9 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The asset type of the external data source this can be one of go/cai-asset-types to
-   * override the default asset type or it can be a custom type defined by the user custom type must
-   * match the asset type in the rule
+   * Required. The asset type of the external data source. This can be a supported Cloud Asset
+   * Inventory asset type (see https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+   * to override the default asset type, or it can be a custom type defined by the user.
    * @param assetType assetType or {@code null} for none
    */
   public ExternalDataSources setAssetType(java.lang.String assetType) {

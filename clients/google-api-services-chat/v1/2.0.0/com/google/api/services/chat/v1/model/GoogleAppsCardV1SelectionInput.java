@@ -44,8 +44,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
    * grained control over the data source. If specified, the `multi_select_max_selected_items`
    * field, `multi_select_min_query_length` field, `external_data_source` field and
    * `platform_data_source` field are ignored. Available for Google Workspace add-ons that extend
-   * Google Workspace Studio. Available for the `Dropdown widget` in Google Chat apps as part of the
-   * [Developer Preview Program](https://developers.google.com/workspace/preview). For the
+   * Google Workspace Studio. Available for the `Dropdown widget` in Google Chat apps. For the
    * `Dropdown` widget in Google Chat apps, only one `DataSourceConfig` is supported. If multiple
    * `DataSourceConfig`s are set, only the first one is used.
    * The value may be {@code null}.
@@ -152,8 +151,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
    * grained control over the data source. If specified, the `multi_select_max_selected_items`
    * field, `multi_select_min_query_length` field, `external_data_source` field and
    * `platform_data_source` field are ignored. Available for Google Workspace add-ons that extend
-   * Google Workspace Studio. Available for the `Dropdown widget` in Google Chat apps as part of the
-   * [Developer Preview Program](https://developers.google.com/workspace/preview). For the
+   * Google Workspace Studio. Available for the `Dropdown widget` in Google Chat apps. For the
    * `Dropdown` widget in Google Chat apps, only one `DataSourceConfig` is supported. If multiple
    * `DataSourceConfig`s are set, only the first one is used.
    * @return value or {@code null} for none
@@ -167,8 +165,7 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
    * grained control over the data source. If specified, the `multi_select_max_selected_items`
    * field, `multi_select_min_query_length` field, `external_data_source` field and
    * `platform_data_source` field are ignored. Available for Google Workspace add-ons that extend
-   * Google Workspace Studio. Available for the `Dropdown widget` in Google Chat apps as part of the
-   * [Developer Preview Program](https://developers.google.com/workspace/preview). For the
+   * Google Workspace Studio. Available for the `Dropdown widget` in Google Chat apps. For the
    * `Dropdown` widget in Google Chat apps, only one `DataSourceConfig` is supported. If multiple
    * `DataSourceConfig`s are set, only the first one is used.
    * @param dataSourceConfigs dataSourceConfigs or {@code null} for none

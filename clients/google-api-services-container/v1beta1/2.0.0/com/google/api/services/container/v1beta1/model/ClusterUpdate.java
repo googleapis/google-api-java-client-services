@@ -103,6 +103,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ClusterTelemetry desiredClusterTelemetry;
 
   /**
+   * Deprecated: Compliance Posture is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Enable/Disable Compliance Posture features for the cluster.
    * The value may be {@code null}.
    */
@@ -859,6 +861,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Deprecated: Compliance Posture is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Enable/Disable Compliance Posture features for the cluster.
    * @return value or {@code null} for none
    */
@@ -867,6 +871,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Deprecated: Compliance Posture is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Enable/Disable Compliance Posture features for the cluster.
    * @param desiredCompliancePostureConfig desiredCompliancePostureConfig or {@code null} for none
    */

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-appsmarket</artifactId>
-  <version>v2-rev20251217-2.0.0</version>
-  <name>Google Workspace Marketplace API v2-rev20251217-2.0.0</name>
+  <version>v2-rev20260209-2.0.0</version>
+  <name>Google Workspace Marketplace API v2-rev20260209-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

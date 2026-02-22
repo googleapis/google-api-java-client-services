@@ -126,6 +126,12 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
   private String updateTime;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useBidiStreaming;
+
+  /**
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AutomatedAgentConfig getAutomatedAgentConfig() {
@@ -362,6 +368,21 @@ public final class GoogleCloudDialogflowV2beta1ConversationProfile extends com.g
    */
   public GoogleCloudDialogflowV2beta1ConversationProfile setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseBidiStreaming() {
+    return useBidiStreaming;
+  }
+
+  /**
+   * @param useBidiStreaming useBidiStreaming or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ConversationProfile setUseBidiStreaming(java.lang.Boolean useBidiStreaming) {
+    this.useBidiStreaming = useBidiStreaming;
     return this;
   }
 

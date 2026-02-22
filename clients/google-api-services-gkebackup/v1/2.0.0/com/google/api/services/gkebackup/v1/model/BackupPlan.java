@@ -122,6 +122,14 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The number of user managed namespaces backed up in the last successful Backup
+   * created via this BackupPlan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer protectedNamespaceCount;
+
+  /**
    * Output only. The number of Kubernetes Pods backed up in the last successful Backup created via
    * this BackupPlan.
    * The value may be {@code null}.
@@ -399,6 +407,25 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   public BackupPlan setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The number of user managed namespaces backed up in the last successful Backup
+   * created via this BackupPlan.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getProtectedNamespaceCount() {
+    return protectedNamespaceCount;
+  }
+
+  /**
+   * Output only. The number of user managed namespaces backed up in the last successful Backup
+   * created via this BackupPlan.
+   * @param protectedNamespaceCount protectedNamespaceCount or {@code null} for none
+   */
+  public BackupPlan setProtectedNamespaceCount(java.lang.Integer protectedNamespaceCount) {
+    this.protectedNamespaceCount = protectedNamespaceCount;
     return this;
   }
 

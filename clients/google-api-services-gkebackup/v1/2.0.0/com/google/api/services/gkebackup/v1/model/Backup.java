@@ -152,6 +152,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The total number of user managed namespaces contained in the Backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer namespaceCount;
+
+  /**
    * Output only. If false, Backup will fail when Backup for GKE detects Kubernetes configuration
    * that is non-standard or requires additional setup to restore. Inherited from the parent
    * BackupPlan's permissive_mode value.
@@ -565,6 +572,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The total number of user managed namespaces contained in the Backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNamespaceCount() {
+    return namespaceCount;
+  }
+
+  /**
+   * Output only. The total number of user managed namespaces contained in the Backup.
+   * @param namespaceCount namespaceCount or {@code null} for none
+   */
+  public Backup setNamespaceCount(java.lang.Integer namespaceCount) {
+    this.namespaceCount = namespaceCount;
     return this;
   }
 

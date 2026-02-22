@@ -38,6 +38,14 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
   private java.lang.Long assertionRowCount;
 
   /**
+   * Output only. Contains the results of all debug queries for this rule. The number of result sets
+   * will correspond to the number of debug_queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDataplexV1DataQualityRuleResultDebugQueryResultSet> debugQueriesResultSets;
+
+  /**
    * Output only. The number of rows a rule was evaluated against.This field is only valid for row-
    * level type rules.Evaluated count can be configured to either include all rows (default) - with
    * null rows automatically failing rule evaluation, or exclude null rows from the evaluated_count,
@@ -108,6 +116,25 @@ public final class GoogleCloudDataplexV1DataQualityRuleResult extends com.google
    */
   public GoogleCloudDataplexV1DataQualityRuleResult setAssertionRowCount(java.lang.Long assertionRowCount) {
     this.assertionRowCount = assertionRowCount;
+    return this;
+  }
+
+  /**
+   * Output only. Contains the results of all debug queries for this rule. The number of result sets
+   * will correspond to the number of debug_queries.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDataplexV1DataQualityRuleResultDebugQueryResultSet> getDebugQueriesResultSets() {
+    return debugQueriesResultSets;
+  }
+
+  /**
+   * Output only. Contains the results of all debug queries for this rule. The number of result sets
+   * will correspond to the number of debug_queries.
+   * @param debugQueriesResultSets debugQueriesResultSets or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRuleResult setDebugQueriesResultSets(java.util.List<GoogleCloudDataplexV1DataQualityRuleResultDebugQueryResultSet> debugQueriesResultSets) {
+    this.debugQueriesResultSets = debugQueriesResultSets;
     return this;
   }
 

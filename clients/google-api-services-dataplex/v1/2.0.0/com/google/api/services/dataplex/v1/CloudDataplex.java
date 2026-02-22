@@ -103,7 +103,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -2617,10 +2617,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Looks up an entry by name using the permission on the source system. Caution: The Vertex AI,
-       * Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc Metastore metadata that is stored in Dataplex
-       * Universal Catalog is changing. For more information, see Changes to metadata stored in Dataplex
-       * Universal Catalog (https://cloud.google.com/dataplex/docs/metadata-changes).
+       * Looks up an entry by name using the permission on the source system.
        *
        * Create a request for the method "locations.lookupEntry".
        *
@@ -2645,10 +2642,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Looks up an entry by name using the permission on the source system. Caution: The Vertex AI,
-         * Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc Metastore metadata that is stored in
-         * Dataplex Universal Catalog is changing. For more information, see Changes to metadata stored in
-         * Dataplex Universal Catalog (https://cloud.google.com/dataplex/docs/metadata-changes).
+         * Looks up an entry by name using the permission on the source system.
          *
          * Create a request for the method "locations.lookupEntry".
          *
@@ -2852,6 +2846,271 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         @Override
         public LookupEntry set(String parameterName, Object value) {
           return (LookupEntry) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Looks up Entry Links referencing the specified Entry.
+       *
+       * Create a request for the method "locations.lookupEntryLinks".
+       *
+       * This request holds the parameters needed by the dataplex server.  After setting any optional
+       * parameters, call the {@link LookupEntryLinks#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The project to which the request should be attributed to Format:
+       *        projects/{project_id_or_number}/locations/{location_id}.
+       * @return the request
+       */
+      public LookupEntryLinks lookupEntryLinks(java.lang.String name) throws java.io.IOException {
+        LookupEntryLinks result = new LookupEntryLinks(name);
+        initialize(result);
+        return result;
+      }
+
+      public class LookupEntryLinks extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1LookupEntryLinksResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:lookupEntryLinks";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Looks up Entry Links referencing the specified Entry.
+         *
+         * Create a request for the method "locations.lookupEntryLinks".
+         *
+         * This request holds the parameters needed by the the dataplex server.  After setting any
+         * optional parameters, call the {@link LookupEntryLinks#execute()} method to invoke the remote
+         * operation. <p> {@link LookupEntryLinks#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The project to which the request should be attributed to Format:
+       *        projects/{project_id_or_number}/locations/{location_id}.
+         * @since 1.13
+         */
+        protected LookupEntryLinks(java.lang.String name) {
+          super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1LookupEntryLinksResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public LookupEntryLinks set$Xgafv(java.lang.String $Xgafv) {
+          return (LookupEntryLinks) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public LookupEntryLinks setAccessToken(java.lang.String accessToken) {
+          return (LookupEntryLinks) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public LookupEntryLinks setAlt(java.lang.String alt) {
+          return (LookupEntryLinks) super.setAlt(alt);
+        }
+
+        @Override
+        public LookupEntryLinks setCallback(java.lang.String callback) {
+          return (LookupEntryLinks) super.setCallback(callback);
+        }
+
+        @Override
+        public LookupEntryLinks setFields(java.lang.String fields) {
+          return (LookupEntryLinks) super.setFields(fields);
+        }
+
+        @Override
+        public LookupEntryLinks setKey(java.lang.String key) {
+          return (LookupEntryLinks) super.setKey(key);
+        }
+
+        @Override
+        public LookupEntryLinks setOauthToken(java.lang.String oauthToken) {
+          return (LookupEntryLinks) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public LookupEntryLinks setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (LookupEntryLinks) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public LookupEntryLinks setQuotaUser(java.lang.String quotaUser) {
+          return (LookupEntryLinks) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public LookupEntryLinks setUploadType(java.lang.String uploadType) {
+          return (LookupEntryLinks) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public LookupEntryLinks setUploadProtocol(java.lang.String uploadProtocol) {
+          return (LookupEntryLinks) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to which the request should be attributed to Format:
+         * projects/{project_id_or_number}/locations/{location_id}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The project to which the request should be attributed to Format:
+       projects/{project_id_or_number}/locations/{location_id}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The project to which the request should be attributed to Format:
+         * projects/{project_id_or_number}/locations/{location_id}.
+         */
+        public LookupEntryLinks setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The resource name of the referred Entry. Format: projects/{project_id_or_number
+         * }/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}. Entry Links
+         * which references this entry will be returned in the response.
+         */
+        @com.google.api.client.util.Key("entry")
+        private java.lang.String entry__;
+
+        /** Required. The resource name of the referred Entry. Format: projects/{project_id_or_number}/location
+       s/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}. Entry Links which references this
+       entry will be returned in the response.
+         */
+        public java.lang.String getEntry() {
+          return entry__;
+        }
+
+        /**
+         * Required. The resource name of the referred Entry. Format: projects/{project_id_or_number
+         * }/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}. Entry Links
+         * which references this entry will be returned in the response.
+         */
+        public LookupEntryLinks setEntry(java.lang.String entry__) {
+          this.entry__ = entry__;
+          return this;
+        }
+
+        /**
+         * Entry link types to filter the response by. If empty, all entry link types will be
+         * returned. At most 10 entry link types can be specified.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> entryLinkTypes;
+
+        /** Entry link types to filter the response by. If empty, all entry link types will be returned. At
+       most 10 entry link types can be specified.
+         */
+        public java.util.List<java.lang.String> getEntryLinkTypes() {
+          return entryLinkTypes;
+        }
+
+        /**
+         * Entry link types to filter the response by. If empty, all entry link types will be
+         * returned. At most 10 entry link types can be specified.
+         */
+        public LookupEntryLinks setEntryLinkTypes(java.util.List<java.lang.String> entryLinkTypes) {
+          this.entryLinkTypes = entryLinkTypes;
+          return this;
+        }
+
+        /** Mode of entry reference. */
+        @com.google.api.client.util.Key
+        private java.lang.String entryMode;
+
+        /** Mode of entry reference.
+         */
+        public java.lang.String getEntryMode() {
+          return entryMode;
+        }
+
+        /** Mode of entry reference. */
+        public LookupEntryLinks setEntryMode(java.lang.String entryMode) {
+          this.entryMode = entryMode;
+          return this;
+        }
+
+        /**
+         * Maximum number of EntryLinks to return. The service may return fewer than this value. If
+         * unspecified, at most 10 EntryLinks will be returned. The maximum value is 10; values
+         * above 10 will be coerced to 10.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Maximum number of EntryLinks to return. The service may return fewer than this value. If
+       unspecified, at most 10 EntryLinks will be returned. The maximum value is 10; values above 10 will
+       be coerced to 10.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Maximum number of EntryLinks to return. The service may return fewer than this value. If
+         * unspecified, at most 10 EntryLinks will be returned. The maximum value is 10; values
+         * above 10 will be coerced to 10.
+         */
+        public LookupEntryLinks setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Page token received from a previous LookupEntryLinks call. Provide this to retrieve the
+         * subsequent page. When paginating, all other parameters that are provided to the
+         * LookupEntryLinks request must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Page token received from a previous LookupEntryLinks call. Provide this to retrieve the subsequent
+       page. When paginating, all other parameters that are provided to the LookupEntryLinks request must
+       match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Page token received from a previous LookupEntryLinks call. Provide this to retrieve the
+         * subsequent page. When paginating, all other parameters that are provided to the
+         * LookupEntryLinks request must match the call that provided the page token.
+         */
+        public LookupEntryLinks setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public LookupEntryLinks set(String parameterName, Object value) {
+          return (LookupEntryLinks) super.set(parameterName, value);
         }
       }
       /**
@@ -15943,10 +16202,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Gets an Entry. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-           * Metastore metadata that is stored in Dataplex Universal Catalog is changing. For more
-           * information, see Changes to metadata stored in Dataplex Universal Catalog
-           * (https://cloud.google.com/dataplex/docs/metadata-changes).
+           * Gets an Entry.
            *
            * Create a request for the method "entries.get".
            *
@@ -15971,10 +16227,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
 
             /**
-             * Gets an Entry. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc
-             * Metastore metadata that is stored in Dataplex Universal Catalog is changing. For more
-             * information, see Changes to metadata stored in Dataplex Universal Catalog
-             * (https://cloud.google.com/dataplex/docs/metadata-changes).
+             * Gets an Entry.
              *
              * Create a request for the method "entries.get".
              *
@@ -16157,10 +16410,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Lists Entries within an EntryGroup. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform,
-           * and Dataproc Metastore metadata that is stored in Dataplex Universal Catalog is changing. For
-           * more information, see Changes to metadata stored in Dataplex Universal Catalog
-           * (https://cloud.google.com/dataplex/docs/metadata-changes).
+           * Lists Entries within an EntryGroup.
            *
            * Create a request for the method "entries.list".
            *
@@ -16185,10 +16435,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
 
             /**
-             * Lists Entries within an EntryGroup. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub,
-             * Dataform, and Dataproc Metastore metadata that is stored in Dataplex Universal Catalog is
-             * changing. For more information, see Changes to metadata stored in Dataplex Universal Catalog
-             * (https://cloud.google.com/dataplex/docs/metadata-changes).
+             * Lists Entries within an EntryGroup.
              *
              * Create a request for the method "entries.list".
              *
@@ -39192,6 +39439,521 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
 
       }
+      /**
+       * An accessor for creating requests from the PolicyIntents collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudDataplex dataplex = new CloudDataplex(...);}
+       *   {@code CloudDataplex.PolicyIntents.List request = dataplex.policyIntents().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public PolicyIntents policyIntents() {
+        return new PolicyIntents();
+      }
+
+      /**
+       * The "policyIntents" collection of methods.
+       */
+      public class PolicyIntents {
+
+        /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+         * does not have a policy set.
+         *
+         * Create a request for the method "policyIntents.getIamPolicy".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/policyIntents/[^/]+$");
+
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+           * and does not have a policy set.
+           *
+           * Create a request for the method "policyIntents.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/policyIntents/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See Resource names
+           * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           * this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See Resource names
+         (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See Resource names
+           * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           * this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/policyIntents/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy.Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset.The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy.Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected.Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset.The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1.To learn
+         which resources support conditions in their IAM policies, see the IAM documentation
+         (https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy.Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset.The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1.To learn which resources support
+           * conditions in their IAM policies, see the IAM documentation
+           * (https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on the specified resource. Replaces any existing policy.Can return
+         * NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
+         *
+         * Create a request for the method "policyIntents.setIamPolicy".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/policyIntents/[^/]+$");
+
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy.Can
+           * return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
+           *
+           * Create a request for the method "policyIntents.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1SetIamPolicyRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/policyIntents/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See Resource names
+           * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           * this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See Resource names
+         (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See Resource names
+           * (https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           * this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/policyIntents/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+         * this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
+         *
+         * Create a request for the method "policyIntents.testIamPermissions".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/policyIntents/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not
+           * exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation
+           * is designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "policyIntents.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See Resource names
+         *        (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         *        field.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleIamV1TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/policyIntents/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See Resource
+           * names (https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See Resource names
+         (https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See Resource
+           * names (https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/policyIntents/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 
@@ -39227,8 +39989,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

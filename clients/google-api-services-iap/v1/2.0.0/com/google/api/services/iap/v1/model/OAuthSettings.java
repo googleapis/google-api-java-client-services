@@ -31,6 +31,32 @@ package com.google.api.services.iap.v1.model;
 public final class OAuthSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. OAuth 2.0 client ID used in the OAuth flow to generate an access token. If this field
+   * is set, you can skip obtaining the OAuth credentials in this step:
+   * https://developers.google.com/identity/protocols/OAuth2?hl=en_US#1.-obtain-
+   * oauth-2.0-credentials-from-the-google-api-console. However, this could allow for client
+   * sharing. The risks of client sharing are outlined here:
+   * https://cloud.google.com/iap/docs/sharing-oauth-clients#risks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientId;
+
+  /**
+   * Optional. Input only. OAuth secret paired with client ID
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientSecret;
+
+  /**
+   * Output only. OAuth secret sha256 paired with client ID
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientSecretSha256;
+
+  /**
    * Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by
    * skipping Google's login screen.
    * https://developers.google.com/identity/protocols/OpenIDConnect#hd-param Note: IAP does not
@@ -47,6 +73,67 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> programmaticClients;
+
+  /**
+   * Optional. OAuth 2.0 client ID used in the OAuth flow to generate an access token. If this field
+   * is set, you can skip obtaining the OAuth credentials in this step:
+   * https://developers.google.com/identity/protocols/OAuth2?hl=en_US#1.-obtain-
+   * oauth-2.0-credentials-from-the-google-api-console. However, this could allow for client
+   * sharing. The risks of client sharing are outlined here:
+   * https://cloud.google.com/iap/docs/sharing-oauth-clients#risks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientId() {
+    return clientId;
+  }
+
+  /**
+   * Optional. OAuth 2.0 client ID used in the OAuth flow to generate an access token. If this field
+   * is set, you can skip obtaining the OAuth credentials in this step:
+   * https://developers.google.com/identity/protocols/OAuth2?hl=en_US#1.-obtain-
+   * oauth-2.0-credentials-from-the-google-api-console. However, this could allow for client
+   * sharing. The risks of client sharing are outlined here:
+   * https://cloud.google.com/iap/docs/sharing-oauth-clients#risks.
+   * @param clientId clientId or {@code null} for none
+   */
+  public OAuthSettings setClientId(java.lang.String clientId) {
+    this.clientId = clientId;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. OAuth secret paired with client ID
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientSecret() {
+    return clientSecret;
+  }
+
+  /**
+   * Optional. Input only. OAuth secret paired with client ID
+   * @param clientSecret clientSecret or {@code null} for none
+   */
+  public OAuthSettings setClientSecret(java.lang.String clientSecret) {
+    this.clientSecret = clientSecret;
+    return this;
+  }
+
+  /**
+   * Output only. OAuth secret sha256 paired with client ID
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientSecretSha256() {
+    return clientSecretSha256;
+  }
+
+  /**
+   * Output only. OAuth secret sha256 paired with client ID
+   * @param clientSecretSha256 clientSecretSha256 or {@code null} for none
+   */
+  public OAuthSettings setClientSecretSha256(java.lang.String clientSecretSha256) {
+    this.clientSecretSha256 = clientSecretSha256;
+    return this;
+  }
 
   /**
    * Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by

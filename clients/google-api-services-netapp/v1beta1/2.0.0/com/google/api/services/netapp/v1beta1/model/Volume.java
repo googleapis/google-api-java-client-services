@@ -72,6 +72,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.Long capacityGib;
 
   /**
+   * Output only. If this volume is a clone, this field contains details about the clone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloneDetails cloneDetails;
+
+  /**
    * Output only. Size of the volume cold tier data rounded down to the nearest GiB.
    * The value may be {@code null}.
    */
@@ -156,6 +163,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean largeCapacity;
+
+  /**
+   * Optional. Large capacity config for the volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LargeCapacityConfig largeCapacityConfig;
 
   /**
    * Output only. Flag indicating if the volume is NFS LDAP enabled or not.
@@ -432,6 +446,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. If this volume is a clone, this field contains details about the clone.
+   * @return value or {@code null} for none
+   */
+  public CloneDetails getCloneDetails() {
+    return cloneDetails;
+  }
+
+  /**
+   * Output only. If this volume is a clone, this field contains details about the clone.
+   * @param cloneDetails cloneDetails or {@code null} for none
+   */
+  public Volume setCloneDetails(CloneDetails cloneDetails) {
+    this.cloneDetails = cloneDetails;
+    return this;
+  }
+
+  /**
    * Output only. Size of the volume cold tier data rounded down to the nearest GiB.
    * @return value or {@code null} for none
    */
@@ -636,6 +667,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setLargeCapacity(java.lang.Boolean largeCapacity) {
     this.largeCapacity = largeCapacity;
+    return this;
+  }
+
+  /**
+   * Optional. Large capacity config for the volume.
+   * @return value or {@code null} for none
+   */
+  public LargeCapacityConfig getLargeCapacityConfig() {
+    return largeCapacityConfig;
+  }
+
+  /**
+   * Optional. Large capacity config for the volume.
+   * @param largeCapacityConfig largeCapacityConfig or {@code null} for none
+   */
+  public Volume setLargeCapacityConfig(LargeCapacityConfig largeCapacityConfig) {
+    this.largeCapacityConfig = largeCapacityConfig;
     return this;
   }
 

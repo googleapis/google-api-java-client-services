@@ -17,10 +17,8 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * Deprecated: Compliance Posture is no longer supported. For more details, see
- * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
- * CompliancePostureConfig defines the settings needed to enable/disable features for the Compliance
- * Posture.
+ * WorkloadIdentityPoolStateDetail represents the state of the Workload Identity Pools for the
+ * fleet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -30,64 +28,64 @@ package com.google.api.services.gkehub.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CompliancePostureConfig extends com.google.api.client.json.GenericJson {
+public final class WorkloadIdentityWorkloadIdentityPoolStateDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of enabled compliance standards.
+   * The state of the Workload Identity Pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ComplianceStandard> complianceStandards;
+  private java.lang.String code;
 
   /**
-   * Defines the enablement mode for Compliance Posture.
+   * A human-readable description of the current state or returned error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String mode;
+  private java.lang.String description;
 
   /**
-   * List of enabled compliance standards.
+   * The state of the Workload Identity Pool.
    * @return value or {@code null} for none
    */
-  public java.util.List<ComplianceStandard> getComplianceStandards() {
-    return complianceStandards;
+  public java.lang.String getCode() {
+    return code;
   }
 
   /**
-   * List of enabled compliance standards.
-   * @param complianceStandards complianceStandards or {@code null} for none
+   * The state of the Workload Identity Pool.
+   * @param code code or {@code null} for none
    */
-  public CompliancePostureConfig setComplianceStandards(java.util.List<ComplianceStandard> complianceStandards) {
-    this.complianceStandards = complianceStandards;
+  public WorkloadIdentityWorkloadIdentityPoolStateDetail setCode(java.lang.String code) {
+    this.code = code;
     return this;
   }
 
   /**
-   * Defines the enablement mode for Compliance Posture.
+   * A human-readable description of the current state or returned error.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMode() {
-    return mode;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * Defines the enablement mode for Compliance Posture.
-   * @param mode mode or {@code null} for none
+   * A human-readable description of the current state or returned error.
+   * @param description description or {@code null} for none
    */
-  public CompliancePostureConfig setMode(java.lang.String mode) {
-    this.mode = mode;
+  public WorkloadIdentityWorkloadIdentityPoolStateDetail setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   @Override
-  public CompliancePostureConfig set(String fieldName, Object value) {
-    return (CompliancePostureConfig) super.set(fieldName, value);
+  public WorkloadIdentityWorkloadIdentityPoolStateDetail set(String fieldName, Object value) {
+    return (WorkloadIdentityWorkloadIdentityPoolStateDetail) super.set(fieldName, value);
   }
 
   @Override
-  public CompliancePostureConfig clone() {
-    return (CompliancePostureConfig) super.clone();
+  public WorkloadIdentityWorkloadIdentityPoolStateDetail clone() {
+    return (WorkloadIdentityWorkloadIdentityPoolStateDetail) super.clone();
   }
 
 }

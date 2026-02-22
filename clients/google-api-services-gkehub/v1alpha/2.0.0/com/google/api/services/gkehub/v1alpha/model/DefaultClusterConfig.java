@@ -38,16 +38,18 @@ public final class DefaultClusterConfig extends com.google.api.client.json.Gener
   private BinaryAuthorizationConfig binaryAuthorizationConfig;
 
   /**
-   * Optional. Enable/Disable Compliance Posture features for the cluster. Note that on UpdateFleet,
-   * only full replacement of this field is allowed. Users are not allowed for partial updates
-   * through field mask.
+   * Optional. Deprecated: Compliance Posture is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
+   * Enable/Disable Compliance Posture features for the cluster. Note that on UpdateFleet, only full
+   * replacement of this field is allowed. Users are not allowed for partial updates through field
+   * mask.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CompliancePostureConfig compliancePostureConfig;
 
   /**
-   * Enable/Disable Security Posture features for the cluster.
+   * Optional. Enable/Disable Security Posture features for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,9 +73,11 @@ public final class DefaultClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Enable/Disable Compliance Posture features for the cluster. Note that on UpdateFleet,
-   * only full replacement of this field is allowed. Users are not allowed for partial updates
-   * through field mask.
+   * Optional. Deprecated: Compliance Posture is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
+   * Enable/Disable Compliance Posture features for the cluster. Note that on UpdateFleet, only full
+   * replacement of this field is allowed. Users are not allowed for partial updates through field
+   * mask.
    * @return value or {@code null} for none
    */
   public CompliancePostureConfig getCompliancePostureConfig() {
@@ -81,9 +85,11 @@ public final class DefaultClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Enable/Disable Compliance Posture features for the cluster. Note that on UpdateFleet,
-   * only full replacement of this field is allowed. Users are not allowed for partial updates
-   * through field mask.
+   * Optional. Deprecated: Compliance Posture is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
+   * Enable/Disable Compliance Posture features for the cluster. Note that on UpdateFleet, only full
+   * replacement of this field is allowed. Users are not allowed for partial updates through field
+   * mask.
    * @param compliancePostureConfig compliancePostureConfig or {@code null} for none
    */
   public DefaultClusterConfig setCompliancePostureConfig(CompliancePostureConfig compliancePostureConfig) {
@@ -92,7 +98,7 @@ public final class DefaultClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Enable/Disable Security Posture features for the cluster.
+   * Optional. Enable/Disable Security Posture features for the cluster.
    * @return value or {@code null} for none
    */
   public SecurityPostureConfig getSecurityPostureConfig() {
@@ -100,7 +106,7 @@ public final class DefaultClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Enable/Disable Security Posture features for the cluster.
+   * Optional. Enable/Disable Security Posture features for the cluster.
    * @param securityPostureConfig securityPostureConfig or {@code null} for none
    */
   public DefaultClusterConfig setSecurityPostureConfig(SecurityPostureConfig securityPostureConfig) {

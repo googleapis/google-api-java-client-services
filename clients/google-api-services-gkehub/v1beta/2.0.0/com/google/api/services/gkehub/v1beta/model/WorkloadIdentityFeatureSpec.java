@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * Schedule represents the schedule of the Rollout.
+ * **WorkloadIdentity**: Global feature specification.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,40 +27,46 @@ package com.google.api.services.gkehub.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Schedule extends com.google.api.client.json.GenericJson {
+public final class WorkloadIdentityFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The schedule of each wave in the Rollout.
+   * Pool to be used for Workload Identity. This pool in trust-domain mode is used with Fleet
+   * Tenancy, so that sameness can be enforced. ex:
+   * projects/example/locations/global/workloadidentitypools/custompool
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<WaveSchedule> waves;
+  private java.lang.String scopeTenancyPool;
 
   /**
-   * Output only. The schedule of each wave in the Rollout.
+   * Pool to be used for Workload Identity. This pool in trust-domain mode is used with Fleet
+   * Tenancy, so that sameness can be enforced. ex:
+   * projects/example/locations/global/workloadidentitypools/custompool
    * @return value or {@code null} for none
    */
-  public java.util.List<WaveSchedule> getWaves() {
-    return waves;
+  public java.lang.String getScopeTenancyPool() {
+    return scopeTenancyPool;
   }
 
   /**
-   * Output only. The schedule of each wave in the Rollout.
-   * @param waves waves or {@code null} for none
+   * Pool to be used for Workload Identity. This pool in trust-domain mode is used with Fleet
+   * Tenancy, so that sameness can be enforced. ex:
+   * projects/example/locations/global/workloadidentitypools/custompool
+   * @param scopeTenancyPool scopeTenancyPool or {@code null} for none
    */
-  public Schedule setWaves(java.util.List<WaveSchedule> waves) {
-    this.waves = waves;
+  public WorkloadIdentityFeatureSpec setScopeTenancyPool(java.lang.String scopeTenancyPool) {
+    this.scopeTenancyPool = scopeTenancyPool;
     return this;
   }
 
   @Override
-  public Schedule set(String fieldName, Object value) {
-    return (Schedule) super.set(fieldName, value);
+  public WorkloadIdentityFeatureSpec set(String fieldName, Object value) {
+    return (WorkloadIdentityFeatureSpec) super.set(fieldName, value);
   }
 
   @Override
-  public Schedule clone() {
-    return (Schedule) super.clone();
+  public WorkloadIdentityFeatureSpec clone() {
+    return (WorkloadIdentityFeatureSpec) super.clone();
   }
 
 }

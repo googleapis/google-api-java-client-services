@@ -31,14 +31,15 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * gcpServiceAccount.
+   * `gcpserviceaccount`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcpServiceAccountEmail;
 
   /**
-   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo.
+   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo. Only specify
+   * when secret_type is `cookiefile`, `token`, or `none`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +54,9 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   private java.lang.String policyDir;
 
   /**
-   * Required. Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile,
-   * gcenode, token, gcpserviceaccount, githubapp or none. The validation of this is case-sensitive.
+   * Required. Type of secret configured for access to the Git repo. Must be one of `ssh`,
+   * `cookiefile`, `gcenode`, `token`, `gcpserviceaccount`, `githubapp` or `none`. The validation of
+   * this is case-sensitive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +92,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * gcpServiceAccount.
+   * `gcpserviceaccount`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpServiceAccountEmail() {
@@ -99,7 +101,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * gcpServiceAccount.
+   * `gcpserviceaccount`.
    * @param gcpServiceAccountEmail gcpServiceAccountEmail or {@code null} for none
    */
   public ConfigManagementGitConfig setGcpServiceAccountEmail(java.lang.String gcpServiceAccountEmail) {
@@ -108,7 +110,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo.
+   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo. Only specify
+   * when secret_type is `cookiefile`, `token`, or `none`.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpsProxy() {
@@ -116,7 +119,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo.
+   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo. Only specify
+   * when secret_type is `cookiefile`, `token`, or `none`.
    * @param httpsProxy httpsProxy or {@code null} for none
    */
   public ConfigManagementGitConfig setHttpsProxy(java.lang.String httpsProxy) {
@@ -144,8 +148,9 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Required. Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile,
-   * gcenode, token, gcpserviceaccount, githubapp or none. The validation of this is case-sensitive.
+   * Required. Type of secret configured for access to the Git repo. Must be one of `ssh`,
+   * `cookiefile`, `gcenode`, `token`, `gcpserviceaccount`, `githubapp` or `none`. The validation of
+   * this is case-sensitive.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretType() {
@@ -153,8 +158,9 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Required. Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile,
-   * gcenode, token, gcpserviceaccount, githubapp or none. The validation of this is case-sensitive.
+   * Required. Type of secret configured for access to the Git repo. Must be one of `ssh`,
+   * `cookiefile`, `gcenode`, `token`, `gcpserviceaccount`, `githubapp` or `none`. The validation of
+   * this is case-sensitive.
    * @param secretType secretType or {@code null} for none
    */
   public ConfigManagementGitConfig setSecretType(java.lang.String secretType) {

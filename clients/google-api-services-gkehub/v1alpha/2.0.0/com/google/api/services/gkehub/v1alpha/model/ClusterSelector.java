@@ -30,7 +30,7 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ClusterSelector extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A valid CEL (Common Expression Language) expression which evaluates
+   * Required. A valid CEL (Common Expression Language) expression which evaluates
    * `resource.labels`.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class ClusterSelector extends com.google.api.client.json.GenericJso
   private java.lang.String labelSelector;
 
   /**
-   * Optional. A valid CEL (Common Expression Language) expression which evaluates
+   * Required. A valid CEL (Common Expression Language) expression which evaluates
    * `resource.labels`.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class ClusterSelector extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. A valid CEL (Common Expression Language) expression which evaluates
+   * Required. A valid CEL (Common Expression Language) expression which evaluates
    * `resource.labels`.
    * @param labelSelector labelSelector or {@code null} for none
    */

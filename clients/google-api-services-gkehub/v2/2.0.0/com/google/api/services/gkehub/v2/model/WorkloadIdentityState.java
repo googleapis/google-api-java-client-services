@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1alpha.model;
+package com.google.api.services.gkehub.v2.model;
 
 /**
  * **WorkloadIdentity**: The membership-specific state for WorkloadIdentity feature.
@@ -27,7 +27,7 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class WorkloadIdentityMembershipState extends com.google.api.client.json.GenericJson {
+public final class WorkloadIdentityState extends com.google.api.client.json.GenericJson {
 
   /**
    * Deprecated, this field will be erased after code is changed to use the new field.
@@ -61,7 +61,7 @@ public final class WorkloadIdentityMembershipState extends com.google.api.client
    * Deprecated, this field will be erased after code is changed to use the new field.
    * @param description description or {@code null} for none
    */
-  public WorkloadIdentityMembershipState setDescription(java.lang.String description) {
+  public WorkloadIdentityState setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
@@ -78,19 +78,19 @@ public final class WorkloadIdentityMembershipState extends com.google.api.client
    * The state of the Identity Providers corresponding to the membership.
    * @param identityProviderStateDetails identityProviderStateDetails or {@code null} for none
    */
-  public WorkloadIdentityMembershipState setIdentityProviderStateDetails(java.util.Map<String, WorkloadIdentityIdentityProviderStateDetail> identityProviderStateDetails) {
+  public WorkloadIdentityState setIdentityProviderStateDetails(java.util.Map<String, WorkloadIdentityIdentityProviderStateDetail> identityProviderStateDetails) {
     this.identityProviderStateDetails = identityProviderStateDetails;
     return this;
   }
 
   @Override
-  public WorkloadIdentityMembershipState set(String fieldName, Object value) {
-    return (WorkloadIdentityMembershipState) super.set(fieldName, value);
+  public WorkloadIdentityState set(String fieldName, Object value) {
+    return (WorkloadIdentityState) super.set(fieldName, value);
   }
 
   @Override
-  public WorkloadIdentityMembershipState clone() {
-    return (WorkloadIdentityMembershipState) super.clone();
+  public WorkloadIdentityState clone() {
+    return (WorkloadIdentityState) super.clone();
   }
 
 }

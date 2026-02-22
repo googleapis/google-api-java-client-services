@@ -80,6 +80,13 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
   private java.util.List<Stage> stages;
 
   /**
+   * Output only. State of the Rollout Sequence as a whole.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RolloutSequenceState state;
+
+  /**
    * Output only. Google-generated UUID for this resource. This is unique across all Rollout
    * Sequence resources. If a Rollout Sequence resource is deleted and another resource with the
    * same name is created, it gets a different uid.
@@ -213,6 +220,23 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
    */
   public RolloutSequence setStages(java.util.List<Stage> stages) {
     this.stages = stages;
+    return this;
+  }
+
+  /**
+   * Output only. State of the Rollout Sequence as a whole.
+   * @return value or {@code null} for none
+   */
+  public RolloutSequenceState getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the Rollout Sequence as a whole.
+   * @param state state or {@code null} for none
+   */
+  public RolloutSequence setState(RolloutSequenceState state) {
+    this.state = state;
     return this;
   }
 

@@ -44,6 +44,13 @@ public final class ClusterUpgradeFleetSpec extends com.google.api.client.json.Ge
   private ClusterUpgradePostConditions postConditions;
 
   /**
+   * Output only. The effective upgrade engine for the fleet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String upgradeEngine;
+
+  /**
    * This fleet consumes upgrades that have COMPLETE status code in the upstream fleets. See
    * UpgradeStatus.Code for code definitions. The fleet name should be either fleet project number
    * or id. This is defined as repeated for future proof reasons. Initial implementation will
@@ -84,6 +91,23 @@ public final class ClusterUpgradeFleetSpec extends com.google.api.client.json.Ge
    */
   public ClusterUpgradeFleetSpec setPostConditions(ClusterUpgradePostConditions postConditions) {
     this.postConditions = postConditions;
+    return this;
+  }
+
+  /**
+   * Output only. The effective upgrade engine for the fleet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpgradeEngine() {
+    return upgradeEngine;
+  }
+
+  /**
+   * Output only. The effective upgrade engine for the fleet.
+   * @param upgradeEngine upgradeEngine or {@code null} for none
+   */
+  public ClusterUpgradeFleetSpec setUpgradeEngine(java.lang.String upgradeEngine) {
+    this.upgradeEngine = upgradeEngine;
     return this;
   }
 

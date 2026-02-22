@@ -49,7 +49,7 @@ public final class Relation extends com.google.api.client.json.GenericJson {
    * Optional. The connection specifying the credentials to be used to read and write to external
    * storage, such as Cloud Storage. The connection can have the form
    * `{project}.{location}.{connection_id}` or
-   * `projects/{project}/locations/{location}/connections/{connection_id}", or be set to DEFAULT.
+   * `projects/{project}/locations/{location}/connections/{connection_id}`, or be set to DEFAULT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,7 +205,7 @@ public final class Relation extends com.google.api.client.json.GenericJson {
    * Optional. The connection specifying the credentials to be used to read and write to external
    * storage, such as Cloud Storage. The connection can have the form
    * `{project}.{location}.{connection_id}` or
-   * `projects/{project}/locations/{location}/connections/{connection_id}", or be set to DEFAULT.
+   * `projects/{project}/locations/{location}/connections/{connection_id}`, or be set to DEFAULT.
    * @return value or {@code null} for none
    */
   public java.lang.String getConnection() {
@@ -216,7 +216,7 @@ public final class Relation extends com.google.api.client.json.GenericJson {
    * Optional. The connection specifying the credentials to be used to read and write to external
    * storage, such as Cloud Storage. The connection can have the form
    * `{project}.{location}.{connection_id}` or
-   * `projects/{project}/locations/{location}/connections/{connection_id}", or be set to DEFAULT.
+   * `projects/{project}/locations/{location}/connections/{connection_id}`, or be set to DEFAULT.
    * @param connection connection or {@code null} for none
    */
   public Relation setConnection(java.lang.String connection) {

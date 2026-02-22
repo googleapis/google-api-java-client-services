@@ -30,8 +30,8 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class MoveRepositoryRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the Folder, TeamFolder, or root location to move the repository to. Can
-   * be in the format of: - "" to move into the root User folder - `projects/locations/folders` -
+   * Optional. The name of the Folder, TeamFolder, or root location to move the repository to. Can
+   * be in the format of: "" to move into the root User folder, `projects/locations/folders`,
    * `projects/locations/teamFolders`
    * The value may be {@code null}.
    */
@@ -39,8 +39,8 @@ public final class MoveRepositoryRequest extends com.google.api.client.json.Gene
   private java.lang.String destinationContainingFolder;
 
   /**
-   * Required. The name of the Folder, TeamFolder, or root location to move the repository to. Can
-   * be in the format of: - "" to move into the root User folder - `projects/locations/folders` -
+   * Optional. The name of the Folder, TeamFolder, or root location to move the repository to. Can
+   * be in the format of: "" to move into the root User folder, `projects/locations/folders`,
    * `projects/locations/teamFolders`
    * @return value or {@code null} for none
    */
@@ -49,8 +49,8 @@ public final class MoveRepositoryRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The name of the Folder, TeamFolder, or root location to move the repository to. Can
-   * be in the format of: - "" to move into the root User folder - `projects/locations/folders` -
+   * Optional. The name of the Folder, TeamFolder, or root location to move the repository to. Can
+   * be in the format of: "" to move into the root User folder, `projects/locations/folders`,
    * `projects/locations/teamFolders`
    * @param destinationContainingFolder destinationContainingFolder or {@code null} for none
    */

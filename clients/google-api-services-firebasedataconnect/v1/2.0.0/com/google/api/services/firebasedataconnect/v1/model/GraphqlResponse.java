@@ -45,7 +45,7 @@ public final class GraphqlResponse extends com.google.api.client.json.GenericJso
 
   /**
    * Errors of this response. If the data entry in the response is not present, the errors entry
-   * must be present. It conforms to https://spec.graphql.org/draft/#sec-Errors.
+   * must be present. It conforms to https://spec.graphql.org/draft/#sec-Errors .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,6 +56,14 @@ public final class GraphqlResponse extends com.google.api.client.json.GenericJso
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GraphqlError.class);
   }
+
+  /**
+   * Additional response information. It conforms to https://spec.graphql.org/draft/#sec-Extensions
+   * .
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GraphqlResponseExtensions extensions;
 
   /**
    * The result of the execution of the requested operation. If an error was raised before execution
@@ -84,7 +92,7 @@ public final class GraphqlResponse extends com.google.api.client.json.GenericJso
 
   /**
    * Errors of this response. If the data entry in the response is not present, the errors entry
-   * must be present. It conforms to https://spec.graphql.org/draft/#sec-Errors.
+   * must be present. It conforms to https://spec.graphql.org/draft/#sec-Errors .
    * @return value or {@code null} for none
    */
   public java.util.List<GraphqlError> getErrors() {
@@ -93,11 +101,30 @@ public final class GraphqlResponse extends com.google.api.client.json.GenericJso
 
   /**
    * Errors of this response. If the data entry in the response is not present, the errors entry
-   * must be present. It conforms to https://spec.graphql.org/draft/#sec-Errors.
+   * must be present. It conforms to https://spec.graphql.org/draft/#sec-Errors .
    * @param errors errors or {@code null} for none
    */
   public GraphqlResponse setErrors(java.util.List<GraphqlError> errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * Additional response information. It conforms to https://spec.graphql.org/draft/#sec-Extensions
+   * .
+   * @return value or {@code null} for none
+   */
+  public GraphqlResponseExtensions getExtensions() {
+    return extensions;
+  }
+
+  /**
+   * Additional response information. It conforms to https://spec.graphql.org/draft/#sec-Extensions
+   * .
+   * @param extensions extensions or {@code null} for none
+   */
+  public GraphqlResponse setExtensions(GraphqlResponseExtensions extensions) {
+    this.extensions = extensions;
     return this;
   }
 

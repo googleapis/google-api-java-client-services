@@ -45,6 +45,13 @@ public final class ExecuteMutationResponse extends com.google.api.client.json.Ge
   private java.util.List<GraphqlError> errors;
 
   /**
+   * Additional response information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GraphqlResponseExtensions extensions;
+
+  /**
    * The result of executing the requested operation.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class ExecuteMutationResponse extends com.google.api.client.json.Ge
    */
   public ExecuteMutationResponse setErrors(java.util.List<GraphqlError> errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * Additional response information.
+   * @return value or {@code null} for none
+   */
+  public GraphqlResponseExtensions getExtensions() {
+    return extensions;
+  }
+
+  /**
+   * Additional response information.
+   * @param extensions extensions or {@code null} for none
+   */
+  public ExecuteMutationResponse setExtensions(GraphqlResponseExtensions extensions) {
+    this.extensions = extensions;
     return this;
   }
 

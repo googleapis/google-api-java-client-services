@@ -103,7 +103,7 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -175,14 +175,18 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
 
       /**
        * Returns metadata about the resources protected by the given Cloud KMS CryptoKey in the given
-       * Cloud organization.
+       * Cloud organization/project.
        *
        * Create a request for the method "protectedResources.search".
        *
        * This request holds the parameters needed by the kmsinventory server.  After setting any optional
        * parameters, call the {@link Search#execute()} method to invoke the remote operation.
        *
-       * @param scope Required. Resource name of the organization. Example: organizations/123
+       * @param scope Required. A scope can be an organization or a project. Resources protected by the crypto key in
+       *        provided scope will be returned. The following values are allowed: *
+       *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") *
+       *        projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       *        "projects/12345678")
        * @return the request
        */
       public Search search(java.lang.String scope) throws java.io.IOException {
@@ -200,7 +204,7 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
 
         /**
          * Returns metadata about the resources protected by the given Cloud KMS CryptoKey in the given
-         * Cloud organization.
+         * Cloud organization/project.
          *
          * Create a request for the method "protectedResources.search".
          *
@@ -210,7 +214,11 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
          * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param scope Required. Resource name of the organization. Example: organizations/123
+         * @param scope Required. A scope can be an organization or a project. Resources protected by the crypto key in
+       *        provided scope will be returned. The following values are allowed: *
+       *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") *
+       *        projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       *        "projects/12345678")
          * @since 1.13
          */
         protected Search(java.lang.String scope) {
@@ -288,17 +296,32 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
           return (Search) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Resource name of the organization. Example: organizations/123 */
+        /**
+         * Required. A scope can be an organization or a project. Resources protected by the crypto
+         * key in provided scope will be returned. The following values are allowed: *
+         * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") *
+         * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+         * "projects/12345678")
+         */
         @com.google.api.client.util.Key
         private java.lang.String scope;
 
-        /** Required. Resource name of the organization. Example: organizations/123
+        /** Required. A scope can be an organization or a project. Resources protected by the crypto key in
+       provided scope will be returned. The following values are allowed: *
+       organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") * projects/{PROJECT_ID} (e.g.,
+       "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
          */
         public java.lang.String getScope() {
           return scope;
         }
 
-        /** Required. Resource name of the organization. Example: organizations/123 */
+        /**
+         * Required. A scope can be an organization or a project. Resources protected by the crypto
+         * key in provided scope will be returned. The following values are allowed: *
+         * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") *
+         * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+         * "projects/12345678")
+         */
         public Search setScope(java.lang.String scope) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
@@ -730,9 +753,13 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
         public class CryptoKeys {
 
           /**
-           * Returns aggregate information about the resources protected by the given Cloud KMS CryptoKey.
-           * Only resources within the same Cloud organization as the key will be returned. The project that
-           * holds the key must be part of an organization in order for this call to succeed.
+           * Returns aggregate information about the resources protected by the given Cloud KMS CryptoKey. By
+           * default, summary of resources within the same Cloud organization as the key will be returned,
+           * which requires the KMS organization service account to be configured(refer
+           * https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles). If the KMS organization
+           * service account is not configured or key's project is not part of an organization, set
+           * fallback_scope to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources within
+           * the key's project.
            *
            * Create a request for the method "cryptoKeys.getProtectedResourcesSummary".
            *
@@ -758,8 +785,12 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
 
             /**
              * Returns aggregate information about the resources protected by the given Cloud KMS CryptoKey.
-             * Only resources within the same Cloud organization as the key will be returned. The project that
-             * holds the key must be part of an organization in order for this call to succeed.
+             * By default, summary of resources within the same Cloud organization as the key will be
+             * returned, which requires the KMS organization service account to be configured(refer
+             * https://docs.cloud.google.com/kms/docs/view-key-usage#required-roles). If the KMS organization
+             * service account is not configured or key's project is not part of an organization, set
+             * fallback_scope to `FALLBACK_SCOPE_PROJECT` to retrieve a summary of protected resources within
+             * the key's project.
              *
              * Create a request for the method "cryptoKeys.getProtectedResourcesSummary".
              *
@@ -868,6 +899,26 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
               return this;
             }
 
+            /**
+             * Optional. The scope to use if the kms organization service account is not configured.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String fallbackScope;
+
+            /** Optional. The scope to use if the kms organization service account is not configured.
+             */
+            public java.lang.String getFallbackScope() {
+              return fallbackScope;
+            }
+
+            /**
+             * Optional. The scope to use if the kms organization service account is not configured.
+             */
+            public GetProtectedResourcesSummary setFallbackScope(java.lang.String fallbackScope) {
+              this.fallbackScope = fallbackScope;
+              return this;
+            }
+
             @Override
             public GetProtectedResourcesSummary set(String parameterName, Object value) {
               return (GetProtectedResourcesSummary) super.set(parameterName, value);
@@ -876,6 +927,305 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
 
         }
       }
+    }
+    /**
+     * An accessor for creating requests from the ProtectedResources collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Kmsinventory kmsinventory = new Kmsinventory(...);}
+     *   {@code Kmsinventory.ProtectedResources.List request = kmsinventory.protectedResources().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ProtectedResources protectedResources() {
+      return new ProtectedResources();
+    }
+
+    /**
+     * The "protectedResources" collection of methods.
+     */
+    public class ProtectedResources {
+
+      /**
+       * Returns metadata about the resources protected by the given Cloud KMS CryptoKey in the given
+       * Cloud organization/project.
+       *
+       * Create a request for the method "protectedResources.search".
+       *
+       * This request holds the parameters needed by the kmsinventory server.  After setting any optional
+       * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+       *
+       * @param scope Required. A scope can be an organization or a project. Resources protected by the crypto key in
+       *        provided scope will be returned. The following values are allowed: *
+       *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") *
+       *        projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       *        "projects/12345678")
+       * @return the request
+       */
+      public Search search(java.lang.String scope) throws java.io.IOException {
+        Search result = new Search(scope);
+        initialize(result);
+        return result;
+      }
+
+      public class Search extends KmsinventoryRequest<com.google.api.services.kmsinventory.v1.model.GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse> {
+
+        private static final String REST_PATH = "v1/{+scope}/protectedResources:search";
+
+        private final java.util.regex.Pattern SCOPE_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Returns metadata about the resources protected by the given Cloud KMS CryptoKey in the given
+         * Cloud organization/project.
+         *
+         * Create a request for the method "protectedResources.search".
+         *
+         * This request holds the parameters needed by the the kmsinventory server.  After setting any
+         * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param scope Required. A scope can be an organization or a project. Resources protected by the crypto key in
+       *        provided scope will be returned. The following values are allowed: *
+       *        organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") *
+       *        projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+       *        "projects/12345678")
+         * @since 1.13
+         */
+        protected Search(java.lang.String scope) {
+          super(Kmsinventory.this, "GET", REST_PATH, null, com.google.api.services.kmsinventory.v1.model.GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse.class);
+          this.scope = com.google.api.client.util.Preconditions.checkNotNull(scope, "Required parameter scope must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+                "Parameter scope must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Search set$Xgafv(java.lang.String $Xgafv) {
+          return (Search) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Search setAccessToken(java.lang.String accessToken) {
+          return (Search) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Search setAlt(java.lang.String alt) {
+          return (Search) super.setAlt(alt);
+        }
+
+        @Override
+        public Search setCallback(java.lang.String callback) {
+          return (Search) super.setCallback(callback);
+        }
+
+        @Override
+        public Search setFields(java.lang.String fields) {
+          return (Search) super.setFields(fields);
+        }
+
+        @Override
+        public Search setKey(java.lang.String key) {
+          return (Search) super.setKey(key);
+        }
+
+        @Override
+        public Search setOauthToken(java.lang.String oauthToken) {
+          return (Search) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Search) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Search setQuotaUser(java.lang.String quotaUser) {
+          return (Search) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Search setUploadType(java.lang.String uploadType) {
+          return (Search) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Search setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Search) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. A scope can be an organization or a project. Resources protected by the crypto
+         * key in provided scope will be returned. The following values are allowed: *
+         * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") *
+         * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+         * "projects/12345678")
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String scope;
+
+        /** Required. A scope can be an organization or a project. Resources protected by the crypto key in
+       provided scope will be returned. The following values are allowed: *
+       organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") * projects/{PROJECT_ID} (e.g.,
+       "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g., "projects/12345678")
+         */
+        public java.lang.String getScope() {
+          return scope;
+        }
+
+        /**
+         * Required. A scope can be an organization or a project. Resources protected by the crypto
+         * key in provided scope will be returned. The following values are allowed: *
+         * organizations/{ORGANIZATION_NUMBER} (e.g., "organizations/12345678") *
+         * projects/{PROJECT_ID} (e.g., "projects/foo-bar") * projects/{PROJECT_NUMBER} (e.g.,
+         * "projects/12345678")
+         */
+        public Search setScope(java.lang.String scope) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(SCOPE_PATTERN.matcher(scope).matches(),
+                "Parameter scope must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.scope = scope;
+          return this;
+        }
+
+        /** Required. The resource name of the CryptoKey. */
+        @com.google.api.client.util.Key
+        private java.lang.String cryptoKey;
+
+        /** Required. The resource name of the CryptoKey.
+         */
+        public java.lang.String getCryptoKey() {
+          return cryptoKey;
+        }
+
+        /** Required. The resource name of the CryptoKey. */
+        public Search setCryptoKey(java.lang.String cryptoKey) {
+          this.cryptoKey = cryptoKey;
+          return this;
+        }
+
+        /**
+         * The maximum number of resources to return. The service may return fewer than this value.
+         * If unspecified, at most 500 resources will be returned. The maximum value is 500; values
+         * above 500 will be coerced to 500.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** The maximum number of resources to return. The service may return fewer than this value. If
+       unspecified, at most 500 resources will be returned. The maximum value is 500; values above 500
+       will be coerced to 500.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * The maximum number of resources to return. The service may return fewer than this value.
+         * If unspecified, at most 500 resources will be returned. The maximum value is 500; values
+         * above 500 will be coerced to 500.
+         */
+        public Search setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * A page token, received from a previous KeyTrackingService.SearchProtectedResources call.
+         * Provide this to retrieve the subsequent page. When paginating, all other parameters
+         * provided to KeyTrackingService.SearchProtectedResources must match the call that provided
+         * the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** A page token, received from a previous KeyTrackingService.SearchProtectedResources call. Provide
+       this to retrieve the subsequent page. When paginating, all other parameters provided to
+       KeyTrackingService.SearchProtectedResources must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * A page token, received from a previous KeyTrackingService.SearchProtectedResources call.
+         * Provide this to retrieve the subsequent page. When paginating, all other parameters
+         * provided to KeyTrackingService.SearchProtectedResources must match the call that provided
+         * the page token.
+         */
+        public Search setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional. A list of resource types that this request searches for. If empty, it will
+         * search all the [trackable resource types](https://cloud.google.com/kms/docs/view-key-
+         * usage#tracked-resource-types). Regular expressions are also supported. For example: *
+         * `compute.googleapis.com.*` snapshots resources whose type starts with
+         * `compute.googleapis.com`. * `.*Image` snapshots resources whose type ends with `Image`. *
+         * `.*Image.*` snapshots resources whose type contains `Image`. See
+         * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
+         * syntax. If the regular expression does not match any supported resource type, an
+         * INVALID_ARGUMENT error will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> resourceTypes;
+
+        /** Optional. A list of resource types that this request searches for. If empty, it will search all the
+       [trackable resource types](https://cloud.google.com/kms/docs/view-key-usage#tracked-resource-
+       types). Regular expressions are also supported. For example: * `compute.googleapis.com.*` snapshots
+       resources whose type starts with `compute.googleapis.com`. * `.*Image` snapshots resources whose
+       type ends with `Image`. * `.*Image.*` snapshots resources whose type contains `Image`. See
+       [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression syntax. If
+       the regular expression does not match any supported resource type, an INVALID_ARGUMENT error will
+       be returned.
+         */
+        public java.util.List<java.lang.String> getResourceTypes() {
+          return resourceTypes;
+        }
+
+        /**
+         * Optional. A list of resource types that this request searches for. If empty, it will
+         * search all the [trackable resource types](https://cloud.google.com/kms/docs/view-key-
+         * usage#tracked-resource-types). Regular expressions are also supported. For example: *
+         * `compute.googleapis.com.*` snapshots resources whose type starts with
+         * `compute.googleapis.com`. * `.*Image` snapshots resources whose type ends with `Image`. *
+         * `.*Image.*` snapshots resources whose type contains `Image`. See
+         * [RE2](https://github.com/google/re2/wiki/Syntax) for all supported regular expression
+         * syntax. If the regular expression does not match any supported resource type, an
+         * INVALID_ARGUMENT error will be returned.
+         */
+        public Search setResourceTypes(java.util.List<java.lang.String> resourceTypes) {
+          this.resourceTypes = resourceTypes;
+          return this;
+        }
+
+        @Override
+        public Search set(String parameterName, Object value) {
+          return (Search) super.set(parameterName, value);
+        }
+      }
+
     }
   }
 
@@ -911,8 +1261,7 @@ public class Kmsinventory extends com.google.api.client.googleapis.services.json
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

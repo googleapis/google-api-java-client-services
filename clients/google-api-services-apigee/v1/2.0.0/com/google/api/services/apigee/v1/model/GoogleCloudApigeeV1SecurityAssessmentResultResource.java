@@ -37,6 +37,13 @@ public final class GoogleCloudApigeeV1SecurityAssessmentResultResource extends c
   private GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails apiHubDeploymentDetails;
 
   /**
+   * Optional.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiHubGatewayType;
+
+  /**
    * Required. Name of this resource. For an Apigee API Proxy, this should be the id of the API
    * proxy. For an API Hub Deployment, this should be the id of the deployment.
    * The value may be {@code null}.
@@ -72,6 +79,23 @@ public final class GoogleCloudApigeeV1SecurityAssessmentResultResource extends c
    */
   public GoogleCloudApigeeV1SecurityAssessmentResultResource setApiHubDeploymentDetails(GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails apiHubDeploymentDetails) {
     this.apiHubDeploymentDetails = apiHubDeploymentDetails;
+    return this;
+  }
+
+  /**
+   * Optional.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiHubGatewayType() {
+    return apiHubGatewayType;
+  }
+
+  /**
+   * Optional.
+   * @param apiHubGatewayType apiHubGatewayType or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityAssessmentResultResource setApiHubGatewayType(java.lang.String apiHubGatewayType) {
+    this.apiHubGatewayType = apiHubGatewayType;
     return this;
   }
 

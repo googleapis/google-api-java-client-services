@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-appsmarket</artifactId>
-      <version>v2-rev20251217-2.0.0</version>
+      <version>v2-rev20260209-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-appsmarket:v2-rev20251217-2.0.0'
+  implementation 'com.google.apis:google-api-services-appsmarket:v2-rev20260209-2.0.0'
 }
 ```
 

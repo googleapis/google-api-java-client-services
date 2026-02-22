@@ -59,14 +59,14 @@ public final class UserLicense extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enabled;
 
   /**
-   * The ID of user license.
+   * The ID of the user license.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The type of API resource. This is always appsmarket#userLicense.
+   * The type of API resource. This is always `appsmarket#userLicense`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +158,7 @@ public final class UserLicense extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of user license.
+   * The ID of the user license.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -166,7 +166,7 @@ public final class UserLicense extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of user license.
+   * The ID of the user license.
    * @param id id or {@code null} for none
    */
   public UserLicense setId(java.lang.String id) {
@@ -175,7 +175,7 @@ public final class UserLicense extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of API resource. This is always appsmarket#userLicense.
+   * The type of API resource. This is always `appsmarket#userLicense`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -183,7 +183,7 @@ public final class UserLicense extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of API resource. This is always appsmarket#userLicense.
+   * The type of API resource. This is always `appsmarket#userLicense`.
    * @param kind kind or {@code null} for none
    */
   public UserLicense setKind(java.lang.String kind) {

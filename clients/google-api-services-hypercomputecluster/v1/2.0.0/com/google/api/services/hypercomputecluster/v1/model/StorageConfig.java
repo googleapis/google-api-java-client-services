@@ -31,7 +31,7 @@ public final class StorageConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. ID of the storage resource to mount, which must match a key in the cluster's
-   * [storage_resources](Cluster.storage_resources).
+   * storage_resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class StorageConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. ID of the storage resource to mount, which must match a key in the cluster's
-   * [storage_resources](Cluster.storage_resources).
+   * storage_resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -56,7 +56,7 @@ public final class StorageConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. ID of the storage resource to mount, which must match a key in the cluster's
-   * [storage_resources](Cluster.storage_resources).
+   * storage_resources.
    * @param id id or {@code null} for none
    */
   public StorageConfig setId(java.lang.String id) {

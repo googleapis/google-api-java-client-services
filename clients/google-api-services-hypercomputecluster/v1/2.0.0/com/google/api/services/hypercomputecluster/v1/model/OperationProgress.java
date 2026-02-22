@@ -17,7 +17,7 @@
 package com.google.api.services.hypercomputecluster.v1.model;
 
 /**
- * Message describing the progress of a cluster mutation long-running operation. operation.
+ * Message describing the progress of a cluster mutation long-running operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cluster Director API. For a detailed explanation see:

@@ -30,6 +30,15 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1SecurityMonitoringCondition extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The API Hub gateway monitored by the security monitoring condition. This should only
+   * be set if risk_assessment_type is API_HUB. Format:
+   * `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiHubGateway;
+
+  /**
    * Output only. The time of the security monitoring condition creation.
    * The value may be {@code null}.
    */
@@ -66,8 +75,17 @@ public final class GoogleCloudApigeeV1SecurityMonitoringCondition extends com.go
   private java.lang.String profile;
 
   /**
-   * Optional. Scope of the security monitoring condition. For Apigee, the environment is the scope
-   * of the resources.
+   * Optional. The risk assessment type of the security monitoring condition. Defaults to
+   * ADVANCED_API_SECURITY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String riskAssessmentType;
+
+  /**
+   * Optional. Scope of the security monitoring condition. When RiskAssessmentType is APIGEE, the
+   * scope should be set to the environment of the resources. When RiskAssessmentType is API_HUB,
+   * the scope should not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,6 +111,27 @@ public final class GoogleCloudApigeeV1SecurityMonitoringCondition extends com.go
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. The API Hub gateway monitored by the security monitoring condition. This should only
+   * be set if risk_assessment_type is API_HUB. Format:
+   * `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiHubGateway() {
+    return apiHubGateway;
+  }
+
+  /**
+   * Optional. The API Hub gateway monitored by the security monitoring condition. This should only
+   * be set if risk_assessment_type is API_HUB. Format:
+   * `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+   * @param apiHubGateway apiHubGateway or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityMonitoringCondition setApiHubGateway(java.lang.String apiHubGateway) {
+    this.apiHubGateway = apiHubGateway;
+    return this;
+  }
 
   /**
    * Output only. The time of the security monitoring condition creation.
@@ -182,8 +221,28 @@ public final class GoogleCloudApigeeV1SecurityMonitoringCondition extends com.go
   }
 
   /**
-   * Optional. Scope of the security monitoring condition. For Apigee, the environment is the scope
-   * of the resources.
+   * Optional. The risk assessment type of the security monitoring condition. Defaults to
+   * ADVANCED_API_SECURITY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRiskAssessmentType() {
+    return riskAssessmentType;
+  }
+
+  /**
+   * Optional. The risk assessment type of the security monitoring condition. Defaults to
+   * ADVANCED_API_SECURITY.
+   * @param riskAssessmentType riskAssessmentType or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SecurityMonitoringCondition setRiskAssessmentType(java.lang.String riskAssessmentType) {
+    this.riskAssessmentType = riskAssessmentType;
+    return this;
+  }
+
+  /**
+   * Optional. Scope of the security monitoring condition. When RiskAssessmentType is APIGEE, the
+   * scope should be set to the environment of the resources. When RiskAssessmentType is API_HUB,
+   * the scope should not be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -191,8 +250,9 @@ public final class GoogleCloudApigeeV1SecurityMonitoringCondition extends com.go
   }
 
   /**
-   * Optional. Scope of the security monitoring condition. For Apigee, the environment is the scope
-   * of the resources.
+   * Optional. Scope of the security monitoring condition. When RiskAssessmentType is APIGEE, the
+   * scope should be set to the environment of the resources. When RiskAssessmentType is API_HUB,
+   * the scope should not be set.
    * @param scope scope or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityMonitoringCondition setScope(java.lang.String scope) {

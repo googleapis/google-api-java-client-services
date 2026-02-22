@@ -103,7 +103,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -56091,6 +56091,29 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
+        /**
+         * Optional. The risk assessment type of the security monitoring condition. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String riskAssessmentType;
+
+        /** Optional. The risk assessment type of the security monitoring condition. Defaults to
+       ADVANCED_API_SECURITY.
+         */
+        public java.lang.String getRiskAssessmentType() {
+          return riskAssessmentType;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security monitoring condition. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        public Delete setRiskAssessmentType(java.lang.String riskAssessmentType) {
+          this.riskAssessmentType = riskAssessmentType;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -56235,6 +56258,29 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 "^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security monitoring condition. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String riskAssessmentType;
+
+        /** Optional. The risk assessment type of the security monitoring condition. Defaults to
+       ADVANCED_API_SECURITY.
+         */
+        public java.lang.String getRiskAssessmentType() {
+          return riskAssessmentType;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security monitoring condition. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        public Get setRiskAssessmentType(java.lang.String riskAssessmentType) {
+          this.riskAssessmentType = riskAssessmentType;
           return this;
         }
 
@@ -56386,21 +56432,30 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Filter for the monitoring conditions. For example: `profile=profile1 AND
-         * scope=env1`
+         * Optional. Filter for the monitoring conditions. When RiskAssessmentType is APIGEE,
+         * monitoring conditions can be filtered by profile and scope. For example:
+         * `profile=profile1 AND scope=env1` When RiskAssessmentType is API_HUB, monitoring
+         * conditions can be filtered by profile and api_hub_gateway. For example: `profile=profile1
+         * AND api_hub_gateway=gateway1`
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Filter for the monitoring conditions. For example: `profile=profile1 AND scope=env1`
+        /** Optional. Filter for the monitoring conditions. When RiskAssessmentType is APIGEE, monitoring
+       conditions can be filtered by profile and scope. For example: `profile=profile1 AND scope=env1`
+       When RiskAssessmentType is API_HUB, monitoring conditions can be filtered by profile and
+       api_hub_gateway. For example: `profile=profile1 AND api_hub_gateway=gateway1`
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional. Filter for the monitoring conditions. For example: `profile=profile1 AND
-         * scope=env1`
+         * Optional. Filter for the monitoring conditions. When RiskAssessmentType is APIGEE,
+         * monitoring conditions can be filtered by profile and scope. For example:
+         * `profile=profile1 AND scope=env1` When RiskAssessmentType is API_HUB, monitoring
+         * conditions can be filtered by profile and api_hub_gateway. For example: `profile=profile1
+         * AND api_hub_gateway=gateway1`
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -56443,6 +56498,29 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security monitoring condition. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String riskAssessmentType;
+
+        /** Optional. The risk assessment type of the security monitoring condition. Defaults to
+       ADVANCED_API_SECURITY.
+         */
+        public java.lang.String getRiskAssessmentType() {
+          return riskAssessmentType;
+        }
+
+        /**
+         * Optional. The risk assessment type of the security monitoring condition. Defaults to
+         * ADVANCED_API_SECURITY.
+         */
+        public List setRiskAssessmentType(java.lang.String riskAssessmentType) {
+          this.riskAssessmentType = riskAssessmentType;
           return this;
         }
 
@@ -64108,8 +64186,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

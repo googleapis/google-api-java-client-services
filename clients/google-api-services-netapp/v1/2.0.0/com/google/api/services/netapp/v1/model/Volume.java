@@ -72,6 +72,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.Long capacityGib;
 
   /**
+   * Output only. If this volume is a clone, this field contains details about the clone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloneDetails cloneDetails;
+
+  /**
    * Output only. Size of the volume cold tier data rounded down to the nearest GiB.
    * The value may be {@code null}.
    */
@@ -428,6 +435,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setCapacityGib(java.lang.Long capacityGib) {
     this.capacityGib = capacityGib;
+    return this;
+  }
+
+  /**
+   * Output only. If this volume is a clone, this field contains details about the clone.
+   * @return value or {@code null} for none
+   */
+  public CloneDetails getCloneDetails() {
+    return cloneDetails;
+  }
+
+  /**
+   * Output only. If this volume is a clone, this field contains details about the clone.
+   * @param cloneDetails cloneDetails or {@code null} for none
+   */
+  public Volume setCloneDetails(CloneDetails cloneDetails) {
+    this.cloneDetails = cloneDetails;
     return this;
   }
 

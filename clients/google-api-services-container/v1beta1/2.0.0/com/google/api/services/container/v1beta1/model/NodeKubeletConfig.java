@@ -98,6 +98,14 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   private java.lang.String cpuManagerPolicy;
 
   /**
+   * Optional. Contains configuration options to modify node-level parameters for container restart
+   * behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CrashLoopBackOffConfig crashLoopBackOff;
+
+  /**
    * Optional. eviction_max_pod_grace_period_seconds is the maximum allowed grace period (in
    * seconds) to use when terminating pods in response to a soft eviction threshold being met. This
    * value effectively caps the Pod's terminationGracePeriodSeconds value during soft evictions.
@@ -210,6 +218,28 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long podPidsLimit;
+
+  /**
+   * Optional. shutdown_grace_period_critical_pods_seconds is the maximum allowed grace period (in
+   * seconds) used to terminate critical pods during a node shutdown. This value should be <=
+   * shutdown_grace_period_seconds, and is only valid if shutdown_grace_period_seconds is set.
+   * https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/ Range: [0, 120].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer shutdownGracePeriodCriticalPodsSeconds;
+
+  /**
+   * Optional. shutdown_grace_period_seconds is the maximum allowed grace period (in seconds) the
+   * total duration that the node should delay the shutdown during a graceful shutdown. This is the
+   * total grace period for pod termination for both regular and critical pods.
+   * https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/ If set to 0, node
+   * will not enable the graceful node shutdown functionality. This field is only valid for Spot
+   * VMs. Allowed values: 0, 30, 120.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer shutdownGracePeriodSeconds;
 
   /**
    * Optional. Defines whether to enable single process OOM killer. If true, will prevent the
@@ -377,6 +407,25 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setCpuManagerPolicy(java.lang.String cpuManagerPolicy) {
     this.cpuManagerPolicy = cpuManagerPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Contains configuration options to modify node-level parameters for container restart
+   * behavior.
+   * @return value or {@code null} for none
+   */
+  public CrashLoopBackOffConfig getCrashLoopBackOff() {
+    return crashLoopBackOff;
+  }
+
+  /**
+   * Optional. Contains configuration options to modify node-level parameters for container restart
+   * behavior.
+   * @param crashLoopBackOff crashLoopBackOff or {@code null} for none
+   */
+  public NodeKubeletConfig setCrashLoopBackOff(CrashLoopBackOffConfig crashLoopBackOff) {
+    this.crashLoopBackOff = crashLoopBackOff;
     return this;
   }
 
@@ -641,6 +690,56 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setPodPidsLimit(java.lang.Long podPidsLimit) {
     this.podPidsLimit = podPidsLimit;
+    return this;
+  }
+
+  /**
+   * Optional. shutdown_grace_period_critical_pods_seconds is the maximum allowed grace period (in
+   * seconds) used to terminate critical pods during a node shutdown. This value should be <=
+   * shutdown_grace_period_seconds, and is only valid if shutdown_grace_period_seconds is set.
+   * https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/ Range: [0, 120].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getShutdownGracePeriodCriticalPodsSeconds() {
+    return shutdownGracePeriodCriticalPodsSeconds;
+  }
+
+  /**
+   * Optional. shutdown_grace_period_critical_pods_seconds is the maximum allowed grace period (in
+   * seconds) used to terminate critical pods during a node shutdown. This value should be <=
+   * shutdown_grace_period_seconds, and is only valid if shutdown_grace_period_seconds is set.
+   * https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/ Range: [0, 120].
+   * @param shutdownGracePeriodCriticalPodsSeconds shutdownGracePeriodCriticalPodsSeconds or {@code null} for none
+   */
+  public NodeKubeletConfig setShutdownGracePeriodCriticalPodsSeconds(java.lang.Integer shutdownGracePeriodCriticalPodsSeconds) {
+    this.shutdownGracePeriodCriticalPodsSeconds = shutdownGracePeriodCriticalPodsSeconds;
+    return this;
+  }
+
+  /**
+   * Optional. shutdown_grace_period_seconds is the maximum allowed grace period (in seconds) the
+   * total duration that the node should delay the shutdown during a graceful shutdown. This is the
+   * total grace period for pod termination for both regular and critical pods.
+   * https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/ If set to 0, node
+   * will not enable the graceful node shutdown functionality. This field is only valid for Spot
+   * VMs. Allowed values: 0, 30, 120.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getShutdownGracePeriodSeconds() {
+    return shutdownGracePeriodSeconds;
+  }
+
+  /**
+   * Optional. shutdown_grace_period_seconds is the maximum allowed grace period (in seconds) the
+   * total duration that the node should delay the shutdown during a graceful shutdown. This is the
+   * total grace period for pod termination for both regular and critical pods.
+   * https://kubernetes.io/docs/concepts/cluster-administration/node-shutdown/ If set to 0, node
+   * will not enable the graceful node shutdown functionality. This field is only valid for Spot
+   * VMs. Allowed values: 0, 30, 120.
+   * @param shutdownGracePeriodSeconds shutdownGracePeriodSeconds or {@code null} for none
+   */
+  public NodeKubeletConfig setShutdownGracePeriodSeconds(java.lang.Integer shutdownGracePeriodSeconds) {
+    this.shutdownGracePeriodSeconds = shutdownGracePeriodSeconds;
     return this;
   }
 

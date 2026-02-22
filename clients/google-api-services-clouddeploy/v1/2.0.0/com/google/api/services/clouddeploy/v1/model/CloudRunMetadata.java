@@ -60,6 +60,14 @@ public final class CloudRunMetadata extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> serviceUrls;
 
   /**
+   * Output only. The Cloud Run worker pool associated with a `Rollout`. Format is
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerPool;
+
+  /**
    * Output only. The name of the Cloud Run job that is associated with a `Rollout`. Format is
    * `projects/{project}/locations/{location}/jobs/{job_name}`.
    * @return value or {@code null} for none
@@ -128,6 +136,25 @@ public final class CloudRunMetadata extends com.google.api.client.json.GenericJs
    */
   public CloudRunMetadata setServiceUrls(java.util.List<java.lang.String> serviceUrls) {
     this.serviceUrls = serviceUrls;
+    return this;
+  }
+
+  /**
+   * Output only. The Cloud Run worker pool associated with a `Rollout`. Format is
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerPool() {
+    return workerPool;
+  }
+
+  /**
+   * Output only. The Cloud Run worker pool associated with a `Rollout`. Format is
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
+   * @param workerPool workerPool or {@code null} for none
+   */
+  public CloudRunMetadata setWorkerPool(java.lang.String workerPool) {
+    this.workerPool = workerPool;
     return this;
   }
 

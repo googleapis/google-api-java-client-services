@@ -44,6 +44,15 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
   private java.util.List<Operation> operations;
 
   /**
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
+   * attempting to list all resources across all supported locations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The standard List next-page token.
    * @return value or {@code null} for none
    */
@@ -74,6 +83,27 @@ public final class ListOperationsResponse extends com.google.api.client.json.Gen
    */
   public ListOperationsResponse setOperations(java.util.List<Operation> operations) {
     this.operations = operations;
+    return this;
+  }
+
+  /**
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
+   * attempting to list all resources across all supported locations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Unordered list. Unreachable resources. Populated when the request sets
+   * `ListOperationsRequest.return_partial_success` and reads across collections. For example, when
+   * attempting to list all resources across all supported locations.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListOperationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

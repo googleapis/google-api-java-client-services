@@ -37,28 +37,34 @@ public final class ConfigManagementContainerOverride extends com.google.api.clie
   private java.lang.String containerName;
 
   /**
-   * Optional. The cpu limit of the container.
+   * Optional. The cpu limit of the container. Use the following CPU resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-cpu.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cpuLimit;
 
   /**
-   * Optional. The cpu request of the container.
+   * Optional. The cpu request of the container. Use the following CPU resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-cpu.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cpuRequest;
 
   /**
-   * Optional. The memory limit of the container.
+   * Optional. The memory limit of the container. Use the following memory resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-
+   * memory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String memoryLimit;
 
   /**
-   * Optional. The memory request of the container.
+   * Optional. The memory request of the container. Use the following memory resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-
+   * memory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +88,8 @@ public final class ConfigManagementContainerOverride extends com.google.api.clie
   }
 
   /**
-   * Optional. The cpu limit of the container.
+   * Optional. The cpu limit of the container. Use the following CPU resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-cpu.
    * @return value or {@code null} for none
    */
   public java.lang.String getCpuLimit() {
@@ -90,7 +97,8 @@ public final class ConfigManagementContainerOverride extends com.google.api.clie
   }
 
   /**
-   * Optional. The cpu limit of the container.
+   * Optional. The cpu limit of the container. Use the following CPU resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-cpu.
    * @param cpuLimit cpuLimit or {@code null} for none
    */
   public ConfigManagementContainerOverride setCpuLimit(java.lang.String cpuLimit) {
@@ -99,7 +107,8 @@ public final class ConfigManagementContainerOverride extends com.google.api.clie
   }
 
   /**
-   * Optional. The cpu request of the container.
+   * Optional. The cpu request of the container. Use the following CPU resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-cpu.
    * @return value or {@code null} for none
    */
   public java.lang.String getCpuRequest() {
@@ -107,7 +116,8 @@ public final class ConfigManagementContainerOverride extends com.google.api.clie
   }
 
   /**
-   * Optional. The cpu request of the container.
+   * Optional. The cpu request of the container. Use the following CPU resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-cpu.
    * @param cpuRequest cpuRequest or {@code null} for none
    */
   public ConfigManagementContainerOverride setCpuRequest(java.lang.String cpuRequest) {
@@ -116,7 +126,9 @@ public final class ConfigManagementContainerOverride extends com.google.api.clie
   }
 
   /**
-   * Optional. The memory limit of the container.
+   * Optional. The memory limit of the container. Use the following memory resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-
+   * memory.
    * @return value or {@code null} for none
    */
   public java.lang.String getMemoryLimit() {
@@ -124,7 +136,9 @@ public final class ConfigManagementContainerOverride extends com.google.api.clie
   }
 
   /**
-   * Optional. The memory limit of the container.
+   * Optional. The memory limit of the container. Use the following memory resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-
+   * memory.
    * @param memoryLimit memoryLimit or {@code null} for none
    */
   public ConfigManagementContainerOverride setMemoryLimit(java.lang.String memoryLimit) {
@@ -133,7 +147,9 @@ public final class ConfigManagementContainerOverride extends com.google.api.clie
   }
 
   /**
-   * Optional. The memory request of the container.
+   * Optional. The memory request of the container. Use the following memory resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-
+   * memory.
    * @return value or {@code null} for none
    */
   public java.lang.String getMemoryRequest() {
@@ -141,7 +157,9 @@ public final class ConfigManagementContainerOverride extends com.google.api.clie
   }
 
   /**
-   * Optional. The memory request of the container.
+   * Optional. The memory request of the container. Use the following memory resource units:
+   * https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-
+   * memory.
    * @param memoryRequest memoryRequest or {@code null} for none
    */
   public ConfigManagementContainerOverride setMemoryRequest(java.lang.String memoryRequest) {

@@ -17,10 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * Deprecated: Compliance Posture is no longer supported. For more details, see
- * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
- * CompliancePostureConfig defines the settings needed to enable/disable features for the Compliance
- * Posture.
+ * State and reasons of the Rollout Sequence.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -30,64 +27,64 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CompliancePostureConfig extends com.google.api.client.json.GenericJson {
+public final class RolloutSequenceState extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of enabled compliance standards.
+   * Output only. Lifecycle state of the Rollout Sequence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ComplianceStandard> complianceStandards;
+  private java.lang.String lifecycleState;
 
   /**
-   * Defines the enablement mode for Compliance Posture.
+   * Output only. StateReason represents the reason for the Rollout Sequence state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String mode;
+  private java.util.List<java.lang.String> stateReasons;
 
   /**
-   * List of enabled compliance standards.
+   * Output only. Lifecycle state of the Rollout Sequence.
    * @return value or {@code null} for none
    */
-  public java.util.List<ComplianceStandard> getComplianceStandards() {
-    return complianceStandards;
+  public java.lang.String getLifecycleState() {
+    return lifecycleState;
   }
 
   /**
-   * List of enabled compliance standards.
-   * @param complianceStandards complianceStandards or {@code null} for none
+   * Output only. Lifecycle state of the Rollout Sequence.
+   * @param lifecycleState lifecycleState or {@code null} for none
    */
-  public CompliancePostureConfig setComplianceStandards(java.util.List<ComplianceStandard> complianceStandards) {
-    this.complianceStandards = complianceStandards;
+  public RolloutSequenceState setLifecycleState(java.lang.String lifecycleState) {
+    this.lifecycleState = lifecycleState;
     return this;
   }
 
   /**
-   * Defines the enablement mode for Compliance Posture.
+   * Output only. StateReason represents the reason for the Rollout Sequence state.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMode() {
-    return mode;
+  public java.util.List<java.lang.String> getStateReasons() {
+    return stateReasons;
   }
 
   /**
-   * Defines the enablement mode for Compliance Posture.
-   * @param mode mode or {@code null} for none
+   * Output only. StateReason represents the reason for the Rollout Sequence state.
+   * @param stateReasons stateReasons or {@code null} for none
    */
-  public CompliancePostureConfig setMode(java.lang.String mode) {
-    this.mode = mode;
+  public RolloutSequenceState setStateReasons(java.util.List<java.lang.String> stateReasons) {
+    this.stateReasons = stateReasons;
     return this;
   }
 
   @Override
-  public CompliancePostureConfig set(String fieldName, Object value) {
-    return (CompliancePostureConfig) super.set(fieldName, value);
+  public RolloutSequenceState set(String fieldName, Object value) {
+    return (RolloutSequenceState) super.set(fieldName, value);
   }
 
   @Override
-  public CompliancePostureConfig clone() {
-    return (CompliancePostureConfig) super.clone();
+  public RolloutSequenceState clone() {
+    return (RolloutSequenceState) super.clone();
   }
 
 }

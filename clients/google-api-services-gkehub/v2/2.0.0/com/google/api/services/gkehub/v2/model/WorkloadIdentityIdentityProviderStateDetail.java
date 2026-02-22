@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1alpha.model;
+package com.google.api.services.gkehub.v2.model;
 
 /**
- * An excluded cluster from the rollout.
+ * IdentityProviderStateDetail represents the state of an Identity Provider.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.gkehub.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ExcludedCluster extends com.google.api.client.json.GenericJson {
+public final class WorkloadIdentityIdentityProviderStateDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The name of the fleet Membership resource associated to the excluded cluster.
+   * The state of the Identity Provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String membership;
+  private java.lang.String code;
 
   /**
-   * Output only. The reason for excluding the cluster from the rollout.
+   * A human-readable description of the current state or returned error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String reason;
+  private java.lang.String description;
 
   /**
-   * Output only. The name of the fleet Membership resource associated to the excluded cluster.
+   * The state of the Identity Provider.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMembership() {
-    return membership;
+  public java.lang.String getCode() {
+    return code;
   }
 
   /**
-   * Output only. The name of the fleet Membership resource associated to the excluded cluster.
-   * @param membership membership or {@code null} for none
+   * The state of the Identity Provider.
+   * @param code code or {@code null} for none
    */
-  public ExcludedCluster setMembership(java.lang.String membership) {
-    this.membership = membership;
+  public WorkloadIdentityIdentityProviderStateDetail setCode(java.lang.String code) {
+    this.code = code;
     return this;
   }
 
   /**
-   * Output only. The reason for excluding the cluster from the rollout.
+   * A human-readable description of the current state or returned error.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReason() {
-    return reason;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * Output only. The reason for excluding the cluster from the rollout.
-   * @param reason reason or {@code null} for none
+   * A human-readable description of the current state or returned error.
+   * @param description description or {@code null} for none
    */
-  public ExcludedCluster setReason(java.lang.String reason) {
-    this.reason = reason;
+  public WorkloadIdentityIdentityProviderStateDetail setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   @Override
-  public ExcludedCluster set(String fieldName, Object value) {
-    return (ExcludedCluster) super.set(fieldName, value);
+  public WorkloadIdentityIdentityProviderStateDetail set(String fieldName, Object value) {
+    return (WorkloadIdentityIdentityProviderStateDetail) super.set(fieldName, value);
   }
 
   @Override
-  public ExcludedCluster clone() {
-    return (ExcludedCluster) super.clone();
+  public WorkloadIdentityIdentityProviderStateDetail clone() {
+    return (WorkloadIdentityIdentityProviderStateDetail) super.clone();
   }
 
 }

@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.gkehub.v1beta.model;
+package com.google.api.services.gkehub.v2alpha.model;
 
 /**
- * Feature config to use for Rollout.
+ * IdentityProviderStateDetail represents the state of an Identity Provider.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.gkehub.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FeatureUpdate extends com.google.api.client.json.GenericJson {
+public final class WorkloadIdentityIdentityProviderStateDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Configuration for Binary Authorization.
+   * The state of the Identity Provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private BinaryAuthorizationConfig binaryAuthorizationConfig;
+  private java.lang.String code;
 
   /**
-   * Optional. Configuration for Security Posture.
+   * A human-readable description of the current state or returned error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SecurityPostureConfig securityPostureConfig;
+  private java.lang.String description;
 
   /**
-   * Optional. Configuration for Binary Authorization.
+   * The state of the Identity Provider.
    * @return value or {@code null} for none
    */
-  public BinaryAuthorizationConfig getBinaryAuthorizationConfig() {
-    return binaryAuthorizationConfig;
+  public java.lang.String getCode() {
+    return code;
   }
 
   /**
-   * Optional. Configuration for Binary Authorization.
-   * @param binaryAuthorizationConfig binaryAuthorizationConfig or {@code null} for none
+   * The state of the Identity Provider.
+   * @param code code or {@code null} for none
    */
-  public FeatureUpdate setBinaryAuthorizationConfig(BinaryAuthorizationConfig binaryAuthorizationConfig) {
-    this.binaryAuthorizationConfig = binaryAuthorizationConfig;
+  public WorkloadIdentityIdentityProviderStateDetail setCode(java.lang.String code) {
+    this.code = code;
     return this;
   }
 
   /**
-   * Optional. Configuration for Security Posture.
+   * A human-readable description of the current state or returned error.
    * @return value or {@code null} for none
    */
-  public SecurityPostureConfig getSecurityPostureConfig() {
-    return securityPostureConfig;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * Optional. Configuration for Security Posture.
-   * @param securityPostureConfig securityPostureConfig or {@code null} for none
+   * A human-readable description of the current state or returned error.
+   * @param description description or {@code null} for none
    */
-  public FeatureUpdate setSecurityPostureConfig(SecurityPostureConfig securityPostureConfig) {
-    this.securityPostureConfig = securityPostureConfig;
+  public WorkloadIdentityIdentityProviderStateDetail setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   @Override
-  public FeatureUpdate set(String fieldName, Object value) {
-    return (FeatureUpdate) super.set(fieldName, value);
+  public WorkloadIdentityIdentityProviderStateDetail set(String fieldName, Object value) {
+    return (WorkloadIdentityIdentityProviderStateDetail) super.set(fieldName, value);
   }
 
   @Override
-  public FeatureUpdate clone() {
-    return (FeatureUpdate) super.clone();
+  public WorkloadIdentityIdentityProviderStateDetail clone() {
+    return (WorkloadIdentityIdentityProviderStateDetail) super.clone();
   }
 
 }

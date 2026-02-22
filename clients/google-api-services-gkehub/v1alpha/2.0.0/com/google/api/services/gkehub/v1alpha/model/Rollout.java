@@ -65,26 +65,6 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Optional. Output only. The excluded clusters from the rollout.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<ExcludedCluster> excludedClusters;
-
-  static {
-    // hack to force ProGuard to consider ExcludedCluster used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ExcludedCluster.class);
-  }
-
-  /**
-   * Optional. Feature config to use for Rollout.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private FeatureUpdate feature;
-
-  /**
    * Optional. Labels for this Rollout.
    * The value may be {@code null}.
    */
@@ -116,13 +96,6 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String rolloutSequence;
-
-  /**
-   * Output only. The schedule of the Rollout.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Schedule schedule;
 
   /**
    * Output only. The stages of the Rollout.
@@ -254,40 +227,6 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Output only. The excluded clusters from the rollout.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ExcludedCluster> getExcludedClusters() {
-    return excludedClusters;
-  }
-
-  /**
-   * Optional. Output only. The excluded clusters from the rollout.
-   * @param excludedClusters excludedClusters or {@code null} for none
-   */
-  public Rollout setExcludedClusters(java.util.List<ExcludedCluster> excludedClusters) {
-    this.excludedClusters = excludedClusters;
-    return this;
-  }
-
-  /**
-   * Optional. Feature config to use for Rollout.
-   * @return value or {@code null} for none
-   */
-  public FeatureUpdate getFeature() {
-    return feature;
-  }
-
-  /**
-   * Optional. Feature config to use for Rollout.
-   * @param feature feature or {@code null} for none
-   */
-  public Rollout setFeature(FeatureUpdate feature) {
-    this.feature = feature;
-    return this;
-  }
-
-  /**
    * Optional. Labels for this Rollout.
    * @return value or {@code null} for none
    */
@@ -362,23 +301,6 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setRolloutSequence(java.lang.String rolloutSequence) {
     this.rolloutSequence = rolloutSequence;
-    return this;
-  }
-
-  /**
-   * Output only. The schedule of the Rollout.
-   * @return value or {@code null} for none
-   */
-  public Schedule getSchedule() {
-    return schedule;
-  }
-
-  /**
-   * Output only. The schedule of the Rollout.
-   * @param schedule schedule or {@code null} for none
-   */
-  public Rollout setSchedule(Schedule schedule) {
-    this.schedule = schedule;
     return this;
   }
 

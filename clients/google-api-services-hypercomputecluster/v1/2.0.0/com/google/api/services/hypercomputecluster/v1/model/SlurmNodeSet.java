@@ -32,7 +32,7 @@ public final class SlurmNodeSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. ID of the compute resource on which this nodeset will run. Must match a key in the
-   * cluster's [compute_resources](Cluster.compute_resources).
+   * cluster's compute_resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class SlurmNodeSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. ID of the compute resource on which this nodeset will run. Must match a key in the
-   * cluster's [compute_resources](Cluster.compute_resources).
+   * cluster's compute_resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getComputeId() {
@@ -90,7 +90,7 @@ public final class SlurmNodeSet extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. ID of the compute resource on which this nodeset will run. Must match a key in the
-   * cluster's [compute_resources](Cluster.compute_resources).
+   * cluster's compute_resources.
    * @param computeId computeId or {@code null} for none
    */
   public SlurmNodeSet setComputeId(java.lang.String computeId) {

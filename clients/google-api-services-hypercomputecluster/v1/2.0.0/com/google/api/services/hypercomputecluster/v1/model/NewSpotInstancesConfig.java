@@ -39,7 +39,8 @@ public final class NewSpotInstancesConfig extends com.google.api.client.json.Gen
   private java.lang.String machineType;
 
   /**
-   * Optional. Specifies the termination action of the instance
+   * Optional. Termination action for the instance. If not specified, Compute Engine sets the
+   * termination action to DELETE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +75,8 @@ public final class NewSpotInstancesConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies the termination action of the instance
+   * Optional. Termination action for the instance. If not specified, Compute Engine sets the
+   * termination action to DELETE.
    * @return value or {@code null} for none
    */
   public java.lang.String getTerminationAction() {
@@ -82,7 +84,8 @@ public final class NewSpotInstancesConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Specifies the termination action of the instance
+   * Optional. Termination action for the instance. If not specified, Compute Engine sets the
+   * termination action to DELETE.
    * @param terminationAction terminationAction or {@code null} for none
    */
   public NewSpotInstancesConfig setTerminationAction(java.lang.String terminationAction) {

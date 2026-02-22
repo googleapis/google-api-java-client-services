@@ -60,7 +60,7 @@ public final class GenerateShiftsRequest extends com.google.api.client.json.Gene
   private java.util.List<ShiftTemplate> shiftTemplates;
 
   /**
-   * Optional. Parameters for the solver.
+   * Required. Parameters for the solver.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +129,7 @@ public final class GenerateShiftsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Parameters for the solver.
+   * Required. Parameters for the solver.
    * @return value or {@code null} for none
    */
   public SolverConfig getSolverConfig() {
@@ -137,7 +137,7 @@ public final class GenerateShiftsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Parameters for the solver.
+   * Required. Parameters for the solver.
    * @param solverConfig solverConfig or {@code null} for none
    */
   public GenerateShiftsRequest setSolverConfig(SolverConfig solverConfig) {

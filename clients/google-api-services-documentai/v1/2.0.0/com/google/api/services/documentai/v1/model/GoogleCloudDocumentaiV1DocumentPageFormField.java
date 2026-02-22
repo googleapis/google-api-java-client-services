@@ -47,7 +47,8 @@ public final class GoogleCloudDocumentaiV1DocumentPageFormField extends com.goog
   private java.lang.String correctedValueText;
 
   /**
-   * Layout for the FormField name. e.g. `Address`, `Email`, `Grand total`, `Phone number`, etc.
+   * Layout for the FormField name. For example, `Address`, `Email`, `Grand total`, `Phone number`,
+   * etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +141,8 @@ public final class GoogleCloudDocumentaiV1DocumentPageFormField extends com.goog
   }
 
   /**
-   * Layout for the FormField name. e.g. `Address`, `Email`, `Grand total`, `Phone number`, etc.
+   * Layout for the FormField name. For example, `Address`, `Email`, `Grand total`, `Phone number`,
+   * etc.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageLayout getFieldName() {
@@ -148,7 +150,8 @@ public final class GoogleCloudDocumentaiV1DocumentPageFormField extends com.goog
   }
 
   /**
-   * Layout for the FormField name. e.g. `Address`, `Email`, `Grand total`, `Phone number`, etc.
+   * Layout for the FormField name. For example, `Address`, `Email`, `Grand total`, `Phone number`,
+   * etc.
    * @param fieldName fieldName or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentPageFormField setFieldName(GoogleCloudDocumentaiV1DocumentPageLayout fieldName) {

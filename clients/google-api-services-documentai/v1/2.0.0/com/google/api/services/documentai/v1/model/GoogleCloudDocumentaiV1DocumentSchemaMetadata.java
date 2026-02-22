@@ -53,7 +53,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
   private java.lang.Boolean prefixedNamingOnProperties;
 
   /**
-   * If set, we will skip the naming format validation in the schema. So the string values in
+   * If set, this will skip the naming format validation in the schema. So the string values in
    * `DocumentSchema.EntityType.name` and `DocumentSchema.EntityType.Property.name` will not be
    * checked.
    * The value may be {@code null}.
@@ -115,7 +115,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
   }
 
   /**
-   * If set, we will skip the naming format validation in the schema. So the string values in
+   * If set, this will skip the naming format validation in the schema. So the string values in
    * `DocumentSchema.EntityType.name` and `DocumentSchema.EntityType.Property.name` will not be
    * checked.
    * @return value or {@code null} for none
@@ -125,7 +125,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends com.goo
   }
 
   /**
-   * If set, we will skip the naming format validation in the schema. So the string values in
+   * If set, this will skip the naming format validation in the schema. So the string values in
    * `DocumentSchema.EntityType.name` and `DocumentSchema.EntityType.Property.name` will not be
    * checked.
    * @param skipNamingValidation skipNamingValidation or {@code null} for none

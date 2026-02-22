@@ -31,21 +31,21 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3ProcessorVersionGenAiModelInfoFoundationGenAiModelInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether finetuning is allowed for this base processor version.
+   * Whether fine tuning is allowed for this base processor version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean finetuningAllowed;
 
   /**
-   * The minimum number of labeled documents in the training dataset required for finetuning.
+   * The minimum number of labeled documents in the training dataset required for fine tuning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minTrainLabeledDocuments;
 
   /**
-   * Whether finetuning is allowed for this base processor version.
+   * Whether fine tuning is allowed for this base processor version.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFinetuningAllowed() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersionGenAiModelInfoFou
   }
 
   /**
-   * Whether finetuning is allowed for this base processor version.
+   * Whether fine tuning is allowed for this base processor version.
    * @param finetuningAllowed finetuningAllowed or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessorVersionGenAiModelInfoFoundationGenAiModelInfo setFinetuningAllowed(java.lang.Boolean finetuningAllowed) {
@@ -62,7 +62,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersionGenAiModelInfoFou
   }
 
   /**
-   * The minimum number of labeled documents in the training dataset required for finetuning.
+   * The minimum number of labeled documents in the training dataset required for fine tuning.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinTrainLabeledDocuments() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDocumentaiV1beta3ProcessorVersionGenAiModelInfoFou
   }
 
   /**
-   * The minimum number of labeled documents in the training dataset required for finetuning.
+   * The minimum number of labeled documents in the training dataset required for fine tuning.
    * @param minTrainLabeledDocuments minTrainLabeledDocuments or {@code null} for none
    */
   public GoogleCloudDocumentaiV1beta3ProcessorVersionGenAiModelInfoFoundationGenAiModelInfo setMinTrainLabeledDocuments(java.lang.Integer minTrainLabeledDocuments) {

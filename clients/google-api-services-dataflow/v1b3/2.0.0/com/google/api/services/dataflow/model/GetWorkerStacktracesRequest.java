@@ -30,12 +30,39 @@ package com.google.api.services.dataflow.model;
 public final class GetWorkerStacktracesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The end time for the stacktrace query. The returned stacktraces will be a recent stack trace at
+   * or shortly before this time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
    * The worker for which to get stacktraces. The returned stacktraces will be for the SDK harness
    * running on this worker.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workerId;
+
+  /**
+   * The end time for the stacktrace query. The returned stacktraces will be a recent stack trace at
+   * or shortly before this time.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * The end time for the stacktrace query. The returned stacktraces will be a recent stack trace at
+   * or shortly before this time.
+   * @param endTime endTime or {@code null} for none
+   */
+  public GetWorkerStacktracesRequest setEndTime(String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
 
   /**
    * The worker for which to get stacktraces. The returned stacktraces will be for the SDK harness

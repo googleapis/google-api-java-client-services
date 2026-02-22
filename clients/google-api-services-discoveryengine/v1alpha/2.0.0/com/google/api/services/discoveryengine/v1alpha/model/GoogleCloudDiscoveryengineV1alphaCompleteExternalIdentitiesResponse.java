@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * A suggested prompt for the agent, to be shown on the agent landing page.
+ * Response message for CompletionService.CompleteExternalIdentities.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The text of the suggested prompt. The language of this is either Agent.language_code,
-   * or ListAvailableAgentViewsRequest.language_code if translations are enabled.
+   * The list of external identities that match the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String text;
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaExternalIdentity> externalIdentities;
 
   /**
-   * Required. The text of the suggested prompt. The language of this is either Agent.language_code,
-   * or ListAvailableAgentViewsRequest.language_code if translations are enabled.
+   * The list of external identities that match the query.
    * @return value or {@code null} for none
    */
-  public java.lang.String getText() {
-    return text;
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaExternalIdentity> getExternalIdentities() {
+    return externalIdentities;
   }
 
   /**
-   * Required. The text of the suggested prompt. The language of this is either Agent.language_code,
-   * or ListAvailableAgentViewsRequest.language_code if translations are enabled.
-   * @param text text or {@code null} for none
+   * The list of external identities that match the query.
+   * @param externalIdentities externalIdentities or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt setText(java.lang.String text) {
-    this.text = text;
+  public GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse setExternalIdentities(java.util.List<GoogleCloudDiscoveryengineV1alphaExternalIdentity> externalIdentities) {
+    this.externalIdentities = externalIdentities;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt clone() {
-    return (GoogleCloudDiscoveryengineV1alphaAgentViewSuggestedPrompt) super.clone();
+  public GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse clone() {
+    return (GoogleCloudDiscoveryengineV1alphaCompleteExternalIdentitiesResponse) super.clone();
   }
 
 }

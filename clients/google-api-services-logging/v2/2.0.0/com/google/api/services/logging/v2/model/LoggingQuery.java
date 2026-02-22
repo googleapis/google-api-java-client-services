@@ -33,8 +33,8 @@ public final class LoggingQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. An advanced query using the Logging Query Language
-   * (https://cloud.google.com/logging/docs/view/logging-query-language). The maximum length of the
-   * filter is 20000 characters.
+   * (https://docs.cloud.google.com/logging/docs/view/logging-query-language). The maximum length of
+   * the filter is 20000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class LoggingQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. An advanced query using the Logging Query Language
-   * (https://cloud.google.com/logging/docs/view/logging-query-language). The maximum length of the
-   * filter is 20000 characters.
+   * (https://docs.cloud.google.com/logging/docs/view/logging-query-language). The maximum length of
+   * the filter is 20000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -73,8 +73,8 @@ public final class LoggingQuery extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. An advanced query using the Logging Query Language
-   * (https://cloud.google.com/logging/docs/view/logging-query-language). The maximum length of the
-   * filter is 20000 characters.
+   * (https://docs.cloud.google.com/logging/docs/view/logging-query-language). The maximum length of
+   * the filter is 20000 characters.
    * @param filter filter or {@code null} for none
    */
   public LoggingQuery setFilter(java.lang.String filter) {

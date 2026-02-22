@@ -44,11 +44,25 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   private RemovePairDataStatus pairDataRemovalStatus;
 
   /**
+   * The status of the ppid data removal from the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemovePpidDataStatus ppidDataRemovalStatus;
+
+  /**
    * The status of the user data removal from the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemoveUserDataStatus userDataRemovalStatus;
+
+  /**
+   * The status of the user id data removal from the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RemoveUserIdDataStatus userIdDataRemovalStatus;
 
   /**
    * The status of the mobile data removal from the destination.
@@ -85,6 +99,23 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
+   * The status of the ppid data removal from the destination.
+   * @return value or {@code null} for none
+   */
+  public RemovePpidDataStatus getPpidDataRemovalStatus() {
+    return ppidDataRemovalStatus;
+  }
+
+  /**
+   * The status of the ppid data removal from the destination.
+   * @param ppidDataRemovalStatus ppidDataRemovalStatus or {@code null} for none
+   */
+  public RemoveAudienceMembersStatus setPpidDataRemovalStatus(RemovePpidDataStatus ppidDataRemovalStatus) {
+    this.ppidDataRemovalStatus = ppidDataRemovalStatus;
+    return this;
+  }
+
+  /**
    * The status of the user data removal from the destination.
    * @return value or {@code null} for none
    */
@@ -98,6 +129,23 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
    */
   public RemoveAudienceMembersStatus setUserDataRemovalStatus(RemoveUserDataStatus userDataRemovalStatus) {
     this.userDataRemovalStatus = userDataRemovalStatus;
+    return this;
+  }
+
+  /**
+   * The status of the user id data removal from the destination.
+   * @return value or {@code null} for none
+   */
+  public RemoveUserIdDataStatus getUserIdDataRemovalStatus() {
+    return userIdDataRemovalStatus;
+  }
+
+  /**
+   * The status of the user id data removal from the destination.
+   * @param userIdDataRemovalStatus userIdDataRemovalStatus or {@code null} for none
+   */
+  public RemoveAudienceMembersStatus setUserIdDataRemovalStatus(RemoveUserIdDataStatus userIdDataRemovalStatus) {
+    this.userIdDataRemovalStatus = userIdDataRemovalStatus;
     return this;
   }
 

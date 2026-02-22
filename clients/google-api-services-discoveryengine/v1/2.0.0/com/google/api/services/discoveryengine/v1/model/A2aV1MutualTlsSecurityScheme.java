@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.discoveryengine.v1alpha.model;
+package com.google.api.services.discoveryengine.v1.model;
 
 /**
- * Response message for the AgentService.GetAgentView method.
+ * Model definition for A2aV1MutualTlsSecurityScheme.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse extends com.google.api.client.json.GenericJson {
+public final class A2aV1MutualTlsSecurityScheme extends com.google.api.client.json.GenericJson {
 
   /**
-   * The data for displaying an Agent.
+   * Description of this security scheme.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1alphaAgentView agentView;
+  private java.lang.String description;
 
   /**
-   * The data for displaying an Agent.
+   * Description of this security scheme.
    * @return value or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaAgentView getAgentView() {
-    return agentView;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * The data for displaying an Agent.
-   * @param agentView agentView or {@code null} for none
+   * Description of this security scheme.
+   * @param description description or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse setAgentView(GoogleCloudDiscoveryengineV1alphaAgentView agentView) {
-    this.agentView = agentView;
+  public A2aV1MutualTlsSecurityScheme setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse) super.set(fieldName, value);
+  public A2aV1MutualTlsSecurityScheme set(String fieldName, Object value) {
+    return (A2aV1MutualTlsSecurityScheme) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse clone() {
-    return (GoogleCloudDiscoveryengineV1alphaGetAgentViewResponse) super.clone();
+  public A2aV1MutualTlsSecurityScheme clone() {
+    return (A2aV1MutualTlsSecurityScheme) super.clone();
   }
 
 }

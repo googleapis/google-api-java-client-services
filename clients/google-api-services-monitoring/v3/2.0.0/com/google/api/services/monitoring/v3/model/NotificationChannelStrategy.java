@@ -41,7 +41,8 @@ public final class NotificationChannelStrategy extends com.google.api.client.jso
   private java.util.List<java.lang.String> notificationChannelNames;
 
   /**
-   * The frequency at which to send reminder notifications for open incidents.
+   * The frequency at which to send reminder notifications for open incidents. The value must be
+   * between 30 minutes and 24 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +72,8 @@ public final class NotificationChannelStrategy extends com.google.api.client.jso
   }
 
   /**
-   * The frequency at which to send reminder notifications for open incidents.
+   * The frequency at which to send reminder notifications for open incidents. The value must be
+   * between 30 minutes and 24 hours.
    * @return value or {@code null} for none
    */
   public String getRenotifyInterval() {
@@ -79,7 +81,8 @@ public final class NotificationChannelStrategy extends com.google.api.client.jso
   }
 
   /**
-   * The frequency at which to send reminder notifications for open incidents.
+   * The frequency at which to send reminder notifications for open incidents. The value must be
+   * between 30 minutes and 24 hours.
    * @param renotifyInterval renotifyInterval or {@code null} for none
    */
   public NotificationChannelStrategy setRenotifyInterval(String renotifyInterval) {

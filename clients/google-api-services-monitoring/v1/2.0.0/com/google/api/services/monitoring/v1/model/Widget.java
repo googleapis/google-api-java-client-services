@@ -53,6 +53,13 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private CollapsibleGroup collapsibleGroup;
 
   /**
+   * A widget that contains two widget visualizations that are coordinated in display.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CoordinatedWidget coordinatedWidget;
+
+  /**
    * A widget that displays a list of error groups.
    * The value may be {@code null}.
    */
@@ -208,6 +215,23 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setCollapsibleGroup(CollapsibleGroup collapsibleGroup) {
     this.collapsibleGroup = collapsibleGroup;
+    return this;
+  }
+
+  /**
+   * A widget that contains two widget visualizations that are coordinated in display.
+   * @return value or {@code null} for none
+   */
+  public CoordinatedWidget getCoordinatedWidget() {
+    return coordinatedWidget;
+  }
+
+  /**
+   * A widget that contains two widget visualizations that are coordinated in display.
+   * @param coordinatedWidget coordinatedWidget or {@code null} for none
+   */
+  public Widget setCoordinatedWidget(CoordinatedWidget coordinatedWidget) {
+    this.coordinatedWidget = coordinatedWidget;
     return this;
   }
 

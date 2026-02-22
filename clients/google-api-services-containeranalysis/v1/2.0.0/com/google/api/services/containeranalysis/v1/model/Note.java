@@ -31,6 +31,13 @@ package com.google.api.services.containeranalysis.v1.model;
 public final class Note extends com.google.api.client.json.GenericJson {
 
   /**
+   * The timestamp when the advisory was first published by the source feed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String advisoryPublishTime;
+
+  /**
    * A note describing an attestation role.
    * The value may be {@code null}.
    */
@@ -185,6 +192,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VulnerabilityAssessmentNote vulnerabilityAssessment;
+
+  /**
+   * The timestamp when the advisory was first published by the source feed.
+   * @return value or {@code null} for none
+   */
+  public String getAdvisoryPublishTime() {
+    return advisoryPublishTime;
+  }
+
+  /**
+   * The timestamp when the advisory was first published by the source feed.
+   * @param advisoryPublishTime advisoryPublishTime or {@code null} for none
+   */
+  public Note setAdvisoryPublishTime(String advisoryPublishTime) {
+    this.advisoryPublishTime = advisoryPublishTime;
+    return this;
+  }
 
   /**
    * A note describing an attestation role.

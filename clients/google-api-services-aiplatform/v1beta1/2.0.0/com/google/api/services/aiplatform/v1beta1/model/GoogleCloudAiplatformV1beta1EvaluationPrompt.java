@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Prompt to be evaluated.
+ * Prompt to be evaluated. This can represent a single-turn prompt or a multi-turn conversation for
+ * agent evaluations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -28,6 +29,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1beta1EvaluationPrompt extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. Represents the complete execution trace of a multi-turn conversation, which can
+   * involve single or multiple agents. This serves as the input context for agent scraping.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AgentData agentData;
 
   /**
    * Prompt template data.
@@ -49,6 +58,25 @@ public final class GoogleCloudAiplatformV1beta1EvaluationPrompt extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.Object value;
+
+  /**
+   * Optional. Represents the complete execution trace of a multi-turn conversation, which can
+   * involve single or multiple agents. This serves as the input context for agent scraping.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentData getAgentData() {
+    return agentData;
+  }
+
+  /**
+   * Optional. Represents the complete execution trace of a multi-turn conversation, which can
+   * involve single or multiple agents. This serves as the input context for agent scraping.
+   * @param agentData agentData or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationPrompt setAgentData(GoogleCloudAiplatformV1beta1AgentData agentData) {
+    this.agentData = agentData;
+    return this;
+  }
 
   /**
    * Prompt template data.

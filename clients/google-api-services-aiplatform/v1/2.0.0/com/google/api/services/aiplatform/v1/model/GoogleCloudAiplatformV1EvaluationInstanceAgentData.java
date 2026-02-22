@@ -37,7 +37,23 @@ public final class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends co
   private GoogleCloudAiplatformV1EvaluationInstanceAgentConfig agentConfig;
 
   /**
-   * Optional. A field containing instructions from the developer for the agent.
+   * Optional. The static Agent Configuration. This map defines the graph structure of the agent
+   * system. Key: agent_id (matches the `author` field in events). Value: The static configuration
+   * of the agent (tools, instructions, sub-agents).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudAiplatformV1EvaluationInstanceAgentConfig> agents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1EvaluationInstanceAgentConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1EvaluationInstanceAgentConfig.class);
+  }
+
+  /**
+   * Optional. Deprecated. A field containing instructions from the developer for the agent. Please
+   * use `agents.developer_instruction` or `turns.events.active_instruction` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,15 +75,19 @@ public final class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends co
 
   /**
    * A JSON string containing a list of tools available to an agent with info such as name,
-   * description, parameters and required parameters. Example: [ { "name": "search_actors",
-   * "description": "Search for actors in a movie. Returns a list of actors, their roles, their
-   * birthdate, and their place of birth.", "parameters": [ { "name": "movie_name", "description":
-   * "The name of the movie." }, { "name": "character_name", "description": "The name of the
-   * character." } ], "required": ["movie_name", "character_name"] } ]
+   * description, parameters and required parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String toolsText;
+
+  /**
+   * Optional. The chronological list of conversation turns. Each turn represents a logical
+   * execution cycle (e.g., User Input -> Agent Response).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1EvaluationInstanceAgentDataConversationTurn> turns;
 
   /**
    * Optional. Agent configuration.
@@ -87,7 +107,29 @@ public final class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends co
   }
 
   /**
-   * Optional. A field containing instructions from the developer for the agent.
+   * Optional. The static Agent Configuration. This map defines the graph structure of the agent
+   * system. Key: agent_id (matches the `author` field in events). Value: The static configuration
+   * of the agent (tools, instructions, sub-agents).
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudAiplatformV1EvaluationInstanceAgentConfig> getAgents() {
+    return agents;
+  }
+
+  /**
+   * Optional. The static Agent Configuration. This map defines the graph structure of the agent
+   * system. Key: agent_id (matches the `author` field in events). Value: The static configuration
+   * of the agent (tools, instructions, sub-agents).
+   * @param agents agents or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationInstanceAgentData setAgents(java.util.Map<String, GoogleCloudAiplatformV1EvaluationInstanceAgentConfig> agents) {
+    this.agents = agents;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated. A field containing instructions from the developer for the agent. Please
+   * use `agents.developer_instruction` or `turns.events.active_instruction` instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1EvaluationInstanceInstanceData getDeveloperInstruction() {
@@ -95,7 +137,8 @@ public final class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends co
   }
 
   /**
-   * Optional. A field containing instructions from the developer for the agent.
+   * Optional. Deprecated. A field containing instructions from the developer for the agent. Please
+   * use `agents.developer_instruction` or `turns.events.active_instruction` instead.
    * @param developerInstruction developerInstruction or {@code null} for none
    */
   public GoogleCloudAiplatformV1EvaluationInstanceAgentData setDeveloperInstruction(GoogleCloudAiplatformV1EvaluationInstanceInstanceData developerInstruction) {
@@ -139,11 +182,7 @@ public final class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends co
 
   /**
    * A JSON string containing a list of tools available to an agent with info such as name,
-   * description, parameters and required parameters. Example: [ { "name": "search_actors",
-   * "description": "Search for actors in a movie. Returns a list of actors, their roles, their
-   * birthdate, and their place of birth.", "parameters": [ { "name": "movie_name", "description":
-   * "The name of the movie." }, { "name": "character_name", "description": "The name of the
-   * character." } ], "required": ["movie_name", "character_name"] } ]
+   * description, parameters and required parameters.
    * @return value or {@code null} for none
    */
   public java.lang.String getToolsText() {
@@ -152,15 +191,30 @@ public final class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends co
 
   /**
    * A JSON string containing a list of tools available to an agent with info such as name,
-   * description, parameters and required parameters. Example: [ { "name": "search_actors",
-   * "description": "Search for actors in a movie. Returns a list of actors, their roles, their
-   * birthdate, and their place of birth.", "parameters": [ { "name": "movie_name", "description":
-   * "The name of the movie." }, { "name": "character_name", "description": "The name of the
-   * character." } ], "required": ["movie_name", "character_name"] } ]
+   * description, parameters and required parameters.
    * @param toolsText toolsText or {@code null} for none
    */
   public GoogleCloudAiplatformV1EvaluationInstanceAgentData setToolsText(java.lang.String toolsText) {
     this.toolsText = toolsText;
+    return this;
+  }
+
+  /**
+   * Optional. The chronological list of conversation turns. Each turn represents a logical
+   * execution cycle (e.g., User Input -> Agent Response).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1EvaluationInstanceAgentDataConversationTurn> getTurns() {
+    return turns;
+  }
+
+  /**
+   * Optional. The chronological list of conversation turns. Each turn represents a logical
+   * execution cycle (e.g., User Input -> Agent Response).
+   * @param turns turns or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationInstanceAgentData setTurns(java.util.List<GoogleCloudAiplatformV1EvaluationInstanceAgentDataConversationTurn> turns) {
+    this.turns = turns;
     return this;
   }
 

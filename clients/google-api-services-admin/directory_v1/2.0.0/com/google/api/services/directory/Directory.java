@@ -103,7 +103,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -2103,6 +2103,201 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           @Override
           public BatchChangeStatus set(String parameterName, Object value) {
             return (BatchChangeStatus) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Counts ChromeOS devices matching the request.
+         *
+         * Create a request for the method "chromeos.countChromeOsDevices".
+         *
+         * This request holds the parameters needed by the admin server.  After setting any optional
+         * parameters, call the {@link CountChromeOsDevices#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param customerId Required. Immutable ID of the Google Workspace account.
+         * @return the request
+         */
+        public CountChromeOsDevices countChromeOsDevices(java.lang.String customerId) throws java.io.IOException {
+          CountChromeOsDevices result = new CountChromeOsDevices(customerId);
+          initialize(result);
+          return result;
+        }
+
+        public class CountChromeOsDevices extends DirectoryRequest<com.google.api.services.directory.model.CountChromeOsDevicesResponse> {
+
+          private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/devices/chromeos:countChromeOsDevices";
+
+          /**
+           * Counts ChromeOS devices matching the request.
+           *
+           * Create a request for the method "chromeos.countChromeOsDevices".
+           *
+           * This request holds the parameters needed by the the admin server.  After setting any optional
+           * parameters, call the {@link CountChromeOsDevices#execute()} method to invoke the remote
+           * operation. <p> {@link CountChromeOsDevices#initialize(com.google.api.client.googleapis.services
+           * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param customerId Required. Immutable ID of the Google Workspace account.
+           * @since 1.13
+           */
+          protected CountChromeOsDevices(java.lang.String customerId) {
+            super(Directory.this, "GET", REST_PATH, null, com.google.api.services.directory.model.CountChromeOsDevicesResponse.class);
+            this.customerId = com.google.api.client.util.Preconditions.checkNotNull(customerId, "Required parameter customerId must be specified.");
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public CountChromeOsDevices set$Xgafv(java.lang.String $Xgafv) {
+            return (CountChromeOsDevices) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CountChromeOsDevices setAccessToken(java.lang.String accessToken) {
+            return (CountChromeOsDevices) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CountChromeOsDevices setAlt(java.lang.String alt) {
+            return (CountChromeOsDevices) super.setAlt(alt);
+          }
+
+          @Override
+          public CountChromeOsDevices setCallback(java.lang.String callback) {
+            return (CountChromeOsDevices) super.setCallback(callback);
+          }
+
+          @Override
+          public CountChromeOsDevices setFields(java.lang.String fields) {
+            return (CountChromeOsDevices) super.setFields(fields);
+          }
+
+          @Override
+          public CountChromeOsDevices setKey(java.lang.String key) {
+            return (CountChromeOsDevices) super.setKey(key);
+          }
+
+          @Override
+          public CountChromeOsDevices setOauthToken(java.lang.String oauthToken) {
+            return (CountChromeOsDevices) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CountChromeOsDevices setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CountChromeOsDevices) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CountChromeOsDevices setQuotaUser(java.lang.String quotaUser) {
+            return (CountChromeOsDevices) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CountChromeOsDevices setUploadType(java.lang.String uploadType) {
+            return (CountChromeOsDevices) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CountChromeOsDevices setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CountChromeOsDevices) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Immutable ID of the Google Workspace account. */
+          @com.google.api.client.util.Key
+          private java.lang.String customerId;
+
+          /** Required. Immutable ID of the Google Workspace account.
+           */
+          public java.lang.String getCustomerId() {
+            return customerId;
+          }
+
+          /** Required. Immutable ID of the Google Workspace account. */
+          public CountChromeOsDevices setCustomerId(java.lang.String customerId) {
+            this.customerId = customerId;
+            return this;
+          }
+
+          /**
+           * Optional. Search string in the format given at
+           * https://developers.google.com/workspace/admin/directory/v1/list-query-operators
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Search string in the format given at
+         https://developers.google.com/workspace/admin/directory/v1/list-query-operators
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Search string in the format given at
+           * https://developers.google.com/workspace/admin/directory/v1/list-query-operators
+           */
+          public CountChromeOsDevices setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Return devices from all child orgunits, as well as the specified org unit. If
+           * this is set to true, 'orgUnitPath' must be provided.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean includeChildOrgunits;
+
+          /** Optional. Return devices from all child orgunits, as well as the specified org unit. If this is set
+         to true, 'orgUnitPath' must be provided.
+           */
+          public java.lang.Boolean getIncludeChildOrgunits() {
+            return includeChildOrgunits;
+          }
+
+          /**
+           * Optional. Return devices from all child orgunits, as well as the specified org unit. If
+           * this is set to true, 'orgUnitPath' must be provided.
+           */
+          public CountChromeOsDevices setIncludeChildOrgunits(java.lang.Boolean includeChildOrgunits) {
+            this.includeChildOrgunits = includeChildOrgunits;
+            return this;
+          }
+
+          /**
+           * Optional. The full path of the organizational unit (minus the leading `/`) or its
+           * unique ID.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orgUnitPath;
+
+          /** Optional. The full path of the organizational unit (minus the leading `/`) or its unique ID.
+           */
+          public java.lang.String getOrgUnitPath() {
+            return orgUnitPath;
+          }
+
+          /**
+           * Optional. The full path of the organizational unit (minus the leading `/`) or its
+           * unique ID.
+           */
+          public CountChromeOsDevices setOrgUnitPath(java.lang.String orgUnitPath) {
+            this.orgUnitPath = orgUnitPath;
+            return this;
+          }
+
+          @Override
+          public CountChromeOsDevices set(String parameterName, Object value) {
+            return (CountChromeOsDevices) super.set(parameterName, value);
           }
         }
         /**
@@ -20631,8 +20826,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

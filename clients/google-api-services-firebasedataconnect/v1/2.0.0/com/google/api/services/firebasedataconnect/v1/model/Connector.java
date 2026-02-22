@@ -38,6 +38,13 @@ public final class Connector extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Optional. The client cache settings of the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClientCache clientCache;
+
+  /**
    * Output only. [Output only] Create time stamp.
    * The value may be {@code null}.
    */
@@ -118,6 +125,23 @@ public final class Connector extends com.google.api.client.json.GenericJson {
    */
   public Connector setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Optional. The client cache settings of the connector.
+   * @return value or {@code null} for none
+   */
+  public ClientCache getClientCache() {
+    return clientCache;
+  }
+
+  /**
+   * Optional. The client cache settings of the connector.
+   * @param clientCache clientCache or {@code null} for none
+   */
+  public Connector setClientCache(ClientCache clientCache) {
+    this.clientCache = clientCache;
     return this;
   }
 

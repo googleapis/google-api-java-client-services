@@ -17,7 +17,7 @@
 package com.google.api.services.documentai.v1.model;
 
 /**
- * Detected non-text visual elements e.g. checkbox, signature etc. on the page.
+ * Detected non-text visual elements, for example, checkbox, signature etc. on the page.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

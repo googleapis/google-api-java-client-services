@@ -103,7 +103,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -618,7 +618,10 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -642,7 +645,10 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -5524,22 +5530,22 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Optional. We will return the schema groups sorted by creation time. The page token will
-           * point to the next Schema.
+           * Optional. Returns the schema groups sorted by creation time. The page token will point
+           * to the next Schema.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. We will return the schema groups sorted by creation time. The page token will point to
-         the next Schema.
+          /** Optional. Returns the schema groups sorted by creation time. The page token will point to the next
+         Schema.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional. We will return the schema groups sorted by creation time. The page token will
-           * point to the next Schema.
+           * Optional. Returns the schema groups sorted by creation time. The page token will point
+           * to the next Schema.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -5688,13 +5694,13 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. The update mask to apply to the resource. **Note:** Only the following fields
-           * can be updated: - display_name. - labels.
+           * can be updated: - `display_name` - `labels`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Optional. The update mask to apply to the resource. **Note:** Only the following fields can be
-         updated: - display_name. - labels.
+         updated: - `display_name` - `labels`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -5702,7 +5708,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Optional. The update mask to apply to the resource. **Note:** Only the following fields
-           * can be updated: - display_name. - labels.
+           * can be updated: - `display_name` - `labels`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -6459,22 +6465,22 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Optional. We will return the SchemaVersion sorted by creation time. The page token
-             * will point to the next SchemaVersion.
+             * Optional. Returns the SchemaVersion sorted by creation time. The page token will
+             * point to the next SchemaVersion.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. We will return the SchemaVersion sorted by creation time. The page token will point to
-           the next SchemaVersion.
+            /** Optional. Returns the SchemaVersion sorted by creation time. The page token will point to the next
+           SchemaVersion.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional. We will return the SchemaVersion sorted by creation time. The page token
-             * will point to the next SchemaVersion.
+             * Optional. Returns the SchemaVersion sorted by creation time. The page token will
+             * point to the next SchemaVersion.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -6623,13 +6629,13 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Optional. The update mask to apply to the resource. **Note:** Only the following
-             * fields can be updated: - display_name. - labels.
+             * fields can be updated: - `display_name` - `labels`
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
             /** Optional. The update mask to apply to the resource. **Note:** Only the following fields can be
-           updated: - display_name. - labels.
+           updated: - `display_name` - `labels`
              */
             public String getUpdateMask() {
               return updateMask;
@@ -6637,7 +6643,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Optional. The update mask to apply to the resource. **Note:** Only the following
-             * fields can be updated: - display_name. - labels.
+             * fields can be updated: - `display_name` - `labels`
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -6849,8 +6855,7 @@ public class Document extends com.google.api.client.googleapis.services.json.Abs
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

@@ -48,7 +48,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends com.g
 
   /**
    * If specified, lists all the possible values for this entity. This should not be more than a
-   * handful of values. If the number of values is >10 or could change frequently use the
+   * handful of values. If the number of values is >10 or could change frequently, use the
    * `EntityType.value_ontology` field and specify a list of all possible values in a value ontology
    * file.
    * The value may be {@code null}.
@@ -60,8 +60,8 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends com.g
    * Name of the type. It must be unique within the schema file and cannot be a "Common Type". The
    * following naming conventions are used: - Use `snake_casing`. - Name matching is case-sensitive.
    * - Maximum 64 characters. - Must start with a letter. - Allowed characters: ASCII letters
-   * `[a-z0-9_-]`. (For backward compatibility internal infrastructure and tooling can handle any
-   * ascii character.) - The `/` is sometimes used to denote a property of a type. For example
+   * `[a-z0-9_-]`. (For backward compatibility, internal infrastructure and tooling can handle any
+   * ASCII character.) - The `/` is sometimes used to denote a property of a type. For example
    * `line_item/amount`. This convention is deprecated, but will still be honored for backward
    * compatibility.
    * The value may be {@code null}.
@@ -112,7 +112,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends com.g
 
   /**
    * If specified, lists all the possible values for this entity. This should not be more than a
-   * handful of values. If the number of values is >10 or could change frequently use the
+   * handful of values. If the number of values is >10 or could change frequently, use the
    * `EntityType.value_ontology` field and specify a list of all possible values in a value ontology
    * file.
    * @return value or {@code null} for none
@@ -123,7 +123,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends com.g
 
   /**
    * If specified, lists all the possible values for this entity. This should not be more than a
-   * handful of values. If the number of values is >10 or could change frequently use the
+   * handful of values. If the number of values is >10 or could change frequently, use the
    * `EntityType.value_ontology` field and specify a list of all possible values in a value ontology
    * file.
    * @param enumValues enumValues or {@code null} for none
@@ -137,8 +137,8 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends com.g
    * Name of the type. It must be unique within the schema file and cannot be a "Common Type". The
    * following naming conventions are used: - Use `snake_casing`. - Name matching is case-sensitive.
    * - Maximum 64 characters. - Must start with a letter. - Allowed characters: ASCII letters
-   * `[a-z0-9_-]`. (For backward compatibility internal infrastructure and tooling can handle any
-   * ascii character.) - The `/` is sometimes used to denote a property of a type. For example
+   * `[a-z0-9_-]`. (For backward compatibility, internal infrastructure and tooling can handle any
+   * ASCII character.) - The `/` is sometimes used to denote a property of a type. For example
    * `line_item/amount`. This convention is deprecated, but will still be honored for backward
    * compatibility.
    * @return value or {@code null} for none
@@ -151,8 +151,8 @@ public final class GoogleCloudDocumentaiV1DocumentSchemaEntityType extends com.g
    * Name of the type. It must be unique within the schema file and cannot be a "Common Type". The
    * following naming conventions are used: - Use `snake_casing`. - Name matching is case-sensitive.
    * - Maximum 64 characters. - Must start with a letter. - Allowed characters: ASCII letters
-   * `[a-z0-9_-]`. (For backward compatibility internal infrastructure and tooling can handle any
-   * ascii character.) - The `/` is sometimes used to denote a property of a type. For example
+   * `[a-z0-9_-]`. (For backward compatibility, internal infrastructure and tooling can handle any
+   * ASCII character.) - The `/` is sometimes used to denote a property of a type. For example
    * `line_item/amount`. This convention is deprecated, but will still be honored for backward
    * compatibility.
    * @param name name or {@code null} for none

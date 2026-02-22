@@ -38,7 +38,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchema extends com.google.api.
   private java.lang.String description;
 
   /**
-   * Display name to show to users.
+   * Display name to show users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchema extends com.google.api.
   }
 
   /**
-   * Display name to show to users.
+   * Display name to show users.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -92,7 +92,7 @@ public final class GoogleCloudDocumentaiV1DocumentSchema extends com.google.api.
   }
 
   /**
-   * Display name to show to users.
+   * Display name to show users.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentSchema setDisplayName(java.lang.String displayName) {

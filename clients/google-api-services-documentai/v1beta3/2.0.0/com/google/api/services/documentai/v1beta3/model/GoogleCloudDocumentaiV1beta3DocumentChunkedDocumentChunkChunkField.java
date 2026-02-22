@@ -17,8 +17,8 @@
 package com.google.api.services.documentai.v1beta3.model;
 
 /**
- * The chunk field in the chunk. A chunk field could be one of the various types (e.g. image, table)
- * supported.
+ * The chunk field in the chunk. A chunk field could be one of the various types (for example,
+ * image, table) supported.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Document AI API. For a detailed explanation

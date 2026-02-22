@@ -81,6 +81,17 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Controls whether the Data API is enabled for this instance. When enabled, this allows
+   * authorized users to connect to the instance from the public internet using the `executeSql`
+   * API, even for private IP instances. If this is not specified, the data API is enabled by
+   * default for Google internal services like AlloyDB Studio. Disable it explicitly to disallow
+   * Google internal services as well.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataApiAccess;
+
+  /**
    * Database flags. Set at the instance level. They are copied from the primary instance on
    * secondary instance creation. Flags that have restrictions default to the value at primary
    * instance on read instances during creation. Read instances can set new flags or override
@@ -396,6 +407,31 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether the Data API is enabled for this instance. When enabled, this allows
+   * authorized users to connect to the instance from the public internet using the `executeSql`
+   * API, even for private IP instances. If this is not specified, the data API is enabled by
+   * default for Google internal services like AlloyDB Studio. Disable it explicitly to disallow
+   * Google internal services as well.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataApiAccess() {
+    return dataApiAccess;
+  }
+
+  /**
+   * Optional. Controls whether the Data API is enabled for this instance. When enabled, this allows
+   * authorized users to connect to the instance from the public internet using the `executeSql`
+   * API, even for private IP instances. If this is not specified, the data API is enabled by
+   * default for Google internal services like AlloyDB Studio. Disable it explicitly to disallow
+   * Google internal services as well.
+   * @param dataApiAccess dataApiAccess or {@code null} for none
+   */
+  public Instance setDataApiAccess(java.lang.String dataApiAccess) {
+    this.dataApiAccess = dataApiAccess;
     return this;
   }
 

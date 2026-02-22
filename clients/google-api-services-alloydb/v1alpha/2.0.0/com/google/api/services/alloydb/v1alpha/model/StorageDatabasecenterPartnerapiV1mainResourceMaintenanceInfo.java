@@ -30,6 +30,13 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The date when the current maintenance version was released.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeDate currentVersionReleaseDate;
+
+  /**
    * Optional. List of Deny maintenance period for the database resource.
    * The value may be {@code null}.
    */
@@ -43,11 +50,26 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
+   * Optional. Whether the instance is in stopped state. This information is temporarily being
+   * captured in maintenanceInfo, till STOPPED state is supported by DB Center.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isInstanceStopped;
+
+  /**
    * Optional. Maintenance window for the database resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule maintenanceSchedule;
+
+  /**
+   * Output only. Current state of maintenance on the database resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceState;
 
   /**
    * Optional. Current Maintenance version of the database resource. Example:
@@ -56,6 +78,31 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
    */
   @com.google.api.client.util.Key
   private java.lang.String maintenanceVersion;
+
+  /**
+   * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
+   * generates and publishes upcoming maintenance window.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance upcomingMaintenance;
+
+  /**
+   * Optional. The date when the current maintenance version was released.
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeDate getCurrentVersionReleaseDate() {
+    return currentVersionReleaseDate;
+  }
+
+  /**
+   * Optional. The date when the current maintenance version was released.
+   * @param currentVersionReleaseDate currentVersionReleaseDate or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setCurrentVersionReleaseDate(GoogleTypeDate currentVersionReleaseDate) {
+    this.currentVersionReleaseDate = currentVersionReleaseDate;
+    return this;
+  }
 
   /**
    * Optional. List of Deny maintenance period for the database resource.
@@ -71,6 +118,25 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setDenyMaintenanceSchedules(java.util.List<StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule> denyMaintenanceSchedules) {
     this.denyMaintenanceSchedules = denyMaintenanceSchedules;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the instance is in stopped state. This information is temporarily being
+   * captured in maintenanceInfo, till STOPPED state is supported by DB Center.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsInstanceStopped() {
+    return isInstanceStopped;
+  }
+
+  /**
+   * Optional. Whether the instance is in stopped state. This information is temporarily being
+   * captured in maintenanceInfo, till STOPPED state is supported by DB Center.
+   * @param isInstanceStopped isInstanceStopped or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setIsInstanceStopped(java.lang.Boolean isInstanceStopped) {
+    this.isInstanceStopped = isInstanceStopped;
     return this;
   }
 
@@ -92,6 +158,23 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
   }
 
   /**
+   * Output only. Current state of maintenance on the database resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceState() {
+    return maintenanceState;
+  }
+
+  /**
+   * Output only. Current state of maintenance on the database resource.
+   * @param maintenanceState maintenanceState or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setMaintenanceState(java.lang.String maintenanceState) {
+    this.maintenanceState = maintenanceState;
+    return this;
+  }
+
+  /**
    * Optional. Current Maintenance version of the database resource. Example:
    * "MYSQL_8_0_41.R20250531.01_15"
    * @return value or {@code null} for none
@@ -107,6 +190,25 @@ public final class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo 
    */
   public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setMaintenanceVersion(java.lang.String maintenanceVersion) {
     this.maintenanceVersion = maintenanceVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
+   * generates and publishes upcoming maintenance window.
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance getUpcomingMaintenance() {
+    return upcomingMaintenance;
+  }
+
+  /**
+   * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
+   * generates and publishes upcoming maintenance window.
+   * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo setUpcomingMaintenance(StorageDatabasecenterPartnerapiV1mainUpcomingMaintenance upcomingMaintenance) {
+    this.upcomingMaintenance = upcomingMaintenance;
     return this;
   }
 

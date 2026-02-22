@@ -19,7 +19,8 @@ package com.google.api.services.aiplatform.v1.model;
 /**
  * Basic tier is a cost-effective and low compute tier suitable for the following cases: *
  * Experimenting with RagManagedDb. * Small data size. * Latency insensitive workload. * Only using
- * RAG Engine with external vector DBs. NOTE: This is the default tier if not explicitly chosen.
+ * RAG Engine with external vector DBs. NOTE: This is the default tier under Spanner mode if not
+ * explicitly chosen.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

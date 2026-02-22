@@ -30,38 +30,38 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1RebaseTunedModelRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Google Cloud Storage location to write the artifacts.
+   * Optional. The Google Cloud Storage location to write the artifacts to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1GcsDestination artifactDestination;
 
   /**
-   * Optional. By default, bison to gemini migration will always create new model/endpoint, but for
-   * gemini-1.0 to gemini-1.5 migration, we default deploy to the same endpoint. See details in this
-   * Section.
+   * Optional. By default, rebasing a model creates a new endpoint for the new model. If this flag
+   * is set to true, the new model will be deployed to the same endpoint as the original model.
+   * WARNING: If you deploy to the same endpoint, the original model will be un-deployed and
+   * replaced by the new model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean deployToSameEndpoint;
 
   /**
-   * Required. TunedModel reference to retrieve the legacy model information.
+   * Required. A reference to the tuned model to rebase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1TunedModelRef tunedModelRef;
 
   /**
-   * Optional. The TuningJob to be updated. Users can use this TuningJob field to overwrite tuning
-   * configs.
+   * Optional. The tuning job to be updated. Users can use this field to overwrite tuning configs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1TuningJob tuningJob;
 
   /**
-   * Optional. The Google Cloud Storage location to write the artifacts.
+   * Optional. The Google Cloud Storage location to write the artifacts to.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1GcsDestination getArtifactDestination() {
@@ -69,7 +69,7 @@ public final class GoogleCloudAiplatformV1RebaseTunedModelRequest extends com.go
   }
 
   /**
-   * Optional. The Google Cloud Storage location to write the artifacts.
+   * Optional. The Google Cloud Storage location to write the artifacts to.
    * @param artifactDestination artifactDestination or {@code null} for none
    */
   public GoogleCloudAiplatformV1RebaseTunedModelRequest setArtifactDestination(GoogleCloudAiplatformV1GcsDestination artifactDestination) {
@@ -78,9 +78,10 @@ public final class GoogleCloudAiplatformV1RebaseTunedModelRequest extends com.go
   }
 
   /**
-   * Optional. By default, bison to gemini migration will always create new model/endpoint, but for
-   * gemini-1.0 to gemini-1.5 migration, we default deploy to the same endpoint. See details in this
-   * Section.
+   * Optional. By default, rebasing a model creates a new endpoint for the new model. If this flag
+   * is set to true, the new model will be deployed to the same endpoint as the original model.
+   * WARNING: If you deploy to the same endpoint, the original model will be un-deployed and
+   * replaced by the new model.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeployToSameEndpoint() {
@@ -88,9 +89,10 @@ public final class GoogleCloudAiplatformV1RebaseTunedModelRequest extends com.go
   }
 
   /**
-   * Optional. By default, bison to gemini migration will always create new model/endpoint, but for
-   * gemini-1.0 to gemini-1.5 migration, we default deploy to the same endpoint. See details in this
-   * Section.
+   * Optional. By default, rebasing a model creates a new endpoint for the new model. If this flag
+   * is set to true, the new model will be deployed to the same endpoint as the original model.
+   * WARNING: If you deploy to the same endpoint, the original model will be un-deployed and
+   * replaced by the new model.
    * @param deployToSameEndpoint deployToSameEndpoint or {@code null} for none
    */
   public GoogleCloudAiplatformV1RebaseTunedModelRequest setDeployToSameEndpoint(java.lang.Boolean deployToSameEndpoint) {
@@ -99,7 +101,7 @@ public final class GoogleCloudAiplatformV1RebaseTunedModelRequest extends com.go
   }
 
   /**
-   * Required. TunedModel reference to retrieve the legacy model information.
+   * Required. A reference to the tuned model to rebase.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1TunedModelRef getTunedModelRef() {
@@ -107,7 +109,7 @@ public final class GoogleCloudAiplatformV1RebaseTunedModelRequest extends com.go
   }
 
   /**
-   * Required. TunedModel reference to retrieve the legacy model information.
+   * Required. A reference to the tuned model to rebase.
    * @param tunedModelRef tunedModelRef or {@code null} for none
    */
   public GoogleCloudAiplatformV1RebaseTunedModelRequest setTunedModelRef(GoogleCloudAiplatformV1TunedModelRef tunedModelRef) {
@@ -116,8 +118,7 @@ public final class GoogleCloudAiplatformV1RebaseTunedModelRequest extends com.go
   }
 
   /**
-   * Optional. The TuningJob to be updated. Users can use this TuningJob field to overwrite tuning
-   * configs.
+   * Optional. The tuning job to be updated. Users can use this field to overwrite tuning configs.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1TuningJob getTuningJob() {
@@ -125,8 +126,7 @@ public final class GoogleCloudAiplatformV1RebaseTunedModelRequest extends com.go
   }
 
   /**
-   * Optional. The TuningJob to be updated. Users can use this TuningJob field to overwrite tuning
-   * configs.
+   * Optional. The tuning job to be updated. Users can use this field to overwrite tuning configs.
    * @param tuningJob tuningJob or {@code null} for none
    */
   public GoogleCloudAiplatformV1RebaseTunedModelRequest setTuningJob(GoogleCloudAiplatformV1TuningJob tuningJob) {

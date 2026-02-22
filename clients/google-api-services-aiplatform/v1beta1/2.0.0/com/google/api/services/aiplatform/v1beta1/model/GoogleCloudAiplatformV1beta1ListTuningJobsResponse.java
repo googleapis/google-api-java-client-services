@@ -30,23 +30,23 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ListTuningJobsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token to retrieve the next page of results. Pass to ListTuningJobsRequest.page_token to
-   * obtain that page.
+   * A token to retrieve the next page of results. Pass this token in a subsequent
+   * [GenAiTuningService.ListTuningJobs] call to retrieve the next page of results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of TuningJobs in the requested page.
+   * The tuning jobs that match the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1TuningJob> tuningJobs;
 
   /**
-   * A token to retrieve the next page of results. Pass to ListTuningJobsRequest.page_token to
-   * obtain that page.
+   * A token to retrieve the next page of results. Pass this token in a subsequent
+   * [GenAiTuningService.ListTuningJobs] call to retrieve the next page of results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +54,8 @@ public final class GoogleCloudAiplatformV1beta1ListTuningJobsResponse extends co
   }
 
   /**
-   * A token to retrieve the next page of results. Pass to ListTuningJobsRequest.page_token to
-   * obtain that page.
+   * A token to retrieve the next page of results. Pass this token in a subsequent
+   * [GenAiTuningService.ListTuningJobs] call to retrieve the next page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListTuningJobsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -64,7 +64,7 @@ public final class GoogleCloudAiplatformV1beta1ListTuningJobsResponse extends co
   }
 
   /**
-   * List of TuningJobs in the requested page.
+   * The tuning jobs that match the request.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1TuningJob> getTuningJobs() {
@@ -72,7 +72,7 @@ public final class GoogleCloudAiplatformV1beta1ListTuningJobsResponse extends co
   }
 
   /**
-   * List of TuningJobs in the requested page.
+   * The tuning jobs that match the request.
    * @param tuningJobs tuningJobs or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListTuningJobsResponse setTuningJobs(java.util.List<GoogleCloudAiplatformV1beta1TuningJob> tuningJobs) {

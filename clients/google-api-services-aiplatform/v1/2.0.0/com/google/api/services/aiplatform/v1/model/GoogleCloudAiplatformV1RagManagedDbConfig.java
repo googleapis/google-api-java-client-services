@@ -30,28 +30,47 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1RagManagedDbConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Sets the RagManagedDb to the Basic tier.
+   * Deprecated: Use `mode` instead to set the tier under Spanner. Sets the RagManagedDb to the
+   * Basic tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1RagManagedDbConfigBasic basic;
 
   /**
-   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not explicitly chosen.
+   * Deprecated: Use `mode` instead to set the tier under Spanner. Sets the RagManagedDb to the
+   * Scaled tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1RagManagedDbConfigScaled scaled;
 
   /**
-   * Sets the RagManagedDb to the Unprovisioned tier.
+   * Sets the backend to be the serverless mode offered by RAG Engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagManagedDbConfigServerless serverless;
+
+  /**
+   * Sets the RAG Engine backend to be RagManagedDb, built on top of Spanner. NOTE: This is the
+   * default mode (w/ Basic Tier) if not explicitly chosen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagManagedDbConfigSpanner spanner;
+
+  /**
+   * Deprecated: Use `mode` instead to set the tier under Spanner. Sets the RagManagedDb to the
+   * Unprovisioned tier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1RagManagedDbConfigUnprovisioned unprovisioned;
 
   /**
-   * Sets the RagManagedDb to the Basic tier.
+   * Deprecated: Use `mode` instead to set the tier under Spanner. Sets the RagManagedDb to the
+   * Basic tier.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1RagManagedDbConfigBasic getBasic() {
@@ -59,7 +78,8 @@ public final class GoogleCloudAiplatformV1RagManagedDbConfig extends com.google.
   }
 
   /**
-   * Sets the RagManagedDb to the Basic tier.
+   * Deprecated: Use `mode` instead to set the tier under Spanner. Sets the RagManagedDb to the
+   * Basic tier.
    * @param basic basic or {@code null} for none
    */
   public GoogleCloudAiplatformV1RagManagedDbConfig setBasic(GoogleCloudAiplatformV1RagManagedDbConfigBasic basic) {
@@ -68,7 +88,8 @@ public final class GoogleCloudAiplatformV1RagManagedDbConfig extends com.google.
   }
 
   /**
-   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not explicitly chosen.
+   * Deprecated: Use `mode` instead to set the tier under Spanner. Sets the RagManagedDb to the
+   * Scaled tier.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1RagManagedDbConfigScaled getScaled() {
@@ -76,7 +97,8 @@ public final class GoogleCloudAiplatformV1RagManagedDbConfig extends com.google.
   }
 
   /**
-   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not explicitly chosen.
+   * Deprecated: Use `mode` instead to set the tier under Spanner. Sets the RagManagedDb to the
+   * Scaled tier.
    * @param scaled scaled or {@code null} for none
    */
   public GoogleCloudAiplatformV1RagManagedDbConfig setScaled(GoogleCloudAiplatformV1RagManagedDbConfigScaled scaled) {
@@ -85,7 +107,44 @@ public final class GoogleCloudAiplatformV1RagManagedDbConfig extends com.google.
   }
 
   /**
-   * Sets the RagManagedDb to the Unprovisioned tier.
+   * Sets the backend to be the serverless mode offered by RAG Engine.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagManagedDbConfigServerless getServerless() {
+    return serverless;
+  }
+
+  /**
+   * Sets the backend to be the serverless mode offered by RAG Engine.
+   * @param serverless serverless or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagManagedDbConfig setServerless(GoogleCloudAiplatformV1RagManagedDbConfigServerless serverless) {
+    this.serverless = serverless;
+    return this;
+  }
+
+  /**
+   * Sets the RAG Engine backend to be RagManagedDb, built on top of Spanner. NOTE: This is the
+   * default mode (w/ Basic Tier) if not explicitly chosen.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagManagedDbConfigSpanner getSpanner() {
+    return spanner;
+  }
+
+  /**
+   * Sets the RAG Engine backend to be RagManagedDb, built on top of Spanner. NOTE: This is the
+   * default mode (w/ Basic Tier) if not explicitly chosen.
+   * @param spanner spanner or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagManagedDbConfig setSpanner(GoogleCloudAiplatformV1RagManagedDbConfigSpanner spanner) {
+    this.spanner = spanner;
+    return this;
+  }
+
+  /**
+   * Deprecated: Use `mode` instead to set the tier under Spanner. Sets the RagManagedDb to the
+   * Unprovisioned tier.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1RagManagedDbConfigUnprovisioned getUnprovisioned() {
@@ -93,7 +152,8 @@ public final class GoogleCloudAiplatformV1RagManagedDbConfig extends com.google.
   }
 
   /**
-   * Sets the RagManagedDb to the Unprovisioned tier.
+   * Deprecated: Use `mode` instead to set the tier under Spanner. Sets the RagManagedDb to the
+   * Unprovisioned tier.
    * @param unprovisioned unprovisioned or {@code null} for none
    */
   public GoogleCloudAiplatformV1RagManagedDbConfig setUnprovisioned(GoogleCloudAiplatformV1RagManagedDbConfigUnprovisioned unprovisioned) {

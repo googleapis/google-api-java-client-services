@@ -17,7 +17,11 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Single evaluation request.
+ * A single evaluation request supporting input for both single-turn model generation and multi-turn
+ * agent execution traces. Valid input modes: 1. Inference Mode: `prompt` is set (containing text or
+ * AgentData context). 2. Offline Eval Mode: `prompt` is unset, and `candidate_responses` contains
+ * `agent_data` (the completed execution trace). Validation Rule: Either `prompt` must be set, OR at
+ * least one of the `candidate_responses` must contain `agent_data`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -50,7 +54,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRequest extends com.goo
   private GoogleCloudAiplatformV1beta1CandidateResponse goldenResponse;
 
   /**
-   * Required. The request/prompt to evaluate.
+   * Optional. The request/prompt to evaluate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +103,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRequest extends com.goo
   }
 
   /**
-   * Required. The request/prompt to evaluate.
+   * Optional. The request/prompt to evaluate.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationPrompt getPrompt() {
@@ -107,7 +111,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRequest extends com.goo
   }
 
   /**
-   * Required. The request/prompt to evaluate.
+   * Optional. The request/prompt to evaluate.
    * @param prompt prompt or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationRequest setPrompt(GoogleCloudAiplatformV1beta1EvaluationPrompt prompt) {

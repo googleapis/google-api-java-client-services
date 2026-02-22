@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1CandidateResponse extends com.google.a
   private java.lang.String candidate;
 
   /**
+   * Output only. Error while scraping model or agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus error;
+
+  /**
    * Text response.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class GoogleCloudAiplatformV1CandidateResponse extends com.google.a
    */
   public GoogleCloudAiplatformV1CandidateResponse setCandidate(java.lang.String candidate) {
     this.candidate = candidate;
+    return this;
+  }
+
+  /**
+   * Output only. Error while scraping model or agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getError() {
+    return error;
+  }
+
+  /**
+   * Output only. Error while scraping model or agent.
+   * @param error error or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CandidateResponse setError(GoogleRpcStatus error) {
+    this.error = error;
     return this;
   }
 

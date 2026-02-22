@@ -31,28 +31,28 @@ package com.google.api.services.displayvideo.v3.model;
 public final class ImageAsset extends com.google.api.client.json.GenericJson {
 
   /**
-   * File size of the image asset in bytes.
+   * Output only. File size of the image asset in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long fileSize;
 
   /**
-   * Metadata for this image at its original size.
+   * Output only. Metadata for this image at its original size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimensions fullSize;
 
   /**
-   * MIME type of the image asset.
+   * Output only. MIME type of the image asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * File size of the image asset in bytes.
+   * Output only. File size of the image asset in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFileSize() {
@@ -60,7 +60,7 @@ public final class ImageAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * File size of the image asset in bytes.
+   * Output only. File size of the image asset in bytes.
    * @param fileSize fileSize or {@code null} for none
    */
   public ImageAsset setFileSize(java.lang.Long fileSize) {
@@ -69,7 +69,7 @@ public final class ImageAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata for this image at its original size.
+   * Output only. Metadata for this image at its original size.
    * @return value or {@code null} for none
    */
   public Dimensions getFullSize() {
@@ -77,7 +77,7 @@ public final class ImageAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Metadata for this image at its original size.
+   * Output only. Metadata for this image at its original size.
    * @param fullSize fullSize or {@code null} for none
    */
   public ImageAsset setFullSize(Dimensions fullSize) {
@@ -86,7 +86,7 @@ public final class ImageAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MIME type of the image asset.
+   * Output only. MIME type of the image asset.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -94,7 +94,7 @@ public final class ImageAsset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * MIME type of the image asset.
+   * Output only. MIME type of the image asset.
    * @param mimeType mimeType or {@code null} for none
    */
   public ImageAsset setMimeType(java.lang.String mimeType) {

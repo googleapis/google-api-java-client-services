@@ -31,13 +31,6 @@ package com.google.api.services.networkmanagement.v1beta1.model;
 public final class Endpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * An [AlloyDB Instance](https://cloud.google.com/alloydb) URI.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String alloyDbInstance;
-
-  /**
    * An [App Engine](https://cloud.google.com/appengine) [service
    * version](https://cloud.google.com/appengine/docs/admin-
    * api/reference/rest/v1/apps.services.versions). Applicable only to source endpoint.
@@ -189,23 +182,6 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String redisInstance;
-
-  /**
-   * An [AlloyDB Instance](https://cloud.google.com/alloydb) URI.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAlloyDbInstance() {
-    return alloyDbInstance;
-  }
-
-  /**
-   * An [AlloyDB Instance](https://cloud.google.com/alloydb) URI.
-   * @param alloyDbInstance alloyDbInstance or {@code null} for none
-   */
-  public Endpoint setAlloyDbInstance(java.lang.String alloyDbInstance) {
-    this.alloyDbInstance = alloyDbInstance;
-    return this;
-  }
 
   /**
    * An [App Engine](https://cloud.google.com/appengine) [service

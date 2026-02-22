@@ -146,13 +146,6 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private GkePodInfo gkePod;
 
   /**
-   * Display information of a Google-managed service.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleManagedServiceInfo googleManagedService;
-
-  /**
    * Display information of a Google service
    * The value may be {@code null}.
    */
@@ -215,6 +208,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private NetworkInfo network;
+
+  /**
+   * Display information of a layer 7 packet inspection by the firewall.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NgfwPacketInspectionInfo ngfwPacketInspection;
 
   /**
    * Project ID that contains the configuration this step is validating.
@@ -578,23 +578,6 @@ public final class Step extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Display information of a Google-managed service.
-   * @return value or {@code null} for none
-   */
-  public GoogleManagedServiceInfo getGoogleManagedService() {
-    return googleManagedService;
-  }
-
-  /**
-   * Display information of a Google-managed service.
-   * @param googleManagedService googleManagedService or {@code null} for none
-   */
-  public Step setGoogleManagedService(GoogleManagedServiceInfo googleManagedService) {
-    this.googleManagedService = googleManagedService;
-    return this;
-  }
-
-  /**
    * Display information of a Google service
    * @return value or {@code null} for none
    */
@@ -746,6 +729,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setNetwork(NetworkInfo network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Display information of a layer 7 packet inspection by the firewall.
+   * @return value or {@code null} for none
+   */
+  public NgfwPacketInspectionInfo getNgfwPacketInspection() {
+    return ngfwPacketInspection;
+  }
+
+  /**
+   * Display information of a layer 7 packet inspection by the firewall.
+   * @param ngfwPacketInspection ngfwPacketInspection or {@code null} for none
+   */
+  public Step setNgfwPacketInspection(NgfwPacketInspectionInfo ngfwPacketInspection) {
+    this.ngfwPacketInspection = ngfwPacketInspection;
     return this;
   }
 

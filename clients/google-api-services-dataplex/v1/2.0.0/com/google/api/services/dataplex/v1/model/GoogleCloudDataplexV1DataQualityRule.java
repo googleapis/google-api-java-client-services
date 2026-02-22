@@ -37,6 +37,14 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   private java.lang.String column;
 
   /**
+   * Optional. Specifies the debug queries for this rule. Currently, only one query is supported,
+   * but this may be expanded in the future.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDataplexV1DataQualityRuleDebugQuery> debugQueries;
+
+  /**
    * Optional. Description of the rule. The maximum length is 1,024 characters.
    * The value may be {@code null}.
    */
@@ -44,7 +52,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   private java.lang.String description;
 
   /**
-   * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
+   * Optional. The dimension a rule belongs to. Results are also aggregated at the dimension level.
    * Custom dimension name is supported with all uppercase letters and maximum length of 30
    * characters.
    * The value may be {@code null}.
@@ -169,6 +177,25 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
+   * Optional. Specifies the debug queries for this rule. Currently, only one query is supported,
+   * but this may be expanded in the future.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDataplexV1DataQualityRuleDebugQuery> getDebugQueries() {
+    return debugQueries;
+  }
+
+  /**
+   * Optional. Specifies the debug queries for this rule. Currently, only one query is supported,
+   * but this may be expanded in the future.
+   * @param debugQueries debugQueries or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityRule setDebugQueries(java.util.List<GoogleCloudDataplexV1DataQualityRuleDebugQuery> debugQueries) {
+    this.debugQueries = debugQueries;
+    return this;
+  }
+
+  /**
    * Optional. Description of the rule. The maximum length is 1,024 characters.
    * @return value or {@code null} for none
    */
@@ -186,7 +213,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
+   * Optional. The dimension a rule belongs to. Results are also aggregated at the dimension level.
    * Custom dimension name is supported with all uppercase letters and maximum length of 30
    * characters.
    * @return value or {@code null} for none
@@ -196,7 +223,7 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
   }
 
   /**
-   * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
+   * Optional. The dimension a rule belongs to. Results are also aggregated at the dimension level.
    * Custom dimension name is supported with all uppercase letters and maximum length of 30
    * characters.
    * @param dimension dimension or {@code null} for none

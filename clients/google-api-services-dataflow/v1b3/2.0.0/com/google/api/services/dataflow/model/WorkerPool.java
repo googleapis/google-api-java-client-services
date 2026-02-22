@@ -61,6 +61,20 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultPackageSet;
 
   /**
+   * Optional. IOPS provisioned for the root disk for VMs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long diskProvisionedIops;
+
+  /**
+   * Optional. Throughput provisioned for the root disk for VMs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long diskProvisionedThroughputMibps;
+
+  /**
    * Size of root disk for VMs, in GB. If zero or unspecified, the service will attempt to choose a
    * reasonable default.
    * The value may be {@code null}.
@@ -277,6 +291,40 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
    */
   public WorkerPool setDefaultPackageSet(java.lang.String defaultPackageSet) {
     this.defaultPackageSet = defaultPackageSet;
+    return this;
+  }
+
+  /**
+   * Optional. IOPS provisioned for the root disk for VMs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDiskProvisionedIops() {
+    return diskProvisionedIops;
+  }
+
+  /**
+   * Optional. IOPS provisioned for the root disk for VMs.
+   * @param diskProvisionedIops diskProvisionedIops or {@code null} for none
+   */
+  public WorkerPool setDiskProvisionedIops(java.lang.Long diskProvisionedIops) {
+    this.diskProvisionedIops = diskProvisionedIops;
+    return this;
+  }
+
+  /**
+   * Optional. Throughput provisioned for the root disk for VMs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDiskProvisionedThroughputMibps() {
+    return diskProvisionedThroughputMibps;
+  }
+
+  /**
+   * Optional. Throughput provisioned for the root disk for VMs.
+   * @param diskProvisionedThroughputMibps diskProvisionedThroughputMibps or {@code null} for none
+   */
+  public WorkerPool setDiskProvisionedThroughputMibps(java.lang.Long diskProvisionedThroughputMibps) {
+    this.diskProvisionedThroughputMibps = diskProvisionedThroughputMibps;
     return this;
   }
 

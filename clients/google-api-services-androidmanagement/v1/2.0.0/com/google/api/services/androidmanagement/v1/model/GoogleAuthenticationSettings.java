@@ -35,7 +35,9 @@ public final class GoogleAuthenticationSettings extends com.google.api.client.js
    * admin can specify if Google authentication is enabled for the enterprise for knowledge worker
    * devices. This value can be set only via the Google Admin Console. Google authentication can be
    * used with signin_url In the case where Google authentication is required and a signin_url is
-   * specified, Google authentication will be launched before signin_url.
+   * specified, Google authentication will be launched before signin_url. This value is overridden
+   * by EnrollmentToken.googleAuthenticationOptions and SigninDetail.googleAuthenticationOptions, if
+   * they are set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +48,9 @@ public final class GoogleAuthenticationSettings extends com.google.api.client.js
    * admin can specify if Google authentication is enabled for the enterprise for knowledge worker
    * devices. This value can be set only via the Google Admin Console. Google authentication can be
    * used with signin_url In the case where Google authentication is required and a signin_url is
-   * specified, Google authentication will be launched before signin_url.
+   * specified, Google authentication will be launched before signin_url. This value is overridden
+   * by EnrollmentToken.googleAuthenticationOptions and SigninDetail.googleAuthenticationOptions, if
+   * they are set.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleAuthenticationRequired() {
@@ -58,7 +62,9 @@ public final class GoogleAuthenticationSettings extends com.google.api.client.js
    * admin can specify if Google authentication is enabled for the enterprise for knowledge worker
    * devices. This value can be set only via the Google Admin Console. Google authentication can be
    * used with signin_url In the case where Google authentication is required and a signin_url is
-   * specified, Google authentication will be launched before signin_url.
+   * specified, Google authentication will be launched before signin_url. This value is overridden
+   * by EnrollmentToken.googleAuthenticationOptions and SigninDetail.googleAuthenticationOptions, if
+   * they are set.
    * @param googleAuthenticationRequired googleAuthenticationRequired or {@code null} for none
    */
   public GoogleAuthenticationSettings setGoogleAuthenticationRequired(java.lang.String googleAuthenticationRequired) {

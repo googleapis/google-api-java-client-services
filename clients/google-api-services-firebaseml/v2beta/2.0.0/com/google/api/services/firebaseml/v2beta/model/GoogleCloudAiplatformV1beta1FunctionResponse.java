@@ -66,6 +66,14 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
   private java.util.Map<String, java.lang.Object> response;
 
   /**
+   * Optional. Specifies how the response should be scheduled in the conversation. Only applicable
+   * to NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scheduling;
+
+  /**
    * Optional. The id of the function call this response is for. Populated by the client to match
    * the corresponding function call `id`.
    * @return value or {@code null} for none
@@ -140,6 +148,25 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
    */
   public GoogleCloudAiplatformV1beta1FunctionResponse setResponse(java.util.Map<String, java.lang.Object> response) {
     this.response = response;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies how the response should be scheduled in the conversation. Only applicable
+   * to NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScheduling() {
+    return scheduling;
+  }
+
+  /**
+   * Optional. Specifies how the response should be scheduled in the conversation. Only applicable
+   * to NON_BLOCKING function calls, is ignored otherwise. Defaults to WHEN_IDLE.
+   * @param scheduling scheduling or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FunctionResponse setScheduling(java.lang.String scheduling) {
+    this.scheduling = scheduling;
     return this;
   }
 

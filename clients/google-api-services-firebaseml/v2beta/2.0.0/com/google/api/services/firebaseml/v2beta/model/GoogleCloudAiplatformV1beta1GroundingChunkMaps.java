@@ -17,9 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * A `Maps` chunk is a piece of evidence that comes from Google Maps. It contains information about
- * a place, such as its name, address, and reviews. This is used to provide the user with rich,
- * location-based information.
+ * A `Maps` chunk is a piece of evidence that comes from Google Maps, containing information about
+ * places or routes. This is used to provide the user with rich, location-based information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:

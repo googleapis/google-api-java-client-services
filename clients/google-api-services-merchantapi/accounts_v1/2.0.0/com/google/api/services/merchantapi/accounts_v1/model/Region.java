@@ -18,10 +18,11 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
  * Represents a geographic region that you can use as a target with both the `RegionalInventory` and
- * `ShippingSettings` services. You can define regions as collections of either postal codes or, in
- * some countries, using predefined geotargets. For more information, see [Set up regions
- * ](https://support.google.com/merchants/answer/7410946#zippy=%2Ccreate-a-new-region) for more
- * information.
+ * `ShippingSettings` services. You can define regions as collections of either postal codes, radius
+ * areas or, in some countries, using predefined geotargets. A region must be defined by specifying
+ * exactly one of `postal_code_area`, `geotarget_area`, or `radius_area`. For more information, see
+ * [Set up regions ](https://support.google.com/merchants/answer/7410946#zippy=%2Ccreate-a-new-
+ * region) for more information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

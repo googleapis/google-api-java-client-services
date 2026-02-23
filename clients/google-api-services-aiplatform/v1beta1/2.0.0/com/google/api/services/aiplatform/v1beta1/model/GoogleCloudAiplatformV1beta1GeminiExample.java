@@ -82,6 +82,14 @@ public final class GoogleCloudAiplatformV1beta1GeminiExample extends com.google.
   private java.lang.String model;
 
   /**
+   * Optional. Settings for prompt and response sanitization using the Model Armor service. If
+   * supplied, safety_settings must not be supplied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ModelArmorConfig modelArmorConfig;
+
+  /**
    * Optional. Per request settings for blocking unsafe content. Enforced on
    * GenerateContentResponse.candidates.
    * The value may be {@code null}.
@@ -217,6 +225,25 @@ public final class GoogleCloudAiplatformV1beta1GeminiExample extends com.google.
    */
   public GoogleCloudAiplatformV1beta1GeminiExample setModel(java.lang.String model) {
     this.model = model;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for prompt and response sanitization using the Model Armor service. If
+   * supplied, safety_settings must not be supplied.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ModelArmorConfig getModelArmorConfig() {
+    return modelArmorConfig;
+  }
+
+  /**
+   * Optional. Settings for prompt and response sanitization using the Model Armor service. If
+   * supplied, safety_settings must not be supplied.
+   * @param modelArmorConfig modelArmorConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GeminiExample setModelArmorConfig(GoogleCloudAiplatformV1beta1ModelArmorConfig modelArmorConfig) {
+    this.modelArmorConfig = modelArmorConfig;
     return this;
   }
 

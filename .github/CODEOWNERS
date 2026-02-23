@@ -6,3 +6,4 @@
 
 .github/auto-approve.yml  @googleapis/cloud-sdk-platform-team
 *                         @googleapis/cloud-sdk-java-team
+*                         @yoshi-approver

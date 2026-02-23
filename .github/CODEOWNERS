@@ -5,5 +5,4 @@
 # https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners#codeowners-syntax
 
 .github/auto-approve.yml  @googleapis/cloud-sdk-platform-team
-*                         @googleapis/cloud-sdk-java-team
-*                         @yoshi-approver
+*                         @googleapis/cloud-sdk-java-team @yoshi-approver

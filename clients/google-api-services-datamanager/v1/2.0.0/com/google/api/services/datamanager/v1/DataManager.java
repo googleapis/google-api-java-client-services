@@ -103,7 +103,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -131,6 +131,3387 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
   @Override
   protected void initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest<?> httpClientRequest) throws java.io.IOException {
     super.initialize(httpClientRequest);
+  }
+
+  /**
+   * An accessor for creating requests from the AccountTypes collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DataManager datamanager = new DataManager(...);}
+   *   {@code DataManager.AccountTypes.List request = datamanager.accountTypes().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public AccountTypes accountTypes() {
+    return new AccountTypes();
+  }
+
+  /**
+   * The "accountTypes" collection of methods.
+   */
+  public class AccountTypes {
+
+    /**
+     * An accessor for creating requests from the Accounts collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DataManager datamanager = new DataManager(...);}
+     *   {@code DataManager.Accounts.List request = datamanager.accounts().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Accounts accounts() {
+      return new Accounts();
+    }
+
+    /**
+     * The "accounts" collection of methods.
+     */
+    public class Accounts {
+
+      /**
+       * An accessor for creating requests from the Insights collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataManager datamanager = new DataManager(...);}
+       *   {@code DataManager.Insights.List request = datamanager.insights().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Insights insights() {
+        return new Insights();
+      }
+
+      /**
+       * The "insights" collection of methods.
+       */
+      public class Insights {
+
+        /**
+         * Retrieves marketing data insights for a given user list. This feature is only available to data
+         * partners. Authorization Headers: This method supports the following optional headers to define
+         * how the API authorizes access for the request: * `login-account`: (Optional) The resource name of
+         * the account where the Google Account of the credentials is a user. If not set, defaults to the
+         * account of the request. Format: `accountTypes/{loginAccountType}/accounts/{loginAccountId}` *
+         * `linked-account`: (Optional) The resource name of the account with an established product link to
+         * the `login-account`. Format: `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         *
+         * Create a request for the method "insights.retrieve".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Retrieve#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent account that owns the user list. Format:
+         *        `accountTypes/{account_type}/accounts/{account}`
+         * @param content the {@link com.google.api.services.datamanager.v1.model.RetrieveInsightsRequest}
+         * @return the request
+         */
+        public Retrieve retrieve(java.lang.String parent, com.google.api.services.datamanager.v1.model.RetrieveInsightsRequest content) throws java.io.IOException {
+          Retrieve result = new Retrieve(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Retrieve extends DataManagerRequest<com.google.api.services.datamanager.v1.model.RetrieveInsightsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/insights:retrieve";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Retrieves marketing data insights for a given user list. This feature is only available to data
+           * partners. Authorization Headers: This method supports the following optional headers to define
+           * how the API authorizes access for the request: * `login-account`: (Optional) The resource name
+           * of the account where the Google Account of the credentials is a user. If not set, defaults to
+           * the account of the request. Format: `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
+           * * `linked-account`: (Optional) The resource name of the account with an established product
+           * link to the `login-account`. Format:
+           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           *
+           * Create a request for the method "insights.retrieve".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Retrieve#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Retrieve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent account that owns the user list. Format:
+         *        `accountTypes/{account_type}/accounts/{account}`
+           * @param content the {@link com.google.api.services.datamanager.v1.model.RetrieveInsightsRequest}
+           * @since 1.13
+           */
+          protected Retrieve(java.lang.String parent, com.google.api.services.datamanager.v1.model.RetrieveInsightsRequest content) {
+            super(DataManager.this, "POST", REST_PATH, content, com.google.api.services.datamanager.v1.model.RetrieveInsightsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Retrieve set$Xgafv(java.lang.String $Xgafv) {
+            return (Retrieve) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Retrieve setAccessToken(java.lang.String accessToken) {
+            return (Retrieve) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Retrieve setAlt(java.lang.String alt) {
+            return (Retrieve) super.setAlt(alt);
+          }
+
+          @Override
+          public Retrieve setCallback(java.lang.String callback) {
+            return (Retrieve) super.setCallback(callback);
+          }
+
+          @Override
+          public Retrieve setFields(java.lang.String fields) {
+            return (Retrieve) super.setFields(fields);
+          }
+
+          @Override
+          public Retrieve setKey(java.lang.String key) {
+            return (Retrieve) super.setKey(key);
+          }
+
+          @Override
+          public Retrieve setOauthToken(java.lang.String oauthToken) {
+            return (Retrieve) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Retrieve setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Retrieve) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Retrieve setQuotaUser(java.lang.String quotaUser) {
+            return (Retrieve) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Retrieve setUploadType(java.lang.String uploadType) {
+            return (Retrieve) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Retrieve setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Retrieve) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent account that owns the user list. Format:
+           * `accountTypes/{account_type}/accounts/{account}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent account that owns the user list. Format:
+         `accountTypes/{account_type}/accounts/{account}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent account that owns the user list. Format:
+           * `accountTypes/{account_type}/accounts/{account}`
+           */
+          public Retrieve setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Retrieve set(String parameterName, Object value) {
+            return (Retrieve) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the PartnerLinks collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataManager datamanager = new DataManager(...);}
+       *   {@code DataManager.PartnerLinks.List request = datamanager.partnerLinks().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public PartnerLinks partnerLinks() {
+        return new PartnerLinks();
+      }
+
+      /**
+       * The "partnerLinks" collection of methods.
+       */
+      public class PartnerLinks {
+
+        /**
+         * Creates a partner link for the given account. Authorization Headers: This method supports the
+         * following optional headers to define how the API authorizes access for the request: * `login-
+         * account`: (Optional) The resource name of the account where the Google Account of the credentials
+         * is a user. If not set, defaults to the account of the request. Format:
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+         * resource name of the account with an established product link to the `login-account`. Format:
+         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         *
+         * Create a request for the method "partnerLinks.create".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of partner links. Format:
+         *        accountTypes/{account_type}/accounts/{account}
+         * @param content the {@link com.google.api.services.datamanager.v1.model.PartnerLink}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.datamanager.v1.model.PartnerLink content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataManagerRequest<com.google.api.services.datamanager.v1.model.PartnerLink> {
+
+          private static final String REST_PATH = "v1/{+parent}/partnerLinks";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Creates a partner link for the given account. Authorization Headers: This method supports the
+           * following optional headers to define how the API authorizes access for the request: * `login-
+           * account`: (Optional) The resource name of the account where the Google Account of the
+           * credentials is a user. If not set, defaults to the account of the request. Format:
+           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+           * resource name of the account with an established product link to the `login-account`. Format:
+           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           *
+           * Create a request for the method "partnerLinks.create".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of partner links. Format:
+         *        accountTypes/{account_type}/accounts/{account}
+           * @param content the {@link com.google.api.services.datamanager.v1.model.PartnerLink}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.datamanager.v1.model.PartnerLink content) {
+            super(DataManager.this, "POST", REST_PATH, content, com.google.api.services.datamanager.v1.model.PartnerLink.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns this collection of partner links. Format:
+           * accountTypes/{account_type}/accounts/{account}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of partner links. Format:
+         accountTypes/{account_type}/accounts/{account}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns this collection of partner links. Format:
+           * accountTypes/{account_type}/accounts/{account}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a partner link for the given account. Authorization Headers: This method supports the
+         * following optional headers to define how the API authorizes access for the request: * `login-
+         * account`: (Optional) The resource name of the account where the Google Account of the credentials
+         * is a user. If not set, defaults to the account of the request. Format:
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+         * resource name of the account with an established product link to the `login-account`. Format:
+         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         *
+         * Create a request for the method "partnerLinks.delete".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the partner link to delete. Format:
+         *        accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataManagerRequest<com.google.api.services.datamanager.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+/partnerLinks/[^/]+$");
+
+          /**
+           * Deletes a partner link for the given account. Authorization Headers: This method supports the
+           * following optional headers to define how the API authorizes access for the request: * `login-
+           * account`: (Optional) The resource name of the account where the Google Account of the
+           * credentials is a user. If not set, defaults to the account of the request. Format:
+           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+           * resource name of the account with an established product link to the `login-account`. Format:
+           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           *
+           * Create a request for the method "partnerLinks.delete".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the partner link to delete. Format:
+         *        accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DataManager.this, "DELETE", REST_PATH, null, com.google.api.services.datamanager.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/partnerLinks/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the partner link to delete. Format:
+           * accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the partner link to delete. Format:
+         accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the partner link to delete. Format:
+           * accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/partnerLinks/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Searches for all partner links to and from a given account. Authorization Headers: This method
+         * supports the following optional headers to define how the API authorizes access for the request:
+         * * `login-account`: (Optional) The resource name of the account where the Google Account of the
+         * credentials is a user. If not set, defaults to the account of the request. Format:
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+         * resource name of the account with an established product link to the `login-account`. Format:
+         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         *
+         * Create a request for the method "partnerLinks.search".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Account to search for partner links. If no `filter` is specified, all partner links where
+         *        this account is either the `owning_account` or `partner_account` are returned. Format:
+         *        `accountTypes/{account_type}/accounts/{account}`
+         * @return the request
+         */
+        public Search search(java.lang.String parent) throws java.io.IOException {
+          Search result = new Search(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends DataManagerRequest<com.google.api.services.datamanager.v1.model.SearchPartnerLinksResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/partnerLinks:search";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Searches for all partner links to and from a given account. Authorization Headers: This method
+           * supports the following optional headers to define how the API authorizes access for the
+           * request: * `login-account`: (Optional) The resource name of the account where the Google
+           * Account of the credentials is a user. If not set, defaults to the account of the request.
+           * Format: `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`:
+           * (Optional) The resource name of the account with an established product link to the `login-
+           * account`. Format: `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           *
+           * Create a request for the method "partnerLinks.search".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Account to search for partner links. If no `filter` is specified, all partner links where
+         *        this account is either the `owning_account` or `partner_account` are returned. Format:
+         *        `accountTypes/{account_type}/accounts/{account}`
+           * @since 1.13
+           */
+          protected Search(java.lang.String parent) {
+            super(DataManager.this, "GET", REST_PATH, null, com.google.api.services.datamanager.v1.model.SearchPartnerLinksResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Account to search for partner links. If no `filter` is specified, all partner
+           * links where this account is either the `owning_account` or `partner_account` are
+           * returned. Format: `accountTypes/{account_type}/accounts/{account}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Account to search for partner links. If no `filter` is specified, all partner links where
+         this account is either the `owning_account` or `partner_account` are returned. Format:
+         `accountTypes/{account_type}/accounts/{account}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Account to search for partner links. If no `filter` is specified, all partner
+           * links where this account is either the `owning_account` or `partner_account` are
+           * returned. Format: `accountTypes/{account_type}/accounts/{account}`
+           */
+          public Search setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A [filter string](//google.aip.dev/160). All fields need to be on the left
+           * hand side of each condition (for example: `partner_link_id = 123456789`). Supported
+           * operations: - `AND` - `=` - `!=` Supported fields: - `partner_link_id` -
+           * `owning_account.account_type` - `owning_account.account_id` -
+           * `partner_account.account_type` - `partner_account.account_id` Example:
+           * `owning_account.account_type = "GOOGLE_ADS" OR partner_account.account_id = 987654321`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A [filter string](//google.aip.dev/160). All fields need to be on the left hand side of
+         each condition (for example: `partner_link_id = 123456789`). Supported operations: - `AND` - `=` -
+         `!=` Supported fields: - `partner_link_id` - `owning_account.account_type` -
+         `owning_account.account_id` - `partner_account.account_type` - `partner_account.account_id`
+         Example: `owning_account.account_type = "GOOGLE_ADS" OR partner_account.account_id = 987654321`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A [filter string](//google.aip.dev/160). All fields need to be on the left
+           * hand side of each condition (for example: `partner_link_id = 123456789`). Supported
+           * operations: - `AND` - `=` - `!=` Supported fields: - `partner_link_id` -
+           * `owning_account.account_type` - `owning_account.account_id` -
+           * `partner_account.account_type` - `partner_account.account_id` Example:
+           * `owning_account.account_type = "GOOGLE_ADS" OR partner_account.account_id = 987654321`
+           */
+          public Search setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * The maximum number of partner links to return. The service may return fewer than this
+           * value. If unspecified, at most 10 partner links will be returned. The maximum value is
+           * 100; values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of partner links to return. The service may return fewer than this value. If
+         unspecified, at most 10 partner links will be returned. The maximum value is 100; values above 100
+         will be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of partner links to return. The service may return fewer than this
+           * value. If unspecified, at most 10 partner links will be returned. The maximum value is
+           * 100; values above 100 will be coerced to 100.
+           */
+          public Search setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `SearchPartnerLinks` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `SearchPartnerLinks` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `SearchPartnerLinks` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `SearchPartnerLinks` must match
+         the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `SearchPartnerLinks` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `SearchPartnerLinks` must match the call that provided the page token.
+           */
+          public Search setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the UserListDirectLicenses collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataManager datamanager = new DataManager(...);}
+       *   {@code DataManager.UserListDirectLicenses.List request = datamanager.userListDirectLicenses().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public UserListDirectLicenses userListDirectLicenses() {
+        return new UserListDirectLicenses();
+      }
+
+      /**
+       * The "userListDirectLicenses" collection of methods.
+       */
+      public class UserListDirectLicenses {
+
+        /**
+         * Creates a user list direct license. This feature is only available to data partners.
+         *
+         * Create a request for the method "userListDirectLicenses.create".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The account that owns the user list being licensed. Should be in the format
+         *        accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+         * @param content the {@link com.google.api.services.datamanager.v1.model.UserListDirectLicense}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.datamanager.v1.model.UserListDirectLicense content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataManagerRequest<com.google.api.services.datamanager.v1.model.UserListDirectLicense> {
+
+          private static final String REST_PATH = "v1/{+parent}/userListDirectLicenses";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Creates a user list direct license. This feature is only available to data partners.
+           *
+           * Create a request for the method "userListDirectLicenses.create".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The account that owns the user list being licensed. Should be in the format
+         *        accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           * @param content the {@link com.google.api.services.datamanager.v1.model.UserListDirectLicense}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.datamanager.v1.model.UserListDirectLicense content) {
+            super(DataManager.this, "POST", REST_PATH, content, com.google.api.services.datamanager.v1.model.UserListDirectLicense.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The account that owns the user list being licensed. Should be in the format
+           * accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The account that owns the user list being licensed. Should be in the format
+         accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The account that owns the user list being licensed. Should be in the format
+           * accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a user list direct license. This feature is only available to data partners.
+         *
+         * Create a request for the method "userListDirectLicenses.get".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the user list direct license.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataManagerRequest<com.google.api.services.datamanager.v1.model.UserListDirectLicense> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+/userListDirectLicenses/[^/]+$");
+
+          /**
+           * Retrieves a user list direct license. This feature is only available to data partners.
+           *
+           * Create a request for the method "userListDirectLicenses.get".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the user list direct license.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DataManager.this, "GET", REST_PATH, null, com.google.api.services.datamanager.v1.model.UserListDirectLicense.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userListDirectLicenses/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the user list direct license. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the user list direct license.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name of the user list direct license. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userListDirectLicenses/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all user list direct licenses owned by the parent account. This feature is only available
+         * to data partners.
+         *
+         * Create a request for the method "userListDirectLicenses.list".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The account whose licenses are being queried. Should be in the format
+         *        accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataManagerRequest<com.google.api.services.datamanager.v1.model.ListUserListDirectLicensesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/userListDirectLicenses";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Lists all user list direct licenses owned by the parent account. This feature is only available
+           * to data partners.
+           *
+           * Create a request for the method "userListDirectLicenses.list".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The account whose licenses are being queried. Should be in the format
+         *        accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DataManager.this, "GET", REST_PATH, null, com.google.api.services.datamanager.v1.model.ListUserListDirectLicensesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The account whose licenses are being queried. Should be in the format
+           * accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The account whose licenses are being queried. Should be in the format
+         accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The account whose licenses are being queried. Should be in the format
+           * accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filters to apply to the list request. All fields need to be on the left hand
+           * side of each condition (for example: user_list_id = 123). **Supported Operations:** -
+           * `AND` - `=` - `!=` - `>` - `>=` - `<` - `<=` **Unsupported Fields:** - `name` (use get
+           * method instead) - `historical_pricings` and all its subfields - `pricing.start_time` -
+           * `pricing.end_time`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filters to apply to the list request. All fields need to be on the left hand side of each
+         condition (for example: user_list_id = 123). **Supported Operations:** - `AND` - `=` - `!=` - `>` -
+         `>=` - `<` - `<=` **Unsupported Fields:** - `name` (use get method instead) - `historical_pricings`
+         and all its subfields - `pricing.start_time` - `pricing.end_time`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filters to apply to the list request. All fields need to be on the left hand
+           * side of each condition (for example: user_list_id = 123). **Supported Operations:** -
+           * `AND` - `=` - `!=` - `>` - `>=` - `<` - `<=` **Unsupported Fields:** - `name` (use get
+           * method instead) - `historical_pricings` and all its subfields - `pricing.start_time` -
+           * `pricing.end_time`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of licenses to return per page. The service may return
+           * fewer than this value. If unspecified, at most 50 licenses will be returned. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of licenses to return per page. The service may return fewer than this
+         value. If unspecified, at most 50 licenses will be returned. The maximum value is 1000; values
+         above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of licenses to return per page. The service may return
+           * fewer than this value. If unspecified, at most 50 licenses will be returned. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListUserListDirectLicense` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListUserListDirectLicense` must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListUserListDirectLicense` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListUserListDirectLicense` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListUserListDirectLicense` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListUserListDirectLicense` must match the call that provided the page
+           * token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a user list direct license. This feature is only available to data partners.
+         *
+         * Create a request for the method "userListDirectLicenses.patch".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the user list direct license.
+         * @param content the {@link com.google.api.services.datamanager.v1.model.UserListDirectLicense}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.datamanager.v1.model.UserListDirectLicense content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DataManagerRequest<com.google.api.services.datamanager.v1.model.UserListDirectLicense> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+/userListDirectLicenses/[^/]+$");
+
+          /**
+           * Updates a user list direct license. This feature is only available to data partners.
+           *
+           * Create a request for the method "userListDirectLicenses.patch".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the user list direct license.
+           * @param content the {@link com.google.api.services.datamanager.v1.model.UserListDirectLicense}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.datamanager.v1.model.UserListDirectLicense content) {
+            super(DataManager.this, "PATCH", REST_PATH, content, com.google.api.services.datamanager.v1.model.UserListDirectLicense.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userListDirectLicenses/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifier. The resource name of the user list direct license. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the user list direct license.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Identifier. The resource name of the user list direct license. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userListDirectLicenses/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The list of fields to update. The special character `*` is not supported and
+           * an `INVALID_UPDATE_MASK` error will be thrown if used.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update. The special character `*` is not supported and an
+         `INVALID_UPDATE_MASK` error will be thrown if used.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The list of fields to update. The special character `*` is not supported and
+           * an `INVALID_UPDATE_MASK` error will be thrown if used.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the UserListGlobalLicenses collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataManager datamanager = new DataManager(...);}
+       *   {@code DataManager.UserListGlobalLicenses.List request = datamanager.userListGlobalLicenses().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public UserListGlobalLicenses userListGlobalLicenses() {
+        return new UserListGlobalLicenses();
+      }
+
+      /**
+       * The "userListGlobalLicenses" collection of methods.
+       */
+      public class UserListGlobalLicenses {
+
+        /**
+         * Creates a user list global license. This feature is only available to data partners.
+         *
+         * Create a request for the method "userListGlobalLicenses.create".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The account that owns the user list being licensed. Should be in the format
+         *        accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+         * @param content the {@link com.google.api.services.datamanager.v1.model.UserListGlobalLicense}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.datamanager.v1.model.UserListGlobalLicense content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataManagerRequest<com.google.api.services.datamanager.v1.model.UserListGlobalLicense> {
+
+          private static final String REST_PATH = "v1/{+parent}/userListGlobalLicenses";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Creates a user list global license. This feature is only available to data partners.
+           *
+           * Create a request for the method "userListGlobalLicenses.create".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The account that owns the user list being licensed. Should be in the format
+         *        accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           * @param content the {@link com.google.api.services.datamanager.v1.model.UserListGlobalLicense}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.datamanager.v1.model.UserListGlobalLicense content) {
+            super(DataManager.this, "POST", REST_PATH, content, com.google.api.services.datamanager.v1.model.UserListGlobalLicense.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The account that owns the user list being licensed. Should be in the format
+           * accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The account that owns the user list being licensed. Should be in the format
+         accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The account that owns the user list being licensed. Should be in the format
+           * accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a user list global license. This feature is only available to data partners.
+         *
+         * Create a request for the method "userListGlobalLicenses.get".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the user list global license.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataManagerRequest<com.google.api.services.datamanager.v1.model.UserListGlobalLicense> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+/userListGlobalLicenses/[^/]+$");
+
+          /**
+           * Retrieves a user list global license. This feature is only available to data partners.
+           *
+           * Create a request for the method "userListGlobalLicenses.get".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the user list global license.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DataManager.this, "GET", REST_PATH, null, com.google.api.services.datamanager.v1.model.UserListGlobalLicense.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userListGlobalLicenses/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the user list global license. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the user list global license.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name of the user list global license. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userListGlobalLicenses/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all user list global licenses owned by the parent account. This feature is only available
+         * to data partners.
+         *
+         * Create a request for the method "userListGlobalLicenses.list".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The account whose licenses are being queried. Should be in the format
+         *        accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataManagerRequest<com.google.api.services.datamanager.v1.model.ListUserListGlobalLicensesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/userListGlobalLicenses";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Lists all user list global licenses owned by the parent account. This feature is only available
+           * to data partners.
+           *
+           * Create a request for the method "userListGlobalLicenses.list".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The account whose licenses are being queried. Should be in the format
+         *        accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DataManager.this, "GET", REST_PATH, null, com.google.api.services.datamanager.v1.model.ListUserListGlobalLicensesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The account whose licenses are being queried. Should be in the format
+           * accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The account whose licenses are being queried. Should be in the format
+         accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The account whose licenses are being queried. Should be in the format
+           * accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filters to apply to the list request. All fields need to be on the left hand
+           * side of each condition (for example: user_list_id = 123). **Supported Operations:** -
+           * `AND` - `=` - `!=` - `>` - `>=` - `<` - `<=` **Unsupported Fields:** - `name` (use get
+           * method instead) - `historical_pricings` and all its subfields - `pricing.start_time` -
+           * `pricing.end_time`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filters to apply to the list request. All fields need to be on the left hand side of each
+         condition (for example: user_list_id = 123). **Supported Operations:** - `AND` - `=` - `!=` - `>` -
+         `>=` - `<` - `<=` **Unsupported Fields:** - `name` (use get method instead) - `historical_pricings`
+         and all its subfields - `pricing.start_time` - `pricing.end_time`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filters to apply to the list request. All fields need to be on the left hand
+           * side of each condition (for example: user_list_id = 123). **Supported Operations:** -
+           * `AND` - `=` - `!=` - `>` - `>=` - `<` - `<=` **Unsupported Fields:** - `name` (use get
+           * method instead) - `historical_pricings` and all its subfields - `pricing.start_time` -
+           * `pricing.end_time`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of licenses to return. The service may return fewer than
+           * this value. If unspecified, at most 50 licenses will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of licenses to return. The service may return fewer than this value.
+         If unspecified, at most 50 licenses will be returned. The maximum value is 1000; values above 1000
+         will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of licenses to return. The service may return fewer than
+           * this value. If unspecified, at most 50 licenses will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListUserListGlobalLicense` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListUserListDirectLicense` must match the call that provided the page
+           * token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListUserListGlobalLicense` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListUserListDirectLicense` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListUserListGlobalLicense` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListUserListDirectLicense` must match the call that provided the page
+           * token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a user list global license. This feature is only available to data partners.
+         *
+         * Create a request for the method "userListGlobalLicenses.patch".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the user list global license.
+         * @param content the {@link com.google.api.services.datamanager.v1.model.UserListGlobalLicense}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.datamanager.v1.model.UserListGlobalLicense content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DataManagerRequest<com.google.api.services.datamanager.v1.model.UserListGlobalLicense> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+/userListGlobalLicenses/[^/]+$");
+
+          /**
+           * Updates a user list global license. This feature is only available to data partners.
+           *
+           * Create a request for the method "userListGlobalLicenses.patch".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the user list global license.
+           * @param content the {@link com.google.api.services.datamanager.v1.model.UserListGlobalLicense}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.datamanager.v1.model.UserListGlobalLicense content) {
+            super(DataManager.this, "PATCH", REST_PATH, content, com.google.api.services.datamanager.v1.model.UserListGlobalLicense.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userListGlobalLicenses/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifier. The resource name of the user list global license. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the user list global license.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Identifier. The resource name of the user list global license. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userListGlobalLicenses/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The list of fields to update. The special character `*` is not supported and
+           * an `INVALID_UPDATE_MASK` error will be thrown if used.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update. The special character `*` is not supported and an
+         `INVALID_UPDATE_MASK` error will be thrown if used.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The list of fields to update. The special character `*` is not supported and
+           * an `INVALID_UPDATE_MASK` error will be thrown if used.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the UserListGlobalLicenseCustomerInfos collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DataManager datamanager = new DataManager(...);}
+         *   {@code DataManager.UserListGlobalLicenseCustomerInfos.List request = datamanager.userListGlobalLicenseCustomerInfos().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public UserListGlobalLicenseCustomerInfos userListGlobalLicenseCustomerInfos() {
+          return new UserListGlobalLicenseCustomerInfos();
+        }
+
+        /**
+         * The "userListGlobalLicenseCustomerInfos" collection of methods.
+         */
+        public class UserListGlobalLicenseCustomerInfos {
+
+          /**
+           * Lists all customer info for a user list global license. This feature is only available to data
+           * partners.
+           *
+           * Create a request for the method "userListGlobalLicenseCustomerInfos.list".
+           *
+           * This request holds the parameters needed by the datamanager server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The global license whose customer info are being queried. Should be in the format `account
+           *        Types/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}/userListGlobalLicenses/{USER_LIST_GLOBAL_LICENS
+           *        E_ID}`. To list all global license customer info under an account, replace the user list
+           *        global license id with a '-' (for example,
+           *        `accountTypes/DATA_PARTNER/accounts/123/userListGlobalLicenses/-`)
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DataManagerRequest<com.google.api.services.datamanager.v1.model.ListUserListGlobalLicenseCustomerInfosResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/userListGlobalLicenseCustomerInfos";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+/userListGlobalLicenses/[^/]+$");
+
+            /**
+             * Lists all customer info for a user list global license. This feature is only available to data
+             * partners.
+             *
+             * Create a request for the method "userListGlobalLicenseCustomerInfos.list".
+             *
+             * This request holds the parameters needed by the the datamanager server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The global license whose customer info are being queried. Should be in the format `account
+           *        Types/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}/userListGlobalLicenses/{USER_LIST_GLOBAL_LICENS
+           *        E_ID}`. To list all global license customer info under an account, replace the user list
+           *        global license id with a '-' (for example,
+           *        `accountTypes/DATA_PARTNER/accounts/123/userListGlobalLicenses/-`)
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DataManager.this, "GET", REST_PATH, null, com.google.api.services.datamanager.v1.model.ListUserListGlobalLicenseCustomerInfosResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accountTypes/[^/]+/accounts/[^/]+/userListGlobalLicenses/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The global license whose customer info are being queried. Should be in the
+             * format `accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}/userListGlobalLicenses/{USE
+             * R_LIST_GLOBAL_LICENSE_ID}`. To list all global license customer info under an
+             * account, replace the user list global license id with a '-' (for example,
+             * `accountTypes/DATA_PARTNER/accounts/123/userListGlobalLicenses/-`)
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The global license whose customer info are being queried. Should be in the format `accoun
+           tTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}/userListGlobalLicenses/{USER_LIST_GLOBAL_LICENSE_ID}`.
+           To list all global license customer info under an account, replace the user list global license id
+           with a '-' (for example, `accountTypes/DATA_PARTNER/accounts/123/userListGlobalLicenses/-`)
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The global license whose customer info are being queried. Should be in the
+             * format `accountTypes/{ACCOUNT_TYPE}/accounts/{ACCOUNT_ID}/userListGlobalLicenses/{USE
+             * R_LIST_GLOBAL_LICENSE_ID}`. To list all global license customer info under an
+             * account, replace the user list global license id with a '-' (for example,
+             * `accountTypes/DATA_PARTNER/accounts/123/userListGlobalLicenses/-`)
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accountTypes/[^/]+/accounts/[^/]+/userListGlobalLicenses/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filters to apply to the list request. All fields need to be on the left
+             * hand side of each condition (for example: user_list_id = 123). **Supported
+             * Operations:** - `AND` - `=` - `!=` - `>` - `>=` - `<` - `<=` **Unsupported Fields:**
+             * - `name` (use get method instead) - `historical_pricings` and all its subfields -
+             * `pricing.start_time` - `pricing.end_time`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filters to apply to the list request. All fields need to be on the left hand side of each
+           condition (for example: user_list_id = 123). **Supported Operations:** - `AND` - `=` - `!=` - `>` -
+           `>=` - `<` - `<=` **Unsupported Fields:** - `name` (use get method instead) - `historical_pricings`
+           and all its subfields - `pricing.start_time` - `pricing.end_time`
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filters to apply to the list request. All fields need to be on the left
+             * hand side of each condition (for example: user_list_id = 123). **Supported
+             * Operations:** - `AND` - `=` - `!=` - `>` - `>=` - `<` - `<=` **Unsupported Fields:**
+             * - `name` (use get method instead) - `historical_pricings` and all its subfields -
+             * `pricing.start_time` - `pricing.end_time`
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of licenses to return. The service may return fewer than
+             * this value. If unspecified, at most 50 licenses will be returned. The maximum value
+             * is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of licenses to return. The service may return fewer than this value.
+           If unspecified, at most 50 licenses will be returned. The maximum value is 1000; values above 1000
+           will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of licenses to return. The service may return fewer than
+             * this value. If unspecified, at most 50 licenses will be returned. The maximum value
+             * is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListUserListDirectLicense` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListUserListDirectLicense` must match the call that provided the page
+             * token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListUserListDirectLicense` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListUserListDirectLicense` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListUserListDirectLicense` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListUserListDirectLicense` must match the call that provided the page
+             * token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the UserLists collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataManager datamanager = new DataManager(...);}
+       *   {@code DataManager.UserLists.List request = datamanager.userLists().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public UserLists userLists() {
+        return new UserLists();
+      }
+
+      /**
+       * The "userLists" collection of methods.
+       */
+      public class UserLists {
+
+        /**
+         * Creates a UserList. Authorization Headers: This method supports the following optional headers to
+         * define how the API authorizes access for the request: * `login-account`: (Optional) The resource
+         * name of the account where the Google Account of the credentials is a user. If not set, defaults
+         * to the account of the request. Format:
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+         * resource name of the account with an established product link to the `login-account`. Format:
+         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         *
+         * Create a request for the method "userLists.create".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent account where this user list will be created. Format:
+         *        accountTypes/{account_type}/accounts/{account}
+         * @param content the {@link com.google.api.services.datamanager.v1.model.UserList}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.datamanager.v1.model.UserList content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataManagerRequest<com.google.api.services.datamanager.v1.model.UserList> {
+
+          private static final String REST_PATH = "v1/{+parent}/userLists";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Creates a UserList. Authorization Headers: This method supports the following optional headers
+           * to define how the API authorizes access for the request: * `login-account`: (Optional) The
+           * resource name of the account where the Google Account of the credentials is a user. If not set,
+           * defaults to the account of the request. Format:
+           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+           * resource name of the account with an established product link to the `login-account`. Format:
+           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           *
+           * Create a request for the method "userLists.create".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent account where this user list will be created. Format:
+         *        accountTypes/{account_type}/accounts/{account}
+           * @param content the {@link com.google.api.services.datamanager.v1.model.UserList}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.datamanager.v1.model.UserList content) {
+            super(DataManager.this, "POST", REST_PATH, content, com.google.api.services.datamanager.v1.model.UserList.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent account where this user list will be created. Format:
+           * accountTypes/{account_type}/accounts/{account}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent account where this user list will be created. Format:
+         accountTypes/{account_type}/accounts/{account}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent account where this user list will be created. Format:
+           * accountTypes/{account_type}/accounts/{account}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. If true, the request is validated but not executed. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If true, the request is validated but not executed.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If true, the request is validated but not executed. */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a UserList. Authorization Headers: This method supports the following optional headers to
+         * define how the API authorizes access for the request: * `login-account`: (Optional) The resource
+         * name of the account where the Google Account of the credentials is a user. If not set, defaults
+         * to the account of the request. Format:
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+         * resource name of the account with an established product link to the `login-account`. Format:
+         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         *
+         * Create a request for the method "userLists.delete".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the user list to delete. Format:
+         *        accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataManagerRequest<com.google.api.services.datamanager.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+/userLists/[^/]+$");
+
+          /**
+           * Deletes a UserList. Authorization Headers: This method supports the following optional headers
+           * to define how the API authorizes access for the request: * `login-account`: (Optional) The
+           * resource name of the account where the Google Account of the credentials is a user. If not set,
+           * defaults to the account of the request. Format:
+           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+           * resource name of the account with an established product link to the `login-account`. Format:
+           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           *
+           * Create a request for the method "userLists.delete".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the user list to delete. Format:
+         *        accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DataManager.this, "DELETE", REST_PATH, null, com.google.api.services.datamanager.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userLists/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the user list to delete. Format:
+           * accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the user list to delete. Format:
+         accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the user list to delete. Format:
+           * accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userLists/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. If true, the request is validated but not executed. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If true, the request is validated but not executed.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If true, the request is validated but not executed. */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a UserList. Authorization Headers: This method supports the following optional headers to
+         * define how the API authorizes access for the request: * `login-account`: (Optional) The resource
+         * name of the account where the Google Account of the credentials is a user. If not set, defaults
+         * to the account of the request. Format:
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+         * resource name of the account with an established product link to the `login-account`. Format:
+         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         *
+         * Create a request for the method "userLists.get".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the UserList to retrieve. Format:
+         *        accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataManagerRequest<com.google.api.services.datamanager.v1.model.UserList> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+/userLists/[^/]+$");
+
+          /**
+           * Gets a UserList. Authorization Headers: This method supports the following optional headers to
+           * define how the API authorizes access for the request: * `login-account`: (Optional) The
+           * resource name of the account where the Google Account of the credentials is a user. If not set,
+           * defaults to the account of the request. Format:
+           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+           * resource name of the account with an established product link to the `login-account`. Format:
+           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           *
+           * Create a request for the method "userLists.get".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the UserList to retrieve. Format:
+         *        accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DataManager.this, "GET", REST_PATH, null, com.google.api.services.datamanager.v1.model.UserList.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userLists/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the UserList to retrieve. Format:
+           * accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the UserList to retrieve. Format:
+         accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the UserList to retrieve. Format:
+           * accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userLists/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists UserLists. Authorization Headers: This method supports the following optional headers to
+         * define how the API authorizes access for the request: * `login-account`: (Optional) The resource
+         * name of the account where the Google Account of the credentials is a user. If not set, defaults
+         * to the account of the request. Format:
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+         * resource name of the account with an established product link to the `login-account`. Format:
+         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         *
+         * Create a request for the method "userLists.list".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent account which owns this collection of user lists. Format:
+         *        accountTypes/{account_type}/accounts/{account}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataManagerRequest<com.google.api.services.datamanager.v1.model.ListUserListsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/userLists";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Lists UserLists. Authorization Headers: This method supports the following optional headers to
+           * define how the API authorizes access for the request: * `login-account`: (Optional) The
+           * resource name of the account where the Google Account of the credentials is a user. If not set,
+           * defaults to the account of the request. Format:
+           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+           * resource name of the account with an established product link to the `login-account`. Format:
+           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           *
+           * Create a request for the method "userLists.list".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent account which owns this collection of user lists. Format:
+         *        accountTypes/{account_type}/accounts/{account}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DataManager.this, "GET", REST_PATH, null, com.google.api.services.datamanager.v1.model.ListUserListsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent account which owns this collection of user lists. Format:
+           * accountTypes/{account_type}/accounts/{account}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent account which owns this collection of user lists. Format:
+         accountTypes/{account_type}/accounts/{account}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent account which owns this collection of user lists. Format:
+           * accountTypes/{account_type}/accounts/{account}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A [filter string](//google.aip.dev/160). All fields need to be on the left
+           * hand side of each condition (for example: `display_name = "list 1"`). Supported
+           * operations: - `AND` - `=` - `!=` - `>` - `>=` - `<` - `<=` - `:` (has) Supported
+           * fields: - `id` - `display_name` - `description` - `membership_status` -
+           * `integration_code` - `access_reason` - `ingested_user_list_info.upload_key_types`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A [filter string](//google.aip.dev/160). All fields need to be on the left hand side of
+         each condition (for example: `display_name = "list 1"`). Supported operations: - `AND` - `=` - `!=`
+         - `>` - `>=` - `<` - `<=` - `:` (has) Supported fields: - `id` - `display_name` - `description` -
+         `membership_status` - `integration_code` - `access_reason` -
+         `ingested_user_list_info.upload_key_types`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A [filter string](//google.aip.dev/160). All fields need to be on the left
+           * hand side of each condition (for example: `display_name = "list 1"`). Supported
+           * operations: - `AND` - `=` - `!=` - `>` - `>=` - `<` - `<=` - `:` (has) Supported
+           * fields: - `id` - `display_name` - `description` - `membership_status` -
+           * `integration_code` - `access_reason` - `ingested_user_list_info.upload_key_types`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of user lists to return. The service may return fewer than
+           * this value. If unspecified, at most 50 user lists will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of user lists to return. The service may return fewer than this value.
+         If unspecified, at most 50 user lists will be returned. The maximum value is 1000; values above
+         1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of user lists to return. The service may return fewer than
+           * this value. If unspecified, at most 50 user lists will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListUserLists` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListUserLists` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListUserLists` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListUserLists` must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListUserLists` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListUserLists` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a UserList. Authorization Headers: This method supports the following optional headers to
+         * define how the API authorizes access for the request: * `login-account`: (Optional) The resource
+         * name of the account where the Google Account of the credentials is a user. If not set, defaults
+         * to the account of the request. Format:
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+         * resource name of the account with an established product link to the `login-account`. Format:
+         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         *
+         * Create a request for the method "userLists.patch".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the user list. Format:
+         *        accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+         * @param content the {@link com.google.api.services.datamanager.v1.model.UserList}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.datamanager.v1.model.UserList content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DataManagerRequest<com.google.api.services.datamanager.v1.model.UserList> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+/userLists/[^/]+$");
+
+          /**
+           * Updates a UserList. Authorization Headers: This method supports the following optional headers
+           * to define how the API authorizes access for the request: * `login-account`: (Optional) The
+           * resource name of the account where the Google Account of the credentials is a user. If not set,
+           * defaults to the account of the request. Format:
+           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
+           * resource name of the account with an established product link to the `login-account`. Format:
+           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           *
+           * Create a request for the method "userLists.patch".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the user list. Format:
+         *        accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           * @param content the {@link com.google.api.services.datamanager.v1.model.UserList}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.datamanager.v1.model.UserList content) {
+            super(DataManager.this, "PATCH", REST_PATH, content, com.google.api.services.datamanager.v1.model.UserList.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userLists/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the user list. Format:
+           * accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the user list. Format:
+         accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the user list. Format:
+           * accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+/userLists/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. The list of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. The list of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /** Optional. If true, the request is validated but not executed. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If true, the request is validated but not executed.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If true, the request is validated but not executed. */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
   }
 
   /**
@@ -654,8 +4035,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

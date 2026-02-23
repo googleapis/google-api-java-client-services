@@ -18,7 +18,7 @@ package com.google.api.services.datamanager.v1.model;
 
 /**
  * [PAIR](//support.google.com/admanager/answer/15067908) IDs for the audience. At least one PAIR ID
- * is required.
+ * is required. This feature is only available to data partners.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:

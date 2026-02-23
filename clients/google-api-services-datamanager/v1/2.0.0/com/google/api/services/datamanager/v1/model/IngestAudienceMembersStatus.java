@@ -44,11 +44,25 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   private IngestPairDataStatus pairDataIngestionStatus;
 
   /**
+   * The status of the ppid data ingestion to the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IngestPpidDataStatus ppidDataIngestionStatus;
+
+  /**
    * The status of the user data ingestion to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestUserDataStatus userDataIngestionStatus;
+
+  /**
+   * The status of the user id data ingestion to the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IngestUserIdDataStatus userIdDataIngestionStatus;
 
   /**
    * The status of the mobile data ingestion to the destination.
@@ -85,6 +99,23 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
+   * The status of the ppid data ingestion to the destination.
+   * @return value or {@code null} for none
+   */
+  public IngestPpidDataStatus getPpidDataIngestionStatus() {
+    return ppidDataIngestionStatus;
+  }
+
+  /**
+   * The status of the ppid data ingestion to the destination.
+   * @param ppidDataIngestionStatus ppidDataIngestionStatus or {@code null} for none
+   */
+  public IngestAudienceMembersStatus setPpidDataIngestionStatus(IngestPpidDataStatus ppidDataIngestionStatus) {
+    this.ppidDataIngestionStatus = ppidDataIngestionStatus;
+    return this;
+  }
+
+  /**
    * The status of the user data ingestion to the destination.
    * @return value or {@code null} for none
    */
@@ -98,6 +129,23 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
    */
   public IngestAudienceMembersStatus setUserDataIngestionStatus(IngestUserDataStatus userDataIngestionStatus) {
     this.userDataIngestionStatus = userDataIngestionStatus;
+    return this;
+  }
+
+  /**
+   * The status of the user id data ingestion to the destination.
+   * @return value or {@code null} for none
+   */
+  public IngestUserIdDataStatus getUserIdDataIngestionStatus() {
+    return userIdDataIngestionStatus;
+  }
+
+  /**
+   * The status of the user id data ingestion to the destination.
+   * @param userIdDataIngestionStatus userIdDataIngestionStatus or {@code null} for none
+   */
+  public IngestAudienceMembersStatus setUserIdDataIngestionStatus(IngestUserIdDataStatus userIdDataIngestionStatus) {
+    this.userIdDataIngestionStatus = userIdDataIngestionStatus;
     return this;
   }
 

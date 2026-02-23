@@ -53,7 +53,16 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String keyProject;
 
   /**
-   * Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+   * Optional. KeyProjectResolutionMode for the AutokeyConfig. Valid values are
+   * `DEDICATED_KEY_PROJECT`, `RESOURCE_PROJECT`, or `DISABLED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String keyProjectResolutionMode;
+
+  /**
+   * Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +126,27 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+   * Optional. KeyProjectResolutionMode for the AutokeyConfig. Valid values are
+   * `DEDICATED_KEY_PROJECT`, `RESOURCE_PROJECT`, or `DISABLED`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getKeyProjectResolutionMode() {
+    return keyProjectResolutionMode;
+  }
+
+  /**
+   * Optional. KeyProjectResolutionMode for the AutokeyConfig. Valid values are
+   * `DEDICATED_KEY_PROJECT`, `RESOURCE_PROJECT`, or `DISABLED`.
+   * @param keyProjectResolutionMode keyProjectResolutionMode or {@code null} for none
+   */
+  public AutokeyConfig setKeyProjectResolutionMode(java.lang.String keyProjectResolutionMode) {
+    this.keyProjectResolutionMode = keyProjectResolutionMode;
+    return this;
+  }
+
+  /**
+   * Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -125,7 +154,8 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig`
+   * Identifier. Name of the AutokeyConfig resource, e.g. `folders/{FOLDER_NUMBER}/autokeyConfig` or
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    * @param name name or {@code null} for none
    */
   public AutokeyConfig setName(java.lang.String name) {

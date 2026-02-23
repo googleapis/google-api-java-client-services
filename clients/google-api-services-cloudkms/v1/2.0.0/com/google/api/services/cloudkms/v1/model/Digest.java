@@ -31,6 +31,15 @@ package com.google.api.services.cloudkms.v1.model;
 public final class Digest extends com.google.api.client.json.GenericJson {
 
   /**
+   * A message digest produced with SHAKE-256, to be used with ML-DSA external-μ algorithms only.
+   * See "message representative" note in section 6.2, algorithm 7 of the FIPS-204 standard:
+   * https://doi.org/10.6028/nist.fips.204
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalMu;
+
+  /**
    * A message digest produced with the SHA-256 algorithm.
    * The value may be {@code null}.
    */
@@ -50,6 +59,59 @@ public final class Digest extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sha512;
+
+  /**
+   * A message digest produced with SHAKE-256, to be used with ML-DSA external-μ algorithms only.
+   * See "message representative" note in section 6.2, algorithm 7 of the FIPS-204 standard:
+   * https://doi.org/10.6028/nist.fips.204
+   * @see #decodeExternalMu()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalMu() {
+    return externalMu;
+  }
+
+  /**
+   * A message digest produced with SHAKE-256, to be used with ML-DSA external-μ algorithms only.
+   * See "message representative" note in section 6.2, algorithm 7 of the FIPS-204 standard:
+   * https://doi.org/10.6028/nist.fips.204
+   * @see #getExternalMu()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeExternalMu() {
+    return com.google.api.client.util.Base64.decodeBase64(externalMu);
+  }
+
+  /**
+   * A message digest produced with SHAKE-256, to be used with ML-DSA external-μ algorithms only.
+   * See "message representative" note in section 6.2, algorithm 7 of the FIPS-204 standard:
+   * https://doi.org/10.6028/nist.fips.204
+   * @see #encodeExternalMu()
+   * @param externalMu externalMu or {@code null} for none
+   */
+  public Digest setExternalMu(java.lang.String externalMu) {
+    this.externalMu = externalMu;
+    return this;
+  }
+
+  /**
+   * A message digest produced with SHAKE-256, to be used with ML-DSA external-μ algorithms only.
+   * See "message representative" note in section 6.2, algorithm 7 of the FIPS-204 standard:
+   * https://doi.org/10.6028/nist.fips.204
+   * @see #setExternalMu()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public Digest encodeExternalMu(byte[] externalMu) {
+    this.externalMu = com.google.api.client.util.Base64.encodeBase64URLSafeString(externalMu);
+    return this;
+  }
 
   /**
    * A message digest produced with the SHA-256 algorithm.

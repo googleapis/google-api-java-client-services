@@ -33,7 +33,7 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
    * Optional. Name of the allocated IP range for the private IP AlloyDB instance, for example:
    * "google-managed-services-default". If set, the instance IPs will be created from this allocated
    * range and will override the IP range used by the parent cluster. The range name must comply
-   * with [RFC 1035](http://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be
+   * with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be
    * 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
    * The value may be {@code null}.
    */
@@ -82,7 +82,7 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
    * Optional. Name of the allocated IP range for the private IP AlloyDB instance, for example:
    * "google-managed-services-default". If set, the instance IPs will be created from this allocated
    * range and will override the IP range used by the parent cluster. The range name must comply
-   * with [RFC 1035](http://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be
+   * with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be
    * 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
    * @return value or {@code null} for none
    */
@@ -94,7 +94,7 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
    * Optional. Name of the allocated IP range for the private IP AlloyDB instance, for example:
    * "google-managed-services-default". If set, the instance IPs will be created from this allocated
    * range and will override the IP range used by the parent cluster. The range name must comply
-   * with [RFC 1035](http://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be
+   * with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be
    * 1-63 characters long and match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
    * @param allocatedIpRangeOverride allocatedIpRangeOverride or {@code null} for none
    */

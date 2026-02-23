@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaQuery extends com.google.api.client.json.GenericJson {
 
   /**
+   * Query content parts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaQueryPart> parts;
+
+  /**
    * Output only. Unique Id for the query.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudDiscoveryengineV1alphaQuery extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * Query content parts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaQueryPart> getParts() {
+    return parts;
+  }
+
+  /**
+   * Query content parts.
+   * @param parts parts or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaQuery setParts(java.util.List<GoogleCloudDiscoveryengineV1alphaQueryPart> parts) {
+    this.parts = parts;
+    return this;
+  }
 
   /**
    * Output only. Unique Id for the query.

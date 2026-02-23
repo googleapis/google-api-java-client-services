@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaStreamAssistRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specification of actions for the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaStreamAssistRequestActionSpec actionSpec;
+
+  /**
    * Optional. Specification of the generation configuration for the request.
    * The value may be {@code null}.
    */
@@ -68,6 +75,23 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistRequest extends 
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaAssistUserMetadata userMetadata;
+
+  /**
+   * Optional. Specification of actions for the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaStreamAssistRequestActionSpec getActionSpec() {
+    return actionSpec;
+  }
+
+  /**
+   * Optional. Specification of actions for the request.
+   * @param actionSpec actionSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaStreamAssistRequest setActionSpec(GoogleCloudDiscoveryengineV1alphaStreamAssistRequestActionSpec actionSpec) {
+    this.actionSpec = actionSpec;
+    return this;
+  }
 
   /**
    * Optional. Specification of the generation configuration for the request.

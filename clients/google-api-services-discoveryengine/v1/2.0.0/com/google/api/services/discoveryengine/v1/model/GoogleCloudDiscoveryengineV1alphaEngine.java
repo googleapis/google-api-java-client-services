@@ -74,6 +74,15 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   private java.lang.String configurableBillingApproach;
 
   /**
+   * Optional. Maps a connector ID (e.g., "hybrid-github", "shopify") to tenant-specific information
+   * required for that connector. The structure of the tenant information string is connector-
+   * dependent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> connectorTenantInfo;
+
+  /**
    * Output only. Timestamp the Recommendation Engine was created at.
    * The value may be {@code null}.
    */
@@ -166,6 +175,13 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Observability config for the engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaObservabilityConfig observabilityConfig;
 
   /**
    * Output only. Additional information of a recommendation engine. Only applicable if
@@ -306,6 +322,27 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setConfigurableBillingApproach(java.lang.String configurableBillingApproach) {
     this.configurableBillingApproach = configurableBillingApproach;
+    return this;
+  }
+
+  /**
+   * Optional. Maps a connector ID (e.g., "hybrid-github", "shopify") to tenant-specific information
+   * required for that connector. The structure of the tenant information string is connector-
+   * dependent.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getConnectorTenantInfo() {
+    return connectorTenantInfo;
+  }
+
+  /**
+   * Optional. Maps a connector ID (e.g., "hybrid-github", "shopify") to tenant-specific information
+   * required for that connector. The structure of the tenant information string is connector-
+   * dependent.
+   * @param connectorTenantInfo connectorTenantInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setConnectorTenantInfo(java.util.Map<String, java.lang.String> connectorTenantInfo) {
+    this.connectorTenantInfo = connectorTenantInfo;
     return this;
   }
 
@@ -524,6 +561,23 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Observability config for the engine.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaObservabilityConfig getObservabilityConfig() {
+    return observabilityConfig;
+  }
+
+  /**
+   * Optional. Observability config for the engine.
+   * @param observabilityConfig observabilityConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setObservabilityConfig(GoogleCloudDiscoveryengineV1alphaObservabilityConfig observabilityConfig) {
+    this.observabilityConfig = observabilityConfig;
     return this;
   }
 

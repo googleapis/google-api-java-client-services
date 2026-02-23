@@ -37,6 +37,21 @@ public final class GoogleCloudDiscoveryengineV1LicenseConfig extends com.google.
   private java.lang.Boolean autoRenew;
 
   /**
+   * Output only. Indication of whether the subscription is terminated earlier than the expiration
+   * date. This is usually terminated by pipeline once the subscription gets terminated from subsv3.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean earlyTerminated;
+
+  /**
+   * Output only. The date when the subscription is terminated earlier than the expiration date.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeDate earlyTerminationDate;
+
+  /**
    * Optional. The planed end date.
    * The value may be {@code null}.
    */
@@ -114,6 +129,42 @@ public final class GoogleCloudDiscoveryengineV1LicenseConfig extends com.google.
    */
   public GoogleCloudDiscoveryengineV1LicenseConfig setAutoRenew(java.lang.Boolean autoRenew) {
     this.autoRenew = autoRenew;
+    return this;
+  }
+
+  /**
+   * Output only. Indication of whether the subscription is terminated earlier than the expiration
+   * date. This is usually terminated by pipeline once the subscription gets terminated from subsv3.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEarlyTerminated() {
+    return earlyTerminated;
+  }
+
+  /**
+   * Output only. Indication of whether the subscription is terminated earlier than the expiration
+   * date. This is usually terminated by pipeline once the subscription gets terminated from subsv3.
+   * @param earlyTerminated earlyTerminated or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1LicenseConfig setEarlyTerminated(java.lang.Boolean earlyTerminated) {
+    this.earlyTerminated = earlyTerminated;
+    return this;
+  }
+
+  /**
+   * Output only. The date when the subscription is terminated earlier than the expiration date.
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeDate getEarlyTerminationDate() {
+    return earlyTerminationDate;
+  }
+
+  /**
+   * Output only. The date when the subscription is terminated earlier than the expiration date.
+   * @param earlyTerminationDate earlyTerminationDate or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1LicenseConfig setEarlyTerminationDate(GoogleTypeDate earlyTerminationDate) {
+    this.earlyTerminationDate = earlyTerminationDate;
     return this;
   }
 

@@ -30,15 +30,17 @@ package com.google.api.services.merchantapi.reports_v1.model;
 public final class ItemIssueSeverity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Aggregated severity of the issue for all reporting contexts it affects. **This field can be
-   * used for filtering the results.**
+   * Aggregated severity of the issue for all reporting contexts it affects. Reporting contexts
+   * included in the computation of the aggregated severity can be restricted using a filter on the
+   * `reporting_context` field. **This field can be used for filtering the results.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String aggregatedSeverity;
 
   /**
-   * Issue severity per reporting context.
+   * Issue severity per reporting context. Reporting contexts included in this list can be
+   * restricted using a filter on the `reporting_context` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +53,9 @@ public final class ItemIssueSeverity extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Aggregated severity of the issue for all reporting contexts it affects. **This field can be
-   * used for filtering the results.**
+   * Aggregated severity of the issue for all reporting contexts it affects. Reporting contexts
+   * included in the computation of the aggregated severity can be restricted using a filter on the
+   * `reporting_context` field. **This field can be used for filtering the results.**
    * @return value or {@code null} for none
    */
   public java.lang.String getAggregatedSeverity() {
@@ -60,8 +63,9 @@ public final class ItemIssueSeverity extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Aggregated severity of the issue for all reporting contexts it affects. **This field can be
-   * used for filtering the results.**
+   * Aggregated severity of the issue for all reporting contexts it affects. Reporting contexts
+   * included in the computation of the aggregated severity can be restricted using a filter on the
+   * `reporting_context` field. **This field can be used for filtering the results.**
    * @param aggregatedSeverity aggregatedSeverity or {@code null} for none
    */
   public ItemIssueSeverity setAggregatedSeverity(java.lang.String aggregatedSeverity) {
@@ -70,7 +74,8 @@ public final class ItemIssueSeverity extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Issue severity per reporting context.
+   * Issue severity per reporting context. Reporting contexts included in this list can be
+   * restricted using a filter on the `reporting_context` field.
    * @return value or {@code null} for none
    */
   public java.util.List<IssueSeverityPerReportingContext> getSeverityPerReportingContext() {
@@ -78,7 +83,8 @@ public final class ItemIssueSeverity extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Issue severity per reporting context.
+   * Issue severity per reporting context. Reporting contexts included in this list can be
+   * restricted using a filter on the `reporting_context` field.
    * @param severityPerReportingContext severityPerReportingContext or {@code null} for none
    */
   public ItemIssueSeverity setSeverityPerReportingContext(java.util.List<IssueSeverityPerReportingContext> severityPerReportingContext) {

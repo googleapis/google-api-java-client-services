@@ -18,11 +18,13 @@ package com.google.api.services.merchantapi.reports_v1beta.model;
 
 /**
  * Fields available for query in `product_view` table. Products in the current inventory. Products
- * in this table are the same as in Products sub-API but not all product attributes from Products
- * sub-API are available for query in this table. In contrast to Products sub-API, this table allows
- * to filter the returned list of products by product attributes. To retrieve a single product by
- * `id` or list all products, Products sub-API should be used. Values are only set for fields
- * requested explicitly in the request's search query.
+ * in this table are the same as a [Product resource in Products sub-
+ * API](https://developers.google.com/merchant/api/reference/rest/products_v1/accounts.products) but
+ * not all product attributes from Products sub-API are available for query in this table. In
+ * contrast to Products sub-API, this table allows to filter the returned list of products by
+ * product attributes. To retrieve a single product by `id` or list all products, Products sub-API
+ * should be used. Values are only set for fields requested explicitly in the request's search
+ * query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -35,7 +37,8 @@ package com.google.api.services.merchantapi.reports_v1beta.model;
 public final class ProductView extends com.google.api.client.json.GenericJson {
 
   /**
-   * Aggregated status.
+   * Aggregated status across all reporting contexts. Reporting contexts included in the computation
+   * of the aggregated status can be restricted using a filter on the `reporting_context` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,12 +248,32 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
   private java.lang.String productTypeL5;
 
   /**
+   * Reporting context to restrict the query to. Restricts the reporting contexts returned in
+   * `status_per_reporting_context` and `item_issues`, and used to compute
+   * `aggregated_reporting_context_status`. **This field can only be used in the `WHERE` clause and
+   * cannot be selected in the `SELECT` clause.**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reportingContext;
+
+  /**
    * Normalized [shipping label](https://support.google.com/merchants/answer/6324504) specified in
    * the data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String shippingLabel;
+
+  /**
+   * Detailed product status per reporting context. Reporting contexts included in this list can be
+   * restricted using a filter on the `reporting_context` field. Equivalent to
+   * `ProductStatus.destination_statuses` in Products API. **This field cannot be used for sorting
+   * or filtering the results.**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StatusPerReportingContext> statusPerReportingContext;
 
   /**
    * Link to the processed image of the product, hosted on the Google infrastructure.
@@ -267,7 +290,8 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * Aggregated status.
+   * Aggregated status across all reporting contexts. Reporting contexts included in the computation
+   * of the aggregated status can be restricted using a filter on the `reporting_context` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getAggregatedReportingContextStatus() {
@@ -275,7 +299,8 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Aggregated status.
+   * Aggregated status across all reporting contexts. Reporting contexts included in the computation
+   * of the aggregated status can be restricted using a filter on the `reporting_context` field.
    * @param aggregatedReportingContextStatus aggregatedReportingContextStatus or {@code null} for none
    */
   public ProductView setAggregatedReportingContextStatus(java.lang.String aggregatedReportingContextStatus) {
@@ -756,6 +781,29 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Reporting context to restrict the query to. Restricts the reporting contexts returned in
+   * `status_per_reporting_context` and `item_issues`, and used to compute
+   * `aggregated_reporting_context_status`. **This field can only be used in the `WHERE` clause and
+   * cannot be selected in the `SELECT` clause.**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReportingContext() {
+    return reportingContext;
+  }
+
+  /**
+   * Reporting context to restrict the query to. Restricts the reporting contexts returned in
+   * `status_per_reporting_context` and `item_issues`, and used to compute
+   * `aggregated_reporting_context_status`. **This field can only be used in the `WHERE` clause and
+   * cannot be selected in the `SELECT` clause.**
+   * @param reportingContext reportingContext or {@code null} for none
+   */
+  public ProductView setReportingContext(java.lang.String reportingContext) {
+    this.reportingContext = reportingContext;
+    return this;
+  }
+
+  /**
    * Normalized [shipping label](https://support.google.com/merchants/answer/6324504) specified in
    * the data source.
    * @return value or {@code null} for none
@@ -771,6 +819,29 @@ public final class ProductView extends com.google.api.client.json.GenericJson {
    */
   public ProductView setShippingLabel(java.lang.String shippingLabel) {
     this.shippingLabel = shippingLabel;
+    return this;
+  }
+
+  /**
+   * Detailed product status per reporting context. Reporting contexts included in this list can be
+   * restricted using a filter on the `reporting_context` field. Equivalent to
+   * `ProductStatus.destination_statuses` in Products API. **This field cannot be used for sorting
+   * or filtering the results.**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StatusPerReportingContext> getStatusPerReportingContext() {
+    return statusPerReportingContext;
+  }
+
+  /**
+   * Detailed product status per reporting context. Reporting contexts included in this list can be
+   * restricted using a filter on the `reporting_context` field. Equivalent to
+   * `ProductStatus.destination_statuses` in Products API. **This field cannot be used for sorting
+   * or filtering the results.**
+   * @param statusPerReportingContext statusPerReportingContext or {@code null} for none
+   */
+  public ProductView setStatusPerReportingContext(java.util.List<StatusPerReportingContext> statusPerReportingContext) {
+    this.statusPerReportingContext = statusPerReportingContext;
     return this;
   }
 

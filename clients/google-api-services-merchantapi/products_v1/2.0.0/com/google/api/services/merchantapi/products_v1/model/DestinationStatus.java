@@ -17,7 +17,8 @@
 package com.google.api.services.merchantapi.products_v1.model;
 
 /**
- * The destination status of the product status.
+ * The destination status of the product status. Equivalent to `StatusPerReportingContext` in
+ * Reports API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

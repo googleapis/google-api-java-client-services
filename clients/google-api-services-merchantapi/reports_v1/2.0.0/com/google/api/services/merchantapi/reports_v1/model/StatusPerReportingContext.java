@@ -14,11 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.merchantapi.products_v1beta.model;
+package com.google.api.services.merchantapi.reports_v1.model;
 
 /**
- * The destination status of the product status. Equivalent to `StatusPerReportingContext` in
- * Reports API.
+ * Status of the product for a specific reporting context. Equivalent to `DestinationStatus` in
+ * Products API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -28,38 +28,42 @@ package com.google.api.services.merchantapi.products_v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DestinationStatus extends com.google.api.client.json.GenericJson {
+public final class StatusPerReportingContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
+   * List of approved countries in the reporting context, represented in [ISO
+   * 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for example, `US`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> approvedCountries;
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
+   * List of disapproved countries in the reporting context, represented in [ISO
+   * 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for example, `US`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> disapprovedCountries;
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
+   * List of pending countries in the reporting context, represented in [ISO
+   * 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for example, `US`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> pendingCountries;
 
   /**
-   * The name of the reporting context.
+   * Reporting context the status applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reportingContext;
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
+   * List of approved countries in the reporting context, represented in [ISO
+   * 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for example, `US`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getApprovedCountries() {
@@ -67,16 +71,18 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is approved.
+   * List of approved countries in the reporting context, represented in [ISO
+   * 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for example, `US`.
    * @param approvedCountries approvedCountries or {@code null} for none
    */
-  public DestinationStatus setApprovedCountries(java.util.List<java.lang.String> approvedCountries) {
+  public StatusPerReportingContext setApprovedCountries(java.util.List<java.lang.String> approvedCountries) {
     this.approvedCountries = approvedCountries;
     return this;
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
+   * List of disapproved countries in the reporting context, represented in [ISO
+   * 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for example, `US`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDisapprovedCountries() {
@@ -84,16 +90,18 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is disapproved.
+   * List of disapproved countries in the reporting context, represented in [ISO
+   * 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for example, `US`.
    * @param disapprovedCountries disapprovedCountries or {@code null} for none
    */
-  public DestinationStatus setDisapprovedCountries(java.util.List<java.lang.String> disapprovedCountries) {
+  public StatusPerReportingContext setDisapprovedCountries(java.util.List<java.lang.String> disapprovedCountries) {
     this.disapprovedCountries = disapprovedCountries;
     return this;
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
+   * List of pending countries in the reporting context, represented in [ISO
+   * 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for example, `US`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPendingCountries() {
@@ -101,16 +109,17 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
+   * List of pending countries in the reporting context, represented in [ISO
+   * 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for example, `US`.
    * @param pendingCountries pendingCountries or {@code null} for none
    */
-  public DestinationStatus setPendingCountries(java.util.List<java.lang.String> pendingCountries) {
+  public StatusPerReportingContext setPendingCountries(java.util.List<java.lang.String> pendingCountries) {
     this.pendingCountries = pendingCountries;
     return this;
   }
 
   /**
-   * The name of the reporting context.
+   * Reporting context the status applies to.
    * @return value or {@code null} for none
    */
   public java.lang.String getReportingContext() {
@@ -118,22 +127,22 @@ public final class DestinationStatus extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The name of the reporting context.
+   * Reporting context the status applies to.
    * @param reportingContext reportingContext or {@code null} for none
    */
-  public DestinationStatus setReportingContext(java.lang.String reportingContext) {
+  public StatusPerReportingContext setReportingContext(java.lang.String reportingContext) {
     this.reportingContext = reportingContext;
     return this;
   }
 
   @Override
-  public DestinationStatus set(String fieldName, Object value) {
-    return (DestinationStatus) super.set(fieldName, value);
+  public StatusPerReportingContext set(String fieldName, Object value) {
+    return (StatusPerReportingContext) super.set(fieldName, value);
   }
 
   @Override
-  public DestinationStatus clone() {
-    return (DestinationStatus) super.clone();
+  public StatusPerReportingContext clone() {
+    return (StatusPerReportingContext) super.clone();
   }
 
 }

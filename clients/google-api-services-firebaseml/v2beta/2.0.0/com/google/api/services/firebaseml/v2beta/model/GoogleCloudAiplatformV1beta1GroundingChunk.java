@@ -32,6 +32,13 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google.api.client.json.GenericJson {
 
   /**
+   * A grounding chunk from an image search result. See the `Image` message for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GroundingChunkImage image;
+
+  /**
    * A grounding chunk from Google Maps. See the `Maps` message for details.
    * The value may be {@code null}.
    */
@@ -53,6 +60,23 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunk extends com.google
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GroundingChunkWeb web;
+
+  /**
+   * A grounding chunk from an image search result. See the `Image` message for details.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingChunkImage getImage() {
+    return image;
+  }
+
+  /**
+   * A grounding chunk from an image search result. See the `Image` message for details.
+   * @param image image or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingChunk setImage(GoogleCloudAiplatformV1beta1GroundingChunkImage image) {
+    this.image = image;
+    return this;
+  }
 
   /**
    * A grounding chunk from Google Maps. See the `Maps` message for details.

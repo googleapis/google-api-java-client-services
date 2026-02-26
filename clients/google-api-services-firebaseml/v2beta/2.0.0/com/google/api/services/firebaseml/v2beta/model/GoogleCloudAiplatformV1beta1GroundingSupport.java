@@ -51,6 +51,14 @@ public final class GoogleCloudAiplatformV1beta1GroundingSupport extends com.goog
   private java.util.List<java.lang.Integer> groundingChunkIndices;
 
   /**
+   * Indices into the `rendered_parts` field of the `GroundingMetadata` message. These indices
+   * specify which rendered parts are associated with this support message.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> renderedParts;
+
+  /**
    * The content segment that this support message applies to.
    * The value may be {@code null}.
    */
@@ -102,6 +110,25 @@ public final class GoogleCloudAiplatformV1beta1GroundingSupport extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GroundingSupport setGroundingChunkIndices(java.util.List<java.lang.Integer> groundingChunkIndices) {
     this.groundingChunkIndices = groundingChunkIndices;
+    return this;
+  }
+
+  /**
+   * Indices into the `rendered_parts` field of the `GroundingMetadata` message. These indices
+   * specify which rendered parts are associated with this support message.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getRenderedParts() {
+    return renderedParts;
+  }
+
+  /**
+   * Indices into the `rendered_parts` field of the `GroundingMetadata` message. These indices
+   * specify which rendered parts are associated with this support message.
+   * @param renderedParts renderedParts or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingSupport setRenderedParts(java.util.List<java.lang.Integer> renderedParts) {
+    this.renderedParts = renderedParts;
     return this;
   }
 

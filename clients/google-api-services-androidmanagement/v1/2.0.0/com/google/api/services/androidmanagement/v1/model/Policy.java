@@ -134,9 +134,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean autoTimeRequired;
 
   /**
-   * Whether applications other than the ones configured in applications are blocked from being
-   * installed. When set, applications that were installed under a previous policy but no longer
-   * appear in the policy are automatically uninstalled.
+   * This field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1107,9 +1105,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether applications other than the ones configured in applications are blocked from being
-   * installed. When set, applications that were installed under a previous policy but no longer
-   * appear in the policy are automatically uninstalled.
+   * This field has no effect.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBlockApplicationsEnabled() {
@@ -1117,9 +1113,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether applications other than the ones configured in applications are blocked from being
-   * installed. When set, applications that were installed under a previous policy but no longer
-   * appear in the policy are automatically uninstalled.
+   * This field has no effect.
    * @param blockApplicationsEnabled blockApplicationsEnabled or {@code null} for none
    */
   public Policy setBlockApplicationsEnabled(java.lang.Boolean blockApplicationsEnabled) {

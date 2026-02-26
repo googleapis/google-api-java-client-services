@@ -45,6 +45,13 @@ public final class BaseImage extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The registry of the base image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String registry;
+
+  /**
    * The repository name in which the base image is from.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class BaseImage extends com.google.api.client.json.GenericJson {
    */
   public BaseImage setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The registry of the base image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegistry() {
+    return registry;
+  }
+
+  /**
+   * The registry of the base image.
+   * @param registry registry or {@code null} for none
+   */
+  public BaseImage setRegistry(java.lang.String registry) {
+    this.registry = registry;
     return this;
   }
 

@@ -134,6 +134,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Indicates whether the job can be paused.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pausable;
+
+  /**
    * Preliminary field: The format of this data may change at any time. A description of the user
    * pipeline and stages through which it is executed. Created by Cloud Dataflow service. Only
    * retrieved with JOB_VIEW_DESCRIPTION or JOB_VIEW_ALL.
@@ -511,6 +518,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether the job can be paused.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPausable() {
+    return pausable;
+  }
+
+  /**
+   * Output only. Indicates whether the job can be paused.
+   * @param pausable pausable or {@code null} for none
+   */
+  public Job setPausable(java.lang.Boolean pausable) {
+    this.pausable = pausable;
     return this;
   }
 

@@ -146,6 +146,13 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   private GoogleCloudDiscoveryengineV1alphaEngineKnowledgeGraphConfig knowledgeGraphConfig;
 
   /**
+   * Optional. The visibility of marketplace agents in the agent gallery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String marketplaceAgentVisibility;
+
+  /**
    * Configurations for the Media Engine. Only applicable on the data stores with solution_type
    * SOLUTION_TYPE_RECOMMENDATION and IndustryVertical.MEDIA vertical.
    * The value may be {@code null}.
@@ -182,6 +189,13 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaObservabilityConfig observabilityConfig;
+
+  /**
+   * Optional. The email of the procurement contact.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String procurementContactEmail;
 
   /**
    * Output only. Additional information of a recommendation engine. Only applicable if
@@ -494,6 +508,23 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   }
 
   /**
+   * Optional. The visibility of marketplace agents in the agent gallery.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMarketplaceAgentVisibility() {
+    return marketplaceAgentVisibility;
+  }
+
+  /**
+   * Optional. The visibility of marketplace agents in the agent gallery.
+   * @param marketplaceAgentVisibility marketplaceAgentVisibility or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setMarketplaceAgentVisibility(java.lang.String marketplaceAgentVisibility) {
+    this.marketplaceAgentVisibility = marketplaceAgentVisibility;
+    return this;
+  }
+
+  /**
    * Configurations for the Media Engine. Only applicable on the data stores with solution_type
    * SOLUTION_TYPE_RECOMMENDATION and IndustryVertical.MEDIA vertical.
    * @return value or {@code null} for none
@@ -578,6 +609,23 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setObservabilityConfig(GoogleCloudDiscoveryengineV1alphaObservabilityConfig observabilityConfig) {
     this.observabilityConfig = observabilityConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The email of the procurement contact.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProcurementContactEmail() {
+    return procurementContactEmail;
+  }
+
+  /**
+   * Optional. The email of the procurement contact.
+   * @param procurementContactEmail procurementContactEmail or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setProcurementContactEmail(java.lang.String procurementContactEmail) {
+    this.procurementContactEmail = procurementContactEmail;
     return this;
   }
 

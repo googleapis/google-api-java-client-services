@@ -13220,17 +13220,23 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
-               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
-               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
+               * * `labels` * `create_time` * `update_time` * `collaborative_project` Examples: *
+               * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred = true` *
+               * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"` *
+               * `collaborative_project =
+               * "projects/123/locations/global/collections/default_collection/engines/"
+               * "default_engine/collaborative_projects/cp1"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
              `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
-             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
-             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
+             `update_time` * `collaborative_project` Examples: * `user_pseudo_id = some_id` * `display_name =
+             "some_name"` * `starred = true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time >
+             "1970-01-01T12:00:00Z"` * `collaborative_project =
+             "projects/123/locations/global/collections/default_collection/engines/"
+             "default_engine/collaborative_projects/cp1"`
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -13239,9 +13245,12 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
-               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
-               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
+               * * `labels` * `create_time` * `update_time` * `collaborative_project` Examples: *
+               * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred = true` *
+               * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"` *
+               * `collaborative_project =
+               * "projects/123/locations/global/collections/default_collection/engines/"
+               * "default_engine/collaborative_projects/cp1"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -27204,17 +27213,23 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
-               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
-               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
+               * * `labels` * `create_time` * `update_time` * `collaborative_project` Examples: *
+               * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred = true` *
+               * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"` *
+               * `collaborative_project =
+               * "projects/123/locations/global/collections/default_collection/engines/"
+               * "default_engine/collaborative_projects/cp1"`
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
               /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
              `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
-             `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
-             true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
+             `update_time` * `collaborative_project` Examples: * `user_pseudo_id = some_id` * `display_name =
+             "some_name"` * `starred = true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time >
+             "1970-01-01T12:00:00Z"` * `collaborative_project =
+             "projects/123/locations/global/collections/default_collection/engines/"
+             "default_engine/collaborative_projects/cp1"`
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -27223,9 +27238,12 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * A comma-separated list of fields to filter by, in EBNF grammar. The supported
                * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
-               * * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
-               * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
-               * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
+               * * `labels` * `create_time` * `update_time` * `collaborative_project` Examples: *
+               * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred = true` *
+               * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"` *
+               * `collaborative_project =
+               * "projects/123/locations/global/collections/default_collection/engines/"
+               * "default_engine/collaborative_projects/cp1"`
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -38108,17 +38126,23 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
              * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
-             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
-             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
-             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
+             * `labels` * `create_time` * `update_time` * `collaborative_project` Examples: *
+             * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred = true` *
+             * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"` *
+             * `collaborative_project =
+             * "projects/123/locations/global/collections/default_collection/engines/"
+             * "default_engine/collaborative_projects/cp1"`
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
            `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
-           `update_time` Examples: * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred =
-           true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
+           `update_time` * `collaborative_project` Examples: * `user_pseudo_id = some_id` * `display_name =
+           "some_name"` * `starred = true` * `is_pinned=true AND (NOT labels:hidden)` * `create_time >
+           "1970-01-01T12:00:00Z"` * `collaborative_project =
+           "projects/123/locations/global/collections/default_collection/engines/"
+           "default_engine/collaborative_projects/cp1"`
              */
             public java.lang.String getFilter() {
               return filter;
@@ -38127,9 +38151,12 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             /**
              * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
              * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
-             * `labels` * `create_time` * `update_time` Examples: * `user_pseudo_id = some_id` *
-             * `display_name = "some_name"` * `starred = true` * `is_pinned=true AND (NOT
-             * labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"`
+             * `labels` * `create_time` * `update_time` * `collaborative_project` Examples: *
+             * `user_pseudo_id = some_id` * `display_name = "some_name"` * `starred = true` *
+             * `is_pinned=true AND (NOT labels:hidden)` * `create_time > "1970-01-01T12:00:00Z"` *
+             * `collaborative_project =
+             * "projects/123/locations/global/collections/default_collection/engines/"
+             * "default_engine/collaborative_projects/cp1"`
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -43654,7 +43681,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       public class LicenseConfigs {
 
         /**
-         * Creates a LicenseConfig
+         * Creates a LicenseConfig This method should only be used for creating NotebookLm licenses or
+         * Gemini Enterprise free trial licenses.
          *
          * Create a request for the method "licenseConfigs.create".
          *
@@ -43679,7 +43707,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a LicenseConfig
+           * Creates a LicenseConfig This method should only be used for creating NotebookLm licenses or
+           * Gemini Enterprise free trial licenses.
            *
            * Create a request for the method "licenseConfigs.create".
            *

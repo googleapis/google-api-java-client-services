@@ -37,21 +37,31 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String audience;
 
   /**
+   * Optional. Product filter by [brand
+   * exclusion](https://support.google.com/merchants/answer/13861679?ref_topic=13773355) for the
+   * promotion. The product filter attributes only applies when the products eligible for promotion
+   * product applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> brandExclusion;
 
   /**
+   * Optional. Product filter by brand for the promotion. The product filter attributes only applies
+   * when the products eligible for promotion product applicability `product_applicability`
+   * attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> brandInclusion;
 
   /**
-   * Required. The [coupon value type] (https://support.google.com/merchants/answer/13861986?ref_top
-   * ic=13773355&sjid=17642868584668136159-NC) attribute to signal the type of promotion that you
-   * are running. Depending on type of the selected coupon value [some attributes are
+   * Required. The [coupon value type]
+   * (https://support.google.com/merchants/answer/13861986?ref_topic=13773355) attribute to signal
+   * the type of promotion that you are running. Depending on type of the selected coupon value
+   * [some attributes are
    * required](https://support.google.com/merchants/answer/6393006?ref_topic=7322920).
    * The value may be {@code null}.
    */
@@ -68,40 +78,43 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Event applicability for this promotion. When present, this field indicates you are
-   * creating a [sales
-   * event](https://support.google.com/merchants/answer/15523289?hl=en&sjid=11099988466404504696-NC)
-   * and not a product promotion. Exactly one of `product_applicability` or `event_applicability`
-   * must be set.
+   * creating a [sales event](https://support.google.com/merchants/answer/15523289) and not a
+   * product promotion. Exactly one of `product_applicability` or `event_applicability` must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventApplicability;
 
   /**
-   * Optional. [Free gift description](https://support.google.com/merchants/answer/13847245?ref_topi
-   * c=13773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Free gift
+   * description](https://support.google.com/merchants/answer/13847245?ref_topic=13773355) for the
+   * promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String freeGiftDescription;
 
   /**
-   * Optional. [Free gift item ID](https://support.google.com/merchants/answer/13857152?ref_topic=13
-   * 773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Free gift item
+   * ID](https://support.google.com/merchants/answer/13857152?ref_topic=13773355) for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String freeGiftItemId;
 
   /**
-   * Optional. [Free gift value](https://support.google.com/merchants/answer/13844477?ref_topic=1377
-   * 3355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Free gift
+   * value](https://support.google.com/merchants/answer/13844477?ref_topic=13773355) for the
+   * promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price freeGiftValue;
 
   /**
+   * Optional. Generic redemption code for the promotion. To be used with the `offerType` field and
+   * must meet the [minimum
+   * requirements](https://support.google.com/merchants/answer/13837405?ref_topic=13773355).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,44 +132,60 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * Optional. A list of Google product categories for this promotion. Set if `EventApplicability`
    * is `SPECIFIC_CATEGORIES`. Up to 5 product categories can be specified. For more details on
    * eligible values for product categories, checkout the `google_product_category` attribute in the
-   * [Promotion data specification](https://support.google.com/merchants/answer/2906014?hl=en).
+   * [Promotion data specification](https://support.google.com/merchants/answer/2906014).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> googleProductCategories;
 
   /**
-   * Optional. Product filter by [item group ID](https://support.google.com/merchants/answer/1383729
-   * 8?ref_topic=13773355&sjid=17642868584668136159-NC). The product filter attributes only applies
-   * when the products eligible for promotion product applicability `product_applicability`
-   * attribute is set to [specific_products](https://support.google.com/merchants/answer/13837299?re
-   * f_topic=13773355&sjid=17642868584668136159-NC). exclusion for the promotion.
+   * Optional. Product filter by [item group
+   * ID](https://support.google.com/merchants/answer/13837298?ref_topic=13773355). The product
+   * filter attributes only applies when the products eligible for promotion product applicability
+   * `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
+   * exclusion for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> itemGroupIdExclusion;
 
   /**
+   * Optional. Product filter by item group ID for the promotion. The product filter attributes only
+   * applies when the products eligible for promotion product applicability [product_applicability]
+   * attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> itemGroupIdInclusion;
 
   /**
+   * Optional. Product filter by [item ID
+   * exclusion](https://support.google.com/merchants/answer/13863524?ref_topic=13773355) for the
+   * promotion. The product filter attributes only applies when the products eligible for promotion
+   * product applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> itemIdExclusion;
 
   /**
+   * Optional. Product filter by [item
+   * ID](https://support.google.com/merchants/answer/13861565?ref_topic=13773355) for the promotion.
+   * The product filter attributes only applies when the products eligible for promotion product
+   * applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> itemIdInclusion;
 
   /**
-   * Optional. [Maximum purchase quantity](https://support.google.com/merchants/answer/13861564?ref_
-   * topic=13773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Maximum purchase
+   * quantity](https://support.google.com/merchants/answer/13861564?ref_topic=13773355) for the
+   * promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -171,8 +200,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private Price limitValue;
 
   /**
-   * Required. [Long title](https://support.google.com/merchants/answer/13838102?ref_topic=13773355&
-   * sjid=17642868584668136159-NC) for the promotion.
+   * Required. [Long title](https://support.google.com/merchants/answer/13838102?ref_topic=13773355)
+   * for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,8 +216,49 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private Price maxDiscountAmount;
 
   /**
-   * Optional. [Minimum purchase amount](https://support.google.com/merchants/answer/13837705?ref_to
-   * pic=13773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. Maximum money off amount for a promotion with `MONEY_OFF_RANGE` coupon value type. At
+   * least one of `min_money_off_amount` or `max_money_off_amount` must be present when the coupon
+   * value type is `MONEY_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price maxMoneyOffAmount;
+
+  /**
+   * Optional. Maximum percent off for a promotion with `PERCENT_OFF_RANGE` coupon value type. At
+   * least one of `min_percent_off` or `max_percent_off` must be present when the coupon value type
+   * is `PERCENT_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxPercentOff;
+
+  /**
+   * Optional. Minimum money off amount for a promotion with `MONEY_OFF_RANGE` coupon value type. At
+   * least one of `min_money_off_amount` or `max_money_off_amount` must be present when the coupon
+   * value type is `MONEY_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price minMoneyOffAmount;
+
+  /**
+   * Optional. Minimum percent off for a promotion with `PERCENT_OFF_RANGE` coupon value type. At
+   * least one of `min_percent_off` or `max_percent_off` must be present when the coupon value type
+   * is `PERCENT_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long minPercentOff;
+
+  /**
+   * Optional. [Minimum purchase
+   * amount](https://support.google.com/merchants/answer/13837705?ref_topic=13773355) for the
+   * promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,17 +271,18 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.Long minimumPurchaseQuantity;
 
   /**
-   * Optional. The [money off amount](https://support.google.com/merchants/answer/13838101?ref_topic
-   * =13773355&sjid=17642868584668136159-NC) offered in the promotion.
+   * Optional. The [money off
+   * amount](https://support.google.com/merchants/answer/13838101?ref_topic=13773355) offered in the
+   * promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price moneyOffAmount;
 
   /**
-   * Required. [Type](https://support.google.com/merchants/answer/13837405?ref_topic=13773355&sjid=1
-   * 7642868584668136159-NC) of the promotion. Use this attribute to indicate whether or not
-   * customers need a coupon code to redeem your promotion.
+   * Required. [Type](https://support.google.com/merchants/answer/13837405?ref_topic=13773355) of
+   * the promotion. Use this attribute to indicate whether or not customers need a coupon code to
+   * redeem your promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,21 +298,30 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.Long percentOff;
 
   /**
-   * Optional. Applicability of the promotion to either all products or [only specific products](htt
-   * ps://support.google.com/merchants/answer/6396257?ref_topic=6396150&sjid=17642868584668136159-NC
-   * ). Exactly one of `product_applicability` or `event_applicability` must be set.
+   * Optional. Applicability of the promotion to either all products or [only specific
+   * products](https://support.google.com/merchants/answer/6396257). Exactly one of
+   * `product_applicability` or `event_applicability` must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productApplicability;
 
   /**
+   * Optional. Product filter by [product type
+   * exclusion](https://support.google.com/merchants/answer/13863746?ref_topic=13773355) for the
+   * promotion. The product filter attributes only applies when the products eligible for promotion
+   * product applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> productTypeExclusion;
 
   /**
+   * Optional. Product filter by product type for the promotion. The product filter attributes only
+   * applies when the products eligible for promotion product applicability `product_applicability`
+   * attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,7 +335,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * submitted the following values as destinations for your products: Shopping Actions, Surfaces
    * across Google, Local surfaces across Google. To represent these values use `FREE_LISTINGS`,
    * `FREE_LOCAL_LISTINGS`, `LOCAL_INVENTORY_ADS`. For more details see [Promotion
-   * destination](https://support.google.com/merchants/answer/13837465?sjid=5155774230887277618-NC)
+   * destination](https://support.google.com/merchants/answer/13837465)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -297,9 +377,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String redemptionRestriction;
 
   /**
-   * Optional. A list of [regions](https://support.google.com/merchants/answer/15406457?hl=en&sjid=8
-   * 815806704218720187-NC#howregionswork) where the promotion is applicable. Must be set if
-   * `audience` is set to `LOCATION`.
+   * Optional. A list of
+   * [regions](https://support.google.com/merchants/answer/15406457?#howregionswork) where the
+   * promotion is applicable. Must be set if `audience` is set to `LOCATION`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,18 +397,24 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String storeApplicability;
 
   /**
+   * Optional. [Store codes to
+   * exclude](https://support.google.com/merchants/answer/13859586?ref_topic=13773355) for the
+   * promotion. The store filter attributes only applies when the `store_applicability` attribute is
+   * set to
+   * [specific_stores](https://support.google.com/merchants/answer/13857563?ref_topic=13773355).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> storeCodesExclusion;
 
   /**
-   * Optional. [Store codes to include](https://support.google.com/merchants/answer/13857470?ref_top
-   * ic=13773355&sjid=17642868584668136159-NC) for the promotion. The store filter attributes only
-   * applies when the `store_applicability` attribute is set to [specific_stores](https://support.go
-   * ogle.com/merchants/answer/13857563?ref_topic=13773355&sjid=17642868584668136159-NC). Store code
-   * (the store ID from your Business Profile) of the physical store the product is sold in. See the
-   * [Local product inventory data
+   * Optional. [Store codes to
+   * include](https://support.google.com/merchants/answer/13857470?ref_topic=13773355) for the
+   * promotion. The store filter attributes only applies when the `store_applicability` attribute is
+   * set to
+   * [specific_stores](https://support.google.com/merchants/answer/13857563?ref_topic=13773355).
+   * Store code (the store ID from your Business Profile) of the physical store the product is sold
+   * in. See the [Local product inventory data
    * specification](https://support.google.com/merchants/answer/3061342) for more information.
    * The value may be {@code null}.
    */
@@ -353,6 +439,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by [brand
+   * exclusion](https://support.google.com/merchants/answer/13861679?ref_topic=13773355) for the
+   * promotion. The product filter attributes only applies when the products eligible for promotion
+   * product applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBrandExclusion() {
@@ -360,6 +451,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by [brand
+   * exclusion](https://support.google.com/merchants/answer/13861679?ref_topic=13773355) for the
+   * promotion. The product filter attributes only applies when the products eligible for promotion
+   * product applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @param brandExclusion brandExclusion or {@code null} for none
    */
   public Attributes setBrandExclusion(java.util.List<java.lang.String> brandExclusion) {
@@ -368,6 +464,10 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by brand for the promotion. The product filter attributes only applies
+   * when the products eligible for promotion product applicability `product_applicability`
+   * attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBrandInclusion() {
@@ -375,6 +475,10 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by brand for the promotion. The product filter attributes only applies
+   * when the products eligible for promotion product applicability `product_applicability`
+   * attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @param brandInclusion brandInclusion or {@code null} for none
    */
   public Attributes setBrandInclusion(java.util.List<java.lang.String> brandInclusion) {
@@ -383,9 +487,10 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The [coupon value type] (https://support.google.com/merchants/answer/13861986?ref_top
-   * ic=13773355&sjid=17642868584668136159-NC) attribute to signal the type of promotion that you
-   * are running. Depending on type of the selected coupon value [some attributes are
+   * Required. The [coupon value type]
+   * (https://support.google.com/merchants/answer/13861986?ref_topic=13773355) attribute to signal
+   * the type of promotion that you are running. Depending on type of the selected coupon value
+   * [some attributes are
    * required](https://support.google.com/merchants/answer/6393006?ref_topic=7322920).
    * @return value or {@code null} for none
    */
@@ -394,9 +499,10 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The [coupon value type] (https://support.google.com/merchants/answer/13861986?ref_top
-   * ic=13773355&sjid=17642868584668136159-NC) attribute to signal the type of promotion that you
-   * are running. Depending on type of the selected coupon value [some attributes are
+   * Required. The [coupon value type]
+   * (https://support.google.com/merchants/answer/13861986?ref_topic=13773355) attribute to signal
+   * the type of promotion that you are running. Depending on type of the selected coupon value
+   * [some attributes are
    * required](https://support.google.com/merchants/answer/6393006?ref_topic=7322920).
    * @param couponValueType couponValueType or {@code null} for none
    */
@@ -426,10 +532,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Event applicability for this promotion. When present, this field indicates you are
-   * creating a [sales
-   * event](https://support.google.com/merchants/answer/15523289?hl=en&sjid=11099988466404504696-NC)
-   * and not a product promotion. Exactly one of `product_applicability` or `event_applicability`
-   * must be set.
+   * creating a [sales event](https://support.google.com/merchants/answer/15523289) and not a
+   * product promotion. Exactly one of `product_applicability` or `event_applicability` must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventApplicability() {
@@ -438,10 +542,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Event applicability for this promotion. When present, this field indicates you are
-   * creating a [sales
-   * event](https://support.google.com/merchants/answer/15523289?hl=en&sjid=11099988466404504696-NC)
-   * and not a product promotion. Exactly one of `product_applicability` or `event_applicability`
-   * must be set.
+   * creating a [sales event](https://support.google.com/merchants/answer/15523289) and not a
+   * product promotion. Exactly one of `product_applicability` or `event_applicability` must be set.
    * @param eventApplicability eventApplicability or {@code null} for none
    */
   public Attributes setEventApplicability(java.lang.String eventApplicability) {
@@ -450,8 +552,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Free gift description](https://support.google.com/merchants/answer/13847245?ref_topi
-   * c=13773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Free gift
+   * description](https://support.google.com/merchants/answer/13847245?ref_topic=13773355) for the
+   * promotion.
    * @return value or {@code null} for none
    */
   public java.lang.String getFreeGiftDescription() {
@@ -459,8 +562,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Free gift description](https://support.google.com/merchants/answer/13847245?ref_topi
-   * c=13773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Free gift
+   * description](https://support.google.com/merchants/answer/13847245?ref_topic=13773355) for the
+   * promotion.
    * @param freeGiftDescription freeGiftDescription or {@code null} for none
    */
   public Attributes setFreeGiftDescription(java.lang.String freeGiftDescription) {
@@ -469,8 +573,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Free gift item ID](https://support.google.com/merchants/answer/13857152?ref_topic=13
-   * 773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Free gift item
+   * ID](https://support.google.com/merchants/answer/13857152?ref_topic=13773355) for the promotion.
    * @return value or {@code null} for none
    */
   public java.lang.String getFreeGiftItemId() {
@@ -478,8 +582,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Free gift item ID](https://support.google.com/merchants/answer/13857152?ref_topic=13
-   * 773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Free gift item
+   * ID](https://support.google.com/merchants/answer/13857152?ref_topic=13773355) for the promotion.
    * @param freeGiftItemId freeGiftItemId or {@code null} for none
    */
   public Attributes setFreeGiftItemId(java.lang.String freeGiftItemId) {
@@ -488,8 +592,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Free gift value](https://support.google.com/merchants/answer/13844477?ref_topic=1377
-   * 3355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Free gift
+   * value](https://support.google.com/merchants/answer/13844477?ref_topic=13773355) for the
+   * promotion.
    * @return value or {@code null} for none
    */
   public Price getFreeGiftValue() {
@@ -497,8 +602,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Free gift value](https://support.google.com/merchants/answer/13844477?ref_topic=1377
-   * 3355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Free gift
+   * value](https://support.google.com/merchants/answer/13844477?ref_topic=13773355) for the
+   * promotion.
    * @param freeGiftValue freeGiftValue or {@code null} for none
    */
   public Attributes setFreeGiftValue(Price freeGiftValue) {
@@ -507,6 +613,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Generic redemption code for the promotion. To be used with the `offerType` field and
+   * must meet the [minimum
+   * requirements](https://support.google.com/merchants/answer/13837405?ref_topic=13773355).
    * @return value or {@code null} for none
    */
   public java.lang.String getGenericRedemptionCode() {
@@ -514,6 +623,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Generic redemption code for the promotion. To be used with the `offerType` field and
+   * must meet the [minimum
+   * requirements](https://support.google.com/merchants/answer/13837405?ref_topic=13773355).
    * @param genericRedemptionCode genericRedemptionCode or {@code null} for none
    */
   public Attributes setGenericRedemptionCode(java.lang.String genericRedemptionCode) {
@@ -544,7 +656,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * Optional. A list of Google product categories for this promotion. Set if `EventApplicability`
    * is `SPECIFIC_CATEGORIES`. Up to 5 product categories can be specified. For more details on
    * eligible values for product categories, checkout the `google_product_category` attribute in the
-   * [Promotion data specification](https://support.google.com/merchants/answer/2906014?hl=en).
+   * [Promotion data specification](https://support.google.com/merchants/answer/2906014).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGoogleProductCategories() {
@@ -555,7 +667,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * Optional. A list of Google product categories for this promotion. Set if `EventApplicability`
    * is `SPECIFIC_CATEGORIES`. Up to 5 product categories can be specified. For more details on
    * eligible values for product categories, checkout the `google_product_category` attribute in the
-   * [Promotion data specification](https://support.google.com/merchants/answer/2906014?hl=en).
+   * [Promotion data specification](https://support.google.com/merchants/answer/2906014).
    * @param googleProductCategories googleProductCategories or {@code null} for none
    */
   public Attributes setGoogleProductCategories(java.util.List<java.lang.String> googleProductCategories) {
@@ -564,11 +676,12 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Product filter by [item group ID](https://support.google.com/merchants/answer/1383729
-   * 8?ref_topic=13773355&sjid=17642868584668136159-NC). The product filter attributes only applies
-   * when the products eligible for promotion product applicability `product_applicability`
-   * attribute is set to [specific_products](https://support.google.com/merchants/answer/13837299?re
-   * f_topic=13773355&sjid=17642868584668136159-NC). exclusion for the promotion.
+   * Optional. Product filter by [item group
+   * ID](https://support.google.com/merchants/answer/13837298?ref_topic=13773355). The product
+   * filter attributes only applies when the products eligible for promotion product applicability
+   * `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
+   * exclusion for the promotion.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getItemGroupIdExclusion() {
@@ -576,11 +689,12 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Product filter by [item group ID](https://support.google.com/merchants/answer/1383729
-   * 8?ref_topic=13773355&sjid=17642868584668136159-NC). The product filter attributes only applies
-   * when the products eligible for promotion product applicability `product_applicability`
-   * attribute is set to [specific_products](https://support.google.com/merchants/answer/13837299?re
-   * f_topic=13773355&sjid=17642868584668136159-NC). exclusion for the promotion.
+   * Optional. Product filter by [item group
+   * ID](https://support.google.com/merchants/answer/13837298?ref_topic=13773355). The product
+   * filter attributes only applies when the products eligible for promotion product applicability
+   * `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
+   * exclusion for the promotion.
    * @param itemGroupIdExclusion itemGroupIdExclusion or {@code null} for none
    */
   public Attributes setItemGroupIdExclusion(java.util.List<java.lang.String> itemGroupIdExclusion) {
@@ -589,6 +703,10 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by item group ID for the promotion. The product filter attributes only
+   * applies when the products eligible for promotion product applicability [product_applicability]
+   * attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getItemGroupIdInclusion() {
@@ -596,6 +714,10 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by item group ID for the promotion. The product filter attributes only
+   * applies when the products eligible for promotion product applicability [product_applicability]
+   * attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @param itemGroupIdInclusion itemGroupIdInclusion or {@code null} for none
    */
   public Attributes setItemGroupIdInclusion(java.util.List<java.lang.String> itemGroupIdInclusion) {
@@ -604,6 +726,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by [item ID
+   * exclusion](https://support.google.com/merchants/answer/13863524?ref_topic=13773355) for the
+   * promotion. The product filter attributes only applies when the products eligible for promotion
+   * product applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getItemIdExclusion() {
@@ -611,6 +738,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by [item ID
+   * exclusion](https://support.google.com/merchants/answer/13863524?ref_topic=13773355) for the
+   * promotion. The product filter attributes only applies when the products eligible for promotion
+   * product applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @param itemIdExclusion itemIdExclusion or {@code null} for none
    */
   public Attributes setItemIdExclusion(java.util.List<java.lang.String> itemIdExclusion) {
@@ -619,6 +751,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by [item
+   * ID](https://support.google.com/merchants/answer/13861565?ref_topic=13773355) for the promotion.
+   * The product filter attributes only applies when the products eligible for promotion product
+   * applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getItemIdInclusion() {
@@ -626,6 +763,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by [item
+   * ID](https://support.google.com/merchants/answer/13861565?ref_topic=13773355) for the promotion.
+   * The product filter attributes only applies when the products eligible for promotion product
+   * applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @param itemIdInclusion itemIdInclusion or {@code null} for none
    */
   public Attributes setItemIdInclusion(java.util.List<java.lang.String> itemIdInclusion) {
@@ -634,8 +776,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Maximum purchase quantity](https://support.google.com/merchants/answer/13861564?ref_
-   * topic=13773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Maximum purchase
+   * quantity](https://support.google.com/merchants/answer/13861564?ref_topic=13773355) for the
+   * promotion.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLimitQuantity() {
@@ -643,8 +786,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Maximum purchase quantity](https://support.google.com/merchants/answer/13861564?ref_
-   * topic=13773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Maximum purchase
+   * quantity](https://support.google.com/merchants/answer/13861564?ref_topic=13773355) for the
+   * promotion.
    * @param limitQuantity limitQuantity or {@code null} for none
    */
   public Attributes setLimitQuantity(java.lang.Long limitQuantity) {
@@ -672,8 +816,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. [Long title](https://support.google.com/merchants/answer/13838102?ref_topic=13773355&
-   * sjid=17642868584668136159-NC) for the promotion.
+   * Required. [Long title](https://support.google.com/merchants/answer/13838102?ref_topic=13773355)
+   * for the promotion.
    * @return value or {@code null} for none
    */
   public java.lang.String getLongTitle() {
@@ -681,8 +825,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. [Long title](https://support.google.com/merchants/answer/13838102?ref_topic=13773355&
-   * sjid=17642868584668136159-NC) for the promotion.
+   * Required. [Long title](https://support.google.com/merchants/answer/13838102?ref_topic=13773355)
+   * for the promotion.
    * @param longTitle longTitle or {@code null} for none
    */
   public Attributes setLongTitle(java.lang.String longTitle) {
@@ -710,8 +854,101 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Minimum purchase amount](https://support.google.com/merchants/answer/13837705?ref_to
-   * pic=13773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. Maximum money off amount for a promotion with `MONEY_OFF_RANGE` coupon value type. At
+   * least one of `min_money_off_amount` or `max_money_off_amount` must be present when the coupon
+   * value type is `MONEY_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * @return value or {@code null} for none
+   */
+  public Price getMaxMoneyOffAmount() {
+    return maxMoneyOffAmount;
+  }
+
+  /**
+   * Optional. Maximum money off amount for a promotion with `MONEY_OFF_RANGE` coupon value type. At
+   * least one of `min_money_off_amount` or `max_money_off_amount` must be present when the coupon
+   * value type is `MONEY_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * @param maxMoneyOffAmount maxMoneyOffAmount or {@code null} for none
+   */
+  public Attributes setMaxMoneyOffAmount(Price maxMoneyOffAmount) {
+    this.maxMoneyOffAmount = maxMoneyOffAmount;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum percent off for a promotion with `PERCENT_OFF_RANGE` coupon value type. At
+   * least one of `min_percent_off` or `max_percent_off` must be present when the coupon value type
+   * is `PERCENT_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxPercentOff() {
+    return maxPercentOff;
+  }
+
+  /**
+   * Optional. Maximum percent off for a promotion with `PERCENT_OFF_RANGE` coupon value type. At
+   * least one of `min_percent_off` or `max_percent_off` must be present when the coupon value type
+   * is `PERCENT_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * @param maxPercentOff maxPercentOff or {@code null} for none
+   */
+  public Attributes setMaxPercentOff(java.lang.Long maxPercentOff) {
+    this.maxPercentOff = maxPercentOff;
+    return this;
+  }
+
+  /**
+   * Optional. Minimum money off amount for a promotion with `MONEY_OFF_RANGE` coupon value type. At
+   * least one of `min_money_off_amount` or `max_money_off_amount` must be present when the coupon
+   * value type is `MONEY_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * @return value or {@code null} for none
+   */
+  public Price getMinMoneyOffAmount() {
+    return minMoneyOffAmount;
+  }
+
+  /**
+   * Optional. Minimum money off amount for a promotion with `MONEY_OFF_RANGE` coupon value type. At
+   * least one of `min_money_off_amount` or `max_money_off_amount` must be present when the coupon
+   * value type is `MONEY_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * @param minMoneyOffAmount minMoneyOffAmount or {@code null} for none
+   */
+  public Attributes setMinMoneyOffAmount(Price minMoneyOffAmount) {
+    this.minMoneyOffAmount = minMoneyOffAmount;
+    return this;
+  }
+
+  /**
+   * Optional. Minimum percent off for a promotion with `PERCENT_OFF_RANGE` coupon value type. At
+   * least one of `min_percent_off` or `max_percent_off` must be present when the coupon value type
+   * is `PERCENT_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMinPercentOff() {
+    return minPercentOff;
+  }
+
+  /**
+   * Optional. Minimum percent off for a promotion with `PERCENT_OFF_RANGE` coupon value type. At
+   * least one of `min_percent_off` or `max_percent_off` must be present when the coupon value type
+   * is `PERCENT_OFF_RANGE`. If neither is provided an
+   * `INVALID_PROMOTION_MISSING_BENEFIT_OR_RESTRICTION` error is returned.
+   * @param minPercentOff minPercentOff or {@code null} for none
+   */
+  public Attributes setMinPercentOff(java.lang.Long minPercentOff) {
+    this.minPercentOff = minPercentOff;
+    return this;
+  }
+
+  /**
+   * Optional. [Minimum purchase
+   * amount](https://support.google.com/merchants/answer/13837705?ref_topic=13773355) for the
+   * promotion.
    * @return value or {@code null} for none
    */
   public Price getMinimumPurchaseAmount() {
@@ -719,8 +956,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Minimum purchase amount](https://support.google.com/merchants/answer/13837705?ref_to
-   * pic=13773355&sjid=17642868584668136159-NC) for the promotion.
+   * Optional. [Minimum purchase
+   * amount](https://support.google.com/merchants/answer/13837705?ref_topic=13773355) for the
+   * promotion.
    * @param minimumPurchaseAmount minimumPurchaseAmount or {@code null} for none
    */
   public Attributes setMinimumPurchaseAmount(Price minimumPurchaseAmount) {
@@ -744,8 +982,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The [money off amount](https://support.google.com/merchants/answer/13838101?ref_topic
-   * =13773355&sjid=17642868584668136159-NC) offered in the promotion.
+   * Optional. The [money off
+   * amount](https://support.google.com/merchants/answer/13838101?ref_topic=13773355) offered in the
+   * promotion.
    * @return value or {@code null} for none
    */
   public Price getMoneyOffAmount() {
@@ -753,8 +992,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The [money off amount](https://support.google.com/merchants/answer/13838101?ref_topic
-   * =13773355&sjid=17642868584668136159-NC) offered in the promotion.
+   * Optional. The [money off
+   * amount](https://support.google.com/merchants/answer/13838101?ref_topic=13773355) offered in the
+   * promotion.
    * @param moneyOffAmount moneyOffAmount or {@code null} for none
    */
   public Attributes setMoneyOffAmount(Price moneyOffAmount) {
@@ -763,9 +1003,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. [Type](https://support.google.com/merchants/answer/13837405?ref_topic=13773355&sjid=1
-   * 7642868584668136159-NC) of the promotion. Use this attribute to indicate whether or not
-   * customers need a coupon code to redeem your promotion.
+   * Required. [Type](https://support.google.com/merchants/answer/13837405?ref_topic=13773355) of
+   * the promotion. Use this attribute to indicate whether or not customers need a coupon code to
+   * redeem your promotion.
    * @return value or {@code null} for none
    */
   public java.lang.String getOfferType() {
@@ -773,9 +1013,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. [Type](https://support.google.com/merchants/answer/13837405?ref_topic=13773355&sjid=1
-   * 7642868584668136159-NC) of the promotion. Use this attribute to indicate whether or not
-   * customers need a coupon code to redeem your promotion.
+   * Required. [Type](https://support.google.com/merchants/answer/13837405?ref_topic=13773355) of
+   * the promotion. Use this attribute to indicate whether or not customers need a coupon code to
+   * redeem your promotion.
    * @param offerType offerType or {@code null} for none
    */
   public Attributes setOfferType(java.lang.String offerType) {
@@ -805,9 +1045,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Applicability of the promotion to either all products or [only specific products](htt
-   * ps://support.google.com/merchants/answer/6396257?ref_topic=6396150&sjid=17642868584668136159-NC
-   * ). Exactly one of `product_applicability` or `event_applicability` must be set.
+   * Optional. Applicability of the promotion to either all products or [only specific
+   * products](https://support.google.com/merchants/answer/6396257). Exactly one of
+   * `product_applicability` or `event_applicability` must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductApplicability() {
@@ -815,9 +1055,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Applicability of the promotion to either all products or [only specific products](htt
-   * ps://support.google.com/merchants/answer/6396257?ref_topic=6396150&sjid=17642868584668136159-NC
-   * ). Exactly one of `product_applicability` or `event_applicability` must be set.
+   * Optional. Applicability of the promotion to either all products or [only specific
+   * products](https://support.google.com/merchants/answer/6396257). Exactly one of
+   * `product_applicability` or `event_applicability` must be set.
    * @param productApplicability productApplicability or {@code null} for none
    */
   public Attributes setProductApplicability(java.lang.String productApplicability) {
@@ -826,6 +1066,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by [product type
+   * exclusion](https://support.google.com/merchants/answer/13863746?ref_topic=13773355) for the
+   * promotion. The product filter attributes only applies when the products eligible for promotion
+   * product applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProductTypeExclusion() {
@@ -833,6 +1078,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by [product type
+   * exclusion](https://support.google.com/merchants/answer/13863746?ref_topic=13773355) for the
+   * promotion. The product filter attributes only applies when the products eligible for promotion
+   * product applicability `product_applicability` attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @param productTypeExclusion productTypeExclusion or {@code null} for none
    */
   public Attributes setProductTypeExclusion(java.util.List<java.lang.String> productTypeExclusion) {
@@ -841,6 +1091,10 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by product type for the promotion. The product filter attributes only
+   * applies when the products eligible for promotion product applicability `product_applicability`
+   * attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProductTypeInclusion() {
@@ -848,6 +1102,10 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Product filter by product type for the promotion. The product filter attributes only
+   * applies when the products eligible for promotion product applicability `product_applicability`
+   * attribute is set to
+   * [specific_products](https://support.google.com/merchants/answer/13837299?ref_topic=13773355).
    * @param productTypeInclusion productTypeInclusion or {@code null} for none
    */
   public Attributes setProductTypeInclusion(java.util.List<java.lang.String> productTypeInclusion) {
@@ -863,7 +1121,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * submitted the following values as destinations for your products: Shopping Actions, Surfaces
    * across Google, Local surfaces across Google. To represent these values use `FREE_LISTINGS`,
    * `FREE_LOCAL_LISTINGS`, `LOCAL_INVENTORY_ADS`. For more details see [Promotion
-   * destination](https://support.google.com/merchants/answer/13837465?sjid=5155774230887277618-NC)
+   * destination](https://support.google.com/merchants/answer/13837465)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPromotionDestinations() {
@@ -878,7 +1136,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * submitted the following values as destinations for your products: Shopping Actions, Surfaces
    * across Google, Local surfaces across Google. To represent these values use `FREE_LISTINGS`,
    * `FREE_LOCAL_LISTINGS`, `LOCAL_INVENTORY_ADS`. For more details see [Promotion
-   * destination](https://support.google.com/merchants/answer/13837465?sjid=5155774230887277618-NC)
+   * destination](https://support.google.com/merchants/answer/13837465)
    * @param promotionDestinations promotionDestinations or {@code null} for none
    */
   public Attributes setPromotionDestinations(java.util.List<java.lang.String> promotionDestinations) {
@@ -969,9 +1227,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A list of [regions](https://support.google.com/merchants/answer/15406457?hl=en&sjid=8
-   * 815806704218720187-NC#howregionswork) where the promotion is applicable. Must be set if
-   * `audience` is set to `LOCATION`.
+   * Optional. A list of
+   * [regions](https://support.google.com/merchants/answer/15406457?#howregionswork) where the
+   * promotion is applicable. Must be set if `audience` is set to `LOCATION`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegionIdInclusion() {
@@ -979,9 +1237,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A list of [regions](https://support.google.com/merchants/answer/15406457?hl=en&sjid=8
-   * 815806704218720187-NC#howregionswork) where the promotion is applicable. Must be set if
-   * `audience` is set to `LOCATION`.
+   * Optional. A list of
+   * [regions](https://support.google.com/merchants/answer/15406457?#howregionswork) where the
+   * promotion is applicable. Must be set if `audience` is set to `LOCATION`.
    * @param regionIdInclusion regionIdInclusion or {@code null} for none
    */
   public Attributes setRegionIdInclusion(java.util.List<java.lang.String> regionIdInclusion) {
@@ -1015,6 +1273,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. [Store codes to
+   * exclude](https://support.google.com/merchants/answer/13859586?ref_topic=13773355) for the
+   * promotion. The store filter attributes only applies when the `store_applicability` attribute is
+   * set to
+   * [specific_stores](https://support.google.com/merchants/answer/13857563?ref_topic=13773355).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getStoreCodesExclusion() {
@@ -1022,6 +1285,11 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. [Store codes to
+   * exclude](https://support.google.com/merchants/answer/13859586?ref_topic=13773355) for the
+   * promotion. The store filter attributes only applies when the `store_applicability` attribute is
+   * set to
+   * [specific_stores](https://support.google.com/merchants/answer/13857563?ref_topic=13773355).
    * @param storeCodesExclusion storeCodesExclusion or {@code null} for none
    */
   public Attributes setStoreCodesExclusion(java.util.List<java.lang.String> storeCodesExclusion) {
@@ -1030,12 +1298,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Store codes to include](https://support.google.com/merchants/answer/13857470?ref_top
-   * ic=13773355&sjid=17642868584668136159-NC) for the promotion. The store filter attributes only
-   * applies when the `store_applicability` attribute is set to [specific_stores](https://support.go
-   * ogle.com/merchants/answer/13857563?ref_topic=13773355&sjid=17642868584668136159-NC). Store code
-   * (the store ID from your Business Profile) of the physical store the product is sold in. See the
-   * [Local product inventory data
+   * Optional. [Store codes to
+   * include](https://support.google.com/merchants/answer/13857470?ref_topic=13773355) for the
+   * promotion. The store filter attributes only applies when the `store_applicability` attribute is
+   * set to
+   * [specific_stores](https://support.google.com/merchants/answer/13857563?ref_topic=13773355).
+   * Store code (the store ID from your Business Profile) of the physical store the product is sold
+   * in. See the [Local product inventory data
    * specification](https://support.google.com/merchants/answer/3061342) for more information.
    * @return value or {@code null} for none
    */
@@ -1044,12 +1313,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Store codes to include](https://support.google.com/merchants/answer/13857470?ref_top
-   * ic=13773355&sjid=17642868584668136159-NC) for the promotion. The store filter attributes only
-   * applies when the `store_applicability` attribute is set to [specific_stores](https://support.go
-   * ogle.com/merchants/answer/13857563?ref_topic=13773355&sjid=17642868584668136159-NC). Store code
-   * (the store ID from your Business Profile) of the physical store the product is sold in. See the
-   * [Local product inventory data
+   * Optional. [Store codes to
+   * include](https://support.google.com/merchants/answer/13857470?ref_topic=13773355) for the
+   * promotion. The store filter attributes only applies when the `store_applicability` attribute is
+   * set to
+   * [specific_stores](https://support.google.com/merchants/answer/13857563?ref_topic=13773355).
+   * Store code (the store ID from your Business Profile) of the physical store the product is sold
+   * in. See the [Local product inventory data
    * specification](https://support.google.com/merchants/answer/3061342) for more information.
    * @param storeCodesInclusion storeCodesInclusion or {@code null} for none
    */

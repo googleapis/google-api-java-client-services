@@ -37,6 +37,14 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponseVideo extends co
   private java.lang.String bytesBase64Encoded;
 
   /**
+   * Optional metadata returned from experimental requests. Likely only includes the rewritten
+   * prompt chunks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperiments experimentsMetadata;
+
+  /**
    * Cloud Storage URI where the generated video is written.
    * The value may be {@code null}.
    */
@@ -64,6 +72,25 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponseVideo extends co
    */
   public CloudAiLargeModelsVisionGenerateVideoResponseVideo setBytesBase64Encoded(java.lang.String bytesBase64Encoded) {
     this.bytesBase64Encoded = bytesBase64Encoded;
+    return this;
+  }
+
+  /**
+   * Optional metadata returned from experimental requests. Likely only includes the rewritten
+   * prompt chunks.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments getExperimentsMetadata() {
+    return experimentsMetadata;
+  }
+
+  /**
+   * Optional metadata returned from experimental requests. Likely only includes the rewritten
+   * prompt chunks.
+   * @param experimentsMetadata experimentsMetadata or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoResponseVideo setExperimentsMetadata(CloudAiLargeModelsVisionGenerateVideoExperiments experimentsMetadata) {
+    this.experimentsMetadata = experimentsMetadata;
     return this;
   }
 

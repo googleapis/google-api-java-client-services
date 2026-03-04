@@ -27,14 +27,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData extends com.google.api.client.json.GenericJson {
+public final class LegacyAgentData extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Agent configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig agentConfig;
+  private LegacyAgentConfig agentConfig;
 
   /**
    * Optional. The static Agent Configuration. This map defines the graph structure of the agent
@@ -43,12 +43,12 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig> agents;
+  private java.util.Map<String, LegacyAgentConfig> agents;
 
   static {
-    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider LegacyAgentConfig used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig.class);
+    com.google.api.client.util.Data.nullOf(LegacyAgentConfig.class);
   }
 
   /**
@@ -89,11 +89,17 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1EvaluationInstanceAgentDataConversationTurn> turns;
 
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1EvaluationInstanceAgentDataConversationTurn used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentDataConversationTurn.class);
+  }
+
   /**
    * Optional. Agent configuration.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig getAgentConfig() {
+  public LegacyAgentConfig getAgentConfig() {
     return agentConfig;
   }
 
@@ -101,7 +107,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
    * Optional. Agent configuration.
    * @param agentConfig agentConfig or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData setAgentConfig(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig agentConfig) {
+  public LegacyAgentData setAgentConfig(LegacyAgentConfig agentConfig) {
     this.agentConfig = agentConfig;
     return this;
   }
@@ -112,7 +118,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
    * of the agent (tools, instructions, sub-agents).
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig> getAgents() {
+  public java.util.Map<String, LegacyAgentConfig> getAgents() {
     return agents;
   }
 
@@ -122,7 +128,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
    * of the agent (tools, instructions, sub-agents).
    * @param agents agents or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData setAgents(java.util.Map<String, GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig> agents) {
+  public LegacyAgentData setAgents(java.util.Map<String, LegacyAgentConfig> agents) {
     this.agents = agents;
     return this;
   }
@@ -141,7 +147,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
    * use `agents.developer_instruction` or `turns.events.active_instruction` instead.
    * @param developerInstruction developerInstruction or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData setDeveloperInstruction(GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData developerInstruction) {
+  public LegacyAgentData setDeveloperInstruction(GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData developerInstruction) {
     this.developerInstruction = developerInstruction;
     return this;
   }
@@ -158,7 +164,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
    * A list of events.
    * @param events events or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData setEvents(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentDataEvents events) {
+  public LegacyAgentData setEvents(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentDataEvents events) {
     this.events = events;
     return this;
   }
@@ -175,7 +181,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
    * List of tools.
    * @param tools tools or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData setTools(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentDataTools tools) {
+  public LegacyAgentData setTools(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentDataTools tools) {
     this.tools = tools;
     return this;
   }
@@ -194,7 +200,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
    * description, parameters and required parameters.
    * @param toolsText toolsText or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData setToolsText(java.lang.String toolsText) {
+  public LegacyAgentData setToolsText(java.lang.String toolsText) {
     this.toolsText = toolsText;
     return this;
   }
@@ -213,19 +219,19 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData exten
    * execution cycle (e.g., User Input -> Agent Response).
    * @param turns turns or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData setTurns(java.util.List<GoogleCloudAiplatformV1beta1EvaluationInstanceAgentDataConversationTurn> turns) {
+  public LegacyAgentData setTurns(java.util.List<GoogleCloudAiplatformV1beta1EvaluationInstanceAgentDataConversationTurn> turns) {
     this.turns = turns;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData) super.set(fieldName, value);
+  public LegacyAgentData set(String fieldName, Object value) {
+    return (LegacyAgentData) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData clone() {
-    return (GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData) super.clone();
+  public LegacyAgentData clone() {
+    return (LegacyAgentData) super.clone();
   }
 
 }

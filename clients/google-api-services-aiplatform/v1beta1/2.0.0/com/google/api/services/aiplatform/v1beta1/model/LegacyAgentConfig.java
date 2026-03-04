@@ -27,7 +27,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig extends com.google.api.client.json.GenericJson {
+public final class LegacyAgentConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Unique identifier of the agent. This ID is used to refer to this agent, e.g., in
@@ -98,7 +98,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig ext
    * AgentEvent.author, or in the `sub_agents` field. It must be unique within the `agents` map.
    * @param agentId agentId or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setAgentId(java.lang.String agentId) {
+  public LegacyAgentConfig setAgentId(java.lang.String agentId) {
     this.agentId = agentId;
     return this;
   }
@@ -117,7 +117,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig ext
    * Useful for the autorater to understand the expected behavior of the agent.
    * @param agentType agentType or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setAgentType(java.lang.String agentType) {
+  public LegacyAgentConfig setAgentType(java.lang.String agentType) {
     this.agentType = agentType;
     return this;
   }
@@ -136,7 +136,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig ext
    * evaluating if the agent is routing tasks correctly.
    * @param description description or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setDescription(java.lang.String description) {
+  public LegacyAgentConfig setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
@@ -155,7 +155,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig ext
    * prompt template used with the `AgentEvent.state_delta` field.
    * @param developerInstruction developerInstruction or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setDeveloperInstruction(GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData developerInstruction) {
+  public LegacyAgentConfig setDeveloperInstruction(GoogleCloudAiplatformV1beta1EvaluationInstanceInstanceData developerInstruction) {
     this.developerInstruction = developerInstruction;
     return this;
   }
@@ -174,7 +174,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig ext
    * directed edges in the agent system graph topology.
    * @param subAgents subAgents or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setSubAgents(java.util.List<java.lang.String> subAgents) {
+  public LegacyAgentConfig setSubAgents(java.util.List<java.lang.String> subAgents) {
     this.subAgents = subAgents;
     return this;
   }
@@ -191,7 +191,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig ext
    * List of tools.
    * @param tools tools or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setTools(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfigTools tools) {
+  public LegacyAgentConfig setTools(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfigTools tools) {
     this.tools = tools;
     return this;
   }
@@ -210,19 +210,19 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig ext
    * description, parameters and required parameters.
    * @param toolsText toolsText or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig setToolsText(java.lang.String toolsText) {
+  public LegacyAgentConfig setToolsText(java.lang.String toolsText) {
     this.toolsText = toolsText;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig) super.set(fieldName, value);
+  public LegacyAgentConfig set(String fieldName, Object value) {
+    return (LegacyAgentConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig clone() {
-    return (GoogleCloudAiplatformV1beta1EvaluationInstanceAgentConfig) super.clone();
+  public LegacyAgentConfig clone() {
+    return (LegacyAgentConfig) super.clone();
   }
 
 }

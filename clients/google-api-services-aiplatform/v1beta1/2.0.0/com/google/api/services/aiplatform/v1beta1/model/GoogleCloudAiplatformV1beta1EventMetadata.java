@@ -53,6 +53,13 @@ public final class GoogleCloudAiplatformV1beta1EventMetadata extends com.google.
   private GoogleCloudAiplatformV1beta1GroundingMetadata groundingMetadata;
 
   /**
+   * Optional. Audio transcription of user input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1Transcription inputTranscription;
+
+  /**
    * Optional. Flag indicating that LLM was interrupted when generating the content. Usually it's
    * due to user interruption during a bidi streaming.
    * The value may be {@code null}.
@@ -67,6 +74,13 @@ public final class GoogleCloudAiplatformV1beta1EventMetadata extends com.google.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> longRunningToolIds;
+
+  /**
+   * Optional. Audio transcription of model output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1Transcription outputTranscription;
 
   /**
    * Optional. Indicates whether the text content is part of a unfinished text stream. Only used for
@@ -140,6 +154,23 @@ public final class GoogleCloudAiplatformV1beta1EventMetadata extends com.google.
   }
 
   /**
+   * Optional. Audio transcription of user input.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Transcription getInputTranscription() {
+    return inputTranscription;
+  }
+
+  /**
+   * Optional. Audio transcription of user input.
+   * @param inputTranscription inputTranscription or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EventMetadata setInputTranscription(GoogleCloudAiplatformV1beta1Transcription inputTranscription) {
+    this.inputTranscription = inputTranscription;
+    return this;
+  }
+
+  /**
    * Optional. Flag indicating that LLM was interrupted when generating the content. Usually it's
    * due to user interruption during a bidi streaming.
    * @return value or {@code null} for none
@@ -174,6 +205,23 @@ public final class GoogleCloudAiplatformV1beta1EventMetadata extends com.google.
    */
   public GoogleCloudAiplatformV1beta1EventMetadata setLongRunningToolIds(java.util.List<java.lang.String> longRunningToolIds) {
     this.longRunningToolIds = longRunningToolIds;
+    return this;
+  }
+
+  /**
+   * Optional. Audio transcription of model output.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Transcription getOutputTranscription() {
+    return outputTranscription;
+  }
+
+  /**
+   * Optional. Audio transcription of model output.
+   * @param outputTranscription outputTranscription or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EventMetadata setOutputTranscription(GoogleCloudAiplatformV1beta1Transcription outputTranscription) {
+    this.outputTranscription = outputTranscription;
     return this;
   }
 

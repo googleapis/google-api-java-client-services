@@ -35,14 +35,14 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData agentData;
+  private LegacyAgentData agentData;
 
   /**
    * Optional. Data used for agent evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData agentEvalData;
+  private LegacyAgentData agentEvalData;
 
   /**
    * Optional. Other data used to populate placeholders based on their key.
@@ -85,7 +85,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
    * Optional. Deprecated. Use `agent_eval_data` instead. Data used for agent evaluation.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData getAgentData() {
+  public LegacyAgentData getAgentData() {
     return agentData;
   }
 
@@ -93,7 +93,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
    * Optional. Deprecated. Use `agent_eval_data` instead. Data used for agent evaluation.
    * @param agentData agentData or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstance setAgentData(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData agentData) {
+  public GoogleCloudAiplatformV1beta1EvaluationInstance setAgentData(LegacyAgentData agentData) {
     this.agentData = agentData;
     return this;
   }
@@ -102,7 +102,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
    * Optional. Data used for agent evaluation.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData getAgentEvalData() {
+  public LegacyAgentData getAgentEvalData() {
     return agentEvalData;
   }
 
@@ -110,7 +110,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
    * Optional. Data used for agent evaluation.
    * @param agentEvalData agentEvalData or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationInstance setAgentEvalData(GoogleCloudAiplatformV1beta1EvaluationInstanceAgentData agentEvalData) {
+  public GoogleCloudAiplatformV1beta1EvaluationInstance setAgentEvalData(LegacyAgentData agentEvalData) {
     this.agentEvalData = agentEvalData;
     return this;
   }

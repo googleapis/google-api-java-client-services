@@ -46,6 +46,13 @@ public final class GoogleCloudAiplatformV1ToolGoogleSearch extends com.google.ap
   private java.util.List<java.lang.String> excludeDomains;
 
   /**
+   * Optional. The set of search types to enable. If not set, web search is enabled by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ToolGoogleSearchSearchTypes searchTypes;
+
+  /**
    * Optional. Sites with confidence level chosen & above this value will be blocked from the search
    * results.
    * @return value or {@code null} for none
@@ -80,6 +87,23 @@ public final class GoogleCloudAiplatformV1ToolGoogleSearch extends com.google.ap
    */
   public GoogleCloudAiplatformV1ToolGoogleSearch setExcludeDomains(java.util.List<java.lang.String> excludeDomains) {
     this.excludeDomains = excludeDomains;
+    return this;
+  }
+
+  /**
+   * Optional. The set of search types to enable. If not set, web search is enabled by default.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ToolGoogleSearchSearchTypes getSearchTypes() {
+    return searchTypes;
+  }
+
+  /**
+   * Optional. The set of search types to enable. If not set, web search is enabled by default.
+   * @param searchTypes searchTypes or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ToolGoogleSearch setSearchTypes(GoogleCloudAiplatformV1ToolGoogleSearchSearchTypes searchTypes) {
+    this.searchTypes = searchTypes;
     return this;
   }
 

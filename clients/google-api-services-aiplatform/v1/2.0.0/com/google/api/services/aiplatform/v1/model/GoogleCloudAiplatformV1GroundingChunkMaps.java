@@ -47,6 +47,13 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
   private java.lang.String placeId;
 
   /**
+   * Output only. Route information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GroundingChunkMapsRoute route;
+
+  /**
    * The text of the place answer.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class GoogleCloudAiplatformV1GroundingChunkMaps extends com.google.
    */
   public GoogleCloudAiplatformV1GroundingChunkMaps setPlaceId(java.lang.String placeId) {
     this.placeId = placeId;
+    return this;
+  }
+
+  /**
+   * Output only. Route information.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingChunkMapsRoute getRoute() {
+    return route;
+  }
+
+  /**
+   * Output only. Route information.
+   * @param route route or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingChunkMaps setRoute(GoogleCloudAiplatformV1GroundingChunkMapsRoute route) {
+    this.route = route;
     return this;
   }
 

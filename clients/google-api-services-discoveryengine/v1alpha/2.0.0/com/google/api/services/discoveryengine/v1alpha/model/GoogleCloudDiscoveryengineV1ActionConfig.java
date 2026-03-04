@@ -69,6 +69,14 @@ public final class GoogleCloudDiscoveryengineV1ActionConfig extends com.google.a
   private java.lang.Boolean useStaticSecrets;
 
   /**
+   * Optional. Mapping from operation name to the list of scopes. Only be populated if there are
+   * user specified scopes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDiscoveryengineV1ActionConfigScopeList> userDefinedScopesMapping;
+
+  /**
    * Optional. Action parameters in structured json format.
    * @return value or {@code null} for none
    */
@@ -158,6 +166,25 @@ public final class GoogleCloudDiscoveryengineV1ActionConfig extends com.google.a
    */
   public GoogleCloudDiscoveryengineV1ActionConfig setUseStaticSecrets(java.lang.Boolean useStaticSecrets) {
     this.useStaticSecrets = useStaticSecrets;
+    return this;
+  }
+
+  /**
+   * Optional. Mapping from operation name to the list of scopes. Only be populated if there are
+   * user specified scopes.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDiscoveryengineV1ActionConfigScopeList> getUserDefinedScopesMapping() {
+    return userDefinedScopesMapping;
+  }
+
+  /**
+   * Optional. Mapping from operation name to the list of scopes. Only be populated if there are
+   * user specified scopes.
+   * @param userDefinedScopesMapping userDefinedScopesMapping or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ActionConfig setUserDefinedScopesMapping(java.util.Map<String, GoogleCloudDiscoveryengineV1ActionConfigScopeList> userDefinedScopesMapping) {
+    this.userDefinedScopesMapping = userDefinedScopesMapping;
     return this;
   }
 

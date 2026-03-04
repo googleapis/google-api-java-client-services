@@ -141,6 +141,16 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
   private java.lang.String engine;
 
   /**
+   * Optional. Represents the entity for customers that may run multiple different entities,
+   * domains, sites or regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`,
+   * `youtube.com`, etc. We recommend that you set `entity` to get better per-entity search,
+   * completion, and prediction results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entity;
+
+  /**
    * Only required for UserEventService.ImportUserEvents method. Timestamp of when the user event
    * happened.
    * The value may be {@code null}.
@@ -491,6 +501,29 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
    */
   public GoogleCloudDiscoveryengineV1UserEvent setEngine(java.lang.String engine) {
     this.engine = engine;
+    return this;
+  }
+
+  /**
+   * Optional. Represents the entity for customers that may run multiple different entities,
+   * domains, sites or regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`,
+   * `youtube.com`, etc. We recommend that you set `entity` to get better per-entity search,
+   * completion, and prediction results.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntity() {
+    return entity;
+  }
+
+  /**
+   * Optional. Represents the entity for customers that may run multiple different entities,
+   * domains, sites or regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`,
+   * `youtube.com`, etc. We recommend that you set `entity` to get better per-entity search,
+   * completion, and prediction results.
+   * @param entity entity or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1UserEvent setEntity(java.lang.String entity) {
+    this.entity = entity;
     return this;
   }
 

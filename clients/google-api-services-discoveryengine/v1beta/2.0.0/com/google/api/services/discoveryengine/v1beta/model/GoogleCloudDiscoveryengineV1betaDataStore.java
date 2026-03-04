@@ -113,6 +113,13 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   private GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig documentProcessingConfig;
 
   /**
+   * Optional. If set, this DataStore is a federated search DataStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaDataStoreFederatedSearchConfig federatedSearchConfig;
+
+  /**
    * Optional. Configuration for `HEALTHCARE_FHIR` vertical.
    * The value may be {@code null}.
    */
@@ -407,6 +414,23 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaDataStore setDocumentProcessingConfig(GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig documentProcessingConfig) {
     this.documentProcessingConfig = documentProcessingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. If set, this DataStore is a federated search DataStore.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStoreFederatedSearchConfig getFederatedSearchConfig() {
+    return federatedSearchConfig;
+  }
+
+  /**
+   * Optional. If set, this DataStore is a federated search DataStore.
+   * @param federatedSearchConfig federatedSearchConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setFederatedSearchConfig(GoogleCloudDiscoveryengineV1betaDataStoreFederatedSearchConfig federatedSearchConfig) {
+    this.federatedSearchConfig = federatedSearchConfig;
     return this;
   }
 

@@ -129,8 +129,18 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy dataProtectionPolicy;
 
   /**
-   * Required. The name of the data source. Supported values: `salesforce`, `jira`, `confluence`,
-   * `bigquery`.
+   * Required. The identifier for the data source. This is a partial list of supported connectors.
+   * Please refer to the
+   * [documentation](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/introduction-
+   * to-connectors-and-data-stores) for the full list of connectors. Supported first-party
+   * connectors include: * `gcs` * `bigquery` * `gcp_fhir` * `google_mail` * `google_drive` *
+   * `google_calendar` * `google_chat` Supported third-party connectors include: Generally available
+   * (GA) connectors: * `onedrive` * `outlook` * `confluence` * `jira` * `servicenow` * `sharepoint`
+   * Preview connectors: * `asana` * `azure_active_directory` * `box` * `canva` *
+   * `confluence_server` * `custom_connector` * `docusign` * `dropbox` * `dynamics365` * `github` *
+   * `gitlab` * `hubspot` * `jira_server` * `linear` * `native_cloud_identity` * `notion` * `okta` *
+   * `pagerduty` * `peoplesoft` * `salesforce` * `shopify` * `slack` * `snowflake` * `teams` *
+   * `trello` * `workday` * `zendesk`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -593,8 +603,18 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   }
 
   /**
-   * Required. The name of the data source. Supported values: `salesforce`, `jira`, `confluence`,
-   * `bigquery`.
+   * Required. The identifier for the data source. This is a partial list of supported connectors.
+   * Please refer to the
+   * [documentation](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/introduction-
+   * to-connectors-and-data-stores) for the full list of connectors. Supported first-party
+   * connectors include: * `gcs` * `bigquery` * `gcp_fhir` * `google_mail` * `google_drive` *
+   * `google_calendar` * `google_chat` Supported third-party connectors include: Generally available
+   * (GA) connectors: * `onedrive` * `outlook` * `confluence` * `jira` * `servicenow` * `sharepoint`
+   * Preview connectors: * `asana` * `azure_active_directory` * `box` * `canva` *
+   * `confluence_server` * `custom_connector` * `docusign` * `dropbox` * `dynamics365` * `github` *
+   * `gitlab` * `hubspot` * `jira_server` * `linear` * `native_cloud_identity` * `notion` * `okta` *
+   * `pagerduty` * `peoplesoft` * `salesforce` * `shopify` * `slack` * `snowflake` * `teams` *
+   * `trello` * `workday` * `zendesk`
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSource() {
@@ -602,8 +622,18 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   }
 
   /**
-   * Required. The name of the data source. Supported values: `salesforce`, `jira`, `confluence`,
-   * `bigquery`.
+   * Required. The identifier for the data source. This is a partial list of supported connectors.
+   * Please refer to the
+   * [documentation](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/introduction-
+   * to-connectors-and-data-stores) for the full list of connectors. Supported first-party
+   * connectors include: * `gcs` * `bigquery` * `gcp_fhir` * `google_mail` * `google_drive` *
+   * `google_calendar` * `google_chat` Supported third-party connectors include: Generally available
+   * (GA) connectors: * `onedrive` * `outlook` * `confluence` * `jira` * `servicenow` * `sharepoint`
+   * Preview connectors: * `asana` * `azure_active_directory` * `box` * `canva` *
+   * `confluence_server` * `custom_connector` * `docusign` * `dropbox` * `dynamics365` * `github` *
+   * `gitlab` * `hubspot` * `jira_server` * `linear` * `native_cloud_identity` * `notion` * `okta` *
+   * `pagerduty` * `peoplesoft` * `salesforce` * `shopify` * `slack` * `snowflake` * `teams` *
+   * `trello` * `workday` * `zendesk`
    * @param dataSource dataSource or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setDataSource(java.lang.String dataSource) {

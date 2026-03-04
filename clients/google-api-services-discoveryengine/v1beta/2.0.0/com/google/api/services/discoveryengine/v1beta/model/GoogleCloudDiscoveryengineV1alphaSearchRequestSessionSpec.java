@@ -17,9 +17,7 @@
 package com.google.api.services.discoveryengine.v1beta.model;
 
 /**
- * Session specification. Multi-turn Search feature is currently at private GA stage. Please use
- * v1alpha or v1beta version instead before we launch this feature to public GA. Or ask for
- * allowlisting through Google Support team.
+ * Session specification.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:

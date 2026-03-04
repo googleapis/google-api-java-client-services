@@ -51,7 +51,9 @@ public final class GoogleCloudDiscoveryengineV1alphaUserInfo extends com.google.
    * name. Don't set for anonymous users. Always use a hashed value for this ID. Don't set the field
    * to the same fixed ID for different users. This mixes the event history of those users together,
    * which results in degraded model quality. The field must be a UTF-8 encoded string with a length
-   * limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. Represents an
+   * opaque ID to the Search API. The Search API doesn't interpret the value in any way. This field
+   * is used to associate events with a user across sessions if the events are being uploaded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +104,9 @@ public final class GoogleCloudDiscoveryengineV1alphaUserInfo extends com.google.
    * name. Don't set for anonymous users. Always use a hashed value for this ID. Don't set the field
    * to the same fixed ID for different users. This mixes the event history of those users together,
    * which results in degraded model quality. The field must be a UTF-8 encoded string with a length
-   * limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. Represents an
+   * opaque ID to the Search API. The Search API doesn't interpret the value in any way. This field
+   * is used to associate events with a user across sessions if the events are being uploaded.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -114,7 +118,9 @@ public final class GoogleCloudDiscoveryengineV1alphaUserInfo extends com.google.
    * name. Don't set for anonymous users. Always use a hashed value for this ID. Don't set the field
    * to the same fixed ID for different users. This mixes the event history of those users together,
    * which results in degraded model quality. The field must be a UTF-8 encoded string with a length
-   * limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. Represents an
+   * opaque ID to the Search API. The Search API doesn't interpret the value in any way. This field
+   * is used to associate events with a user across sessions if the events are being uploaded.
    * @param userId userId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaUserInfo setUserId(java.lang.String userId) {

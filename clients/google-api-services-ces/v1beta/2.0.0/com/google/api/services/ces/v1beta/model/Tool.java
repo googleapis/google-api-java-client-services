@@ -112,10 +112,10 @@ public final class Tool extends com.google.api.client.json.GenericJson {
   private McpTool mcpTool;
 
   /**
-   * Identifier. The unique identifier of the tool. Format: -
-   * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone tools.
+   * Identifier. The resource name of the tool. Format: *
+   * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone tools. *
    * `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}` for tools
-   * retrieved from a toolset. These tools are dynamic and output-only, they cannot be referenced
+   * retrieved from a toolset. These tools are dynamic and output-only; they cannot be referenced
    * directly where a tool is expected.
    * The value may be {@code null}.
    */
@@ -360,10 +360,10 @@ public final class Tool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The unique identifier of the tool. Format: -
-   * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone tools.
+   * Identifier. The resource name of the tool. Format: *
+   * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone tools. *
    * `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}` for tools
-   * retrieved from a toolset. These tools are dynamic and output-only, they cannot be referenced
+   * retrieved from a toolset. These tools are dynamic and output-only; they cannot be referenced
    * directly where a tool is expected.
    * @return value or {@code null} for none
    */
@@ -372,10 +372,10 @@ public final class Tool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The unique identifier of the tool. Format: -
-   * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone tools.
+   * Identifier. The resource name of the tool. Format: *
+   * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone tools. *
    * `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}` for tools
-   * retrieved from a toolset. These tools are dynamic and output-only, they cannot be referenced
+   * retrieved from a toolset. These tools are dynamic and output-only; they cannot be referenced
    * directly where a tool is expected.
    * @param name name or {@code null} for none
    */

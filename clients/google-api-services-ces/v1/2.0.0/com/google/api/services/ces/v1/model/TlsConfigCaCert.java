@@ -35,8 +35,9 @@ public final class TlsConfigCaCert extends com.google.api.client.json.GenericJso
    * overrides the default SSL trust store. If this is empty or unspecified, CES will use Google's
    * default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are
    * signed with "subject alt name". For instance a certificate can be self-signed using the
-   * following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \
-   * -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
+   * following command: ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
+   * example.com.key \ -out example.com.crt \ -extfile <(printf
+   * "\nsubjectAltName='DNS:www.example.com'") ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +56,9 @@ public final class TlsConfigCaCert extends com.google.api.client.json.GenericJso
    * overrides the default SSL trust store. If this is empty or unspecified, CES will use Google's
    * default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are
    * signed with "subject alt name". For instance a certificate can be self-signed using the
-   * following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \
-   * -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
+   * following command: ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
+   * example.com.key \ -out example.com.crt \ -extfile <(printf
+   * "\nsubjectAltName='DNS:www.example.com'") ```
    * @see #decodeCert()
    * @return value or {@code null} for none
    */
@@ -69,8 +71,9 @@ public final class TlsConfigCaCert extends com.google.api.client.json.GenericJso
    * overrides the default SSL trust store. If this is empty or unspecified, CES will use Google's
    * default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are
    * signed with "subject alt name". For instance a certificate can be self-signed using the
-   * following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \
-   * -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
+   * following command: ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
+   * example.com.key \ -out example.com.crt \ -extfile <(printf
+   * "\nsubjectAltName='DNS:www.example.com'") ```
    * @see #getCert()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -85,8 +88,9 @@ public final class TlsConfigCaCert extends com.google.api.client.json.GenericJso
    * overrides the default SSL trust store. If this is empty or unspecified, CES will use Google's
    * default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are
    * signed with "subject alt name". For instance a certificate can be self-signed using the
-   * following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \
-   * -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
+   * following command: ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
+   * example.com.key \ -out example.com.crt \ -extfile <(printf
+   * "\nsubjectAltName='DNS:www.example.com'") ```
    * @see #encodeCert()
    * @param cert cert or {@code null} for none
    */
@@ -100,8 +104,9 @@ public final class TlsConfigCaCert extends com.google.api.client.json.GenericJso
    * overrides the default SSL trust store. If this is empty or unspecified, CES will use Google's
    * default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are
    * signed with "subject alt name". For instance a certificate can be self-signed using the
-   * following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \
-   * -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
+   * following command: ``` openssl x509 -req -days 200 -in example.com.csr \ -signkey
+   * example.com.key \ -out example.com.crt \ -extfile <(printf
+   * "\nsubjectAltName='DNS:www.example.com'") ```
    * @see #setCert()
    *
    * <p>

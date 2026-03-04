@@ -38,6 +38,13 @@ public final class Chunk extends com.google.api.client.json.GenericJson {
   private AgentTransfer agentTransfer;
 
   /**
+   * Optional. Blob data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Blob blob;
+
+  /**
    * A struct represents default variables at the start of the conversation, keyed by variable
    * names.
    * The value may be {@code null}.
@@ -108,6 +115,23 @@ public final class Chunk extends com.google.api.client.json.GenericJson {
    */
   public Chunk setAgentTransfer(AgentTransfer agentTransfer) {
     this.agentTransfer = agentTransfer;
+    return this;
+  }
+
+  /**
+   * Optional. Blob data.
+   * @return value or {@code null} for none
+   */
+  public Blob getBlob() {
+    return blob;
+  }
+
+  /**
+   * Optional. Blob data.
+   * @param blob blob or {@code null} for none
+   */
+  public Chunk setBlob(Blob blob) {
+    this.blob = blob;
     return this;
   }
 

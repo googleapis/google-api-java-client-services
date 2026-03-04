@@ -40,7 +40,8 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The entry agent to handle the session. If not specified, the session will be handled
-   * by the root agent of the app. Format: `projects/{project}/locations/{location}/agents/{agent}`
+   * by the root agent of the app. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/agents/{agent}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,6 +98,14 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String timeZone;
 
   /**
+   * Optional. Whether to use tool fakes for the session. If this field is set, the agent will
+   * attempt use tool fakes instead of calling the real tools.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useToolFakes;
+
+  /**
    * Optional. The deployment of the app to use for the session. Format:
    * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
    * @return value or {@code null} for none
@@ -117,7 +126,8 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The entry agent to handle the session. If not specified, the session will be handled
-   * by the root agent of the app. Format: `projects/{project}/locations/{location}/agents/{agent}`
+   * by the root agent of the app. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/agents/{agent}`
    * @return value or {@code null} for none
    */
   public java.lang.String getEntryAgent() {
@@ -126,7 +136,8 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The entry agent to handle the session. If not specified, the session will be handled
-   * by the root agent of the app. Format: `projects/{project}/locations/{location}/agents/{agent}`
+   * by the root agent of the app. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/agents/{agent}`
    * @param entryAgent entryAgent or {@code null} for none
    */
   public SessionConfig setEntryAgent(java.lang.String entryAgent) {
@@ -234,6 +245,25 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
    */
   public SessionConfig setTimeZone(java.lang.String timeZone) {
     this.timeZone = timeZone;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to use tool fakes for the session. If this field is set, the agent will
+   * attempt use tool fakes instead of calling the real tools.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseToolFakes() {
+    return useToolFakes;
+  }
+
+  /**
+   * Optional. Whether to use tool fakes for the session. If this field is set, the agent will
+   * attempt use tool fakes instead of calling the real tools.
+   * @param useToolFakes useToolFakes or {@code null} for none
+   */
+  public SessionConfig setUseToolFakes(java.lang.Boolean useToolFakes) {
+    this.useToolFakes = useToolFakes;
     return this;
   }
 

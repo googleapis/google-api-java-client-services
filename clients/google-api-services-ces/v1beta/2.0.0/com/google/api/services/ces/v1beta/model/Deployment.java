@@ -32,8 +32,9 @@ package com.google.api.services.ces.v1beta.model;
 public final class Deployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name of the app version to deploy. Format:
-   * projects/{project}/locations/{location}/apps/{app}/versions/{version}
+   * Optional. The resource name of the app version to deploy. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}` Use
+   * `projects/{project}/locations/{location}/apps/{app}/versions/-` to use the draft app.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The resource name of the deployment. Format:
-   * projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+   * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,8 +85,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Required. The resource name of the app version to deploy. Format:
-   * projects/{project}/locations/{location}/apps/{app}/versions/{version}
+   * Optional. The resource name of the app version to deploy. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}` Use
+   * `projects/{project}/locations/{location}/apps/{app}/versions/-` to use the draft app.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppVersion() {
@@ -93,8 +95,9 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the app version to deploy. Format:
-   * projects/{project}/locations/{location}/apps/{app}/versions/{version}
+   * Optional. The resource name of the app version to deploy. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}` Use
+   * `projects/{project}/locations/{location}/apps/{app}/versions/-` to use the draft app.
    * @param appVersion appVersion or {@code null} for none
    */
   public Deployment setAppVersion(java.lang.String appVersion) {
@@ -174,7 +177,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The resource name of the deployment. Format:
-   * projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+   * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -183,7 +186,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The resource name of the deployment. Format:
-   * projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+   * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
    * @param name name or {@code null} for none
    */
   public Deployment setName(java.lang.String name) {

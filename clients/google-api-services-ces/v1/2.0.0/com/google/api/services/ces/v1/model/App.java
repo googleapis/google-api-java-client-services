@@ -89,6 +89,13 @@ public final class App extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Optional. Error handling settings of the app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ErrorHandlingSettings errorHandlingSettings;
+
+  /**
    * Output only. Etag used to ensure the object hasn't changed during a read-modify-write
    * operation. If the etag is empty, the update will overwrite any concurrent changes.
    * The value may be {@code null}.
@@ -348,6 +355,23 @@ public final class App extends com.google.api.client.json.GenericJson {
    */
   public App setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Error handling settings of the app.
+   * @return value or {@code null} for none
+   */
+  public ErrorHandlingSettings getErrorHandlingSettings() {
+    return errorHandlingSettings;
+  }
+
+  /**
+   * Optional. Error handling settings of the app.
+   * @param errorHandlingSettings errorHandlingSettings or {@code null} for none
+   */
+  public App setErrorHandlingSettings(ErrorHandlingSettings errorHandlingSettings) {
+    this.errorHandlingSettings = errorHandlingSettings;
     return this;
   }
 

@@ -312,6 +312,154 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
         }
       }
       /**
+       * Retrieves the security settings for the project and location.
+       *
+       * Create a request for the method "locations.getSecuritySettings".
+       *
+       * This request holds the parameters needed by the ces server.  After setting any optional
+       * parameters, call the {@link GetSecuritySettings#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the security settings to retrieve. Format:
+       *        `projects/{project}/locations/{location}/securitySettings`
+       * @return the request
+       */
+      public GetSecuritySettings getSecuritySettings(java.lang.String name) throws java.io.IOException {
+        GetSecuritySettings result = new GetSecuritySettings(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetSecuritySettings extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.SecuritySettings> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securitySettings$");
+
+        /**
+         * Retrieves the security settings for the project and location.
+         *
+         * Create a request for the method "locations.getSecuritySettings".
+         *
+         * This request holds the parameters needed by the the ces server.  After setting any optional
+         * parameters, call the {@link GetSecuritySettings#execute()} method to invoke the remote
+         * operation. <p> {@link GetSecuritySettings#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the security settings to retrieve. Format:
+       *        `projects/{project}/locations/{location}/securitySettings`
+         * @since 1.13
+         */
+        protected GetSecuritySettings(java.lang.String name) {
+          super(CustomerEngagementSuite.this, "GET", REST_PATH, null, com.google.api.services.ces.v1beta.model.SecuritySettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/securitySettings$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetSecuritySettings set$Xgafv(java.lang.String $Xgafv) {
+          return (GetSecuritySettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetSecuritySettings setAccessToken(java.lang.String accessToken) {
+          return (GetSecuritySettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetSecuritySettings setAlt(java.lang.String alt) {
+          return (GetSecuritySettings) super.setAlt(alt);
+        }
+
+        @Override
+        public GetSecuritySettings setCallback(java.lang.String callback) {
+          return (GetSecuritySettings) super.setCallback(callback);
+        }
+
+        @Override
+        public GetSecuritySettings setFields(java.lang.String fields) {
+          return (GetSecuritySettings) super.setFields(fields);
+        }
+
+        @Override
+        public GetSecuritySettings setKey(java.lang.String key) {
+          return (GetSecuritySettings) super.setKey(key);
+        }
+
+        @Override
+        public GetSecuritySettings setOauthToken(java.lang.String oauthToken) {
+          return (GetSecuritySettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetSecuritySettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetSecuritySettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetSecuritySettings setQuotaUser(java.lang.String quotaUser) {
+          return (GetSecuritySettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetSecuritySettings setUploadType(java.lang.String uploadType) {
+          return (GetSecuritySettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetSecuritySettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetSecuritySettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the security settings to retrieve. Format:
+         * `projects/{project}/locations/{location}/securitySettings`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the security settings to retrieve. Format:
+       `projects/{project}/locations/{location}/securitySettings`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the security settings to retrieve. Format:
+         * `projects/{project}/locations/{location}/securitySettings`
+         */
+        public GetSecuritySettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/securitySettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetSecuritySettings set(String parameterName, Object value) {
+          return (GetSecuritySettings) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service. This method can be called in
        * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
        * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
@@ -540,6 +688,170 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the security settings for the project and location.
+       *
+       * Create a request for the method "locations.updateSecuritySettings".
+       *
+       * This request holds the parameters needed by the ces server.  After setting any optional
+       * parameters, call the {@link UpdateSecuritySettings#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. The unique identifier of the security settings. Format:
+       *        `projects/{project}/locations/{location}/securitySettings`
+       * @param content the {@link com.google.api.services.ces.v1beta.model.SecuritySettings}
+       * @return the request
+       */
+      public UpdateSecuritySettings updateSecuritySettings(java.lang.String name, com.google.api.services.ces.v1beta.model.SecuritySettings content) throws java.io.IOException {
+        UpdateSecuritySettings result = new UpdateSecuritySettings(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateSecuritySettings extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.SecuritySettings> {
+
+        private static final String REST_PATH = "v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securitySettings$");
+
+        /**
+         * Updates the security settings for the project and location.
+         *
+         * Create a request for the method "locations.updateSecuritySettings".
+         *
+         * This request holds the parameters needed by the the ces server.  After setting any optional
+         * parameters, call the {@link UpdateSecuritySettings#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateSecuritySettings#initialize(com.google.api.client.googleapis.servic
+         * es.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Identifier. The unique identifier of the security settings. Format:
+       *        `projects/{project}/locations/{location}/securitySettings`
+         * @param content the {@link com.google.api.services.ces.v1beta.model.SecuritySettings}
+         * @since 1.13
+         */
+        protected UpdateSecuritySettings(java.lang.String name, com.google.api.services.ces.v1beta.model.SecuritySettings content) {
+          super(CustomerEngagementSuite.this, "PATCH", REST_PATH, content, com.google.api.services.ces.v1beta.model.SecuritySettings.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/securitySettings$");
+          }
+        }
+
+        @Override
+        public UpdateSecuritySettings set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateSecuritySettings) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateSecuritySettings setAccessToken(java.lang.String accessToken) {
+          return (UpdateSecuritySettings) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateSecuritySettings setAlt(java.lang.String alt) {
+          return (UpdateSecuritySettings) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateSecuritySettings setCallback(java.lang.String callback) {
+          return (UpdateSecuritySettings) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateSecuritySettings setFields(java.lang.String fields) {
+          return (UpdateSecuritySettings) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateSecuritySettings setKey(java.lang.String key) {
+          return (UpdateSecuritySettings) super.setKey(key);
+        }
+
+        @Override
+        public UpdateSecuritySettings setOauthToken(java.lang.String oauthToken) {
+          return (UpdateSecuritySettings) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateSecuritySettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateSecuritySettings) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateSecuritySettings setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateSecuritySettings) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateSecuritySettings setUploadType(java.lang.String uploadType) {
+          return (UpdateSecuritySettings) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateSecuritySettings setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateSecuritySettings) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The unique identifier of the security settings. Format:
+         * `projects/{project}/locations/{location}/securitySettings`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The unique identifier of the security settings. Format:
+       `projects/{project}/locations/{location}/securitySettings`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The unique identifier of the security settings. Format:
+         * `projects/{project}/locations/{location}/securitySettings`
+         */
+        public UpdateSecuritySettings setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/securitySettings$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. Field mask is used to control which fields get updated. If the mask is not
+         * present, all fields will be updated.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. Field mask is used to control which fields get updated. If the mask is not present, all
+       fields will be updated.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. Field mask is used to control which fields get updated. If the mask is not
+         * present, all fields will be updated.
+         */
+        public UpdateSecuritySettings setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateSecuritySettings set(String parameterName, Object value) {
+          return (UpdateSecuritySettings) super.set(parameterName, value);
         }
       }
 
@@ -5244,7 +5556,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Identifier. The resource name of the deployment. Format:
-           *        projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+           *        `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
            * @param content the {@link com.google.api.services.ces.v1beta.model.Deployment}
            * @return the request
            */
@@ -5272,7 +5584,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Identifier. The resource name of the deployment. Format:
-           *        projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+           *        `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
              * @param content the {@link com.google.api.services.ces.v1beta.model.Deployment}
              * @since 1.13
              */
@@ -5343,13 +5655,13 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
 
             /**
              * Identifier. The resource name of the deployment. Format:
-             * projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+             * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Identifier. The resource name of the deployment. Format:
-           projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+           `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
              */
             public java.lang.String getName() {
               return name;
@@ -5357,7 +5669,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
 
             /**
              * Identifier. The resource name of the deployment. Format:
-             * projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+             * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8648,6 +8960,152 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Uploads audio for use in Golden Evaluations. Stores the audio in the Cloud Storage bucket defined
+           * in 'App.logging_settings.evaluation_audio_recording_config.gcs_bucket' and returns a transcript.
+           *
+           * Create a request for the method "evaluations.uploadEvaluationAudio".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link UploadEvaluationAudio#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the Evaluation for which to upload the evaluation audio. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+           * @param content the {@link com.google.api.services.ces.v1beta.model.UploadEvaluationAudioRequest}
+           * @return the request
+           */
+          public UploadEvaluationAudio uploadEvaluationAudio(java.lang.String name, com.google.api.services.ces.v1beta.model.UploadEvaluationAudioRequest content) throws java.io.IOException {
+            UploadEvaluationAudio result = new UploadEvaluationAudio(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UploadEvaluationAudio extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.UploadEvaluationAudioResponse> {
+
+            private static final String REST_PATH = "v1beta/{+name}:uploadEvaluationAudio";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/evaluations/[^/]+$");
+
+            /**
+             * Uploads audio for use in Golden Evaluations. Stores the audio in the Cloud Storage bucket
+             * defined in 'App.logging_settings.evaluation_audio_recording_config.gcs_bucket' and returns a
+             * transcript.
+             *
+             * Create a request for the method "evaluations.uploadEvaluationAudio".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link UploadEvaluationAudio#execute()} method to invoke the remote
+             * operation. <p> {@link UploadEvaluationAudio#initialize(com.google.api.client.googleapis.service
+             * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Evaluation for which to upload the evaluation audio. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+             * @param content the {@link com.google.api.services.ces.v1beta.model.UploadEvaluationAudioRequest}
+             * @since 1.13
+             */
+            protected UploadEvaluationAudio(java.lang.String name, com.google.api.services.ces.v1beta.model.UploadEvaluationAudioRequest content) {
+              super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.UploadEvaluationAudioResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/evaluations/[^/]+$");
+              }
+            }
+
+            @Override
+            public UploadEvaluationAudio set$Xgafv(java.lang.String $Xgafv) {
+              return (UploadEvaluationAudio) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UploadEvaluationAudio setAccessToken(java.lang.String accessToken) {
+              return (UploadEvaluationAudio) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UploadEvaluationAudio setAlt(java.lang.String alt) {
+              return (UploadEvaluationAudio) super.setAlt(alt);
+            }
+
+            @Override
+            public UploadEvaluationAudio setCallback(java.lang.String callback) {
+              return (UploadEvaluationAudio) super.setCallback(callback);
+            }
+
+            @Override
+            public UploadEvaluationAudio setFields(java.lang.String fields) {
+              return (UploadEvaluationAudio) super.setFields(fields);
+            }
+
+            @Override
+            public UploadEvaluationAudio setKey(java.lang.String key) {
+              return (UploadEvaluationAudio) super.setKey(key);
+            }
+
+            @Override
+            public UploadEvaluationAudio setOauthToken(java.lang.String oauthToken) {
+              return (UploadEvaluationAudio) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UploadEvaluationAudio setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UploadEvaluationAudio) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UploadEvaluationAudio setQuotaUser(java.lang.String quotaUser) {
+              return (UploadEvaluationAudio) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UploadEvaluationAudio setUploadType(java.lang.String uploadType) {
+              return (UploadEvaluationAudio) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UploadEvaluationAudio setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UploadEvaluationAudio) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Evaluation for which to upload the evaluation
+             * audio. Format:
+             * `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Evaluation for which to upload the evaluation audio. Format:
+           `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Evaluation for which to upload the evaluation
+             * audio. Format:
+             * `projects/{project}/locations/{location}/apps/{app}/evaluations/{evaluation}`
+             */
+            public UploadEvaluationAudio setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/evaluations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public UploadEvaluationAudio set(String parameterName, Object value) {
+              return (UploadEvaluationAudio) super.set(parameterName, value);
             }
           }
 
@@ -12862,10 +13320,10 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
            * This request holds the parameters needed by the ces server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Identifier. The unique identifier of the tool. Format: -
-           *        `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone tools.
+           * @param name Identifier. The resource name of the tool. Format: *
+           *        `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone tools. *
            *        `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}` for
-           *        tools retrieved from a toolset. These tools are dynamic and output-only, they cannot be
+           *        tools retrieved from a toolset. These tools are dynamic and output-only; they cannot be
            *        referenced directly where a tool is expected.
            * @param content the {@link com.google.api.services.ces.v1beta.model.Tool}
            * @return the request
@@ -12893,10 +13351,10 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Identifier. The unique identifier of the tool. Format: -
-           *        `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone tools.
+             * @param name Identifier. The resource name of the tool. Format: *
+           *        `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone tools. *
            *        `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}` for
-           *        tools retrieved from a toolset. These tools are dynamic and output-only, they cannot be
+           *        tools retrieved from a toolset. These tools are dynamic and output-only; they cannot be
            *        referenced directly where a tool is expected.
              * @param content the {@link com.google.api.services.ces.v1beta.model.Tool}
              * @since 1.13
@@ -12967,20 +13425,20 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
 
             /**
-             * Identifier. The unique identifier of the tool. Format: -
-             * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone
-             * tools.
+             * Identifier. The resource name of the tool. Format: *
+             * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone
+             * tools. *
              * `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}`
-             * for tools retrieved from a toolset. These tools are dynamic and output-only, they
+             * for tools retrieved from a toolset. These tools are dynamic and output-only; they
              * cannot be referenced directly where a tool is expected.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Identifier. The unique identifier of the tool. Format: -
-           `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone tools.
+            /** Identifier. The resource name of the tool. Format: *
+           `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone tools. *
            `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}` for tools
-           retrieved from a toolset. These tools are dynamic and output-only, they cannot be referenced
+           retrieved from a toolset. These tools are dynamic and output-only; they cannot be referenced
            directly where a tool is expected.
              */
             public java.lang.String getName() {
@@ -12988,11 +13446,11 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
 
             /**
-             * Identifier. The unique identifier of the tool. Format: -
-             * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone
-             * tools.
+             * Identifier. The resource name of the tool. Format: *
+             * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone
+             * tools. *
              * `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}`
-             * for tools retrieved from a toolset. These tools are dynamic and output-only, they
+             * for tools retrieved from a toolset. These tools are dynamic and output-only; they
              * cannot be referenced directly where a tool is expected.
              */
             public Patch setName(java.lang.String name) {

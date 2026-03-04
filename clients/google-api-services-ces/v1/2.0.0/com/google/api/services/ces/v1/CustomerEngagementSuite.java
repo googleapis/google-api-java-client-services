@@ -4687,7 +4687,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Identifier. The resource name of the deployment. Format:
-           *        projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+           *        `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
            * @param content the {@link com.google.api.services.ces.v1.model.Deployment}
            * @return the request
            */
@@ -4715,7 +4715,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Identifier. The resource name of the deployment. Format:
-           *        projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+           *        `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
              * @param content the {@link com.google.api.services.ces.v1.model.Deployment}
              * @since 1.13
              */
@@ -4786,13 +4786,13 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
 
             /**
              * Identifier. The resource name of the deployment. Format:
-             * projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+             * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Identifier. The resource name of the deployment. Format:
-           projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+           `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
              */
             public java.lang.String getName() {
               return name;
@@ -4800,7 +4800,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
 
             /**
              * Identifier. The resource name of the deployment. Format:
-             * projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}
+             * `projects/{project}/locations/{location}/apps/{app}/deployments/{deployment}`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -7627,10 +7627,10 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
            * This request holds the parameters needed by the ces server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Identifier. The unique identifier of the tool. Format: -
-           *        `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone tools.
+           * @param name Identifier. The resource name of the tool. Format: *
+           *        `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone tools. *
            *        `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}` for
-           *        tools retrieved from a toolset. These tools are dynamic and output-only, they cannot be
+           *        tools retrieved from a toolset. These tools are dynamic and output-only; they cannot be
            *        referenced directly where a tool is expected.
            * @param content the {@link com.google.api.services.ces.v1.model.Tool}
            * @return the request
@@ -7658,10 +7658,10 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Identifier. The unique identifier of the tool. Format: -
-           *        `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone tools.
+             * @param name Identifier. The resource name of the tool. Format: *
+           *        `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone tools. *
            *        `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}` for
-           *        tools retrieved from a toolset. These tools are dynamic and output-only, they cannot be
+           *        tools retrieved from a toolset. These tools are dynamic and output-only; they cannot be
            *        referenced directly where a tool is expected.
              * @param content the {@link com.google.api.services.ces.v1.model.Tool}
              * @since 1.13
@@ -7732,20 +7732,20 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
 
             /**
-             * Identifier. The unique identifier of the tool. Format: -
-             * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone
-             * tools.
+             * Identifier. The resource name of the tool. Format: *
+             * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone
+             * tools. *
              * `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}`
-             * for tools retrieved from a toolset. These tools are dynamic and output-only, they
+             * for tools retrieved from a toolset. These tools are dynamic and output-only; they
              * cannot be referenced directly where a tool is expected.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Identifier. The unique identifier of the tool. Format: -
-           `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone tools.
+            /** Identifier. The resource name of the tool. Format: *
+           `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone tools. *
            `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}` for tools
-           retrieved from a toolset. These tools are dynamic and output-only, they cannot be referenced
+           retrieved from a toolset. These tools are dynamic and output-only; they cannot be referenced
            directly where a tool is expected.
              */
             public java.lang.String getName() {
@@ -7753,11 +7753,11 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
 
             /**
-             * Identifier. The unique identifier of the tool. Format: -
-             * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for ## standalone
-             * tools.
+             * Identifier. The resource name of the tool. Format: *
+             * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}` for standalone
+             * tools. *
              * `projects/{project}/locations/{location}/apps/{app}/toolsets/{toolset}/tools/{tool}`
-             * for tools retrieved from a toolset. These tools are dynamic and output-only, they
+             * for tools retrieved from a toolset. These tools are dynamic and output-only; they
              * cannot be referenced directly where a tool is expected.
              */
             public Patch setName(java.lang.String name) {

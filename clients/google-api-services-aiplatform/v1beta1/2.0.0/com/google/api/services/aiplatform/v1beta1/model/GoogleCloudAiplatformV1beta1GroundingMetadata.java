@@ -62,6 +62,15 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
   private java.util.List<GoogleCloudAiplatformV1beta1GroundingSupport> groundingSupports;
 
   /**
+   * Optional. The image search queries that were used to generate the content. This field is
+   * populated only when the grounding source is Google Search with the Image Search search_type
+   * enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> imageSearchQueries;
+
+  /**
    * Optional. Output only. Metadata related to the retrieval grounding source.
    * The value may be {@code null}.
    */
@@ -154,6 +163,27 @@ public final class GoogleCloudAiplatformV1beta1GroundingMetadata extends com.goo
    */
   public GoogleCloudAiplatformV1beta1GroundingMetadata setGroundingSupports(java.util.List<GoogleCloudAiplatformV1beta1GroundingSupport> groundingSupports) {
     this.groundingSupports = groundingSupports;
+    return this;
+  }
+
+  /**
+   * Optional. The image search queries that were used to generate the content. This field is
+   * populated only when the grounding source is Google Search with the Image Search search_type
+   * enabled.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getImageSearchQueries() {
+    return imageSearchQueries;
+  }
+
+  /**
+   * Optional. The image search queries that were used to generate the content. This field is
+   * populated only when the grounding source is Google Search with the Image Search search_type
+   * enabled.
+   * @param imageSearchQueries imageSearchQueries or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingMetadata setImageSearchQueries(java.util.List<java.lang.String> imageSearchQueries) {
+    this.imageSearchQueries = imageSearchQueries;
     return this;
   }
 

@@ -37,8 +37,9 @@ public final class GoogleCloudAiplatformV1beta1UploadRagFileConfig extends com.g
   private GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig;
 
   /**
-   * Specifies the metadata config for RagFiles. Including paths for metadata schema and metadata.
-   * Alteratively, inline metadata schema and metadata can be provided.
+   * Optional. Specifies the metadata config for RagFiles. Including paths for metadata schema and
+   * metadata. Alteratively, inline metadata schema and metadata can be provided. Deprecated: Not in
+   * use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,8 +78,9 @@ public final class GoogleCloudAiplatformV1beta1UploadRagFileConfig extends com.g
   }
 
   /**
-   * Specifies the metadata config for RagFiles. Including paths for metadata schema and metadata.
-   * Alteratively, inline metadata schema and metadata can be provided.
+   * Optional. Specifies the metadata config for RagFiles. Including paths for metadata schema and
+   * metadata. Alteratively, inline metadata schema and metadata can be provided. Deprecated: Not in
+   * use.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagFileMetadataConfig getRagFileMetadataConfig() {
@@ -86,8 +88,9 @@ public final class GoogleCloudAiplatformV1beta1UploadRagFileConfig extends com.g
   }
 
   /**
-   * Specifies the metadata config for RagFiles. Including paths for metadata schema and metadata.
-   * Alteratively, inline metadata schema and metadata can be provided.
+   * Optional. Specifies the metadata config for RagFiles. Including paths for metadata schema and
+   * metadata. Alteratively, inline metadata schema and metadata can be provided. Deprecated: Not in
+   * use.
    * @param ragFileMetadataConfig ragFileMetadataConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1UploadRagFileConfig setRagFileMetadataConfig(GoogleCloudAiplatformV1beta1RagFileMetadataConfig ragFileMetadataConfig) {

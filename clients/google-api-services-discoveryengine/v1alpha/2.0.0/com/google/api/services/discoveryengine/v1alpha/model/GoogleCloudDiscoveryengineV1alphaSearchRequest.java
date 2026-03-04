@@ -410,9 +410,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    * interpreted as "How did Alphabet do in 2023?". Example #2 (coordination between /search API
    * calls and /answer API calls): Call /answer API with the session ID generated in the first call.
    * Here, the answer generation happens in the context of the search results from the first search
-   * call. Multi-turn Search feature is currently at private GA stage. Please use v1alpha or v1beta
-   * version instead before we launch this feature to public GA. Or ask for allowlisting through
-   * Google Support team.
+   * call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1337,9 +1335,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    * interpreted as "How did Alphabet do in 2023?". Example #2 (coordination between /search API
    * calls and /answer API calls): Call /answer API with the session ID generated in the first call.
    * Here, the answer generation happens in the context of the search results from the first search
-   * call. Multi-turn Search feature is currently at private GA stage. Please use v1alpha or v1beta
-   * version instead before we launch this feature to public GA. Or ask for allowlisting through
-   * Google Support team.
+   * call.
    * @return value or {@code null} for none
    */
   public java.lang.String getSession() {
@@ -1355,9 +1351,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    * interpreted as "How did Alphabet do in 2023?". Example #2 (coordination between /search API
    * calls and /answer API calls): Call /answer API with the session ID generated in the first call.
    * Here, the answer generation happens in the context of the search results from the first search
-   * call. Multi-turn Search feature is currently at private GA stage. Please use v1alpha or v1beta
-   * version instead before we launch this feature to public GA. Or ask for allowlisting through
-   * Google Support team.
+   * call.
    * @param session session or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setSession(java.lang.String session) {

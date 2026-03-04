@@ -38,8 +38,8 @@ public final class PrivateDnsSettings extends com.google.api.client.json.Generic
    * NonComplianceDetail with PENDING is reported if the device is not connected to a network. A
    * NonComplianceDetail with nonComplianceReason INVALID_VALUE and specificNonComplianceReason
    * PRIVATE_DNS_HOST_NOT_SERVING is reported if the specified host is not a DNS server or not
-   * supported on Android. A NonComplianceReason with nonComplianceReason INVALID_VALUE is reported
-   * if applying this setting fails for any other reason.
+   * supported on Android. A NonComplianceDetail with INVALID_VALUE is reported if applying this
+   * setting fails for any other reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,8 @@ public final class PrivateDnsSettings extends com.google.api.client.json.Generic
    * NonComplianceDetail with PENDING is reported if the device is not connected to a network. A
    * NonComplianceDetail with nonComplianceReason INVALID_VALUE and specificNonComplianceReason
    * PRIVATE_DNS_HOST_NOT_SERVING is reported if the specified host is not a DNS server or not
-   * supported on Android. A NonComplianceReason with nonComplianceReason INVALID_VALUE is reported
-   * if applying this setting fails for any other reason.
+   * supported on Android. A NonComplianceDetail with INVALID_VALUE is reported if applying this
+   * setting fails for any other reason.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivateDnsHost() {
@@ -77,8 +77,8 @@ public final class PrivateDnsSettings extends com.google.api.client.json.Generic
    * NonComplianceDetail with PENDING is reported if the device is not connected to a network. A
    * NonComplianceDetail with nonComplianceReason INVALID_VALUE and specificNonComplianceReason
    * PRIVATE_DNS_HOST_NOT_SERVING is reported if the specified host is not a DNS server or not
-   * supported on Android. A NonComplianceReason with nonComplianceReason INVALID_VALUE is reported
-   * if applying this setting fails for any other reason.
+   * supported on Android. A NonComplianceDetail with INVALID_VALUE is reported if applying this
+   * setting fails for any other reason.
    * @param privateDnsHost privateDnsHost or {@code null} for none
    */
   public PrivateDnsSettings setPrivateDnsHost(java.lang.String privateDnsHost) {

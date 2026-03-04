@@ -88,9 +88,9 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean deletionProtection;
 
   /**
-   * Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table.
-   * Timestamps not matching the granularity will be rejected. If unspecified at creation time, the
-   * value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
+   * Immutable. The granularity at which timestamps are stored in this table. Timestamps not
+   * matching the granularity will be rejected. If unspecified at creation time, the value will be
+   * set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,9 +268,9 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table.
-   * Timestamps not matching the granularity will be rejected. If unspecified at creation time, the
-   * value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
+   * Immutable. The granularity at which timestamps are stored in this table. Timestamps not
+   * matching the granularity will be rejected. If unspecified at creation time, the value will be
+   * set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGranularity() {
@@ -278,9 +278,9 @@ public final class Table extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table.
-   * Timestamps not matching the granularity will be rejected. If unspecified at creation time, the
-   * value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
+   * Immutable. The granularity at which timestamps are stored in this table. Timestamps not
+   * matching the granularity will be rejected. If unspecified at creation time, the value will be
+   * set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
    * @param granularity granularity or {@code null} for none
    */
   public Table setGranularity(java.lang.String granularity) {

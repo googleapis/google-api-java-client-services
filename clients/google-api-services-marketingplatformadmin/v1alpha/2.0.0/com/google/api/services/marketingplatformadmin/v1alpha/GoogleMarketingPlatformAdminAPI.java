@@ -288,7 +288,7 @@ public class GoogleMarketingPlatformAdminAPI extends com.google.api.client.googl
       }
     }
     /**
-     * Lookup for a single organization.
+     * Looks up a single organization.
      *
      * Create a request for the method "organizations.get".
      *
@@ -312,7 +312,7 @@ public class GoogleMarketingPlatformAdminAPI extends com.google.api.client.googl
           java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
       /**
-       * Lookup for a single organization.
+       * Looks up a single organization.
        *
        * Create a request for the method "organizations.get".
        *
@@ -586,7 +586,7 @@ public class GoogleMarketingPlatformAdminAPI extends com.google.api.client.googl
       }
     }
     /**
-     * Get the usage and billing data for properties within the organization for the specified month.
+     * Gets the usage and billing data for properties within the organization for the specified month.
      * Per direct client org, user needs to be OrgAdmin/BillingAdmin on the organization in order to
      * view the billing and usage data. Per sales partner client org, user needs to be
      * OrgAdmin/BillingAdmin on the sales partner org in order to view the billing and usage data, or
@@ -617,7 +617,7 @@ public class GoogleMarketingPlatformAdminAPI extends com.google.api.client.googl
           java.util.regex.Pattern.compile("^organizations/[^/]+$");
 
       /**
-       * Get the usage and billing data for properties within the organization for the specified month.
+       * Gets the usage and billing data for properties within the organization for the specified month.
        * Per direct client org, user needs to be OrgAdmin/BillingAdmin on the organization in order to
        * view the billing and usage data. Per sales partner client org, user needs to be
        * OrgAdmin/BillingAdmin on the sales partner org in order to view the billing and usage data, or

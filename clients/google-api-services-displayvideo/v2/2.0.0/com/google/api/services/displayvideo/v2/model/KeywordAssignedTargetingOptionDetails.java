@@ -32,6 +32,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class KeywordAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The policy names to exempt the keyword from. This field is only applicable for Demand
+   * Gen keywords, which are positively targeted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> exemptedPolicyNames;
+
+  /**
    * Required. The keyword, for example `car insurance`. Positive keyword cannot be offensive word.
    * Must be UTF-8 encoded with a maximum size of 255 bytes. Maximum number of characters is 80.
    * Maximum number of words is 10.
@@ -46,6 +54,25 @@ public final class KeywordAssignedTargetingOptionDetails extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean negative;
+
+  /**
+   * Optional. The policy names to exempt the keyword from. This field is only applicable for Demand
+   * Gen keywords, which are positively targeted.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExemptedPolicyNames() {
+    return exemptedPolicyNames;
+  }
+
+  /**
+   * Optional. The policy names to exempt the keyword from. This field is only applicable for Demand
+   * Gen keywords, which are positively targeted.
+   * @param exemptedPolicyNames exemptedPolicyNames or {@code null} for none
+   */
+  public KeywordAssignedTargetingOptionDetails setExemptedPolicyNames(java.util.List<java.lang.String> exemptedPolicyNames) {
+    this.exemptedPolicyNames = exemptedPolicyNames;
+    return this;
+  }
 
   /**
    * Required. The keyword, for example `car insurance`. Positive keyword cannot be offensive word.

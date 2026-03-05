@@ -32,7 +32,9 @@ public final class LineItemBudget extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The type of the budget allocation. `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is
-   * only applicable when automatic budget allocation is enabled for the parent insertion order.
+   * only applicable when automatic budget allocation is enabled for the parent insertion order. For
+   * demand gen line items, budget allocation type must be `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`.
+   * Demand Gen line items do not support other budget allocation types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +64,9 @@ public final class LineItemBudget extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The type of the budget allocation. `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is
-   * only applicable when automatic budget allocation is enabled for the parent insertion order.
+   * only applicable when automatic budget allocation is enabled for the parent insertion order. For
+   * demand gen line items, budget allocation type must be `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`.
+   * Demand Gen line items do not support other budget allocation types.
    * @return value or {@code null} for none
    */
   public java.lang.String getBudgetAllocationType() {
@@ -71,7 +75,9 @@ public final class LineItemBudget extends com.google.api.client.json.GenericJson
 
   /**
    * Required. The type of the budget allocation. `LINE_ITEM_BUDGET_ALLOCATION_TYPE_AUTOMATIC` is
-   * only applicable when automatic budget allocation is enabled for the parent insertion order.
+   * only applicable when automatic budget allocation is enabled for the parent insertion order. For
+   * demand gen line items, budget allocation type must be `LINE_ITEM_BUDGET_ALLOCATION_TYPE_FIXED`.
+   * Demand Gen line items do not support other budget allocation types.
    * @param budgetAllocationType budgetAllocationType or {@code null} for none
    */
   public LineItemBudget setBudgetAllocationType(java.lang.String budgetAllocationType) {

@@ -30,6 +30,21 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The aspects that are attached to the entry link. The format of the aspect key has to
+   * be the following: {project_id_or_number}.{location_id}.{aspect_type_id} Currently, only a
+   * single aspect of a Dataplex-owned Aspect Type is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDataplexV1Aspect> aspects;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDataplexV1Aspect used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDataplexV1Aspect.class);
+  }
+
+  /**
    * Output only. The time when the Entry Link was created.
    * The value may be {@code null}.
    */
@@ -48,8 +63,8 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
   private java.lang.String entryLinkType;
 
   /**
-   * Required. Specifies the Entries referenced in the Entry Link. There should be exactly two entry
-   * references.
+   * Required. Immutable. Specifies the Entries referenced in the Entry Link. There should be
+   * exactly two entry references.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,6 +85,27 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. The aspects that are attached to the entry link. The format of the aspect key has to
+   * be the following: {project_id_or_number}.{location_id}.{aspect_type_id} Currently, only a
+   * single aspect of a Dataplex-owned Aspect Type is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDataplexV1Aspect> getAspects() {
+    return aspects;
+  }
+
+  /**
+   * Optional. The aspects that are attached to the entry link. The format of the aspect key has to
+   * be the following: {project_id_or_number}.{location_id}.{aspect_type_id} Currently, only a
+   * single aspect of a Dataplex-owned Aspect Type is allowed.
+   * @param aspects aspects or {@code null} for none
+   */
+  public GoogleCloudDataplexV1EntryLink setAspects(java.util.Map<String, GoogleCloudDataplexV1Aspect> aspects) {
+    this.aspects = aspects;
+    return this;
+  }
 
   /**
    * Output only. The time when the Entry Link was created.
@@ -114,8 +150,8 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
   }
 
   /**
-   * Required. Specifies the Entries referenced in the Entry Link. There should be exactly two entry
-   * references.
+   * Required. Immutable. Specifies the Entries referenced in the Entry Link. There should be
+   * exactly two entry references.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1EntryLinkEntryReference> getEntryReferences() {
@@ -123,8 +159,8 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
   }
 
   /**
-   * Required. Specifies the Entries referenced in the Entry Link. There should be exactly two entry
-   * references.
+   * Required. Immutable. Specifies the Entries referenced in the Entry Link. There should be
+   * exactly two entry references.
    * @param entryReferences entryReferences or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryLink setEntryReferences(java.util.List<GoogleCloudDataplexV1EntryLinkEntryReference> entryReferences) {

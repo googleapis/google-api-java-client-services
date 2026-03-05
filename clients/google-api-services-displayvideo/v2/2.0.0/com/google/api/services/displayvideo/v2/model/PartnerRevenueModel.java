@@ -46,7 +46,8 @@ public final class PartnerRevenueModel extends com.google.api.client.json.Generi
   private java.lang.Long markupAmount;
 
   /**
-   * Required. The markup type of the partner revenue model.
+   * Required. The markup type of the partner revenue model. Demand Gen line items only support
+   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +87,8 @@ public final class PartnerRevenueModel extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The markup type of the partner revenue model.
+   * Required. The markup type of the partner revenue model. Demand Gen line items only support
+   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMarkupType() {
@@ -94,7 +96,8 @@ public final class PartnerRevenueModel extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The markup type of the partner revenue model.
+   * Required. The markup type of the partner revenue model. Demand Gen line items only support
+   * `PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP`.
    * @param markupType markupType or {@code null} for none
    */
   public PartnerRevenueModel setMarkupType(java.lang.String markupType) {

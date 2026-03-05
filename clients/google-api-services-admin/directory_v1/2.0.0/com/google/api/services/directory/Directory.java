@@ -1357,22 +1357,24 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Search string in the format given at
-       * https://developers.google.com/workspace/admin/directory/v1/list-query-operators
+       * Search string in the format given at [List query
+       * operators](https://developers.google.com/workspace/admin/directory/v1/list-query-
+       * operators).
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Search string in the format given at
-     https://developers.google.com/workspace/admin/directory/v1/list-query-operators
+      /** Search string in the format given at [List query
+     operators](https://developers.google.com/workspace/admin/directory/v1/list-query-operators).
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Search string in the format given at
-       * https://developers.google.com/workspace/admin/directory/v1/list-query-operators
+       * Search string in the format given at [List query
+       * operators](https://developers.google.com/workspace/admin/directory/v1/list-query-
+       * operators).
        */
       public List setQuery(java.lang.String query) {
         this.query = query;
@@ -2228,22 +2230,24 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Optional. Search string in the format given at
-           * https://developers.google.com/workspace/admin/directory/v1/list-query-operators
+           * Optional. Search string in the format given at [List query
+           * operators](https://developers.google.com/workspace/admin/directory/v1/list-query-
+           * operators).
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Search string in the format given at
-         https://developers.google.com/workspace/admin/directory/v1/list-query-operators
+          /** Optional. Search string in the format given at [List query
+         operators](https://developers.google.com/workspace/admin/directory/v1/list-query-operators).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. Search string in the format given at
-           * https://developers.google.com/workspace/admin/directory/v1/list-query-operators
+           * Optional. Search string in the format given at [List query
+           * operators](https://developers.google.com/workspace/admin/directory/v1/list-query-
+           * operators).
            */
           public CountChromeOsDevices setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -17391,8 +17395,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
     /**
      * Create a guest user with access to a [subset of Workspace
-     * capabilities](https://support.google.com/a/answer/16558545?hl=en). This feature is currently in
-     * Alpha. Please reach out to support if you are interested in trying this feature.
+     * capabilities](https://support.google.com/a/answer/16558545). This feature is currently in Alpha.
+     * Please reach out to support if you are interested in trying this feature.
      *
      * Create a request for the method "users.createGuest".
      *
@@ -17414,7 +17418,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Create a guest user with access to a [subset of Workspace
-       * capabilities](https://support.google.com/a/answer/16558545?hl=en). This feature is currently in
+       * capabilities](https://support.google.com/a/answer/16558545). This feature is currently in
        * Alpha. Please reach out to support if you are interested in trying this feature.
        *
        * Create a request for the method "users.createGuest".

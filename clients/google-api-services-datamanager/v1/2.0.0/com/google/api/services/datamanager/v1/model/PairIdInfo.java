@@ -47,7 +47,7 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String cleanRoomIdentifier;
 
   /**
-   * Optional. This field denotes the percentage of membership match of this user list with the
+   * Required. This field denotes the percentage of membership match of this user list with the
    * corresponding publisher's first party data. Must be between 0 and 100 inclusive.
    * The value may be {@code null}.
    */
@@ -111,7 +111,7 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. This field denotes the percentage of membership match of this user list with the
+   * Required. This field denotes the percentage of membership match of this user list with the
    * corresponding publisher's first party data. Must be between 0 and 100 inclusive.
    * @return value or {@code null} for none
    */
@@ -120,7 +120,7 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. This field denotes the percentage of membership match of this user list with the
+   * Required. This field denotes the percentage of membership match of this user list with the
    * corresponding publisher's first party data. Must be between 0 and 100 inclusive.
    * @param matchRatePercentage matchRatePercentage or {@code null} for none
    */

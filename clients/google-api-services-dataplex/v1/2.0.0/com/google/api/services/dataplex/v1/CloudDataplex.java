@@ -17385,6 +17385,201 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               return (Get) super.set(parameterName, value);
             }
           }
+          /**
+           * Updates an Entry Link.
+           *
+           * Create a request for the method "entryLinks.patch".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Immutable. Identifier. The relative resource name of the Entry Link, of the form: proje
+           *        cts/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks
+           *        /{entry_link_id}
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/.*$");
+
+            /**
+             * Updates an Entry Link.
+             *
+             * Create a request for the method "entryLinks.patch".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Immutable. Identifier. The relative resource name of the Entry Link, of the form: proje
+           *        cts/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks
+           *        /{entry_link_id}
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink content) {
+              super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/.*$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Immutable. Identifier. The relative resource name of the Entry Link, of
+             * the form: projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_
+             * group_id}/entryLinks/{entry_link_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Immutable. Identifier. The relative resource name of the Entry Link, of the form: proj
+           ects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_
+           link_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Immutable. Identifier. The relative resource name of the Entry Link, of
+             * the form: projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_
+             * group_id}/entryLinks/{entry_link_id}
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true and the entry link doesn't exist, the service will create
+             * it.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean allowMissing;
+
+            /** Optional. If set to true and the entry link doesn't exist, the service will create it.
+             */
+            public java.lang.Boolean getAllowMissing() {
+              return allowMissing;
+            }
+
+            /**
+             * Optional. If set to true and the entry link doesn't exist, the service will create
+             * it.
+             */
+            public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+              this.allowMissing = allowMissing;
+              return this;
+            }
+
+            /**
+             * Optional. The map keys of the Aspects which the service should modify. It should be
+             * the aspect type reference in the format
+             * {project_id_or_number}.{location_id}.{aspect_type_id}.If this field is left empty,
+             * the service treats it as specifying exactly those Aspects present in the request.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> aspectKeys;
+
+            /** Optional. The map keys of the Aspects which the service should modify. It should be the aspect type
+           reference in the format {project_id_or_number}.{location_id}.{aspect_type_id}.If this field is left
+           empty, the service treats it as specifying exactly those Aspects present in the request.
+             */
+            public java.util.List<java.lang.String> getAspectKeys() {
+              return aspectKeys;
+            }
+
+            /**
+             * Optional. The map keys of the Aspects which the service should modify. It should be
+             * the aspect type reference in the format
+             * {project_id_or_number}.{location_id}.{aspect_type_id}.If this field is left empty,
+             * the service treats it as specifying exactly those Aspects present in the request.
+             */
+            public Patch setAspectKeys(java.util.List<java.lang.String> aspectKeys) {
+              this.aspectKeys = aspectKeys;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
 
         }
       }

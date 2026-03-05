@@ -28,7 +28,7 @@ package com.google.api.services.backupdr.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class OperationMetadata extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudBackupdrV1OperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. AdditionalInfo contains additional Info related to backup plan association
@@ -103,7 +103,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    * resource.
    * @param additionalInfo additionalInfo or {@code null} for none
    */
-  public OperationMetadata setAdditionalInfo(java.util.Map<String, java.lang.String> additionalInfo) {
+  public GoogleCloudBackupdrV1OperationMetadata setAdditionalInfo(java.util.Map<String, java.lang.String> additionalInfo) {
     this.additionalInfo = additionalInfo;
     return this;
   }
@@ -120,7 +120,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    * Output only. API version used to start the operation.
    * @param apiVersion apiVersion or {@code null} for none
    */
-  public OperationMetadata setApiVersion(java.lang.String apiVersion) {
+  public GoogleCloudBackupdrV1OperationMetadata setApiVersion(java.lang.String apiVersion) {
     this.apiVersion = apiVersion;
     return this;
   }
@@ -137,7 +137,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    * Output only. The time the operation was created.
    * @param createTime createTime or {@code null} for none
    */
-  public OperationMetadata setCreateTime(String createTime) {
+  public GoogleCloudBackupdrV1OperationMetadata setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -154,7 +154,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    * Output only. The time the operation finished running.
    * @param endTime endTime or {@code null} for none
    */
-  public OperationMetadata setEndTime(String endTime) {
+  public GoogleCloudBackupdrV1OperationMetadata setEndTime(String endTime) {
     this.endTime = endTime;
     return this;
   }
@@ -175,7 +175,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    * with a google.rpc.Status.code of 1, corresponding to 'Code.CANCELLED'.
    * @param requestedCancellation requestedCancellation or {@code null} for none
    */
-  public OperationMetadata setRequestedCancellation(java.lang.Boolean requestedCancellation) {
+  public GoogleCloudBackupdrV1OperationMetadata setRequestedCancellation(java.lang.Boolean requestedCancellation) {
     this.requestedCancellation = requestedCancellation;
     return this;
   }
@@ -192,7 +192,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    * Output only. Human-readable status of the operation, if any.
    * @param statusMessage statusMessage or {@code null} for none
    */
-  public OperationMetadata setStatusMessage(java.lang.String statusMessage) {
+  public GoogleCloudBackupdrV1OperationMetadata setStatusMessage(java.lang.String statusMessage) {
     this.statusMessage = statusMessage;
     return this;
   }
@@ -209,7 +209,7 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    * Output only. Server-defined resource path for the target of the operation.
    * @param target target or {@code null} for none
    */
-  public OperationMetadata setTarget(java.lang.String target) {
+  public GoogleCloudBackupdrV1OperationMetadata setTarget(java.lang.String target) {
     this.target = target;
     return this;
   }
@@ -226,19 +226,19 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    * Output only. Name of the verb executed by the operation.
    * @param verb verb or {@code null} for none
    */
-  public OperationMetadata setVerb(java.lang.String verb) {
+  public GoogleCloudBackupdrV1OperationMetadata setVerb(java.lang.String verb) {
     this.verb = verb;
     return this;
   }
 
   @Override
-  public OperationMetadata set(String fieldName, Object value) {
-    return (OperationMetadata) super.set(fieldName, value);
+  public GoogleCloudBackupdrV1OperationMetadata set(String fieldName, Object value) {
+    return (GoogleCloudBackupdrV1OperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public OperationMetadata clone() {
-    return (OperationMetadata) super.clone();
+  public GoogleCloudBackupdrV1OperationMetadata clone() {
+    return (GoogleCloudBackupdrV1OperationMetadata) super.clone();
   }
 
 }

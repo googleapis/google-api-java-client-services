@@ -71,6 +71,14 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extend
   }
 
   /**
+   * Optional. Configuration for Cloud Logging. If this field is present, the logging will be
+   * enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudBeyondcorpSecuritygatewaysV1LoggingConfig logging;
+
+  /**
    * Identifier. Name of the resource.
    * The value may be {@code null}.
    */
@@ -187,6 +195,25 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extend
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway setHubs(java.util.Map<String, GoogleCloudBeyondcorpSecuritygatewaysV1Hub> hubs) {
     this.hubs = hubs;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Cloud Logging. If this field is present, the logging will be
+   * enabled.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1LoggingConfig getLogging() {
+    return logging;
+  }
+
+  /**
+   * Optional. Configuration for Cloud Logging. If this field is present, the logging will be
+   * enabled.
+   * @param logging logging or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway setLogging(GoogleCloudBeyondcorpSecuritygatewaysV1LoggingConfig logging) {
+    this.logging = logging;
     return this;
   }
 

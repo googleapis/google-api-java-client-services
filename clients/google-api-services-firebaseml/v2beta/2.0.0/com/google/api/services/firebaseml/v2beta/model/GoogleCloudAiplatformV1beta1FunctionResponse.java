@@ -17,9 +17,9 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * The result output from a [FunctionCall] that contains a string representing the
- * [FunctionDeclaration.name] and a structured JSON object containing any output from the function
- * is used as context to the model. This should contain the result of a [FunctionCall] made based on
+ * The result output from a FunctionCall that contains a string representing the
+ * FunctionDeclaration.name and a structured JSON object containing any output from the function is
+ * used as context to the model. This should contain the result of a `FunctionCall` made based on
  * model prediction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -41,8 +41,8 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
   private java.lang.String id;
 
   /**
-   * Required. The name of the function to call. Matches [FunctionDeclaration.name] and
-   * [FunctionCall.name].
+   * Required. The name of the function to call. Matches FunctionDeclaration.name and
+   * FunctionCall.name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,8 +93,8 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
   }
 
   /**
-   * Required. The name of the function to call. Matches [FunctionDeclaration.name] and
-   * [FunctionCall.name].
+   * Required. The name of the function to call. Matches FunctionDeclaration.name and
+   * FunctionCall.name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -102,8 +102,8 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
   }
 
   /**
-   * Required. The name of the function to call. Matches [FunctionDeclaration.name] and
-   * [FunctionCall.name].
+   * Required. The name of the function to call. Matches FunctionDeclaration.name and
+   * FunctionCall.name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FunctionResponse setName(java.lang.String name) {

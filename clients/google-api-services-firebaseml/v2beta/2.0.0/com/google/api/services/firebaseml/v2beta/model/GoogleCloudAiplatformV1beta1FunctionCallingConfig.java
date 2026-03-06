@@ -31,8 +31,8 @@ public final class GoogleCloudAiplatformV1beta1FunctionCallingConfig extends com
 
   /**
    * Optional. Function names to call. Only set when the Mode is ANY. Function names should match
-   * [FunctionDeclaration.name]. With mode set to ANY, model will predict a function call from the
-   * set of function names provided.
+   * FunctionDeclaration.name. With mode set to ANY, model will predict a function call from the set
+   * of function names provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCallingConfig extends com
   /**
    * Optional. When set to true, arguments of a single function call will be streamed out in
    * multiple parts/contents/responses. Partial parameter results will be returned in the
-   * [FunctionCall.partial_args] field.
+   * `FunctionCall.partial_args` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class GoogleCloudAiplatformV1beta1FunctionCallingConfig extends com
 
   /**
    * Optional. Function names to call. Only set when the Mode is ANY. Function names should match
-   * [FunctionDeclaration.name]. With mode set to ANY, model will predict a function call from the
-   * set of function names provided.
+   * FunctionDeclaration.name. With mode set to ANY, model will predict a function call from the set
+   * of function names provided.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedFunctionNames() {
@@ -66,8 +66,8 @@ public final class GoogleCloudAiplatformV1beta1FunctionCallingConfig extends com
 
   /**
    * Optional. Function names to call. Only set when the Mode is ANY. Function names should match
-   * [FunctionDeclaration.name]. With mode set to ANY, model will predict a function call from the
-   * set of function names provided.
+   * FunctionDeclaration.name. With mode set to ANY, model will predict a function call from the set
+   * of function names provided.
    * @param allowedFunctionNames allowedFunctionNames or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FunctionCallingConfig setAllowedFunctionNames(java.util.List<java.lang.String> allowedFunctionNames) {
@@ -95,7 +95,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCallingConfig extends com
   /**
    * Optional. When set to true, arguments of a single function call will be streamed out in
    * multiple parts/contents/responses. Partial parameter results will be returned in the
-   * [FunctionCall.partial_args] field.
+   * `FunctionCall.partial_args` field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStreamFunctionCallArguments() {
@@ -105,7 +105,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCallingConfig extends com
   /**
    * Optional. When set to true, arguments of a single function call will be streamed out in
    * multiple parts/contents/responses. Partial parameter results will be returned in the
-   * [FunctionCall.partial_args] field.
+   * `FunctionCall.partial_args` field.
    * @param streamFunctionCallArguments streamFunctionCallArguments or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FunctionCallingConfig setStreamFunctionCallArguments(java.lang.Boolean streamFunctionCallArguments) {

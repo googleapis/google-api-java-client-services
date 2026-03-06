@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2AdjustByMatchingInfoTypes extends com.googl
   private java.util.List<GooglePrivacyDlpV2InfoType> infoTypes;
 
   /**
-   * How the adjustment rule is applied. Only MATCHING_TYPE_PARTIAL_MATCH is supported: - Partial
+   * How the adjustment rule is applied. Only `MATCHING_TYPE_PARTIAL_MATCH` is supported: - Partial
    * match: adjusts the findings of infoTypes specified in the inspection rule when they have a
    * nonempty intersection with a finding of an infoType specified in this adjustment rule.
    * The value may be {@code null}.
@@ -94,7 +94,7 @@ public final class GooglePrivacyDlpV2AdjustByMatchingInfoTypes extends com.googl
   }
 
   /**
-   * How the adjustment rule is applied. Only MATCHING_TYPE_PARTIAL_MATCH is supported: - Partial
+   * How the adjustment rule is applied. Only `MATCHING_TYPE_PARTIAL_MATCH` is supported: - Partial
    * match: adjusts the findings of infoTypes specified in the inspection rule when they have a
    * nonempty intersection with a finding of an infoType specified in this adjustment rule.
    * @return value or {@code null} for none
@@ -104,7 +104,7 @@ public final class GooglePrivacyDlpV2AdjustByMatchingInfoTypes extends com.googl
   }
 
   /**
-   * How the adjustment rule is applied. Only MATCHING_TYPE_PARTIAL_MATCH is supported: - Partial
+   * How the adjustment rule is applied. Only `MATCHING_TYPE_PARTIAL_MATCH` is supported: - Partial
    * match: adjusts the findings of infoTypes specified in the inspection rule when they have a
    * nonempty intersection with a finding of an infoType specified in this adjustment rule.
    * @param matchingType matchingType or {@code null} for none

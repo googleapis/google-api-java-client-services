@@ -77,6 +77,13 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
   private java.lang.String likelihood;
 
   /**
+   * key-value pairs to detect in the metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2MetadataKeyValueExpression metadataKeyValueExpression;
+
+  /**
    * Regular expression based CustomInfoType.
    * The value may be {@code null}.
    */
@@ -208,6 +215,23 @@ public final class GooglePrivacyDlpV2CustomInfoType extends com.google.api.clien
    */
   public GooglePrivacyDlpV2CustomInfoType setLikelihood(java.lang.String likelihood) {
     this.likelihood = likelihood;
+    return this;
+  }
+
+  /**
+   * key-value pairs to detect in the metadata.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2MetadataKeyValueExpression getMetadataKeyValueExpression() {
+    return metadataKeyValueExpression;
+  }
+
+  /**
+   * key-value pairs to detect in the metadata.
+   * @param metadataKeyValueExpression metadataKeyValueExpression or {@code null} for none
+   */
+  public GooglePrivacyDlpV2CustomInfoType setMetadataKeyValueExpression(GooglePrivacyDlpV2MetadataKeyValueExpression metadataKeyValueExpression) {
+    this.metadataKeyValueExpression = metadataKeyValueExpression;
     return this;
   }
 

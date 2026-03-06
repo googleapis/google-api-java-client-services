@@ -31,6 +31,13 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2MetadataLocation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata key that contains the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2KeyValueMetadataLabel keyValueMetadataLabel;
+
+  /**
    * Storage metadata.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GooglePrivacyDlpV2MetadataLocation extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Metadata key that contains the finding.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2KeyValueMetadataLabel getKeyValueMetadataLabel() {
+    return keyValueMetadataLabel;
+  }
+
+  /**
+   * Metadata key that contains the finding.
+   * @param keyValueMetadataLabel keyValueMetadataLabel or {@code null} for none
+   */
+  public GooglePrivacyDlpV2MetadataLocation setKeyValueMetadataLabel(GooglePrivacyDlpV2KeyValueMetadataLabel keyValueMetadataLabel) {
+    this.keyValueMetadataLabel = keyValueMetadataLabel;
+    return this;
+  }
 
   /**
    * Storage metadata.

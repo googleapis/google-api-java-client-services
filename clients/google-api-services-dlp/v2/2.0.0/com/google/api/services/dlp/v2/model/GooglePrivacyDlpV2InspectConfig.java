@@ -127,7 +127,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   /**
    * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the
    * set are executed in the end, other rules are executed in the order they are specified for each
-   * info type.
+   * info type. Not supported for the `metadata_key_value_expression` CustomInfoType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -310,7 +310,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   /**
    * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the
    * set are executed in the end, other rules are executed in the order they are specified for each
-   * info type.
+   * info type. Not supported for the `metadata_key_value_expression` CustomInfoType.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePrivacyDlpV2InspectionRuleSet> getRuleSet() {
@@ -320,7 +320,7 @@ public final class GooglePrivacyDlpV2InspectConfig extends com.google.api.client
   /**
    * Set of rules to apply to the findings for this InspectConfig. Exclusion rules, contained in the
    * set are executed in the end, other rules are executed in the order they are specified for each
-   * info type.
+   * info type. Not supported for the `metadata_key_value_expression` CustomInfoType.
    * @param ruleSet ruleSet or {@code null} for none
    */
   public GooglePrivacyDlpV2InspectConfig setRuleSet(java.util.List<GooglePrivacyDlpV2InspectionRuleSet> ruleSet) {

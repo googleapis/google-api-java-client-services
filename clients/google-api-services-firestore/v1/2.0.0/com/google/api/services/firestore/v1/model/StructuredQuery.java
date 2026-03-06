@@ -79,16 +79,22 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   private java.lang.Integer offset;
 
   /**
-   * The order to apply to the query results. Firestore allows callers to provide a full ordering, a
-   * partial ordering, or no ordering at all. In all cases, Firestore guarantees a stable ordering
-   * through the following rules: * The `order_by` is required to reference all fields used with an
-   * inequality filter. * All fields that are required to be in the `order_by` but are not already
-   * present are appended in lexicographical ordering of the field name. * If an order on `__name__`
-   * is not specified, it is appended by default. Fields are appended with the same sort direction
-   * as the last order specified, or 'ASCENDING' if no order was specified. For example: * `ORDER BY
-   * a` becomes `ORDER BY a ASC, __name__ ASC` * `ORDER BY a DESC` becomes `ORDER BY a DESC,
-   * __name__ DESC` * `WHERE a > 1` becomes `WHERE a > 1 ORDER BY a ASC, __name__ ASC` * `WHERE
-   * __name__ > ... AND a > 1` becomes `WHERE __name__ > ... AND a > 1 ORDER BY a ASC, __name__ ASC`
+   * The order to apply to the query results. Callers can provide a full ordering, a partial
+   * ordering, or no ordering at all. While Firestore will always respect the provided order, the
+   * behavior for queries without a full ordering is different per database edition: In Standard
+   * edition, Firestore guarantees a stable ordering through the following rules: * The `order_by`
+   * is required to reference all fields used with an inequality filter. * All fields that are
+   * required to be in the `order_by` but are not already present are appended in lexicographical
+   * ordering of the field name. * If an order on `__name__` is not specified, it is appended by
+   * default. Fields are appended with the same sort direction as the last order specified, or
+   * 'ASCENDING' if no order was specified. For example: * `ORDER BY a` becomes `ORDER BY a ASC,
+   * __name__ ASC` * `ORDER BY a DESC` becomes `ORDER BY a DESC, __name__ DESC` * `WHERE a > 1`
+   * becomes `WHERE a > 1 ORDER BY a ASC, __name__ ASC` * `WHERE __name__ > ... AND a > 1` becomes
+   * `WHERE __name__ > ... AND a > 1 ORDER BY a ASC, __name__ ASC` In Enterprise edition, Firestore
+   * does not guarantee a stable ordering. Instead it will pick the most efficient ordering based on
+   * the indexes available at the time of query execution. This will result in a different ordering
+   * for queries that are otherwise identical. To ensure a stable ordering, always include a unique
+   * field in the `order_by` clause, such as `__name__`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -233,16 +239,22 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The order to apply to the query results. Firestore allows callers to provide a full ordering, a
-   * partial ordering, or no ordering at all. In all cases, Firestore guarantees a stable ordering
-   * through the following rules: * The `order_by` is required to reference all fields used with an
-   * inequality filter. * All fields that are required to be in the `order_by` but are not already
-   * present are appended in lexicographical ordering of the field name. * If an order on `__name__`
-   * is not specified, it is appended by default. Fields are appended with the same sort direction
-   * as the last order specified, or 'ASCENDING' if no order was specified. For example: * `ORDER BY
-   * a` becomes `ORDER BY a ASC, __name__ ASC` * `ORDER BY a DESC` becomes `ORDER BY a DESC,
-   * __name__ DESC` * `WHERE a > 1` becomes `WHERE a > 1 ORDER BY a ASC, __name__ ASC` * `WHERE
-   * __name__ > ... AND a > 1` becomes `WHERE __name__ > ... AND a > 1 ORDER BY a ASC, __name__ ASC`
+   * The order to apply to the query results. Callers can provide a full ordering, a partial
+   * ordering, or no ordering at all. While Firestore will always respect the provided order, the
+   * behavior for queries without a full ordering is different per database edition: In Standard
+   * edition, Firestore guarantees a stable ordering through the following rules: * The `order_by`
+   * is required to reference all fields used with an inequality filter. * All fields that are
+   * required to be in the `order_by` but are not already present are appended in lexicographical
+   * ordering of the field name. * If an order on `__name__` is not specified, it is appended by
+   * default. Fields are appended with the same sort direction as the last order specified, or
+   * 'ASCENDING' if no order was specified. For example: * `ORDER BY a` becomes `ORDER BY a ASC,
+   * __name__ ASC` * `ORDER BY a DESC` becomes `ORDER BY a DESC, __name__ DESC` * `WHERE a > 1`
+   * becomes `WHERE a > 1 ORDER BY a ASC, __name__ ASC` * `WHERE __name__ > ... AND a > 1` becomes
+   * `WHERE __name__ > ... AND a > 1 ORDER BY a ASC, __name__ ASC` In Enterprise edition, Firestore
+   * does not guarantee a stable ordering. Instead it will pick the most efficient ordering based on
+   * the indexes available at the time of query execution. This will result in a different ordering
+   * for queries that are otherwise identical. To ensure a stable ordering, always include a unique
+   * field in the `order_by` clause, such as `__name__`.
    * @return value or {@code null} for none
    */
   public java.util.List<Order> getOrderBy() {
@@ -250,16 +262,22 @@ public final class StructuredQuery extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The order to apply to the query results. Firestore allows callers to provide a full ordering, a
-   * partial ordering, or no ordering at all. In all cases, Firestore guarantees a stable ordering
-   * through the following rules: * The `order_by` is required to reference all fields used with an
-   * inequality filter. * All fields that are required to be in the `order_by` but are not already
-   * present are appended in lexicographical ordering of the field name. * If an order on `__name__`
-   * is not specified, it is appended by default. Fields are appended with the same sort direction
-   * as the last order specified, or 'ASCENDING' if no order was specified. For example: * `ORDER BY
-   * a` becomes `ORDER BY a ASC, __name__ ASC` * `ORDER BY a DESC` becomes `ORDER BY a DESC,
-   * __name__ DESC` * `WHERE a > 1` becomes `WHERE a > 1 ORDER BY a ASC, __name__ ASC` * `WHERE
-   * __name__ > ... AND a > 1` becomes `WHERE __name__ > ... AND a > 1 ORDER BY a ASC, __name__ ASC`
+   * The order to apply to the query results. Callers can provide a full ordering, a partial
+   * ordering, or no ordering at all. While Firestore will always respect the provided order, the
+   * behavior for queries without a full ordering is different per database edition: In Standard
+   * edition, Firestore guarantees a stable ordering through the following rules: * The `order_by`
+   * is required to reference all fields used with an inequality filter. * All fields that are
+   * required to be in the `order_by` but are not already present are appended in lexicographical
+   * ordering of the field name. * If an order on `__name__` is not specified, it is appended by
+   * default. Fields are appended with the same sort direction as the last order specified, or
+   * 'ASCENDING' if no order was specified. For example: * `ORDER BY a` becomes `ORDER BY a ASC,
+   * __name__ ASC` * `ORDER BY a DESC` becomes `ORDER BY a DESC, __name__ DESC` * `WHERE a > 1`
+   * becomes `WHERE a > 1 ORDER BY a ASC, __name__ ASC` * `WHERE __name__ > ... AND a > 1` becomes
+   * `WHERE __name__ > ... AND a > 1 ORDER BY a ASC, __name__ ASC` In Enterprise edition, Firestore
+   * does not guarantee a stable ordering. Instead it will pick the most efficient ordering based on
+   * the indexes available at the time of query execution. This will result in a different ordering
+   * for queries that are otherwise identical. To ensure a stable ordering, always include a unique
+   * field in the `order_by` clause, such as `__name__`.
    * @param orderBy orderBy or {@code null} for none
    */
   public StructuredQuery setOrderBy(java.util.List<Order> orderBy) {

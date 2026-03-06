@@ -137,6 +137,15 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private String timestampValue;
 
   /**
+   * Pointer to a variable defined elsewhere in a pipeline. Unlike `field_reference_value` which
+   * references a field within a document, this refers to a variable, defined in a separate
+   * namespace than the fields of a document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String variableReferenceValue;
+
+  /**
    * An array value. Cannot directly contain another array value, though can contain a map which
    * contains another array.
    * @return value or {@code null} for none
@@ -419,6 +428,27 @@ public final class Value extends com.google.api.client.json.GenericJson {
    */
   public Value setTimestampValue(String timestampValue) {
     this.timestampValue = timestampValue;
+    return this;
+  }
+
+  /**
+   * Pointer to a variable defined elsewhere in a pipeline. Unlike `field_reference_value` which
+   * references a field within a document, this refers to a variable, defined in a separate
+   * namespace than the fields of a document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVariableReferenceValue() {
+    return variableReferenceValue;
+  }
+
+  /**
+   * Pointer to a variable defined elsewhere in a pipeline. Unlike `field_reference_value` which
+   * references a field within a document, this refers to a variable, defined in a separate
+   * namespace than the fields of a document.
+   * @param variableReferenceValue variableReferenceValue or {@code null} for none
+   */
+  public Value setVariableReferenceValue(java.lang.String variableReferenceValue) {
+    this.variableReferenceValue = variableReferenceValue;
     return this;
   }
 

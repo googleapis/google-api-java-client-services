@@ -133,7 +133,7 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.lang.String keyPrefix;
 
   /**
-   * The location of the database. Available locations are listed at
+   * Required. The location of the database. Available locations are listed at
    * https://cloud.google.com/firestore/docs/locations.
    * The value may be {@code null}.
    */
@@ -194,8 +194,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private java.util.Map<String, java.lang.String> tags;
 
   /**
-   * The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore
-   * for information about how to choose.
+   * Required. The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-
+   * datastore for information about how to choose.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -469,7 +469,7 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The location of the database. Available locations are listed at
+   * Required. The location of the database. Available locations are listed at
    * https://cloud.google.com/firestore/docs/locations.
    * @return value or {@code null} for none
    */
@@ -478,7 +478,7 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The location of the database. Available locations are listed at
+   * Required. The location of the database. Available locations are listed at
    * https://cloud.google.com/firestore/docs/locations.
    * @param locationId locationId or {@code null} for none
    */
@@ -615,8 +615,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore
-   * for information about how to choose.
+   * Required. The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-
+   * datastore for information about how to choose.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -624,8 +624,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
-   * The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore
-   * for information about how to choose.
+   * Required. The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-
+   * datastore for information about how to choose.
    * @param type type or {@code null} for none
    */
   public GoogleFirestoreAdminV1Database setType(java.lang.String type) {

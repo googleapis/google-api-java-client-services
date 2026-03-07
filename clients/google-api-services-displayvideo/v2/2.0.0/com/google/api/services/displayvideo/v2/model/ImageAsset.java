@@ -31,6 +31,13 @@ package com.google.api.services.displayvideo.v2.model;
 public final class ImageAsset extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. The unique ID of the asset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long assetId;
+
+  /**
    * Output only. File size of the image asset in bytes.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class ImageAsset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
+
+  /**
+   * Required. The unique ID of the asset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAssetId() {
+    return assetId;
+  }
+
+  /**
+   * Required. The unique ID of the asset.
+   * @param assetId assetId or {@code null} for none
+   */
+  public ImageAsset setAssetId(java.lang.Long assetId) {
+    this.assetId = assetId;
+    return this;
+  }
 
   /**
    * Output only. File size of the image asset in bytes.

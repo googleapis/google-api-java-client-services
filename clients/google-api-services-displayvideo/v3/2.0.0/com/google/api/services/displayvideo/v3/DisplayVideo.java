@@ -1463,6 +1463,268 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class AdGroupAds {
 
       /**
+       * Creates an ad group ad.
+       *
+       * Create a request for the method "adGroupAds.create".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Output only. The unique ID of the advertiser the ad belongs to.
+       * @param content the {@link com.google.api.services.displayvideo.v3.model.AdGroupAd}
+       * @return the request
+       */
+      public Create create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v3.model.AdGroupAd content) throws java.io.IOException {
+        Create result = new Create(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.AdGroupAd> {
+
+        private static final String REST_PATH = "v3/advertisers/{+advertiserId}/adGroupAds";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Creates an ad group ad.
+         *
+         * Create a request for the method "adGroupAds.create".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Output only. The unique ID of the advertiser the ad belongs to.
+         * @param content the {@link com.google.api.services.displayvideo.v3.model.AdGroupAd}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v3.model.AdGroupAd content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v3.model.AdGroupAd.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Output only. The unique ID of the advertiser the ad belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Output only. The unique ID of the advertiser the ad belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Output only. The unique ID of the advertiser the ad belongs to. */
+        public Create setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes an ad group ad.
+       *
+       * Create a request for the method "adGroupAds.delete".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser the ad belongs to.
+       * @param adGroupAdId Required. The ID of the ad to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.Long advertiserId, java.lang.Long adGroupAdId) throws java.io.IOException {
+        Delete result = new Delete(advertiserId, adGroupAdId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.Empty> {
+
+        private static final String REST_PATH = "v3/advertisers/{+advertiserId}/adGroupAds/{+adGroupAdId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern AD_GROUP_AD_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Deletes an ad group ad.
+         *
+         * Create a request for the method "adGroupAds.delete".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser the ad belongs to.
+         * @param adGroupAdId Required. The ID of the ad to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.Long advertiserId, java.lang.Long adGroupAdId) {
+          super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v3.model.Empty.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.adGroupAdId = com.google.api.client.util.Preconditions.checkNotNull(adGroupAdId, "Required parameter adGroupAdId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser the ad belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser the ad belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser the ad belongs to. */
+        public Delete setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the ad to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.Long adGroupAdId;
+
+        /** Required. The ID of the ad to delete.
+         */
+        public java.lang.Long getAdGroupAdId() {
+          return adGroupAdId;
+        }
+
+        /** Required. The ID of the ad to delete. */
+        public Delete setAdGroupAdId(java.lang.Long adGroupAdId) {
+          this.adGroupAdId = adGroupAdId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets an ad group ad.
        *
        * Create a request for the method "adGroupAds.get".
@@ -1866,6 +2128,165 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates an ad group ad.
+       *
+       * Create a request for the method "adGroupAds.patch".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Output only. The unique ID of the advertiser the ad belongs to.
+       * @param adGroupAdId Output only. The unique ID of the ad. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v3.model.AdGroupAd}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long advertiserId, java.lang.Long adGroupAdId, com.google.api.services.displayvideo.v3.model.AdGroupAd content) throws java.io.IOException {
+        Patch result = new Patch(advertiserId, adGroupAdId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.AdGroupAd> {
+
+        private static final String REST_PATH = "v3/advertisers/{+advertiserId}/adGroupAds/{+adGroupAdId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern AD_GROUP_AD_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Updates an ad group ad.
+         *
+         * Create a request for the method "adGroupAds.patch".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Output only. The unique ID of the advertiser the ad belongs to.
+         * @param adGroupAdId Output only. The unique ID of the ad. Assigned by the system.
+         * @param content the {@link com.google.api.services.displayvideo.v3.model.AdGroupAd}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long advertiserId, java.lang.Long adGroupAdId, com.google.api.services.displayvideo.v3.model.AdGroupAd content) {
+          super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v3.model.AdGroupAd.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.adGroupAdId = com.google.api.client.util.Preconditions.checkNotNull(adGroupAdId, "Required parameter adGroupAdId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Output only. The unique ID of the advertiser the ad belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Output only. The unique ID of the advertiser the ad belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Output only. The unique ID of the advertiser the ad belongs to. */
+        public Patch setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Output only. The unique ID of the ad. Assigned by the system. */
+        @com.google.api.client.util.Key
+        private java.lang.Long adGroupAdId;
+
+        /** Output only. The unique ID of the ad. Assigned by the system.
+         */
+        public java.lang.Long getAdGroupAdId() {
+          return adGroupAdId;
+        }
+
+        /** Output only. The unique ID of the ad. Assigned by the system. */
+        public Patch setAdGroupAdId(java.lang.Long adGroupAdId) {
+          this.adGroupAdId = adGroupAdId;
+          return this;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The mask to control which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
 
     }
     /**
@@ -1888,6 +2309,139 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
      */
     public class AdGroups {
 
+      /**
+       * Bulk edits targeting options for multiple ad groups. The same set of delete and create requests
+       * will be applied to all specified ad groups. Specifically, the operation will delete the assigned
+       * targeting options provided in BulkEditAdGroupAssignedTargetingOptionsRequest.delete_requests from
+       * each ad group, and then create the assigned targeting options provided in
+       * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. Only ad groups under a line item
+       * of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+       *
+       * Create a request for the method "adGroups.bulkEditAssignedTargetingOptions".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link BulkEditAssignedTargetingOptions#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser the ad groups belong to.
+       * @param content the {@link com.google.api.services.displayvideo.v3.model.BulkEditAdGroupAssignedTargetingOptionsRequest}
+       * @return the request
+       */
+      public BulkEditAssignedTargetingOptions bulkEditAssignedTargetingOptions(java.lang.Long advertiserId, com.google.api.services.displayvideo.v3.model.BulkEditAdGroupAssignedTargetingOptionsRequest content) throws java.io.IOException {
+        BulkEditAssignedTargetingOptions result = new BulkEditAssignedTargetingOptions(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class BulkEditAssignedTargetingOptions extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.BulkEditAdGroupAssignedTargetingOptionsResponse> {
+
+        private static final String REST_PATH = "v3/advertisers/{+advertiserId}/adGroups:bulkEditAssignedTargetingOptions";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Bulk edits targeting options for multiple ad groups. The same set of delete and create requests
+         * will be applied to all specified ad groups. Specifically, the operation will delete the
+         * assigned targeting options provided in
+         * BulkEditAdGroupAssignedTargetingOptionsRequest.delete_requests from each ad group, and then
+         * create the assigned targeting options provided in
+         * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. Only ad groups under a line
+         * item of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+         *
+         * Create a request for the method "adGroups.bulkEditAssignedTargetingOptions".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link BulkEditAssignedTargetingOptions#execute()} method to
+         * invoke the remote operation. <p> {@link BulkEditAssignedTargetingOptions#initialize(com.google.
+         * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+         * instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser the ad groups belong to.
+         * @param content the {@link com.google.api.services.displayvideo.v3.model.BulkEditAdGroupAssignedTargetingOptionsRequest}
+         * @since 1.13
+         */
+        protected BulkEditAssignedTargetingOptions(java.lang.Long advertiserId, com.google.api.services.displayvideo.v3.model.BulkEditAdGroupAssignedTargetingOptionsRequest content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v3.model.BulkEditAdGroupAssignedTargetingOptionsResponse.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions set$Xgafv(java.lang.String $Xgafv) {
+          return (BulkEditAssignedTargetingOptions) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setAccessToken(java.lang.String accessToken) {
+          return (BulkEditAssignedTargetingOptions) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setAlt(java.lang.String alt) {
+          return (BulkEditAssignedTargetingOptions) super.setAlt(alt);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setCallback(java.lang.String callback) {
+          return (BulkEditAssignedTargetingOptions) super.setCallback(callback);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setFields(java.lang.String fields) {
+          return (BulkEditAssignedTargetingOptions) super.setFields(fields);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setKey(java.lang.String key) {
+          return (BulkEditAssignedTargetingOptions) super.setKey(key);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setOauthToken(java.lang.String oauthToken) {
+          return (BulkEditAssignedTargetingOptions) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (BulkEditAssignedTargetingOptions) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setQuotaUser(java.lang.String quotaUser) {
+          return (BulkEditAssignedTargetingOptions) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setUploadType(java.lang.String uploadType) {
+          return (BulkEditAssignedTargetingOptions) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions setUploadProtocol(java.lang.String uploadProtocol) {
+          return (BulkEditAssignedTargetingOptions) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser the ad groups belong to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser the ad groups belong to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser the ad groups belong to. */
+        public BulkEditAssignedTargetingOptions setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public BulkEditAssignedTargetingOptions set(String parameterName, Object value) {
+          return (BulkEditAssignedTargetingOptions) super.set(parameterName, value);
+        }
+      }
       /**
        * Lists assigned targeting options for multiple ad groups across targeting types. Inherited
        * assigned targeting options are not included.
@@ -2162,6 +2716,268 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         @Override
         public BulkListAdGroupAssignedTargetingOptions set(String parameterName, Object value) {
           return (BulkListAdGroupAssignedTargetingOptions) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Creates a new ad group. Returns the newly created ad group if successful.
+       *
+       * Create a request for the method "adGroups.create".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Output only. The unique ID of the advertiser the ad group belongs to.
+       * @param content the {@link com.google.api.services.displayvideo.v3.model.AdGroup}
+       * @return the request
+       */
+      public Create create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v3.model.AdGroup content) throws java.io.IOException {
+        Create result = new Create(advertiserId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.AdGroup> {
+
+        private static final String REST_PATH = "v3/advertisers/{+advertiserId}/adGroups";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Creates a new ad group. Returns the newly created ad group if successful.
+         *
+         * Create a request for the method "adGroups.create".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Output only. The unique ID of the advertiser the ad group belongs to.
+         * @param content the {@link com.google.api.services.displayvideo.v3.model.AdGroup}
+         * @since 1.13
+         */
+        protected Create(java.lang.Long advertiserId, com.google.api.services.displayvideo.v3.model.AdGroup content) {
+          super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v3.model.AdGroup.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Output only. The unique ID of the advertiser the ad group belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Output only. The unique ID of the advertiser the ad group belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Output only. The unique ID of the advertiser the ad group belongs to. */
+        public Create setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist.
+       *
+       * Create a request for the method "adGroups.delete".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Required. The ID of the advertiser this ad group belongs to.
+       * @param adGroupId Required. The ID of the ad group to delete.
+       * @return the request
+       */
+      public Delete delete(java.lang.Long advertiserId, java.lang.Long adGroupId) throws java.io.IOException {
+        Delete result = new Delete(advertiserId, adGroupId);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.Empty> {
+
+        private static final String REST_PATH = "v3/advertisers/{+advertiserId}/adGroups/{+adGroupId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern AD_GROUP_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist.
+         *
+         * Create a request for the method "adGroups.delete".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Required. The ID of the advertiser this ad group belongs to.
+         * @param adGroupId Required. The ID of the ad group to delete.
+         * @since 1.13
+         */
+        protected Delete(java.lang.Long advertiserId, java.lang.Long adGroupId) {
+          super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v3.model.Empty.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.adGroupId = com.google.api.client.util.Preconditions.checkNotNull(adGroupId, "Required parameter adGroupId must be specified.");
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The ID of the advertiser this ad group belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Required. The ID of the advertiser this ad group belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Required. The ID of the advertiser this ad group belongs to. */
+        public Delete setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Required. The ID of the ad group to delete. */
+        @com.google.api.client.util.Key
+        private java.lang.Long adGroupId;
+
+        /** Required. The ID of the ad group to delete.
+         */
+        public java.lang.Long getAdGroupId() {
+          return adGroupId;
+        }
+
+        /** Required. The ID of the ad group to delete. */
+        public Delete setAdGroupId(java.lang.Long adGroupId) {
+          this.adGroupId = adGroupId;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
         }
       }
       /**
@@ -2568,6 +3384,165 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return (List) super.set(parameterName, value);
         }
       }
+      /**
+       * Updates an existing ad group. Returns the updated ad group if successful.
+       *
+       * Create a request for the method "adGroups.patch".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param advertiserId Output only. The unique ID of the advertiser the ad group belongs to.
+       * @param adGroupId Output only. The unique ID of the ad group. Assigned by the system.
+       * @param content the {@link com.google.api.services.displayvideo.v3.model.AdGroup}
+       * @return the request
+       */
+      public Patch patch(java.lang.Long advertiserId, java.lang.Long adGroupId, com.google.api.services.displayvideo.v3.model.AdGroup content) throws java.io.IOException {
+        Patch result = new Patch(advertiserId, adGroupId, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.AdGroup> {
+
+        private static final String REST_PATH = "v3/advertisers/{+advertiserId}/adGroups/{+adGroupId}";
+
+        private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        private final java.util.regex.Pattern AD_GROUP_ID_PATTERN =
+            java.util.regex.Pattern.compile("^[^/]+$");
+
+        /**
+         * Updates an existing ad group. Returns the updated ad group if successful.
+         *
+         * Create a request for the method "adGroups.patch".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param advertiserId Output only. The unique ID of the advertiser the ad group belongs to.
+         * @param adGroupId Output only. The unique ID of the ad group. Assigned by the system.
+         * @param content the {@link com.google.api.services.displayvideo.v3.model.AdGroup}
+         * @since 1.13
+         */
+        protected Patch(java.lang.Long advertiserId, java.lang.Long adGroupId, com.google.api.services.displayvideo.v3.model.AdGroup content) {
+          super(DisplayVideo.this, "PATCH", REST_PATH, content, com.google.api.services.displayvideo.v3.model.AdGroup.class);
+          this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+          this.adGroupId = com.google.api.client.util.Preconditions.checkNotNull(adGroupId, "Required parameter adGroupId must be specified.");
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Output only. The unique ID of the advertiser the ad group belongs to. */
+        @com.google.api.client.util.Key
+        private java.lang.Long advertiserId;
+
+        /** Output only. The unique ID of the advertiser the ad group belongs to.
+         */
+        public java.lang.Long getAdvertiserId() {
+          return advertiserId;
+        }
+
+        /** Output only. The unique ID of the advertiser the ad group belongs to. */
+        public Patch setAdvertiserId(java.lang.Long advertiserId) {
+          this.advertiserId = advertiserId;
+          return this;
+        }
+
+        /** Output only. The unique ID of the ad group. Assigned by the system. */
+        @com.google.api.client.util.Key
+        private java.lang.Long adGroupId;
+
+        /** Output only. The unique ID of the ad group. Assigned by the system.
+         */
+        public java.lang.Long getAdGroupId() {
+          return adGroupId;
+        }
+
+        /** Output only. The unique ID of the ad group. Assigned by the system. */
+        public Patch setAdGroupId(java.lang.Long adGroupId) {
+          this.adGroupId = adGroupId;
+          return this;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The mask to control which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Required. The mask to control which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the TargetingTypes collection.
@@ -2609,6 +3584,461 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          */
         public class AssignedTargetingOptions {
 
+          /**
+           * Assigns a targeting option to an ad group. Returns the assigned targeting option if successful.
+           * Only ad groups under a line item of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for
+           * this method.
+           *
+           * Create a request for the method "assignedTargetingOptions.create".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the ad group belongs to.
+           * @param adGroupId Required. The ID of the ad group the assigned targeting option will belong to.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+           *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+           *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD`
+           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` *
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           * @param content the {@link com.google.api.services.displayvideo.v3.model.AssignedTargetingOption}
+           * @return the request
+           */
+          public Create create(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String targetingType, com.google.api.services.displayvideo.v3.model.AssignedTargetingOption content) throws java.io.IOException {
+            Create result = new Create(advertiserId, adGroupId, targetingType, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.AssignedTargetingOption> {
+
+            private static final String REST_PATH = "v3/advertisers/{+advertiserId}/adGroups/{+adGroupId}/targetingTypes/{+targetingType}/assignedTargetingOptions";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern AD_GROUP_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Assigns a targeting option to an ad group. Returns the assigned targeting option if successful.
+             * Only ad groups under a line item of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported
+             * for this method.
+             *
+             * Create a request for the method "assignedTargetingOptions.create".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the ad group belongs to.
+             * @param adGroupId Required. The ID of the ad group the assigned targeting option will belong to.
+             * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+           *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+           *        `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD`
+           *        * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           *        `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` *
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * @param content the {@link com.google.api.services.displayvideo.v3.model.AssignedTargetingOption}
+             * @since 1.13
+             */
+            protected Create(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String targetingType, com.google.api.services.displayvideo.v3.model.AssignedTargetingOption content) {
+              super(DisplayVideo.this, "POST", REST_PATH, content, com.google.api.services.displayvideo.v3.model.AssignedTargetingOption.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.adGroupId = com.google.api.client.util.Preconditions.checkNotNull(adGroupId, "Required parameter adGroupId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the ad group belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the ad group belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the ad group belongs to. */
+            public Create setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** Required. The ID of the ad group the assigned targeting option will belong to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long adGroupId;
+
+            /** Required. The ID of the ad group the assigned targeting option will belong to.
+             */
+            public java.lang.Long getAdGroupId() {
+              return adGroupId;
+            }
+
+            /** Required. The ID of the ad group the assigned targeting option will belong to. */
+            public Create setAdGroupId(java.lang.Long adGroupId) {
+              this.adGroupId = adGroupId;
+              return this;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
+             * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+             * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+           `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+           `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+           `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+           `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
+             * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_GEO_REGION` *
+             * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+             * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_PARENTAL_STATUS` *
+             * `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_URL` *
+             * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            public Create setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an assigned targeting option from an ad group. Only ad groups under a line item of
+           * line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+           *
+           * Create a request for the method "assignedTargetingOptions.delete".
+           *
+           * This request holds the parameters needed by the displayvideo server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param advertiserId Required. The ID of the advertiser the ad group belongs to.
+           * @param adGroupId Required. The ID of the ad group the assigned targeting option belongs to.
+           * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+           *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
+           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) throws java.io.IOException {
+            Delete result = new Delete(advertiserId, adGroupId, targetingType, assignedTargetingOptionId);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.Empty> {
+
+            private static final String REST_PATH = "v3/advertisers/{+advertiserId}/adGroups/{+adGroupId}/targetingTypes/{+targetingType}/assignedTargetingOptions/{+assignedTargetingOptionId}";
+
+            private final java.util.regex.Pattern ADVERTISER_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern AD_GROUP_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern TARGETING_TYPE_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            private final java.util.regex.Pattern ASSIGNED_TARGETING_OPTION_ID_PATTERN =
+                java.util.regex.Pattern.compile("^[^/]+$");
+
+            /**
+             * Deletes an assigned targeting option from an ad group. Only ad groups under a line item of
+             * line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+             *
+             * Create a request for the method "assignedTargetingOptions.delete".
+             *
+             * This request holds the parameters needed by the the displayvideo server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param advertiserId Required. The ID of the advertiser the ad group belongs to.
+             * @param adGroupId Required. The ID of the ad group the assigned targeting option belongs to.
+             * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           *        `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+           *        `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+           *        `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+           *        `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
+           *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.Long advertiserId, java.lang.Long adGroupId, java.lang.String targetingType, java.lang.String assignedTargetingOptionId) {
+              super(DisplayVideo.this, "DELETE", REST_PATH, null, com.google.api.services.displayvideo.v3.model.Empty.class);
+              this.advertiserId = com.google.api.client.util.Preconditions.checkNotNull(advertiserId, "Required parameter advertiserId must be specified.");
+              this.adGroupId = com.google.api.client.util.Preconditions.checkNotNull(adGroupId, "Required parameter adGroupId must be specified.");
+              this.targetingType = com.google.api.client.util.Preconditions.checkNotNull(targetingType, "Required parameter targetingType must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = com.google.api.client.util.Preconditions.checkNotNull(assignedTargetingOptionId, "Required parameter assignedTargetingOptionId must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The ID of the advertiser the ad group belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long advertiserId;
+
+            /** Required. The ID of the advertiser the ad group belongs to.
+             */
+            public java.lang.Long getAdvertiserId() {
+              return advertiserId;
+            }
+
+            /** Required. The ID of the advertiser the ad group belongs to. */
+            public Delete setAdvertiserId(java.lang.Long advertiserId) {
+              this.advertiserId = advertiserId;
+              return this;
+            }
+
+            /** Required. The ID of the ad group the assigned targeting option belongs to. */
+            @com.google.api.client.util.Key
+            private java.lang.Long adGroupId;
+
+            /** Required. The ID of the ad group the assigned targeting option belongs to.
+             */
+            public java.lang.Long getAdGroupId() {
+              return adGroupId;
+            }
+
+            /** Required. The ID of the ad group the assigned targeting option belongs to. */
+            public Delete setAdGroupId(java.lang.Long adGroupId) {
+              this.adGroupId = adGroupId;
+              return this;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
+             * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+             * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
+             * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String targetingType;
+
+            /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
+           `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` * `TARGETING_TYPE_APP_CATEGORY` *
+           `TARGETING_TYPE_AUDIENCE_GROUP` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+           `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_PARENTAL_STATUS` *
+           `TARGETING_TYPE_SESSION_POSITION` * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+           `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            public java.lang.String getTargetingType() {
+              return targetingType;
+            }
+
+            /**
+             * Required. Identifies the type of this assigned targeting option. Supported targeting
+             * types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_APP` *
+             * `TARGETING_TYPE_APP_CATEGORY` * `TARGETING_TYPE_AUDIENCE_GROUP` *
+             * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_GENDER` *
+             * `TARGETING_TYPE_HOUSEHOLD_INCOME` * `TARGETING_TYPE_KEYWORD` *
+             * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SESSION_POSITION` *
+             * `TARGETING_TYPE_URL` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
+             * `TARGETING_TYPE_YOUTUBE_VIDEO`
+             */
+            public Delete setTargetingType(java.lang.String targetingType) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TARGETING_TYPE_PATTERN.matcher(targetingType).matches(),
+                    "Parameter targetingType must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.targetingType = targetingType;
+              return this;
+            }
+
+            /** Required. The ID of the assigned targeting option to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String assignedTargetingOptionId;
+
+            /** Required. The ID of the assigned targeting option to delete.
+             */
+            public java.lang.String getAssignedTargetingOptionId() {
+              return assignedTargetingOptionId;
+            }
+
+            /** Required. The ID of the assigned targeting option to delete. */
+            public Delete setAssignedTargetingOptionId(java.lang.String assignedTargetingOptionId) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ASSIGNED_TARGETING_OPTION_ID_PATTERN.matcher(assignedTargetingOptionId).matches(),
+                    "Parameter assignedTargetingOptionId must conform to the pattern " +
+                    "^[^/]+$");
+              }
+              this.assignedTargetingOptionId = assignedTargetingOptionId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
           /**
            * Gets a single targeting option assigned to an ad group. Inherited assigned targeting options are
            * not included.

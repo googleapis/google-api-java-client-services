@@ -56,7 +56,7 @@ public final class DayAndTimeAssignedTargetingOptionDetails extends com.google.a
 
   /**
    * Required. The mechanism used to determine which timezone to use for this day and time targeting
-   * setting.
+   * setting. For demand gen line items, this field is always TIME_ZONE_RESOLUTION_ADVERTISER.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class DayAndTimeAssignedTargetingOptionDetails extends com.google.a
 
   /**
    * Required. The mechanism used to determine which timezone to use for this day and time targeting
-   * setting.
+   * setting. For demand gen line items, this field is always TIME_ZONE_RESOLUTION_ADVERTISER.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZoneResolution() {
@@ -128,7 +128,7 @@ public final class DayAndTimeAssignedTargetingOptionDetails extends com.google.a
 
   /**
    * Required. The mechanism used to determine which timezone to use for this day and time targeting
-   * setting.
+   * setting. For demand gen line items, this field is always TIME_ZONE_RESOLUTION_ADVERTISER.
    * @param timeZoneResolution timeZoneResolution or {@code null} for none
    */
   public DayAndTimeAssignedTargetingOptionDetails setTimeZoneResolution(java.lang.String timeZoneResolution) {

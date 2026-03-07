@@ -52,6 +52,16 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
   private java.lang.Long postViewCountPercentageMillis;
 
   /**
+   * Optional. The attribution model to use for conversion measurement. This attribution model will
+   * determine how conversions are counted. The Primary model can be set by you for a floodlight
+   * config or group. More details [here](https://support.google.com/displayvideo/answer/7409983).
+   * Only applicable to Demand Gen line items.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long primaryAttributionModelId;
+
+  /**
    * The Floodlight activity configs used to track conversions. The number of conversions counted is
    * the sum of all of the conversions counted by all of the Floodlight activity IDs specified in
    * this field. This field can't be updated if a custom bidding algorithm is assigned to the line
@@ -94,6 +104,29 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
    */
   public ConversionCountingConfig setPostViewCountPercentageMillis(java.lang.Long postViewCountPercentageMillis) {
     this.postViewCountPercentageMillis = postViewCountPercentageMillis;
+    return this;
+  }
+
+  /**
+   * Optional. The attribution model to use for conversion measurement. This attribution model will
+   * determine how conversions are counted. The Primary model can be set by you for a floodlight
+   * config or group. More details [here](https://support.google.com/displayvideo/answer/7409983).
+   * Only applicable to Demand Gen line items.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPrimaryAttributionModelId() {
+    return primaryAttributionModelId;
+  }
+
+  /**
+   * Optional. The attribution model to use for conversion measurement. This attribution model will
+   * determine how conversions are counted. The Primary model can be set by you for a floodlight
+   * config or group. More details [here](https://support.google.com/displayvideo/answer/7409983).
+   * Only applicable to Demand Gen line items.
+   * @param primaryAttributionModelId primaryAttributionModelId or {@code null} for none
+   */
+  public ConversionCountingConfig setPrimaryAttributionModelId(java.lang.Long primaryAttributionModelId) {
+    this.primaryAttributionModelId = primaryAttributionModelId;
     return this;
   }
 

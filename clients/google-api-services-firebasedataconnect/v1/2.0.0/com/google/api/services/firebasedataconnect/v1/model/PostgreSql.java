@@ -59,6 +59,13 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean ephemeral;
 
   /**
+   * Optional. User-configured PostgreSQL schema. Defaults to "public" if not specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String schema;
+
+  /**
    * Optional. Configure how to perform Postgresql schema migration.
    * The value may be {@code null}.
    */
@@ -142,6 +149,23 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
    */
   public PostgreSql setEphemeral(java.lang.Boolean ephemeral) {
     this.ephemeral = ephemeral;
+    return this;
+  }
+
+  /**
+   * Optional. User-configured PostgreSQL schema. Defaults to "public" if not specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSchema() {
+    return schema;
+  }
+
+  /**
+   * Optional. User-configured PostgreSQL schema. Defaults to "public" if not specified.
+   * @param schema schema or {@code null} for none
+   */
+  public PostgreSql setSchema(java.lang.String schema) {
+    this.schema = schema;
     return this;
   }
 

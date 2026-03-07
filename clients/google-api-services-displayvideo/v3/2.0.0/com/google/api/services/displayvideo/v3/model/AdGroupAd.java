@@ -83,6 +83,39 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private BumperAd bumperAd;
 
   /**
+   * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
+   * 1207068802760924844-NC#CarouselAd).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DemandGenCarouselAd demandGenCarouselAd;
+
+  /**
+   * Details of a [Demand Gen image
+   * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DemandGenImageAd demandGenImageAd;
+
+  /**
+   * Details of a [Demand Gen product
+   * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#Product-
+   * onlyAd).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DemandGenProductAd demandGenProductAd;
+
+  /**
+   * Details of a [Demand Gen video
+   * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DemandGenVideoAd demandGenVideoAd;
+
+  /**
    * Required. The display name of the ad. Must be UTF-8 encoded with a maximum size of 255 bytes.
    * The value may be {@code null}.
    */
@@ -274,6 +307,84 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
    */
   public AdGroupAd setBumperAd(BumperAd bumperAd) {
     this.bumperAd = bumperAd;
+    return this;
+  }
+
+  /**
+   * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
+   * 1207068802760924844-NC#CarouselAd).
+   * @return value or {@code null} for none
+   */
+  public DemandGenCarouselAd getDemandGenCarouselAd() {
+    return demandGenCarouselAd;
+  }
+
+  /**
+   * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
+   * 1207068802760924844-NC#CarouselAd).
+   * @param demandGenCarouselAd demandGenCarouselAd or {@code null} for none
+   */
+  public AdGroupAd setDemandGenCarouselAd(DemandGenCarouselAd demandGenCarouselAd) {
+    this.demandGenCarouselAd = demandGenCarouselAd;
+    return this;
+  }
+
+  /**
+   * Details of a [Demand Gen image
+   * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
+   * @return value or {@code null} for none
+   */
+  public DemandGenImageAd getDemandGenImageAd() {
+    return demandGenImageAd;
+  }
+
+  /**
+   * Details of a [Demand Gen image
+   * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
+   * @param demandGenImageAd demandGenImageAd or {@code null} for none
+   */
+  public AdGroupAd setDemandGenImageAd(DemandGenImageAd demandGenImageAd) {
+    this.demandGenImageAd = demandGenImageAd;
+    return this;
+  }
+
+  /**
+   * Details of a [Demand Gen product
+   * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#Product-
+   * onlyAd).
+   * @return value or {@code null} for none
+   */
+  public DemandGenProductAd getDemandGenProductAd() {
+    return demandGenProductAd;
+  }
+
+  /**
+   * Details of a [Demand Gen product
+   * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#Product-
+   * onlyAd).
+   * @param demandGenProductAd demandGenProductAd or {@code null} for none
+   */
+  public AdGroupAd setDemandGenProductAd(DemandGenProductAd demandGenProductAd) {
+    this.demandGenProductAd = demandGenProductAd;
+    return this;
+  }
+
+  /**
+   * Details of a [Demand Gen video
+   * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
+   * @return value or {@code null} for none
+   */
+  public DemandGenVideoAd getDemandGenVideoAd() {
+    return demandGenVideoAd;
+  }
+
+  /**
+   * Details of a [Demand Gen video
+   * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
+   * @param demandGenVideoAd demandGenVideoAd or {@code null} for none
+   */
+  public AdGroupAd setDemandGenVideoAd(DemandGenVideoAd demandGenVideoAd) {
+    this.demandGenVideoAd = demandGenVideoAd;
     return this;
   }
 

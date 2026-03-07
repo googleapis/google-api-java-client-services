@@ -31,6 +31,14 @@ package com.google.api.services.displayvideo.v4.model;
 public final class BiddingStrategy extends com.google.api.client.json.GenericJson {
 
   /**
+   * A bid strategy used by Demand Gen resources. It can only be used for a Demand Gen line item or
+   * ad group entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DemandGenBiddingStrategy demandGenBid;
+
+  /**
    * A strategy that uses a fixed bid price.
    * The value may be {@code null}.
    */
@@ -70,6 +78,25 @@ public final class BiddingStrategy extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private YoutubeAndPartnersBiddingStrategy youtubeAndPartnersBid;
+
+  /**
+   * A bid strategy used by Demand Gen resources. It can only be used for a Demand Gen line item or
+   * ad group entity.
+   * @return value or {@code null} for none
+   */
+  public DemandGenBiddingStrategy getDemandGenBid() {
+    return demandGenBid;
+  }
+
+  /**
+   * A bid strategy used by Demand Gen resources. It can only be used for a Demand Gen line item or
+   * ad group entity.
+   * @param demandGenBid demandGenBid or {@code null} for none
+   */
+  public BiddingStrategy setDemandGenBid(DemandGenBiddingStrategy demandGenBid) {
+    this.demandGenBid = demandGenBid;
+    return this;
+  }
 
   /**
    * A strategy that uses a fixed bid price.

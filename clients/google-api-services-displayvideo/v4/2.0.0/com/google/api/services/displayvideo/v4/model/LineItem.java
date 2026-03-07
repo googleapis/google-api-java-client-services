@@ -85,6 +85,13 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Long> creativeIds;
 
   /**
+   * Optional. Settings specific to Demand Gen line items.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DemandGenSettings demandGenSettings;
+
+  /**
    * Required. The display name of the line item. Must be UTF-8 encoded with a maximum size of 240
    * bytes.
    * The value may be {@code null}.
@@ -357,6 +364,23 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
    */
   public LineItem setCreativeIds(java.util.List<java.lang.Long> creativeIds) {
     this.creativeIds = creativeIds;
+    return this;
+  }
+
+  /**
+   * Optional. Settings specific to Demand Gen line items.
+   * @return value or {@code null} for none
+   */
+  public DemandGenSettings getDemandGenSettings() {
+    return demandGenSettings;
+  }
+
+  /**
+   * Optional. Settings specific to Demand Gen line items.
+   * @param demandGenSettings demandGenSettings or {@code null} for none
+   */
+  public LineItem setDemandGenSettings(DemandGenSettings demandGenSettings) {
+    this.demandGenSettings = demandGenSettings;
     return this;
   }
 

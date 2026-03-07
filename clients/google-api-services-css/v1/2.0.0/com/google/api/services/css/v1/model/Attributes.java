@@ -390,8 +390,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * The cut of the item. It can be used to represent combined size types for apparel items. Maximum
-   * two of size types can be provided (see
-   * [https://support.google.com/merchants/answer/6324497](size type)).
+   * two of size types can be provided (see [size
+   * type](https://support.google.com/merchants/answer/6324497).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1268,8 +1268,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * The cut of the item. It can be used to represent combined size types for apparel items. Maximum
-   * two of size types can be provided (see
-   * [https://support.google.com/merchants/answer/6324497](size type)).
+   * two of size types can be provided (see [size
+   * type](https://support.google.com/merchants/answer/6324497).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSizeTypes() {
@@ -1278,8 +1278,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * The cut of the item. It can be used to represent combined size types for apparel items. Maximum
-   * two of size types can be provided (see
-   * [https://support.google.com/merchants/answer/6324497](size type)).
+   * two of size types can be provided (see [size
+   * type](https://support.google.com/merchants/answer/6324497).
    * @param sizeTypes sizeTypes or {@code null} for none
    */
   public Attributes setSizeTypes(java.util.List<java.lang.String> sizeTypes) {

@@ -92,7 +92,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Configuration for the git proxy feature. Enabling the git proxy allows clients to
-   * perform git operations on the repositories linked in the connection.
+   * perform git operations on the repositories linked in the connection. [Learn
+   * more](https://docs.cloud.google.com/developer-connect/docs/configure-git-proxy).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -329,7 +330,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Configuration for the git proxy feature. Enabling the git proxy allows clients to
-   * perform git operations on the repositories linked in the connection.
+   * perform git operations on the repositories linked in the connection. [Learn
+   * more](https://docs.cloud.google.com/developer-connect/docs/configure-git-proxy).
    * @return value or {@code null} for none
    */
   public GitProxyConfig getGitProxyConfig() {
@@ -338,7 +340,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Configuration for the git proxy feature. Enabling the git proxy allows clients to
-   * perform git operations on the repositories linked in the connection.
+   * perform git operations on the repositories linked in the connection. [Learn
+   * more](https://docs.cloud.google.com/developer-connect/docs/configure-git-proxy).
    * @param gitProxyConfig gitProxyConfig or {@code null} for none
    */
   public Connection setGitProxyConfig(GitProxyConfig gitProxyConfig) {

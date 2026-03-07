@@ -40,9 +40,7 @@ public final class LocalInventoryDataSource extends com.google.api.client.json.G
 
   /**
    * Required. Immutable. The feed label of the offers to which the local inventory is provided.
-   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See
-   * also [migration to feed labels](https://developers.google.com/shopping-
-   * content/guides/products/feed-labels).
+   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,9 +67,7 @@ public final class LocalInventoryDataSource extends com.google.api.client.json.G
 
   /**
    * Required. Immutable. The feed label of the offers to which the local inventory is provided.
-   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See
-   * also [migration to feed labels](https://developers.google.com/shopping-
-   * content/guides/products/feed-labels).
+   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedLabel() {
@@ -80,9 +76,7 @@ public final class LocalInventoryDataSource extends com.google.api.client.json.G
 
   /**
    * Required. Immutable. The feed label of the offers to which the local inventory is provided.
-   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See
-   * also [migration to feed labels](https://developers.google.com/shopping-
-   * content/guides/products/feed-labels).
+   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * @param feedLabel feedLabel or {@code null} for none
    */
   public LocalInventoryDataSource setFeedLabel(java.lang.String feedLabel) {

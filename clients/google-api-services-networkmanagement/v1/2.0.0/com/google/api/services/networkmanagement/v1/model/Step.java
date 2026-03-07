@@ -139,6 +139,20 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private GKEMasterInfo gkeMaster;
 
   /**
+   * Display information of a GKE Network Policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkeNetworkPolicyInfo gkeNetworkPolicy;
+
+  /**
+   * Display information of the reason why GKE Network Policy evaluation was skipped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkeNetworkPolicySkippedInfo gkeNetworkPolicySkipped;
+
+  /**
    * Display information of a Google Kubernetes Engine Pod.
    * The value may be {@code null}.
    */
@@ -557,6 +571,40 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setGkeMaster(GKEMasterInfo gkeMaster) {
     this.gkeMaster = gkeMaster;
+    return this;
+  }
+
+  /**
+   * Display information of a GKE Network Policy.
+   * @return value or {@code null} for none
+   */
+  public GkeNetworkPolicyInfo getGkeNetworkPolicy() {
+    return gkeNetworkPolicy;
+  }
+
+  /**
+   * Display information of a GKE Network Policy.
+   * @param gkeNetworkPolicy gkeNetworkPolicy or {@code null} for none
+   */
+  public Step setGkeNetworkPolicy(GkeNetworkPolicyInfo gkeNetworkPolicy) {
+    this.gkeNetworkPolicy = gkeNetworkPolicy;
+    return this;
+  }
+
+  /**
+   * Display information of the reason why GKE Network Policy evaluation was skipped.
+   * @return value or {@code null} for none
+   */
+  public GkeNetworkPolicySkippedInfo getGkeNetworkPolicySkipped() {
+    return gkeNetworkPolicySkipped;
+  }
+
+  /**
+   * Display information of the reason why GKE Network Policy evaluation was skipped.
+   * @param gkeNetworkPolicySkipped gkeNetworkPolicySkipped or {@code null} for none
+   */
+  public Step setGkeNetworkPolicySkipped(GkeNetworkPolicySkippedInfo gkeNetworkPolicySkipped) {
+    this.gkeNetworkPolicySkipped = gkeNetworkPolicySkipped;
     return this;
   }
 

@@ -39,9 +39,7 @@ public final class RegionalInventoryDataSource extends com.google.api.client.jso
 
   /**
    * Required. Immutable. The feed label of the offers to which the regional inventory is provided.
-   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See
-   * also [migration to feed labels](https://developers.google.com/shopping-
-   * content/guides/products/feed-labels).
+   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +66,7 @@ public final class RegionalInventoryDataSource extends com.google.api.client.jso
 
   /**
    * Required. Immutable. The feed label of the offers to which the regional inventory is provided.
-   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See
-   * also [migration to feed labels](https://developers.google.com/shopping-
-   * content/guides/products/feed-labels).
+   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedLabel() {
@@ -79,9 +75,7 @@ public final class RegionalInventoryDataSource extends com.google.api.client.jso
 
   /**
    * Required. Immutable. The feed label of the offers to which the regional inventory is provided.
-   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See
-   * also [migration to feed labels](https://developers.google.com/shopping-
-   * content/guides/products/feed-labels).
+   * Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
    * @param feedLabel feedLabel or {@code null} for none
    */
   public RegionalInventoryDataSource setFeedLabel(java.lang.String feedLabel) {

@@ -217,11 +217,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * Optional. The time the event described by the log entry occurred. This time is used to compute
    * the log entry's age and to enforce the logs retention period. If this field is omitted in a new
    * log entry, then Logging assigns it the current time. Timestamps have nanosecond accuracy, but
-   * trailing zeros in the fractional seconds might be omitted when the timestamp is
-   * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
-   * (https://cloud.google.com/logging/quotas#logs_retention_periods) in the past, and that don't
-   * exceed 24 hours in the future. Log entries outside those time boundaries are rejected by
-   * Logging.
+   * trailing zeros in the fractional seconds might be omitted when the timestamp is displayed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -680,11 +676,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * Optional. The time the event described by the log entry occurred. This time is used to compute
    * the log entry's age and to enforce the logs retention period. If this field is omitted in a new
    * log entry, then Logging assigns it the current time. Timestamps have nanosecond accuracy, but
-   * trailing zeros in the fractional seconds might be omitted when the timestamp is
-   * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
-   * (https://cloud.google.com/logging/quotas#logs_retention_periods) in the past, and that don't
-   * exceed 24 hours in the future. Log entries outside those time boundaries are rejected by
-   * Logging.
+   * trailing zeros in the fractional seconds might be omitted when the timestamp is displayed.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -695,11 +687,7 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    * Optional. The time the event described by the log entry occurred. This time is used to compute
    * the log entry's age and to enforce the logs retention period. If this field is omitted in a new
    * log entry, then Logging assigns it the current time. Timestamps have nanosecond accuracy, but
-   * trailing zeros in the fractional seconds might be omitted when the timestamp is
-   * displayed.Incoming log entries must have timestamps that don't exceed the logs retention period
-   * (https://cloud.google.com/logging/quotas#logs_retention_periods) in the past, and that don't
-   * exceed 24 hours in the future. Log entries outside those time boundaries are rejected by
-   * Logging.
+   * trailing zeros in the fractional seconds might be omitted when the timestamp is displayed.
    * @param timestamp timestamp or {@code null} for none
    */
   public LogEntry setTimestamp(String timestamp) {

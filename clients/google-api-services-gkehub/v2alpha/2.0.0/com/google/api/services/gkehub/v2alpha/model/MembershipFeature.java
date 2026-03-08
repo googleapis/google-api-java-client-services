@@ -45,7 +45,7 @@ public final class MembershipFeature extends com.google.api.client.json.GenericJ
   private String deleteTime;
 
   /**
-   * GCP labels for this MembershipFeature.
+   * Google Cloud labels for this MembershipFeature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class MembershipFeature extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * GCP labels for this MembershipFeature.
+   * Google Cloud labels for this MembershipFeature.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -132,7 +132,7 @@ public final class MembershipFeature extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * GCP labels for this MembershipFeature.
+   * Google Cloud labels for this MembershipFeature.
    * @param labels labels or {@code null} for none
    */
   public MembershipFeature setLabels(java.util.Map<String, java.lang.String> labels) {

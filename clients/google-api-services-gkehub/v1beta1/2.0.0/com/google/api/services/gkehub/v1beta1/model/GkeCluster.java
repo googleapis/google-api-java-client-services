@@ -38,7 +38,7 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean clusterMissing;
 
   /**
-   * Immutable. Self-link of the GCP resource for the GKE cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the GKE cluster. For example:
    * //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal
    * clusters are also supported.
    * The value may be {@code null}.
@@ -66,7 +66,7 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Self-link of the GCP resource for the GKE cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the GKE cluster. For example:
    * //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal
    * clusters are also supported.
    * @return value or {@code null} for none
@@ -76,7 +76,7 @@ public final class GkeCluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Self-link of the GCP resource for the GKE cluster. For example:
+   * Immutable. Self-link of the Google Cloud resource for the GKE cluster. For example:
    * //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster Zonal
    * clusters are also supported.
    * @param resourceLink resourceLink or {@code null} for none

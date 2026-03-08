@@ -54,8 +54,8 @@ public final class KubernetesMetadata extends com.google.api.client.json.Generic
 
   /**
    * Output only. Node providerID as reported by the first node in the list of nodes on the
-   * Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP),
-   * the node_count will be zero and the node_provider_id will be empty.
+   * Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-
+   * Google Cloud), the node_count will be zero and the node_provider_id will be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,8 +132,8 @@ public final class KubernetesMetadata extends com.google.api.client.json.Generic
 
   /**
    * Output only. Node providerID as reported by the first node in the list of nodes on the
-   * Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP),
-   * the node_count will be zero and the node_provider_id will be empty.
+   * Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-
+   * Google Cloud), the node_count will be zero and the node_provider_id will be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getNodeProviderId() {
@@ -142,8 +142,8 @@ public final class KubernetesMetadata extends com.google.api.client.json.Generic
 
   /**
    * Output only. Node providerID as reported by the first node in the list of nodes on the
-   * Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-GCP),
-   * the node_count will be zero and the node_provider_id will be empty.
+   * Kubernetes endpoint. On Kubernetes platforms that support zero-node clusters (like GKE-on-
+   * Google Cloud), the node_count will be zero and the node_provider_id will be empty.
    * @param nodeProviderId nodeProviderId or {@code null} for none
    */
   public KubernetesMetadata setNodeProviderId(java.lang.String nodeProviderId) {

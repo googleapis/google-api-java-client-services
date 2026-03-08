@@ -86,9 +86,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String infrastructureType;
 
   /**
-   * Optional. GCP labels for this membership. These labels are not leveraged by multi-cluster
-   * features, instead, we prefer cluster labels, which can be set on GKE cluster or other cluster
-   * types.
+   * Optional. Google Cloud labels for this membership. These labels are not leveraged by multi-
+   * cluster features, instead, we prefer cluster labels, which can be set on GKE cluster or other
+   * cluster types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,9 +287,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. GCP labels for this membership. These labels are not leveraged by multi-cluster
-   * features, instead, we prefer cluster labels, which can be set on GKE cluster or other cluster
-   * types.
+   * Optional. Google Cloud labels for this membership. These labels are not leveraged by multi-
+   * cluster features, instead, we prefer cluster labels, which can be set on GKE cluster or other
+   * cluster types.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -297,9 +297,9 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. GCP labels for this membership. These labels are not leveraged by multi-cluster
-   * features, instead, we prefer cluster labels, which can be set on GKE cluster or other cluster
-   * types.
+   * Optional. Google Cloud labels for this membership. These labels are not leveraged by multi-
+   * cluster features, instead, we prefer cluster labels, which can be set on GKE cluster or other
+   * cluster types.
    * @param labels labels or {@code null} for none
    */
   public Membership setLabels(java.util.Map<String, java.lang.String> labels) {

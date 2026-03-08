@@ -63,7 +63,9 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   private java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> defs;
 
   /**
-   * Optional. Description of the schema.
+   * Optional. Describes the data. The model uses this field to understand the purpose of the schema
+   * and how to use it. It is a best practice to provide a clear and descriptive explanation for the
+   * schema and its properties here, rather than in the prompt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -302,7 +304,9 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Description of the schema.
+   * Optional. Describes the data. The model uses this field to understand the purpose of the schema
+   * and how to use it. It is a best practice to provide a clear and descriptive explanation for the
+   * schema and its properties here, rather than in the prompt.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -310,7 +314,9 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   }
 
   /**
-   * Optional. Description of the schema.
+   * Optional. Describes the data. The model uses this field to understand the purpose of the schema
+   * and how to use it. It is a best practice to provide a clear and descriptive explanation for the
+   * schema and its properties here, rather than in the prompt.
    * @param description description or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Schema setDescription(java.lang.String description) {

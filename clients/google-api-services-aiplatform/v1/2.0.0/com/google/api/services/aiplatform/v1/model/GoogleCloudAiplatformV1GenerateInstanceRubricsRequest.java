@@ -34,7 +34,7 @@ public final class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1EvaluationInstanceAgentConfig agentConfig;
+  private GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentConfig agentConfig;
 
   /**
    * Required. The prompt to generate rubrics from. For single-turn queries, this is a single
@@ -80,7 +80,7 @@ public final class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends
    * Optional. Agent configuration, required for agent-based rubric generation.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1EvaluationInstanceAgentConfig getAgentConfig() {
+  public GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentConfig getAgentConfig() {
     return agentConfig;
   }
 
@@ -88,7 +88,7 @@ public final class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends
    * Optional. Agent configuration, required for agent-based rubric generation.
    * @param agentConfig agentConfig or {@code null} for none
    */
-  public GoogleCloudAiplatformV1GenerateInstanceRubricsRequest setAgentConfig(GoogleCloudAiplatformV1EvaluationInstanceAgentConfig agentConfig) {
+  public GoogleCloudAiplatformV1GenerateInstanceRubricsRequest setAgentConfig(GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentConfig agentConfig) {
     this.agentConfig = agentConfig;
     return this;
   }

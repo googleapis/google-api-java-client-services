@@ -60,8 +60,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
   private java.lang.String evaluationRun;
 
   /**
-   * Output only. The operation ID of the evaluation run. Format:
-   * `projects/{project}/locations/{location}/operations/{operation_id}`.
+   * Output only. Deprecated: The updated architecture uses evaluation_run instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +139,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
   }
 
   /**
-   * Output only. The operation ID of the evaluation run. Format:
-   * `projects/{project}/locations/{location}/operations/{operation_id}`.
+   * Output only. Deprecated: The updated architecture uses evaluation_run instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperationName() {
@@ -149,8 +147,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
   }
 
   /**
-   * Output only. The operation ID of the evaluation run. Format:
-   * `projects/{project}/locations/{location}/operations/{operation_id}`.
+   * Output only. Deprecated: The updated architecture uses evaluation_run instead.
    * @param operationName operationName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluateDatasetRun setOperationName(java.lang.String operationName) {

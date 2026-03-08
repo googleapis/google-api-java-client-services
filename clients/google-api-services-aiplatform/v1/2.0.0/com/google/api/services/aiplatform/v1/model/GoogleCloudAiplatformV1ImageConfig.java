@@ -62,6 +62,16 @@ public final class GoogleCloudAiplatformV1ImageConfig extends com.google.api.cli
   private java.lang.String personGeneration;
 
   /**
+   * Optional. Controls whether prominent people (celebrities) generation is allowed. If used with
+   * personGeneration, personGeneration enum would take precedence. For instance, if ALLOW_NONE is
+   * set, all person generation would be blocked. If this field is unspecified, the default behavior
+   * is to allow prominent people.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String prominentPeople;
+
+  /**
    * Optional. The desired aspect ratio for the generated images. The following aspect ratios are
    * supported: "1:1" "2:3", "3:2" "3:4", "4:3" "4:5", "5:4" "9:16", "16:9" "21:9"
    * @return value or {@code null} for none
@@ -130,6 +140,29 @@ public final class GoogleCloudAiplatformV1ImageConfig extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1ImageConfig setPersonGeneration(java.lang.String personGeneration) {
     this.personGeneration = personGeneration;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether prominent people (celebrities) generation is allowed. If used with
+   * personGeneration, personGeneration enum would take precedence. For instance, if ALLOW_NONE is
+   * set, all person generation would be blocked. If this field is unspecified, the default behavior
+   * is to allow prominent people.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProminentPeople() {
+    return prominentPeople;
+  }
+
+  /**
+   * Optional. Controls whether prominent people (celebrities) generation is allowed. If used with
+   * personGeneration, personGeneration enum would take precedence. For instance, if ALLOW_NONE is
+   * set, all person generation would be blocked. If this field is unspecified, the default behavior
+   * is to allow prominent people.
+   * @param prominentPeople prominentPeople or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImageConfig setProminentPeople(java.lang.String prominentPeople) {
+    this.prominentPeople = prominentPeople;
     return this;
   }
 

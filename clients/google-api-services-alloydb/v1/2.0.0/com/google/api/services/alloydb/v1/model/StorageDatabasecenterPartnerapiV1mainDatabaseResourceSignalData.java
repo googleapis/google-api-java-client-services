@@ -19,7 +19,7 @@ package com.google.api.services.alloydb.v1.model;
 /**
  * Database resource signal data. This is used to send signals to Condor which are based on the
  * DB/Instance/Fleet level configurations. These will be used to send signals for all inventory
- * types. Next ID: 7
+ * types. Next ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,6 +30,13 @@ package com.google.api.services.alloydb.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Deprecated: Use signal_metadata_list instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainBackupRun backupRun;
 
   /**
    * Required. Full Resource name of the source resource.
@@ -53,11 +60,18 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalDa
   private StorageDatabasecenterPartnerapiV1mainDatabaseResourceId resourceId;
 
   /**
-   * Signal data for boolean signals.
+   * Deprecated: Use signal_metadata_list instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean signalBoolValue;
+
+  /**
+   * This will support array of OneOf signal metadata information for a given signal type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StorageDatabasecenterPartnerapiV1mainSignalMetadata> signalMetadataList;
 
   /**
    * Required. Output only. Signal state of the signal
@@ -72,6 +86,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalDa
    */
   @com.google.api.client.util.Key
   private java.lang.String signalType;
+
+  /**
+   * Deprecated: Use signal_metadata_list instead.
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainBackupRun getBackupRun() {
+    return backupRun;
+  }
+
+  /**
+   * Deprecated: Use signal_metadata_list instead.
+   * @param backupRun backupRun or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun backupRun) {
+    this.backupRun = backupRun;
+    return this;
+  }
 
   /**
    * Required. Full Resource name of the source resource.
@@ -125,7 +156,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalDa
   }
 
   /**
-   * Signal data for boolean signals.
+   * Deprecated: Use signal_metadata_list instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSignalBoolValue() {
@@ -133,11 +164,28 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalDa
   }
 
   /**
-   * Signal data for boolean signals.
+   * Deprecated: Use signal_metadata_list instead.
    * @param signalBoolValue signalBoolValue or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData setSignalBoolValue(java.lang.Boolean signalBoolValue) {
     this.signalBoolValue = signalBoolValue;
+    return this;
+  }
+
+  /**
+   * This will support array of OneOf signal metadata information for a given signal type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StorageDatabasecenterPartnerapiV1mainSignalMetadata> getSignalMetadataList() {
+    return signalMetadataList;
+  }
+
+  /**
+   * This will support array of OneOf signal metadata information for a given signal type.
+   * @param signalMetadataList signalMetadataList or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData setSignalMetadataList(java.util.List<StorageDatabasecenterPartnerapiV1mainSignalMetadata> signalMetadataList) {
+    this.signalMetadataList = signalMetadataList;
     return this;
   }
 

@@ -34,7 +34,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentConfig agentConfig;
+  private GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigInferenceAgentConfig agentConfig;
 
   /**
    * Optional. Generation config.
@@ -56,7 +56,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
    * Optional. Agent config used to generate responses.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentConfig getAgentConfig() {
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigInferenceAgentConfig getAgentConfig() {
     return agentConfig;
   }
 
@@ -64,7 +64,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
    * Optional. Agent config used to generate responses.
    * @param agentConfig agentConfig or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setAgentConfig(GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentConfig agentConfig) {
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setAgentConfig(GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigInferenceAgentConfig agentConfig) {
     this.agentConfig = agentConfig;
     return this;
   }

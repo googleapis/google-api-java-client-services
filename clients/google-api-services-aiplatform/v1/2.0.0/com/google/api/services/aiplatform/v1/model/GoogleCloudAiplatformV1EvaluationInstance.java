@@ -31,18 +31,11 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EvaluationInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Deprecated. Use `agent_eval_data` instead. Data used for agent evaluation.
+   * Optional. Deprecated: Use `agent_eval_data` instead. Data used for agent evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1EvaluationInstanceAgentData agentData;
-
-  /**
-   * Optional. Data used for agent evaluation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1EvaluationInstanceAgentData agentEvalData;
+  private GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData agentData;
 
   /**
    * Optional. Other data used to populate placeholders based on their key.
@@ -82,36 +75,19 @@ public final class GoogleCloudAiplatformV1EvaluationInstance extends com.google.
   private java.util.Map<String, GoogleCloudAiplatformV1RubricGroup> rubricGroups;
 
   /**
-   * Optional. Deprecated. Use `agent_eval_data` instead. Data used for agent evaluation.
+   * Optional. Deprecated: Use `agent_eval_data` instead. Data used for agent evaluation.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1EvaluationInstanceAgentData getAgentData() {
+  public GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData getAgentData() {
     return agentData;
   }
 
   /**
-   * Optional. Deprecated. Use `agent_eval_data` instead. Data used for agent evaluation.
+   * Optional. Deprecated: Use `agent_eval_data` instead. Data used for agent evaluation.
    * @param agentData agentData or {@code null} for none
    */
-  public GoogleCloudAiplatformV1EvaluationInstance setAgentData(GoogleCloudAiplatformV1EvaluationInstanceAgentData agentData) {
+  public GoogleCloudAiplatformV1EvaluationInstance setAgentData(GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData agentData) {
     this.agentData = agentData;
-    return this;
-  }
-
-  /**
-   * Optional. Data used for agent evaluation.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1EvaluationInstanceAgentData getAgentEvalData() {
-    return agentEvalData;
-  }
-
-  /**
-   * Optional. Data used for agent evaluation.
-   * @param agentEvalData agentEvalData or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1EvaluationInstance setAgentEvalData(GoogleCloudAiplatformV1EvaluationInstanceAgentData agentEvalData) {
-    this.agentEvalData = agentEvalData;
     return this;
   }
 

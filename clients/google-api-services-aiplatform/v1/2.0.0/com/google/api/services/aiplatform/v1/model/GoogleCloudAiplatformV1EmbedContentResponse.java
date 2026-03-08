@@ -44,7 +44,7 @@ public final class GoogleCloudAiplatformV1EmbedContentResponse extends com.googl
   private java.lang.Boolean truncated;
 
   /**
-   * Metadata about the response(s).
+   * Usage metadata about the response(s).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GoogleCloudAiplatformV1EmbedContentResponse extends com.googl
   }
 
   /**
-   * Metadata about the response(s).
+   * Usage metadata about the response(s).
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1UsageMetadata getUsageMetadata() {
@@ -93,7 +93,7 @@ public final class GoogleCloudAiplatformV1EmbedContentResponse extends com.googl
   }
 
   /**
-   * Metadata about the response(s).
+   * Usage metadata about the response(s).
    * @param usageMetadata usageMetadata or {@code null} for none
    */
   public GoogleCloudAiplatformV1EmbedContentResponse setUsageMetadata(GoogleCloudAiplatformV1UsageMetadata usageMetadata) {

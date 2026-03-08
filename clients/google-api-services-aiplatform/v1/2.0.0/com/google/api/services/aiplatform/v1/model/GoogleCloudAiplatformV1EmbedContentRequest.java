@@ -30,45 +30,47 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether to silently truncate the input content if it's longer than the maximum
-   * sequence length.
+   * Optional. Deprecated: Please use EmbedContentConfig.auto_truncate instead. Whether to silently
+   * truncate the input content if it's longer than the maximum sequence length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean autoTruncate;
 
   /**
-   * Required. Input content to be embedded. Required.
+   * Required. The content to be embedded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1Content content;
 
   /**
-   * Optional. Optional reduced dimension for the output embedding. If set, excessive values in the
-   * output embedding are truncated from the end.
+   * Optional. Deprecated: Please use EmbedContentConfig.output_dimensionality instead. Reduced
+   * dimension for the output embedding. If set, excessive values in the output embedding are
+   * truncated from the end.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer outputDimensionality;
 
   /**
-   * Optional. The task type of the embedding.
+   * Optional. Deprecated: Please use EmbedContentConfig.task_type instead. The task type of the
+   * embedding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String taskType;
 
   /**
-   * Optional. An optional title for the text.
+   * Optional. Deprecated: Please use EmbedContentConfig.title instead. The title for the text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
 
   /**
-   * Optional. Whether to silently truncate the input content if it's longer than the maximum
-   * sequence length.
+   * Optional. Deprecated: Please use EmbedContentConfig.auto_truncate instead. Whether to silently
+   * truncate the input content if it's longer than the maximum sequence length.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoTruncate() {
@@ -76,8 +78,8 @@ public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google
   }
 
   /**
-   * Optional. Whether to silently truncate the input content if it's longer than the maximum
-   * sequence length.
+   * Optional. Deprecated: Please use EmbedContentConfig.auto_truncate instead. Whether to silently
+   * truncate the input content if it's longer than the maximum sequence length.
    * @param autoTruncate autoTruncate or {@code null} for none
    */
   public GoogleCloudAiplatformV1EmbedContentRequest setAutoTruncate(java.lang.Boolean autoTruncate) {
@@ -86,7 +88,7 @@ public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google
   }
 
   /**
-   * Required. Input content to be embedded. Required.
+   * Required. The content to be embedded.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1Content getContent() {
@@ -94,7 +96,7 @@ public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google
   }
 
   /**
-   * Required. Input content to be embedded. Required.
+   * Required. The content to be embedded.
    * @param content content or {@code null} for none
    */
   public GoogleCloudAiplatformV1EmbedContentRequest setContent(GoogleCloudAiplatformV1Content content) {
@@ -103,8 +105,9 @@ public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google
   }
 
   /**
-   * Optional. Optional reduced dimension for the output embedding. If set, excessive values in the
-   * output embedding are truncated from the end.
+   * Optional. Deprecated: Please use EmbedContentConfig.output_dimensionality instead. Reduced
+   * dimension for the output embedding. If set, excessive values in the output embedding are
+   * truncated from the end.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getOutputDimensionality() {
@@ -112,8 +115,9 @@ public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google
   }
 
   /**
-   * Optional. Optional reduced dimension for the output embedding. If set, excessive values in the
-   * output embedding are truncated from the end.
+   * Optional. Deprecated: Please use EmbedContentConfig.output_dimensionality instead. Reduced
+   * dimension for the output embedding. If set, excessive values in the output embedding are
+   * truncated from the end.
    * @param outputDimensionality outputDimensionality or {@code null} for none
    */
   public GoogleCloudAiplatformV1EmbedContentRequest setOutputDimensionality(java.lang.Integer outputDimensionality) {
@@ -122,7 +126,8 @@ public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google
   }
 
   /**
-   * Optional. The task type of the embedding.
+   * Optional. Deprecated: Please use EmbedContentConfig.task_type instead. The task type of the
+   * embedding.
    * @return value or {@code null} for none
    */
   public java.lang.String getTaskType() {
@@ -130,7 +135,8 @@ public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google
   }
 
   /**
-   * Optional. The task type of the embedding.
+   * Optional. Deprecated: Please use EmbedContentConfig.task_type instead. The task type of the
+   * embedding.
    * @param taskType taskType or {@code null} for none
    */
   public GoogleCloudAiplatformV1EmbedContentRequest setTaskType(java.lang.String taskType) {
@@ -139,7 +145,7 @@ public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google
   }
 
   /**
-   * Optional. An optional title for the text.
+   * Optional. Deprecated: Please use EmbedContentConfig.title instead. The title for the text.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -147,7 +153,7 @@ public final class GoogleCloudAiplatformV1EmbedContentRequest extends com.google
   }
 
   /**
-   * Optional. An optional title for the text.
+   * Optional. Deprecated: Please use EmbedContentConfig.title instead. The title for the text.
    * @param title title or {@code null} for none
    */
   public GoogleCloudAiplatformV1EmbedContentRequest setTitle(java.lang.String title) {

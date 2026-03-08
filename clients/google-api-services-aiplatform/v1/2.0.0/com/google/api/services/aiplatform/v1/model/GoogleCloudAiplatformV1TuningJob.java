@@ -75,6 +75,19 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   private GoogleRpcStatus error;
 
   /**
+   * Output only. Evaluation runs for the Tuning Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1EvaluateDatasetRun> evaluateDatasetRuns;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1EvaluateDatasetRun used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1EvaluateDatasetRun.class);
+  }
+
+  /**
    * Output only. The Experiment associated with this TuningJob.
    * The value may be {@code null}.
    */
@@ -282,6 +295,23 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1TuningJob setError(GoogleRpcStatus error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Output only. Evaluation runs for the Tuning Job.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1EvaluateDatasetRun> getEvaluateDatasetRuns() {
+    return evaluateDatasetRuns;
+  }
+
+  /**
+   * Output only. Evaluation runs for the Tuning Job.
+   * @param evaluateDatasetRuns evaluateDatasetRuns or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1TuningJob setEvaluateDatasetRuns(java.util.List<GoogleCloudAiplatformV1EvaluateDatasetRun> evaluateDatasetRuns) {
+    this.evaluateDatasetRuns = evaluateDatasetRuns;
     return this;
   }
 

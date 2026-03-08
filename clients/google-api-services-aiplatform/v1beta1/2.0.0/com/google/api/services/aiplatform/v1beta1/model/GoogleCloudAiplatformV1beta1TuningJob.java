@@ -63,6 +63,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private java.lang.String description;
 
   /**
+   * Optional. Spec for creating a distillation dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DistillationSamplingSpec distillationSamplingSpec;
+
+  /**
    * Tuning Spec for Distillation.
    * The value may be {@code null}.
    */
@@ -246,6 +253,13 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private GoogleCloudAiplatformV1beta1TuningDataStats tuningDataStats;
 
   /**
+   * Output only. Tuning Job metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1TuningJobMetadata tuningJobMetadata;
+
+  /**
    * Output only. The detail state of the tuning job (while the overall `JobState` is running).
    * The value may be {@code null}.
    */
@@ -341,6 +355,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Spec for creating a distillation dataset.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DistillationSamplingSpec getDistillationSamplingSpec() {
+    return distillationSamplingSpec;
+  }
+
+  /**
+   * Optional. Spec for creating a distillation dataset.
+   * @param distillationSamplingSpec distillationSamplingSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setDistillationSamplingSpec(GoogleCloudAiplatformV1beta1DistillationSamplingSpec distillationSamplingSpec) {
+    this.distillationSamplingSpec = distillationSamplingSpec;
     return this;
   }
 
@@ -764,6 +795,23 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setTuningDataStats(GoogleCloudAiplatformV1beta1TuningDataStats tuningDataStats) {
     this.tuningDataStats = tuningDataStats;
+    return this;
+  }
+
+  /**
+   * Output only. Tuning Job metadata.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJobMetadata getTuningJobMetadata() {
+    return tuningJobMetadata;
+  }
+
+  /**
+   * Output only. Tuning Job metadata.
+   * @param tuningJobMetadata tuningJobMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setTuningJobMetadata(GoogleCloudAiplatformV1beta1TuningJobMetadata tuningJobMetadata) {
+    this.tuningJobMetadata = tuningJobMetadata;
     return this;
   }
 

@@ -91,6 +91,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscrip
   private java.lang.String text;
 
   /**
+   * Turn level audio for this transcript segment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1alpha1ConversationDataSourceTurnLevelAudio turnLevelAudio;
+
+  /**
    * A list of the word-specific information for each word in the segment.
    * The value may be {@code null}.
    */
@@ -238,6 +245,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscrip
    */
   public GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegment setText(java.lang.String text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * Turn level audio for this transcript segment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ConversationDataSourceTurnLevelAudio getTurnLevelAudio() {
+    return turnLevelAudio;
+  }
+
+  /**
+   * Turn level audio for this transcript segment.
+   * @param turnLevelAudio turnLevelAudio or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegment setTurnLevelAudio(GoogleCloudContactcenterinsightsV1alpha1ConversationDataSourceTurnLevelAudio turnLevelAudio) {
+    this.turnLevelAudio = turnLevelAudio;
     return this;
   }
 

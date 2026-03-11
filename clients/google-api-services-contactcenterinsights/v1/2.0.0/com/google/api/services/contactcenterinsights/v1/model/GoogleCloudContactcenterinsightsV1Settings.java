@@ -122,6 +122,16 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
   private GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig;
 
   /**
+   * Optional. The time zone applied to the project. This is a string representation of the time
+   * zone, for example, "America/New_York". This field follows the IANA TZ database format. See
+   * https://www.iana.org/time-zones for a list of valid values. If no value is set the user time
+   * zone will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
    * Output only. The time at which the settings were last updated.
    * The value may be {@code null}.
    */
@@ -326,6 +336,29 @@ public final class GoogleCloudContactcenterinsightsV1Settings extends com.google
    */
   public GoogleCloudContactcenterinsightsV1Settings setSpeechConfig(GoogleCloudContactcenterinsightsV1SpeechConfig speechConfig) {
     this.speechConfig = speechConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The time zone applied to the project. This is a string representation of the time
+   * zone, for example, "America/New_York". This field follows the IANA TZ database format. See
+   * https://www.iana.org/time-zones for a list of valid values. If no value is set the user time
+   * zone will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Optional. The time zone applied to the project. This is a string representation of the time
+   * zone, for example, "America/New_York". This field follows the IANA TZ database format. See
+   * https://www.iana.org/time-zones for a list of valid values. If no value is set the user time
+   * zone will be used.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Settings setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

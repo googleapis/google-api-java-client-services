@@ -43,6 +43,7 @@ jobs:
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
       - name: Create PR via Local Checkout (Large Commit Support)
         shell: bash
+        working-directory: google-api-java-client-services
         env:
           GH_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
           SERVICE: ${{ matrix.service }}
@@ -50,6 +51,8 @@ jobs:
           FORK_REPO: "yoshi-code-bot/google-api-java-client-services"
           BASE_REPO: "${{ github.repository }}"
         run: |
+          set -ex
+
           # 1. Setup Identity
           git config user.name "Yoshi Code Bot"
           git config user.email "yoshi-automation@google.com"

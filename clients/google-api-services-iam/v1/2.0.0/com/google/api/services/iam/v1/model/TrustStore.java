@@ -61,6 +61,15 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. If set to True, the trust bundle will include the private ca managed identity
+   * regional root public certificates. Important: `trust_default_shared_ca` is only supported for
+   * managed identity trust domain resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean trustDefaultSharedCa;
+
+  /**
    * Optional. Set of intermediate CA certificates used for building the trust chain to the trust
    * anchor. Important: Intermediate CAs are only supported for X.509 federation.
    * @return value or {@code null} for none
@@ -97,6 +106,27 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
    */
   public TrustStore setTrustAnchors(java.util.List<TrustAnchor> trustAnchors) {
     this.trustAnchors = trustAnchors;
+    return this;
+  }
+
+  /**
+   * Optional. If set to True, the trust bundle will include the private ca managed identity
+   * regional root public certificates. Important: `trust_default_shared_ca` is only supported for
+   * managed identity trust domain resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTrustDefaultSharedCa() {
+    return trustDefaultSharedCa;
+  }
+
+  /**
+   * Optional. If set to True, the trust bundle will include the private ca managed identity
+   * regional root public certificates. Important: `trust_default_shared_ca` is only supported for
+   * managed identity trust domain resource.
+   * @param trustDefaultSharedCa trustDefaultSharedCa or {@code null} for none
+   */
+  public TrustStore setTrustDefaultSharedCa(java.lang.Boolean trustDefaultSharedCa) {
+    this.trustDefaultSharedCa = trustDefaultSharedCa;
     return this;
   }
 

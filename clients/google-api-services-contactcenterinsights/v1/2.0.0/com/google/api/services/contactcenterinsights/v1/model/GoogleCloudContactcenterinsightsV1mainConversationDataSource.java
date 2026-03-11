@@ -52,6 +52,14 @@ public final class GoogleCloudContactcenterinsightsV1mainConversationDataSource 
   private java.lang.String metadataUri;
 
   /**
+   * Cloud Storage URIs that points to files that contain the conversation audio for each turn.
+   * Assume the order of the URIs is the same as the order of the transcript turns.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudContactcenterinsightsV1mainConversationDataSourceTurnLevelAudio> turnLevelAudios;
+
+  /**
    * The source when the conversation comes from Dialogflow.
    * @return value or {@code null} for none
    */
@@ -99,6 +107,25 @@ public final class GoogleCloudContactcenterinsightsV1mainConversationDataSource 
    */
   public GoogleCloudContactcenterinsightsV1mainConversationDataSource setMetadataUri(java.lang.String metadataUri) {
     this.metadataUri = metadataUri;
+    return this;
+  }
+
+  /**
+   * Cloud Storage URIs that points to files that contain the conversation audio for each turn.
+   * Assume the order of the URIs is the same as the order of the transcript turns.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudContactcenterinsightsV1mainConversationDataSourceTurnLevelAudio> getTurnLevelAudios() {
+    return turnLevelAudios;
+  }
+
+  /**
+   * Cloud Storage URIs that points to files that contain the conversation audio for each turn.
+   * Assume the order of the URIs is the same as the order of the transcript turns.
+   * @param turnLevelAudios turnLevelAudios or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainConversationDataSource setTurnLevelAudios(java.util.List<GoogleCloudContactcenterinsightsV1mainConversationDataSourceTurnLevelAudio> turnLevelAudios) {
+    this.turnLevelAudios = turnLevelAudios;
     return this;
   }
 

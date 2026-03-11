@@ -27,6 +27,7 @@ jobs:
         with:
           fetch-depth: 1
           path: google-api-java-client-services
+          token: ${{ secrets.CLOUD_JAVA_BOT_GITHUB_TOKEN }}
       - uses: actions/checkout@v2
         with:
           repository: googleapis/discovery-artifact-manager
@@ -45,20 +46,16 @@ jobs:
         shell: bash
         working-directory: google-api-java-client-services
         env:
-          GH_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+          GH_TOKEN: ${{ secrets.CLOUD_JAVA_BOT_GITHUB_TOKEN }}
           SERVICE: ${{ matrix.service }}
-          AUTHOR: "Yoshi Code Bot <yoshi-automation@google.com>"
-          FORK_REPO: "yoshi-code-bot/google-api-java-client-services"
+          AUTHOR: "Cloud Java Bot <cloud-java-bot@google.com>"
           BASE_REPO: "${{ github.repository }}"
         run: |
           set -ex
 
           # 1. Setup Identity
-          git config user.name "Yoshi Code Bot"
-          git config user.email "yoshi-automation@google.com"
-
-          # 2. Add and Fetch Fork
-          git remote add fork "https://x-access-token:${GH_TOKEN}@github.com/${FORK_REPO}.git"
+          git config user.name "Cloud Java Bot"
+          git config user.email "cloud-java-bot@google.com"
           
           # 3. Create Branch
           BRANCH="regenerate-${SERVICE}"
@@ -76,15 +73,11 @@ jobs:
           fi
 
           git commit -m "$MESSAGE"
-          git push fork "$BRANCH" --force
-
-          # 6. Create PR using GitHub CLI
-          # Note: --head needs 'owner:branch' format when pushing from a fork
-          FORK_OWNER=$(echo "$FORK_REPO" | cut -d'/' -f1)
+          git push origin "$BRANCH" --force
           
           gh pr create \
             --repo "$BASE_REPO" \
-            --head "${FORK_OWNER}:${BRANCH}" \
+            --head "${BRANCH}" \
             --base "main" \
             --title "$MESSAGE" \
             --body "Generated in GitHub action: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \

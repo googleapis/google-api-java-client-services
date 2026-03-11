@@ -70,6 +70,18 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   private java.lang.Integer rotationWindowPercentage;
 
   /**
+   * Optional. If set to true, the trust domain will utilize the GCP-provisioned default CA. A
+   * default CA in the same region as the workload will be selected to issue the certificate.
+   * Enabling this will clear any existing `ca_pools` configuration to provision the certificates.
+   * NOTE: This field is mutually exclusive with `ca_pools`. If this flag is enabled, certificates
+   * will be automatically provisioned from the default shared CAs. This flag should not be set if
+   * you want to use your own CA pools to provision the certificates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useDefaultSharedCa;
+
+  /**
    * Optional. A required mapping of a Google Cloud region to the CA pool resource located in that
    * region. The CA pool is used for certificate issuance, adhering to the following constraints: *
    * Key format: A supported cloud region name equivalent to the location identifier in the
@@ -154,6 +166,33 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
    */
   public InlineCertificateIssuanceConfig setRotationWindowPercentage(java.lang.Integer rotationWindowPercentage) {
     this.rotationWindowPercentage = rotationWindowPercentage;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, the trust domain will utilize the GCP-provisioned default CA. A
+   * default CA in the same region as the workload will be selected to issue the certificate.
+   * Enabling this will clear any existing `ca_pools` configuration to provision the certificates.
+   * NOTE: This field is mutually exclusive with `ca_pools`. If this flag is enabled, certificates
+   * will be automatically provisioned from the default shared CAs. This flag should not be set if
+   * you want to use your own CA pools to provision the certificates.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseDefaultSharedCa() {
+    return useDefaultSharedCa;
+  }
+
+  /**
+   * Optional. If set to true, the trust domain will utilize the GCP-provisioned default CA. A
+   * default CA in the same region as the workload will be selected to issue the certificate.
+   * Enabling this will clear any existing `ca_pools` configuration to provision the certificates.
+   * NOTE: This field is mutually exclusive with `ca_pools`. If this flag is enabled, certificates
+   * will be automatically provisioned from the default shared CAs. This flag should not be set if
+   * you want to use your own CA pools to provision the certificates.
+   * @param useDefaultSharedCa useDefaultSharedCa or {@code null} for none
+   */
+  public InlineCertificateIssuanceConfig setUseDefaultSharedCa(java.lang.Boolean useDefaultSharedCa) {
+    this.useDefaultSharedCa = useDefaultSharedCa;
     return this;
   }
 

@@ -56,12 +56,12 @@ jobs:
             }
             return result
   generate:
-    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@build/fix-compute
+    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main
     needs: batch
     secrets: inherit
     # The size of the batch is implicitly decided by the hour of the day.
     # For example, a job starting at "1:30" uses the chunk at the index 1 in the array.
-    if: github.event_name != 'workflow_dispatch' && ${{!!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour]}}
+    if: ${{ github.event_name != 'workflow_dispatch' && !!fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour] }}
     with: 
       services: ${{toJson(fromJson(needs.batch.outputs.services).batches[fromJson(needs.batch.outputs.services).hour])}}
   generate_dispatch:

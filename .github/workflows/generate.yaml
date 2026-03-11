@@ -42,17 +42,18 @@ jobs:
           pip --version  
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
       - uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0
-        token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-        commit-message: ${{ env.MESSAGE }}
-        committer: ${{ env.AUTHOR }}
-        author: ${{ env.AUTHOR }}
-        branch: regenerate-${{ matrix.service }}
-        title: ${{ env.MESSAGE }}
-        body: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
-        add-paths: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
-        base: main
-        push-to-fork: yoshi-code-bot/google-api-java-client-services
-
         env:
-          - MESSAGE: 'chore: regenerate ${{ matrix.service }} client'
-          - AUTHOR: Yoshi Code Bot <yoshi-automation@google.com>
+          MESSAGE: 'chore: regenerate ${{ matrix.service }} client'
+          AUTHOR: Yoshi Code Bot <yoshi-automation@google.com>
+        with: 
+          token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+          commit-message: ${{ env.MESSAGE }}
+          committer: ${{ env.AUTHOR }}
+          author: ${{ env.AUTHOR }}
+          branch: regenerate-${{ matrix.service }}
+          title: ${{ env.MESSAGE }}
+          body: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
+          add-paths: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
+          base: main
+          push-to-fork: yoshi-code-bot/google-api-java-client-services
+        

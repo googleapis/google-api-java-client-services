@@ -41,19 +41,48 @@ jobs:
           pip install pip==21.3.1
           pip --version  
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
-      - uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0
+      - name: Create PR via Local Checkout (Large Commit Support)
+        shell: bash
         env:
-          MESSAGE: 'chore: regenerate ${{ matrix.service }} client'
-          AUTHOR: Yoshi Code Bot <yoshi-automation@google.com>
-        with: 
-          token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-          commit-message: ${{ env.MESSAGE }}
-          committer: ${{ env.AUTHOR }}
-          author: ${{ env.AUTHOR }}
-          branch: regenerate-${{ matrix.service }}
-          title: ${{ env.MESSAGE }}
-          body: 'Generated in GitHub action: https://github.com/${{ github.repository_owner }}/${{ github.repository }}/actions/workflows/codegen.yaml'
-          add-paths: 'google-api-java-client-services/clients/google-api-services-${{ matrix.service }}'
-          base: main
-          push-to-fork: yoshi-code-bot/google-api-java-client-services
-        
+          GH_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+          SERVICE: ${{ matrix.service }}
+          AUTHOR: "Yoshi Code Bot <yoshi-automation@google.com>"
+          FORK_REPO: "yoshi-code-bot/google-api-java-client-services"
+          BASE_REPO: "${{ github.repository }}"
+        run: |
+          # 1. Setup Identity
+          git config user.name "Yoshi Code Bot"
+          git config user.email "yoshi-automation@google.com"
+
+          # 2. Add and Fetch Fork
+          git remote add fork "https://x-access-token:${GH_TOKEN}@github.com/${FORK_REPO}.git"
+          
+          # 3. Create Branch
+          BRANCH="regenerate-${SERVICE}"
+          git checkout -b "$BRANCH"
+
+          # 4. Stage specific files (Large commit handling)
+          TARGET_PATH="google-api-java-client-services/clients/google-api-services-${SERVICE}"
+          git add "$TARGET_PATH"
+
+          # 5. Commit & Push
+          MESSAGE="chore: regenerate ${SERVICE} client"
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit for ${SERVICE}."
+            exit 0
+          fi
+
+          git commit -m "$MESSAGE"
+          git push fork "$BRANCH" --force
+
+          # 6. Create PR using GitHub CLI
+          # Note: --head needs 'owner:branch' format when pushing from a fork
+          FORK_OWNER=$(echo "$FORK_REPO" | cut -d'/' -f1)
+          
+          gh pr create \
+            --repo "$BASE_REPO" \
+            --head "${FORK_OWNER}:${BRANCH}" \
+            --base "main" \
+            --title "$MESSAGE" \
+            --body "Generated in GitHub action: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            || echo "PR already exists or failed to create, but changes are pushed."

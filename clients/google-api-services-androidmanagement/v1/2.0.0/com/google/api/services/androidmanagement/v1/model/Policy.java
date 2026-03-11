@@ -492,7 +492,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean networkEscapeHatchEnabled;
 
   /**
-   * Whether resetting network settings is disabled.
+   * Whether resetting network settings is disabled. This applies only on fully managed devices. A
+   * NonComplianceDetail with MANAGEMENT_MODE is reported for other management modes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1914,7 +1915,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether resetting network settings is disabled.
+   * Whether resetting network settings is disabled. This applies only on fully managed devices. A
+   * NonComplianceDetail with MANAGEMENT_MODE is reported for other management modes.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNetworkResetDisabled() {
@@ -1922,7 +1924,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether resetting network settings is disabled.
+   * Whether resetting network settings is disabled. This applies only on fully managed devices. A
+   * NonComplianceDetail with MANAGEMENT_MODE is reported for other management modes.
    * @param networkResetDisabled networkResetDisabled or {@code null} for none
    */
   public Policy setNetworkResetDisabled(java.lang.Boolean networkResetDisabled) {

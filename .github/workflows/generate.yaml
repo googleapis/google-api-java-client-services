@@ -65,7 +65,7 @@ jobs:
           git checkout -b "$BRANCH"
 
           # 4. Stage specific files (Large commit handling)
-          TARGET_PATH="google-api-java-client-services/clients/google-api-services-${SERVICE}"
+          TARGET_PATH="clients/google-api-services-${SERVICE}"
           git add "$TARGET_PATH"
 
           # 5. Commit & Push

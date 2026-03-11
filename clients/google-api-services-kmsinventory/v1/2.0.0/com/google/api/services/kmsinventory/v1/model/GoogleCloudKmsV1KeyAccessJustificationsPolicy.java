@@ -18,7 +18,8 @@ package com.google.api.services.kmsinventory.v1.model;
 
 /**
  * A KeyAccessJustificationsPolicy specifies zero or more allowed AccessReason values for encrypt,
- * decrypt, and sign operations on a CryptoKey.
+ * decrypt, and sign operations on a CryptoKey or KeyAccessJustificationsPolicyConfig (the default
+ * Key Access Justifications policy).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the KMS Inventory API. For a detailed explanation see:
@@ -31,16 +32,20 @@ package com.google.api.services.kmsinventory.v1.model;
 public final class GoogleCloudKmsV1KeyAccessJustificationsPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of allowed reasons for access to a CryptoKey. Zero allowed access reasons means all
-   * encrypt, decrypt, and sign operations for the CryptoKey associated with this policy will fail.
+   * The list of allowed reasons for access to a CryptoKey. Note that empty allowed_access_reasons
+   * has a different meaning depending on where this message appears. If this is under
+   * KeyAccessJustificationsPolicyConfig, it means allow-all. If this is under CryptoKey, it means
+   * deny-all.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedAccessReasons;
 
   /**
-   * The list of allowed reasons for access to a CryptoKey. Zero allowed access reasons means all
-   * encrypt, decrypt, and sign operations for the CryptoKey associated with this policy will fail.
+   * The list of allowed reasons for access to a CryptoKey. Note that empty allowed_access_reasons
+   * has a different meaning depending on where this message appears. If this is under
+   * KeyAccessJustificationsPolicyConfig, it means allow-all. If this is under CryptoKey, it means
+   * deny-all.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedAccessReasons() {
@@ -48,8 +53,10 @@ public final class GoogleCloudKmsV1KeyAccessJustificationsPolicy extends com.goo
   }
 
   /**
-   * The list of allowed reasons for access to a CryptoKey. Zero allowed access reasons means all
-   * encrypt, decrypt, and sign operations for the CryptoKey associated with this policy will fail.
+   * The list of allowed reasons for access to a CryptoKey. Note that empty allowed_access_reasons
+   * has a different meaning depending on where this message appears. If this is under
+   * KeyAccessJustificationsPolicyConfig, it means allow-all. If this is under CryptoKey, it means
+   * deny-all.
    * @param allowedAccessReasons allowedAccessReasons or {@code null} for none
    */
   public GoogleCloudKmsV1KeyAccessJustificationsPolicy setAllowedAccessReasons(java.util.List<java.lang.String> allowedAccessReasons) {

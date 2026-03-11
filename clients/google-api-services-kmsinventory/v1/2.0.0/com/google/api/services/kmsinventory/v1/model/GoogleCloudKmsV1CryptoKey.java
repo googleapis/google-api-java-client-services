@@ -73,7 +73,9 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
    * will be evaluated in encrypt, decrypt, and sign operations, and the operation will fail if
    * rejected by the policy. The policy is defined by specifying zero or more allowed justification
    * codes. https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-
-   * codes By default, this field is absent, and all justification codes are allowed.
+   * codes By default, this field is absent, and all justification codes are allowed. If the
+   * `key_access_justifications_policy.allowed_access_reasons` is empty (zero allowed justification
+   * code), all encrypt, decrypt, and sign operations will fail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +234,9 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
    * will be evaluated in encrypt, decrypt, and sign operations, and the operation will fail if
    * rejected by the policy. The policy is defined by specifying zero or more allowed justification
    * codes. https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-
-   * codes By default, this field is absent, and all justification codes are allowed.
+   * codes By default, this field is absent, and all justification codes are allowed. If the
+   * `key_access_justifications_policy.allowed_access_reasons` is empty (zero allowed justification
+   * code), all encrypt, decrypt, and sign operations will fail.
    * @return value or {@code null} for none
    */
   public GoogleCloudKmsV1KeyAccessJustificationsPolicy getKeyAccessJustificationsPolicy() {
@@ -245,7 +249,9 @@ public final class GoogleCloudKmsV1CryptoKey extends com.google.api.client.json.
    * will be evaluated in encrypt, decrypt, and sign operations, and the operation will fail if
    * rejected by the policy. The policy is defined by specifying zero or more allowed justification
    * codes. https://cloud.google.com/assured-workloads/key-access-justifications/docs/justification-
-   * codes By default, this field is absent, and all justification codes are allowed.
+   * codes By default, this field is absent, and all justification codes are allowed. If the
+   * `key_access_justifications_policy.allowed_access_reasons` is empty (zero allowed justification
+   * code), all encrypt, decrypt, and sign operations will fail.
    * @param keyAccessJustificationsPolicy keyAccessJustificationsPolicy or {@code null} for none
    */
   public GoogleCloudKmsV1CryptoKey setKeyAccessJustificationsPolicy(GoogleCloudKmsV1KeyAccessJustificationsPolicy keyAccessJustificationsPolicy) {

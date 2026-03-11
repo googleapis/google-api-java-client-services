@@ -56,7 +56,7 @@ jobs:
             }
             return result
   generate:
-    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main
+    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@build/fix-compute
     needs: batch
     secrets: inherit
     # The size of the batch is implicitly decided by the hour of the day.

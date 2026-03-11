@@ -467,16 +467,17 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Unspecified is interpreted as READER. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /**
-
+      /** Unspecified is interpreted as READER.
        */
       public java.lang.String getView() {
         return view;
       }
 
+      /** Unspecified is interpreted as READER. */
       public Get setView(java.lang.String view) {
         this.view = view;
         return this;
@@ -607,16 +608,17 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Unspecified is interpreted as READER. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /**
-
+      /** Unspecified is interpreted as READER.
        */
       public java.lang.String getView() {
         return view;
       }
 
+      /** Unspecified is interpreted as READER. */
       public GetByUrl setView(java.lang.String view) {
         this.view = view;
         return this;
@@ -793,16 +795,17 @@ public class Blogger extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Unspecified is interpreted as the user's role on the blog. */
       @com.google.api.client.util.Key
       private java.lang.String view;
 
-      /**
-
+      /** Unspecified is interpreted as the user's role on the blog.
        */
       public java.lang.String getView() {
         return view;
       }
 
+      /** Unspecified is interpreted as the user's role on the blog. */
       public ListByUser setView(java.lang.String view) {
         this.view = view;
         return this;

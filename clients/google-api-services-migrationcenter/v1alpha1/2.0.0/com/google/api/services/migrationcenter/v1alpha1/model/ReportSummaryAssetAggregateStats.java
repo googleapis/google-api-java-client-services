@@ -52,6 +52,13 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
   private ReportSummaryChartData databaseTypes;
 
   /**
+   * Output only. Estimated usage stats for the assets in this collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReportSummaryAssetAggregateStatsEstimatedUsageStats estimatedUsageStats;
+
+  /**
    * Histogram showing a distribution of memory sizes.
    * The value may be {@code null}.
    */
@@ -185,6 +192,23 @@ public final class ReportSummaryAssetAggregateStats extends com.google.api.clien
    */
   public ReportSummaryAssetAggregateStats setDatabaseTypes(ReportSummaryChartData databaseTypes) {
     this.databaseTypes = databaseTypes;
+    return this;
+  }
+
+  /**
+   * Output only. Estimated usage stats for the assets in this collection.
+   * @return value or {@code null} for none
+   */
+  public ReportSummaryAssetAggregateStatsEstimatedUsageStats getEstimatedUsageStats() {
+    return estimatedUsageStats;
+  }
+
+  /**
+   * Output only. Estimated usage stats for the assets in this collection.
+   * @param estimatedUsageStats estimatedUsageStats or {@code null} for none
+   */
+  public ReportSummaryAssetAggregateStats setEstimatedUsageStats(ReportSummaryAssetAggregateStatsEstimatedUsageStats estimatedUsageStats) {
+    this.estimatedUsageStats = estimatedUsageStats;
     return this;
   }
 

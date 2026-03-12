@@ -49,6 +49,14 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
   private ComputeEnginePreferences computeEnginePreferences;
 
   /**
+   * Optional. Estimated usage data for missing usage data. If performance data is available, it
+   * overrides this field. If not set, default values will be used for the usage data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EstimatedUsage estimatedUsage;
+
+  /**
    * Optional. Parameters that affect network cost estimations. If not set, default values will be
    * used for the parameters.
    * The value may be {@code null}.
@@ -141,6 +149,25 @@ public final class VirtualMachinePreferences extends com.google.api.client.json.
    */
   public VirtualMachinePreferences setComputeEnginePreferences(ComputeEnginePreferences computeEnginePreferences) {
     this.computeEnginePreferences = computeEnginePreferences;
+    return this;
+  }
+
+  /**
+   * Optional. Estimated usage data for missing usage data. If performance data is available, it
+   * overrides this field. If not set, default values will be used for the usage data.
+   * @return value or {@code null} for none
+   */
+  public EstimatedUsage getEstimatedUsage() {
+    return estimatedUsage;
+  }
+
+  /**
+   * Optional. Estimated usage data for missing usage data. If performance data is available, it
+   * overrides this field. If not set, default values will be used for the usage data.
+   * @param estimatedUsage estimatedUsage or {@code null} for none
+   */
+  public VirtualMachinePreferences setEstimatedUsage(EstimatedUsage estimatedUsage) {
+    this.estimatedUsage = estimatedUsage;
     return this;
   }
 

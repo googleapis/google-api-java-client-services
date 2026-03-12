@@ -45,6 +45,41 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> attributes;
 
   /**
+   * Output only. Asset information specific for AWS API Gateway REST APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsApiGatewayRestApiDetails awsApiGatewayRestApiDetails;
+
+  /**
+   * Output only. Asset information specific for AWS AppSync GraphQL APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsAppSyncGraphqlApiDetails awsAppSyncGraphqlApiDetails;
+
+  /**
+   * Output only. Asset information specific for AWS Application Load Balancers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsApplicationLoadBalancerDetails awsApplicationLoadBalancerDetails;
+
+  /**
+   * Output only. Asset information specific for AwsAutoscalingGroupDetails
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsAutoscalingGroupDetails awsAutoscalingGroupDetails;
+
+  /**
+   * Output only. Asset information specific for AWS Batch Compute Environments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsBatchComputeEnvironmentDetails awsBatchComputeEnvironmentDetails;
+
+  /**
    * Output only. Asset information specific for AWS CloudFront distributions.
    * The value may be {@code null}.
    */
@@ -57,6 +92,20 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private AwsDynamoDBTableDetails awsDynamodbTableDetails;
+
+  /**
+   * Output only. Asset information specific for AWS EBS Volumes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsEbsVolumeDetails awsEbsVolumeDetails;
+
+  /**
+   * Output only. Asset information specific for AwsEcrRepositoryDetails
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsEcrRepositoryDetails awsEcrRepositoryDetails;
 
   /**
    * Output only. Asset information specific for AWS ECS clusters.
@@ -80,11 +129,32 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private AwsEksClusterDetails awsEksClusterDetails;
 
   /**
+   * Output only. Asset information specific for AWS Elastic IP Addresses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsElasticIpAddressDetails awsElasticIpAddressDetails;
+
+  /**
+   * Output only. Asset information specific for AWS Elastic Network Interfaces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsElasticNetworkInterfaceDetails awsElasticNetworkInterfaceDetails;
+
+  /**
    * Output only. Asset information specific for AWS Load Balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsElbLoadBalancerDetails awsElbLoadBalancerDetails;
+
+  /**
+   * Output only. Asset information specific for AWS Internet Gateways.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsInternetGatewayDetails awsInternetGatewayDetails;
 
   /**
    * Output only. Asset information specific for AWS Lambda functions.
@@ -120,6 +190,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private AwsS3BucketDetails awsS3BucketDetails;
+
+  /**
+   * Output only. Asset information specific for AWS SNS Topics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsSnsTopicDetails awsSnsTopicDetails;
 
   /**
    * Output only. Asset information specific for AWS VPCs.
@@ -282,6 +359,91 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Asset information specific for AWS API Gateway REST APIs.
+   * @return value or {@code null} for none
+   */
+  public AwsApiGatewayRestApiDetails getAwsApiGatewayRestApiDetails() {
+    return awsApiGatewayRestApiDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS API Gateway REST APIs.
+   * @param awsApiGatewayRestApiDetails awsApiGatewayRestApiDetails or {@code null} for none
+   */
+  public Asset setAwsApiGatewayRestApiDetails(AwsApiGatewayRestApiDetails awsApiGatewayRestApiDetails) {
+    this.awsApiGatewayRestApiDetails = awsApiGatewayRestApiDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS AppSync GraphQL APIs.
+   * @return value or {@code null} for none
+   */
+  public AwsAppSyncGraphqlApiDetails getAwsAppSyncGraphqlApiDetails() {
+    return awsAppSyncGraphqlApiDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS AppSync GraphQL APIs.
+   * @param awsAppSyncGraphqlApiDetails awsAppSyncGraphqlApiDetails or {@code null} for none
+   */
+  public Asset setAwsAppSyncGraphqlApiDetails(AwsAppSyncGraphqlApiDetails awsAppSyncGraphqlApiDetails) {
+    this.awsAppSyncGraphqlApiDetails = awsAppSyncGraphqlApiDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Application Load Balancers.
+   * @return value or {@code null} for none
+   */
+  public AwsApplicationLoadBalancerDetails getAwsApplicationLoadBalancerDetails() {
+    return awsApplicationLoadBalancerDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Application Load Balancers.
+   * @param awsApplicationLoadBalancerDetails awsApplicationLoadBalancerDetails or {@code null} for none
+   */
+  public Asset setAwsApplicationLoadBalancerDetails(AwsApplicationLoadBalancerDetails awsApplicationLoadBalancerDetails) {
+    this.awsApplicationLoadBalancerDetails = awsApplicationLoadBalancerDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsAutoscalingGroupDetails
+   * @return value or {@code null} for none
+   */
+  public AwsAutoscalingGroupDetails getAwsAutoscalingGroupDetails() {
+    return awsAutoscalingGroupDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsAutoscalingGroupDetails
+   * @param awsAutoscalingGroupDetails awsAutoscalingGroupDetails or {@code null} for none
+   */
+  public Asset setAwsAutoscalingGroupDetails(AwsAutoscalingGroupDetails awsAutoscalingGroupDetails) {
+    this.awsAutoscalingGroupDetails = awsAutoscalingGroupDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Batch Compute Environments.
+   * @return value or {@code null} for none
+   */
+  public AwsBatchComputeEnvironmentDetails getAwsBatchComputeEnvironmentDetails() {
+    return awsBatchComputeEnvironmentDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Batch Compute Environments.
+   * @param awsBatchComputeEnvironmentDetails awsBatchComputeEnvironmentDetails or {@code null} for none
+   */
+  public Asset setAwsBatchComputeEnvironmentDetails(AwsBatchComputeEnvironmentDetails awsBatchComputeEnvironmentDetails) {
+    this.awsBatchComputeEnvironmentDetails = awsBatchComputeEnvironmentDetails;
+    return this;
+  }
+
+  /**
    * Output only. Asset information specific for AWS CloudFront distributions.
    * @return value or {@code null} for none
    */
@@ -312,6 +474,40 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setAwsDynamodbTableDetails(AwsDynamoDBTableDetails awsDynamodbTableDetails) {
     this.awsDynamodbTableDetails = awsDynamodbTableDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS EBS Volumes.
+   * @return value or {@code null} for none
+   */
+  public AwsEbsVolumeDetails getAwsEbsVolumeDetails() {
+    return awsEbsVolumeDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS EBS Volumes.
+   * @param awsEbsVolumeDetails awsEbsVolumeDetails or {@code null} for none
+   */
+  public Asset setAwsEbsVolumeDetails(AwsEbsVolumeDetails awsEbsVolumeDetails) {
+    this.awsEbsVolumeDetails = awsEbsVolumeDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsEcrRepositoryDetails
+   * @return value or {@code null} for none
+   */
+  public AwsEcrRepositoryDetails getAwsEcrRepositoryDetails() {
+    return awsEcrRepositoryDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AwsEcrRepositoryDetails
+   * @param awsEcrRepositoryDetails awsEcrRepositoryDetails or {@code null} for none
+   */
+  public Asset setAwsEcrRepositoryDetails(AwsEcrRepositoryDetails awsEcrRepositoryDetails) {
+    this.awsEcrRepositoryDetails = awsEcrRepositoryDetails;
     return this;
   }
 
@@ -367,6 +563,40 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Asset information specific for AWS Elastic IP Addresses.
+   * @return value or {@code null} for none
+   */
+  public AwsElasticIpAddressDetails getAwsElasticIpAddressDetails() {
+    return awsElasticIpAddressDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Elastic IP Addresses.
+   * @param awsElasticIpAddressDetails awsElasticIpAddressDetails or {@code null} for none
+   */
+  public Asset setAwsElasticIpAddressDetails(AwsElasticIpAddressDetails awsElasticIpAddressDetails) {
+    this.awsElasticIpAddressDetails = awsElasticIpAddressDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Elastic Network Interfaces.
+   * @return value or {@code null} for none
+   */
+  public AwsElasticNetworkInterfaceDetails getAwsElasticNetworkInterfaceDetails() {
+    return awsElasticNetworkInterfaceDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Elastic Network Interfaces.
+   * @param awsElasticNetworkInterfaceDetails awsElasticNetworkInterfaceDetails or {@code null} for none
+   */
+  public Asset setAwsElasticNetworkInterfaceDetails(AwsElasticNetworkInterfaceDetails awsElasticNetworkInterfaceDetails) {
+    this.awsElasticNetworkInterfaceDetails = awsElasticNetworkInterfaceDetails;
+    return this;
+  }
+
+  /**
    * Output only. Asset information specific for AWS Load Balancers.
    * @return value or {@code null} for none
    */
@@ -380,6 +610,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setAwsElbLoadBalancerDetails(AwsElbLoadBalancerDetails awsElbLoadBalancerDetails) {
     this.awsElbLoadBalancerDetails = awsElbLoadBalancerDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Internet Gateways.
+   * @return value or {@code null} for none
+   */
+  public AwsInternetGatewayDetails getAwsInternetGatewayDetails() {
+    return awsInternetGatewayDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS Internet Gateways.
+   * @param awsInternetGatewayDetails awsInternetGatewayDetails or {@code null} for none
+   */
+  public Asset setAwsInternetGatewayDetails(AwsInternetGatewayDetails awsInternetGatewayDetails) {
+    this.awsInternetGatewayDetails = awsInternetGatewayDetails;
     return this;
   }
 
@@ -465,6 +712,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setAwsS3BucketDetails(AwsS3BucketDetails awsS3BucketDetails) {
     this.awsS3BucketDetails = awsS3BucketDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS SNS Topics.
+   * @return value or {@code null} for none
+   */
+  public AwsSnsTopicDetails getAwsSnsTopicDetails() {
+    return awsSnsTopicDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for AWS SNS Topics.
+   * @param awsSnsTopicDetails awsSnsTopicDetails or {@code null} for none
+   */
+  public Asset setAwsSnsTopicDetails(AwsSnsTopicDetails awsSnsTopicDetails) {
+    this.awsSnsTopicDetails = awsSnsTopicDetails;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.ces.v1.model;
 public final class Tool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The agent tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentTool agentTool;
+
+  /**
    * Optional. The client function.
    * The value may be {@code null}.
    */
@@ -163,6 +170,23 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WidgetTool widgetTool;
+
+  /**
+   * Optional. The agent tool.
+   * @return value or {@code null} for none
+   */
+  public AgentTool getAgentTool() {
+    return agentTool;
+  }
+
+  /**
+   * Optional. The agent tool.
+   * @param agentTool agentTool or {@code null} for none
+   */
+  public Tool setAgentTool(AgentTool agentTool) {
+    this.agentTool = agentTool;
+    return this;
+  }
 
   /**
    * Optional. The client function.

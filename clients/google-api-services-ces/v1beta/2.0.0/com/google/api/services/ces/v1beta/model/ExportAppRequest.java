@@ -31,6 +31,14 @@ package com.google.api.services.ces.v1beta.model;
 public final class ExportAppRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The resource name of the app version to export. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appVersion;
+
+  /**
    * Required. The format to export the app in.
    * The value may be {@code null}.
    */
@@ -45,6 +53,25 @@ public final class ExportAppRequest extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsUri;
+
+  /**
+   * Optional. The resource name of the app version to export. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppVersion() {
+    return appVersion;
+  }
+
+  /**
+   * Optional. The resource name of the app version to export. Format:
+   * `projects/{project}/locations/{location}/apps/{app}/versions/{version}`.
+   * @param appVersion appVersion or {@code null} for none
+   */
+  public ExportAppRequest setAppVersion(java.lang.String appVersion) {
+    this.appVersion = appVersion;
+    return this;
+  }
 
   /**
    * Required. The format to export the app in.

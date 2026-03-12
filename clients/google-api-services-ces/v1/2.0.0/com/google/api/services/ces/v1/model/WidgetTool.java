@@ -33,6 +33,14 @@ package com.google.api.services.ces.v1.model;
 public final class WidgetTool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The mapping that defines how data from a source tool is mapped to the widget's input
+   * parameters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WidgetToolDataMapping dataMapping;
+
+  /**
    * Optional. The description of the widget tool.
    * The value may be {@code null}.
    */
@@ -54,11 +62,37 @@ public final class WidgetTool extends com.google.api.client.json.GenericJson {
   private Schema parameters;
 
   /**
+   * Optional. Configuration for rendering the widget.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> uiConfig;
+
+  /**
    * Optional. The type of the widget tool. If not specified, the default type will be CUSTOMIZED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String widgetType;
+
+  /**
+   * Optional. The mapping that defines how data from a source tool is mapped to the widget's input
+   * parameters.
+   * @return value or {@code null} for none
+   */
+  public WidgetToolDataMapping getDataMapping() {
+    return dataMapping;
+  }
+
+  /**
+   * Optional. The mapping that defines how data from a source tool is mapped to the widget's input
+   * parameters.
+   * @param dataMapping dataMapping or {@code null} for none
+   */
+  public WidgetTool setDataMapping(WidgetToolDataMapping dataMapping) {
+    this.dataMapping = dataMapping;
+    return this;
+  }
 
   /**
    * Optional. The description of the widget tool.
@@ -108,6 +142,23 @@ public final class WidgetTool extends com.google.api.client.json.GenericJson {
    */
   public WidgetTool setParameters(Schema parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for rendering the widget.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getUiConfig() {
+    return uiConfig;
+  }
+
+  /**
+   * Optional. Configuration for rendering the widget.
+   * @param uiConfig uiConfig or {@code null} for none
+   */
+  public WidgetTool setUiConfig(java.util.Map<String, java.lang.Object> uiConfig) {
+    this.uiConfig = uiConfig;
     return this;
   }
 

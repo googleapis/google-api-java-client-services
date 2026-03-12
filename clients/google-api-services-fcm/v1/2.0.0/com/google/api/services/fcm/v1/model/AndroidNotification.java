@@ -57,14 +57,6 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
   private java.lang.String bodyLocKey;
 
   /**
-   * If set, display notifications delivered to the device will be handled by the app instead of the
-   * proxy.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean bypassProxyNotification;
-
-  /**
    * The [notification's channel
    * id](https://developer.android.com/guide/topics/ui/notifiers/notifications#ManageChannels) (new
    * in Android O). The app must create a channel with this channel ID before any notification with
@@ -185,11 +177,14 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    * Set the relative priority for this notification. Priority is an indication of how much of the
    * user's attention should be consumed by this notification. Low-priority notifications may be
    * hidden from the user in certain situations, while the user might be interrupted for a higher-
-   * priority notification. The effect of setting the same priorities may differ slightly on
-   * different platforms. Note this priority differs from `AndroidMessagePriority`. This priority is
-   * processed by the client after the message has been delivered, whereas [AndroidMessagePriority](
-   * https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority
-   * ) is an FCM concept that controls when the message is delivered.
+   * priority notification. This parameter affects notification priority only on devices running
+   * Android 7.1 (API level 25) and lower. On Android 8.0 (API level 26) and higher, priority is
+   * ignored in favor of channel
+   * [importance](https://developer.android.com/develop/ui/views/notifications/channels#importance).
+   * Note this priority differs from `AndroidMessagePriority`. This priority is processed by the
+   * client after the message has been delivered, whereas [AndroidMessagePriority](https://firebase.
+   * google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority) is an FCM
+   * concept that controls when the message is delivered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -342,25 +337,6 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    */
   public AndroidNotification setBodyLocKey(java.lang.String bodyLocKey) {
     this.bodyLocKey = bodyLocKey;
-    return this;
-  }
-
-  /**
-   * If set, display notifications delivered to the device will be handled by the app instead of the
-   * proxy.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getBypassProxyNotification() {
-    return bypassProxyNotification;
-  }
-
-  /**
-   * If set, display notifications delivered to the device will be handled by the app instead of the
-   * proxy.
-   * @param bypassProxyNotification bypassProxyNotification or {@code null} for none
-   */
-  public AndroidNotification setBypassProxyNotification(java.lang.Boolean bypassProxyNotification) {
-    this.bypassProxyNotification = bypassProxyNotification;
     return this;
   }
 
@@ -638,11 +614,14 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    * Set the relative priority for this notification. Priority is an indication of how much of the
    * user's attention should be consumed by this notification. Low-priority notifications may be
    * hidden from the user in certain situations, while the user might be interrupted for a higher-
-   * priority notification. The effect of setting the same priorities may differ slightly on
-   * different platforms. Note this priority differs from `AndroidMessagePriority`. This priority is
-   * processed by the client after the message has been delivered, whereas [AndroidMessagePriority](
-   * https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority
-   * ) is an FCM concept that controls when the message is delivered.
+   * priority notification. This parameter affects notification priority only on devices running
+   * Android 7.1 (API level 25) and lower. On Android 8.0 (API level 26) and higher, priority is
+   * ignored in favor of channel
+   * [importance](https://developer.android.com/develop/ui/views/notifications/channels#importance).
+   * Note this priority differs from `AndroidMessagePriority`. This priority is processed by the
+   * client after the message has been delivered, whereas [AndroidMessagePriority](https://firebase.
+   * google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority) is an FCM
+   * concept that controls when the message is delivered.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationPriority() {
@@ -653,11 +632,14 @@ public final class AndroidNotification extends com.google.api.client.json.Generi
    * Set the relative priority for this notification. Priority is an indication of how much of the
    * user's attention should be consumed by this notification. Low-priority notifications may be
    * hidden from the user in certain situations, while the user might be interrupted for a higher-
-   * priority notification. The effect of setting the same priorities may differ slightly on
-   * different platforms. Note this priority differs from `AndroidMessagePriority`. This priority is
-   * processed by the client after the message has been delivered, whereas [AndroidMessagePriority](
-   * https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority
-   * ) is an FCM concept that controls when the message is delivered.
+   * priority notification. This parameter affects notification priority only on devices running
+   * Android 7.1 (API level 25) and lower. On Android 8.0 (API level 26) and higher, priority is
+   * ignored in favor of channel
+   * [importance](https://developer.android.com/develop/ui/views/notifications/channels#importance).
+   * Note this priority differs from `AndroidMessagePriority`. This priority is processed by the
+   * client after the message has been delivered, whereas [AndroidMessagePriority](https://firebase.
+   * google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority) is an FCM
+   * concept that controls when the message is delivered.
    * @param notificationPriority notificationPriority or {@code null} for none
    */
   public AndroidNotification setNotificationPriority(java.lang.String notificationPriority) {

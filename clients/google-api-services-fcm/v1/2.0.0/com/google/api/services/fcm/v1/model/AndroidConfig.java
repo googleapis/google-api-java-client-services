@@ -81,7 +81,8 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Message priority. Can take "normal" and "high" values. For more information, see [Setting the
-   * priority of a message](https://goo.gl/GjONJv).
+   * priority of a message](https://firebase.google.com/docs/cloud-messaging/customize-
+   * messages/setting-message-priority).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,7 +237,8 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Message priority. Can take "normal" and "high" values. For more information, see [Setting the
-   * priority of a message](https://goo.gl/GjONJv).
+   * priority of a message](https://firebase.google.com/docs/cloud-messaging/customize-
+   * messages/setting-message-priority).
    * @return value or {@code null} for none
    */
   public java.lang.String getPriority() {
@@ -245,7 +247,8 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Message priority. Can take "normal" and "high" values. For more information, see [Setting the
-   * priority of a message](https://goo.gl/GjONJv).
+   * priority of a message](https://firebase.google.com/docs/cloud-messaging/customize-
+   * messages/setting-message-priority).
    * @param priority priority or {@code null} for none
    */
   public AndroidConfig setPriority(java.lang.String priority) {

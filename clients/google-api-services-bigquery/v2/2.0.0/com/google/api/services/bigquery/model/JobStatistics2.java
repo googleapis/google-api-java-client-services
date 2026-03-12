@@ -257,6 +257,14 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. Referenced property graphs for the job. Queries that reference more than 50
+   * property graphs will not have a complete list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PropertyGraphReference> referencedPropertyGraphs;
+
+  /**
    * Output only. Referenced routines for the job.
    * The value may be {@code null}.
    */
@@ -989,6 +997,25 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setQueryPlan(java.util.List<ExplainQueryStage> queryPlan) {
     this.queryPlan = queryPlan;
+    return this;
+  }
+
+  /**
+   * Output only. Referenced property graphs for the job. Queries that reference more than 50
+   * property graphs will not have a complete list.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PropertyGraphReference> getReferencedPropertyGraphs() {
+    return referencedPropertyGraphs;
+  }
+
+  /**
+   * Output only. Referenced property graphs for the job. Queries that reference more than 50
+   * property graphs will not have a complete list.
+   * @param referencedPropertyGraphs referencedPropertyGraphs or {@code null} for none
+   */
+  public JobStatistics2 setReferencedPropertyGraphs(java.util.List<PropertyGraphReference> referencedPropertyGraphs) {
+    this.referencedPropertyGraphs = referencedPropertyGraphs;
     return this;
   }
 

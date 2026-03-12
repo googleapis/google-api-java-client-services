@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AdGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The format of the ads in the ad group.
+   * Required. Immutable. The format of the ads in the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String entityStatus;
 
   /**
-   * Required. The unique ID of the line item that the ad group belongs to.
+   * Required. Immutable. The unique ID of the line item that the ad group belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -114,7 +114,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   private TargetingExpansionConfig targetingExpansion;
 
   /**
-   * Required. The format of the ads in the ad group.
+   * Required. Immutable. The format of the ads in the ad group.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdGroupFormat() {
@@ -122,7 +122,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The format of the ads in the ad group.
+   * Required. Immutable. The format of the ads in the ad group.
    * @param adGroupFormat adGroupFormat or {@code null} for none
    */
   public AdGroup setAdGroupFormat(java.lang.String adGroupFormat) {
@@ -243,7 +243,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The unique ID of the line item that the ad group belongs to.
+   * Required. Immutable. The unique ID of the line item that the ad group belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLineItemId() {
@@ -251,7 +251,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The unique ID of the line item that the ad group belongs to.
+   * Required. Immutable. The unique ID of the line item that the ad group belongs to.
    * @param lineItemId lineItemId or {@code null} for none
    */
   public AdGroup setLineItemId(java.lang.Long lineItemId) {

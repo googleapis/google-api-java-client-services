@@ -38,7 +38,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private java.lang.Long adGroupAdId;
 
   /**
-   * Required. The unique ID of the ad group that the ad belongs to.
+   * Required. Immutable. The unique ID of the ad group that the ad belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -203,7 +203,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The unique ID of the ad group that the ad belongs to.
+   * Required. Immutable. The unique ID of the ad group that the ad belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdGroupId() {
@@ -211,7 +211,7 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The unique ID of the ad group that the ad belongs to.
+   * Required. Immutable. The unique ID of the ad group that the ad belongs to.
    * @param adGroupId adGroupId or {@code null} for none
    */
   public AdGroupAd setAdGroupId(java.lang.Long adGroupId) {

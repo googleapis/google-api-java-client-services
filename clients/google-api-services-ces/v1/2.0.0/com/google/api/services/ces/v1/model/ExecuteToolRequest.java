@@ -38,6 +38,15 @@ public final class ExecuteToolRequest extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.Object> args;
 
   /**
+   * Optional. The [ToolCallContext](https://docs.cloud.google.com/customer-engagement-
+   * ai/conversational-agents/ps/tool/python#environment for details) to be passed to the Python
+   * tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> context;
+
+  /**
    * Optional. The name of the tool to execute. Format:
    * projects/{project}/locations/{location}/apps/{app}/tools/{tool}
    * The value may be {@code null}.
@@ -74,6 +83,27 @@ public final class ExecuteToolRequest extends com.google.api.client.json.Generic
    */
   public ExecuteToolRequest setArgs(java.util.Map<String, java.lang.Object> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Optional. The [ToolCallContext](https://docs.cloud.google.com/customer-engagement-
+   * ai/conversational-agents/ps/tool/python#environment for details) to be passed to the Python
+   * tool.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getContext() {
+    return context;
+  }
+
+  /**
+   * Optional. The [ToolCallContext](https://docs.cloud.google.com/customer-engagement-
+   * ai/conversational-agents/ps/tool/python#environment for details) to be passed to the Python
+   * tool.
+   * @param context context or {@code null} for none
+   */
+  public ExecuteToolRequest setContext(java.util.Map<String, java.lang.Object> context) {
+    this.context = context;
     return this;
   }
 

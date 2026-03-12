@@ -25,7 +25,7 @@ package com.google.api.services.ces.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/customer-engagement-ai/conversational-agents/ps/reference" target="_blank">API Documentation</a>
+ * <a href="https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -6749,7 +6749,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
           }
           /**
-           * Initiates a single turn interaction with the CES agent within a session.
+           * Initiates a single-turn interaction with the CES agent within a session.
            *
            * Create a request for the method "sessions.runSession".
            *
@@ -6775,7 +6775,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/sessions/[^/]+$");
 
             /**
-             * Initiates a single turn interaction with the CES agent within a session.
+             * Initiates a single-turn interaction with the CES agent within a session.
              *
              * Create a request for the method "sessions.runSession".
              *

@@ -37,6 +37,20 @@ public final class DmlStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Long deletedRowCount;
 
   /**
+   * Output only. DML mode used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dmlMode;
+
+  /**
+   * Output only. Reason for disabling fine-grained DML if applicable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fineGrainedDmlUnusedReason;
+
+  /**
    * Output only. Number of inserted Rows. Populated by DML INSERT and MERGE statements
    * The value may be {@code null}.
    */
@@ -64,6 +78,40 @@ public final class DmlStatistics extends com.google.api.client.json.GenericJson 
    */
   public DmlStatistics setDeletedRowCount(java.lang.Long deletedRowCount) {
     this.deletedRowCount = deletedRowCount;
+    return this;
+  }
+
+  /**
+   * Output only. DML mode used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDmlMode() {
+    return dmlMode;
+  }
+
+  /**
+   * Output only. DML mode used.
+   * @param dmlMode dmlMode or {@code null} for none
+   */
+  public DmlStatistics setDmlMode(java.lang.String dmlMode) {
+    this.dmlMode = dmlMode;
+    return this;
+  }
+
+  /**
+   * Output only. Reason for disabling fine-grained DML if applicable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFineGrainedDmlUnusedReason() {
+    return fineGrainedDmlUnusedReason;
+  }
+
+  /**
+   * Output only. Reason for disabling fine-grained DML if applicable.
+   * @param fineGrainedDmlUnusedReason fineGrainedDmlUnusedReason or {@code null} for none
+   */
+  public DmlStatistics setFineGrainedDmlUnusedReason(java.lang.String fineGrainedDmlUnusedReason) {
+    this.fineGrainedDmlUnusedReason = fineGrainedDmlUnusedReason;
     return this;
   }
 

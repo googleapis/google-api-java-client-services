@@ -17,8 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Specifies a Sensitive Data Protection (https://cloud.google.com/sensitive-data-
- * protection/docs/sensitive-data-protection-overview) policy.
+ * Reference to an Agent Gateway resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -28,40 +27,43 @@ package com.google.api.services.discoveryengine.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDiscoveryengineV1betaAgentGatewaySettingAgentGatewayReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies the resource name of the Sensitive Data Protection content policy.
+   * Required. Immutable. The resource name of the agent gateway. Expected format:
+   * `projects/{project_number}/locations/{location}/agentGateways/{agent_gateway}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String policy;
+  private java.lang.String name;
 
   /**
-   * Optional. Specifies the resource name of the Sensitive Data Protection content policy.
+   * Required. Immutable. The resource name of the agent gateway. Expected format:
+   * `projects/{project_number}/locations/{location}/agentGateways/{agent_gateway}`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPolicy() {
-    return policy;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Optional. Specifies the resource name of the Sensitive Data Protection content policy.
-   * @param policy policy or {@code null} for none
+   * Required. Immutable. The resource name of the agent gateway. Expected format:
+   * `projects/{project_number}/locations/{location}/agentGateways/{agent_gateway}`.
+   * @param name name or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy setPolicy(java.lang.String policy) {
-    this.policy = policy;
+  public GoogleCloudDiscoveryengineV1betaAgentGatewaySettingAgentGatewayReference setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy set(String fieldName, Object value) {
-    return (GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy) super.set(fieldName, value);
+  public GoogleCloudDiscoveryengineV1betaAgentGatewaySettingAgentGatewayReference set(String fieldName, Object value) {
+    return (GoogleCloudDiscoveryengineV1betaAgentGatewaySettingAgentGatewayReference) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy clone() {
-    return (GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy) super.clone();
+  public GoogleCloudDiscoveryengineV1betaAgentGatewaySettingAgentGatewayReference clone() {
+    return (GoogleCloudDiscoveryengineV1betaAgentGatewaySettingAgentGatewayReference) super.clone();
   }
 
 }

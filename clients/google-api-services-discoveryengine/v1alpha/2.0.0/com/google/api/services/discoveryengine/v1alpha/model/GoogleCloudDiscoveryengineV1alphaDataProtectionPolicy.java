@@ -17,7 +17,7 @@
 package com.google.api.services.discoveryengine.v1alpha.model;
 
 /**
- * Data protection policy config for a connector.
+ * Contains the data protection policy config for a DataStore or a connector.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The sensitive data protection policy for the connector source.
+   * Optional. Specifies the sensitive data protection policy for the connector source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy sensitiveDataProtectionPolicy;
 
   /**
-   * Optional. The sensitive data protection policy for the connector source.
+   * Optional. Specifies the sensitive data protection policy for the connector source.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy getSensitiveDataProtectionPolicy() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy extends
   }
 
   /**
-   * Optional. The sensitive data protection policy for the connector source.
+   * Optional. Specifies the sensitive data protection policy for the connector source.
    * @param sensitiveDataProtectionPolicy sensitiveDataProtectionPolicy or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataProtectionPolicy setSensitiveDataProtectionPolicy(GoogleCloudDiscoveryengineV1alphaDataProtectionPolicySensitiveDataProtectionPolicy sensitiveDataProtectionPolicy) {

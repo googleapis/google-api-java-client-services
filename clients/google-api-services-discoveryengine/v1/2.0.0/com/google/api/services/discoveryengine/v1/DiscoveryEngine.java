@@ -46631,15 +46631,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
-             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
+             * unspecified, defaults to 1000. The maximum value is 1000; values above 1000 will be
+             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
             /** Optional. Requested page size. Server may return fewer items than requested. If unspecified,
-           defaults to 10. The maximum value is 50; values above 50 will be coerced to 50. If this field is
-           negative, an INVALID_ARGUMENT error is returned.
+           defaults to 1000. The maximum value is 1000; values above 1000 will be coerced to 1000. If this
+           field is negative, an INVALID_ARGUMENT error is returned.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
@@ -46647,8 +46647,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
-             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
+             * unspecified, defaults to 1000. The maximum value is 1000; values above 1000 will be
+             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;

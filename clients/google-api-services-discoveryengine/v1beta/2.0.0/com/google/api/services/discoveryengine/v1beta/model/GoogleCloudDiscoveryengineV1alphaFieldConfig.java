@@ -149,6 +149,16 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
   private java.util.List<java.lang.String> schemaOrgPaths;
 
   /**
+   * Optional. Specifies the importance of the field when `searchable_option` is
+   * `SEARCHABLE_ENABLED`. If `searchable_option` is `SEARCHABLE_DISABLED`, this field is ignored.
+   * If `searchable_option` is `SEARCHABLE_ENABLED` and this is
+   * `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as `DEFAULT_IMPORTANCE`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String searchableFieldImportance;
+
+  /**
    * If searchable_option is SEARCHABLE_ENABLED, field values are searchable by text queries in
    * SearchService.Search. If SEARCHABLE_ENABLED but field type is numerical, field values will not
    * be searchable by text queries in SearchService.Search, as there are no text values associated
@@ -428,6 +438,29 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
    */
   public GoogleCloudDiscoveryengineV1alphaFieldConfig setSchemaOrgPaths(java.util.List<java.lang.String> schemaOrgPaths) {
     this.schemaOrgPaths = schemaOrgPaths;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the importance of the field when `searchable_option` is
+   * `SEARCHABLE_ENABLED`. If `searchable_option` is `SEARCHABLE_DISABLED`, this field is ignored.
+   * If `searchable_option` is `SEARCHABLE_ENABLED` and this is
+   * `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as `DEFAULT_IMPORTANCE`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSearchableFieldImportance() {
+    return searchableFieldImportance;
+  }
+
+  /**
+   * Optional. Specifies the importance of the field when `searchable_option` is
+   * `SEARCHABLE_ENABLED`. If `searchable_option` is `SEARCHABLE_DISABLED`, this field is ignored.
+   * If `searchable_option` is `SEARCHABLE_ENABLED` and this is
+   * `SEARCHABLE_FIELD_IMPORTANCE_UNSPECIFIED`, it behaves as `DEFAULT_IMPORTANCE`.
+   * @param searchableFieldImportance searchableFieldImportance or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaFieldConfig setSearchableFieldImportance(java.lang.String searchableFieldImportance) {
+    this.searchableFieldImportance = searchableFieldImportance;
     return this;
   }
 

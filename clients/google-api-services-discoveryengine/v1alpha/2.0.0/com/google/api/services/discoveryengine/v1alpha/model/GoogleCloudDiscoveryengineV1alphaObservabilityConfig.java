@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaObservabilityConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Enables observability. If false, all other flags are ignored.
+   * Optional. Enables observability. If `false`, all other flags are ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -38,14 +38,14 @@ public final class GoogleCloudDiscoveryengineV1alphaObservabilityConfig extends 
 
   /**
    * Optional. Enables sensitive logging. Sensitive logging includes customer core content (e.g.
-   * prompts, responses). If false, will sanitize all sensitive fields.
+   * prompts, responses). If `false`, will sanitize all sensitive fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean sensitiveLoggingEnabled;
 
   /**
-   * Optional. Enables observability. If false, all other flags are ignored.
+   * Optional. Enables observability. If `false`, all other flags are ignored.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getObservabilityEnabled() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDiscoveryengineV1alphaObservabilityConfig extends 
   }
 
   /**
-   * Optional. Enables observability. If false, all other flags are ignored.
+   * Optional. Enables observability. If `false`, all other flags are ignored.
    * @param observabilityEnabled observabilityEnabled or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaObservabilityConfig setObservabilityEnabled(java.lang.Boolean observabilityEnabled) {
@@ -63,7 +63,7 @@ public final class GoogleCloudDiscoveryengineV1alphaObservabilityConfig extends 
 
   /**
    * Optional. Enables sensitive logging. Sensitive logging includes customer core content (e.g.
-   * prompts, responses). If false, will sanitize all sensitive fields.
+   * prompts, responses). If `false`, will sanitize all sensitive fields.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSensitiveLoggingEnabled() {
@@ -72,7 +72,7 @@ public final class GoogleCloudDiscoveryengineV1alphaObservabilityConfig extends 
 
   /**
    * Optional. Enables sensitive logging. Sensitive logging includes customer core content (e.g.
-   * prompts, responses). If false, will sanitize all sensitive fields.
+   * prompts, responses). If `false`, will sanitize all sensitive fields.
    * @param sensitiveLoggingEnabled sensitiveLoggingEnabled or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaObservabilityConfig setSensitiveLoggingEnabled(java.lang.Boolean sensitiveLoggingEnabled) {

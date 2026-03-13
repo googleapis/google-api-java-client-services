@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The agent gateway setting for the engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1AgentGatewaySetting agentGatewaySetting;
+
+  /**
    * Optional. Immutable. This the application type which this engine resource represents. NOTE:
    * this is a new concept independ of existing industry vertical or solution type.
    * The value may be {@code null}.
@@ -191,11 +198,11 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   private GoogleCloudDiscoveryengineV1ObservabilityConfig observabilityConfig;
 
   /**
-   * Optional. The email of the procurement contact.
+   * Optional. The emails of the procurement contacts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String procurementContactEmail;
+  private java.util.List<java.lang.String> procurementContactEmails;
 
   /**
    * Configurations for the Search Engine. Only applicable if solution_type is SOLUTION_TYPE_SEARCH.
@@ -217,6 +224,23 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. The agent gateway setting for the engine.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AgentGatewaySetting getAgentGatewaySetting() {
+    return agentGatewaySetting;
+  }
+
+  /**
+   * Optional. The agent gateway setting for the engine.
+   * @param agentGatewaySetting agentGatewaySetting or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setAgentGatewaySetting(GoogleCloudDiscoveryengineV1AgentGatewaySetting agentGatewaySetting) {
+    this.agentGatewaySetting = agentGatewaySetting;
+    return this;
+  }
 
   /**
    * Optional. Immutable. This the application type which this engine resource represents. NOTE:
@@ -598,19 +622,19 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   }
 
   /**
-   * Optional. The email of the procurement contact.
+   * Optional. The emails of the procurement contacts.
    * @return value or {@code null} for none
    */
-  public java.lang.String getProcurementContactEmail() {
-    return procurementContactEmail;
+  public java.util.List<java.lang.String> getProcurementContactEmails() {
+    return procurementContactEmails;
   }
 
   /**
-   * Optional. The email of the procurement contact.
-   * @param procurementContactEmail procurementContactEmail or {@code null} for none
+   * Optional. The emails of the procurement contacts.
+   * @param procurementContactEmails procurementContactEmails or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1Engine setProcurementContactEmail(java.lang.String procurementContactEmail) {
-    this.procurementContactEmail = procurementContactEmail;
+  public GoogleCloudDiscoveryengineV1Engine setProcurementContactEmails(java.util.List<java.lang.String> procurementContactEmails) {
+    this.procurementContactEmails = procurementContactEmails;
     return this;
   }
 

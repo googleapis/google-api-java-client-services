@@ -753,6 +753,197 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
     }
+    /**
+     * An accessor for creating requests from the Tracks collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.Tracks.List request = androidpublisher.tracks().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Tracks tracks() {
+      return new Tracks();
+    }
+
+    /**
+     * The "tracks" collection of methods.
+     */
+    public class Tracks {
+
+      /**
+       * An accessor for creating requests from the Releases collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+       *   {@code AndroidPublisher.Releases.List request = androidpublisher.releases().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Releases releases() {
+        return new Releases();
+      }
+
+      /**
+       * The "releases" collection of methods.
+       */
+      public class Releases {
+
+        /**
+         * Returns the list of all releases for a given track. This excludes any releases that are obsolete.
+         *
+         * Create a request for the method "releases.list".
+         *
+         * This request holds the parameters needed by the androidpublisher server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent track, which owns this collection of releases. Format:
+         *        applications/{package_name}/tracks/{track}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ListReleaseSummariesResponse> {
+
+          private static final String REST_PATH = "androidpublisher/v3/{+parent}/releases";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^applications/[^/]+/tracks/[^/]+$");
+
+          /**
+           * Returns the list of all releases for a given track. This excludes any releases that are
+           * obsolete.
+           *
+           * Create a request for the method "releases.list".
+           *
+           * This request holds the parameters needed by the the androidpublisher server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent track, which owns this collection of releases. Format:
+         *        applications/{package_name}/tracks/{track}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.ListReleaseSummariesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^applications/[^/]+/tracks/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent track, which owns this collection of releases. Format:
+           * applications/{package_name}/tracks/{track}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent track, which owns this collection of releases. Format:
+         applications/{package_name}/tracks/{track}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent track, which owns this collection of releases. Format:
+           * applications/{package_name}/tracks/{track}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^applications/[^/]+/tracks/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
   }
 
   /**
@@ -1605,6 +1796,22 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       /** Identifier of the edit. */
       public Commit setEditId(java.lang.String editId) {
         this.editId = editId;
+        return this;
+      }
+
+      /** Optional. The behavior of committing a new edit while changes are already in review. */
+      @com.google.api.client.util.Key
+      private java.lang.String changesInReviewBehavior;
+
+      /** Optional. The behavior of committing a new edit while changes are already in review.
+       */
+      public java.lang.String getChangesInReviewBehavior() {
+        return changesInReviewBehavior;
+      }
+
+      /** Optional. The behavior of committing a new edit while changes are already in review. */
+      public Commit setChangesInReviewBehavior(java.lang.String changesInReviewBehavior) {
+        this.changesInReviewBehavior = changesInReviewBehavior;
         return this;
       }
 

@@ -9340,17 +9340,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the request should enforce expansive access rules. */
+      /** Deprecated: All requests use the expansive access rules. */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceExpansiveAccess;
 
-      /** Whether the request should enforce expansive access rules. [default: false]
+      /** Deprecated: All requests use the expansive access rules. [default: false]
        */
       public java.lang.Boolean getEnforceExpansiveAccess() {
         return enforceExpansiveAccess;
       }
 
-      /** Whether the request should enforce expansive access rules. */
+      /** Deprecated: All requests use the expansive access rules. */
       public Create setEnforceExpansiveAccess(java.lang.Boolean enforceExpansiveAccess) {
         this.enforceExpansiveAccess = enforceExpansiveAccess;
         return this;
@@ -9373,7 +9373,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the request should enforce expansive access rules.
+       * Deprecated: All requests use the expansive access rules.
        * </p>
        */
       public boolean isEnforceExpansiveAccess() {
@@ -9861,17 +9861,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the request should enforce expansive access rules. */
+      /** Deprecated: All requests use the expansive access rules. */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceExpansiveAccess;
 
-      /** Whether the request should enforce expansive access rules. [default: false]
+      /** Deprecated: All requests use the expansive access rules. [default: false]
        */
       public java.lang.Boolean getEnforceExpansiveAccess() {
         return enforceExpansiveAccess;
       }
 
-      /** Whether the request should enforce expansive access rules. */
+      /** Deprecated: All requests use the expansive access rules. */
       public Delete setEnforceExpansiveAccess(java.lang.Boolean enforceExpansiveAccess) {
         this.enforceExpansiveAccess = enforceExpansiveAccess;
         return this;
@@ -9894,7 +9894,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the request should enforce expansive access rules.
+       * Deprecated: All requests use the expansive access rules.
        * </p>
        */
       public boolean isEnforceExpansiveAccess() {
@@ -10852,17 +10852,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether the request should enforce expansive access rules. */
+      /** Deprecated: All requests use the expansive access rules. */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceExpansiveAccess;
 
-      /** Whether the request should enforce expansive access rules. [default: false]
+      /** Deprecated: All requests use the expansive access rules. [default: false]
        */
       public java.lang.Boolean getEnforceExpansiveAccess() {
         return enforceExpansiveAccess;
       }
 
-      /** Whether the request should enforce expansive access rules. */
+      /** Deprecated: All requests use the expansive access rules. */
       public Update setEnforceExpansiveAccess(java.lang.Boolean enforceExpansiveAccess) {
         this.enforceExpansiveAccess = enforceExpansiveAccess;
         return this;
@@ -10885,7 +10885,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether the request should enforce expansive access rules.
+       * Deprecated: All requests use the expansive access rules.
        * </p>
        */
       public boolean isEnforceExpansiveAccess() {

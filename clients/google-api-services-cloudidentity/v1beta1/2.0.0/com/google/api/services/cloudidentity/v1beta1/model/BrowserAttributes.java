@@ -17,9 +17,9 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Contains information about browser profiles reported by the [Endpoint Verification
- * extension](https://chromewebstore.google.com/detail/endpoint-
- * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
+ * Contains information about browser profiles reported by the Clients on the device (e.g. [Endpoint
+ * Verification extension](https://chromewebstore.google.com/detail/endpoint-
+ * verification/callobklhcbilhphinckomhgkigmfocg?pli=1)).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -34,7 +34,8 @@ public final class BrowserAttributes extends com.google.api.client.json.GenericJ
   /**
    * Represents the current state of the [Chrome browser
    * attributes](https://cloud.google.com/access-context-manager/docs/browser-attributes) sent by
-   * the [Endpoint Verification extension](https://chromewebstore.google.com/detail/endpoint-
+   * the clients on the device, such as [Endpoint Verification
+   * extension](https://chromewebstore.google.com/detail/endpoint-
    * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
    * The value may be {@code null}.
    */
@@ -58,7 +59,8 @@ public final class BrowserAttributes extends com.google.api.client.json.GenericJ
   /**
    * Represents the current state of the [Chrome browser
    * attributes](https://cloud.google.com/access-context-manager/docs/browser-attributes) sent by
-   * the [Endpoint Verification extension](https://chromewebstore.google.com/detail/endpoint-
+   * the clients on the device, such as [Endpoint Verification
+   * extension](https://chromewebstore.google.com/detail/endpoint-
    * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
    * @return value or {@code null} for none
    */
@@ -69,7 +71,8 @@ public final class BrowserAttributes extends com.google.api.client.json.GenericJ
   /**
    * Represents the current state of the [Chrome browser
    * attributes](https://cloud.google.com/access-context-manager/docs/browser-attributes) sent by
-   * the [Endpoint Verification extension](https://chromewebstore.google.com/detail/endpoint-
+   * the clients on the device, such as [Endpoint Verification
+   * extension](https://chromewebstore.google.com/detail/endpoint-
    * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
    * @param chromeBrowserInfo chromeBrowserInfo or {@code null} for none
    */

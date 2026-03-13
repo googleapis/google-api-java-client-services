@@ -30,7 +30,7 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GoogleCloudAssetV1GcsDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The URI of the Cloud Storage object. It's the same URI that is used by gsutil.
+   * Required. The URI of the Cloud Storage object. It's the same URI that is used by gcloud storage.
    * Example: "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
    * If the specified Cloud Storage object already exists and there is no
@@ -42,7 +42,7 @@ public final class GoogleCloudAssetV1GcsDestination extends com.google.api.clien
   private java.lang.String uri;
 
   /**
-   * Required. The URI of the Cloud Storage object. It's the same URI that is used by gsutil.
+   * Required. The URI of the Cloud Storage object. It's the same URI that is used by gcloud storage.
    * Example: "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
    * If the specified Cloud Storage object already exists and there is no
@@ -55,7 +55,7 @@ public final class GoogleCloudAssetV1GcsDestination extends com.google.api.clien
   }
 
   /**
-   * Required. The URI of the Cloud Storage object. It's the same URI that is used by gsutil.
+   * Required. The URI of the Cloud Storage object. It's the same URI that is used by gcloud storage.
    * Example: "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
    * If the specified Cloud Storage object already exists and there is no

@@ -31,24 +31,18 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2KeyValueMetadataLabel extends com.google.api.client.json.GenericJson {
 
   /**
-   * The metadata key. The format depends on the source of the metadata. Examples: - Microsoft
-   * Purview Information Protection keys look like
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Method',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Name'. - General metadata keys look like
-   * 'Author', 'Title', 'Description'.
+   * The metadata key. The format depends on the source of the metadata. Example: -
+   * `MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled` (a Microsoft Purview Information
+   * Protection key example)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * The metadata key. The format depends on the source of the metadata. Examples: - Microsoft
-   * Purview Information Protection keys look like
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Method',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Name'. - General metadata keys look like
-   * 'Author', 'Title', 'Description'.
+   * The metadata key. The format depends on the source of the metadata. Example: -
+   * `MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled` (a Microsoft Purview Information
+   * Protection key example)
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -56,12 +50,9 @@ public final class GooglePrivacyDlpV2KeyValueMetadataLabel extends com.google.ap
   }
 
   /**
-   * The metadata key. The format depends on the source of the metadata. Examples: - Microsoft
-   * Purview Information Protection keys look like
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Method',
-   * 'MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Name'. - General metadata keys look like
-   * 'Author', 'Title', 'Description'.
+   * The metadata key. The format depends on the source of the metadata. Example: -
+   * `MSIP_Label_122709e3-8f6b-4860-985f-7f722a94f61e_Enabled` (a Microsoft Purview Information
+   * Protection key example)
    * @param key key or {@code null} for none
    */
   public GooglePrivacyDlpV2KeyValueMetadataLabel setKey(java.lang.String key) {

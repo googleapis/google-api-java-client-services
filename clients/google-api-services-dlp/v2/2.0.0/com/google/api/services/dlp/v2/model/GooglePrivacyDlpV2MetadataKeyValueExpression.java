@@ -17,8 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Configuration for a custom infoType that detects given expression of key-value pair in the
- * metadata.
+ * Configuration for a custom infoType that detects key-value pairs in the metadata matching the
+ * specified regular expressions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

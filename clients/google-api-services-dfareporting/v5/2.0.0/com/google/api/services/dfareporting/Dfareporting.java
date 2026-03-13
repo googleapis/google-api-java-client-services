@@ -25831,6 +25831,103 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
         return this;
       }
 
+      /**
+       * Optional. Indicates whether to include the dc_dbm macro in the generated tags. [Learn
+       * more](https://support.google.com/campaignmanager/answer/9280273) about this macro.
+       */
+      @com.google.api.client.util.Key("tagProperties.dcDbmMacroIncluded")
+      private java.lang.Boolean tagPropertiesDcDbmMacroIncluded;
+
+      /** Optional. Indicates whether to include the dc_dbm macro in the generated tags. [Learn
+     more](https://support.google.com/campaignmanager/answer/9280273) about this macro.
+       */
+      public java.lang.Boolean getTagPropertiesDcDbmMacroIncluded() {
+        return tagPropertiesDcDbmMacroIncluded;
+      }
+
+      /**
+       * Optional. Indicates whether to include the dc_dbm macro in the generated tags. [Learn
+       * more](https://support.google.com/campaignmanager/answer/9280273) about this macro.
+       */
+      public Generatetags setTagPropertiesDcDbmMacroIncluded(java.lang.Boolean tagPropertiesDcDbmMacroIncluded) {
+        this.tagPropertiesDcDbmMacroIncluded = tagPropertiesDcDbmMacroIncluded;
+        return this;
+      }
+
+      /**
+       * Optional. Indicates whether to include the GPP macro in the generated tags. [Learn
+       * more](https://support.google.com/campaignmanager/answer/10031693) about this macro.
+       */
+      @com.google.api.client.util.Key("tagProperties.gppMacrosIncluded")
+      private java.lang.Boolean tagPropertiesGppMacrosIncluded;
+
+      /** Optional. Indicates whether to include the GPP macro in the generated tags. [Learn
+     more](https://support.google.com/campaignmanager/answer/10031693) about this macro.
+       */
+      public java.lang.Boolean getTagPropertiesGppMacrosIncluded() {
+        return tagPropertiesGppMacrosIncluded;
+      }
+
+      /**
+       * Optional. Indicates whether to include the GPP macro in the generated tags. [Learn
+       * more](https://support.google.com/campaignmanager/answer/10031693) about this macro.
+       */
+      public Generatetags setTagPropertiesGppMacrosIncluded(java.lang.Boolean tagPropertiesGppMacrosIncluded) {
+        this.tagPropertiesGppMacrosIncluded = tagPropertiesGppMacrosIncluded;
+        return this;
+      }
+
+      /**
+       * Optional. Indicates whether to include the TCF macro in the generated tags. Default true.
+       * [Learn more](https://support.google.com/campaignmanager/answer/10031693) about this macro.
+       */
+      @com.google.api.client.util.Key("tagProperties.tcfGdprMacrosIncluded")
+      private java.lang.Boolean tagPropertiesTcfGdprMacrosIncluded;
+
+      /** Optional. Indicates whether to include the TCF macro in the generated tags. Default true. [Learn
+     more](https://support.google.com/campaignmanager/answer/10031693) about this macro. [default: true]
+       */
+      public java.lang.Boolean getTagPropertiesTcfGdprMacrosIncluded() {
+        return tagPropertiesTcfGdprMacrosIncluded;
+      }
+
+      /**
+       * Optional. Indicates whether to include the TCF macro in the generated tags. Default true.
+       * [Learn more](https://support.google.com/campaignmanager/answer/10031693) about this macro.
+       */
+      public Generatetags setTagPropertiesTcfGdprMacrosIncluded(java.lang.Boolean tagPropertiesTcfGdprMacrosIncluded) {
+        this.tagPropertiesTcfGdprMacrosIncluded = tagPropertiesTcfGdprMacrosIncluded;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Optional. Indicates whether to include the TCF macro in the generated tags. Default true. [Learn
+     more](https://support.google.com/campaignmanager/answer/10031693) about this macro.
+       * </p>
+       */
+      public boolean isTagPropertiesTcfGdprMacrosIncluded() {
+        if (tagPropertiesTcfGdprMacrosIncluded == null || tagPropertiesTcfGdprMacrosIncluded == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return true;
+        }
+        return tagPropertiesTcfGdprMacrosIncluded;
+      }
+
       @Override
       public Generatetags set(String parameterName, Object value) {
         return (Generatetags) super.set(parameterName, value);

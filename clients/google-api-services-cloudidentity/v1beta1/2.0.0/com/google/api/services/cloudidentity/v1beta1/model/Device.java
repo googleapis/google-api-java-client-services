@@ -69,6 +69,21 @@ public final class Device extends com.google.api.client.json.GenericJson {
   private java.lang.String brand;
 
   /**
+   * Browser profiles on the device. This is a copy of the BrowserAttributes message defined in
+   * EndpointVerificationSpecificAttributes. We are replicating it here since EndpointVerification
+   * isn't the only client reporting browser profiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BrowserAttributes> browserProfiles;
+
+  static {
+    // hack to force ProGuard to consider BrowserAttributes used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(BrowserAttributes.class);
+  }
+
+  /**
    * Output only. Build number of the device.
    * The value may be {@code null}.
    */
@@ -351,6 +366,27 @@ public final class Device extends com.google.api.client.json.GenericJson {
    */
   public Device setBrand(java.lang.String brand) {
     this.brand = brand;
+    return this;
+  }
+
+  /**
+   * Browser profiles on the device. This is a copy of the BrowserAttributes message defined in
+   * EndpointVerificationSpecificAttributes. We are replicating it here since EndpointVerification
+   * isn't the only client reporting browser profiles.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BrowserAttributes> getBrowserProfiles() {
+    return browserProfiles;
+  }
+
+  /**
+   * Browser profiles on the device. This is a copy of the BrowserAttributes message defined in
+   * EndpointVerificationSpecificAttributes. We are replicating it here since EndpointVerification
+   * isn't the only client reporting browser profiles.
+   * @param browserProfiles browserProfiles or {@code null} for none
+   */
+  public Device setBrowserProfiles(java.util.List<BrowserAttributes> browserProfiles) {
+    this.browserProfiles = browserProfiles;
     return this;
   }
 

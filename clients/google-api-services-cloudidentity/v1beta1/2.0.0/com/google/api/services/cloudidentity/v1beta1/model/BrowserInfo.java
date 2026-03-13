@@ -17,7 +17,7 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Browser-specific fields reported by the [Endpoint Verification
+ * Browser-specific fields reported by clients on the device, such as [Endpoint Verification
  * extension](https://chromewebstore.google.com/detail/endpoint-
  * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
  *
@@ -137,6 +137,15 @@ public final class BrowserInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String passwordProtectionWarningTrigger;
+
+  /**
+   * Output only. Chrome policies information for the browser as can be seen in chrome://policy.
+   * Full possibilities of policies can be consulted in [Chrome Enterprise Policy
+   * List](https://chromeenterprise.google/policies/).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ChromePolicy> policies;
 
   /**
    * Current state of [Safe Browsing protection
@@ -396,6 +405,27 @@ public final class BrowserInfo extends com.google.api.client.json.GenericJson {
    */
   public BrowserInfo setPasswordProtectionWarningTrigger(java.lang.String passwordProtectionWarningTrigger) {
     this.passwordProtectionWarningTrigger = passwordProtectionWarningTrigger;
+    return this;
+  }
+
+  /**
+   * Output only. Chrome policies information for the browser as can be seen in chrome://policy.
+   * Full possibilities of policies can be consulted in [Chrome Enterprise Policy
+   * List](https://chromeenterprise.google/policies/).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ChromePolicy> getPolicies() {
+    return policies;
+  }
+
+  /**
+   * Output only. Chrome policies information for the browser as can be seen in chrome://policy.
+   * Full possibilities of policies can be consulted in [Chrome Enterprise Policy
+   * List](https://chromeenterprise.google/policies/).
+   * @param policies policies or {@code null} for none
+   */
+  public BrowserInfo setPolicies(java.util.List<ChromePolicy> policies) {
+    this.policies = policies;
     return this;
   }
 

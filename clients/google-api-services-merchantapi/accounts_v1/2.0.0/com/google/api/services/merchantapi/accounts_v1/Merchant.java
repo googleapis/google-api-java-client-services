@@ -11017,8 +11017,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
       /**
        * Deletes a Merchant Center account user. Executing this method requires admin access. The user to
-       * be deleted can't be the last admin user of that account. Also a user is protected from deletion
-       * if it is managed by Business Manager"
+       * be deleted can't be the last admin user of that account.
        *
        * Create a request for the method "users.delete".
        *
@@ -11045,8 +11044,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Deletes a Merchant Center account user. Executing this method requires admin access. The user
-         * to be deleted can't be the last admin user of that account. Also a user is protected from
-         * deletion if it is managed by Business Manager"
+         * to be deleted can't be the last admin user of that account.
          *
          * Create a request for the method "users.delete".
          *

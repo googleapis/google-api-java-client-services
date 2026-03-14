@@ -48,8 +48,8 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
   /**
    * Strongly validated etag for optimistic concurrency control. Preserve the value returned from
    * `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a
-   * modification in the mean time. The `update_mask` of the request need not include `etag` for
-   * this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC
+   * modification in the meantime. The `update_mask` of the request need not include `etag` for this
+   * protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC
    * 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
    * The value may be {@code null}.
    */
@@ -131,8 +131,8 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
   /**
    * Strongly validated etag for optimistic concurrency control. Preserve the value returned from
    * `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a
-   * modification in the mean time. The `update_mask` of the request need not include `etag` for
-   * this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC
+   * modification in the meantime. The `update_mask` of the request need not include `etag` for this
+   * protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC
    * 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
    * @return value or {@code null} for none
    */
@@ -143,8 +143,8 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
   /**
    * Strongly validated etag for optimistic concurrency control. Preserve the value returned from
    * `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a
-   * modification in the mean time. The `update_mask` of the request need not include `etag` for
-   * this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC
+   * modification in the meantime. The `update_mask` of the request need not include `etag` for this
+   * protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC
    * 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
    * @param etag etag or {@code null} for none
    */

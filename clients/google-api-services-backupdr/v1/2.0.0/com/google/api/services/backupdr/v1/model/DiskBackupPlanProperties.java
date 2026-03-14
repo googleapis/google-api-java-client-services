@@ -17,7 +17,7 @@
 package com.google.api.services.backupdr.v1.model;
 
 /**
- * Model definition for LocationMetadata.
+ * --- DiskBackupPlanProperties Message ---
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation
@@ -28,40 +28,43 @@ package com.google.api.services.backupdr.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LocationMetadata extends com.google.api.client.json.GenericJson {
+public final class DiskBackupPlanProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of features that are not supported in the location.
+   * Optional. Indicates whether to perform a guest flush operation before taking a disk backup.
+   * When set to false, the system will create crash-consistent backups. Default value is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> unsupportedFeatures;
+  private java.lang.Boolean guestFlush;
 
   /**
-   * List of features that are not supported in the location.
+   * Optional. Indicates whether to perform a guest flush operation before taking a disk backup.
+   * When set to false, the system will create crash-consistent backups. Default value is false.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getUnsupportedFeatures() {
-    return unsupportedFeatures;
+  public java.lang.Boolean getGuestFlush() {
+    return guestFlush;
   }
 
   /**
-   * List of features that are not supported in the location.
-   * @param unsupportedFeatures unsupportedFeatures or {@code null} for none
+   * Optional. Indicates whether to perform a guest flush operation before taking a disk backup.
+   * When set to false, the system will create crash-consistent backups. Default value is false.
+   * @param guestFlush guestFlush or {@code null} for none
    */
-  public LocationMetadata setUnsupportedFeatures(java.util.List<java.lang.String> unsupportedFeatures) {
-    this.unsupportedFeatures = unsupportedFeatures;
+  public DiskBackupPlanProperties setGuestFlush(java.lang.Boolean guestFlush) {
+    this.guestFlush = guestFlush;
     return this;
   }
 
   @Override
-  public LocationMetadata set(String fieldName, Object value) {
-    return (LocationMetadata) super.set(fieldName, value);
+  public DiskBackupPlanProperties set(String fieldName, Object value) {
+    return (DiskBackupPlanProperties) super.set(fieldName, value);
   }
 
   @Override
-  public LocationMetadata clone() {
-    return (LocationMetadata) super.clone();
+  public DiskBackupPlanProperties clone() {
+    return (DiskBackupPlanProperties) super.clone();
   }
 
 }

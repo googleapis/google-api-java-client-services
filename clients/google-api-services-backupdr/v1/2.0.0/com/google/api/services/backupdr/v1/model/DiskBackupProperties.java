@@ -59,6 +59,13 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
   private java.lang.Boolean enableConfidentialCompute;
 
   /**
+   * Optional. Defines if the guest flush is enabled for the source disk. Default value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean guestFlush;
+
+  /**
    * A list of guest OS features that are applicable to this backup.
    * The value may be {@code null}.
    */
@@ -215,6 +222,23 @@ public final class DiskBackupProperties extends com.google.api.client.json.Gener
    */
   public DiskBackupProperties setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
     this.enableConfidentialCompute = enableConfidentialCompute;
+    return this;
+  }
+
+  /**
+   * Optional. Defines if the guest flush is enabled for the source disk. Default value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGuestFlush() {
+    return guestFlush;
+  }
+
+  /**
+   * Optional. Defines if the guest flush is enabled for the source disk. Default value is false.
+   * @param guestFlush guestFlush or {@code null} for none
+   */
+  public DiskBackupProperties setGuestFlush(java.lang.Boolean guestFlush) {
+    this.guestFlush = guestFlush;
     return this;
   }
 

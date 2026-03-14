@@ -30,7 +30,7 @@ package com.google.api.services.cloudasset.v1.model;
 public final class GcsDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
+   * The uri of the Cloud Storage object. It's the same uri that is used by gcloud storage. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
    * The value may be {@code null}.
@@ -52,7 +52,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
   private java.lang.String uriPrefix;
 
   /**
-   * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
+   * The uri of the Cloud Storage object. It's the same uri that is used by gcloud storage. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
    * @return value or {@code null} for none
@@ -62,7 +62,7 @@ public final class GcsDestination extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The uri of the Cloud Storage object. It's the same uri that is used by gsutil. Example:
+   * The uri of the Cloud Storage object. It's the same uri that is used by gcloud storage. Example:
    * "gs://bucket_name/object_name". See [Viewing and Editing Object
    * Metadata](https://cloud.google.com/storage/docs/viewing-editing-metadata) for more information.
    * @param uri uri or {@code null} for none

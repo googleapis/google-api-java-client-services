@@ -1799,17 +1799,27 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         return this;
       }
 
-      /** Optional. The behavior of committing a new edit while changes are already in review. */
+      /**
+       * Optional. Specify how the API should behave if there are changes currently in review. If
+       * this value is not set, it will default to "CANCEL_IN_REVIEW_AND_SUBMIT", which will cancel
+       * the changes in review and then send all the changes for publishing.
+       */
       @com.google.api.client.util.Key
       private java.lang.String changesInReviewBehavior;
 
-      /** Optional. The behavior of committing a new edit while changes are already in review.
+      /** Optional. Specify how the API should behave if there are changes currently in review. If this value
+     is not set, it will default to "CANCEL_IN_REVIEW_AND_SUBMIT", which will cancel the changes in
+     review and then send all the changes for publishing.
        */
       public java.lang.String getChangesInReviewBehavior() {
         return changesInReviewBehavior;
       }
 
-      /** Optional. The behavior of committing a new edit while changes are already in review. */
+      /**
+       * Optional. Specify how the API should behave if there are changes currently in review. If
+       * this value is not set, it will default to "CANCEL_IN_REVIEW_AND_SUBMIT", which will cancel
+       * the changes in review and then send all the changes for publishing.
+       */
       public Commit setChangesInReviewBehavior(java.lang.String changesInReviewBehavior) {
         this.changesInReviewBehavior = changesInReviewBehavior;
         return this;

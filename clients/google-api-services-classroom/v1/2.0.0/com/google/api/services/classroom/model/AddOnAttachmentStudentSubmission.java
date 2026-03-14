@@ -45,7 +45,7 @@ public final class AddOnAttachmentStudentSubmission extends com.google.api.clien
 
   /**
    * Identifier for the student that owns this submission. Requires the user to be a teacher in the
-   * course and have permission to read student submissions.
+   * course and have permission to read student submissions. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class AddOnAttachmentStudentSubmission extends com.google.api.clien
 
   /**
    * Identifier for the student that owns this submission. Requires the user to be a teacher in the
-   * course and have permission to read student submissions.
+   * course and have permission to read student submissions. Read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -96,7 +96,7 @@ public final class AddOnAttachmentStudentSubmission extends com.google.api.clien
 
   /**
    * Identifier for the student that owns this submission. Requires the user to be a teacher in the
-   * course and have permission to read student submissions.
+   * course and have permission to read student submissions. Read-only.
    * @param userId userId or {@code null} for none
    */
   public AddOnAttachmentStudentSubmission setUserId(java.lang.String userId) {

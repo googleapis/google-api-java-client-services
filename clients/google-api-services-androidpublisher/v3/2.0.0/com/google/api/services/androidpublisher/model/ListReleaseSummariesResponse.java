@@ -17,7 +17,8 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Wraps response to list releases.
+ * Response listing all releases for a given track that are either ready to be sent for review, in
+ * review, approved, not approved or available.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -31,14 +32,14 @@ package com.google.api.services.androidpublisher.model;
 public final class ListReleaseSummariesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of releases on this track. This excludes any releases that are obsolete.
+   * List of releases for this track. There will be a maximum of 20 releases returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ReleaseSummary> releases;
 
   /**
-   * List of releases on this track. This excludes any releases that are obsolete.
+   * List of releases for this track. There will be a maximum of 20 releases returned.
    * @return value or {@code null} for none
    */
   public java.util.List<ReleaseSummary> getReleases() {
@@ -46,7 +47,7 @@ public final class ListReleaseSummariesResponse extends com.google.api.client.js
   }
 
   /**
-   * List of releases on this track. This excludes any releases that are obsolete.
+   * List of releases for this track. There will be a maximum of 20 releases returned.
    * @param releases releases or {@code null} for none
    */
   public ListReleaseSummariesResponse setReleases(java.util.List<ReleaseSummary> releases) {

@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Contains information about the release.
+ * Summary of a release.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed
@@ -31,7 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class ReleaseSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of active artifacts on this release. This does not include controlled artifacts.
+   * List of active artifacts on this release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,28 +44,29 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The lifecycle state of the release.
+   * The lifecycle state of a release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String releaseLifecycleState;
 
   /**
-   * The name of the release.
+   * Name of the release.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String releaseName;
 
   /**
-   * The alias of the track that this release belongs to.
+   * Identifier of the track. More on [track name](https://developers.google.com/android-
+   * publisher/tracks).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String track;
 
   /**
-   * List of active artifacts on this release. This does not include controlled artifacts.
+   * List of active artifacts on this release.
    * @return value or {@code null} for none
    */
   public java.util.List<ArtifactSummary> getActiveArtifacts() {
@@ -73,7 +74,7 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of active artifacts on this release. This does not include controlled artifacts.
+   * List of active artifacts on this release.
    * @param activeArtifacts activeArtifacts or {@code null} for none
    */
   public ReleaseSummary setActiveArtifacts(java.util.List<ArtifactSummary> activeArtifacts) {
@@ -82,7 +83,7 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The lifecycle state of the release.
+   * The lifecycle state of a release.
    * @return value or {@code null} for none
    */
   public java.lang.String getReleaseLifecycleState() {
@@ -90,7 +91,7 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The lifecycle state of the release.
+   * The lifecycle state of a release.
    * @param releaseLifecycleState releaseLifecycleState or {@code null} for none
    */
   public ReleaseSummary setReleaseLifecycleState(java.lang.String releaseLifecycleState) {
@@ -99,7 +100,7 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the release.
+   * Name of the release.
    * @return value or {@code null} for none
    */
   public java.lang.String getReleaseName() {
@@ -107,7 +108,7 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the release.
+   * Name of the release.
    * @param releaseName releaseName or {@code null} for none
    */
   public ReleaseSummary setReleaseName(java.lang.String releaseName) {
@@ -116,7 +117,8 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The alias of the track that this release belongs to.
+   * Identifier of the track. More on [track name](https://developers.google.com/android-
+   * publisher/tracks).
    * @return value or {@code null} for none
    */
   public java.lang.String getTrack() {
@@ -124,7 +126,8 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The alias of the track that this release belongs to.
+   * Identifier of the track. More on [track name](https://developers.google.com/android-
+   * publisher/tracks).
    * @param track track or {@code null} for none
    */
   public ReleaseSummary setTrack(java.lang.String track) {

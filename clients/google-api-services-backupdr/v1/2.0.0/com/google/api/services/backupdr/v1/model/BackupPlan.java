@@ -73,6 +73,14 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Defines optional properties specific to backups of disk-based resources, such as
+   * Compute Engine Persistent Disks. This includes settings like whether to perform a guest flush.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskBackupPlanProperties diskBackupPlanProperties;
+
+  /**
    * Optional. `etag` is returned from the service in the response. As a user of the service, you
    * may provide an etag value in this field to prevent stale resources.
    * The value may be {@code null}.
@@ -252,6 +260,25 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   public BackupPlan setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Defines optional properties specific to backups of disk-based resources, such as
+   * Compute Engine Persistent Disks. This includes settings like whether to perform a guest flush.
+   * @return value or {@code null} for none
+   */
+  public DiskBackupPlanProperties getDiskBackupPlanProperties() {
+    return diskBackupPlanProperties;
+  }
+
+  /**
+   * Optional. Defines optional properties specific to backups of disk-based resources, such as
+   * Compute Engine Persistent Disks. This includes settings like whether to perform a guest flush.
+   * @param diskBackupPlanProperties diskBackupPlanProperties or {@code null} for none
+   */
+  public BackupPlan setDiskBackupPlanProperties(DiskBackupPlanProperties diskBackupPlanProperties) {
+    this.diskBackupPlanProperties = diskBackupPlanProperties;
     return this;
   }
 

@@ -32,7 +32,7 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
   /**
    * Determines how the date part of the DateElement will be displayed in the document. If unset,
    * the default value is DATE_FORMAT_MONTH_DAY_YEAR_ABBREVIATED, indicating the DateElement will be
-   * formatted as `MMM d, y` in `en_US`, or locale specific equivalent.
+   * formatted as `MMM d, y` in `en`, or locale specific equivalent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,13 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
   private java.lang.String displayText;
 
   /**
-   * The locale of the document, as defined by the Unicode Common Locale Data Repository (CLDR)
-   * project. For example, `en_US`. If unset, the default locale is `en_US`.
+   * The language code of the DateElement. For example, `en`. If unset, the default locale is `en`.
+   * Limited to the following locales: `af`, `am`, `ar`, `az`, `be`, `bg`, `bn`, `ca`, `cs`, `da`,
+   * `de`, `el`, `en`, `en-CA`, `en-GB`, `es`, `es-419`, `et`, `eu`, `fa`, `fi`, `fil`, `fr`, `fr-
+   * CA`, `gl`, `gu`, `hi`, `hr`, `hu`, `hy`, `id`, `is`, `it`, `iw`, `ja`, `ka`, `kk`, `km`, `kn`,
+   * `ko`, `lo`, `lt`, `lv`, `ml`, `mn`, `mr`, `ms`, `ne`, `nl`, `no`, `pa`, `pl`, `pt-BR`, `pt-PT`,
+   * `ro`, `ru`, `si`, `sk`, `sl`, `sr`, `sv`, `sw`, `ta`, `te`, `th`, `tr`, `uk`, `ur`, `vi`, `zh-
+   * CN`, `zh-HK`, `zh-TW`, `zu`, `cy`, `my`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +90,7 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
   /**
    * Determines how the date part of the DateElement will be displayed in the document. If unset,
    * the default value is DATE_FORMAT_MONTH_DAY_YEAR_ABBREVIATED, indicating the DateElement will be
-   * formatted as `MMM d, y` in `en_US`, or locale specific equivalent.
+   * formatted as `MMM d, y` in `en`, or locale specific equivalent.
    * @return value or {@code null} for none
    */
   public java.lang.String getDateFormat() {
@@ -95,7 +100,7 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
   /**
    * Determines how the date part of the DateElement will be displayed in the document. If unset,
    * the default value is DATE_FORMAT_MONTH_DAY_YEAR_ABBREVIATED, indicating the DateElement will be
-   * formatted as `MMM d, y` in `en_US`, or locale specific equivalent.
+   * formatted as `MMM d, y` in `en`, or locale specific equivalent.
    * @param dateFormat dateFormat or {@code null} for none
    */
   public DateElementProperties setDateFormat(java.lang.String dateFormat) {
@@ -121,8 +126,13 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * The locale of the document, as defined by the Unicode Common Locale Data Repository (CLDR)
-   * project. For example, `en_US`. If unset, the default locale is `en_US`.
+   * The language code of the DateElement. For example, `en`. If unset, the default locale is `en`.
+   * Limited to the following locales: `af`, `am`, `ar`, `az`, `be`, `bg`, `bn`, `ca`, `cs`, `da`,
+   * `de`, `el`, `en`, `en-CA`, `en-GB`, `es`, `es-419`, `et`, `eu`, `fa`, `fi`, `fil`, `fr`, `fr-
+   * CA`, `gl`, `gu`, `hi`, `hr`, `hu`, `hy`, `id`, `is`, `it`, `iw`, `ja`, `ka`, `kk`, `km`, `kn`,
+   * `ko`, `lo`, `lt`, `lv`, `ml`, `mn`, `mr`, `ms`, `ne`, `nl`, `no`, `pa`, `pl`, `pt-BR`, `pt-PT`,
+   * `ro`, `ru`, `si`, `sk`, `sl`, `sr`, `sv`, `sw`, `ta`, `te`, `th`, `tr`, `uk`, `ur`, `vi`, `zh-
+   * CN`, `zh-HK`, `zh-TW`, `zu`, `cy`, `my`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocale() {
@@ -130,8 +140,13 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
   }
 
   /**
-   * The locale of the document, as defined by the Unicode Common Locale Data Repository (CLDR)
-   * project. For example, `en_US`. If unset, the default locale is `en_US`.
+   * The language code of the DateElement. For example, `en`. If unset, the default locale is `en`.
+   * Limited to the following locales: `af`, `am`, `ar`, `az`, `be`, `bg`, `bn`, `ca`, `cs`, `da`,
+   * `de`, `el`, `en`, `en-CA`, `en-GB`, `es`, `es-419`, `et`, `eu`, `fa`, `fi`, `fil`, `fr`, `fr-
+   * CA`, `gl`, `gu`, `hi`, `hr`, `hu`, `hy`, `id`, `is`, `it`, `iw`, `ja`, `ka`, `kk`, `km`, `kn`,
+   * `ko`, `lo`, `lt`, `lv`, `ml`, `mn`, `mr`, `ms`, `ne`, `nl`, `no`, `pa`, `pl`, `pt-BR`, `pt-PT`,
+   * `ro`, `ru`, `si`, `sk`, `sl`, `sr`, `sv`, `sw`, `ta`, `te`, `th`, `tr`, `uk`, `ur`, `vi`, `zh-
+   * CN`, `zh-HK`, `zh-TW`, `zu`, `cy`, `my`.
    * @param locale locale or {@code null} for none
    */
   public DateElementProperties setLocale(java.lang.String locale) {

@@ -43,11 +43,19 @@ public final class ResourceDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifier of the resource.
+   * Identifier of the resource, such as a doc_id for a Drive document, a conference_id for a Meet
+   * conference, or a "gaia_id/rfc2822_message_id" for an email.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
+
+  /**
+   * Owner details of the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OwnerDetails ownerDetails;
 
   /**
    * Defines relationship of the resource to the events
@@ -89,7 +97,8 @@ public final class ResourceDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifier of the resource.
+   * Identifier of the resource, such as a doc_id for a Drive document, a conference_id for a Meet
+   * conference, or a "gaia_id/rfc2822_message_id" for an email.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -97,11 +106,29 @@ public final class ResourceDetails extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Identifier of the resource.
+   * Identifier of the resource, such as a doc_id for a Drive document, a conference_id for a Meet
+   * conference, or a "gaia_id/rfc2822_message_id" for an email.
    * @param id id or {@code null} for none
    */
   public ResourceDetails setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Owner details of the resource.
+   * @return value or {@code null} for none
+   */
+  public OwnerDetails getOwnerDetails() {
+    return ownerDetails;
+  }
+
+  /**
+   * Owner details of the resource.
+   * @param ownerDetails ownerDetails or {@code null} for none
+   */
+  public ResourceDetails setOwnerDetails(OwnerDetails ownerDetails) {
+    this.ownerDetails = ownerDetails;
     return this;
   }
 

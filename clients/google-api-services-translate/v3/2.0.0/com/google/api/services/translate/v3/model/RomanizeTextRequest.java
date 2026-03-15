@@ -38,9 +38,11 @@ public final class RomanizeTextRequest extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> contents;
 
   /**
-   * Optional. The ISO-639 language code of the input text if known, for example, "hi" or "zh". If
-   * the source language isn't specified, the API attempts to identify the source language
-   * automatically and returns the source language for each content in the response.
+   * Optional. The ISO-639 language code of the input text if known, for example, "hi" or "zh".
+   * Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages#roman). If the source language isn't
+   * specified, the API attempts to identify the source language automatically and returns the
+   * source language for each content in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,9 +66,11 @@ public final class RomanizeTextRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The ISO-639 language code of the input text if known, for example, "hi" or "zh". If
-   * the source language isn't specified, the API attempts to identify the source language
-   * automatically and returns the source language for each content in the response.
+   * Optional. The ISO-639 language code of the input text if known, for example, "hi" or "zh".
+   * Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages#roman). If the source language isn't
+   * specified, the API attempts to identify the source language automatically and returns the
+   * source language for each content in the response.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceLanguageCode() {
@@ -74,9 +78,11 @@ public final class RomanizeTextRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The ISO-639 language code of the input text if known, for example, "hi" or "zh". If
-   * the source language isn't specified, the API attempts to identify the source language
-   * automatically and returns the source language for each content in the response.
+   * Optional. The ISO-639 language code of the input text if known, for example, "hi" or "zh".
+   * Supported language codes are listed in [Language
+   * Support](https://cloud.google.com/translate/docs/languages#roman). If the source language isn't
+   * specified, the API attempts to identify the source language automatically and returns the
+   * source language for each content in the response.
    * @param sourceLanguageCode sourceLanguageCode or {@code null} for none
    */
   public RomanizeTextRequest setSourceLanguageCode(java.lang.String sourceLanguageCode) {

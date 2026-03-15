@@ -70,8 +70,8 @@ public final class TestIssue extends com.google.api.client.json.GenericJson {
    * com.google.devtools.toolresults.v1.warnings
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private Any warning;
+  @com.google.api.client.util.Key("warning_migration")
+  private Any warningMigration;
 
   /**
    * Category of issue. Required.
@@ -163,17 +163,17 @@ public final class TestIssue extends com.google.api.client.json.GenericJson {
    * com.google.devtools.toolresults.v1.warnings
    * @return value or {@code null} for none
    */
-  public Any getWarning() {
-    return warning;
+  public Any getWarningMigration() {
+    return warningMigration;
   }
 
   /**
    * Warning message with additional details of the issue. Should always be a message from
    * com.google.devtools.toolresults.v1.warnings
-   * @param warning warning or {@code null} for none
+   * @param warningMigration warningMigration or {@code null} for none
    */
-  public TestIssue setWarning(Any warning) {
-    this.warning = warning;
+  public TestIssue setWarningMigration(Any warningMigration) {
+    this.warningMigration = warningMigration;
     return this;
   }
 

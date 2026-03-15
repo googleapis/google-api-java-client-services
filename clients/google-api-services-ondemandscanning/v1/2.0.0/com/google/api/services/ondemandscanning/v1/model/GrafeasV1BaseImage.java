@@ -45,6 +45,13 @@ public final class GrafeasV1BaseImage extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
+   * The registry in which the base image is from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String registry;
+
+  /**
    * The repository name in which the base image is from.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class GrafeasV1BaseImage extends com.google.api.client.json.Generic
    */
   public GrafeasV1BaseImage setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The registry in which the base image is from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegistry() {
+    return registry;
+  }
+
+  /**
+   * The registry in which the base image is from.
+   * @param registry registry or {@code null} for none
+   */
+  public GrafeasV1BaseImage setRegistry(java.lang.String registry) {
+    this.registry = registry;
     return this;
   }
 

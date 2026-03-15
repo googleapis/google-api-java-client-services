@@ -51,6 +51,20 @@ public final class VariableFormatValue extends com.google.api.client.json.Generi
   private Parameter convertNullToValue;
 
   /**
+   * The option to convert a variable value to a boolean.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean convertToBoolean;
+
+  /**
+   * The option to convert a variable value to a number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String convertToNumber;
+
+  /**
    * The value to convert if a variable value is true.
    * The value may be {@code null}.
    */
@@ -112,6 +126,40 @@ public final class VariableFormatValue extends com.google.api.client.json.Generi
    */
   public VariableFormatValue setConvertNullToValue(Parameter convertNullToValue) {
     this.convertNullToValue = convertNullToValue;
+    return this;
+  }
+
+  /**
+   * The option to convert a variable value to a boolean.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getConvertToBoolean() {
+    return convertToBoolean;
+  }
+
+  /**
+   * The option to convert a variable value to a boolean.
+   * @param convertToBoolean convertToBoolean or {@code null} for none
+   */
+  public VariableFormatValue setConvertToBoolean(java.lang.Boolean convertToBoolean) {
+    this.convertToBoolean = convertToBoolean;
+    return this;
+  }
+
+  /**
+   * The option to convert a variable value to a number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConvertToNumber() {
+    return convertToNumber;
+  }
+
+  /**
+   * The option to convert a variable value to a number.
+   * @param convertToNumber convertToNumber or {@code null} for none
+   */
+  public VariableFormatValue setConvertToNumber(java.lang.String convertToNumber) {
+    this.convertToNumber = convertToNumber;
     return this;
   }
 

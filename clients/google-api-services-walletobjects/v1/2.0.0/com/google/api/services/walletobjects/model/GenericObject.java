@@ -250,7 +250,8 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
   private TimeInterval validTimeInterval;
 
   /**
-   * Optional value added module data. Maximum of ten on the object.
+   * Optional value added module data. Maximum of fifteen on the object. For a pass only fifteen
+   * will be displayed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -783,7 +784,8 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional value added module data. Maximum of ten on the object.
+   * Optional value added module data. Maximum of fifteen on the object. For a pass only fifteen
+   * will be displayed.
    * @return value or {@code null} for none
    */
   public java.util.List<ValueAddedModuleData> getValueAddedModuleData() {
@@ -791,7 +793,8 @@ public final class GenericObject extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional value added module data. Maximum of ten on the object.
+   * Optional value added module data. Maximum of fifteen on the object. For a pass only fifteen
+   * will be displayed.
    * @param valueAddedModuleData valueAddedModuleData or {@code null} for none
    */
   public GenericObject setValueAddedModuleData(java.util.List<ValueAddedModuleData> valueAddedModuleData) {

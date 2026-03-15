@@ -103,7 +103,7 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -312,7 +312,10 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -336,7 +339,10 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -1249,17 +1255,27 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. A token identifying a page of results the server should return. */
+          /**
+           * Optional. A page token, received from a previous `ListParameters` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListParameters` must match the call that provided the page token.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. A token identifying a page of results the server should return.
+          /** Optional. A page token, received from a previous `ListParameters` call. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters provided to `ListParameters` must match
+         the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** Optional. A token identifying a page of results the server should return. */
+          /**
+           * Optional. A page token, received from a previous `ListParameters` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListParameters` must match the call that provided the page token.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -2237,17 +2253,27 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Optional. A token identifying a page of results the server should return. */
+            /**
+             * Optional. A page token, received from a previous `ListParameterVersions` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListParameterVersions` must match the call that provided the page token.
+             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. A token identifying a page of results the server should return.
+            /** Optional. A page token, received from a previous `ListParameterVersions` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListParameterVersions` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** Optional. A token identifying a page of results the server should return. */
+            /**
+             * Optional. A page token, received from a previous `ListParameterVersions` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListParameterVersions` must match the call that provided the page token.
+             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -2649,8 +2675,7 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

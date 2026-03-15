@@ -17,9 +17,8 @@
 package com.google.api.services.translate.v3beta1.model;
 
 /**
- * ----------------------------------------------------------------------------- Configures which
- * glossary should be used for a specific target language, and defines options for applying that
- * glossary.
+ * Configures which glossary should be used for a specific target language, and defines options for
+ * applying that glossary.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Translation API. For a detailed explanation

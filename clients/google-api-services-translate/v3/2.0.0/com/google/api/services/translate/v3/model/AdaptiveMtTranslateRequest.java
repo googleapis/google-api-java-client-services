@@ -38,7 +38,7 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
   private java.util.List<java.lang.String> content;
 
   /**
-   * Required. The resource name for the dataset to use for adaptive MT.
+   * Required. The resource name for the dataset to use for adaptive MT translation.
    * `projects/{project}/locations/{location-id}/adaptiveMtDatasets/{dataset}`
    * The value may be {@code null}.
    */
@@ -78,7 +78,7 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The resource name for the dataset to use for adaptive MT.
+   * Required. The resource name for the dataset to use for adaptive MT translation.
    * `projects/{project}/locations/{location-id}/adaptiveMtDatasets/{dataset}`
    * @return value or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The resource name for the dataset to use for adaptive MT.
+   * Required. The resource name for the dataset to use for adaptive MT translation.
    * `projects/{project}/locations/{location-id}/adaptiveMtDatasets/{dataset}`
    * @param dataset dataset or {@code null} for none
    */

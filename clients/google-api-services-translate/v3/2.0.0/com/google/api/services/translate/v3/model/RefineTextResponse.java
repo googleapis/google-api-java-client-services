@@ -17,7 +17,7 @@
 package com.google.api.services.translate.v3.model;
 
 /**
- * Used with equivalent term set glossaries.
+ * Response message for RefineText.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Translation API. For a detailed explanation
@@ -28,46 +28,40 @@ package com.google.api.services.translate.v3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LanguageCodesSet extends com.google.api.client.json.GenericJson {
+public final class RefineTextResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The ISO-639 language code(s) for terms defined in the glossary. All entries are
-   * unique. The list contains at least two entries. Expected to be an exact match for
-   * GlossaryTerm.language_code.
+   * The refined translations obtained from the original translations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> languageCodes;
+  private java.util.List<java.lang.String> refinedTranslations;
 
   /**
-   * Optional. The ISO-639 language code(s) for terms defined in the glossary. All entries are
-   * unique. The list contains at least two entries. Expected to be an exact match for
-   * GlossaryTerm.language_code.
+   * The refined translations obtained from the original translations.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getLanguageCodes() {
-    return languageCodes;
+  public java.util.List<java.lang.String> getRefinedTranslations() {
+    return refinedTranslations;
   }
 
   /**
-   * Optional. The ISO-639 language code(s) for terms defined in the glossary. All entries are
-   * unique. The list contains at least two entries. Expected to be an exact match for
-   * GlossaryTerm.language_code.
-   * @param languageCodes languageCodes or {@code null} for none
+   * The refined translations obtained from the original translations.
+   * @param refinedTranslations refinedTranslations or {@code null} for none
    */
-  public LanguageCodesSet setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
-    this.languageCodes = languageCodes;
+  public RefineTextResponse setRefinedTranslations(java.util.List<java.lang.String> refinedTranslations) {
+    this.refinedTranslations = refinedTranslations;
     return this;
   }
 
   @Override
-  public LanguageCodesSet set(String fieldName, Object value) {
-    return (LanguageCodesSet) super.set(fieldName, value);
+  public RefineTextResponse set(String fieldName, Object value) {
+    return (RefineTextResponse) super.set(fieldName, value);
   }
 
   @Override
-  public LanguageCodesSet clone() {
-    return (LanguageCodesSet) super.clone();
+  public RefineTextResponse clone() {
+    return (RefineTextResponse) super.clone();
   }
 
 }

@@ -56,7 +56,7 @@ public final class GoogleCloudRetailV2betaConversationalSearchRequestSearchParam
 
   /**
    * Optional. The sort string to specify the sorting of search results. The syntax of the sort
-   * string is the same as SearchRequest.sort.
+   * string is the same as SearchRequest.order_by.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class GoogleCloudRetailV2betaConversationalSearchRequestSearchParam
 
   /**
    * Optional. The sort string to specify the sorting of search results. The syntax of the sort
-   * string is the same as SearchRequest.sort.
+   * string is the same as SearchRequest.order_by.
    * @return value or {@code null} for none
    */
   public java.lang.String getSortBy() {
@@ -130,7 +130,7 @@ public final class GoogleCloudRetailV2betaConversationalSearchRequestSearchParam
 
   /**
    * Optional. The sort string to specify the sorting of search results. The syntax of the sort
-   * string is the same as SearchRequest.sort.
+   * string is the same as SearchRequest.order_by.
    * @param sortBy sortBy or {@code null} for none
    */
   public GoogleCloudRetailV2betaConversationalSearchRequestSearchParams setSortBy(java.lang.String sortBy) {

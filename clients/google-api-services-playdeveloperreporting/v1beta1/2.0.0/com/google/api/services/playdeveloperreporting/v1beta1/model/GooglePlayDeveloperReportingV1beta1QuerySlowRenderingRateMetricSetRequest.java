@@ -31,17 +31,17 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
 public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
-   * of Android that was running on the user's device, e.g., 26. * `versionCode` (int64): version of
-   * the app that was running on the user's device. * `deviceModel` (string): unique identifier of
-   * the user's device model. The form of the identifier is 'deviceBrand/device', where deviceBrand
-   * corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g., google/coral. *
-   * `deviceBrand` (string): unique identifier of the user's device brand, e.g., google. *
-   * `deviceType` (string): the type (also known as form factor) of the user's device, e.g., PHONE.
-   * * `countryCode` (string): the country or region of the user's device based on their IP address,
-   * represented as a 2-letter ISO-3166 code (e.g. US for the United States). * `deviceRamBucket`
-   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
-   * Make of the device's primary system-on-chip, e.g., Samsung.
+   * Optional. Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the
+   * API level of Android that was running on the user's device, e.g., 26. * `versionCode` (int64):
+   * version of the app that was running on the user's device. * `deviceModel` (string): unique
+   * identifier of the user's device model. The form of the identifier is 'deviceBrand/device',
+   * where deviceBrand corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g.,
+   * google/coral. * `deviceBrand` (string): unique identifier of the user's device brand, e.g.,
+   * google. * `deviceType` (string): the type (also known as form factor) of the user's device,
+   * e.g., PHONE. * `countryCode` (string): the country or region of the user's device based on
+   * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
+   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
+   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -59,7 +59,7 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   private java.util.List<java.lang.String> dimensions;
 
   /**
-   * Filters to apply to data. The filtering expression follows
+   * Optional. Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by equality of all
    * breakdown dimensions.
    * The value may be {@code null}.
@@ -68,7 +68,7 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   private java.lang.String filter;
 
   /**
-   * Metrics to aggregate. **Supported metrics:** * `slowRenderingRate20Fps`
+   * Optional. Metrics to aggregate. **Supported metrics:** * `slowRenderingRate20Fps`
    * (`google.type.Decimal`): Percentage of distinct users in the aggregation period that had a slow
    * rendering. * `slowRenderingRate20Fps7dUserWeighted` (`google.type.Decimal`): Rolling average
    * value of `slowRenderingRate20Fps` in the last 7 days. The daily values are weighted by the
@@ -93,51 +93,51 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   private java.util.List<java.lang.String> metrics;
 
   /**
-   * Maximum size of the returned data. If unspecified, at most 1000 rows will be returned. The
-   * maximum value is 100000; values above 100000 will be coerced to 100000.
+   * Optional. Maximum size of the returned data. If unspecified, at most 1000 rows will be
+   * returned. The maximum value is 100000; values above 100000 will be coerced to 100000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer pageSize;
 
   /**
-   * A page token, received from a previous call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to the request must match the call that provided the
-   * page token.
+   * Optional. A page token, received from a previous call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to the request must match the call that
+   * provided the page token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pageToken;
 
   /**
-   * Specification of the timeline aggregation parameters. **Supported aggregation periods:** *
-   * DAILY: metrics are aggregated in calendar date intervals. Due to historical constraints, the
-   * only supported timezone is `America/Los_Angeles`.
+   * Optional. Specification of the timeline aggregation parameters. **Supported aggregation
+   * periods:** * DAILY: metrics are aggregated in calendar date intervals. Due to historical
+   * constraints, the only supported timezone is `America/Los_Angeles`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePlayDeveloperReportingV1beta1TimelineSpec timelineSpec;
 
   /**
-   * User view to select. The output data will correspond to the selected view. The only supported
-   * value is `OS_PUBLIC`.
+   * Optional. User view to select. The output data will correspond to the selected view. The only
+   * supported value is `OS_PUBLIC`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userCohort;
 
   /**
-   * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
-   * of Android that was running on the user's device, e.g., 26. * `versionCode` (int64): version of
-   * the app that was running on the user's device. * `deviceModel` (string): unique identifier of
-   * the user's device model. The form of the identifier is 'deviceBrand/device', where deviceBrand
-   * corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g., google/coral. *
-   * `deviceBrand` (string): unique identifier of the user's device brand, e.g., google. *
-   * `deviceType` (string): the type (also known as form factor) of the user's device, e.g., PHONE.
-   * * `countryCode` (string): the country or region of the user's device based on their IP address,
-   * represented as a 2-letter ISO-3166 code (e.g. US for the United States). * `deviceRamBucket`
-   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
-   * Make of the device's primary system-on-chip, e.g., Samsung.
+   * Optional. Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the
+   * API level of Android that was running on the user's device, e.g., 26. * `versionCode` (int64):
+   * version of the app that was running on the user's device. * `deviceModel` (string): unique
+   * identifier of the user's device model. The form of the identifier is 'deviceBrand/device',
+   * where deviceBrand corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g.,
+   * google/coral. * `deviceBrand` (string): unique identifier of the user's device brand, e.g.,
+   * google. * `deviceType` (string): the type (also known as form factor) of the user's device,
+   * e.g., PHONE. * `countryCode` (string): the country or region of the user's device based on
+   * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
+   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
+   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -156,17 +156,17 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the API level
-   * of Android that was running on the user's device, e.g., 26. * `versionCode` (int64): version of
-   * the app that was running on the user's device. * `deviceModel` (string): unique identifier of
-   * the user's device model. The form of the identifier is 'deviceBrand/device', where deviceBrand
-   * corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g., google/coral. *
-   * `deviceBrand` (string): unique identifier of the user's device brand, e.g., google. *
-   * `deviceType` (string): the type (also known as form factor) of the user's device, e.g., PHONE.
-   * * `countryCode` (string): the country or region of the user's device based on their IP address,
-   * represented as a 2-letter ISO-3166 code (e.g. US for the United States). * `deviceRamBucket`
-   * (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string):
-   * Make of the device's primary system-on-chip, e.g., Samsung.
+   * Optional. Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the
+   * API level of Android that was running on the user's device, e.g., 26. * `versionCode` (int64):
+   * version of the app that was running on the user's device. * `deviceModel` (string): unique
+   * identifier of the user's device model. The form of the identifier is 'deviceBrand/device',
+   * where deviceBrand corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g.,
+   * google/coral. * `deviceBrand` (string): unique identifier of the user's device brand, e.g.,
+   * google. * `deviceType` (string): the type (also known as form factor) of the user's device,
+   * e.g., PHONE. * `countryCode` (string): the country or region of the user's device based on
+   * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
+   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
+   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -186,7 +186,7 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * Filters to apply to data. The filtering expression follows
+   * Optional. Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by equality of all
    * breakdown dimensions.
    * @return value or {@code null} for none
@@ -196,7 +196,7 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * Filters to apply to data. The filtering expression follows
+   * Optional. Filters to apply to data. The filtering expression follows
    * [AIP-160](https://google.aip.dev/160) standard and supports filtering by equality of all
    * breakdown dimensions.
    * @param filter filter or {@code null} for none
@@ -207,7 +207,7 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * Metrics to aggregate. **Supported metrics:** * `slowRenderingRate20Fps`
+   * Optional. Metrics to aggregate. **Supported metrics:** * `slowRenderingRate20Fps`
    * (`google.type.Decimal`): Percentage of distinct users in the aggregation period that had a slow
    * rendering. * `slowRenderingRate20Fps7dUserWeighted` (`google.type.Decimal`): Rolling average
    * value of `slowRenderingRate20Fps` in the last 7 days. The daily values are weighted by the
@@ -233,7 +233,7 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * Metrics to aggregate. **Supported metrics:** * `slowRenderingRate20Fps`
+   * Optional. Metrics to aggregate. **Supported metrics:** * `slowRenderingRate20Fps`
    * (`google.type.Decimal`): Percentage of distinct users in the aggregation period that had a slow
    * rendering. * `slowRenderingRate20Fps7dUserWeighted` (`google.type.Decimal`): Rolling average
    * value of `slowRenderingRate20Fps` in the last 7 days. The daily values are weighted by the
@@ -260,8 +260,8 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * Maximum size of the returned data. If unspecified, at most 1000 rows will be returned. The
-   * maximum value is 100000; values above 100000 will be coerced to 100000.
+   * Optional. Maximum size of the returned data. If unspecified, at most 1000 rows will be
+   * returned. The maximum value is 100000; values above 100000 will be coerced to 100000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -269,8 +269,8 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * Maximum size of the returned data. If unspecified, at most 1000 rows will be returned. The
-   * maximum value is 100000; values above 100000 will be coerced to 100000.
+   * Optional. Maximum size of the returned data. If unspecified, at most 1000 rows will be
+   * returned. The maximum value is 100000; values above 100000 will be coerced to 100000.
    * @param pageSize pageSize or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetRequest setPageSize(java.lang.Integer pageSize) {
@@ -279,9 +279,9 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * A page token, received from a previous call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to the request must match the call that provided the
-   * page token.
+   * Optional. A page token, received from a previous call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to the request must match the call that
+   * provided the page token.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -289,9 +289,9 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * A page token, received from a previous call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to the request must match the call that provided the
-   * page token.
+   * Optional. A page token, received from a previous call. Provide this to retrieve the subsequent
+   * page. When paginating, all other parameters provided to the request must match the call that
+   * provided the page token.
    * @param pageToken pageToken or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetRequest setPageToken(java.lang.String pageToken) {
@@ -300,9 +300,9 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * Specification of the timeline aggregation parameters. **Supported aggregation periods:** *
-   * DAILY: metrics are aggregated in calendar date intervals. Due to historical constraints, the
-   * only supported timezone is `America/Los_Angeles`.
+   * Optional. Specification of the timeline aggregation parameters. **Supported aggregation
+   * periods:** * DAILY: metrics are aggregated in calendar date intervals. Due to historical
+   * constraints, the only supported timezone is `America/Los_Angeles`.
    * @return value or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1TimelineSpec getTimelineSpec() {
@@ -310,9 +310,9 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * Specification of the timeline aggregation parameters. **Supported aggregation periods:** *
-   * DAILY: metrics are aggregated in calendar date intervals. Due to historical constraints, the
-   * only supported timezone is `America/Los_Angeles`.
+   * Optional. Specification of the timeline aggregation parameters. **Supported aggregation
+   * periods:** * DAILY: metrics are aggregated in calendar date intervals. Due to historical
+   * constraints, the only supported timezone is `America/Los_Angeles`.
    * @param timelineSpec timelineSpec or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetRequest setTimelineSpec(GooglePlayDeveloperReportingV1beta1TimelineSpec timelineSpec) {
@@ -321,8 +321,8 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * User view to select. The output data will correspond to the selected view. The only supported
-   * value is `OS_PUBLIC`.
+   * Optional. User view to select. The output data will correspond to the selected view. The only
+   * supported value is `OS_PUBLIC`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserCohort() {
@@ -330,8 +330,8 @@ public final class GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetr
   }
 
   /**
-   * User view to select. The output data will correspond to the selected view. The only supported
-   * value is `OS_PUBLIC`.
+   * Optional. User view to select. The output data will correspond to the selected view. The only
+   * supported value is `OS_PUBLIC`.
    * @param userCohort userCohort or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1QuerySlowRenderingRateMetricSetRequest setUserCohort(java.lang.String userCohort) {

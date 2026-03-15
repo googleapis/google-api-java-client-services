@@ -31,14 +31,14 @@ package com.google.api.services.playdeveloperreporting.v1alpha1.model;
 public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Granularity of the aggregation period of the row.
+   * Optional. Granularity of the aggregation period of the row.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String aggregationPeriod;
 
   /**
-   * Dimension columns in the row.
+   * Optional. Dimension columns in the row.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.go
   }
 
   /**
-   * Metric columns in the row.
+   * Optional. Metric columns in the row.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,14 +64,14 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.go
   }
 
   /**
-   * Starting date (and time for hourly aggregation) of the period covered by this row.
+   * Optional. Starting date (and time for hourly aggregation) of the period covered by this row.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleTypeDateTime startTime;
 
   /**
-   * Granularity of the aggregation period of the row.
+   * Optional. Granularity of the aggregation period of the row.
    * @return value or {@code null} for none
    */
   public java.lang.String getAggregationPeriod() {
@@ -79,7 +79,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.go
   }
 
   /**
-   * Granularity of the aggregation period of the row.
+   * Optional. Granularity of the aggregation period of the row.
    * @param aggregationPeriod aggregationPeriod or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1MetricsRow setAggregationPeriod(java.lang.String aggregationPeriod) {
@@ -88,7 +88,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.go
   }
 
   /**
-   * Dimension columns in the row.
+   * Optional. Dimension columns in the row.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePlayDeveloperReportingV1alpha1DimensionValue> getDimensions() {
@@ -96,7 +96,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.go
   }
 
   /**
-   * Dimension columns in the row.
+   * Optional. Dimension columns in the row.
    * @param dimensions dimensions or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1MetricsRow setDimensions(java.util.List<GooglePlayDeveloperReportingV1alpha1DimensionValue> dimensions) {
@@ -105,7 +105,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.go
   }
 
   /**
-   * Metric columns in the row.
+   * Optional. Metric columns in the row.
    * @return value or {@code null} for none
    */
   public java.util.List<GooglePlayDeveloperReportingV1alpha1MetricValue> getMetrics() {
@@ -113,7 +113,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.go
   }
 
   /**
-   * Metric columns in the row.
+   * Optional. Metric columns in the row.
    * @param metrics metrics or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1MetricsRow setMetrics(java.util.List<GooglePlayDeveloperReportingV1alpha1MetricValue> metrics) {
@@ -122,7 +122,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.go
   }
 
   /**
-   * Starting date (and time for hourly aggregation) of the period covered by this row.
+   * Optional. Starting date (and time for hourly aggregation) of the period covered by this row.
    * @return value or {@code null} for none
    */
   public GoogleTypeDateTime getStartTime() {
@@ -130,7 +130,7 @@ public final class GooglePlayDeveloperReportingV1alpha1MetricsRow extends com.go
   }
 
   /**
-   * Starting date (and time for hourly aggregation) of the period covered by this row.
+   * Optional. Starting date (and time for hourly aggregation) of the period covered by this row.
    * @param startTime startTime or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1MetricsRow setStartTime(GoogleTypeDateTime startTime) {

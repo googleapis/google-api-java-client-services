@@ -67,6 +67,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversati
   private java.util.List<GoogleRpcStatus> partialErrors;
 
   /**
+   * Output only. If true, the labeling rules will be re-evaluated for the conversations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean relabel;
+
+  /**
    * The original request for bulk analyze.
    * The value may be {@code null}.
    */
@@ -165,6 +172,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversati
    */
   public GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsMetadata setPartialErrors(java.util.List<GoogleRpcStatus> partialErrors) {
     this.partialErrors = partialErrors;
+    return this;
+  }
+
+  /**
+   * Output only. If true, the labeling rules will be re-evaluated for the conversations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRelabel() {
+    return relabel;
+  }
+
+  /**
+   * Output only. If true, the labeling rules will be re-evaluated for the conversations.
+   * @param relabel relabel or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsMetadata setRelabel(java.lang.Boolean relabel) {
+    this.relabel = relabel;
     return this;
   }
 

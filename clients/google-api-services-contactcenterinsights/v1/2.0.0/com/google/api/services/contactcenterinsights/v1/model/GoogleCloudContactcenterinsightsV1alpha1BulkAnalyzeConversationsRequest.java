@@ -60,6 +60,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversati
   private java.lang.String parent;
 
   /**
+   * Optional. If true, the labeling rules will be re-evaluated for the conversations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean relabel;
+
+  /**
    * Required. Percentage of selected conversation to analyze, between [0, 100].
    * @return value or {@code null} for none
    */
@@ -126,6 +133,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversati
    */
   public GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsRequest setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the labeling rules will be re-evaluated for the conversations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRelabel() {
+    return relabel;
+  }
+
+  /**
+   * Optional. If true, the labeling rules will be re-evaluated for the conversations.
+   * @param relabel relabel or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsRequest setRelabel(java.lang.Boolean relabel) {
+    this.relabel = relabel;
     return this;
   }
 

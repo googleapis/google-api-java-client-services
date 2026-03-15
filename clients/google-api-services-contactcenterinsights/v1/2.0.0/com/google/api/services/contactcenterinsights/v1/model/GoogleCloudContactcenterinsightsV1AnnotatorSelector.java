@@ -58,6 +58,14 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelector extends c
   private GoogleCloudContactcenterinsightsV1AnnotatorSelectorQaConfig qaConfig;
 
   /**
+   * Optional. Whether to run the auto-labeling annotator. If true, the auto-labeling annotator will
+   * be run. This is a non-billable operation designed for fixing or backfilling custom labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean runAutoLabelingAnnotator;
+
+  /**
    * Whether to run the entity annotator.
    * The value may be {@code null}.
    */
@@ -188,6 +196,25 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelector extends c
    */
   public GoogleCloudContactcenterinsightsV1AnnotatorSelector setQaConfig(GoogleCloudContactcenterinsightsV1AnnotatorSelectorQaConfig qaConfig) {
     this.qaConfig = qaConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to run the auto-labeling annotator. If true, the auto-labeling annotator will
+   * be run. This is a non-billable operation designed for fixing or backfilling custom labels.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRunAutoLabelingAnnotator() {
+    return runAutoLabelingAnnotator;
+  }
+
+  /**
+   * Optional. Whether to run the auto-labeling annotator. If true, the auto-labeling annotator will
+   * be run. This is a non-billable operation designed for fixing or backfilling custom labels.
+   * @param runAutoLabelingAnnotator runAutoLabelingAnnotator or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelector setRunAutoLabelingAnnotator(java.lang.Boolean runAutoLabelingAnnotator) {
+    this.runAutoLabelingAnnotator = runAutoLabelingAnnotator;
     return this;
   }
 

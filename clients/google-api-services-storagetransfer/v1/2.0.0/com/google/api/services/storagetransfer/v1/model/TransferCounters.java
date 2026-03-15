@@ -188,6 +188,21 @@ public final class TransferCounters extends com.google.api.client.json.GenericJs
   private java.lang.Long objectsFromSourceSkippedBySync;
 
   /**
+   * Number of unrestored deep archive objects skipped.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long unrestoredDeepArchiveObjectsSkippedCount;
+
+  /**
+   * Number of glacier objects skipped, glacier objects are unsupported by default regardless of the
+   * restore status. Allowlist the project to copy glacier objects if needed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long unsupportedS3GlacierObjectsSkippedCount;
+
+  /**
    * Bytes that are copied to the data sink.
    * @return value or {@code null} for none
    */
@@ -563,6 +578,42 @@ public final class TransferCounters extends com.google.api.client.json.GenericJs
    */
   public TransferCounters setObjectsFromSourceSkippedBySync(java.lang.Long objectsFromSourceSkippedBySync) {
     this.objectsFromSourceSkippedBySync = objectsFromSourceSkippedBySync;
+    return this;
+  }
+
+  /**
+   * Number of unrestored deep archive objects skipped.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getUnrestoredDeepArchiveObjectsSkippedCount() {
+    return unrestoredDeepArchiveObjectsSkippedCount;
+  }
+
+  /**
+   * Number of unrestored deep archive objects skipped.
+   * @param unrestoredDeepArchiveObjectsSkippedCount unrestoredDeepArchiveObjectsSkippedCount or {@code null} for none
+   */
+  public TransferCounters setUnrestoredDeepArchiveObjectsSkippedCount(java.lang.Long unrestoredDeepArchiveObjectsSkippedCount) {
+    this.unrestoredDeepArchiveObjectsSkippedCount = unrestoredDeepArchiveObjectsSkippedCount;
+    return this;
+  }
+
+  /**
+   * Number of glacier objects skipped, glacier objects are unsupported by default regardless of the
+   * restore status. Allowlist the project to copy glacier objects if needed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getUnsupportedS3GlacierObjectsSkippedCount() {
+    return unsupportedS3GlacierObjectsSkippedCount;
+  }
+
+  /**
+   * Number of glacier objects skipped, glacier objects are unsupported by default regardless of the
+   * restore status. Allowlist the project to copy glacier objects if needed.
+   * @param unsupportedS3GlacierObjectsSkippedCount unsupportedS3GlacierObjectsSkippedCount or {@code null} for none
+   */
+  public TransferCounters setUnsupportedS3GlacierObjectsSkippedCount(java.lang.Long unsupportedS3GlacierObjectsSkippedCount) {
+    this.unsupportedS3GlacierObjectsSkippedCount = unsupportedS3GlacierObjectsSkippedCount;
     return this;
   }
 

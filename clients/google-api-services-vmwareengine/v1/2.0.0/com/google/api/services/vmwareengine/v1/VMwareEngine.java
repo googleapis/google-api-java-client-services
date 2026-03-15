@@ -103,7 +103,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -480,7 +480,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -504,7 +507,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -1186,8 +1192,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
       public class Datastores {
 
         /**
-         * Creates a new `Datastore` resource in a given project and location. Datastores are regional
-         * resources
+         * Creates a new `Datastore` resource in a given project and location.
          *
          * Create a request for the method "datastores.create".
          *
@@ -1215,8 +1220,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new `Datastore` resource in a given project and location. Datastores are regional
-           * resources
+           * Creates a new `Datastore` resource in a given project and location.
            *
            * Create a request for the method "datastores.create".
            *
@@ -2052,8 +2056,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Modifies a Datastore resource. Only the following fields can be updated: `description`. Only
-         * fields specified in `updateMask` are applied.
+         * Modifies a Datastore resource. Only fields specified in `updateMask` are applied.
          *
          * Create a request for the method "datastores.patch".
          *
@@ -2080,8 +2083,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datastores/[^/]+$");
 
           /**
-           * Modifies a Datastore resource. Only the following fields can be updated: `description`. Only
-           * fields specified in `updateMask` are applied.
+           * Modifies a Datastore resource. Only fields specified in `updateMask` are applied.
            *
            * Create a request for the method "datastores.patch".
            *
@@ -2222,8 +2224,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * Optional. Field mask is used to specify the fields to be overwritten in the Datastore
            * resource by the update. The fields specified in the `update_mask` are relative to the
            * resource, not the full request. A field will be overwritten if it is in the mask. If
-           * the user does not provide a mask then all fields will be overwritten. Only the
-           * following fields can be updated: `description`.
+           * the user does not provide a mask then all fields will be overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -2231,7 +2232,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           /** Optional. Field mask is used to specify the fields to be overwritten in the Datastore resource by
          the update. The fields specified in the `update_mask` are relative to the resource, not the full
          request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
-         all fields will be overwritten. Only the following fields can be updated: `description`.
+         all fields will be overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2241,8 +2242,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * Optional. Field mask is used to specify the fields to be overwritten in the Datastore
            * resource by the update. The fields specified in the `update_mask` are relative to the
            * resource, not the full request. A field will be overwritten if it is in the mask. If
-           * the user does not provide a mask then all fields will be overwritten. Only the
-           * following fields can be updated: `description`.
+           * the user does not provide a mask then all fields will be overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -11413,7 +11413,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
           }
           /**
-           * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+           * Mounts a `Datastore` on a cluster resource
            *
            * Create a request for the method "clusters.mountDatastore".
            *
@@ -11441,7 +11441,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/clusters/[^/]+$");
 
             /**
-             * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+             * Mounts a `Datastore` on a cluster resource
              *
              * Create a request for the method "clusters.mountDatastore".
              *
@@ -12089,7 +12089,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
           }
           /**
-           * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+           * Unmounts a `Datastore` on a cluster resource
            *
            * Create a request for the method "clusters.unmountDatastore".
            *
@@ -12117,7 +12117,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/clusters/[^/]+$");
 
             /**
-             * Mounts a `Datastore` on a cluster resource Datastores are zonal resources
+             * Unmounts a `Datastore` on a cluster resource
              *
              * Create a request for the method "clusters.unmountDatastore".
              *
@@ -21062,8 +21062,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

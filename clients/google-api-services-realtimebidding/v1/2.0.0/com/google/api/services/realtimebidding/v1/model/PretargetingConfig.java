@@ -17,8 +17,8 @@
 package com.google.api.services.realtimebidding.v1.model;
 
 /**
- * Pretargeting configuration: a set of targeting dimensions applied at the pretargeting stage of
- * the RTB funnel. These control which inventory a bidder will receive bid requests for.
+ * Pretargeting config: a set of targeting dimensions applied at the pretargeting stage of the RTB
+ * funnel. These control which inventory a bidder will receive bid requests for.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Real-time Bidding API. For a detailed explanation
@@ -32,9 +32,9 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class PretargetingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Targeting modes included by this configuration. A bid request must allow all the specified
-   * targeting modes. An unset value allows all bid requests to be sent, regardless of which
-   * targeting modes they allow.
+   * Targeting modes included by this config. A bid request must allow all the specified targeting
+   * modes. An unset value allows all bid requests to be sent, regardless of which targeting modes
+   * they allow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,26 +53,25 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private AppTargeting appTargeting;
 
   /**
-   * Output only. The identifier that corresponds to this pretargeting configuration that helps
-   * buyers track and attribute their spend across their own arbitrary divisions. If a bid request
-   * matches more than one configuration, the buyer chooses which billing_id to attribute each of
-   * their bids.
+   * Output only. The identifier that corresponds to this pretargeting config that helps buyers
+   * track and attribute their spend across their own arbitrary divisions. If a bid request matches
+   * more than one config, the buyer chooses which billing_id to attribute each of their bids.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long billingId;
 
   /**
-   * The diplay name associated with this configuration. This name must be unique among all the
-   * pretargeting configurations a bidder has.
+   * The diplay name associated with this config. This name must be unique among all the
+   * pretargeting configs a bidder has.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * The sensitive content category label IDs excluded in this configuration. Bid requests for
-   * inventory with any of the specified content label IDs will not be sent. Refer to this file
+   * The sensitive content category label IDs excluded in this config. Bid requests for inventory
+   * with any of the specified content label IDs will not be sent. Refer to this file
    * https://storage.googleapis.com/adx-rtb-dictionaries/content-labels.txt for category IDs.
    * The value may be {@code null}.
    */
@@ -80,17 +79,17 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private java.util.List<java.lang.Long> excludedContentLabelIds;
 
   /**
-   * The geos included or excluded in this configuration defined in
-   * https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv
+   * The geos included or excluded in this config defined in https://storage.googleapis.com/adx-rtb-
+   * dictionaries/geo-table.csv
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NumericTargetingDimension geoTargeting;
 
   /**
-   * Creative dimensions included by this configuration. Only bid requests eligible for at least one
-   * of the specified creative dimensions will be sent. An unset value allows all bid requests to be
-   * sent, regardless of creative dimension.
+   * Creative dimensions included by this config. Only bid requests eligible for at least one of the
+   * specified creative dimensions will be sent. An unset value allows all bid requests to be sent,
+   * regardless of creative dimension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,16 +111,16 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> includedEnvironments;
 
   /**
-   * Creative formats included by this configuration. Only bid requests eligible for at least one of
-   * the specified creative formats will be sent. An unset value will allow all bid requests to be
-   * sent, regardless of format.
+   * Creative formats included by this config. Only bid requests eligible for at least one of the
+   * specified creative formats will be sent. An unset value will allow all bid requests to be sent,
+   * regardless of format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> includedFormats;
 
   /**
-   * The languages included in this configuration, represented by their language code. See
+   * The languages included in this config, represented by their language code. See
    * https://developers.google.com/adwords/api/docs/appendix/languagecodes.
    * The value may be {@code null}.
    */
@@ -129,7 +128,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> includedLanguages;
 
   /**
-   * The mobile operating systems included in this configuration as defined in
+   * The mobile operating systems included in this config as defined in
    * https://storage.googleapis.com/adx-rtb-dictionaries/mobile-os.csv
    * The value may be {@code null}.
    */
@@ -137,16 +136,15 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private java.util.List<java.lang.Long> includedMobileOperatingSystemIds;
 
   /**
-   * The platforms included by this configration. Bid requests for devices with the specified
-   * platform types will be sent. An unset value allows all bid requests to be sent, regardless of
-   * platform.
+   * The platforms included by this config. Bid requests for devices with the specified platform
+   * types will be sent. An unset value allows all bid requests to be sent, regardless of platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> includedPlatforms;
 
   /**
-   * User identifier types included in this configuration. At least one of the user identifier types
+   * User identifier types included in this config. At least one of the user identifier types
    * specified in this list must be available for the bid request to be sent.
    * The value may be {@code null}.
    */
@@ -154,8 +152,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> includedUserIdTypes;
 
   /**
-   * The interstitial targeting specified for this configuration. The unset value will allow bid
-   * requests to be sent regardless of whether they are for interstitials or not.
+   * The interstitial targeting specified for this config. The unset value will allow bid requests
+   * to be sent regardless of whether they are for interstitials or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,10 +168,10 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private java.util.List<java.lang.Long> invalidGeoIds;
 
   /**
-   * The maximum QPS threshold for this configuration. The bidder should receive no more than this
-   * number of bid requests matching this configuration per second across all their bidding
-   * endpoints among all trading locations. Further information available at
-   * https://developers.google.com/authorized-buyers/rtb/peer-guide
+   * The maximum QPS threshold for this config. The bidder should receive no more than this number
+   * of bid requests matching this config per second across all their bidding endpoints among all
+   * trading locations. Further information available at https://developers.google.com/authorized-
+   * buyers/rtb/peer-guide
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -181,16 +179,16 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
 
   /**
    * The targeted minimum viewability decile, ranging in values [0, 10]. A value of 5 means that the
-   * configuration will only match adslots for which we predict at least 50% viewability. Values >
-   * 10 will be rounded down to 10. An unset value or a value of 0 indicates that bid requests will
-   * be sent regardless of viewability.
+   * config will only match adslots for which we predict at least 50% viewability. Values > 10 will
+   * be rounded down to 10. An unset value or a value of 0 indicates that bid requests will be sent
+   * regardless of viewability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minimumViewabilityDecile;
 
   /**
-   * Output only. Name of the pretargeting configuration that must follow the pattern
+   * Output only. Name of the pretargeting config that must follow the pattern
    * `bidders/{bidder_account_id}/pretargetingConfigs/{config_id}`
    * The value may be {@code null}.
    */
@@ -214,21 +212,21 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   private StringTargetingDimension publisherTargeting;
 
   /**
-   * Output only. The state of this pretargeting configuration.
+   * Output only. The state of this pretargeting config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The remarketing lists included or excluded in this configuration as defined in UserList.
+   * The remarketing lists included or excluded in this config as defined in UserList.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NumericTargetingDimension userListTargeting;
 
   /**
-   * The verticals included or excluded in this configuration as defined in
+   * The verticals included or excluded in this config as defined in
    * https://developers.google.com/authorized-buyers/rtb/downloads/publisher-verticals
    * The value may be {@code null}.
    */
@@ -241,16 +239,16 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
    * for targeting allows all web-based bid requests to be sent. Sites can either be targeting
    * positively (bid requests will be sent only if the destination site is listed in the targeting
    * dimension) or negatively (bid requests will be sent only if the destination site is not listed
-   * in the pretargeting configuration).
+   * in the pretargeting config).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StringTargetingDimension webTargeting;
 
   /**
-   * Targeting modes included by this configuration. A bid request must allow all the specified
-   * targeting modes. An unset value allows all bid requests to be sent, regardless of which
-   * targeting modes they allow.
+   * Targeting modes included by this config. A bid request must allow all the specified targeting
+   * modes. An unset value allows all bid requests to be sent, regardless of which targeting modes
+   * they allow.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedUserTargetingModes() {
@@ -258,9 +256,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Targeting modes included by this configuration. A bid request must allow all the specified
-   * targeting modes. An unset value allows all bid requests to be sent, regardless of which
-   * targeting modes they allow.
+   * Targeting modes included by this config. A bid request must allow all the specified targeting
+   * modes. An unset value allows all bid requests to be sent, regardless of which targeting modes
+   * they allow.
    * @param allowedUserTargetingModes allowedUserTargetingModes or {@code null} for none
    */
   public PretargetingConfig setAllowedUserTargetingModes(java.util.List<java.lang.String> allowedUserTargetingModes) {
@@ -296,10 +294,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The identifier that corresponds to this pretargeting configuration that helps
-   * buyers track and attribute their spend across their own arbitrary divisions. If a bid request
-   * matches more than one configuration, the buyer chooses which billing_id to attribute each of
-   * their bids.
+   * Output only. The identifier that corresponds to this pretargeting config that helps buyers
+   * track and attribute their spend across their own arbitrary divisions. If a bid request matches
+   * more than one config, the buyer chooses which billing_id to attribute each of their bids.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBillingId() {
@@ -307,10 +304,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The identifier that corresponds to this pretargeting configuration that helps
-   * buyers track and attribute their spend across their own arbitrary divisions. If a bid request
-   * matches more than one configuration, the buyer chooses which billing_id to attribute each of
-   * their bids.
+   * Output only. The identifier that corresponds to this pretargeting config that helps buyers
+   * track and attribute their spend across their own arbitrary divisions. If a bid request matches
+   * more than one config, the buyer chooses which billing_id to attribute each of their bids.
    * @param billingId billingId or {@code null} for none
    */
   public PretargetingConfig setBillingId(java.lang.Long billingId) {
@@ -319,8 +315,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The diplay name associated with this configuration. This name must be unique among all the
-   * pretargeting configurations a bidder has.
+   * The diplay name associated with this config. This name must be unique among all the
+   * pretargeting configs a bidder has.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -328,8 +324,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The diplay name associated with this configuration. This name must be unique among all the
-   * pretargeting configurations a bidder has.
+   * The diplay name associated with this config. This name must be unique among all the
+   * pretargeting configs a bidder has.
    * @param displayName displayName or {@code null} for none
    */
   public PretargetingConfig setDisplayName(java.lang.String displayName) {
@@ -338,8 +334,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The sensitive content category label IDs excluded in this configuration. Bid requests for
-   * inventory with any of the specified content label IDs will not be sent. Refer to this file
+   * The sensitive content category label IDs excluded in this config. Bid requests for inventory
+   * with any of the specified content label IDs will not be sent. Refer to this file
    * https://storage.googleapis.com/adx-rtb-dictionaries/content-labels.txt for category IDs.
    * @return value or {@code null} for none
    */
@@ -348,8 +344,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The sensitive content category label IDs excluded in this configuration. Bid requests for
-   * inventory with any of the specified content label IDs will not be sent. Refer to this file
+   * The sensitive content category label IDs excluded in this config. Bid requests for inventory
+   * with any of the specified content label IDs will not be sent. Refer to this file
    * https://storage.googleapis.com/adx-rtb-dictionaries/content-labels.txt for category IDs.
    * @param excludedContentLabelIds excludedContentLabelIds or {@code null} for none
    */
@@ -359,8 +355,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The geos included or excluded in this configuration defined in
-   * https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv
+   * The geos included or excluded in this config defined in https://storage.googleapis.com/adx-rtb-
+   * dictionaries/geo-table.csv
    * @return value or {@code null} for none
    */
   public NumericTargetingDimension getGeoTargeting() {
@@ -368,8 +364,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The geos included or excluded in this configuration defined in
-   * https://storage.googleapis.com/adx-rtb-dictionaries/geo-table.csv
+   * The geos included or excluded in this config defined in https://storage.googleapis.com/adx-rtb-
+   * dictionaries/geo-table.csv
    * @param geoTargeting geoTargeting or {@code null} for none
    */
   public PretargetingConfig setGeoTargeting(NumericTargetingDimension geoTargeting) {
@@ -378,9 +374,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Creative dimensions included by this configuration. Only bid requests eligible for at least one
-   * of the specified creative dimensions will be sent. An unset value allows all bid requests to be
-   * sent, regardless of creative dimension.
+   * Creative dimensions included by this config. Only bid requests eligible for at least one of the
+   * specified creative dimensions will be sent. An unset value allows all bid requests to be sent,
+   * regardless of creative dimension.
    * @return value or {@code null} for none
    */
   public java.util.List<CreativeDimensions> getIncludedCreativeDimensions() {
@@ -388,9 +384,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Creative dimensions included by this configuration. Only bid requests eligible for at least one
-   * of the specified creative dimensions will be sent. An unset value allows all bid requests to be
-   * sent, regardless of creative dimension.
+   * Creative dimensions included by this config. Only bid requests eligible for at least one of the
+   * specified creative dimensions will be sent. An unset value allows all bid requests to be sent,
+   * regardless of creative dimension.
    * @param includedCreativeDimensions includedCreativeDimensions or {@code null} for none
    */
   public PretargetingConfig setIncludedCreativeDimensions(java.util.List<CreativeDimensions> includedCreativeDimensions) {
@@ -420,9 +416,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Creative formats included by this configuration. Only bid requests eligible for at least one of
-   * the specified creative formats will be sent. An unset value will allow all bid requests to be
-   * sent, regardless of format.
+   * Creative formats included by this config. Only bid requests eligible for at least one of the
+   * specified creative formats will be sent. An unset value will allow all bid requests to be sent,
+   * regardless of format.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedFormats() {
@@ -430,9 +426,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Creative formats included by this configuration. Only bid requests eligible for at least one of
-   * the specified creative formats will be sent. An unset value will allow all bid requests to be
-   * sent, regardless of format.
+   * Creative formats included by this config. Only bid requests eligible for at least one of the
+   * specified creative formats will be sent. An unset value will allow all bid requests to be sent,
+   * regardless of format.
    * @param includedFormats includedFormats or {@code null} for none
    */
   public PretargetingConfig setIncludedFormats(java.util.List<java.lang.String> includedFormats) {
@@ -441,7 +437,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The languages included in this configuration, represented by their language code. See
+   * The languages included in this config, represented by their language code. See
    * https://developers.google.com/adwords/api/docs/appendix/languagecodes.
    * @return value or {@code null} for none
    */
@@ -450,7 +446,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The languages included in this configuration, represented by their language code. See
+   * The languages included in this config, represented by their language code. See
    * https://developers.google.com/adwords/api/docs/appendix/languagecodes.
    * @param includedLanguages includedLanguages or {@code null} for none
    */
@@ -460,7 +456,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The mobile operating systems included in this configuration as defined in
+   * The mobile operating systems included in this config as defined in
    * https://storage.googleapis.com/adx-rtb-dictionaries/mobile-os.csv
    * @return value or {@code null} for none
    */
@@ -469,7 +465,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The mobile operating systems included in this configuration as defined in
+   * The mobile operating systems included in this config as defined in
    * https://storage.googleapis.com/adx-rtb-dictionaries/mobile-os.csv
    * @param includedMobileOperatingSystemIds includedMobileOperatingSystemIds or {@code null} for none
    */
@@ -479,9 +475,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The platforms included by this configration. Bid requests for devices with the specified
-   * platform types will be sent. An unset value allows all bid requests to be sent, regardless of
-   * platform.
+   * The platforms included by this config. Bid requests for devices with the specified platform
+   * types will be sent. An unset value allows all bid requests to be sent, regardless of platform.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedPlatforms() {
@@ -489,9 +484,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The platforms included by this configration. Bid requests for devices with the specified
-   * platform types will be sent. An unset value allows all bid requests to be sent, regardless of
-   * platform.
+   * The platforms included by this config. Bid requests for devices with the specified platform
+   * types will be sent. An unset value allows all bid requests to be sent, regardless of platform.
    * @param includedPlatforms includedPlatforms or {@code null} for none
    */
   public PretargetingConfig setIncludedPlatforms(java.util.List<java.lang.String> includedPlatforms) {
@@ -500,7 +494,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * User identifier types included in this configuration. At least one of the user identifier types
+   * User identifier types included in this config. At least one of the user identifier types
    * specified in this list must be available for the bid request to be sent.
    * @return value or {@code null} for none
    */
@@ -509,7 +503,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * User identifier types included in this configuration. At least one of the user identifier types
+   * User identifier types included in this config. At least one of the user identifier types
    * specified in this list must be available for the bid request to be sent.
    * @param includedUserIdTypes includedUserIdTypes or {@code null} for none
    */
@@ -519,8 +513,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The interstitial targeting specified for this configuration. The unset value will allow bid
-   * requests to be sent regardless of whether they are for interstitials or not.
+   * The interstitial targeting specified for this config. The unset value will allow bid requests
+   * to be sent regardless of whether they are for interstitials or not.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterstitialTargeting() {
@@ -528,8 +522,8 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The interstitial targeting specified for this configuration. The unset value will allow bid
-   * requests to be sent regardless of whether they are for interstitials or not.
+   * The interstitial targeting specified for this config. The unset value will allow bid requests
+   * to be sent regardless of whether they are for interstitials or not.
    * @param interstitialTargeting interstitialTargeting or {@code null} for none
    */
   public PretargetingConfig setInterstitialTargeting(java.lang.String interstitialTargeting) {
@@ -557,10 +551,10 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The maximum QPS threshold for this configuration. The bidder should receive no more than this
-   * number of bid requests matching this configuration per second across all their bidding
-   * endpoints among all trading locations. Further information available at
-   * https://developers.google.com/authorized-buyers/rtb/peer-guide
+   * The maximum QPS threshold for this config. The bidder should receive no more than this number
+   * of bid requests matching this config per second across all their bidding endpoints among all
+   * trading locations. Further information available at https://developers.google.com/authorized-
+   * buyers/rtb/peer-guide
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaximumQps() {
@@ -568,10 +562,10 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The maximum QPS threshold for this configuration. The bidder should receive no more than this
-   * number of bid requests matching this configuration per second across all their bidding
-   * endpoints among all trading locations. Further information available at
-   * https://developers.google.com/authorized-buyers/rtb/peer-guide
+   * The maximum QPS threshold for this config. The bidder should receive no more than this number
+   * of bid requests matching this config per second across all their bidding endpoints among all
+   * trading locations. Further information available at https://developers.google.com/authorized-
+   * buyers/rtb/peer-guide
    * @param maximumQps maximumQps or {@code null} for none
    */
   public PretargetingConfig setMaximumQps(java.lang.Long maximumQps) {
@@ -581,9 +575,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
 
   /**
    * The targeted minimum viewability decile, ranging in values [0, 10]. A value of 5 means that the
-   * configuration will only match adslots for which we predict at least 50% viewability. Values >
-   * 10 will be rounded down to 10. An unset value or a value of 0 indicates that bid requests will
-   * be sent regardless of viewability.
+   * config will only match adslots for which we predict at least 50% viewability. Values > 10 will
+   * be rounded down to 10. An unset value or a value of 0 indicates that bid requests will be sent
+   * regardless of viewability.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinimumViewabilityDecile() {
@@ -592,9 +586,9 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
 
   /**
    * The targeted minimum viewability decile, ranging in values [0, 10]. A value of 5 means that the
-   * configuration will only match adslots for which we predict at least 50% viewability. Values >
-   * 10 will be rounded down to 10. An unset value or a value of 0 indicates that bid requests will
-   * be sent regardless of viewability.
+   * config will only match adslots for which we predict at least 50% viewability. Values > 10 will
+   * be rounded down to 10. An unset value or a value of 0 indicates that bid requests will be sent
+   * regardless of viewability.
    * @param minimumViewabilityDecile minimumViewabilityDecile or {@code null} for none
    */
   public PretargetingConfig setMinimumViewabilityDecile(java.lang.Integer minimumViewabilityDecile) {
@@ -603,7 +597,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Name of the pretargeting configuration that must follow the pattern
+   * Output only. Name of the pretargeting config that must follow the pattern
    * `bidders/{bidder_account_id}/pretargetingConfigs/{config_id}`
    * @return value or {@code null} for none
    */
@@ -612,7 +606,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Name of the pretargeting configuration that must follow the pattern
+   * Output only. Name of the pretargeting config that must follow the pattern
    * `bidders/{bidder_account_id}/pretargetingConfigs/{config_id}`
    * @param name name or {@code null} for none
    */
@@ -657,7 +651,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The state of this pretargeting configuration.
+   * Output only. The state of this pretargeting config.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -665,7 +659,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The state of this pretargeting configuration.
+   * Output only. The state of this pretargeting config.
    * @param state state or {@code null} for none
    */
   public PretargetingConfig setState(java.lang.String state) {
@@ -674,7 +668,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The remarketing lists included or excluded in this configuration as defined in UserList.
+   * The remarketing lists included or excluded in this config as defined in UserList.
    * @return value or {@code null} for none
    */
   public NumericTargetingDimension getUserListTargeting() {
@@ -682,7 +676,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The remarketing lists included or excluded in this configuration as defined in UserList.
+   * The remarketing lists included or excluded in this config as defined in UserList.
    * @param userListTargeting userListTargeting or {@code null} for none
    */
   public PretargetingConfig setUserListTargeting(NumericTargetingDimension userListTargeting) {
@@ -691,7 +685,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The verticals included or excluded in this configuration as defined in
+   * The verticals included or excluded in this config as defined in
    * https://developers.google.com/authorized-buyers/rtb/downloads/publisher-verticals
    * @return value or {@code null} for none
    */
@@ -700,7 +694,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * The verticals included or excluded in this configuration as defined in
+   * The verticals included or excluded in this config as defined in
    * https://developers.google.com/authorized-buyers/rtb/downloads/publisher-verticals
    * @param verticalTargeting verticalTargeting or {@code null} for none
    */
@@ -715,7 +709,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
    * for targeting allows all web-based bid requests to be sent. Sites can either be targeting
    * positively (bid requests will be sent only if the destination site is listed in the targeting
    * dimension) or negatively (bid requests will be sent only if the destination site is not listed
-   * in the pretargeting configuration).
+   * in the pretargeting config).
    * @return value or {@code null} for none
    */
   public StringTargetingDimension getWebTargeting() {
@@ -728,7 +722,7 @@ public final class PretargetingConfig extends com.google.api.client.json.Generic
    * for targeting allows all web-based bid requests to be sent. Sites can either be targeting
    * positively (bid requests will be sent only if the destination site is listed in the targeting
    * dimension) or negatively (bid requests will be sent only if the destination site is not listed
-   * in the pretargeting configuration).
+   * in the pretargeting config).
    * @param webTargeting webTargeting or {@code null} for none
    */
   public PretargetingConfig setWebTargeting(StringTargetingDimension webTargeting) {

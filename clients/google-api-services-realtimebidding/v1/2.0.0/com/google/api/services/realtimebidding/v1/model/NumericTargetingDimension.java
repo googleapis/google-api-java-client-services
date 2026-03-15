@@ -32,21 +32,21 @@ package com.google.api.services.realtimebidding.v1.model;
 public final class NumericTargetingDimension extends com.google.api.client.json.GenericJson {
 
   /**
-   * The IDs excluded in a configuration.
+   * The IDs excluded in a config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> excludedIds;
 
   /**
-   * The IDs included in a configuration.
+   * The IDs included in a config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> includedIds;
 
   /**
-   * The IDs excluded in a configuration.
+   * The IDs excluded in a config.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getExcludedIds() {
@@ -54,7 +54,7 @@ public final class NumericTargetingDimension extends com.google.api.client.json.
   }
 
   /**
-   * The IDs excluded in a configuration.
+   * The IDs excluded in a config.
    * @param excludedIds excludedIds or {@code null} for none
    */
   public NumericTargetingDimension setExcludedIds(java.util.List<java.lang.Long> excludedIds) {
@@ -63,7 +63,7 @@ public final class NumericTargetingDimension extends com.google.api.client.json.
   }
 
   /**
-   * The IDs included in a configuration.
+   * The IDs included in a config.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getIncludedIds() {
@@ -71,7 +71,7 @@ public final class NumericTargetingDimension extends com.google.api.client.json.
   }
 
   /**
-   * The IDs included in a configuration.
+   * The IDs included in a config.
    * @param includedIds includedIds or {@code null} for none
    */
   public NumericTargetingDimension setIncludedIds(java.util.List<java.lang.Long> includedIds) {

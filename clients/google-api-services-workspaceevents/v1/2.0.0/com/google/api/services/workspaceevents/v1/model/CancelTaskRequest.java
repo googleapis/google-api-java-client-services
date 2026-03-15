@@ -30,6 +30,33 @@ package com.google.api.services.workspaceevents.v1.model;
 @SuppressWarnings("javadoc")
 public final class CancelTaskRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+   * release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tenant;
+
+  /**
+   * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+   * release.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTenant() {
+    return tenant;
+  }
+
+  /**
+   * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+   * release.
+   * @param tenant tenant or {@code null} for none
+   */
+  public CancelTaskRequest setTenant(java.lang.String tenant) {
+    this.tenant = tenant;
+    return this;
+  }
+
   @Override
   public CancelTaskRequest set(String fieldName, Object value) {
     return (CancelTaskRequest) super.set(fieldName, value);

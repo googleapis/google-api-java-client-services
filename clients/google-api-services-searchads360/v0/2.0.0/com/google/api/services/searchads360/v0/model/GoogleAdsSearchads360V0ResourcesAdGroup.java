@@ -38,7 +38,9 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
   private java.lang.String adRotationMode;
 
   /**
-   * The maximum CPC (cost-per-click) bid.
+   * The maximum CPC (cost-per-click) bid. This field is used when the ad group's effective bidding
+   * strategy is Manual CPC. This field is not applicable and will be ignored if the ad group's
+   * campaign is using a portfolio bidding strategy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -199,7 +201,9 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
   }
 
   /**
-   * The maximum CPC (cost-per-click) bid.
+   * The maximum CPC (cost-per-click) bid. This field is used when the ad group's effective bidding
+   * strategy is Manual CPC. This field is not applicable and will be ignored if the ad group's
+   * campaign is using a portfolio bidding strategy.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCpcBidMicros() {
@@ -207,7 +211,9 @@ public final class GoogleAdsSearchads360V0ResourcesAdGroup extends com.google.ap
   }
 
   /**
-   * The maximum CPC (cost-per-click) bid.
+   * The maximum CPC (cost-per-click) bid. This field is used when the ad group's effective bidding
+   * strategy is Manual CPC. This field is not applicable and will be ignored if the ad group's
+   * campaign is using a portfolio bidding strategy.
    * @param cpcBidMicros cpcBidMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesAdGroup setCpcBidMicros(java.lang.Long cpcBidMicros) {

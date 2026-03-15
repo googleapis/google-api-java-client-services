@@ -46,15 +46,17 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings exten
   private java.lang.Boolean targetGoogleSearch;
 
   /**
-   * Whether ads will be served on the Google Partner Network. This is available only to some select
-   * Google partner accounts.
+   * Whether ads will be served on the partner network. This is available only to some select
+   * partner accounts. Unless you have been instructed to use this field, it likely does not apply
+   * to your account. This does not control whether ads will be served on Google Search Partners
+   * Network; use `target_search_network` for that instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean targetPartnerSearchNetwork;
 
   /**
-   * Whether ads will be served on partner sites in the Google Search Network (requires
+   * Whether ads will be served on sites in the Google Search Partners Network (requires
    * `target_google_search` to also be `true`).
    * The value may be {@code null}.
    */
@@ -98,8 +100,10 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings exten
   }
 
   /**
-   * Whether ads will be served on the Google Partner Network. This is available only to some select
-   * Google partner accounts.
+   * Whether ads will be served on the partner network. This is available only to some select
+   * partner accounts. Unless you have been instructed to use this field, it likely does not apply
+   * to your account. This does not control whether ads will be served on Google Search Partners
+   * Network; use `target_search_network` for that instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTargetPartnerSearchNetwork() {
@@ -107,8 +111,10 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings exten
   }
 
   /**
-   * Whether ads will be served on the Google Partner Network. This is available only to some select
-   * Google partner accounts.
+   * Whether ads will be served on the partner network. This is available only to some select
+   * partner accounts. Unless you have been instructed to use this field, it likely does not apply
+   * to your account. This does not control whether ads will be served on Google Search Partners
+   * Network; use `target_search_network` for that instead.
    * @param targetPartnerSearchNetwork targetPartnerSearchNetwork or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings setTargetPartnerSearchNetwork(java.lang.Boolean targetPartnerSearchNetwork) {
@@ -117,7 +123,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings exten
   }
 
   /**
-   * Whether ads will be served on partner sites in the Google Search Network (requires
+   * Whether ads will be served on sites in the Google Search Partners Network (requires
    * `target_google_search` to also be `true`).
    * @return value or {@code null} for none
    */
@@ -126,7 +132,7 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings exten
   }
 
   /**
-   * Whether ads will be served on partner sites in the Google Search Network (requires
+   * Whether ads will be served on sites in the Google Search Partners Network (requires
    * `target_google_search` to also be `true`).
    * @param targetSearchNetwork targetSearchNetwork or {@code null} for none
    */

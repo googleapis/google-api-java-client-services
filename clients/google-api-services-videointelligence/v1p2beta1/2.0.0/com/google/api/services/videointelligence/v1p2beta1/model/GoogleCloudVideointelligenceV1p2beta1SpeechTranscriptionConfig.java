@@ -31,6 +31,14 @@ package com.google.api.services.videointelligence.v1p2beta1.model;
 public final class GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Legacy field. This field must be a Cloud Storage URI prefix. (e.g.,
+   * `gs://bucket/path/`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String audioOutputUriPrefix;
+
+  /**
    * Optional. For file formats, such as MXF or MKV, supporting multiple audio tracks, specify up to
    * two tracks. Default: track 0.
    * The value may be {@code null}.
@@ -116,6 +124,25 @@ public final class GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfi
     // hack to force ProGuard to consider GoogleCloudVideointelligenceV1p2beta1SpeechContext used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudVideointelligenceV1p2beta1SpeechContext.class);
+  }
+
+  /**
+   * Optional. Legacy field. This field must be a Cloud Storage URI prefix. (e.g.,
+   * `gs://bucket/path/`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAudioOutputUriPrefix() {
+    return audioOutputUriPrefix;
+  }
+
+  /**
+   * Optional. Legacy field. This field must be a Cloud Storage URI prefix. (e.g.,
+   * `gs://bucket/path/`).
+   * @param audioOutputUriPrefix audioOutputUriPrefix or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig setAudioOutputUriPrefix(java.lang.String audioOutputUriPrefix) {
+    this.audioOutputUriPrefix = audioOutputUriPrefix;
+    return this;
   }
 
   /**

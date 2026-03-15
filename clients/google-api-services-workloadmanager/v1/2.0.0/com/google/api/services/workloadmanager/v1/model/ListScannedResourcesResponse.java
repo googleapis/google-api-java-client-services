@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for response to list scanned resources
+ * Response message for the ListScannedResources RPC.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -38,7 +38,7 @@ public final class ListScannedResourcesResponse extends com.google.api.client.js
   private java.lang.String nextPageToken;
 
   /**
-   * All scanned resources in response
+   * All scanned resources in response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class ListScannedResourcesResponse extends com.google.api.client.js
   }
 
   /**
-   * All scanned resources in response
+   * All scanned resources in response.
    * @return value or {@code null} for none
    */
   public java.util.List<ScannedResource> getScannedResources() {
@@ -72,7 +72,7 @@ public final class ListScannedResourcesResponse extends com.google.api.client.js
   }
 
   /**
-   * All scanned resources in response
+   * All scanned resources in response.
    * @param scannedResources scannedResources or {@code null} for none
    */
   public ListScannedResourcesResponse setScannedResources(java.util.List<ScannedResource> scannedResources) {

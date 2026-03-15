@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * * A ShellCommand is invoked via the agent's command line executor
+ * A ShellCommand is invoked via the agent's command line executor.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ShellCommand extends com.google.api.client.json.GenericJson {
 
   /**
-   * args is a string of arguments to be passed to the command.
+   * Arguments to be passed to the command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String args;
 
   /**
-   * command is the name of the command to be executed.
+   * The name of the command to be executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class ShellCommand extends com.google.api.client.json.GenericJson {
   private java.lang.Integer timeoutSeconds;
 
   /**
-   * args is a string of arguments to be passed to the command.
+   * Arguments to be passed to the command.
    * @return value or {@code null} for none
    */
   public java.lang.String getArgs() {
@@ -59,7 +59,7 @@ public final class ShellCommand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * args is a string of arguments to be passed to the command.
+   * Arguments to be passed to the command.
    * @param args args or {@code null} for none
    */
   public ShellCommand setArgs(java.lang.String args) {
@@ -68,7 +68,7 @@ public final class ShellCommand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * command is the name of the command to be executed.
+   * The name of the command to be executed.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommand() {
@@ -76,7 +76,7 @@ public final class ShellCommand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * command is the name of the command to be executed.
+   * The name of the command to be executed.
    * @param command command or {@code null} for none
    */
   public ShellCommand setCommand(java.lang.String command) {

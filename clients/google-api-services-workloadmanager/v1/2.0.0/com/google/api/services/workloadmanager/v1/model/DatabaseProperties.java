@@ -37,7 +37,7 @@ public final class DatabaseProperties extends com.google.api.client.json.Generic
   private BackupProperties backupProperties;
 
   /**
-   * Output only. Type of the database. HANA, DB2, etc.
+   * Output only. Type of the database. `HANA`, `DB2`, etc.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class DatabaseProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Type of the database. HANA, DB2, etc.
+   * Output only. Type of the database. `HANA`, `DB2`, etc.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseType() {
@@ -69,7 +69,7 @@ public final class DatabaseProperties extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Type of the database. HANA, DB2, etc.
+   * Output only. Type of the database. `HANA`, `DB2`, etc.
    * @param databaseType databaseType or {@code null} for none
    */
   public DatabaseProperties setDatabaseType(java.lang.String databaseType) {

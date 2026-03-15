@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Response message for the ListExecutions RPC.
+ * The response object from `ListActuations`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,54 +27,56 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListExecutionsResponse extends com.google.api.client.json.GenericJson {
+public final class ListActuationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Execution.
+   * The list of Actuation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Execution> executions;
+  private java.util.List<Actuation> actuations;
 
   static {
-    // hack to force ProGuard to consider Execution used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider Actuation used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Execution.class);
+    com.google.api.client.util.Data.nullOf(Actuation.class);
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Execution.
+   * The list of Actuation
    * @return value or {@code null} for none
    */
-  public java.util.List<Execution> getExecutions() {
-    return executions;
+  public java.util.List<Actuation> getActuations() {
+    return actuations;
   }
 
   /**
-   * The list of Execution.
-   * @param executions executions or {@code null} for none
+   * The list of Actuation
+   * @param actuations actuations or {@code null} for none
    */
-  public ListExecutionsResponse setExecutions(java.util.List<Execution> executions) {
-    this.executions = executions;
+  public ListActuationsResponse setActuations(java.util.List<Actuation> actuations) {
+    this.actuations = actuations;
     return this;
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -82,16 +84,17 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListExecutionsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListActuationsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -99,22 +102,22 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
-  public ListExecutionsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+  public ListActuationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
     this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ListExecutionsResponse set(String fieldName, Object value) {
-    return (ListExecutionsResponse) super.set(fieldName, value);
+  public ListActuationsResponse set(String fieldName, Object value) {
+    return (ListActuationsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListExecutionsResponse clone() {
-    return (ListExecutionsResponse) super.clone();
+  public ListActuationsResponse clone() {
+    return (ListActuationsResponse) super.clone();
   }
 
 }

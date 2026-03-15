@@ -37,6 +37,14 @@ public final class GoogleCloudRunV2SourceCode extends com.google.api.client.json
   private GoogleCloudRunV2CloudStorageSource cloudStorageSource;
 
   /**
+   * Optional. Input only. Source code inlined in the request. Cloud Run will store the
+   * inlined_source to Cloud Storage and replace the field with cloud_storage_source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2InlinedSource inlinedSource;
+
+  /**
    * The source is a Cloud Storage bucket.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class GoogleCloudRunV2SourceCode extends com.google.api.client.json
    */
   public GoogleCloudRunV2SourceCode setCloudStorageSource(GoogleCloudRunV2CloudStorageSource cloudStorageSource) {
     this.cloudStorageSource = cloudStorageSource;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Source code inlined in the request. Cloud Run will store the
+   * inlined_source to Cloud Storage and replace the field with cloud_storage_source.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2InlinedSource getInlinedSource() {
+    return inlinedSource;
+  }
+
+  /**
+   * Optional. Input only. Source code inlined in the request. Cloud Run will store the
+   * inlined_source to Cloud Storage and replace the field with cloud_storage_source.
+   * @param inlinedSource inlinedSource or {@code null} for none
+   */
+  public GoogleCloudRunV2SourceCode setInlinedSource(GoogleCloudRunV2InlinedSource inlinedSource) {
+    this.inlinedSource = inlinedSource;
     return this;
   }
 

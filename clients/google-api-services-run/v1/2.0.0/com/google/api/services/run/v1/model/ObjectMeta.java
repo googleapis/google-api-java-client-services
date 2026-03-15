@@ -40,27 +40,28 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * authorization-breakglass`: Service, Job, * `run.googleapis.com/binary-authorization`: Service,
    * Job, Execution. * `run.googleapis.com/build-base-image`: Service. * `run.googleapis.com/build-
    * enable-automatic-updates`: Service. * `run.googleapis.com/build-environment-variables`:
-   * Service. * `run.googleapis.com/build-function-target`: Service. * `run.googleapis.com/build-
-   * id`: Service. * `run.googleapis.com/build-image-uri`: Service. * `run.googleapis.com/build-
-   * name`: Service. * `run.googleapis.com/build-service-account`: Service. *
-   * `run.googleapis.com/build-source-location`: Service. * `run.googleapis.com/build-worker-pool`:
-   * Service. * `run.googleapis.com/client-name`: All resources. * `run.googleapis.com/cloudsql-
-   * instances`: Revision, Execution. * `run.googleapis.com/container-dependencies`: Revision . *
-   * `run.googleapis.com/cpu-throttling`: Revision. * `run.googleapis.com/custom-audiences`:
-   * Service. * `run.googleapis.com/default-url-disabled`: Service. *
-   * `run.googleapis.com/description`: Service. * `run.googleapis.com/encryption-key-shutdown-
-   * hours`: Revision * `run.googleapis.com/encryption-key`: Revision, Execution. *
-   * `run.googleapis.com/execution-environment`: Revision, Execution. * `run.googleapis.com/gc-
-   * traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-disabled`: Revision. *
-   * `run.googleapis.com/health-check-disabled`: Revision. * `run.googleapis.com/ingress`: Service.
-   * * `run.googleapis.com/launch-stage`: Service, Job. * `run.googleapis.com/minScale`: Service. *
-   * `run.googleapis.com/maxScale`: Service. * `run.googleapis.com/manualInstanceCount`: Service. *
-   * `run.googleapis.com/network-interfaces`: Revision, Execution. * `run.googleapis.com/post-key-
-   * revocation-action-type`: Revision. `run.googleapis.com/scalingMode`: Service. *
-   * `run.googleapis.com/secrets`: Revision, Execution. * `run.googleapis.com/secure-session-agent`:
-   * Revision. * `run.googleapis.com/sessionAffinity`: Revision. * `run.googleapis.com/startup-cpu-
-   * boost`: Revision. * `run.googleapis.com/vpc-access-connector`: Revision, Execution. *
-   * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
+   * Service. * `run.googleapis.com/build-function-target`: Service, Revision. *
+   * `run.googleapis.com/build-id`: Service, Revision. * `run.googleapis.com/build-image-uri`:
+   * Service. * `run.googleapis.com/build-name`: Service. * `run.googleapis.com/build-service-
+   * account`: Service. * `run.googleapis.com/build-source-location`: Service, Revision. *
+   * `run.googleapis.com/build-worker-pool`: Service. * `run.googleapis.com/client-name`: All
+   * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
+   * `run.googleapis.com/container-dependencies`: Revision . * `run.googleapis.com/cpu-throttling`:
+   * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/default-url-
+   * disabled`: Service. * `run.googleapis.com/description`: Service. *
+   * `run.googleapis.com/encryption-key-shutdown-hours`: Revision * `run.googleapis.com/encryption-
+   * key`: Revision, Execution. * `run.googleapis.com/execution-environment`: Revision, Execution. *
+   * `run.googleapis.com/gc-traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-
+   * disabled`: Revision. * `run.googleapis.com/health-check-disabled`: Revision. *
+   * `run.googleapis.com/ingress`: Service, Instance. * `run.googleapis.com/invoker-iam-disabled`:
+   * Service, Instance. * `run.googleapis.com/launch-stage`: Service, Job. *
+   * `run.googleapis.com/minScale`: Service. * `run.googleapis.com/maxScale`: Service. *
+   * `run.googleapis.com/manualInstanceCount`: Service. * `run.googleapis.com/network-interfaces`:
+   * Revision, Execution. * `run.googleapis.com/post-key-revocation-action-type`: Revision.
+   * `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision, Execution.
+   * * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
+   * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
+   * connector`: Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +104,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> finalizers;
 
   /**
-   * Not supported by Cloud Run
+   * Optional. A prefix for the resource name if not provided in the create request. Must be less
+   * than 31 characters to allow for a random suffix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,9 +127,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The name of the resource. Name is required when creating top-level resources
-   * (Service, Job), must be unique within a Cloud Run project/region, and cannot be changed once
-   * created.
+   * Optional. The name of the resource. A name for creating top-level resources (Service, Job,
+   * WorkerPool). Must be unique within a Cloud Run project/region, and cannot be changed once
+   * created. If omitted, a default name will be generated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,27 +185,28 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * authorization-breakglass`: Service, Job, * `run.googleapis.com/binary-authorization`: Service,
    * Job, Execution. * `run.googleapis.com/build-base-image`: Service. * `run.googleapis.com/build-
    * enable-automatic-updates`: Service. * `run.googleapis.com/build-environment-variables`:
-   * Service. * `run.googleapis.com/build-function-target`: Service. * `run.googleapis.com/build-
-   * id`: Service. * `run.googleapis.com/build-image-uri`: Service. * `run.googleapis.com/build-
-   * name`: Service. * `run.googleapis.com/build-service-account`: Service. *
-   * `run.googleapis.com/build-source-location`: Service. * `run.googleapis.com/build-worker-pool`:
-   * Service. * `run.googleapis.com/client-name`: All resources. * `run.googleapis.com/cloudsql-
-   * instances`: Revision, Execution. * `run.googleapis.com/container-dependencies`: Revision . *
-   * `run.googleapis.com/cpu-throttling`: Revision. * `run.googleapis.com/custom-audiences`:
-   * Service. * `run.googleapis.com/default-url-disabled`: Service. *
-   * `run.googleapis.com/description`: Service. * `run.googleapis.com/encryption-key-shutdown-
-   * hours`: Revision * `run.googleapis.com/encryption-key`: Revision, Execution. *
-   * `run.googleapis.com/execution-environment`: Revision, Execution. * `run.googleapis.com/gc-
-   * traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-disabled`: Revision. *
-   * `run.googleapis.com/health-check-disabled`: Revision. * `run.googleapis.com/ingress`: Service.
-   * * `run.googleapis.com/launch-stage`: Service, Job. * `run.googleapis.com/minScale`: Service. *
-   * `run.googleapis.com/maxScale`: Service. * `run.googleapis.com/manualInstanceCount`: Service. *
-   * `run.googleapis.com/network-interfaces`: Revision, Execution. * `run.googleapis.com/post-key-
-   * revocation-action-type`: Revision. `run.googleapis.com/scalingMode`: Service. *
-   * `run.googleapis.com/secrets`: Revision, Execution. * `run.googleapis.com/secure-session-agent`:
-   * Revision. * `run.googleapis.com/sessionAffinity`: Revision. * `run.googleapis.com/startup-cpu-
-   * boost`: Revision. * `run.googleapis.com/vpc-access-connector`: Revision, Execution. *
-   * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
+   * Service. * `run.googleapis.com/build-function-target`: Service, Revision. *
+   * `run.googleapis.com/build-id`: Service, Revision. * `run.googleapis.com/build-image-uri`:
+   * Service. * `run.googleapis.com/build-name`: Service. * `run.googleapis.com/build-service-
+   * account`: Service. * `run.googleapis.com/build-source-location`: Service, Revision. *
+   * `run.googleapis.com/build-worker-pool`: Service. * `run.googleapis.com/client-name`: All
+   * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
+   * `run.googleapis.com/container-dependencies`: Revision . * `run.googleapis.com/cpu-throttling`:
+   * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/default-url-
+   * disabled`: Service. * `run.googleapis.com/description`: Service. *
+   * `run.googleapis.com/encryption-key-shutdown-hours`: Revision * `run.googleapis.com/encryption-
+   * key`: Revision, Execution. * `run.googleapis.com/execution-environment`: Revision, Execution. *
+   * `run.googleapis.com/gc-traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-
+   * disabled`: Revision. * `run.googleapis.com/health-check-disabled`: Revision. *
+   * `run.googleapis.com/ingress`: Service, Instance. * `run.googleapis.com/invoker-iam-disabled`:
+   * Service, Instance. * `run.googleapis.com/launch-stage`: Service, Job. *
+   * `run.googleapis.com/minScale`: Service. * `run.googleapis.com/maxScale`: Service. *
+   * `run.googleapis.com/manualInstanceCount`: Service. * `run.googleapis.com/network-interfaces`:
+   * Revision, Execution. * `run.googleapis.com/post-key-revocation-action-type`: Revision.
+   * `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision, Execution.
+   * * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
+   * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
+   * connector`: Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -220,27 +223,28 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * authorization-breakglass`: Service, Job, * `run.googleapis.com/binary-authorization`: Service,
    * Job, Execution. * `run.googleapis.com/build-base-image`: Service. * `run.googleapis.com/build-
    * enable-automatic-updates`: Service. * `run.googleapis.com/build-environment-variables`:
-   * Service. * `run.googleapis.com/build-function-target`: Service. * `run.googleapis.com/build-
-   * id`: Service. * `run.googleapis.com/build-image-uri`: Service. * `run.googleapis.com/build-
-   * name`: Service. * `run.googleapis.com/build-service-account`: Service. *
-   * `run.googleapis.com/build-source-location`: Service. * `run.googleapis.com/build-worker-pool`:
-   * Service. * `run.googleapis.com/client-name`: All resources. * `run.googleapis.com/cloudsql-
-   * instances`: Revision, Execution. * `run.googleapis.com/container-dependencies`: Revision . *
-   * `run.googleapis.com/cpu-throttling`: Revision. * `run.googleapis.com/custom-audiences`:
-   * Service. * `run.googleapis.com/default-url-disabled`: Service. *
-   * `run.googleapis.com/description`: Service. * `run.googleapis.com/encryption-key-shutdown-
-   * hours`: Revision * `run.googleapis.com/encryption-key`: Revision, Execution. *
-   * `run.googleapis.com/execution-environment`: Revision, Execution. * `run.googleapis.com/gc-
-   * traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-disabled`: Revision. *
-   * `run.googleapis.com/health-check-disabled`: Revision. * `run.googleapis.com/ingress`: Service.
-   * * `run.googleapis.com/launch-stage`: Service, Job. * `run.googleapis.com/minScale`: Service. *
-   * `run.googleapis.com/maxScale`: Service. * `run.googleapis.com/manualInstanceCount`: Service. *
-   * `run.googleapis.com/network-interfaces`: Revision, Execution. * `run.googleapis.com/post-key-
-   * revocation-action-type`: Revision. `run.googleapis.com/scalingMode`: Service. *
-   * `run.googleapis.com/secrets`: Revision, Execution. * `run.googleapis.com/secure-session-agent`:
-   * Revision. * `run.googleapis.com/sessionAffinity`: Revision. * `run.googleapis.com/startup-cpu-
-   * boost`: Revision. * `run.googleapis.com/vpc-access-connector`: Revision, Execution. *
-   * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
+   * Service. * `run.googleapis.com/build-function-target`: Service, Revision. *
+   * `run.googleapis.com/build-id`: Service, Revision. * `run.googleapis.com/build-image-uri`:
+   * Service. * `run.googleapis.com/build-name`: Service. * `run.googleapis.com/build-service-
+   * account`: Service. * `run.googleapis.com/build-source-location`: Service, Revision. *
+   * `run.googleapis.com/build-worker-pool`: Service. * `run.googleapis.com/client-name`: All
+   * resources. * `run.googleapis.com/cloudsql-instances`: Revision, Execution. *
+   * `run.googleapis.com/container-dependencies`: Revision . * `run.googleapis.com/cpu-throttling`:
+   * Revision. * `run.googleapis.com/custom-audiences`: Service. * `run.googleapis.com/default-url-
+   * disabled`: Service. * `run.googleapis.com/description`: Service. *
+   * `run.googleapis.com/encryption-key-shutdown-hours`: Revision * `run.googleapis.com/encryption-
+   * key`: Revision, Execution. * `run.googleapis.com/execution-environment`: Revision, Execution. *
+   * `run.googleapis.com/gc-traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-
+   * disabled`: Revision. * `run.googleapis.com/health-check-disabled`: Revision. *
+   * `run.googleapis.com/ingress`: Service, Instance. * `run.googleapis.com/invoker-iam-disabled`:
+   * Service, Instance. * `run.googleapis.com/launch-stage`: Service, Job. *
+   * `run.googleapis.com/minScale`: Service. * `run.googleapis.com/maxScale`: Service. *
+   * `run.googleapis.com/manualInstanceCount`: Service. * `run.googleapis.com/network-interfaces`:
+   * Revision, Execution. * `run.googleapis.com/post-key-revocation-action-type`: Revision.
+   * `run.googleapis.com/scalingMode`: Service. * `run.googleapis.com/secrets`: Revision, Execution.
+   * * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
+   * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
+   * connector`: Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
    * @param annotations annotations or {@code null} for none
    */
   public ObjectMeta setAnnotations(java.util.Map<String, java.lang.String> annotations) {
@@ -336,7 +340,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not supported by Cloud Run
+   * Optional. A prefix for the resource name if not provided in the create request. Must be less
+   * than 31 characters to allow for a random suffix.
    * @return value or {@code null} for none
    */
   public java.lang.String getGenerateName() {
@@ -344,7 +349,8 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Not supported by Cloud Run
+   * Optional. A prefix for the resource name if not provided in the create request. Must be less
+   * than 31 characters to allow for a random suffix.
    * @param generateName generateName or {@code null} for none
    */
   public ObjectMeta setGenerateName(java.lang.String generateName) {
@@ -389,9 +395,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the resource. Name is required when creating top-level resources
-   * (Service, Job), must be unique within a Cloud Run project/region, and cannot be changed once
-   * created.
+   * Optional. The name of the resource. A name for creating top-level resources (Service, Job,
+   * WorkerPool). Must be unique within a Cloud Run project/region, and cannot be changed once
+   * created. If omitted, a default name will be generated.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -399,9 +405,9 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the resource. Name is required when creating top-level resources
-   * (Service, Job), must be unique within a Cloud Run project/region, and cannot be changed once
-   * created.
+   * Optional. The name of the resource. A name for creating top-level resources (Service, Job,
+   * WorkerPool). Must be unique within a Cloud Run project/region, and cannot be changed once
+   * created. If omitted, a default name will be generated.
    * @param name name or {@code null} for none
    */
   public ObjectMeta setName(java.lang.String name) {

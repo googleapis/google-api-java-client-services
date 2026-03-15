@@ -63,6 +63,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2Application application;
 
   /**
+   * ArtifactGuardPolicies associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2ArtifactGuardPolicies artifactGuardPolicies;
+
+  /**
    * The results of an attack path simulation relevant to this finding.
    * The value may be {@code null}.
    */
@@ -281,6 +288,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2Exfiltration exfiltration;
+
+  /**
+   * External exposure associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2ExternalExposure externalExposure;
 
   /**
    * Output only. Third party SIEM/SOAR fields within SCC, contains external system information and
@@ -522,6 +536,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private java.lang.String resourceName;
 
   /**
+   * Secret associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2Secret secret;
+
+  /**
    * Output only. User specified security marks. These marks are entirely managed by the user and
    * come from the SecurityMarks resource that belongs to the finding.
    * The value may be {@code null}.
@@ -651,6 +672,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setApplication(GoogleCloudSecuritycenterV2Application application) {
     this.application = application;
+    return this;
+  }
+
+  /**
+   * ArtifactGuardPolicies associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ArtifactGuardPolicies getArtifactGuardPolicies() {
+    return artifactGuardPolicies;
+  }
+
+  /**
+   * ArtifactGuardPolicies associated with the finding.
+   * @param artifactGuardPolicies artifactGuardPolicies or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setArtifactGuardPolicies(GoogleCloudSecuritycenterV2ArtifactGuardPolicies artifactGuardPolicies) {
+    this.artifactGuardPolicies = artifactGuardPolicies;
     return this;
   }
 
@@ -1076,6 +1114,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setExfiltration(GoogleCloudSecuritycenterV2Exfiltration exfiltration) {
     this.exfiltration = exfiltration;
+    return this;
+  }
+
+  /**
+   * External exposure associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure getExternalExposure() {
+    return externalExposure;
+  }
+
+  /**
+   * External exposure associated with the finding.
+   * @param externalExposure externalExposure or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setExternalExposure(GoogleCloudSecuritycenterV2ExternalExposure externalExposure) {
+    this.externalExposure = externalExposure;
     return this;
   }
 
@@ -1614,6 +1669,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setResourceName(java.lang.String resourceName) {
     this.resourceName = resourceName;
+    return this;
+  }
+
+  /**
+   * Secret associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Secret getSecret() {
+    return secret;
+  }
+
+  /**
+   * Secret associated with the finding.
+   * @param secret secret or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setSecret(GoogleCloudSecuritycenterV2Secret secret) {
+    this.secret = secret;
     return this;
   }
 

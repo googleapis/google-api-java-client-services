@@ -67,6 +67,20 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Represents the principal for this assignment. If not empty, jobs run by this
+   * principal will utilize the associated reservation. Otherwise, jobs will fall back to using the
+   * reservation assigned to the project, folder, or organization (in that order). If no reservation
+   * is assigned at any of these levels, on-demand capacity will be used. The supported formats are:
+   * * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
+   * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for service
+   * accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadId
+   * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String principal;
+
+  /**
    * Optional. The scheduling policy to use for jobs and queries of this assignee when running under
    * the associated reservation. The scheduling policy controls how the reservation's resources are
    * distributed. This overrides the default scheduling policy specified on the reservation. This
@@ -162,6 +176,37 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    */
   public Assignment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Represents the principal for this assignment. If not empty, jobs run by this
+   * principal will utilize the associated reservation. Otherwise, jobs will fall back to using the
+   * reservation assigned to the project, folder, or organization (in that order). If no reservation
+   * is assigned at any of these levels, on-demand capacity will be used. The supported formats are:
+   * * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
+   * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for service
+   * accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadId
+   * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrincipal() {
+    return principal;
+  }
+
+  /**
+   * Optional. Represents the principal for this assignment. If not empty, jobs run by this
+   * principal will utilize the associated reservation. Otherwise, jobs will fall back to using the
+   * reservation assigned to the project, folder, or organization (in that order). If no reservation
+   * is assigned at any of these levels, on-demand capacity will be used. The supported formats are:
+   * * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
+   * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for service
+   * accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadId
+   * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities.
+   * @param principal principal or {@code null} for none
+   */
+  public Assignment setPrincipal(java.lang.String principal) {
+    this.principal = principal;
     return this;
   }
 

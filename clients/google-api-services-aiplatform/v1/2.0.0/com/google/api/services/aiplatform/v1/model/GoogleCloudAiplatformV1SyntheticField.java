@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Represents a single named field within a SyntheticExample.
+ * Represents a single named field within a synthetic example, consisting of a name and the actual
+ * content.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,21 +31,23 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SyntheticField extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The content of the field.
+   * Required. The actual content or value for this field. This can be text, images, or other types
+   * of data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1Content content;
 
   /**
-   * Optional. The name of the field.
+   * Optional. The name of the specific field, such as "product_name" or "review_text".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fieldName;
 
   /**
-   * Required. The content of the field.
+   * Required. The actual content or value for this field. This can be text, images, or other types
+   * of data.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1Content getContent() {
@@ -52,7 +55,8 @@ public final class GoogleCloudAiplatformV1SyntheticField extends com.google.api.
   }
 
   /**
-   * Required. The content of the field.
+   * Required. The actual content or value for this field. This can be text, images, or other types
+   * of data.
    * @param content content or {@code null} for none
    */
   public GoogleCloudAiplatformV1SyntheticField setContent(GoogleCloudAiplatformV1Content content) {
@@ -61,7 +65,7 @@ public final class GoogleCloudAiplatformV1SyntheticField extends com.google.api.
   }
 
   /**
-   * Optional. The name of the field.
+   * Optional. The name of the specific field, such as "product_name" or "review_text".
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldName() {
@@ -69,7 +73,7 @@ public final class GoogleCloudAiplatformV1SyntheticField extends com.google.api.
   }
 
   /**
-   * Optional. The name of the field.
+   * Optional. The name of the specific field, such as "product_name" or "review_text".
    * @param fieldName fieldName or {@code null} for none
    */
   public GoogleCloudAiplatformV1SyntheticField setFieldName(java.lang.String fieldName) {

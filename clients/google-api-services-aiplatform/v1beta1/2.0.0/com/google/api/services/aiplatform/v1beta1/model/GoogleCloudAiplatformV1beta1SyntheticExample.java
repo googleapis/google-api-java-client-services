@@ -17,8 +17,10 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Represents a single synthetic example, composed of multiple fields. Used for providing few-shot
- * examples in the request and for returning generated examples in the response.
+ * A single instance of generated synthetic data. Each example is made up of one or more named
+ * fields, as defined in `OutputFieldSpec`. These examples are used as few-shot examples to show the
+ * model what you want (in `GenerateSyntheticDataRequest.examples`) and to return generated examples
+ * in the response (in `GenerateSyntheticDataResponse.synthetic_examples`).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

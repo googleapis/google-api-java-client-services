@@ -17,9 +17,9 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * The result output from a [FunctionCall] that contains a string representing the
- * [FunctionDeclaration.name] and a structured JSON object containing any output from the function
- * is used as context to the model. This should contain the result of a [FunctionCall] made based on
+ * The result output from a FunctionCall that contains a string representing the
+ * FunctionDeclaration.name and a structured JSON object containing any output from the function is
+ * used as context to the model. This should contain the result of a `FunctionCall` made based on
  * model prediction.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -33,8 +33,8 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1FunctionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the function to call. Matches [FunctionDeclaration.name] and
-   * [FunctionCall.name].
+   * Required. The name of the function to call. Matches FunctionDeclaration.name and
+   * FunctionCall.name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class GoogleCloudAiplatformV1FunctionResponse extends com.google.ap
   private java.lang.String scheduling;
 
   /**
-   * Required. The name of the function to call. Matches [FunctionDeclaration.name] and
-   * [FunctionCall.name].
+   * Required. The name of the function to call. Matches FunctionDeclaration.name and
+   * FunctionCall.name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -75,8 +75,8 @@ public final class GoogleCloudAiplatformV1FunctionResponse extends com.google.ap
   }
 
   /**
-   * Required. The name of the function to call. Matches [FunctionDeclaration.name] and
-   * [FunctionCall.name].
+   * Required. The name of the function to call. Matches FunctionDeclaration.name and
+   * FunctionCall.name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1FunctionResponse setName(java.lang.String name) {

@@ -87,6 +87,13 @@ public final class GoogleCloudAiplatformV1SessionEvent extends com.google.api.cl
   private java.lang.String name;
 
   /**
+   * Optional. Weakly typed raw event data in proto struct format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> rawEvent;
+
+  /**
    * Required. Timestamp when the event was created on client side.
    * The value may be {@code null}.
    */
@@ -228,6 +235,23 @@ public final class GoogleCloudAiplatformV1SessionEvent extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1SessionEvent setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Weakly typed raw event data in proto struct format.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getRawEvent() {
+    return rawEvent;
+  }
+
+  /**
+   * Optional. Weakly typed raw event data in proto struct format.
+   * @param rawEvent rawEvent or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SessionEvent setRawEvent(java.util.Map<String, java.lang.Object> rawEvent) {
+    this.rawEvent = rawEvent;
     return this;
   }
 

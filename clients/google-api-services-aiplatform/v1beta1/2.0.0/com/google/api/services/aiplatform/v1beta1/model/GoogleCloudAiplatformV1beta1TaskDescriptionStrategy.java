@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Defines a generation strategy based on a high-level task description.
+ * Defines a generation strategy based on a general task description.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,14 +30,16 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1TaskDescriptionStrategy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A high-level description of the synthetic data to be generated.
+   * Required. A general description of the type of synthetic data you want to generate. For
+   * example, "Generate customer reviews for a new smartphone."
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String taskDescription;
 
   /**
-   * Required. A high-level description of the synthetic data to be generated.
+   * Required. A general description of the type of synthetic data you want to generate. For
+   * example, "Generate customer reviews for a new smartphone."
    * @return value or {@code null} for none
    */
   public java.lang.String getTaskDescription() {
@@ -45,7 +47,8 @@ public final class GoogleCloudAiplatformV1beta1TaskDescriptionStrategy extends c
   }
 
   /**
-   * Required. A high-level description of the synthetic data to be generated.
+   * Required. A general description of the type of synthetic data you want to generate. For
+   * example, "Generate customer reviews for a new smartphone."
    * @param taskDescription taskDescription or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1TaskDescriptionStrategy setTaskDescription(java.lang.String taskDescription) {

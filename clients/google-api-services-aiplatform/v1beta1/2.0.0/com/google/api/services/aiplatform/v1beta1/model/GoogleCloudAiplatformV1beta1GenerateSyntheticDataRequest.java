@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Request message for DataFoundryService.GenerateSyntheticData.
+ * Request message for DataFoundryService.GenerateSyntheticData. It contains the settings and
+ * information needed to generate synthetic data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,37 +31,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The number of synthetic examples to generate. For this stateless API, the count is
-   * limited to a small number.
+   * Required. The number of synthetic examples to generate. For this stateless API, you can
+   * generate up to 50 examples in a single request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer count;
 
   /**
-   * Optional. A list of few-shot examples to guide the model's output style and format.
+   * Optional. A list of few-shot examples that help the model understand the desired style, tone,
+   * and format of the generated synthetic data. Providing these few-shot examples can significantly
+   * improve the quality and relevance of the output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1SyntheticExample> examples;
 
   /**
-   * Required. The schema of the desired output, defined by a list of fields.
+   * Required. Defines the schema of each synthetic example to be generated, defined by a list of
+   * fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1beta1OutputFieldSpec> outputFieldSpecs;
 
   /**
-   * Generate data from a high-level task description.
+   * Generates synthetic data based on a high-level description of the task or data you want.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1TaskDescriptionStrategy taskDescription;
 
   /**
-   * Required. The number of synthetic examples to generate. For this stateless API, the count is
-   * limited to a small number.
+   * Required. The number of synthetic examples to generate. For this stateless API, you can
+   * generate up to 50 examples in a single request.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCount() {
@@ -68,8 +72,8 @@ public final class GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest exte
   }
 
   /**
-   * Required. The number of synthetic examples to generate. For this stateless API, the count is
-   * limited to a small number.
+   * Required. The number of synthetic examples to generate. For this stateless API, you can
+   * generate up to 50 examples in a single request.
    * @param count count or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest setCount(java.lang.Integer count) {
@@ -78,7 +82,9 @@ public final class GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest exte
   }
 
   /**
-   * Optional. A list of few-shot examples to guide the model's output style and format.
+   * Optional. A list of few-shot examples that help the model understand the desired style, tone,
+   * and format of the generated synthetic data. Providing these few-shot examples can significantly
+   * improve the quality and relevance of the output.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1SyntheticExample> getExamples() {
@@ -86,7 +92,9 @@ public final class GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest exte
   }
 
   /**
-   * Optional. A list of few-shot examples to guide the model's output style and format.
+   * Optional. A list of few-shot examples that help the model understand the desired style, tone,
+   * and format of the generated synthetic data. Providing these few-shot examples can significantly
+   * improve the quality and relevance of the output.
    * @param examples examples or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest setExamples(java.util.List<GoogleCloudAiplatformV1beta1SyntheticExample> examples) {
@@ -95,7 +103,8 @@ public final class GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest exte
   }
 
   /**
-   * Required. The schema of the desired output, defined by a list of fields.
+   * Required. Defines the schema of each synthetic example to be generated, defined by a list of
+   * fields.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1OutputFieldSpec> getOutputFieldSpecs() {
@@ -103,7 +112,8 @@ public final class GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest exte
   }
 
   /**
-   * Required. The schema of the desired output, defined by a list of fields.
+   * Required. Defines the schema of each synthetic example to be generated, defined by a list of
+   * fields.
    * @param outputFieldSpecs outputFieldSpecs or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest setOutputFieldSpecs(java.util.List<GoogleCloudAiplatformV1beta1OutputFieldSpec> outputFieldSpecs) {
@@ -112,7 +122,7 @@ public final class GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest exte
   }
 
   /**
-   * Generate data from a high-level task description.
+   * Generates synthetic data based on a high-level description of the task or data you want.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1TaskDescriptionStrategy getTaskDescription() {
@@ -120,7 +130,7 @@ public final class GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest exte
   }
 
   /**
-   * Generate data from a high-level task description.
+   * Generates synthetic data based on a high-level description of the task or data you want.
    * @param taskDescription taskDescription or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerateSyntheticDataRequest setTaskDescription(GoogleCloudAiplatformV1beta1TaskDescriptionStrategy taskDescription) {

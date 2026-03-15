@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Configuration for organizing memories for a particular scope.
+ * Represents configuration for organizing memories for a particular scope.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -28,6 +28,13 @@ package com.google.api.services.aiplatform.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Optional. Represents configuration for customizing how memories are consolidated together.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig consolidationConfig;
 
   /**
    * Optional. If true, then the memories will be generated in the third person (i.e. "The user
@@ -62,6 +69,23 @@ public final class GoogleCloudAiplatformV1MemoryBankCustomizationConfig extends 
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> scopeKeys;
+
+  /**
+   * Optional. Represents configuration for customizing how memories are consolidated together.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig getConsolidationConfig() {
+    return consolidationConfig;
+  }
+
+  /**
+   * Optional. Represents configuration for customizing how memories are consolidated together.
+   * @param consolidationConfig consolidationConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MemoryBankCustomizationConfig setConsolidationConfig(GoogleCloudAiplatformV1MemoryBankCustomizationConfigConsolidationConfig consolidationConfig) {
+    this.consolidationConfig = consolidationConfig;
+    return this;
+  }
 
   /**
    * Optional. If true, then the memories will be generated in the third person (i.e. "The user

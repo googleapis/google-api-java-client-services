@@ -37,6 +37,19 @@ public final class GoogleCloudAiplatformV1EvaluationRunEvaluationConfig extends 
   private GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig autoraterConfig;
 
   /**
+   * Optional. Specifications for custom dataset-level aggregations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1DatasetCustomMetric> datasetCustomMetrics;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1DatasetCustomMetric used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1DatasetCustomMetric.class);
+  }
+
+  /**
    * Required. The metrics to be calculated in the evaluation run.
    * The value may be {@code null}.
    */
@@ -90,6 +103,23 @@ public final class GoogleCloudAiplatformV1EvaluationRunEvaluationConfig extends 
    */
   public GoogleCloudAiplatformV1EvaluationRunEvaluationConfig setAutoraterConfig(GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig autoraterConfig) {
     this.autoraterConfig = autoraterConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Specifications for custom dataset-level aggregations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1DatasetCustomMetric> getDatasetCustomMetrics() {
+    return datasetCustomMetrics;
+  }
+
+  /**
+   * Optional. Specifications for custom dataset-level aggregations.
+   * @param datasetCustomMetrics datasetCustomMetrics or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunEvaluationConfig setDatasetCustomMetrics(java.util.List<GoogleCloudAiplatformV1DatasetCustomMetric> datasetCustomMetrics) {
+    this.datasetCustomMetrics = datasetCustomMetrics;
     return this;
   }
 

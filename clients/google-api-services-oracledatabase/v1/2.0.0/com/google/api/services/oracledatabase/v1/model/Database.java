@@ -118,6 +118,22 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String opsInsightsStatus;
 
   /**
+   * Optional. The ID of the pluggable database associated with the Database. The ID must be unique
+   * within the project and location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pluggableDatabaseId;
+
+  /**
+   * Optional. The pluggable database associated with the Database. The name must begin with an
+   * alphabetic character and can contain a maximum of thirty alphanumeric characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pluggableDatabaseName;
+
+  /**
    * Optional. The properties of the Database.
    * The value may be {@code null}.
    */
@@ -336,6 +352,44 @@ public final class Database extends com.google.api.client.json.GenericJson {
    */
   public Database setOpsInsightsStatus(java.lang.String opsInsightsStatus) {
     this.opsInsightsStatus = opsInsightsStatus;
+    return this;
+  }
+
+  /**
+   * Optional. The ID of the pluggable database associated with the Database. The ID must be unique
+   * within the project and location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPluggableDatabaseId() {
+    return pluggableDatabaseId;
+  }
+
+  /**
+   * Optional. The ID of the pluggable database associated with the Database. The ID must be unique
+   * within the project and location.
+   * @param pluggableDatabaseId pluggableDatabaseId or {@code null} for none
+   */
+  public Database setPluggableDatabaseId(java.lang.String pluggableDatabaseId) {
+    this.pluggableDatabaseId = pluggableDatabaseId;
+    return this;
+  }
+
+  /**
+   * Optional. The pluggable database associated with the Database. The name must begin with an
+   * alphabetic character and can contain a maximum of thirty alphanumeric characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPluggableDatabaseName() {
+    return pluggableDatabaseName;
+  }
+
+  /**
+   * Optional. The pluggable database associated with the Database. The name must begin with an
+   * alphabetic character and can contain a maximum of thirty alphanumeric characters.
+   * @param pluggableDatabaseName pluggableDatabaseName or {@code null} for none
+   */
+  public Database setPluggableDatabaseName(java.lang.String pluggableDatabaseName) {
+    this.pluggableDatabaseName = pluggableDatabaseName;
     return this;
   }
 

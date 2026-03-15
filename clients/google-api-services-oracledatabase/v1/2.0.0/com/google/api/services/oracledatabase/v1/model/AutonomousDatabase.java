@@ -32,14 +32,14 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class AutonomousDatabase extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The password for the default ADMIN user.
+   * Optional. Immutable. The password for the default ADMIN user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adminPassword;
 
   /**
-   * Optional. The subnet CIDR range for the Autonomous Database.
+   * Optional. Immutable. The subnet CIDR range for the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,9 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private String createTime;
 
   /**
-   * Optional. The name of the Autonomous Database. The database name must be unique in the project.
-   * The name must begin with a letter and can contain a maximum of 30 alphanumeric characters.
+   * Optional. Immutable. The name of the Autonomous Database. The database name must be unique in
+   * the project. The name must begin with a letter and can contain a maximum of 30 alphanumeric
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +70,8 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> disasterRecoverySupportedLocations;
 
   /**
-   * Optional. The display name for the Autonomous Database. The name does not have to be unique
-   * within your project.
+   * Optional. Immutable. The display name for the Autonomous Database. The name does not have to be
+   * unique within your project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,16 +100,16 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * Optional. The name of the VPC network used by the Autonomous Database in the following format:
-   * projects/{project}/global/networks/{network}
+   * Optional. Immutable. The name of the VPC network used by the Autonomous Database in the
+   * following format: projects/{project}/global/networks/{network}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Optional. The name of the OdbNetwork associated with the Autonomous Database. Format:
-   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
+   * Optional. Immutable. The name of the OdbNetwork associated with the Autonomous Database.
+   * Format: projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the OdbSubnet.
    * The value may be {@code null}.
    */
@@ -116,7 +117,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String odbNetwork;
 
   /**
-   * Optional. The name of the OdbSubnet associated with the Autonomous Database. Format:
+   * Optional. Immutable. The name of the OdbSubnet associated with the Autonomous Database. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * The value may be {@code null}.
    */
@@ -138,16 +139,16 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private AutonomousDatabaseProperties properties;
 
   /**
-   * Optional. The source Autonomous Database configuration for the standby Autonomous Database. The
-   * source Autonomous Database is configured while creating the Peer Autonomous Database and can't
-   * be updated after creation.
+   * Optional. Immutable. The source Autonomous Database configuration for the standby Autonomous
+   * Database. The source Autonomous Database is configured while creating the Peer Autonomous
+   * Database and can't be updated after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SourceConfig sourceConfig;
 
   /**
-   * Optional. The password for the default ADMIN user.
+   * Optional. Immutable. The password for the default ADMIN user.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdminPassword() {
@@ -155,7 +156,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The password for the default ADMIN user.
+   * Optional. Immutable. The password for the default ADMIN user.
    * @param adminPassword adminPassword or {@code null} for none
    */
   public AutonomousDatabase setAdminPassword(java.lang.String adminPassword) {
@@ -164,7 +165,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The subnet CIDR range for the Autonomous Database.
+   * Optional. Immutable. The subnet CIDR range for the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.lang.String getCidr() {
@@ -172,7 +173,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The subnet CIDR range for the Autonomous Database.
+   * Optional. Immutable. The subnet CIDR range for the Autonomous Database.
    * @param cidr cidr or {@code null} for none
    */
   public AutonomousDatabase setCidr(java.lang.String cidr) {
@@ -198,8 +199,9 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the Autonomous Database. The database name must be unique in the project.
-   * The name must begin with a letter and can contain a maximum of 30 alphanumeric characters.
+   * Optional. Immutable. The name of the Autonomous Database. The database name must be unique in
+   * the project. The name must begin with a letter and can contain a maximum of 30 alphanumeric
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -207,8 +209,9 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the Autonomous Database. The database name must be unique in the project.
-   * The name must begin with a letter and can contain a maximum of 30 alphanumeric characters.
+   * Optional. Immutable. The name of the Autonomous Database. The database name must be unique in
+   * the project. The name must begin with a letter and can contain a maximum of 30 alphanumeric
+   * characters.
    * @param database database or {@code null} for none
    */
   public AutonomousDatabase setDatabase(java.lang.String database) {
@@ -236,8 +239,8 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The display name for the Autonomous Database. The name does not have to be unique
-   * within your project.
+   * Optional. Immutable. The display name for the Autonomous Database. The name does not have to be
+   * unique within your project.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -245,8 +248,8 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The display name for the Autonomous Database. The name does not have to be unique
-   * within your project.
+   * Optional. Immutable. The display name for the Autonomous Database. The name does not have to be
+   * unique within your project.
    * @param displayName displayName or {@code null} for none
    */
   public AutonomousDatabase setDisplayName(java.lang.String displayName) {
@@ -308,8 +311,8 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the VPC network used by the Autonomous Database in the following format:
-   * projects/{project}/global/networks/{network}
+   * Optional. Immutable. The name of the VPC network used by the Autonomous Database in the
+   * following format: projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -317,8 +320,8 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the VPC network used by the Autonomous Database in the following format:
-   * projects/{project}/global/networks/{network}
+   * Optional. Immutable. The name of the VPC network used by the Autonomous Database in the
+   * following format: projects/{project}/global/networks/{network}
    * @param network network or {@code null} for none
    */
   public AutonomousDatabase setNetwork(java.lang.String network) {
@@ -327,8 +330,8 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the Autonomous Database. Format:
-   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
+   * Optional. Immutable. The name of the OdbNetwork associated with the Autonomous Database.
+   * Format: projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the OdbSubnet.
    * @return value or {@code null} for none
    */
@@ -337,8 +340,8 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the Autonomous Database. Format:
-   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
+   * Optional. Immutable. The name of the OdbNetwork associated with the Autonomous Database.
+   * Format: projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the OdbSubnet.
    * @param odbNetwork odbNetwork or {@code null} for none
    */
@@ -348,7 +351,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the OdbSubnet associated with the Autonomous Database. Format:
+   * Optional. Immutable. The name of the OdbSubnet associated with the Autonomous Database. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @return value or {@code null} for none
    */
@@ -357,7 +360,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the OdbSubnet associated with the Autonomous Database. Format:
+   * Optional. Immutable. The name of the OdbSubnet associated with the Autonomous Database. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @param odbSubnet odbSubnet or {@code null} for none
    */
@@ -401,9 +404,9 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The source Autonomous Database configuration for the standby Autonomous Database. The
-   * source Autonomous Database is configured while creating the Peer Autonomous Database and can't
-   * be updated after creation.
+   * Optional. Immutable. The source Autonomous Database configuration for the standby Autonomous
+   * Database. The source Autonomous Database is configured while creating the Peer Autonomous
+   * Database and can't be updated after creation.
    * @return value or {@code null} for none
    */
   public SourceConfig getSourceConfig() {
@@ -411,9 +414,9 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The source Autonomous Database configuration for the standby Autonomous Database. The
-   * source Autonomous Database is configured while creating the Peer Autonomous Database and can't
-   * be updated after creation.
+   * Optional. Immutable. The source Autonomous Database configuration for the standby Autonomous
+   * Database. The source Autonomous Database is configured while creating the Peer Autonomous
+   * Database and can't be updated after creation.
    * @param sourceConfig sourceConfig or {@code null} for none
    */
   public AutonomousDatabase setSourceConfig(SourceConfig sourceConfig) {

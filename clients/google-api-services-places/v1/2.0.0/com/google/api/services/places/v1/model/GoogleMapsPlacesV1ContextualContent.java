@@ -40,14 +40,14 @@ public final class GoogleMapsPlacesV1ContextualContent extends com.google.api.cl
   private java.util.List<GoogleMapsPlacesV1ContextualContentJustification> justifications;
 
   /**
-   * Information (including references) about photos of this place, contexual to the place query.
+   * Information (including references) about photos of this place, contextual to the place query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleMapsPlacesV1Photo> photos;
 
   /**
-   * List of reviews about this place, contexual to the place query.
+   * List of reviews about this place, contextual to the place query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class GoogleMapsPlacesV1ContextualContent extends com.google.api.cl
   }
 
   /**
-   * Information (including references) about photos of this place, contexual to the place query.
+   * Information (including references) about photos of this place, contextual to the place query.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1Photo> getPhotos() {
@@ -81,7 +81,7 @@ public final class GoogleMapsPlacesV1ContextualContent extends com.google.api.cl
   }
 
   /**
-   * Information (including references) about photos of this place, contexual to the place query.
+   * Information (including references) about photos of this place, contextual to the place query.
    * @param photos photos or {@code null} for none
    */
   public GoogleMapsPlacesV1ContextualContent setPhotos(java.util.List<GoogleMapsPlacesV1Photo> photos) {
@@ -90,7 +90,7 @@ public final class GoogleMapsPlacesV1ContextualContent extends com.google.api.cl
   }
 
   /**
-   * List of reviews about this place, contexual to the place query.
+   * List of reviews about this place, contextual to the place query.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1Review> getReviews() {
@@ -98,7 +98,7 @@ public final class GoogleMapsPlacesV1ContextualContent extends com.google.api.cl
   }
 
   /**
-   * List of reviews about this place, contexual to the place query.
+   * List of reviews about this place, contextual to the place query.
    * @param reviews reviews or {@code null} for none
    */
   public GoogleMapsPlacesV1ContextualContent setReviews(java.util.List<GoogleMapsPlacesV1Review> reviews) {

@@ -31,6 +31,15 @@ package com.google.api.services.serviceconsumermanagement.v1.model;
 public final class TenantResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The newly created regional resource name of the tenant project that has been
+   * migrated from a global service. This field is only set for migrated tenant projects. Format:
+   * `services//{collection_id}/{RESOURCE_ID}/locations/{LOCATION}/tenantProjects/{TENANT_ID}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String migratedTenantProject;
+
+  /**
    * Output only. @OutputOnly Identifier of the tenant resource. For cloud projects, it is in the
    * form 'projects/{number}'. For example 'projects/123456'.
    * The value may be {@code null}.
@@ -51,6 +60,27 @@ public final class TenantResource extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String tag;
+
+  /**
+   * Output only. The newly created regional resource name of the tenant project that has been
+   * migrated from a global service. This field is only set for migrated tenant projects. Format:
+   * `services//{collection_id}/{RESOURCE_ID}/locations/{LOCATION}/tenantProjects/{TENANT_ID}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMigratedTenantProject() {
+    return migratedTenantProject;
+  }
+
+  /**
+   * Output only. The newly created regional resource name of the tenant project that has been
+   * migrated from a global service. This field is only set for migrated tenant projects. Format:
+   * `services//{collection_id}/{RESOURCE_ID}/locations/{LOCATION}/tenantProjects/{TENANT_ID}`.
+   * @param migratedTenantProject migratedTenantProject or {@code null} for none
+   */
+  public TenantResource setMigratedTenantProject(java.lang.String migratedTenantProject) {
+    this.migratedTenantProject = migratedTenantProject;
+    return this;
+  }
 
   /**
    * Output only. @OutputOnly Identifier of the tenant resource. For cloud projects, it is in the

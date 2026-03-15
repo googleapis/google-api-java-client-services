@@ -73,9 +73,9 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   /**
    * Immutable. Name of the constraint. This is unique within the organization. Format of the name
    * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
-   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 70
+   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 71
    * characters and the minimum length is 1. Note that the prefix
-   * `organizations/{organization_id}/customConstraints/` is not counted.
+   * `organizations/{organization_id}/customConstraints/custom.` is not counted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,9 +191,9 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   /**
    * Immutable. Name of the constraint. This is unique within the organization. Format of the name
    * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
-   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 70
+   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 71
    * characters and the minimum length is 1. Note that the prefix
-   * `organizations/{organization_id}/customConstraints/` is not counted.
+   * `organizations/{organization_id}/customConstraints/custom.` is not counted.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -203,9 +203,9 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   /**
    * Immutable. Name of the constraint. This is unique within the organization. Format of the name
    * should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example:
-   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 70
+   * `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 71
    * characters and the minimum length is 1. Note that the prefix
-   * `organizations/{organization_id}/customConstraints/` is not counted.
+   * `organizations/{organization_id}/customConstraints/custom.` is not counted.
    * @param name name or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setName(java.lang.String name) {

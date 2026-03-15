@@ -72,6 +72,13 @@ public final class ConsumerConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean consumerImportSubnetRoutesWithPublicIp;
 
   /**
+   * Output only. If this is true, consumer peering is active.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean consumerPeeringActive;
+
+  /**
    * Export custom routes flag value for peering from producer to consumer.
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class ConsumerConfig extends com.google.api.client.json.GenericJson
    */
   public ConsumerConfig setConsumerImportSubnetRoutesWithPublicIp(java.lang.Boolean consumerImportSubnetRoutesWithPublicIp) {
     this.consumerImportSubnetRoutesWithPublicIp = consumerImportSubnetRoutesWithPublicIp;
+    return this;
+  }
+
+  /**
+   * Output only. If this is true, consumer peering is active.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getConsumerPeeringActive() {
+    return consumerPeeringActive;
+  }
+
+  /**
+   * Output only. If this is true, consumer peering is active.
+   * @param consumerPeeringActive consumerPeeringActive or {@code null} for none
+   */
+  public ConsumerConfig setConsumerPeeringActive(java.lang.Boolean consumerPeeringActive) {
+    this.consumerPeeringActive = consumerPeeringActive;
     return this;
   }
 

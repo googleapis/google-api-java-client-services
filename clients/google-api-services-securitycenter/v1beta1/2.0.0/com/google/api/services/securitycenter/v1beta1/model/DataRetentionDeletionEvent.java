@@ -71,6 +71,14 @@ public final class DataRetentionDeletionEvent extends com.google.api.client.json
   private String maxRetentionAllowed;
 
   /**
+   * Min duration of retention allowed from the DSPM retention control. This field is only populated
+   * when event type is set to EVENT_TYPE_MIN_TTL_FROM_CREATION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String minRetentionAllowed;
+
+  /**
    * Number of objects that violated the policy for this resource. If the number is less than 1,000,
    * then the value of this field is the exact number. If the number of objects that violated the
    * policy is greater than or equal to 1,000, then the value of this field is 1000.
@@ -147,6 +155,25 @@ public final class DataRetentionDeletionEvent extends com.google.api.client.json
    */
   public DataRetentionDeletionEvent setMaxRetentionAllowed(String maxRetentionAllowed) {
     this.maxRetentionAllowed = maxRetentionAllowed;
+    return this;
+  }
+
+  /**
+   * Min duration of retention allowed from the DSPM retention control. This field is only populated
+   * when event type is set to EVENT_TYPE_MIN_TTL_FROM_CREATION.
+   * @return value or {@code null} for none
+   */
+  public String getMinRetentionAllowed() {
+    return minRetentionAllowed;
+  }
+
+  /**
+   * Min duration of retention allowed from the DSPM retention control. This field is only populated
+   * when event type is set to EVENT_TYPE_MIN_TTL_FROM_CREATION.
+   * @param minRetentionAllowed minRetentionAllowed or {@code null} for none
+   */
+  public DataRetentionDeletionEvent setMinRetentionAllowed(String minRetentionAllowed) {
+    this.minRetentionAllowed = minRetentionAllowed;
     return this;
   }
 

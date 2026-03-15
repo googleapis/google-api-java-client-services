@@ -65,6 +65,18 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   private java.lang.Boolean failOpen;
 
   /**
+   * Optional. List of the Envoy attributes to forward to the extension server. The attributes
+   * provided here are included as part of the `ProcessingRequest.attributes` field (of type `map`),
+   * where the keys are the attribute names. Refer to the
+   * [documentation](https://cloud.google.com/service-extensions/docs/cel-matcher-language-
+   * reference#attributes) for the names of attributes that can be forwarded. If omitted, no
+   * attributes are sent. Each element is a string indicating the attribute name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> forwardAttributes;
+
+  /**
    * Optional. List of the HTTP headers to forward to the extension (from the client). If omitted,
    * all headers are sent. Each element is a string indicating the header name.
    * The value may be {@code null}.
@@ -82,10 +94,11 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * Optional. All backend services and forwarding rules referenced by this extension must share the
+   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. Can be
+   * omitted for AuthzExtensions that do not reference a backend service. For more information,
+   * refer to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-
+   * service).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,6 +240,33 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. List of the Envoy attributes to forward to the extension server. The attributes
+   * provided here are included as part of the `ProcessingRequest.attributes` field (of type `map`),
+   * where the keys are the attribute names. Refer to the
+   * [documentation](https://cloud.google.com/service-extensions/docs/cel-matcher-language-
+   * reference#attributes) for the names of attributes that can be forwarded. If omitted, no
+   * attributes are sent. Each element is a string indicating the attribute name.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getForwardAttributes() {
+    return forwardAttributes;
+  }
+
+  /**
+   * Optional. List of the Envoy attributes to forward to the extension server. The attributes
+   * provided here are included as part of the `ProcessingRequest.attributes` field (of type `map`),
+   * where the keys are the attribute names. Refer to the
+   * [documentation](https://cloud.google.com/service-extensions/docs/cel-matcher-language-
+   * reference#attributes) for the names of attributes that can be forwarded. If omitted, no
+   * attributes are sent. Each element is a string indicating the attribute name.
+   * @param forwardAttributes forwardAttributes or {@code null} for none
+   */
+  public AuthzExtension setForwardAttributes(java.util.List<java.lang.String> forwardAttributes) {
+    this.forwardAttributes = forwardAttributes;
+    return this;
+  }
+
+  /**
    * Optional. List of the HTTP headers to forward to the extension (from the client). If omitted,
    * all headers are sent. Each element is a string indicating the header name.
    * @return value or {@code null} for none
@@ -267,10 +307,11 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * Optional. All backend services and forwarding rules referenced by this extension must share the
+   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. Can be
+   * omitted for AuthzExtensions that do not reference a backend service. For more information,
+   * refer to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-
+   * service).
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -278,10 +319,11 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * Optional. All backend services and forwarding rules referenced by this extension must share the
+   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. Can be
+   * omitted for AuthzExtensions that do not reference a backend service. For more information,
+   * refer to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-
+   * service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public AuthzExtension setLoadBalancingScheme(java.lang.String loadBalancingScheme) {

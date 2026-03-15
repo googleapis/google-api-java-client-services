@@ -52,6 +52,18 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
   private java.lang.Boolean failOpen;
 
   /**
+   * Optional. List of the Envoy attributes to forward to the extension server. The attributes
+   * provided here are included as part of the `ProcessingRequest.attributes` field (of type `map`),
+   * where the keys are the attribute names. Refer to the
+   * [documentation](https://cloud.google.com/service-extensions/docs/cel-matcher-language-
+   * reference#attributes) for the names of attributes that can be forwarded. If omitted, no
+   * attributes are sent. Each element is a string indicating the attribute name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> forwardAttributes;
+
+  /**
    * Optional. List of the HTTP headers to forward to the extension (from the client or backend). If
    * omitted, all headers are sent. Each element is a string indicating the header name.
    * The value may be {@code null}.
@@ -216,6 +228,33 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    */
   public ExtensionChainExtension setFailOpen(java.lang.Boolean failOpen) {
     this.failOpen = failOpen;
+    return this;
+  }
+
+  /**
+   * Optional. List of the Envoy attributes to forward to the extension server. The attributes
+   * provided here are included as part of the `ProcessingRequest.attributes` field (of type `map`),
+   * where the keys are the attribute names. Refer to the
+   * [documentation](https://cloud.google.com/service-extensions/docs/cel-matcher-language-
+   * reference#attributes) for the names of attributes that can be forwarded. If omitted, no
+   * attributes are sent. Each element is a string indicating the attribute name.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getForwardAttributes() {
+    return forwardAttributes;
+  }
+
+  /**
+   * Optional. List of the Envoy attributes to forward to the extension server. The attributes
+   * provided here are included as part of the `ProcessingRequest.attributes` field (of type `map`),
+   * where the keys are the attribute names. Refer to the
+   * [documentation](https://cloud.google.com/service-extensions/docs/cel-matcher-language-
+   * reference#attributes) for the names of attributes that can be forwarded. If omitted, no
+   * attributes are sent. Each element is a string indicating the attribute name.
+   * @param forwardAttributes forwardAttributes or {@code null} for none
+   */
+  public ExtensionChainExtension setForwardAttributes(java.util.List<java.lang.String> forwardAttributes) {
+    this.forwardAttributes = forwardAttributes;
     return this;
   }
 

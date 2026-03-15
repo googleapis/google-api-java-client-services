@@ -31,14 +31,14 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
 public final class GooglePlayDeveloperReportingV1beta1OsVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Numeric version code of the OS - API level
+   * Optional. Numeric version code of the OS - API level
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long apiLevel;
 
   /**
-   * Numeric version code of the OS - API level
+   * Optional. Numeric version code of the OS - API level
    * @return value or {@code null} for none
    */
   public java.lang.Long getApiLevel() {
@@ -46,7 +46,7 @@ public final class GooglePlayDeveloperReportingV1beta1OsVersion extends com.goog
   }
 
   /**
-   * Numeric version code of the OS - API level
+   * Optional. Numeric version code of the OS - API level
    * @param apiLevel apiLevel or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1beta1OsVersion setApiLevel(java.lang.Long apiLevel) {

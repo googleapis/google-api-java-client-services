@@ -83,11 +83,35 @@ public final class PointInTimeRestoreContext extends com.google.api.client.json.
   private java.lang.String privateNetwork;
 
   /**
+   * Optional. The region of the target instance where the datasource will be restored. For example:
+   * "us-central1".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * Target instance name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetInstance;
+
+  /**
+   * Optional. Specifies the instance settings that will be cleared from the source instance. This
+   * field is only applicable for cross project PITRs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> targetInstanceClearSettingsFieldNames;
+
+  /**
+   * Optional. Specifies the instance settings that will be overridden from the source instance.
+   * This field is only applicable for cross project PITRs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseInstance targetInstanceSettings;
 
   /**
    * Optional. The name of the allocated IP range for the internal IP Cloud SQL instance. For
@@ -212,6 +236,25 @@ public final class PointInTimeRestoreContext extends com.google.api.client.json.
   }
 
   /**
+   * Optional. The region of the target instance where the datasource will be restored. For example:
+   * "us-central1".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * Optional. The region of the target instance where the datasource will be restored. For example:
+   * "us-central1".
+   * @param region region or {@code null} for none
+   */
+  public PointInTimeRestoreContext setRegion(java.lang.String region) {
+    this.region = region;
+    return this;
+  }
+
+  /**
    * Target instance name.
    * @return value or {@code null} for none
    */
@@ -225,6 +268,44 @@ public final class PointInTimeRestoreContext extends com.google.api.client.json.
    */
   public PointInTimeRestoreContext setTargetInstance(java.lang.String targetInstance) {
     this.targetInstance = targetInstance;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the instance settings that will be cleared from the source instance. This
+   * field is only applicable for cross project PITRs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTargetInstanceClearSettingsFieldNames() {
+    return targetInstanceClearSettingsFieldNames;
+  }
+
+  /**
+   * Optional. Specifies the instance settings that will be cleared from the source instance. This
+   * field is only applicable for cross project PITRs.
+   * @param targetInstanceClearSettingsFieldNames targetInstanceClearSettingsFieldNames or {@code null} for none
+   */
+  public PointInTimeRestoreContext setTargetInstanceClearSettingsFieldNames(java.util.List<java.lang.String> targetInstanceClearSettingsFieldNames) {
+    this.targetInstanceClearSettingsFieldNames = targetInstanceClearSettingsFieldNames;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the instance settings that will be overridden from the source instance.
+   * This field is only applicable for cross project PITRs.
+   * @return value or {@code null} for none
+   */
+  public DatabaseInstance getTargetInstanceSettings() {
+    return targetInstanceSettings;
+  }
+
+  /**
+   * Optional. Specifies the instance settings that will be overridden from the source instance.
+   * This field is only applicable for cross project PITRs.
+   * @param targetInstanceSettings targetInstanceSettings or {@code null} for none
+   */
+  public PointInTimeRestoreContext setTargetInstanceSettings(DatabaseInstance targetInstanceSettings) {
+    this.targetInstanceSettings = targetInstanceSettings;
     return this;
   }
 

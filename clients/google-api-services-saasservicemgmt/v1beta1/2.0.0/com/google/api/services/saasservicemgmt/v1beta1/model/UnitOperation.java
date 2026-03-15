@@ -22,7 +22,7 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
  * scheduled in the future, however only one will be allowed to execute at a time (that can change
  * in the future for non-mutating operations). UnitOperations allow different actors interacting
  * with the same unit to focus only on the change they have requested. This is a base object that
- * contains the common fields in all unit operations. Next: 19
+ * contains the common fields in all unit operations. Next: 22
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the SaaS Runtime API. For a detailed explanation see:
@@ -66,6 +66,14 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
 
   /**
    * The value may be {@code null}.
@@ -258,6 +266,25 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
    */
   public UnitOperation setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public UnitOperation setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
     return this;
   }
 

@@ -30,11 +30,11 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
 public final class RolloutStats extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A breakdown of the progress of operations triggered by the rollout. Provides a
-   * count of Operations by their state. This can be used to determine the number of units which
-   * have been updated, or are scheduled to be updated. There will be at most one entry per group.
-   * Possible values for operation groups are: - "SCHEDULED" - "PENDING" - "RUNNING" - "SUCCEEDED" -
-   * "FAILED" - "CANCELLED"
+   * Optional. Output only. Unordered list. A breakdown of the progress of operations triggered by
+   * the rollout. Provides a count of Operations by their state. This can be used to determine the
+   * number of units which have been updated, or are scheduled to be updated. There will be at most
+   * one entry per group. Possible values for operation groups are: - "SCHEDULED" - "PENDING" -
+   * "RUNNING" - "SUCCEEDED" - "FAILED" - "CANCELLED"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,11 +47,11 @@ public final class RolloutStats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A breakdown of the progress of operations triggered by the rollout. Provides a
-   * count of Operations by their state. This can be used to determine the number of units which
-   * have been updated, or are scheduled to be updated. There will be at most one entry per group.
-   * Possible values for operation groups are: - "SCHEDULED" - "PENDING" - "RUNNING" - "SUCCEEDED" -
-   * "FAILED" - "CANCELLED"
+   * Optional. Output only. Unordered list. A breakdown of the progress of operations triggered by
+   * the rollout. Provides a count of Operations by their state. This can be used to determine the
+   * number of units which have been updated, or are scheduled to be updated. There will be at most
+   * one entry per group. Possible values for operation groups are: - "SCHEDULED" - "PENDING" -
+   * "RUNNING" - "SUCCEEDED" - "FAILED" - "CANCELLED"
    * @return value or {@code null} for none
    */
   public java.util.List<Aggregate> getOperationsByState() {
@@ -59,11 +59,11 @@ public final class RolloutStats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A breakdown of the progress of operations triggered by the rollout. Provides a
-   * count of Operations by their state. This can be used to determine the number of units which
-   * have been updated, or are scheduled to be updated. There will be at most one entry per group.
-   * Possible values for operation groups are: - "SCHEDULED" - "PENDING" - "RUNNING" - "SUCCEEDED" -
-   * "FAILED" - "CANCELLED"
+   * Optional. Output only. Unordered list. A breakdown of the progress of operations triggered by
+   * the rollout. Provides a count of Operations by their state. This can be used to determine the
+   * number of units which have been updated, or are scheduled to be updated. There will be at most
+   * one entry per group. Possible values for operation groups are: - "SCHEDULED" - "PENDING" -
+   * "RUNNING" - "SUCCEEDED" - "FAILED" - "CANCELLED"
    * @param operationsByState operationsByState or {@code null} for none
    */
   public RolloutStats setOperationsByState(java.util.List<Aggregate> operationsByState) {

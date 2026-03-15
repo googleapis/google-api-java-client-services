@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class AddFilterViewRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The filter to add. The filterViewId field is optional; if one is not set, an id will be
+   * The filter to add. The filterViewId field is optional. If one is not set, an ID will be
    * randomly generated. (It is an error to specify the ID of a filter that already exists.)
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class AddFilterViewRequest extends com.google.api.client.json.Gener
   private FilterView filter;
 
   /**
-   * The filter to add. The filterViewId field is optional; if one is not set, an id will be
+   * The filter to add. The filterViewId field is optional. If one is not set, an ID will be
    * randomly generated. (It is an error to specify the ID of a filter that already exists.)
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class AddFilterViewRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * The filter to add. The filterViewId field is optional; if one is not set, an id will be
+   * The filter to add. The filterViewId field is optional. If one is not set, an ID will be
    * randomly generated. (It is an error to specify the ID of a filter that already exists.)
    * @param filter filter or {@code null} for none
    */

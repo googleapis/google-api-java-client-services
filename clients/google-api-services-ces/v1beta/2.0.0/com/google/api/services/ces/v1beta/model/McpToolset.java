@@ -40,6 +40,16 @@ public final class McpToolset extends com.google.api.client.json.GenericJson {
   private ApiAuthentication apiAuthentication;
 
   /**
+   * Optional. The custom headers to send in the request to the MCP server. The values must be in
+   * the format `$context.variables.` and can be set in the session variables. See
+   * https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps/tool/open-
+   * api#openapi-injection for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> customHeaders;
+
+  /**
    * Required. The address of the MCP server, for example, "https://example.com/mcp/". If the server
    * is built with the MCP SDK, the url should be suffixed with "/mcp/". Only Streamable HTTP
    * transport based servers are supported. See
@@ -84,6 +94,29 @@ public final class McpToolset extends com.google.api.client.json.GenericJson {
    */
   public McpToolset setApiAuthentication(ApiAuthentication apiAuthentication) {
     this.apiAuthentication = apiAuthentication;
+    return this;
+  }
+
+  /**
+   * Optional. The custom headers to send in the request to the MCP server. The values must be in
+   * the format `$context.variables.` and can be set in the session variables. See
+   * https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps/tool/open-
+   * api#openapi-injection for more details.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getCustomHeaders() {
+    return customHeaders;
+  }
+
+  /**
+   * Optional. The custom headers to send in the request to the MCP server. The values must be in
+   * the format `$context.variables.` and can be set in the session variables. See
+   * https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps/tool/open-
+   * api#openapi-injection for more details.
+   * @param customHeaders customHeaders or {@code null} for none
+   */
+  public McpToolset setCustomHeaders(java.util.Map<String, java.lang.String> customHeaders) {
+    this.customHeaders = customHeaders;
     return this;
   }
 

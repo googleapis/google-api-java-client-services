@@ -41,6 +41,16 @@ public final class McpTool extends com.google.api.client.json.GenericJson {
   private ApiAuthentication apiAuthentication;
 
   /**
+   * Optional. The custom headers to send in the request to the MCP server. The values must be in
+   * the format `$context.variables.` and can be set in the session variables. See
+   * https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps/tool/open-
+   * api#openapi-injection for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> customHeaders;
+
+  /**
    * Optional. The description of the MCP tool.
    * The value may be {@code null}.
    */
@@ -114,6 +124,29 @@ public final class McpTool extends com.google.api.client.json.GenericJson {
    */
   public McpTool setApiAuthentication(ApiAuthentication apiAuthentication) {
     this.apiAuthentication = apiAuthentication;
+    return this;
+  }
+
+  /**
+   * Optional. The custom headers to send in the request to the MCP server. The values must be in
+   * the format `$context.variables.` and can be set in the session variables. See
+   * https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps/tool/open-
+   * api#openapi-injection for more details.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getCustomHeaders() {
+    return customHeaders;
+  }
+
+  /**
+   * Optional. The custom headers to send in the request to the MCP server. The values must be in
+   * the format `$context.variables.` and can be set in the session variables. See
+   * https://docs.cloud.google.com/customer-engagement-ai/conversational-agents/ps/tool/open-
+   * api#openapi-injection for more details.
+   * @param customHeaders customHeaders or {@code null} for none
+   */
+  public McpTool setCustomHeaders(java.util.Map<String, java.lang.String> customHeaders) {
+    this.customHeaders = customHeaders;
     return this;
   }
 

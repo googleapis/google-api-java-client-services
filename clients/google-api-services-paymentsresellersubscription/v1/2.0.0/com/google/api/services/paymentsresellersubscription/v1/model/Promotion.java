@@ -78,7 +78,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. 2-letter ISO region code where the promotion is available in. Ex. "US" Please
-   * refers to: https://en.wikipedia.org/wiki/ISO_3166-1
+   * refer to: https://en.wikipedia.org/wiki/ISO_3166-1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,7 +217,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. 2-letter ISO region code where the promotion is available in. Ex. "US" Please
-   * refers to: https://en.wikipedia.org/wiki/ISO_3166-1
+   * refer to: https://en.wikipedia.org/wiki/ISO_3166-1
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegionCodes() {
@@ -226,7 +226,7 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. 2-letter ISO region code where the promotion is available in. Ex. "US" Please
-   * refers to: https://en.wikipedia.org/wiki/ISO_3166-1
+   * refer to: https://en.wikipedia.org/wiki/ISO_3166-1
    * @param regionCodes regionCodes or {@code null} for none
    */
   public Promotion setRegionCodes(java.util.List<java.lang.String> regionCodes) {

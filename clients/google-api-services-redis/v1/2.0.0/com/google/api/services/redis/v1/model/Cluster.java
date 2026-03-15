@@ -31,6 +31,13 @@ package com.google.api.services.redis.v1.model;
 public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The ACL policy to be applied to the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String aclPolicy;
+
+  /**
    * Optional. Immutable. Deprecated, do not use.
    * The value may be {@code null}.
    */
@@ -257,6 +264,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer replicaCount;
 
   /**
+   * Optional. Input only. Rotate the server certificates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean rotateServerCertificate;
+
+  /**
    * Optional. Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -269,6 +283,22 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
+
+  /**
+   * Optional. Server CA mode for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverCaMode;
+
+  /**
+   * Optional. Customer-managed CA pool for the cluster. Only applicable for BYOCA i.e. if
+   * server_ca_mode is SERVER_CA_MODE_CUSTOMER_MANAGED_CAS_CA. Format:
+   * "projects/{project}/locations/{region}/caPools/{ca_pool}".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverCaPool;
 
   /**
    * Optional. Number of shards for the Redis cluster.
@@ -328,6 +358,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ZoneDistributionConfig zoneDistributionConfig;
+
+  /**
+   * Optional. The ACL policy to be applied to the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAclPolicy() {
+    return aclPolicy;
+  }
+
+  /**
+   * Optional. The ACL policy to be applied to the cluster.
+   * @param aclPolicy aclPolicy or {@code null} for none
+   */
+  public Cluster setAclPolicy(java.lang.String aclPolicy) {
+    this.aclPolicy = aclPolicy;
+    return this;
+  }
 
   /**
    * Optional. Immutable. Deprecated, do not use.
@@ -872,6 +919,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Input only. Rotate the server certificates.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRotateServerCertificate() {
+    return rotateServerCertificate;
+  }
+
+  /**
+   * Optional. Input only. Rotate the server certificates.
+   * @param rotateServerCertificate rotateServerCertificate or {@code null} for none
+   */
+  public Cluster setRotateServerCertificate(java.lang.Boolean rotateServerCertificate) {
+    this.rotateServerCertificate = rotateServerCertificate;
+    return this;
+  }
+
+  /**
    * Optional. Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
@@ -902,6 +966,44 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * Optional. Server CA mode for the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerCaMode() {
+    return serverCaMode;
+  }
+
+  /**
+   * Optional. Server CA mode for the cluster.
+   * @param serverCaMode serverCaMode or {@code null} for none
+   */
+  public Cluster setServerCaMode(java.lang.String serverCaMode) {
+    this.serverCaMode = serverCaMode;
+    return this;
+  }
+
+  /**
+   * Optional. Customer-managed CA pool for the cluster. Only applicable for BYOCA i.e. if
+   * server_ca_mode is SERVER_CA_MODE_CUSTOMER_MANAGED_CAS_CA. Format:
+   * "projects/{project}/locations/{region}/caPools/{ca_pool}".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerCaPool() {
+    return serverCaPool;
+  }
+
+  /**
+   * Optional. Customer-managed CA pool for the cluster. Only applicable for BYOCA i.e. if
+   * server_ca_mode is SERVER_CA_MODE_CUSTOMER_MANAGED_CAS_CA. Format:
+   * "projects/{project}/locations/{region}/caPools/{ca_pool}".
+   * @param serverCaPool serverCaPool or {@code null} for none
+   */
+  public Cluster setServerCaPool(java.lang.String serverCaPool) {
+    this.serverCaPool = serverCaPool;
     return this;
   }
 

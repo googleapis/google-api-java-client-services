@@ -31,6 +31,13 @@ package com.google.api.services.redis.v1beta1.model;
 public final class ResourceMaintenanceInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The date when the current maintenance version was released.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Date currentVersionReleaseDate;
+
+  /**
    * Optional. List of Deny maintenance period for the database resource.
    * The value may be {@code null}.
    */
@@ -44,11 +51,26 @@ public final class ResourceMaintenanceInfo extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. Whether the instance is in stopped state. This information is temporarily being
+   * captured in maintenanceInfo, till STOPPED state is supported by DB Center.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isInstanceStopped;
+
+  /**
    * Optional. Maintenance window for the database resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceMaintenanceSchedule maintenanceSchedule;
+
+  /**
+   * Output only. Current state of maintenance on the database resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceState;
 
   /**
    * Optional. Current Maintenance version of the database resource. Example:
@@ -57,6 +79,31 @@ public final class ResourceMaintenanceInfo extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String maintenanceVersion;
+
+  /**
+   * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
+   * generates and publishes upcoming maintenance window.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpcomingMaintenance upcomingMaintenance;
+
+  /**
+   * Optional. The date when the current maintenance version was released.
+   * @return value or {@code null} for none
+   */
+  public Date getCurrentVersionReleaseDate() {
+    return currentVersionReleaseDate;
+  }
+
+  /**
+   * Optional. The date when the current maintenance version was released.
+   * @param currentVersionReleaseDate currentVersionReleaseDate or {@code null} for none
+   */
+  public ResourceMaintenanceInfo setCurrentVersionReleaseDate(Date currentVersionReleaseDate) {
+    this.currentVersionReleaseDate = currentVersionReleaseDate;
+    return this;
+  }
 
   /**
    * Optional. List of Deny maintenance period for the database resource.
@@ -72,6 +119,25 @@ public final class ResourceMaintenanceInfo extends com.google.api.client.json.Ge
    */
   public ResourceMaintenanceInfo setDenyMaintenanceSchedules(java.util.List<ResourceMaintenanceDenySchedule> denyMaintenanceSchedules) {
     this.denyMaintenanceSchedules = denyMaintenanceSchedules;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the instance is in stopped state. This information is temporarily being
+   * captured in maintenanceInfo, till STOPPED state is supported by DB Center.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsInstanceStopped() {
+    return isInstanceStopped;
+  }
+
+  /**
+   * Optional. Whether the instance is in stopped state. This information is temporarily being
+   * captured in maintenanceInfo, till STOPPED state is supported by DB Center.
+   * @param isInstanceStopped isInstanceStopped or {@code null} for none
+   */
+  public ResourceMaintenanceInfo setIsInstanceStopped(java.lang.Boolean isInstanceStopped) {
+    this.isInstanceStopped = isInstanceStopped;
     return this;
   }
 
@@ -93,6 +159,23 @@ public final class ResourceMaintenanceInfo extends com.google.api.client.json.Ge
   }
 
   /**
+   * Output only. Current state of maintenance on the database resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceState() {
+    return maintenanceState;
+  }
+
+  /**
+   * Output only. Current state of maintenance on the database resource.
+   * @param maintenanceState maintenanceState or {@code null} for none
+   */
+  public ResourceMaintenanceInfo setMaintenanceState(java.lang.String maintenanceState) {
+    this.maintenanceState = maintenanceState;
+    return this;
+  }
+
+  /**
    * Optional. Current Maintenance version of the database resource. Example:
    * "MYSQL_8_0_41.R20250531.01_15"
    * @return value or {@code null} for none
@@ -108,6 +191,25 @@ public final class ResourceMaintenanceInfo extends com.google.api.client.json.Ge
    */
   public ResourceMaintenanceInfo setMaintenanceVersion(java.lang.String maintenanceVersion) {
     this.maintenanceVersion = maintenanceVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
+   * generates and publishes upcoming maintenance window.
+   * @return value or {@code null} for none
+   */
+  public UpcomingMaintenance getUpcomingMaintenance() {
+    return upcomingMaintenance;
+  }
+
+  /**
+   * Optional. Upcoming maintenance for the database resource. This field is populated once SLM
+   * generates and publishes upcoming maintenance window.
+   * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
+   */
+  public ResourceMaintenanceInfo setUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {
+    this.upcomingMaintenance = upcomingMaintenance;
     return this;
   }
 

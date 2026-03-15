@@ -19,7 +19,7 @@ package com.google.api.services.redis.v1.model;
 /**
  * Database resource signal data. This is used to send signals to Condor which are based on the
  * DB/Instance/Fleet level configurations. These will be used to send signals for all inventory
- * types. Next ID: 7
+ * types. Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -31,6 +31,13 @@ package com.google.api.services.redis.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class DatabaseResourceSignalData extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Deprecated: Use signal_metadata_list instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupRun backupRun;
 
   /**
    * Required. Full Resource name of the source resource.
@@ -47,6 +54,13 @@ public final class DatabaseResourceSignalData extends com.google.api.client.json
   private String lastRefreshTime;
 
   /**
+   * Resource location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Database resource id.
    * The value may be {@code null}.
    */
@@ -54,11 +68,18 @@ public final class DatabaseResourceSignalData extends com.google.api.client.json
   private DatabaseResourceId resourceId;
 
   /**
-   * Signal data for boolean signals.
+   * Deprecated: Use signal_metadata_list instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean signalBoolValue;
+
+  /**
+   * This will support array of OneOf signal metadata information for a given signal type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SignalMetadata> signalMetadataList;
 
   /**
    * Required. Output only. Signal state of the signal
@@ -73,6 +94,23 @@ public final class DatabaseResourceSignalData extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.String signalType;
+
+  /**
+   * Deprecated: Use signal_metadata_list instead.
+   * @return value or {@code null} for none
+   */
+  public BackupRun getBackupRun() {
+    return backupRun;
+  }
+
+  /**
+   * Deprecated: Use signal_metadata_list instead.
+   * @param backupRun backupRun or {@code null} for none
+   */
+  public DatabaseResourceSignalData setBackupRun(BackupRun backupRun) {
+    this.backupRun = backupRun;
+    return this;
+  }
 
   /**
    * Required. Full Resource name of the source resource.
@@ -109,6 +147,23 @@ public final class DatabaseResourceSignalData extends com.google.api.client.json
   }
 
   /**
+   * Resource location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Resource location.
+   * @param location location or {@code null} for none
+   */
+  public DatabaseResourceSignalData setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
+
+  /**
    * Database resource id.
    * @return value or {@code null} for none
    */
@@ -126,7 +181,7 @@ public final class DatabaseResourceSignalData extends com.google.api.client.json
   }
 
   /**
-   * Signal data for boolean signals.
+   * Deprecated: Use signal_metadata_list instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSignalBoolValue() {
@@ -134,11 +189,28 @@ public final class DatabaseResourceSignalData extends com.google.api.client.json
   }
 
   /**
-   * Signal data for boolean signals.
+   * Deprecated: Use signal_metadata_list instead.
    * @param signalBoolValue signalBoolValue or {@code null} for none
    */
   public DatabaseResourceSignalData setSignalBoolValue(java.lang.Boolean signalBoolValue) {
     this.signalBoolValue = signalBoolValue;
+    return this;
+  }
+
+  /**
+   * This will support array of OneOf signal metadata information for a given signal type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SignalMetadata> getSignalMetadataList() {
+    return signalMetadataList;
+  }
+
+  /**
+   * This will support array of OneOf signal metadata information for a given signal type.
+   * @param signalMetadataList signalMetadataList or {@code null} for none
+   */
+  public DatabaseResourceSignalData setSignalMetadataList(java.util.List<SignalMetadata> signalMetadataList) {
+    this.signalMetadataList = signalMetadataList;
     return this;
   }
 

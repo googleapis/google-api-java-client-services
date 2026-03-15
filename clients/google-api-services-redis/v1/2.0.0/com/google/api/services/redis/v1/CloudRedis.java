@@ -103,7 +103,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -312,7 +312,164 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Gets the details of regional certificate authority information for Redis cluster.
+       *
+       * Create a request for the method "locations.getSharedRegionalCertificateAuthority".
+       *
+       * This request holds the parameters needed by the redis server.  After setting any optional
+       * parameters, call the {@link GetSharedRegionalCertificateAuthority#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Required. Regional certificate authority resource name using the form:
+       *        `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority` where
+       *        `location_id` refers to a Google Cloud region.
+       * @return the request
+       */
+      public GetSharedRegionalCertificateAuthority getSharedRegionalCertificateAuthority(java.lang.String name) throws java.io.IOException {
+        GetSharedRegionalCertificateAuthority result = new GetSharedRegionalCertificateAuthority(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetSharedRegionalCertificateAuthority extends CloudRedisRequest<com.google.api.services.redis.v1.model.SharedRegionalCertificateAuthority> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sharedRegionalCertificateAuthority$");
+
+        /**
+         * Gets the details of regional certificate authority information for Redis cluster.
+         *
+         * Create a request for the method "locations.getSharedRegionalCertificateAuthority".
+         *
+         * This request holds the parameters needed by the the redis server.  After setting any optional
+         * parameters, call the {@link GetSharedRegionalCertificateAuthority#execute()} method to invoke
+         * the remote operation. <p> {@link GetSharedRegionalCertificateAuthority#initialize(com.google.ap
+         * i.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+         * instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Regional certificate authority resource name using the form:
+       *        `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority` where
+       *        `location_id` refers to a Google Cloud region.
+         * @since 1.13
+         */
+        protected GetSharedRegionalCertificateAuthority(java.lang.String name) {
+          super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1.model.SharedRegionalCertificateAuthority.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/sharedRegionalCertificateAuthority$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority set$Xgafv(java.lang.String $Xgafv) {
+          return (GetSharedRegionalCertificateAuthority) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setAccessToken(java.lang.String accessToken) {
+          return (GetSharedRegionalCertificateAuthority) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setAlt(java.lang.String alt) {
+          return (GetSharedRegionalCertificateAuthority) super.setAlt(alt);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setCallback(java.lang.String callback) {
+          return (GetSharedRegionalCertificateAuthority) super.setCallback(callback);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setFields(java.lang.String fields) {
+          return (GetSharedRegionalCertificateAuthority) super.setFields(fields);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setKey(java.lang.String key) {
+          return (GetSharedRegionalCertificateAuthority) super.setKey(key);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setOauthToken(java.lang.String oauthToken) {
+          return (GetSharedRegionalCertificateAuthority) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetSharedRegionalCertificateAuthority) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setQuotaUser(java.lang.String quotaUser) {
+          return (GetSharedRegionalCertificateAuthority) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setUploadType(java.lang.String uploadType) {
+          return (GetSharedRegionalCertificateAuthority) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetSharedRegionalCertificateAuthority) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Regional certificate authority resource name using the form:
+         * `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority` where
+         * `location_id` refers to a Google Cloud region.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Regional certificate authority resource name using the form:
+       `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority` where
+       `location_id` refers to a Google Cloud region.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Regional certificate authority resource name using the form:
+         * `projects/{project_id}/locations/{location_id}/sharedRegionalCertificateAuthority` where
+         * `location_id` refers to a Google Cloud region.
+         */
+        public GetSharedRegionalCertificateAuthority setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/sharedRegionalCertificateAuthority$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetSharedRegionalCertificateAuthority set(String parameterName, Object value) {
+          return (GetSharedRegionalCertificateAuthority) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -336,7 +493,10 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -5369,9 +5529,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -5379,10 +5539,11 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           private java.lang.Boolean returnPartialSuccess;
 
           /** When set to `true`, operations that are reachable are returned as normal, and those that are
-         unreachable are returned in the [ListOperationsResponse.unreachable] field. This can only be `true`
-         when reading across collections e.g. when `parent` is set to `"projects/example/locations/-"`. This
-         field is not by default supported and will result in an `UNIMPLEMENTED` error if set unless
-         explicitly documented otherwise in service or product specific documentation.
+         unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+         when reading across collections. For example, when `parent` is set to
+         `"projects/example/locations/-"`. This field is not supported by default and will result in an
+         `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+         documentation.
            */
           public java.lang.Boolean getReturnPartialSuccess() {
             return returnPartialSuccess;
@@ -5390,9 +5551,9 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * When set to `true`, operations that are reachable are returned as normal, and those
-           * that are unreachable are returned in the [ListOperationsResponse.unreachable] field.
-           * This can only be `true` when reading across collections e.g. when `parent` is set to
-           * `"projects/example/locations/-"`. This field is not by default supported and will
+           * that are unreachable are returned in the ListOperationsResponse.unreachable field. This
+           * can only be `true` when reading across collections. For example, when `parent` is set
+           * to `"projects/example/locations/-"`. This field is not supported by default and will
            * result in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in
            * service or product specific documentation.
            */
@@ -5443,8 +5604,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

@@ -31,6 +31,13 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.client.json.GenericJson {
 
   /**
+   * Ad Format type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String adFormatType;
+
+  /**
    * Ad network type.
    * The value may be {@code null}.
    */
@@ -473,6 +480,73 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
   private java.util.List<GoogleAdsSearchads360V0CommonValue> rawEventConversionDimensions;
 
   /**
+   * The display names of participants in an event listing, like performers, speakers, or teams.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String verticalAdsEventParticipantDisplayNames;
+
+  /**
+   * The class of the hotel. Generally in the range of 1 to 5 stars, but fully customizable in the
+   * hotel feed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long verticalAdsHotelClass;
+
+  /**
+   * The listing associated with a listing impression, click or conversion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String verticalAdsListing;
+
+  /**
+   * The brand associated with a specific listing within a Vertical Ads context, for example, the
+   * brand of a car rental, a vacation home, or an event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String verticalAdsListingBrand;
+
+  /**
+   * The city where the vertical ads listing is located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String verticalAdsListingCity;
+
+  /**
+   * The country where the vertical ads listing is located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String verticalAdsListingCountry;
+
+  /**
+   * The region where the vertical ads listing is located.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String verticalAdsListingRegion;
+
+  /**
+   * A specific partner account within a Partner Center (for example, Hotel Center) that supplies
+   * inventory feed data for Vertical Ads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long verticalAdsPartnerAccount;
+
+  /**
+   * Type of vertical ad, such as Vacation Rentals, Car Rentals, or Events, used to categorize and
+   * segment data in the context of Vertical Ads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String verticalAdsVertical;
+
+  /**
    * Week as defined as Monday through Sunday, and represented by the date of Monday. Formatted as
    * yyyy-MM-dd.
    * The value may be {@code null}.
@@ -486,6 +560,23 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer year;
+
+  /**
+   * Ad Format type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAdFormatType() {
+    return adFormatType;
+  }
+
+  /**
+   * Ad Format type.
+   * @param adFormatType adFormatType or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setAdFormatType(java.lang.String adFormatType) {
+    this.adFormatType = adFormatType;
+    return this;
+  }
 
   /**
    * Ad network type.
@@ -1554,6 +1645,167 @@ public final class GoogleAdsSearchads360V0CommonSegments extends com.google.api.
    */
   public GoogleAdsSearchads360V0CommonSegments setRawEventConversionDimensions(java.util.List<GoogleAdsSearchads360V0CommonValue> rawEventConversionDimensions) {
     this.rawEventConversionDimensions = rawEventConversionDimensions;
+    return this;
+  }
+
+  /**
+   * The display names of participants in an event listing, like performers, speakers, or teams.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVerticalAdsEventParticipantDisplayNames() {
+    return verticalAdsEventParticipantDisplayNames;
+  }
+
+  /**
+   * The display names of participants in an event listing, like performers, speakers, or teams.
+   * @param verticalAdsEventParticipantDisplayNames verticalAdsEventParticipantDisplayNames or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setVerticalAdsEventParticipantDisplayNames(java.lang.String verticalAdsEventParticipantDisplayNames) {
+    this.verticalAdsEventParticipantDisplayNames = verticalAdsEventParticipantDisplayNames;
+    return this;
+  }
+
+  /**
+   * The class of the hotel. Generally in the range of 1 to 5 stars, but fully customizable in the
+   * hotel feed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVerticalAdsHotelClass() {
+    return verticalAdsHotelClass;
+  }
+
+  /**
+   * The class of the hotel. Generally in the range of 1 to 5 stars, but fully customizable in the
+   * hotel feed.
+   * @param verticalAdsHotelClass verticalAdsHotelClass or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setVerticalAdsHotelClass(java.lang.Long verticalAdsHotelClass) {
+    this.verticalAdsHotelClass = verticalAdsHotelClass;
+    return this;
+  }
+
+  /**
+   * The listing associated with a listing impression, click or conversion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVerticalAdsListing() {
+    return verticalAdsListing;
+  }
+
+  /**
+   * The listing associated with a listing impression, click or conversion.
+   * @param verticalAdsListing verticalAdsListing or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setVerticalAdsListing(java.lang.String verticalAdsListing) {
+    this.verticalAdsListing = verticalAdsListing;
+    return this;
+  }
+
+  /**
+   * The brand associated with a specific listing within a Vertical Ads context, for example, the
+   * brand of a car rental, a vacation home, or an event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVerticalAdsListingBrand() {
+    return verticalAdsListingBrand;
+  }
+
+  /**
+   * The brand associated with a specific listing within a Vertical Ads context, for example, the
+   * brand of a car rental, a vacation home, or an event.
+   * @param verticalAdsListingBrand verticalAdsListingBrand or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setVerticalAdsListingBrand(java.lang.String verticalAdsListingBrand) {
+    this.verticalAdsListingBrand = verticalAdsListingBrand;
+    return this;
+  }
+
+  /**
+   * The city where the vertical ads listing is located.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVerticalAdsListingCity() {
+    return verticalAdsListingCity;
+  }
+
+  /**
+   * The city where the vertical ads listing is located.
+   * @param verticalAdsListingCity verticalAdsListingCity or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setVerticalAdsListingCity(java.lang.String verticalAdsListingCity) {
+    this.verticalAdsListingCity = verticalAdsListingCity;
+    return this;
+  }
+
+  /**
+   * The country where the vertical ads listing is located.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVerticalAdsListingCountry() {
+    return verticalAdsListingCountry;
+  }
+
+  /**
+   * The country where the vertical ads listing is located.
+   * @param verticalAdsListingCountry verticalAdsListingCountry or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setVerticalAdsListingCountry(java.lang.String verticalAdsListingCountry) {
+    this.verticalAdsListingCountry = verticalAdsListingCountry;
+    return this;
+  }
+
+  /**
+   * The region where the vertical ads listing is located.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVerticalAdsListingRegion() {
+    return verticalAdsListingRegion;
+  }
+
+  /**
+   * The region where the vertical ads listing is located.
+   * @param verticalAdsListingRegion verticalAdsListingRegion or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setVerticalAdsListingRegion(java.lang.String verticalAdsListingRegion) {
+    this.verticalAdsListingRegion = verticalAdsListingRegion;
+    return this;
+  }
+
+  /**
+   * A specific partner account within a Partner Center (for example, Hotel Center) that supplies
+   * inventory feed data for Vertical Ads.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVerticalAdsPartnerAccount() {
+    return verticalAdsPartnerAccount;
+  }
+
+  /**
+   * A specific partner account within a Partner Center (for example, Hotel Center) that supplies
+   * inventory feed data for Vertical Ads.
+   * @param verticalAdsPartnerAccount verticalAdsPartnerAccount or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setVerticalAdsPartnerAccount(java.lang.Long verticalAdsPartnerAccount) {
+    this.verticalAdsPartnerAccount = verticalAdsPartnerAccount;
+    return this;
+  }
+
+  /**
+   * Type of vertical ad, such as Vacation Rentals, Car Rentals, or Events, used to categorize and
+   * segment data in the context of Vertical Ads.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVerticalAdsVertical() {
+    return verticalAdsVertical;
+  }
+
+  /**
+   * Type of vertical ad, such as Vacation Rentals, Car Rentals, or Events, used to categorize and
+   * segment data in the context of Vertical Ads.
+   * @param verticalAdsVertical verticalAdsVertical or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0CommonSegments setVerticalAdsVertical(java.lang.String verticalAdsVertical) {
+    this.verticalAdsVertical = verticalAdsVertical;
     return this;
   }
 

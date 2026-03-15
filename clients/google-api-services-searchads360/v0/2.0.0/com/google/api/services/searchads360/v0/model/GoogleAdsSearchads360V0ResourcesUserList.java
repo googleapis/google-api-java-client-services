@@ -17,7 +17,10 @@
 package com.google.api.services.searchads360.v0.model;
 
 /**
- * A user list. This is a list of users a customer may target.
+ * A user list. This is a list of users a customer may target. The unique key of a user list
+ * consists of the following fields: `id`. Note that the `name` must also be unique for user lists
+ * owned by a given customer, except in some cases where `access_reason` is set to `SHARED`.
+ * Violating the unique name constraint produces error: `UserListError.INVALID_NAME`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed
@@ -38,8 +41,8 @@ public final class GoogleAdsSearchads360V0ResourcesUserList extends com.google.a
   private java.lang.Long id;
 
   /**
-   * Name of this user list. Depending on its access_reason, the user list name may not be unique
-   * (for example, if access_reason=SHARED)
+   * Name of this user list. Unique per user list, except in some cases where a user list of the
+   * same name has `access_reason` set to `SHARED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +81,8 @@ public final class GoogleAdsSearchads360V0ResourcesUserList extends com.google.a
   }
 
   /**
-   * Name of this user list. Depending on its access_reason, the user list name may not be unique
-   * (for example, if access_reason=SHARED)
+   * Name of this user list. Unique per user list, except in some cases where a user list of the
+   * same name has `access_reason` set to `SHARED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -87,8 +90,8 @@ public final class GoogleAdsSearchads360V0ResourcesUserList extends com.google.a
   }
 
   /**
-   * Name of this user list. Depending on its access_reason, the user list name may not be unique
-   * (for example, if access_reason=SHARED)
+   * Name of this user list. Unique per user list, except in some cases where a user list of the
+   * same name has `access_reason` set to `SHARED`.
    * @param name name or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesUserList setName(java.lang.String name) {

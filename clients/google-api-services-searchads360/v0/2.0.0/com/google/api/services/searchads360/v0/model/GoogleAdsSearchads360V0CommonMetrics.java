@@ -57,16 +57,16 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double allConversionsByConversionDate;
 
   /**
-   * The number of times people clicked the "Call" button to call a store during or after clicking
-   * an ad. This number doesn't include whether or not calls were connected, or the duration of any
-   * calls. This metric applies to feed items only.
+   * The number of times people clicked the "Call" button to call a business during or after
+   * clicking an ad. This number doesn't include whether or not calls were connected, or the
+   * duration of any calls. This metric applies to feed items only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double allConversionsFromClickToCall;
 
   /**
-   * The number of times people clicked a "Get directions" button to navigate to a store after
+   * The number of times people clicked a "Get directions" button to navigate to a business after
    * clicking an ad. This metric applies to feed items only.
    * The value may be {@code null}.
    */
@@ -89,7 +89,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double allConversionsFromInteractionsValuePerInteraction;
 
   /**
-   * The number of times people clicked a link to view a store's menu after clicking an ad. This
+   * The number of times people clicked a link to view a business's menu after clicking an ad. This
    * metric applies to feed items only.
    * The value may be {@code null}.
    */
@@ -97,8 +97,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   private java.lang.Double allConversionsFromMenu;
 
   /**
-   * The number of times people placed an order at a store after clicking an ad. This metric applies
-   * to feed items only.
+   * The number of times people placed an order at a business after clicking an ad. This metric
+   * applies to feed items only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,23 +106,23 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
 
   /**
    * The number of other conversions (for example, posting a review or saving a location for a
-   * store) that occurred after people clicked an ad. This metric applies to feed items only.
+   * business) that occurred after people clicked an ad. This metric applies to feed items only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double allConversionsFromOtherEngagement;
 
   /**
-   * Estimated number of times people visited a store after clicking an ad. This metric applies to
-   * feed items only.
+   * Estimated number of times people visited a business after clicking an ad. This metric applies
+   * to feed items only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double allConversionsFromStoreVisit;
 
   /**
-   * The number of times that people were taken to a store's URL after clicking an ad. This metric
-   * applies to feed items only.
+   * The number of times that people were taken to a business's URL after clicking an ad. This
+   * metric applies to feed items only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1114,9 +1114,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times people clicked the "Call" button to call a store during or after clicking
-   * an ad. This number doesn't include whether or not calls were connected, or the duration of any
-   * calls. This metric applies to feed items only.
+   * The number of times people clicked the "Call" button to call a business during or after
+   * clicking an ad. This number doesn't include whether or not calls were connected, or the
+   * duration of any calls. This metric applies to feed items only.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAllConversionsFromClickToCall() {
@@ -1124,9 +1124,9 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times people clicked the "Call" button to call a store during or after clicking
-   * an ad. This number doesn't include whether or not calls were connected, or the duration of any
-   * calls. This metric applies to feed items only.
+   * The number of times people clicked the "Call" button to call a business during or after
+   * clicking an ad. This number doesn't include whether or not calls were connected, or the
+   * duration of any calls. This metric applies to feed items only.
    * @param allConversionsFromClickToCall allConversionsFromClickToCall or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setAllConversionsFromClickToCall(java.lang.Double allConversionsFromClickToCall) {
@@ -1135,7 +1135,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times people clicked a "Get directions" button to navigate to a store after
+   * The number of times people clicked a "Get directions" button to navigate to a business after
    * clicking an ad. This metric applies to feed items only.
    * @return value or {@code null} for none
    */
@@ -1144,7 +1144,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times people clicked a "Get directions" button to navigate to a store after
+   * The number of times people clicked a "Get directions" button to navigate to a business after
    * clicking an ad. This metric applies to feed items only.
    * @param allConversionsFromDirections allConversionsFromDirections or {@code null} for none
    */
@@ -1190,7 +1190,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times people clicked a link to view a store's menu after clicking an ad. This
+   * The number of times people clicked a link to view a business's menu after clicking an ad. This
    * metric applies to feed items only.
    * @return value or {@code null} for none
    */
@@ -1199,7 +1199,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times people clicked a link to view a store's menu after clicking an ad. This
+   * The number of times people clicked a link to view a business's menu after clicking an ad. This
    * metric applies to feed items only.
    * @param allConversionsFromMenu allConversionsFromMenu or {@code null} for none
    */
@@ -1209,8 +1209,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times people placed an order at a store after clicking an ad. This metric applies
-   * to feed items only.
+   * The number of times people placed an order at a business after clicking an ad. This metric
+   * applies to feed items only.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAllConversionsFromOrder() {
@@ -1218,8 +1218,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times people placed an order at a store after clicking an ad. This metric applies
-   * to feed items only.
+   * The number of times people placed an order at a business after clicking an ad. This metric
+   * applies to feed items only.
    * @param allConversionsFromOrder allConversionsFromOrder or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setAllConversionsFromOrder(java.lang.Double allConversionsFromOrder) {
@@ -1229,7 +1229,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
 
   /**
    * The number of other conversions (for example, posting a review or saving a location for a
-   * store) that occurred after people clicked an ad. This metric applies to feed items only.
+   * business) that occurred after people clicked an ad. This metric applies to feed items only.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAllConversionsFromOtherEngagement() {
@@ -1238,7 +1238,7 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
 
   /**
    * The number of other conversions (for example, posting a review or saving a location for a
-   * store) that occurred after people clicked an ad. This metric applies to feed items only.
+   * business) that occurred after people clicked an ad. This metric applies to feed items only.
    * @param allConversionsFromOtherEngagement allConversionsFromOtherEngagement or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setAllConversionsFromOtherEngagement(java.lang.Double allConversionsFromOtherEngagement) {
@@ -1247,8 +1247,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * Estimated number of times people visited a store after clicking an ad. This metric applies to
-   * feed items only.
+   * Estimated number of times people visited a business after clicking an ad. This metric applies
+   * to feed items only.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAllConversionsFromStoreVisit() {
@@ -1256,8 +1256,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * Estimated number of times people visited a store after clicking an ad. This metric applies to
-   * feed items only.
+   * Estimated number of times people visited a business after clicking an ad. This metric applies
+   * to feed items only.
    * @param allConversionsFromStoreVisit allConversionsFromStoreVisit or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setAllConversionsFromStoreVisit(java.lang.Double allConversionsFromStoreVisit) {
@@ -1266,8 +1266,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times that people were taken to a store's URL after clicking an ad. This metric
-   * applies to feed items only.
+   * The number of times that people were taken to a business's URL after clicking an ad. This
+   * metric applies to feed items only.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAllConversionsFromStoreWebsite() {
@@ -1275,8 +1275,8 @@ public final class GoogleAdsSearchads360V0CommonMetrics extends com.google.api.c
   }
 
   /**
-   * The number of times that people were taken to a store's URL after clicking an ad. This metric
-   * applies to feed items only.
+   * The number of times that people were taken to a business's URL after clicking an ad. This
+   * metric applies to feed items only.
    * @param allConversionsFromStoreWebsite allConversionsFromStoreWebsite or {@code null} for none
    */
   public GoogleAdsSearchads360V0CommonMetrics setAllConversionsFromStoreWebsite(java.lang.Double allConversionsFromStoreWebsite) {

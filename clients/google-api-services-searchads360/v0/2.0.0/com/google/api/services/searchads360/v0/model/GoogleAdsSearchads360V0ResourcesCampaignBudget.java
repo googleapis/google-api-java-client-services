@@ -31,9 +31,12 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0ResourcesCampaignBudget extends com.google.api.client.json.GenericJson {
 
   /**
-   * The amount of the budget, in the local currency for the account. Amount is specified in micros,
-   * where one million is equivalent to one currency unit. Monthly spend is capped at 30.4 times
-   * this amount.
+   * The average daily amount to be spent by the campaign. This field is used when the
+   * CampaignBudget `period` is set to `DAILY`, which is the default. Amount is specified in micros
+   * in the account's local currency. One million micros is equivalent to one currency unit. The
+   * effective monthly spend is capped at 30.4 times this daily amount. This field is mutually
+   * exclusive with 'total_amount_micros'. Only one of 'amount_micros' or 'total_amount_micros'
+   * should be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -63,9 +66,12 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignBudget extends com.go
   private java.lang.String resourceName;
 
   /**
-   * The amount of the budget, in the local currency for the account. Amount is specified in micros,
-   * where one million is equivalent to one currency unit. Monthly spend is capped at 30.4 times
-   * this amount.
+   * The average daily amount to be spent by the campaign. This field is used when the
+   * CampaignBudget `period` is set to `DAILY`, which is the default. Amount is specified in micros
+   * in the account's local currency. One million micros is equivalent to one currency unit. The
+   * effective monthly spend is capped at 30.4 times this daily amount. This field is mutually
+   * exclusive with 'total_amount_micros'. Only one of 'amount_micros' or 'total_amount_micros'
+   * should be set.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAmountMicros() {
@@ -73,9 +79,12 @@ public final class GoogleAdsSearchads360V0ResourcesCampaignBudget extends com.go
   }
 
   /**
-   * The amount of the budget, in the local currency for the account. Amount is specified in micros,
-   * where one million is equivalent to one currency unit. Monthly spend is capped at 30.4 times
-   * this amount.
+   * The average daily amount to be spent by the campaign. This field is used when the
+   * CampaignBudget `period` is set to `DAILY`, which is the default. Amount is specified in micros
+   * in the account's local currency. One million micros is equivalent to one currency unit. The
+   * effective monthly spend is capped at 30.4 times this daily amount. This field is mutually
+   * exclusive with 'total_amount_micros'. Only one of 'amount_micros' or 'total_amount_micros'
+   * should be set.
    * @param amountMicros amountMicros or {@code null} for none
    */
   public GoogleAdsSearchads360V0ResourcesCampaignBudget setAmountMicros(java.lang.Long amountMicros) {

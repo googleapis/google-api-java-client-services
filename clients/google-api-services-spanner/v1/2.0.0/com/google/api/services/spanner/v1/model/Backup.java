@@ -145,6 +145,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String maxExpireTime;
 
   /**
+   * Output only. The minimum edition required to successfully restore the backup. Populated only if
+   * the edition is Enterprise or Enterprise Plus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String minimumRestorableEdition;
+
+  /**
    * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally
    * unique identifier for the backup which cannot be changed. Values are of the form
    * `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and
@@ -476,6 +484,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setMaxExpireTime(String maxExpireTime) {
     this.maxExpireTime = maxExpireTime;
+    return this;
+  }
+
+  /**
+   * Output only. The minimum edition required to successfully restore the backup. Populated only if
+   * the edition is Enterprise or Enterprise Plus.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMinimumRestorableEdition() {
+    return minimumRestorableEdition;
+  }
+
+  /**
+   * Output only. The minimum edition required to successfully restore the backup. Populated only if
+   * the edition is Enterprise or Enterprise Plus.
+   * @param minimumRestorableEdition minimumRestorableEdition or {@code null} for none
+   */
+  public Backup setMinimumRestorableEdition(java.lang.String minimumRestorableEdition) {
+    this.minimumRestorableEdition = minimumRestorableEdition;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.spanner.v1.model;
 public final class RequestOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Optional context that may be needed for some requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClientContext clientContext;
+
+  /**
    * Priority for the request.
    * The value may be {@code null}.
    */
@@ -50,16 +57,34 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
 
   /**
    * A tag used for statistics collection about this transaction. Both `request_tag` and
-   * `transaction_tag` can be specified for a read or query that belongs to a transaction. The value
-   * of transaction_tag should be the same for all requests belonging to the same transaction. If
-   * this request doesn't belong to any transaction, `transaction_tag` is ignored. Legal characters
-   * for `transaction_tag` values are all printable characters (ASCII 32 - 126) and the length of a
-   * `transaction_tag` is limited to 50 characters. Values that exceed this limit are truncated. Any
-   * leading underscore (_) characters are removed from the string.
+   * `transaction_tag` can be specified for a read or query that belongs to a transaction. To enable
+   * tagging on a transaction, `transaction_tag` must be set to the same value for all requests
+   * belonging to the same transaction, including BeginTransaction. If this request doesn't belong
+   * to any transaction, `transaction_tag` is ignored. Legal characters for `transaction_tag` values
+   * are all printable characters (ASCII 32 - 126) and the length of a `transaction_tag` is limited
+   * to 50 characters. Values that exceed this limit are truncated. Any leading underscore (_)
+   * characters are removed from the string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transactionTag;
+
+  /**
+   * Optional. Optional context that may be needed for some requests.
+   * @return value or {@code null} for none
+   */
+  public ClientContext getClientContext() {
+    return clientContext;
+  }
+
+  /**
+   * Optional. Optional context that may be needed for some requests.
+   * @param clientContext clientContext or {@code null} for none
+   */
+  public RequestOptions setClientContext(ClientContext clientContext) {
+    this.clientContext = clientContext;
+    return this;
+  }
 
   /**
    * Priority for the request.
@@ -107,12 +132,13 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
 
   /**
    * A tag used for statistics collection about this transaction. Both `request_tag` and
-   * `transaction_tag` can be specified for a read or query that belongs to a transaction. The value
-   * of transaction_tag should be the same for all requests belonging to the same transaction. If
-   * this request doesn't belong to any transaction, `transaction_tag` is ignored. Legal characters
-   * for `transaction_tag` values are all printable characters (ASCII 32 - 126) and the length of a
-   * `transaction_tag` is limited to 50 characters. Values that exceed this limit are truncated. Any
-   * leading underscore (_) characters are removed from the string.
+   * `transaction_tag` can be specified for a read or query that belongs to a transaction. To enable
+   * tagging on a transaction, `transaction_tag` must be set to the same value for all requests
+   * belonging to the same transaction, including BeginTransaction. If this request doesn't belong
+   * to any transaction, `transaction_tag` is ignored. Legal characters for `transaction_tag` values
+   * are all printable characters (ASCII 32 - 126) and the length of a `transaction_tag` is limited
+   * to 50 characters. Values that exceed this limit are truncated. Any leading underscore (_)
+   * characters are removed from the string.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransactionTag() {
@@ -121,12 +147,13 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
 
   /**
    * A tag used for statistics collection about this transaction. Both `request_tag` and
-   * `transaction_tag` can be specified for a read or query that belongs to a transaction. The value
-   * of transaction_tag should be the same for all requests belonging to the same transaction. If
-   * this request doesn't belong to any transaction, `transaction_tag` is ignored. Legal characters
-   * for `transaction_tag` values are all printable characters (ASCII 32 - 126) and the length of a
-   * `transaction_tag` is limited to 50 characters. Values that exceed this limit are truncated. Any
-   * leading underscore (_) characters are removed from the string.
+   * `transaction_tag` can be specified for a read or query that belongs to a transaction. To enable
+   * tagging on a transaction, `transaction_tag` must be set to the same value for all requests
+   * belonging to the same transaction, including BeginTransaction. If this request doesn't belong
+   * to any transaction, `transaction_tag` is ignored. Legal characters for `transaction_tag` values
+   * are all printable characters (ASCII 32 - 126) and the length of a `transaction_tag` is limited
+   * to 50 characters. Values that exceed this limit are truncated. Any leading underscore (_)
+   * characters are removed from the string.
    * @param transactionTag transactionTag or {@code null} for none
    */
   public RequestOptions setTransactionTag(java.lang.String transactionTag) {

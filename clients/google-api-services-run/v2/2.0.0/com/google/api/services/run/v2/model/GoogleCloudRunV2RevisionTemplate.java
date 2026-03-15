@@ -42,7 +42,21 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Holds the single container that defines the unit of execution for this Revision.
+   * Optional. Arbitrary identifier for the API client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String client;
+
+  /**
+   * Optional. Arbitrary version identifier for the API client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientVersion;
+
+  /**
+   * Holds the list which define the units of execution for this Revision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -217,7 +231,41 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Holds the single container that defines the unit of execution for this Revision.
+   * Optional. Arbitrary identifier for the API client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClient() {
+    return client;
+  }
+
+  /**
+   * Optional. Arbitrary identifier for the API client.
+   * @param client client or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setClient(java.lang.String client) {
+    this.client = client;
+    return this;
+  }
+
+  /**
+   * Optional. Arbitrary version identifier for the API client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientVersion() {
+    return clientVersion;
+  }
+
+  /**
+   * Optional. Arbitrary version identifier for the API client.
+   * @param clientVersion clientVersion or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setClientVersion(java.lang.String clientVersion) {
+    this.clientVersion = clientVersion;
+    return this;
+  }
+
+  /**
+   * Holds the list which define the units of execution for this Revision.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRunV2Container> getContainers() {
@@ -225,7 +273,7 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   }
 
   /**
-   * Holds the single container that defines the unit of execution for this Revision.
+   * Holds the list which define the units of execution for this Revision.
    * @param containers containers or {@code null} for none
    */
   public GoogleCloudRunV2RevisionTemplate setContainers(java.util.List<GoogleCloudRunV2Container> containers) {

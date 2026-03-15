@@ -17,9 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * A predicted [FunctionCall] returned from the model that contains a string representing the
- * [FunctionDeclaration.name] and a structured JSON object containing the parameters and their
- * values.
+ * A predicted FunctionCall returned from the model that contains a string representing the
+ * FunctionDeclaration.name and a structured JSON object containing the parameters and their values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -33,7 +32,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
 
   /**
    * Optional. The function parameters and values in JSON object format. See
-   * [FunctionDeclaration.parameters] for parameter details.
+   * FunctionDeclaration.parameters for parameter details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +47,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   private java.lang.String id;
 
   /**
-   * Optional. The name of the function to call. Matches [FunctionDeclaration.name].
+   * Optional. The name of the function to call. Matches FunctionDeclaration.name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +71,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
 
   /**
    * Optional. The function parameters and values in JSON object format. See
-   * [FunctionDeclaration.parameters] for parameter details.
+   * FunctionDeclaration.parameters for parameter details.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getArgs() {
@@ -81,7 +80,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
 
   /**
    * Optional. The function parameters and values in JSON object format. See
-   * [FunctionDeclaration.parameters] for parameter details.
+   * FunctionDeclaration.parameters for parameter details.
    * @param args args or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FunctionCall setArgs(java.util.Map<String, java.lang.Object> args) {
@@ -109,7 +108,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   }
 
   /**
-   * Optional. The name of the function to call. Matches [FunctionDeclaration.name].
+   * Optional. The name of the function to call. Matches FunctionDeclaration.name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -117,7 +116,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   }
 
   /**
-   * Optional. The name of the function to call. Matches [FunctionDeclaration.name].
+   * Optional. The name of the function to call. Matches FunctionDeclaration.name.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FunctionCall setName(java.lang.String name) {

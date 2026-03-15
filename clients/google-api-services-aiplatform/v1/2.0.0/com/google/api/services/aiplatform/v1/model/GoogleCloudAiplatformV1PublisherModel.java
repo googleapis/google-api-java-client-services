@@ -44,7 +44,7 @@ public final class GoogleCloudAiplatformV1PublisherModel extends com.google.api.
   private java.lang.String launchStage;
 
   /**
-   * Output only. The resource name of the PublisherModel.
+   * Output only. Identifier. The resource name of the PublisherModel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +131,7 @@ public final class GoogleCloudAiplatformV1PublisherModel extends com.google.api.
   }
 
   /**
-   * Output only. The resource name of the PublisherModel.
+   * Output only. Identifier. The resource name of the PublisherModel.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -139,7 +139,7 @@ public final class GoogleCloudAiplatformV1PublisherModel extends com.google.api.
   }
 
   /**
-   * Output only. The resource name of the PublisherModel.
+   * Output only. Identifier. The resource name of the PublisherModel.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1PublisherModel setName(java.lang.String name) {

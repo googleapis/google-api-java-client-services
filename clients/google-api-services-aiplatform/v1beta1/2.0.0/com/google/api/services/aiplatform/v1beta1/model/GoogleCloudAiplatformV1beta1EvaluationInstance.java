@@ -45,7 +45,9 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
   private GoogleCloudAiplatformV1beta1AgentData agentEvalData;
 
   /**
-   * Optional. Other data used to populate placeholders based on their key.
+   * Optional. Other data used to populate placeholders based on their key. If a key conflicts with
+   * a field in the EvaluationInstance (e.g. `prompt`), the value of the field will take precedence
+   * over the value in other_data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +118,9 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
   }
 
   /**
-   * Optional. Other data used to populate placeholders based on their key.
+   * Optional. Other data used to populate placeholders based on their key. If a key conflicts with
+   * a field in the EvaluationInstance (e.g. `prompt`), the value of the field will take precedence
+   * over the value in other_data.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationInstanceMapInstance getOtherData() {
@@ -124,7 +128,9 @@ public final class GoogleCloudAiplatformV1beta1EvaluationInstance extends com.go
   }
 
   /**
-   * Optional. Other data used to populate placeholders based on their key.
+   * Optional. Other data used to populate placeholders based on their key. If a key conflicts with
+   * a field in the EvaluationInstance (e.g. `prompt`), the value of the field will take precedence
+   * over the value in other_data.
    * @param otherData otherData or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationInstance setOtherData(GoogleCloudAiplatformV1beta1EvaluationInstanceMapInstance otherData) {

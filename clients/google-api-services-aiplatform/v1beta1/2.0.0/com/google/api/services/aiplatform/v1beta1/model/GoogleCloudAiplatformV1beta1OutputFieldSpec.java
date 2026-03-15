@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Defines a specification for a single output field.
+ * Specifies the properties of a single field that are included in each generated synthetic example.
+ * This helps the model understand what kind of data to generate for each field.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,7 +31,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1OutputFieldSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the output field.
+   * Required. The name of this field in the generated synthetic data, such as "email_subject" or
+   * "customer_review".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,16 +46,18 @@ public final class GoogleCloudAiplatformV1beta1OutputFieldSpec extends com.googl
   private java.lang.String fieldType;
 
   /**
-   * Optional. Optional, but recommended. Additional guidance specific to this field to provide
-   * targeted instructions for the LLM to generate the content of a single output field. While the
-   * LLM can sometimes infer content from the field name, providing explicit guidance is preferred.
+   * Optional. Specific instructions for the large language model on how to generate content for
+   * this particular field. While the LLM can sometimes infer content from the field name, providing
+   * explicit guidance is preferred. For example, for a field named "review", the guidance could be
+   * "A positive review about a coffee maker."
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String guidance;
 
   /**
-   * Required. The name of the output field.
+   * Required. The name of this field in the generated synthetic data, such as "email_subject" or
+   * "customer_review".
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldName() {
@@ -61,7 +65,8 @@ public final class GoogleCloudAiplatformV1beta1OutputFieldSpec extends com.googl
   }
 
   /**
-   * Required. The name of the output field.
+   * Required. The name of this field in the generated synthetic data, such as "email_subject" or
+   * "customer_review".
    * @param fieldName fieldName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OutputFieldSpec setFieldName(java.lang.String fieldName) {
@@ -87,9 +92,10 @@ public final class GoogleCloudAiplatformV1beta1OutputFieldSpec extends com.googl
   }
 
   /**
-   * Optional. Optional, but recommended. Additional guidance specific to this field to provide
-   * targeted instructions for the LLM to generate the content of a single output field. While the
-   * LLM can sometimes infer content from the field name, providing explicit guidance is preferred.
+   * Optional. Specific instructions for the large language model on how to generate content for
+   * this particular field. While the LLM can sometimes infer content from the field name, providing
+   * explicit guidance is preferred. For example, for a field named "review", the guidance could be
+   * "A positive review about a coffee maker."
    * @return value or {@code null} for none
    */
   public java.lang.String getGuidance() {
@@ -97,9 +103,10 @@ public final class GoogleCloudAiplatformV1beta1OutputFieldSpec extends com.googl
   }
 
   /**
-   * Optional. Optional, but recommended. Additional guidance specific to this field to provide
-   * targeted instructions for the LLM to generate the content of a single output field. While the
-   * LLM can sometimes infer content from the field name, providing explicit guidance is preferred.
+   * Optional. Specific instructions for the large language model on how to generate content for
+   * this particular field. While the LLM can sometimes infer content from the field name, providing
+   * explicit guidance is preferred. For example, for a field named "review", the guidance could be
+   * "A positive review about a coffee maker."
    * @param guidance guidance or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OutputFieldSpec setGuidance(java.lang.String guidance) {

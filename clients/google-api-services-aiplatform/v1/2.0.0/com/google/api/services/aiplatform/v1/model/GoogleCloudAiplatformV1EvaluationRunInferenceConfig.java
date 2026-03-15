@@ -37,8 +37,11 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   private GoogleCloudAiplatformV1GenerationConfig generationConfig;
 
   /**
-   * Optional. The fully qualified name of the publisher model or endpoint to use. Publisher model
-   * format: `projects/{project}/locations/{location}/publishers/models` Endpoint format:
+   * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
+   * Llama third-party models are also supported through Model Garden. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * The value may be {@code null}.
    */
@@ -63,8 +66,11 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   }
 
   /**
-   * Optional. The fully qualified name of the publisher model or endpoint to use. Publisher model
-   * format: `projects/{project}/locations/{location}/publishers/models` Endpoint format:
+   * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
+   * Llama third-party models are also supported through Model Garden. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @return value or {@code null} for none
    */
@@ -73,8 +79,11 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   }
 
   /**
-   * Optional. The fully qualified name of the publisher model or endpoint to use. Publisher model
-   * format: `projects/{project}/locations/{location}/publishers/models` Endpoint format:
+   * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
+   * Llama third-party models are also supported through Model Garden. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @param model model or {@code null} for none
    */

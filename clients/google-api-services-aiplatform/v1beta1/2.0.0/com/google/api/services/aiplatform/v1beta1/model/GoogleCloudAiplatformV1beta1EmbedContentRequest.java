@@ -45,6 +45,13 @@ public final class GoogleCloudAiplatformV1beta1EmbedContentRequest extends com.g
   private GoogleCloudAiplatformV1beta1Content content;
 
   /**
+   * Optional. Configuration for the EmbedContent request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EmbedContentRequestEmbedContentConfig embedContentConfig;
+
+  /**
    * Optional. Deprecated: Please use EmbedContentConfig.output_dimensionality instead. Reduced
    * dimension for the output embedding. If set, excessive values in the output embedding are
    * truncated from the end.
@@ -101,6 +108,23 @@ public final class GoogleCloudAiplatformV1beta1EmbedContentRequest extends com.g
    */
   public GoogleCloudAiplatformV1beta1EmbedContentRequest setContent(GoogleCloudAiplatformV1beta1Content content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the EmbedContent request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EmbedContentRequestEmbedContentConfig getEmbedContentConfig() {
+    return embedContentConfig;
+  }
+
+  /**
+   * Optional. Configuration for the EmbedContent request.
+   * @param embedContentConfig embedContentConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EmbedContentRequest setEmbedContentConfig(GoogleCloudAiplatformV1beta1EmbedContentRequestEmbedContentConfig embedContentConfig) {
+    this.embedContentConfig = embedContentConfig;
     return this;
   }
 

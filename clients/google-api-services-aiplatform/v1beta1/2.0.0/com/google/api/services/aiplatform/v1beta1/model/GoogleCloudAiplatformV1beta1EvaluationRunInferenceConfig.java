@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Agent config used to generate responses.
+   * Optional. Deprecated: Use `agents` instead. Agent config used to generate responses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,8 +44,11 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   private GoogleCloudAiplatformV1beta1GenerationConfig generationConfig;
 
   /**
-   * Optional. The fully qualified name of the publisher model or endpoint to use. Publisher model
-   * format: `projects/{project}/locations/{location}/publishers/models` Endpoint format:
+   * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
+   * Llama third-party models are also supported through Model Garden. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * The value may be {@code null}.
    */
@@ -53,7 +56,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   private java.lang.String model;
 
   /**
-   * Optional. Agent config used to generate responses.
+   * Optional. Deprecated: Use `agents` instead. Agent config used to generate responses.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigInferenceAgentConfig getAgentConfig() {
@@ -61,7 +64,7 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   }
 
   /**
-   * Optional. Agent config used to generate responses.
+   * Optional. Deprecated: Use `agents` instead. Agent config used to generate responses.
    * @param agentConfig agentConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setAgentConfig(GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigInferenceAgentConfig agentConfig) {
@@ -87,8 +90,11 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   }
 
   /**
-   * Optional. The fully qualified name of the publisher model or endpoint to use. Publisher model
-   * format: `projects/{project}/locations/{location}/publishers/models` Endpoint format:
+   * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
+   * Llama third-party models are also supported through Model Garden. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @return value or {@code null} for none
    */
@@ -97,8 +103,11 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   }
 
   /**
-   * Optional. The fully qualified name of the publisher model or endpoint to use. Publisher model
-   * format: `projects/{project}/locations/{location}/publishers/models` Endpoint format:
+   * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
+   * Llama third-party models are also supported through Model Garden. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @param model model or {@code null} for none
    */

@@ -224,7 +224,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String readReplicasMode;
 
   /**
-   * Optional. Redis configuration parameters, according to http://redis.io/topics/config.
+   * Optional. Redis configuration parameters, according to [Redis
+   * configuration](https://redis.io/docs/latest/operate/oss_and_stack/management/config/).
    * Currently, the only supported parameters are: Redis version 3.2 and newer: * maxmemory-policy *
    * notify-keyspace-events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-log-
    * factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-bytes * stream-node-max-
@@ -801,7 +802,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Redis configuration parameters, according to http://redis.io/topics/config.
+   * Optional. Redis configuration parameters, according to [Redis
+   * configuration](https://redis.io/docs/latest/operate/oss_and_stack/management/config/).
    * Currently, the only supported parameters are: Redis version 3.2 and newer: * maxmemory-policy *
    * notify-keyspace-events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-log-
    * factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-bytes * stream-node-max-
@@ -813,7 +815,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Redis configuration parameters, according to http://redis.io/topics/config.
+   * Optional. Redis configuration parameters, according to [Redis
+   * configuration](https://redis.io/docs/latest/operate/oss_and_stack/management/config/).
    * Currently, the only supported parameters are: Redis version 3.2 and newer: * maxmemory-policy *
    * notify-keyspace-events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-log-
    * factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-bytes * stream-node-max-

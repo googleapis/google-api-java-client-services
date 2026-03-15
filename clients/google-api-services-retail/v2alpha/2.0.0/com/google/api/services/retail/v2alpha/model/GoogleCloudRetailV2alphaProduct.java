@@ -104,19 +104,19 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   private java.util.List<java.lang.String> brands;
 
   /**
-   * Product categories. This field is repeated for supporting one product belonging to several
-   * parallel categories. Strongly recommended using the full path for better search /
-   * recommendation quality. To represent full path of category, use '>' sign to separate different
-   * hierarchies. If '>' is part of the category name, replace it with other character(s). For
-   * example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports &
-   * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
-   * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
-   * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
-   * allowed per Product unless overridden through the Google Cloud console. Empty values are not
-   * allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
-   * Center property google_product_category. Schema.org property [Product.category]
-   * (https://schema.org/category). [mc_google_product_category]:
+   * Optional. Product categories. This field is repeated for supporting one product belonging to
+   * several parallel categories. Strongly recommended using the full path for better search /
+   * recommendation quality. To represent the full path of category, use the '>' sign, with one
+   * space on each side, to separate different hierarchies. If '>' is part of the category name,
+   * replace it with other character(s). For example, if a shoes product belongs to both ["Shoes &
+   * Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could
+   * be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic
+   * Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is
+   * returned. At most 250 values are allowed per Product unless overridden through the Google Cloud
+   * console. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length
+   * limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding
+   * properties: Google Merchant Center property google_product_category. Schema.org property
+   * [Product.category] (https://schema.org/category). [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * The value may be {@code null}.
    */
@@ -594,19 +594,19 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Product categories. This field is repeated for supporting one product belonging to several
-   * parallel categories. Strongly recommended using the full path for better search /
-   * recommendation quality. To represent full path of category, use '>' sign to separate different
-   * hierarchies. If '>' is part of the category name, replace it with other character(s). For
-   * example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports &
-   * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
-   * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
-   * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
-   * allowed per Product unless overridden through the Google Cloud console. Empty values are not
-   * allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
-   * Center property google_product_category. Schema.org property [Product.category]
-   * (https://schema.org/category). [mc_google_product_category]:
+   * Optional. Product categories. This field is repeated for supporting one product belonging to
+   * several parallel categories. Strongly recommended using the full path for better search /
+   * recommendation quality. To represent the full path of category, use the '>' sign, with one
+   * space on each side, to separate different hierarchies. If '>' is part of the category name,
+   * replace it with other character(s). For example, if a shoes product belongs to both ["Shoes &
+   * Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could
+   * be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic
+   * Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is
+   * returned. At most 250 values are allowed per Product unless overridden through the Google Cloud
+   * console. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length
+   * limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding
+   * properties: Google Merchant Center property google_product_category. Schema.org property
+   * [Product.category] (https://schema.org/category). [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * @return value or {@code null} for none
    */
@@ -615,19 +615,19 @@ public final class GoogleCloudRetailV2alphaProduct extends com.google.api.client
   }
 
   /**
-   * Product categories. This field is repeated for supporting one product belonging to several
-   * parallel categories. Strongly recommended using the full path for better search /
-   * recommendation quality. To represent full path of category, use '>' sign to separate different
-   * hierarchies. If '>' is part of the category name, replace it with other character(s). For
-   * example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports &
-   * Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categories": [ "Shoes
-   * & Accessories > Shoes", "Sports & Fitness > Athletic Clothing > Shoes" ] Must be set for
-   * Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is returned. At most 250 values are
-   * allowed per Product unless overridden through the Google Cloud console. Empty values are not
-   * allowed. Each value must be a UTF-8 encoded string with a length limit of 5,000 characters.
-   * Otherwise, an INVALID_ARGUMENT error is returned. Corresponding properties: Google Merchant
-   * Center property google_product_category. Schema.org property [Product.category]
-   * (https://schema.org/category). [mc_google_product_category]:
+   * Optional. Product categories. This field is repeated for supporting one product belonging to
+   * several parallel categories. Strongly recommended using the full path for better search /
+   * recommendation quality. To represent the full path of category, use the '>' sign, with one
+   * space on each side, to separate different hierarchies. If '>' is part of the category name,
+   * replace it with other character(s). For example, if a shoes product belongs to both ["Shoes &
+   * Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could
+   * be represented as: "categories": [ "Shoes & Accessories > Shoes", "Sports & Fitness > Athletic
+   * Clothing > Shoes" ] Must be set for Type.PRIMARY Product otherwise an INVALID_ARGUMENT error is
+   * returned. At most 250 values are allowed per Product unless overridden through the Google Cloud
+   * console. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length
+   * limit of 5,000 characters. Otherwise, an INVALID_ARGUMENT error is returned. Corresponding
+   * properties: Google Merchant Center property google_product_category. Schema.org property
+   * [Product.category] (https://schema.org/category). [mc_google_product_category]:
    * https://support.google.com/merchants/answer/6324436
    * @param categories categories or {@code null} for none
    */

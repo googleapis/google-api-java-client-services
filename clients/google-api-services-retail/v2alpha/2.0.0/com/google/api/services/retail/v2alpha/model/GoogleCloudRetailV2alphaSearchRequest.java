@@ -162,12 +162,13 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   private java.lang.String orderBy;
 
   /**
-   * The categories associated with a category page. Must be set for category navigation queries to
-   * achieve good search quality. The format should be the same as UserEvent.page_categories; To
-   * represent full path of category, use '>' sign to separate different hierarchies. If '>' is part
-   * of the category name, replace it with other character(s). Category pages include special pages
-   * such as sales or promotions. For instance, a special sale page may have the category hierarchy:
-   * "pageCategories" : ["Sales > 2017 Black Friday Deals"].
+   * Optional. The categories associated with a category page. Must be set for category navigation
+   * queries to achieve good search quality. The format should be the same as
+   * UserEvent.page_categories; To represent the full path of category, use '>' sign, with one space
+   * on each side, to separate different hierarchies. If '>' is part of the category name, replace
+   * it with other character(s). Category pages include special pages such as sales or promotions.
+   * For instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales >
+   * 2017 Black Friday Deals"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,7 +205,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * Optional. An id corresponding to a place, such as a store id or region id. When specified, we
    * use the price from the local inventory with the matching product's LocalInventory.place_id for
-   * revenue optimization.
+   * revenue optimization. Note, the currency of the local inventory's price must match the currency
+   * of the product's price.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -629,12 +631,13 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   }
 
   /**
-   * The categories associated with a category page. Must be set for category navigation queries to
-   * achieve good search quality. The format should be the same as UserEvent.page_categories; To
-   * represent full path of category, use '>' sign to separate different hierarchies. If '>' is part
-   * of the category name, replace it with other character(s). Category pages include special pages
-   * such as sales or promotions. For instance, a special sale page may have the category hierarchy:
-   * "pageCategories" : ["Sales > 2017 Black Friday Deals"].
+   * Optional. The categories associated with a category page. Must be set for category navigation
+   * queries to achieve good search quality. The format should be the same as
+   * UserEvent.page_categories; To represent the full path of category, use '>' sign, with one space
+   * on each side, to separate different hierarchies. If '>' is part of the category name, replace
+   * it with other character(s). Category pages include special pages such as sales or promotions.
+   * For instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales >
+   * 2017 Black Friday Deals"].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPageCategories() {
@@ -642,12 +645,13 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   }
 
   /**
-   * The categories associated with a category page. Must be set for category navigation queries to
-   * achieve good search quality. The format should be the same as UserEvent.page_categories; To
-   * represent full path of category, use '>' sign to separate different hierarchies. If '>' is part
-   * of the category name, replace it with other character(s). Category pages include special pages
-   * such as sales or promotions. For instance, a special sale page may have the category hierarchy:
-   * "pageCategories" : ["Sales > 2017 Black Friday Deals"].
+   * Optional. The categories associated with a category page. Must be set for category navigation
+   * queries to achieve good search quality. The format should be the same as
+   * UserEvent.page_categories; To represent the full path of category, use '>' sign, with one space
+   * on each side, to separate different hierarchies. If '>' is part of the category name, replace
+   * it with other character(s). Category pages include special pages such as sales or promotions.
+   * For instance, a special sale page may have the category hierarchy: "pageCategories" : ["Sales >
+   * 2017 Black Friday Deals"].
    * @param pageCategories pageCategories or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequest setPageCategories(java.util.List<java.lang.String> pageCategories) {
@@ -723,7 +727,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * Optional. An id corresponding to a place, such as a store id or region id. When specified, we
    * use the price from the local inventory with the matching product's LocalInventory.place_id for
-   * revenue optimization.
+   * revenue optimization. Note, the currency of the local inventory's price must match the currency
+   * of the product's price.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaceId() {
@@ -733,7 +738,8 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * Optional. An id corresponding to a place, such as a store id or region id. When specified, we
    * use the price from the local inventory with the matching product's LocalInventory.place_id for
-   * revenue optimization.
+   * revenue optimization. Note, the currency of the local inventory's price must match the currency
+   * of the product's price.
    * @param placeId placeId or {@code null} for none
    */
   public GoogleCloudRetailV2alphaSearchRequest setPlaceId(java.lang.String placeId) {

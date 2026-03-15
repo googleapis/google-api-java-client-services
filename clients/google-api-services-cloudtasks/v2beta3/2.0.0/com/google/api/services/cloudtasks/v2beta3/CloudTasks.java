@@ -462,7 +462,10 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -486,7 +489,10 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -687,7 +693,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Creates or Updates a CMEK config. Updates the Customer Managed Encryption Key assotiated with the
+       * Creates or Updates a CMEK config. Updates the Customer Managed Encryption Key associated with the
        * Cloud Tasks location (Creates if the key does not already exist). All new tasks created in the
        * location will be encrypted at-rest with the KMS-key provided in the config.
        *
@@ -715,7 +721,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cmekConfig$");
 
         /**
-         * Creates or Updates a CMEK config. Updates the Customer Managed Encryption Key assotiated with
+         * Creates or Updates a CMEK config. Updates the Customer Managed Encryption Key associated with
          * the Cloud Tasks location (Creates if the key does not already exist). All new tasks created in
          * the location will be encrypted at-rest with the KMS-key provided in the config.
          *

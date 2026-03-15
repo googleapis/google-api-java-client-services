@@ -103,7 +103,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -154,7 +154,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
   public class HashList {
 
     /**
-     * Get the latest contents of a hash list. A hash list may either by a threat list or a non-threat
+     * Gets the latest contents of a hash list. A hash list may either by a threat list or a non-threat
      * list such as the Global Cache. This is a standard Get method as defined by
      * https://google.aip.dev/131 and the HTTP method is also GET.
      *
@@ -178,8 +178,8 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v5/hashList/{name}";
 
       /**
-       * Get the latest contents of a hash list. A hash list may either by a threat list or a non-threat
-       * list such as the Global Cache. This is a standard Get method as defined by
+       * Gets the latest contents of a hash list. A hash list may either by a threat list or a non-
+       * threat list such as the Global Cache. This is a standard Get method as defined by
        * https://google.aip.dev/131 and the HTTP method is also GET.
        *
        * Create a request for the method "hashList.get".
@@ -399,7 +399,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
   public class HashLists {
 
     /**
-     * Get multiple hash lists at once. It is very common for a client to need to get multiple hash
+     * Gets multiple hash lists at once. It is very common for a client to need to get multiple hash
      * lists. Using this method is preferred over using the regular Get method multiple times. This is a
      * standard batch Get method as defined by https://google.aip.dev/231 and the HTTP method is also
      * GET.
@@ -422,7 +422,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v5/hashLists:batchGet";
 
       /**
-       * Get multiple hash lists at once. It is very common for a client to need to get multiple hash
+       * Gets multiple hash lists at once. It is very common for a client to need to get multiple hash
        * lists. Using this method is preferred over using the regular Get method multiple times. This is
        * a standard batch Get method as defined by https://google.aip.dev/231 and the HTTP method is
        * also GET.
@@ -630,7 +630,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * List hash lists. In the V5 API, Google will never remove a hash list that has ever been returned
+     * Lists hash lists. In the V5 API, Google will never remove a hash list that has ever been returned
      * by this method. This enables clients to skip using this method and simply hard-code all hash
      * lists they need. This is a standard List method as defined by https://google.aip.dev/132 and the
      * HTTP method is GET.
@@ -653,7 +653,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v5/hashLists";
 
       /**
-       * List hash lists. In the V5 API, Google will never remove a hash list that has ever been
+       * Lists hash lists. In the V5 API, Google will never remove a hash list that has ever been
        * returned by this method. This enables clients to skip using this method and simply hard-code
        * all hash lists they need. This is a standard List method as defined by
        * https://google.aip.dev/132 and the HTTP method is GET.
@@ -814,7 +814,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
   public class Hashes {
 
     /**
-     * Search for full hashes matching the specified prefixes. This is a custom method as defined by
+     * Searches for full hashes matching the specified prefixes. This is a custom method as defined by
      * https://google.aip.dev/136 (the custom method refers to this method having a custom name within
      * Google's general API development nomenclature; it does not refer to using a custom HTTP method).
      *
@@ -836,7 +836,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v5/hashes:search";
 
       /**
-       * Search for full hashes matching the specified prefixes. This is a custom method as defined by
+       * Searches for full hashes matching the specified prefixes. This is a custom method as defined by
        * https://google.aip.dev/136 (the custom method refers to this method having a custom name within
        * Google's general API development nomenclature; it does not refer to using a custom HTTP
        * method).
@@ -958,6 +958,156 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Urls collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Safebrowsing safebrowsing = new Safebrowsing(...);}
+   *   {@code Safebrowsing.Urls.List request = safebrowsing.urls().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Urls urls() {
+    return new Urls();
+  }
+
+  /**
+   * The "urls" collection of methods.
+   */
+  public class Urls {
+
+    /**
+     * Searches for URLs matching known threats. Each URL and it's host-suffix and path-prefix
+     * expressions (up to a limited depth) are checked. This means that the response may contain URLs
+     * that were not included in the request, but are expressions of the requested URLs.
+     *
+     * Create a request for the method "urls.search".
+     *
+     * This request holds the parameters needed by the safebrowsing server.  After setting any optional
+     * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public Search search() throws java.io.IOException {
+      Search result = new Search();
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends SafebrowsingRequest<com.google.api.services.safebrowsing.v5.model.GoogleSecuritySafebrowsingV5SearchUrlsResponse> {
+
+      private static final String REST_PATH = "v5/urls:search";
+
+      /**
+       * Searches for URLs matching known threats. Each URL and it's host-suffix and path-prefix
+       * expressions (up to a limited depth) are checked. This means that the response may contain URLs
+       * that were not included in the request, but are expressions of the requested URLs.
+       *
+       * Create a request for the method "urls.search".
+       *
+       * This request holds the parameters needed by the the safebrowsing server.  After setting any
+       * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected Search() {
+        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v5.model.GoogleSecuritySafebrowsingV5SearchUrlsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The URLs to be looked up. Clients MUST NOT send more than 50 URLs. */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> urls;
+
+      /** Required. The URLs to be looked up. Clients MUST NOT send more than 50 URLs.
+       */
+      public java.util.List<java.lang.String> getUrls() {
+        return urls;
+      }
+
+      /** Required. The URLs to be looked up. Clients MUST NOT send more than 50 URLs. */
+      public Search setUrls(java.util.List<java.lang.String> urls) {
+        this.urls = urls;
+        return this;
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link Safebrowsing}.
    *
    * <p>
@@ -989,8 +1139,7 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

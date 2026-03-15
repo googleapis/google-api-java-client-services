@@ -39,16 +39,21 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   /**
    * A condition that determines whether this rule is used to evaluate the policy. When set, the
    * google.type.Expr.expression field must contain 1 to 10 subexpressions, joined by the `||` or
-   * `&&` operators. Each subexpression must use the `resource.matchTag()` or
-   * `resource.matchTagId()` Common Expression Language (CEL) function. The `resource.matchTag()`
-   * function takes the following arguments: * `key_name`: the namespaced name of the tag key, with
-   * the organization ID and a slash (`/`) as a prefix; for example, `123456789012/environment` *
-   * `value_name`: the short name of the tag value For example:
+   * `&&` operators. Each subexpression must use the `resource.matchTag()`, `resource.matchTagId()`,
+   * `resource.hasTagKey()`, or `resource.hasTagKeyId()` Common Expression Language (CEL) function.
+   * The `resource.matchTag()` function takes the following arguments: * `key_name`: the namespaced
+   * name of the tag key, with the organization ID and a slash (`/`) as a prefix; for example,
+   * `123456789012/environment` * `value_name`: the short name of the tag value For example:
    * `resource.matchTag('123456789012/environment, 'prod')` The `resource.matchTagId()` function
    * takes the following arguments: * `key_id`: the permanent ID of the tag key; for example,
    * `tagKeys/123456789012` * `value_id`: the permanent ID of the tag value; for example,
    * `tagValues/567890123456` For example: `resource.matchTagId('tagKeys/123456789012',
-   * 'tagValues/567890123456')`
+   * 'tagValues/567890123456')` The `resource.hasTagKey()` function takes the following argument: *
+   * `key_name`: the namespaced name of the tag key, with the organization ID and a slash (`/`) as a
+   * prefix; for example, `123456789012/environment` For example:
+   * `resource.hasTagKey('123456789012/environment')` The `resource.hasTagKeyId()` function takes
+   * the following arguments: * `key_id`: the permanent ID of the tag key; for example,
+   * `tagKeys/123456789012` For example: `resource.hasTagKeyId('tagKeys/123456789012')`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,16 +118,21 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   /**
    * A condition that determines whether this rule is used to evaluate the policy. When set, the
    * google.type.Expr.expression field must contain 1 to 10 subexpressions, joined by the `||` or
-   * `&&` operators. Each subexpression must use the `resource.matchTag()` or
-   * `resource.matchTagId()` Common Expression Language (CEL) function. The `resource.matchTag()`
-   * function takes the following arguments: * `key_name`: the namespaced name of the tag key, with
-   * the organization ID and a slash (`/`) as a prefix; for example, `123456789012/environment` *
-   * `value_name`: the short name of the tag value For example:
+   * `&&` operators. Each subexpression must use the `resource.matchTag()`, `resource.matchTagId()`,
+   * `resource.hasTagKey()`, or `resource.hasTagKeyId()` Common Expression Language (CEL) function.
+   * The `resource.matchTag()` function takes the following arguments: * `key_name`: the namespaced
+   * name of the tag key, with the organization ID and a slash (`/`) as a prefix; for example,
+   * `123456789012/environment` * `value_name`: the short name of the tag value For example:
    * `resource.matchTag('123456789012/environment, 'prod')` The `resource.matchTagId()` function
    * takes the following arguments: * `key_id`: the permanent ID of the tag key; for example,
    * `tagKeys/123456789012` * `value_id`: the permanent ID of the tag value; for example,
    * `tagValues/567890123456` For example: `resource.matchTagId('tagKeys/123456789012',
-   * 'tagValues/567890123456')`
+   * 'tagValues/567890123456')` The `resource.hasTagKey()` function takes the following argument: *
+   * `key_name`: the namespaced name of the tag key, with the organization ID and a slash (`/`) as a
+   * prefix; for example, `123456789012/environment` For example:
+   * `resource.hasTagKey('123456789012/environment')` The `resource.hasTagKeyId()` function takes
+   * the following arguments: * `key_id`: the permanent ID of the tag key; for example,
+   * `tagKeys/123456789012` For example: `resource.hasTagKeyId('tagKeys/123456789012')`
    * @return value or {@code null} for none
    */
   public Expr getCondition() {
@@ -132,16 +142,21 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   /**
    * A condition that determines whether this rule is used to evaluate the policy. When set, the
    * google.type.Expr.expression field must contain 1 to 10 subexpressions, joined by the `||` or
-   * `&&` operators. Each subexpression must use the `resource.matchTag()` or
-   * `resource.matchTagId()` Common Expression Language (CEL) function. The `resource.matchTag()`
-   * function takes the following arguments: * `key_name`: the namespaced name of the tag key, with
-   * the organization ID and a slash (`/`) as a prefix; for example, `123456789012/environment` *
-   * `value_name`: the short name of the tag value For example:
+   * `&&` operators. Each subexpression must use the `resource.matchTag()`, `resource.matchTagId()`,
+   * `resource.hasTagKey()`, or `resource.hasTagKeyId()` Common Expression Language (CEL) function.
+   * The `resource.matchTag()` function takes the following arguments: * `key_name`: the namespaced
+   * name of the tag key, with the organization ID and a slash (`/`) as a prefix; for example,
+   * `123456789012/environment` * `value_name`: the short name of the tag value For example:
    * `resource.matchTag('123456789012/environment, 'prod')` The `resource.matchTagId()` function
    * takes the following arguments: * `key_id`: the permanent ID of the tag key; for example,
    * `tagKeys/123456789012` * `value_id`: the permanent ID of the tag value; for example,
    * `tagValues/567890123456` For example: `resource.matchTagId('tagKeys/123456789012',
-   * 'tagValues/567890123456')`
+   * 'tagValues/567890123456')` The `resource.hasTagKey()` function takes the following argument: *
+   * `key_name`: the namespaced name of the tag key, with the organization ID and a slash (`/`) as a
+   * prefix; for example, `123456789012/environment` For example:
+   * `resource.hasTagKey('123456789012/environment')` The `resource.hasTagKeyId()` function takes
+   * the following arguments: * `key_id`: the permanent ID of the tag key; for example,
+   * `tagKeys/123456789012` For example: `resource.hasTagKeyId('tagKeys/123456789012')`
    * @param condition condition or {@code null} for none
    */
   public GoogleCloudSecuritypostureV1PolicyRule setCondition(Expr condition) {

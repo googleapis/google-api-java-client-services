@@ -17,13 +17,11 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * A subscription serves as a central billing entity between an external partner and Google. The
- * underlying Google services rely on the subscription state to grant or revoke the user's service
- * entitlement. It's important to note that the subscription state may not always perfectly align
- * with the user's service entitlement. For example, some Google services may continue providing
- * access to the user until the current billing cycle ends, even if the subscription has been
- * immediately canceled. However, other services may not do the same. To fully understand the
- * specific details, please consult the relevant contract or product policy.
+ * Acts as a central billing entity between an external partner and Google. Google services use the
+ * subscription state to grant or revoke the user's service entitlement. Note: The subscription
+ * state might not perfectly align with the user's service entitlement. Some services might continue
+ * providing access until the current cycle ends, even if the subscription is immediately canceled.
+ * Consult the relevant contract or product policy for specific details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed

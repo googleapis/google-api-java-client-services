@@ -17,7 +17,7 @@
 package com.google.api.services.paymentsresellersubscription.v1.model;
 
 /**
- * Details for a subscriptiin line item with finite billing cycles.
+ * Details for a subscription line item with finite billing cycles.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed
@@ -31,7 +31,7 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class FiniteBillingCycleDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The number of a subscription line item billing cycles after which billing will stop
+   * The number of a subscription line item billing cycles after which billing will stop
    * automatically.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class FiniteBillingCycleDetails extends com.google.api.client.json.
   private java.lang.Long billingCycleCountLimit;
 
   /**
-   * Required. The number of a subscription line item billing cycles after which billing will stop
+   * The number of a subscription line item billing cycles after which billing will stop
    * automatically.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class FiniteBillingCycleDetails extends com.google.api.client.json.
   }
 
   /**
-   * Required. The number of a subscription line item billing cycles after which billing will stop
+   * The number of a subscription line item billing cycles after which billing will stop
    * automatically.
    * @param billingCycleCountLimit billingCycleCountLimit or {@code null} for none
    */

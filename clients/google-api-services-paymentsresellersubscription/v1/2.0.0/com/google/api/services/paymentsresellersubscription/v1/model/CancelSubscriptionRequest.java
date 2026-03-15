@@ -33,7 +33,7 @@ public final class CancelSubscriptionRequest extends com.google.api.client.json.
   /**
    * Optional. If true, Google will cancel the subscription immediately, and may or may not (based
    * on the contract) issue a prorated refund for the remainder of the billing cycle. Otherwise,
-   * Google defers the cancelation at renewal_time, and will not issue a refund. - YouTube
+   * Google defers the cancellation at renewal_time, and will not issue a refund. - YouTube
    * subscriptions must use this option currently. However, the user will still have access to the
    * subscription until the end of the billing cycle.
    * The value may be {@code null}.
@@ -51,7 +51,7 @@ public final class CancelSubscriptionRequest extends com.google.api.client.json.
   /**
    * Optional. If true, Google will cancel the subscription immediately, and may or may not (based
    * on the contract) issue a prorated refund for the remainder of the billing cycle. Otherwise,
-   * Google defers the cancelation at renewal_time, and will not issue a refund. - YouTube
+   * Google defers the cancellation at renewal_time, and will not issue a refund. - YouTube
    * subscriptions must use this option currently. However, the user will still have access to the
    * subscription until the end of the billing cycle.
    * @return value or {@code null} for none
@@ -63,7 +63,7 @@ public final class CancelSubscriptionRequest extends com.google.api.client.json.
   /**
    * Optional. If true, Google will cancel the subscription immediately, and may or may not (based
    * on the contract) issue a prorated refund for the remainder of the billing cycle. Otherwise,
-   * Google defers the cancelation at renewal_time, and will not issue a refund. - YouTube
+   * Google defers the cancellation at renewal_time, and will not issue a refund. - YouTube
    * subscriptions must use this option currently. However, the user will still have access to the
    * subscription until the end of the billing cycle.
    * @param cancelImmediately cancelImmediately or {@code null} for none

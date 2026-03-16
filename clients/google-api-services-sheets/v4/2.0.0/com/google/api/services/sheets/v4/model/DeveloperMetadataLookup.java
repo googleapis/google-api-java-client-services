@@ -22,7 +22,7 @@ package com.google.api.services.sheets.v4.model;
  * a metadata key is specified, this considers all developer metadata with that key. If a key,
  * visibility, and location type are all specified, this considers all developer metadata with that
  * key and visibility that are associated with a location of that type. In general, this selects all
- * DeveloperMetadata that matches the intersection of all the specified fields; any field or
+ * DeveloperMetadata that match the intersection of all the specified fields; any field or
  * combination of fields may be specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -52,7 +52,7 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
    * developer metadata associated on rows. If the field is left unspecified, all location types are
    * considered. This field cannot be specified as SPREADSHEET when the locationMatchingStrategy is
    * specified as INTERSECTING or when the metadataLocation is specified as a non-spreadsheet
-   * location: spreadsheet metadata cannot intersect any other developer metadata location. This
+   * location. Spreadsheet metadata cannot intersect any other developer metadata location. This
    * field also must be left unspecified when the locationMatchingStrategy is specified as EXACT.
    * The value may be {@code null}.
    */
@@ -132,7 +132,7 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
    * developer metadata associated on rows. If the field is left unspecified, all location types are
    * considered. This field cannot be specified as SPREADSHEET when the locationMatchingStrategy is
    * specified as INTERSECTING or when the metadataLocation is specified as a non-spreadsheet
-   * location: spreadsheet metadata cannot intersect any other developer metadata location. This
+   * location. Spreadsheet metadata cannot intersect any other developer metadata location. This
    * field also must be left unspecified when the locationMatchingStrategy is specified as EXACT.
    * @return value or {@code null} for none
    */
@@ -146,7 +146,7 @@ public final class DeveloperMetadataLookup extends com.google.api.client.json.Ge
    * developer metadata associated on rows. If the field is left unspecified, all location types are
    * considered. This field cannot be specified as SPREADSHEET when the locationMatchingStrategy is
    * specified as INTERSECTING or when the metadataLocation is specified as a non-spreadsheet
-   * location: spreadsheet metadata cannot intersect any other developer metadata location. This
+   * location. Spreadsheet metadata cannot intersect any other developer metadata location. This
    * field also must be left unspecified when the locationMatchingStrategy is specified as EXACT.
    * @param locationType locationType or {@code null} for none
    */

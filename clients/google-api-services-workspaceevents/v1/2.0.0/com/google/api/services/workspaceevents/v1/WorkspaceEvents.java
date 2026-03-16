@@ -103,7 +103,7 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -1827,6 +1827,28 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
         return this;
       }
 
+      /**
+       * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+       * release.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String tenant;
+
+      /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+       */
+      public java.lang.String getTenant() {
+        return tenant;
+      }
+
+      /**
+       * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+       * release.
+       */
+      public Get setTenant(java.lang.String tenant) {
+        this.tenant = tenant;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -1967,6 +1989,28 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
               "^tasks/[^/]+$");
         }
         this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+       * release.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String tenant;
+
+      /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+       */
+      public java.lang.String getTenant() {
+        return tenant;
+      }
+
+      /**
+       * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+       * release.
+       */
+      public Subscribe setTenant(java.lang.String tenant) {
+        this.tenant = tenant;
         return this;
       }
 
@@ -2138,6 +2182,28 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
           return this;
         }
 
+        /**
+         * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+         * release.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String tenant;
+
+        /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+         */
+        public java.lang.String getTenant() {
+          return tenant;
+        }
+
+        /**
+         * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+         * release.
+         */
+        public Create setTenant(java.lang.String tenant) {
+          this.tenant = tenant;
+          return this;
+        }
+
         @Override
         public Create set(String parameterName, Object value) {
           return (Create) super.set(parameterName, value);
@@ -2273,6 +2339,28 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
                 "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+         * release.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String tenant;
+
+        /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+         */
+        public java.lang.String getTenant() {
+          return tenant;
+        }
+
+        /**
+         * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+         * release.
+         */
+        public Delete setTenant(java.lang.String tenant) {
+          this.tenant = tenant;
           return this;
         }
 
@@ -2420,6 +2508,28 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
                 "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+         * release.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String tenant;
+
+        /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+         */
+        public java.lang.String getTenant() {
+          return tenant;
+        }
+
+        /**
+         * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+         * release.
+         */
+        public Get setTenant(java.lang.String tenant) {
+          this.tenant = tenant;
           return this;
         }
 
@@ -2610,6 +2720,28 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
           return this;
         }
 
+        /**
+         * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+         * release.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String tenant;
+
+        /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+         */
+        public java.lang.String getTenant() {
+          return tenant;
+        }
+
+        /**
+         * Optional tenant, provided as a path parameter. Experimental, might still change for 1.0
+         * release.
+         */
+        public List setTenant(java.lang.String tenant) {
+          this.tenant = tenant;
+          return this;
+        }
+
         @Override
         public List set(String parameterName, Object value) {
           return (List) super.set(parameterName, value);
@@ -2651,8 +2783,7 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

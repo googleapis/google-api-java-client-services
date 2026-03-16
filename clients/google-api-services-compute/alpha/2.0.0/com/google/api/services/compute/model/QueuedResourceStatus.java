@@ -30,31 +30,31 @@ package com.google.api.services.compute.model;
 public final class QueuedResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional status detail for the FAILED state.
+   * Output only. Additional status detail for the FAILED state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QueuedResourceStatusFailedData failedData;
 
   /**
-   * [Output only] Fully qualified URL of the provisioning GCE operation to track the provisioning
-   * along with provisioning errors. The referenced operation may not exist after having been
-   * deleted or expired.
+   * Output only. [Output only] Fully qualified URL of the provisioning GCE operation to track the
+   * provisioning along with provisioning errors. The referenced operation may not exist after
+   * having been deleted or expired.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> provisioningOperations;
 
   /**
-   * Constraints for the time when the resource(s) start provisioning. Always exposed as absolute
-   * times.
+   * Output only. Constraints for the time when the resource(s) start provisioning. Always exposed
+   * as absolute times.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QueuingPolicy queuingPolicy;
 
   /**
-   * Additional status detail for the FAILED state.
+   * Output only. Additional status detail for the FAILED state.
    * @return value or {@code null} for none
    */
   public QueuedResourceStatusFailedData getFailedData() {
@@ -62,7 +62,7 @@ public final class QueuedResourceStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * Additional status detail for the FAILED state.
+   * Output only. Additional status detail for the FAILED state.
    * @param failedData failedData or {@code null} for none
    */
   public QueuedResourceStatus setFailedData(QueuedResourceStatusFailedData failedData) {
@@ -71,9 +71,9 @@ public final class QueuedResourceStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output only] Fully qualified URL of the provisioning GCE operation to track the provisioning
-   * along with provisioning errors. The referenced operation may not exist after having been
-   * deleted or expired.
+   * Output only. [Output only] Fully qualified URL of the provisioning GCE operation to track the
+   * provisioning along with provisioning errors. The referenced operation may not exist after
+   * having been deleted or expired.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProvisioningOperations() {
@@ -81,9 +81,9 @@ public final class QueuedResourceStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output only] Fully qualified URL of the provisioning GCE operation to track the provisioning
-   * along with provisioning errors. The referenced operation may not exist after having been
-   * deleted or expired.
+   * Output only. [Output only] Fully qualified URL of the provisioning GCE operation to track the
+   * provisioning along with provisioning errors. The referenced operation may not exist after
+   * having been deleted or expired.
    * @param provisioningOperations provisioningOperations or {@code null} for none
    */
   public QueuedResourceStatus setProvisioningOperations(java.util.List<java.lang.String> provisioningOperations) {
@@ -92,8 +92,8 @@ public final class QueuedResourceStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * Constraints for the time when the resource(s) start provisioning. Always exposed as absolute
-   * times.
+   * Output only. Constraints for the time when the resource(s) start provisioning. Always exposed
+   * as absolute times.
    * @return value or {@code null} for none
    */
   public QueuingPolicy getQueuingPolicy() {
@@ -101,8 +101,8 @@ public final class QueuedResourceStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * Constraints for the time when the resource(s) start provisioning. Always exposed as absolute
-   * times.
+   * Output only. Constraints for the time when the resource(s) start provisioning. Always exposed
+   * as absolute times.
    * @param queuingPolicy queuingPolicy or {@code null} for none
    */
   public QueuedResourceStatus setQueuingPolicy(QueuingPolicy queuingPolicy) {

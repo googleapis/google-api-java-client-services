@@ -34,7 +34,7 @@ package com.google.api.services.compute.model;
 public final class TargetTcpProxy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,11 +55,19 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target TCP proxies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target TCP
+   * proxies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Specifies the type of load balancing scheme used by this target proxy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loadBalancingScheme;
 
   /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
@@ -97,8 +105,8 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   private java.lang.String proxyHeader;
 
   /**
-   * [Output Only] URL of the region where the regional TCP proxy resides. This field is not
-   * applicable to global TCP proxy.
+   * Output only. [Output Only] URL of the region where the regional TCP proxy resides. This field
+   * is not applicable to global TCP proxy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +127,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   private java.lang.String service;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -127,7 +135,7 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public TargetTcpProxy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -170,7 +178,8 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target TCP proxies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target TCP
+   * proxies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -178,11 +187,29 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target TCP proxies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#targetTcpProxy for target TCP
+   * proxies.
    * @param kind kind or {@code null} for none
    */
   public TargetTcpProxy setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Specifies the type of load balancing scheme used by this target proxy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoadBalancingScheme() {
+    return loadBalancingScheme;
+  }
+
+  /**
+   * Specifies the type of load balancing scheme used by this target proxy.
+   * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
+   */
+  public TargetTcpProxy setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
+    this.loadBalancingScheme = loadBalancingScheme;
     return this;
   }
 
@@ -266,8 +293,8 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] URL of the region where the regional TCP proxy resides. This field is not
-   * applicable to global TCP proxy.
+   * Output only. [Output Only] URL of the region where the regional TCP proxy resides. This field
+   * is not applicable to global TCP proxy.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -275,8 +302,8 @@ public final class TargetTcpProxy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] URL of the region where the regional TCP proxy resides. This field is not
-   * applicable to global TCP proxy.
+   * Output only. [Output Only] URL of the region where the regional TCP proxy resides. This field
+   * is not applicable to global TCP proxy.
    * @param region region or {@code null} for none
    */
   public TargetTcpProxy setRegion(java.lang.String region) {

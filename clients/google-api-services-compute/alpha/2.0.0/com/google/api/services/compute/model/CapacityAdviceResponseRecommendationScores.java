@@ -30,6 +30,22 @@ package com.google.api.services.compute.model;
 public final class CapacityAdviceResponseRecommendationScores extends com.google.api.client.json.GenericJson {
 
   /**
+   * The estimated run time of the majority of Spot VMs in the request before preemption. The
+   * estimate is best-effort only. It is based on history data and current conditions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String estimatedUptime;
+
+  /**
+   * Output only. The likely maximum time that you will have to wait until Compute Engine provisions
+   * your instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String estimatedWaitDuration;
+
+  /**
    * The obtainability score indicates the likelihood of successfully obtaining (provisioning) the
    * requested number of VMs. The score range is 0.0 through 1.0. Higher is better.
    * The value may be {@code null}.
@@ -45,6 +61,44 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.Double uptimeScore;
+
+  /**
+   * The estimated run time of the majority of Spot VMs in the request before preemption. The
+   * estimate is best-effort only. It is based on history data and current conditions.
+   * @return value or {@code null} for none
+   */
+  public String getEstimatedUptime() {
+    return estimatedUptime;
+  }
+
+  /**
+   * The estimated run time of the majority of Spot VMs in the request before preemption. The
+   * estimate is best-effort only. It is based on history data and current conditions.
+   * @param estimatedUptime estimatedUptime or {@code null} for none
+   */
+  public CapacityAdviceResponseRecommendationScores setEstimatedUptime(String estimatedUptime) {
+    this.estimatedUptime = estimatedUptime;
+    return this;
+  }
+
+  /**
+   * Output only. The likely maximum time that you will have to wait until Compute Engine provisions
+   * your instances.
+   * @return value or {@code null} for none
+   */
+  public String getEstimatedWaitDuration() {
+    return estimatedWaitDuration;
+  }
+
+  /**
+   * Output only. The likely maximum time that you will have to wait until Compute Engine provisions
+   * your instances.
+   * @param estimatedWaitDuration estimatedWaitDuration or {@code null} for none
+   */
+  public CapacityAdviceResponseRecommendationScores setEstimatedWaitDuration(String estimatedWaitDuration) {
+    this.estimatedWaitDuration = estimatedWaitDuration;
+    return this;
+  }
 
   /**
    * The obtainability score indicates the likelihood of successfully obtaining (provisioning) the

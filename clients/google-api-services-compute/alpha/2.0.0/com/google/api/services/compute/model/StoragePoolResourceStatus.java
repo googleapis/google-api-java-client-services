@@ -51,35 +51,35 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   private java.lang.Long diskCount;
 
   /**
-   * [Output Only] Maximum allowed read IOPS for this Exapool.
+   * Output only. [Output Only] Maximum allowed read IOPS for this Exapool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long exapoolMaxReadIops;
 
   /**
-   * [Output Only] Maximum allowed read throughput in MiB/s for this Exapool.
+   * Output only. [Output Only] Maximum allowed read throughput in MiB/s for this Exapool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long exapoolMaxReadThroughput;
 
   /**
-   * [Output Only] Maximum allowed write IOPS for this Exapool.
+   * Output only. [Output Only] Maximum allowed write IOPS for this Exapool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long exapoolMaxWriteIops;
 
   /**
-   * [Output Only] Maximum allowed write throughput in MiB/s for this Exapool.
+   * Output only. [Output Only] Maximum allowed write throughput in MiB/s for this Exapool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long exapoolMaxWriteThroughput;
 
   /**
-   * [Output Only] Timestamp of the last successful resize inRFC3339 text format.
+   * Output only. [Output Only] Timestamp of the last successful resize inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,7 +234,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed read IOPS for this Exapool.
+   * Output only. [Output Only] Maximum allowed read IOPS for this Exapool.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExapoolMaxReadIops() {
@@ -242,7 +242,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed read IOPS for this Exapool.
+   * Output only. [Output Only] Maximum allowed read IOPS for this Exapool.
    * @param exapoolMaxReadIops exapoolMaxReadIops or {@code null} for none
    */
   public StoragePoolResourceStatus setExapoolMaxReadIops(java.lang.Long exapoolMaxReadIops) {
@@ -251,7 +251,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed read throughput in MiB/s for this Exapool.
+   * Output only. [Output Only] Maximum allowed read throughput in MiB/s for this Exapool.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExapoolMaxReadThroughput() {
@@ -259,7 +259,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed read throughput in MiB/s for this Exapool.
+   * Output only. [Output Only] Maximum allowed read throughput in MiB/s for this Exapool.
    * @param exapoolMaxReadThroughput exapoolMaxReadThroughput or {@code null} for none
    */
   public StoragePoolResourceStatus setExapoolMaxReadThroughput(java.lang.Long exapoolMaxReadThroughput) {
@@ -268,7 +268,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed write IOPS for this Exapool.
+   * Output only. [Output Only] Maximum allowed write IOPS for this Exapool.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExapoolMaxWriteIops() {
@@ -276,7 +276,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed write IOPS for this Exapool.
+   * Output only. [Output Only] Maximum allowed write IOPS for this Exapool.
    * @param exapoolMaxWriteIops exapoolMaxWriteIops or {@code null} for none
    */
   public StoragePoolResourceStatus setExapoolMaxWriteIops(java.lang.Long exapoolMaxWriteIops) {
@@ -285,7 +285,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed write throughput in MiB/s for this Exapool.
+   * Output only. [Output Only] Maximum allowed write throughput in MiB/s for this Exapool.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExapoolMaxWriteThroughput() {
@@ -293,7 +293,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Maximum allowed write throughput in MiB/s for this Exapool.
+   * Output only. [Output Only] Maximum allowed write throughput in MiB/s for this Exapool.
    * @param exapoolMaxWriteThroughput exapoolMaxWriteThroughput or {@code null} for none
    */
   public StoragePoolResourceStatus setExapoolMaxWriteThroughput(java.lang.Long exapoolMaxWriteThroughput) {
@@ -302,7 +302,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Timestamp of the last successful resize inRFC3339 text format.
+   * Output only. [Output Only] Timestamp of the last successful resize inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastResizeTimestamp() {
@@ -310,7 +310,7 @@ public final class StoragePoolResourceStatus extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Timestamp of the last successful resize inRFC3339 text format.
+   * Output only. [Output Only] Timestamp of the last successful resize inRFC3339 text format.
    * @param lastResizeTimestamp lastResizeTimestamp or {@code null} for none
    */
   public StoragePoolResourceStatus setLastResizeTimestamp(java.lang.String lastResizeTimestamp) {

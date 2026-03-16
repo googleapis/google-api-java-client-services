@@ -30,16 +30,16 @@ package com.google.api.services.compute.model;
 public final class SnapshotResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output only] Scheduled deletion time of the snapshot. The snapshot will be deleted by the at
-   * any point within one hour after the deletion time.
+   * Output only. [Output only] Scheduled deletion time of the snapshot. The snapshot will be
+   * deleted by the at any point within one hour after the deletion time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String scheduledDeletionTime;
 
   /**
-   * [Output only] Scheduled deletion time of the snapshot. The snapshot will be deleted by the at
-   * any point within one hour after the deletion time.
+   * Output only. [Output only] Scheduled deletion time of the snapshot. The snapshot will be
+   * deleted by the at any point within one hour after the deletion time.
    * @return value or {@code null} for none
    */
   public String getScheduledDeletionTime() {
@@ -47,8 +47,8 @@ public final class SnapshotResourceStatus extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output only] Scheduled deletion time of the snapshot. The snapshot will be deleted by the at
-   * any point within one hour after the deletion time.
+   * Output only. [Output only] Scheduled deletion time of the snapshot. The snapshot will be
+   * deleted by the at any point within one hour after the deletion time.
    * @param scheduledDeletionTime scheduledDeletionTime or {@code null} for none
    */
   public SnapshotResourceStatus setScheduledDeletionTime(String scheduledDeletionTime) {

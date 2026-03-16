@@ -30,11 +30,35 @@ package com.google.api.services.compute.model;
 public final class CapacityAdviceRequestInstancePropertiesScheduling extends com.google.api.client.json.GenericJson {
 
   /**
+   * The maximum time that instances can run before Compute Engine terminates them.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maxRunDuration;
+
+  /**
    * Specifies the provisioning model of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String provisioningModel;
+
+  /**
+   * The maximum time that instances can run before Compute Engine terminates them.
+   * @return value or {@code null} for none
+   */
+  public String getMaxRunDuration() {
+    return maxRunDuration;
+  }
+
+  /**
+   * The maximum time that instances can run before Compute Engine terminates them.
+   * @param maxRunDuration maxRunDuration or {@code null} for none
+   */
+  public CapacityAdviceRequestInstancePropertiesScheduling setMaxRunDuration(String maxRunDuration) {
+    this.maxRunDuration = maxRunDuration;
+    return this;
+  }
 
   /**
    * Specifies the provisioning model of the instance.

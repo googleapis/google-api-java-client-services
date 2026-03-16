@@ -33,7 +33,7 @@ package com.google.api.services.compute.model;
 public final class InstantSnapshotGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,15 +48,16 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   private java.lang.String description;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#instantSnapshotGroup for InstantSnapshotGroup
-   * resources.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#instantSnapshotGroup for
+   * InstantSnapshotGroup resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +75,9 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * [Output Only] URL of the region where the instant snapshot group resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the instant snapshot group resides. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a field in the
+   * request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,14 +90,14 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   private InstantSnapshotGroupResourceStatus resourceStatus;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,22 +110,23 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   private java.lang.String sourceConsistencyGroup;
 
   /**
-   * [Output Only]
+   * Output only. [Output Only]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * [Output Only] URL of the zone where the instant snapshot group resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the zone where the instant snapshot group resides. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a field in the
+   * request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -131,7 +134,7 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InstantSnapshotGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -159,7 +162,8 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -167,7 +171,8 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public InstantSnapshotGroup setId(java.math.BigInteger id) {
@@ -176,8 +181,8 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#instantSnapshotGroup for InstantSnapshotGroup
-   * resources.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#instantSnapshotGroup for
+   * InstantSnapshotGroup resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -185,8 +190,8 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#instantSnapshotGroup for InstantSnapshotGroup
-   * resources.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#instantSnapshotGroup for
+   * InstantSnapshotGroup resources.
    * @param kind kind or {@code null} for none
    */
   public InstantSnapshotGroup setKind(java.lang.String kind) {
@@ -220,8 +225,9 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] URL of the region where the instant snapshot group resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the instant snapshot group resides. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a field in the
+   * request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -229,8 +235,9 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] URL of the region where the instant snapshot group resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the instant snapshot group resides. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a field in the
+   * request body.
    * @param region region or {@code null} for none
    */
   public InstantSnapshotGroup setRegion(java.lang.String region) {
@@ -254,7 +261,7 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -262,7 +269,7 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InstantSnapshotGroup setSelfLink(java.lang.String selfLink) {
@@ -271,7 +278,7 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -279,7 +286,7 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public InstantSnapshotGroup setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -303,7 +310,7 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only]
+   * Output only. [Output Only]
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -311,7 +318,7 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only]
+   * Output only. [Output Only]
    * @param status status or {@code null} for none
    */
   public InstantSnapshotGroup setStatus(java.lang.String status) {
@@ -320,8 +327,9 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] URL of the zone where the instant snapshot group resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the zone where the instant snapshot group resides. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a field in the
+   * request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -329,8 +337,9 @@ public final class InstantSnapshotGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] URL of the zone where the instant snapshot group resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the zone where the instant snapshot group resides. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a field in the
+   * request body.
    * @param zone zone or {@code null} for none
    */
   public InstantSnapshotGroup setZone(java.lang.String zone) {

@@ -32,7 +32,7 @@ package com.google.api.services.compute.model;
 public final class RecoverableSnapshot extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,40 +46,41 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   private java.lang.String description;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#recoverableSnapshot for RecoverableSnapshot
-   * resources.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#recoverableSnapshot for
+   * RecoverableSnapshot resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Identifier. Name of the recoverable snapshot generated on the deletion of the snapshot. The
-   * name will be 1-63 characters long, and comply withRFC1035. Specifically, the name will be 1-63
-   * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
-   * first character will be a lowercase letter, and all following characters can be a dash,
-   * lowercase letter, or digit, except the last character, which cannot be a dash.
+   * Output only. Identifier. Name of the recoverable snapshot generated on the deletion of the
+   * snapshot. The name will be 1-63 characters long, and comply withRFC1035. Specifically, the name
+   * will be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
+   * which means the first character will be a lowercase letter, and all following characters can be
+   * a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output Only] The original snapshot resource.
+   * Output only. Output Only] The original snapshot resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RecoverableSnapshotOriginalSnapshot originalResource;
 
   /**
-   * [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
+   * Output only. [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,35 +94,35 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] Status of the recoverable snapshot.
+   * Output only. [Output Only] Status of the recoverable snapshot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -129,7 +130,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public RecoverableSnapshot setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -155,7 +156,8 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -163,7 +165,8 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public RecoverableSnapshot setId(java.math.BigInteger id) {
@@ -172,8 +175,8 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#recoverableSnapshot for RecoverableSnapshot
-   * resources.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#recoverableSnapshot for
+   * RecoverableSnapshot resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -181,8 +184,8 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#recoverableSnapshot for RecoverableSnapshot
-   * resources.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#recoverableSnapshot for
+   * RecoverableSnapshot resources.
    * @param kind kind or {@code null} for none
    */
   public RecoverableSnapshot setKind(java.lang.String kind) {
@@ -191,11 +194,11 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * Identifier. Name of the recoverable snapshot generated on the deletion of the snapshot. The
-   * name will be 1-63 characters long, and comply withRFC1035. Specifically, the name will be 1-63
-   * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
-   * first character will be a lowercase letter, and all following characters can be a dash,
-   * lowercase letter, or digit, except the last character, which cannot be a dash.
+   * Output only. Identifier. Name of the recoverable snapshot generated on the deletion of the
+   * snapshot. The name will be 1-63 characters long, and comply withRFC1035. Specifically, the name
+   * will be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
+   * which means the first character will be a lowercase letter, and all following characters can be
+   * a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -203,11 +206,11 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * Identifier. Name of the recoverable snapshot generated on the deletion of the snapshot. The
-   * name will be 1-63 characters long, and comply withRFC1035. Specifically, the name will be 1-63
-   * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
-   * first character will be a lowercase letter, and all following characters can be a dash,
-   * lowercase letter, or digit, except the last character, which cannot be a dash.
+   * Output only. Identifier. Name of the recoverable snapshot generated on the deletion of the
+   * snapshot. The name will be 1-63 characters long, and comply withRFC1035. Specifically, the name
+   * will be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`
+   * which means the first character will be a lowercase letter, and all following characters can be
+   * a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
    * @param name name or {@code null} for none
    */
   public RecoverableSnapshot setName(java.lang.String name) {
@@ -216,7 +219,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output Only] The original snapshot resource.
+   * Output only. Output Only] The original snapshot resource.
    * @return value or {@code null} for none
    */
   public RecoverableSnapshotOriginalSnapshot getOriginalResource() {
@@ -224,7 +227,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output Only] The original snapshot resource.
+   * Output only. Output Only] The original snapshot resource.
    * @param originalResource originalResource or {@code null} for none
    */
   public RecoverableSnapshot setOriginalResource(RecoverableSnapshotOriginalSnapshot originalResource) {
@@ -233,7 +236,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
+   * Output only. [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurgeTimestamp() {
@@ -241,7 +244,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
+   * Output only. [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
    * @param purgeTimestamp purgeTimestamp or {@code null} for none
    */
   public RecoverableSnapshot setPurgeTimestamp(java.lang.String purgeTimestamp) {
@@ -267,7 +270,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -275,7 +278,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public RecoverableSnapshot setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -284,7 +287,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -292,7 +295,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public RecoverableSnapshot setSelfLink(java.lang.String selfLink) {
@@ -301,7 +304,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -309,7 +312,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public RecoverableSnapshot setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -318,7 +321,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Status of the recoverable snapshot.
+   * Output only. [Output Only] Status of the recoverable snapshot.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -326,7 +329,7 @@ public final class RecoverableSnapshot extends com.google.api.client.json.Generi
   }
 
   /**
-   * [Output Only] Status of the recoverable snapshot.
+   * Output only. [Output Only] Status of the recoverable snapshot.
    * @param status status or {@code null} for none
    */
   public RecoverableSnapshot setStatus(java.lang.String status) {

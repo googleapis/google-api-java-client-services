@@ -56,7 +56,7 @@ public final class ListInstantSnapshotGroups extends com.google.api.client.json.
   }
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,14 +73,15 @@ public final class ListInstantSnapshotGroups extends com.google.api.client.json.
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +144,7 @@ public final class ListInstantSnapshotGroups extends com.google.api.client.json.
   }
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -151,7 +152,7 @@ public final class ListInstantSnapshotGroups extends com.google.api.client.json.
   }
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    * @param kind kind or {@code null} for none
    */
   public ListInstantSnapshotGroups setKind(java.lang.String kind) {
@@ -183,7 +184,7 @@ public final class ListInstantSnapshotGroups extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -191,7 +192,7 @@ public final class ListInstantSnapshotGroups extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public ListInstantSnapshotGroups setSelfLink(java.lang.String selfLink) {
@@ -200,7 +201,8 @@ public final class ListInstantSnapshotGroups extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -208,7 +210,8 @@ public final class ListInstantSnapshotGroups extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @param unreachables unreachables or {@code null} for none
    */
   public ListInstantSnapshotGroups setUnreachables(java.util.List<java.lang.String> unreachables) {

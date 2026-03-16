@@ -40,7 +40,7 @@ package com.google.api.services.compute.model;
 public final class ExternalVpnGateway extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,8 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   private java.lang.String description;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -72,7 +73,8 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   private java.util.List<ExternalVpnGatewayInterface> interfaces;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#externalVpnGateway for externalVpnGateways.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#externalVpnGateway for
+   * externalVpnGateways.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,14 +128,14 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   private java.lang.String redundancyType;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -141,7 +143,7 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ExternalVpnGateway setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -167,7 +169,8 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -175,7 +178,8 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public ExternalVpnGateway setId(java.math.BigInteger id) {
@@ -209,7 +213,8 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#externalVpnGateway for externalVpnGateways.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#externalVpnGateway for
+   * externalVpnGateways.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -217,7 +222,8 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#externalVpnGateway for externalVpnGateways.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#externalVpnGateway for
+   * externalVpnGateways.
    * @param kind kind or {@code null} for none
    */
   public ExternalVpnGateway setKind(java.lang.String kind) {
@@ -375,7 +381,7 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -383,7 +389,7 @@ public final class ExternalVpnGateway extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public ExternalVpnGateway setSelfLink(java.lang.String selfLink) {

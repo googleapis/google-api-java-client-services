@@ -37,23 +37,23 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   private java.lang.String blockerType;
 
   /**
-   * [Output Only] The url of Google Cloud public documentation explaining this requirement. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] The url of Google Cloud public documentation explaining this
+   * requirement. This is set for every type of requirement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentationLink;
 
   /**
-   * [Output Only] A human-readable explanation of this requirement and why it's not met. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] A human-readable explanation of this requirement and why it's not
+   * met. This is set for every type of requirement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String explanation;
 
   /**
-   * [Output Only] Facilities used to explain this blocker in more detail. Like
+   * Output only. [Output Only] Facilities used to explain this blocker in more detail. Like
    * physicalStructure.metros.facilities.facility, this is a numeric string like "5467".
    * The value may be {@code null}.
    */
@@ -61,24 +61,24 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   private java.util.List<java.lang.String> facilities;
 
   /**
-   * [Output Only] Interconnects used to explain this blocker in more detail.
+   * Output only. [Output Only] Interconnects used to explain this blocker in more detail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> interconnects;
 
   /**
-   * [Output Only] Metros used to explain this blocker in more detail. These are three-letter
-   * lowercase strings like "iad". A blocker like INCOMPATIBLE_METROS will specify the problematic
-   * metros in this field.
+   * Output only. [Output Only] Metros used to explain this blocker in more detail. These are three-
+   * letter lowercase strings like "iad". A blocker like INCOMPATIBLE_METROS will specify the
+   * problematic metros in this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> metros;
 
   /**
-   * [Output Only] Zones used to explain this blocker in more detail. Zone names are "zone1" and/or
-   * "zone2".
+   * Output only. [Output Only] Zones used to explain this blocker in more detail. Zone names are
+   * "zone1" and/or "zone2".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,8 +100,8 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] The url of Google Cloud public documentation explaining this requirement. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] The url of Google Cloud public documentation explaining this
+   * requirement. This is set for every type of requirement.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentationLink() {
@@ -109,8 +109,8 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] The url of Google Cloud public documentation explaining this requirement. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] The url of Google Cloud public documentation explaining this
+   * requirement. This is set for every type of requirement.
    * @param documentationLink documentationLink or {@code null} for none
    */
   public InterconnectGroupConfiguredTopologyCapabilityIntendedCapabilityBlockers setDocumentationLink(java.lang.String documentationLink) {
@@ -119,8 +119,8 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] A human-readable explanation of this requirement and why it's not met. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] A human-readable explanation of this requirement and why it's not
+   * met. This is set for every type of requirement.
    * @return value or {@code null} for none
    */
   public java.lang.String getExplanation() {
@@ -128,8 +128,8 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] A human-readable explanation of this requirement and why it's not met. This is
-   * set for every type of requirement.
+   * Output only. [Output Only] A human-readable explanation of this requirement and why it's not
+   * met. This is set for every type of requirement.
    * @param explanation explanation or {@code null} for none
    */
   public InterconnectGroupConfiguredTopologyCapabilityIntendedCapabilityBlockers setExplanation(java.lang.String explanation) {
@@ -138,7 +138,7 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] Facilities used to explain this blocker in more detail. Like
+   * Output only. [Output Only] Facilities used to explain this blocker in more detail. Like
    * physicalStructure.metros.facilities.facility, this is a numeric string like "5467".
    * @return value or {@code null} for none
    */
@@ -147,7 +147,7 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] Facilities used to explain this blocker in more detail. Like
+   * Output only. [Output Only] Facilities used to explain this blocker in more detail. Like
    * physicalStructure.metros.facilities.facility, this is a numeric string like "5467".
    * @param facilities facilities or {@code null} for none
    */
@@ -157,7 +157,7 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] Interconnects used to explain this blocker in more detail.
+   * Output only. [Output Only] Interconnects used to explain this blocker in more detail.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInterconnects() {
@@ -165,7 +165,7 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] Interconnects used to explain this blocker in more detail.
+   * Output only. [Output Only] Interconnects used to explain this blocker in more detail.
    * @param interconnects interconnects or {@code null} for none
    */
   public InterconnectGroupConfiguredTopologyCapabilityIntendedCapabilityBlockers setInterconnects(java.util.List<java.lang.String> interconnects) {
@@ -174,9 +174,9 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] Metros used to explain this blocker in more detail. These are three-letter
-   * lowercase strings like "iad". A blocker like INCOMPATIBLE_METROS will specify the problematic
-   * metros in this field.
+   * Output only. [Output Only] Metros used to explain this blocker in more detail. These are three-
+   * letter lowercase strings like "iad". A blocker like INCOMPATIBLE_METROS will specify the
+   * problematic metros in this field.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetros() {
@@ -184,9 +184,9 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] Metros used to explain this blocker in more detail. These are three-letter
-   * lowercase strings like "iad". A blocker like INCOMPATIBLE_METROS will specify the problematic
-   * metros in this field.
+   * Output only. [Output Only] Metros used to explain this blocker in more detail. These are three-
+   * letter lowercase strings like "iad". A blocker like INCOMPATIBLE_METROS will specify the
+   * problematic metros in this field.
    * @param metros metros or {@code null} for none
    */
   public InterconnectGroupConfiguredTopologyCapabilityIntendedCapabilityBlockers setMetros(java.util.List<java.lang.String> metros) {
@@ -195,8 +195,8 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] Zones used to explain this blocker in more detail. Zone names are "zone1" and/or
-   * "zone2".
+   * Output only. [Output Only] Zones used to explain this blocker in more detail. Zone names are
+   * "zone1" and/or "zone2".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getZones() {
@@ -204,8 +204,8 @@ public final class InterconnectGroupConfiguredTopologyCapabilityIntendedCapabili
   }
 
   /**
-   * [Output Only] Zones used to explain this blocker in more detail. Zone names are "zone1" and/or
-   * "zone2".
+   * Output only. [Output Only] Zones used to explain this blocker in more detail. Zone names are
+   * "zone1" and/or "zone2".
    * @param zones zones or {@code null} for none
    */
   public InterconnectGroupConfiguredTopologyCapabilityIntendedCapabilityBlockers setZones(java.util.List<java.lang.String> zones) {

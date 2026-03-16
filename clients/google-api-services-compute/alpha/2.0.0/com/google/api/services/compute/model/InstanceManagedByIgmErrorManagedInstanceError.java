@@ -30,21 +30,21 @@ package com.google.api.services.compute.model;
 public final class InstanceManagedByIgmErrorManagedInstanceError extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Error code.
+   * Output only. [Output Only] Error code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String code;
 
   /**
-   * [Output Only] Error message.
+   * Output only. [Output Only] Error message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * [Output Only] Error code.
+   * Output only. [Output Only] Error code.
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -52,7 +52,7 @@ public final class InstanceManagedByIgmErrorManagedInstanceError extends com.goo
   }
 
   /**
-   * [Output Only] Error code.
+   * Output only. [Output Only] Error code.
    * @param code code or {@code null} for none
    */
   public InstanceManagedByIgmErrorManagedInstanceError setCode(java.lang.String code) {
@@ -61,7 +61,7 @@ public final class InstanceManagedByIgmErrorManagedInstanceError extends com.goo
   }
 
   /**
-   * [Output Only] Error message.
+   * Output only. [Output Only] Error message.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -69,7 +69,7 @@ public final class InstanceManagedByIgmErrorManagedInstanceError extends com.goo
   }
 
   /**
-   * [Output Only] Error message.
+   * Output only. [Output Only] Error message.
    * @param message message or {@code null} for none
    */
   public InstanceManagedByIgmErrorManagedInstanceError setMessage(java.lang.String message) {

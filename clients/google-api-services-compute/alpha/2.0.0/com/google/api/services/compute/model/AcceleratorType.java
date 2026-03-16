@@ -62,7 +62,8 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for accelerator types.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#acceleratorType for
+   * accelerator types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,14 +84,14 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * [Output Only] Server-defined, fully qualified URL for this resource.
+   * Output only. [Output Only] Server-defined, fully qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +175,8 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for accelerator types.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#acceleratorType for
+   * accelerator types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -182,7 +184,8 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for accelerator types.
+   * Output only. [Output Only] The type of the resource. Alwayscompute#acceleratorType for
+   * accelerator types.
    * @param kind kind or {@code null} for none
    */
   public AcceleratorType setKind(java.lang.String kind) {
@@ -225,7 +228,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined, fully qualified URL for this resource.
+   * Output only. [Output Only] Server-defined, fully qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -233,7 +236,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined, fully qualified URL for this resource.
+   * Output only. [Output Only] Server-defined, fully qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public AcceleratorType setSelfLink(java.lang.String selfLink) {
@@ -242,7 +245,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -250,7 +253,7 @@ public final class AcceleratorType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public AcceleratorType setSelfLinkWithId(java.lang.String selfLinkWithId) {

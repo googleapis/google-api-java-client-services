@@ -54,7 +54,7 @@ public final class CapacityAdviceResponseRecommendationShard extends com.google.
   private java.lang.String provisioningModel;
 
   /**
-   * The zone name for this shard.
+   * Output only. The zone name for this shard.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class CapacityAdviceResponseRecommendationShard extends com.google.
   }
 
   /**
-   * The zone name for this shard.
+   * Output only. The zone name for this shard.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -122,7 +122,7 @@ public final class CapacityAdviceResponseRecommendationShard extends com.google.
   }
 
   /**
-   * The zone name for this shard.
+   * Output only. The zone name for this shard.
    * @param zone zone or {@code null} for none
    */
   public CapacityAdviceResponseRecommendationShard setZone(java.lang.String zone) {

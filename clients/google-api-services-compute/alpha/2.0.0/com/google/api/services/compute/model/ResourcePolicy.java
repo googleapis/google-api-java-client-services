@@ -31,7 +31,7 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,8 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private ResourcePolicyGroupPlacementPolicy groupPlacementPolicy;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -72,7 +73,8 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private ResourcePolicyInstanceSchedulePolicy instanceSchedulePolicy;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#resource_policies for resource policies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#resource_policies for resource
+   * policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,21 +98,21 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private java.lang.String region;
 
   /**
-   * [Output Only] The system status of the resource policy.
+   * Output only. [Output Only] The system status of the resource policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourcePolicyResourceStatus resourceStatus;
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +126,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private ResourcePolicySnapshotSchedulePolicy snapshotSchedulePolicy;
 
   /**
-   * [Output Only] The status of resource policy creation.
+   * Output only. [Output Only] The status of resource policy creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +147,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   private ResourcePolicyWorkloadPolicy workloadPolicy;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -153,7 +155,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ResourcePolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -211,7 +213,8 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -219,7 +222,8 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public ResourcePolicy setId(java.math.BigInteger id) {
@@ -245,7 +249,8 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#resource_policies for resource policies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#resource_policies for resource
+   * policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -253,7 +258,8 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#resource_policies for resource policies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#resource_policies for resource
+   * policies.
    * @param kind kind or {@code null} for none
    */
   public ResourcePolicy setKind(java.lang.String kind) {
@@ -302,7 +308,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The system status of the resource policy.
+   * Output only. [Output Only] The system status of the resource policy.
    * @return value or {@code null} for none
    */
   public ResourcePolicyResourceStatus getResourceStatus() {
@@ -310,7 +316,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The system status of the resource policy.
+   * Output only. [Output Only] The system status of the resource policy.
    * @param resourceStatus resourceStatus or {@code null} for none
    */
   public ResourcePolicy setResourceStatus(ResourcePolicyResourceStatus resourceStatus) {
@@ -319,7 +325,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -327,7 +333,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public ResourcePolicy setSelfLink(java.lang.String selfLink) {
@@ -336,7 +342,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -344,7 +350,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public ResourcePolicy setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -370,7 +376,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The status of resource policy creation.
+   * Output only. [Output Only] The status of resource policy creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -378,7 +384,7 @@ public final class ResourcePolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Output Only] The status of resource policy creation.
+   * Output only. [Output Only] The status of resource policy creation.
    * @param status status or {@code null} for none
    */
   public ResourcePolicy setStatus(java.lang.String status) {

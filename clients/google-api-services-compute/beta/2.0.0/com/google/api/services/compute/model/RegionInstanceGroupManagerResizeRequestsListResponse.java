@@ -36,7 +36,7 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   private java.lang.String etag;
 
   /**
-   * [Output Only] Unique identifier for the resource; defined by the server.
+   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,39 +56,40 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#regionInstanceGroupManagerResizeRequestList
-   * for a list of Resize Requests.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#regionInstanceGroupManagerResizeRequestList for a list of Resize Requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachables;
 
   /**
-   * [Output Only] Informational warning message.
+   * Output only. [Output Only] Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +111,7 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Unique identifier for the resource; defined by the server.
+   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -118,7 +119,7 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Unique identifier for the resource; defined by the server.
+   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
    * @param id id or {@code null} for none
    */
   public RegionInstanceGroupManagerResizeRequestsListResponse setId(java.lang.String id) {
@@ -144,8 +145,8 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#regionInstanceGroupManagerResizeRequestList
-   * for a list of Resize Requests.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#regionInstanceGroupManagerResizeRequestList for a list of Resize Requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -153,8 +154,8 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#regionInstanceGroupManagerResizeRequestList
-   * for a list of Resize Requests.
+   * Output only. [Output Only] Type of the resource.
+   * Alwayscompute#regionInstanceGroupManagerResizeRequestList for a list of Resize Requests.
    * @param kind kind or {@code null} for none
    */
   public RegionInstanceGroupManagerResizeRequestsListResponse setKind(java.lang.String kind) {
@@ -163,10 +164,10 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -174,10 +175,10 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] This token allows you to get the next page of results for list requests. If the
-   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
-   * parameter pageToken in the next list request. Subsequent list requests will have their own
-   * nextPageToken to continue paging through the results.
+   * Output only. [Output Only] This token allows you to get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
+   * for the query parameter pageToken in the next list request. Subsequent list requests will have
+   * their own nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public RegionInstanceGroupManagerResizeRequestsListResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -186,7 +187,7 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -194,7 +195,7 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public RegionInstanceGroupManagerResizeRequestsListResponse setSelfLink(java.lang.String selfLink) {
@@ -203,7 +204,8 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -211,7 +213,8 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @param unreachables unreachables or {@code null} for none
    */
   public RegionInstanceGroupManagerResizeRequestsListResponse setUnreachables(java.util.List<java.lang.String> unreachables) {
@@ -220,7 +223,7 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Informational warning message.
+   * Output only. [Output Only] Informational warning message.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -228,7 +231,7 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Informational warning message.
+   * Output only. [Output Only] Informational warning message.
    * @param warning warning or {@code null} for none
    */
   public RegionInstanceGroupManagerResizeRequestsListResponse setWarning(Warning warning) {
@@ -247,7 +250,7 @@ public final class RegionInstanceGroupManagerResizeRequestsListResponse extends 
   }
 
   /**
-   * [Output Only] Informational warning message.
+   * Output only. [Output Only] Informational warning message.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 

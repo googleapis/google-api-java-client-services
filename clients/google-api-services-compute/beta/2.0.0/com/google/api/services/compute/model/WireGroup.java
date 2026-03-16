@@ -39,7 +39,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adminEnabled;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,15 +61,15 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, WireGroupEndpoint> endpoints;
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,21 +87,21 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   * Output only. [Output Only] Indicates whether there are wire changes yet to be processed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Topology details for the wire group configuration.
+   * Output only. Topology details for the wire group configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +122,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   private WireProperties wireProperties;
 
   /**
-   * The single/redundant wire(s) managed by the wire group.
+   * Output only. The single/redundant wire(s) managed by the wire group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,7 +156,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -164,7 +164,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public WireGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -209,8 +209,8 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -218,8 +218,8 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @param id id or {@code null} for none
    */
   public WireGroup setId(java.math.BigInteger id) {
@@ -228,7 +228,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -236,7 +236,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
    * @param kind kind or {@code null} for none
    */
   public WireGroup setKind(java.lang.String kind) {
@@ -270,7 +270,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   * Output only. [Output Only] Indicates whether there are wire changes yet to be processed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -278,7 +278,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   * Output only. [Output Only] Indicates whether there are wire changes yet to be processed.
    * @param reconciling reconciling or {@code null} for none
    */
   public WireGroup setReconciling(java.lang.Boolean reconciling) {
@@ -287,7 +287,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -295,7 +295,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public WireGroup setSelfLink(java.lang.String selfLink) {
@@ -304,7 +304,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Topology details for the wire group configuration.
+   * Output only. Topology details for the wire group configuration.
    * @return value or {@code null} for none
    */
   public WireGroupTopology getTopology() {
@@ -312,7 +312,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Topology details for the wire group configuration.
+   * Output only. Topology details for the wire group configuration.
    * @param topology topology or {@code null} for none
    */
   public WireGroup setTopology(WireGroupTopology topology) {
@@ -355,7 +355,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The single/redundant wire(s) managed by the wire group.
+   * Output only. The single/redundant wire(s) managed by the wire group.
    * @return value or {@code null} for none
    */
   public java.util.List<Wire> getWires() {
@@ -363,7 +363,7 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The single/redundant wire(s) managed by the wire group.
+   * Output only. The single/redundant wire(s) managed by the wire group.
    * @param wires wires or {@code null} for none
    */
   public WireGroup setWires(java.util.List<Wire> wires) {

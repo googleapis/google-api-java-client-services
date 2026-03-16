@@ -30,24 +30,24 @@ package com.google.api.services.compute.model;
 public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The current rollouts for the latest version of the resource. There should be only
-   * one current rollout, but for scalability, we make it repeated.
+   * Output only. [Output Only] The current rollouts for the latest version of the resource. There
+   * should be only one current rollout, but for scalability, we make it repeated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata> currentRollouts;
 
   /**
-   * [Output Only] The last completed rollout resource. This field will not be populated until the
-   * first rollout is completed.
+   * Output only. [Output Only] The last completed rollout resource. This field will not be
+   * populated until the first rollout is completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata previousRollout;
 
   /**
-   * [Output Only] The current rollouts for the latest version of the resource. There should be only
-   * one current rollout, but for scalability, we make it repeated.
+   * Output only. [Output Only] The current rollouts for the latest version of the resource. There
+   * should be only one current rollout, but for scalability, we make it repeated.
    * @return value or {@code null} for none
    */
   public java.util.List<GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata> getCurrentRollouts() {
@@ -55,8 +55,8 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatus extends 
   }
 
   /**
-   * [Output Only] The current rollouts for the latest version of the resource. There should be only
-   * one current rollout, but for scalability, we make it repeated.
+   * Output only. [Output Only] The current rollouts for the latest version of the resource. There
+   * should be only one current rollout, but for scalability, we make it repeated.
    * @param currentRollouts currentRollouts or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutStatus setCurrentRollouts(java.util.List<GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata> currentRollouts) {
@@ -65,8 +65,8 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatus extends 
   }
 
   /**
-   * [Output Only] The last completed rollout resource. This field will not be populated until the
-   * first rollout is completed.
+   * Output only. [Output Only] The last completed rollout resource. This field will not be
+   * populated until the first rollout is completed.
    * @return value or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata getPreviousRollout() {
@@ -74,8 +74,8 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatus extends 
   }
 
   /**
-   * [Output Only] The last completed rollout resource. This field will not be populated until the
-   * first rollout is completed.
+   * Output only. [Output Only] The last completed rollout resource. This field will not be
+   * populated until the first rollout is completed.
    * @param previousRollout previousRollout or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutStatus setPreviousRollout(GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata previousRollout) {

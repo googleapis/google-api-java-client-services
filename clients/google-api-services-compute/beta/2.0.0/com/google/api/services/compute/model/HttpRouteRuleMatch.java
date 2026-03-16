@@ -96,14 +96,18 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
   private java.util.List<MetadataFilter> metadataFilters;
 
   /**
-   * If specified, the route is a pattern match expression that must match the :path header once the
-   * query string is removed.
+   * If specified, this field defines a path template pattern that must match the :path header after
+   * the query string is removed.
    *
-   *  A pattern match allows you to match               - The value must be between 1 and 1024
-   * characters       - The pattern must start with a leading slash ("/")       - There may be no
-   * more than 5 operators in pattern
+   * A path template pattern can include variables and wildcards. Variables are enclosed in curly
+   * braces, for example{variable_name}. Wildcards include * that matches a single path segment, and
+   * ** that matches zero or more path segments. The pattern must follow these rules:
    *
-   *  Precisely one ofprefix_match, full_path_match,regex_match or path_template_match must be set.
+   *           - The value must be between 1 and 1024 characters.       - The pattern must start
+   * with a leading slash ("/").       - No more than 5 operators (variables or wildcards) may
+   * appear in       the pattern.
+   *
+   * Precisely one ofprefixMatch, fullPathMatch,regexMatch, or pathTemplateMatch must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +119,10 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    *
    * The value must be from 1 to 1024 characters.
    *
-   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
-   * specified.
+   * The * character inside a prefix match is treated as a literal character, not as a wildcard.
+   *
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match can be used within a
+   * matchRule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,7 +152,7 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED (regional scope) or INTERNAL_MANAGED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,14 +289,18 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
   }
 
   /**
-   * If specified, the route is a pattern match expression that must match the :path header once the
-   * query string is removed.
+   * If specified, this field defines a path template pattern that must match the :path header after
+   * the query string is removed.
    *
-   *  A pattern match allows you to match               - The value must be between 1 and 1024
-   * characters       - The pattern must start with a leading slash ("/")       - There may be no
-   * more than 5 operators in pattern
+   * A path template pattern can include variables and wildcards. Variables are enclosed in curly
+   * braces, for example{variable_name}. Wildcards include * that matches a single path segment, and
+   * ** that matches zero or more path segments. The pattern must follow these rules:
    *
-   *  Precisely one ofprefix_match, full_path_match,regex_match or path_template_match must be set.
+   *           - The value must be between 1 and 1024 characters.       - The pattern must start
+   * with a leading slash ("/").       - No more than 5 operators (variables or wildcards) may
+   * appear in       the pattern.
+   *
+   * Precisely one ofprefixMatch, fullPathMatch,regexMatch, or pathTemplateMatch must be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getPathTemplateMatch() {
@@ -298,14 +308,18 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
   }
 
   /**
-   * If specified, the route is a pattern match expression that must match the :path header once the
-   * query string is removed.
+   * If specified, this field defines a path template pattern that must match the :path header after
+   * the query string is removed.
    *
-   *  A pattern match allows you to match               - The value must be between 1 and 1024
-   * characters       - The pattern must start with a leading slash ("/")       - There may be no
-   * more than 5 operators in pattern
+   * A path template pattern can include variables and wildcards. Variables are enclosed in curly
+   * braces, for example{variable_name}. Wildcards include * that matches a single path segment, and
+   * ** that matches zero or more path segments. The pattern must follow these rules:
    *
-   *  Precisely one ofprefix_match, full_path_match,regex_match or path_template_match must be set.
+   *           - The value must be between 1 and 1024 characters.       - The pattern must start
+   * with a leading slash ("/").       - No more than 5 operators (variables or wildcards) may
+   * appear in       the pattern.
+   *
+   * Precisely one ofprefixMatch, fullPathMatch,regexMatch, or pathTemplateMatch must be set.
    * @param pathTemplateMatch pathTemplateMatch or {@code null} for none
    */
   public HttpRouteRuleMatch setPathTemplateMatch(java.lang.String pathTemplateMatch) {
@@ -319,8 +333,10 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    *
    * The value must be from 1 to 1024 characters.
    *
-   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
-   * specified.
+   * The * character inside a prefix match is treated as a literal character, not as a wildcard.
+   *
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match can be used within a
+   * matchRule.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrefixMatch() {
@@ -333,8 +349,10 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    *
    * The value must be from 1 to 1024 characters.
    *
-   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
-   * specified.
+   * The * character inside a prefix match is treated as a literal character, not as a wildcard.
+   *
+   * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match can be used within a
+   * matchRule.
    * @param prefixMatch prefixMatch or {@code null} for none
    */
   public HttpRouteRuleMatch setPrefixMatch(java.lang.String prefixMatch) {
@@ -373,7 +391,7 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED (regional scope) or INTERNAL_MANAGED.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegexMatch() {
@@ -388,7 +406,7 @@ public final class HttpRouteRuleMatch extends com.google.api.client.json.Generic
    * Only one of prefixMatch, fullPathMatch,regexMatch or path_template_match must be specified.
    *
    * Regular expressions can only be used when the loadBalancingScheme is set to
-   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED orINTERNAL_MANAGED.
+   * INTERNAL_SELF_MANAGED, EXTERNAL_MANAGED (regional scope) or INTERNAL_MANAGED.
    * @param regexMatch regexMatch or {@code null} for none
    */
   public HttpRouteRuleMatch setRegexMatch(java.lang.String regexMatch) {

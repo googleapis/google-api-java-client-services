@@ -56,7 +56,7 @@ public final class WireGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,8 @@ public final class WireGroupList extends com.google.api.client.json.GenericJson 
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +144,7 @@ public final class WireGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -151,7 +152,7 @@ public final class WireGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#wireGroups for wire groups.
    * @param kind kind or {@code null} for none
    */
   public WireGroupList setKind(java.lang.String kind) {
@@ -200,7 +201,8 @@ public final class WireGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -208,7 +210,8 @@ public final class WireGroupList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
+   * Output only. [Output Only] Unreachable resources. end_interface:
+   * MixerListResponseWithEtagBuilder
    * @param unreachables unreachables or {@code null} for none
    */
   public WireGroupList setUnreachables(java.util.List<java.lang.String> unreachables) {

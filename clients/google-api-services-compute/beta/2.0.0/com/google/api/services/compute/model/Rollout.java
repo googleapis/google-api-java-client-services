@@ -17,7 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represent a Rollout resource.
+ * Rollout resource.
+ *
+ * A Rollout is a specific instance of a RolloutPlan. It represents a single execution of a strategy
+ * to roll out a specific resource. It also provides APIs to interact with the rollout.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -44,7 +47,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String completionTime;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,14 +75,15 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Always compute#rollout for rollouts.
+   * Output only. [Output Only] Type of the resource. Always compute#rollout for rollouts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,14 +116,14 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String rolloutPlan;
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -174,7 +178,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -182,7 +186,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Rollout setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -242,7 +246,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -250,7 +255,8 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public Rollout setId(java.math.BigInteger id) {
@@ -259,7 +265,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#rollout for rollouts.
+   * Output only. [Output Only] Type of the resource. Always compute#rollout for rollouts.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -267,7 +273,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#rollout for rollouts.
+   * Output only. [Output Only] Type of the resource. Always compute#rollout for rollouts.
    * @param kind kind or {@code null} for none
    */
   public Rollout setKind(java.lang.String kind) {
@@ -337,7 +343,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -345,7 +351,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined fully-qualified URL for this resource.
+   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Rollout setSelfLink(java.lang.String selfLink) {
@@ -354,7 +360,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -362,7 +368,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource's resource id.
+   * Output only. [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Rollout setSelfLinkWithId(java.lang.String selfLinkWithId) {

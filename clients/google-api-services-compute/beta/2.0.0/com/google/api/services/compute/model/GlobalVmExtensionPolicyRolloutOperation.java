@@ -37,7 +37,7 @@ public final class GlobalVmExtensionPolicyRolloutOperation extends com.google.ap
   private GlobalVmExtensionPolicyRolloutOperationRolloutInput rolloutInput;
 
   /**
-   * [Output Only] The rollout status of the policy.
+   * Output only. [Output Only] The rollout status of the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GlobalVmExtensionPolicyRolloutOperation extends com.google.ap
   }
 
   /**
-   * [Output Only] The rollout status of the policy.
+   * Output only. [Output Only] The rollout status of the policy.
    * @return value or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutStatus getRolloutStatus() {
@@ -69,7 +69,7 @@ public final class GlobalVmExtensionPolicyRolloutOperation extends com.google.ap
   }
 
   /**
-   * [Output Only] The rollout status of the policy.
+   * Output only. [Output Only] The rollout status of the policy.
    * @param rolloutStatus rolloutStatus or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperation setRolloutStatus(GlobalVmExtensionPolicyRolloutOperationRolloutStatus rolloutStatus) {

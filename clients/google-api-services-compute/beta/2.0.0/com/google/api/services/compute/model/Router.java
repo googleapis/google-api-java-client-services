@@ -48,7 +48,7 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.util.List<RouterBgpPeer> bgpPeers;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.util.List<RouterInterface> interfaces;
 
   /**
-   * [Output Only] Type of resource. Always compute#router for routers.
+   * Output only. [Output Only] Type of resource. Always compute#router for routers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +196,7 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -204,7 +204,7 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Router setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -293,7 +293,7 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#router for routers.
+   * Output only. [Output Only] Type of resource. Always compute#router for routers.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -301,7 +301,7 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of resource. Always compute#router for routers.
+   * Output only. [Output Only] Type of resource. Always compute#router for routers.
    * @param kind kind or {@code null} for none
    */
   public Router setKind(java.lang.String kind) {

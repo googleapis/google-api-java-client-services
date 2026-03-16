@@ -30,28 +30,28 @@ package com.google.api.services.compute.model;
 public final class InstanceWithNamedPorts extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The URL of the instance.
+   * Output only. [Output Only] The URL of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
 
   /**
-   * [Output Only] The named ports that belong to this instance group.
+   * Output only. [Output Only] The named ports that belong to this instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<NamedPort> namedPorts;
 
   /**
-   * [Output Only] The status of the instance.
+   * Output only. [Output Only] The status of the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * [Output Only] The URL of the instance.
+   * Output only. [Output Only] The URL of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -59,7 +59,7 @@ public final class InstanceWithNamedPorts extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The URL of the instance.
+   * Output only. [Output Only] The URL of the instance.
    * @param instance instance or {@code null} for none
    */
   public InstanceWithNamedPorts setInstance(java.lang.String instance) {
@@ -68,7 +68,7 @@ public final class InstanceWithNamedPorts extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The named ports that belong to this instance group.
+   * Output only. [Output Only] The named ports that belong to this instance group.
    * @return value or {@code null} for none
    */
   public java.util.List<NamedPort> getNamedPorts() {
@@ -76,7 +76,7 @@ public final class InstanceWithNamedPorts extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The named ports that belong to this instance group.
+   * Output only. [Output Only] The named ports that belong to this instance group.
    * @param namedPorts namedPorts or {@code null} for none
    */
   public InstanceWithNamedPorts setNamedPorts(java.util.List<NamedPort> namedPorts) {
@@ -85,7 +85,7 @@ public final class InstanceWithNamedPorts extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The status of the instance.
+   * Output only. [Output Only] The status of the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -93,7 +93,7 @@ public final class InstanceWithNamedPorts extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] The status of the instance.
+   * Output only. [Output Only] The status of the instance.
    * @param status status or {@code null} for none
    */
   public InstanceWithNamedPorts setStatus(java.lang.String status) {

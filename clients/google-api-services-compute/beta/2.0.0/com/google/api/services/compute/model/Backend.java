@@ -190,6 +190,13 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Float maxUtilization;
 
   /**
+   * Information about the resource or system that manages the backend.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendBackendOrchestrationInfo orchestrationInfo;
+
+  /**
    * This field indicates whether this backend should be fully utilized before sending traffic to
    * backends with default preference. The possible values are:        - PREFERRED: Backends with
    * this preference level will be    filled up to their capacity limits first, based on RTT.    -
@@ -572,6 +579,23 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   public Backend setMaxUtilization(java.lang.Float maxUtilization) {
     this.maxUtilization = maxUtilization;
+    return this;
+  }
+
+  /**
+   * Information about the resource or system that manages the backend.
+   * @return value or {@code null} for none
+   */
+  public BackendBackendOrchestrationInfo getOrchestrationInfo() {
+    return orchestrationInfo;
+  }
+
+  /**
+   * Information about the resource or system that manages the backend.
+   * @param orchestrationInfo orchestrationInfo or {@code null} for none
+   */
+  public Backend setOrchestrationInfo(BackendBackendOrchestrationInfo orchestrationInfo) {
+    this.orchestrationInfo = orchestrationInfo;
     return this;
   }
 

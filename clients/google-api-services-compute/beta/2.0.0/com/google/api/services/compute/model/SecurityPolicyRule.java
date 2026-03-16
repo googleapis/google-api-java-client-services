@@ -85,7 +85,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private SecurityPolicyRuleHttpHeaderAction headerAction;
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyRule for security policy rules
+   * Output only. [Output only] Type of the resource. Alwayscompute#securityPolicyRule for security
+   * policy rules
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +184,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   private java.lang.Long ruleNumber;
 
   /**
-   * [Output Only] Calculation of the complexity of a single firewall security policy rule.
+   * Output only. [Output Only] Calculation of the complexity of a single firewall security policy
+   * rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -331,7 +333,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyRule for security policy rules
+   * Output only. [Output only] Type of the resource. Alwayscompute#securityPolicyRule for security
+   * policy rules
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -339,7 +342,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output only] Type of the resource. Alwayscompute#securityPolicyRule for security policy rules
+   * Output only. [Output only] Type of the resource. Alwayscompute#securityPolicyRule for security
+   * policy rules
    * @param kind kind or {@code null} for none
    */
   public SecurityPolicyRule setKind(java.lang.String kind) {
@@ -554,7 +558,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Calculation of the complexity of a single firewall security policy rule.
+   * Output only. [Output Only] Calculation of the complexity of a single firewall security policy
+   * rule.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRuleTupleCount() {
@@ -562,7 +567,8 @@ public final class SecurityPolicyRule extends com.google.api.client.json.Generic
   }
 
   /**
-   * [Output Only] Calculation of the complexity of a single firewall security policy rule.
+   * Output only. [Output Only] Calculation of the complexity of a single firewall security policy
+   * rule.
    * @param ruleTupleCount ruleTupleCount or {@code null} for none
    */
   public SecurityPolicyRule setRuleTupleCount(java.lang.Integer ruleTupleCount) {

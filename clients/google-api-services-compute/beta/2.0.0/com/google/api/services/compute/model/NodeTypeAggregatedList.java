@@ -44,8 +44,8 @@ public final class NodeTypeAggregatedList extends com.google.api.client.json.Gen
   private java.util.Map<String, NodeTypesScopedList> items;
 
   /**
-   * [Output Only] Type of resource.Alwayscompute#nodeTypeAggregatedList for aggregated lists of
-   * node types.
+   * Output only. [Output Only] Type of resource.Alwayscompute#nodeTypeAggregatedList for aggregated
+   * lists of node types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,14 +62,14 @@ public final class NodeTypeAggregatedList extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class NodeTypeAggregatedList extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of resource.Alwayscompute#nodeTypeAggregatedList for aggregated lists of
-   * node types.
+   * Output only. [Output Only] Type of resource.Alwayscompute#nodeTypeAggregatedList for aggregated
+   * lists of node types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -126,8 +126,8 @@ public final class NodeTypeAggregatedList extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Type of resource.Alwayscompute#nodeTypeAggregatedList for aggregated lists of
-   * node types.
+   * Output only. [Output Only] Type of resource.Alwayscompute#nodeTypeAggregatedList for aggregated
+   * lists of node types.
    * @param kind kind or {@code null} for none
    */
   public NodeTypeAggregatedList setKind(java.lang.String kind) {
@@ -159,7 +159,7 @@ public final class NodeTypeAggregatedList extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -167,7 +167,7 @@ public final class NodeTypeAggregatedList extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NodeTypeAggregatedList setSelfLink(java.lang.String selfLink) {
@@ -176,7 +176,7 @@ public final class NodeTypeAggregatedList extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -184,7 +184,7 @@ public final class NodeTypeAggregatedList extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Output Only] Unreachable resources.
+   * Output only. [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public NodeTypeAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

@@ -32,7 +32,12 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Location configurations mapped by location name. Currently only zone names are supported and
-   * must be represented as valid internal URLs, such as zones/us-central1-a.
+   * must be represented as valid internal URLs, such as zones/us-central1-a. The bulkInsert
+   * operation doesn't create instances in an AI zone, even if an AI zone is available in the
+   * specified region. For example, if you set a DENY preference for us-central1-a, Compute Engine
+   * will consider us-central1-b and us-central1-c for instance creation, but not us-central1-ai1a.
+   * Also, you can't use the locations[] configuration to allow instance creation in an AI zone. To
+   * include an AI zone in bulkInsert operations, use the locationPolicy.zones[] field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +51,21 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String targetShape;
 
   /**
+   * The bulkInsert operation applies any preferences set in the locations field to the specific
+   * zones listed in the zones field if the same zones are specified in both fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LocationPolicyZoneConfiguration> zones;
+
+  /**
    * Location configurations mapped by location name. Currently only zone names are supported and
-   * must be represented as valid internal URLs, such as zones/us-central1-a.
+   * must be represented as valid internal URLs, such as zones/us-central1-a. The bulkInsert
+   * operation doesn't create instances in an AI zone, even if an AI zone is available in the
+   * specified region. For example, if you set a DENY preference for us-central1-a, Compute Engine
+   * will consider us-central1-b and us-central1-c for instance creation, but not us-central1-ai1a.
+   * Also, you can't use the locations[] configuration to allow instance creation in an AI zone. To
+   * include an AI zone in bulkInsert operations, use the locationPolicy.zones[] field.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, LocationPolicyLocation> getLocations() {
@@ -56,7 +74,12 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Location configurations mapped by location name. Currently only zone names are supported and
-   * must be represented as valid internal URLs, such as zones/us-central1-a.
+   * must be represented as valid internal URLs, such as zones/us-central1-a. The bulkInsert
+   * operation doesn't create instances in an AI zone, even if an AI zone is available in the
+   * specified region. For example, if you set a DENY preference for us-central1-a, Compute Engine
+   * will consider us-central1-b and us-central1-c for instance creation, but not us-central1-ai1a.
+   * Also, you can't use the locations[] configuration to allow instance creation in an AI zone. To
+   * include an AI zone in bulkInsert operations, use the locationPolicy.zones[] field.
    * @param locations locations or {@code null} for none
    */
   public LocationPolicy setLocations(java.util.Map<String, LocationPolicyLocation> locations) {
@@ -78,6 +101,25 @@ public final class LocationPolicy extends com.google.api.client.json.GenericJson
    */
   public LocationPolicy setTargetShape(java.lang.String targetShape) {
     this.targetShape = targetShape;
+    return this;
+  }
+
+  /**
+   * The bulkInsert operation applies any preferences set in the locations field to the specific
+   * zones listed in the zones field if the same zones are specified in both fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LocationPolicyZoneConfiguration> getZones() {
+    return zones;
+  }
+
+  /**
+   * The bulkInsert operation applies any preferences set in the locations field to the specific
+   * zones listed in the zones field if the same zones are specified in both fields.
+   * @param zones zones or {@code null} for none
+   */
+  public LocationPolicy setZones(java.util.List<LocationPolicyZoneConfiguration> zones) {
+    this.zones = zones;
     return this;
   }
 

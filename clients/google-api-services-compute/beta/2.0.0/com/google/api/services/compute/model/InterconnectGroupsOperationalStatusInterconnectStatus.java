@@ -30,35 +30,36 @@ package com.google.api.services.compute.model;
 public final class InterconnectGroupsOperationalStatusInterconnectStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the Interconnect is enabled.
+   * Output only. Whether the Interconnect is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean adminEnabled;
 
   /**
-   * The diagnostics of the Interconnect, as returned by the existing get-diagnostics method.
+   * Output only. The diagnostics of the Interconnect, as returned by the existing get-diagnostics
+   * method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InterconnectDiagnostics diagnostics;
 
   /**
-   * The URL of the Interconnect being described.
+   * Output only. The URL of the Interconnect being described.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String interconnect;
 
   /**
-   * Whether this interconnect is participating in the redundant configuration.
+   * Output only. Whether this interconnect is participating in the redundant configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String isActive;
 
   /**
-   * Whether the Interconnect is enabled.
+   * Output only. Whether the Interconnect is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdminEnabled() {
@@ -66,7 +67,7 @@ public final class InterconnectGroupsOperationalStatusInterconnectStatus extends
   }
 
   /**
-   * Whether the Interconnect is enabled.
+   * Output only. Whether the Interconnect is enabled.
    * @param adminEnabled adminEnabled or {@code null} for none
    */
   public InterconnectGroupsOperationalStatusInterconnectStatus setAdminEnabled(java.lang.Boolean adminEnabled) {
@@ -75,7 +76,8 @@ public final class InterconnectGroupsOperationalStatusInterconnectStatus extends
   }
 
   /**
-   * The diagnostics of the Interconnect, as returned by the existing get-diagnostics method.
+   * Output only. The diagnostics of the Interconnect, as returned by the existing get-diagnostics
+   * method.
    * @return value or {@code null} for none
    */
   public InterconnectDiagnostics getDiagnostics() {
@@ -83,7 +85,8 @@ public final class InterconnectGroupsOperationalStatusInterconnectStatus extends
   }
 
   /**
-   * The diagnostics of the Interconnect, as returned by the existing get-diagnostics method.
+   * Output only. The diagnostics of the Interconnect, as returned by the existing get-diagnostics
+   * method.
    * @param diagnostics diagnostics or {@code null} for none
    */
   public InterconnectGroupsOperationalStatusInterconnectStatus setDiagnostics(InterconnectDiagnostics diagnostics) {
@@ -92,7 +95,7 @@ public final class InterconnectGroupsOperationalStatusInterconnectStatus extends
   }
 
   /**
-   * The URL of the Interconnect being described.
+   * Output only. The URL of the Interconnect being described.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterconnect() {
@@ -100,7 +103,7 @@ public final class InterconnectGroupsOperationalStatusInterconnectStatus extends
   }
 
   /**
-   * The URL of the Interconnect being described.
+   * Output only. The URL of the Interconnect being described.
    * @param interconnect interconnect or {@code null} for none
    */
   public InterconnectGroupsOperationalStatusInterconnectStatus setInterconnect(java.lang.String interconnect) {
@@ -109,7 +112,7 @@ public final class InterconnectGroupsOperationalStatusInterconnectStatus extends
   }
 
   /**
-   * Whether this interconnect is participating in the redundant configuration.
+   * Output only. Whether this interconnect is participating in the redundant configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getIsActive() {
@@ -117,7 +120,7 @@ public final class InterconnectGroupsOperationalStatusInterconnectStatus extends
   }
 
   /**
-   * Whether this interconnect is participating in the redundant configuration.
+   * Output only. Whether this interconnect is participating in the redundant configuration.
    * @param isActive isActive or {@code null} for none
    */
   public InterconnectGroupsOperationalStatusInterconnectStatus setIsActive(java.lang.String isActive) {

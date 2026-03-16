@@ -42,14 +42,14 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.Integer allocatablePrefixLength;
 
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String byoipApiVersion;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +63,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String description;
 
   /**
-   * [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs
-   * only.
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for
+   * IPv4 PDPs only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +83,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String fingerprint;
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -98,8 +98,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String ipCidrRange;
 
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from
-   * parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public Delegated Prefixes.
+   * Inherited from parent prefix.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +113,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.Boolean isLiveMigration;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public delegated
-   * prefixes.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public
+   * delegated prefixes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,16 +153,16 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.util.List<PublicDelegatedPrefixPublicDelegatedSubPrefix> publicDelegatedSubPrefixs;
 
   /**
-   * [Output Only] URL of the region where the public delegated prefix resides. This field applies
-   * only to the region resource. You must specify this field as part of the HTTP request URL. It is
-   * not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the public delegated prefix resides. This
+   * field applies only to the region resource. You must specify this field as part of the HTTP
+   * request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +202,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    * @return value or {@code null} for none
    */
   public java.lang.String getByoipApiVersion() {
@@ -210,7 +210,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The version of BYOIP API.
+   * Output only. [Output Only] The version of BYOIP API.
    * @param byoipApiVersion byoipApiVersion or {@code null} for none
    */
   public PublicDelegatedPrefix setByoipApiVersion(java.lang.String byoipApiVersion) {
@@ -219,7 +219,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -227,7 +227,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public PublicDelegatedPrefix setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -253,8 +253,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs
-   * only.
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for
+   * IPv4 PDPs only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableEnhancedIpv4Allocation() {
@@ -262,8 +262,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs
-   * only.
+   * Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for
+   * IPv4 PDPs only.
    * @param enableEnhancedIpv4Allocation enableEnhancedIpv4Allocation or {@code null} for none
    */
   public PublicDelegatedPrefix setEnableEnhancedIpv4Allocation(java.lang.Boolean enableEnhancedIpv4Allocation) {
@@ -337,8 +337,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -346,8 +346,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The unique identifier for the resource type. The server generates this
-   * identifier.
+   * Output only. [Output Only] The unique identifier for the resource type. The server generates
+   * this identifier.
    * @param id id or {@code null} for none
    */
   public PublicDelegatedPrefix setId(java.math.BigInteger id) {
@@ -373,8 +373,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from
-   * parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public Delegated Prefixes.
+   * Inherited from parent prefix.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6AccessType() {
@@ -382,8 +382,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from
-   * parent prefix.
+   * Output only. [Output Only] The internet access type for IPv6 Public Delegated Prefixes.
+   * Inherited from parent prefix.
    * @param ipv6AccessType ipv6AccessType or {@code null} for none
    */
   public PublicDelegatedPrefix setIpv6AccessType(java.lang.String ipv6AccessType) {
@@ -409,8 +409,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public delegated
-   * prefixes.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public
+   * delegated prefixes.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -418,8 +418,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public delegated
-   * prefixes.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public
+   * delegated prefixes.
    * @param kind kind or {@code null} for none
    */
   public PublicDelegatedPrefix setKind(java.lang.String kind) {
@@ -504,9 +504,9 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] URL of the region where the public delegated prefix resides. This field applies
-   * only to the region resource. You must specify this field as part of the HTTP request URL. It is
-   * not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the public delegated prefix resides. This
+   * field applies only to the region resource. You must specify this field as part of the HTTP
+   * request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -514,9 +514,9 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] URL of the region where the public delegated prefix resides. This field applies
-   * only to the region resource. You must specify this field as part of the HTTP request URL. It is
-   * not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the public delegated prefix resides. This
+   * field applies only to the region resource. You must specify this field as part of the HTTP
+   * request URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public PublicDelegatedPrefix setRegion(java.lang.String region) {
@@ -525,7 +525,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -533,7 +533,7 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public PublicDelegatedPrefix setSelfLink(java.lang.String selfLink) {

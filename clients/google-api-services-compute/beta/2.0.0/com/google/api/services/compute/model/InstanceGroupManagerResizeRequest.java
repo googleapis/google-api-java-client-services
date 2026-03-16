@@ -41,7 +41,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.Integer count;
 
   /**
-   * [Output Only] The creation timestamp for this resize request inRFC3339 text format.
+   * Output only. [Output Only] The creation timestamp for this resize request inRFC3339 text
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +56,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String description;
 
   /**
-   * [Output Only] A unique identifier for this resource type. The server generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The server generates
+   * this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -71,8 +73,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.util.List<PerInstanceConfig> instances;
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceGroupManagerResizeRequest for
-   * resize requests.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceGroupManagerResizeRequest for resize requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +88,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.String name;
 
   /**
-   * [Output Only] The URL of aregion where the resize request is located. Populated only for
-   * regional resize requests.
+   * Output only. [Output Only] The URL of aregion where the resize request is located. Populated
+   * only for regional resize requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,36 +112,36 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.lang.Integer resizeBy;
 
   /**
-   * [Output Only] The URL for this resize request. The server defines this URL.
+   * Output only. [Output Only] The URL for this resize request. The server defines this URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output only] Current state of the request.
+   * Output only. [Output only] Current state of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * [Output only] Status of the request.
+   * Output only. [Output only] Status of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerResizeRequestStatus status;
 
   /**
-   * [Output Only] The URL of azone where the resize request is located. Populated only for zonal
-   * resize requests.
+   * Output only. [Output Only] The URL of azone where the resize request is located. Populated only
+   * for zonal resize requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +167,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The creation timestamp for this resize request inRFC3339 text format.
+   * Output only. [Output Only] The creation timestamp for this resize request inRFC3339 text
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -173,7 +176,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The creation timestamp for this resize request inRFC3339 text format.
+   * Output only. [Output Only] The creation timestamp for this resize request inRFC3339 text
+   * format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -199,7 +203,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] A unique identifier for this resource type. The server generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The server generates
+   * this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -207,7 +212,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] A unique identifier for this resource type. The server generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The server generates
+   * this identifier.
    * @param id id or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setId(java.math.BigInteger id) {
@@ -237,8 +243,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceGroupManagerResizeRequest for
-   * resize requests.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceGroupManagerResizeRequest for resize requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -246,8 +252,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceGroupManagerResizeRequest for
-   * resize requests.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceGroupManagerResizeRequest for resize requests.
    * @param kind kind or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setKind(java.lang.String kind) {
@@ -273,8 +279,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of aregion where the resize request is located. Populated only for
-   * regional resize requests.
+   * Output only. [Output Only] The URL of aregion where the resize request is located. Populated
+   * only for regional resize requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -282,8 +288,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of aregion where the resize request is located. Populated only for
-   * regional resize requests.
+   * Output only. [Output Only] The URL of aregion where the resize request is located. Populated
+   * only for regional resize requests.
    * @param region region or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setRegion(java.lang.String region) {
@@ -330,7 +336,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL for this resize request. The server defines this URL.
+   * Output only. [Output Only] The URL for this resize request. The server defines this URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -338,7 +344,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL for this resize request. The server defines this URL.
+   * Output only. [Output Only] The URL for this resize request. The server defines this URL.
    * @param selfLink selfLink or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setSelfLink(java.lang.String selfLink) {
@@ -347,7 +353,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -355,7 +361,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -364,7 +370,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output only] Current state of the request.
+   * Output only. [Output only] Current state of the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -372,7 +378,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output only] Current state of the request.
+   * Output only. [Output only] Current state of the request.
    * @param state state or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setState(java.lang.String state) {
@@ -381,7 +387,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output only] Status of the request.
+   * Output only. [Output only] Status of the request.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerResizeRequestStatus getStatus() {
@@ -389,7 +395,7 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output only] Status of the request.
+   * Output only. [Output only] Status of the request.
    * @param status status or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setStatus(InstanceGroupManagerResizeRequestStatus status) {
@@ -398,8 +404,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of azone where the resize request is located. Populated only for zonal
-   * resize requests.
+   * Output only. [Output Only] The URL of azone where the resize request is located. Populated only
+   * for zonal resize requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -407,8 +413,8 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * [Output Only] The URL of azone where the resize request is located. Populated only for zonal
-   * resize requests.
+   * Output only. [Output Only] The URL of azone where the resize request is located. Populated only
+   * for zonal resize requests.
    * @param zone zone or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setZone(java.lang.String zone) {

@@ -30,33 +30,33 @@ package com.google.api.services.compute.model;
 public final class InstanceManagedByIgmErrorInstanceActionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Action that managed instance group was executing on the instance when the error
-   * occurred. Possible values:
+   * Output only. [Output Only] Action that managed instance group was executing on the instance
+   * when the error occurred. Possible values:
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * [Output Only] The URL of the instance. The URL can be set even if the instance has not yet been
-   * created.
+   * Output only. [Output Only] The URL of the instance. The URL can be set even if the instance has
+   * not yet been created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
 
   /**
-   * [Output Only] Version this instance was created from, or was being created from, but the
-   * creation failed. Corresponds to one of the versions that were set on the Instance Group Manager
-   * resource at the time this instance was being created.
+   * Output only. [Output Only] Version this instance was created from, or was being created from,
+   * but the creation failed. Corresponds to one of the versions that were set on the Instance Group
+   * Manager resource at the time this instance was being created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedInstanceVersion version;
 
   /**
-   * [Output Only] Action that managed instance group was executing on the instance when the error
-   * occurred. Possible values:
+   * Output only. [Output Only] Action that managed instance group was executing on the instance
+   * when the error occurred. Possible values:
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -64,8 +64,8 @@ public final class InstanceManagedByIgmErrorInstanceActionDetails extends com.go
   }
 
   /**
-   * [Output Only] Action that managed instance group was executing on the instance when the error
-   * occurred. Possible values:
+   * Output only. [Output Only] Action that managed instance group was executing on the instance
+   * when the error occurred. Possible values:
    * @param action action or {@code null} for none
    */
   public InstanceManagedByIgmErrorInstanceActionDetails setAction(java.lang.String action) {
@@ -74,8 +74,8 @@ public final class InstanceManagedByIgmErrorInstanceActionDetails extends com.go
   }
 
   /**
-   * [Output Only] The URL of the instance. The URL can be set even if the instance has not yet been
-   * created.
+   * Output only. [Output Only] The URL of the instance. The URL can be set even if the instance has
+   * not yet been created.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -83,8 +83,8 @@ public final class InstanceManagedByIgmErrorInstanceActionDetails extends com.go
   }
 
   /**
-   * [Output Only] The URL of the instance. The URL can be set even if the instance has not yet been
-   * created.
+   * Output only. [Output Only] The URL of the instance. The URL can be set even if the instance has
+   * not yet been created.
    * @param instance instance or {@code null} for none
    */
   public InstanceManagedByIgmErrorInstanceActionDetails setInstance(java.lang.String instance) {
@@ -93,9 +93,9 @@ public final class InstanceManagedByIgmErrorInstanceActionDetails extends com.go
   }
 
   /**
-   * [Output Only] Version this instance was created from, or was being created from, but the
-   * creation failed. Corresponds to one of the versions that were set on the Instance Group Manager
-   * resource at the time this instance was being created.
+   * Output only. [Output Only] Version this instance was created from, or was being created from,
+   * but the creation failed. Corresponds to one of the versions that were set on the Instance Group
+   * Manager resource at the time this instance was being created.
    * @return value or {@code null} for none
    */
   public ManagedInstanceVersion getVersion() {
@@ -103,9 +103,9 @@ public final class InstanceManagedByIgmErrorInstanceActionDetails extends com.go
   }
 
   /**
-   * [Output Only] Version this instance was created from, or was being created from, but the
-   * creation failed. Corresponds to one of the versions that were set on the Instance Group Manager
-   * resource at the time this instance was being created.
+   * Output only. [Output Only] Version this instance was created from, or was being created from,
+   * but the creation failed. Corresponds to one of the versions that were set on the Instance Group
+   * Manager resource at the time this instance was being created.
    * @param version version or {@code null} for none
    */
   public InstanceManagedByIgmErrorInstanceActionDetails setVersion(ManagedInstanceVersion version) {

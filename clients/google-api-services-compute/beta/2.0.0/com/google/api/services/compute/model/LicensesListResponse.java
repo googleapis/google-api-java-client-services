@@ -60,7 +60,7 @@ public final class LicensesListResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +131,7 @@ public final class LicensesListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -139,7 +139,7 @@ public final class LicensesListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public LicensesListResponse setSelfLink(java.lang.String selfLink) {

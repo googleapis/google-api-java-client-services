@@ -34,7 +34,7 @@ package com.google.api.services.compute.model;
 public final class HealthAggregationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,15 +72,16 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   private java.lang.Long healthyPercentThreshold;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for health
-   * aggregation policies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for
+   * health aggregation policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,30 +122,30 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   private java.lang.String policyType;
 
   /**
-   * [Output Only] URL of the region where the health aggregation policy resides. This field applies
-   * only to the regional resource. You must specify this field as part of the HTTP request URL. It
-   * is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the health aggregation policy resides. This
+   * field applies only to the regional resource. You must specify this field as part of the HTTP
+   * request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL with id for the resource.
+   * Output only. [Output Only] Server-defined URL with id for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -152,7 +153,7 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public HealthAggregationPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -268,7 +269,8 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -276,7 +278,8 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public HealthAggregationPolicy setId(java.math.BigInteger id) {
@@ -285,8 +288,8 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for health
-   * aggregation policies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for
+   * health aggregation policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -294,8 +297,8 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for health
-   * aggregation policies.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for
+   * health aggregation policies.
    * @param kind kind or {@code null} for none
    */
   public HealthAggregationPolicy setKind(java.lang.String kind) {
@@ -381,9 +384,9 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] URL of the region where the health aggregation policy resides. This field applies
-   * only to the regional resource. You must specify this field as part of the HTTP request URL. It
-   * is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the health aggregation policy resides. This
+   * field applies only to the regional resource. You must specify this field as part of the HTTP
+   * request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -391,9 +394,9 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] URL of the region where the health aggregation policy resides. This field applies
-   * only to the regional resource. You must specify this field as part of the HTTP request URL. It
-   * is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the health aggregation policy resides. This
+   * field applies only to the regional resource. You must specify this field as part of the HTTP
+   * request URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public HealthAggregationPolicy setRegion(java.lang.String region) {
@@ -402,7 +405,7 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -410,7 +413,7 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public HealthAggregationPolicy setSelfLink(java.lang.String selfLink) {
@@ -419,7 +422,7 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Server-defined URL with id for the resource.
+   * Output only. [Output Only] Server-defined URL with id for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -427,7 +430,7 @@ public final class HealthAggregationPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * [Output Only] Server-defined URL with id for the resource.
+   * Output only. [Output Only] Server-defined URL with id for the resource.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public HealthAggregationPolicy setSelfLinkWithId(java.lang.String selfLinkWithId) {

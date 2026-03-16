@@ -66,15 +66,16 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String baseInstanceName;
 
   /**
-   * [Output Only] The creation timestamp for this managed instance group inRFC3339 text format.
+   * Output only. [Output Only] The creation timestamp for this managed instance group inRFC3339
+   * text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
 
   /**
-   * [Output Only] The list of instance actions and the number of instances in this managed instance
-   * group that are scheduled for each of those actions.
+   * Output only. [Output Only] The list of instance actions and the number of instances in this
+   * managed instance group that are scheduled for each of those actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +116,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String fingerprint;
 
   /**
-   * [Output Only] A unique identifier for this resource type. The server generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The server generates
+   * this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -130,7 +132,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private InstanceGroupManagerInstanceFlexibilityPolicy instanceFlexibilityPolicy;
 
   /**
-   * [Output Only] The URL of the Instance Group resource.
+   * Output only. [Output Only] The URL of the Instance Group resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,8 +156,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.String instanceTemplate;
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceGroupManager for managed
-   * instance groups.
+   * Output only. [Output Only] The resource type, which is alwayscompute#instanceGroupManager for
+   * managed instance groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,8 +202,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private InstanceGroupManagerParams params;
 
   /**
-   * [Output Only] The URL of theregion where the managed instance group resides (for regional
-   * resources).
+   * Output only. [Output Only] The URL of theregion where the managed instance group resides (for
+   * regional resources).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,21 +217,22 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private InstanceGroupManagerResourcePolicies resourcePolicies;
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * [Output Only] The URL for this managed instance group. The server defines this URL.
+   * Output only. [Output Only] The URL for this managed instance group. The server defines this
+   * URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,7 +263,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private StatefulPolicy statefulPolicy;
 
   /**
-   * [Output Only] The status of this managed instance group.
+   * Output only. [Output Only] The status of this managed instance group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -331,8 +334,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.util.List<InstanceGroupManagerVersion> versions;
 
   /**
-   * [Output Only] The URL of azone where the managed instance group is located (for zonal
-   * resources).
+   * Output only. [Output Only] The URL of azone where the managed instance group is located (for
+   * zonal resources).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -406,7 +409,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The creation timestamp for this managed instance group inRFC3339 text format.
+   * Output only. [Output Only] The creation timestamp for this managed instance group inRFC3339
+   * text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -414,7 +418,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The creation timestamp for this managed instance group inRFC3339 text format.
+   * Output only. [Output Only] The creation timestamp for this managed instance group inRFC3339
+   * text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InstanceGroupManager setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -423,8 +428,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The list of instance actions and the number of instances in this managed instance
-   * group that are scheduled for each of those actions.
+   * Output only. [Output Only] The list of instance actions and the number of instances in this
+   * managed instance group that are scheduled for each of those actions.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary getCurrentActions() {
@@ -432,8 +437,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The list of instance actions and the number of instances in this managed instance
-   * group that are scheduled for each of those actions.
+   * Output only. [Output Only] The list of instance actions and the number of instances in this
+   * managed instance group that are scheduled for each of those actions.
    * @param currentActions currentActions or {@code null} for none
    */
   public InstanceGroupManager setCurrentActions(InstanceGroupManagerActionsSummary currentActions) {
@@ -558,7 +563,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] A unique identifier for this resource type. The server generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The server generates
+   * this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -566,7 +572,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] A unique identifier for this resource type. The server generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The server generates
+   * this identifier.
    * @param id id or {@code null} for none
    */
   public InstanceGroupManager setId(java.math.BigInteger id) {
@@ -594,7 +601,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the Instance Group resource.
+   * Output only. [Output Only] The URL of the Instance Group resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceGroup() {
@@ -602,7 +609,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of the Instance Group resource.
+   * Output only. [Output Only] The URL of the Instance Group resource.
    * @param instanceGroup instanceGroup or {@code null} for none
    */
   public InstanceGroupManager setInstanceGroup(java.lang.String instanceGroup) {
@@ -651,8 +658,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceGroupManager for managed
-   * instance groups.
+   * Output only. [Output Only] The resource type, which is alwayscompute#instanceGroupManager for
+   * managed instance groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -660,8 +667,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceGroupManager for managed
-   * instance groups.
+   * Output only. [Output Only] The resource type, which is alwayscompute#instanceGroupManager for
+   * managed instance groups.
    * @param kind kind or {@code null} for none
    */
   public InstanceGroupManager setKind(java.lang.String kind) {
@@ -761,8 +768,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of theregion where the managed instance group resides (for regional
-   * resources).
+   * Output only. [Output Only] The URL of theregion where the managed instance group resides (for
+   * regional resources).
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -770,8 +777,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of theregion where the managed instance group resides (for regional
-   * resources).
+   * Output only. [Output Only] The URL of theregion where the managed instance group resides (for
+   * regional resources).
    * @param region region or {@code null} for none
    */
   public InstanceGroupManager setRegion(java.lang.String region) {
@@ -797,7 +804,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -805,7 +812,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public InstanceGroupManager setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -814,7 +821,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -822,7 +829,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Reserved for future use.
+   * Output only. [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public InstanceGroupManager setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -831,7 +838,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL for this managed instance group. The server defines this URL.
+   * Output only. [Output Only] The URL for this managed instance group. The server defines this
+   * URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -839,7 +847,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL for this managed instance group. The server defines this URL.
+   * Output only. [Output Only] The URL for this managed instance group. The server defines this
+   * URL.
    * @param selfLink selfLink or {@code null} for none
    */
   public InstanceGroupManager setSelfLink(java.lang.String selfLink) {
@@ -905,7 +914,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The status of this managed instance group.
+   * Output only. [Output Only] The status of this managed instance group.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatus getStatus() {
@@ -913,7 +922,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The status of this managed instance group.
+   * Output only. [Output Only] The status of this managed instance group.
    * @param status status or {@code null} for none
    */
   public InstanceGroupManager setStatus(InstanceGroupManagerStatus status) {
@@ -1071,8 +1080,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of azone where the managed instance group is located (for zonal
-   * resources).
+   * Output only. [Output Only] The URL of azone where the managed instance group is located (for
+   * zonal resources).
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -1080,8 +1089,8 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The URL of azone where the managed instance group is located (for zonal
-   * resources).
+   * Output only. [Output Only] The URL of azone where the managed instance group is located (for
+   * zonal resources).
    * @param zone zone or {@code null} for none
    */
   public InstanceGroupManager setZone(java.lang.String zone) {

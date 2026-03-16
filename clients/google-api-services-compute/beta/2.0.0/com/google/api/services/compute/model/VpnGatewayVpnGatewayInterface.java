@@ -30,7 +30,8 @@ package com.google.api.services.compute.model;
 public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Numeric identifier for this VPN interface associated with the VPN gateway.
+   * Output only. [Output Only] Numeric identifier for this VPN interface associated with the VPN
+   * gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,21 +48,22 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   private java.lang.String interconnectAttachment;
 
   /**
-   * [Output Only] IP address for this VPN interface associated with the VPN gateway. The IP address
-   * could be either a regional external IP address or a regional internal IP address. The two IP
-   * addresses for a VPN gateway must be all regional external or regional internal IP addresses.
-   * There cannot be a mix of regional external IP addresses and regional internal IP addresses. For
-   * HA VPN over Cloud Interconnect, the IP addresses for both interfaces could either be regional
-   * internal IP addresses or regional external IP addresses. For regular (non HA VPN over Cloud
-   * Interconnect) HA VPN tunnels, the IP address must be a regional external IP address.
+   * Output only. [Output Only] IP address for this VPN interface associated with the VPN gateway.
+   * The IP address could be either a regional external IP address or a regional internal IP
+   * address. The two IP addresses for a VPN gateway must be all regional external or regional
+   * internal IP addresses. There cannot be a mix of regional external IP addresses and regional
+   * internal IP addresses. For HA VPN over Cloud Interconnect, the IP addresses for both interfaces
+   * could either be regional internal IP addresses or regional external IP addresses. For regular
+   * (non HA VPN over Cloud Interconnect) HA VPN tunnels, the IP address must be a regional external
+   * IP address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
 
   /**
-   * [Output Only] IPv6 address for this VPN interface associated with the VPN gateway. The IPv6
-   * address must be a regional external IPv6 address. The format is RFC 5952 format (e.g.
+   * Output only. [Output Only] IPv6 address for this VPN interface associated with the VPN gateway.
+   * The IPv6 address must be a regional external IPv6 address. The format is RFC 5952 format (e.g.
    * 2001:db8::2d9:51:0:0).
    * The value may be {@code null}.
    */
@@ -69,7 +71,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   private java.lang.String ipv6Address;
 
   /**
-   * [Output Only] Numeric identifier for this VPN interface associated with the VPN gateway.
+   * Output only. [Output Only] Numeric identifier for this VPN interface associated with the VPN
+   * gateway.
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -77,7 +80,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] Numeric identifier for this VPN interface associated with the VPN gateway.
+   * Output only. [Output Only] Numeric identifier for this VPN interface associated with the VPN
+   * gateway.
    * @param id id or {@code null} for none
    */
   public VpnGatewayVpnGatewayInterface setId(java.lang.Long id) {
@@ -109,13 +113,14 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] IP address for this VPN interface associated with the VPN gateway. The IP address
-   * could be either a regional external IP address or a regional internal IP address. The two IP
-   * addresses for a VPN gateway must be all regional external or regional internal IP addresses.
-   * There cannot be a mix of regional external IP addresses and regional internal IP addresses. For
-   * HA VPN over Cloud Interconnect, the IP addresses for both interfaces could either be regional
-   * internal IP addresses or regional external IP addresses. For regular (non HA VPN over Cloud
-   * Interconnect) HA VPN tunnels, the IP address must be a regional external IP address.
+   * Output only. [Output Only] IP address for this VPN interface associated with the VPN gateway.
+   * The IP address could be either a regional external IP address or a regional internal IP
+   * address. The two IP addresses for a VPN gateway must be all regional external or regional
+   * internal IP addresses. There cannot be a mix of regional external IP addresses and regional
+   * internal IP addresses. For HA VPN over Cloud Interconnect, the IP addresses for both interfaces
+   * could either be regional internal IP addresses or regional external IP addresses. For regular
+   * (non HA VPN over Cloud Interconnect) HA VPN tunnels, the IP address must be a regional external
+   * IP address.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -123,13 +128,14 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] IP address for this VPN interface associated with the VPN gateway. The IP address
-   * could be either a regional external IP address or a regional internal IP address. The two IP
-   * addresses for a VPN gateway must be all regional external or regional internal IP addresses.
-   * There cannot be a mix of regional external IP addresses and regional internal IP addresses. For
-   * HA VPN over Cloud Interconnect, the IP addresses for both interfaces could either be regional
-   * internal IP addresses or regional external IP addresses. For regular (non HA VPN over Cloud
-   * Interconnect) HA VPN tunnels, the IP address must be a regional external IP address.
+   * Output only. [Output Only] IP address for this VPN interface associated with the VPN gateway.
+   * The IP address could be either a regional external IP address or a regional internal IP
+   * address. The two IP addresses for a VPN gateway must be all regional external or regional
+   * internal IP addresses. There cannot be a mix of regional external IP addresses and regional
+   * internal IP addresses. For HA VPN over Cloud Interconnect, the IP addresses for both interfaces
+   * could either be regional internal IP addresses or regional external IP addresses. For regular
+   * (non HA VPN over Cloud Interconnect) HA VPN tunnels, the IP address must be a regional external
+   * IP address.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public VpnGatewayVpnGatewayInterface setIpAddress(java.lang.String ipAddress) {
@@ -138,8 +144,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] IPv6 address for this VPN interface associated with the VPN gateway. The IPv6
-   * address must be a regional external IPv6 address. The format is RFC 5952 format (e.g.
+   * Output only. [Output Only] IPv6 address for this VPN interface associated with the VPN gateway.
+   * The IPv6 address must be a regional external IPv6 address. The format is RFC 5952 format (e.g.
    * 2001:db8::2d9:51:0:0).
    * @return value or {@code null} for none
    */
@@ -148,8 +154,8 @@ public final class VpnGatewayVpnGatewayInterface extends com.google.api.client.j
   }
 
   /**
-   * [Output Only] IPv6 address for this VPN interface associated with the VPN gateway. The IPv6
-   * address must be a regional external IPv6 address. The format is RFC 5952 format (e.g.
+   * Output only. [Output Only] IPv6 address for this VPN interface associated with the VPN gateway.
+   * The IPv6 address must be a regional external IPv6 address. The format is RFC 5952 format (e.g.
    * 2001:db8::2d9:51:0:0).
    * @param ipv6Address ipv6Address or {@code null} for none
    */

@@ -35,7 +35,7 @@ package com.google.api.services.compute.model;
 public final class NotificationEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,15 +56,16 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   private NotificationEndpointGrpcSettings grpcSettings;
 
   /**
-   * [Output Only] A unique identifier for this resource type. The server generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The server generates
+   * this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for notification
-   * endpoints.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
+   * notification endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,23 +83,23 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
-   * [Output Only] URL of the region where the notification endpoint resides. This field applies
-   * only to the regional resource. You must specify this field as part of the HTTP request URL. It
-   * is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the notification endpoint resides. This
+   * field applies only to the regional resource. You must specify this field as part of the HTTP
+   * request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -106,7 +107,7 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NotificationEndpoint setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -149,7 +150,8 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] A unique identifier for this resource type. The server generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The server generates
+   * this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -157,7 +159,8 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] A unique identifier for this resource type. The server generates this identifier.
+   * Output only. [Output Only] A unique identifier for this resource type. The server generates
+   * this identifier.
    * @param id id or {@code null} for none
    */
   public NotificationEndpoint setId(java.math.BigInteger id) {
@@ -166,8 +169,8 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for notification
-   * endpoints.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
+   * notification endpoints.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -175,8 +178,8 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for notification
-   * endpoints.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#notificationEndpoint for
+   * notification endpoints.
    * @param kind kind or {@code null} for none
    */
   public NotificationEndpoint setKind(java.lang.String kind) {
@@ -210,9 +213,9 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] URL of the region where the notification endpoint resides. This field applies
-   * only to the regional resource. You must specify this field as part of the HTTP request URL. It
-   * is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the notification endpoint resides. This
+   * field applies only to the regional resource. You must specify this field as part of the HTTP
+   * request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -220,9 +223,9 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] URL of the region where the notification endpoint resides. This field applies
-   * only to the regional resource. You must specify this field as part of the HTTP request URL. It
-   * is not settable as a field in the request body.
+   * Output only. [Output Only] URL of the region where the notification endpoint resides. This
+   * field applies only to the regional resource. You must specify this field as part of the HTTP
+   * request URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public NotificationEndpoint setRegion(java.lang.String region) {
@@ -231,7 +234,7 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -239,7 +242,7 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NotificationEndpoint setSelfLink(java.lang.String selfLink) {

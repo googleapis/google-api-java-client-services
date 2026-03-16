@@ -17,7 +17,7 @@
 package com.google.api.services.walletobjects.model;
 
 /**
- * Model definition for JwtResource.
+ * A JWT representation of a pass.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Wallet API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.walletobjects.model;
 public final class JwtResource extends com.google.api.client.json.GenericJson {
 
   /**
-   * A string representing a JWT of the format described at
+   * Required. A string representing a JWT of the format described at
    * https://developers.google.com/wallet/reference/rest/v1/Jwt
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class JwtResource extends com.google.api.client.json.GenericJson {
   private java.lang.String jwt;
 
   /**
-   * A string representing a JWT of the format described at
+   * Required. A string representing a JWT of the format described at
    * https://developers.google.com/wallet/reference/rest/v1/Jwt
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class JwtResource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string representing a JWT of the format described at
+   * Required. A string representing a JWT of the format described at
    * https://developers.google.com/wallet/reference/rest/v1/Jwt
    * @param jwt jwt or {@code null} for none
    */

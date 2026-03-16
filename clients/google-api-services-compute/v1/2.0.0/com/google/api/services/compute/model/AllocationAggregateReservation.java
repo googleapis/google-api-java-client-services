@@ -32,7 +32,7 @@ package com.google.api.services.compute.model;
 public final class AllocationAggregateReservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output only] List of resources currently in use.
+   * Output only. [Output only] List of resources currently in use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   private java.lang.String workloadType;
 
   /**
-   * [Output only] List of resources currently in use.
+   * Output only. [Output only] List of resources currently in use.
    * @return value or {@code null} for none
    */
   public java.util.List<AllocationAggregateReservationReservedResourceInfo> getInUseResources() {
@@ -68,7 +68,7 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   }
 
   /**
-   * [Output only] List of resources currently in use.
+   * Output only. [Output only] List of resources currently in use.
    * @param inUseResources inUseResources or {@code null} for none
    */
   public AllocationAggregateReservation setInUseResources(java.util.List<AllocationAggregateReservationReservedResourceInfo> inUseResources) {

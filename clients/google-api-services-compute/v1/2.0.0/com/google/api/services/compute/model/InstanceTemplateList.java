@@ -50,8 +50,8 @@ public final class InstanceTemplateList extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceTemplatesListResponse for
-   * instance template lists.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceTemplatesListResponse for instance template lists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class InstanceTemplateList extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class InstanceTemplateList extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceTemplatesListResponse for
-   * instance template lists.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceTemplatesListResponse for instance template lists.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +125,8 @@ public final class InstanceTemplateList extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The resource type, which is alwayscompute#instanceTemplatesListResponse for
-   * instance template lists.
+   * Output only. [Output Only] The resource type, which is
+   * alwayscompute#instanceTemplatesListResponse for instance template lists.
    * @param kind kind or {@code null} for none
    */
   public InstanceTemplateList setKind(java.lang.String kind) {
@@ -158,7 +158,7 @@ public final class InstanceTemplateList extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -166,7 +166,7 @@ public final class InstanceTemplateList extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Server-defined URL for this resource.
+   * Output only. [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InstanceTemplateList setSelfLink(java.lang.String selfLink) {

@@ -30,14 +30,16 @@ package com.google.api.services.compute.model;
 public final class ManagedInstanceLastAttempt extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Encountered errors during the last attempt to create or delete the instance.
+   * Output only. [Output Only] Encountered errors during the last attempt to create or delete the
+   * instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Errors errors;
 
   /**
-   * [Output Only] Encountered errors during the last attempt to create or delete the instance.
+   * Output only. [Output Only] Encountered errors during the last attempt to create or delete the
+   * instance.
    * @return value or {@code null} for none
    */
   public Errors getErrors() {
@@ -45,7 +47,8 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Encountered errors during the last attempt to create or delete the instance.
+   * Output only. [Output Only] Encountered errors during the last attempt to create or delete the
+   * instance.
    * @param errors errors or {@code null} for none
    */
   public ManagedInstanceLastAttempt setErrors(Errors errors) {
@@ -64,7 +67,8 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Encountered errors during the last attempt to create or delete the instance.
+   * Output only. [Output Only] Encountered errors during the last attempt to create or delete the
+   * instance.
    */
   public static final class Errors extends com.google.api.client.json.GenericJson {
 

@@ -42,7 +42,7 @@ public final class InterconnectAttachmentGroupsOperationalStatus extends com.goo
   private InterconnectAttachmentGroupConfigured configured;
 
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +55,7 @@ public final class InterconnectAttachmentGroupsOperationalStatus extends com.goo
   private InterconnectAttachmentGroupIntent intent;
 
   /**
-   * The operational state of the group, including only active Attachments.
+   * Output only. The operational state of the group, including only active Attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class InterconnectAttachmentGroupsOperationalStatus extends com.goo
   }
 
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupStatus() {
@@ -100,7 +100,7 @@ public final class InterconnectAttachmentGroupsOperationalStatus extends com.goo
   }
 
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    * @param groupStatus groupStatus or {@code null} for none
    */
   public InterconnectAttachmentGroupsOperationalStatus setGroupStatus(java.lang.String groupStatus) {
@@ -124,7 +124,7 @@ public final class InterconnectAttachmentGroupsOperationalStatus extends com.goo
   }
 
   /**
-   * The operational state of the group, including only active Attachments.
+   * Output only. The operational state of the group, including only active Attachments.
    * @return value or {@code null} for none
    */
   public InterconnectAttachmentGroupConfigured getOperational() {
@@ -132,7 +132,7 @@ public final class InterconnectAttachmentGroupsOperationalStatus extends com.goo
   }
 
   /**
-   * The operational state of the group, including only active Attachments.
+   * Output only. The operational state of the group, including only active Attachments.
    * @param operational operational or {@code null} for none
    */
   public InterconnectAttachmentGroupsOperationalStatus setOperational(InterconnectAttachmentGroupConfigured operational) {

@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class PreviewFeatureStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The description of the feature.
+   * Output only. [Output Only] The description of the feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * [Output Only] Link to the public documentation for the feature.
+   * Output only. [Output Only] Link to the public documentation for the feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class PreviewFeatureStatus extends com.google.api.client.json.Gener
   private PreviewFeatureStatusReleaseStatus releaseStatus;
 
   /**
-   * [Output Only] The description of the feature.
+   * Output only. [Output Only] The description of the feature.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -58,7 +58,7 @@ public final class PreviewFeatureStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] The description of the feature.
+   * Output only. [Output Only] The description of the feature.
    * @param description description or {@code null} for none
    */
   public PreviewFeatureStatus setDescription(java.lang.String description) {
@@ -67,7 +67,7 @@ public final class PreviewFeatureStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Link to the public documentation for the feature.
+   * Output only. [Output Only] Link to the public documentation for the feature.
    * @return value or {@code null} for none
    */
   public java.lang.String getHelpLink() {
@@ -75,7 +75,7 @@ public final class PreviewFeatureStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * [Output Only] Link to the public documentation for the feature.
+   * Output only. [Output Only] Link to the public documentation for the feature.
    * @param helpLink helpLink or {@code null} for none
    */
   public PreviewFeatureStatus setHelpLink(java.lang.String helpLink) {

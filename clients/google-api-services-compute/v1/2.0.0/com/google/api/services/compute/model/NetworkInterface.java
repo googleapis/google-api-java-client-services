@@ -59,6 +59,14 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
+   * network_attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableVpcScopedDns;
+
+  /**
    * Fingerprint hash of contents stored in this network interface. This field will be ignored when
    * inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided
    * in order to update theNetworkInterface. The request will fail with error400 Bad Request if the
@@ -99,8 +107,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
-   * Internet. This field is always inherited from its subnetwork.
+   * Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed
+   * from the Internet. This field is always inherited from its subnetwork.
    *
    * Valid only if stackType is IPV4_IPV6.
    * The value may be {@code null}.
@@ -118,7 +126,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String ipv6Address;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkInterface for network interfaces.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkInterface for network
+   * interfaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -259,6 +268,25 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
+   * network_attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableVpcScopedDns() {
+    return enableVpcScopedDns;
+  }
+
+  /**
+   * Optional. If true, DNS resolution will be enabled over this interface. Only valid with
+   * network_attachment.
+   * @param enableVpcScopedDns enableVpcScopedDns or {@code null} for none
+   */
+  public NetworkInterface setEnableVpcScopedDns(java.lang.Boolean enableVpcScopedDns) {
+    this.enableVpcScopedDns = enableVpcScopedDns;
+    return this;
+  }
+
+  /**
    * Fingerprint hash of contents stored in this network interface. This field will be ignored when
    * inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided
    * in order to update theNetworkInterface. The request will fail with error400 Bad Request if the
@@ -373,8 +401,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
-   * Internet. This field is always inherited from its subnetwork.
+   * Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed
+   * from the Internet. This field is always inherited from its subnetwork.
    *
    * Valid only if stackType is IPV4_IPV6.
    * @return value or {@code null} for none
@@ -384,8 +412,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the
-   * Internet. This field is always inherited from its subnetwork.
+   * Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed
+   * from the Internet. This field is always inherited from its subnetwork.
    *
    * Valid only if stackType is IPV4_IPV6.
    * @param ipv6AccessType ipv6AccessType or {@code null} for none
@@ -417,7 +445,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkInterface for network interfaces.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkInterface for network
+   * interfaces.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -425,7 +454,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#networkInterface for network interfaces.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#networkInterface for network
+   * interfaces.
    * @param kind kind or {@code null} for none
    */
   public NetworkInterface setKind(java.lang.String kind) {

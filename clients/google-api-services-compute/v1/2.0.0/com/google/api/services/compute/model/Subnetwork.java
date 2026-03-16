@@ -34,7 +34,29 @@ package com.google.api.services.compute.model;
 public final class Subnetwork extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Whether this subnetwork's ranges can conflict with existing custom routes. Setting this to true
+   * allows this subnetwork's primary and secondary ranges to overlap with (and contain) custom
+   * routes that have already been configured on the corresponding network.
+   *
+   * For example if a static route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be
+   * created if allow_conflicting_routes=true.
+   *
+   * Overlapping is only allowed on subnetwork operations; routes whose ranges conflict with this
+   * subnetwork's ranges won't be allowed unless route.allow_conflicting_subnetworks is set to true.
+   *
+   * Typically packets destined to IPs within the subnetwork (which may contain private/sensitive
+   * data) are prevented from leaving the virtual network. Setting this field to true will disable
+   * this feature.
+   *
+   * The default value is false and applies to all existing subnetworks and automatically created
+   * subnetworks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowSubnetCidrRoutesOverlap;
+
+  /**
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +74,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is determined by the org
    * policy, if there is no org policy specified, then it will default to disabled. This field isn't
-   * supported if the subnet purpose field is set toREGIONAL_MANAGED_PROXY.
+   * supported if the subnet purpose field is set toREGIONAL_MANAGED_PROXY. It is recommended to
+   * uselogConfig.enable field instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,15 +101,16 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * [Output Only] The gateway address for default routes to reach destination addresses outside
-   * this subnetwork.
+   * Output only. [Output Only] The gateway address for default routes to reach destination
+   * addresses outside this subnetwork.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gatewayAddress;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -134,27 +158,28 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String ipv6AccessType;
 
   /**
-   * [Output Only] This field is for internal use.
+   * Output only. [Output Only] This field is for internal use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipv6CidrRange;
 
   /**
-   * [Output Only] Possible endpoints of this subnetwork. It can be one of the following:        -
-   * VM_ONLY: The subnetwork can be used for creating instances and    IPv6 addresses with VM
-   * endpoint type. Such a subnetwork gets external IPv6    ranges from a public delegated prefix
-   * and cannot be used to create NetLb.    - VM_AND_FR: The subnetwork can be used for creating
-   * both VM    instances and Forwarding Rules. It can also be used to reserve IPv6    addresses
-   * with both VM and FR endpoint types. Such a subnetwork gets its    IPv6 range from Google IP
-   * Pool directly.
+   * Output only. [Output Only] Possible endpoints of this subnetwork. It can be one of the
+   * following:        - VM_ONLY: The subnetwork can be used for creating instances and    IPv6
+   * addresses with VM endpoint type. Such a subnetwork gets external IPv6    ranges from a public
+   * delegated prefix and cannot be used to create NetLb.    - VM_AND_FR: The subnetwork can be used
+   * for creating both VM    instances and Forwarding Rules. It can also be used to reserve IPv6
+   * addresses with both VM and FR endpoint types. Such a subnetwork gets its    IPv6 range from
+   * Google IP Pool directly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipv6GceEndpoint;
 
   /**
-   * [Output Only] Type of the resource. Always compute#subnetwork for Subnetwork resources.
+   * Output only. [Output Only] Type of the resource. Always compute#subnetwork for Subnetwork
+   * resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,6 +260,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String reservedInternalRange;
 
   /**
+   * Configures subnet mask resolution for this subnetwork.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolveSubnetMask;
+
+  /**
    * The role of subnetwork. Currently, this field is only used when purpose is set to
    * GLOBAL_MANAGED_PROXY orREGIONAL_MANAGED_PROXY. The value can be set toACTIVE or BACKUP. An
    * ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a
@@ -249,7 +281,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * An array of configurations for secondary IP ranges for VM instances contained in this
    * subnetwork. The primary IP of such VM must belong to the primary ipCidrRange of the subnetwork.
    * The alias IPs may belong to either primary or secondary ranges. This field can be updated with
-   * apatch request.
+   * apatch request. Supports both IPv4 and IPv6 ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,11 +306,11 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String stackType;
 
   /**
-   * [Output Only] The state of the subnetwork, which can be one of the following values:READY:
-   * Subnetwork is created and ready to useDRAINING: only applicable to subnetworks that have the
-   * purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer
-   * are being drained. A subnetwork that is draining cannot be used or modified until it reaches a
-   * status ofREADY
+   * Output only. [Output Only] The state of the subnetwork, which can be one of the following
+   * values:READY: Subnetwork is created and ready to useDRAINING: only applicable to subnetworks
+   * that have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the
+   * load balancer are being drained. A subnetwork that is draining cannot be used or modified until
+   * it reaches a status ofREADY
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,7 +341,54 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private SubnetworkUtilizationDetails utilizationDetails;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Whether this subnetwork's ranges can conflict with existing custom routes. Setting this to true
+   * allows this subnetwork's primary and secondary ranges to overlap with (and contain) custom
+   * routes that have already been configured on the corresponding network.
+   *
+   * For example if a static route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be
+   * created if allow_conflicting_routes=true.
+   *
+   * Overlapping is only allowed on subnetwork operations; routes whose ranges conflict with this
+   * subnetwork's ranges won't be allowed unless route.allow_conflicting_subnetworks is set to true.
+   *
+   * Typically packets destined to IPs within the subnetwork (which may contain private/sensitive
+   * data) are prevented from leaving the virtual network. Setting this field to true will disable
+   * this feature.
+   *
+   * The default value is false and applies to all existing subnetworks and automatically created
+   * subnetworks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowSubnetCidrRoutesOverlap() {
+    return allowSubnetCidrRoutesOverlap;
+  }
+
+  /**
+   * Whether this subnetwork's ranges can conflict with existing custom routes. Setting this to true
+   * allows this subnetwork's primary and secondary ranges to overlap with (and contain) custom
+   * routes that have already been configured on the corresponding network.
+   *
+   * For example if a static route has range 10.1.0.0/16, a subnet range 10.0.0.0/8 could only be
+   * created if allow_conflicting_routes=true.
+   *
+   * Overlapping is only allowed on subnetwork operations; routes whose ranges conflict with this
+   * subnetwork's ranges won't be allowed unless route.allow_conflicting_subnetworks is set to true.
+   *
+   * Typically packets destined to IPs within the subnetwork (which may contain private/sensitive
+   * data) are prevented from leaving the virtual network. Setting this field to true will disable
+   * this feature.
+   *
+   * The default value is false and applies to all existing subnetworks and automatically created
+   * subnetworks.
+   * @param allowSubnetCidrRoutesOverlap allowSubnetCidrRoutesOverlap or {@code null} for none
+   */
+  public Subnetwork setAllowSubnetCidrRoutesOverlap(java.lang.Boolean allowSubnetCidrRoutesOverlap) {
+    this.allowSubnetCidrRoutesOverlap = allowSubnetCidrRoutesOverlap;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -317,7 +396,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Subnetwork setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -348,7 +427,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is determined by the org
    * policy, if there is no org policy specified, then it will default to disabled. This field isn't
-   * supported if the subnet purpose field is set toREGIONAL_MANAGED_PROXY.
+   * supported if the subnet purpose field is set toREGIONAL_MANAGED_PROXY. It is recommended to
+   * uselogConfig.enable field instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableFlowLogs() {
@@ -359,7 +439,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it
    * will not appear in get listings. If not set the default behavior is determined by the org
    * policy, if there is no org policy specified, then it will default to disabled. This field isn't
-   * supported if the subnet purpose field is set toREGIONAL_MANAGED_PROXY.
+   * supported if the subnet purpose field is set toREGIONAL_MANAGED_PROXY. It is recommended to
+   * uselogConfig.enable field instead.
    * @param enableFlowLogs enableFlowLogs or {@code null} for none
    */
   public Subnetwork setEnableFlowLogs(java.lang.Boolean enableFlowLogs) {
@@ -450,8 +531,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The gateway address for default routes to reach destination addresses outside
-   * this subnetwork.
+   * Output only. [Output Only] The gateway address for default routes to reach destination
+   * addresses outside this subnetwork.
    * @return value or {@code null} for none
    */
   public java.lang.String getGatewayAddress() {
@@ -459,8 +540,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The gateway address for default routes to reach destination addresses outside
-   * this subnetwork.
+   * Output only. [Output Only] The gateway address for default routes to reach destination
+   * addresses outside this subnetwork.
    * @param gatewayAddress gatewayAddress or {@code null} for none
    */
   public Subnetwork setGatewayAddress(java.lang.String gatewayAddress) {
@@ -469,7 +550,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -477,7 +559,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public Subnetwork setId(java.math.BigInteger id) {
@@ -580,7 +663,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] This field is for internal use.
+   * Output only. [Output Only] This field is for internal use.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6CidrRange() {
@@ -588,7 +671,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] This field is for internal use.
+   * Output only. [Output Only] This field is for internal use.
    * @param ipv6CidrRange ipv6CidrRange or {@code null} for none
    */
   public Subnetwork setIpv6CidrRange(java.lang.String ipv6CidrRange) {
@@ -597,13 +680,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Possible endpoints of this subnetwork. It can be one of the following:        -
-   * VM_ONLY: The subnetwork can be used for creating instances and    IPv6 addresses with VM
-   * endpoint type. Such a subnetwork gets external IPv6    ranges from a public delegated prefix
-   * and cannot be used to create NetLb.    - VM_AND_FR: The subnetwork can be used for creating
-   * both VM    instances and Forwarding Rules. It can also be used to reserve IPv6    addresses
-   * with both VM and FR endpoint types. Such a subnetwork gets its    IPv6 range from Google IP
-   * Pool directly.
+   * Output only. [Output Only] Possible endpoints of this subnetwork. It can be one of the
+   * following:        - VM_ONLY: The subnetwork can be used for creating instances and    IPv6
+   * addresses with VM endpoint type. Such a subnetwork gets external IPv6    ranges from a public
+   * delegated prefix and cannot be used to create NetLb.    - VM_AND_FR: The subnetwork can be used
+   * for creating both VM    instances and Forwarding Rules. It can also be used to reserve IPv6
+   * addresses with both VM and FR endpoint types. Such a subnetwork gets its    IPv6 range from
+   * Google IP Pool directly.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpv6GceEndpoint() {
@@ -611,13 +694,13 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Possible endpoints of this subnetwork. It can be one of the following:        -
-   * VM_ONLY: The subnetwork can be used for creating instances and    IPv6 addresses with VM
-   * endpoint type. Such a subnetwork gets external IPv6    ranges from a public delegated prefix
-   * and cannot be used to create NetLb.    - VM_AND_FR: The subnetwork can be used for creating
-   * both VM    instances and Forwarding Rules. It can also be used to reserve IPv6    addresses
-   * with both VM and FR endpoint types. Such a subnetwork gets its    IPv6 range from Google IP
-   * Pool directly.
+   * Output only. [Output Only] Possible endpoints of this subnetwork. It can be one of the
+   * following:        - VM_ONLY: The subnetwork can be used for creating instances and    IPv6
+   * addresses with VM endpoint type. Such a subnetwork gets external IPv6    ranges from a public
+   * delegated prefix and cannot be used to create NetLb.    - VM_AND_FR: The subnetwork can be used
+   * for creating both VM    instances and Forwarding Rules. It can also be used to reserve IPv6
+   * addresses with both VM and FR endpoint types. Such a subnetwork gets its    IPv6 range from
+   * Google IP Pool directly.
    * @param ipv6GceEndpoint ipv6GceEndpoint or {@code null} for none
    */
   public Subnetwork setIpv6GceEndpoint(java.lang.String ipv6GceEndpoint) {
@@ -626,7 +709,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#subnetwork for Subnetwork resources.
+   * Output only. [Output Only] Type of the resource. Always compute#subnetwork for Subnetwork
+   * resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -634,7 +718,8 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] Type of the resource. Always compute#subnetwork for Subnetwork resources.
+   * Output only. [Output Only] Type of the resource. Always compute#subnetwork for Subnetwork
+   * resources.
    * @param kind kind or {@code null} for none
    */
   public Subnetwork setKind(java.lang.String kind) {
@@ -818,6 +903,23 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Configures subnet mask resolution for this subnetwork.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolveSubnetMask() {
+    return resolveSubnetMask;
+  }
+
+  /**
+   * Configures subnet mask resolution for this subnetwork.
+   * @param resolveSubnetMask resolveSubnetMask or {@code null} for none
+   */
+  public Subnetwork setResolveSubnetMask(java.lang.String resolveSubnetMask) {
+    this.resolveSubnetMask = resolveSubnetMask;
+    return this;
+  }
+
+  /**
    * The role of subnetwork. Currently, this field is only used when purpose is set to
    * GLOBAL_MANAGED_PROXY orREGIONAL_MANAGED_PROXY. The value can be set toACTIVE or BACKUP. An
    * ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a
@@ -846,7 +948,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * An array of configurations for secondary IP ranges for VM instances contained in this
    * subnetwork. The primary IP of such VM must belong to the primary ipCidrRange of the subnetwork.
    * The alias IPs may belong to either primary or secondary ranges. This field can be updated with
-   * apatch request.
+   * apatch request. Supports both IPv4 and IPv6 ranges.
    * @return value or {@code null} for none
    */
   public java.util.List<SubnetworkSecondaryRange> getSecondaryIpRanges() {
@@ -857,7 +959,7 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    * An array of configurations for secondary IP ranges for VM instances contained in this
    * subnetwork. The primary IP of such VM must belong to the primary ipCidrRange of the subnetwork.
    * The alias IPs may belong to either primary or secondary ranges. This field can be updated with
-   * apatch request.
+   * apatch request. Supports both IPv4 and IPv6 ranges.
    * @param secondaryIpRanges secondaryIpRanges or {@code null} for none
    */
   public Subnetwork setSecondaryIpRanges(java.util.List<SubnetworkSecondaryRange> secondaryIpRanges) {
@@ -908,11 +1010,11 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The state of the subnetwork, which can be one of the following values:READY:
-   * Subnetwork is created and ready to useDRAINING: only applicable to subnetworks that have the
-   * purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer
-   * are being drained. A subnetwork that is draining cannot be used or modified until it reaches a
-   * status ofREADY
+   * Output only. [Output Only] The state of the subnetwork, which can be one of the following
+   * values:READY: Subnetwork is created and ready to useDRAINING: only applicable to subnetworks
+   * that have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the
+   * load balancer are being drained. A subnetwork that is draining cannot be used or modified until
+   * it reaches a status ofREADY
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -920,11 +1022,11 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] The state of the subnetwork, which can be one of the following values:READY:
-   * Subnetwork is created and ready to useDRAINING: only applicable to subnetworks that have the
-   * purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer
-   * are being drained. A subnetwork that is draining cannot be used or modified until it reaches a
-   * status ofREADY
+   * Output only. [Output Only] The state of the subnetwork, which can be one of the following
+   * values:READY: Subnetwork is created and ready to useDRAINING: only applicable to subnetworks
+   * that have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the
+   * load balancer are being drained. A subnetwork that is draining cannot be used or modified until
+   * it reaches a status ofREADY
    * @param state state or {@code null} for none
    */
   public Subnetwork setState(java.lang.String state) {

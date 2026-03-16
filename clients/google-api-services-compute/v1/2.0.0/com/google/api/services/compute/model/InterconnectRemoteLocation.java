@@ -33,161 +33,163 @@ package com.google.api.services.compute.model;
 public final class InterconnectRemoteLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The postal address of the Point of Presence, each line in the address is
-   * separated by a newline character.
+   * Output only. [Output Only] The postal address of the Point of Presence, each line in the
+   * address is separated by a newline character.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String address;
 
   /**
-   * [Output Only] Subset of fields from InterconnectAttachment's |configurationConstraints| field
-   * that apply to all attachments for this remote location.
+   * Output only. [Output Only] Subset of fields from InterconnectAttachment's
+   * |configurationConstraints| field that apply to all attachments for this remote location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InterconnectAttachmentConfigurationConstraints attachmentConfigurationConstraints;
 
   /**
-   * [Output Only] Metropolitan area designator that indicates which city an interconnect is
-   * located. For example: "Chicago, IL", "Amsterdam, Netherlands".
+   * Output only. [Output Only] Metropolitan area designator that indicates which city an
+   * interconnect is located. For example: "Chicago, IL", "Amsterdam, Netherlands".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String city;
 
   /**
-   * [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect and
-   * associated InterconnectAttachments.
+   * Output only. [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect
+   * and associated InterconnectAttachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InterconnectRemoteLocationConstraints constraints;
 
   /**
-   * [Output Only] Continent for this location, which can take one of the following values:        -
-   * AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
+   * Output only. [Output Only] Continent for this location, which can take one of the following
+   * values:        - AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String continent;
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
 
   /**
-   * [Output Only] An optional description of the resource.
+   * Output only. [Output Only] An optional description of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   * Output only. [Output Only] The name of the provider for this facility (e.g., EQUINIX).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String facilityProvider;
 
   /**
-   * [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-DC1).
+   * Output only. [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-
+   * DC1).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String facilityProviderFacilityId;
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for interconnect
-   * remote locations.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for
+   * interconnect remote locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take one of the
-   * following values: LACP_SUPPORTED, LACP_UNSUPPORTED
+   * Output only. [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take
+   * one of the following values: LACP_SUPPORTED, LACP_UNSUPPORTED
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lacp;
 
   /**
-   * [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation group (LAG).
-   * When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
+   * Output only. [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation
+   * group (LAG). When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxLagSize100Gbps;
 
   /**
-   * [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation group (LAG).
-   * When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
+   * Output only. [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation
+   * group (LAG). When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxLagSize10Gbps;
 
   /**
-   * [Output Only] The maximum number of 400 Gbps ports supported in a link aggregation group (LAG).
-   * When linkType is 400 Gbps, requestedLinkCount cannot exceed max_lag_size_400_gbps.
+   * Output only. [Output Only] The maximum number of 400 Gbps ports supported in a link aggregation
+   * group (LAG). When linkType is 400 Gbps, requestedLinkCount cannot exceed max_lag_size_400_gbps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxLagSize400Gbps;
 
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * [Output Only] The peeringdb identifier for this facility (corresponding with a netfac type in
-   * peeringdb).
+   * Output only. [Output Only] The peeringdb identifier for this facility (corresponding with a
+   * netfac type in peeringdb).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peeringdbFacilityId;
 
   /**
-   * [Output Only] Permitted connections.
+   * Output only. [Output Only] Permitted connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<InterconnectRemoteLocationPermittedConnections> permittedConnections;
 
   /**
-   * [Output Only] Indicates the service provider present at the remote location. Example values:
-   * "Amazon Web Services", "Microsoft Azure".
+   * Output only. [Output Only] Indicates the service provider present at the remote location.
+   * Example values: "Amazon Web Services", "Microsoft Azure".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String remoteService;
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] The status of this InterconnectRemoteLocation, which can take one of the
-   * following values:        - CLOSED: The InterconnectRemoteLocation is closed and is unavailable
-   * for provisioning new Cross-Cloud Interconnects.     - AVAILABLE: The
+   * Output only. [Output Only] The status of this InterconnectRemoteLocation, which can take one of
+   * the following values:        - CLOSED: The InterconnectRemoteLocation is closed and is
+   * unavailable    for provisioning new Cross-Cloud Interconnects.     - AVAILABLE: The
    * InterconnectRemoteLocation is available for provisioning new    Cross-Cloud Interconnects.
    * The value may be {@code null}.
    */
@@ -195,8 +197,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   private java.lang.String status;
 
   /**
-   * [Output Only] The postal address of the Point of Presence, each line in the address is
-   * separated by a newline character.
+   * Output only. [Output Only] The postal address of the Point of Presence, each line in the
+   * address is separated by a newline character.
    * @return value or {@code null} for none
    */
   public java.lang.String getAddress() {
@@ -204,8 +206,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The postal address of the Point of Presence, each line in the address is
-   * separated by a newline character.
+   * Output only. [Output Only] The postal address of the Point of Presence, each line in the
+   * address is separated by a newline character.
    * @param address address or {@code null} for none
    */
   public InterconnectRemoteLocation setAddress(java.lang.String address) {
@@ -214,8 +216,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Subset of fields from InterconnectAttachment's |configurationConstraints| field
-   * that apply to all attachments for this remote location.
+   * Output only. [Output Only] Subset of fields from InterconnectAttachment's
+   * |configurationConstraints| field that apply to all attachments for this remote location.
    * @return value or {@code null} for none
    */
   public InterconnectAttachmentConfigurationConstraints getAttachmentConfigurationConstraints() {
@@ -223,8 +225,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Subset of fields from InterconnectAttachment's |configurationConstraints| field
-   * that apply to all attachments for this remote location.
+   * Output only. [Output Only] Subset of fields from InterconnectAttachment's
+   * |configurationConstraints| field that apply to all attachments for this remote location.
    * @param attachmentConfigurationConstraints attachmentConfigurationConstraints or {@code null} for none
    */
   public InterconnectRemoteLocation setAttachmentConfigurationConstraints(InterconnectAttachmentConfigurationConstraints attachmentConfigurationConstraints) {
@@ -233,8 +235,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Metropolitan area designator that indicates which city an interconnect is
-   * located. For example: "Chicago, IL", "Amsterdam, Netherlands".
+   * Output only. [Output Only] Metropolitan area designator that indicates which city an
+   * interconnect is located. For example: "Chicago, IL", "Amsterdam, Netherlands".
    * @return value or {@code null} for none
    */
   public java.lang.String getCity() {
@@ -242,8 +244,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Metropolitan area designator that indicates which city an interconnect is
-   * located. For example: "Chicago, IL", "Amsterdam, Netherlands".
+   * Output only. [Output Only] Metropolitan area designator that indicates which city an
+   * interconnect is located. For example: "Chicago, IL", "Amsterdam, Netherlands".
    * @param city city or {@code null} for none
    */
   public InterconnectRemoteLocation setCity(java.lang.String city) {
@@ -252,8 +254,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect and
-   * associated InterconnectAttachments.
+   * Output only. [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect
+   * and associated InterconnectAttachments.
    * @return value or {@code null} for none
    */
   public InterconnectRemoteLocationConstraints getConstraints() {
@@ -261,8 +263,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect and
-   * associated InterconnectAttachments.
+   * Output only. [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect
+   * and associated InterconnectAttachments.
    * @param constraints constraints or {@code null} for none
    */
   public InterconnectRemoteLocation setConstraints(InterconnectRemoteLocationConstraints constraints) {
@@ -271,8 +273,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Continent for this location, which can take one of the following values:        -
-   * AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
+   * Output only. [Output Only] Continent for this location, which can take one of the following
+   * values:        - AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
    * @return value or {@code null} for none
    */
   public java.lang.String getContinent() {
@@ -280,8 +282,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Continent for this location, which can take one of the following values:        -
-   * AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
+   * Output only. [Output Only] Continent for this location, which can take one of the following
+   * values:        - AFRICA    - ASIA_PAC    - EUROPE    - NORTH_AMERICA    - SOUTH_AMERICA
    * @param continent continent or {@code null} for none
    */
   public InterconnectRemoteLocation setContinent(java.lang.String continent) {
@@ -290,7 +292,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -298,7 +300,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Creation timestamp inRFC3339 text format.
+   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InterconnectRemoteLocation setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -307,7 +309,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] An optional description of the resource.
+   * Output only. [Output Only] An optional description of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -315,7 +317,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] An optional description of the resource.
+   * Output only. [Output Only] An optional description of the resource.
    * @param description description or {@code null} for none
    */
   public InterconnectRemoteLocation setDescription(java.lang.String description) {
@@ -324,7 +326,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   * Output only. [Output Only] The name of the provider for this facility (e.g., EQUINIX).
    * @return value or {@code null} for none
    */
   public java.lang.String getFacilityProvider() {
@@ -332,7 +334,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   * Output only. [Output Only] The name of the provider for this facility (e.g., EQUINIX).
    * @param facilityProvider facilityProvider or {@code null} for none
    */
   public InterconnectRemoteLocation setFacilityProvider(java.lang.String facilityProvider) {
@@ -341,7 +343,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-DC1).
+   * Output only. [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-
+   * DC1).
    * @return value or {@code null} for none
    */
   public java.lang.String getFacilityProviderFacilityId() {
@@ -349,7 +352,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-DC1).
+   * Output only. [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-
+   * DC1).
    * @param facilityProviderFacilityId facilityProviderFacilityId or {@code null} for none
    */
   public InterconnectRemoteLocation setFacilityProviderFacilityId(java.lang.String facilityProviderFacilityId) {
@@ -358,7 +362,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -366,7 +371,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
+   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
+   * by the server.
    * @param id id or {@code null} for none
    */
   public InterconnectRemoteLocation setId(java.math.BigInteger id) {
@@ -375,8 +381,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for interconnect
-   * remote locations.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for
+   * interconnect remote locations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -384,8 +390,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for interconnect
-   * remote locations.
+   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for
+   * interconnect remote locations.
    * @param kind kind or {@code null} for none
    */
   public InterconnectRemoteLocation setKind(java.lang.String kind) {
@@ -394,8 +400,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take one of the
-   * following values: LACP_SUPPORTED, LACP_UNSUPPORTED
+   * Output only. [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take
+   * one of the following values: LACP_SUPPORTED, LACP_UNSUPPORTED
    * @return value or {@code null} for none
    */
   public java.lang.String getLacp() {
@@ -403,8 +409,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take one of the
-   * following values: LACP_SUPPORTED, LACP_UNSUPPORTED
+   * Output only. [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take
+   * one of the following values: LACP_SUPPORTED, LACP_UNSUPPORTED
    * @param lacp lacp or {@code null} for none
    */
   public InterconnectRemoteLocation setLacp(java.lang.String lacp) {
@@ -413,8 +419,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation group (LAG).
-   * When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
+   * Output only. [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation
+   * group (LAG). When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxLagSize100Gbps() {
@@ -422,8 +428,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation group (LAG).
-   * When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
+   * Output only. [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation
+   * group (LAG). When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
    * @param maxLagSize100Gbps maxLagSize100Gbps or {@code null} for none
    */
   public InterconnectRemoteLocation setMaxLagSize100Gbps(java.lang.Integer maxLagSize100Gbps) {
@@ -432,8 +438,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation group (LAG).
-   * When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
+   * Output only. [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation
+   * group (LAG). When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxLagSize10Gbps() {
@@ -441,8 +447,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation group (LAG).
-   * When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
+   * Output only. [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation
+   * group (LAG). When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
    * @param maxLagSize10Gbps maxLagSize10Gbps or {@code null} for none
    */
   public InterconnectRemoteLocation setMaxLagSize10Gbps(java.lang.Integer maxLagSize10Gbps) {
@@ -451,8 +457,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The maximum number of 400 Gbps ports supported in a link aggregation group (LAG).
-   * When linkType is 400 Gbps, requestedLinkCount cannot exceed max_lag_size_400_gbps.
+   * Output only. [Output Only] The maximum number of 400 Gbps ports supported in a link aggregation
+   * group (LAG). When linkType is 400 Gbps, requestedLinkCount cannot exceed max_lag_size_400_gbps.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxLagSize400Gbps() {
@@ -460,8 +466,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The maximum number of 400 Gbps ports supported in a link aggregation group (LAG).
-   * When linkType is 400 Gbps, requestedLinkCount cannot exceed max_lag_size_400_gbps.
+   * Output only. [Output Only] The maximum number of 400 Gbps ports supported in a link aggregation
+   * group (LAG). When linkType is 400 Gbps, requestedLinkCount cannot exceed max_lag_size_400_gbps.
    * @param maxLagSize400Gbps maxLagSize400Gbps or {@code null} for none
    */
   public InterconnectRemoteLocation setMaxLagSize400Gbps(java.lang.Integer maxLagSize400Gbps) {
@@ -470,7 +476,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -478,7 +484,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Name of the resource.
+   * Output only. [Output Only] Name of the resource.
    * @param name name or {@code null} for none
    */
   public InterconnectRemoteLocation setName(java.lang.String name) {
@@ -487,8 +493,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The peeringdb identifier for this facility (corresponding with a netfac type in
-   * peeringdb).
+   * Output only. [Output Only] The peeringdb identifier for this facility (corresponding with a
+   * netfac type in peeringdb).
    * @return value or {@code null} for none
    */
   public java.lang.String getPeeringdbFacilityId() {
@@ -496,8 +502,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The peeringdb identifier for this facility (corresponding with a netfac type in
-   * peeringdb).
+   * Output only. [Output Only] The peeringdb identifier for this facility (corresponding with a
+   * netfac type in peeringdb).
    * @param peeringdbFacilityId peeringdbFacilityId or {@code null} for none
    */
   public InterconnectRemoteLocation setPeeringdbFacilityId(java.lang.String peeringdbFacilityId) {
@@ -506,7 +512,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Permitted connections.
+   * Output only. [Output Only] Permitted connections.
    * @return value or {@code null} for none
    */
   public java.util.List<InterconnectRemoteLocationPermittedConnections> getPermittedConnections() {
@@ -514,7 +520,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Permitted connections.
+   * Output only. [Output Only] Permitted connections.
    * @param permittedConnections permittedConnections or {@code null} for none
    */
   public InterconnectRemoteLocation setPermittedConnections(java.util.List<InterconnectRemoteLocationPermittedConnections> permittedConnections) {
@@ -523,8 +529,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Indicates the service provider present at the remote location. Example values:
-   * "Amazon Web Services", "Microsoft Azure".
+   * Output only. [Output Only] Indicates the service provider present at the remote location.
+   * Example values: "Amazon Web Services", "Microsoft Azure".
    * @return value or {@code null} for none
    */
   public java.lang.String getRemoteService() {
@@ -532,8 +538,8 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Indicates the service provider present at the remote location. Example values:
-   * "Amazon Web Services", "Microsoft Azure".
+   * Output only. [Output Only] Indicates the service provider present at the remote location.
+   * Example values: "Amazon Web Services", "Microsoft Azure".
    * @param remoteService remoteService or {@code null} for none
    */
   public InterconnectRemoteLocation setRemoteService(java.lang.String remoteService) {
@@ -542,7 +548,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -550,7 +556,7 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Server-defined URL for the resource.
+   * Output only. [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InterconnectRemoteLocation setSelfLink(java.lang.String selfLink) {
@@ -559,9 +565,9 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The status of this InterconnectRemoteLocation, which can take one of the
-   * following values:        - CLOSED: The InterconnectRemoteLocation is closed and is unavailable
-   * for provisioning new Cross-Cloud Interconnects.     - AVAILABLE: The
+   * Output only. [Output Only] The status of this InterconnectRemoteLocation, which can take one of
+   * the following values:        - CLOSED: The InterconnectRemoteLocation is closed and is
+   * unavailable    for provisioning new Cross-Cloud Interconnects.     - AVAILABLE: The
    * InterconnectRemoteLocation is available for provisioning new    Cross-Cloud Interconnects.
    * @return value or {@code null} for none
    */
@@ -570,9 +576,9 @@ public final class InterconnectRemoteLocation extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] The status of this InterconnectRemoteLocation, which can take one of the
-   * following values:        - CLOSED: The InterconnectRemoteLocation is closed and is unavailable
-   * for provisioning new Cross-Cloud Interconnects.     - AVAILABLE: The
+   * Output only. [Output Only] The status of this InterconnectRemoteLocation, which can take one of
+   * the following values:        - CLOSED: The InterconnectRemoteLocation is closed and is
+   * unavailable    for provisioning new Cross-Cloud Interconnects.     - AVAILABLE: The
    * InterconnectRemoteLocation is available for provisioning new    Cross-Cloud Interconnects.
    * @param status status or {@code null} for none
    */

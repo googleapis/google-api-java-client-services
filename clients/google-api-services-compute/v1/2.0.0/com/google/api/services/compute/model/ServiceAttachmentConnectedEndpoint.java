@@ -44,6 +44,13 @@ public final class ServiceAttachmentConnectedEndpoint extends com.google.api.cli
   private java.lang.String endpoint;
 
   /**
+   * The url of a connected endpoint with resource id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String endpointWithId;
+
+  /**
    * NAT IPs of the connected PSC endpoint and those of other endpoints propagated from it.
    * The value may be {@code null}.
    */
@@ -103,6 +110,23 @@ public final class ServiceAttachmentConnectedEndpoint extends com.google.api.cli
    */
   public ServiceAttachmentConnectedEndpoint setEndpoint(java.lang.String endpoint) {
     this.endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * The url of a connected endpoint with resource id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEndpointWithId() {
+    return endpointWithId;
+  }
+
+  /**
+   * The url of a connected endpoint with resource id.
+   * @param endpointWithId endpointWithId or {@code null} for none
+   */
+  public ServiceAttachmentConnectedEndpoint setEndpointWithId(java.lang.String endpointWithId) {
+    this.endpointWithId = endpointWithId;
     return this;
   }
 

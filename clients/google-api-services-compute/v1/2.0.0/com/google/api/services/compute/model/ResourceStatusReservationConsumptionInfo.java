@@ -30,14 +30,16 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusReservationConsumptionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The full resource name of the reservation that this instance is consuming from.
+   * Output only. [Output Only] The full resource name of the reservation that this instance is
+   * consuming from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumedReservation;
 
   /**
-   * [Output Only] The full resource name of the reservation that this instance is consuming from.
+   * Output only. [Output Only] The full resource name of the reservation that this instance is
+   * consuming from.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumedReservation() {
@@ -45,7 +47,8 @@ public final class ResourceStatusReservationConsumptionInfo extends com.google.a
   }
 
   /**
-   * [Output Only] The full resource name of the reservation that this instance is consuming from.
+   * Output only. [Output Only] The full resource name of the reservation that this instance is
+   * consuming from.
    * @param consumedReservation consumedReservation or {@code null} for none
    */
   public ResourceStatusReservationConsumptionInfo setConsumedReservation(java.lang.String consumedReservation) {

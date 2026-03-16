@@ -30,29 +30,30 @@ package com.google.api.services.compute.model;
 public final class InstanceManagedByIgmError extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] Contents of the error.
+   * Output only. [Output Only] Contents of the error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceManagedByIgmErrorManagedInstanceError error;
 
   /**
-   * [Output Only] Details of the instance action that triggered this error. May be null, if the
-   * error was not caused by an action on an instance. This field is optional.
+   * Output only. [Output Only] Details of the instance action that triggered this error. May be
+   * null, if the error was not caused by an action on an instance. This field is optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceManagedByIgmErrorInstanceActionDetails instanceActionDetails;
 
   /**
-   * [Output Only] The time that this error occurred. This value is in RFC3339 text format.
+   * Output only. [Output Only] The time that this error occurred. This value is in RFC3339 text
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timestamp;
 
   /**
-   * [Output Only] Contents of the error.
+   * Output only. [Output Only] Contents of the error.
    * @return value or {@code null} for none
    */
   public InstanceManagedByIgmErrorManagedInstanceError getError() {
@@ -60,7 +61,7 @@ public final class InstanceManagedByIgmError extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Contents of the error.
+   * Output only. [Output Only] Contents of the error.
    * @param error error or {@code null} for none
    */
   public InstanceManagedByIgmError setError(InstanceManagedByIgmErrorManagedInstanceError error) {
@@ -69,8 +70,8 @@ public final class InstanceManagedByIgmError extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Details of the instance action that triggered this error. May be null, if the
-   * error was not caused by an action on an instance. This field is optional.
+   * Output only. [Output Only] Details of the instance action that triggered this error. May be
+   * null, if the error was not caused by an action on an instance. This field is optional.
    * @return value or {@code null} for none
    */
   public InstanceManagedByIgmErrorInstanceActionDetails getInstanceActionDetails() {
@@ -78,8 +79,8 @@ public final class InstanceManagedByIgmError extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] Details of the instance action that triggered this error. May be null, if the
-   * error was not caused by an action on an instance. This field is optional.
+   * Output only. [Output Only] Details of the instance action that triggered this error. May be
+   * null, if the error was not caused by an action on an instance. This field is optional.
    * @param instanceActionDetails instanceActionDetails or {@code null} for none
    */
   public InstanceManagedByIgmError setInstanceActionDetails(InstanceManagedByIgmErrorInstanceActionDetails instanceActionDetails) {
@@ -88,7 +89,8 @@ public final class InstanceManagedByIgmError extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The time that this error occurred. This value is in RFC3339 text format.
+   * Output only. [Output Only] The time that this error occurred. This value is in RFC3339 text
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimestamp() {
@@ -96,7 +98,8 @@ public final class InstanceManagedByIgmError extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The time that this error occurred. This value is in RFC3339 text format.
+   * Output only. [Output Only] The time that this error occurred. This value is in RFC3339 text
+   * format.
    * @param timestamp timestamp or {@code null} for none
    */
   public InstanceManagedByIgmError setTimestamp(java.lang.String timestamp) {

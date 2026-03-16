@@ -30,29 +30,29 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatusStateful extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] A bit indicating whether the managed instance group has stateful configuration,
-   * that is, if you have configured any items in a stateful policy or in per-instance configs. The
-   * group might report that it has no stateful configuration even when there is still some
-   * preserved state on a managed instance, for example, if you have deleted all PICs but not yet
-   * applied those deletions.
+   * Output only. [Output Only] A bit indicating whether the managed instance group has stateful
+   * configuration, that is, if you have configured any items in a stateful policy or in per-
+   * instance configs. The group might report that it has no stateful configuration even when there
+   * is still some preserved state on a managed instance, for example, if you have deleted all PICs
+   * but not yet applied those deletions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean hasStatefulConfig;
 
   /**
-   * [Output Only] Status of per-instance configurations on the instances.
+   * Output only. [Output Only] Status of per-instance configurations on the instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerStatusStatefulPerInstanceConfigs perInstanceConfigs;
 
   /**
-   * [Output Only] A bit indicating whether the managed instance group has stateful configuration,
-   * that is, if you have configured any items in a stateful policy or in per-instance configs. The
-   * group might report that it has no stateful configuration even when there is still some
-   * preserved state on a managed instance, for example, if you have deleted all PICs but not yet
-   * applied those deletions.
+   * Output only. [Output Only] A bit indicating whether the managed instance group has stateful
+   * configuration, that is, if you have configured any items in a stateful policy or in per-
+   * instance configs. The group might report that it has no stateful configuration even when there
+   * is still some preserved state on a managed instance, for example, if you have deleted all PICs
+   * but not yet applied those deletions.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasStatefulConfig() {
@@ -60,11 +60,11 @@ public final class InstanceGroupManagerStatusStateful extends com.google.api.cli
   }
 
   /**
-   * [Output Only] A bit indicating whether the managed instance group has stateful configuration,
-   * that is, if you have configured any items in a stateful policy or in per-instance configs. The
-   * group might report that it has no stateful configuration even when there is still some
-   * preserved state on a managed instance, for example, if you have deleted all PICs but not yet
-   * applied those deletions.
+   * Output only. [Output Only] A bit indicating whether the managed instance group has stateful
+   * configuration, that is, if you have configured any items in a stateful policy or in per-
+   * instance configs. The group might report that it has no stateful configuration even when there
+   * is still some preserved state on a managed instance, for example, if you have deleted all PICs
+   * but not yet applied those deletions.
    * @param hasStatefulConfig hasStatefulConfig or {@code null} for none
    */
   public InstanceGroupManagerStatusStateful setHasStatefulConfig(java.lang.Boolean hasStatefulConfig) {
@@ -73,7 +73,7 @@ public final class InstanceGroupManagerStatusStateful extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Status of per-instance configurations on the instances.
+   * Output only. [Output Only] Status of per-instance configurations on the instances.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatusStatefulPerInstanceConfigs getPerInstanceConfigs() {
@@ -81,7 +81,7 @@ public final class InstanceGroupManagerStatusStateful extends com.google.api.cli
   }
 
   /**
-   * [Output Only] Status of per-instance configurations on the instances.
+   * Output only. [Output Only] Status of per-instance configurations on the instances.
    * @param perInstanceConfigs perInstanceConfigs or {@code null} for none
    */
   public InstanceGroupManagerStatusStateful setPerInstanceConfigs(InstanceGroupManagerStatusStatefulPerInstanceConfigs perInstanceConfigs) {

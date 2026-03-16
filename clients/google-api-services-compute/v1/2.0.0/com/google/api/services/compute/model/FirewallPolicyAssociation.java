@@ -45,7 +45,7 @@ public final class FirewallPolicyAssociation extends com.google.api.client.json.
   private java.lang.String displayName;
 
   /**
-   * [Output Only] The firewall policy ID of the association.
+   * Output only. [Output Only] The firewall policy ID of the association.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class FirewallPolicyAssociation extends com.google.api.client.json.
   private java.lang.String name;
 
   /**
-   * [Output Only] The short name of the firewall policy of the association.
+   * Output only. [Output Only] The short name of the firewall policy of the association.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class FirewallPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The firewall policy ID of the association.
+   * Output only. [Output Only] The firewall policy ID of the association.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirewallPolicyId() {
@@ -110,7 +110,7 @@ public final class FirewallPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The firewall policy ID of the association.
+   * Output only. [Output Only] The firewall policy ID of the association.
    * @param firewallPolicyId firewallPolicyId or {@code null} for none
    */
   public FirewallPolicyAssociation setFirewallPolicyId(java.lang.String firewallPolicyId) {
@@ -136,7 +136,7 @@ public final class FirewallPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The short name of the firewall policy of the association.
+   * Output only. [Output Only] The short name of the firewall policy of the association.
    * @return value or {@code null} for none
    */
   public java.lang.String getShortName() {
@@ -144,7 +144,7 @@ public final class FirewallPolicyAssociation extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The short name of the firewall policy of the association.
+   * Output only. [Output Only] The short name of the firewall policy of the association.
    * @param shortName shortName or {@code null} for none
    */
   public FirewallPolicyAssociation setShortName(java.lang.String shortName) {

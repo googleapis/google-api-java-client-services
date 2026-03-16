@@ -30,21 +30,21 @@ package com.google.api.services.compute.model;
 public final class InterconnectGroupsOperationalStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration analysis, as returned by Get.
+   * Output only. The configuration analysis, as returned by Get.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InterconnectGroupConfigured configured;
 
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String groupStatus;
 
   /**
-   * The intent of the resource, as returned by Get.
+   * Output only. The intent of the resource, as returned by Get.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,14 +57,14 @@ public final class InterconnectGroupsOperationalStatus extends com.google.api.cl
   private java.util.List<InterconnectGroupsOperationalStatusInterconnectStatus> interconnectStatuses;
 
   /**
-   * The operational state of the group, including only active Interconnects.
+   * Output only. The operational state of the group, including only active Interconnects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InterconnectGroupConfigured operational;
 
   /**
-   * The configuration analysis, as returned by Get.
+   * Output only. The configuration analysis, as returned by Get.
    * @return value or {@code null} for none
    */
   public InterconnectGroupConfigured getConfigured() {
@@ -72,7 +72,7 @@ public final class InterconnectGroupsOperationalStatus extends com.google.api.cl
   }
 
   /**
-   * The configuration analysis, as returned by Get.
+   * Output only. The configuration analysis, as returned by Get.
    * @param configured configured or {@code null} for none
    */
   public InterconnectGroupsOperationalStatus setConfigured(InterconnectGroupConfigured configured) {
@@ -81,7 +81,7 @@ public final class InterconnectGroupsOperationalStatus extends com.google.api.cl
   }
 
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupStatus() {
@@ -89,7 +89,7 @@ public final class InterconnectGroupsOperationalStatus extends com.google.api.cl
   }
 
   /**
-   * Summarizes the status of the group.
+   * Output only. Summarizes the status of the group.
    * @param groupStatus groupStatus or {@code null} for none
    */
   public InterconnectGroupsOperationalStatus setGroupStatus(java.lang.String groupStatus) {
@@ -98,7 +98,7 @@ public final class InterconnectGroupsOperationalStatus extends com.google.api.cl
   }
 
   /**
-   * The intent of the resource, as returned by Get.
+   * Output only. The intent of the resource, as returned by Get.
    * @return value or {@code null} for none
    */
   public InterconnectGroupIntent getIntent() {
@@ -106,7 +106,7 @@ public final class InterconnectGroupsOperationalStatus extends com.google.api.cl
   }
 
   /**
-   * The intent of the resource, as returned by Get.
+   * Output only. The intent of the resource, as returned by Get.
    * @param intent intent or {@code null} for none
    */
   public InterconnectGroupsOperationalStatus setIntent(InterconnectGroupIntent intent) {
@@ -130,7 +130,7 @@ public final class InterconnectGroupsOperationalStatus extends com.google.api.cl
   }
 
   /**
-   * The operational state of the group, including only active Interconnects.
+   * Output only. The operational state of the group, including only active Interconnects.
    * @return value or {@code null} for none
    */
   public InterconnectGroupConfigured getOperational() {
@@ -138,7 +138,7 @@ public final class InterconnectGroupsOperationalStatus extends com.google.api.cl
   }
 
   /**
-   * The operational state of the group, including only active Interconnects.
+   * Output only. The operational state of the group, including only active Interconnects.
    * @param operational operational or {@code null} for none
    */
   public InterconnectGroupsOperationalStatus setOperational(InterconnectGroupConfigured operational) {

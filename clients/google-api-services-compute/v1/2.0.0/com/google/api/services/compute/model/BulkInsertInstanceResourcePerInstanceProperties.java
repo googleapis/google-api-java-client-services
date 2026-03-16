@@ -38,7 +38,7 @@ public final class BulkInsertInstanceResourcePerInstanceProperties extends com.g
   private java.lang.String hostname;
 
   /**
-   * This field is only temporary. It will be removed. Do not use it.
+   * Output only. This field is only temporary. It will be removed. Do not use it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class BulkInsertInstanceResourcePerInstanceProperties extends com.g
   }
 
   /**
-   * This field is only temporary. It will be removed. Do not use it.
+   * Output only. This field is only temporary. It will be removed. Do not use it.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -72,7 +72,7 @@ public final class BulkInsertInstanceResourcePerInstanceProperties extends com.g
   }
 
   /**
-   * This field is only temporary. It will be removed. Do not use it.
+   * Output only. This field is only temporary. It will be removed. Do not use it.
    * @param name name or {@code null} for none
    */
   public BulkInsertInstanceResourcePerInstanceProperties setName(java.lang.String name) {

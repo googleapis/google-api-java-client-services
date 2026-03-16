@@ -30,6 +30,14 @@ package com.google.api.services.sqladmin.model;
 public final class Settings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configures whether the replica is in accelerated mode. This feature is in private
+   * preview and requires allowlisting to take effect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean acceleratedReplicaMode;
+
+  /**
    * The activation policy specifies when the instance is activated; it is applicable only when the
    * instance state is RUNNABLE. Valid values: * `ALWAYS`: The instance is on, and remains so even
    * in the absence of connection requests. * `NEVER`: The instance is off; it is not activated,
@@ -394,6 +402,25 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> userLabels;
+
+  /**
+   * Optional. Configures whether the replica is in accelerated mode. This feature is in private
+   * preview and requires allowlisting to take effect.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAcceleratedReplicaMode() {
+    return acceleratedReplicaMode;
+  }
+
+  /**
+   * Optional. Configures whether the replica is in accelerated mode. This feature is in private
+   * preview and requires allowlisting to take effect.
+   * @param acceleratedReplicaMode acceleratedReplicaMode or {@code null} for none
+   */
+  public Settings setAcceleratedReplicaMode(java.lang.Boolean acceleratedReplicaMode) {
+    this.acceleratedReplicaMode = acceleratedReplicaMode;
+    return this;
+  }
 
   /**
    * The activation policy specifies when the instance is activated; it is applicable only when the

@@ -30,7 +30,7 @@ package com.google.api.services.vmwareengine.v1.model;
 public final class NfsDatastore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Google service file service configuration
+   * Google file service configuration
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class NfsDatastore extends com.google.api.client.json.GenericJson {
   private ThirdPartyFileService thirdPartyFileService;
 
   /**
-   * Google service file service configuration
+   * Google file service configuration
    * @return value or {@code null} for none
    */
   public GoogleFileService getGoogleFileService() {
@@ -59,7 +59,7 @@ public final class NfsDatastore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google service file service configuration
+   * Google file service configuration
    * @param googleFileService googleFileService or {@code null} for none
    */
   public NfsDatastore setGoogleFileService(GoogleFileService googleFileService) {

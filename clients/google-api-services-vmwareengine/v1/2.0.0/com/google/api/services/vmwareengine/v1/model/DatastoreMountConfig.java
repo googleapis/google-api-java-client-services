@@ -30,16 +30,15 @@ package com.google.api.services.vmwareengine.v1.model;
 public final class DatastoreMountConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. NFS is accessed by hosts in read mode Optional. Default value used will be READ_WRITE
+   * Optional. The access mode of the NFS volume. Optional. Default value used will be READ_WRITE
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessMode;
 
   /**
-   * Required. The resource name of the datastore to unmount. The datastore requested to be mounted
-   * should be in same region/zone as the cluster. Resource names are schemeless URIs that follow
-   * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+   * Required. The resource name of the datastore to mount. Resource names are schemeless URIs that
+   * follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
    * `projects/my-project/locations/us-central1/datastores/my-datastore`
    * The value may be {@code null}.
    */
@@ -68,13 +67,6 @@ public final class DatastoreMountConfig extends com.google.api.client.json.Gener
   private java.lang.String nfsVersion;
 
   /**
-   * Optional. ONLY required when NFS 4.1 version is used
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String securityType;
-
-  /**
    * Output only. Server IP addresses of the NFS volume. For NFS 3, you can only provide a single
    * server IP address or DNS names.
    * The value may be {@code null}.
@@ -83,7 +75,7 @@ public final class DatastoreMountConfig extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> servers;
 
   /**
-   * Optional. NFS is accessed by hosts in read mode Optional. Default value used will be READ_WRITE
+   * Optional. The access mode of the NFS volume. Optional. Default value used will be READ_WRITE
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessMode() {
@@ -91,7 +83,7 @@ public final class DatastoreMountConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. NFS is accessed by hosts in read mode Optional. Default value used will be READ_WRITE
+   * Optional. The access mode of the NFS volume. Optional. Default value used will be READ_WRITE
    * @param accessMode accessMode or {@code null} for none
    */
   public DatastoreMountConfig setAccessMode(java.lang.String accessMode) {
@@ -100,9 +92,8 @@ public final class DatastoreMountConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The resource name of the datastore to unmount. The datastore requested to be mounted
-   * should be in same region/zone as the cluster. Resource names are schemeless URIs that follow
-   * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+   * Required. The resource name of the datastore to mount. Resource names are schemeless URIs that
+   * follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
    * `projects/my-project/locations/us-central1/datastores/my-datastore`
    * @return value or {@code null} for none
    */
@@ -111,9 +102,8 @@ public final class DatastoreMountConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The resource name of the datastore to unmount. The datastore requested to be mounted
-   * should be in same region/zone as the cluster. Resource names are schemeless URIs that follow
-   * the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+   * Required. The resource name of the datastore to mount. Resource names are schemeless URIs that
+   * follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
    * `projects/my-project/locations/us-central1/datastores/my-datastore`
    * @param datastore datastore or {@code null} for none
    */
@@ -170,23 +160,6 @@ public final class DatastoreMountConfig extends com.google.api.client.json.Gener
    */
   public DatastoreMountConfig setNfsVersion(java.lang.String nfsVersion) {
     this.nfsVersion = nfsVersion;
-    return this;
-  }
-
-  /**
-   * Optional. ONLY required when NFS 4.1 version is used
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSecurityType() {
-    return securityType;
-  }
-
-  /**
-   * Optional. ONLY required when NFS 4.1 version is used
-   * @param securityType securityType or {@code null} for none
-   */
-  public DatastoreMountConfig setSecurityType(java.lang.String securityType) {
-    this.securityType = securityType;
     return this;
   }
 

@@ -33,8 +33,8 @@ package com.google.api.services.compute.model;
 public final class InterconnectLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The postal address of the Point of Presence, each line in the
-   * address is separated by a newline character.
+   * [Output Only] The postal address of the Point of Presence, each line in the address is
+   * separated by a newline character.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String continent;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,78 +99,75 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.util.List<InterconnectLocationCrossSiteInterconnectInfo> crossSiteInterconnectInfos;
 
   /**
-   * Output only. [Output Only] An optional description of the resource.
+   * [Output Only] An optional description of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String facilityProvider;
 
   /**
-   * Output only. [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-
-   * DC1).
+   * [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-DC1).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String facilityProviderFacilityId;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnectLocation for
-   * interconnect locations.
+   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for interconnect
+   * locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Output only. [Output Only] Name of the resource.
+   * [Output Only] Name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] The peeringdb identifier for this facility (corresponding with a
-   * netfac type in peeringdb).
+   * [Output Only] The peeringdb identifier for this facility (corresponding with a netfac type in
+   * peeringdb).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peeringdbFacilityId;
 
   /**
-   * Output only. [Output Only] A list of InterconnectLocation.RegionInfo objects, that describe
-   * parameters pertaining to the relation between this InterconnectLocation and various Google
-   * Cloud regions.
+   * [Output Only] A list of InterconnectLocation.RegionInfo objects, that describe parameters
+   * pertaining to the relation between this InterconnectLocation and various Google Cloud regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<InterconnectLocationRegionInfo> regionInfos;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] URLs of the other locations that can pair up with this location to
-   * support Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99%
-   * peer locations of each other.
+   * [Output Only] URLs of the other locations that can pair up with this location to support
+   * Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99% peer
+   * locations of each other.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,15 +184,15 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String status;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean supportsPzs;
 
   /**
-   * Output only. [Output Only] The postal address of the Point of Presence, each line in the
-   * address is separated by a newline character.
+   * [Output Only] The postal address of the Point of Presence, each line in the address is
+   * separated by a newline character.
    * @return value or {@code null} for none
    */
   public java.lang.String getAddress() {
@@ -203,8 +200,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] The postal address of the Point of Presence, each line in the
-   * address is separated by a newline character.
+   * [Output Only] The postal address of the Point of Presence, each line in the address is
+   * separated by a newline character.
    * @param address address or {@code null} for none
    */
   public InterconnectLocation setAddress(java.lang.String address) {
@@ -312,7 +309,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -320,7 +317,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InterconnectLocation setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -350,7 +347,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] An optional description of the resource.
+   * [Output Only] An optional description of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -358,7 +355,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] An optional description of the resource.
+   * [Output Only] An optional description of the resource.
    * @param description description or {@code null} for none
    */
   public InterconnectLocation setDescription(java.lang.String description) {
@@ -367,7 +364,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
    * @return value or {@code null} for none
    */
   public java.lang.String getFacilityProvider() {
@@ -375,7 +372,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
    * @param facilityProvider facilityProvider or {@code null} for none
    */
   public InterconnectLocation setFacilityProvider(java.lang.String facilityProvider) {
@@ -384,8 +381,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-
-   * DC1).
+   * [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-DC1).
    * @return value or {@code null} for none
    */
   public java.lang.String getFacilityProviderFacilityId() {
@@ -393,8 +389,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-
-   * DC1).
+   * [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-DC1).
    * @param facilityProviderFacilityId facilityProviderFacilityId or {@code null} for none
    */
   public InterconnectLocation setFacilityProviderFacilityId(java.lang.String facilityProviderFacilityId) {
@@ -403,8 +398,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -412,8 +406,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public InterconnectLocation setId(java.math.BigInteger id) {
@@ -422,8 +415,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnectLocation for
-   * interconnect locations.
+   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for interconnect
+   * locations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -431,8 +424,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnectLocation for
-   * interconnect locations.
+   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for interconnect
+   * locations.
    * @param kind kind or {@code null} for none
    */
   public InterconnectLocation setKind(java.lang.String kind) {
@@ -441,7 +434,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Name of the resource.
+   * [Output Only] Name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -449,7 +442,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Name of the resource.
+   * [Output Only] Name of the resource.
    * @param name name or {@code null} for none
    */
   public InterconnectLocation setName(java.lang.String name) {
@@ -458,8 +451,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] The peeringdb identifier for this facility (corresponding with a
-   * netfac type in peeringdb).
+   * [Output Only] The peeringdb identifier for this facility (corresponding with a netfac type in
+   * peeringdb).
    * @return value or {@code null} for none
    */
   public java.lang.String getPeeringdbFacilityId() {
@@ -467,8 +460,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] The peeringdb identifier for this facility (corresponding with a
-   * netfac type in peeringdb).
+   * [Output Only] The peeringdb identifier for this facility (corresponding with a netfac type in
+   * peeringdb).
    * @param peeringdbFacilityId peeringdbFacilityId or {@code null} for none
    */
   public InterconnectLocation setPeeringdbFacilityId(java.lang.String peeringdbFacilityId) {
@@ -477,9 +470,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] A list of InterconnectLocation.RegionInfo objects, that describe
-   * parameters pertaining to the relation between this InterconnectLocation and various Google
-   * Cloud regions.
+   * [Output Only] A list of InterconnectLocation.RegionInfo objects, that describe parameters
+   * pertaining to the relation between this InterconnectLocation and various Google Cloud regions.
    * @return value or {@code null} for none
    */
   public java.util.List<InterconnectLocationRegionInfo> getRegionInfos() {
@@ -487,9 +479,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] A list of InterconnectLocation.RegionInfo objects, that describe
-   * parameters pertaining to the relation between this InterconnectLocation and various Google
-   * Cloud regions.
+   * [Output Only] A list of InterconnectLocation.RegionInfo objects, that describe parameters
+   * pertaining to the relation between this InterconnectLocation and various Google Cloud regions.
    * @param regionInfos regionInfos or {@code null} for none
    */
   public InterconnectLocation setRegionInfos(java.util.List<InterconnectLocationRegionInfo> regionInfos) {
@@ -498,7 +489,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -506,7 +497,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InterconnectLocation setSelfLink(java.lang.String selfLink) {
@@ -515,9 +506,9 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] URLs of the other locations that can pair up with this location to
-   * support Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99%
-   * peer locations of each other.
+   * [Output Only] URLs of the other locations that can pair up with this location to support
+   * Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99% peer
+   * locations of each other.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSingleRegionProductionCriticalPeerLocations() {
@@ -525,9 +516,9 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] URLs of the other locations that can pair up with this location to
-   * support Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99%
-   * peer locations of each other.
+   * [Output Only] URLs of the other locations that can pair up with this location to support
+   * Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99% peer
+   * locations of each other.
    * @param singleRegionProductionCriticalPeerLocations singleRegionProductionCriticalPeerLocations or {@code null} for none
    */
   public InterconnectLocation setSingleRegionProductionCriticalPeerLocations(java.util.List<java.lang.String> singleRegionProductionCriticalPeerLocations) {
@@ -559,7 +550,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsPzs() {
@@ -567,7 +558,7 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param supportsPzs supportsPzs or {@code null} for none
    */
   public InterconnectLocation setSupportsPzs(java.lang.Boolean supportsPzs) {

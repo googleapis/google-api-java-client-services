@@ -30,22 +30,22 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Errors encountered during bulk instance operation.
+   * [Output Only] Errors encountered during bulk instance operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Error error;
 
   /**
-   * Output only. [Output Only] Timestamp of the last progress check of bulk instance operation.
-   * Timestamp is in RFC3339 text format.
+   * [Output Only] Timestamp of the last progress check of bulk instance operation. Timestamp is in
+   * RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestamp;
 
   /**
-   * Output only. [Output Only] Errors encountered during bulk instance operation.
+   * [Output Only] Errors encountered during bulk instance operation.
    * @return value or {@code null} for none
    */
   public Error getError() {
@@ -53,7 +53,7 @@ public final class InstanceGroupManagerStatusBulkInstanceOperationLastProgressCh
   }
 
   /**
-   * Output only. [Output Only] Errors encountered during bulk instance operation.
+   * [Output Only] Errors encountered during bulk instance operation.
    * @param error error or {@code null} for none
    */
   public InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck setError(Error error) {
@@ -62,8 +62,8 @@ public final class InstanceGroupManagerStatusBulkInstanceOperationLastProgressCh
   }
 
   /**
-   * Output only. [Output Only] Timestamp of the last progress check of bulk instance operation.
-   * Timestamp is in RFC3339 text format.
+   * [Output Only] Timestamp of the last progress check of bulk instance operation. Timestamp is in
+   * RFC3339 text format.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -71,8 +71,8 @@ public final class InstanceGroupManagerStatusBulkInstanceOperationLastProgressCh
   }
 
   /**
-   * Output only. [Output Only] Timestamp of the last progress check of bulk instance operation.
-   * Timestamp is in RFC3339 text format.
+   * [Output Only] Timestamp of the last progress check of bulk instance operation. Timestamp is in
+   * RFC3339 text format.
    * @param timestamp timestamp or {@code null} for none
    */
   public InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck setTimestamp(String timestamp) {
@@ -91,7 +91,7 @@ public final class InstanceGroupManagerStatusBulkInstanceOperationLastProgressCh
   }
 
   /**
-   * Output only. [Output Only] Errors encountered during bulk instance operation.
+   * [Output Only] Errors encountered during bulk instance operation.
    */
   public static final class Error extends com.google.api.client.json.GenericJson {
 

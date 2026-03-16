@@ -50,8 +50,7 @@ public final class ServiceAttachmentList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service
-   * attachments.
+   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +115,7 @@ public final class ServiceAttachmentList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service
-   * attachments.
+   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service attachments.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +123,7 @@ public final class ServiceAttachmentList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service
-   * attachments.
+   * [Output Only] Type of the resource. Alwayscompute#serviceAttachment for service attachments.
    * @param kind kind or {@code null} for none
    */
   public ServiceAttachmentList setKind(java.lang.String kind) {

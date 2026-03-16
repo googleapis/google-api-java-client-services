@@ -50,7 +50,7 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Type of resource.
+   * Type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output only] Server-defined URL for this resource.
+   * [Output only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Type of resource.
+   * Type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -122,7 +122,7 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Type of resource.
+   * Type of resource.
    * @param kind kind or {@code null} for none
    */
   public MultiMigsList setKind(java.lang.String kind) {
@@ -152,7 +152,7 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Server-defined URL for this resource.
+   * [Output only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -160,7 +160,7 @@ public final class MultiMigsList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Server-defined URL for this resource.
+   * [Output only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public MultiMigsList setSelfLink(java.lang.String selfLink) {

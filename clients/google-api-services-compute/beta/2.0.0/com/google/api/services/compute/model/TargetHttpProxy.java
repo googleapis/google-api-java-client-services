@@ -45,7 +45,7 @@ package com.google.api.services.compute.model;
 public final class TargetHttpProxy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,8 +108,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#targetHttpProxy for target HTTP
-   * proxies.
+   * [Output Only] Type of resource. Always compute#targetHttpProxy for target HTTP proxies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,8 +142,8 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   private java.lang.Boolean proxyBind;
 
   /**
-   * Output only. [Output Only] URL of the region where the regional Target HTTP Proxy resides. This
-   * field is not applicable to global Target HTTP Proxies.
+   * [Output Only] URL of the region where the regional Target HTTP Proxy resides. This field is not
+   * applicable to global Target HTTP Proxies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +164,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   private java.lang.String urlMap;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -173,7 +172,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public TargetHttpProxy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -345,8 +344,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#targetHttpProxy for target HTTP
-   * proxies.
+   * [Output Only] Type of resource. Always compute#targetHttpProxy for target HTTP proxies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -354,8 +352,7 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#targetHttpProxy for target HTTP
-   * proxies.
+   * [Output Only] Type of resource. Always compute#targetHttpProxy for target HTTP proxies.
    * @param kind kind or {@code null} for none
    */
   public TargetHttpProxy setKind(java.lang.String kind) {
@@ -424,8 +421,8 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional Target HTTP Proxy resides. This
-   * field is not applicable to global Target HTTP Proxies.
+   * [Output Only] URL of the region where the regional Target HTTP Proxy resides. This field is not
+   * applicable to global Target HTTP Proxies.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -433,8 +430,8 @@ public final class TargetHttpProxy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional Target HTTP Proxy resides. This
-   * field is not applicable to global Target HTTP Proxies.
+   * [Output Only] URL of the region where the regional Target HTTP Proxy resides. This field is not
+   * applicable to global Target HTTP Proxies.
    * @param region region or {@code null} for none
    */
   public TargetHttpProxy setRegion(java.lang.String region) {

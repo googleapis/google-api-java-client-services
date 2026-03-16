@@ -30,44 +30,43 @@ package com.google.api.services.compute.model;
 public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A list of active IPs for NAT. Example: ["1.1.1.1", "179.12.26.133"].
+   * A list of active IPs for NAT. Example: ["1.1.1.1", "179.12.26.133"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> activeNatIps;
 
   /**
-   * Output only. A list of IPs for NAT that are in drain mode. Example: ["1.1.1.1",
-   * "179.12.26.133"].
+   * A list of IPs for NAT that are in drain mode. Example: ["1.1.1.1", "179.12.26.133"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> drainNatIps;
 
   /**
-   * Output only. The number of extra IPs to allocate. This will be greater than 0 only if the
-   * existing IPs in this NAT Rule are NOT enough to allow all configured VMs to use NAT.
+   * The number of extra IPs to allocate. This will be greater than 0 only if the existing IPs in
+   * this NAT Rule are NOT enough to allow all configured VMs to use NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minExtraIpsNeeded;
 
   /**
-   * Output only. Number of VM endpoints (i.e., NICs) that have NAT Mappings from this NAT Rule.
+   * Number of VM endpoints (i.e., NICs) that have NAT Mappings from this NAT Rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numVmEndpointsWithNatMappings;
 
   /**
-   * Output only. Rule number of the rule.
+   * Rule number of the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer ruleNumber;
 
   /**
-   * Output only. A list of active IPs for NAT. Example: ["1.1.1.1", "179.12.26.133"].
+   * A list of active IPs for NAT. Example: ["1.1.1.1", "179.12.26.133"].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getActiveNatIps() {
@@ -75,7 +74,7 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. A list of active IPs for NAT. Example: ["1.1.1.1", "179.12.26.133"].
+   * A list of active IPs for NAT. Example: ["1.1.1.1", "179.12.26.133"].
    * @param activeNatIps activeNatIps or {@code null} for none
    */
   public RouterStatusNatStatusNatRuleStatus setActiveNatIps(java.util.List<java.lang.String> activeNatIps) {
@@ -84,8 +83,7 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. A list of IPs for NAT that are in drain mode. Example: ["1.1.1.1",
-   * "179.12.26.133"].
+   * A list of IPs for NAT that are in drain mode. Example: ["1.1.1.1", "179.12.26.133"].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDrainNatIps() {
@@ -93,8 +91,7 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. A list of IPs for NAT that are in drain mode. Example: ["1.1.1.1",
-   * "179.12.26.133"].
+   * A list of IPs for NAT that are in drain mode. Example: ["1.1.1.1", "179.12.26.133"].
    * @param drainNatIps drainNatIps or {@code null} for none
    */
   public RouterStatusNatStatusNatRuleStatus setDrainNatIps(java.util.List<java.lang.String> drainNatIps) {
@@ -103,8 +100,8 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. The number of extra IPs to allocate. This will be greater than 0 only if the
-   * existing IPs in this NAT Rule are NOT enough to allow all configured VMs to use NAT.
+   * The number of extra IPs to allocate. This will be greater than 0 only if the existing IPs in
+   * this NAT Rule are NOT enough to allow all configured VMs to use NAT.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinExtraIpsNeeded() {
@@ -112,8 +109,8 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. The number of extra IPs to allocate. This will be greater than 0 only if the
-   * existing IPs in this NAT Rule are NOT enough to allow all configured VMs to use NAT.
+   * The number of extra IPs to allocate. This will be greater than 0 only if the existing IPs in
+   * this NAT Rule are NOT enough to allow all configured VMs to use NAT.
    * @param minExtraIpsNeeded minExtraIpsNeeded or {@code null} for none
    */
   public RouterStatusNatStatusNatRuleStatus setMinExtraIpsNeeded(java.lang.Integer minExtraIpsNeeded) {
@@ -122,7 +119,7 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. Number of VM endpoints (i.e., NICs) that have NAT Mappings from this NAT Rule.
+   * Number of VM endpoints (i.e., NICs) that have NAT Mappings from this NAT Rule.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumVmEndpointsWithNatMappings() {
@@ -130,7 +127,7 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. Number of VM endpoints (i.e., NICs) that have NAT Mappings from this NAT Rule.
+   * Number of VM endpoints (i.e., NICs) that have NAT Mappings from this NAT Rule.
    * @param numVmEndpointsWithNatMappings numVmEndpointsWithNatMappings or {@code null} for none
    */
   public RouterStatusNatStatusNatRuleStatus setNumVmEndpointsWithNatMappings(java.lang.Integer numVmEndpointsWithNatMappings) {
@@ -139,7 +136,7 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. Rule number of the rule.
+   * Rule number of the rule.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRuleNumber() {
@@ -147,7 +144,7 @@ public final class RouterStatusNatStatusNatRuleStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. Rule number of the rule.
+   * Rule number of the rule.
    * @param ruleNumber ruleNumber or {@code null} for none
    */
   public RouterStatusNatStatusNatRuleStatus setRuleNumber(java.lang.Integer ruleNumber) {

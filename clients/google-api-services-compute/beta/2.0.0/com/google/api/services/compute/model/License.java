@@ -56,7 +56,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean chargesUseFee;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> incompatibleLicenses;
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#license for licenses.
+   * [Output Only] Type of resource. Always compute#license for licenses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,14 +130,6 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean osLicense;
 
   /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private LicenseParams params;
-
-  /**
    * If true, this license can be removed from a disk's set of licenses, with no replacement license
    * needed.
    * The value may be {@code null}.
@@ -162,14 +154,14 @@ public final class License extends com.google.api.client.json.GenericJson {
   private LicenseResourceRequirements resourceRequirements;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +183,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean transferable;
 
   /**
-   * Output only. [Output Only] Last update timestamp inRFC3339 text format.
+   * [Output Only] Last update timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,7 +243,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -259,7 +251,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public License setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -323,7 +315,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#license for licenses.
+   * [Output Only] Type of resource. Always compute#license for licenses.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -331,7 +323,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#license for licenses.
+   * [Output Only] Type of resource. Always compute#license for licenses.
    * @param kind kind or {@code null} for none
    */
   public License setKind(java.lang.String kind) {
@@ -429,25 +421,6 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * @return value or {@code null} for none
-   */
-  public LicenseParams getParams() {
-    return params;
-  }
-
-  /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * @param params params or {@code null} for none
-   */
-  public License setParams(LicenseParams params) {
-    this.params = params;
-    return this;
-  }
-
-  /**
    * If true, this license can be removed from a disk's set of licenses, with no replacement license
    * needed.
    * @return value or {@code null} for none
@@ -505,7 +478,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -513,7 +486,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public License setSelfLink(java.lang.String selfLink) {
@@ -522,7 +495,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -530,7 +503,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public License setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -575,7 +548,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Last update timestamp inRFC3339 text format.
+   * [Output Only] Last update timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateTimestamp() {
@@ -583,7 +556,7 @@ public final class License extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Last update timestamp inRFC3339 text format.
+   * [Output Only] Last update timestamp inRFC3339 text format.
    * @param updateTimestamp updateTimestamp or {@code null} for none
    */
   public License setUpdateTimestamp(java.lang.String updateTimestamp) {

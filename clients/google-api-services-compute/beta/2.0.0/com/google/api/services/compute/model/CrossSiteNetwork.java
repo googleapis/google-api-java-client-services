@@ -33,7 +33,7 @@ package com.google.api.services.compute.model;
 public final class CrossSiteNetwork extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,16 +47,15 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource type. The server generates
-   * this identifier.
+   * [Output Only] The unique identifier for the resource type. The server generates this
+   * identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site
-   * networks.
+   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site networks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,14 +73,14 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -89,7 +88,7 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public CrossSiteNetwork setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -115,8 +114,8 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource type. The server generates
-   * this identifier.
+   * [Output Only] The unique identifier for the resource type. The server generates this
+   * identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -124,8 +123,8 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource type. The server generates
-   * this identifier.
+   * [Output Only] The unique identifier for the resource type. The server generates this
+   * identifier.
    * @param id id or {@code null} for none
    */
   public CrossSiteNetwork setId(java.math.BigInteger id) {
@@ -134,8 +133,7 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site
-   * networks.
+   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site networks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -143,8 +141,7 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site
-   * networks.
+   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site networks.
    * @param kind kind or {@code null} for none
    */
   public CrossSiteNetwork setKind(java.lang.String kind) {
@@ -178,7 +175,7 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -186,7 +183,7 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public CrossSiteNetwork setSelfLink(java.lang.String selfLink) {

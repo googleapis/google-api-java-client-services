@@ -68,7 +68,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#zone for zones.
+   * [Output Only] Type of the resource. Always compute#zone for zones.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#zone for zones.
+   * [Output Only] Type of the resource. Always compute#zone for zones.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -203,7 +203,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#zone for zones.
+   * [Output Only] Type of the resource. Always compute#zone for zones.
    * @param kind kind or {@code null} for none
    */
   public Zone setKind(java.lang.String kind) {
@@ -280,7 +280,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsPzs() {
@@ -288,7 +288,7 @@ public final class Zone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param supportsPzs supportsPzs or {@code null} for none
    */
   public Zone setSupportsPzs(java.lang.Boolean supportsPzs) {

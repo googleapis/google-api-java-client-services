@@ -56,8 +56,7 @@ public final class CrossSiteNetworkList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site
-   * networks.
+   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site networks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,8 +80,7 @@ public final class CrossSiteNetworkList extends com.google.api.client.json.Gener
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources. end_interface:
-   * MixerListResponseWithEtagBuilder
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,8 +143,7 @@ public final class CrossSiteNetworkList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site
-   * networks.
+   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site networks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -154,8 +151,7 @@ public final class CrossSiteNetworkList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site
-   * networks.
+   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site networks.
    * @param kind kind or {@code null} for none
    */
   public CrossSiteNetworkList setKind(java.lang.String kind) {
@@ -204,8 +200,7 @@ public final class CrossSiteNetworkList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources. end_interface:
-   * MixerListResponseWithEtagBuilder
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -213,8 +208,7 @@ public final class CrossSiteNetworkList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources. end_interface:
-   * MixerListResponseWithEtagBuilder
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
    * @param unreachables unreachables or {@code null} for none
    */
   public CrossSiteNetworkList setUnreachables(java.util.List<java.lang.String> unreachables) {

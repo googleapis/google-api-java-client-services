@@ -124,6 +124,19 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean allowPscGlobalAccess;
 
   /**
+   * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
+   * inject packets into the consumer's network. If set to true, the target service attachment must
+   * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
+   * forwarding rules should not use this field.
+   *
+   * This field was never released to any customers and is deprecated and will be removed in the
+   * future.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowPscPacketInjection;
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * internal and external passthrough Network Load Balancers; must be omitted for all other load
    * balancer types.
@@ -133,17 +146,17 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String backendService;
 
   /**
-   * Output only. [Output Only] The URL for the corresponding base forwarding rule. By base
-   * forwarding rule, we mean the forwarding rule that has the same IP address, protocol, and port
-   * settings with the current forwarding rule, but without sourceIPRanges specified. Always empty
-   * if the current forwarding rule does not have sourceIPRanges specified.
+   * [Output Only] The URL for the corresponding base forwarding rule. By base forwarding rule, we
+   * mean the forwarding rule that has the same IP address, protocol, and port settings with the
+   * current forwarding rule, but without sourceIPRanges specified. Always empty if the current
+   * forwarding rule does not have sourceIPRanges specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String baseForwardingRule;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,8 +253,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.Boolean isMirroringCollector;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#forwardingRule for forwarding
-   * rule resources.
+   * [Output Only] Type of the resource. Alwayscompute#forwardingRule for forwarding rule resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -414,9 +426,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String pscConnectionStatus;
 
   /**
-   * Output only. [Output Only] URL of the region where the regional forwarding rule resides. This
-   * field is not applicable to global forwarding rules. You must specify this field as part of the
-   * HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional forwarding rule resides. This field is not
+   * applicable to global forwarding rules. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -430,7 +442,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -692,6 +704,35 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
+   * inject packets into the consumer's network. If set to true, the target service attachment must
+   * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
+   * forwarding rules should not use this field.
+   *
+   * This field was never released to any customers and is deprecated and will be removed in the
+   * future.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowPscPacketInjection() {
+    return allowPscPacketInjection;
+  }
+
+  /**
+   * This is used in PSC consumer ForwardingRule to control whether the producer is allowed to
+   * inject packets into the consumer's network. If set to true, the target service attachment must
+   * have tunneling enabled and TunnelingConfig.RoutingMode set to PACKET_INJECTION Non-PSC
+   * forwarding rules should not use this field.
+   *
+   * This field was never released to any customers and is deprecated and will be removed in the
+   * future.
+   * @param allowPscPacketInjection allowPscPacketInjection or {@code null} for none
+   */
+  public ForwardingRule setAllowPscPacketInjection(java.lang.Boolean allowPscPacketInjection) {
+    this.allowPscPacketInjection = allowPscPacketInjection;
+    return this;
+  }
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic. Required for
    * internal and external passthrough Network Load Balancers; must be omitted for all other load
    * balancer types.
@@ -713,10 +754,10 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The URL for the corresponding base forwarding rule. By base
-   * forwarding rule, we mean the forwarding rule that has the same IP address, protocol, and port
-   * settings with the current forwarding rule, but without sourceIPRanges specified. Always empty
-   * if the current forwarding rule does not have sourceIPRanges specified.
+   * [Output Only] The URL for the corresponding base forwarding rule. By base forwarding rule, we
+   * mean the forwarding rule that has the same IP address, protocol, and port settings with the
+   * current forwarding rule, but without sourceIPRanges specified. Always empty if the current
+   * forwarding rule does not have sourceIPRanges specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseForwardingRule() {
@@ -724,10 +765,10 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The URL for the corresponding base forwarding rule. By base
-   * forwarding rule, we mean the forwarding rule that has the same IP address, protocol, and port
-   * settings with the current forwarding rule, but without sourceIPRanges specified. Always empty
-   * if the current forwarding rule does not have sourceIPRanges specified.
+   * [Output Only] The URL for the corresponding base forwarding rule. By base forwarding rule, we
+   * mean the forwarding rule that has the same IP address, protocol, and port settings with the
+   * current forwarding rule, but without sourceIPRanges specified. Always empty if the current
+   * forwarding rule does not have sourceIPRanges specified.
    * @param baseForwardingRule baseForwardingRule or {@code null} for none
    */
   public ForwardingRule setBaseForwardingRule(java.lang.String baseForwardingRule) {
@@ -736,7 +777,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -744,7 +785,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ForwardingRule setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -995,8 +1036,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#forwardingRule for forwarding
-   * rule resources.
+   * [Output Only] Type of the resource. Alwayscompute#forwardingRule for forwarding rule resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -1004,8 +1044,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#forwardingRule for forwarding
-   * rule resources.
+   * [Output Only] Type of the resource. Alwayscompute#forwardingRule for forwarding rule resources.
    * @param kind kind or {@code null} for none
    */
   public ForwardingRule setKind(java.lang.String kind) {
@@ -1422,9 +1461,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional forwarding rule resides. This
-   * field is not applicable to global forwarding rules. You must specify this field as part of the
-   * HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional forwarding rule resides. This field is not
+   * applicable to global forwarding rules. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -1432,9 +1471,9 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional forwarding rule resides. This
-   * field is not applicable to global forwarding rules. You must specify this field as part of the
-   * HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional forwarding rule resides. This field is not
+   * applicable to global forwarding rules. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public ForwardingRule setRegion(java.lang.String region) {
@@ -1460,7 +1499,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -1468,7 +1507,7 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public ForwardingRule setSelfLinkWithId(java.lang.String selfLinkWithId) {

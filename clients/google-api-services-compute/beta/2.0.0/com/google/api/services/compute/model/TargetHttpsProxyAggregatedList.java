@@ -50,8 +50,8 @@ public final class TargetHttpsProxyAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetHttpsProxyAggregatedList for
-   * lists of Target HTTP Proxies.
+   * [Output Only] Type of resource. Alwayscompute#targetHttpsProxyAggregatedList for lists of
+   * Target HTTP Proxies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,14 +68,14 @@ public final class TargetHttpsProxyAggregatedList extends com.google.api.client.
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +123,8 @@ public final class TargetHttpsProxyAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetHttpsProxyAggregatedList for
-   * lists of Target HTTP Proxies.
+   * [Output Only] Type of resource. Alwayscompute#targetHttpsProxyAggregatedList for lists of
+   * Target HTTP Proxies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -132,8 +132,8 @@ public final class TargetHttpsProxyAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetHttpsProxyAggregatedList for
-   * lists of Target HTTP Proxies.
+   * [Output Only] Type of resource. Alwayscompute#targetHttpsProxyAggregatedList for lists of
+   * Target HTTP Proxies.
    * @param kind kind or {@code null} for none
    */
   public TargetHttpsProxyAggregatedList setKind(java.lang.String kind) {
@@ -165,7 +165,7 @@ public final class TargetHttpsProxyAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -173,7 +173,7 @@ public final class TargetHttpsProxyAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public TargetHttpsProxyAggregatedList setSelfLink(java.lang.String selfLink) {
@@ -182,7 +182,7 @@ public final class TargetHttpsProxyAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -190,7 +190,7 @@ public final class TargetHttpsProxyAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public TargetHttpsProxyAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

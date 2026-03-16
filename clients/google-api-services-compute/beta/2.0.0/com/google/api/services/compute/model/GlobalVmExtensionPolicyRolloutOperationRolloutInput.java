@@ -30,19 +30,12 @@ package com.google.api.services.compute.model;
 public final class GlobalVmExtensionPolicyRolloutOperationRolloutInput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Specifies the behavior of the rollout if a conflict is detected in a project during a
-   * rollout. This only applies to `insert` and `update` methods.
-   *
-   * A conflict occurs in the following cases:
-   *
-   * * `insert` method: If the zonal policy already exists when the insert   happens. * `update`
-   * method: If the zonal policy was modified by a zonal API call   outside of this rollout.
-   *
-   * Possible values are the following:
-   *
-   * * `""` (empty string): If a conflict occurs, the local value is not   overwritten. This is the
-   * default behavior. * `"overwrite"`: If a conflict occurs, the local value is overwritten   with
-   * the rollout value.
+   * Optional. [Optional] Specifies the behavior of the Rollout if a conflict is detected in a
+   * project during a Rollout. It can be one of the following values: 1) empty : don't overwrite the
+   * local value if conflict happens. This is the default behavior. 2) "overwrite" : Overwrite the
+   * local value with the rollout value. The concept of "conflict" applies to: 1) Insert action. If
+   * the zonal policy already exists when Insert happens, it's a conflict. 2) Update action. If the
+   * zonal policy was updated out of band by a zonal API, it's a conflict.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,41 +49,28 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutInput extends c
   private java.lang.String name;
 
   /**
-   * Optional. Specifies the predefined rollout plan for the policy. Valid values are `SLOW_ROLLOUT`
-   * and `FAST_ROLLOUT`. The recommended value is `SLOW_ROLLOUT` for progressive rollout. For more
-   * information, see Rollout plans for global policies.
+   * Optional. Predefined rollout plan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String predefinedRolloutPlan;
 
   /**
-   * Optional. The UUID that identifies a policy rollout retry attempt for update and delete
-   * operations. Set this field only when retrying a rollout for an existing extension policy.
-   *
-   * * `update` method: Lets you retry policy rollout without changes. An error occurs if you set
-   * retry_uuid but the policy is modified. * `delete` method: Lets you retry policy deletion
-   * rollout if the previous deletion rollout is not finished and the policy is in the DELETING
-   * state. If you set this field when the policy is not in the DELETING state, an error occurs.
+   * Optional. The UUID of the retry action. Only set it if this is a retry for an existing
+   * resource. This is for the user re-populate the resource without changes. An error will be
+   * returned if the retry_uuid is set but the resource get modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String retryUuid;
 
   /**
-   * Optional. Specifies the behavior of the rollout if a conflict is detected in a project during a
-   * rollout. This only applies to `insert` and `update` methods.
-   *
-   * A conflict occurs in the following cases:
-   *
-   * * `insert` method: If the zonal policy already exists when the insert   happens. * `update`
-   * method: If the zonal policy was modified by a zonal API call   outside of this rollout.
-   *
-   * Possible values are the following:
-   *
-   * * `""` (empty string): If a conflict occurs, the local value is not   overwritten. This is the
-   * default behavior. * `"overwrite"`: If a conflict occurs, the local value is overwritten   with
-   * the rollout value.
+   * Optional. [Optional] Specifies the behavior of the Rollout if a conflict is detected in a
+   * project during a Rollout. It can be one of the following values: 1) empty : don't overwrite the
+   * local value if conflict happens. This is the default behavior. 2) "overwrite" : Overwrite the
+   * local value with the rollout value. The concept of "conflict" applies to: 1) Insert action. If
+   * the zonal policy already exists when Insert happens, it's a conflict. 2) Update action. If the
+   * zonal policy was updated out of band by a zonal API, it's a conflict.
    * @return value or {@code null} for none
    */
   public java.lang.String getConflictBehavior() {
@@ -98,19 +78,12 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutInput extends c
   }
 
   /**
-   * Optional. Specifies the behavior of the rollout if a conflict is detected in a project during a
-   * rollout. This only applies to `insert` and `update` methods.
-   *
-   * A conflict occurs in the following cases:
-   *
-   * * `insert` method: If the zonal policy already exists when the insert   happens. * `update`
-   * method: If the zonal policy was modified by a zonal API call   outside of this rollout.
-   *
-   * Possible values are the following:
-   *
-   * * `""` (empty string): If a conflict occurs, the local value is not   overwritten. This is the
-   * default behavior. * `"overwrite"`: If a conflict occurs, the local value is overwritten   with
-   * the rollout value.
+   * Optional. [Optional] Specifies the behavior of the Rollout if a conflict is detected in a
+   * project during a Rollout. It can be one of the following values: 1) empty : don't overwrite the
+   * local value if conflict happens. This is the default behavior. 2) "overwrite" : Overwrite the
+   * local value with the rollout value. The concept of "conflict" applies to: 1) Insert action. If
+   * the zonal policy already exists when Insert happens, it's a conflict. 2) Update action. If the
+   * zonal policy was updated out of band by a zonal API, it's a conflict.
    * @param conflictBehavior conflictBehavior or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutInput setConflictBehavior(java.lang.String conflictBehavior) {
@@ -136,9 +109,7 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutInput extends c
   }
 
   /**
-   * Optional. Specifies the predefined rollout plan for the policy. Valid values are `SLOW_ROLLOUT`
-   * and `FAST_ROLLOUT`. The recommended value is `SLOW_ROLLOUT` for progressive rollout. For more
-   * information, see Rollout plans for global policies.
+   * Optional. Predefined rollout plan.
    * @return value or {@code null} for none
    */
   public java.lang.String getPredefinedRolloutPlan() {
@@ -146,9 +117,7 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutInput extends c
   }
 
   /**
-   * Optional. Specifies the predefined rollout plan for the policy. Valid values are `SLOW_ROLLOUT`
-   * and `FAST_ROLLOUT`. The recommended value is `SLOW_ROLLOUT` for progressive rollout. For more
-   * information, see Rollout plans for global policies.
+   * Optional. Predefined rollout plan.
    * @param predefinedRolloutPlan predefinedRolloutPlan or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutInput setPredefinedRolloutPlan(java.lang.String predefinedRolloutPlan) {
@@ -157,13 +126,9 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutInput extends c
   }
 
   /**
-   * Optional. The UUID that identifies a policy rollout retry attempt for update and delete
-   * operations. Set this field only when retrying a rollout for an existing extension policy.
-   *
-   * * `update` method: Lets you retry policy rollout without changes. An error occurs if you set
-   * retry_uuid but the policy is modified. * `delete` method: Lets you retry policy deletion
-   * rollout if the previous deletion rollout is not finished and the policy is in the DELETING
-   * state. If you set this field when the policy is not in the DELETING state, an error occurs.
+   * Optional. The UUID of the retry action. Only set it if this is a retry for an existing
+   * resource. This is for the user re-populate the resource without changes. An error will be
+   * returned if the retry_uuid is set but the resource get modified.
    * @return value or {@code null} for none
    */
   public java.lang.String getRetryUuid() {
@@ -171,13 +136,9 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutInput extends c
   }
 
   /**
-   * Optional. The UUID that identifies a policy rollout retry attempt for update and delete
-   * operations. Set this field only when retrying a rollout for an existing extension policy.
-   *
-   * * `update` method: Lets you retry policy rollout without changes. An error occurs if you set
-   * retry_uuid but the policy is modified. * `delete` method: Lets you retry policy deletion
-   * rollout if the previous deletion rollout is not finished and the policy is in the DELETING
-   * state. If you set this field when the policy is not in the DELETING state, an error occurs.
+   * Optional. The UUID of the retry action. Only set it if this is a retry for an existing
+   * resource. This is for the user re-populate the resource without changes. An error will be
+   * returned if the retry_uuid is set but the resource get modified.
    * @param retryUuid retryUuid or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutInput setRetryUuid(java.lang.String retryUuid) {

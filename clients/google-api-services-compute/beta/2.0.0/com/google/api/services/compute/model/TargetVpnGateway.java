@@ -33,7 +33,7 @@ package com.google.api.services.compute.model;
 public final class TargetVpnGateway extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,7 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN
-   * gateways.
+   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN gateways.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,14 +109,6 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   private java.lang.String network;
 
   /**
-   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
-   * of resource payload.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private TargetVpnGatewayParams params;
-
-  /**
    * [Output Only] URL of the region where the target VPN gateway resides. You must specify this
    * field as part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
@@ -149,7 +140,7 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> tunnels;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -157,7 +148,7 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public TargetVpnGateway setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -219,8 +210,7 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN
-   * gateways.
+   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN gateways.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -228,8 +218,7 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN
-   * gateways.
+   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN gateways.
    * @param kind kind or {@code null} for none
    */
   public TargetVpnGateway setKind(java.lang.String kind) {
@@ -366,25 +355,6 @@ public final class TargetVpnGateway extends com.google.api.client.json.GenericJs
    */
   public TargetVpnGateway setNetwork(java.lang.String network) {
     this.network = network;
-    return this;
-  }
-
-  /**
-   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
-   * of resource payload.
-   * @return value or {@code null} for none
-   */
-  public TargetVpnGatewayParams getParams() {
-    return params;
-  }
-
-  /**
-   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
-   * of resource payload.
-   * @param params params or {@code null} for none
-   */
-  public TargetVpnGateway setParams(TargetVpnGatewayParams params) {
-    this.params = params;
     return this;
   }
 

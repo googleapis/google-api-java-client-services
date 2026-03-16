@@ -30,16 +30,16 @@ package com.google.api.services.compute.model;
 public final class DiskAsyncReplication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on
-   * the disk as a member of a group.
+   * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consistencyGroupPolicy;
 
   /**
-   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on
-   * the disk as a member of a group.
+   * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,19 +56,19 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
   private java.lang.String disk;
 
   /**
-   * Output only. [Output Only] The unique ID of the other disk asynchronously replicated to or from
-   * the current disk. This value identifies the exact disk that was used to create this
-   * replication. For example, if you started replicating the persistent disk from a disk that was
-   * later deleted and recreated under the same name, the disk ID would identify the exact version
-   * of the disk that was used.
+   * [Output Only] The unique ID of the other disk asynchronously replicated to or from the current
+   * disk. This value identifies the exact disk that was used to create this replication. For
+   * example, if you started replicating the persistent disk from a disk that was later deleted and
+   * recreated under the same name, the disk ID would identify the exact version of the disk that
+   * was used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diskId;
 
   /**
-   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on
-   * the disk as a member of a group.
+   * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsistencyGroupPolicy() {
@@ -76,8 +76,8 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on
-   * the disk as a member of a group.
+   * [Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
    * @param consistencyGroupPolicy consistencyGroupPolicy or {@code null} for none
    */
   public DiskAsyncReplication setConsistencyGroupPolicy(java.lang.String consistencyGroupPolicy) {
@@ -86,8 +86,8 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on
-   * the disk as a member of a group.
+   * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsistencyGroupPolicyId() {
@@ -95,8 +95,8 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on
-   * the disk as a member of a group.
+   * [Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a
+   * member of a group.
    * @param consistencyGroupPolicyId consistencyGroupPolicyId or {@code null} for none
    */
   public DiskAsyncReplication setConsistencyGroupPolicyId(java.lang.String consistencyGroupPolicyId) {
@@ -128,11 +128,11 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] The unique ID of the other disk asynchronously replicated to or from
-   * the current disk. This value identifies the exact disk that was used to create this
-   * replication. For example, if you started replicating the persistent disk from a disk that was
-   * later deleted and recreated under the same name, the disk ID would identify the exact version
-   * of the disk that was used.
+   * [Output Only] The unique ID of the other disk asynchronously replicated to or from the current
+   * disk. This value identifies the exact disk that was used to create this replication. For
+   * example, if you started replicating the persistent disk from a disk that was later deleted and
+   * recreated under the same name, the disk ID would identify the exact version of the disk that
+   * was used.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskId() {
@@ -140,11 +140,11 @@ public final class DiskAsyncReplication extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] The unique ID of the other disk asynchronously replicated to or from
-   * the current disk. This value identifies the exact disk that was used to create this
-   * replication. For example, if you started replicating the persistent disk from a disk that was
-   * later deleted and recreated under the same name, the disk ID would identify the exact version
-   * of the disk that was used.
+   * [Output Only] The unique ID of the other disk asynchronously replicated to or from the current
+   * disk. This value identifies the exact disk that was used to create this replication. For
+   * example, if you started replicating the persistent disk from a disk that was later deleted and
+   * recreated under the same name, the disk ID would identify the exact version of the disk that
+   * was used.
    * @param diskId diskId or {@code null} for none
    */
   public DiskAsyncReplication setDiskId(java.lang.String diskId) {

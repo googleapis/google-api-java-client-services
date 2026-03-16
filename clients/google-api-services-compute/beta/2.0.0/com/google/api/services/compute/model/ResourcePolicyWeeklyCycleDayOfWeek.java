@@ -39,8 +39,8 @@ public final class ResourcePolicyWeeklyCycleDayOfWeek extends com.google.api.cli
   private java.lang.String day;
 
   /**
-   * Output only. [Output only] Duration of the time window, automatically chosen to be smallest
-   * possible in the given scenario.
+   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * given scenario.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class ResourcePolicyWeeklyCycleDayOfWeek extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output only] Duration of the time window, automatically chosen to be smallest
-   * possible in the given scenario.
+   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * given scenario.
    * @return value or {@code null} for none
    */
   public java.lang.String getDuration() {
@@ -85,8 +85,8 @@ public final class ResourcePolicyWeeklyCycleDayOfWeek extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output only] Duration of the time window, automatically chosen to be smallest
-   * possible in the given scenario.
+   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * given scenario.
    * @param duration duration or {@code null} for none
    */
   public ResourcePolicyWeeklyCycleDayOfWeek setDuration(java.lang.String duration) {

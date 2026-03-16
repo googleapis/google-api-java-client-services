@@ -58,7 +58,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.lang.Integer checkIntervalSec;
 
   /**
-   * Output only. [Output Only] Creation timestamp in3339 text format.
+   * [Output Only] Creation timestamp in3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Output only. Type of the resource.
+   * Type of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,8 +143,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] Region where the health check resides.  Not applicable to global
-   * health checks.
+   * [Output Only] Region where the health check resides.  Not applicable to global health checks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,7 +224,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp in3339 text format.
+   * [Output Only] Creation timestamp in3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -233,7 +232,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp in3339 text format.
+   * [Output Only] Creation timestamp in3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public HealthCheck setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -370,7 +369,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Type of the resource.
+   * Type of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -378,7 +377,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Type of the resource.
+   * Type of the resource.
    * @param kind kind or {@code null} for none
    */
   public HealthCheck setKind(java.lang.String kind) {
@@ -431,8 +430,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Region where the health check resides.  Not applicable to global
-   * health checks.
+   * [Output Only] Region where the health check resides.  Not applicable to global health checks.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -440,8 +438,7 @@ public final class HealthCheck extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Region where the health check resides.  Not applicable to global
-   * health checks.
+   * [Output Only] Region where the health check resides.  Not applicable to global health checks.
    * @param region region or {@code null} for none
    */
   public HealthCheck setRegion(java.lang.String region) {

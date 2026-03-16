@@ -37,7 +37,7 @@ public final class ReservationBlockPhysicalTopologyInstance extends com.google.a
   private java.math.BigInteger instanceId;
 
   /**
-   * Output only. The PhysicalHostTopology of instances within a Block resource.
+   * The PhysicalHostTopology of instances within a Block resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class ReservationBlockPhysicalTopologyInstance extends com.google.a
   }
 
   /**
-   * Output only. The PhysicalHostTopology of instances within a Block resource.
+   * The PhysicalHostTopology of instances within a Block resource.
    * @return value or {@code null} for none
    */
   public ReservationBlockPhysicalTopologyInstancePhysicalHostTopology getPhysicalHostTopology() {
@@ -76,7 +76,7 @@ public final class ReservationBlockPhysicalTopologyInstance extends com.google.a
   }
 
   /**
-   * Output only. The PhysicalHostTopology of instances within a Block resource.
+   * The PhysicalHostTopology of instances within a Block resource.
    * @param physicalHostTopology physicalHostTopology or {@code null} for none
    */
   public ReservationBlockPhysicalTopologyInstance setPhysicalHostTopology(ReservationBlockPhysicalTopologyInstancePhysicalHostTopology physicalHostTopology) {

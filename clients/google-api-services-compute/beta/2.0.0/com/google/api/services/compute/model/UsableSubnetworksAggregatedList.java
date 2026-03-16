@@ -50,8 +50,8 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#usableSubnetworksAggregatedList for
-   * aggregated lists of usable subnetworks.
+   * [Output Only] Type of resource. Alwayscompute#usableSubnetworksAggregatedList for aggregated
+   * lists of usable subnetworks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Informational warning messages for failures encountered from scopes.
+   * [Output Only] Informational warning messages for failures encountered from scopes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,14 +82,14 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +137,8 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#usableSubnetworksAggregatedList for
-   * aggregated lists of usable subnetworks.
+   * [Output Only] Type of resource. Alwayscompute#usableSubnetworksAggregatedList for aggregated
+   * lists of usable subnetworks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -146,8 +146,8 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#usableSubnetworksAggregatedList for
-   * aggregated lists of usable subnetworks.
+   * [Output Only] Type of resource. Alwayscompute#usableSubnetworksAggregatedList for aggregated
+   * lists of usable subnetworks.
    * @param kind kind or {@code null} for none
    */
   public UsableSubnetworksAggregatedList setKind(java.lang.String kind) {
@@ -181,7 +181,7 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Informational warning messages for failures encountered from scopes.
+   * [Output Only] Informational warning messages for failures encountered from scopes.
    * @return value or {@code null} for none
    */
   public java.util.List<SubnetworksScopedWarning> getScopedWarnings() {
@@ -189,7 +189,7 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Informational warning messages for failures encountered from scopes.
+   * [Output Only] Informational warning messages for failures encountered from scopes.
    * @param scopedWarnings scopedWarnings or {@code null} for none
    */
   public UsableSubnetworksAggregatedList setScopedWarnings(java.util.List<SubnetworksScopedWarning> scopedWarnings) {
@@ -198,7 +198,7 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -206,7 +206,7 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public UsableSubnetworksAggregatedList setSelfLink(java.lang.String selfLink) {
@@ -215,7 +215,7 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -223,7 +223,7 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public UsableSubnetworksAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

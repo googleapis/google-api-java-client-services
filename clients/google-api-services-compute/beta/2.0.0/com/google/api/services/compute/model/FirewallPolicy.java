@@ -37,7 +37,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.util.List<FirewallPolicyAssociation> associations;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +85,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#firewallPolicyfor firewall
-   * policies
+   * [Output only] Type of the resource. Alwayscompute#firewallPolicyfor firewall policies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,22 +107,16 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.util.List<FirewallPolicyRule> packetMirroringRules;
 
   /**
-   * Output only. [Output Only] The parent of the firewall policy. This field is not applicable to
-   * network firewall policies.
+   * [Output Only] The parent of the firewall policy. This field is not applicable to network
+   * firewall policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Indicates the source of this Firewall Policy. This field is optional on creation and defaults
-   * to USER_DEFINED.
-   *
-   * The USER_DEFINED value indicates a regular firewall policy.
-   *
-   * The SYSTEM value indicates a system-level policy managed by an internal service like GKE. This
-   * SYSTEM value is reserved for internal services and cannot be set by users during policy
-   * creation. Policies with a SYSTEM source cannot be modified or deleted by users.
+   * [Output Only] Source of this Firewall Policy. USER_DEFINED if created by a Cloud user, or
+   * SYSTEM if created by managed services like GKE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,17 +132,17 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String policyType;
 
   /**
-   * Output only. [Output Only] URL of the region where the regional firewall policy resides. This
-   * field is not applicable to global firewall policies. You must specify this field as part of the
-   * HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional firewall policy resides. This field is not
+   * applicable to global firewall policies. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Output only. [Output Only] Total count of all firewall policy rule tuples. A firewall policy
-   * can not exceed a set number of tuples.
+   * [Output Only] Total count of all firewall policy rule tuples. A firewall policy can not exceed
+   * a set number of tuples.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +165,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,7 +202,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -217,7 +210,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public FirewallPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -360,8 +353,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#firewallPolicyfor firewall
-   * policies
+   * [Output only] Type of the resource. Alwayscompute#firewallPolicyfor firewall policies
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -369,8 +361,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#firewallPolicyfor firewall
-   * policies
+   * [Output only] Type of the resource. Alwayscompute#firewallPolicyfor firewall policies
    * @param kind kind or {@code null} for none
    */
   public FirewallPolicy setKind(java.lang.String kind) {
@@ -415,8 +406,8 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The parent of the firewall policy. This field is not applicable to
-   * network firewall policies.
+   * [Output Only] The parent of the firewall policy. This field is not applicable to network
+   * firewall policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -424,8 +415,8 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The parent of the firewall policy. This field is not applicable to
-   * network firewall policies.
+   * [Output Only] The parent of the firewall policy. This field is not applicable to network
+   * firewall policies.
    * @param parent parent or {@code null} for none
    */
   public FirewallPolicy setParent(java.lang.String parent) {
@@ -434,14 +425,8 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Indicates the source of this Firewall Policy. This field is optional on creation and defaults
-   * to USER_DEFINED.
-   *
-   * The USER_DEFINED value indicates a regular firewall policy.
-   *
-   * The SYSTEM value indicates a system-level policy managed by an internal service like GKE. This
-   * SYSTEM value is reserved for internal services and cannot be set by users during policy
-   * creation. Policies with a SYSTEM source cannot be modified or deleted by users.
+   * [Output Only] Source of this Firewall Policy. USER_DEFINED if created by a Cloud user, or
+   * SYSTEM if created by managed services like GKE.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicySource() {
@@ -449,14 +434,8 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Indicates the source of this Firewall Policy. This field is optional on creation and defaults
-   * to USER_DEFINED.
-   *
-   * The USER_DEFINED value indicates a regular firewall policy.
-   *
-   * The SYSTEM value indicates a system-level policy managed by an internal service like GKE. This
-   * SYSTEM value is reserved for internal services and cannot be set by users during policy
-   * creation. Policies with a SYSTEM source cannot be modified or deleted by users.
+   * [Output Only] Source of this Firewall Policy. USER_DEFINED if created by a Cloud user, or
+   * SYSTEM if created by managed services like GKE.
    * @param policySource policySource or {@code null} for none
    */
   public FirewallPolicy setPolicySource(java.lang.String policySource) {
@@ -486,9 +465,9 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional firewall policy resides. This
-   * field is not applicable to global firewall policies. You must specify this field as part of the
-   * HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional firewall policy resides. This field is not
+   * applicable to global firewall policies. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -496,9 +475,9 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional firewall policy resides. This
-   * field is not applicable to global firewall policies. You must specify this field as part of the
-   * HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional firewall policy resides. This field is not
+   * applicable to global firewall policies. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public FirewallPolicy setRegion(java.lang.String region) {
@@ -507,8 +486,8 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Total count of all firewall policy rule tuples. A firewall policy
-   * can not exceed a set number of tuples.
+   * [Output Only] Total count of all firewall policy rule tuples. A firewall policy can not exceed
+   * a set number of tuples.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRuleTupleCount() {
@@ -516,8 +495,8 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Total count of all firewall policy rule tuples. A firewall policy
-   * can not exceed a set number of tuples.
+   * [Output Only] Total count of all firewall policy rule tuples. A firewall policy can not exceed
+   * a set number of tuples.
    * @param ruleTupleCount ruleTupleCount or {@code null} for none
    */
   public FirewallPolicy setRuleTupleCount(java.lang.Integer ruleTupleCount) {
@@ -564,7 +543,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -572,7 +551,7 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public FirewallPolicy setSelfLinkWithId(java.lang.String selfLinkWithId) {

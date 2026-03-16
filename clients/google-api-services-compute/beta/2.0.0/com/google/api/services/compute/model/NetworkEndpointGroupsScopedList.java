@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class NetworkEndpointGroupsScopedList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The list ofnetwork endpoint groups that are contained in this scope.
+   * [Output Only] The list ofnetwork endpoint groups that are contained in this scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,15 +43,15 @@ public final class NetworkEndpointGroupsScopedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] An informational warning that replaces the list of network endpoint
-   * groups when the list is empty.
+   * [Output Only] An informational warning that replaces the list of network endpoint groups when
+   * the list is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
 
   /**
-   * Output only. [Output Only] The list ofnetwork endpoint groups that are contained in this scope.
+   * [Output Only] The list ofnetwork endpoint groups that are contained in this scope.
    * @return value or {@code null} for none
    */
   public java.util.List<NetworkEndpointGroup> getNetworkEndpointGroups() {
@@ -59,7 +59,7 @@ public final class NetworkEndpointGroupsScopedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] The list ofnetwork endpoint groups that are contained in this scope.
+   * [Output Only] The list ofnetwork endpoint groups that are contained in this scope.
    * @param networkEndpointGroups networkEndpointGroups or {@code null} for none
    */
   public NetworkEndpointGroupsScopedList setNetworkEndpointGroups(java.util.List<NetworkEndpointGroup> networkEndpointGroups) {
@@ -68,8 +68,8 @@ public final class NetworkEndpointGroupsScopedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] An informational warning that replaces the list of network endpoint
-   * groups when the list is empty.
+   * [Output Only] An informational warning that replaces the list of network endpoint groups when
+   * the list is empty.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -77,8 +77,8 @@ public final class NetworkEndpointGroupsScopedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] An informational warning that replaces the list of network endpoint
-   * groups when the list is empty.
+   * [Output Only] An informational warning that replaces the list of network endpoint groups when
+   * the list is empty.
    * @param warning warning or {@code null} for none
    */
   public NetworkEndpointGroupsScopedList setWarning(Warning warning) {
@@ -97,8 +97,8 @@ public final class NetworkEndpointGroupsScopedList extends com.google.api.client
   }
 
   /**
-   * Output only. [Output Only] An informational warning that replaces the list of network endpoint
-   * groups when the list is empty.
+   * [Output Only] An informational warning that replaces the list of network endpoint groups when the
+   * list is empty.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 

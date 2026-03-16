@@ -44,7 +44,7 @@ public final class NetworkEndpointGroupsListNetworkEndpoints extends com.google.
   private java.util.List<NetworkEndpointWithHealthStatus> items;
 
   /**
-   * Output only. [Output Only] The resource type, which is
+   * [Output Only] The resource type, which is
    * alwayscompute#networkEndpointGroupsListNetworkEndpoints for the list of network endpoints in
    * the specified network endpoint group.
    * The value may be {@code null}.
@@ -104,7 +104,7 @@ public final class NetworkEndpointGroupsListNetworkEndpoints extends com.google.
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is
+   * [Output Only] The resource type, which is
    * alwayscompute#networkEndpointGroupsListNetworkEndpoints for the list of network endpoints in
    * the specified network endpoint group.
    * @return value or {@code null} for none
@@ -114,7 +114,7 @@ public final class NetworkEndpointGroupsListNetworkEndpoints extends com.google.
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is
+   * [Output Only] The resource type, which is
    * alwayscompute#networkEndpointGroupsListNetworkEndpoints for the list of network endpoints in
    * the specified network endpoint group.
    * @param kind kind or {@code null} for none

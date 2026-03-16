@@ -38,11 +38,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
   private java.lang.String targetShape;
 
   /**
-   * Zones where the regional managed instance group will create and manage its instances. By
-   * default, a regional MIG doesn't automatically select an AI zone to create instances, even if an
-   * AI zone is available in the specified region. To create instances in an AI zone in the selected
-   * region, you must explicitly specify it in the distribution policy together with the other
-   * preferred zones.
+   * Zones where the regional managed instance group will create and manage its instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,11 +64,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Zones where the regional managed instance group will create and manage its instances. By
-   * default, a regional MIG doesn't automatically select an AI zone to create instances, even if an
-   * AI zone is available in the specified region. To create instances in an AI zone in the selected
-   * region, you must explicitly specify it in the distribution policy together with the other
-   * preferred zones.
+   * Zones where the regional managed instance group will create and manage its instances.
    * @return value or {@code null} for none
    */
   public java.util.List<DistributionPolicyZoneConfiguration> getZones() {
@@ -80,11 +72,7 @@ public final class DistributionPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Zones where the regional managed instance group will create and manage its instances. By
-   * default, a regional MIG doesn't automatically select an AI zone to create instances, even if an
-   * AI zone is available in the specified region. To create instances in an AI zone in the selected
-   * region, you must explicitly specify it in the distribution policy together with the other
-   * preferred zones.
+   * Zones where the regional managed instance group will create and manage its instances.
    * @param zones zones or {@code null} for none
    */
   public DistributionPolicy setZones(java.util.List<DistributionPolicyZoneConfiguration> zones) {

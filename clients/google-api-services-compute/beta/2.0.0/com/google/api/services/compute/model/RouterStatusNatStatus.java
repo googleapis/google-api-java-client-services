@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class RouterStatusNatStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A list of IPs auto-allocated for NAT. Example: ["1.1.1.1", "129.2.16.89"]
+   * A list of IPs auto-allocated for NAT. Example: ["1.1.1.1", "129.2.16.89"]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> autoAllocatedNatIps;
 
   /**
-   * Output only. A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
+   * A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
    * "179.12.26.133"].
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> drainAutoAllocatedNatIps;
 
   /**
-   * Output only. A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
+   * A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
    * "179.12.26.133"].
    * The value may be {@code null}.
    */
@@ -53,23 +53,23 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> drainUserAllocatedNatIps;
 
   /**
-   * Output only. The number of extra IPs to allocate. This will be greater than 0 only if user-
-   * specified IPs are NOT enough to allow all configured VMs to use NAT. This value is meaningful
-   * only when auto-allocation of NAT IPs is *not* used.
+   * The number of extra IPs to allocate. This will be greater than 0 only if user-specified IPs are
+   * NOT enough to allow all configured VMs to use NAT. This value is meaningful only when auto-
+   * allocation of NAT IPs is *not* used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minExtraNatIpsNeeded;
 
   /**
-   * Output only. Unique name of this NAT.
+   * Unique name of this NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Number of VM endpoints (i.e., Nics) that can use NAT.
+   * Number of VM endpoints (i.e., Nics) that can use NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,22 +83,21 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   private java.util.List<RouterStatusNatStatusNatRuleStatus> ruleStatus;
 
   /**
-   * Output only. A list of fully qualified URLs of reserved IP address resources.
+   * A list of fully qualified URLs of reserved IP address resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> userAllocatedNatIpResources;
 
   /**
-   * Output only. A list of IPs user-allocated for NAT. They will be raw IP strings like
-   * "179.12.26.133".
+   * A list of IPs user-allocated for NAT. They will be raw IP strings like "179.12.26.133".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> userAllocatedNatIps;
 
   /**
-   * Output only. A list of IPs auto-allocated for NAT. Example: ["1.1.1.1", "129.2.16.89"]
+   * A list of IPs auto-allocated for NAT. Example: ["1.1.1.1", "129.2.16.89"]
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAutoAllocatedNatIps() {
@@ -106,7 +105,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. A list of IPs auto-allocated for NAT. Example: ["1.1.1.1", "129.2.16.89"]
+   * A list of IPs auto-allocated for NAT. Example: ["1.1.1.1", "129.2.16.89"]
    * @param autoAllocatedNatIps autoAllocatedNatIps or {@code null} for none
    */
   public RouterStatusNatStatus setAutoAllocatedNatIps(java.util.List<java.lang.String> autoAllocatedNatIps) {
@@ -115,7 +114,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
+   * A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
    * "179.12.26.133"].
    * @return value or {@code null} for none
    */
@@ -124,7 +123,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
+   * A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
    * "179.12.26.133"].
    * @param drainAutoAllocatedNatIps drainAutoAllocatedNatIps or {@code null} for none
    */
@@ -134,7 +133,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
+   * A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
    * "179.12.26.133"].
    * @return value or {@code null} for none
    */
@@ -143,7 +142,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
+   * A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1",
    * "179.12.26.133"].
    * @param drainUserAllocatedNatIps drainUserAllocatedNatIps or {@code null} for none
    */
@@ -153,9 +152,9 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The number of extra IPs to allocate. This will be greater than 0 only if user-
-   * specified IPs are NOT enough to allow all configured VMs to use NAT. This value is meaningful
-   * only when auto-allocation of NAT IPs is *not* used.
+   * The number of extra IPs to allocate. This will be greater than 0 only if user-specified IPs are
+   * NOT enough to allow all configured VMs to use NAT. This value is meaningful only when auto-
+   * allocation of NAT IPs is *not* used.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinExtraNatIpsNeeded() {
@@ -163,9 +162,9 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The number of extra IPs to allocate. This will be greater than 0 only if user-
-   * specified IPs are NOT enough to allow all configured VMs to use NAT. This value is meaningful
-   * only when auto-allocation of NAT IPs is *not* used.
+   * The number of extra IPs to allocate. This will be greater than 0 only if user-specified IPs are
+   * NOT enough to allow all configured VMs to use NAT. This value is meaningful only when auto-
+   * allocation of NAT IPs is *not* used.
    * @param minExtraNatIpsNeeded minExtraNatIpsNeeded or {@code null} for none
    */
   public RouterStatusNatStatus setMinExtraNatIpsNeeded(java.lang.Integer minExtraNatIpsNeeded) {
@@ -174,7 +173,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Unique name of this NAT.
+   * Unique name of this NAT.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -182,7 +181,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Unique name of this NAT.
+   * Unique name of this NAT.
    * @param name name or {@code null} for none
    */
   public RouterStatusNatStatus setName(java.lang.String name) {
@@ -191,7 +190,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Number of VM endpoints (i.e., Nics) that can use NAT.
+   * Number of VM endpoints (i.e., Nics) that can use NAT.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumVmEndpointsWithNatMappings() {
@@ -199,7 +198,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Number of VM endpoints (i.e., Nics) that can use NAT.
+   * Number of VM endpoints (i.e., Nics) that can use NAT.
    * @param numVmEndpointsWithNatMappings numVmEndpointsWithNatMappings or {@code null} for none
    */
   public RouterStatusNatStatus setNumVmEndpointsWithNatMappings(java.lang.Integer numVmEndpointsWithNatMappings) {
@@ -225,7 +224,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. A list of fully qualified URLs of reserved IP address resources.
+   * A list of fully qualified URLs of reserved IP address resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUserAllocatedNatIpResources() {
@@ -233,7 +232,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. A list of fully qualified URLs of reserved IP address resources.
+   * A list of fully qualified URLs of reserved IP address resources.
    * @param userAllocatedNatIpResources userAllocatedNatIpResources or {@code null} for none
    */
   public RouterStatusNatStatus setUserAllocatedNatIpResources(java.util.List<java.lang.String> userAllocatedNatIpResources) {
@@ -242,8 +241,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. A list of IPs user-allocated for NAT. They will be raw IP strings like
-   * "179.12.26.133".
+   * A list of IPs user-allocated for NAT. They will be raw IP strings like "179.12.26.133".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUserAllocatedNatIps() {
@@ -251,8 +249,7 @@ public final class RouterStatusNatStatus extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. A list of IPs user-allocated for NAT. They will be raw IP strings like
-   * "179.12.26.133".
+   * A list of IPs user-allocated for NAT. They will be raw IP strings like "179.12.26.133".
    * @param userAllocatedNatIps userAllocatedNatIps or {@code null} for none
    */
   public RouterStatusNatStatus setUserAllocatedNatIps(java.util.List<java.lang.String> userAllocatedNatIps) {

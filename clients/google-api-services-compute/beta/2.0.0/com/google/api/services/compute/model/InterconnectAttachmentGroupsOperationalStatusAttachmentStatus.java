@@ -30,39 +30,39 @@ package com.google.api.services.compute.model;
 public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether this Attachment is enabled. This becomes false when the customer drains
-   * their Attachment.
+   * Whether this Attachment is enabled. This becomes false when the customer drains their
+   * Attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean adminEnabled;
 
   /**
-   * Output only. The URL of the Attachment being described.
+   * The URL of the Attachment being described.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attachment;
 
   /**
-   * Output only. Whether this Attachment is participating in the redundant configuration. This will
-   * be ACTIVE if and only if the status below is CONNECTION_UP. Any INACTIVE Attachments are
-   * excluded from the analysis that generates operational.availabilitySLA.
+   * Whether this Attachment is participating in the redundant configuration. This will be ACTIVE if
+   * and only if the status below is CONNECTION_UP. Any INACTIVE Attachments are excluded from the
+   * analysis that generates operational.availabilitySLA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String isActive;
 
   /**
-   * Output only. Whether this Attachment is active, and if so, whether BGP is up.
+   * Whether this Attachment is active, and if so, whether BGP is up.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. Whether this Attachment is enabled. This becomes false when the customer drains
-   * their Attachment.
+   * Whether this Attachment is enabled. This becomes false when the customer drains their
+   * Attachment.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdminEnabled() {
@@ -70,8 +70,8 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   }
 
   /**
-   * Output only. Whether this Attachment is enabled. This becomes false when the customer drains
-   * their Attachment.
+   * Whether this Attachment is enabled. This becomes false when the customer drains their
+   * Attachment.
    * @param adminEnabled adminEnabled or {@code null} for none
    */
   public InterconnectAttachmentGroupsOperationalStatusAttachmentStatus setAdminEnabled(java.lang.Boolean adminEnabled) {
@@ -80,7 +80,7 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   }
 
   /**
-   * Output only. The URL of the Attachment being described.
+   * The URL of the Attachment being described.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttachment() {
@@ -88,7 +88,7 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   }
 
   /**
-   * Output only. The URL of the Attachment being described.
+   * The URL of the Attachment being described.
    * @param attachment attachment or {@code null} for none
    */
   public InterconnectAttachmentGroupsOperationalStatusAttachmentStatus setAttachment(java.lang.String attachment) {
@@ -97,9 +97,9 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   }
 
   /**
-   * Output only. Whether this Attachment is participating in the redundant configuration. This will
-   * be ACTIVE if and only if the status below is CONNECTION_UP. Any INACTIVE Attachments are
-   * excluded from the analysis that generates operational.availabilitySLA.
+   * Whether this Attachment is participating in the redundant configuration. This will be ACTIVE if
+   * and only if the status below is CONNECTION_UP. Any INACTIVE Attachments are excluded from the
+   * analysis that generates operational.availabilitySLA.
    * @return value or {@code null} for none
    */
   public java.lang.String getIsActive() {
@@ -107,9 +107,9 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   }
 
   /**
-   * Output only. Whether this Attachment is participating in the redundant configuration. This will
-   * be ACTIVE if and only if the status below is CONNECTION_UP. Any INACTIVE Attachments are
-   * excluded from the analysis that generates operational.availabilitySLA.
+   * Whether this Attachment is participating in the redundant configuration. This will be ACTIVE if
+   * and only if the status below is CONNECTION_UP. Any INACTIVE Attachments are excluded from the
+   * analysis that generates operational.availabilitySLA.
    * @param isActive isActive or {@code null} for none
    */
   public InterconnectAttachmentGroupsOperationalStatusAttachmentStatus setIsActive(java.lang.String isActive) {
@@ -118,7 +118,7 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   }
 
   /**
-   * Output only. Whether this Attachment is active, and if so, whether BGP is up.
+   * Whether this Attachment is active, and if so, whether BGP is up.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -126,7 +126,7 @@ public final class InterconnectAttachmentGroupsOperationalStatusAttachmentStatus
   }
 
   /**
-   * Output only. Whether this Attachment is active, and if so, whether BGP is up.
+   * Whether this Attachment is active, and if so, whether BGP is up.
    * @param status status or {@code null} for none
    */
   public InterconnectAttachmentGroupsOperationalStatusAttachmentStatus setStatus(java.lang.String status) {

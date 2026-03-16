@@ -50,8 +50,8 @@ public final class MachineImageList extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute#machineImagesListResponse
-   * for machine image lists.
+   * [Output Only] The resource type, which is alwayscompute#machineImagesListResponse for machine
+   * image lists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class MachineImageList extends com.google.api.client.json.GenericJs
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class MachineImageList extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute#machineImagesListResponse
-   * for machine image lists.
+   * [Output Only] The resource type, which is alwayscompute#machineImagesListResponse for machine
+   * image lists.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +125,8 @@ public final class MachineImageList extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute#machineImagesListResponse
-   * for machine image lists.
+   * [Output Only] The resource type, which is alwayscompute#machineImagesListResponse for machine
+   * image lists.
    * @param kind kind or {@code null} for none
    */
   public MachineImageList setKind(java.lang.String kind) {
@@ -158,7 +158,7 @@ public final class MachineImageList extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -166,7 +166,7 @@ public final class MachineImageList extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public MachineImageList setSelfLink(java.lang.String selfLink) {

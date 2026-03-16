@@ -44,9 +44,8 @@ public final class PublicDelegatedPrefixAggregatedList extends com.google.api.cl
   private java.util.Map<String, PublicDelegatedPrefixesScopedList> items;
 
   /**
-   * Output only. [Output Only] Type of the resource.
-   * Alwayscompute#publicDelegatedPrefixAggregatedList for aggregated lists of public delegated
-   * prefixes.
+   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefixAggregatedList for
+   * aggregated lists of public delegated prefixes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +69,7 @@ public final class PublicDelegatedPrefixAggregatedList extends com.google.api.cl
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,9 +117,8 @@ public final class PublicDelegatedPrefixAggregatedList extends com.google.api.cl
   }
 
   /**
-   * Output only. [Output Only] Type of the resource.
-   * Alwayscompute#publicDelegatedPrefixAggregatedList for aggregated lists of public delegated
-   * prefixes.
+   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefixAggregatedList for
+   * aggregated lists of public delegated prefixes.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -128,9 +126,8 @@ public final class PublicDelegatedPrefixAggregatedList extends com.google.api.cl
   }
 
   /**
-   * Output only. [Output Only] Type of the resource.
-   * Alwayscompute#publicDelegatedPrefixAggregatedList for aggregated lists of public delegated
-   * prefixes.
+   * [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefixAggregatedList for
+   * aggregated lists of public delegated prefixes.
    * @param kind kind or {@code null} for none
    */
   public PublicDelegatedPrefixAggregatedList setKind(java.lang.String kind) {
@@ -179,7 +176,7 @@ public final class PublicDelegatedPrefixAggregatedList extends com.google.api.cl
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -187,7 +184,7 @@ public final class PublicDelegatedPrefixAggregatedList extends com.google.api.cl
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public PublicDelegatedPrefixAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

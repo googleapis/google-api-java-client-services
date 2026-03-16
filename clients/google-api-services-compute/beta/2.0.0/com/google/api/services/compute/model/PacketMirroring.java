@@ -43,7 +43,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   private PacketMirroringForwardingRuleInfo collectorIlb;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,16 +74,14 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   private PacketMirroringFilter filter;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet
-   * mirrorings.
+   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet mirrorings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +134,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   private java.lang.String region;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +160,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -170,7 +168,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public PacketMirroring setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -236,8 +234,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -245,8 +242,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public PacketMirroring setId(java.math.BigInteger id) {
@@ -255,8 +251,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet
-   * mirrorings.
+   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet mirrorings.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -264,8 +259,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet
-   * mirrorings.
+   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet mirrorings.
    * @param kind kind or {@code null} for none
    */
   public PacketMirroring setKind(java.lang.String kind) {
@@ -381,7 +375,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -389,7 +383,7 @@ public final class PacketMirroring extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public PacketMirroring setSelfLink(java.lang.String selfLink) {

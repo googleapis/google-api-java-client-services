@@ -37,7 +37,7 @@ public final class FirewallPoliciesListAssociationsResponse extends com.google.a
   private java.util.List<FirewallPolicyAssociation> associations;
 
   /**
-   * Output only. [Output Only] Type of firewallPolicy associations.
+   * [Output Only] Type of firewallPolicy associations.
    * Alwayscompute#FirewallPoliciesListAssociations for lists of firewallPolicy associations.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class FirewallPoliciesListAssociationsResponse extends com.google.a
   }
 
   /**
-   * Output only. [Output Only] Type of firewallPolicy associations.
+   * [Output Only] Type of firewallPolicy associations.
    * Alwayscompute#FirewallPoliciesListAssociations for lists of firewallPolicy associations.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class FirewallPoliciesListAssociationsResponse extends com.google.a
   }
 
   /**
-   * Output only. [Output Only] Type of firewallPolicy associations.
+   * [Output Only] Type of firewallPolicy associations.
    * Alwayscompute#FirewallPoliciesListAssociations for lists of firewallPolicy associations.
    * @param kind kind or {@code null} for none
    */

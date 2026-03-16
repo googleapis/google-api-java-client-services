@@ -50,8 +50,7 @@ public final class NetworkPolicyList extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#networkPolicyList for lists of
-   * network policies.
+   * [Output Only] Type of resource. Alwayscompute#networkPolicyList for lists of network policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +108,7 @@ public final class NetworkPolicyList extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#networkPolicyList for lists of
-   * network policies.
+   * [Output Only] Type of resource. Alwayscompute#networkPolicyList for lists of network policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -118,8 +116,7 @@ public final class NetworkPolicyList extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#networkPolicyList for lists of
-   * network policies.
+   * [Output Only] Type of resource. Alwayscompute#networkPolicyList for lists of network policies.
    * @param kind kind or {@code null} for none
    */
   public NetworkPolicyList setKind(java.lang.String kind) {

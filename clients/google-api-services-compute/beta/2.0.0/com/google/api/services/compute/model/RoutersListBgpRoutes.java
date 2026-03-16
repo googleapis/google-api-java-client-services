@@ -43,8 +43,7 @@ public final class RoutersListBgpRoutes extends com.google.api.client.json.Gener
   private java.lang.String id;
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#routersListBgpRoutes for lists of
-   * bgp routes.
+   * [Output Only] Type of resource. Alwayscompute#routersListBgpRoutes for lists of bgp routes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,14 +73,14 @@ public final class RoutersListBgpRoutes extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,8 +126,7 @@ public final class RoutersListBgpRoutes extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#routersListBgpRoutes for lists of
-   * bgp routes.
+   * [Output Only] Type of resource. Alwayscompute#routersListBgpRoutes for lists of bgp routes.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -136,8 +134,7 @@ public final class RoutersListBgpRoutes extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#routersListBgpRoutes for lists of
-   * bgp routes.
+   * [Output Only] Type of resource. Alwayscompute#routersListBgpRoutes for lists of bgp routes.
    * @param kind kind or {@code null} for none
    */
   public RoutersListBgpRoutes setKind(java.lang.String kind) {
@@ -186,7 +183,7 @@ public final class RoutersListBgpRoutes extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -194,7 +191,7 @@ public final class RoutersListBgpRoutes extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public RoutersListBgpRoutes setSelfLink(java.lang.String selfLink) {
@@ -203,7 +200,7 @@ public final class RoutersListBgpRoutes extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -211,7 +208,7 @@ public final class RoutersListBgpRoutes extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public RoutersListBgpRoutes setUnreachables(java.util.List<java.lang.String> unreachables) {

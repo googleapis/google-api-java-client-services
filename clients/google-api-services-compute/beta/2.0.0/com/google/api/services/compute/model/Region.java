@@ -61,7 +61,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#region for regions.
+   * [Output Only] Type of the resource. Always compute#region for regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,8 +75,8 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] Warning of fetching the `quotas` field for this region. This field
-   * is populated only if fetching of the `quotas` field fails.
+   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
+   * only if fetching of the `quotas` field fails.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +192,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#region for regions.
+   * [Output Only] Type of the resource. Always compute#region for regions.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -200,7 +200,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#region for regions.
+   * [Output Only] Type of the resource. Always compute#region for regions.
    * @param kind kind or {@code null} for none
    */
   public Region setKind(java.lang.String kind) {
@@ -226,8 +226,8 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Warning of fetching the `quotas` field for this region. This field
-   * is populated only if fetching of the `quotas` field fails.
+   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
+   * only if fetching of the `quotas` field fails.
    * @return value or {@code null} for none
    */
   public QuotaStatusWarning getQuotaStatusWarning() {
@@ -235,8 +235,8 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Warning of fetching the `quotas` field for this region. This field
-   * is populated only if fetching of the `quotas` field fails.
+   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
+   * only if fetching of the `quotas` field fails.
    * @param quotaStatusWarning quotaStatusWarning or {@code null} for none
    */
   public Region setQuotaStatusWarning(QuotaStatusWarning quotaStatusWarning) {
@@ -296,7 +296,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsPzs() {
@@ -304,7 +304,7 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param supportsPzs supportsPzs or {@code null} for none
    */
   public Region setSupportsPzs(java.lang.Boolean supportsPzs) {
@@ -340,8 +340,8 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Warning of fetching the `quotas` field for this region. This field is
-   * populated only if fetching of the `quotas` field fails.
+   * [Output Only] Warning of fetching the `quotas` field for this region. This field is populated
+   * only if fetching of the `quotas` field fails.
    */
   public static final class QuotaStatusWarning extends com.google.api.client.json.GenericJson {
 

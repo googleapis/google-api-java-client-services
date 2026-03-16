@@ -56,14 +56,14 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
   private java.lang.String bgpInterRegionCost;
 
   /**
-   * Output only. [Output Only] Effective value of the bgp_always_compare_med field.
+   * [Output Only] Effective value of the bgp_always_compare_med field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean effectiveBgpAlwaysCompareMed;
 
   /**
-   * Output only. [Output Only] Effective value of the bgp_inter_region_cost field.
+   * [Output Only] Effective value of the bgp_inter_region_cost field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +137,7 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Effective value of the bgp_always_compare_med field.
+   * [Output Only] Effective value of the bgp_always_compare_med field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEffectiveBgpAlwaysCompareMed() {
@@ -145,7 +145,7 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Effective value of the bgp_always_compare_med field.
+   * [Output Only] Effective value of the bgp_always_compare_med field.
    * @param effectiveBgpAlwaysCompareMed effectiveBgpAlwaysCompareMed or {@code null} for none
    */
   public NetworkRoutingConfig setEffectiveBgpAlwaysCompareMed(java.lang.Boolean effectiveBgpAlwaysCompareMed) {
@@ -154,7 +154,7 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Effective value of the bgp_inter_region_cost field.
+   * [Output Only] Effective value of the bgp_inter_region_cost field.
    * @return value or {@code null} for none
    */
   public java.lang.String getEffectiveBgpInterRegionCost() {
@@ -162,7 +162,7 @@ public final class NetworkRoutingConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Effective value of the bgp_inter_region_cost field.
+   * [Output Only] Effective value of the bgp_inter_region_cost field.
    * @param effectiveBgpInterRegionCost effectiveBgpInterRegionCost or {@code null} for none
    */
   public NetworkRoutingConfig setEffectiveBgpInterRegionCost(java.lang.String effectiveBgpInterRegionCost) {

@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerResizeRequestStatusLastAttempt extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Errors that prevented the ResizeRequest to be fulfilled.
+   * Errors that prevented the ResizeRequest to be fulfilled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Error error;
 
   /**
-   * Output only. Errors that prevented the ResizeRequest to be fulfilled.
+   * Errors that prevented the ResizeRequest to be fulfilled.
    * @return value or {@code null} for none
    */
   public Error getError() {
@@ -45,7 +45,7 @@ public final class InstanceGroupManagerResizeRequestStatusLastAttempt extends co
   }
 
   /**
-   * Output only. Errors that prevented the ResizeRequest to be fulfilled.
+   * Errors that prevented the ResizeRequest to be fulfilled.
    * @param error error or {@code null} for none
    */
   public InstanceGroupManagerResizeRequestStatusLastAttempt setError(Error error) {
@@ -64,7 +64,7 @@ public final class InstanceGroupManagerResizeRequestStatusLastAttempt extends co
   }
 
   /**
-   * Output only. Errors that prevented the ResizeRequest to be fulfilled.
+   * Errors that prevented the ResizeRequest to be fulfilled.
    */
   public static final class Error extends com.google.api.client.json.GenericJson {
 

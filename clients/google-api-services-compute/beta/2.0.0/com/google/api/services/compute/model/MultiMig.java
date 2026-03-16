@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class MultiMig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] The creation timestamp of this multi-MIG in RFC3339 text format.
+   * [Output only] The creation timestamp of this multi-MIG in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,15 +44,15 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Output only. [Output only] The unique identifier for this resource type. The server generates
-   * this identifier.
+   * [Output only] The unique identifier for this resource type. The server generates this
+   * identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#multiMig for multi-MIGs.
+   * [Output only] Type of the resource. Alwayscompute#multiMig for multi-MIGs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +70,8 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. [Output only] The URL of the region where the resource resides. You must specify
-   * this field as part of the HTTP request URL. You cannot set the region as a field in the request
-   * body.
+   * [Output only] The URL of the region where the resource resides. You must specify this field as
+   * part of the HTTP request URL. You cannot set the region as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +85,7 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   private MultiMigResourcePolicies resourcePolicies;
 
   /**
-   * Output only. [Output only] Server-defined URL for the resource.
+   * [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +98,7 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   private MultiMigStatus status;
 
   /**
-   * Output only. [Output only] The creation timestamp of this multi-MIG in RFC3339 text format.
+   * [Output only] The creation timestamp of this multi-MIG in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -107,7 +106,7 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The creation timestamp of this multi-MIG in RFC3339 text format.
+   * [Output only] The creation timestamp of this multi-MIG in RFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public MultiMig setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -133,8 +132,8 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The unique identifier for this resource type. The server generates
-   * this identifier.
+   * [Output only] The unique identifier for this resource type. The server generates this
+   * identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -142,8 +141,8 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The unique identifier for this resource type. The server generates
-   * this identifier.
+   * [Output only] The unique identifier for this resource type. The server generates this
+   * identifier.
    * @param id id or {@code null} for none
    */
   public MultiMig setId(java.math.BigInteger id) {
@@ -152,7 +151,7 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#multiMig for multi-MIGs.
+   * [Output only] Type of the resource. Alwayscompute#multiMig for multi-MIGs.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -160,7 +159,7 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#multiMig for multi-MIGs.
+   * [Output only] Type of the resource. Alwayscompute#multiMig for multi-MIGs.
    * @param kind kind or {@code null} for none
    */
   public MultiMig setKind(java.lang.String kind) {
@@ -194,9 +193,8 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The URL of the region where the resource resides. You must specify
-   * this field as part of the HTTP request URL. You cannot set the region as a field in the request
-   * body.
+   * [Output only] The URL of the region where the resource resides. You must specify this field as
+   * part of the HTTP request URL. You cannot set the region as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -204,9 +202,8 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The URL of the region where the resource resides. You must specify
-   * this field as part of the HTTP request URL. You cannot set the region as a field in the request
-   * body.
+   * [Output only] The URL of the region where the resource resides. You must specify this field as
+   * part of the HTTP request URL. You cannot set the region as a field in the request body.
    * @param region region or {@code null} for none
    */
   public MultiMig setRegion(java.lang.String region) {
@@ -232,7 +229,7 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Server-defined URL for the resource.
+   * [Output only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -240,7 +237,7 @@ public final class MultiMig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Server-defined URL for the resource.
+   * [Output only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public MultiMig setSelfLink(java.lang.String selfLink) {

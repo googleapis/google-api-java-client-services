@@ -50,8 +50,8 @@ public final class HealthAggregationPolicyList extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for
-   * health aggregation policies.
+   * [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for health
+   * aggregation policies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class HealthAggregationPolicyList extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for
-   * health aggregation policies.
+   * [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for health
+   * aggregation policies.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +125,8 @@ public final class HealthAggregationPolicyList extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for
-   * health aggregation policies.
+   * [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for health
+   * aggregation policies.
    * @param kind kind or {@code null} for none
    */
   public HealthAggregationPolicyList setKind(java.lang.String kind) {

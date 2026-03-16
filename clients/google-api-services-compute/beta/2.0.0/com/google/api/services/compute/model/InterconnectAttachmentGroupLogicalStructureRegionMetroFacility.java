@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InterconnectAttachmentGroupLogicalStructureRegionMetroFacility extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The name of a facility, like "iad-1234".
+   * [Output Only] The name of a facility, like "iad-1234".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class InterconnectAttachmentGroupLogicalStructureRegionMetroFacilit
   private java.util.List<InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone> zones;
 
   /**
-   * Output only. [Output Only] The name of a facility, like "iad-1234".
+   * [Output Only] The name of a facility, like "iad-1234".
    * @return value or {@code null} for none
    */
   public java.lang.String getFacility() {
@@ -51,7 +51,7 @@ public final class InterconnectAttachmentGroupLogicalStructureRegionMetroFacilit
   }
 
   /**
-   * Output only. [Output Only] The name of a facility, like "iad-1234".
+   * [Output Only] The name of a facility, like "iad-1234".
    * @param facility facility or {@code null} for none
    */
   public InterconnectAttachmentGroupLogicalStructureRegionMetroFacility setFacility(java.lang.String facility) {

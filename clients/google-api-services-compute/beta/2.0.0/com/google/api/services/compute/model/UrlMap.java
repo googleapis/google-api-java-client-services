@@ -56,7 +56,7 @@ package com.google.api.services.compute.model;
 public final class UrlMap extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +196,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#urlMaps for url maps.
+   * [Output Only] Type of the resource. Always compute#urlMaps for url maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,9 +227,9 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional URL map resides. This field is
-   * not applicable to global URL maps. You must specify this field as part of the HTTP request URL.
-   * It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional URL map resides. This field is not
+   * applicable to global URL maps. You must specify this field as part of the HTTP request URL. It
+   * is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +254,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   private java.util.List<UrlMapTest> tests;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -262,7 +262,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public UrlMap setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -590,7 +590,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#urlMaps for url maps.
+   * [Output Only] Type of the resource. Always compute#urlMaps for url maps.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -598,7 +598,7 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#urlMaps for url maps.
+   * [Output Only] Type of the resource. Always compute#urlMaps for url maps.
    * @param kind kind or {@code null} for none
    */
   public UrlMap setKind(java.lang.String kind) {
@@ -649,9 +649,9 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional URL map resides. This field is
-   * not applicable to global URL maps. You must specify this field as part of the HTTP request URL.
-   * It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional URL map resides. This field is not
+   * applicable to global URL maps. You must specify this field as part of the HTTP request URL. It
+   * is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -659,9 +659,9 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional URL map resides. This field is
-   * not applicable to global URL maps. You must specify this field as part of the HTTP request URL.
-   * It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional URL map resides. This field is not
+   * applicable to global URL maps. You must specify this field as part of the HTTP request URL. It
+   * is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public UrlMap setRegion(java.lang.String region) {

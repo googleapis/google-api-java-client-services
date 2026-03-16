@@ -30,56 +30,28 @@ package com.google.api.services.compute.model;
 public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The rollout status for each location. The list of the locations is
-   * the same as the list of locations in the rollout plan.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadataLocationRolloutStatus> locationRolloutStatus;
-
-  /**
-   * Output only. [Output Only] The name of the rollout. Ex. projects//locations/global/rollouts/.
+   * [Output Only] The name of the rollout. Ex. projects//locations/global/rollouts/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rollout;
 
   /**
-   * Output only. [Output Only] The name of the rollout plan. Ex.
-   * projects//locations/global/rolloutPlans/.
+   * [Output Only] The name of the rollout plan. Ex. projects//locations/global/rolloutPlans/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rolloutPlan;
 
   /**
-   * Output only. [Output Only] The overall state of the rollout.
+   * [Output Only] The overall state of the rollout.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. [Output Only] The rollout status for each location. The list of the locations is
-   * the same as the list of locations in the rollout plan.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadataLocationRolloutStatus> getLocationRolloutStatus() {
-    return locationRolloutStatus;
-  }
-
-  /**
-   * Output only. [Output Only] The rollout status for each location. The list of the locations is
-   * the same as the list of locations in the rollout plan.
-   * @param locationRolloutStatus locationRolloutStatus or {@code null} for none
-   */
-  public GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata setLocationRolloutStatus(java.util.Map<String, GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadataLocationRolloutStatus> locationRolloutStatus) {
-    this.locationRolloutStatus = locationRolloutStatus;
-    return this;
-  }
-
-  /**
-   * Output only. [Output Only] The name of the rollout. Ex. projects//locations/global/rollouts/.
+   * [Output Only] The name of the rollout. Ex. projects//locations/global/rollouts/.
    * @return value or {@code null} for none
    */
   public java.lang.String getRollout() {
@@ -87,7 +59,7 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMe
   }
 
   /**
-   * Output only. [Output Only] The name of the rollout. Ex. projects//locations/global/rollouts/.
+   * [Output Only] The name of the rollout. Ex. projects//locations/global/rollouts/.
    * @param rollout rollout or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata setRollout(java.lang.String rollout) {
@@ -96,8 +68,7 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMe
   }
 
   /**
-   * Output only. [Output Only] The name of the rollout plan. Ex.
-   * projects//locations/global/rolloutPlans/.
+   * [Output Only] The name of the rollout plan. Ex. projects//locations/global/rolloutPlans/.
    * @return value or {@code null} for none
    */
   public java.lang.String getRolloutPlan() {
@@ -105,8 +76,7 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMe
   }
 
   /**
-   * Output only. [Output Only] The name of the rollout plan. Ex.
-   * projects//locations/global/rolloutPlans/.
+   * [Output Only] The name of the rollout plan. Ex. projects//locations/global/rolloutPlans/.
    * @param rolloutPlan rolloutPlan or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata setRolloutPlan(java.lang.String rolloutPlan) {
@@ -115,7 +85,7 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMe
   }
 
   /**
-   * Output only. [Output Only] The overall state of the rollout.
+   * [Output Only] The overall state of the rollout.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -123,7 +93,7 @@ public final class GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMe
   }
 
   /**
-   * Output only. [Output Only] The overall state of the rollout.
+   * [Output Only] The overall state of the rollout.
    * @param state state or {@code null} for none
    */
   public GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata setState(java.lang.String state) {

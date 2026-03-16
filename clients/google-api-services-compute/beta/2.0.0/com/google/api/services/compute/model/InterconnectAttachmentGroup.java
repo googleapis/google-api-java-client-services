@@ -47,7 +47,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   private InterconnectAttachmentGroupConfigured configured;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   private java.lang.String etag;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource type. The server generates
-   * this identifier.
+   * [Output Only] The unique identifier for the resource type. The server generates this
+   * identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -93,7 +93,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   private java.lang.String interconnectGroup;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#interconnectAttachmentGroup.
+   * [Output Only] Type of the resource. Always compute#interconnectAttachmentGroup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -170,7 +170,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InterconnectAttachmentGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -219,8 +219,8 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource type. The server generates
-   * this identifier.
+   * [Output Only] The unique identifier for the resource type. The server generates this
+   * identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -228,8 +228,8 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource type. The server generates
-   * this identifier.
+   * [Output Only] The unique identifier for the resource type. The server generates this
+   * identifier.
    * @param id id or {@code null} for none
    */
   public InterconnectAttachmentGroup setId(java.math.BigInteger id) {
@@ -272,7 +272,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#interconnectAttachmentGroup.
+   * [Output Only] Type of the resource. Always compute#interconnectAttachmentGroup.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -280,7 +280,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#interconnectAttachmentGroup.
+   * [Output Only] Type of the resource. Always compute#interconnectAttachmentGroup.
    * @param kind kind or {@code null} for none
    */
   public InterconnectAttachmentGroup setKind(java.lang.String kind) {
@@ -329,7 +329,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -337,7 +337,7 @@ public final class InterconnectAttachmentGroup extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InterconnectAttachmentGroup setSelfLink(java.lang.String selfLink) {

@@ -30,23 +30,23 @@ package com.google.api.services.compute.model;
 public final class WireGroupTopologyEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The InterconnectLocation.city (metropolitan area designator) that all
-   * interconnects are located in.
+   * The InterconnectLocation.city (metropolitan area designator) that all interconnects are located
+   * in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String city;
 
   /**
-   * Output only. Endpoint label from the wire group.
+   * Endpoint label from the wire group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
 
   /**
-   * Output only. The InterconnectLocation.city (metropolitan area designator) that all
-   * interconnects are located in.
+   * The InterconnectLocation.city (metropolitan area designator) that all interconnects are located
+   * in.
    * @return value or {@code null} for none
    */
   public java.lang.String getCity() {
@@ -54,8 +54,8 @@ public final class WireGroupTopologyEndpoint extends com.google.api.client.json.
   }
 
   /**
-   * Output only. The InterconnectLocation.city (metropolitan area designator) that all
-   * interconnects are located in.
+   * The InterconnectLocation.city (metropolitan area designator) that all interconnects are located
+   * in.
    * @param city city or {@code null} for none
    */
   public WireGroupTopologyEndpoint setCity(java.lang.String city) {
@@ -64,7 +64,7 @@ public final class WireGroupTopologyEndpoint extends com.google.api.client.json.
   }
 
   /**
-   * Output only. Endpoint label from the wire group.
+   * Endpoint label from the wire group.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -72,7 +72,7 @@ public final class WireGroupTopologyEndpoint extends com.google.api.client.json.
   }
 
   /**
-   * Output only. Endpoint label from the wire group.
+   * Endpoint label from the wire group.
    * @param label label or {@code null} for none
    */
   public WireGroupTopologyEndpoint setLabel(java.lang.String label) {

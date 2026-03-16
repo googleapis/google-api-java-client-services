@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyHourlyCycle extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Duration of the time window, automatically chosen to be smallest
-   * possible in the given scenario.
+   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * given scenario.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class ResourcePolicyHourlyCycle extends com.google.api.client.json.
   private java.lang.String startTime;
 
   /**
-   * Output only. [Output only] Duration of the time window, automatically chosen to be smallest
-   * possible in the given scenario.
+   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * given scenario.
    * @return value or {@code null} for none
    */
   public java.lang.String getDuration() {
@@ -63,8 +63,8 @@ public final class ResourcePolicyHourlyCycle extends com.google.api.client.json.
   }
 
   /**
-   * Output only. [Output only] Duration of the time window, automatically chosen to be smallest
-   * possible in the given scenario.
+   * [Output only] Duration of the time window, automatically chosen to be smallest possible in the
+   * given scenario.
    * @param duration duration or {@code null} for none
    */
   public ResourcePolicyHourlyCycle setDuration(java.lang.String duration) {

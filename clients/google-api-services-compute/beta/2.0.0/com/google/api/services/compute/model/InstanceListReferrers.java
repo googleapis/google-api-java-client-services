@@ -44,8 +44,8 @@ public final class InstanceListReferrers extends com.google.api.client.json.Gene
   private java.util.List<Reference> items;
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#instanceListReferrers for lists of
-   * Instance referrers.
+   * [Output Only] Type of resource. Alwayscompute#instanceListReferrers for lists of Instance
+   * referrers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class InstanceListReferrers extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class InstanceListReferrers extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#instanceListReferrers for lists of
-   * Instance referrers.
+   * [Output Only] Type of resource. Alwayscompute#instanceListReferrers for lists of Instance
+   * referrers.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -119,8 +119,8 @@ public final class InstanceListReferrers extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#instanceListReferrers for lists of
-   * Instance referrers.
+   * [Output Only] Type of resource. Alwayscompute#instanceListReferrers for lists of Instance
+   * referrers.
    * @param kind kind or {@code null} for none
    */
   public InstanceListReferrers setKind(java.lang.String kind) {
@@ -152,7 +152,7 @@ public final class InstanceListReferrers extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -160,7 +160,7 @@ public final class InstanceListReferrers extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InstanceListReferrers setSelfLink(java.lang.String selfLink) {

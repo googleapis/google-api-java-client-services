@@ -47,7 +47,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,15 +109,14 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableLogging;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#firewall for firewall rules.
+   * [Output Only] Type of the resource. Always compute#firewall for firewall rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,7 +264,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -273,7 +272,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Firewall setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -398,8 +397,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -407,8 +405,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public Firewall setId(java.math.BigInteger id) {
@@ -417,7 +414,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#firewall for firewall rules.
+   * [Output Only] Type of the resource. Always compute#firewall for firewall rules.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -425,7 +422,7 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#firewall for firewall rules.
+   * [Output Only] Type of the resource. Always compute#firewall for firewall rules.
    * @param kind kind or {@code null} for none
    */
   public Firewall setKind(java.lang.String kind) {

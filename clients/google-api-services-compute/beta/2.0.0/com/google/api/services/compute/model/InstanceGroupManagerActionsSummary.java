@@ -30,9 +30,9 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerActionsSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The total number of instances in the managed instance group that are
-   * scheduled to be abandoned. Abandoning an instance removes it from the managed instance group
-   * without deleting it.
+   * [Output Only] The total number of instances in the managed instance group that are scheduled to
+   * be abandoned. Abandoning an instance removes it from the managed instance group without
+   * deleting it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,16 +40,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
 
   /**
    * [Output Only] The number of instances in the managed instance group that are scheduled to be
-   * adopted or are currently being adopted.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer adopting;
-
-  /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be created or are currently being created. If the group fails to create any of
-   * these instances, it tries again until it creates the instance successfully.
+   * created or are currently being created. If the group fails to create any of these instances, it
+   * tries again until it creates the instance successfully.
    *
    * If you have disabled creation retries, this field will not be populated; instead, the
    * creatingWithoutRetries field will be populated.
@@ -59,92 +51,92 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   private java.lang.Integer creating;
 
   /**
-   * Output only. [Output Only] The number of instances that the managed instance group will attempt
-   * to create. The group attempts to create each instance only once. If the group fails to create
-   * any of these instances, it decreases the group's targetSize value accordingly.
+   * [Output Only] The number of instances that the managed instance group will attempt to create.
+   * The group attempts to create each instance only once. If the group fails to create any of these
+   * instances, it decreases the group's targetSize value accordingly.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer creatingWithoutRetries;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be deleted or are currently being deleted.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * deleted or are currently being deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer deleting;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * running and have no scheduled actions.
+   * [Output Only] The number of instances in the managed instance group that are running and have
+   * no scheduled actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer none;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be recreated or are currently being being recreated. Recreating an instance
-   * deletes the existing root persistent disk and creates a new disk from the image that is defined
-   * in the instance template.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * recreated or are currently being being recreated. Recreating an instance deletes the existing
+   * root persistent disk and creates a new disk from the image that is defined in the instance
+   * template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer recreating;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are being
-   * reconfigured with properties that do not require a restart or a recreate action. For example,
-   * setting or removing target pools for the instance.
+   * [Output Only] The number of instances in the managed instance group that are being reconfigured
+   * with properties that do not require a restart or a recreate action. For example, setting or
+   * removing target pools for the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer refreshing;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be restarted or are currently being restarted.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * restarted or are currently being restarted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer restarting;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be resumed or are currently being resumed.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * resumed or are currently being resumed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer resuming;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be started or are currently being started.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * started or are currently being started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer starting;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be stopped or are currently being stopped.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * stopped or are currently being stopped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer stopping;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be suspended or are currently being suspended.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * suspended or are currently being suspended.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer suspending;
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are being
-   * verified. See the managedInstances[].currentAction property in the listManagedInstances method
+   * [Output Only] The number of instances in the managed instance group that are being verified.
+   * See the managedInstances[].currentAction property in the listManagedInstances method
    * documentation.
    * The value may be {@code null}.
    */
@@ -152,9 +144,9 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   private java.lang.Integer verifying;
 
   /**
-   * Output only. [Output Only] The total number of instances in the managed instance group that are
-   * scheduled to be abandoned. Abandoning an instance removes it from the managed instance group
-   * without deleting it.
+   * [Output Only] The total number of instances in the managed instance group that are scheduled to
+   * be abandoned. Abandoning an instance removes it from the managed instance group without
+   * deleting it.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAbandoning() {
@@ -162,9 +154,9 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The total number of instances in the managed instance group that are
-   * scheduled to be abandoned. Abandoning an instance removes it from the managed instance group
-   * without deleting it.
+   * [Output Only] The total number of instances in the managed instance group that are scheduled to
+   * be abandoned. Abandoning an instance removes it from the managed instance group without
+   * deleting it.
    * @param abandoning abandoning or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setAbandoning(java.lang.Integer abandoning) {
@@ -174,27 +166,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
 
   /**
    * [Output Only] The number of instances in the managed instance group that are scheduled to be
-   * adopted or are currently being adopted.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getAdopting() {
-    return adopting;
-  }
-
-  /**
-   * [Output Only] The number of instances in the managed instance group that are scheduled to be
-   * adopted or are currently being adopted.
-   * @param adopting adopting or {@code null} for none
-   */
-  public InstanceGroupManagerActionsSummary setAdopting(java.lang.Integer adopting) {
-    this.adopting = adopting;
-    return this;
-  }
-
-  /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be created or are currently being created. If the group fails to create any of
-   * these instances, it tries again until it creates the instance successfully.
+   * created or are currently being created. If the group fails to create any of these instances, it
+   * tries again until it creates the instance successfully.
    *
    * If you have disabled creation retries, this field will not be populated; instead, the
    * creatingWithoutRetries field will be populated.
@@ -205,9 +178,9 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be created or are currently being created. If the group fails to create any of
-   * these instances, it tries again until it creates the instance successfully.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * created or are currently being created. If the group fails to create any of these instances, it
+   * tries again until it creates the instance successfully.
    *
    * If you have disabled creation retries, this field will not be populated; instead, the
    * creatingWithoutRetries field will be populated.
@@ -219,9 +192,9 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances that the managed instance group will attempt
-   * to create. The group attempts to create each instance only once. If the group fails to create
-   * any of these instances, it decreases the group's targetSize value accordingly.
+   * [Output Only] The number of instances that the managed instance group will attempt to create.
+   * The group attempts to create each instance only once. If the group fails to create any of these
+   * instances, it decreases the group's targetSize value accordingly.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCreatingWithoutRetries() {
@@ -229,9 +202,9 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances that the managed instance group will attempt
-   * to create. The group attempts to create each instance only once. If the group fails to create
-   * any of these instances, it decreases the group's targetSize value accordingly.
+   * [Output Only] The number of instances that the managed instance group will attempt to create.
+   * The group attempts to create each instance only once. If the group fails to create any of these
+   * instances, it decreases the group's targetSize value accordingly.
    * @param creatingWithoutRetries creatingWithoutRetries or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setCreatingWithoutRetries(java.lang.Integer creatingWithoutRetries) {
@@ -240,8 +213,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be deleted or are currently being deleted.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * deleted or are currently being deleted.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDeleting() {
@@ -249,8 +222,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be deleted or are currently being deleted.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * deleted or are currently being deleted.
    * @param deleting deleting or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setDeleting(java.lang.Integer deleting) {
@@ -259,8 +232,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * running and have no scheduled actions.
+   * [Output Only] The number of instances in the managed instance group that are running and have
+   * no scheduled actions.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNone() {
@@ -268,8 +241,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * running and have no scheduled actions.
+   * [Output Only] The number of instances in the managed instance group that are running and have
+   * no scheduled actions.
    * @param none none or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setNone(java.lang.Integer none) {
@@ -278,10 +251,10 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be recreated or are currently being being recreated. Recreating an instance
-   * deletes the existing root persistent disk and creates a new disk from the image that is defined
-   * in the instance template.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * recreated or are currently being being recreated. Recreating an instance deletes the existing
+   * root persistent disk and creates a new disk from the image that is defined in the instance
+   * template.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRecreating() {
@@ -289,10 +262,10 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be recreated or are currently being being recreated. Recreating an instance
-   * deletes the existing root persistent disk and creates a new disk from the image that is defined
-   * in the instance template.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * recreated or are currently being being recreated. Recreating an instance deletes the existing
+   * root persistent disk and creates a new disk from the image that is defined in the instance
+   * template.
    * @param recreating recreating or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setRecreating(java.lang.Integer recreating) {
@@ -301,9 +274,9 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are being
-   * reconfigured with properties that do not require a restart or a recreate action. For example,
-   * setting or removing target pools for the instance.
+   * [Output Only] The number of instances in the managed instance group that are being reconfigured
+   * with properties that do not require a restart or a recreate action. For example, setting or
+   * removing target pools for the instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRefreshing() {
@@ -311,9 +284,9 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are being
-   * reconfigured with properties that do not require a restart or a recreate action. For example,
-   * setting or removing target pools for the instance.
+   * [Output Only] The number of instances in the managed instance group that are being reconfigured
+   * with properties that do not require a restart or a recreate action. For example, setting or
+   * removing target pools for the instance.
    * @param refreshing refreshing or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setRefreshing(java.lang.Integer refreshing) {
@@ -322,8 +295,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be restarted or are currently being restarted.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * restarted or are currently being restarted.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRestarting() {
@@ -331,8 +304,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be restarted or are currently being restarted.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * restarted or are currently being restarted.
    * @param restarting restarting or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setRestarting(java.lang.Integer restarting) {
@@ -341,8 +314,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be resumed or are currently being resumed.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * resumed or are currently being resumed.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getResuming() {
@@ -350,8 +323,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be resumed or are currently being resumed.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * resumed or are currently being resumed.
    * @param resuming resuming or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setResuming(java.lang.Integer resuming) {
@@ -360,8 +333,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be started or are currently being started.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * started or are currently being started.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStarting() {
@@ -369,8 +342,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be started or are currently being started.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * started or are currently being started.
    * @param starting starting or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setStarting(java.lang.Integer starting) {
@@ -379,8 +352,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be stopped or are currently being stopped.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * stopped or are currently being stopped.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStopping() {
@@ -388,8 +361,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be stopped or are currently being stopped.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * stopped or are currently being stopped.
    * @param stopping stopping or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setStopping(java.lang.Integer stopping) {
@@ -398,8 +371,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be suspended or are currently being suspended.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * suspended or are currently being suspended.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getSuspending() {
@@ -407,8 +380,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are
-   * scheduled to be suspended or are currently being suspended.
+   * [Output Only] The number of instances in the managed instance group that are scheduled to be
+   * suspended or are currently being suspended.
    * @param suspending suspending or {@code null} for none
    */
   public InstanceGroupManagerActionsSummary setSuspending(java.lang.Integer suspending) {
@@ -417,8 +390,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are being
-   * verified. See the managedInstances[].currentAction property in the listManagedInstances method
+   * [Output Only] The number of instances in the managed instance group that are being verified.
+   * See the managedInstances[].currentAction property in the listManagedInstances method
    * documentation.
    * @return value or {@code null} for none
    */
@@ -427,8 +400,8 @@ public final class InstanceGroupManagerActionsSummary extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The number of instances in the managed instance group that are being
-   * verified. See the managedInstances[].currentAction property in the listManagedInstances method
+   * [Output Only] The number of instances in the managed instance group that are being verified.
+   * See the managedInstances[].currentAction property in the listManagedInstances method
    * documentation.
    * @param verifying verifying or {@code null} for none
    */

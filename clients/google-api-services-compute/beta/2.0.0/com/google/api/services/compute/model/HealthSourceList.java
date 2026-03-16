@@ -50,7 +50,7 @@ public final class HealthSourceList extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#healthSource for health sources.
+   * [Output Only] Type of the resource. Alwayscompute#healthSource for health sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class HealthSourceList extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#healthSource for health sources.
+   * [Output Only] Type of the resource. Alwayscompute#healthSource for health sources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -123,7 +123,7 @@ public final class HealthSourceList extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#healthSource for health sources.
+   * [Output Only] Type of the resource. Alwayscompute#healthSource for health sources.
    * @param kind kind or {@code null} for none
    */
   public HealthSourceList setKind(java.lang.String kind) {

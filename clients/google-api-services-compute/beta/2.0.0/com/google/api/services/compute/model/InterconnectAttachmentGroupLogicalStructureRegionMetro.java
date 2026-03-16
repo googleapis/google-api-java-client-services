@@ -36,8 +36,8 @@ public final class InterconnectAttachmentGroupLogicalStructureRegionMetro extend
   private java.util.List<InterconnectAttachmentGroupLogicalStructureRegionMetroFacility> facilities;
 
   /**
-   * Output only. [Output Only] The name of the metro, as a three-letter lowercase string like
-   * "iad". This is the first component of the location of an Interconnect.
+   * [Output Only] The name of the metro, as a three-letter lowercase string like "iad". This is the
+   * first component of the location of an Interconnect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,8 @@ public final class InterconnectAttachmentGroupLogicalStructureRegionMetro extend
   }
 
   /**
-   * Output only. [Output Only] The name of the metro, as a three-letter lowercase string like
-   * "iad". This is the first component of the location of an Interconnect.
+   * [Output Only] The name of the metro, as a three-letter lowercase string like "iad". This is the
+   * first component of the location of an Interconnect.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetro() {
@@ -68,8 +68,8 @@ public final class InterconnectAttachmentGroupLogicalStructureRegionMetro extend
   }
 
   /**
-   * Output only. [Output Only] The name of the metro, as a three-letter lowercase string like
-   * "iad". This is the first component of the location of an Interconnect.
+   * [Output Only] The name of the metro, as a three-letter lowercase string like "iad". This is the
+   * first component of the location of an Interconnect.
    * @param metro metro or {@code null} for none
    */
   public InterconnectAttachmentGroupLogicalStructureRegionMetro setMetro(java.lang.String metro) {

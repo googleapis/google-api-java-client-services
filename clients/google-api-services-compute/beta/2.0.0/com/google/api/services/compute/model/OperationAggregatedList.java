@@ -44,8 +44,8 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
   private java.util.Map<String, OperationsScopedList> items;
 
   /**
-   * Output only. [Output Only] Type of resource. Always `compute#operationAggregatedList` for
-   * aggregated lists of operations.
+   * [Output Only] Type of resource. Always `compute#operationAggregatedList` for aggregated lists
+   * of operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always `compute#operationAggregatedList` for
-   * aggregated lists of operations.
+   * [Output Only] Type of resource. Always `compute#operationAggregatedList` for aggregated lists
+   * of operations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -126,8 +126,8 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always `compute#operationAggregatedList` for
-   * aggregated lists of operations.
+   * [Output Only] Type of resource. Always `compute#operationAggregatedList` for aggregated lists
+   * of operations.
    * @param kind kind or {@code null} for none
    */
   public OperationAggregatedList setKind(java.lang.String kind) {
@@ -176,7 +176,7 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -184,7 +184,7 @@ public final class OperationAggregatedList extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public OperationAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

@@ -30,8 +30,7 @@ package com.google.api.services.compute.model;
 public final class UsableSubnetworkSecondaryRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The range of IP addresses belonging to this subnetwork secondary range. Can be Ipv4 or Ipv6
-   * range.
+   * The range of IP addresses belonging to this subnetwork secondary range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,7 @@ public final class UsableSubnetworkSecondaryRange extends com.google.api.client.
   private java.lang.String rangeName;
 
   /**
-   * The range of IP addresses belonging to this subnetwork secondary range. Can be Ipv4 or Ipv6
-   * range.
+   * The range of IP addresses belonging to this subnetwork secondary range.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpCidrRange() {
@@ -56,8 +54,7 @@ public final class UsableSubnetworkSecondaryRange extends com.google.api.client.
   }
 
   /**
-   * The range of IP addresses belonging to this subnetwork secondary range. Can be Ipv4 or Ipv6
-   * range.
+   * The range of IP addresses belonging to this subnetwork secondary range.
    * @param ipCidrRange ipCidrRange or {@code null} for none
    */
   public UsableSubnetworkSecondaryRange setIpCidrRange(java.lang.String ipCidrRange) {

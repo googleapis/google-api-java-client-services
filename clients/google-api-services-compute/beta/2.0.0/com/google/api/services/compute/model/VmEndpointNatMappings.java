@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class VmEndpointNatMappings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Name of the VM instance which the endpoint belongs to
+   * Name of the VM instance which the endpoint belongs to
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class VmEndpointNatMappings extends com.google.api.client.json.Gene
   private java.util.List<VmEndpointNatMappingsInterfaceNatMappings> interfaceNatMappings;
 
   /**
-   * Output only. Name of the VM instance which the endpoint belongs to
+   * Name of the VM instance which the endpoint belongs to
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceName() {
@@ -51,7 +51,7 @@ public final class VmEndpointNatMappings extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Name of the VM instance which the endpoint belongs to
+   * Name of the VM instance which the endpoint belongs to
    * @param instanceName instanceName or {@code null} for none
    */
   public VmEndpointNatMappings setInstanceName(java.lang.String instanceName) {

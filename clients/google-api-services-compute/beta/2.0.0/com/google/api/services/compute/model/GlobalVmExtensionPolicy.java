@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class GlobalVmExtensionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   private java.util.Map<String, GlobalVmExtensionPolicyExtensionPolicy> extensionPolicies;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -68,7 +67,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   private java.util.List<GlobalVmExtensionPolicyInstanceSelector> instanceSelectors;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#globalVmExtensionPolicy for
+   * [Output Only] Type of the resource. Alwayscompute#globalVmExtensionPolicy for
    * globalVmExtensionPolicies.
    * The value may be {@code null}.
    */
@@ -105,36 +104,36 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   private GlobalVmExtensionPolicyRolloutOperation rolloutOperation;
 
   /**
-   * Output only. [Output Only] The scoped resource status. It's only for tracking the purging
-   * status of the policy.
+   * [Output Only] The scoped resource status. It's only for tracking the purging status of the
+   * policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scopedResourceStatus;
 
   /**
-   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only] Update timestamp inRFC3339 text format.
+   * [Output Only] Update timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String updateTimestamp;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -142,7 +141,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public GlobalVmExtensionPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -187,8 +186,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -196,8 +194,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public GlobalVmExtensionPolicy setId(java.math.BigInteger id) {
@@ -225,7 +222,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#globalVmExtensionPolicy for
+   * [Output Only] Type of the resource. Alwayscompute#globalVmExtensionPolicy for
    * globalVmExtensionPolicies.
    * @return value or {@code null} for none
    */
@@ -234,7 +231,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#globalVmExtensionPolicy for
+   * [Output Only] Type of the resource. Alwayscompute#globalVmExtensionPolicy for
    * globalVmExtensionPolicies.
    * @param kind kind or {@code null} for none
    */
@@ -311,8 +308,8 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] The scoped resource status. It's only for tracking the purging
-   * status of the policy.
+   * [Output Only] The scoped resource status. It's only for tracking the purging status of the
+   * policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getScopedResourceStatus() {
@@ -320,8 +317,8 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] The scoped resource status. It's only for tracking the purging
-   * status of the policy.
+   * [Output Only] The scoped resource status. It's only for tracking the purging status of the
+   * policy.
    * @param scopedResourceStatus scopedResourceStatus or {@code null} for none
    */
   public GlobalVmExtensionPolicy setScopedResourceStatus(java.lang.String scopedResourceStatus) {
@@ -330,7 +327,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -338,7 +335,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined fully-qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public GlobalVmExtensionPolicy setSelfLink(java.lang.String selfLink) {
@@ -347,7 +344,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -355,7 +352,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public GlobalVmExtensionPolicy setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -364,7 +361,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Update timestamp inRFC3339 text format.
+   * [Output Only] Update timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateTimestamp() {
@@ -372,7 +369,7 @@ public final class GlobalVmExtensionPolicy extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. [Output Only] Update timestamp inRFC3339 text format.
+   * [Output Only] Update timestamp inRFC3339 text format.
    * @param updateTimestamp updateTimestamp or {@code null} for none
    */
   public GlobalVmExtensionPolicy setUpdateTimestamp(java.lang.String updateTimestamp) {

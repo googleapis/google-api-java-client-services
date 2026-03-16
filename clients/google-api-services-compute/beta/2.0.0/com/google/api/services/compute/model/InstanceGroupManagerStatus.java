@@ -30,70 +30,54 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Status of all-instances configuration on the group.
+   * [Output only] Status of all-instances configuration on the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerStatusAllInstancesConfig allInstancesConfig;
 
   /**
-   * Output only. [Output Only] The accelerator topology applied to this MIG. Currently only one
-   * accelerator topology is supported.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<InstanceGroupManagerStatusAcceleratorTopology> appliedAcceleratorTopologies;
-
-  /**
-   * Output only. [Output Only] The URL of theAutoscaler that targets this instance group manager.
+   * [Output Only] The URL of theAutoscaler that targets this instance group manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String autoscaler;
 
   /**
-   * Output only. [Output Only] The status of bulk instance operation.
+   * [Output Only] The status of bulk instance operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerStatusBulkInstanceOperation bulkInstanceOperation;
 
   /**
-   * Output only. [Output Only] The list of instance statuses and the number of instances in this
-   * managed instance group that have the status. Currently only shown for TPU MIGs
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InstanceGroupManagerStatusInstanceStatusSummary currentInstanceStatuses;
-
-  /**
-   * Output only. [Output Only] A bit indicating whether the managed instance group is in a stable
-   * state. A stable state means that: none of the instances in the managed instance group is
-   * currently undergoing any type of change (for example, creation, restart, or deletion); no
-   * future changes are scheduled for instances in the managed instance group; and the managed
-   * instance group itself is not being modified.
+   * [Output Only] A bit indicating whether the managed instance group is in a stable state. A
+   * stable state means that: none of the instances in the managed instance group is currently
+   * undergoing any type of change (for example, creation, restart, or deletion); no future changes
+   * are scheduled for instances in the managed instance group; and the managed instance group
+   * itself is not being modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isStable;
 
   /**
-   * Output only. [Output Only] Stateful status of the given Instance Group Manager.
+   * [Output Only] Stateful status of the given Instance Group Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerStatusStateful stateful;
 
   /**
-   * Output only. [Output Only] A status of consistency of Instances' versions with their target
-   * version specified by version field on Instance Group Manager.
+   * [Output Only] A status of consistency of Instances' versions with their target version
+   * specified by version field on Instance Group Manager.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerStatusVersionTarget versionTarget;
 
   /**
-   * Output only. [Output only] Status of all-instances configuration on the group.
+   * [Output only] Status of all-instances configuration on the group.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatusAllInstancesConfig getAllInstancesConfig() {
@@ -101,7 +85,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output only] Status of all-instances configuration on the group.
+   * [Output only] Status of all-instances configuration on the group.
    * @param allInstancesConfig allInstancesConfig or {@code null} for none
    */
   public InstanceGroupManagerStatus setAllInstancesConfig(InstanceGroupManagerStatusAllInstancesConfig allInstancesConfig) {
@@ -110,26 +94,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] The accelerator topology applied to this MIG. Currently only one
-   * accelerator topology is supported.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<InstanceGroupManagerStatusAcceleratorTopology> getAppliedAcceleratorTopologies() {
-    return appliedAcceleratorTopologies;
-  }
-
-  /**
-   * Output only. [Output Only] The accelerator topology applied to this MIG. Currently only one
-   * accelerator topology is supported.
-   * @param appliedAcceleratorTopologies appliedAcceleratorTopologies or {@code null} for none
-   */
-  public InstanceGroupManagerStatus setAppliedAcceleratorTopologies(java.util.List<InstanceGroupManagerStatusAcceleratorTopology> appliedAcceleratorTopologies) {
-    this.appliedAcceleratorTopologies = appliedAcceleratorTopologies;
-    return this;
-  }
-
-  /**
-   * Output only. [Output Only] The URL of theAutoscaler that targets this instance group manager.
+   * [Output Only] The URL of theAutoscaler that targets this instance group manager.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutoscaler() {
@@ -137,7 +102,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] The URL of theAutoscaler that targets this instance group manager.
+   * [Output Only] The URL of theAutoscaler that targets this instance group manager.
    * @param autoscaler autoscaler or {@code null} for none
    */
   public InstanceGroupManagerStatus setAutoscaler(java.lang.String autoscaler) {
@@ -146,7 +111,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] The status of bulk instance operation.
+   * [Output Only] The status of bulk instance operation.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatusBulkInstanceOperation getBulkInstanceOperation() {
@@ -154,7 +119,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] The status of bulk instance operation.
+   * [Output Only] The status of bulk instance operation.
    * @param bulkInstanceOperation bulkInstanceOperation or {@code null} for none
    */
   public InstanceGroupManagerStatus setBulkInstanceOperation(InstanceGroupManagerStatusBulkInstanceOperation bulkInstanceOperation) {
@@ -163,30 +128,11 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] The list of instance statuses and the number of instances in this
-   * managed instance group that have the status. Currently only shown for TPU MIGs
-   * @return value or {@code null} for none
-   */
-  public InstanceGroupManagerStatusInstanceStatusSummary getCurrentInstanceStatuses() {
-    return currentInstanceStatuses;
-  }
-
-  /**
-   * Output only. [Output Only] The list of instance statuses and the number of instances in this
-   * managed instance group that have the status. Currently only shown for TPU MIGs
-   * @param currentInstanceStatuses currentInstanceStatuses or {@code null} for none
-   */
-  public InstanceGroupManagerStatus setCurrentInstanceStatuses(InstanceGroupManagerStatusInstanceStatusSummary currentInstanceStatuses) {
-    this.currentInstanceStatuses = currentInstanceStatuses;
-    return this;
-  }
-
-  /**
-   * Output only. [Output Only] A bit indicating whether the managed instance group is in a stable
-   * state. A stable state means that: none of the instances in the managed instance group is
-   * currently undergoing any type of change (for example, creation, restart, or deletion); no
-   * future changes are scheduled for instances in the managed instance group; and the managed
-   * instance group itself is not being modified.
+   * [Output Only] A bit indicating whether the managed instance group is in a stable state. A
+   * stable state means that: none of the instances in the managed instance group is currently
+   * undergoing any type of change (for example, creation, restart, or deletion); no future changes
+   * are scheduled for instances in the managed instance group; and the managed instance group
+   * itself is not being modified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsStable() {
@@ -194,11 +140,11 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] A bit indicating whether the managed instance group is in a stable
-   * state. A stable state means that: none of the instances in the managed instance group is
-   * currently undergoing any type of change (for example, creation, restart, or deletion); no
-   * future changes are scheduled for instances in the managed instance group; and the managed
-   * instance group itself is not being modified.
+   * [Output Only] A bit indicating whether the managed instance group is in a stable state. A
+   * stable state means that: none of the instances in the managed instance group is currently
+   * undergoing any type of change (for example, creation, restart, or deletion); no future changes
+   * are scheduled for instances in the managed instance group; and the managed instance group
+   * itself is not being modified.
    * @param isStable isStable or {@code null} for none
    */
   public InstanceGroupManagerStatus setIsStable(java.lang.Boolean isStable) {
@@ -207,7 +153,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] Stateful status of the given Instance Group Manager.
+   * [Output Only] Stateful status of the given Instance Group Manager.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatusStateful getStateful() {
@@ -215,7 +161,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] Stateful status of the given Instance Group Manager.
+   * [Output Only] Stateful status of the given Instance Group Manager.
    * @param stateful stateful or {@code null} for none
    */
   public InstanceGroupManagerStatus setStateful(InstanceGroupManagerStatusStateful stateful) {
@@ -224,8 +170,8 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] A status of consistency of Instances' versions with their target
-   * version specified by version field on Instance Group Manager.
+   * [Output Only] A status of consistency of Instances' versions with their target version
+   * specified by version field on Instance Group Manager.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatusVersionTarget getVersionTarget() {
@@ -233,8 +179,8 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] A status of consistency of Instances' versions with their target
-   * version specified by version field on Instance Group Manager.
+   * [Output Only] A status of consistency of Instances' versions with their target version
+   * specified by version field on Instance Group Manager.
    * @param versionTarget versionTarget or {@code null} for none
    */
   public InstanceGroupManagerStatus setVersionTarget(InstanceGroupManagerStatusVersionTarget versionTarget) {

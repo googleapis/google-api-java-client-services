@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class RegionInstanceGroupManagersListInstanceConfigsResp extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The list of PerInstanceConfig.
+   * [Output Only] The list of PerInstanceConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,24 +43,24 @@ public final class RegionInstanceGroupManagersListInstanceConfigsResp extends co
   }
 
   /**
-   * Output only. [Output Only] This token allows you to get the next page of results for list
-   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
-   * for the query parameter pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
 
   /**
-   * Output only. [Output Only] The list of PerInstanceConfig.
+   * [Output Only] The list of PerInstanceConfig.
    * @return value or {@code null} for none
    */
   public java.util.List<PerInstanceConfig> getItems() {
@@ -68,7 +68,7 @@ public final class RegionInstanceGroupManagersListInstanceConfigsResp extends co
   }
 
   /**
-   * Output only. [Output Only] The list of PerInstanceConfig.
+   * [Output Only] The list of PerInstanceConfig.
    * @param items items or {@code null} for none
    */
   public RegionInstanceGroupManagersListInstanceConfigsResp setItems(java.util.List<PerInstanceConfig> items) {
@@ -77,10 +77,10 @@ public final class RegionInstanceGroupManagersListInstanceConfigsResp extends co
   }
 
   /**
-   * Output only. [Output Only] This token allows you to get the next page of results for list
-   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
-   * for the query parameter pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -88,10 +88,10 @@ public final class RegionInstanceGroupManagersListInstanceConfigsResp extends co
   }
 
   /**
-   * Output only. [Output Only] This token allows you to get the next page of results for list
-   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
-   * for the query parameter pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public RegionInstanceGroupManagersListInstanceConfigsResp setNextPageToken(java.lang.String nextPageToken) {
@@ -100,7 +100,7 @@ public final class RegionInstanceGroupManagersListInstanceConfigsResp extends co
   }
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -108,7 +108,7 @@ public final class RegionInstanceGroupManagersListInstanceConfigsResp extends co
   }
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    * @param warning warning or {@code null} for none
    */
   public RegionInstanceGroupManagersListInstanceConfigsResp setWarning(Warning warning) {
@@ -127,7 +127,7 @@ public final class RegionInstanceGroupManagersListInstanceConfigsResp extends co
   }
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 

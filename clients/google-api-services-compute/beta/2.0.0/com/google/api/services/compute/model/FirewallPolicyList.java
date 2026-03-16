@@ -50,8 +50,7 @@ public final class FirewallPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#firewallPolicyList for listsof
-   * FirewallPolicies
+   * [Output Only] Type of resource. Alwayscompute#firewallPolicyList for listsof FirewallPolicies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +108,7 @@ public final class FirewallPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#firewallPolicyList for listsof
-   * FirewallPolicies
+   * [Output Only] Type of resource. Alwayscompute#firewallPolicyList for listsof FirewallPolicies
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -118,8 +116,7 @@ public final class FirewallPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#firewallPolicyList for listsof
-   * FirewallPolicies
+   * [Output Only] Type of resource. Alwayscompute#firewallPolicyList for listsof FirewallPolicies
    * @param kind kind or {@code null} for none
    */
   public FirewallPolicyList setKind(java.lang.String kind) {

@@ -65,13 +65,6 @@ public final class ResourceStatusEffectiveInstanceMetadata extends com.google.ap
   private java.lang.Boolean enableOsloginMetadataValue;
 
   /**
-   * Effective gce-container-declaration value at Instance level.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean gceContainerDeclarationMetadataValue;
-
-  /**
    * Effective serial-port-enable value at Instance level.
    * The value may be {@code null}.
    */
@@ -174,23 +167,6 @@ public final class ResourceStatusEffectiveInstanceMetadata extends com.google.ap
    */
   public ResourceStatusEffectiveInstanceMetadata setEnableOsloginMetadataValue(java.lang.Boolean enableOsloginMetadataValue) {
     this.enableOsloginMetadataValue = enableOsloginMetadataValue;
-    return this;
-  }
-
-  /**
-   * Effective gce-container-declaration value at Instance level.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getGceContainerDeclarationMetadataValue() {
-    return gceContainerDeclarationMetadataValue;
-  }
-
-  /**
-   * Effective gce-container-declaration value at Instance level.
-   * @param gceContainerDeclarationMetadataValue gceContainerDeclarationMetadataValue or {@code null} for none
-   */
-  public ResourceStatusEffectiveInstanceMetadata setGceContainerDeclarationMetadataValue(java.lang.Boolean gceContainerDeclarationMetadataValue) {
-    this.gceContainerDeclarationMetadataValue = gceContainerDeclarationMetadataValue;
     return this;
   }
 

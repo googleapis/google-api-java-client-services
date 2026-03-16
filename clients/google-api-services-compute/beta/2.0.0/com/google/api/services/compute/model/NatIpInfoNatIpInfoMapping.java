@@ -30,28 +30,28 @@ package com.google.api.services.compute.model;
 public final class NatIpInfoNatIpInfoMapping extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Specifies whether NAT IP is auto or manual.
+   * Specifies whether NAT IP is auto or manual.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mode;
 
   /**
-   * Output only. NAT IP address. For example: 203.0.113.11.
+   * NAT IP address. For example: 203.0.113.11.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String natIp;
 
   /**
-   * Output only. Specifies whether NAT IP is currently serving at least one endpoint or not.
+   * Specifies whether NAT IP is currently serving at least one endpoint or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String usage;
 
   /**
-   * Output only. Specifies whether NAT IP is auto or manual.
+   * Specifies whether NAT IP is auto or manual.
    * @return value or {@code null} for none
    */
   public java.lang.String getMode() {
@@ -59,7 +59,7 @@ public final class NatIpInfoNatIpInfoMapping extends com.google.api.client.json.
   }
 
   /**
-   * Output only. Specifies whether NAT IP is auto or manual.
+   * Specifies whether NAT IP is auto or manual.
    * @param mode mode or {@code null} for none
    */
   public NatIpInfoNatIpInfoMapping setMode(java.lang.String mode) {
@@ -68,7 +68,7 @@ public final class NatIpInfoNatIpInfoMapping extends com.google.api.client.json.
   }
 
   /**
-   * Output only. NAT IP address. For example: 203.0.113.11.
+   * NAT IP address. For example: 203.0.113.11.
    * @return value or {@code null} for none
    */
   public java.lang.String getNatIp() {
@@ -76,7 +76,7 @@ public final class NatIpInfoNatIpInfoMapping extends com.google.api.client.json.
   }
 
   /**
-   * Output only. NAT IP address. For example: 203.0.113.11.
+   * NAT IP address. For example: 203.0.113.11.
    * @param natIp natIp or {@code null} for none
    */
   public NatIpInfoNatIpInfoMapping setNatIp(java.lang.String natIp) {
@@ -85,7 +85,7 @@ public final class NatIpInfoNatIpInfoMapping extends com.google.api.client.json.
   }
 
   /**
-   * Output only. Specifies whether NAT IP is currently serving at least one endpoint or not.
+   * Specifies whether NAT IP is currently serving at least one endpoint or not.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsage() {
@@ -93,7 +93,7 @@ public final class NatIpInfoNatIpInfoMapping extends com.google.api.client.json.
   }
 
   /**
-   * Output only. Specifies whether NAT IP is currently serving at least one endpoint or not.
+   * Specifies whether NAT IP is currently serving at least one endpoint or not.
    * @param usage usage or {@code null} for none
    */
   public NatIpInfoNatIpInfoMapping setUsage(java.lang.String usage) {

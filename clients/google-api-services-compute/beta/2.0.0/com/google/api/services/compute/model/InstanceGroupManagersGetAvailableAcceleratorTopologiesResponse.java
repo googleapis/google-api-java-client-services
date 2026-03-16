@@ -37,13 +37,6 @@ public final class InstanceGroupManagersGetAvailableAcceleratorTopologiesRespons
   private java.util.Map<String, InstanceGroupManagersGetAvailableAcceleratorTopologiesResponseAcceleratorTopologyInfo> acceleratorTopologiesInfo;
 
   /**
-   * URL to MMIG this MIG belongs to.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String multiMig;
-
-  /**
    * The accelerator topology information returned per id of the topology location.
    * @return value or {@code null} for none
    */
@@ -57,23 +50,6 @@ public final class InstanceGroupManagersGetAvailableAcceleratorTopologiesRespons
    */
   public InstanceGroupManagersGetAvailableAcceleratorTopologiesResponse setAcceleratorTopologiesInfo(java.util.Map<String, InstanceGroupManagersGetAvailableAcceleratorTopologiesResponseAcceleratorTopologyInfo> acceleratorTopologiesInfo) {
     this.acceleratorTopologiesInfo = acceleratorTopologiesInfo;
-    return this;
-  }
-
-  /**
-   * URL to MMIG this MIG belongs to.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMultiMig() {
-    return multiMig;
-  }
-
-  /**
-   * URL to MMIG this MIG belongs to.
-   * @param multiMig multiMig or {@code null} for none
-   */
-  public InstanceGroupManagersGetAvailableAcceleratorTopologiesResponse setMultiMig(java.lang.String multiMig) {
-    this.multiMig = multiMig;
     return this;
   }
 

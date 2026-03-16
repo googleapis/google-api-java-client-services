@@ -46,14 +46,14 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.Long archiveSizeBytes;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
 
   /**
-   * Output only. The deprecation status associated with this image.
+   * The deprecation status associated with this image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +74,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.Long diskSizeGb;
 
   /**
-   * Output only. Whether this image is created from a confidential compute mode disk. [Output
-   * Only]: This field is not set by user, but from source disk.
+   * Whether this image is created from a confidential compute mode disk. [Output Only]: This field
+   * is not set by user, but from source disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -134,7 +133,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey imageEncryptionKey;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#image for images.
+   * [Output Only] Type of the resource. Always compute#image for images.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,14 +244,14 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,9 +286,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey sourceDiskEncryptionKey;
 
   /**
-   * Output only. [Output Only] The ID value of the disk used to create this image. This value may
-   * be used to determine whether the image was taken from the current or a previous instance of a
-   * given disk name.
+   * [Output Only] The ID value of the disk used to create this image. This value may be used to
+   * determine whether the image was taken from the current or a previous instance of a given disk
+   * name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,9 +316,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey sourceImageEncryptionKey;
 
   /**
-   * Output only. [Output Only] The ID value of the image used to create this image. This value may
-   * be used to determine whether the image was taken from the current or a previous instance of a
-   * given image name.
+   * [Output Only] The ID value of the image used to create this image. This value may be used to
+   * determine whether the image was taken from the current or a previous instance of a given image
+   * name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -347,9 +346,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey sourceSnapshotEncryptionKey;
 
   /**
-   * Output only. [Output Only] The ID value of the snapshot used to create this image. This value
-   * may be used to determine whether the snapshot was taken from the current or a previous instance
-   * of a given snapshot name.
+   * [Output Only] The ID value of the snapshot used to create this image. This value may be used to
+   * determine whether the snapshot was taken from the current or a previous instance of a given
+   * snapshot name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,9 +362,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceType;
 
   /**
-   * Output only. [Output Only] The status of the image. An image can be used to create other
-   * resources, such as instances, only after the image has been successfully created and the status
-   * is set to READY. Possible values are FAILED, PENDING, orREADY.
+   * [Output Only] The status of the image. An image can be used to create other resources, such as
+   * instances, only after the image has been successfully created and the status is set to READY.
+   * Possible values are FAILED, PENDING, orREADY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -377,6 +376,17 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> storageLocations;
+
+  /**
+   * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
+   * be modified after the disk is created. This includes a list of URLs to the license resource.
+   * For example, to provide a debian license:
+   *
+   * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> userLicenses;
 
   /**
    * The architecture of the image. Valid values are ARM64 or X86_64.
@@ -413,7 +423,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -421,7 +431,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Image setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -430,7 +440,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The deprecation status associated with this image.
+   * The deprecation status associated with this image.
    * @return value or {@code null} for none
    */
   public DeprecationStatus getDeprecated() {
@@ -438,7 +448,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The deprecation status associated with this image.
+   * The deprecation status associated with this image.
    * @param deprecated deprecated or {@code null} for none
    */
   public Image setDeprecated(DeprecationStatus deprecated) {
@@ -481,8 +491,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this image is created from a confidential compute mode disk. [Output
-   * Only]: This field is not set by user, but from source disk.
+   * Whether this image is created from a confidential compute mode disk. [Output Only]: This field
+   * is not set by user, but from source disk.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConfidentialCompute() {
@@ -490,8 +500,8 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether this image is created from a confidential compute mode disk. [Output
-   * Only]: This field is not set by user, but from source disk.
+   * Whether this image is created from a confidential compute mode disk. [Output Only]: This field
+   * is not set by user, but from source disk.
    * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
    */
   public Image setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
@@ -550,8 +560,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -559,8 +568,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public Image setId(java.math.BigInteger id) {
@@ -604,7 +612,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#image for images.
+   * [Output Only] Type of the resource. Always compute#image for images.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -612,7 +620,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#image for images.
+   * [Output Only] Type of the resource. Always compute#image for images.
    * @param kind kind or {@code null} for none
    */
   public Image setKind(java.lang.String kind) {
@@ -899,7 +907,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -907,7 +915,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Image setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -916,7 +924,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -924,7 +932,7 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Image setSelfLink(java.lang.String selfLink) {
@@ -998,9 +1006,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The ID value of the disk used to create this image. This value may
-   * be used to determine whether the image was taken from the current or a previous instance of a
-   * given disk name.
+   * [Output Only] The ID value of the disk used to create this image. This value may be used to
+   * determine whether the image was taken from the current or a previous instance of a given disk
+   * name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDiskId() {
@@ -1008,9 +1016,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The ID value of the disk used to create this image. This value may
-   * be used to determine whether the image was taken from the current or a previous instance of a
-   * given disk name.
+   * [Output Only] The ID value of the disk used to create this image. This value may be used to
+   * determine whether the image was taken from the current or a previous instance of a given disk
+   * name.
    * @param sourceDiskId sourceDiskId or {@code null} for none
    */
   public Image setSourceDiskId(java.lang.String sourceDiskId) {
@@ -1067,9 +1075,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The ID value of the image used to create this image. This value may
-   * be used to determine whether the image was taken from the current or a previous instance of a
-   * given image name.
+   * [Output Only] The ID value of the image used to create this image. This value may be used to
+   * determine whether the image was taken from the current or a previous instance of a given image
+   * name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceImageId() {
@@ -1077,9 +1085,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The ID value of the image used to create this image. This value may
-   * be used to determine whether the image was taken from the current or a previous instance of a
-   * given image name.
+   * [Output Only] The ID value of the image used to create this image. This value may be used to
+   * determine whether the image was taken from the current or a previous instance of a given image
+   * name.
    * @param sourceImageId sourceImageId or {@code null} for none
    */
   public Image setSourceImageId(java.lang.String sourceImageId) {
@@ -1136,9 +1144,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The ID value of the snapshot used to create this image. This value
-   * may be used to determine whether the snapshot was taken from the current or a previous instance
-   * of a given snapshot name.
+   * [Output Only] The ID value of the snapshot used to create this image. This value may be used to
+   * determine whether the snapshot was taken from the current or a previous instance of a given
+   * snapshot name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshotId() {
@@ -1146,9 +1154,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The ID value of the snapshot used to create this image. This value
-   * may be used to determine whether the snapshot was taken from the current or a previous instance
-   * of a given snapshot name.
+   * [Output Only] The ID value of the snapshot used to create this image. This value may be used to
+   * determine whether the snapshot was taken from the current or a previous instance of a given
+   * snapshot name.
    * @param sourceSnapshotId sourceSnapshotId or {@code null} for none
    */
   public Image setSourceSnapshotId(java.lang.String sourceSnapshotId) {
@@ -1174,9 +1182,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the image. An image can be used to create other
-   * resources, such as instances, only after the image has been successfully created and the status
-   * is set to READY. Possible values are FAILED, PENDING, orREADY.
+   * [Output Only] The status of the image. An image can be used to create other resources, such as
+   * instances, only after the image has been successfully created and the status is set to READY.
+   * Possible values are FAILED, PENDING, orREADY.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1184,9 +1192,9 @@ public final class Image extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the image. An image can be used to create other
-   * resources, such as instances, only after the image has been successfully created and the status
-   * is set to READY. Possible values are FAILED, PENDING, orREADY.
+   * [Output Only] The status of the image. An image can be used to create other resources, such as
+   * instances, only after the image has been successfully created and the status is set to READY.
+   * Possible values are FAILED, PENDING, orREADY.
    * @param status status or {@code null} for none
    */
   public Image setStatus(java.lang.String status) {
@@ -1208,6 +1216,31 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   public Image setStorageLocations(java.util.List<java.lang.String> storageLocations) {
     this.storageLocations = storageLocations;
+    return this;
+  }
+
+  /**
+   * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
+   * be modified after the disk is created. This includes a list of URLs to the license resource.
+   * For example, to provide a debian license:
+   *
+   * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUserLicenses() {
+    return userLicenses;
+  }
+
+  /**
+   * A list of publicly visible user-licenses. Unlike regular licenses, user provided licenses can
+   * be modified after the disk is created. This includes a list of URLs to the license resource.
+   * For example, to provide a debian license:
+   *
+   * https://www.googleapis.com/compute/v1/projects/debian-cloud/global/licenses/debian-9-stretch
+   * @param userLicenses userLicenses or {@code null} for none
+   */
+  public Image setUserLicenses(java.util.List<java.lang.String> userLicenses) {
+    this.userLicenses = userLicenses;
     return this;
   }
 
@@ -1244,13 +1277,10 @@ public final class Image extends com.google.api.client.json.GenericJson {
     private java.lang.String sha1Checksum;
 
     /**
-     * The full Google Cloud Storage URL or Artifact Registry path where the raw disk image archive is
-     * stored. The following are valid formats:        -
+     * The full Google Cloud Storage URL where the raw disk image archive is stored. The following are
+     * valid formats for the URL:        -
      * https://storage.googleapis.com/bucket_name/image_archive_name    -
-     * https://storage.googleapis.com/bucket_name/folder_name/image_archive_name    -
-     * projects/project/locations/location/repositories/repo/packages/package/versions/version_id    -
-     * projects/project/locations/location/repositories/repo/packages/package/versions/version_id@dirs
-     * um_sha256:hex_value
+     * https://storage.googleapis.com/bucket_name/folder_name/image_archive_name
      *
      * In order to create an image, you must provide the full or partial URL of one of the following:
      * - The rawDisk.source URL     - The sourceDisk URL     - The sourceImage URL     - The
@@ -1301,13 +1331,10 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The full Google Cloud Storage URL or Artifact Registry path where the raw disk image archive is
-     * stored. The following are valid formats:        -
+     * The full Google Cloud Storage URL where the raw disk image archive is stored. The following are
+     * valid formats for the URL:        -
      * https://storage.googleapis.com/bucket_name/image_archive_name    -
-     * https://storage.googleapis.com/bucket_name/folder_name/image_archive_name    -
-     * projects/project/locations/location/repositories/repo/packages/package/versions/version_id    -
-     * projects/project/locations/location/repositories/repo/packages/package/versions/version_id@dirs
-     * um_sha256:hex_value
+     * https://storage.googleapis.com/bucket_name/folder_name/image_archive_name
      *
      * In order to create an image, you must provide the full or partial URL of one of the following:
      * - The rawDisk.source URL     - The sourceDisk URL     - The sourceImage URL     - The
@@ -1319,13 +1346,10 @@ public final class Image extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The full Google Cloud Storage URL or Artifact Registry path where the raw disk image archive is
-     * stored. The following are valid formats:        -
+     * The full Google Cloud Storage URL where the raw disk image archive is stored. The following are
+     * valid formats for the URL:        -
      * https://storage.googleapis.com/bucket_name/image_archive_name    -
-     * https://storage.googleapis.com/bucket_name/folder_name/image_archive_name    -
-     * projects/project/locations/location/repositories/repo/packages/package/versions/version_id    -
-     * projects/project/locations/location/repositories/repo/packages/package/versions/version_id@dirs
-     * um_sha256:hex_value
+     * https://storage.googleapis.com/bucket_name/folder_name/image_archive_name
      *
      * In order to create an image, you must provide the full or partial URL of one of the following:
      * - The rawDisk.source URL     - The sourceDisk URL     - The sourceImage URL     - The

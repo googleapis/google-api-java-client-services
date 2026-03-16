@@ -31,16 +31,16 @@ package com.google.api.services.compute.model;
 public final class VpnGatewayStatusVpnConnection extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. URL reference to the peer external VPN gateways to which the VPN tunnels in this
-   * VPN connection are connected. This field is mutually exclusive with peer_gcp_gateway.
+   * URL reference to the peer external VPN gateways to which the VPN tunnels in this VPN connection
+   * are connected. This field is mutually exclusive with peer_gcp_gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerExternalGateway;
 
   /**
-   * Output only. URL reference to the peer side VPN gateways to which the VPN tunnels in this VPN
-   * connection are connected. This field is mutually exclusive with peer_gcp_gateway.
+   * URL reference to the peer side VPN gateways to which the VPN tunnels in this VPN connection are
+   * connected. This field is mutually exclusive with peer_gcp_gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class VpnGatewayStatusVpnConnection extends com.google.api.client.j
   }
 
   /**
-   * Output only. URL reference to the peer external VPN gateways to which the VPN tunnels in this
-   * VPN connection are connected. This field is mutually exclusive with peer_gcp_gateway.
+   * URL reference to the peer external VPN gateways to which the VPN tunnels in this VPN connection
+   * are connected. This field is mutually exclusive with peer_gcp_gateway.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerExternalGateway() {
@@ -76,8 +76,8 @@ public final class VpnGatewayStatusVpnConnection extends com.google.api.client.j
   }
 
   /**
-   * Output only. URL reference to the peer external VPN gateways to which the VPN tunnels in this
-   * VPN connection are connected. This field is mutually exclusive with peer_gcp_gateway.
+   * URL reference to the peer external VPN gateways to which the VPN tunnels in this VPN connection
+   * are connected. This field is mutually exclusive with peer_gcp_gateway.
    * @param peerExternalGateway peerExternalGateway or {@code null} for none
    */
   public VpnGatewayStatusVpnConnection setPeerExternalGateway(java.lang.String peerExternalGateway) {
@@ -86,8 +86,8 @@ public final class VpnGatewayStatusVpnConnection extends com.google.api.client.j
   }
 
   /**
-   * Output only. URL reference to the peer side VPN gateways to which the VPN tunnels in this VPN
-   * connection are connected. This field is mutually exclusive with peer_gcp_gateway.
+   * URL reference to the peer side VPN gateways to which the VPN tunnels in this VPN connection are
+   * connected. This field is mutually exclusive with peer_gcp_gateway.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerGcpGateway() {
@@ -95,8 +95,8 @@ public final class VpnGatewayStatusVpnConnection extends com.google.api.client.j
   }
 
   /**
-   * Output only. URL reference to the peer side VPN gateways to which the VPN tunnels in this VPN
-   * connection are connected. This field is mutually exclusive with peer_gcp_gateway.
+   * URL reference to the peer side VPN gateways to which the VPN tunnels in this VPN connection are
+   * connected. This field is mutually exclusive with peer_gcp_gateway.
    * @param peerGcpGateway peerGcpGateway or {@code null} for none
    */
   public VpnGatewayStatusVpnConnection setPeerGcpGateway(java.lang.String peerGcpGateway) {

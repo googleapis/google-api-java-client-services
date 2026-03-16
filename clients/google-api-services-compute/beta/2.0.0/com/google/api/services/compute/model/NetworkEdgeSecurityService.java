@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class NetworkEdgeSecurityService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,15 +56,14 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   private java.lang.String fingerprint;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#networkEdgeSecurityService for
+   * [Output only] Type of the resource. Alwayscompute#networkEdgeSecurityService for
    * NetworkEdgeSecurityServices
    * The value may be {@code null}.
    */
@@ -83,8 +82,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] URL of the region where the resource resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the resource resides. You must specify this field as part
+   * of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,21 +98,21 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   private java.lang.String securityPolicy;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -121,7 +120,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NetworkEdgeSecurityService setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -212,8 +211,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -221,8 +219,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public NetworkEdgeSecurityService setId(java.math.BigInteger id) {
@@ -231,7 +228,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#networkEdgeSecurityService for
+   * [Output only] Type of the resource. Alwayscompute#networkEdgeSecurityService for
    * NetworkEdgeSecurityServices
    * @return value or {@code null} for none
    */
@@ -240,7 +237,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#networkEdgeSecurityService for
+   * [Output only] Type of the resource. Alwayscompute#networkEdgeSecurityService for
    * NetworkEdgeSecurityServices
    * @param kind kind or {@code null} for none
    */
@@ -275,8 +272,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the resource resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the resource resides. You must specify this field as part
+   * of the HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -284,8 +281,8 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the resource resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the resource resides. You must specify this field as part
+   * of the HTTP request URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public NetworkEdgeSecurityService setRegion(java.lang.String region) {
@@ -313,7 +310,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -321,7 +318,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NetworkEdgeSecurityService setSelfLink(java.lang.String selfLink) {
@@ -330,7 +327,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -338,7 +335,7 @@ public final class NetworkEdgeSecurityService extends com.google.api.client.json
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public NetworkEdgeSecurityService setSelfLinkWithId(java.lang.String selfLinkWithId) {

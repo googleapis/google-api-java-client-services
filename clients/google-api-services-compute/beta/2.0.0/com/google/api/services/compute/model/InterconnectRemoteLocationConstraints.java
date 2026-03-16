@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class InterconnectRemoteLocationConstraints extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Port pair remote location constraints, which can take one of the
-   * following values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION.
+   * [Output Only] Port pair remote location constraints, which can take one of the following
+   * values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION.
    *
    * Google Cloud API refers only to individual ports, but the UI uses this field when ordering a
    * pair of ports, to prevent users from accidentally ordering something that is incompatible with
@@ -44,15 +44,15 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
   private java.lang.String portPairRemoteLocation;
 
   /**
-   * Output only. [Output Only] Port pair VLAN constraints, which can take one of the following
-   * values: PORT_PAIR_UNCONSTRAINED_VLAN, PORT_PAIR_MATCHING_VLAN
+   * [Output Only] Port pair VLAN constraints, which can take one of the following values:
+   * PORT_PAIR_UNCONSTRAINED_VLAN, PORT_PAIR_MATCHING_VLAN
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String portPairVlan;
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    *
    * [min-length, max-length]
    *
@@ -70,8 +70,8 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
   private InterconnectRemoteLocationConstraintsSubnetLengthRange subnetLengthRange;
 
   /**
-   * Output only. [Output Only] Port pair remote location constraints, which can take one of the
-   * following values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION.
+   * [Output Only] Port pair remote location constraints, which can take one of the following
+   * values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION.
    *
    * Google Cloud API refers only to individual ports, but the UI uses this field when ordering a
    * pair of ports, to prevent users from accidentally ordering something that is incompatible with
@@ -85,8 +85,8 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
   }
 
   /**
-   * Output only. [Output Only] Port pair remote location constraints, which can take one of the
-   * following values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION.
+   * [Output Only] Port pair remote location constraints, which can take one of the following
+   * values: PORT_PAIR_UNCONSTRAINED_REMOTE_LOCATION, PORT_PAIR_MATCHING_REMOTE_LOCATION.
    *
    * Google Cloud API refers only to individual ports, but the UI uses this field when ordering a
    * pair of ports, to prevent users from accidentally ordering something that is incompatible with
@@ -101,8 +101,8 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
   }
 
   /**
-   * Output only. [Output Only] Port pair VLAN constraints, which can take one of the following
-   * values: PORT_PAIR_UNCONSTRAINED_VLAN, PORT_PAIR_MATCHING_VLAN
+   * [Output Only] Port pair VLAN constraints, which can take one of the following values:
+   * PORT_PAIR_UNCONSTRAINED_VLAN, PORT_PAIR_MATCHING_VLAN
    * @return value or {@code null} for none
    */
   public java.lang.String getPortPairVlan() {
@@ -110,8 +110,8 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
   }
 
   /**
-   * Output only. [Output Only] Port pair VLAN constraints, which can take one of the following
-   * values: PORT_PAIR_UNCONSTRAINED_VLAN, PORT_PAIR_MATCHING_VLAN
+   * [Output Only] Port pair VLAN constraints, which can take one of the following values:
+   * PORT_PAIR_UNCONSTRAINED_VLAN, PORT_PAIR_MATCHING_VLAN
    * @param portPairVlan portPairVlan or {@code null} for none
    */
   public InterconnectRemoteLocationConstraints setPortPairVlan(java.lang.String portPairVlan) {
@@ -120,7 +120,7 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    *
    * [min-length, max-length]
    *
@@ -139,7 +139,7 @@ public final class InterconnectRemoteLocationConstraints extends com.google.api.
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    *
    * [min-length, max-length]
    *

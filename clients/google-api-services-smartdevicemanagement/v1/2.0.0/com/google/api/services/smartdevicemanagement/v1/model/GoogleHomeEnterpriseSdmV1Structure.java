@@ -31,6 +31,14 @@ package com.google.api.services.smartdevicemanagement.v1.model;
 public final class GoogleHomeEnterpriseSdmV1Structure extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The unique identifier for the structure in Google Home Platform. Format:
+   * homegraph.googleapis.com/Structure/{structure_id}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ghpName;
+
+  /**
    * Output only. The resource name of the structure. For example: "enterprises/XYZ/structures/ABC".
    * The value may be {@code null}.
    */
@@ -43,6 +51,25 @@ public final class GoogleHomeEnterpriseSdmV1Structure extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> traits;
+
+  /**
+   * Output only. The unique identifier for the structure in Google Home Platform. Format:
+   * homegraph.googleapis.com/Structure/{structure_id}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGhpName() {
+    return ghpName;
+  }
+
+  /**
+   * Output only. The unique identifier for the structure in Google Home Platform. Format:
+   * homegraph.googleapis.com/Structure/{structure_id}
+   * @param ghpName ghpName or {@code null} for none
+   */
+  public GoogleHomeEnterpriseSdmV1Structure setGhpName(java.lang.String ghpName) {
+    this.ghpName = ghpName;
+    return this;
+  }
 
   /**
    * Output only. The resource name of the structure. For example: "enterprises/XYZ/structures/ABC".

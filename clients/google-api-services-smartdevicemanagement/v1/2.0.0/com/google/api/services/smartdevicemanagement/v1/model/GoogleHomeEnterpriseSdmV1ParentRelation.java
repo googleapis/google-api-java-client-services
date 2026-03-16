@@ -39,6 +39,15 @@ public final class GoogleHomeEnterpriseSdmV1ParentRelation extends com.google.ap
   private java.lang.String displayName;
 
   /**
+   * Output only. The GHP name of the relation -- e.g., structure/room where the device is assigned
+   * to. For example: "homegraph.googleapis.com/Structure/ABC" or
+   * "homegraph.googleapis.com/Room/ABC"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ghpParent;
+
+  /**
    * Output only. The name of the relation -- e.g., structure/room where the device is assigned to.
    * For example: "enterprises/XYZ/structures/ABC" or "enterprises/XYZ/structures/ABC/rooms/123"
    * The value may be {@code null}.
@@ -62,6 +71,27 @@ public final class GoogleHomeEnterpriseSdmV1ParentRelation extends com.google.ap
    */
   public GoogleHomeEnterpriseSdmV1ParentRelation setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. The GHP name of the relation -- e.g., structure/room where the device is assigned
+   * to. For example: "homegraph.googleapis.com/Structure/ABC" or
+   * "homegraph.googleapis.com/Room/ABC"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGhpParent() {
+    return ghpParent;
+  }
+
+  /**
+   * Output only. The GHP name of the relation -- e.g., structure/room where the device is assigned
+   * to. For example: "homegraph.googleapis.com/Structure/ABC" or
+   * "homegraph.googleapis.com/Room/ABC"
+   * @param ghpParent ghpParent or {@code null} for none
+   */
+  public GoogleHomeEnterpriseSdmV1ParentRelation setGhpParent(java.lang.String ghpParent) {
+    this.ghpParent = ghpParent;
     return this;
   }
 

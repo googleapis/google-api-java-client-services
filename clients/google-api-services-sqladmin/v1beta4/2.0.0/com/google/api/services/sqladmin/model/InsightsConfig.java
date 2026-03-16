@@ -31,6 +31,13 @@ package com.google.api.services.sqladmin.model;
 public final class InsightsConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether enhanced query insights feature is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enhancedQueryInsightsEnabled;
+
+  /**
    * Whether Query Insights feature is enabled.
    * The value may be {@code null}.
    */
@@ -67,6 +74,23 @@ public final class InsightsConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean recordClientAddress;
+
+  /**
+   * Optional. Whether enhanced query insights feature is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnhancedQueryInsightsEnabled() {
+    return enhancedQueryInsightsEnabled;
+  }
+
+  /**
+   * Optional. Whether enhanced query insights feature is enabled.
+   * @param enhancedQueryInsightsEnabled enhancedQueryInsightsEnabled or {@code null} for none
+   */
+  public InsightsConfig setEnhancedQueryInsightsEnabled(java.lang.Boolean enhancedQueryInsightsEnabled) {
+    this.enhancedQueryInsightsEnabled = enhancedQueryInsightsEnabled;
+    return this;
+  }
 
   /**
    * Whether Query Insights feature is enabled.

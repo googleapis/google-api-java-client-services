@@ -103,7 +103,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -11467,17 +11467,27 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Optional. revoke the existing roles granted to the user. */
+      /**
+       * Optional. Specifies whether to revoke existing roles that are not present in the
+       * `database_roles` field. If `false` or unset, the database roles specified in
+       * `database_roles` are added to the user's existing roles.
+       */
       @com.google.api.client.util.Key
       private java.lang.Boolean revokeExistingRoles;
 
-      /** Optional. revoke the existing roles granted to the user.
+      /** Optional. Specifies whether to revoke existing roles that are not present in the `database_roles`
+     field. If `false` or unset, the database roles specified in `database_roles` are added to the
+     user's existing roles.
        */
       public java.lang.Boolean getRevokeExistingRoles() {
         return revokeExistingRoles;
       }
 
-      /** Optional. revoke the existing roles granted to the user. */
+      /**
+       * Optional. Specifies whether to revoke existing roles that are not present in the
+       * `database_roles` field. If `false` or unset, the database roles specified in
+       * `database_roles` are added to the user's existing roles.
+       */
       public Update setRevokeExistingRoles(java.lang.Boolean revokeExistingRoles) {
         this.revokeExistingRoles = revokeExistingRoles;
         return this;
@@ -11523,8 +11533,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>

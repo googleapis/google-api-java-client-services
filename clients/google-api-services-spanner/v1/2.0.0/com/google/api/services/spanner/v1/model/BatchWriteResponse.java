@@ -30,8 +30,10 @@ package com.google.api.services.spanner.v1.model;
 public final class BatchWriteResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The commit timestamp of the transaction that applied this batch. Present if `status` is `OK`,
-   * absent otherwise.
+   * The commit timestamp of the transaction that applied this batch. Present if status is OK and
+   * the mutation groups were applied, absent otherwise. For mutation groups with conditions, a
+   * status=OK and missing commit_timestamp means that the mutation groups were not applied due to
+   * the condition not being satisfied after evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +55,10 @@ public final class BatchWriteResponse extends com.google.api.client.json.Generic
   private Status status;
 
   /**
-   * The commit timestamp of the transaction that applied this batch. Present if `status` is `OK`,
-   * absent otherwise.
+   * The commit timestamp of the transaction that applied this batch. Present if status is OK and
+   * the mutation groups were applied, absent otherwise. For mutation groups with conditions, a
+   * status=OK and missing commit_timestamp means that the mutation groups were not applied due to
+   * the condition not being satisfied after evaluation.
    * @return value or {@code null} for none
    */
   public String getCommitTimestamp() {
@@ -62,8 +66,10 @@ public final class BatchWriteResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * The commit timestamp of the transaction that applied this batch. Present if `status` is `OK`,
-   * absent otherwise.
+   * The commit timestamp of the transaction that applied this batch. Present if status is OK and
+   * the mutation groups were applied, absent otherwise. For mutation groups with conditions, a
+   * status=OK and missing commit_timestamp means that the mutation groups were not applied due to
+   * the condition not being satisfied after evaluation.
    * @param commitTimestamp commitTimestamp or {@code null} for none
    */
   public BatchWriteResponse setCommitTimestamp(String commitTimestamp) {

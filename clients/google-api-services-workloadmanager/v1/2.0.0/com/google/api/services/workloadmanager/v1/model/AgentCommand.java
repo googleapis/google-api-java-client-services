@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * * An AgentCommand specifies a one-time executable program for the agent to run.
+ * An AgentCommand specifies a one-time executable program for the agent to run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,22 +30,21 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class AgentCommand extends com.google.api.client.json.GenericJson {
 
   /**
-   * command is the name of the agent one-time executable that will be invoked.
+   * The name of the agent one-time executable that will be invoked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String command;
 
   /**
-   * parameters is a map of key/value pairs that can be used to specify additional one-time
-   * executable settings.
+   * A map of key/value pairs that can be used to specify additional one-time executable settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> parameters;
 
   /**
-   * command is the name of the agent one-time executable that will be invoked.
+   * The name of the agent one-time executable that will be invoked.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommand() {
@@ -53,7 +52,7 @@ public final class AgentCommand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * command is the name of the agent one-time executable that will be invoked.
+   * The name of the agent one-time executable that will be invoked.
    * @param command command or {@code null} for none
    */
   public AgentCommand setCommand(java.lang.String command) {
@@ -62,8 +61,7 @@ public final class AgentCommand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * parameters is a map of key/value pairs that can be used to specify additional one-time
-   * executable settings.
+   * A map of key/value pairs that can be used to specify additional one-time executable settings.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getParameters() {
@@ -71,8 +69,7 @@ public final class AgentCommand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * parameters is a map of key/value pairs that can be used to specify additional one-time
-   * executable settings.
+   * A map of key/value pairs that can be used to specify additional one-time executable settings.
    * @param parameters parameters or {@code null} for none
    */
   public AgentCommand setParameters(java.util.Map<String, java.lang.String> parameters) {

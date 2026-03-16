@@ -17,7 +17,8 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message describing Evaluation object
+ * Represents a Workload Manager Evaluation configuration. An Evaluation defines a set of rules to
+ * be validated against a scope of Cloud resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,14 +31,15 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Evaluation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. BigQuery destination
+   * Optional. The BigQuery destination for detailed evaluation results. If this field is specified,
+   * the results of each evaluation execution are exported to BigQuery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BigQueryDestination bigQueryDestination;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. [Output only] Create time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +53,14 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   private java.lang.String customRulesBucket;
 
   /**
-   * Description of the Evaluation
+   * Description of the Evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Evaluation type
+   * Evaluation type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,72 +68,69 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. Customer-managed encryption key name, in the format
-   * projects/locations/keyRings/cryptoKeys.
+   * projects/locations/keyRings/cryptoKeys. The key will be used for CMEK encryption of the
+   * evaluation resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKey;
 
   /**
-   * Labels as key value pairs
+   * Labels as key value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * name of resource names have the form
-   * 'projects/{project_id}/locations/{location_id}/evaluations/{evaluation_id}'
+   * Name of resource that has the form
+   * `projects/{project_id}/locations/{location_id}/evaluations/{evaluation_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * annotations as key value pairs
+   * Resource filter for an evaluation defining the scope of resources to be evaluated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceFilter resourceFilter;
 
   /**
-   * Output only. [Output only] The updated rule ids if exist.
+   * Output only. [Output only] The current lifecycle state of the evaluation resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceStatus resourceStatus;
 
   /**
-   * the name of the rule
+   * The names of the rules used for this evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ruleNames;
 
   /**
-   * Output only. [Output only] The updated rule ids if exist.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> ruleVersions;
-
-  /**
-   * crontab format schedule for scheduled evaluation, currently only support the following
-   * schedule: "0 1 * * *", "0 6 * * *", "0 12 * * *", "0 0 1 * *", "0 0 7 * *",
+   * Crontab format schedule for scheduled evaluation, currently only supports the following fixed
+   * schedules: * `0 1 * * *` # Hourly * `0 6 * * *` # Every 6 hours * `0 12 * * *` # Every 12 hours
+   * * `0 0 1 * *` # Daily * `0 0 7 * *` # Weekly * `0 0 14 * *` # Every 14 days * `0 0 1 1 *` #
+   * Monthly
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String schedule;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. [Output only] Update time stamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. BigQuery destination
+   * Optional. The BigQuery destination for detailed evaluation results. If this field is specified,
+   * the results of each evaluation execution are exported to BigQuery.
    * @return value or {@code null} for none
    */
   public BigQueryDestination getBigQueryDestination() {
@@ -139,7 +138,8 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. BigQuery destination
+   * Optional. The BigQuery destination for detailed evaluation results. If this field is specified,
+   * the results of each evaluation execution are exported to BigQuery.
    * @param bigQueryDestination bigQueryDestination or {@code null} for none
    */
   public Evaluation setBigQueryDestination(BigQueryDestination bigQueryDestination) {
@@ -148,7 +148,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. [Output only] Create time stamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -156,7 +156,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. [Output only] Create time stamp.
    * @param createTime createTime or {@code null} for none
    */
   public Evaluation setCreateTime(String createTime) {
@@ -182,7 +182,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the Evaluation
+   * Description of the Evaluation.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -190,7 +190,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Description of the Evaluation
+   * Description of the Evaluation.
    * @param description description or {@code null} for none
    */
   public Evaluation setDescription(java.lang.String description) {
@@ -199,7 +199,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Evaluation type
+   * Evaluation type.
    * @return value or {@code null} for none
    */
   public java.lang.String getEvaluationType() {
@@ -207,7 +207,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Evaluation type
+   * Evaluation type.
    * @param evaluationType evaluationType or {@code null} for none
    */
   public Evaluation setEvaluationType(java.lang.String evaluationType) {
@@ -217,7 +217,8 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. Customer-managed encryption key name, in the format
-   * projects/locations/keyRings/cryptoKeys.
+   * projects/locations/keyRings/cryptoKeys. The key will be used for CMEK encryption of the
+   * evaluation resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKey() {
@@ -226,7 +227,8 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. Customer-managed encryption key name, in the format
-   * projects/locations/keyRings/cryptoKeys.
+   * projects/locations/keyRings/cryptoKeys. The key will be used for CMEK encryption of the
+   * evaluation resource.
    * @param kmsKey kmsKey or {@code null} for none
    */
   public Evaluation setKmsKey(java.lang.String kmsKey) {
@@ -235,7 +237,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels as key value pairs
+   * Labels as key value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -243,7 +245,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Labels as key value pairs
+   * Labels as key value pairs.
    * @param labels labels or {@code null} for none
    */
   public Evaluation setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -252,8 +254,8 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * name of resource names have the form
-   * 'projects/{project_id}/locations/{location_id}/evaluations/{evaluation_id}'
+   * Name of resource that has the form
+   * `projects/{project_id}/locations/{location_id}/evaluations/{evaluation_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -261,8 +263,8 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * name of resource names have the form
-   * 'projects/{project_id}/locations/{location_id}/evaluations/{evaluation_id}'
+   * Name of resource that has the form
+   * `projects/{project_id}/locations/{location_id}/evaluations/{evaluation_id}`.
    * @param name name or {@code null} for none
    */
   public Evaluation setName(java.lang.String name) {
@@ -271,7 +273,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * annotations as key value pairs
+   * Resource filter for an evaluation defining the scope of resources to be evaluated.
    * @return value or {@code null} for none
    */
   public ResourceFilter getResourceFilter() {
@@ -279,7 +281,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * annotations as key value pairs
+   * Resource filter for an evaluation defining the scope of resources to be evaluated.
    * @param resourceFilter resourceFilter or {@code null} for none
    */
   public Evaluation setResourceFilter(ResourceFilter resourceFilter) {
@@ -288,7 +290,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The updated rule ids if exist.
+   * Output only. [Output only] The current lifecycle state of the evaluation resource.
    * @return value or {@code null} for none
    */
   public ResourceStatus getResourceStatus() {
@@ -296,7 +298,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The updated rule ids if exist.
+   * Output only. [Output only] The current lifecycle state of the evaluation resource.
    * @param resourceStatus resourceStatus or {@code null} for none
    */
   public Evaluation setResourceStatus(ResourceStatus resourceStatus) {
@@ -305,7 +307,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the name of the rule
+   * The names of the rules used for this evaluation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRuleNames() {
@@ -313,7 +315,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the name of the rule
+   * The names of the rules used for this evaluation.
    * @param ruleNames ruleNames or {@code null} for none
    */
   public Evaluation setRuleNames(java.util.List<java.lang.String> ruleNames) {
@@ -322,25 +324,10 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] The updated rule ids if exist.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getRuleVersions() {
-    return ruleVersions;
-  }
-
-  /**
-   * Output only. [Output only] The updated rule ids if exist.
-   * @param ruleVersions ruleVersions or {@code null} for none
-   */
-  public Evaluation setRuleVersions(java.util.List<java.lang.String> ruleVersions) {
-    this.ruleVersions = ruleVersions;
-    return this;
-  }
-
-  /**
-   * crontab format schedule for scheduled evaluation, currently only support the following
-   * schedule: "0 1 * * *", "0 6 * * *", "0 12 * * *", "0 0 1 * *", "0 0 7 * *",
+   * Crontab format schedule for scheduled evaluation, currently only supports the following fixed
+   * schedules: * `0 1 * * *` # Hourly * `0 6 * * *` # Every 6 hours * `0 12 * * *` # Every 12 hours
+   * * `0 0 1 * *` # Daily * `0 0 7 * *` # Weekly * `0 0 14 * *` # Every 14 days * `0 0 1 1 *` #
+   * Monthly
    * @return value or {@code null} for none
    */
   public java.lang.String getSchedule() {
@@ -348,8 +335,10 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * crontab format schedule for scheduled evaluation, currently only support the following
-   * schedule: "0 1 * * *", "0 6 * * *", "0 12 * * *", "0 0 1 * *", "0 0 7 * *",
+   * Crontab format schedule for scheduled evaluation, currently only supports the following fixed
+   * schedules: * `0 1 * * *` # Hourly * `0 6 * * *` # Every 6 hours * `0 12 * * *` # Every 12 hours
+   * * `0 0 1 * *` # Daily * `0 0 7 * *` # Weekly * `0 0 14 * *` # Every 14 days * `0 0 1 1 *` #
+   * Monthly
    * @param schedule schedule or {@code null} for none
    */
   public Evaluation setSchedule(java.lang.String schedule) {
@@ -358,7 +347,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. [Output only] Update time stamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -366,7 +355,7 @@ public final class Evaluation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. [Output only] Update time stamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public Evaluation setUpdateTime(String updateTime) {

@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for creating a Execution
+ * Request message for the RunEvaluation RPC.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,15 +30,14 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class RunEvaluationRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource being created
+   * Required. The resource being created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Execution execution;
 
   /**
-   * Required. Id of the requesting object If auto-generating Id server-side, remove this field and
-   * execution_id from the method_signature of Create RPC
+   * Required. ID of the execution which will be created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +58,7 @@ public final class RunEvaluationRequest extends com.google.api.client.json.Gener
   private java.lang.String requestId;
 
   /**
-   * Required. The resource being created
+   * Required. The resource being created.
    * @return value or {@code null} for none
    */
   public Execution getExecution() {
@@ -67,7 +66,7 @@ public final class RunEvaluationRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The resource being created
+   * Required. The resource being created.
    * @param execution execution or {@code null} for none
    */
   public RunEvaluationRequest setExecution(Execution execution) {
@@ -76,8 +75,7 @@ public final class RunEvaluationRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Id of the requesting object If auto-generating Id server-side, remove this field and
-   * execution_id from the method_signature of Create RPC
+   * Required. ID of the execution which will be created.
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionId() {
@@ -85,8 +83,7 @@ public final class RunEvaluationRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Id of the requesting object If auto-generating Id server-side, remove this field and
-   * execution_id from the method_signature of Create RPC
+   * Required. ID of the execution which will be created.
    * @param executionId executionId or {@code null} for none
    */
   public RunEvaluationRequest setExecutionId(java.lang.String executionId) {

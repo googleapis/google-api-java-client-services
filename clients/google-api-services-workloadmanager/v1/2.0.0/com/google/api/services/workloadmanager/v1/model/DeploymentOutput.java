@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * A scanned resource.
+ * Message for output of deployment resource
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,41 +27,41 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ScannedResource extends com.google.api.client.json.GenericJson {
+public final class DeploymentOutput extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name.
+   * name of the resource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String resource;
+  private java.lang.String name;
 
   /**
-   * Resource type.
+   * type of the resource
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Resource name.
+   * name of the resource
    * @return value or {@code null} for none
    */
-  public java.lang.String getResource() {
-    return resource;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Resource name.
-   * @param resource resource or {@code null} for none
+   * name of the resource
+   * @param name name or {@code null} for none
    */
-  public ScannedResource setResource(java.lang.String resource) {
-    this.resource = resource;
+  public DeploymentOutput setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * Resource type.
+   * type of the resource
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -69,22 +69,22 @@ public final class ScannedResource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Resource type.
+   * type of the resource
    * @param type type or {@code null} for none
    */
-  public ScannedResource setType(java.lang.String type) {
+  public DeploymentOutput setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public ScannedResource set(String fieldName, Object value) {
-    return (ScannedResource) super.set(fieldName, value);
+  public DeploymentOutput set(String fieldName, Object value) {
+    return (DeploymentOutput) super.set(fieldName, value);
   }
 
   @Override
-  public ScannedResource clone() {
-    return (ScannedResource) super.clone();
+  public DeploymentOutput clone() {
+    return (DeploymentOutput) super.clone();
   }
 
 }

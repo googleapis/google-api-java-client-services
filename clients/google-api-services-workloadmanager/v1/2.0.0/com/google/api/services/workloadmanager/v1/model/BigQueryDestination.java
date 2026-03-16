@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message describing big query destination
+ * BigQuery destination for evaluation results.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class BigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. determine if results will be saved in a new table
+   * Optional. Determines if a new results table will be created when an Execution is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean createNewResultsTable;
 
   /**
-   * Optional. destination dataset to save evaluation results
+   * Optional. Destination dataset to save evaluation results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String destinationDataset;
 
   /**
-   * Optional. determine if results will be saved in a new table
+   * Optional. Determines if a new results table will be created when an Execution is created.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCreateNewResultsTable() {
@@ -52,7 +52,7 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. determine if results will be saved in a new table
+   * Optional. Determines if a new results table will be created when an Execution is created.
    * @param createNewResultsTable createNewResultsTable or {@code null} for none
    */
   public BigQueryDestination setCreateNewResultsTable(java.lang.Boolean createNewResultsTable) {
@@ -61,7 +61,7 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. destination dataset to save evaluation results
+   * Optional. Destination dataset to save evaluation results.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationDataset() {
@@ -69,7 +69,7 @@ public final class BigQueryDestination extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. destination dataset to save evaluation results
+   * Optional. Destination dataset to save evaluation results.
    * @param destinationDataset destinationDataset or {@code null} for none
    */
   public BigQueryDestination setDestinationDataset(java.lang.String destinationDataset) {

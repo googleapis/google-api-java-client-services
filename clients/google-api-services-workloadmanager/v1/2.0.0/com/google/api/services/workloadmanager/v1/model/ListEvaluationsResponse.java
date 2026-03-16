@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for response to listing Evaluations
+ * Response message for the ListEvaluations RPC.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ListEvaluationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Evaluation
+   * The list of evaluations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class ListEvaluationsResponse extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Evaluation
+   * The list of evaluations.
    * @return value or {@code null} for none
    */
   public java.util.List<Evaluation> getEvaluations() {
@@ -65,7 +65,7 @@ public final class ListEvaluationsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The list of Evaluation
+   * The list of evaluations.
    * @param evaluations evaluations or {@code null} for none
    */
   public ListEvaluationsResponse setEvaluations(java.util.List<Evaluation> evaluations) {

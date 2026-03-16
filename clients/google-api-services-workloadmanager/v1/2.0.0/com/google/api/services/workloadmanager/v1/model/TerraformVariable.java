@@ -17,7 +17,9 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * A scanned resource.
+ * In order to align with Infra Manager dependency, we create the same TerraformVariable message to
+ * represent a Terraform input variable, by following Infra Manager's API documentation:
+ * https://cloud.google.com/infrastructure-manager/docs/reference/rest A Terraform input variable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,64 +29,40 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ScannedResource extends com.google.api.client.json.GenericJson {
+public final class TerraformVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name.
+   * Optional. Input variable value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String resource;
+  private java.lang.Object inputValue;
 
   /**
-   * Resource type.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
-   * Resource name.
+   * Optional. Input variable value.
    * @return value or {@code null} for none
    */
-  public java.lang.String getResource() {
-    return resource;
+  public java.lang.Object getInputValue() {
+    return inputValue;
   }
 
   /**
-   * Resource name.
-   * @param resource resource or {@code null} for none
+   * Optional. Input variable value.
+   * @param inputValue inputValue or {@code null} for none
    */
-  public ScannedResource setResource(java.lang.String resource) {
-    this.resource = resource;
-    return this;
-  }
-
-  /**
-   * Resource type.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * Resource type.
-   * @param type type or {@code null} for none
-   */
-  public ScannedResource setType(java.lang.String type) {
-    this.type = type;
+  public TerraformVariable setInputValue(java.lang.Object inputValue) {
+    this.inputValue = inputValue;
     return this;
   }
 
   @Override
-  public ScannedResource set(String fieldName, Object value) {
-    return (ScannedResource) super.set(fieldName, value);
+  public TerraformVariable set(String fieldName, Object value) {
+    return (TerraformVariable) super.set(fieldName, value);
   }
 
   @Override
-  public ScannedResource clone() {
-    return (ScannedResource) super.clone();
+  public TerraformVariable clone() {
+    return (TerraformVariable) super.clone();
   }
 
 }

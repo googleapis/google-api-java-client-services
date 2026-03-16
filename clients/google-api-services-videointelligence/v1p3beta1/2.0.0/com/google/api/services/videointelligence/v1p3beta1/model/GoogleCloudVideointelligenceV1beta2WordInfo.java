@@ -52,6 +52,14 @@ public final class GoogleCloudVideointelligenceV1beta2WordInfo extends com.googl
   private String endTime;
 
   /**
+   * Output only. A distinct string value is assigned for every speaker within the audio. This field
+   * specifies which one of those speakers was detected to have spoken this word.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String speakerLabel;
+
+  /**
    * Output only. A distinct integer value is assigned for every speaker within the audio. This
    * field specifies which one of those speakers was detected to have spoken this word. Value ranges
    * from 1 up to diarization_speaker_count, and is only set if speaker diarization is enabled.
@@ -119,6 +127,25 @@ public final class GoogleCloudVideointelligenceV1beta2WordInfo extends com.googl
    */
   public GoogleCloudVideointelligenceV1beta2WordInfo setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Output only. A distinct string value is assigned for every speaker within the audio. This field
+   * specifies which one of those speakers was detected to have spoken this word.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpeakerLabel() {
+    return speakerLabel;
+  }
+
+  /**
+   * Output only. A distinct string value is assigned for every speaker within the audio. This field
+   * specifies which one of those speakers was detected to have spoken this word.
+   * @param speakerLabel speakerLabel or {@code null} for none
+   */
+  public GoogleCloudVideointelligenceV1beta2WordInfo setSpeakerLabel(java.lang.String speakerLabel) {
+    this.speakerLabel = speakerLabel;
     return this;
   }
 

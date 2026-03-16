@@ -34,10 +34,9 @@ public final class IngressFrom extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of identities that are allowed access through [IngressPolicy]. Identities can be an
-   * individual user, service account, Google group, or third-party identity. For third-party
-   * identity, only single identities are supported and other identity types are not supported. The
-   * `v1` identities that have the prefix `user`, `group`, `serviceAccount`, and `principal` in
-   * https://cloud.google.com/iam/docs/principal-identifiers#v1 are supported.
+   * individual user, service account, Google group, or third-party identity. For the list of
+   * supported identity types, see https://docs.cloud.google.com/vpc-service-
+   * controls/docs/supported-identities.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,10 +59,9 @@ public final class IngressFrom extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of identities that are allowed access through [IngressPolicy]. Identities can be an
-   * individual user, service account, Google group, or third-party identity. For third-party
-   * identity, only single identities are supported and other identity types are not supported. The
-   * `v1` identities that have the prefix `user`, `group`, `serviceAccount`, and `principal` in
-   * https://cloud.google.com/iam/docs/principal-identifiers#v1 are supported.
+   * individual user, service account, Google group, or third-party identity. For the list of
+   * supported identity types, see https://docs.cloud.google.com/vpc-service-
+   * controls/docs/supported-identities.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIdentities() {
@@ -72,10 +70,9 @@ public final class IngressFrom extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of identities that are allowed access through [IngressPolicy]. Identities can be an
-   * individual user, service account, Google group, or third-party identity. For third-party
-   * identity, only single identities are supported and other identity types are not supported. The
-   * `v1` identities that have the prefix `user`, `group`, `serviceAccount`, and `principal` in
-   * https://cloud.google.com/iam/docs/principal-identifiers#v1 are supported.
+   * individual user, service account, Google group, or third-party identity. For the list of
+   * supported identity types, see https://docs.cloud.google.com/vpc-service-
+   * controls/docs/supported-identities.
    * @param identities identities or {@code null} for none
    */
   public IngressFrom setIdentities(java.util.List<java.lang.String> identities) {

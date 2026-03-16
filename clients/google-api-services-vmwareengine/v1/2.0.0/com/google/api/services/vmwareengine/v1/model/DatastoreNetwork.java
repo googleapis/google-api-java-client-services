@@ -30,16 +30,22 @@ package com.google.api.services.vmwareengine.v1.model;
 public final class DatastoreNetwork extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The number of connections of the NFS volume. Spported from vsphere 8.0u1
+   * Optional. connection_count is used to set multiple connections from NFS client on ESXi host to
+   * NFS server. A higher number of connections results in better performance on datastores. In
+   * MountDatastore API by default max 4 connections are configured. User can set value of
+   * connection_count between 1 to 4. Connection_count is supported from vsphere 8.0u1 for earlier
+   * version 1 connection count is set on the ESXi hosts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer connectionCount;
 
   /**
-   * Optional. The Maximal Transmission Unit (MTU) of the datastore. System sets default MTU size.
-   * It prefers the VPC peering MTU, falling back to the VEN MTU if no peering MTU is found. when
-   * detected, and falling back to the VEN MTU otherwise.
+   * Optional. MTU value is set on the VMKernel adapter for the NFS traffic. By default standard
+   * 1500 MTU size is set in MountDatastore API which is good for typical setups. However google VPC
+   * networks supports jumbo MTU 8896. We recommend to tune this value based on the NFS traffic
+   * performance. Performance can be determined using benchmarking I/O tools like fio (Flexible I/O
+   * Tester) utility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +71,11 @@ public final class DatastoreNetwork extends com.google.api.client.json.GenericJs
   private java.lang.String subnet;
 
   /**
-   * Optional. The number of connections of the NFS volume. Spported from vsphere 8.0u1
+   * Optional. connection_count is used to set multiple connections from NFS client on ESXi host to
+   * NFS server. A higher number of connections results in better performance on datastores. In
+   * MountDatastore API by default max 4 connections are configured. User can set value of
+   * connection_count between 1 to 4. Connection_count is supported from vsphere 8.0u1 for earlier
+   * version 1 connection count is set on the ESXi hosts.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getConnectionCount() {
@@ -73,7 +83,11 @@ public final class DatastoreNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The number of connections of the NFS volume. Spported from vsphere 8.0u1
+   * Optional. connection_count is used to set multiple connections from NFS client on ESXi host to
+   * NFS server. A higher number of connections results in better performance on datastores. In
+   * MountDatastore API by default max 4 connections are configured. User can set value of
+   * connection_count between 1 to 4. Connection_count is supported from vsphere 8.0u1 for earlier
+   * version 1 connection count is set on the ESXi hosts.
    * @param connectionCount connectionCount or {@code null} for none
    */
   public DatastoreNetwork setConnectionCount(java.lang.Integer connectionCount) {
@@ -82,9 +96,11 @@ public final class DatastoreNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Maximal Transmission Unit (MTU) of the datastore. System sets default MTU size.
-   * It prefers the VPC peering MTU, falling back to the VEN MTU if no peering MTU is found. when
-   * detected, and falling back to the VEN MTU otherwise.
+   * Optional. MTU value is set on the VMKernel adapter for the NFS traffic. By default standard
+   * 1500 MTU size is set in MountDatastore API which is good for typical setups. However google VPC
+   * networks supports jumbo MTU 8896. We recommend to tune this value based on the NFS traffic
+   * performance. Performance can be determined using benchmarking I/O tools like fio (Flexible I/O
+   * Tester) utility.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMtu() {
@@ -92,9 +108,11 @@ public final class DatastoreNetwork extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The Maximal Transmission Unit (MTU) of the datastore. System sets default MTU size.
-   * It prefers the VPC peering MTU, falling back to the VEN MTU if no peering MTU is found. when
-   * detected, and falling back to the VEN MTU otherwise.
+   * Optional. MTU value is set on the VMKernel adapter for the NFS traffic. By default standard
+   * 1500 MTU size is set in MountDatastore API which is good for typical setups. However google VPC
+   * networks supports jumbo MTU 8896. We recommend to tune this value based on the NFS traffic
+   * performance. Performance can be determined using benchmarking I/O tools like fio (Flexible I/O
+   * Tester) utility.
    * @param mtu mtu or {@code null} for none
    */
   public DatastoreNetwork setMtu(java.lang.Integer mtu) {

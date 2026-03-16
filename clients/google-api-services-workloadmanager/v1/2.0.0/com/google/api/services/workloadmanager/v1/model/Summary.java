@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for execution summary
+ * Execution summary.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,28 +30,28 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Summary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Number of failures
+   * Output only. Number of failures.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long failures;
 
   /**
-   * Output only. Number of new failures compared to the previous execution
+   * Output only. Number of new failures compared to the previous execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long newFailures;
 
   /**
-   * Output only. Number of new fixes compared to the previous execution
+   * Output only. Number of new fixes compared to the previous execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long newFixes;
 
   /**
-   * Output only. Number of failures
+   * Output only. Number of failures.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFailures() {
@@ -59,7 +59,7 @@ public final class Summary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of failures
+   * Output only. Number of failures.
    * @param failures failures or {@code null} for none
    */
   public Summary setFailures(java.lang.Long failures) {
@@ -68,7 +68,7 @@ public final class Summary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of new failures compared to the previous execution
+   * Output only. Number of new failures compared to the previous execution.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNewFailures() {
@@ -76,7 +76,7 @@ public final class Summary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of new failures compared to the previous execution
+   * Output only. Number of new failures compared to the previous execution.
    * @param newFailures newFailures or {@code null} for none
    */
   public Summary setNewFailures(java.lang.Long newFailures) {
@@ -85,7 +85,7 @@ public final class Summary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of new fixes compared to the previous execution
+   * Output only. Number of new fixes compared to the previous execution.
    * @return value or {@code null} for none
    */
   public java.lang.Long getNewFixes() {
@@ -93,7 +93,7 @@ public final class Summary extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of new fixes compared to the previous execution
+   * Output only. Number of new fixes compared to the previous execution.
    * @param newFixes newFixes or {@code null} for none
    */
   public Summary setNewFixes(java.lang.Long newFixes) {

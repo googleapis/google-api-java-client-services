@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message represent a rule
+ * A rule to be evaluated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -38,49 +38,49 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   private java.lang.String assetType;
 
   /**
-   * descrite rule in plain language
+   * Describe rule in plain language.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * the name display in UI
+   * The name display in UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * the message template for rule
+   * The message template for rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String errorMessage;
 
   /**
-   * rule name
+   * Rule name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * the primary category
+   * The primary category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryCategory;
 
   /**
-   * the remediation for the rule
+   * The remediation for the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String remediation;
 
   /**
-   * Output only. the version of the rule
+   * Output only. The version of the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,28 +94,28 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   private java.lang.String ruleType;
 
   /**
-   * the secondary category
+   * The secondary category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secondaryCategory;
 
   /**
-   * the severity of the rule
+   * The severity of the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * List of user-defined tags
+   * List of user-defined tags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
 
   /**
-   * the docuement url for the rule
+   * The document url for the rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * descrite rule in plain language
+   * Describe rule in plain language.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -149,7 +149,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * descrite rule in plain language
+   * Describe rule in plain language.
    * @param description description or {@code null} for none
    */
   public Rule setDescription(java.lang.String description) {
@@ -158,7 +158,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the name display in UI
+   * The name display in UI.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -166,7 +166,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the name display in UI
+   * The name display in UI.
    * @param displayName displayName or {@code null} for none
    */
   public Rule setDisplayName(java.lang.String displayName) {
@@ -175,7 +175,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the message template for rule
+   * The message template for rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorMessage() {
@@ -183,7 +183,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the message template for rule
+   * The message template for rule.
    * @param errorMessage errorMessage or {@code null} for none
    */
   public Rule setErrorMessage(java.lang.String errorMessage) {
@@ -192,7 +192,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * rule name
+   * Rule name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -200,7 +200,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * rule name
+   * Rule name.
    * @param name name or {@code null} for none
    */
   public Rule setName(java.lang.String name) {
@@ -209,7 +209,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the primary category
+   * The primary category.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryCategory() {
@@ -217,7 +217,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the primary category
+   * The primary category.
    * @param primaryCategory primaryCategory or {@code null} for none
    */
   public Rule setPrimaryCategory(java.lang.String primaryCategory) {
@@ -226,7 +226,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the remediation for the rule
+   * The remediation for the rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getRemediation() {
@@ -234,7 +234,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the remediation for the rule
+   * The remediation for the rule.
    * @param remediation remediation or {@code null} for none
    */
   public Rule setRemediation(java.lang.String remediation) {
@@ -243,7 +243,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the version of the rule
+   * Output only. The version of the rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionId() {
@@ -251,7 +251,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. the version of the rule
+   * Output only. The version of the rule.
    * @param revisionId revisionId or {@code null} for none
    */
   public Rule setRevisionId(java.lang.String revisionId) {
@@ -277,7 +277,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the secondary category
+   * The secondary category.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryCategory() {
@@ -285,7 +285,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the secondary category
+   * The secondary category.
    * @param secondaryCategory secondaryCategory or {@code null} for none
    */
   public Rule setSecondaryCategory(java.lang.String secondaryCategory) {
@@ -294,7 +294,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the severity of the rule
+   * The severity of the rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -302,7 +302,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the severity of the rule
+   * The severity of the rule.
    * @param severity severity or {@code null} for none
    */
   public Rule setSeverity(java.lang.String severity) {
@@ -311,7 +311,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of user-defined tags
+   * List of user-defined tags.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTags() {
@@ -319,7 +319,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of user-defined tags
+   * List of user-defined tags.
    * @param tags tags or {@code null} for none
    */
   public Rule setTags(java.util.List<java.lang.String> tags) {
@@ -328,7 +328,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the docuement url for the rule
+   * The document url for the rule.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -336,7 +336,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * the docuement url for the rule
+   * The document url for the rule.
    * @param uri uri or {@code null} for none
    */
   public Rule setUri(java.lang.String uri) {

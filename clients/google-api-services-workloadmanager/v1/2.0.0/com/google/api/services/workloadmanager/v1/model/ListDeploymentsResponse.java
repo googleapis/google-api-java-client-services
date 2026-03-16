@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Response message for the ListExecutions RPC.
+ * Message for response to listing Deployments
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,19 +27,19 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListExecutionsResponse extends com.google.api.client.json.GenericJson {
+public final class ListDeploymentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Execution.
+   * The list of Deployment
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Execution> executions;
+  private java.util.List<Deployment> deployments;
 
   static {
-    // hack to force ProGuard to consider Execution used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider Deployment used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Execution.class);
+    com.google.api.client.util.Data.nullOf(Deployment.class);
   }
 
   /**
@@ -50,26 +50,26 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Execution.
+   * The list of Deployment
    * @return value or {@code null} for none
    */
-  public java.util.List<Execution> getExecutions() {
-    return executions;
+  public java.util.List<Deployment> getDeployments() {
+    return deployments;
   }
 
   /**
-   * The list of Execution.
-   * @param executions executions or {@code null} for none
+   * The list of Deployment
+   * @param deployments deployments or {@code null} for none
    */
-  public ListExecutionsResponse setExecutions(java.util.List<Execution> executions) {
-    this.executions = executions;
+  public ListDeploymentsResponse setDeployments(java.util.List<Deployment> deployments) {
+    this.deployments = deployments;
     return this;
   }
 
@@ -85,13 +85,13 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
    * A token identifying a page of results the server should return.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListExecutionsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListDeploymentsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -99,22 +99,22 @@ public final class ListExecutionsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
-  public ListExecutionsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+  public ListDeploymentsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
     this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ListExecutionsResponse set(String fieldName, Object value) {
-    return (ListExecutionsResponse) super.set(fieldName, value);
+  public ListDeploymentsResponse set(String fieldName, Object value) {
+    return (ListDeploymentsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListExecutionsResponse clone() {
-    return (ListExecutionsResponse) super.clone();
+  public ListDeploymentsResponse clone() {
+    return (ListDeploymentsResponse) super.clone();
   }
 
 }

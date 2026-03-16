@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message describing resource filters
+ * Resource filter for an evaluation defining the scope of resources to be evaluated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,35 +30,39 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ResourceFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Filter compute engine resource
+   * Filter compute engine resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GceInstanceFilter gceInstanceFilter;
 
   /**
-   * The label used for filter resource
+   * Labels to filter resources by. Each key-value pair in the map must exist on the resource for it
+   * to be included (e.g. VM instance labels). For example, specifying `{ "env": "prod", "database":
+   * "nosql" }` will only include resources that have labels `env=prod` and `database=nosql`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> inclusionLabels;
 
   /**
-   * The id pattern for filter resource
+   * The pattern to filter resources by their id For example, a pattern of ".*prod-cluster.*" will
+   * match all resources that contain "prod-cluster" in their ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourceIdPatterns;
 
   /**
-   * The scopes of evaluation resource
+   * The scopes of evaluation resource. Format: * `projects/{project_id}` * `folders/{folder_id}` *
+   * `organizations/{organization_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> scopes;
 
   /**
-   * Filter compute engine resource
+   * Filter compute engine resources.
    * @return value or {@code null} for none
    */
   public GceInstanceFilter getGceInstanceFilter() {
@@ -66,7 +70,7 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Filter compute engine resource
+   * Filter compute engine resources.
    * @param gceInstanceFilter gceInstanceFilter or {@code null} for none
    */
   public ResourceFilter setGceInstanceFilter(GceInstanceFilter gceInstanceFilter) {
@@ -75,7 +79,9 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The label used for filter resource
+   * Labels to filter resources by. Each key-value pair in the map must exist on the resource for it
+   * to be included (e.g. VM instance labels). For example, specifying `{ "env": "prod", "database":
+   * "nosql" }` will only include resources that have labels `env=prod` and `database=nosql`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getInclusionLabels() {
@@ -83,7 +89,9 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The label used for filter resource
+   * Labels to filter resources by. Each key-value pair in the map must exist on the resource for it
+   * to be included (e.g. VM instance labels). For example, specifying `{ "env": "prod", "database":
+   * "nosql" }` will only include resources that have labels `env=prod` and `database=nosql`.
    * @param inclusionLabels inclusionLabels or {@code null} for none
    */
   public ResourceFilter setInclusionLabels(java.util.Map<String, java.lang.String> inclusionLabels) {
@@ -92,7 +100,8 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The id pattern for filter resource
+   * The pattern to filter resources by their id For example, a pattern of ".*prod-cluster.*" will
+   * match all resources that contain "prod-cluster" in their ID.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceIdPatterns() {
@@ -100,7 +109,8 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The id pattern for filter resource
+   * The pattern to filter resources by their id For example, a pattern of ".*prod-cluster.*" will
+   * match all resources that contain "prod-cluster" in their ID.
    * @param resourceIdPatterns resourceIdPatterns or {@code null} for none
    */
   public ResourceFilter setResourceIdPatterns(java.util.List<java.lang.String> resourceIdPatterns) {
@@ -109,7 +119,8 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The scopes of evaluation resource
+   * The scopes of evaluation resource. Format: * `projects/{project_id}` * `folders/{folder_id}` *
+   * `organizations/{organization_id}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getScopes() {
@@ -117,7 +128,8 @@ public final class ResourceFilter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The scopes of evaluation resource
+   * The scopes of evaluation resource. Format: * `projects/{project_id}` * `folders/{folder_id}` *
+   * `organizations/{organization_id}`
    * @param scopes scopes or {@code null} for none
    */
   public ResourceFilter setScopes(java.util.List<java.lang.String> scopes) {

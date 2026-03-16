@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message describing the result of an execution
+ * The result of an execution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -71,7 +71,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   private java.lang.String severity;
 
   /**
-   * Execution result type of the scanned resource
+   * Execution result type of the scanned resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +177,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Execution result type of the scanned resource
+   * Execution result type of the scanned resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -185,7 +185,7 @@ public final class ExecutionResult extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Execution result type of the scanned resource
+   * Execution result type of the scanned resource.
    * @param type type or {@code null} for none
    */
   public ExecutionResult setType(java.lang.String type) {

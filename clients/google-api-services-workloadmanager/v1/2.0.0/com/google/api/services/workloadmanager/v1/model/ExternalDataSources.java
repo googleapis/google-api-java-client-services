@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message for external data sources
+ * External data sources for an execution.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,9 +30,9 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ExternalDataSources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The asset type of the external data source this can be one of go/cai-asset-types to
-   * override the default asset type or it can be a custom type defined by the user custom type must
-   * match the asset type in the rule
+   * Required. The asset type of the external data source. This can be a supported Cloud Asset
+   * Inventory asset type (see https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+   * to override the default asset type, or it can be a custom type defined by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,30 +40,31 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
 
   /**
    * Optional. Name of external data source. The name will be used inside the rego/sql to refer the
-   * external data
+   * external data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Type of external data source
+   * Required. Type of external data source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required. URI of external data source. example of bq table {project_ID}.{dataset_ID}.{table_ID}
+   * Required. URI of external data source. example of bq table
+   * {project_ID}.{dataset_ID}.{table_ID}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * Required. The asset type of the external data source this can be one of go/cai-asset-types to
-   * override the default asset type or it can be a custom type defined by the user custom type must
-   * match the asset type in the rule
+   * Required. The asset type of the external data source. This can be a supported Cloud Asset
+   * Inventory asset type (see https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+   * to override the default asset type, or it can be a custom type defined by the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssetType() {
@@ -71,9 +72,9 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The asset type of the external data source this can be one of go/cai-asset-types to
-   * override the default asset type or it can be a custom type defined by the user custom type must
-   * match the asset type in the rule
+   * Required. The asset type of the external data source. This can be a supported Cloud Asset
+   * Inventory asset type (see https://cloud.google.com/asset-inventory/docs/supported-asset-types)
+   * to override the default asset type, or it can be a custom type defined by the user.
    * @param assetType assetType or {@code null} for none
    */
   public ExternalDataSources setAssetType(java.lang.String assetType) {
@@ -83,7 +84,7 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
 
   /**
    * Optional. Name of external data source. The name will be used inside the rego/sql to refer the
-   * external data
+   * external data.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -92,7 +93,7 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
 
   /**
    * Optional. Name of external data source. The name will be used inside the rego/sql to refer the
-   * external data
+   * external data.
    * @param name name or {@code null} for none
    */
   public ExternalDataSources setName(java.lang.String name) {
@@ -101,7 +102,7 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Type of external data source
+   * Required. Type of external data source.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -109,7 +110,7 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Type of external data source
+   * Required. Type of external data source.
    * @param type type or {@code null} for none
    */
   public ExternalDataSources setType(java.lang.String type) {
@@ -118,7 +119,8 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. URI of external data source. example of bq table {project_ID}.{dataset_ID}.{table_ID}
+   * Required. URI of external data source. example of bq table
+   * {project_ID}.{dataset_ID}.{table_ID}.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -126,7 +128,8 @@ public final class ExternalDataSources extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. URI of external data source. example of bq table {project_ID}.{dataset_ID}.{table_ID}
+   * Required. URI of external data source. example of bq table
+   * {project_ID}.{dataset_ID}.{table_ID}.
    * @param uri uri or {@code null} for none
    */
   public ExternalDataSources setUri(java.lang.String uri) {

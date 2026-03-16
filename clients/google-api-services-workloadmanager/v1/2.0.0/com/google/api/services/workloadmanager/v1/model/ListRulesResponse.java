@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Mesesage of response of list rules
+ * Response message for the ListRules RPC.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,38 +30,14 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class ListRulesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A wrapper of the invalid rules that failed to be validated.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InvalidRulesWrapper invalidRulesWrapper;
-
-  /**
-   * all rules in response
+   * All rules in response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Rule> rules;
 
   /**
-   * A wrapper of the invalid rules that failed to be validated.
-   * @return value or {@code null} for none
-   */
-  public InvalidRulesWrapper getInvalidRulesWrapper() {
-    return invalidRulesWrapper;
-  }
-
-  /**
-   * A wrapper of the invalid rules that failed to be validated.
-   * @param invalidRulesWrapper invalidRulesWrapper or {@code null} for none
-   */
-  public ListRulesResponse setInvalidRulesWrapper(InvalidRulesWrapper invalidRulesWrapper) {
-    this.invalidRulesWrapper = invalidRulesWrapper;
-    return this;
-  }
-
-  /**
-   * all rules in response
+   * All rules in response.
    * @return value or {@code null} for none
    */
   public java.util.List<Rule> getRules() {
@@ -69,7 +45,7 @@ public final class ListRulesResponse extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * all rules in response
+   * All rules in response.
    * @param rules rules or {@code null} for none
    */
   public ListRulesResponse setRules(java.util.List<Rule> rules) {

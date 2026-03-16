@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Execution result summary per rule.
+ * HealthCheck contains the detailed health check of a component based on asource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,45 +27,45 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RuleExecutionResult extends com.google.api.client.json.GenericJson {
+public final class HealthCheck extends com.google.api.client.json.GenericJson {
 
   /**
-   * Execution message, if any.
+   * Output only. The message of the health check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String message;
 
   /**
-   * Number of violations.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long resultCount;
-
-  /**
-   * Rule name as plain text like `sap-hana-configured`.
+   * Output only. The health check source metric name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String rule;
+  private java.lang.String metric;
 
   /**
-   * Number of total scanned resources.
+   * Output only. The resource the check performs on.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long scannedResourceCount;
+  @com.google.api.client.util.Key
+  private CloudResource resource;
 
   /**
-   * Output only. The execution status.
+   * Output only. The source of the health check.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String source;
+
+  /**
+   * Output only. The state of the health check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Execution message, if any.
+   * Output only. The message of the health check.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -73,67 +73,67 @@ public final class RuleExecutionResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * Execution message, if any.
+   * Output only. The message of the health check.
    * @param message message or {@code null} for none
    */
-  public RuleExecutionResult setMessage(java.lang.String message) {
+  public HealthCheck setMessage(java.lang.String message) {
     this.message = message;
     return this;
   }
 
   /**
-   * Number of violations.
+   * Output only. The health check source metric name.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getResultCount() {
-    return resultCount;
+  public java.lang.String getMetric() {
+    return metric;
   }
 
   /**
-   * Number of violations.
-   * @param resultCount resultCount or {@code null} for none
+   * Output only. The health check source metric name.
+   * @param metric metric or {@code null} for none
    */
-  public RuleExecutionResult setResultCount(java.lang.Long resultCount) {
-    this.resultCount = resultCount;
+  public HealthCheck setMetric(java.lang.String metric) {
+    this.metric = metric;
     return this;
   }
 
   /**
-   * Rule name as plain text like `sap-hana-configured`.
+   * Output only. The resource the check performs on.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRule() {
-    return rule;
+  public CloudResource getResource() {
+    return resource;
   }
 
   /**
-   * Rule name as plain text like `sap-hana-configured`.
-   * @param rule rule or {@code null} for none
+   * Output only. The resource the check performs on.
+   * @param resource resource or {@code null} for none
    */
-  public RuleExecutionResult setRule(java.lang.String rule) {
-    this.rule = rule;
+  public HealthCheck setResource(CloudResource resource) {
+    this.resource = resource;
     return this;
   }
 
   /**
-   * Number of total scanned resources.
+   * Output only. The source of the health check.
    * @return value or {@code null} for none
    */
-  public java.lang.Long getScannedResourceCount() {
-    return scannedResourceCount;
+  public java.lang.String getSource() {
+    return source;
   }
 
   /**
-   * Number of total scanned resources.
-   * @param scannedResourceCount scannedResourceCount or {@code null} for none
+   * Output only. The source of the health check.
+   * @param source source or {@code null} for none
    */
-  public RuleExecutionResult setScannedResourceCount(java.lang.Long scannedResourceCount) {
-    this.scannedResourceCount = scannedResourceCount;
+  public HealthCheck setSource(java.lang.String source) {
+    this.source = source;
     return this;
   }
 
   /**
-   * Output only. The execution status.
+   * Output only. The state of the health check.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -141,22 +141,22 @@ public final class RuleExecutionResult extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. The execution status.
+   * Output only. The state of the health check.
    * @param state state or {@code null} for none
    */
-  public RuleExecutionResult setState(java.lang.String state) {
+  public HealthCheck setState(java.lang.String state) {
     this.state = state;
     return this;
   }
 
   @Override
-  public RuleExecutionResult set(String fieldName, Object value) {
-    return (RuleExecutionResult) super.set(fieldName, value);
+  public HealthCheck set(String fieldName, Object value) {
+    return (HealthCheck) super.set(fieldName, value);
   }
 
   @Override
-  public RuleExecutionResult clone() {
-    return (RuleExecutionResult) super.clone();
+  public HealthCheck clone() {
+    return (HealthCheck) super.clone();
   }
 
 }

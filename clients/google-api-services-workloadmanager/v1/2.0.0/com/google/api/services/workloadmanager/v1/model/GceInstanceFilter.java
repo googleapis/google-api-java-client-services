@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * Message describing compute engine instance filter
+ * A filter for matching Compute Engine instances.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -30,14 +30,16 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class GceInstanceFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Service account of compute engine
+   * If non-empty, only Compute Engine instances associated with at least one of the provided
+   * service accounts will be included in the evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> serviceAccounts;
 
   /**
-   * Service account of compute engine
+   * If non-empty, only Compute Engine instances associated with at least one of the provided
+   * service accounts will be included in the evaluation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServiceAccounts() {
@@ -45,7 +47,8 @@ public final class GceInstanceFilter extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Service account of compute engine
+   * If non-empty, only Compute Engine instances associated with at least one of the provided
+   * service accounts will be included in the evaluation.
    * @param serviceAccounts serviceAccounts or {@code null} for none
    */
   public GceInstanceFilter setServiceAccounts(java.util.List<java.lang.String> serviceAccounts) {

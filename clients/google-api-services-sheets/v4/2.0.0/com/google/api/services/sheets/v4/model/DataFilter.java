@@ -17,7 +17,9 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Filter that describes what data should be selected or returned from a request.
+ * Filter that describes what data should be selected or returned from a request. For more
+ * information, see [Read, write, and search
+ * metadata](https://developers.google.com/workspace/sheets/api/guides/metadata).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

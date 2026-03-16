@@ -17,12 +17,14 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Developer metadata associated with a location or object in a spreadsheet. Developer metadata may
- * be used to associate arbitrary data with various parts of a spreadsheet and will remain
+ * Developer metadata associated with a location or object in a spreadsheet. For more information,
+ * see [Read, write, and search
+ * metadata](https://developers.google.com/workspace/sheets/api/guides/metadata). Developer metadata
+ * may be used to associate arbitrary data with various parts of a spreadsheet and it will remain
  * associated at those locations as they move around and the spreadsheet is edited. For example, if
  * developer metadata is associated with row 5 and another row is then subsequently inserted above
- * row 5, that original metadata will still be associated with the row it was first associated with
- * (what is now row 6). If the associated object is deleted its metadata is deleted too.
+ * row 5, that original metadata is still associated with the row it was first associated with (what
+ * is now row 6). If the associated object is deleted then its metadata is deleted too.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -65,7 +67,7 @@ public final class DeveloperMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String metadataValue;
 
   /**
-   * The metadata visibility. Developer metadata must always have a visibility specified.
+   * The metadata visibility. Developer metadata must always have visibility specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +146,7 @@ public final class DeveloperMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The metadata visibility. Developer metadata must always have a visibility specified.
+   * The metadata visibility. Developer metadata must always have visibility specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisibility() {
@@ -152,7 +154,7 @@ public final class DeveloperMetadata extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The metadata visibility. Developer metadata must always have a visibility specified.
+   * The metadata visibility. Developer metadata must always have visibility specified.
    * @param visibility visibility or {@code null} for none
    */
   public DeveloperMetadata setVisibility(java.lang.String visibility) {

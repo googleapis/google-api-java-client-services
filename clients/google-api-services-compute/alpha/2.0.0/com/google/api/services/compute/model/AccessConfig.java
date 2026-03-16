@@ -49,7 +49,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer externalIpv6PrefixLength;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
+   * [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String networkTier;
 
   /**
-   * Output only. [Output Only] The public DNS domain name for the instance.
+   * [Output Only] The public DNS domain name for the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +183,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
+   * [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -191,7 +191,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
+   * [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
    * @param kind kind or {@code null} for none
    */
   public AccessConfig setKind(java.lang.String kind) {
@@ -275,7 +275,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The public DNS domain name for the instance.
+   * [Output Only] The public DNS domain name for the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicDnsName() {
@@ -283,7 +283,7 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The public DNS domain name for the instance.
+   * [Output Only] The public DNS domain name for the instance.
    * @param publicDnsName publicDnsName or {@code null} for none
    */
   public AccessConfig setPublicDnsName(java.lang.String publicDnsName) {

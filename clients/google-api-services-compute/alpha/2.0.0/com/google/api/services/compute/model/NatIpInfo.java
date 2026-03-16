@@ -30,21 +30,21 @@ package com.google.api.services.compute.model;
 public final class NatIpInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A list of all NAT IPs assigned to this NAT config.
+   * A list of all NAT IPs assigned to this NAT config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<NatIpInfoNatIpInfoMapping> natIpInfoMappings;
 
   /**
-   * Output only. Name of the NAT config which the NAT IP belongs to.
+   * Name of the NAT config which the NAT IP belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String natName;
 
   /**
-   * Output only. A list of all NAT IPs assigned to this NAT config.
+   * A list of all NAT IPs assigned to this NAT config.
    * @return value or {@code null} for none
    */
   public java.util.List<NatIpInfoNatIpInfoMapping> getNatIpInfoMappings() {
@@ -52,7 +52,7 @@ public final class NatIpInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A list of all NAT IPs assigned to this NAT config.
+   * A list of all NAT IPs assigned to this NAT config.
    * @param natIpInfoMappings natIpInfoMappings or {@code null} for none
    */
   public NatIpInfo setNatIpInfoMappings(java.util.List<NatIpInfoNatIpInfoMapping> natIpInfoMappings) {
@@ -61,7 +61,7 @@ public final class NatIpInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the NAT config which the NAT IP belongs to.
+   * Name of the NAT config which the NAT IP belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getNatName() {
@@ -69,7 +69,7 @@ public final class NatIpInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Name of the NAT config which the NAT IP belongs to.
+   * Name of the NAT config which the NAT IP belongs to.
    * @param natName natName or {@code null} for none
    */
   public NatIpInfo setNatName(java.lang.String natName) {

@@ -44,8 +44,8 @@ public final class ForwardingRuleAggregatedList extends com.google.api.client.js
   private java.util.Map<String, ForwardingRulesScopedList> items;
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#forwardingRuleAggregatedList for
-   * lists of forwarding rules.
+   * [Output Only] Type of resource. Alwayscompute#forwardingRuleAggregatedList for lists of
+   * forwarding rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,14 +62,14 @@ public final class ForwardingRuleAggregatedList extends com.google.api.client.js
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +117,8 @@ public final class ForwardingRuleAggregatedList extends com.google.api.client.js
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#forwardingRuleAggregatedList for
-   * lists of forwarding rules.
+   * [Output Only] Type of resource. Alwayscompute#forwardingRuleAggregatedList for lists of
+   * forwarding rules.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -126,8 +126,8 @@ public final class ForwardingRuleAggregatedList extends com.google.api.client.js
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#forwardingRuleAggregatedList for
-   * lists of forwarding rules.
+   * [Output Only] Type of resource. Alwayscompute#forwardingRuleAggregatedList for lists of
+   * forwarding rules.
    * @param kind kind or {@code null} for none
    */
   public ForwardingRuleAggregatedList setKind(java.lang.String kind) {
@@ -159,7 +159,7 @@ public final class ForwardingRuleAggregatedList extends com.google.api.client.js
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -167,7 +167,7 @@ public final class ForwardingRuleAggregatedList extends com.google.api.client.js
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public ForwardingRuleAggregatedList setSelfLink(java.lang.String selfLink) {
@@ -176,7 +176,7 @@ public final class ForwardingRuleAggregatedList extends com.google.api.client.js
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -184,7 +184,7 @@ public final class ForwardingRuleAggregatedList extends com.google.api.client.js
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public ForwardingRuleAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

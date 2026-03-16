@@ -79,7 +79,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#diskType for disk types.
+   * [Output Only] Type of the resource. Always compute#diskType for disk types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -216,7 +216,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#diskType for disk types.
+   * [Output Only] Type of the resource. Always compute#diskType for disk types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -224,7 +224,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#diskType for disk types.
+   * [Output Only] Type of the resource. Always compute#diskType for disk types.
    * @param kind kind or {@code null} for none
    */
   public DiskType setKind(java.lang.String kind) {
@@ -288,7 +288,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -296,7 +296,7 @@ public final class DiskType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public DiskType setSelfLinkWithId(java.lang.String selfLinkWithId) {

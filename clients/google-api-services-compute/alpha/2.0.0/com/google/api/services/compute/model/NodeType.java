@@ -77,7 +77,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
+   * [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   private java.lang.Integer localSsdGb;
 
   /**
-   * Output only. [Output Only] Maximum number of VMs that can be created for this node type.
+   * [Output Only] Maximum number of VMs that can be created for this node type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,22 +112,21 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only] The name of the zone where the node type resides, such as us-
-   * central1-a.
+   * [Output Only] The name of the zone where the node type resides, such as us-central1-a.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,7 +235,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
+   * [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -244,7 +243,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
+   * [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
    * @param kind kind or {@code null} for none
    */
   public NodeType setKind(java.lang.String kind) {
@@ -270,7 +269,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Maximum number of VMs that can be created for this node type.
+   * [Output Only] Maximum number of VMs that can be created for this node type.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxVms() {
@@ -278,7 +277,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Maximum number of VMs that can be created for this node type.
+   * [Output Only] Maximum number of VMs that can be created for this node type.
    * @param maxVms maxVms or {@code null} for none
    */
   public NodeType setMaxVms(java.lang.Integer maxVms) {
@@ -321,7 +320,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -329,7 +328,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NodeType setSelfLink(java.lang.String selfLink) {
@@ -338,7 +337,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -346,7 +345,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public NodeType setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -355,8 +354,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The name of the zone where the node type resides, such as us-
-   * central1-a.
+   * [Output Only] The name of the zone where the node type resides, such as us-central1-a.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -364,8 +362,7 @@ public final class NodeType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The name of the zone where the node type resides, such as us-
-   * central1-a.
+   * [Output Only] The name of the zone where the node type resides, such as us-central1-a.
    * @param zone zone or {@code null} for none
    */
   public NodeType setZone(java.lang.String zone) {

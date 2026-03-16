@@ -30,30 +30,30 @@ package com.google.api.services.compute.model;
 public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] ASNs in the path segment. When type is SEQUENCE, these are ordered.
+   * [Output only] ASNs in the path segment. When type is SEQUENCE, these are ordered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Integer> asns;
 
   /**
-   * Output only. [Output only] ASNs in the path segment. This field is for better support of 32 bit
-   * ASNs as the other asns field suffers from overflow when the ASN is larger. When type is
-   * SEQUENCE, these are ordered.
+   * [Output only] ASNs in the path segment. This field is for better support of 32 bit ASNs as the
+   * other asns field suffers from overflow when the ASN is larger. When type is SEQUENCE, these are
+   * ordered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.Long> asns32;
 
   /**
-   * Output only. [Output only] Type of AS-PATH segment (SEQUENCE or SET)
+   * [Output only] Type of AS-PATH segment (SEQUENCE or SET)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Output only. [Output only] ASNs in the path segment. When type is SEQUENCE, these are ordered.
+   * [Output only] ASNs in the path segment. When type is SEQUENCE, these are ordered.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getAsns() {
@@ -61,7 +61,7 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] ASNs in the path segment. When type is SEQUENCE, these are ordered.
+   * [Output only] ASNs in the path segment. When type is SEQUENCE, these are ordered.
    * @param asns asns or {@code null} for none
    */
   public BgpRouteAsPath setAsns(java.util.List<java.lang.Integer> asns) {
@@ -70,9 +70,9 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] ASNs in the path segment. This field is for better support of 32 bit
-   * ASNs as the other asns field suffers from overflow when the ASN is larger. When type is
-   * SEQUENCE, these are ordered.
+   * [Output only] ASNs in the path segment. This field is for better support of 32 bit ASNs as the
+   * other asns field suffers from overflow when the ASN is larger. When type is SEQUENCE, these are
+   * ordered.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getAsns32() {
@@ -80,9 +80,9 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] ASNs in the path segment. This field is for better support of 32 bit
-   * ASNs as the other asns field suffers from overflow when the ASN is larger. When type is
-   * SEQUENCE, these are ordered.
+   * [Output only] ASNs in the path segment. This field is for better support of 32 bit ASNs as the
+   * other asns field suffers from overflow when the ASN is larger. When type is SEQUENCE, these are
+   * ordered.
    * @param asns32 asns32 or {@code null} for none
    */
   public BgpRouteAsPath setAsns32(java.util.List<java.lang.Long> asns32) {
@@ -91,7 +91,7 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Type of AS-PATH segment (SEQUENCE or SET)
+   * [Output only] Type of AS-PATH segment (SEQUENCE or SET)
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -99,7 +99,7 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Type of AS-PATH segment (SEQUENCE or SET)
+   * [Output only] Type of AS-PATH segment (SEQUENCE or SET)
    * @param type type or {@code null} for none
    */
   public BgpRouteAsPath setType(java.lang.String type) {

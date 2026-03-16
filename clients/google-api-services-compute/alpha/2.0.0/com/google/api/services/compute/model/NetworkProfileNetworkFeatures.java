@@ -276,14 +276,14 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   private java.util.List<java.lang.String> subnetStackTypes;
 
   /**
-   * Output only. Specifies which subnetwork purposes are supported.
+   * Specifies which subnetwork purposes are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> subnetworkPurposes;
 
   /**
-   * Output only. Specifies which subnetwork stack types are supported.
+   * Specifies which subnetwork stack types are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -894,7 +894,7 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
-   * Output only. Specifies which subnetwork purposes are supported.
+   * Specifies which subnetwork purposes are supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubnetworkPurposes() {
@@ -902,7 +902,7 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
-   * Output only. Specifies which subnetwork purposes are supported.
+   * Specifies which subnetwork purposes are supported.
    * @param subnetworkPurposes subnetworkPurposes or {@code null} for none
    */
   public NetworkProfileNetworkFeatures setSubnetworkPurposes(java.util.List<java.lang.String> subnetworkPurposes) {
@@ -911,7 +911,7 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
-   * Output only. Specifies which subnetwork stack types are supported.
+   * Specifies which subnetwork stack types are supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubnetworkStackTypes() {
@@ -919,7 +919,7 @@ public final class NetworkProfileNetworkFeatures extends com.google.api.client.j
   }
 
   /**
-   * Output only. Specifies which subnetwork stack types are supported.
+   * Specifies which subnetwork stack types are supported.
    * @param subnetworkStackTypes subnetworkStackTypes or {@code null} for none
    */
   public NetworkProfileNetworkFeatures setSubnetworkStackTypes(java.util.List<java.lang.String> subnetworkStackTypes) {

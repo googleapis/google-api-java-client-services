@@ -40,22 +40,22 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   private java.lang.Integer hostCount;
 
   /**
-   * Output only. Number of hosts currently in use. If there is one or more Instances running on the
-   * host, it is considered in use.
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer inUseHostCount;
 
   /**
-   * Output only. Number of instances currently in use in this reservation.
+   * Number of instances currently in use in this reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer inUseInstanceCount;
 
   /**
-   * Output only. [Output only] List of resources currently in use.
+   * [Output only] List of resources currently in use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +102,8 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   }
 
   /**
-   * Output only. Number of hosts currently in use. If there is one or more Instances running on the
-   * host, it is considered in use.
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInUseHostCount() {
@@ -111,8 +111,8 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   }
 
   /**
-   * Output only. Number of hosts currently in use. If there is one or more Instances running on the
-   * host, it is considered in use.
+   * Number of hosts currently in use. If there is one or more Instances running on the host, it is
+   * considered in use.
    * @param inUseHostCount inUseHostCount or {@code null} for none
    */
   public AllocationAggregateReservation setInUseHostCount(java.lang.Integer inUseHostCount) {
@@ -121,7 +121,7 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   }
 
   /**
-   * Output only. Number of instances currently in use in this reservation.
+   * Number of instances currently in use in this reservation.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInUseInstanceCount() {
@@ -129,7 +129,7 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   }
 
   /**
-   * Output only. Number of instances currently in use in this reservation.
+   * Number of instances currently in use in this reservation.
    * @param inUseInstanceCount inUseInstanceCount or {@code null} for none
    */
   public AllocationAggregateReservation setInUseInstanceCount(java.lang.Integer inUseInstanceCount) {
@@ -138,7 +138,7 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output only] List of resources currently in use.
+   * [Output only] List of resources currently in use.
    * @return value or {@code null} for none
    */
   public java.util.List<AllocationAggregateReservationReservedResourceInfo> getInUseResources() {
@@ -146,7 +146,7 @@ public final class AllocationAggregateReservation extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output only] List of resources currently in use.
+   * [Output only] List of resources currently in use.
    * @param inUseResources inUseResources or {@code null} for none
    */
   public AllocationAggregateReservation setInUseResources(java.util.List<AllocationAggregateReservationReservedResourceInfo> inUseResources) {

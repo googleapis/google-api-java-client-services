@@ -30,14 +30,6 @@ package com.google.api.services.compute.model;
 public final class HttpRouteAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cache policy for this URL Map’s route. Available only for Global EXTERNAL_MANAGED load balancer
-   * schemes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private CachePolicy cachePolicy;
-
-  /**
    * The specification for allowing client-side cross-origin requests. For more information about
    * the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
    *
@@ -61,15 +53,6 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private HttpFaultInjection faultInjectionPolicy;
-
-  /**
-   * Image optimization policy for this URL Map’s route. Available only for Global EXTERNAL_MANAGED
-   * load balancer schemes. Either Cloud CDN must be enabled on the backend service or backend
-   * bucket serving the route, or cache policy must be configured on the same route
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ImageOptimizationPolicy imageOptimizationPolicy;
 
   /**
    * Specifies the maximum duration (timeout) for streams on the selected route. Unlike the timeout
@@ -151,25 +134,6 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   private java.util.List<WeightedBackendService> weightedBackendServices;
 
   /**
-   * Cache policy for this URL Map’s route. Available only for Global EXTERNAL_MANAGED load balancer
-   * schemes.
-   * @return value or {@code null} for none
-   */
-  public CachePolicy getCachePolicy() {
-    return cachePolicy;
-  }
-
-  /**
-   * Cache policy for this URL Map’s route. Available only for Global EXTERNAL_MANAGED load balancer
-   * schemes.
-   * @param cachePolicy cachePolicy or {@code null} for none
-   */
-  public HttpRouteAction setCachePolicy(CachePolicy cachePolicy) {
-    this.cachePolicy = cachePolicy;
-    return this;
-  }
-
-  /**
    * The specification for allowing client-side cross-origin requests. For more information about
    * the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
    *
@@ -222,27 +186,6 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    */
   public HttpRouteAction setFaultInjectionPolicy(HttpFaultInjection faultInjectionPolicy) {
     this.faultInjectionPolicy = faultInjectionPolicy;
-    return this;
-  }
-
-  /**
-   * Image optimization policy for this URL Map’s route. Available only for Global EXTERNAL_MANAGED
-   * load balancer schemes. Either Cloud CDN must be enabled on the backend service or backend
-   * bucket serving the route, or cache policy must be configured on the same route
-   * @return value or {@code null} for none
-   */
-  public ImageOptimizationPolicy getImageOptimizationPolicy() {
-    return imageOptimizationPolicy;
-  }
-
-  /**
-   * Image optimization policy for this URL Map’s route. Available only for Global EXTERNAL_MANAGED
-   * load balancer schemes. Either Cloud CDN must be enabled on the backend service or backend
-   * bucket serving the route, or cache policy must be configured on the same route
-   * @param imageOptimizationPolicy imageOptimizationPolicy or {@code null} for none
-   */
-  public HttpRouteAction setImageOptimizationPolicy(ImageOptimizationPolicy imageOptimizationPolicy) {
-    this.imageOptimizationPolicy = imageOptimizationPolicy;
     return this;
   }
 

@@ -30,23 +30,23 @@ package com.google.api.services.compute.model;
 public final class ReplicationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The last sync time of the device pair.
+   * The last sync time of the device pair.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastReplicationTime;
 
   /**
-   * Output only. Replication lag in seconds. This will only be populated if device is in
-   * replicating state. Note that the value is calculated sometime during request processing and at
-   * the instant the client receives the response, the current replication_lag may have changed.
+   * Replication lag in seconds. This will only be populated if device is in replicating state. Note
+   * that the value is calculated sometime during request processing and at the instant the client
+   * receives the response, the current replication_lag may have changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long secondsSinceLastReplication;
 
   /**
-   * Output only. The last sync time of the device pair.
+   * The last sync time of the device pair.
    * @return value or {@code null} for none
    */
   public String getLastReplicationTime() {
@@ -54,7 +54,7 @@ public final class ReplicationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The last sync time of the device pair.
+   * The last sync time of the device pair.
    * @param lastReplicationTime lastReplicationTime or {@code null} for none
    */
   public ReplicationDetails setLastReplicationTime(String lastReplicationTime) {
@@ -63,9 +63,9 @@ public final class ReplicationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Replication lag in seconds. This will only be populated if device is in
-   * replicating state. Note that the value is calculated sometime during request processing and at
-   * the instant the client receives the response, the current replication_lag may have changed.
+   * Replication lag in seconds. This will only be populated if device is in replicating state. Note
+   * that the value is calculated sometime during request processing and at the instant the client
+   * receives the response, the current replication_lag may have changed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSecondsSinceLastReplication() {
@@ -73,9 +73,9 @@ public final class ReplicationDetails extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Replication lag in seconds. This will only be populated if device is in
-   * replicating state. Note that the value is calculated sometime during request processing and at
-   * the instant the client receives the response, the current replication_lag may have changed.
+   * Replication lag in seconds. This will only be populated if device is in replicating state. Note
+   * that the value is calculated sometime during request processing and at the instant the client
+   * receives the response, the current replication_lag may have changed.
    * @param secondsSinceLastReplication secondsSinceLastReplication or {@code null} for none
    */
   public ReplicationDetails setSecondsSinceLastReplication(java.lang.Long secondsSinceLastReplication) {

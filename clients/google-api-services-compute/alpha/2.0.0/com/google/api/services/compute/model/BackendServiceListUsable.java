@@ -50,8 +50,8 @@ public final class BackendServiceListUsable extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#usableBackendServiceList for lists
-   * of usable backend services.
+   * [Output Only] Type of resource. Alwayscompute#usableBackendServiceList for lists of usable
+   * backend services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class BackendServiceListUsable extends com.google.api.client.json.G
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class BackendServiceListUsable extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#usableBackendServiceList for lists
-   * of usable backend services.
+   * [Output Only] Type of resource. Alwayscompute#usableBackendServiceList for lists of usable
+   * backend services.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +125,8 @@ public final class BackendServiceListUsable extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#usableBackendServiceList for lists
-   * of usable backend services.
+   * [Output Only] Type of resource. Alwayscompute#usableBackendServiceList for lists of usable
+   * backend services.
    * @param kind kind or {@code null} for none
    */
   public BackendServiceListUsable setKind(java.lang.String kind) {
@@ -158,7 +158,7 @@ public final class BackendServiceListUsable extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -166,7 +166,7 @@ public final class BackendServiceListUsable extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public BackendServiceListUsable setSelfLink(java.lang.String selfLink) {

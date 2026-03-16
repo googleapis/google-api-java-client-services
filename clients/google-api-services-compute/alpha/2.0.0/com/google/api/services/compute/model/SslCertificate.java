@@ -71,7 +71,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] Expire time of the certificate. RFC3339
+   * [Output Only] Expire time of the certificate. RFC3339
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +85,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL
-   * certificates.
+   * [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL certificates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,8 +118,8 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String privateKey;
 
   /**
-   * Output only. [Output Only] URL of the region where the regional SSL Certificate resides. This
-   * field is not applicable to global SSL Certificate.
+   * [Output Only] URL of the region where the regional SSL Certificate resides. This field is not
+   * applicable to global SSL Certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +133,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +147,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   private SslCertificateSelfManagedSslCertificate selfManaged;
 
   /**
-   * Output only. [Output Only] Domains associated with the certificate via Subject Alternative
-   * Name.
+   * [Output Only] Domains associated with the certificate via Subject Alternative Name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +217,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Expire time of the certificate. RFC3339
+   * [Output Only] Expire time of the certificate. RFC3339
    * @return value or {@code null} for none
    */
   public java.lang.String getExpireTime() {
@@ -227,7 +225,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Expire time of the certificate. RFC3339
+   * [Output Only] Expire time of the certificate. RFC3339
    * @param expireTime expireTime or {@code null} for none
    */
   public SslCertificate setExpireTime(java.lang.String expireTime) {
@@ -253,8 +251,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL
-   * certificates.
+   * [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL certificates.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -262,8 +259,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL
-   * certificates.
+   * [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL certificates.
    * @param kind kind or {@code null} for none
    */
   public SslCertificate setKind(java.lang.String kind) {
@@ -333,8 +329,8 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional SSL Certificate resides. This
-   * field is not applicable to global SSL Certificate.
+   * [Output Only] URL of the region where the regional SSL Certificate resides. This field is not
+   * applicable to global SSL Certificate.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -342,8 +338,8 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional SSL Certificate resides. This
-   * field is not applicable to global SSL Certificate.
+   * [Output Only] URL of the region where the regional SSL Certificate resides. This field is not
+   * applicable to global SSL Certificate.
    * @param region region or {@code null} for none
    */
   public SslCertificate setRegion(java.lang.String region) {
@@ -369,7 +365,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -377,7 +373,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public SslCertificate setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -403,8 +399,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Domains associated with the certificate via Subject Alternative
-   * Name.
+   * [Output Only] Domains associated with the certificate via Subject Alternative Name.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubjectAlternativeNames() {
@@ -412,8 +407,7 @@ public final class SslCertificate extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Domains associated with the certificate via Subject Alternative
-   * Name.
+   * [Output Only] Domains associated with the certificate via Subject Alternative Name.
    * @param subjectAlternativeNames subjectAlternativeNames or {@code null} for none
    */
   public SslCertificate setSubjectAlternativeNames(java.util.List<java.lang.String> subjectAlternativeNames) {

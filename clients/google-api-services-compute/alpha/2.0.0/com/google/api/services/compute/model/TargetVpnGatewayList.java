@@ -50,8 +50,7 @@ public final class TargetVpnGatewayList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN
-   * gateways.
+   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN gateways.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +67,7 @@ public final class TargetVpnGatewayList extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +115,7 @@ public final class TargetVpnGatewayList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN
-   * gateways.
+   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN gateways.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +123,7 @@ public final class TargetVpnGatewayList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN
-   * gateways.
+   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN gateways.
    * @param kind kind or {@code null} for none
    */
   public TargetVpnGatewayList setKind(java.lang.String kind) {
@@ -158,7 +155,7 @@ public final class TargetVpnGatewayList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -166,7 +163,7 @@ public final class TargetVpnGatewayList extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public TargetVpnGatewayList setSelfLink(java.lang.String selfLink) {

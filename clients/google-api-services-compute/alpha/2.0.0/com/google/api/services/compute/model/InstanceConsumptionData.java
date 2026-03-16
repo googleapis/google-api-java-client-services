@@ -30,21 +30,21 @@ package com.google.api.services.compute.model;
 public final class InstanceConsumptionData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Resources consumed by the instance.
+   * Resources consumed by the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceConsumptionInfo consumptionInfo;
 
   /**
-   * Output only. Server-defined URL for the instance.
+   * Server-defined URL for the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
 
   /**
-   * Output only. Resources consumed by the instance.
+   * Resources consumed by the instance.
    * @return value or {@code null} for none
    */
   public InstanceConsumptionInfo getConsumptionInfo() {
@@ -52,7 +52,7 @@ public final class InstanceConsumptionData extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Resources consumed by the instance.
+   * Resources consumed by the instance.
    * @param consumptionInfo consumptionInfo or {@code null} for none
    */
   public InstanceConsumptionData setConsumptionInfo(InstanceConsumptionInfo consumptionInfo) {
@@ -61,7 +61,7 @@ public final class InstanceConsumptionData extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Server-defined URL for the instance.
+   * Server-defined URL for the instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -69,7 +69,7 @@ public final class InstanceConsumptionData extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. Server-defined URL for the instance.
+   * Server-defined URL for the instance.
    * @param instance instance or {@code null} for none
    */
   public InstanceConsumptionData setInstance(java.lang.String instance) {

@@ -52,7 +52,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   private java.lang.String cpuOvercommitType;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,16 +78,14 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeTemplate for node
-   * templates.
+   * [Output Only] The type of the resource. Alwayscompute#nodeTemplate for node templates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,22 +124,21 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   private NodeTemplateNodeTypeFlexibility nodeTypeFlexibility;
 
   /**
-   * Output only. [Output Only] The name of the region where the node template resides, such as us-
-   * central1.
+   * [Output Only] The name of the region where the node template resides, such as us-central1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,15 +156,15 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   private ServerBinding serverBinding;
 
   /**
-   * Output only. [Output Only] The status of the node template. One of the following
-   * values:CREATING, READY, and DELETING.
+   * [Output Only] The status of the node template. One of the following values:CREATING, READY, and
+   * DELETING.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. [Output Only] An optional, human-readable explanation of the status.
+   * [Output Only] An optional, human-readable explanation of the status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +203,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -214,7 +211,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NodeTemplate setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -255,8 +252,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -264,8 +260,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public NodeTemplate setId(java.math.BigInteger id) {
@@ -274,8 +269,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeTemplate for node
-   * templates.
+   * [Output Only] The type of the resource. Alwayscompute#nodeTemplate for node templates.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -283,8 +277,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The type of the resource. Alwayscompute#nodeTemplate for node
-   * templates.
+   * [Output Only] The type of the resource. Alwayscompute#nodeTemplate for node templates.
    * @param kind kind or {@code null} for none
    */
   public NodeTemplate setKind(java.lang.String kind) {
@@ -369,8 +362,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The name of the region where the node template resides, such as us-
-   * central1.
+   * [Output Only] The name of the region where the node template resides, such as us-central1.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -378,8 +370,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The name of the region where the node template resides, such as us-
-   * central1.
+   * [Output Only] The name of the region where the node template resides, such as us-central1.
    * @param region region or {@code null} for none
    */
   public NodeTemplate setRegion(java.lang.String region) {
@@ -388,7 +379,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -396,7 +387,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NodeTemplate setSelfLink(java.lang.String selfLink) {
@@ -405,7 +396,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -413,7 +404,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public NodeTemplate setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -447,8 +438,8 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the node template. One of the following
-   * values:CREATING, READY, and DELETING.
+   * [Output Only] The status of the node template. One of the following values:CREATING, READY, and
+   * DELETING.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -456,8 +447,8 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the node template. One of the following
-   * values:CREATING, READY, and DELETING.
+   * [Output Only] The status of the node template. One of the following values:CREATING, READY, and
+   * DELETING.
    * @param status status or {@code null} for none
    */
   public NodeTemplate setStatus(java.lang.String status) {
@@ -466,7 +457,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] An optional, human-readable explanation of the status.
+   * [Output Only] An optional, human-readable explanation of the status.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatusMessage() {
@@ -474,7 +465,7 @@ public final class NodeTemplate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] An optional, human-readable explanation of the status.
+   * [Output Only] An optional, human-readable explanation of the status.
    * @param statusMessage statusMessage or {@code null} for none
    */
   public NodeTemplate setStatusMessage(java.lang.String statusMessage) {

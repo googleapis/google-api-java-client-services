@@ -53,14 +53,6 @@ public final class InstanceGroupManagersResizeAdvancedRequest extends com.google
   private java.lang.Boolean noCreationRetries;
 
   /**
-   * If this flag is enabled within a request to decrease a MIG's target size, then the MIG declines
-   * that request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean scaleInProtection;
-
-  /**
    * The number of running instances that the managed instance group should maintain at any given
    * time. The group automatically adds or removes instances to maintain the number of instances
    * specified by this parameter.
@@ -115,25 +107,6 @@ public final class InstanceGroupManagersResizeAdvancedRequest extends com.google
    */
   public InstanceGroupManagersResizeAdvancedRequest setNoCreationRetries(java.lang.Boolean noCreationRetries) {
     this.noCreationRetries = noCreationRetries;
-    return this;
-  }
-
-  /**
-   * If this flag is enabled within a request to decrease a MIG's target size, then the MIG declines
-   * that request.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getScaleInProtection() {
-    return scaleInProtection;
-  }
-
-  /**
-   * If this flag is enabled within a request to decrease a MIG's target size, then the MIG declines
-   * that request.
-   * @param scaleInProtection scaleInProtection or {@code null} for none
-   */
-  public InstanceGroupManagersResizeAdvancedRequest setScaleInProtection(java.lang.Boolean scaleInProtection) {
-    this.scaleInProtection = scaleInProtection;
     return this;
   }
 

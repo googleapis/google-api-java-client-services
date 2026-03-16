@@ -31,67 +31,64 @@ package com.google.api.services.compute.model;
 public final class ResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Accelerators status show results of GPU scans. These scans are
-   * specialized diagnostic tests designed to uncover latent manufacturing defects or other issues
-   * that could potentially lead to data corruption or impede the customer's ability to efficiently
-   * execute GPU workloads.
+   * [Output Only] Accelerators status show results of GPU scans. These scans are specialized
+   * diagnostic tests designed to uncover latent manufacturing defects or other issues that could
+   * potentially lead to data corruption or impede the customer's ability to efficiently execute GPU
+   * workloads.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ResourceStatusAcceleratorStatus> acceleratorStatus;
 
   /**
-   * Output only. [Output Only] The full resource name of the reservation that this instance is
-   * consuming from.
+   * [Output Only] The full resource name of the reservation that this instance is consuming from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumedReservation;
 
   /**
-   * Output only. [Output Only] The full resource name of the reservation block that this instance
-   * is consuming from.
+   * [Output Only] The full resource name of the reservation block that this instance is consuming
+   * from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String consumedReservationBlock;
 
   /**
-   * Output only. [Output Only] Effective metadata is a field that consolidates project, zonal
-   * instance settings, and instance-level predefined metadata keys to provide the overridden value
-   * for those metadata keys at the instance level.
+   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
+   * and instance-level predefined metadata keys to provide the overridden value for those metadata
+   * keys at the instance level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceStatusEffectiveInstanceMetadata effectiveInstanceMetadata;
 
   /**
-   * Output only. [Output Only] Contains last termination details why the instance was terminated.
+   * [Output Only] Contains last termination details why the instance was terminated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceStatusLastInstanceTerminationDetails lastInstanceTerminationDetails;
 
   /**
-   * Output only. [Output Only] The precise location of your instance within the zone's data center,
-   * including the block, sub-block, and host. The field is formatted as follows:
-   * blockId/subBlockId/hostId.
+   * [Output Only] The precise location of your instance within the zone's data center, including
+   * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String physicalHost;
 
   /**
-   * Output only. [Output Only] A series of fields containing the global name of the Compute Engine
-   * cluster, as well as the ID of the block, sub-block, and host on which the running instance is
-   * located.
+   * [Output Only] A series of fields containing the global name of the Compute Engine cluster, as
+   * well as the ID of the block, sub-block, and host on which the running instance is located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceStatusPhysicalHostTopology physicalHostTopology;
 
   /**
-   * Output only. [Output Only] Reservation information that the instance is consuming from.
+   * [Output Only] Reservation information that the instance is consuming from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +109,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private java.util.Map<String, ResourceStatusServiceIntegrationStatus> serviceIntegrationStatuses;
 
   /**
-   * Output only. [Output Only] Details about the instance stopping state.
+   * [Output Only] Details about the instance stopping state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,10 +122,10 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private UpcomingMaintenance upcomingMaintenance;
 
   /**
-   * Output only. [Output Only] Accelerators status show results of GPU scans. These scans are
-   * specialized diagnostic tests designed to uncover latent manufacturing defects or other issues
-   * that could potentially lead to data corruption or impede the customer's ability to efficiently
-   * execute GPU workloads.
+   * [Output Only] Accelerators status show results of GPU scans. These scans are specialized
+   * diagnostic tests designed to uncover latent manufacturing defects or other issues that could
+   * potentially lead to data corruption or impede the customer's ability to efficiently execute GPU
+   * workloads.
    * @return value or {@code null} for none
    */
   public java.util.List<ResourceStatusAcceleratorStatus> getAcceleratorStatus() {
@@ -136,10 +133,10 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Accelerators status show results of GPU scans. These scans are
-   * specialized diagnostic tests designed to uncover latent manufacturing defects or other issues
-   * that could potentially lead to data corruption or impede the customer's ability to efficiently
-   * execute GPU workloads.
+   * [Output Only] Accelerators status show results of GPU scans. These scans are specialized
+   * diagnostic tests designed to uncover latent manufacturing defects or other issues that could
+   * potentially lead to data corruption or impede the customer's ability to efficiently execute GPU
+   * workloads.
    * @param acceleratorStatus acceleratorStatus or {@code null} for none
    */
   public ResourceStatus setAcceleratorStatus(java.util.List<ResourceStatusAcceleratorStatus> acceleratorStatus) {
@@ -148,8 +145,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The full resource name of the reservation that this instance is
-   * consuming from.
+   * [Output Only] The full resource name of the reservation that this instance is consuming from.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumedReservation() {
@@ -157,8 +153,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The full resource name of the reservation that this instance is
-   * consuming from.
+   * [Output Only] The full resource name of the reservation that this instance is consuming from.
    * @param consumedReservation consumedReservation or {@code null} for none
    */
   public ResourceStatus setConsumedReservation(java.lang.String consumedReservation) {
@@ -167,8 +162,8 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The full resource name of the reservation block that this instance
-   * is consuming from.
+   * [Output Only] The full resource name of the reservation block that this instance is consuming
+   * from.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumedReservationBlock() {
@@ -176,8 +171,8 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The full resource name of the reservation block that this instance
-   * is consuming from.
+   * [Output Only] The full resource name of the reservation block that this instance is consuming
+   * from.
    * @param consumedReservationBlock consumedReservationBlock or {@code null} for none
    */
   public ResourceStatus setConsumedReservationBlock(java.lang.String consumedReservationBlock) {
@@ -186,9 +181,9 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Effective metadata is a field that consolidates project, zonal
-   * instance settings, and instance-level predefined metadata keys to provide the overridden value
-   * for those metadata keys at the instance level.
+   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
+   * and instance-level predefined metadata keys to provide the overridden value for those metadata
+   * keys at the instance level.
    * @return value or {@code null} for none
    */
   public ResourceStatusEffectiveInstanceMetadata getEffectiveInstanceMetadata() {
@@ -196,9 +191,9 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Effective metadata is a field that consolidates project, zonal
-   * instance settings, and instance-level predefined metadata keys to provide the overridden value
-   * for those metadata keys at the instance level.
+   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
+   * and instance-level predefined metadata keys to provide the overridden value for those metadata
+   * keys at the instance level.
    * @param effectiveInstanceMetadata effectiveInstanceMetadata or {@code null} for none
    */
   public ResourceStatus setEffectiveInstanceMetadata(ResourceStatusEffectiveInstanceMetadata effectiveInstanceMetadata) {
@@ -207,7 +202,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Contains last termination details why the instance was terminated.
+   * [Output Only] Contains last termination details why the instance was terminated.
    * @return value or {@code null} for none
    */
   public ResourceStatusLastInstanceTerminationDetails getLastInstanceTerminationDetails() {
@@ -215,7 +210,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Contains last termination details why the instance was terminated.
+   * [Output Only] Contains last termination details why the instance was terminated.
    * @param lastInstanceTerminationDetails lastInstanceTerminationDetails or {@code null} for none
    */
   public ResourceStatus setLastInstanceTerminationDetails(ResourceStatusLastInstanceTerminationDetails lastInstanceTerminationDetails) {
@@ -224,9 +219,8 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The precise location of your instance within the zone's data center,
-   * including the block, sub-block, and host. The field is formatted as follows:
-   * blockId/subBlockId/hostId.
+   * [Output Only] The precise location of your instance within the zone's data center, including
+   * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhysicalHost() {
@@ -234,9 +228,8 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The precise location of your instance within the zone's data center,
-   * including the block, sub-block, and host. The field is formatted as follows:
-   * blockId/subBlockId/hostId.
+   * [Output Only] The precise location of your instance within the zone's data center, including
+   * the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
    * @param physicalHost physicalHost or {@code null} for none
    */
   public ResourceStatus setPhysicalHost(java.lang.String physicalHost) {
@@ -245,9 +238,8 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] A series of fields containing the global name of the Compute Engine
-   * cluster, as well as the ID of the block, sub-block, and host on which the running instance is
-   * located.
+   * [Output Only] A series of fields containing the global name of the Compute Engine cluster, as
+   * well as the ID of the block, sub-block, and host on which the running instance is located.
    * @return value or {@code null} for none
    */
   public ResourceStatusPhysicalHostTopology getPhysicalHostTopology() {
@@ -255,9 +247,8 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] A series of fields containing the global name of the Compute Engine
-   * cluster, as well as the ID of the block, sub-block, and host on which the running instance is
-   * located.
+   * [Output Only] A series of fields containing the global name of the Compute Engine cluster, as
+   * well as the ID of the block, sub-block, and host on which the running instance is located.
    * @param physicalHostTopology physicalHostTopology or {@code null} for none
    */
   public ResourceStatus setPhysicalHostTopology(ResourceStatusPhysicalHostTopology physicalHostTopology) {
@@ -266,7 +257,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Reservation information that the instance is consuming from.
+   * [Output Only] Reservation information that the instance is consuming from.
    * @return value or {@code null} for none
    */
   public ResourceStatusReservationConsumptionInfo getReservationConsumptionInfo() {
@@ -274,7 +265,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Reservation information that the instance is consuming from.
+   * [Output Only] Reservation information that the instance is consuming from.
    * @param reservationConsumptionInfo reservationConsumptionInfo or {@code null} for none
    */
   public ResourceStatus setReservationConsumptionInfo(ResourceStatusReservationConsumptionInfo reservationConsumptionInfo) {
@@ -317,7 +308,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Details about the instance stopping state.
+   * [Output Only] Details about the instance stopping state.
    * @return value or {@code null} for none
    */
   public ResourceStatusShutdownDetails getShutdownDetails() {
@@ -325,7 +316,7 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Details about the instance stopping state.
+   * [Output Only] Details about the instance stopping state.
    * @param shutdownDetails shutdownDetails or {@code null} for none
    */
   public ResourceStatus setShutdownDetails(ResourceStatusShutdownDetails shutdownDetails) {

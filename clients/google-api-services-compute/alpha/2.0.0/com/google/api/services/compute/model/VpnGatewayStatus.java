@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class VpnGatewayStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of VPN connection for this VpnGateway.
+   * List of VPN connection for this VpnGateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<VpnGatewayStatusVpnConnection> vpnConnections;
 
   /**
-   * Output only. List of VPN connection for this VpnGateway.
+   * List of VPN connection for this VpnGateway.
    * @return value or {@code null} for none
    */
   public java.util.List<VpnGatewayStatusVpnConnection> getVpnConnections() {
@@ -45,7 +45,7 @@ public final class VpnGatewayStatus extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. List of VPN connection for this VpnGateway.
+   * List of VPN connection for this VpnGateway.
    * @param vpnConnections vpnConnections or {@code null} for none
    */
   public VpnGatewayStatus setVpnConnections(java.util.List<VpnGatewayStatusVpnConnection> vpnConnections) {

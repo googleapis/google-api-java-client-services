@@ -33,7 +33,7 @@ package com.google.api.services.compute.model;
 public final class SnapshotGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,16 +48,14 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#snapshotGroup for SnapshotGroup
-   * resources.
+   * [Output Only] Type of the resource. Alwayscompute#snapshotGroup for SnapshotGroup resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,21 +73,21 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,21 +101,21 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   private java.lang.String sourceInstantSnapshotGroup;
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SnapshotGroupSourceInstantSnapshotGroupInfo sourceInstantSnapshotGroupInfo;
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -125,7 +123,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public SnapshotGroup setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -153,8 +151,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -162,8 +159,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public SnapshotGroup setId(java.math.BigInteger id) {
@@ -172,8 +168,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#snapshotGroup for SnapshotGroup
-   * resources.
+   * [Output Only] Type of the resource. Alwayscompute#snapshotGroup for SnapshotGroup resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -181,8 +176,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#snapshotGroup for SnapshotGroup
-   * resources.
+   * [Output Only] Type of the resource. Alwayscompute#snapshotGroup for SnapshotGroup resources.
    * @param kind kind or {@code null} for none
    */
   public SnapshotGroup setKind(java.lang.String kind) {
@@ -216,7 +210,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -224,7 +218,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public SnapshotGroup setSelfLink(java.lang.String selfLink) {
@@ -233,7 +227,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -241,7 +235,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public SnapshotGroup setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -250,7 +244,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @return value or {@code null} for none
    */
   public SnapshotGroupSourceInfo getSourceInfo() {
@@ -258,7 +252,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @param sourceInfo sourceInfo or {@code null} for none
    */
   public SnapshotGroup setSourceInfo(SnapshotGroupSourceInfo sourceInfo) {
@@ -284,7 +278,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @return value or {@code null} for none
    */
   public SnapshotGroupSourceInstantSnapshotGroupInfo getSourceInstantSnapshotGroupInfo() {
@@ -292,7 +286,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @param sourceInstantSnapshotGroupInfo sourceInstantSnapshotGroupInfo or {@code null} for none
    */
   public SnapshotGroup setSourceInstantSnapshotGroupInfo(SnapshotGroupSourceInstantSnapshotGroupInfo sourceInstantSnapshotGroupInfo) {
@@ -301,7 +295,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -309,7 +303,7 @@ public final class SnapshotGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @param status status or {@code null} for none
    */
   public SnapshotGroup setStatus(java.lang.String status) {

@@ -36,8 +36,8 @@ public final class InterconnectGroupPhysicalStructureMetros extends com.google.a
   private java.util.List<InterconnectGroupPhysicalStructureMetrosFacilities> facilities;
 
   /**
-   * Output only. [Output Only] The name of the metro, as a three-letter lowercase string like
-   * "iad". This is the first component of the location of Interconnects underneath this.
+   * [Output Only] The name of the metro, as a three-letter lowercase string like "iad". This is the
+   * first component of the location of Interconnects underneath this.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,8 @@ public final class InterconnectGroupPhysicalStructureMetros extends com.google.a
   }
 
   /**
-   * Output only. [Output Only] The name of the metro, as a three-letter lowercase string like
-   * "iad". This is the first component of the location of Interconnects underneath this.
+   * [Output Only] The name of the metro, as a three-letter lowercase string like "iad". This is the
+   * first component of the location of Interconnects underneath this.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetro() {
@@ -68,8 +68,8 @@ public final class InterconnectGroupPhysicalStructureMetros extends com.google.a
   }
 
   /**
-   * Output only. [Output Only] The name of the metro, as a three-letter lowercase string like
-   * "iad". This is the first component of the location of Interconnects underneath this.
+   * [Output Only] The name of the metro, as a three-letter lowercase string like "iad". This is the
+   * first component of the location of Interconnects underneath this.
    * @param metro metro or {@code null} for none
    */
   public InterconnectGroupPhysicalStructureMetros setMetro(java.lang.String metro) {

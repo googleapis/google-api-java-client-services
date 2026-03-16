@@ -37,30 +37,28 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   private java.lang.String activationStatus;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creationTimestamp;
 
   /**
-   * Output only. [Output Only] Description of the feature.
+   * [Output Only] Description of the feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output only] The type of the feature. Always "compute#previewFeature" for preview
-   * features.
+   * [Output only] The type of the feature. Always "compute#previewFeature" for preview features.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,14 +79,14 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   private PreviewFeatureRolloutOperation rolloutOperation;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output only] Status of the feature.
+   * [Output only] Status of the feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +110,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -120,7 +118,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public PreviewFeature setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -129,7 +127,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Description of the feature.
+   * [Output Only] Description of the feature.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -137,7 +135,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Description of the feature.
+   * [Output Only] Description of the feature.
    * @param description description or {@code null} for none
    */
   public PreviewFeature setDescription(java.lang.String description) {
@@ -146,8 +144,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -155,8 +152,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public PreviewFeature setId(java.math.BigInteger id) {
@@ -165,8 +161,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] The type of the feature. Always "compute#previewFeature" for preview
-   * features.
+   * [Output only] The type of the feature. Always "compute#previewFeature" for preview features.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -174,8 +169,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] The type of the feature. Always "compute#previewFeature" for preview
-   * features.
+   * [Output only] The type of the feature. Always "compute#previewFeature" for preview features.
    * @param kind kind or {@code null} for none
    */
   public PreviewFeature setKind(java.lang.String kind) {
@@ -218,7 +212,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -226,7 +220,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public PreviewFeature setSelfLink(java.lang.String selfLink) {
@@ -235,7 +229,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Status of the feature.
+   * [Output only] Status of the feature.
    * @return value or {@code null} for none
    */
   public PreviewFeatureStatus getStatus() {
@@ -243,7 +237,7 @@ public final class PreviewFeature extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output only] Status of the feature.
+   * [Output only] Status of the feature.
    * @param status status or {@code null} for none
    */
   public PreviewFeature setStatus(PreviewFeatureStatus status) {

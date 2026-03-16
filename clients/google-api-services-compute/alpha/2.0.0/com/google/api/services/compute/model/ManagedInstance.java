@@ -30,30 +30,28 @@ package com.google.api.services.compute.model;
 public final class ManagedInstance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Current all-instances configuration revision applied to this
-   * instance.
+   * [Output Only] Current all-instances configuration revision applied to this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedInstanceAllInstancesConfig allInstancesConfig;
 
   /**
-   * Output only. [Output Only] The current action that the managed instance group has scheduled for
-   * the instance. Possible values:        - NONE The instance is running, and the managed
-   * instance group does not have any scheduled actions for this instance.    - CREATING The managed
-   * instance group is creating this    instance. If the group fails to create this instance, it
-   * will try again    until it is successful.    - CREATING_WITHOUT_RETRIES The managed instance
-   * group    is attempting to create this instance only once. If the group fails    to create this
-   * instance, it does not try again and the group'stargetSize value is decreased instead.    -
-   * RECREATING The managed instance group is recreating    this instance.    - DELETING The managed
-   * instance group is permanently    deleting this instance.    - ABANDONING The managed instance
-   * group is abandoning    this instance. The instance will be removed from the instance group
-   * and from any target pools that are associated with this group.    - RESTARTING The managed
-   * instance group is restarting    the instance.    - REFRESHING The managed instance group is
-   * applying    configuration changes to the instance without stopping it. For example,    the
-   * group can update the target pool list for an instance without    stopping that instance.    -
-   * VERIFYING The managed instance group has created the    instance and it is in the process of
-   * being verified.
+   * [Output Only] The current action that the managed instance group has scheduled for the
+   * instance. Possible values:        - NONE The instance is running, and the managed    instance
+   * group does not have any scheduled actions for this instance.    - CREATING The managed instance
+   * group is creating this    instance. If the group fails to create this instance, it will try
+   * again    until it is successful.    - CREATING_WITHOUT_RETRIES The managed instance group    is
+   * attempting to create this instance only once. If the group fails    to create this instance, it
+   * does not try again and the group'stargetSize value is decreased instead.    - RECREATING The
+   * managed instance group is recreating    this instance.    - DELETING The managed instance group
+   * is permanently    deleting this instance.    - ABANDONING The managed instance group is
+   * abandoning    this instance. The instance will be removed from the instance group    and from
+   * any target pools that are associated with this group.    - RESTARTING The managed instance
+   * group is restarting    the instance.    - REFRESHING The managed instance group is applying
+   * configuration changes to the instance without stopping it. For example,    the group can update
+   * the target pool list for an instance without    stopping that instance.    - VERIFYING The
+   * managed instance group has created the    instance and it is in the process of being verified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,84 +64,81 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstanceCurrentActionDetails currentActionDetails;
 
   /**
-   * Output only. [Output only] The unique identifier for this resource. This field is empty when
-   * instance does not exist.
+   * [Output only] The unique identifier for this resource. This field is empty when instance does
+   * not exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] The URL of the instance. The URL can exist even if the instance has
-   * not yet been created.
+   * [Output Only] The URL of the instance. The URL can exist even if the instance has not yet been
+   * created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
 
   /**
-   * Output only. [Output Only] The overrides to instance properties resulting from
-   * InstanceFlexibilityPolicy.
+   * [Output Only] The overrides to instance properties resulting from InstanceFlexibilityPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedInstanceInstanceFlexibilityOverride instanceFlexibilityOverride;
 
   /**
-   * Output only. [Output Only] Health state of the instance per health-check.
+   * [Output Only] Health state of the instance per health-check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ManagedInstanceInstanceHealth> instanceHealth;
 
   /**
-   * Output only. [Output Only] The status of the instance. This field is empty when the instance
-   * does not exist.
+   * [Output Only] The status of the instance. This field is empty when the instance does not exist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceStatus;
 
   /**
-   * Output only. [Output Only] The intended template of the instance. This field is empty when
-   * current_action is one of { DELETING, ABANDONING }.
+   * [Output Only] The intended template of the instance. This field is empty when current_action is
+   * one of { DELETING, ABANDONING }.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceTemplate;
 
   /**
-   * Output only. [Output Only] Information about the last attempt to create or delete the instance.
+   * [Output Only] Information about the last attempt to create or delete the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedInstanceLastAttempt lastAttempt;
 
   /**
-   * Output only. [Output Only] The name of the instance. The name always exists even if the
-   * instance has not yet been created.
+   * [Output Only] The name of the instance. The name always exists even if the instance has not yet
+   * been created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] Preserved state applied from per-instance config for this instance.
+   * [Output Only] Preserved state applied from per-instance config for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PreservedState preservedStateFromConfig;
 
   /**
-   * Output only. [Output Only] Preserved state generated based on stateful policy for this
-   * instance.
+   * [Output Only] Preserved state generated based on stateful policy for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PreservedState preservedStateFromPolicy;
 
   /**
-   * Output only. [Output Only] Instance properties selected for this instance resulting from
+   * [Output Only] Instance properties selected for this instance resulting from
    * InstanceFlexibilityPolicy.
    * The value may be {@code null}.
    */
@@ -151,46 +146,44 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstancePropertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy;
 
   /**
-   * Output only. [Output Only] Information about the termination timestamp of the instance, if
-   * applicable.
+   * [Output Only] Information about the termination timestamp of the instance, if applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedInstanceScheduling scheduling;
 
   /**
-   * Output only. [Output only] The size of the VM represented by this Managed Instance. This is how
-   * much this Managed Instance contributes to the size of the group.
+   * [Output only] The size of the VM represented by this Managed Instance. This is how much this
+   * Managed Instance contributes to the size of the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float sizeInUnit;
 
   /**
-   * Output only. [Output Only] Tag describing the version.
+   * [Output Only] Tag describing the version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tag;
 
   /**
-   * Output only. [Output Only] The eventual status of the instance. The instance group manager will
-   * not be identified as stable till each managed instance reaches its targetStatus.
+   * [Output Only] The eventual status of the instance. The instance group manager will not be
+   * identified as stable till each managed instance reaches its targetStatus.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetStatus;
 
   /**
-   * Output only. [Output Only] Intended version of this instance.
+   * [Output Only] Intended version of this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedInstanceVersion version;
 
   /**
-   * Output only. [Output Only] Current all-instances configuration revision applied to this
-   * instance.
+   * [Output Only] Current all-instances configuration revision applied to this instance.
    * @return value or {@code null} for none
    */
   public ManagedInstanceAllInstancesConfig getAllInstancesConfig() {
@@ -198,8 +191,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Current all-instances configuration revision applied to this
-   * instance.
+   * [Output Only] Current all-instances configuration revision applied to this instance.
    * @param allInstancesConfig allInstancesConfig or {@code null} for none
    */
   public ManagedInstance setAllInstancesConfig(ManagedInstanceAllInstancesConfig allInstancesConfig) {
@@ -208,22 +200,21 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The current action that the managed instance group has scheduled for
-   * the instance. Possible values:        - NONE The instance is running, and the managed
-   * instance group does not have any scheduled actions for this instance.    - CREATING The managed
-   * instance group is creating this    instance. If the group fails to create this instance, it
-   * will try again    until it is successful.    - CREATING_WITHOUT_RETRIES The managed instance
-   * group    is attempting to create this instance only once. If the group fails    to create this
-   * instance, it does not try again and the group'stargetSize value is decreased instead.    -
-   * RECREATING The managed instance group is recreating    this instance.    - DELETING The managed
-   * instance group is permanently    deleting this instance.    - ABANDONING The managed instance
-   * group is abandoning    this instance. The instance will be removed from the instance group
-   * and from any target pools that are associated with this group.    - RESTARTING The managed
-   * instance group is restarting    the instance.    - REFRESHING The managed instance group is
-   * applying    configuration changes to the instance without stopping it. For example,    the
-   * group can update the target pool list for an instance without    stopping that instance.    -
-   * VERIFYING The managed instance group has created the    instance and it is in the process of
-   * being verified.
+   * [Output Only] The current action that the managed instance group has scheduled for the
+   * instance. Possible values:        - NONE The instance is running, and the managed    instance
+   * group does not have any scheduled actions for this instance.    - CREATING The managed instance
+   * group is creating this    instance. If the group fails to create this instance, it will try
+   * again    until it is successful.    - CREATING_WITHOUT_RETRIES The managed instance group    is
+   * attempting to create this instance only once. If the group fails    to create this instance, it
+   * does not try again and the group'stargetSize value is decreased instead.    - RECREATING The
+   * managed instance group is recreating    this instance.    - DELETING The managed instance group
+   * is permanently    deleting this instance.    - ABANDONING The managed instance group is
+   * abandoning    this instance. The instance will be removed from the instance group    and from
+   * any target pools that are associated with this group.    - RESTARTING The managed instance
+   * group is restarting    the instance.    - REFRESHING The managed instance group is applying
+   * configuration changes to the instance without stopping it. For example,    the group can update
+   * the target pool list for an instance without    stopping that instance.    - VERIFYING The
+   * managed instance group has created the    instance and it is in the process of being verified.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentAction() {
@@ -231,22 +222,21 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The current action that the managed instance group has scheduled for
-   * the instance. Possible values:        - NONE The instance is running, and the managed
-   * instance group does not have any scheduled actions for this instance.    - CREATING The managed
-   * instance group is creating this    instance. If the group fails to create this instance, it
-   * will try again    until it is successful.    - CREATING_WITHOUT_RETRIES The managed instance
-   * group    is attempting to create this instance only once. If the group fails    to create this
-   * instance, it does not try again and the group'stargetSize value is decreased instead.    -
-   * RECREATING The managed instance group is recreating    this instance.    - DELETING The managed
-   * instance group is permanently    deleting this instance.    - ABANDONING The managed instance
-   * group is abandoning    this instance. The instance will be removed from the instance group
-   * and from any target pools that are associated with this group.    - RESTARTING The managed
-   * instance group is restarting    the instance.    - REFRESHING The managed instance group is
-   * applying    configuration changes to the instance without stopping it. For example,    the
-   * group can update the target pool list for an instance without    stopping that instance.    -
-   * VERIFYING The managed instance group has created the    instance and it is in the process of
-   * being verified.
+   * [Output Only] The current action that the managed instance group has scheduled for the
+   * instance. Possible values:        - NONE The instance is running, and the managed    instance
+   * group does not have any scheduled actions for this instance.    - CREATING The managed instance
+   * group is creating this    instance. If the group fails to create this instance, it will try
+   * again    until it is successful.    - CREATING_WITHOUT_RETRIES The managed instance group    is
+   * attempting to create this instance only once. If the group fails    to create this instance, it
+   * does not try again and the group'stargetSize value is decreased instead.    - RECREATING The
+   * managed instance group is recreating    this instance.    - DELETING The managed instance group
+   * is permanently    deleting this instance.    - ABANDONING The managed instance group is
+   * abandoning    this instance. The instance will be removed from the instance group    and from
+   * any target pools that are associated with this group.    - RESTARTING The managed instance
+   * group is restarting    the instance.    - REFRESHING The managed instance group is applying
+   * configuration changes to the instance without stopping it. For example,    the group can update
+   * the target pool list for an instance without    stopping that instance.    - VERIFYING The
+   * managed instance group has created the    instance and it is in the process of being verified.
    * @param currentAction currentAction or {@code null} for none
    */
   public ManagedInstance setCurrentAction(java.lang.String currentAction) {
@@ -270,8 +260,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output only] The unique identifier for this resource. This field is empty when
-   * instance does not exist.
+   * [Output only] The unique identifier for this resource. This field is empty when instance does
+   * not exist.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -279,8 +269,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output only] The unique identifier for this resource. This field is empty when
-   * instance does not exist.
+   * [Output only] The unique identifier for this resource. This field is empty when instance does
+   * not exist.
    * @param id id or {@code null} for none
    */
   public ManagedInstance setId(java.math.BigInteger id) {
@@ -289,8 +279,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The URL of the instance. The URL can exist even if the instance has
-   * not yet been created.
+   * [Output Only] The URL of the instance. The URL can exist even if the instance has not yet been
+   * created.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -298,8 +288,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The URL of the instance. The URL can exist even if the instance has
-   * not yet been created.
+   * [Output Only] The URL of the instance. The URL can exist even if the instance has not yet been
+   * created.
    * @param instance instance or {@code null} for none
    */
   public ManagedInstance setInstance(java.lang.String instance) {
@@ -308,8 +298,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The overrides to instance properties resulting from
-   * InstanceFlexibilityPolicy.
+   * [Output Only] The overrides to instance properties resulting from InstanceFlexibilityPolicy.
    * @return value or {@code null} for none
    */
   public ManagedInstanceInstanceFlexibilityOverride getInstanceFlexibilityOverride() {
@@ -317,8 +306,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The overrides to instance properties resulting from
-   * InstanceFlexibilityPolicy.
+   * [Output Only] The overrides to instance properties resulting from InstanceFlexibilityPolicy.
    * @param instanceFlexibilityOverride instanceFlexibilityOverride or {@code null} for none
    */
   public ManagedInstance setInstanceFlexibilityOverride(ManagedInstanceInstanceFlexibilityOverride instanceFlexibilityOverride) {
@@ -327,7 +315,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Health state of the instance per health-check.
+   * [Output Only] Health state of the instance per health-check.
    * @return value or {@code null} for none
    */
   public java.util.List<ManagedInstanceInstanceHealth> getInstanceHealth() {
@@ -335,7 +323,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Health state of the instance per health-check.
+   * [Output Only] Health state of the instance per health-check.
    * @param instanceHealth instanceHealth or {@code null} for none
    */
   public ManagedInstance setInstanceHealth(java.util.List<ManagedInstanceInstanceHealth> instanceHealth) {
@@ -344,8 +332,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The status of the instance. This field is empty when the instance
-   * does not exist.
+   * [Output Only] The status of the instance. This field is empty when the instance does not exist.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceStatus() {
@@ -353,8 +340,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The status of the instance. This field is empty when the instance
-   * does not exist.
+   * [Output Only] The status of the instance. This field is empty when the instance does not exist.
    * @param instanceStatus instanceStatus or {@code null} for none
    */
   public ManagedInstance setInstanceStatus(java.lang.String instanceStatus) {
@@ -363,8 +349,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The intended template of the instance. This field is empty when
-   * current_action is one of { DELETING, ABANDONING }.
+   * [Output Only] The intended template of the instance. This field is empty when current_action is
+   * one of { DELETING, ABANDONING }.
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceTemplate() {
@@ -372,8 +358,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The intended template of the instance. This field is empty when
-   * current_action is one of { DELETING, ABANDONING }.
+   * [Output Only] The intended template of the instance. This field is empty when current_action is
+   * one of { DELETING, ABANDONING }.
    * @param instanceTemplate instanceTemplate or {@code null} for none
    */
   public ManagedInstance setInstanceTemplate(java.lang.String instanceTemplate) {
@@ -382,7 +368,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Information about the last attempt to create or delete the instance.
+   * [Output Only] Information about the last attempt to create or delete the instance.
    * @return value or {@code null} for none
    */
   public ManagedInstanceLastAttempt getLastAttempt() {
@@ -390,7 +376,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Information about the last attempt to create or delete the instance.
+   * [Output Only] Information about the last attempt to create or delete the instance.
    * @param lastAttempt lastAttempt or {@code null} for none
    */
   public ManagedInstance setLastAttempt(ManagedInstanceLastAttempt lastAttempt) {
@@ -399,8 +385,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The name of the instance. The name always exists even if the
-   * instance has not yet been created.
+   * [Output Only] The name of the instance. The name always exists even if the instance has not yet
+   * been created.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -408,8 +394,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The name of the instance. The name always exists even if the
-   * instance has not yet been created.
+   * [Output Only] The name of the instance. The name always exists even if the instance has not yet
+   * been created.
    * @param name name or {@code null} for none
    */
   public ManagedInstance setName(java.lang.String name) {
@@ -418,7 +404,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Preserved state applied from per-instance config for this instance.
+   * [Output Only] Preserved state applied from per-instance config for this instance.
    * @return value or {@code null} for none
    */
   public PreservedState getPreservedStateFromConfig() {
@@ -426,7 +412,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Preserved state applied from per-instance config for this instance.
+   * [Output Only] Preserved state applied from per-instance config for this instance.
    * @param preservedStateFromConfig preservedStateFromConfig or {@code null} for none
    */
   public ManagedInstance setPreservedStateFromConfig(PreservedState preservedStateFromConfig) {
@@ -435,8 +421,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Preserved state generated based on stateful policy for this
-   * instance.
+   * [Output Only] Preserved state generated based on stateful policy for this instance.
    * @return value or {@code null} for none
    */
   public PreservedState getPreservedStateFromPolicy() {
@@ -444,8 +429,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Preserved state generated based on stateful policy for this
-   * instance.
+   * [Output Only] Preserved state generated based on stateful policy for this instance.
    * @param preservedStateFromPolicy preservedStateFromPolicy or {@code null} for none
    */
   public ManagedInstance setPreservedStateFromPolicy(PreservedState preservedStateFromPolicy) {
@@ -454,7 +438,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Instance properties selected for this instance resulting from
+   * [Output Only] Instance properties selected for this instance resulting from
    * InstanceFlexibilityPolicy.
    * @return value or {@code null} for none
    */
@@ -463,7 +447,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Instance properties selected for this instance resulting from
+   * [Output Only] Instance properties selected for this instance resulting from
    * InstanceFlexibilityPolicy.
    * @param propertiesFromFlexibilityPolicy propertiesFromFlexibilityPolicy or {@code null} for none
    */
@@ -473,8 +457,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Information about the termination timestamp of the instance, if
-   * applicable.
+   * [Output Only] Information about the termination timestamp of the instance, if applicable.
    * @return value or {@code null} for none
    */
   public ManagedInstanceScheduling getScheduling() {
@@ -482,8 +465,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Information about the termination timestamp of the instance, if
-   * applicable.
+   * [Output Only] Information about the termination timestamp of the instance, if applicable.
    * @param scheduling scheduling or {@code null} for none
    */
   public ManagedInstance setScheduling(ManagedInstanceScheduling scheduling) {
@@ -492,8 +474,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output only] The size of the VM represented by this Managed Instance. This is how
-   * much this Managed Instance contributes to the size of the group.
+   * [Output only] The size of the VM represented by this Managed Instance. This is how much this
+   * Managed Instance contributes to the size of the group.
    * @return value or {@code null} for none
    */
   public java.lang.Float getSizeInUnit() {
@@ -501,8 +483,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output only] The size of the VM represented by this Managed Instance. This is how
-   * much this Managed Instance contributes to the size of the group.
+   * [Output only] The size of the VM represented by this Managed Instance. This is how much this
+   * Managed Instance contributes to the size of the group.
    * @param sizeInUnit sizeInUnit or {@code null} for none
    */
   public ManagedInstance setSizeInUnit(java.lang.Float sizeInUnit) {
@@ -511,7 +493,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Tag describing the version.
+   * [Output Only] Tag describing the version.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -519,7 +501,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Tag describing the version.
+   * [Output Only] Tag describing the version.
    * @param tag tag or {@code null} for none
    */
   public ManagedInstance setTag(java.lang.String tag) {
@@ -528,8 +510,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The eventual status of the instance. The instance group manager will
-   * not be identified as stable till each managed instance reaches its targetStatus.
+   * [Output Only] The eventual status of the instance. The instance group manager will not be
+   * identified as stable till each managed instance reaches its targetStatus.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetStatus() {
@@ -537,8 +519,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The eventual status of the instance. The instance group manager will
-   * not be identified as stable till each managed instance reaches its targetStatus.
+   * [Output Only] The eventual status of the instance. The instance group manager will not be
+   * identified as stable till each managed instance reaches its targetStatus.
    * @param targetStatus targetStatus or {@code null} for none
    */
   public ManagedInstance setTargetStatus(java.lang.String targetStatus) {
@@ -547,7 +529,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Intended version of this instance.
+   * [Output Only] Intended version of this instance.
    * @return value or {@code null} for none
    */
   public ManagedInstanceVersion getVersion() {
@@ -555,7 +537,7 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Intended version of this instance.
+   * [Output Only] Intended version of this instance.
    * @param version version or {@code null} for none
    */
   public ManagedInstance setVersion(ManagedInstanceVersion version) {

@@ -32,15 +32,14 @@ package com.google.api.services.compute.model;
 public final class InstantSnapshot extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The architecture of the instant snapshot. Valid values are ARM64 or
-   * X86_64.
+   * [Output Only] The architecture of the instant snapshot. Valid values are ARM64 or X86_64.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String architecture;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +53,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] Size of the source disk, specified in GB.
+   * [Output Only] Size of the source disk, specified in GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -69,16 +68,15 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   private java.lang.Boolean guestFlush;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#instantSnapshot for
-   * InstantSnapshot resources.
+   * [Output Only] Type of the resource. Alwayscompute#instantSnapshot for InstantSnapshot
+   * resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,24 +115,15 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InstantSnapshotParams params;
-
-  /**
-   * Output only. [Output Only] URL of the region where the instant snapshot resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * [Output Only] URL of the region where the instant snapshot resides. You must specify this field
+   * as part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Output only. [Output Only] Status information for the instant snapshot resource.
+   * [Output Only] Status information for the instant snapshot resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,21 +137,21 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,51 +172,50 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   private java.lang.String sourceDisk;
 
   /**
-   * Output only. [Output Only] The ID value of the disk used to create this InstantSnapshot. This
-   * value may be used to determine whether the InstantSnapshot was taken from the current or a
-   * previous instance of a given disk name.
+   * [Output Only] The ID value of the disk used to create this InstantSnapshot. This value may be
+   * used to determine whether the InstantSnapshot was taken from the current or a previous instance
+   * of a given disk name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceDiskId;
 
   /**
-   * Output only. [Output Only] URL of the source instant snapshot this instant snapshot is part of.
-   * Note that the source instant snapshot group must be in the same zone/region as the instant
-   * snapshot to be created. This can be a full or valid partial URL.
+   * [Output Only] URL of the source instant snapshot this instant snapshot is part of. Note that
+   * the source instant snapshot group must be in the same zone/region as the instant snapshot to be
+   * created. This can be a full or valid partial URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceInstantSnapshotGroup;
 
   /**
-   * Output only. [Output Only] The ID value of the source instant snapshot group this
-   * InstantSnapshot is part of. This value may be used to determine whether the InstantSnapshot was
-   * created as part of an InstantSnapshotGroup creation.
+   * [Output Only] The ID value of the source instant snapshot group this InstantSnapshot is part
+   * of. This value may be used to determine whether the InstantSnapshot was created as part of an
+   * InstantSnapshotGroup creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceInstantSnapshotGroupId;
 
   /**
-   * Output only. [Output Only] The status of the instantSnapshot. This can beCREATING, DELETING,
-   * FAILED, orREADY.
+   * [Output Only] The status of the instantSnapshot. This can beCREATING, DELETING, FAILED,
+   * orREADY.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. [Output Only] URL of the zone where the instant snapshot resides. You must specify
-   * this field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the zone where the instant snapshot resides. You must specify this field
+   * as part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Output only. [Output Only] The architecture of the instant snapshot. Valid values are ARM64 or
-   * X86_64.
+   * [Output Only] The architecture of the instant snapshot. Valid values are ARM64 or X86_64.
    * @return value or {@code null} for none
    */
   public java.lang.String getArchitecture() {
@@ -235,8 +223,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The architecture of the instant snapshot. Valid values are ARM64 or
-   * X86_64.
+   * [Output Only] The architecture of the instant snapshot. Valid values are ARM64 or X86_64.
    * @param architecture architecture or {@code null} for none
    */
   public InstantSnapshot setArchitecture(java.lang.String architecture) {
@@ -245,7 +232,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -253,7 +240,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InstantSnapshot setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -279,7 +266,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Size of the source disk, specified in GB.
+   * [Output Only] Size of the source disk, specified in GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDiskSizeGb() {
@@ -287,7 +274,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Size of the source disk, specified in GB.
+   * [Output Only] Size of the source disk, specified in GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public InstantSnapshot setDiskSizeGb(java.lang.Long diskSizeGb) {
@@ -315,8 +302,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -324,8 +310,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public InstantSnapshot setId(java.math.BigInteger id) {
@@ -334,8 +319,8 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#instantSnapshot for
-   * InstantSnapshot resources.
+   * [Output Only] Type of the resource. Alwayscompute#instantSnapshot for InstantSnapshot
+   * resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -343,8 +328,8 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#instantSnapshot for
-   * InstantSnapshot resources.
+   * [Output Only] Type of the resource. Alwayscompute#instantSnapshot for InstantSnapshot
+   * resources.
    * @param kind kind or {@code null} for none
    */
   public InstantSnapshot setKind(java.lang.String kind) {
@@ -466,28 +451,8 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * @return value or {@code null} for none
-   */
-  public InstantSnapshotParams getParams() {
-    return params;
-  }
-
-  /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * @param params params or {@code null} for none
-   */
-  public InstantSnapshot setParams(InstantSnapshotParams params) {
-    this.params = params;
-    return this;
-  }
-
-  /**
-   * Output only. [Output Only] URL of the region where the instant snapshot resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * [Output Only] URL of the region where the instant snapshot resides. You must specify this field
+   * as part of the HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -495,9 +460,8 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the instant snapshot resides. You must
-   * specify this field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * [Output Only] URL of the region where the instant snapshot resides. You must specify this field
+   * as part of the HTTP request URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public InstantSnapshot setRegion(java.lang.String region) {
@@ -506,7 +470,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Status information for the instant snapshot resource.
+   * [Output Only] Status information for the instant snapshot resource.
    * @return value or {@code null} for none
    */
   public InstantSnapshotResourceStatus getResourceStatus() {
@@ -514,7 +478,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Status information for the instant snapshot resource.
+   * [Output Only] Status information for the instant snapshot resource.
    * @param resourceStatus resourceStatus or {@code null} for none
    */
   public InstantSnapshot setResourceStatus(InstantSnapshotResourceStatus resourceStatus) {
@@ -540,7 +504,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -548,7 +512,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public InstantSnapshot setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -557,7 +521,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -565,7 +529,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InstantSnapshot setSelfLink(java.lang.String selfLink) {
@@ -574,7 +538,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -582,7 +546,7 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public InstantSnapshot setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -622,9 +586,9 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The ID value of the disk used to create this InstantSnapshot. This
-   * value may be used to determine whether the InstantSnapshot was taken from the current or a
-   * previous instance of a given disk name.
+   * [Output Only] The ID value of the disk used to create this InstantSnapshot. This value may be
+   * used to determine whether the InstantSnapshot was taken from the current or a previous instance
+   * of a given disk name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDiskId() {
@@ -632,9 +596,9 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The ID value of the disk used to create this InstantSnapshot. This
-   * value may be used to determine whether the InstantSnapshot was taken from the current or a
-   * previous instance of a given disk name.
+   * [Output Only] The ID value of the disk used to create this InstantSnapshot. This value may be
+   * used to determine whether the InstantSnapshot was taken from the current or a previous instance
+   * of a given disk name.
    * @param sourceDiskId sourceDiskId or {@code null} for none
    */
   public InstantSnapshot setSourceDiskId(java.lang.String sourceDiskId) {
@@ -643,9 +607,9 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] URL of the source instant snapshot this instant snapshot is part of.
-   * Note that the source instant snapshot group must be in the same zone/region as the instant
-   * snapshot to be created. This can be a full or valid partial URL.
+   * [Output Only] URL of the source instant snapshot this instant snapshot is part of. Note that
+   * the source instant snapshot group must be in the same zone/region as the instant snapshot to be
+   * created. This can be a full or valid partial URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceInstantSnapshotGroup() {
@@ -653,9 +617,9 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] URL of the source instant snapshot this instant snapshot is part of.
-   * Note that the source instant snapshot group must be in the same zone/region as the instant
-   * snapshot to be created. This can be a full or valid partial URL.
+   * [Output Only] URL of the source instant snapshot this instant snapshot is part of. Note that
+   * the source instant snapshot group must be in the same zone/region as the instant snapshot to be
+   * created. This can be a full or valid partial URL.
    * @param sourceInstantSnapshotGroup sourceInstantSnapshotGroup or {@code null} for none
    */
   public InstantSnapshot setSourceInstantSnapshotGroup(java.lang.String sourceInstantSnapshotGroup) {
@@ -664,9 +628,9 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The ID value of the source instant snapshot group this
-   * InstantSnapshot is part of. This value may be used to determine whether the InstantSnapshot was
-   * created as part of an InstantSnapshotGroup creation.
+   * [Output Only] The ID value of the source instant snapshot group this InstantSnapshot is part
+   * of. This value may be used to determine whether the InstantSnapshot was created as part of an
+   * InstantSnapshotGroup creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceInstantSnapshotGroupId() {
@@ -674,9 +638,9 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The ID value of the source instant snapshot group this
-   * InstantSnapshot is part of. This value may be used to determine whether the InstantSnapshot was
-   * created as part of an InstantSnapshotGroup creation.
+   * [Output Only] The ID value of the source instant snapshot group this InstantSnapshot is part
+   * of. This value may be used to determine whether the InstantSnapshot was created as part of an
+   * InstantSnapshotGroup creation.
    * @param sourceInstantSnapshotGroupId sourceInstantSnapshotGroupId or {@code null} for none
    */
   public InstantSnapshot setSourceInstantSnapshotGroupId(java.lang.String sourceInstantSnapshotGroupId) {
@@ -685,8 +649,8 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The status of the instantSnapshot. This can beCREATING, DELETING,
-   * FAILED, orREADY.
+   * [Output Only] The status of the instantSnapshot. This can beCREATING, DELETING, FAILED,
+   * orREADY.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -694,8 +658,8 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The status of the instantSnapshot. This can beCREATING, DELETING,
-   * FAILED, orREADY.
+   * [Output Only] The status of the instantSnapshot. This can beCREATING, DELETING, FAILED,
+   * orREADY.
    * @param status status or {@code null} for none
    */
   public InstantSnapshot setStatus(java.lang.String status) {
@@ -704,8 +668,8 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] URL of the zone where the instant snapshot resides. You must specify
-   * this field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the zone where the instant snapshot resides. You must specify this field
+   * as part of the HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -713,8 +677,8 @@ public final class InstantSnapshot extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] URL of the zone where the instant snapshot resides. You must specify
-   * this field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the zone where the instant snapshot resides. You must specify this field
+   * as part of the HTTP request URL. It is not settable as a field in the request body.
    * @param zone zone or {@code null} for none
    */
   public InstantSnapshot setZone(java.lang.String zone) {

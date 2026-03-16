@@ -44,7 +44,7 @@ public final class InstanceTemplateAggregatedList extends com.google.api.client.
   private java.util.Map<String, InstanceTemplatesScopedList> items;
 
   /**
-   * Output only. Type of resource.
+   * Type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class InstanceTemplateAggregatedList extends com.google.api.client.
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,7 +109,7 @@ public final class InstanceTemplateAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. Type of resource.
+   * Type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -117,7 +117,7 @@ public final class InstanceTemplateAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. Type of resource.
+   * Type of resource.
    * @param kind kind or {@code null} for none
    */
   public InstanceTemplateAggregatedList setKind(java.lang.String kind) {
@@ -149,7 +149,7 @@ public final class InstanceTemplateAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -157,7 +157,7 @@ public final class InstanceTemplateAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public InstanceTemplateAggregatedList setSelfLink(java.lang.String selfLink) {

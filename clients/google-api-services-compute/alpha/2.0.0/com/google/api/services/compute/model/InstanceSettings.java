@@ -52,8 +52,7 @@ public final class InstanceSettings extends com.google.api.client.json.GenericJs
   private java.lang.String fingerprint;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#instance_settings for instance
-   * settings.
+   * [Output Only] Type of the resource. Alwayscompute#instance_settings for instance settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +66,8 @@ public final class InstanceSettings extends com.google.api.client.json.GenericJs
   private InstanceSettingsMetadata metadata;
 
   /**
-   * Output only. [Output Only] URL of the zone where the resource resides You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the zone where the resource resides You must specify this field as part of
+   * the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +160,7 @@ public final class InstanceSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#instance_settings for instance
-   * settings.
+   * [Output Only] Type of the resource. Alwayscompute#instance_settings for instance settings.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -170,8 +168,7 @@ public final class InstanceSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#instance_settings for instance
-   * settings.
+   * [Output Only] Type of the resource. Alwayscompute#instance_settings for instance settings.
    * @param kind kind or {@code null} for none
    */
   public InstanceSettings setKind(java.lang.String kind) {
@@ -197,8 +194,8 @@ public final class InstanceSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] URL of the zone where the resource resides You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the zone where the resource resides You must specify this field as part of
+   * the HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -206,8 +203,8 @@ public final class InstanceSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] URL of the zone where the resource resides You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the zone where the resource resides You must specify this field as part of
+   * the HTTP request URL. It is not settable as a field in the request body.
    * @param zone zone or {@code null} for none
    */
   public InstanceSettings setZone(java.lang.String zone) {

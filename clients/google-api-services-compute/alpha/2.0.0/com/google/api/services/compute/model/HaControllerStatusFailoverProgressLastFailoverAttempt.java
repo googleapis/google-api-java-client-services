@@ -30,21 +30,21 @@ package com.google.api.services.compute.model;
 public final class HaControllerStatusFailoverProgressLastFailoverAttempt extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Encountered errors during the last attempt to process failover.
+   * [Output Only] Encountered errors during the last attempt to process failover.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Errors errors;
 
   /**
-   * Output only. [Output Only] Show timestamp only if there is an error.RFC3339 text format.
+   * [Output Only] Show timestamp only if there is an error.RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestamp;
 
   /**
-   * Output only. [Output Only] Encountered errors during the last attempt to process failover.
+   * [Output Only] Encountered errors during the last attempt to process failover.
    * @return value or {@code null} for none
    */
   public Errors getErrors() {
@@ -52,7 +52,7 @@ public final class HaControllerStatusFailoverProgressLastFailoverAttempt extends
   }
 
   /**
-   * Output only. [Output Only] Encountered errors during the last attempt to process failover.
+   * [Output Only] Encountered errors during the last attempt to process failover.
    * @param errors errors or {@code null} for none
    */
   public HaControllerStatusFailoverProgressLastFailoverAttempt setErrors(Errors errors) {
@@ -61,7 +61,7 @@ public final class HaControllerStatusFailoverProgressLastFailoverAttempt extends
   }
 
   /**
-   * Output only. [Output Only] Show timestamp only if there is an error.RFC3339 text format.
+   * [Output Only] Show timestamp only if there is an error.RFC3339 text format.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -69,7 +69,7 @@ public final class HaControllerStatusFailoverProgressLastFailoverAttempt extends
   }
 
   /**
-   * Output only. [Output Only] Show timestamp only if there is an error.RFC3339 text format.
+   * [Output Only] Show timestamp only if there is an error.RFC3339 text format.
    * @param timestamp timestamp or {@code null} for none
    */
   public HaControllerStatusFailoverProgressLastFailoverAttempt setTimestamp(String timestamp) {
@@ -88,7 +88,7 @@ public final class HaControllerStatusFailoverProgressLastFailoverAttempt extends
   }
 
   /**
-   * Output only. [Output Only] Encountered errors during the last attempt to process failover.
+   * [Output Only] Encountered errors during the last attempt to process failover.
    */
   public static final class Errors extends com.google.api.client.json.GenericJson {
 

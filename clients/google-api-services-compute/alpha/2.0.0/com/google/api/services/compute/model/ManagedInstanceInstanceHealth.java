@@ -30,31 +30,30 @@ package com.google.api.services.compute.model;
 public final class ManagedInstanceInstanceHealth extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The current detailed instance health state.
+   * [Output Only] The current detailed instance health state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String detailedHealthState;
 
   /**
-   * Output only. [Output Only] The URL for the health check that verifies whether the instance is
-   * healthy.
+   * [Output Only] The URL for the health check that verifies whether the instance is healthy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String healthCheck;
 
   /**
-   * Output only. [Output Only] The current instance health state. This field will not get promoted
-   * to beta/GA and might be removed from alpha APIs after 01/12/2019. Please use
-   * detailed_health_state field instead.
+   * [Output Only] The current instance health state. This field will not get promoted to beta/GA
+   * and might be removed from alpha APIs after 01/12/2019. Please use detailed_health_state field
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String healthState;
 
   /**
-   * Output only. [Output Only] The current detailed instance health state.
+   * [Output Only] The current detailed instance health state.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetailedHealthState() {
@@ -62,7 +61,7 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * Output only. [Output Only] The current detailed instance health state.
+   * [Output Only] The current detailed instance health state.
    * @param detailedHealthState detailedHealthState or {@code null} for none
    */
   public ManagedInstanceInstanceHealth setDetailedHealthState(java.lang.String detailedHealthState) {
@@ -71,8 +70,7 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * Output only. [Output Only] The URL for the health check that verifies whether the instance is
-   * healthy.
+   * [Output Only] The URL for the health check that verifies whether the instance is healthy.
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthCheck() {
@@ -80,8 +78,7 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * Output only. [Output Only] The URL for the health check that verifies whether the instance is
-   * healthy.
+   * [Output Only] The URL for the health check that verifies whether the instance is healthy.
    * @param healthCheck healthCheck or {@code null} for none
    */
   public ManagedInstanceInstanceHealth setHealthCheck(java.lang.String healthCheck) {
@@ -90,9 +87,9 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * Output only. [Output Only] The current instance health state. This field will not get promoted
-   * to beta/GA and might be removed from alpha APIs after 01/12/2019. Please use
-   * detailed_health_state field instead.
+   * [Output Only] The current instance health state. This field will not get promoted to beta/GA
+   * and might be removed from alpha APIs after 01/12/2019. Please use detailed_health_state field
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthState() {
@@ -100,9 +97,9 @@ public final class ManagedInstanceInstanceHealth extends com.google.api.client.j
   }
 
   /**
-   * Output only. [Output Only] The current instance health state. This field will not get promoted
-   * to beta/GA and might be removed from alpha APIs after 01/12/2019. Please use
-   * detailed_health_state field instead.
+   * [Output Only] The current instance health state. This field will not get promoted to beta/GA
+   * and might be removed from alpha APIs after 01/12/2019. Please use detailed_health_state field
+   * instead.
    * @param healthState healthState or {@code null} for none
    */
   public ManagedInstanceInstanceHealth setHealthState(java.lang.String healthState) {

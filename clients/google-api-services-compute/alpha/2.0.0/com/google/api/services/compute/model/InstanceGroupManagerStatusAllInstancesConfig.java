@@ -30,24 +30,24 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerStatusAllInstancesConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Current all-instances configuration revision. This value is in
-   * RFC3339 text format.
+   * [Output Only] Current all-instances configuration revision. This value is in RFC3339 text
+   * format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currentRevision;
 
   /**
-   * Output only. [Output Only] A bit indicating whether this configuration has been applied to all
-   * managed instances in the group.
+   * [Output Only] A bit indicating whether this configuration has been applied to all managed
+   * instances in the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean effective;
 
   /**
-   * Output only. [Output Only] Current all-instances configuration revision. This value is in
-   * RFC3339 text format.
+   * [Output Only] Current all-instances configuration revision. This value is in RFC3339 text
+   * format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentRevision() {
@@ -55,8 +55,8 @@ public final class InstanceGroupManagerStatusAllInstancesConfig extends com.goog
   }
 
   /**
-   * Output only. [Output Only] Current all-instances configuration revision. This value is in
-   * RFC3339 text format.
+   * [Output Only] Current all-instances configuration revision. This value is in RFC3339 text
+   * format.
    * @param currentRevision currentRevision or {@code null} for none
    */
   public InstanceGroupManagerStatusAllInstancesConfig setCurrentRevision(java.lang.String currentRevision) {
@@ -65,8 +65,8 @@ public final class InstanceGroupManagerStatusAllInstancesConfig extends com.goog
   }
 
   /**
-   * Output only. [Output Only] A bit indicating whether this configuration has been applied to all
-   * managed instances in the group.
+   * [Output Only] A bit indicating whether this configuration has been applied to all managed
+   * instances in the group.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEffective() {
@@ -74,8 +74,8 @@ public final class InstanceGroupManagerStatusAllInstancesConfig extends com.goog
   }
 
   /**
-   * Output only. [Output Only] A bit indicating whether this configuration has been applied to all
-   * managed instances in the group.
+   * [Output Only] A bit indicating whether this configuration has been applied to all managed
+   * instances in the group.
    * @param effective effective or {@code null} for none
    */
   public InstanceGroupManagerStatusAllInstancesConfig setEffective(java.lang.Boolean effective) {

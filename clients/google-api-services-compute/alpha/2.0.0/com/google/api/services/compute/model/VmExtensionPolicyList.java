@@ -30,8 +30,8 @@ package com.google.api.services.compute.model;
 public final class VmExtensionPolicyList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Fingerprint of this resource. A hash of the contents stored in this
-   * object. This field is used in optimistic locking. This field will be ignored when inserting a
+   * [Output Only] Fingerprint of this resource. A hash of the contents stored in this object. This
+   * field is used in optimistic locking. This field will be ignored when inserting a
    * VmExtensionPolicy. An up-to-date fingerprint must be provided in order to update the
    * VmExtensionPolicy.
    *
@@ -43,14 +43,14 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   private java.lang.String etag;
 
   /**
-   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
+   * [Output Only] Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Output only. [Output Only] A list of VM extension policy resources.
+   * [Output Only] A list of VM extension policy resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,46 +63,46 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Type of resource.
+   * Type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Output only. [Output Only] This token allows you to get the next page of results for list
-   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
-   * for the query parameter pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachables;
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
 
   /**
-   * Output only. [Output Only] Fingerprint of this resource. A hash of the contents stored in this
-   * object. This field is used in optimistic locking. This field will be ignored when inserting a
+   * [Output Only] Fingerprint of this resource. A hash of the contents stored in this object. This
+   * field is used in optimistic locking. This field will be ignored when inserting a
    * VmExtensionPolicy. An up-to-date fingerprint must be provided in order to update the
    * VmExtensionPolicy.
    *
@@ -115,8 +115,8 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Fingerprint of this resource. A hash of the contents stored in this
-   * object. This field is used in optimistic locking. This field will be ignored when inserting a
+   * [Output Only] Fingerprint of this resource. A hash of the contents stored in this object. This
+   * field is used in optimistic locking. This field will be ignored when inserting a
    * VmExtensionPolicy. An up-to-date fingerprint must be provided in order to update the
    * VmExtensionPolicy.
    *
@@ -130,7 +130,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
+   * [Output Only] Unique identifier for the resource; defined by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -138,7 +138,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
+   * [Output Only] Unique identifier for the resource; defined by the server.
    * @param id id or {@code null} for none
    */
   public VmExtensionPolicyList setId(java.lang.String id) {
@@ -147,7 +147,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] A list of VM extension policy resources.
+   * [Output Only] A list of VM extension policy resources.
    * @return value or {@code null} for none
    */
   public java.util.List<VmExtensionPolicy> getItems() {
@@ -155,7 +155,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] A list of VM extension policy resources.
+   * [Output Only] A list of VM extension policy resources.
    * @param items items or {@code null} for none
    */
   public VmExtensionPolicyList setItems(java.util.List<VmExtensionPolicy> items) {
@@ -164,7 +164,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Type of resource.
+   * Type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -172,7 +172,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Type of resource.
+   * Type of resource.
    * @param kind kind or {@code null} for none
    */
   public VmExtensionPolicyList setKind(java.lang.String kind) {
@@ -181,10 +181,10 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] This token allows you to get the next page of results for list
-   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
-   * for the query parameter pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -192,10 +192,10 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] This token allows you to get the next page of results for list
-   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
-   * for the query parameter pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public VmExtensionPolicyList setNextPageToken(java.lang.String nextPageToken) {
@@ -204,7 +204,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -212,7 +212,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public VmExtensionPolicyList setSelfLink(java.lang.String selfLink) {
@@ -221,7 +221,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -229,7 +229,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public VmExtensionPolicyList setUnreachables(java.util.List<java.lang.String> unreachables) {
@@ -238,7 +238,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -246,7 +246,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    * @param warning warning or {@code null} for none
    */
   public VmExtensionPolicyList setWarning(Warning warning) {
@@ -265,7 +265,7 @@ public final class VmExtensionPolicyList extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 

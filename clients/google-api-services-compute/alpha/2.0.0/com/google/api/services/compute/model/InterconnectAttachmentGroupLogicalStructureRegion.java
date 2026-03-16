@@ -36,7 +36,7 @@ public final class InterconnectAttachmentGroupLogicalStructureRegion extends com
   private java.util.List<InterconnectAttachmentGroupLogicalStructureRegionMetro> metros;
 
   /**
-   * Output only. [Output Only] The name of a region, like "us-central1".
+   * [Output Only] The name of a region, like "us-central1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class InterconnectAttachmentGroupLogicalStructureRegion extends com
   }
 
   /**
-   * Output only. [Output Only] The name of a region, like "us-central1".
+   * [Output Only] The name of a region, like "us-central1".
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -66,7 +66,7 @@ public final class InterconnectAttachmentGroupLogicalStructureRegion extends com
   }
 
   /**
-   * Output only. [Output Only] The name of a region, like "us-central1".
+   * [Output Only] The name of a region, like "us-central1".
    * @param region region or {@code null} for none
    */
   public InterconnectAttachmentGroupLogicalStructureRegion setRegion(java.lang.String region) {

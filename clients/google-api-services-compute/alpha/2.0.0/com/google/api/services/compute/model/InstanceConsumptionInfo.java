@@ -30,35 +30,35 @@ package com.google.api.services.compute.model;
 public final class InstanceConsumptionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The number of virtual CPUs that are available to the instance.
+   * The number of virtual CPUs that are available to the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer guestCpus;
 
   /**
-   * Output only. The amount of local SSD storage available to the instance, defined in GiB.
+   * The amount of local SSD storage available to the instance, defined in GiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer localSsdGb;
 
   /**
-   * Output only. The amount of physical memory available to the instance, defined in MiB.
+   * The amount of physical memory available to the instance, defined in MiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer memoryMb;
 
   /**
-   * Output only. The minimal guaranteed number of virtual CPUs that are reserved.
+   * The minimal guaranteed number of virtual CPUs that are reserved.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minNodeCpus;
 
   /**
-   * Output only. The number of virtual CPUs that are available to the instance.
+   * The number of virtual CPUs that are available to the instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getGuestCpus() {
@@ -66,7 +66,7 @@ public final class InstanceConsumptionInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The number of virtual CPUs that are available to the instance.
+   * The number of virtual CPUs that are available to the instance.
    * @param guestCpus guestCpus or {@code null} for none
    */
   public InstanceConsumptionInfo setGuestCpus(java.lang.Integer guestCpus) {
@@ -75,7 +75,7 @@ public final class InstanceConsumptionInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The amount of local SSD storage available to the instance, defined in GiB.
+   * The amount of local SSD storage available to the instance, defined in GiB.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLocalSsdGb() {
@@ -83,7 +83,7 @@ public final class InstanceConsumptionInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The amount of local SSD storage available to the instance, defined in GiB.
+   * The amount of local SSD storage available to the instance, defined in GiB.
    * @param localSsdGb localSsdGb or {@code null} for none
    */
   public InstanceConsumptionInfo setLocalSsdGb(java.lang.Integer localSsdGb) {
@@ -92,7 +92,7 @@ public final class InstanceConsumptionInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The amount of physical memory available to the instance, defined in MiB.
+   * The amount of physical memory available to the instance, defined in MiB.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMemoryMb() {
@@ -100,7 +100,7 @@ public final class InstanceConsumptionInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The amount of physical memory available to the instance, defined in MiB.
+   * The amount of physical memory available to the instance, defined in MiB.
    * @param memoryMb memoryMb or {@code null} for none
    */
   public InstanceConsumptionInfo setMemoryMb(java.lang.Integer memoryMb) {
@@ -109,7 +109,7 @@ public final class InstanceConsumptionInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The minimal guaranteed number of virtual CPUs that are reserved.
+   * The minimal guaranteed number of virtual CPUs that are reserved.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinNodeCpus() {
@@ -117,7 +117,7 @@ public final class InstanceConsumptionInfo extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The minimal guaranteed number of virtual CPUs that are reserved.
+   * The minimal guaranteed number of virtual CPUs that are reserved.
    * @param minNodeCpus minNodeCpus or {@code null} for none
    */
   public InstanceConsumptionInfo setMinNodeCpus(java.lang.Integer minNodeCpus) {

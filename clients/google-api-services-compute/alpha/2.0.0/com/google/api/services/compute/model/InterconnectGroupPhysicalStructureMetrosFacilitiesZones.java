@@ -30,24 +30,24 @@ package com.google.api.services.compute.model;
 public final class InterconnectGroupPhysicalStructureMetrosFacilitiesZones extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] URLs of Interconnects in this redundancy group in the given metro,
-   * facility, and zone.
+   * [Output Only] URLs of Interconnects in this redundancy group in the given metro, facility, and
+   * zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> interconnects;
 
   /**
-   * Output only. [Output Only] The name of the zone, either "zone1" or "zone2". This is the second
-   * component of the location of Interconnects in this facility.
+   * [Output Only] The name of the zone, either "zone1" or "zone2". This is the second component of
+   * the location of Interconnects in this facility.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Output only. [Output Only] URLs of Interconnects in this redundancy group in the given metro,
-   * facility, and zone.
+   * [Output Only] URLs of Interconnects in this redundancy group in the given metro, facility, and
+   * zone.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInterconnects() {
@@ -55,8 +55,8 @@ public final class InterconnectGroupPhysicalStructureMetrosFacilitiesZones exten
   }
 
   /**
-   * Output only. [Output Only] URLs of Interconnects in this redundancy group in the given metro,
-   * facility, and zone.
+   * [Output Only] URLs of Interconnects in this redundancy group in the given metro, facility, and
+   * zone.
    * @param interconnects interconnects or {@code null} for none
    */
   public InterconnectGroupPhysicalStructureMetrosFacilitiesZones setInterconnects(java.util.List<java.lang.String> interconnects) {
@@ -65,8 +65,8 @@ public final class InterconnectGroupPhysicalStructureMetrosFacilitiesZones exten
   }
 
   /**
-   * Output only. [Output Only] The name of the zone, either "zone1" or "zone2". This is the second
-   * component of the location of Interconnects in this facility.
+   * [Output Only] The name of the zone, either "zone1" or "zone2". This is the second component of
+   * the location of Interconnects in this facility.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -74,8 +74,8 @@ public final class InterconnectGroupPhysicalStructureMetrosFacilitiesZones exten
   }
 
   /**
-   * Output only. [Output Only] The name of the zone, either "zone1" or "zone2". This is the second
-   * component of the location of Interconnects in this facility.
+   * [Output Only] The name of the zone, either "zone1" or "zone2". This is the second component of
+   * the location of Interconnects in this facility.
    * @param zone zone or {@code null} for none
    */
   public InterconnectGroupPhysicalStructureMetrosFacilitiesZones setZone(java.lang.String zone) {

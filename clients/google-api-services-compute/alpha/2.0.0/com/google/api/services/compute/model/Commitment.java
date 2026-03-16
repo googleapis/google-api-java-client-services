@@ -58,7 +58,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String category;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] Commitment end time inRFC3339 text format.
+   * [Output Only] Commitment end time inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,15 +95,14 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> existingReservations;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#commitment for commitments.
+   * [Output Only] Type of the resource. Always compute#commitment for commitments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,14 +135,6 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private CommitmentParams params;
-
-  /**
    * The minimum time duration that you commit to purchasing resources. The plan that you choose
    * determines the preset term length of the commitment (which is 1 year or 3 years) and affects
    * the discount rate that you receive for your resources. Committing to a longer time duration
@@ -155,8 +146,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String plan;
 
   /**
-   * Output only. [Output Only] URL of the region where the commitment and committed resources are
-   * located.
+   * [Output Only] URL of the region where the commitment and committed resources are located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +166,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.util.List<Reservation> reservations;
 
   /**
-   * Output only. [Output Only] Status information for Commitment resource.
+   * [Output Only] Status information for Commitment resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,14 +181,14 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.util.List<ResourceCommitment> resources;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,23 +203,23 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String splitSourceCommitment;
 
   /**
-   * Output only. [Output Only] Commitment start time inRFC3339 text format.
+   * [Output Only] Commitment start time inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startTimestamp;
 
   /**
-   * Output only. [Output Only] Status of the commitment with regards to eventual expiration (each
-   * commitment has an end date defined). Status can be one of the following values: NOT_YET_ACTIVE,
-   * ACTIVE, orEXPIRED.
+   * [Output Only] Status of the commitment with regards to eventual expiration (each commitment has
+   * an end date defined). Status can be one of the following values: NOT_YET_ACTIVE, ACTIVE,
+   * orEXPIRED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. [Output Only] An optional, human-readable explanation of the status.
+   * [Output Only] An optional, human-readable explanation of the status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,11 +235,10 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    * COMPUTE_OPTIMIZED_C2D,  COMPUTE_OPTIMIZED_C3, COMPUTE_OPTIMIZED_C3D,COMPUTE_OPTIMIZED_H3,
    * GENERAL_PURPOSE,GENERAL_PURPOSE_C4, GENERAL_PURPOSE_E2,GENERAL_PURPOSE_N2,
    * GENERAL_PURPOSE_N2D,GENERAL_PURPOSE_N4, GENERAL_PURPOSE_T2D,GRAPHICS_OPTIMIZED,
-   * GRAPHICS_OPTIMIZED_G4,MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3,MEMORY_OPTIMIZED_X4,
-   * STORAGE_OPTIMIZED_Z3. For example, type MEMORY_OPTIMIZED specifies a commitment that applies
-   * only to eligible resources of memory optimized M1 and M2 machine series. Type GENERAL_PURPOSE
-   * specifies a commitment that applies only to eligible resources of general purpose N1 machine
-   * series.
+   * MEMORY_OPTIMIZED,MEMORY_OPTIMIZED_M3, MEMORY_OPTIMIZED_X4,STORAGE_OPTIMIZED_Z3. For example,
+   * type MEMORY_OPTIMIZED specifies a commitment that applies only to eligible resources of memory
+   * optimized M1 and M2 machine series. Type GENERAL_PURPOSE specifies a commitment that applies
+   * only to eligible resources of general purpose N1 machine series.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -308,7 +297,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -316,7 +305,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Commitment setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -365,7 +354,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Commitment end time inRFC3339 text format.
+   * [Output Only] Commitment end time inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndTimestamp() {
@@ -373,7 +362,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Commitment end time inRFC3339 text format.
+   * [Output Only] Commitment end time inRFC3339 text format.
    * @param endTimestamp endTimestamp or {@code null} for none
    */
   public Commitment setEndTimestamp(java.lang.String endTimestamp) {
@@ -397,8 +386,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -406,8 +394,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public Commitment setId(java.math.BigInteger id) {
@@ -416,7 +403,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#commitment for commitments.
+   * [Output Only] Type of the resource. Always compute#commitment for commitments.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -424,7 +411,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#commitment for commitments.
+   * [Output Only] Type of the resource. Always compute#commitment for commitments.
    * @param kind kind or {@code null} for none
    */
   public Commitment setKind(java.lang.String kind) {
@@ -494,25 +481,6 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * @return value or {@code null} for none
-   */
-  public CommitmentParams getParams() {
-    return params;
-  }
-
-  /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * @param params params or {@code null} for none
-   */
-  public Commitment setParams(CommitmentParams params) {
-    this.params = params;
-    return this;
-  }
-
-  /**
    * The minimum time duration that you commit to purchasing resources. The plan that you choose
    * determines the preset term length of the commitment (which is 1 year or 3 years) and affects
    * the discount rate that you receive for your resources. Committing to a longer time duration
@@ -538,8 +506,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the commitment and committed resources are
-   * located.
+   * [Output Only] URL of the region where the commitment and committed resources are located.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -547,8 +514,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the commitment and committed resources are
-   * located.
+   * [Output Only] URL of the region where the commitment and committed resources are located.
    * @param region region or {@code null} for none
    */
   public Commitment setRegion(java.lang.String region) {
@@ -586,7 +552,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status information for Commitment resource.
+   * [Output Only] Status information for Commitment resource.
    * @return value or {@code null} for none
    */
   public CommitmentResourceStatus getResourceStatus() {
@@ -594,7 +560,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status information for Commitment resource.
+   * [Output Only] Status information for Commitment resource.
    * @param resourceStatus resourceStatus or {@code null} for none
    */
   public Commitment setResourceStatus(CommitmentResourceStatus resourceStatus) {
@@ -622,7 +588,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -630,7 +596,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Commitment setSelfLink(java.lang.String selfLink) {
@@ -639,7 +605,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -647,7 +613,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Commitment setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -675,7 +641,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Commitment start time inRFC3339 text format.
+   * [Output Only] Commitment start time inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartTimestamp() {
@@ -683,7 +649,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Commitment start time inRFC3339 text format.
+   * [Output Only] Commitment start time inRFC3339 text format.
    * @param startTimestamp startTimestamp or {@code null} for none
    */
   public Commitment setStartTimestamp(java.lang.String startTimestamp) {
@@ -692,9 +658,9 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status of the commitment with regards to eventual expiration (each
-   * commitment has an end date defined). Status can be one of the following values: NOT_YET_ACTIVE,
-   * ACTIVE, orEXPIRED.
+   * [Output Only] Status of the commitment with regards to eventual expiration (each commitment has
+   * an end date defined). Status can be one of the following values: NOT_YET_ACTIVE, ACTIVE,
+   * orEXPIRED.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -702,9 +668,9 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status of the commitment with regards to eventual expiration (each
-   * commitment has an end date defined). Status can be one of the following values: NOT_YET_ACTIVE,
-   * ACTIVE, orEXPIRED.
+   * [Output Only] Status of the commitment with regards to eventual expiration (each commitment has
+   * an end date defined). Status can be one of the following values: NOT_YET_ACTIVE, ACTIVE,
+   * orEXPIRED.
    * @param status status or {@code null} for none
    */
   public Commitment setStatus(java.lang.String status) {
@@ -713,7 +679,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] An optional, human-readable explanation of the status.
+   * [Output Only] An optional, human-readable explanation of the status.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatusMessage() {
@@ -721,7 +687,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] An optional, human-readable explanation of the status.
+   * [Output Only] An optional, human-readable explanation of the status.
    * @param statusMessage statusMessage or {@code null} for none
    */
   public Commitment setStatusMessage(java.lang.String statusMessage) {
@@ -739,11 +705,10 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    * COMPUTE_OPTIMIZED_C2D,  COMPUTE_OPTIMIZED_C3, COMPUTE_OPTIMIZED_C3D,COMPUTE_OPTIMIZED_H3,
    * GENERAL_PURPOSE,GENERAL_PURPOSE_C4, GENERAL_PURPOSE_E2,GENERAL_PURPOSE_N2,
    * GENERAL_PURPOSE_N2D,GENERAL_PURPOSE_N4, GENERAL_PURPOSE_T2D,GRAPHICS_OPTIMIZED,
-   * GRAPHICS_OPTIMIZED_G4,MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3,MEMORY_OPTIMIZED_X4,
-   * STORAGE_OPTIMIZED_Z3. For example, type MEMORY_OPTIMIZED specifies a commitment that applies
-   * only to eligible resources of memory optimized M1 and M2 machine series. Type GENERAL_PURPOSE
-   * specifies a commitment that applies only to eligible resources of general purpose N1 machine
-   * series.
+   * MEMORY_OPTIMIZED,MEMORY_OPTIMIZED_M3, MEMORY_OPTIMIZED_X4,STORAGE_OPTIMIZED_Z3. For example,
+   * type MEMORY_OPTIMIZED specifies a commitment that applies only to eligible resources of memory
+   * optimized M1 and M2 machine series. Type GENERAL_PURPOSE specifies a commitment that applies
+   * only to eligible resources of general purpose N1 machine series.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -760,11 +725,10 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    * COMPUTE_OPTIMIZED_C2D,  COMPUTE_OPTIMIZED_C3, COMPUTE_OPTIMIZED_C3D,COMPUTE_OPTIMIZED_H3,
    * GENERAL_PURPOSE,GENERAL_PURPOSE_C4, GENERAL_PURPOSE_E2,GENERAL_PURPOSE_N2,
    * GENERAL_PURPOSE_N2D,GENERAL_PURPOSE_N4, GENERAL_PURPOSE_T2D,GRAPHICS_OPTIMIZED,
-   * GRAPHICS_OPTIMIZED_G4,MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3,MEMORY_OPTIMIZED_X4,
-   * STORAGE_OPTIMIZED_Z3. For example, type MEMORY_OPTIMIZED specifies a commitment that applies
-   * only to eligible resources of memory optimized M1 and M2 machine series. Type GENERAL_PURPOSE
-   * specifies a commitment that applies only to eligible resources of general purpose N1 machine
-   * series.
+   * MEMORY_OPTIMIZED,MEMORY_OPTIMIZED_M3, MEMORY_OPTIMIZED_X4,STORAGE_OPTIMIZED_Z3. For example,
+   * type MEMORY_OPTIMIZED specifies a commitment that applies only to eligible resources of memory
+   * optimized M1 and M2 machine series. Type GENERAL_PURPOSE specifies a commitment that applies
+   * only to eligible resources of general purpose N1 machine series.
    * @param type type or {@code null} for none
    */
   public Commitment setType(java.lang.String type) {

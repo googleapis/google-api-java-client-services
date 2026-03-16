@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class PacketMirroringForwardingRuleInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Unique identifier for the forwarding rule; defined by the server.
+   * [Output Only] Unique identifier for the forwarding rule; defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class PacketMirroringForwardingRuleInfo extends com.google.api.clie
   private java.lang.String url;
 
   /**
-   * Output only. [Output Only] Unique identifier for the forwarding rule; defined by the server.
+   * [Output Only] Unique identifier for the forwarding rule; defined by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getCanonicalUrl() {
@@ -53,7 +53,7 @@ public final class PacketMirroringForwardingRuleInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. [Output Only] Unique identifier for the forwarding rule; defined by the server.
+   * [Output Only] Unique identifier for the forwarding rule; defined by the server.
    * @param canonicalUrl canonicalUrl or {@code null} for none
    */
   public PacketMirroringForwardingRuleInfo setCanonicalUrl(java.lang.String canonicalUrl) {

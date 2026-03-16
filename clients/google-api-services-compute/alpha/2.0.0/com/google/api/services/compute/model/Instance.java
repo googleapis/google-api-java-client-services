@@ -55,14 +55,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ConfidentialInstanceConfig confidentialInstanceConfig;
 
   /**
-   * Output only. [Output Only] The CPU platform used by this instance.
+   * [Output Only] The CPU platform used by this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cpuPlatform;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +146,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String hostname;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -188,7 +187,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String keyRevocationActionType;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#instance for instances.
+   * [Output Only] Type of the resource. Always compute#instance for instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,21 +213,21 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. [Output Only] Last start timestamp inRFC3339 text format.
+   * [Output Only] Last start timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastStartTimestamp;
 
   /**
-   * Output only. [Output Only] Last stop timestamp inRFC3339 text format.
+   * [Output Only] Last stop timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastStopTimestamp;
 
   /**
-   * Output only. [Output Only] Last suspended timestamp inRFC3339 text format.
+   * [Output Only] Last suspended timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +320,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String postKeyRevocationActionType;
 
   /**
-   * Output only. Total amount of preserved state for SUSPENDED instances. Read-only in the api.
+   * Total amount of preserved state for SUSPENDED instances. Read-only in the api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -350,22 +349,22 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resourcePolicies;
 
   /**
-   * Output only. [Output Only] Specifies values set for instance attributes as compared to the
-   * values requested by user in the corresponding input only field.
+   * [Output Only] Specifies values set for instance attributes as compared to the values requested
+   * by user in the corresponding input only field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceStatus resourceStatus;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -387,14 +386,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> secureTags;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -432,14 +431,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ShieldedInstanceIntegrityPolicy shieldedInstanceIntegrityPolicy;
 
   /**
-   * Output only. Deprecating, please use shielded_instance_config.
+   * Deprecating, please use shielded_instance_config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ShieldedVmConfig shieldedVmConfig;
 
   /**
-   * Output only. Deprecating, please use shielded_instance_integrity_policy.
+   * Deprecating, please use shielded_instance_integrity_policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -460,24 +459,24 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private CustomerEncryptionKey sourceMachineImageEncryptionKey;
 
   /**
-   * Output only. [Output Only] Whether a VM has been restricted for start because Compute Engine
-   * has detected suspicious activity.
+   * [Output Only] Whether a VM has been restricted for start because Compute Engine has detected
+   * suspicious activity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean startRestricted;
 
   /**
-   * Output only. [Output Only] The status of the instance. One of the following values:
-   * PROVISIONING, STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED, REPAIRING, andTERMINATED. For
-   * more information about the status of the instance, see  Instance life cycle.
+   * [Output Only] The status of the instance. One of the following values: PROVISIONING,
+   * STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED, REPAIRING, andTERMINATED. For more information
+   * about the status of the instance, see  Instance life cycle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. [Output Only] An optional, human-readable explanation of the status.
+   * [Output Only] An optional, human-readable explanation of the status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -494,8 +493,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private Tags tags;
 
   /**
-   * Output only. [Output Only] DEPRECATED: Please useresource_status.upcoming_maintenance instead.
-   * Specifies upcoming maintenance for the instance.
+   * [Output Only] DEPRECATED: Please useresource_status.upcoming_maintenance instead. Specifies
+   * upcoming maintenance for the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -508,8 +507,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private WorkloadIdentityConfig workloadIdentityConfig;
 
   /**
-   * Output only. [Output Only] URL of the zone where the instance resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the zone where the instance resides. You must specify this field as part
+   * of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -569,7 +568,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The CPU platform used by this instance.
+   * [Output Only] The CPU platform used by this instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getCpuPlatform() {
@@ -577,7 +576,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The CPU platform used by this instance.
+   * [Output Only] The CPU platform used by this instance.
    * @param cpuPlatform cpuPlatform or {@code null} for none
    */
   public Instance setCpuPlatform(java.lang.String cpuPlatform) {
@@ -586,7 +585,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -594,7 +593,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Instance setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -795,8 +794,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -804,8 +802,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public Instance setId(java.math.BigInteger id) {
@@ -894,7 +891,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#instance for instances.
+   * [Output Only] Type of the resource. Always compute#instance for instances.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -902,7 +899,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#instance for instances.
+   * [Output Only] Type of the resource. Always compute#instance for instances.
    * @param kind kind or {@code null} for none
    */
   public Instance setKind(java.lang.String kind) {
@@ -993,7 +990,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Last start timestamp inRFC3339 text format.
+   * [Output Only] Last start timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastStartTimestamp() {
@@ -1001,7 +998,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Last start timestamp inRFC3339 text format.
+   * [Output Only] Last start timestamp inRFC3339 text format.
    * @param lastStartTimestamp lastStartTimestamp or {@code null} for none
    */
   public Instance setLastStartTimestamp(java.lang.String lastStartTimestamp) {
@@ -1010,7 +1007,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Last stop timestamp inRFC3339 text format.
+   * [Output Only] Last stop timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastStopTimestamp() {
@@ -1018,7 +1015,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Last stop timestamp inRFC3339 text format.
+   * [Output Only] Last stop timestamp inRFC3339 text format.
    * @param lastStopTimestamp lastStopTimestamp or {@code null} for none
    */
   public Instance setLastStopTimestamp(java.lang.String lastStopTimestamp) {
@@ -1027,7 +1024,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Last suspended timestamp inRFC3339 text format.
+   * [Output Only] Last suspended timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastSuspendedTimestamp() {
@@ -1035,7 +1032,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Last suspended timestamp inRFC3339 text format.
+   * [Output Only] Last suspended timestamp inRFC3339 text format.
    * @param lastSuspendedTimestamp lastSuspendedTimestamp or {@code null} for none
    */
   public Instance setLastSuspendedTimestamp(java.lang.String lastSuspendedTimestamp) {
@@ -1243,7 +1240,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Total amount of preserved state for SUSPENDED instances. Read-only in the api.
+   * Total amount of preserved state for SUSPENDED instances. Read-only in the api.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPreservedStateSizeGb() {
@@ -1251,7 +1248,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Total amount of preserved state for SUSPENDED instances. Read-only in the api.
+   * Total amount of preserved state for SUSPENDED instances. Read-only in the api.
    * @param preservedStateSizeGb preservedStateSizeGb or {@code null} for none
    */
   public Instance setPreservedStateSizeGb(java.lang.Long preservedStateSizeGb) {
@@ -1313,8 +1310,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Specifies values set for instance attributes as compared to the
-   * values requested by user in the corresponding input only field.
+   * [Output Only] Specifies values set for instance attributes as compared to the values requested
+   * by user in the corresponding input only field.
    * @return value or {@code null} for none
    */
   public ResourceStatus getResourceStatus() {
@@ -1322,8 +1319,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Specifies values set for instance attributes as compared to the
-   * values requested by user in the corresponding input only field.
+   * [Output Only] Specifies values set for instance attributes as compared to the values requested
+   * by user in the corresponding input only field.
    * @param resourceStatus resourceStatus or {@code null} for none
    */
   public Instance setResourceStatus(ResourceStatus resourceStatus) {
@@ -1332,7 +1329,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -1340,7 +1337,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public Instance setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -1349,7 +1346,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -1357,7 +1354,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Instance setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -1402,7 +1399,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -1410,7 +1407,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Instance setSelfLink(java.lang.String selfLink) {
@@ -1419,7 +1416,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -1427,7 +1424,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Instance setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -1510,7 +1507,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecating, please use shielded_instance_config.
+   * Deprecating, please use shielded_instance_config.
    * @return value or {@code null} for none
    */
   public ShieldedVmConfig getShieldedVmConfig() {
@@ -1518,7 +1515,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecating, please use shielded_instance_config.
+   * Deprecating, please use shielded_instance_config.
    * @param shieldedVmConfig shieldedVmConfig or {@code null} for none
    */
   public Instance setShieldedVmConfig(ShieldedVmConfig shieldedVmConfig) {
@@ -1527,7 +1524,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecating, please use shielded_instance_integrity_policy.
+   * Deprecating, please use shielded_instance_integrity_policy.
    * @return value or {@code null} for none
    */
   public ShieldedVmIntegrityPolicy getShieldedVmIntegrityPolicy() {
@@ -1535,7 +1532,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecating, please use shielded_instance_integrity_policy.
+   * Deprecating, please use shielded_instance_integrity_policy.
    * @param shieldedVmIntegrityPolicy shieldedVmIntegrityPolicy or {@code null} for none
    */
   public Instance setShieldedVmIntegrityPolicy(ShieldedVmIntegrityPolicy shieldedVmIntegrityPolicy) {
@@ -1578,8 +1575,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Whether a VM has been restricted for start because Compute Engine
-   * has detected suspicious activity.
+   * [Output Only] Whether a VM has been restricted for start because Compute Engine has detected
+   * suspicious activity.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStartRestricted() {
@@ -1587,8 +1584,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Whether a VM has been restricted for start because Compute Engine
-   * has detected suspicious activity.
+   * [Output Only] Whether a VM has been restricted for start because Compute Engine has detected
+   * suspicious activity.
    * @param startRestricted startRestricted or {@code null} for none
    */
   public Instance setStartRestricted(java.lang.Boolean startRestricted) {
@@ -1597,9 +1594,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the instance. One of the following values:
-   * PROVISIONING, STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED, REPAIRING, andTERMINATED. For
-   * more information about the status of the instance, see  Instance life cycle.
+   * [Output Only] The status of the instance. One of the following values: PROVISIONING,
+   * STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED, REPAIRING, andTERMINATED. For more information
+   * about the status of the instance, see  Instance life cycle.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -1607,9 +1604,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the instance. One of the following values:
-   * PROVISIONING, STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED, REPAIRING, andTERMINATED. For
-   * more information about the status of the instance, see  Instance life cycle.
+   * [Output Only] The status of the instance. One of the following values: PROVISIONING,
+   * STAGING,RUNNING, STOPPING, SUSPENDING,SUSPENDED, REPAIRING, andTERMINATED. For more information
+   * about the status of the instance, see  Instance life cycle.
    * @param status status or {@code null} for none
    */
   public Instance setStatus(java.lang.String status) {
@@ -1618,7 +1615,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] An optional, human-readable explanation of the status.
+   * [Output Only] An optional, human-readable explanation of the status.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatusMessage() {
@@ -1626,7 +1623,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] An optional, human-readable explanation of the status.
+   * [Output Only] An optional, human-readable explanation of the status.
    * @param statusMessage statusMessage or {@code null} for none
    */
   public Instance setStatusMessage(java.lang.String statusMessage) {
@@ -1658,8 +1655,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] DEPRECATED: Please useresource_status.upcoming_maintenance instead.
-   * Specifies upcoming maintenance for the instance.
+   * [Output Only] DEPRECATED: Please useresource_status.upcoming_maintenance instead. Specifies
+   * upcoming maintenance for the instance.
    * @return value or {@code null} for none
    */
   public UpcomingMaintenance getUpcomingMaintenance() {
@@ -1667,8 +1664,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] DEPRECATED: Please useresource_status.upcoming_maintenance instead.
-   * Specifies upcoming maintenance for the instance.
+   * [Output Only] DEPRECATED: Please useresource_status.upcoming_maintenance instead. Specifies
+   * upcoming maintenance for the instance.
    * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
    */
   public Instance setUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {
@@ -1692,8 +1689,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the zone where the instance resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the zone where the instance resides. You must specify this field as part
+   * of the HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -1701,8 +1698,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the zone where the instance resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the zone where the instance resides. You must specify this field as part
+   * of the HTTP request URL. It is not settable as a field in the request body.
    * @param zone zone or {@code null} for none
    */
   public Instance setZone(java.lang.String zone) {

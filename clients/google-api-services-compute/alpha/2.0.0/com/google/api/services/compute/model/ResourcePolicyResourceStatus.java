@@ -32,18 +32,16 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Specifies a set of output values reffering to the
-   * instance_schedule_policy system status. This field should have the same name as corresponding
-   * policy field.
+   * [Output Only] Specifies a set of output values reffering to the instance_schedule_policy system
+   * status. This field should have the same name as corresponding policy field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourcePolicyResourceStatusInstanceSchedulePolicyStatus instanceSchedulePolicy;
 
   /**
-   * Output only. [Output Only] Specifies a set of output values reffering to the
-   * instance_schedule_policy system status. This field should have the same name as corresponding
-   * policy field.
+   * [Output Only] Specifies a set of output values reffering to the instance_schedule_policy system
+   * status. This field should have the same name as corresponding policy field.
    * @return value or {@code null} for none
    */
   public ResourcePolicyResourceStatusInstanceSchedulePolicyStatus getInstanceSchedulePolicy() {
@@ -51,9 +49,8 @@ public final class ResourcePolicyResourceStatus extends com.google.api.client.js
   }
 
   /**
-   * Output only. [Output Only] Specifies a set of output values reffering to the
-   * instance_schedule_policy system status. This field should have the same name as corresponding
-   * policy field.
+   * [Output Only] Specifies a set of output values reffering to the instance_schedule_policy system
+   * status. This field should have the same name as corresponding policy field.
    * @param instanceSchedulePolicy instanceSchedulePolicy or {@code null} for none
    */
   public ResourcePolicyResourceStatus setInstanceSchedulePolicy(ResourcePolicyResourceStatusInstanceSchedulePolicyStatus instanceSchedulePolicy) {

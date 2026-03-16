@@ -58,8 +58,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool
-   * types.
+   * [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +128,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,8 +218,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool
-   * types.
+   * [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool types.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -228,8 +226,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool
-   * types.
+   * [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool types.
    * @param kind kind or {@code null} for none
    */
   public StoragePoolType setKind(java.lang.String kind) {
@@ -391,7 +388,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -399,7 +396,7 @@ public final class StoragePoolType extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public StoragePoolType setSelfLinkWithId(java.lang.String selfLinkWithId) {

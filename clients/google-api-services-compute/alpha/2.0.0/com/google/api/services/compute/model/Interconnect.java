@@ -70,15 +70,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> availableFeatures;
 
   /**
-   * Output only. [Output Only] A list of CircuitInfo objects, that describe the individual circuits
-   * in this LAG.
+   * [Output Only] A list of CircuitInfo objects, that describe the individual circuits in this LAG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<InterconnectCircuitInfo> circuitInfos;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,55 +99,46 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] URL of the InterconnectLocation object that represents where this
-   * connection is to be provisioned. By default it will be the same as the location field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String effectiveLocation;
-
-  /**
-   * Output only. [Output Only] A list of outages expected for this Interconnect.
+   * [Output Only] A list of outages expected for this Interconnect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<InterconnectOutageNotification> expectedOutages;
 
   /**
-   * Output only. [Output Only] IP address configured on the Google side of the Interconnect link.
-   * This can be used only for ping tests.
+   * [Output Only] IP address configured on the Google side of the Interconnect link. This can be
+   * used only for ping tests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googleIpAddress;
 
   /**
-   * Output only. [Output Only] Google reference ID to be used when raising support tickets with
-   * Google or otherwise to debug backend connectivity issues.
+   * [Output Only] Google reference ID to be used when raising support tickets with Google or
+   * otherwise to debug backend connectivity issues.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String googleReferenceId;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] A list of the URLs of all InterconnectAttachments configured to use
-   * this Interconnect.
+   * [Output Only] A list of the URLs of all InterconnectAttachments configured to use  this
+   * Interconnect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> interconnectAttachments;
 
   /**
-   * Output only. [Output Only] URLs of InterconnectGroups that include this Interconnect. Order is
-   * arbitrary and items are unique.
+   * [Output Only] URLs of InterconnectGroups that include this Interconnect. Order is arbitrary and
+   * items are unique.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +156,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String interconnectType;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnect for interconnects.
+   * [Output Only] Type of the resource. Alwayscompute#interconnect for interconnects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,9 +243,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String nocContactEmail;
 
   /**
-   * Output only. [Output Only] The current status of this Interconnect's functionality, which can
-   * take one of the following values:        - OS_ACTIVE: A valid Interconnect, which is turned up
-   * and is ready to    use. Attachments may be provisioned on this Interconnect.
+   * [Output Only] The current status of this Interconnect's functionality, which can take one of
+   * the following values:        - OS_ACTIVE: A valid Interconnect, which is turned up and is ready
+   * to    use. Attachments may be provisioned on this Interconnect.
    *
    * - OS_UNPROVISIONED: An Interconnect that has not completed turnup. No attachments may be
    * provisioned on this Interconnect. - OS_UNDER_MAINTENANCE: An Interconnect that is undergoing
@@ -274,16 +264,16 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private InterconnectParams params;
 
   /**
-   * Output only. [Output Only] IP address configured on the customer side of the Interconnect link.
-   * The customer should configure this IP address during turnup when prompted by Google NOC. This
-   * can be used only for ping tests.
+   * [Output Only] IP address configured on the customer side of the Interconnect link. The customer
+   * should configure this IP address during turnup when prompted by Google NOC. This can be used
+   * only for ping tests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerIpAddress;
 
   /**
-   * Output only. [Output Only] Number of links actually provisioned in this interconnect.
+   * [Output Only] Number of links actually provisioned in this interconnect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -318,48 +308,49 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.Integer requestedLinkCount;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only] The current state of Interconnect functionality, which can take one
-   * of the following values:        - ACTIVE: The Interconnect is valid, turned up and ready to
-   * use.    Attachments may be provisioned on this Interconnect.    - UNPROVISIONED: The
-   * Interconnect has not completed turnup. No    attachments may be provisioned on this
-   * Interconnect.    - UNDER_MAINTENANCE: The Interconnect is undergoing internal maintenance.
-   * No attachments may be provisioned or updated on this    Interconnect.
+   * [Output Only] The current state of Interconnect functionality, which can take one of the
+   * following values:        - ACTIVE: The Interconnect is valid, turned up and ready to use.
+   * Attachments may be provisioned on this Interconnect.    - UNPROVISIONED: The Interconnect has
+   * not completed turnup. No    attachments may be provisioned on this Interconnect.    -
+   * UNDER_MAINTENANCE: The Interconnect is undergoing internal maintenance.    No attachments may
+   * be provisioned or updated on this    Interconnect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * To be deprecated.
+   * Specific subzone in the InterconnectLocation that represents where this connection is to be
+   * provisioned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subzone;
 
   /**
-   * Output only. [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to
-   * use this Interconnect. The Interconnect cannot be deleted if this list is non-empty.
+   * [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to use this
+   * Interconnect. The Interconnect cannot be deleted if this list is non-empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -452,8 +443,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A list of CircuitInfo objects, that describe the individual circuits
-   * in this LAG.
+   * [Output Only] A list of CircuitInfo objects, that describe the individual circuits in this LAG.
    * @return value or {@code null} for none
    */
   public java.util.List<InterconnectCircuitInfo> getCircuitInfos() {
@@ -461,8 +451,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A list of CircuitInfo objects, that describe the individual circuits
-   * in this LAG.
+   * [Output Only] A list of CircuitInfo objects, that describe the individual circuits in this LAG.
    * @param circuitInfos circuitInfos or {@code null} for none
    */
   public Interconnect setCircuitInfos(java.util.List<InterconnectCircuitInfo> circuitInfos) {
@@ -471,7 +460,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -479,7 +468,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Interconnect setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -524,26 +513,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the InterconnectLocation object that represents where this
-   * connection is to be provisioned. By default it will be the same as the location field.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEffectiveLocation() {
-    return effectiveLocation;
-  }
-
-  /**
-   * Output only. [Output Only] URL of the InterconnectLocation object that represents where this
-   * connection is to be provisioned. By default it will be the same as the location field.
-   * @param effectiveLocation effectiveLocation or {@code null} for none
-   */
-  public Interconnect setEffectiveLocation(java.lang.String effectiveLocation) {
-    this.effectiveLocation = effectiveLocation;
-    return this;
-  }
-
-  /**
-   * Output only. [Output Only] A list of outages expected for this Interconnect.
+   * [Output Only] A list of outages expected for this Interconnect.
    * @return value or {@code null} for none
    */
   public java.util.List<InterconnectOutageNotification> getExpectedOutages() {
@@ -551,7 +521,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A list of outages expected for this Interconnect.
+   * [Output Only] A list of outages expected for this Interconnect.
    * @param expectedOutages expectedOutages or {@code null} for none
    */
   public Interconnect setExpectedOutages(java.util.List<InterconnectOutageNotification> expectedOutages) {
@@ -560,8 +530,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] IP address configured on the Google side of the Interconnect link.
-   * This can be used only for ping tests.
+   * [Output Only] IP address configured on the Google side of the Interconnect link. This can be
+   * used only for ping tests.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleIpAddress() {
@@ -569,8 +539,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] IP address configured on the Google side of the Interconnect link.
-   * This can be used only for ping tests.
+   * [Output Only] IP address configured on the Google side of the Interconnect link. This can be
+   * used only for ping tests.
    * @param googleIpAddress googleIpAddress or {@code null} for none
    */
   public Interconnect setGoogleIpAddress(java.lang.String googleIpAddress) {
@@ -579,8 +549,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Google reference ID to be used when raising support tickets with
-   * Google or otherwise to debug backend connectivity issues.
+   * [Output Only] Google reference ID to be used when raising support tickets with Google or
+   * otherwise to debug backend connectivity issues.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoogleReferenceId() {
@@ -588,8 +558,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Google reference ID to be used when raising support tickets with
-   * Google or otherwise to debug backend connectivity issues.
+   * [Output Only] Google reference ID to be used when raising support tickets with Google or
+   * otherwise to debug backend connectivity issues.
    * @param googleReferenceId googleReferenceId or {@code null} for none
    */
   public Interconnect setGoogleReferenceId(java.lang.String googleReferenceId) {
@@ -598,8 +568,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -607,8 +576,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public Interconnect setId(java.math.BigInteger id) {
@@ -617,8 +585,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A list of the URLs of all InterconnectAttachments configured to use
-   * this Interconnect.
+   * [Output Only] A list of the URLs of all InterconnectAttachments configured to use  this
+   * Interconnect.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInterconnectAttachments() {
@@ -626,8 +594,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A list of the URLs of all InterconnectAttachments configured to use
-   * this Interconnect.
+   * [Output Only] A list of the URLs of all InterconnectAttachments configured to use  this
+   * Interconnect.
    * @param interconnectAttachments interconnectAttachments or {@code null} for none
    */
   public Interconnect setInterconnectAttachments(java.util.List<java.lang.String> interconnectAttachments) {
@@ -636,8 +604,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URLs of InterconnectGroups that include this Interconnect. Order is
-   * arbitrary and items are unique.
+   * [Output Only] URLs of InterconnectGroups that include this Interconnect. Order is arbitrary and
+   * items are unique.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInterconnectGroups() {
@@ -645,8 +613,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URLs of InterconnectGroups that include this Interconnect. Order is
-   * arbitrary and items are unique.
+   * [Output Only] URLs of InterconnectGroups that include this Interconnect. Order is arbitrary and
+   * items are unique.
    * @param interconnectGroups interconnectGroups or {@code null} for none
    */
   public Interconnect setInterconnectGroups(java.util.List<java.lang.String> interconnectGroups) {
@@ -680,7 +648,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnect for interconnects.
+   * [Output Only] Type of the resource. Alwayscompute#interconnect for interconnects.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -688,7 +656,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#interconnect for interconnects.
+   * [Output Only] Type of the resource. Alwayscompute#interconnect for interconnects.
    * @param kind kind or {@code null} for none
    */
   public Interconnect setKind(java.lang.String kind) {
@@ -921,9 +889,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The current status of this Interconnect's functionality, which can
-   * take one of the following values:        - OS_ACTIVE: A valid Interconnect, which is turned up
-   * and is ready to    use. Attachments may be provisioned on this Interconnect.
+   * [Output Only] The current status of this Interconnect's functionality, which can take one of
+   * the following values:        - OS_ACTIVE: A valid Interconnect, which is turned up and is ready
+   * to    use. Attachments may be provisioned on this Interconnect.
    *
    * - OS_UNPROVISIONED: An Interconnect that has not completed turnup. No attachments may be
    * provisioned on this Interconnect. - OS_UNDER_MAINTENANCE: An Interconnect that is undergoing
@@ -935,9 +903,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The current status of this Interconnect's functionality, which can
-   * take one of the following values:        - OS_ACTIVE: A valid Interconnect, which is turned up
-   * and is ready to    use. Attachments may be provisioned on this Interconnect.
+   * [Output Only] The current status of this Interconnect's functionality, which can take one of
+   * the following values:        - OS_ACTIVE: A valid Interconnect, which is turned up and is ready
+   * to    use. Attachments may be provisioned on this Interconnect.
    *
    * - OS_UNPROVISIONED: An Interconnect that has not completed turnup. No attachments may be
    * provisioned on this Interconnect. - OS_UNDER_MAINTENANCE: An Interconnect that is undergoing
@@ -969,9 +937,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] IP address configured on the customer side of the Interconnect link.
-   * The customer should configure this IP address during turnup when prompted by Google NOC. This
-   * can be used only for ping tests.
+   * [Output Only] IP address configured on the customer side of the Interconnect link. The customer
+   * should configure this IP address during turnup when prompted by Google NOC. This can be used
+   * only for ping tests.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerIpAddress() {
@@ -979,9 +947,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] IP address configured on the customer side of the Interconnect link.
-   * The customer should configure this IP address during turnup when prompted by Google NOC. This
-   * can be used only for ping tests.
+   * [Output Only] IP address configured on the customer side of the Interconnect link. The customer
+   * should configure this IP address during turnup when prompted by Google NOC. This can be used
+   * only for ping tests.
    * @param peerIpAddress peerIpAddress or {@code null} for none
    */
   public Interconnect setPeerIpAddress(java.lang.String peerIpAddress) {
@@ -990,7 +958,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Number of links actually provisioned in this interconnect.
+   * [Output Only] Number of links actually provisioned in this interconnect.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProvisionedLinkCount() {
@@ -998,7 +966,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Number of links actually provisioned in this interconnect.
+   * [Output Only] Number of links actually provisioned in this interconnect.
    * @param provisionedLinkCount provisionedLinkCount or {@code null} for none
    */
   public Interconnect setProvisionedLinkCount(java.lang.Integer provisionedLinkCount) {
@@ -1072,7 +1040,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -1080,7 +1048,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Interconnect setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -1089,7 +1057,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -1097,7 +1065,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Interconnect setSelfLink(java.lang.String selfLink) {
@@ -1106,7 +1074,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -1114,7 +1082,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Interconnect setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -1123,12 +1091,12 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The current state of Interconnect functionality, which can take one
-   * of the following values:        - ACTIVE: The Interconnect is valid, turned up and ready to
-   * use.    Attachments may be provisioned on this Interconnect.    - UNPROVISIONED: The
-   * Interconnect has not completed turnup. No    attachments may be provisioned on this
-   * Interconnect.    - UNDER_MAINTENANCE: The Interconnect is undergoing internal maintenance.
-   * No attachments may be provisioned or updated on this    Interconnect.
+   * [Output Only] The current state of Interconnect functionality, which can take one of the
+   * following values:        - ACTIVE: The Interconnect is valid, turned up and ready to use.
+   * Attachments may be provisioned on this Interconnect.    - UNPROVISIONED: The Interconnect has
+   * not completed turnup. No    attachments may be provisioned on this Interconnect.    -
+   * UNDER_MAINTENANCE: The Interconnect is undergoing internal maintenance.    No attachments may
+   * be provisioned or updated on this    Interconnect.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -1136,12 +1104,12 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The current state of Interconnect functionality, which can take one
-   * of the following values:        - ACTIVE: The Interconnect is valid, turned up and ready to
-   * use.    Attachments may be provisioned on this Interconnect.    - UNPROVISIONED: The
-   * Interconnect has not completed turnup. No    attachments may be provisioned on this
-   * Interconnect.    - UNDER_MAINTENANCE: The Interconnect is undergoing internal maintenance.
-   * No attachments may be provisioned or updated on this    Interconnect.
+   * [Output Only] The current state of Interconnect functionality, which can take one of the
+   * following values:        - ACTIVE: The Interconnect is valid, turned up and ready to use.
+   * Attachments may be provisioned on this Interconnect.    - UNPROVISIONED: The Interconnect has
+   * not completed turnup. No    attachments may be provisioned on this Interconnect.    -
+   * UNDER_MAINTENANCE: The Interconnect is undergoing internal maintenance.    No attachments may
+   * be provisioned or updated on this    Interconnect.
    * @param state state or {@code null} for none
    */
   public Interconnect setState(java.lang.String state) {
@@ -1150,7 +1118,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * To be deprecated.
+   * Specific subzone in the InterconnectLocation that represents where this connection is to be
+   * provisioned.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubzone() {
@@ -1158,7 +1127,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * To be deprecated.
+   * Specific subzone in the InterconnectLocation that represents where this connection is to be
+   * provisioned.
    * @param subzone subzone or {@code null} for none
    */
   public Interconnect setSubzone(java.lang.String subzone) {
@@ -1167,8 +1137,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to
-   * use this Interconnect. The Interconnect cannot be deleted if this list is non-empty.
+   * [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to use this
+   * Interconnect. The Interconnect cannot be deleted if this list is non-empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getWireGroups() {
@@ -1176,8 +1146,8 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to
-   * use this Interconnect. The Interconnect cannot be deleted if this list is non-empty.
+   * [Output Only] A list of the URLs of all CrossSiteNetwork WireGroups configured to use this
+   * Interconnect. The Interconnect cannot be deleted if this list is non-empty.
    * @param wireGroups wireGroups or {@code null} for none
    */
   public Interconnect setWireGroups(java.util.List<java.lang.String> wireGroups) {

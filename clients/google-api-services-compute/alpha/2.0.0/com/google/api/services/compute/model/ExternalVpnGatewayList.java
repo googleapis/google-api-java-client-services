@@ -56,7 +56,7 @@ public final class ExternalVpnGatewayList extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#externalVpnGatewayList for lists of
+   * [Output Only] Type of resource. Always compute#externalVpnGatewayList for lists of
    * externalVpnGateways.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class ExternalVpnGatewayList extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +137,7 @@ public final class ExternalVpnGatewayList extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#externalVpnGatewayList for lists of
+   * [Output Only] Type of resource. Always compute#externalVpnGatewayList for lists of
    * externalVpnGateways.
    * @return value or {@code null} for none
    */
@@ -146,7 +146,7 @@ public final class ExternalVpnGatewayList extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#externalVpnGatewayList for lists of
+   * [Output Only] Type of resource. Always compute#externalVpnGatewayList for lists of
    * externalVpnGateways.
    * @param kind kind or {@code null} for none
    */
@@ -179,7 +179,7 @@ public final class ExternalVpnGatewayList extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -187,7 +187,7 @@ public final class ExternalVpnGatewayList extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public ExternalVpnGatewayList setSelfLink(java.lang.String selfLink) {

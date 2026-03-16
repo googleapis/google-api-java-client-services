@@ -30,8 +30,7 @@ package com.google.api.services.compute.model;
 public final class FixedOrPercent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Absolute value of VM instances calculated based on the specific
-   * mode.
+   * [Output Only] Absolute value of VM instances calculated based on the specific mode.
    *
    *             - If the value is fixed, then the calculated      value is equal to the fixed
    * value.     - If the value is a percent, then the     calculated      value is percent/100 *
@@ -59,8 +58,7 @@ public final class FixedOrPercent extends com.google.api.client.json.GenericJson
   private java.lang.Integer percent;
 
   /**
-   * Output only. [Output Only] Absolute value of VM instances calculated based on the specific
-   * mode.
+   * [Output Only] Absolute value of VM instances calculated based on the specific mode.
    *
    *             - If the value is fixed, then the calculated      value is equal to the fixed
    * value.     - If the value is a percent, then the     calculated      value is percent/100 *
@@ -74,8 +72,7 @@ public final class FixedOrPercent extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. [Output Only] Absolute value of VM instances calculated based on the specific
-   * mode.
+   * [Output Only] Absolute value of VM instances calculated based on the specific mode.
    *
    *             - If the value is fixed, then the calculated      value is equal to the fixed
    * value.     - If the value is a percent, then the     calculated      value is percent/100 *

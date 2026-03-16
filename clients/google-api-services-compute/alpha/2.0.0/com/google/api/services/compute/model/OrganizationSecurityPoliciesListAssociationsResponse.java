@@ -37,7 +37,7 @@ public final class OrganizationSecurityPoliciesListAssociationsResponse extends 
   private java.util.List<SecurityPolicyAssociation> associations;
 
   /**
-   * Output only. [Output Only] Type of securityPolicy associations.
+   * [Output Only] Type of securityPolicy associations.
    * Alwayscompute#organizationSecurityPoliciesListAssociations for lists of securityPolicy
    * associations.
    * The value may be {@code null}.
@@ -63,7 +63,7 @@ public final class OrganizationSecurityPoliciesListAssociationsResponse extends 
   }
 
   /**
-   * Output only. [Output Only] Type of securityPolicy associations.
+   * [Output Only] Type of securityPolicy associations.
    * Alwayscompute#organizationSecurityPoliciesListAssociations for lists of securityPolicy
    * associations.
    * @return value or {@code null} for none
@@ -73,7 +73,7 @@ public final class OrganizationSecurityPoliciesListAssociationsResponse extends 
   }
 
   /**
-   * Output only. [Output Only] Type of securityPolicy associations.
+   * [Output Only] Type of securityPolicy associations.
    * Alwayscompute#organizationSecurityPoliciesListAssociations for lists of securityPolicy
    * associations.
    * @param kind kind or {@code null} for none

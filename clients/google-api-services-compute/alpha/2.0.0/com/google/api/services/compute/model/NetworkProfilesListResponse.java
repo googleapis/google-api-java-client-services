@@ -56,8 +56,7 @@ public final class NetworkProfilesListResponse extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#networkProfileList for network
-   * profiles.
+   * [Output Only] Type of resource. Alwayscompute#networkProfileList for network profiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,15 +73,14 @@ public final class NetworkProfilesListResponse extends com.google.api.client.jso
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources. end_interface:
-   * MixerListResponseWithEtagBuilder
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,8 +143,7 @@ public final class NetworkProfilesListResponse extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#networkProfileList for network
-   * profiles.
+   * [Output Only] Type of resource. Alwayscompute#networkProfileList for network profiles.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -154,8 +151,7 @@ public final class NetworkProfilesListResponse extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#networkProfileList for network
-   * profiles.
+   * [Output Only] Type of resource. Alwayscompute#networkProfileList for network profiles.
    * @param kind kind or {@code null} for none
    */
   public NetworkProfilesListResponse setKind(java.lang.String kind) {
@@ -187,7 +183,7 @@ public final class NetworkProfilesListResponse extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -195,7 +191,7 @@ public final class NetworkProfilesListResponse extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NetworkProfilesListResponse setSelfLink(java.lang.String selfLink) {
@@ -204,8 +200,7 @@ public final class NetworkProfilesListResponse extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources. end_interface:
-   * MixerListResponseWithEtagBuilder
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -213,8 +208,7 @@ public final class NetworkProfilesListResponse extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources. end_interface:
-   * MixerListResponseWithEtagBuilder
+   * [Output Only] Unreachable resources. end_interface: MixerListResponseWithEtagBuilder
    * @param unreachables unreachables or {@code null} for none
    */
   public NetworkProfilesListResponse setUnreachables(java.util.List<java.lang.String> unreachables) {

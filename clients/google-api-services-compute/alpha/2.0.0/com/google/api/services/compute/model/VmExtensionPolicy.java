@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class VmExtensionPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
-   * Required. A map of extension names (for example, "ops-agent") to their corresponding policy
+   * Required. A map of extension names (e.g., "cloudops") to their corresponding policy
    * configurations.
    * The value may be {@code null}.
    */
@@ -52,16 +52,14 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   private java.util.Map<String, VmExtensionPolicyExtensionPolicy> extensionPolicies;
 
   /**
-   * Optional. Output only. [Output Only] Link to the global policy that manages this zone policy,
-   * if applicable.
+   * Optional. [Output Only] Link to the global policy that manages this zone policy, if applicable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String globalResourceLink;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -76,14 +74,14 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   private java.util.List<VmExtensionPolicyInstanceSelector> instanceSelectors;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
+   * [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Optional. Output only. [Output Only] Indicates if this policy is managed by a global policy.
+   * Optional. [Output Only] Indicates if this policy is managed by a global policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +102,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
    * Optional. Priority of this policy. Used to resolve conflicts when multiple policies apply to
    * the same extension. The policy priority is an integer from 0 to 65535, inclusive. Lower
    * integers indicate higher priorities. If you do not specify a priority when creating a rule, it
-   * is assigned a priority of 1000. If priorities are equal, the policy with the most recent
+   * is assigned a priority of 1000. If priorities are equal, the policy with the more recent
    * creation timestamp takes precedence.
    * The value may be {@code null}.
    */
@@ -112,35 +110,35 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   private java.lang.Integer priority;
 
   /**
-   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Optional. Output only. [Output Only] Current state of the policy: ACTIVE or DELETING.
+   * Optional. [Output Only] Current state of the policy: ACTIVE or DELETING.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. [Output Only] Update timestamp inRFC3339 text format.
+   * [Output Only] Update timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String updateTimestamp;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -148,7 +146,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public VmExtensionPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -174,7 +172,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. A map of extension names (for example, "ops-agent") to their corresponding policy
+   * Required. A map of extension names (e.g., "cloudops") to their corresponding policy
    * configurations.
    * @return value or {@code null} for none
    */
@@ -183,7 +181,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. A map of extension names (for example, "ops-agent") to their corresponding policy
+   * Required. A map of extension names (e.g., "cloudops") to their corresponding policy
    * configurations.
    * @param extensionPolicies extensionPolicies or {@code null} for none
    */
@@ -193,8 +191,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Output only. [Output Only] Link to the global policy that manages this zone policy,
-   * if applicable.
+   * Optional. [Output Only] Link to the global policy that manages this zone policy, if applicable.
    * @return value or {@code null} for none
    */
   public java.lang.String getGlobalResourceLink() {
@@ -202,8 +199,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Output only. [Output Only] Link to the global policy that manages this zone policy,
-   * if applicable.
+   * Optional. [Output Only] Link to the global policy that manages this zone policy, if applicable.
    * @param globalResourceLink globalResourceLink or {@code null} for none
    */
   public VmExtensionPolicy setGlobalResourceLink(java.lang.String globalResourceLink) {
@@ -212,8 +208,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -221,8 +216,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public VmExtensionPolicy setId(java.math.BigInteger id) {
@@ -250,7 +244,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
+   * [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -258,7 +252,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
+   * [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
    * @param kind kind or {@code null} for none
    */
   public VmExtensionPolicy setKind(java.lang.String kind) {
@@ -267,7 +261,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Output only. [Output Only] Indicates if this policy is managed by a global policy.
+   * Optional. [Output Only] Indicates if this policy is managed by a global policy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getManagedByGlobal() {
@@ -275,7 +269,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Output only. [Output Only] Indicates if this policy is managed by a global policy.
+   * Optional. [Output Only] Indicates if this policy is managed by a global policy.
    * @param managedByGlobal managedByGlobal or {@code null} for none
    */
   public VmExtensionPolicy setManagedByGlobal(java.lang.Boolean managedByGlobal) {
@@ -312,7 +306,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
    * Optional. Priority of this policy. Used to resolve conflicts when multiple policies apply to
    * the same extension. The policy priority is an integer from 0 to 65535, inclusive. Lower
    * integers indicate higher priorities. If you do not specify a priority when creating a rule, it
-   * is assigned a priority of 1000. If priorities are equal, the policy with the most recent
+   * is assigned a priority of 1000. If priorities are equal, the policy with the more recent
    * creation timestamp takes precedence.
    * @return value or {@code null} for none
    */
@@ -324,7 +318,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
    * Optional. Priority of this policy. Used to resolve conflicts when multiple policies apply to
    * the same extension. The policy priority is an integer from 0 to 65535, inclusive. Lower
    * integers indicate higher priorities. If you do not specify a priority when creating a rule, it
-   * is assigned a priority of 1000. If priorities are equal, the policy with the most recent
+   * is assigned a priority of 1000. If priorities are equal, the policy with the more recent
    * creation timestamp takes precedence.
    * @param priority priority or {@code null} for none
    */
@@ -334,7 +328,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -342,7 +336,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined fully-qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public VmExtensionPolicy setSelfLink(java.lang.String selfLink) {
@@ -351,7 +345,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -359,7 +353,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource's resource id.
+   * [Output Only] Server-defined URL for this resource's resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public VmExtensionPolicy setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -368,7 +362,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Output only. [Output Only] Current state of the policy: ACTIVE or DELETING.
+   * Optional. [Output Only] Current state of the policy: ACTIVE or DELETING.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -376,7 +370,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Output only. [Output Only] Current state of the policy: ACTIVE or DELETING.
+   * Optional. [Output Only] Current state of the policy: ACTIVE or DELETING.
    * @param state state or {@code null} for none
    */
   public VmExtensionPolicy setState(java.lang.String state) {
@@ -385,7 +379,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Update timestamp inRFC3339 text format.
+   * [Output Only] Update timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdateTimestamp() {
@@ -393,7 +387,7 @@ public final class VmExtensionPolicy extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Update timestamp inRFC3339 text format.
+   * [Output Only] Update timestamp inRFC3339 text format.
    * @param updateTimestamp updateTimestamp or {@code null} for none
    */
   public VmExtensionPolicy setUpdateTimestamp(java.lang.String updateTimestamp) {

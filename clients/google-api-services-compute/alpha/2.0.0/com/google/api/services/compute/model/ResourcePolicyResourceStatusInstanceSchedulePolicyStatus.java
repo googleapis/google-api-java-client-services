@@ -30,24 +30,22 @@ package com.google.api.services.compute.model;
 public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The last time the schedule successfully ran. The timestamp is an
-   * RFC3339 string.
+   * [Output Only] The last time the schedule successfully ran. The timestamp is an RFC3339 string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String lastRunStartTime;
 
   /**
-   * Output only. [Output Only] The next time the schedule is planned to run. The actual time might
-   * be slightly different. The timestamp is an RFC3339 string.
+   * [Output Only] The next time the schedule is planned to run. The actual time might be slightly
+   * different. The timestamp is an RFC3339 string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextRunStartTime;
 
   /**
-   * Output only. [Output Only] The last time the schedule successfully ran. The timestamp is an
-   * RFC3339 string.
+   * [Output Only] The last time the schedule successfully ran. The timestamp is an RFC3339 string.
    * @return value or {@code null} for none
    */
   public java.lang.String getLastRunStartTime() {
@@ -55,8 +53,7 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatus exte
   }
 
   /**
-   * Output only. [Output Only] The last time the schedule successfully ran. The timestamp is an
-   * RFC3339 string.
+   * [Output Only] The last time the schedule successfully ran. The timestamp is an RFC3339 string.
    * @param lastRunStartTime lastRunStartTime or {@code null} for none
    */
   public ResourcePolicyResourceStatusInstanceSchedulePolicyStatus setLastRunStartTime(java.lang.String lastRunStartTime) {
@@ -65,8 +62,8 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatus exte
   }
 
   /**
-   * Output only. [Output Only] The next time the schedule is planned to run. The actual time might
-   * be slightly different. The timestamp is an RFC3339 string.
+   * [Output Only] The next time the schedule is planned to run. The actual time might be slightly
+   * different. The timestamp is an RFC3339 string.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextRunStartTime() {
@@ -74,8 +71,8 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatus exte
   }
 
   /**
-   * Output only. [Output Only] The next time the schedule is planned to run. The actual time might
-   * be slightly different. The timestamp is an RFC3339 string.
+   * [Output Only] The next time the schedule is planned to run. The actual time might be slightly
+   * different. The timestamp is an RFC3339 string.
    * @param nextRunStartTime nextRunStartTime or {@code null} for none
    */
   public ResourcePolicyResourceStatusInstanceSchedulePolicyStatus setNextRunStartTime(java.lang.String nextRunStartTime) {

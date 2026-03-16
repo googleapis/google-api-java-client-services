@@ -46,21 +46,15 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private AllocationAggregateReservation aggregateReservation;
 
   /**
-   * Output only. [Output Only] Full or partial URL to a parent commitment. This field displays for
-   * reservations that are tied to a commitment.
+   * [Output Only] Full or partial URL to a parent commitment. This field displays for reservations
+   * that are tied to a commitment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commitment;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String confidentialComputeType;
-
-  /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,15 +91,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Indicates the early access maintenance for the reservation. If this field is absent or set to
-   * NO_EARLY_ACCESS, the reservation is not enrolled in early access maintenance and the standard
-   * notice applies.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String earlyAccessMaintenance;
-
-  /**
    * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
    * hardware errors.
    * The value may be {@code null}.
@@ -114,23 +99,22 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableEmergentMaintenance;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
+   * [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Output only. [Output Only] Full or partial URL to parent commitments. This field displays for
-   * reservations that are tied to multiple commitments.
+   * [Output Only] Full or partial URL to parent commitments. This field displays for reservations
+   * that are tied to multiple commitments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,14 +132,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ReservationParams params;
-
-  /**
    * Protection tier for the workload which specifies the workload expectations in the event of
    * infrastructure failures at data center (e.g. power and/or cooling failures).
    * The value may be {@code null}.
@@ -164,7 +140,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String protectionTier;
 
   /**
-   * Output only. [Output only] Indicates the reservation mode of the reservation.
+   * [Output only] Indicates the reservation mode of the reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,14 +163,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> resourcePolicies;
 
   /**
-   * Output only. [Output Only] Status information for Reservation resource.
+   * [Output Only] Status information for Reservation resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AllocationResourceStatus resourceStatus;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,14 +184,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String schedulingType;
 
   /**
-   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,10 +223,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean specificReservationRequired;
 
   /**
-   * Output only. [Output Only] The status of the reservation.              - CREATING: Reservation
-   * resources are being        allocated.      - READY: Reservation resources have been allocated,
-   * and the reservation is ready for use.      - DELETING: Reservation deletion is in progress.
-   * - UPDATING: Reservation update is in progress.
+   * [Output Only] The status of the reservation.              - CREATING: Reservation resources are
+   * being        allocated.      - READY: Reservation resources have been allocated,        and the
+   * reservation is ready for use.      - DELETING: Reservation deletion is in progress.      -
+   * UPDATING: Reservation update is in progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -299,8 +275,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Full or partial URL to a parent commitment. This field displays for
-   * reservations that are tied to a commitment.
+   * [Output Only] Full or partial URL to a parent commitment. This field displays for reservations
+   * that are tied to a commitment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommitment() {
@@ -308,8 +284,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Full or partial URL to a parent commitment. This field displays for
-   * reservations that are tied to a commitment.
+   * [Output Only] Full or partial URL to a parent commitment. This field displays for reservations
+   * that are tied to a commitment.
    * @param commitment commitment or {@code null} for none
    */
   public Reservation setCommitment(java.lang.String commitment) {
@@ -318,22 +294,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getConfidentialComputeType() {
-    return confidentialComputeType;
-  }
-
-  /**
-   * @param confidentialComputeType confidentialComputeType or {@code null} for none
-   */
-  public Reservation setConfidentialComputeType(java.lang.String confidentialComputeType) {
-    this.confidentialComputeType = confidentialComputeType;
-    return this;
-  }
-
-  /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -341,7 +302,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Reservation setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -422,27 +383,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the early access maintenance for the reservation. If this field is absent or set to
-   * NO_EARLY_ACCESS, the reservation is not enrolled in early access maintenance and the standard
-   * notice applies.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEarlyAccessMaintenance() {
-    return earlyAccessMaintenance;
-  }
-
-  /**
-   * Indicates the early access maintenance for the reservation. If this field is absent or set to
-   * NO_EARLY_ACCESS, the reservation is not enrolled in early access maintenance and the standard
-   * notice applies.
-   * @param earlyAccessMaintenance earlyAccessMaintenance or {@code null} for none
-   */
-  public Reservation setEarlyAccessMaintenance(java.lang.String earlyAccessMaintenance) {
-    this.earlyAccessMaintenance = earlyAccessMaintenance;
-    return this;
-  }
-
-  /**
    * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
    * hardware errors.
    * @return value or {@code null} for none
@@ -462,8 +402,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -471,8 +410,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public Reservation setId(java.math.BigInteger id) {
@@ -481,7 +419,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
+   * [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -489,7 +427,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
+   * [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
    * @param kind kind or {@code null} for none
    */
   public Reservation setKind(java.lang.String kind) {
@@ -498,8 +436,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Full or partial URL to parent commitments. This field displays for
-   * reservations that are tied to multiple commitments.
+   * [Output Only] Full or partial URL to parent commitments. This field displays for reservations
+   * that are tied to multiple commitments.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLinkedCommitments() {
@@ -507,8 +445,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Full or partial URL to parent commitments. This field displays for
-   * reservations that are tied to multiple commitments.
+   * [Output Only] Full or partial URL to parent commitments. This field displays for reservations
+   * that are tied to multiple commitments.
    * @param linkedCommitments linkedCommitments or {@code null} for none
    */
   public Reservation setLinkedCommitments(java.util.List<java.lang.String> linkedCommitments) {
@@ -542,25 +480,6 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * @return value or {@code null} for none
-   */
-  public ReservationParams getParams() {
-    return params;
-  }
-
-  /**
-   * Input only. Additional params passed with the request, but not persisted as part of resource
-   * payload.
-   * @param params params or {@code null} for none
-   */
-  public Reservation setParams(ReservationParams params) {
-    this.params = params;
-    return this;
-  }
-
-  /**
    * Protection tier for the workload which specifies the workload expectations in the event of
    * infrastructure failures at data center (e.g. power and/or cooling failures).
    * @return value or {@code null} for none
@@ -580,7 +499,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Indicates the reservation mode of the reservation.
+   * [Output only] Indicates the reservation mode of the reservation.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservationMode() {
@@ -588,7 +507,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Indicates the reservation mode of the reservation.
+   * [Output only] Indicates the reservation mode of the reservation.
    * @param reservationMode reservationMode or {@code null} for none
    */
   public Reservation setReservationMode(java.lang.String reservationMode) {
@@ -635,7 +554,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status information for Reservation resource.
+   * [Output Only] Status information for Reservation resource.
    * @return value or {@code null} for none
    */
   public AllocationResourceStatus getResourceStatus() {
@@ -643,7 +562,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status information for Reservation resource.
+   * [Output Only] Status information for Reservation resource.
    * @param resourceStatus resourceStatus or {@code null} for none
    */
   public Reservation setResourceStatus(AllocationResourceStatus resourceStatus) {
@@ -652,7 +571,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -660,7 +579,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Reservation setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -686,7 +605,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined fully-qualified URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -694,7 +613,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined fully-qualified URL for this resource.
+   * [Output Only] Server-defined fully-qualified URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public Reservation setSelfLink(java.lang.String selfLink) {
@@ -703,7 +622,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -711,7 +630,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Reservation setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -779,10 +698,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the reservation.              - CREATING: Reservation
-   * resources are being        allocated.      - READY: Reservation resources have been allocated,
-   * and the reservation is ready for use.      - DELETING: Reservation deletion is in progress.
-   * - UPDATING: Reservation update is in progress.
+   * [Output Only] The status of the reservation.              - CREATING: Reservation resources are
+   * being        allocated.      - READY: Reservation resources have been allocated,        and the
+   * reservation is ready for use.      - DELETING: Reservation deletion is in progress.      -
+   * UPDATING: Reservation update is in progress.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -790,10 +709,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the reservation.              - CREATING: Reservation
-   * resources are being        allocated.      - READY: Reservation resources have been allocated,
-   * and the reservation is ready for use.      - DELETING: Reservation deletion is in progress.
-   * - UPDATING: Reservation update is in progress.
+   * [Output Only] The status of the reservation.              - CREATING: Reservation resources are
+   * being        allocated.      - READY: Reservation resources have been allocated,        and the
+   * reservation is ready for use.      - DELETING: Reservation deletion is in progress.      -
+   * UPDATING: Reservation update is in progress.
    * @param status status or {@code null} for none
    */
   public Reservation setStatus(java.lang.String status) {

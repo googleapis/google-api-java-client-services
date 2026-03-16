@@ -50,8 +50,7 @@ public final class OperationList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always `compute#operations` for Operations
-   * resource.
+   * [Output Only] Type of resource. Always `compute#operations` for Operations resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +115,7 @@ public final class OperationList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always `compute#operations` for Operations
-   * resource.
+   * [Output Only] Type of resource. Always `compute#operations` for Operations resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +123,7 @@ public final class OperationList extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always `compute#operations` for Operations
-   * resource.
+   * [Output Only] Type of resource. Always `compute#operations` for Operations resource.
    * @param kind kind or {@code null} for none
    */
   public OperationList setKind(java.lang.String kind) {

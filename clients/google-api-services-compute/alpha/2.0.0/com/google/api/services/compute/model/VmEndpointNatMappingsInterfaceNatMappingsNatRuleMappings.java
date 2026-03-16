@@ -30,50 +30,50 @@ package com.google.api.services.compute.model;
 public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of all drain IP:port-range mappings assigned to this interface by this rule.
-   * These ranges are inclusive, that is, both the first and the last ports can be used for NAT.
-   * Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
+   * List of all drain IP:port-range mappings assigned to this interface by this rule. These ranges
+   * are inclusive, that is, both the first and the last ports can be used for NAT. Example:
+   * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> drainNatIpPortRanges;
 
   /**
-   * Output only. A list of all IP:port-range mappings assigned to this interface by this rule.
-   * These ranges are inclusive, that is, both the first and the last ports can be used for NAT.
-   * Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
+   * A list of all IP:port-range mappings assigned to this interface by this rule. These ranges are
+   * inclusive, that is, both the first and the last ports can be used for NAT. Example:
+   * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> natIpPortRanges;
 
   /**
-   * Output only. Total number of drain ports across all NAT IPs allocated to this interface by this
-   * rule. It equals the aggregated port number in the field drain_nat_ip_port_ranges.
+   * Total number of drain ports across all NAT IPs allocated to this interface by this rule. It
+   * equals the aggregated port number in the field drain_nat_ip_port_ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numTotalDrainNatPorts;
 
   /**
-   * Output only. Total number of ports across all NAT IPs allocated to this interface by this rule.
-   * It equals the aggregated port number in the field nat_ip_port_ranges.
+   * Total number of ports across all NAT IPs allocated to this interface by this rule. It equals
+   * the aggregated port number in the field nat_ip_port_ranges.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numTotalNatPorts;
 
   /**
-   * Output only. Rule number of the NAT Rule.
+   * Rule number of the NAT Rule.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer ruleNumber;
 
   /**
-   * Output only. List of all drain IP:port-range mappings assigned to this interface by this rule.
-   * These ranges are inclusive, that is, both the first and the last ports can be used for NAT.
-   * Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
+   * List of all drain IP:port-range mappings assigned to this interface by this rule. These ranges
+   * are inclusive, that is, both the first and the last ports can be used for NAT. Example:
+   * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDrainNatIpPortRanges() {
@@ -81,9 +81,9 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Output only. List of all drain IP:port-range mappings assigned to this interface by this rule.
-   * These ranges are inclusive, that is, both the first and the last ports can be used for NAT.
-   * Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
+   * List of all drain IP:port-range mappings assigned to this interface by this rule. These ranges
+   * are inclusive, that is, both the first and the last ports can be used for NAT. Example:
+   * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * @param drainNatIpPortRanges drainNatIpPortRanges or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings setDrainNatIpPortRanges(java.util.List<java.lang.String> drainNatIpPortRanges) {
@@ -92,9 +92,9 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Output only. A list of all IP:port-range mappings assigned to this interface by this rule.
-   * These ranges are inclusive, that is, both the first and the last ports can be used for NAT.
-   * Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
+   * A list of all IP:port-range mappings assigned to this interface by this rule. These ranges are
+   * inclusive, that is, both the first and the last ports can be used for NAT. Example:
+   * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNatIpPortRanges() {
@@ -102,9 +102,9 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Output only. A list of all IP:port-range mappings assigned to this interface by this rule.
-   * These ranges are inclusive, that is, both the first and the last ports can be used for NAT.
-   * Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
+   * A list of all IP:port-range mappings assigned to this interface by this rule. These ranges are
+   * inclusive, that is, both the first and the last ports can be used for NAT. Example:
+   * ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
    * @param natIpPortRanges natIpPortRanges or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings setNatIpPortRanges(java.util.List<java.lang.String> natIpPortRanges) {
@@ -113,8 +113,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Output only. Total number of drain ports across all NAT IPs allocated to this interface by this
-   * rule. It equals the aggregated port number in the field drain_nat_ip_port_ranges.
+   * Total number of drain ports across all NAT IPs allocated to this interface by this rule. It
+   * equals the aggregated port number in the field drain_nat_ip_port_ranges.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumTotalDrainNatPorts() {
@@ -122,8 +122,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Output only. Total number of drain ports across all NAT IPs allocated to this interface by this
-   * rule. It equals the aggregated port number in the field drain_nat_ip_port_ranges.
+   * Total number of drain ports across all NAT IPs allocated to this interface by this rule. It
+   * equals the aggregated port number in the field drain_nat_ip_port_ranges.
    * @param numTotalDrainNatPorts numTotalDrainNatPorts or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings setNumTotalDrainNatPorts(java.lang.Integer numTotalDrainNatPorts) {
@@ -132,8 +132,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Output only. Total number of ports across all NAT IPs allocated to this interface by this rule.
-   * It equals the aggregated port number in the field nat_ip_port_ranges.
+   * Total number of ports across all NAT IPs allocated to this interface by this rule. It equals
+   * the aggregated port number in the field nat_ip_port_ranges.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNumTotalNatPorts() {
@@ -141,8 +141,8 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Output only. Total number of ports across all NAT IPs allocated to this interface by this rule.
-   * It equals the aggregated port number in the field nat_ip_port_ranges.
+   * Total number of ports across all NAT IPs allocated to this interface by this rule. It equals
+   * the aggregated port number in the field nat_ip_port_ranges.
    * @param numTotalNatPorts numTotalNatPorts or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings setNumTotalNatPorts(java.lang.Integer numTotalNatPorts) {
@@ -151,7 +151,7 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Output only. Rule number of the NAT Rule.
+   * Rule number of the NAT Rule.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRuleNumber() {
@@ -159,7 +159,7 @@ public final class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings exte
   }
 
   /**
-   * Output only. Rule number of the NAT Rule.
+   * Rule number of the NAT Rule.
    * @param ruleNumber ruleNumber or {@code null} for none
    */
   public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings setRuleNumber(java.lang.Integer ruleNumber) {

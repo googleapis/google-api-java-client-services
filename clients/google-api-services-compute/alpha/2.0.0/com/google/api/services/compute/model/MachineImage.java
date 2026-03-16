@@ -34,7 +34,7 @@ package com.google.api.services.compute.model;
 public final class MachineImage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The creation timestamp for this machine image inRFC3339 text format.
+   * [Output Only] The creation timestamp for this machine image inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean guestFlush;
 
   /**
-   * Output only. [Output Only] A unique identifier for this machine image. The server defines this
-   * identifier.
+   * [Output Only] A unique identifier for this machine image. The server defines this identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -71,8 +70,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private InstanceProperties instanceProperties;
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute#machineImage for machine
-   * image.
+   * [Output Only] The resource type, which is alwayscompute#machineImage for machine image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,29 +139,28 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Output only. An array of Machine Image specific properties for disks attached to the source
-   * instance
+   * An array of Machine Image specific properties for disks attached to the source instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SavedDisk> savedDisks;
 
   /**
-   * Output only. [Output Only] The URL for this machine image. The server defines this URL.
+   * [Output Only] The URL for this machine image. The server defines this URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,16 +185,16 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceInstance;
 
   /**
-   * Output only. [Output Only] DEPRECATED: Please use instance_properties instead for source
-   * instance related properties. New properties will not be added to this field.
+   * [Output Only] DEPRECATED: Please use instance_properties instead for source instance related
+   * properties. New properties will not be added to this field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SourceInstanceProperties sourceInstanceProperties;
 
   /**
-   * Output only. [Output Only] The status of the machine image. One of the following
-   * values:INVALID, CREATING, READY,DELETING, and UPLOADING.
+   * [Output Only] The status of the machine image. One of the following values:INVALID, CREATING,
+   * READY,DELETING, and UPLOADING.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,14 +208,14 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> storageLocations;
 
   /**
-   * Output only. [Output Only] Total size of the storage used by the machine image.
+   * [Output Only] Total size of the storage used by the machine image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long totalStorageBytes;
 
   /**
-   * Output only. [Output Only] The creation timestamp for this machine image inRFC3339 text format.
+   * [Output Only] The creation timestamp for this machine image inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -226,7 +223,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The creation timestamp for this machine image inRFC3339 text format.
+   * [Output Only] The creation timestamp for this machine image inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public MachineImage setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -271,8 +268,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A unique identifier for this machine image. The server defines this
-   * identifier.
+   * [Output Only] A unique identifier for this machine image. The server defines this identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -280,8 +276,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] A unique identifier for this machine image. The server defines this
-   * identifier.
+   * [Output Only] A unique identifier for this machine image. The server defines this identifier.
    * @param id id or {@code null} for none
    */
   public MachineImage setId(java.math.BigInteger id) {
@@ -307,8 +302,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute#machineImage for machine
-   * image.
+   * [Output Only] The resource type, which is alwayscompute#machineImage for machine image.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -316,8 +310,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute#machineImage for machine
-   * image.
+   * [Output Only] The resource type, which is alwayscompute#machineImage for machine image.
    * @param kind kind or {@code null} for none
    */
   public MachineImage setKind(java.lang.String kind) {
@@ -506,7 +499,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -514,7 +507,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * [Output Only] Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public MachineImage setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -523,8 +516,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An array of Machine Image specific properties for disks attached to the source
-   * instance
+   * An array of Machine Image specific properties for disks attached to the source instance
    * @return value or {@code null} for none
    */
   public java.util.List<SavedDisk> getSavedDisks() {
@@ -532,8 +524,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An array of Machine Image specific properties for disks attached to the source
-   * instance
+   * An array of Machine Image specific properties for disks attached to the source instance
    * @param savedDisks savedDisks or {@code null} for none
    */
   public MachineImage setSavedDisks(java.util.List<SavedDisk> savedDisks) {
@@ -542,7 +533,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The URL for this machine image. The server defines this URL.
+   * [Output Only] The URL for this machine image. The server defines this URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -550,7 +541,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The URL for this machine image. The server defines this URL.
+   * [Output Only] The URL for this machine image. The server defines this URL.
    * @param selfLink selfLink or {@code null} for none
    */
   public MachineImage setSelfLink(java.lang.String selfLink) {
@@ -559,7 +550,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -567,7 +558,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public MachineImage setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -618,8 +609,8 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] DEPRECATED: Please use instance_properties instead for source
-   * instance related properties. New properties will not be added to this field.
+   * [Output Only] DEPRECATED: Please use instance_properties instead for source instance related
+   * properties. New properties will not be added to this field.
    * @return value or {@code null} for none
    */
   public SourceInstanceProperties getSourceInstanceProperties() {
@@ -627,8 +618,8 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] DEPRECATED: Please use instance_properties instead for source
-   * instance related properties. New properties will not be added to this field.
+   * [Output Only] DEPRECATED: Please use instance_properties instead for source instance related
+   * properties. New properties will not be added to this field.
    * @param sourceInstanceProperties sourceInstanceProperties or {@code null} for none
    */
   public MachineImage setSourceInstanceProperties(SourceInstanceProperties sourceInstanceProperties) {
@@ -637,8 +628,8 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the machine image. One of the following
-   * values:INVALID, CREATING, READY,DELETING, and UPLOADING.
+   * [Output Only] The status of the machine image. One of the following values:INVALID, CREATING,
+   * READY,DELETING, and UPLOADING.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -646,8 +637,8 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The status of the machine image. One of the following
-   * values:INVALID, CREATING, READY,DELETING, and UPLOADING.
+   * [Output Only] The status of the machine image. One of the following values:INVALID, CREATING,
+   * READY,DELETING, and UPLOADING.
    * @param status status or {@code null} for none
    */
   public MachineImage setStatus(java.lang.String status) {
@@ -673,7 +664,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Total size of the storage used by the machine image.
+   * [Output Only] Total size of the storage used by the machine image.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalStorageBytes() {
@@ -681,7 +672,7 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Total size of the storage used by the machine image.
+   * [Output Only] Total size of the storage used by the machine image.
    * @param totalStorageBytes totalStorageBytes or {@code null} for none
    */
   public MachineImage setTotalStorageBytes(java.lang.Long totalStorageBytes) {

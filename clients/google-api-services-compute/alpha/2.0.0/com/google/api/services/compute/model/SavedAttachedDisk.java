@@ -67,7 +67,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   private java.lang.Long diskSizeGb;
 
   /**
-   * Output only. [Output Only] URL of the disk type resource. For
+   * [Output Only] URL of the disk type resource. For
    * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    * The value may be {@code null}.
    */
@@ -89,7 +89,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Specifies zero-based index of the disk that is attached to the source instance.
+   * Specifies zero-based index of the disk that is attached to the source instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,14 +103,14 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   private java.lang.String interface__;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Output only. [Output Only] Any valid publicly visible licenses.
+   * [Output Only] Any valid publicly visible licenses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,18 +131,17 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   private java.lang.String source;
 
   /**
-   * Output only. [Output Only] A size of the storage used by the disk's snapshot by this machine
-   * image.
+   * [Output Only] A size of the storage used by the disk's snapshot by this machine image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long storageBytes;
 
   /**
-   * Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is
-   * being adjusted as a result of shared storage reallocation. This status can either be UPDATING,
-   * meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the
-   * snapshot is up-to-date.
+   * [Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as
+   * a result of shared storage reallocation. This status can either be UPDATING, meaning the size
+   * of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
+   * date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,7 +244,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] URL of the disk type resource. For
+   * [Output Only] URL of the disk type resource. For
    * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    * @return value or {@code null} for none
    */
@@ -254,7 +253,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] URL of the disk type resource. For
+   * [Output Only] URL of the disk type resource. For
    * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
    * @param diskType diskType or {@code null} for none
    */
@@ -283,7 +282,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Specifies zero-based index of the disk that is attached to the source instance.
+   * Specifies zero-based index of the disk that is attached to the source instance.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getIndex() {
@@ -291,7 +290,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Specifies zero-based index of the disk that is attached to the source instance.
+   * Specifies zero-based index of the disk that is attached to the source instance.
    * @param index index or {@code null} for none
    */
   public SavedAttachedDisk setIndex(java.lang.Integer index) {
@@ -317,7 +316,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -325,7 +324,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
    * @param kind kind or {@code null} for none
    */
   public SavedAttachedDisk setKind(java.lang.String kind) {
@@ -334,7 +333,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Any valid publicly visible licenses.
+   * [Output Only] Any valid publicly visible licenses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLicenses() {
@@ -342,7 +341,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] Any valid publicly visible licenses.
+   * [Output Only] Any valid publicly visible licenses.
    * @param licenses licenses or {@code null} for none
    */
   public SavedAttachedDisk setLicenses(java.util.List<java.lang.String> licenses) {
@@ -385,8 +384,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] A size of the storage used by the disk's snapshot by this machine
-   * image.
+   * [Output Only] A size of the storage used by the disk's snapshot by this machine image.
    * @return value or {@code null} for none
    */
   public java.lang.Long getStorageBytes() {
@@ -394,8 +392,7 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] A size of the storage used by the disk's snapshot by this machine
-   * image.
+   * [Output Only] A size of the storage used by the disk's snapshot by this machine image.
    * @param storageBytes storageBytes or {@code null} for none
    */
   public SavedAttachedDisk setStorageBytes(java.lang.Long storageBytes) {
@@ -404,10 +401,10 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is
-   * being adjusted as a result of shared storage reallocation. This status can either be UPDATING,
-   * meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the
-   * snapshot is up-to-date.
+   * [Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as
+   * a result of shared storage reallocation. This status can either be UPDATING, meaning the size
+   * of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
+   * date.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageBytesStatus() {
@@ -415,10 +412,10 @@ public final class SavedAttachedDisk extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is
-   * being adjusted as a result of shared storage reallocation. This status can either be UPDATING,
-   * meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the
-   * snapshot is up-to-date.
+   * [Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as
+   * a result of shared storage reallocation. This status can either be UPDATING, meaning the size
+   * of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-
+   * date.
    * @param storageBytesStatus storageBytesStatus or {@code null} for none
    */
   public SavedAttachedDisk setStorageBytesStatus(java.lang.String storageBytesStatus) {

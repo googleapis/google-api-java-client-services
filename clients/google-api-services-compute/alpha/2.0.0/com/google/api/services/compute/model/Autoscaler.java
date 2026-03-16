@@ -53,7 +53,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private AutoscalingPolicy autoscalingPolicy;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,15 +67,14 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#autoscaler for autoscalers.
+   * [Output Only] Type of the resource. Always compute#autoscaler for autoscalers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,25 +92,25 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] Target recommended MIG size (number of instances) computed by
-   * autoscaler. Autoscaler calculates the recommended MIG size even when the autoscaling policy
-   * mode is different from ON. This field is empty when autoscaler is not connected to an existing
-   * managed instance group or autoscaler did not generate its prediction.
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is
+   * different from ON. This field is empty when autoscaler is not connected to an existing managed
+   * instance group or autoscaler did not generate its prediction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer recommendedSize;
 
   /**
-   * Output only. [Output Only] URL of theregion where the instance group resides (for autoscalers
-   * living in regional scope).
+   * [Output Only] URL of theregion where the instance group resides (for autoscalers living in
+   * regional scope).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Output only. [Output Only] Status information of existing scaling schedules.
+   * [Output Only] Status information of existing scaling schedules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +124,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,8 +162,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   private java.lang.String target;
 
   /**
-   * Output only. [Output Only] URL of thezone where the instance group resides (for autoscalers
-   * living in zonal scope).
+   * [Output Only] URL of thezone where the instance group resides (for autoscalers living in zonal
+   * scope).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -196,7 +195,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -204,7 +203,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public Autoscaler setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -230,8 +229,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -239,8 +237,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public Autoscaler setId(java.math.BigInteger id) {
@@ -249,7 +246,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#autoscaler for autoscalers.
+   * [Output Only] Type of the resource. Always compute#autoscaler for autoscalers.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -257,7 +254,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#autoscaler for autoscalers.
+   * [Output Only] Type of the resource. Always compute#autoscaler for autoscalers.
    * @param kind kind or {@code null} for none
    */
   public Autoscaler setKind(java.lang.String kind) {
@@ -291,10 +288,10 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Target recommended MIG size (number of instances) computed by
-   * autoscaler. Autoscaler calculates the recommended MIG size even when the autoscaling policy
-   * mode is different from ON. This field is empty when autoscaler is not connected to an existing
-   * managed instance group or autoscaler did not generate its prediction.
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is
+   * different from ON. This field is empty when autoscaler is not connected to an existing managed
+   * instance group or autoscaler did not generate its prediction.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRecommendedSize() {
@@ -302,10 +299,10 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Target recommended MIG size (number of instances) computed by
-   * autoscaler. Autoscaler calculates the recommended MIG size even when the autoscaling policy
-   * mode is different from ON. This field is empty when autoscaler is not connected to an existing
-   * managed instance group or autoscaler did not generate its prediction.
+   * [Output Only] Target recommended MIG size (number of instances) computed by autoscaler.
+   * Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is
+   * different from ON. This field is empty when autoscaler is not connected to an existing managed
+   * instance group or autoscaler did not generate its prediction.
    * @param recommendedSize recommendedSize or {@code null} for none
    */
   public Autoscaler setRecommendedSize(java.lang.Integer recommendedSize) {
@@ -314,8 +311,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of theregion where the instance group resides (for autoscalers
-   * living in regional scope).
+   * [Output Only] URL of theregion where the instance group resides (for autoscalers living in
+   * regional scope).
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -323,8 +320,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of theregion where the instance group resides (for autoscalers
-   * living in regional scope).
+   * [Output Only] URL of theregion where the instance group resides (for autoscalers living in
+   * regional scope).
    * @param region region or {@code null} for none
    */
   public Autoscaler setRegion(java.lang.String region) {
@@ -333,7 +330,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status information of existing scaling schedules.
+   * [Output Only] Status information of existing scaling schedules.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ScalingScheduleStatus> getScalingScheduleStatus() {
@@ -341,7 +338,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status information of existing scaling schedules.
+   * [Output Only] Status information of existing scaling schedules.
    * @param scalingScheduleStatus scalingScheduleStatus or {@code null} for none
    */
   public Autoscaler setScalingScheduleStatus(java.util.Map<String, ScalingScheduleStatus> scalingScheduleStatus) {
@@ -367,7 +364,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -375,7 +372,7 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Autoscaler setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -455,8 +452,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of thezone where the instance group resides (for autoscalers
-   * living in zonal scope).
+   * [Output Only] URL of thezone where the instance group resides (for autoscalers living in zonal
+   * scope).
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -464,8 +461,8 @@ public final class Autoscaler extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of thezone where the instance group resides (for autoscalers
-   * living in zonal scope).
+   * [Output Only] URL of thezone where the instance group resides (for autoscalers living in zonal
+   * scope).
    * @param zone zone or {@code null} for none
    */
   public Autoscaler setZone(java.lang.String zone) {

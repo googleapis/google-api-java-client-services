@@ -30,62 +30,62 @@ package com.google.api.services.compute.model;
 public final class HaControllerStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Contains the details of the ongoing failover. This message is not
-   * displayed if failover is NOT in progress.
+   * [Output Only] Contains the details of the ongoing failover. This message is not displayed if
+   * failover is NOT in progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HaControllerStatusFailoverProgress failoverProgress;
 
   /**
-   * Output only. [Output Only] Contains the details of the last successful failover.
+   * [Output Only] Contains the details of the last successful failover.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private HaControllerStatusFailoverProgress lastFailoverInfo;
 
   /**
-   * Output only. [Output Only]  Indicates if the failover is currently in-progress.
+   * [Output Only]  Indicates if the failover is currently in-progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ongoingFailover;
 
   /**
-   * Output only. [Output Only] The URL to the instance that is intended to be primary at this
-   * moment. Primary instance will be changed at the very beginning of a failover operation.
+   * [Output Only] The URL to the instance that is intended to be primary at this moment. Primary
+   * instance will be changed at the very beginning of a failover operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryInstance;
 
   /**
-   * Output only. [Output Only] The name of the zone that is intended to be primary at this moment.
-   * Primary zone will be changed at the very beginning of a failover operation. The zone may not be
-   * operational in the middle of a failover operation.
+   * [Output Only] The name of the zone that is intended to be primary at this moment. Primary zone
+   * will be changed at the very beginning of a failover operation. The zone may not be operational
+   * in the middle of a failover operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String primaryZone;
 
   /**
-   * Output only. [Output Only] Indicates if the resource is ready for initiating a failover to the
-   * secondary zone.
+   * [Output Only] Indicates if the resource is ready for initiating a failover to the secondary
+   * zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean readyForFailover;
 
   /**
-   * Output only. [Output Only] Map of zone statuses. Key: name of the zone Value: ZoneStatus
+   * [Output Only] Map of zone statuses. Key: name of the zone Value: ZoneStatus
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, HaControllerStatusZoneStatus> zoneStatus;
 
   /**
-   * Output only. [Output Only] Contains the details of the ongoing failover. This message is not
-   * displayed if failover is NOT in progress.
+   * [Output Only] Contains the details of the ongoing failover. This message is not displayed if
+   * failover is NOT in progress.
    * @return value or {@code null} for none
    */
   public HaControllerStatusFailoverProgress getFailoverProgress() {
@@ -93,8 +93,8 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Contains the details of the ongoing failover. This message is not
-   * displayed if failover is NOT in progress.
+   * [Output Only] Contains the details of the ongoing failover. This message is not displayed if
+   * failover is NOT in progress.
    * @param failoverProgress failoverProgress or {@code null} for none
    */
   public HaControllerStatus setFailoverProgress(HaControllerStatusFailoverProgress failoverProgress) {
@@ -103,7 +103,7 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Contains the details of the last successful failover.
+   * [Output Only] Contains the details of the last successful failover.
    * @return value or {@code null} for none
    */
   public HaControllerStatusFailoverProgress getLastFailoverInfo() {
@@ -111,7 +111,7 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Contains the details of the last successful failover.
+   * [Output Only] Contains the details of the last successful failover.
    * @param lastFailoverInfo lastFailoverInfo or {@code null} for none
    */
   public HaControllerStatus setLastFailoverInfo(HaControllerStatusFailoverProgress lastFailoverInfo) {
@@ -120,7 +120,7 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only]  Indicates if the failover is currently in-progress.
+   * [Output Only]  Indicates if the failover is currently in-progress.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOngoingFailover() {
@@ -128,7 +128,7 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only]  Indicates if the failover is currently in-progress.
+   * [Output Only]  Indicates if the failover is currently in-progress.
    * @param ongoingFailover ongoingFailover or {@code null} for none
    */
   public HaControllerStatus setOngoingFailover(java.lang.Boolean ongoingFailover) {
@@ -137,8 +137,8 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] The URL to the instance that is intended to be primary at this
-   * moment. Primary instance will be changed at the very beginning of a failover operation.
+   * [Output Only] The URL to the instance that is intended to be primary at this moment. Primary
+   * instance will be changed at the very beginning of a failover operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryInstance() {
@@ -146,8 +146,8 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] The URL to the instance that is intended to be primary at this
-   * moment. Primary instance will be changed at the very beginning of a failover operation.
+   * [Output Only] The URL to the instance that is intended to be primary at this moment. Primary
+   * instance will be changed at the very beginning of a failover operation.
    * @param primaryInstance primaryInstance or {@code null} for none
    */
   public HaControllerStatus setPrimaryInstance(java.lang.String primaryInstance) {
@@ -156,9 +156,9 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] The name of the zone that is intended to be primary at this moment.
-   * Primary zone will be changed at the very beginning of a failover operation. The zone may not be
-   * operational in the middle of a failover operation.
+   * [Output Only] The name of the zone that is intended to be primary at this moment. Primary zone
+   * will be changed at the very beginning of a failover operation. The zone may not be operational
+   * in the middle of a failover operation.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryZone() {
@@ -166,9 +166,9 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] The name of the zone that is intended to be primary at this moment.
-   * Primary zone will be changed at the very beginning of a failover operation. The zone may not be
-   * operational in the middle of a failover operation.
+   * [Output Only] The name of the zone that is intended to be primary at this moment. Primary zone
+   * will be changed at the very beginning of a failover operation. The zone may not be operational
+   * in the middle of a failover operation.
    * @param primaryZone primaryZone or {@code null} for none
    */
   public HaControllerStatus setPrimaryZone(java.lang.String primaryZone) {
@@ -177,8 +177,8 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Indicates if the resource is ready for initiating a failover to the
-   * secondary zone.
+   * [Output Only] Indicates if the resource is ready for initiating a failover to the secondary
+   * zone.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReadyForFailover() {
@@ -186,8 +186,8 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Indicates if the resource is ready for initiating a failover to the
-   * secondary zone.
+   * [Output Only] Indicates if the resource is ready for initiating a failover to the secondary
+   * zone.
    * @param readyForFailover readyForFailover or {@code null} for none
    */
   public HaControllerStatus setReadyForFailover(java.lang.Boolean readyForFailover) {
@@ -196,7 +196,7 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Map of zone statuses. Key: name of the zone Value: ZoneStatus
+   * [Output Only] Map of zone statuses. Key: name of the zone Value: ZoneStatus
    * @return value or {@code null} for none
    */
   public java.util.Map<String, HaControllerStatusZoneStatus> getZoneStatus() {
@@ -204,7 +204,7 @@ public final class HaControllerStatus extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Map of zone statuses. Key: name of the zone Value: ZoneStatus
+   * [Output Only] Map of zone statuses. Key: name of the zone Value: ZoneStatus
    * @param zoneStatus zoneStatus or {@code null} for none
    */
   public HaControllerStatus setZoneStatus(java.util.Map<String, HaControllerStatusZoneStatus> zoneStatus) {

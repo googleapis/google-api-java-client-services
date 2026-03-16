@@ -30,42 +30,42 @@ package com.google.api.services.compute.model;
 public final class BgpRoute extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] AS-PATH for the route
+   * [Output only] AS-PATH for the route
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<BgpRouteAsPath> asPaths;
 
   /**
-   * Output only. [Output only] BGP communities in human-readable A:B format.
+   * [Output only] BGP communities in human-readable A:B format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> communities;
 
   /**
-   * Output only. [Output only] Destination IP range for the route, in human-readable CIDR format
+   * [Output only] Destination IP range for the route, in human-readable CIDR format
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BgpRouteNetworkLayerReachabilityInformation destination;
 
   /**
-   * Output only. [Output only] BGP multi-exit discriminator
+   * [Output only] BGP multi-exit discriminator
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long med;
 
   /**
-   * Output only. [Output only] BGP origin (EGP, IGP or INCOMPLETE)
+   * [Output only] BGP origin (EGP, IGP or INCOMPLETE)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String origin;
 
   /**
-   * Output only. [Output only] AS-PATH for the route
+   * [Output only] AS-PATH for the route
    * @return value or {@code null} for none
    */
   public java.util.List<BgpRouteAsPath> getAsPaths() {
@@ -73,7 +73,7 @@ public final class BgpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] AS-PATH for the route
+   * [Output only] AS-PATH for the route
    * @param asPaths asPaths or {@code null} for none
    */
   public BgpRoute setAsPaths(java.util.List<BgpRouteAsPath> asPaths) {
@@ -82,7 +82,7 @@ public final class BgpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] BGP communities in human-readable A:B format.
+   * [Output only] BGP communities in human-readable A:B format.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCommunities() {
@@ -90,7 +90,7 @@ public final class BgpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] BGP communities in human-readable A:B format.
+   * [Output only] BGP communities in human-readable A:B format.
    * @param communities communities or {@code null} for none
    */
   public BgpRoute setCommunities(java.util.List<java.lang.String> communities) {
@@ -99,7 +99,7 @@ public final class BgpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Destination IP range for the route, in human-readable CIDR format
+   * [Output only] Destination IP range for the route, in human-readable CIDR format
    * @return value or {@code null} for none
    */
   public BgpRouteNetworkLayerReachabilityInformation getDestination() {
@@ -107,7 +107,7 @@ public final class BgpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Destination IP range for the route, in human-readable CIDR format
+   * [Output only] Destination IP range for the route, in human-readable CIDR format
    * @param destination destination or {@code null} for none
    */
   public BgpRoute setDestination(BgpRouteNetworkLayerReachabilityInformation destination) {
@@ -116,7 +116,7 @@ public final class BgpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] BGP multi-exit discriminator
+   * [Output only] BGP multi-exit discriminator
    * @return value or {@code null} for none
    */
   public java.lang.Long getMed() {
@@ -124,7 +124,7 @@ public final class BgpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] BGP multi-exit discriminator
+   * [Output only] BGP multi-exit discriminator
    * @param med med or {@code null} for none
    */
   public BgpRoute setMed(java.lang.Long med) {
@@ -133,7 +133,7 @@ public final class BgpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] BGP origin (EGP, IGP or INCOMPLETE)
+   * [Output only] BGP origin (EGP, IGP or INCOMPLETE)
    * @return value or {@code null} for none
    */
   public java.lang.String getOrigin() {
@@ -141,7 +141,7 @@ public final class BgpRoute extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] BGP origin (EGP, IGP or INCOMPLETE)
+   * [Output only] BGP origin (EGP, IGP or INCOMPLETE)
    * @param origin origin or {@code null} for none
    */
   public BgpRoute setOrigin(java.lang.String origin) {

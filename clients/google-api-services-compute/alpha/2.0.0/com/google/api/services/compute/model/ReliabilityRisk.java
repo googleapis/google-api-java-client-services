@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class ReliabilityRisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#reliabilityRisk for reliability
-   * risks.
+   * [Output Only] Type of resource. Always compute#reliabilityRisk for reliability risks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,21 +79,21 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   private RiskRecommendation recommendation;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -102,7 +101,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public ReliabilityRisk setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -162,8 +161,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#reliabilityRisk for reliability
-   * risks.
+   * [Output Only] Type of resource. Always compute#reliabilityRisk for reliability risks.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -171,8 +169,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Always compute#reliabilityRisk for reliability
-   * risks.
+   * [Output Only] Type of resource. Always compute#reliabilityRisk for reliability risks.
    * @param kind kind or {@code null} for none
    */
   public ReliabilityRisk setKind(java.lang.String kind) {
@@ -215,7 +212,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -223,7 +220,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public ReliabilityRisk setSelfLink(java.lang.String selfLink) {
@@ -232,7 +229,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -240,7 +237,7 @@ public final class ReliabilityRisk extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public ReliabilityRisk setSelfLinkWithId(java.lang.String selfLinkWithId) {

@@ -65,14 +65,14 @@ public final class HaControllersList extends com.google.api.client.json.GenericJ
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output only] Server-defined URL for this resource.
+   * [Output only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output only] Unreachable resources.
+   * [Output only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,7 +156,7 @@ public final class HaControllersList extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Server-defined URL for this resource.
+   * [Output only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -164,7 +164,7 @@ public final class HaControllersList extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Server-defined URL for this resource.
+   * [Output only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public HaControllersList setSelfLink(java.lang.String selfLink) {
@@ -173,7 +173,7 @@ public final class HaControllersList extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Unreachable resources.
+   * [Output only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -181,7 +181,7 @@ public final class HaControllersList extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Unreachable resources.
+   * [Output only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public HaControllersList setUnreachables(java.util.List<java.lang.String> unreachables) {

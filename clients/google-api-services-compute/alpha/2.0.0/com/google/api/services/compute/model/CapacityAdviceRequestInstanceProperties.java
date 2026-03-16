@@ -30,38 +30,11 @@ package com.google.api.services.compute.model;
 public final class CapacityAdviceRequestInstanceProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. Specifies the topology required to create a partition for VMs that have
-   * interconnected GPUs or TPUs. Example values: 2x2 for ct5l-hightpu-4t.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String acceleratorTopology;
-
-  /**
    * Specifies the scheduling options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CapacityAdviceRequestInstancePropertiesScheduling scheduling;
-
-  /**
-   * Input only. Specifies the topology required to create a partition for VMs that have
-   * interconnected GPUs or TPUs. Example values: 2x2 for ct5l-hightpu-4t.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAcceleratorTopology() {
-    return acceleratorTopology;
-  }
-
-  /**
-   * Input only. Specifies the topology required to create a partition for VMs that have
-   * interconnected GPUs or TPUs. Example values: 2x2 for ct5l-hightpu-4t.
-   * @param acceleratorTopology acceleratorTopology or {@code null} for none
-   */
-  public CapacityAdviceRequestInstanceProperties setAcceleratorTopology(java.lang.String acceleratorTopology) {
-    this.acceleratorTopology = acceleratorTopology;
-    return this;
-  }
 
   /**
    * Specifies the scheduling options.

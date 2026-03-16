@@ -30,21 +30,21 @@ package com.google.api.services.compute.model;
 public final class InstantSnapshotGroupResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String consistencyMembershipResolutionTime;
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstantSnapshotGroupSourceInfo sourceInfo;
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @return value or {@code null} for none
    */
   public String getConsistencyMembershipResolutionTime() {
@@ -52,7 +52,7 @@ public final class InstantSnapshotGroupResourceStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @param consistencyMembershipResolutionTime consistencyMembershipResolutionTime or {@code null} for none
    */
   public InstantSnapshotGroupResourceStatus setConsistencyMembershipResolutionTime(String consistencyMembershipResolutionTime) {
@@ -61,7 +61,7 @@ public final class InstantSnapshotGroupResourceStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @return value or {@code null} for none
    */
   public InstantSnapshotGroupSourceInfo getSourceInfo() {
@@ -69,7 +69,7 @@ public final class InstantSnapshotGroupResourceStatus extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only]
+   * [Output Only]
    * @param sourceInfo sourceInfo or {@code null} for none
    */
   public InstantSnapshotGroupResourceStatus setSourceInfo(InstantSnapshotGroupSourceInfo sourceInfo) {

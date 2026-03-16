@@ -30,17 +30,15 @@ package com.google.api.services.compute.model;
 public final class HaController extends com.google.api.client.json.GenericJson {
 
   /**
-   * Advanced configuration option. If specified, these Backend Services need to be pre-created.
-   *
-   * Currently, only one backend service can be specified, and it must be L4 Internal Load Balancer
-   * (ILB).
+   * Advanced configuration option. If specified, these Backend Services need to be pre-created and
+   * configured as managed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> backendServices;
 
   /**
-   * Output only. [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp in RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,14 +52,6 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Capacity guarantee settings for the event of a failover. This determines whether capacity is
-   * guaranteed to be available in the zones used by the HaController.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String failoverCapacity;
-
-  /**
    * Indicates how failover should be initiated.
    * The value may be {@code null}.
    */
@@ -69,8 +59,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private java.lang.String failoverInitiation;
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -89,7 +78,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private java.lang.String instanceName;
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#haController for HaControllers.
+   * [Output Only] Type of the resource. Alwayscompute#haController for HaControllers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +104,8 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private HaControllerNetworkingAutoConfiguration networkingAutoConfiguration;
 
   /**
-   * Output only. [Output Only] URL of the region where the resource resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the resource resides. You must specify this field as part
+   * of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,21 +119,21 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private java.lang.String secondaryZoneCapacity;
 
   /**
-   * Output only. [Output only] Server-defined URL for the resource.
+   * [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only] Status information for the HaController resource.
+   * [Output Only] Status information for the HaController resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,10 +147,8 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, HaControllerZoneConfiguration> zoneConfigurations;
 
   /**
-   * Advanced configuration option. If specified, these Backend Services need to be pre-created.
-   *
-   * Currently, only one backend service can be specified, and it must be L4 Internal Load Balancer
-   * (ILB).
+   * Advanced configuration option. If specified, these Backend Services need to be pre-created and
+   * configured as managed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBackendServices() {
@@ -169,10 +156,8 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Advanced configuration option. If specified, these Backend Services need to be pre-created.
-   *
-   * Currently, only one backend service can be specified, and it must be L4 Internal Load Balancer
-   * (ILB).
+   * Advanced configuration option. If specified, these Backend Services need to be pre-created and
+   * configured as managed.
    * @param backendServices backendServices or {@code null} for none
    */
   public HaController setBackendServices(java.util.List<java.lang.String> backendServices) {
@@ -181,7 +166,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -189,7 +174,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp in RFC3339 text format.
+   * [Output Only] Creation timestamp in RFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public HaController setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -215,25 +200,6 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Capacity guarantee settings for the event of a failover. This determines whether capacity is
-   * guaranteed to be available in the zones used by the HaController.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFailoverCapacity() {
-    return failoverCapacity;
-  }
-
-  /**
-   * Capacity guarantee settings for the event of a failover. This determines whether capacity is
-   * guaranteed to be available in the zones used by the HaController.
-   * @param failoverCapacity failoverCapacity or {@code null} for none
-   */
-  public HaController setFailoverCapacity(java.lang.String failoverCapacity) {
-    this.failoverCapacity = failoverCapacity;
-    return this;
-  }
-
-  /**
    * Indicates how failover should be initiated.
    * @return value or {@code null} for none
    */
@@ -251,8 +217,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -260,8 +225,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The unique identifier for the resource. This identifier is defined
-   * by the server.
+   * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @param id id or {@code null} for none
    */
   public HaController setId(java.math.BigInteger id) {
@@ -297,7 +261,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#haController for HaControllers.
+   * [Output Only] Type of the resource. Alwayscompute#haController for HaControllers.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -305,7 +269,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Alwayscompute#haController for HaControllers.
+   * [Output Only] Type of the resource. Alwayscompute#haController for HaControllers.
    * @param kind kind or {@code null} for none
    */
   public HaController setKind(java.lang.String kind) {
@@ -358,8 +322,8 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the resource resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the resource resides. You must specify this field as part
+   * of the HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -367,8 +331,8 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the resource resides. You must specify this
-   * field as part of the HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the resource resides. You must specify this field as part
+   * of the HTTP request URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public HaController setRegion(java.lang.String region) {
@@ -394,7 +358,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Server-defined URL for the resource.
+   * [Output only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -402,7 +366,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Server-defined URL for the resource.
+   * [Output only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public HaController setSelfLink(java.lang.String selfLink) {
@@ -411,7 +375,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -419,7 +383,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public HaController setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -428,7 +392,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status information for the HaController resource.
+   * [Output Only] Status information for the HaController resource.
    * @return value or {@code null} for none
    */
   public HaControllerStatus getStatus() {
@@ -436,7 +400,7 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Status information for the HaController resource.
+   * [Output Only] Status information for the HaController resource.
    * @param status status or {@code null} for none
    */
   public HaController setStatus(HaControllerStatus status) {

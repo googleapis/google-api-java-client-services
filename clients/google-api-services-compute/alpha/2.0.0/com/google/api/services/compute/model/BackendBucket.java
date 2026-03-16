@@ -99,7 +99,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private java.math.BigInteger id;
 
   /**
-   * Output only. Type of the resource.
+   * Type of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,9 +135,9 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private BackendBucketParams params;
 
   /**
-   * Output only. [Output Only] URL of the region where the regional backend bucket resides. This
-   * field is not applicable to global backend buckets. You must specify this field as part of the
-   * HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional backend bucket resides. This field is not
+   * applicable to global backend buckets. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,14 +151,14 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only] List of resources referencing that backend bucket.
+   * [Output Only] List of resources referencing that backend bucket.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -324,7 +324,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Type of the resource.
+   * Type of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -332,7 +332,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Type of the resource.
+   * Type of the resource.
    * @param kind kind or {@code null} for none
    */
   public BackendBucket setKind(java.lang.String kind) {
@@ -408,9 +408,9 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional backend bucket resides. This
-   * field is not applicable to global backend buckets. You must specify this field as part of the
-   * HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional backend bucket resides. This field is not
+   * applicable to global backend buckets. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -418,9 +418,9 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional backend bucket resides. This
-   * field is not applicable to global backend buckets. You must specify this field as part of the
-   * HTTP request URL. It is not settable as a field in the request body.
+   * [Output Only] URL of the region where the regional backend bucket resides. This field is not
+   * applicable to global backend buckets. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public BackendBucket setRegion(java.lang.String region) {
@@ -446,7 +446,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -454,7 +454,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public BackendBucket setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -463,7 +463,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] List of resources referencing that backend bucket.
+   * [Output Only] List of resources referencing that backend bucket.
    * @return value or {@code null} for none
    */
   public java.util.List<BackendBucketUsedBy> getUsedBy() {
@@ -471,7 +471,7 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] List of resources referencing that backend bucket.
+   * [Output Only] List of resources referencing that backend bucket.
    * @param usedBy usedBy or {@code null} for none
    */
   public BackendBucket setUsedBy(java.util.List<BackendBucketUsedBy> usedBy) {

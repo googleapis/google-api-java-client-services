@@ -56,8 +56,7 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof
-   * securityPolicies
+   * [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof securityPolicies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +73,7 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +136,7 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof
-   * securityPolicies
+   * [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof securityPolicies
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -146,8 +144,7 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof
-   * securityPolicies
+   * [Output Only] Type of resource. Alwayscompute#securityPolicyList for listsof securityPolicies
    * @param kind kind or {@code null} for none
    */
   public SecurityPolicyList setKind(java.lang.String kind) {
@@ -179,7 +176,7 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -187,7 +184,7 @@ public final class SecurityPolicyList extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public SecurityPolicyList setUnreachables(java.util.List<java.lang.String> unreachables) {

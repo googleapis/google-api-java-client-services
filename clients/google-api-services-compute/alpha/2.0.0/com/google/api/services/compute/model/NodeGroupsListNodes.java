@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class NodeGroupsListNodes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
+   * [Output Only] Unique identifier for the resource; defined by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,39 +50,39 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute.nodeGroupsListNodes for
-   * the list of nodes in the specified node group.
+   * [Output Only] The resource type, which is alwayscompute.nodeGroupsListNodes for the list of
+   * nodes in the specified node group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Output only. [Output Only] This token allows you to get the next page of results for list
-   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
-   * for the query parameter pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Warning warning;
 
   /**
-   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
+   * [Output Only] Unique identifier for the resource; defined by the server.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -90,7 +90,7 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] Unique identifier for the resource; defined by the server.
+   * [Output Only] Unique identifier for the resource; defined by the server.
    * @param id id or {@code null} for none
    */
   public NodeGroupsListNodes setId(java.lang.String id) {
@@ -116,8 +116,8 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute.nodeGroupsListNodes for
-   * the list of nodes in the specified node group.
+   * [Output Only] The resource type, which is alwayscompute.nodeGroupsListNodes for the list of
+   * nodes in the specified node group.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -125,8 +125,8 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute.nodeGroupsListNodes for
-   * the list of nodes in the specified node group.
+   * [Output Only] The resource type, which is alwayscompute.nodeGroupsListNodes for the list of
+   * nodes in the specified node group.
    * @param kind kind or {@code null} for none
    */
   public NodeGroupsListNodes setKind(java.lang.String kind) {
@@ -135,10 +135,10 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] This token allows you to get the next page of results for list
-   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
-   * for the query parameter pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -146,10 +146,10 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] This token allows you to get the next page of results for list
-   * requests. If the number of results is larger thanmaxResults, use the nextPageToken as a value
-   * for the query parameter pageToken in the next list request. Subsequent list requests will have
-   * their own nextPageToken to continue paging through the results.
+   * [Output Only] This token allows you to get the next page of results for list requests. If the
+   * number of results is larger thanmaxResults, use the nextPageToken as a value for the query
+   * parameter pageToken in the next list request. Subsequent list requests will have their own
+   * nextPageToken to continue paging through the results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public NodeGroupsListNodes setNextPageToken(java.lang.String nextPageToken) {
@@ -158,7 +158,7 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -166,7 +166,7 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NodeGroupsListNodes setSelfLink(java.lang.String selfLink) {
@@ -175,7 +175,7 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    * @return value or {@code null} for none
    */
   public Warning getWarning() {
@@ -183,7 +183,7 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    * @param warning warning or {@code null} for none
    */
   public NodeGroupsListNodes setWarning(Warning warning) {
@@ -202,7 +202,7 @@ public final class NodeGroupsListNodes extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output Only] Informational warning message.
+   * [Output Only] Informational warning message.
    */
   public static final class Warning extends com.google.api.client.json.GenericJson {
 

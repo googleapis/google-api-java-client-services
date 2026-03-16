@@ -33,8 +33,8 @@ package com.google.api.services.compute.model;
 public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The Cloud Armor tier for this project. It can be one of the
-   * following values: CA_STANDARD,CA_ENTERPRISE_PAYGO.
+   * [Output Only] The Cloud Armor tier for this project. It can be one of the following values:
+   * CA_STANDARD,CA_ENTERPRISE_PAYGO.
    *
    * If this field is not specified, it is assumed to beCA_STANDARD.
    * The value may be {@code null}.
@@ -97,15 +97,15 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#project for projects.
+   * [Output Only] Type of the resource. Always compute#project for projects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Output only. [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It
-   * can be one of the following values:CA_STANDARD, CAMP_PLUS_PAYGO.
+   * [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It can be one of
+   * the following values:CA_STANDARD, CAMP_PLUS_PAYGO.
    *
    * If this field is not specified, it is assumed to beCA_STANDARD.
    * The value may be {@code null}.
@@ -144,7 +144,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private UsageExportLocation usageExportLocation;
 
   /**
-   * Output only. [Output Only] Default internal DNS setting used by VMs running in this project.
+   * [Output Only] Default internal DNS setting used by VMs running in this project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,8 +159,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String xpnProjectStatus;
 
   /**
-   * Output only. [Output Only] The Cloud Armor tier for this project. It can be one of the
-   * following values: CA_STANDARD,CA_ENTERPRISE_PAYGO.
+   * [Output Only] The Cloud Armor tier for this project. It can be one of the following values:
+   * CA_STANDARD,CA_ENTERPRISE_PAYGO.
    *
    * If this field is not specified, it is assumed to beCA_STANDARD.
    * @return value or {@code null} for none
@@ -170,8 +170,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The Cloud Armor tier for this project. It can be one of the
-   * following values: CA_STANDARD,CA_ENTERPRISE_PAYGO.
+   * [Output Only] The Cloud Armor tier for this project. It can be one of the following values:
+   * CA_STANDARD,CA_ENTERPRISE_PAYGO.
    *
    * If this field is not specified, it is assumed to beCA_STANDARD.
    * @param cloudArmorTier cloudArmorTier or {@code null} for none
@@ -311,7 +311,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#project for projects.
+   * [Output Only] Type of the resource. Always compute#project for projects.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -319,7 +319,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Type of the resource. Always compute#project for projects.
+   * [Output Only] Type of the resource. Always compute#project for projects.
    * @param kind kind or {@code null} for none
    */
   public Project setKind(java.lang.String kind) {
@@ -328,8 +328,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It
-   * can be one of the following values:CA_STANDARD, CAMP_PLUS_PAYGO.
+   * [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It can be one of
+   * the following values:CA_STANDARD, CAMP_PLUS_PAYGO.
    *
    * If this field is not specified, it is assumed to beCA_STANDARD.
    * @return value or {@code null} for none
@@ -339,8 +339,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It
-   * can be one of the following values:CA_STANDARD, CAMP_PLUS_PAYGO.
+   * [Output Only] The Cloud Armor Managed Protection (CAMP) tier for this project. It can be one of
+   * the following values:CA_STANDARD, CAMP_PLUS_PAYGO.
    *
    * If this field is not specified, it is assumed to beCA_STANDARD.
    * @param managedProtectionTier managedProtectionTier or {@code null} for none
@@ -423,7 +423,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Default internal DNS setting used by VMs running in this project.
+   * [Output Only] Default internal DNS setting used by VMs running in this project.
    * @return value or {@code null} for none
    */
   public java.lang.String getVmDnsSetting() {
@@ -431,7 +431,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Default internal DNS setting used by VMs running in this project.
+   * [Output Only] Default internal DNS setting used by VMs running in this project.
    * @param vmDnsSetting vmDnsSetting or {@code null} for none
    */
   public Project setVmDnsSetting(java.lang.String vmDnsSetting) {

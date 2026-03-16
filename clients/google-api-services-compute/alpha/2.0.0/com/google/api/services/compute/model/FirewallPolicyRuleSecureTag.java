@@ -37,8 +37,8 @@ public final class FirewallPolicyRuleSecureTag extends com.google.api.client.jso
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A
-   * secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+   * [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is
+   * `INEFFECTIVE` when it is deleted or its network is deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class FirewallPolicyRuleSecureTag extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A
-   * secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+   * [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is
+   * `INEFFECTIVE` when it is deleted or its network is deleted.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -71,8 +71,8 @@ public final class FirewallPolicyRuleSecureTag extends com.google.api.client.jso
   }
 
   /**
-   * Output only. [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A
-   * secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+   * [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is
+   * `INEFFECTIVE` when it is deleted or its network is deleted.
    * @param state state or {@code null} for none
    */
   public FirewallPolicyRuleSecureTag setState(java.lang.String state) {

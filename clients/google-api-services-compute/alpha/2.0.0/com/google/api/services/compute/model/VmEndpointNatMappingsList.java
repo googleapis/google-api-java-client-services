@@ -37,8 +37,8 @@ public final class VmEndpointNatMappingsList extends com.google.api.client.json.
   private java.lang.String id;
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#vmEndpointNatMappingsList for lists
-   * of Nat mappings of VM endpoints.
+   * [Output Only] Type of resource. Alwayscompute#vmEndpointNatMappingsList for lists of Nat
+   * mappings of VM endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class VmEndpointNatMappingsList extends com.google.api.client.json.
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +99,8 @@ public final class VmEndpointNatMappingsList extends com.google.api.client.json.
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#vmEndpointNatMappingsList for lists
-   * of Nat mappings of VM endpoints.
+   * [Output Only] Type of resource. Alwayscompute#vmEndpointNatMappingsList for lists of Nat
+   * mappings of VM endpoints.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -108,8 +108,8 @@ public final class VmEndpointNatMappingsList extends com.google.api.client.json.
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#vmEndpointNatMappingsList for lists
-   * of Nat mappings of VM endpoints.
+   * [Output Only] Type of resource. Alwayscompute#vmEndpointNatMappingsList for lists of Nat
+   * mappings of VM endpoints.
    * @param kind kind or {@code null} for none
    */
   public VmEndpointNatMappingsList setKind(java.lang.String kind) {
@@ -158,7 +158,7 @@ public final class VmEndpointNatMappingsList extends com.google.api.client.json.
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -166,7 +166,7 @@ public final class VmEndpointNatMappingsList extends com.google.api.client.json.
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public VmEndpointNatMappingsList setSelfLink(java.lang.String selfLink) {

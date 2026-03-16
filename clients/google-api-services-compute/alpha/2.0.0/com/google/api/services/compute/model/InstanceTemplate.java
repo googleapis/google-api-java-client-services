@@ -44,8 +44,7 @@ package com.google.api.services.compute.model;
 public final class InstanceTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The creation timestamp for this instance template inRFC3339 text
-   * format.
+   * [Output Only] The creation timestamp for this instance template inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,16 +58,16 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
-   * Output only. [Output Only] A unique identifier for this instance template. The server defines
-   * this identifier.
+   * [Output Only] A unique identifier for this instance template. The server defines this
+   * identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute#instanceTemplate for
-   * instance templates.
+   * [Output Only] The resource type, which is alwayscompute#instanceTemplate for instance
+   * templates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,22 +92,22 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   private InstanceProperties properties;
 
   /**
-   * Output only. [Output Only] URL of the region where the instance template resides. Only
-   * applicable for regional resources.
+   * [Output Only] URL of the region where the instance template resides. Only applicable for
+   * regional resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Output only. [Output Only] The URL for this instance template. The server defines this URL.
+   * [Output Only] The URL for this instance template. The server defines this URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,8 +131,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   private SourceInstanceParams sourceInstanceParams;
 
   /**
-   * Output only. [Output Only] The creation timestamp for this instance template inRFC3339 text
-   * format.
+   * [Output Only] The creation timestamp for this instance template inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -141,8 +139,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The creation timestamp for this instance template inRFC3339 text
-   * format.
+   * [Output Only] The creation timestamp for this instance template inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public InstanceTemplate setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -168,8 +165,8 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] A unique identifier for this instance template. The server defines
-   * this identifier.
+   * [Output Only] A unique identifier for this instance template. The server defines this
+   * identifier.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getId() {
@@ -177,8 +174,8 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] A unique identifier for this instance template. The server defines
-   * this identifier.
+   * [Output Only] A unique identifier for this instance template. The server defines this
+   * identifier.
    * @param id id or {@code null} for none
    */
   public InstanceTemplate setId(java.math.BigInteger id) {
@@ -187,8 +184,8 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute#instanceTemplate for
-   * instance templates.
+   * [Output Only] The resource type, which is alwayscompute#instanceTemplate for instance
+   * templates.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -196,8 +193,8 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is alwayscompute#instanceTemplate for
-   * instance templates.
+   * [Output Only] The resource type, which is alwayscompute#instanceTemplate for instance
+   * templates.
    * @param kind kind or {@code null} for none
    */
   public InstanceTemplate setKind(java.lang.String kind) {
@@ -248,8 +245,8 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the instance template resides. Only
-   * applicable for regional resources.
+   * [Output Only] URL of the region where the instance template resides. Only applicable for
+   * regional resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -257,8 +254,8 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the instance template resides. Only
-   * applicable for regional resources.
+   * [Output Only] URL of the region where the instance template resides. Only applicable for
+   * regional resources.
    * @param region region or {@code null} for none
    */
   public InstanceTemplate setRegion(java.lang.String region) {
@@ -267,7 +264,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The URL for this instance template. The server defines this URL.
+   * [Output Only] The URL for this instance template. The server defines this URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -275,7 +272,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] The URL for this instance template. The server defines this URL.
+   * [Output Only] The URL for this instance template. The server defines this URL.
    * @param selfLink selfLink or {@code null} for none
    */
   public InstanceTemplate setSelfLink(java.lang.String selfLink) {
@@ -284,7 +281,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -292,7 +289,7 @@ public final class InstanceTemplate extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public InstanceTemplate setSelfLinkWithId(java.lang.String selfLinkWithId) {

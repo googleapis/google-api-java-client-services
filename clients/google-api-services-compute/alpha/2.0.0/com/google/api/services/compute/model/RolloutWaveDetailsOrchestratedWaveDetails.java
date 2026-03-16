@@ -37,14 +37,6 @@ public final class RolloutWaveDetailsOrchestratedWaveDetails extends com.google.
   private java.lang.Long completedResourcesCount;
 
   /**
-   * Output only. Estimated timestamp at which the wave will complete. Extrapolated from current
-   * progress.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String estimatedCompletionTime;
-
-  /**
    * Output only. Estimated total count of resources.
    * The value may be {@code null}.
    */
@@ -68,14 +60,6 @@ public final class RolloutWaveDetailsOrchestratedWaveDetails extends com.google.
   private java.lang.Long failedResourcesCount;
 
   /**
-   * Output only. Status of each location in the wave. Map keys (locations) must be specified like
-   * "us-east1" or "asia-west1-a".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, RolloutWaveDetailsOrchestratedWaveDetailsLocationStatus> locationStatus;
-
-  /**
    * Output only. Resource completed so far.
    * @return value or {@code null} for none
    */
@@ -89,25 +73,6 @@ public final class RolloutWaveDetailsOrchestratedWaveDetails extends com.google.
    */
   public RolloutWaveDetailsOrchestratedWaveDetails setCompletedResourcesCount(java.lang.Long completedResourcesCount) {
     this.completedResourcesCount = completedResourcesCount;
-    return this;
-  }
-
-  /**
-   * Output only. Estimated timestamp at which the wave will complete. Extrapolated from current
-   * progress.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEstimatedCompletionTime() {
-    return estimatedCompletionTime;
-  }
-
-  /**
-   * Output only. Estimated timestamp at which the wave will complete. Extrapolated from current
-   * progress.
-   * @param estimatedCompletionTime estimatedCompletionTime or {@code null} for none
-   */
-  public RolloutWaveDetailsOrchestratedWaveDetails setEstimatedCompletionTime(java.lang.String estimatedCompletionTime) {
-    this.estimatedCompletionTime = estimatedCompletionTime;
     return this;
   }
 
@@ -163,25 +128,6 @@ public final class RolloutWaveDetailsOrchestratedWaveDetails extends com.google.
    */
   public RolloutWaveDetailsOrchestratedWaveDetails setFailedResourcesCount(java.lang.Long failedResourcesCount) {
     this.failedResourcesCount = failedResourcesCount;
-    return this;
-  }
-
-  /**
-   * Output only. Status of each location in the wave. Map keys (locations) must be specified like
-   * "us-east1" or "asia-west1-a".
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, RolloutWaveDetailsOrchestratedWaveDetailsLocationStatus> getLocationStatus() {
-    return locationStatus;
-  }
-
-  /**
-   * Output only. Status of each location in the wave. Map keys (locations) must be specified like
-   * "us-east1" or "asia-west1-a".
-   * @param locationStatus locationStatus or {@code null} for none
-   */
-  public RolloutWaveDetailsOrchestratedWaveDetails setLocationStatus(java.util.Map<String, RolloutWaveDetailsOrchestratedWaveDetailsLocationStatus> locationStatus) {
-    this.locationStatus = locationStatus;
     return this;
   }
 

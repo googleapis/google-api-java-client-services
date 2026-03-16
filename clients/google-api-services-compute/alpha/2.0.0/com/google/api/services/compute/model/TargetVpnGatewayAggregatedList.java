@@ -44,8 +44,7 @@ public final class TargetVpnGatewayAggregatedList extends com.google.api.client.
   private java.util.Map<String, TargetVpnGatewaysScopedList> items;
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN
-   * gateways.
+   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN gateways.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,14 +61,14 @@ public final class TargetVpnGatewayAggregatedList extends com.google.api.client.
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,8 +116,7 @@ public final class TargetVpnGatewayAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN
-   * gateways.
+   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN gateways.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -126,8 +124,7 @@ public final class TargetVpnGatewayAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN
-   * gateways.
+   * [Output Only] Type of resource. Alwayscompute#targetVpnGateway for target VPN gateways.
    * @param kind kind or {@code null} for none
    */
   public TargetVpnGatewayAggregatedList setKind(java.lang.String kind) {
@@ -159,7 +156,7 @@ public final class TargetVpnGatewayAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -167,7 +164,7 @@ public final class TargetVpnGatewayAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public TargetVpnGatewayAggregatedList setSelfLink(java.lang.String selfLink) {
@@ -176,7 +173,7 @@ public final class TargetVpnGatewayAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -184,7 +181,7 @@ public final class TargetVpnGatewayAggregatedList extends com.google.api.client.
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public TargetVpnGatewayAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

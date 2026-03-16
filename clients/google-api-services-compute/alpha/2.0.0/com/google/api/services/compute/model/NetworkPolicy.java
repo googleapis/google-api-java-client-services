@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class NetworkPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] A list of associations that belong to this network policy.
+   * [Output Only] A list of associations that belong to this network policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<NetworkPolicyAssociation> associations;
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +58,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   private java.math.BigInteger id;
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#networkPolicy for network
-   * policies
+   * [Output only] Type of the resource. Alwayscompute#networkPolicy for network policies
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,45 +72,44 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * Output only. [Output Only] URL of the region where the regional network policy resides. You
-   * must specify this field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * [Output Only] URL of the region where the regional network policy resides. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * Output only. [Output Only] Total count of all network policy rule tuples. A network policy can
-   * not exceed a set number of tuples.
+   * [Output Only] Total count of all network policy rule tuples. A network policy can not exceed a
+   * set number of tuples.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer ruleTupleCount;
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
 
   /**
-   * Output only. [Output Only] A list of traffic classification rules that belong to this policy.
+   * [Output Only] A list of traffic classification rules that belong to this policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<NetworkPolicyTrafficClassificationRule> trafficClassificationRules;
 
   /**
-   * Output only. [Output Only] A list of associations that belong to this network policy.
+   * [Output Only] A list of associations that belong to this network policy.
    * @return value or {@code null} for none
    */
   public java.util.List<NetworkPolicyAssociation> getAssociations() {
@@ -119,7 +117,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] A list of associations that belong to this network policy.
+   * [Output Only] A list of associations that belong to this network policy.
    * @param associations associations or {@code null} for none
    */
   public NetworkPolicy setAssociations(java.util.List<NetworkPolicyAssociation> associations) {
@@ -128,7 +126,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreationTimestamp() {
@@ -136,7 +134,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Creation timestamp inRFC3339 text format.
+   * [Output Only] Creation timestamp inRFC3339 text format.
    * @param creationTimestamp creationTimestamp or {@code null} for none
    */
   public NetworkPolicy setCreationTimestamp(java.lang.String creationTimestamp) {
@@ -179,8 +177,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#networkPolicy for network
-   * policies
+   * [Output only] Type of the resource. Alwayscompute#networkPolicy for network policies
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -188,8 +185,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Type of the resource. Alwayscompute#networkPolicy for network
-   * policies
+   * [Output only] Type of the resource. Alwayscompute#networkPolicy for network policies
    * @param kind kind or {@code null} for none
    */
   public NetworkPolicy setKind(java.lang.String kind) {
@@ -215,9 +211,8 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional network policy resides. You
-   * must specify this field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * [Output Only] URL of the region where the regional network policy resides. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field in the request body.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -225,9 +220,8 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] URL of the region where the regional network policy resides. You
-   * must specify this field as part of the HTTP request URL. It is not settable as a field in the
-   * request body.
+   * [Output Only] URL of the region where the regional network policy resides. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field in the request body.
    * @param region region or {@code null} for none
    */
   public NetworkPolicy setRegion(java.lang.String region) {
@@ -236,8 +230,8 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Total count of all network policy rule tuples. A network policy can
-   * not exceed a set number of tuples.
+   * [Output Only] Total count of all network policy rule tuples. A network policy can not exceed a
+   * set number of tuples.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRuleTupleCount() {
@@ -245,8 +239,8 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Total count of all network policy rule tuples. A network policy can
-   * not exceed a set number of tuples.
+   * [Output Only] Total count of all network policy rule tuples. A network policy can not exceed a
+   * set number of tuples.
    * @param ruleTupleCount ruleTupleCount or {@code null} for none
    */
   public NetworkPolicy setRuleTupleCount(java.lang.Integer ruleTupleCount) {
@@ -255,7 +249,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -263,7 +257,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for the resource.
+   * [Output Only] Server-defined URL for the resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NetworkPolicy setSelfLink(java.lang.String selfLink) {
@@ -272,7 +266,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -280,7 +274,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * [Output Only] Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public NetworkPolicy setSelfLinkWithId(java.lang.String selfLinkWithId) {
@@ -289,7 +283,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] A list of traffic classification rules that belong to this policy.
+   * [Output Only] A list of traffic classification rules that belong to this policy.
    * @return value or {@code null} for none
    */
   public java.util.List<NetworkPolicyTrafficClassificationRule> getTrafficClassificationRules() {
@@ -297,7 +291,7 @@ public final class NetworkPolicy extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output Only] A list of traffic classification rules that belong to this policy.
+   * [Output Only] A list of traffic classification rules that belong to this policy.
    * @param trafficClassificationRules trafficClassificationRules or {@code null} for none
    */
   public NetworkPolicy setTrafficClassificationRules(java.util.List<NetworkPolicyTrafficClassificationRule> trafficClassificationRules) {

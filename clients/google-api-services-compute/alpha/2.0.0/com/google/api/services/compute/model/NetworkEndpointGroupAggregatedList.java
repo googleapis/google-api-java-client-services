@@ -44,9 +44,8 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   private java.util.Map<String, NetworkEndpointGroupsScopedList> items;
 
   /**
-   * Output only. [Output Only] The resource type, which is
-   * alwayscompute#networkEndpointGroupAggregatedList for aggregated lists of network endpoint
-   * groups.
+   * [Output Only] The resource type, which is alwayscompute#networkEndpointGroupAggregatedList for
+   * aggregated lists of network endpoint groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,14 +62,14 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   private java.lang.String nextPageToken;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,9 +117,8 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is
-   * alwayscompute#networkEndpointGroupAggregatedList for aggregated lists of network endpoint
-   * groups.
+   * [Output Only] The resource type, which is alwayscompute#networkEndpointGroupAggregatedList for
+   * aggregated lists of network endpoint groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -128,9 +126,8 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] The resource type, which is
-   * alwayscompute#networkEndpointGroupAggregatedList for aggregated lists of network endpoint
-   * groups.
+   * [Output Only] The resource type, which is alwayscompute#networkEndpointGroupAggregatedList for
+   * aggregated lists of network endpoint groups.
    * @param kind kind or {@code null} for none
    */
   public NetworkEndpointGroupAggregatedList setKind(java.lang.String kind) {
@@ -162,7 +159,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLink() {
@@ -170,7 +167,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource.
+   * [Output Only] Server-defined URL for this resource.
    * @param selfLink selfLink or {@code null} for none
    */
   public NetworkEndpointGroupAggregatedList setSelfLink(java.lang.String selfLink) {
@@ -179,7 +176,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachables() {
@@ -187,7 +184,7 @@ public final class NetworkEndpointGroupAggregatedList extends com.google.api.cli
   }
 
   /**
-   * Output only. [Output Only] Unreachable resources.
+   * [Output Only] Unreachable resources.
    * @param unreachables unreachables or {@code null} for none
    */
   public NetworkEndpointGroupAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {

@@ -30,29 +30,29 @@ package com.google.api.services.compute.model;
 public final class VpnGatewayStatusTunnel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The VPN gateway interface this VPN tunnel is associated with.
+   * The VPN gateway interface this VPN tunnel is associated with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long localGatewayInterface;
 
   /**
-   * Output only. The peer gateway interface this VPN tunnel is connected to, the peer gateway could
-   * either be an external VPN gateway or a Google Cloud VPN gateway.
+   * The peer gateway interface this VPN tunnel is connected to, the peer gateway could either be an
+   * external VPN gateway or a Google Cloud VPN gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Long peerGatewayInterface;
 
   /**
-   * Output only. URL reference to the VPN tunnel.
+   * URL reference to the VPN tunnel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tunnelUrl;
 
   /**
-   * Output only. The VPN gateway interface this VPN tunnel is associated with.
+   * The VPN gateway interface this VPN tunnel is associated with.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLocalGatewayInterface() {
@@ -60,7 +60,7 @@ public final class VpnGatewayStatusTunnel extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The VPN gateway interface this VPN tunnel is associated with.
+   * The VPN gateway interface this VPN tunnel is associated with.
    * @param localGatewayInterface localGatewayInterface or {@code null} for none
    */
   public VpnGatewayStatusTunnel setLocalGatewayInterface(java.lang.Long localGatewayInterface) {
@@ -69,8 +69,8 @@ public final class VpnGatewayStatusTunnel extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The peer gateway interface this VPN tunnel is connected to, the peer gateway could
-   * either be an external VPN gateway or a Google Cloud VPN gateway.
+   * The peer gateway interface this VPN tunnel is connected to, the peer gateway could either be an
+   * external VPN gateway or a Google Cloud VPN gateway.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPeerGatewayInterface() {
@@ -78,8 +78,8 @@ public final class VpnGatewayStatusTunnel extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The peer gateway interface this VPN tunnel is connected to, the peer gateway could
-   * either be an external VPN gateway or a Google Cloud VPN gateway.
+   * The peer gateway interface this VPN tunnel is connected to, the peer gateway could either be an
+   * external VPN gateway or a Google Cloud VPN gateway.
    * @param peerGatewayInterface peerGatewayInterface or {@code null} for none
    */
   public VpnGatewayStatusTunnel setPeerGatewayInterface(java.lang.Long peerGatewayInterface) {
@@ -88,7 +88,7 @@ public final class VpnGatewayStatusTunnel extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. URL reference to the VPN tunnel.
+   * URL reference to the VPN tunnel.
    * @return value or {@code null} for none
    */
   public java.lang.String getTunnelUrl() {
@@ -96,7 +96,7 @@ public final class VpnGatewayStatusTunnel extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. URL reference to the VPN tunnel.
+   * URL reference to the VPN tunnel.
    * @param tunnelUrl tunnelUrl or {@code null} for none
    */
   public VpnGatewayStatusTunnel setTunnelUrl(java.lang.String tunnelUrl) {

@@ -30,9 +30,10 @@ package com.google.api.services.spanner.v1.model;
 public final class AutoscalingTargets extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The target high priority cpu utilization percentage that the autoscaler should be
+   * Optional. The target high priority cpu utilization percentage that the autoscaler should be
    * trying to achieve for the instance. This number is on a scale from 0 (no utilization) to 100
-   * (full utilization). The valid range is [10, 90] inclusive.
+   * (full utilization). The valid range is [10, 90] inclusive. If not specified or set to 0, the
+   * autoscaler skips scaling based on high priority CPU utilization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,9 +49,23 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
   private java.lang.Integer storageUtilizationPercent;
 
   /**
-   * Required. The target high priority cpu utilization percentage that the autoscaler should be
+   * Optional. The target total CPU utilization percentage that the autoscaler should be trying to
+   * achieve for the instance. This number is on a scale from 0 (no utilization) to 100 (full
+   * utilization). The valid range is [10, 90] inclusive. If not specified or set to 0, the
+   * autoscaler skips scaling based on total CPU utilization. If both
+   * `high_priority_cpu_utilization_percent` and `total_cpu_utilization_percent` are specified, the
+   * autoscaler provisions the larger of the two required compute capacities to satisfy both
+   * targets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalCpuUtilizationPercent;
+
+  /**
+   * Optional. The target high priority cpu utilization percentage that the autoscaler should be
    * trying to achieve for the instance. This number is on a scale from 0 (no utilization) to 100
-   * (full utilization). The valid range is [10, 90] inclusive.
+   * (full utilization). The valid range is [10, 90] inclusive. If not specified or set to 0, the
+   * autoscaler skips scaling based on high priority CPU utilization.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHighPriorityCpuUtilizationPercent() {
@@ -58,9 +73,10 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The target high priority cpu utilization percentage that the autoscaler should be
+   * Optional. The target high priority cpu utilization percentage that the autoscaler should be
    * trying to achieve for the instance. This number is on a scale from 0 (no utilization) to 100
-   * (full utilization). The valid range is [10, 90] inclusive.
+   * (full utilization). The valid range is [10, 90] inclusive. If not specified or set to 0, the
+   * autoscaler skips scaling based on high priority CPU utilization.
    * @param highPriorityCpuUtilizationPercent highPriorityCpuUtilizationPercent or {@code null} for none
    */
   public AutoscalingTargets setHighPriorityCpuUtilizationPercent(java.lang.Integer highPriorityCpuUtilizationPercent) {
@@ -86,6 +102,35 @@ public final class AutoscalingTargets extends com.google.api.client.json.Generic
    */
   public AutoscalingTargets setStorageUtilizationPercent(java.lang.Integer storageUtilizationPercent) {
     this.storageUtilizationPercent = storageUtilizationPercent;
+    return this;
+  }
+
+  /**
+   * Optional. The target total CPU utilization percentage that the autoscaler should be trying to
+   * achieve for the instance. This number is on a scale from 0 (no utilization) to 100 (full
+   * utilization). The valid range is [10, 90] inclusive. If not specified or set to 0, the
+   * autoscaler skips scaling based on total CPU utilization. If both
+   * `high_priority_cpu_utilization_percent` and `total_cpu_utilization_percent` are specified, the
+   * autoscaler provisions the larger of the two required compute capacities to satisfy both
+   * targets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalCpuUtilizationPercent() {
+    return totalCpuUtilizationPercent;
+  }
+
+  /**
+   * Optional. The target total CPU utilization percentage that the autoscaler should be trying to
+   * achieve for the instance. This number is on a scale from 0 (no utilization) to 100 (full
+   * utilization). The valid range is [10, 90] inclusive. If not specified or set to 0, the
+   * autoscaler skips scaling based on total CPU utilization. If both
+   * `high_priority_cpu_utilization_percent` and `total_cpu_utilization_percent` are specified, the
+   * autoscaler provisions the larger of the two required compute capacities to satisfy both
+   * targets.
+   * @param totalCpuUtilizationPercent totalCpuUtilizationPercent or {@code null} for none
+   */
+  public AutoscalingTargets setTotalCpuUtilizationPercent(java.lang.Integer totalCpuUtilizationPercent) {
+    this.totalCpuUtilizationPercent = totalCpuUtilizationPercent;
     return this;
   }
 

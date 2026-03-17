@@ -32,6 +32,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class TargetingExpansionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field only
+   * applies to Demand Gen ad groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean excludeDemographicExpansion;
+
+  /**
    * Whether to exclude first-party audiences from use in targeting expansion. This field was
    * deprecated with the launch of [optimized
    * targeting](//support.google.com/displayvideo/answer/12060859). This field will be set to
@@ -53,6 +61,25 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String targetingExpansionLevel;
+
+  /**
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field only
+   * applies to Demand Gen ad groups.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExcludeDemographicExpansion() {
+    return excludeDemographicExpansion;
+  }
+
+  /**
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field only
+   * applies to Demand Gen ad groups.
+   * @param excludeDemographicExpansion excludeDemographicExpansion or {@code null} for none
+   */
+  public TargetingExpansionConfig setExcludeDemographicExpansion(java.lang.Boolean excludeDemographicExpansion) {
+    this.excludeDemographicExpansion = excludeDemographicExpansion;
+    return this;
+  }
 
   /**
    * Whether to exclude first-party audiences from use in targeting expansion. This field was

@@ -66,6 +66,14 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   private java.lang.Boolean enableOptimizedTargeting;
 
   /**
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field only
+   * applies to Demand Gen ad groups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean excludeDemographicExpansion;
+
+  /**
    * Output only. Magnitude of expansion for eligible first-party user lists under this ad group.
    * This field only applies to YouTube and Partners line item and ad group resources.
    * @return value or {@code null} for none
@@ -139,6 +147,25 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    */
   public TargetingExpansionConfig setEnableOptimizedTargeting(java.lang.Boolean enableOptimizedTargeting) {
     this.enableOptimizedTargeting = enableOptimizedTargeting;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field only
+   * applies to Demand Gen ad groups.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExcludeDemographicExpansion() {
+    return excludeDemographicExpansion;
+  }
+
+  /**
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field only
+   * applies to Demand Gen ad groups.
+   * @param excludeDemographicExpansion excludeDemographicExpansion or {@code null} for none
+   */
+  public TargetingExpansionConfig setExcludeDemographicExpansion(java.lang.Boolean excludeDemographicExpansion) {
+    this.excludeDemographicExpansion = excludeDemographicExpansion;
     return this;
   }
 

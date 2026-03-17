@@ -30,28 +30,28 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1FlattenedApiVersionDeploymentView extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API.
+   * Optional. The API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1Api api;
 
   /**
-   * The deployment.
+   * Optional. The deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1Deployment deployment;
 
   /**
-   * The version.
+   * Optional. The version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1Version version;
 
   /**
-   * The API.
+   * Optional. The API.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1Api getApi() {
@@ -59,7 +59,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionDeploymentView extends 
   }
 
   /**
-   * The API.
+   * Optional. The API.
    * @param api api or {@code null} for none
    */
   public GoogleCloudApihubV1FlattenedApiVersionDeploymentView setApi(GoogleCloudApihubV1Api api) {
@@ -68,7 +68,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionDeploymentView extends 
   }
 
   /**
-   * The deployment.
+   * Optional. The deployment.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1Deployment getDeployment() {
@@ -76,7 +76,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionDeploymentView extends 
   }
 
   /**
-   * The deployment.
+   * Optional. The deployment.
    * @param deployment deployment or {@code null} for none
    */
   public GoogleCloudApihubV1FlattenedApiVersionDeploymentView setDeployment(GoogleCloudApihubV1Deployment deployment) {
@@ -85,7 +85,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionDeploymentView extends 
   }
 
   /**
-   * The version.
+   * Optional. The version.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1Version getVersion() {
@@ -93,7 +93,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionDeploymentView extends 
   }
 
   /**
-   * The version.
+   * Optional. The version.
    * @param version version or {@code null} for none
    */
   public GoogleCloudApihubV1FlattenedApiVersionDeploymentView setVersion(GoogleCloudApihubV1Version version) {

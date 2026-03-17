@@ -30,7 +30,7 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1RetrieveApiViewsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of API views.
+   * Output only. The list of API views.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class GoogleCloudApihubV1RetrieveApiViewsResponse extends com.googl
   private java.lang.String nextPageToken;
 
   /**
-   * The list of API views.
+   * Output only. The list of API views.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudApihubV1ApiView> getApiViews() {
@@ -58,7 +58,7 @@ public final class GoogleCloudApihubV1RetrieveApiViewsResponse extends com.googl
   }
 
   /**
-   * The list of API views.
+   * Output only. The list of API views.
    * @param apiViews apiViews or {@code null} for none
    */
   public GoogleCloudApihubV1RetrieveApiViewsResponse setApiViews(java.util.List<GoogleCloudApihubV1ApiView> apiViews) {

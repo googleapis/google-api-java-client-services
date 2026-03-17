@@ -2617,6 +2617,146 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
+       * Looks up LLM Context for the specified resources.
+       *
+       * Create a request for the method "locations.lookupContext".
+       *
+       * This request holds the parameters needed by the dataplex server.  After setting any optional
+       * parameters, call the {@link LookupContext#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The project to which the request should be attributed in the following form:
+       *        projects/{project}/locations/{location}.
+       * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1LookupContextRequest}
+       * @return the request
+       */
+      public LookupContext lookupContext(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1LookupContextRequest content) throws java.io.IOException {
+        LookupContext result = new LookupContext(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class LookupContext extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1LookupContextResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:lookupContext";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Looks up LLM Context for the specified resources.
+         *
+         * Create a request for the method "locations.lookupContext".
+         *
+         * This request holds the parameters needed by the the dataplex server.  After setting any
+         * optional parameters, call the {@link LookupContext#execute()} method to invoke the remote
+         * operation. <p> {@link LookupContext#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The project to which the request should be attributed in the following form:
+       *        projects/{project}/locations/{location}.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1LookupContextRequest}
+         * @since 1.13
+         */
+        protected LookupContext(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1LookupContextRequest content) {
+          super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1LookupContextResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public LookupContext set$Xgafv(java.lang.String $Xgafv) {
+          return (LookupContext) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public LookupContext setAccessToken(java.lang.String accessToken) {
+          return (LookupContext) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public LookupContext setAlt(java.lang.String alt) {
+          return (LookupContext) super.setAlt(alt);
+        }
+
+        @Override
+        public LookupContext setCallback(java.lang.String callback) {
+          return (LookupContext) super.setCallback(callback);
+        }
+
+        @Override
+        public LookupContext setFields(java.lang.String fields) {
+          return (LookupContext) super.setFields(fields);
+        }
+
+        @Override
+        public LookupContext setKey(java.lang.String key) {
+          return (LookupContext) super.setKey(key);
+        }
+
+        @Override
+        public LookupContext setOauthToken(java.lang.String oauthToken) {
+          return (LookupContext) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public LookupContext setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (LookupContext) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public LookupContext setQuotaUser(java.lang.String quotaUser) {
+          return (LookupContext) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public LookupContext setUploadType(java.lang.String uploadType) {
+          return (LookupContext) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public LookupContext setUploadProtocol(java.lang.String uploadProtocol) {
+          return (LookupContext) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The project to which the request should be attributed in the following form:
+         * projects/{project}/locations/{location}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The project to which the request should be attributed in the following form:
+       projects/{project}/locations/{location}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The project to which the request should be attributed in the following form:
+         * projects/{project}/locations/{location}.
+         */
+        public LookupContext setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public LookupContext set(String parameterName, Object value) {
+          return (LookupContext) super.set(parameterName, value);
+        }
+      }
+      /**
        * Looks up an entry by name using the permission on the source system.
        *
        * Create a request for the method "locations.lookupEntry".

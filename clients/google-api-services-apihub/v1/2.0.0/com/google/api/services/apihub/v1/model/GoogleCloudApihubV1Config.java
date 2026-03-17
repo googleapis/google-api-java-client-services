@@ -30,6 +30,13 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1Config extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The configuration for syncing MCP data in the API Hub instance to the Agent Registry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApihubV1AgentRegistrySyncConfig agentRegistrySyncConfig;
+
+  /**
    * Optional. The Customer Managed Encryption Key (CMEK) used for data encryption. The CMEK name
    * should follow the format of
    * `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`, where the location
@@ -61,6 +68,23 @@ public final class GoogleCloudApihubV1Config extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.lang.String vertexLocation;
+
+  /**
+   * Optional. The configuration for syncing MCP data in the API Hub instance to the Agent Registry.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApihubV1AgentRegistrySyncConfig getAgentRegistrySyncConfig() {
+    return agentRegistrySyncConfig;
+  }
+
+  /**
+   * Optional. The configuration for syncing MCP data in the API Hub instance to the Agent Registry.
+   * @param agentRegistrySyncConfig agentRegistrySyncConfig or {@code null} for none
+   */
+  public GoogleCloudApihubV1Config setAgentRegistrySyncConfig(GoogleCloudApihubV1AgentRegistrySyncConfig agentRegistrySyncConfig) {
+    this.agentRegistrySyncConfig = agentRegistrySyncConfig;
+    return this;
+  }
 
   /**
    * Optional. The Customer Managed Encryption Key (CMEK) used for data encryption. The CMEK name

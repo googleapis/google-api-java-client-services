@@ -31,35 +31,35 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView extends com.google.api.client.json.GenericJson {
 
   /**
-   * The API.
+   * Optional. The API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1Api api;
 
   /**
-   * The API operation.
+   * Optional. The API operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1ApiOperation apiOperation;
 
   /**
-   * The deployment.
+   * Optional. The deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1Deployment deployment;
 
   /**
-   * The version.
+   * Optional. The version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1Version version;
 
   /**
-   * The API.
+   * Optional. The API.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1Api getApi() {
@@ -67,7 +67,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView
   }
 
   /**
-   * The API.
+   * Optional. The API.
    * @param api api or {@code null} for none
    */
   public GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView setApi(GoogleCloudApihubV1Api api) {
@@ -76,7 +76,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView
   }
 
   /**
-   * The API operation.
+   * Optional. The API operation.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1ApiOperation getApiOperation() {
@@ -84,7 +84,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView
   }
 
   /**
-   * The API operation.
+   * Optional. The API operation.
    * @param apiOperation apiOperation or {@code null} for none
    */
   public GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView setApiOperation(GoogleCloudApihubV1ApiOperation apiOperation) {
@@ -93,7 +93,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView
   }
 
   /**
-   * The deployment.
+   * Optional. The deployment.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1Deployment getDeployment() {
@@ -101,7 +101,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView
   }
 
   /**
-   * The deployment.
+   * Optional. The deployment.
    * @param deployment deployment or {@code null} for none
    */
   public GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView setDeployment(GoogleCloudApihubV1Deployment deployment) {
@@ -110,7 +110,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView
   }
 
   /**
-   * The version.
+   * Optional. The version.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1Version getVersion() {
@@ -118,7 +118,7 @@ public final class GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView
   }
 
   /**
-   * The version.
+   * Optional. The version.
    * @param version version or {@code null} for none
    */
   public GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView setVersion(GoogleCloudApihubV1Version version) {

@@ -30,21 +30,21 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1ApiView extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. MCP server view.
+   * MCP server view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1FlattenedApiVersionDeploymentView mcpServerView;
 
   /**
-   * Output only. MCP tools view.
+   * MCP tools view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView mcpToolView;
 
   /**
-   * Output only. MCP server view.
+   * MCP server view.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1FlattenedApiVersionDeploymentView getMcpServerView() {
@@ -52,7 +52,7 @@ public final class GoogleCloudApihubV1ApiView extends com.google.api.client.json
   }
 
   /**
-   * Output only. MCP server view.
+   * MCP server view.
    * @param mcpServerView mcpServerView or {@code null} for none
    */
   public GoogleCloudApihubV1ApiView setMcpServerView(GoogleCloudApihubV1FlattenedApiVersionDeploymentView mcpServerView) {
@@ -61,7 +61,7 @@ public final class GoogleCloudApihubV1ApiView extends com.google.api.client.json
   }
 
   /**
-   * Output only. MCP tools view.
+   * MCP tools view.
    * @return value or {@code null} for none
    */
   public GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView getMcpToolView() {
@@ -69,7 +69,7 @@ public final class GoogleCloudApihubV1ApiView extends com.google.api.client.json
   }
 
   /**
-   * Output only. MCP tools view.
+   * MCP tools view.
    * @param mcpToolView mcpToolView or {@code null} for none
    */
   public GoogleCloudApihubV1ApiView setMcpToolView(GoogleCloudApihubV1FlattenedApiVersionOperationDeploymentView mcpToolView) {

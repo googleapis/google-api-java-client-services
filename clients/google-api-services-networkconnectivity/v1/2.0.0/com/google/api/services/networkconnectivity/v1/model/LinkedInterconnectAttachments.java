@@ -33,6 +33,30 @@ package com.google.api.services.networkconnectivity.v1.model;
 public final class LinkedInterconnectAttachments extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Dynamic routes overlapped/encompassed by exclude export ranges are excluded during
+   * export to hub.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeExportRanges;
+
+  /**
+   * Optional. Hub routes overlapped/encompassed by exclude import ranges are excluded during import
+   * from hub.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeImportRanges;
+
+  /**
+   * Optional. Dynamic routes fully encompassed by include export ranges are included during export
+   * to hub.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> includeExportRanges;
+
+  /**
    * Optional. Hub routes fully encompassed by include import ranges are included during import from
    * hub.
    * The value may be {@code null}.
@@ -62,6 +86,63 @@ public final class LinkedInterconnectAttachments extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String vpcNetwork;
+
+  /**
+   * Optional. Dynamic routes overlapped/encompassed by exclude export ranges are excluded during
+   * export to hub.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeExportRanges() {
+    return excludeExportRanges;
+  }
+
+  /**
+   * Optional. Dynamic routes overlapped/encompassed by exclude export ranges are excluded during
+   * export to hub.
+   * @param excludeExportRanges excludeExportRanges or {@code null} for none
+   */
+  public LinkedInterconnectAttachments setExcludeExportRanges(java.util.List<java.lang.String> excludeExportRanges) {
+    this.excludeExportRanges = excludeExportRanges;
+    return this;
+  }
+
+  /**
+   * Optional. Hub routes overlapped/encompassed by exclude import ranges are excluded during import
+   * from hub.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeImportRanges() {
+    return excludeImportRanges;
+  }
+
+  /**
+   * Optional. Hub routes overlapped/encompassed by exclude import ranges are excluded during import
+   * from hub.
+   * @param excludeImportRanges excludeImportRanges or {@code null} for none
+   */
+  public LinkedInterconnectAttachments setExcludeImportRanges(java.util.List<java.lang.String> excludeImportRanges) {
+    this.excludeImportRanges = excludeImportRanges;
+    return this;
+  }
+
+  /**
+   * Optional. Dynamic routes fully encompassed by include export ranges are included during export
+   * to hub.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncludeExportRanges() {
+    return includeExportRanges;
+  }
+
+  /**
+   * Optional. Dynamic routes fully encompassed by include export ranges are included during export
+   * to hub.
+   * @param includeExportRanges includeExportRanges or {@code null} for none
+   */
+  public LinkedInterconnectAttachments setIncludeExportRanges(java.util.List<java.lang.String> includeExportRanges) {
+    this.includeExportRanges = includeExportRanges;
+    return this;
+  }
 
   /**
    * Optional. Hub routes fully encompassed by include import ranges are included during import from

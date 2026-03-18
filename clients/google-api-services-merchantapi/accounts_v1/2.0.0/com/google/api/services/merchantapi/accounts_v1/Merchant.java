@@ -255,6 +255,157 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Creates a Merchant Center test account. Test accounts are intended for development and testing
+     * purposes, such as validating API integrations or new feature behavior. Key characteristics and
+     * limitations of test accounts: - Immutable Type: A test account cannot be converted into a regular
+     * (live) Merchant Center account. Likewise, a regular account cannot be converted into a test
+     * account. - Non-Serving Products: Any products, offers, or data created within a test account will
+     * not be published or made visible to end-users on any Google surfaces. They are strictly for
+     * testing environments. - Separate Environment: Test accounts operate in a sandbox-like manner,
+     * isolated from live serving and real user traffic.
+     *
+     * Create a request for the method "accounts.createTestAccount".
+     *
+     * This request holds the parameters needed by the merchantapi server.  After setting any optional
+     * parameters, call the {@link CreateTestAccount#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The account resource name to create the test account under. Format: accounts/{account}
+     * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.Account}
+     * @return the request
+     */
+    public CreateTestAccount createTestAccount(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1.model.Account content) throws java.io.IOException {
+      CreateTestAccount result = new CreateTestAccount(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class CreateTestAccount extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1.model.Account> {
+
+      private static final String REST_PATH = "accounts/v1/{+parent}:createTestAccount";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+      /**
+       * Creates a Merchant Center test account. Test accounts are intended for development and testing
+       * purposes, such as validating API integrations or new feature behavior. Key characteristics and
+       * limitations of test accounts: - Immutable Type: A test account cannot be converted into a
+       * regular (live) Merchant Center account. Likewise, a regular account cannot be converted into a
+       * test account. - Non-Serving Products: Any products, offers, or data created within a test
+       * account will not be published or made visible to end-users on any Google surfaces. They are
+       * strictly for testing environments. - Separate Environment: Test accounts operate in a sandbox-
+       * like manner, isolated from live serving and real user traffic.
+       *
+       * Create a request for the method "accounts.createTestAccount".
+       *
+       * This request holds the parameters needed by the the merchantapi server.  After setting any
+       * optional parameters, call the {@link CreateTestAccount#execute()} method to invoke the remote
+       * operation. <p> {@link CreateTestAccount#initialize(com.google.api.client.googleapis.services.Ab
+       * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param parent Required. The account resource name to create the test account under. Format: accounts/{account}
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.Account}
+       * @since 1.13
+       */
+      protected CreateTestAccount(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1.model.Account content) {
+        super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1.model.Account.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+      }
+
+      @Override
+      public CreateTestAccount set$Xgafv(java.lang.String $Xgafv) {
+        return (CreateTestAccount) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CreateTestAccount setAccessToken(java.lang.String accessToken) {
+        return (CreateTestAccount) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CreateTestAccount setAlt(java.lang.String alt) {
+        return (CreateTestAccount) super.setAlt(alt);
+      }
+
+      @Override
+      public CreateTestAccount setCallback(java.lang.String callback) {
+        return (CreateTestAccount) super.setCallback(callback);
+      }
+
+      @Override
+      public CreateTestAccount setFields(java.lang.String fields) {
+        return (CreateTestAccount) super.setFields(fields);
+      }
+
+      @Override
+      public CreateTestAccount setKey(java.lang.String key) {
+        return (CreateTestAccount) super.setKey(key);
+      }
+
+      @Override
+      public CreateTestAccount setOauthToken(java.lang.String oauthToken) {
+        return (CreateTestAccount) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CreateTestAccount setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CreateTestAccount) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CreateTestAccount setQuotaUser(java.lang.String quotaUser) {
+        return (CreateTestAccount) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CreateTestAccount setUploadType(java.lang.String uploadType) {
+        return (CreateTestAccount) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CreateTestAccount setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CreateTestAccount) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The account resource name to create the test account under. Format:
+       * accounts/{account}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The account resource name to create the test account under. Format: accounts/{account}
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The account resource name to create the test account under. Format:
+       * accounts/{account}
+       */
+      public CreateTestAccount setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^accounts/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public CreateTestAccount set(String parameterName, Object value) {
+        return (CreateTestAccount) super.set(parameterName, value);
+      }
+    }
+    /**
      * Deletes the specified account regardless of its type: standalone, advanced account or sub-
      * account. Deleting an advanced account leads to the deletion of all of its sub-accounts. This also
      * deletes the account's [developer registration

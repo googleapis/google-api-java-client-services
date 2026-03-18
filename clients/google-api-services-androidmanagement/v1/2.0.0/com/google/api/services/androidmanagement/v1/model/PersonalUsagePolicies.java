@@ -91,7 +91,8 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   private java.lang.String privateSpacePolicy;
 
   /**
-   * If true, screen capture is disabled for all users.
+   * If true, screen capture is disabled for all users. This also blocks Circle to Search
+   * (https://support.google.com/android/answer/14508957).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,7 +228,8 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * If true, screen capture is disabled for all users.
+   * If true, screen capture is disabled for all users. This also blocks Circle to Search
+   * (https://support.google.com/android/answer/14508957).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getScreenCaptureDisabled() {
@@ -235,7 +237,8 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   }
 
   /**
-   * If true, screen capture is disabled for all users.
+   * If true, screen capture is disabled for all users. This also blocks Circle to Search
+   * (https://support.google.com/android/answer/14508957).
    * @param screenCaptureDisabled screenCaptureDisabled or {@code null} for none
    */
   public PersonalUsagePolicies setScreenCaptureDisabled(java.lang.Boolean screenCaptureDisabled) {

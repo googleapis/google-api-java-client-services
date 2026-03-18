@@ -681,7 +681,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean safeBootDisabled;
 
   /**
-   * Whether screen capture is disabled.
+   * Whether screen capture is disabled. This also blocks Circle to Search
+   * (https://support.google.com/android/answer/14508957).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2305,7 +2306,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether screen capture is disabled.
+   * Whether screen capture is disabled. This also blocks Circle to Search
+   * (https://support.google.com/android/answer/14508957).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getScreenCaptureDisabled() {
@@ -2313,7 +2315,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether screen capture is disabled.
+   * Whether screen capture is disabled. This also blocks Circle to Search
+   * (https://support.google.com/android/answer/14508957).
    * @param screenCaptureDisabled screenCaptureDisabled or {@code null} for none
    */
   public Policy setScreenCaptureDisabled(java.lang.Boolean screenCaptureDisabled) {

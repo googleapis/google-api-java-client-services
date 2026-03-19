@@ -41,8 +41,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSetUpDataConnectorRequest ex
    * Required. The ID to use for the Collection, which will become the final component of the
    * Collection's resource name. A new Collection is created as part of the DataConnector setup.
    * DataConnector is a singleton resource under Collection, managing all DataStores of the
-   * Collection. This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard
-   * with a length limit of 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * Collection. Should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a
+   * length limit of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +78,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSetUpDataConnectorRequest ex
    * Required. The ID to use for the Collection, which will become the final component of the
    * Collection's resource name. A new Collection is created as part of the DataConnector setup.
    * DataConnector is a singleton resource under Collection, managing all DataStores of the
-   * Collection. This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard
-   * with a length limit of 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * Collection. Should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a
+   * length limit of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @return value or {@code null} for none
    */
   public java.lang.String getCollectionId() {
@@ -90,8 +90,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSetUpDataConnectorRequest ex
    * Required. The ID to use for the Collection, which will become the final component of the
    * Collection's resource name. A new Collection is created as part of the DataConnector setup.
    * DataConnector is a singleton resource under Collection, managing all DataStores of the
-   * Collection. This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard
-   * with a length limit of 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * Collection. Should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a
+   * length limit of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @param collectionId collectionId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSetUpDataConnectorRequest setCollectionId(java.lang.String collectionId) {

@@ -154,6 +154,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private java.util.List<GoogleCloudDiscoveryengineV1alphaDestinationConfig> destinationConfigs;
 
   /**
+   * Output only. The dynamic tools fetched for this connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaDynamicTool> dynamicTools;
+
+  /**
    * Output only. The list of FQDNs of the data connector can egress to. This includes both FQDN
    * derived from the customer provided instance URL and default per connector type FQDNs. Note:
    * This field is derived from both the DataConnector.params, and connector source spec. It should
@@ -655,6 +662,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setDestinationConfigs(java.util.List<GoogleCloudDiscoveryengineV1alphaDestinationConfig> destinationConfigs) {
     this.destinationConfigs = destinationConfigs;
+    return this;
+  }
+
+  /**
+   * Output only. The dynamic tools fetched for this connector.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaDynamicTool> getDynamicTools() {
+    return dynamicTools;
+  }
+
+  /**
+   * Output only. The dynamic tools fetched for this connector.
+   * @param dynamicTools dynamicTools or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setDynamicTools(java.util.List<GoogleCloudDiscoveryengineV1alphaDynamicTool> dynamicTools) {
+    this.dynamicTools = dynamicTools;
     return this;
   }
 

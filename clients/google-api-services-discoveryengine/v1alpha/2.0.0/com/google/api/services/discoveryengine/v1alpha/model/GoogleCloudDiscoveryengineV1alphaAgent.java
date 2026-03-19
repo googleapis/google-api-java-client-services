@@ -127,6 +127,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
   private java.lang.String name;
 
   /**
+   * Optional. Observability config for the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaObservabilityConfig observabilityConfig;
+
+  /**
    * Output only. The reason why the agent was rejected. Only set if the state is PRIVATE, and got
    * there via rejection.
    * The value may be {@code null}.
@@ -399,6 +406,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1alphaAgent setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Observability config for the agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaObservabilityConfig getObservabilityConfig() {
+    return observabilityConfig;
+  }
+
+  /**
+   * Optional. Observability config for the agent.
+   * @param observabilityConfig observabilityConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAgent setObservabilityConfig(GoogleCloudDiscoveryengineV1alphaObservabilityConfig observabilityConfig) {
+    this.observabilityConfig = observabilityConfig;
     return this;
   }
 

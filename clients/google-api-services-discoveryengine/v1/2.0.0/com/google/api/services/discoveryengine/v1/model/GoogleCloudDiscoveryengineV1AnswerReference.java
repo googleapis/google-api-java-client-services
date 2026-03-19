@@ -37,13 +37,6 @@ public final class GoogleCloudDiscoveryengineV1AnswerReference extends com.googl
   private GoogleCloudDiscoveryengineV1AnswerReferenceChunkInfo chunkInfo;
 
   /**
-   * Output only. The search queries that produced this reference.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> queries;
-
-  /**
    * Structured document information.
    * The value may be {@code null}.
    */
@@ -71,23 +64,6 @@ public final class GoogleCloudDiscoveryengineV1AnswerReference extends com.googl
    */
   public GoogleCloudDiscoveryengineV1AnswerReference setChunkInfo(GoogleCloudDiscoveryengineV1AnswerReferenceChunkInfo chunkInfo) {
     this.chunkInfo = chunkInfo;
-    return this;
-  }
-
-  /**
-   * Output only. The search queries that produced this reference.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getQueries() {
-    return queries;
-  }
-
-  /**
-   * Output only. The search queries that produced this reference.
-   * @param queries queries or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1AnswerReference setQueries(java.util.List<java.lang.String> queries) {
-    this.queries = queries;
     return this;
   }
 

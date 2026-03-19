@@ -3124,9 +3124,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * Required. The ID to use for the Collection, which will become the final component of the
          * Collection's resource name. A new Collection is created as part of the DataConnector
          * setup. DataConnector is a singleton resource under Collection, managing all DataStores of
-         * the Collection. This field must conform to
-         * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
-         * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+         * the Collection. Should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
+         * standard with a length limit of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is
+         * returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String collectionId;
@@ -3134,8 +3134,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         /** Required. The ID to use for the Collection, which will become the final component of the
        Collection's resource name. A new Collection is created as part of the DataConnector setup.
        DataConnector is a singleton resource under Collection, managing all DataStores of the Collection.
-       This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
-       limit of 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+       Should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of
+       63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
          */
         public java.lang.String getCollectionId() {
           return collectionId;
@@ -3145,9 +3145,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * Required. The ID to use for the Collection, which will become the final component of the
          * Collection's resource name. A new Collection is created as part of the DataConnector
          * setup. DataConnector is a singleton resource under Collection, managing all DataStores of
-         * the Collection. This field must conform to
-         * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63
-         * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+         * the Collection. Should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
+         * standard with a length limit of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is
+         * returned.
          */
         public SetUpDataConnectorV2 setCollectionId(java.lang.String collectionId) {
           this.collectionId = collectionId;
@@ -5274,8 +5274,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * @param name Required. Full resource name of DataConnector, such as
          *        `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
          *        the caller does not have permission to access the DataConnector, regardless of whether or
-         *        not it exists, a PERMISSION_DENIED error is returned. If the requested DataConnector does
-         *        not exist, a NOT_FOUND error is returned.
+         *        not it exists, a `PERMISSION_DENIED` error is returned. If the requested DataConnector
+         *        does not exist, a `NOT_FOUND` error is returned.
          * @return the request
          */
         public GetDataConnector getDataConnector(java.lang.String name) throws java.io.IOException {
@@ -5305,8 +5305,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * @param name Required. Full resource name of DataConnector, such as
          *        `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
          *        the caller does not have permission to access the DataConnector, regardless of whether or
-         *        not it exists, a PERMISSION_DENIED error is returned. If the requested DataConnector does
-         *        not exist, a NOT_FOUND error is returned.
+         *        not it exists, a `PERMISSION_DENIED` error is returned. If the requested DataConnector
+         *        does not exist, a `NOT_FOUND` error is returned.
            * @since 1.13
            */
           protected GetDataConnector(java.lang.String name) {
@@ -5388,8 +5388,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Required. Full resource name of DataConnector, such as
            * `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
            * the caller does not have permission to access the DataConnector, regardless of whether
-           * or not it exists, a PERMISSION_DENIED error is returned. If the requested DataConnector
-           * does not exist, a NOT_FOUND error is returned.
+           * or not it exists, a `PERMISSION_DENIED` error is returned. If the requested
+           * DataConnector does not exist, a `NOT_FOUND` error is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
@@ -5397,7 +5397,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           /** Required. Full resource name of DataConnector, such as
          `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If the caller
          does not have permission to access the DataConnector, regardless of whether or not it exists, a
-         PERMISSION_DENIED error is returned. If the requested DataConnector does not exist, a NOT_FOUND
+         `PERMISSION_DENIED` error is returned. If the requested DataConnector does not exist, a `NOT_FOUND`
          error is returned.
            */
           public java.lang.String getName() {
@@ -5408,8 +5408,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Required. Full resource name of DataConnector, such as
            * `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
            * the caller does not have permission to access the DataConnector, regardless of whether
-           * or not it exists, a PERMISSION_DENIED error is returned. If the requested DataConnector
-           * does not exist, a NOT_FOUND error is returned.
+           * or not it exists, a `PERMISSION_DENIED` error is returned. If the requested
+           * DataConnector does not exist, a `NOT_FOUND` error is returned.
            */
           public GetDataConnector setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5956,7 +5956,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * `incremental_refresh_interval` - `data_protection_policy` Note: Support for these
            * fields may vary depending on the connector type. For example, not all connectors
            * support `destination_configs`. If an unsupported or unknown field path is provided, the
-           * request will return an INVALID_ARGUMENT error.
+           * request will return an `INVALID_ARGUMENT` error.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -5967,7 +5967,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          `blocking_reasons` - `sync_mode` - `incremental_sync_disabled` - `incremental_refresh_interval` -
          `data_protection_policy` Note: Support for these fields may vary depending on the connector type.
          For example, not all connectors support `destination_configs`. If an unsupported or unknown field
-         path is provided, the request will return an INVALID_ARGUMENT error.
+         path is provided, the request will return an `INVALID_ARGUMENT` error.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -5981,7 +5981,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * `incremental_refresh_interval` - `data_protection_policy` Note: Support for these
            * fields may vary depending on the connector type. For example, not all connectors
            * support `destination_configs`. If an unsupported or unknown field path is provided, the
-           * request will return an INVALID_ARGUMENT error.
+           * request will return an `INVALID_ARGUMENT` error.
            */
           public UpdateDataConnector setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -6617,7 +6617,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param parent Required. The parent DataConnector resource name, such as
              *        `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
              *        the caller does not have permission to list ConnectorRuns under this DataConnector,
-             *        regardless of whether or not this DataConnector exists, a PERMISSION_DENIED error is
+             *        regardless of whether or not this DataConnector exists, a `PERMISSION_DENIED` error is
              *        returned.
              * @return the request
              */
@@ -6647,7 +6647,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param parent Required. The parent DataConnector resource name, such as
              *        `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If
              *        the caller does not have permission to list ConnectorRuns under this DataConnector,
-             *        regardless of whether or not this DataConnector exists, a PERMISSION_DENIED error is
+             *        regardless of whether or not this DataConnector exists, a `PERMISSION_DENIED` error is
              *        returned.
                * @since 1.13
                */
@@ -6730,7 +6730,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The parent DataConnector resource name, such as `projects/{project}/locat
                * ions/{location}/collections/{collection_id}/dataConnector`. If the caller does not
                * have permission to list ConnectorRuns under this DataConnector, regardless of
-               * whether or not this DataConnector exists, a PERMISSION_DENIED error is returned.
+               * whether or not this DataConnector exists, a `PERMISSION_DENIED` error is returned.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
@@ -6738,7 +6738,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /** Required. The parent DataConnector resource name, such as
              `projects/{project}/locations/{location}/collections/{collection_id}/dataConnector`. If the caller
              does not have permission to list ConnectorRuns under this DataConnector, regardless of whether or
-             not this DataConnector exists, a PERMISSION_DENIED error is returned.
+             not this DataConnector exists, a `PERMISSION_DENIED` error is returned.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -6748,7 +6748,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The parent DataConnector resource name, such as `projects/{project}/locat
                * ions/{location}/collections/{collection_id}/dataConnector`. If the caller does not
                * have permission to list ConnectorRuns under this DataConnector, regardless of
-               * whether or not this DataConnector exists, a PERMISSION_DENIED error is returned.
+               * whether or not this DataConnector exists, a `PERMISSION_DENIED` error is returned.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -6763,14 +6763,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Requested page size. Server may return fewer items than requested. If unspecified,
                * defaults to 10. The maximum value is 50; values above 50 will be coerced to 50. If
-               * this field is negative, an INVALID_ARGUMENT error is returned.
+               * this field is negative, an `INVALID_ARGUMENT` error is returned.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
               /** Requested page size. Server may return fewer items than requested. If unspecified, defaults to 10.
              The maximum value is 50; values above 50 will be coerced to 50. If this field is negative, an
-             INVALID_ARGUMENT error is returned.
+             `INVALID_ARGUMENT` error is returned.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
@@ -6779,7 +6779,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Requested page size. Server may return fewer items than requested. If unspecified,
                * defaults to 10. The maximum value is 50; values above 50 will be coerced to 50. If
-               * this field is negative, an INVALID_ARGUMENT error is returned.
+               * this field is negative, an `INVALID_ARGUMENT` error is returned.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -28633,6 +28633,49 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                         "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
                   }
                   this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. Filters the Agents list. Supported fields: * `display_name`: display
+                 * name of the agent. Supports `=`, `:`. * `id`: ID of the agent. Supports `=`. *
+                 * `state`: state of the agent. Supports `=`. * `type`: type of the agent. Supports
+                 * `=` (e.g., "GOOGLE_MADE", "OUR_AGENTS"). * `create_time`: timestamp when the
+                 * agent was created. Supports `=`, `>`, `<`, `>=`, `<=`. * `update_time`: timestamp
+                 * when the agent was last updated. Supports `=`, `>`, `<`, `>=`, `<=`. *
+                 * `has_active_iam_proposals`: whether the agent has pending proposals. Supports
+                 * `=`. Examples: * `display_name = "My Agent"` * `type = "GOOGLE_MADE"` *
+                 * `create_time > "2023-01-01T00:00:00Z"` * `has_active_iam_proposals = true`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String filter;
+
+                /** Optional. Filters the Agents list. Supported fields: * `display_name`: display name of the agent.
+               Supports `=`, `:`. * `id`: ID of the agent. Supports `=`. * `state`: state of the agent. Supports
+               `=`. * `type`: type of the agent. Supports `=` (e.g., "GOOGLE_MADE", "OUR_AGENTS"). *
+               `create_time`: timestamp when the agent was created. Supports `=`, `>`, `<`, `>=`, `<=`. *
+               `update_time`: timestamp when the agent was last updated. Supports `=`, `>`, `<`, `>=`, `<=`. *
+               `has_active_iam_proposals`: whether the agent has pending proposals. Supports `=`. Examples: *
+               `display_name = "My Agent"` * `type = "GOOGLE_MADE"` * `create_time > "2023-01-01T00:00:00Z"` *
+               `has_active_iam_proposals = true`
+                 */
+                public java.lang.String getFilter() {
+                  return filter;
+                }
+
+                /**
+                 * Optional. Filters the Agents list. Supported fields: * `display_name`: display
+                 * name of the agent. Supports `=`, `:`. * `id`: ID of the agent. Supports `=`. *
+                 * `state`: state of the agent. Supports `=`. * `type`: type of the agent. Supports
+                 * `=` (e.g., "GOOGLE_MADE", "OUR_AGENTS"). * `create_time`: timestamp when the
+                 * agent was created. Supports `=`, `>`, `<`, `>=`, `<=`. * `update_time`: timestamp
+                 * when the agent was last updated. Supports `=`, `>`, `<`, `>=`, `<=`. *
+                 * `has_active_iam_proposals`: whether the agent has pending proposals. Supports
+                 * `=`. Examples: * `display_name = "My Agent"` * `type = "GOOGLE_MADE"` *
+                 * `create_time > "2023-01-01T00:00:00Z"` * `has_active_iam_proposals = true`
+                 */
+                public List setFilter(java.lang.String filter) {
+                  this.filter = filter;
                   return this;
                 }
 
@@ -60707,306 +60750,6 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           @Override
           public BatchUpdateUserLicenses set(String parameterName, Object value) {
             return (BatchUpdateUserLicenses) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Creates a new User Store.
-         *
-         * Create a request for the method "userStores.create".
-         *
-         * This request holds the parameters needed by the discoveryengine server.  After setting any
-         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-         *
-         * @param parent Required. The parent collection resource name, such as `projects/{project}/locations/{location}`.
-         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserStore}
-         * @return the request
-         */
-        public Create create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserStore content) throws java.io.IOException {
-          Create result = new Create(parent, content);
-          initialize(result);
-          return result;
-        }
-
-        public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserStore> {
-
-          private static final String REST_PATH = "v1alpha/{+parent}/userStores";
-
-          private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
-
-          /**
-           * Creates a new User Store.
-           *
-           * Create a request for the method "userStores.create".
-           *
-           * This request holds the parameters needed by the the discoveryengine server.  After setting any
-           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param parent Required. The parent collection resource name, such as `projects/{project}/locations/{location}`.
-           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserStore}
-           * @since 1.13
-           */
-          protected Create(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserStore content) {
-            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserStore.class);
-            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-          }
-
-          @Override
-          public Create set$Xgafv(java.lang.String $Xgafv) {
-            return (Create) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Create setAccessToken(java.lang.String accessToken) {
-            return (Create) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Create setAlt(java.lang.String alt) {
-            return (Create) super.setAlt(alt);
-          }
-
-          @Override
-          public Create setCallback(java.lang.String callback) {
-            return (Create) super.setCallback(callback);
-          }
-
-          @Override
-          public Create setFields(java.lang.String fields) {
-            return (Create) super.setFields(fields);
-          }
-
-          @Override
-          public Create setKey(java.lang.String key) {
-            return (Create) super.setKey(key);
-          }
-
-          @Override
-          public Create setOauthToken(java.lang.String oauthToken) {
-            return (Create) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Create) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Create setQuotaUser(java.lang.String quotaUser) {
-            return (Create) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Create setUploadType(java.lang.String uploadType) {
-            return (Create) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Create setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Create) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The parent collection resource name, such as
-           * `projects/{project}/locations/{location}`.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String parent;
-
-          /** Required. The parent collection resource name, such as `projects/{project}/locations/{location}`.
-           */
-          public java.lang.String getParent() {
-            return parent;
-          }
-
-          /**
-           * Required. The parent collection resource name, such as
-           * `projects/{project}/locations/{location}`.
-           */
-          public Create setParent(java.lang.String parent) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                  "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+$");
-            }
-            this.parent = parent;
-            return this;
-          }
-
-          /**
-           * Required. The ID of the User Store to create. The ID must contain only letters (a-z,
-           * A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 63
-           * characters.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String userStoreId;
-
-          /** Required. The ID of the User Store to create. The ID must contain only letters (a-z, A-Z), numbers
-         (0-9), underscores (_), and hyphens (-). The maximum length is 63 characters.
-           */
-          public java.lang.String getUserStoreId() {
-            return userStoreId;
-          }
-
-          /**
-           * Required. The ID of the User Store to create. The ID must contain only letters (a-z,
-           * A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 63
-           * characters.
-           */
-          public Create setUserStoreId(java.lang.String userStoreId) {
-            this.userStoreId = userStoreId;
-            return this;
-          }
-
-          @Override
-          public Create set(String parameterName, Object value) {
-            return (Create) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Deletes the User Store.
-         *
-         * Create a request for the method "userStores.delete".
-         *
-         * This request holds the parameters needed by the discoveryengine server.  After setting any
-         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. The name of the User Store to delete. Format:
-         *        `projects/{project}/locations/{location}/userStores/{user_store_id}`
-         * @return the request
-         */
-        public Delete delete(java.lang.String name) throws java.io.IOException {
-          Delete result = new Delete(name);
-          initialize(result);
-          return result;
-        }
-
-        public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
-
-          private static final String REST_PATH = "v1alpha/{+name}";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
-
-          /**
-           * Deletes the User Store.
-           *
-           * Create a request for the method "userStores.delete".
-           *
-           * This request holds the parameters needed by the the discoveryengine server.  After setting any
-           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-           * <p> {@link
-           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-           * be called to initialize this instance immediately after invoking the constructor. </p>
-           *
-           * @param name Required. The name of the User Store to delete. Format:
-         *        `projects/{project}/locations/{location}/userStores/{user_store_id}`
-           * @since 1.13
-           */
-          protected Delete(java.lang.String name) {
-            super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
-            }
-          }
-
-          @Override
-          public Delete set$Xgafv(java.lang.String $Xgafv) {
-            return (Delete) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public Delete setAccessToken(java.lang.String accessToken) {
-            return (Delete) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public Delete setAlt(java.lang.String alt) {
-            return (Delete) super.setAlt(alt);
-          }
-
-          @Override
-          public Delete setCallback(java.lang.String callback) {
-            return (Delete) super.setCallback(callback);
-          }
-
-          @Override
-          public Delete setFields(java.lang.String fields) {
-            return (Delete) super.setFields(fields);
-          }
-
-          @Override
-          public Delete setKey(java.lang.String key) {
-            return (Delete) super.setKey(key);
-          }
-
-          @Override
-          public Delete setOauthToken(java.lang.String oauthToken) {
-            return (Delete) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (Delete) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public Delete setQuotaUser(java.lang.String quotaUser) {
-            return (Delete) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public Delete setUploadType(java.lang.String uploadType) {
-            return (Delete) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-            return (Delete) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /**
-           * Required. The name of the User Store to delete. Format:
-           * `projects/{project}/locations/{location}/userStores/{user_store_id}`
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. The name of the User Store to delete. Format:
-         `projects/{project}/locations/{location}/userStores/{user_store_id}`
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /**
-           * Required. The name of the User Store to delete. Format:
-           * `projects/{project}/locations/{location}/userStores/{user_store_id}`
-           */
-          public Delete setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          @Override
-          public Delete set(String parameterName, Object value) {
-            return (Delete) super.set(parameterName, value);
           }
         }
         /**

@@ -116,7 +116,7 @@ public final class GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest exten
   private java.lang.String recaptchaVersion;
 
   /**
-   * Android only. Safety Net has been deprecated. Please use play_integrity_token instead.
+   * Android only. Safety Net has been deprecated. Use play_integrity_token instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -323,7 +323,7 @@ public final class GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest exten
   }
 
   /**
-   * Android only. Safety Net has been deprecated. Please use play_integrity_token instead.
+   * Android only. Safety Net has been deprecated. Use play_integrity_token instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getSafetyNetToken() {
@@ -331,7 +331,7 @@ public final class GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest exten
   }
 
   /**
-   * Android only. Safety Net has been deprecated. Please use play_integrity_token instead.
+   * Android only. Safety Net has been deprecated. Use play_integrity_token instead.
    * @param safetyNetToken safetyNetToken or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SendVerificationCodeRequest setSafetyNetToken(java.lang.String safetyNetToken) {

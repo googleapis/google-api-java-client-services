@@ -83,6 +83,12 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private FirewallPolicyRuleOperationMetadata firewallPolicyRuleOperationMetadata;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GetVersionOperationMetadata getVersionOperationMetadata;
+
+  /**
    * [Output Only] If the operation fails, this field contains the HTTP error message that was
    * returned, such as `NOT FOUND`.
    * The value may be {@code null}.
@@ -369,6 +375,21 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setFirewallPolicyRuleOperationMetadata(FirewallPolicyRuleOperationMetadata firewallPolicyRuleOperationMetadata) {
     this.firewallPolicyRuleOperationMetadata = firewallPolicyRuleOperationMetadata;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GetVersionOperationMetadata getGetVersionOperationMetadata() {
+    return getVersionOperationMetadata;
+  }
+
+  /**
+   * @param getVersionOperationMetadata getVersionOperationMetadata or {@code null} for none
+   */
+  public Operation setGetVersionOperationMetadata(GetVersionOperationMetadata getVersionOperationMetadata) {
+    this.getVersionOperationMetadata = getVersionOperationMetadata;
     return this;
   }
 

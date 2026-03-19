@@ -1573,6 +1573,357 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
 
     }
     /**
+     * An accessor for creating requests from the SmartNotes collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Meet meet = new Meet(...);}
+     *   {@code Meet.SmartNotes.List request = meet.smartNotes().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SmartNotes smartNotes() {
+      return new SmartNotes();
+    }
+
+    /**
+     * The "smartNotes" collection of methods.
+     */
+    public class SmartNotes {
+
+      /**
+       * Gets smart notes by smart note ID.
+       *
+       * Create a request for the method "smartNotes.get".
+       *
+       * This request holds the parameters needed by the meet server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Resource name of the smart note. Format:
+       *        conferenceRecords/{conference_record}/smartNotes/{smart_note}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends MeetRequest<com.google.api.services.meet.v2.model.SmartNote> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^conferenceRecords/[^/]+/smartNotes/[^/]+$");
+
+        /**
+         * Gets smart notes by smart note ID.
+         *
+         * Create a request for the method "smartNotes.get".
+         *
+         * This request holds the parameters needed by the the meet server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Resource name of the smart note. Format:
+       *        conferenceRecords/{conference_record}/smartNotes/{smart_note}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Meet.this, "GET", REST_PATH, null, com.google.api.services.meet.v2.model.SmartNote.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^conferenceRecords/[^/]+/smartNotes/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Resource name of the smart note. Format:
+         * conferenceRecords/{conference_record}/smartNotes/{smart_note}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource name of the smart note. Format:
+       conferenceRecords/{conference_record}/smartNotes/{smart_note}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Resource name of the smart note. Format:
+         * conferenceRecords/{conference_record}/smartNotes/{smart_note}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^conferenceRecords/[^/]+/smartNotes/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists the set of smart notes from the conference record. By default, ordered by start time and in
+       * ascending order.
+       *
+       * Create a request for the method "smartNotes.list".
+       *
+       * This request holds the parameters needed by the meet server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Format: `conferenceRecords/{conference_record}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends MeetRequest<com.google.api.services.meet.v2.model.ListSmartNotesResponse> {
+
+        private static final String REST_PATH = "v2/{+parent}/smartNotes";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^conferenceRecords/[^/]+$");
+
+        /**
+         * Lists the set of smart notes from the conference record. By default, ordered by start time and
+         * in ascending order.
+         *
+         * Create a request for the method "smartNotes.list".
+         *
+         * This request holds the parameters needed by the the meet server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Format: `conferenceRecords/{conference_record}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Meet.this, "GET", REST_PATH, null, com.google.api.services.meet.v2.model.ListSmartNotesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^conferenceRecords/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: `conferenceRecords/{conference_record}` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Format: `conferenceRecords/{conference_record}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Format: `conferenceRecords/{conference_record}` */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^conferenceRecords/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of smart notes to return. The service might return fewer than
+         * this value. If unspecified, at most 10 smart notes are returned. The maximum value is
+         * 100; values above 100 are coerced to 100. Maximum might change in the future.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of smart notes to return. The service might return fewer than this value.
+       If unspecified, at most 10 smart notes are returned. The maximum value is 100; values above 100 are
+       coerced to 100. Maximum might change in the future.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of smart notes to return. The service might return fewer than
+         * this value. If unspecified, at most 10 smart notes are returned. The maximum value is
+         * 100; values above 100 are coerced to 100. Maximum might change in the future.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. Page token returned from previous List Call. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Page token returned from previous List Call.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. Page token returned from previous List Call. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Transcripts collection.
      *
      * <p>The typical use is:</p>

@@ -39,6 +39,16 @@ public final class GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundation
   private java.lang.Float learningRateMultiplier;
 
   /**
+   * Optional. Resource name of a previously fine tuned version id to copy the overwritten configs
+   * from. The base_processor_version should be newer than the base processor version used to fine
+   * tune this provided processor version. Format: `projects/{project}/locations/{location}/processo
+   * rs/{processor}/processorVersions/{processorVersion}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String previousFineTunedProcessorVersionName;
+
+  /**
    * Optional. The number of steps to run for model tuning. Valid values are between 1 and 400. If
    * not provided, recommended steps will be used.
    * The value may be {@code null}.
@@ -62,6 +72,29 @@ public final class GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundation
    */
   public GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundationModelTuningOptions setLearningRateMultiplier(java.lang.Float learningRateMultiplier) {
     this.learningRateMultiplier = learningRateMultiplier;
+    return this;
+  }
+
+  /**
+   * Optional. Resource name of a previously fine tuned version id to copy the overwritten configs
+   * from. The base_processor_version should be newer than the base processor version used to fine
+   * tune this provided processor version. Format: `projects/{project}/locations/{location}/processo
+   * rs/{processor}/processorVersions/{processorVersion}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreviousFineTunedProcessorVersionName() {
+    return previousFineTunedProcessorVersionName;
+  }
+
+  /**
+   * Optional. Resource name of a previously fine tuned version id to copy the overwritten configs
+   * from. The base_processor_version should be newer than the base processor version used to fine
+   * tune this provided processor version. Format: `projects/{project}/locations/{location}/processo
+   * rs/{processor}/processorVersions/{processorVersion}`.
+   * @param previousFineTunedProcessorVersionName previousFineTunedProcessorVersionName or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1TrainProcessorVersionRequestFoundationModelTuningOptions setPreviousFineTunedProcessorVersionName(java.lang.String previousFineTunedProcessorVersionName) {
+    this.previousFineTunedProcessorVersionName = previousFineTunedProcessorVersionName;
     return this;
   }
 

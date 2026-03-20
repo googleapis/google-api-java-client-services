@@ -31,6 +31,16 @@ package com.google.api.services.container.model;
 public final class LustreCsiDriverConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * When set to true, this disables multi-NIC support for the Lustre CSI driver. By default, GKE
+   * enables multi-NIC support, which allows the Lustre CSI driver to automatically detect and
+   * configure all suitable network interfaces on a node to maximize I/O performance for demanding
+   * workloads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableMultiNic;
+
+  /**
    * If set to true, the Lustre CSI driver will install Lustre kernel modules using port 6988. This
    * serves as a workaround for a port conflict with the gke-metadata-server. This field is required
    * ONLY under the following conditions: 1. The GKE node version is older than 1.33.2-gke.4655000.
@@ -48,6 +58,29 @@ public final class LustreCsiDriverConfig extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
+
+  /**
+   * When set to true, this disables multi-NIC support for the Lustre CSI driver. By default, GKE
+   * enables multi-NIC support, which allows the Lustre CSI driver to automatically detect and
+   * configure all suitable network interfaces on a node to maximize I/O performance for demanding
+   * workloads.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableMultiNic() {
+    return disableMultiNic;
+  }
+
+  /**
+   * When set to true, this disables multi-NIC support for the Lustre CSI driver. By default, GKE
+   * enables multi-NIC support, which allows the Lustre CSI driver to automatically detect and
+   * configure all suitable network interfaces on a node to maximize I/O performance for demanding
+   * workloads.
+   * @param disableMultiNic disableMultiNic or {@code null} for none
+   */
+  public LustreCsiDriverConfig setDisableMultiNic(java.lang.Boolean disableMultiNic) {
+    this.disableMultiNic = disableMultiNic;
+    return this;
+  }
 
   /**
    * If set to true, the Lustre CSI driver will install Lustre kernel modules using port 6988. This

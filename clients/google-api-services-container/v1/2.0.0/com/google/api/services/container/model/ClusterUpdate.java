@@ -75,6 +75,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AutoIpamConfig desiredAutoIpamConfig;
 
   /**
+   * The desired autopilot cluster policies that to be enforced in the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterPolicyConfig desiredAutopilotClusterPolicyConfig;
+
+  /**
    * WorkloadPolicyConfig is the configuration related to GCW workload policy
    * The value may be {@code null}.
    */
@@ -299,6 +306,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String desiredLoggingService;
+
+  /**
+   * The desired managed machine learning diagnostics configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedMachineLearningDiagnosticsConfig desiredManagedMachineLearningDiagnosticsConfig;
 
   /**
    * The desired managed open telemetry configuration.
@@ -706,6 +720,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredAutoIpamConfig(AutoIpamConfig desiredAutoIpamConfig) {
     this.desiredAutoIpamConfig = desiredAutoIpamConfig;
+    return this;
+  }
+
+  /**
+   * The desired autopilot cluster policies that to be enforced in the cluster.
+   * @return value or {@code null} for none
+   */
+  public ClusterPolicyConfig getDesiredAutopilotClusterPolicyConfig() {
+    return desiredAutopilotClusterPolicyConfig;
+  }
+
+  /**
+   * The desired autopilot cluster policies that to be enforced in the cluster.
+   * @param desiredAutopilotClusterPolicyConfig desiredAutopilotClusterPolicyConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredAutopilotClusterPolicyConfig(ClusterPolicyConfig desiredAutopilotClusterPolicyConfig) {
+    this.desiredAutopilotClusterPolicyConfig = desiredAutopilotClusterPolicyConfig;
     return this;
   }
 
@@ -1248,6 +1279,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredLoggingService(java.lang.String desiredLoggingService) {
     this.desiredLoggingService = desiredLoggingService;
+    return this;
+  }
+
+  /**
+   * The desired managed machine learning diagnostics configuration.
+   * @return value or {@code null} for none
+   */
+  public ManagedMachineLearningDiagnosticsConfig getDesiredManagedMachineLearningDiagnosticsConfig() {
+    return desiredManagedMachineLearningDiagnosticsConfig;
+  }
+
+  /**
+   * The desired managed machine learning diagnostics configuration.
+   * @param desiredManagedMachineLearningDiagnosticsConfig desiredManagedMachineLearningDiagnosticsConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredManagedMachineLearningDiagnosticsConfig(ManagedMachineLearningDiagnosticsConfig desiredManagedMachineLearningDiagnosticsConfig) {
+    this.desiredManagedMachineLearningDiagnosticsConfig = desiredManagedMachineLearningDiagnosticsConfig;
     return this;
   }
 

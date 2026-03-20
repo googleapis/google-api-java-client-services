@@ -57,6 +57,18 @@ public final class GoogleCloudDialogflowV2beta1Conversation extends com.google.a
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1ConversationProfile initialConversationProfile;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDialogflowV2beta1ConversationGeneratorContext> initialGeneratorContexts;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String lifecycleState;
 
   /**
@@ -140,6 +152,36 @@ public final class GoogleCloudDialogflowV2beta1Conversation extends com.google.a
    */
   public GoogleCloudDialogflowV2beta1Conversation setIngestedContextReferences(java.util.Map<String, GoogleCloudDialogflowV2beta1ConversationContextReference> ingestedContextReferences) {
     this.ingestedContextReferences = ingestedContextReferences;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ConversationProfile getInitialConversationProfile() {
+    return initialConversationProfile;
+  }
+
+  /**
+   * @param initialConversationProfile initialConversationProfile or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1Conversation setInitialConversationProfile(GoogleCloudDialogflowV2beta1ConversationProfile initialConversationProfile) {
+    this.initialConversationProfile = initialConversationProfile;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDialogflowV2beta1ConversationGeneratorContext> getInitialGeneratorContexts() {
+    return initialGeneratorContexts;
+  }
+
+  /**
+   * @param initialGeneratorContexts initialGeneratorContexts or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1Conversation setInitialGeneratorContexts(java.util.Map<String, GoogleCloudDialogflowV2beta1ConversationGeneratorContext> initialGeneratorContexts) {
+    this.initialGeneratorContexts = initialGeneratorContexts;
     return this;
   }
 

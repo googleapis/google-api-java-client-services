@@ -129,6 +129,12 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowCxV3beta1TraceBlock> traceBlocks;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String transcript;
 
   /**
@@ -416,6 +422,21 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
    */
   public GoogleCloudDialogflowCxV3beta1QueryResult setText(java.lang.String text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowCxV3beta1TraceBlock> getTraceBlocks() {
+    return traceBlocks;
+  }
+
+  /**
+   * @param traceBlocks traceBlocks or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1QueryResult setTraceBlocks(java.util.List<GoogleCloudDialogflowCxV3beta1TraceBlock> traceBlocks) {
+    this.traceBlocks = traceBlocks;
     return this;
   }
 

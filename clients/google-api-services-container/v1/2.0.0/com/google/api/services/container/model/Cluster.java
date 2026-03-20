@@ -376,6 +376,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private MaintenancePolicy maintenancePolicy;
 
   /**
+   * Configuration for Managed Machine Learning Diagnostics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ManagedMachineLearningDiagnosticsConfig managedMachineLearningDiagnosticsConfig;
+
+  /**
    * Configuration for Managed OpenTelemetry pipeline.
    * The value may be {@code null}.
    */
@@ -581,6 +588,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
+
+  /**
+   * Optional. Configuration for scheduled upgrades.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScheduleUpgradeConfig scheduleUpgradeConfig;
 
   /**
    * Secret CSI driver configuration.
@@ -1500,6 +1514,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Configuration for Managed Machine Learning Diagnostics.
+   * @return value or {@code null} for none
+   */
+  public ManagedMachineLearningDiagnosticsConfig getManagedMachineLearningDiagnosticsConfig() {
+    return managedMachineLearningDiagnosticsConfig;
+  }
+
+  /**
+   * Configuration for Managed Machine Learning Diagnostics.
+   * @param managedMachineLearningDiagnosticsConfig managedMachineLearningDiagnosticsConfig or {@code null} for none
+   */
+  public Cluster setManagedMachineLearningDiagnosticsConfig(ManagedMachineLearningDiagnosticsConfig managedMachineLearningDiagnosticsConfig) {
+    this.managedMachineLearningDiagnosticsConfig = managedMachineLearningDiagnosticsConfig;
+    return this;
+  }
+
+  /**
    * Configuration for Managed OpenTelemetry pipeline.
    * @return value or {@code null} for none
    */
@@ -1985,6 +2016,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for scheduled upgrades.
+   * @return value or {@code null} for none
+   */
+  public ScheduleUpgradeConfig getScheduleUpgradeConfig() {
+    return scheduleUpgradeConfig;
+  }
+
+  /**
+   * Optional. Configuration for scheduled upgrades.
+   * @param scheduleUpgradeConfig scheduleUpgradeConfig or {@code null} for none
+   */
+  public Cluster setScheduleUpgradeConfig(ScheduleUpgradeConfig scheduleUpgradeConfig) {
+    this.scheduleUpgradeConfig = scheduleUpgradeConfig;
     return this;
   }
 

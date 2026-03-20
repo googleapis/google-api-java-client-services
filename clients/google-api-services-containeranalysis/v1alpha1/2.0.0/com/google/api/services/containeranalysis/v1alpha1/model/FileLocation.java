@@ -47,6 +47,14 @@ public final class FileLocation extends com.google.api.client.json.GenericJson {
   private LayerDetails layerDetails;
 
   /**
+   * Line number in the file where the package is found. Optional field that only applies to source
+   * repository scanning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer lineNumber;
+
+  /**
    * For jars that are contained inside .war files, this filepath can indicate the path to war file
    * combined with the path to jar file.
    * @return value or {@code null} for none
@@ -81,6 +89,25 @@ public final class FileLocation extends com.google.api.client.json.GenericJson {
    */
   public FileLocation setLayerDetails(LayerDetails layerDetails) {
     this.layerDetails = layerDetails;
+    return this;
+  }
+
+  /**
+   * Line number in the file where the package is found. Optional field that only applies to source
+   * repository scanning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLineNumber() {
+    return lineNumber;
+  }
+
+  /**
+   * Line number in the file where the package is found. Optional field that only applies to source
+   * repository scanning.
+   * @param lineNumber lineNumber or {@code null} for none
+   */
+  public FileLocation setLineNumber(java.lang.Integer lineNumber) {
+    this.lineNumber = lineNumber;
     return this;
   }
 

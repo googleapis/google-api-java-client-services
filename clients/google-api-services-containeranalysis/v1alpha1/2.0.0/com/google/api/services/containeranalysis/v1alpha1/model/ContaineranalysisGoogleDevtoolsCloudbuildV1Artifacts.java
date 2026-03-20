@@ -81,6 +81,16 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends 
   private ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects objects;
 
   /**
+   * Optional. A list of OCI images to be uploaded to Artifact Registry upon successful completion
+   * of all build steps. OCI images in the specified paths will be uploaded to the specified
+   * Artifact Registry repository using the builder service account's credentials. If any images
+   * fail to be pushed, the build is marked FAILURE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsOci> oci;
+
+  /**
    * A list of Python packages to be uploaded to Artifact Registry upon successful completion of all
    * build steps. The build service account credentials will be used to perform the upload. If any
    * objects fail to be pushed, the build is marked FAILURE.
@@ -199,6 +209,29 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends 
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts setObjects(ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects objects) {
     this.objects = objects;
+    return this;
+  }
+
+  /**
+   * Optional. A list of OCI images to be uploaded to Artifact Registry upon successful completion
+   * of all build steps. OCI images in the specified paths will be uploaded to the specified
+   * Artifact Registry repository using the builder service account's credentials. If any images
+   * fail to be pushed, the build is marked FAILURE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsOci> getOci() {
+    return oci;
+  }
+
+  /**
+   * Optional. A list of OCI images to be uploaded to Artifact Registry upon successful completion
+   * of all build steps. OCI images in the specified paths will be uploaded to the specified
+   * Artifact Registry repository using the builder service account's credentials. If any images
+   * fail to be pushed, the build is marked FAILURE.
+   * @param oci oci or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts setOci(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsOci> oci) {
+    this.oci = oci;
     return this;
   }
 

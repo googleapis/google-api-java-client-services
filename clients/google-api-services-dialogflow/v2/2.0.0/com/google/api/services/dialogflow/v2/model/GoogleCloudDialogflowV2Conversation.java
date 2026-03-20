@@ -57,6 +57,18 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2ConversationProfile initialConversationProfile;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDialogflowV2ConversationGeneratorContext> initialGeneratorContexts;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String lifecycleState;
 
   /**
@@ -140,6 +152,36 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
    */
   public GoogleCloudDialogflowV2Conversation setIngestedContextReferences(java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> ingestedContextReferences) {
     this.ingestedContextReferences = ingestedContextReferences;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationProfile getInitialConversationProfile() {
+    return initialConversationProfile;
+  }
+
+  /**
+   * @param initialConversationProfile initialConversationProfile or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Conversation setInitialConversationProfile(GoogleCloudDialogflowV2ConversationProfile initialConversationProfile) {
+    this.initialConversationProfile = initialConversationProfile;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDialogflowV2ConversationGeneratorContext> getInitialGeneratorContexts() {
+    return initialGeneratorContexts;
+  }
+
+  /**
+   * @param initialGeneratorContexts initialGeneratorContexts or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Conversation setInitialGeneratorContexts(java.util.Map<String, GoogleCloudDialogflowV2ConversationGeneratorContext> initialGeneratorContexts) {
+    this.initialGeneratorContexts = initialGeneratorContexts;
     return this;
   }
 

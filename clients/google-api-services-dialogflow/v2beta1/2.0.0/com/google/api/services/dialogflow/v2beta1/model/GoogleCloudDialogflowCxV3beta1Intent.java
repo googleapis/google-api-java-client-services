@@ -45,6 +45,12 @@ public final class GoogleCloudDialogflowCxV3beta1Intent extends com.google.api.c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String dtmfPattern;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Boolean isFallback;
 
   /**
@@ -104,6 +110,21 @@ public final class GoogleCloudDialogflowCxV3beta1Intent extends com.google.api.c
    */
   public GoogleCloudDialogflowCxV3beta1Intent setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDtmfPattern() {
+    return dtmfPattern;
+  }
+
+  /**
+   * @param dtmfPattern dtmfPattern or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Intent setDtmfPattern(java.lang.String dtmfPattern) {
+    this.dtmfPattern = dtmfPattern;
     return this;
   }
 

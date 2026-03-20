@@ -47,6 +47,13 @@ public final class AccountConnector extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
+   * Custom OAuth config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomOAuthConfig customOauthConfig;
+
+  /**
    * Optional. This checksum is computed by the server based on the value of other fields, and may
    * be sent on update and delete requests to ensure the client has an up-to-date value before
    * proceeding.
@@ -83,6 +90,13 @@ public final class AccountConnector extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private ProviderOAuthConfig providerOauthConfig;
+
+  /**
+   * Optional. Configuration for the http and git proxy features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProxyConfig proxyConfig;
 
   /**
    * Output only. The timestamp when the accountConnector was updated.
@@ -122,6 +136,23 @@ public final class AccountConnector extends com.google.api.client.json.GenericJs
    */
   public AccountConnector setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Custom OAuth config.
+   * @return value or {@code null} for none
+   */
+  public CustomOAuthConfig getCustomOauthConfig() {
+    return customOauthConfig;
+  }
+
+  /**
+   * Custom OAuth config.
+   * @param customOauthConfig customOauthConfig or {@code null} for none
+   */
+  public AccountConnector setCustomOauthConfig(CustomOAuthConfig customOauthConfig) {
+    this.customOauthConfig = customOauthConfig;
     return this;
   }
 
@@ -213,6 +244,23 @@ public final class AccountConnector extends com.google.api.client.json.GenericJs
    */
   public AccountConnector setProviderOauthConfig(ProviderOAuthConfig providerOauthConfig) {
     this.providerOauthConfig = providerOauthConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the http and git proxy features.
+   * @return value or {@code null} for none
+   */
+  public ProxyConfig getProxyConfig() {
+    return proxyConfig;
+  }
+
+  /**
+   * Optional. Configuration for the http and git proxy features.
+   * @param proxyConfig proxyConfig or {@code null} for none
+   */
+  public AccountConnector setProxyConfig(ProxyConfig proxyConfig) {
+    this.proxyConfig = proxyConfig;
     return this;
   }
 

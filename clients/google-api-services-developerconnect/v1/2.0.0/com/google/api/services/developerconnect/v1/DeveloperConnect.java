@@ -1019,6 +1019,214 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
           }
         }
         /**
+         * FetchUserRepositories returns a list of UserRepos that are available for an account connector
+         * resource.
+         *
+         * Create a request for the method "accountConnectors.fetchUserRepositories".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link FetchUserRepositories#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param accountConnector Required. The name of the Account Connector resource in the format:
+         *        `projects/locations/accountConnectors`.
+         * @return the request
+         */
+        public FetchUserRepositories fetchUserRepositories(java.lang.String accountConnector) throws java.io.IOException {
+          FetchUserRepositories result = new FetchUserRepositories(accountConnector);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchUserRepositories extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.FetchUserRepositoriesResponse> {
+
+          private static final String REST_PATH = "v1/{+accountConnector}:fetchUserRepositories";
+
+          private final java.util.regex.Pattern ACCOUNT_CONNECTOR_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+          /**
+           * FetchUserRepositories returns a list of UserRepos that are available for an account connector
+           * resource.
+           *
+           * Create a request for the method "accountConnectors.fetchUserRepositories".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link FetchUserRepositories#execute()} method to invoke the
+           * remote operation. <p> {@link FetchUserRepositories#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param accountConnector Required. The name of the Account Connector resource in the format:
+         *        `projects/locations/accountConnectors`.
+           * @since 1.13
+           */
+          protected FetchUserRepositories(java.lang.String accountConnector) {
+            super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.FetchUserRepositoriesResponse.class);
+            this.accountConnector = com.google.api.client.util.Preconditions.checkNotNull(accountConnector, "Required parameter accountConnector must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_CONNECTOR_PATTERN.matcher(accountConnector).matches(),
+                  "Parameter accountConnector must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchUserRepositories set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchUserRepositories) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchUserRepositories setAccessToken(java.lang.String accessToken) {
+            return (FetchUserRepositories) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchUserRepositories setAlt(java.lang.String alt) {
+            return (FetchUserRepositories) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchUserRepositories setCallback(java.lang.String callback) {
+            return (FetchUserRepositories) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchUserRepositories setFields(java.lang.String fields) {
+            return (FetchUserRepositories) super.setFields(fields);
+          }
+
+          @Override
+          public FetchUserRepositories setKey(java.lang.String key) {
+            return (FetchUserRepositories) super.setKey(key);
+          }
+
+          @Override
+          public FetchUserRepositories setOauthToken(java.lang.String oauthToken) {
+            return (FetchUserRepositories) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchUserRepositories setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchUserRepositories) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchUserRepositories setQuotaUser(java.lang.String quotaUser) {
+            return (FetchUserRepositories) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchUserRepositories setUploadType(java.lang.String uploadType) {
+            return (FetchUserRepositories) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchUserRepositories setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchUserRepositories) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Account Connector resource in the format:
+           * `projects/locations/accountConnectors`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String accountConnector;
+
+          /** Required. The name of the Account Connector resource in the format:
+         `projects/locations/accountConnectors`.
+           */
+          public java.lang.String getAccountConnector() {
+            return accountConnector;
+          }
+
+          /**
+           * Required. The name of the Account Connector resource in the format:
+           * `projects/locations/accountConnectors`.
+           */
+          public FetchUserRepositories setAccountConnector(java.lang.String accountConnector) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_CONNECTOR_PATTERN.matcher(accountConnector).matches(),
+                  "Parameter accountConnector must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+            }
+            this.accountConnector = accountConnector;
+            return this;
+          }
+
+          /** Optional. Number of results to return in the list. Defaults to 20. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Number of results to return in the list. Defaults to 20.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. Number of results to return in the list. Defaults to 20. */
+          public FetchUserRepositories setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. Page start. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Page start.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. Page start. */
+          public FetchUserRepositories setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The name of the repository. When specified, only the UserRepository with this
+           * name will be returned if the repository is accessible under this Account Connector for
+           * the calling user.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String repository;
+
+          /** Optional. The name of the repository. When specified, only the UserRepository with this name will
+         be returned if the repository is accessible under this Account Connector for the calling user.
+           */
+          public java.lang.String getRepository() {
+            return repository;
+          }
+
+          /**
+           * Optional. The name of the repository. When specified, only the UserRepository with this
+           * name will be returned if the repository is accessible under this Account Connector for
+           * the calling user.
+           */
+          public FetchUserRepositories setRepository(java.lang.String repository) {
+            this.repository = repository;
+            return this;
+          }
+
+          @Override
+          public FetchUserRepositories set(String parameterName, Object value) {
+            return (FetchUserRepositories) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single AccountConnector.
          *
          * Create a request for the method "accountConnectors.get".

@@ -51,7 +51,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Optional. User-provided description of the cluster.
+   * Optional. User-provided description of the cluster. Maximum of 2048 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,7 +156,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User-provided description of the cluster.
+   * Optional. User-provided description of the cluster. Maximum of 2048 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -164,7 +164,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. User-provided description of the cluster.
+   * Optional. User-provided description of the cluster. Maximum of 2048 characters.
    * @param description description or {@code null} for none
    */
   public Cluster setDescription(java.lang.String description) {

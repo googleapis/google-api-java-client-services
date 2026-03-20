@@ -17,7 +17,7 @@
 package com.google.api.services.cloudidentity.v1beta1.model;
 
 /**
- * Contains information about browser profiles reported by the Clients on the device (e.g. [Endpoint
+ * Contains information about browser profiles reported by the clients on the device (e.g. [Endpoint
  * Verification extension](https://chromewebstore.google.com/detail/endpoint-
  * verification/callobklhcbilhphinckomhgkigmfocg?pli=1)).
  *

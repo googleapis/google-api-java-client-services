@@ -31,8 +31,9 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class MigrationExecution extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration information specific to migrating from self-managed hive metastore on Google
-   * Cloud using Cloud SQL as the backend database to Dataproc Metastore.
+   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
+   * migration instead. Configuration information specific to migrating from self-managed hive
+   * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * Output only. The current phase of the migration execution.
+   * Output only. Deprecated: Phase was designed for incoming migrations to Dataproc Metastore, not
+   * applicable when migrating away from it. The current phase of the migration execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +85,9 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
   private java.lang.String stateMessage;
 
   /**
-   * Configuration information specific to migrating from self-managed hive metastore on Google
-   * Cloud using Cloud SQL as the backend database to Dataproc Metastore.
+   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
+   * migration instead. Configuration information specific to migrating from self-managed hive
+   * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
    * @return value or {@code null} for none
    */
   public CloudSQLMigrationConfig getCloudSqlMigrationConfig() {
@@ -92,8 +95,9 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
   }
 
   /**
-   * Configuration information specific to migrating from self-managed hive metastore on Google
-   * Cloud using Cloud SQL as the backend database to Dataproc Metastore.
+   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
+   * migration instead. Configuration information specific to migrating from self-managed hive
+   * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
    * @param cloudSqlMigrationConfig cloudSqlMigrationConfig or {@code null} for none
    */
   public MigrationExecution setCloudSqlMigrationConfig(CloudSQLMigrationConfig cloudSqlMigrationConfig) {
@@ -157,7 +161,8 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The current phase of the migration execution.
+   * Output only. Deprecated: Phase was designed for incoming migrations to Dataproc Metastore, not
+   * applicable when migrating away from it. The current phase of the migration execution.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhase() {
@@ -165,7 +170,8 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The current phase of the migration execution.
+   * Output only. Deprecated: Phase was designed for incoming migrations to Dataproc Metastore, not
+   * applicable when migrating away from it. The current phase of the migration execution.
    * @param phase phase or {@code null} for none
    */
   public MigrationExecution setPhase(java.lang.String phase) {

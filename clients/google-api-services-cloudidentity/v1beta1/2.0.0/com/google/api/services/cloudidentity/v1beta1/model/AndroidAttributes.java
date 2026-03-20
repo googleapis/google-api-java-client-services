@@ -66,8 +66,8 @@ public final class AndroidAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String ownershipPrivilege;
 
   /**
-   * Whether device supports Android work profiles. If false, this service will not block access to
-   * corp data even if an administrator turns on the "Enforce Work Profile" policy.
+   * Whether the device supports Android work profiles. If false, this service will not block access
+   * to corp data even if an administrator turns on the "Enforce Work Profile" policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,8 +175,8 @@ public final class AndroidAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether device supports Android work profiles. If false, this service will not block access to
-   * corp data even if an administrator turns on the "Enforce Work Profile" policy.
+   * Whether the device supports Android work profiles. If false, this service will not block access
+   * to corp data even if an administrator turns on the "Enforce Work Profile" policy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSupportsWorkProfile() {
@@ -184,8 +184,8 @@ public final class AndroidAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Whether device supports Android work profiles. If false, this service will not block access to
-   * corp data even if an administrator turns on the "Enforce Work Profile" policy.
+   * Whether the device supports Android work profiles. If false, this service will not block access
+   * to corp data even if an administrator turns on the "Enforce Work Profile" policy.
    * @param supportsWorkProfile supportsWorkProfile or {@code null} for none
    */
   public AndroidAttributes setSupportsWorkProfile(java.lang.Boolean supportsWorkProfile) {

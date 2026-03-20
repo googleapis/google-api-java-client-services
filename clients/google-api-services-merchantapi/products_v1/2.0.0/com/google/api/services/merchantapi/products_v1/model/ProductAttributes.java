@@ -622,6 +622,15 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> promotionIds;
 
   /**
+   * The return label of the product, used to group products in account-level return policies. Max.
+   * 100 characters. For more information, see [Return policy
+   * label](https://support.google.com/merchants/answer/9445425).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String returnPolicyLabel;
+
+  /**
    * Advertised sale price of the item.
    * The value may be {@code null}.
    */
@@ -667,7 +676,9 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private ShippingDimension shippingHeight;
 
   /**
-   * The shipping label of the product, used to group product in account-level shipping rules.
+   * The shipping label of the product, used to group products in account-level shipping rules. Max.
+   * 100 characters. For more information, see [Shipping
+   * label](https://support.google.com/merchants/answer/6324504).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -2144,6 +2155,27 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The return label of the product, used to group products in account-level return policies. Max.
+   * 100 characters. For more information, see [Return policy
+   * label](https://support.google.com/merchants/answer/9445425).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReturnPolicyLabel() {
+    return returnPolicyLabel;
+  }
+
+  /**
+   * The return label of the product, used to group products in account-level return policies. Max.
+   * 100 characters. For more information, see [Return policy
+   * label](https://support.google.com/merchants/answer/9445425).
+   * @param returnPolicyLabel returnPolicyLabel or {@code null} for none
+   */
+  public ProductAttributes setReturnPolicyLabel(java.lang.String returnPolicyLabel) {
+    this.returnPolicyLabel = returnPolicyLabel;
+    return this;
+  }
+
+  /**
    * Advertised sale price of the item.
    * @return value or {@code null} for none
    */
@@ -2252,7 +2284,9 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The shipping label of the product, used to group product in account-level shipping rules.
+   * The shipping label of the product, used to group products in account-level shipping rules. Max.
+   * 100 characters. For more information, see [Shipping
+   * label](https://support.google.com/merchants/answer/6324504).
    * @return value or {@code null} for none
    */
   public java.lang.String getShippingLabel() {
@@ -2260,7 +2294,9 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The shipping label of the product, used to group product in account-level shipping rules.
+   * The shipping label of the product, used to group products in account-level shipping rules. Max.
+   * 100 characters. For more information, see [Shipping
+   * label](https://support.google.com/merchants/answer/6324504).
    * @param shippingLabel shippingLabel or {@code null} for none
    */
   public ProductAttributes setShippingLabel(java.lang.String shippingLabel) {

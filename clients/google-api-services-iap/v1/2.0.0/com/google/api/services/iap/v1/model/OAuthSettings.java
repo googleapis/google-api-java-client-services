@@ -31,26 +31,23 @@ package com.google.api.services.iap.v1.model;
 public final class OAuthSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. OAuth 2.0 client ID used in the OAuth flow to generate an access token. If this field
-   * is set, you can skip obtaining the OAuth credentials in this step:
-   * https://developers.google.com/identity/protocols/OAuth2?hl=en_US#1.-obtain-
-   * oauth-2.0-credentials-from-the-google-api-console. However, this could allow for client
-   * sharing. The risks of client sharing are outlined here:
-   * https://cloud.google.com/iap/docs/sharing-oauth-clients#risks.
+   * Optional. OAuth 2.0 client ID used in the OAuth flow. This allows for client sharing. The risks
+   * of client sharing are outlined here: https://cloud.google.com/iap/docs/sharing-oauth-
+   * clients#risks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientId;
 
   /**
-   * Optional. Input only. OAuth secret paired with client ID
+   * Optional. Input only. OAuth secret paired with client ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientSecret;
 
   /**
-   * Output only. OAuth secret sha256 paired with client ID
+   * Output only. OAuth secret SHA256 paired with client ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,12 +72,9 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> programmaticClients;
 
   /**
-   * Optional. OAuth 2.0 client ID used in the OAuth flow to generate an access token. If this field
-   * is set, you can skip obtaining the OAuth credentials in this step:
-   * https://developers.google.com/identity/protocols/OAuth2?hl=en_US#1.-obtain-
-   * oauth-2.0-credentials-from-the-google-api-console. However, this could allow for client
-   * sharing. The risks of client sharing are outlined here:
-   * https://cloud.google.com/iap/docs/sharing-oauth-clients#risks.
+   * Optional. OAuth 2.0 client ID used in the OAuth flow. This allows for client sharing. The risks
+   * of client sharing are outlined here: https://cloud.google.com/iap/docs/sharing-oauth-
+   * clients#risks.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -88,12 +82,9 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. OAuth 2.0 client ID used in the OAuth flow to generate an access token. If this field
-   * is set, you can skip obtaining the OAuth credentials in this step:
-   * https://developers.google.com/identity/protocols/OAuth2?hl=en_US#1.-obtain-
-   * oauth-2.0-credentials-from-the-google-api-console. However, this could allow for client
-   * sharing. The risks of client sharing are outlined here:
-   * https://cloud.google.com/iap/docs/sharing-oauth-clients#risks.
+   * Optional. OAuth 2.0 client ID used in the OAuth flow. This allows for client sharing. The risks
+   * of client sharing are outlined here: https://cloud.google.com/iap/docs/sharing-oauth-
+   * clients#risks.
    * @param clientId clientId or {@code null} for none
    */
   public OAuthSettings setClientId(java.lang.String clientId) {
@@ -102,7 +93,7 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Input only. OAuth secret paired with client ID
+   * Optional. Input only. OAuth secret paired with client ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientSecret() {
@@ -110,7 +101,7 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Input only. OAuth secret paired with client ID
+   * Optional. Input only. OAuth secret paired with client ID.
    * @param clientSecret clientSecret or {@code null} for none
    */
   public OAuthSettings setClientSecret(java.lang.String clientSecret) {
@@ -119,7 +110,7 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. OAuth secret sha256 paired with client ID
+   * Output only. OAuth secret SHA256 paired with client ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientSecretSha256() {
@@ -127,7 +118,7 @@ public final class OAuthSettings extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. OAuth secret sha256 paired with client ID
+   * Output only. OAuth secret SHA256 paired with client ID.
    * @param clientSecretSha256 clientSecretSha256 or {@code null} for none
    */
   public OAuthSettings setClientSecretSha256(java.lang.String clientSecretSha256) {

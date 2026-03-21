@@ -44,6 +44,13 @@ public final class DirectoryEntry extends com.google.api.client.json.GenericJson
   private java.lang.String file;
 
   /**
+   * Entry with metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FilesystemEntryMetadata metadata;
+
+  /**
    * A child directory in the directory.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class DirectoryEntry extends com.google.api.client.json.GenericJson
    */
   public DirectoryEntry setFile(java.lang.String file) {
     this.file = file;
+    return this;
+  }
+
+  /**
+   * Entry with metadata.
+   * @return value or {@code null} for none
+   */
+  public FilesystemEntryMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Entry with metadata.
+   * @param metadata metadata or {@code null} for none
+   */
+  public DirectoryEntry setMetadata(FilesystemEntryMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

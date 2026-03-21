@@ -31,7 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class ReleaseSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of active artifacts on this release.
+   * List of active artifacts on this release
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,15 +58,15 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   private java.lang.String releaseName;
 
   /**
-   * Identifier of the track. More on [track name](https://developers.google.com/android-
-   * publisher/tracks).
+   * Identifier for the track. [Learn more about track
+   * names.](https://developers.google.com/android-publisher/tracks).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String track;
 
   /**
-   * List of active artifacts on this release.
+   * List of active artifacts on this release
    * @return value or {@code null} for none
    */
   public java.util.List<ArtifactSummary> getActiveArtifacts() {
@@ -74,7 +74,7 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * List of active artifacts on this release.
+   * List of active artifacts on this release
    * @param activeArtifacts activeArtifacts or {@code null} for none
    */
   public ReleaseSummary setActiveArtifacts(java.util.List<ArtifactSummary> activeArtifacts) {
@@ -117,8 +117,8 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identifier of the track. More on [track name](https://developers.google.com/android-
-   * publisher/tracks).
+   * Identifier for the track. [Learn more about track
+   * names.](https://developers.google.com/android-publisher/tracks).
    * @return value or {@code null} for none
    */
   public java.lang.String getTrack() {
@@ -126,8 +126,8 @@ public final class ReleaseSummary extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identifier of the track. More on [track name](https://developers.google.com/android-
-   * publisher/tracks).
+   * Identifier for the track. [Learn more about track
+   * names.](https://developers.google.com/android-publisher/tracks).
    * @param track track or {@code null} for none
    */
   public ReleaseSummary setTrack(java.lang.String track) {

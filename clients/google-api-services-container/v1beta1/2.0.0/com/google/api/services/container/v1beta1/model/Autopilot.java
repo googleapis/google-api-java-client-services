@@ -31,6 +31,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class Autopilot extends com.google.api.client.json.GenericJson {
 
   /**
+   * ClusterPolicyConfig denotes cluster level policies that are enforced for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClusterPolicyConfig clusterPolicyConfig;
+
+  /**
    * Output only. ConversionStatus shows conversion status.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class Autopilot extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WorkloadPolicyConfig workloadPolicyConfig;
+
+  /**
+   * ClusterPolicyConfig denotes cluster level policies that are enforced for the cluster.
+   * @return value or {@code null} for none
+   */
+  public ClusterPolicyConfig getClusterPolicyConfig() {
+    return clusterPolicyConfig;
+  }
+
+  /**
+   * ClusterPolicyConfig denotes cluster level policies that are enforced for the cluster.
+   * @param clusterPolicyConfig clusterPolicyConfig or {@code null} for none
+   */
+  public Autopilot setClusterPolicyConfig(ClusterPolicyConfig clusterPolicyConfig) {
+    this.clusterPolicyConfig = clusterPolicyConfig;
+    return this;
+  }
 
   /**
    * Output only. ConversionStatus shows conversion status.

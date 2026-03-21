@@ -417,6 +417,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
+   * Optional. The taint configuration for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TaintConfig taintConfig;
+
+  /**
    * List of kubernetes taints to be applied to each node. For more information, including usage and
    * the valid values, see: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
    * The value may be {@code null}.
@@ -1331,6 +1338,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setTags(java.util.List<java.lang.String> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * Optional. The taint configuration for the node pool.
+   * @return value or {@code null} for none
+   */
+  public TaintConfig getTaintConfig() {
+    return taintConfig;
+  }
+
+  /**
+   * Optional. The taint configuration for the node pool.
+   * @param taintConfig taintConfig or {@code null} for none
+   */
+  public NodeConfig setTaintConfig(TaintConfig taintConfig) {
+    this.taintConfig = taintConfig;
     return this;
   }
 

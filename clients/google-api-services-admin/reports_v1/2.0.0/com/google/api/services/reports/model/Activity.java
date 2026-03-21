@@ -550,6 +550,19 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     private java.util.List<java.lang.String> resourceIds;
 
     /**
+     * Includes sensitive parameter value pairs for various applications.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<SensitiveParameters> sensitiveParameters;
+
+    static {
+      // hack to force ProGuard to consider SensitiveParameters used, since otherwise it would be stripped out
+      // see https://github.com/google/google-api-java-client/issues/543
+      com.google.api.client.util.Data.nullOf(SensitiveParameters.class);
+    }
+
+    /**
      * Status of the event. Note: Not all events have status.
      * The value may be {@code null}.
      */
@@ -628,6 +641,23 @@ public final class Activity extends com.google.api.client.json.GenericJson {
      */
     public Events setResourceIds(java.util.List<java.lang.String> resourceIds) {
       this.resourceIds = resourceIds;
+      return this;
+    }
+
+    /**
+     * Includes sensitive parameter value pairs for various applications.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<SensitiveParameters> getSensitiveParameters() {
+      return sensitiveParameters;
+    }
+
+    /**
+     * Includes sensitive parameter value pairs for various applications.
+     * @param sensitiveParameters sensitiveParameters or {@code null} for none
+     */
+    public Events setSensitiveParameters(java.util.List<SensitiveParameters> sensitiveParameters) {
+      this.sensitiveParameters = sensitiveParameters;
       return this;
     }
 
@@ -944,6 +974,308 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       }
       /**
        * Model definition for ActivityEventsParametersMultiMessageValue.
+       */
+      public static final class MultiMessageValue extends com.google.api.client.json.GenericJson {
+
+        /**
+         * Parameter values
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<NestedParameter> parameter;
+
+        /**
+         * Parameter values
+         * @return value or {@code null} for none
+         */
+        public java.util.List<NestedParameter> getParameter() {
+          return parameter;
+        }
+
+        /**
+         * Parameter values
+         * @param parameter parameter or {@code null} for none
+         */
+        public MultiMessageValue setParameter(java.util.List<NestedParameter> parameter) {
+          this.parameter = parameter;
+          return this;
+        }
+
+        @Override
+        public MultiMessageValue set(String fieldName, Object value) {
+          return (MultiMessageValue) super.set(fieldName, value);
+        }
+
+        @Override
+        public MultiMessageValue clone() {
+          return (MultiMessageValue) super.clone();
+        }
+
+      }
+    }
+    /**
+     * Model definition for ActivityEventsSensitiveParameters.
+     */
+    public static final class SensitiveParameters extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Boolean value of the parameter.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean boolValue;
+
+      /**
+       * Integer value of the parameter.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+      private java.lang.Long intValue;
+
+      /**
+       * Nested parameter value pairs associated with this parameter. Complex value type for a parameter
+       * are returned as a list of parameter values. For example, the address parameter may have a value
+       * as `[{parameter: [{name: city, value: abc}]}]`
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private MessageValue messageValue;
+
+      /**
+       * Integer values of the parameter.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+      private java.util.List<java.lang.Long> multiIntValue;
+
+      /**
+       * List of `messageValue` objects.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<MultiMessageValue> multiMessageValue;
+
+      static {
+        // hack to force ProGuard to consider MultiMessageValue used, since otherwise it would be stripped out
+        // see https://github.com/google/google-api-java-client/issues/543
+        com.google.api.client.util.Data.nullOf(MultiMessageValue.class);
+      }
+
+      /**
+       * String values of the parameter.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> multiValue;
+
+      /**
+       * The name of the parameter.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /**
+       * String value of the parameter.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String value;
+
+      /**
+       * Boolean value of the parameter.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getBoolValue() {
+        return boolValue;
+      }
+
+      /**
+       * Boolean value of the parameter.
+       * @param boolValue boolValue or {@code null} for none
+       */
+      public SensitiveParameters setBoolValue(java.lang.Boolean boolValue) {
+        this.boolValue = boolValue;
+        return this;
+      }
+
+      /**
+       * Integer value of the parameter.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Long getIntValue() {
+        return intValue;
+      }
+
+      /**
+       * Integer value of the parameter.
+       * @param intValue intValue or {@code null} for none
+       */
+      public SensitiveParameters setIntValue(java.lang.Long intValue) {
+        this.intValue = intValue;
+        return this;
+      }
+
+      /**
+       * Nested parameter value pairs associated with this parameter. Complex value type for a parameter
+       * are returned as a list of parameter values. For example, the address parameter may have a value
+       * as `[{parameter: [{name: city, value: abc}]}]`
+       * @return value or {@code null} for none
+       */
+      public MessageValue getMessageValue() {
+        return messageValue;
+      }
+
+      /**
+       * Nested parameter value pairs associated with this parameter. Complex value type for a parameter
+       * are returned as a list of parameter values. For example, the address parameter may have a value
+       * as `[{parameter: [{name: city, value: abc}]}]`
+       * @param messageValue messageValue or {@code null} for none
+       */
+      public SensitiveParameters setMessageValue(MessageValue messageValue) {
+        this.messageValue = messageValue;
+        return this;
+      }
+
+      /**
+       * Integer values of the parameter.
+       * @return value or {@code null} for none
+       */
+      public java.util.List<java.lang.Long> getMultiIntValue() {
+        return multiIntValue;
+      }
+
+      /**
+       * Integer values of the parameter.
+       * @param multiIntValue multiIntValue or {@code null} for none
+       */
+      public SensitiveParameters setMultiIntValue(java.util.List<java.lang.Long> multiIntValue) {
+        this.multiIntValue = multiIntValue;
+        return this;
+      }
+
+      /**
+       * List of `messageValue` objects.
+       * @return value or {@code null} for none
+       */
+      public java.util.List<MultiMessageValue> getMultiMessageValue() {
+        return multiMessageValue;
+      }
+
+      /**
+       * List of `messageValue` objects.
+       * @param multiMessageValue multiMessageValue or {@code null} for none
+       */
+      public SensitiveParameters setMultiMessageValue(java.util.List<MultiMessageValue> multiMessageValue) {
+        this.multiMessageValue = multiMessageValue;
+        return this;
+      }
+
+      /**
+       * String values of the parameter.
+       * @return value or {@code null} for none
+       */
+      public java.util.List<java.lang.String> getMultiValue() {
+        return multiValue;
+      }
+
+      /**
+       * String values of the parameter.
+       * @param multiValue multiValue or {@code null} for none
+       */
+      public SensitiveParameters setMultiValue(java.util.List<java.lang.String> multiValue) {
+        this.multiValue = multiValue;
+        return this;
+      }
+
+      /**
+       * The name of the parameter.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * The name of the parameter.
+       * @param name name or {@code null} for none
+       */
+      public SensitiveParameters setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * String value of the parameter.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getValue() {
+        return value;
+      }
+
+      /**
+       * String value of the parameter.
+       * @param value value or {@code null} for none
+       */
+      public SensitiveParameters setValue(java.lang.String value) {
+        this.value = value;
+        return this;
+      }
+
+      @Override
+      public SensitiveParameters set(String fieldName, Object value) {
+        return (SensitiveParameters) super.set(fieldName, value);
+      }
+
+      @Override
+      public SensitiveParameters clone() {
+        return (SensitiveParameters) super.clone();
+      }
+
+      /**
+       * Nested parameter value pairs associated with this parameter. Complex value type for a parameter
+       * are returned as a list of parameter values. For example, the address parameter may have a value
+       * as `[{parameter: [{name: city, value: abc}]}]`
+       */
+      public static final class MessageValue extends com.google.api.client.json.GenericJson {
+
+        /**
+         * Parameter values
+         * The value may be {@code null}.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<NestedParameter> parameter;
+
+        /**
+         * Parameter values
+         * @return value or {@code null} for none
+         */
+        public java.util.List<NestedParameter> getParameter() {
+          return parameter;
+        }
+
+        /**
+         * Parameter values
+         * @param parameter parameter or {@code null} for none
+         */
+        public MessageValue setParameter(java.util.List<NestedParameter> parameter) {
+          this.parameter = parameter;
+          return this;
+        }
+
+        @Override
+        public MessageValue set(String fieldName, Object value) {
+          return (MessageValue) super.set(fieldName, value);
+        }
+
+        @Override
+        public MessageValue clone() {
+          return (MessageValue) super.clone();
+        }
+
+      }
+      /**
+       * Model definition for ActivityEventsSensitiveParametersMultiMessageValue.
        */
       public static final class MultiMessageValue extends com.google.api.client.json.GenericJson {
 

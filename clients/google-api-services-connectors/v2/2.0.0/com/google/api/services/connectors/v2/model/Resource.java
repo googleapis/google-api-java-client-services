@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v2.model;
 public final class Resource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata for the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("_meta")
+  private java.util.Map<String, java.lang.Object> meta;
+
+  /**
    * A description of what this resource represents.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Metadata for the resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getMeta() {
+    return meta;
+  }
+
+  /**
+   * Metadata for the resource.
+   * @param meta meta or {@code null} for none
+   */
+  public Resource setMeta(java.util.Map<String, java.lang.Object> meta) {
+    this.meta = meta;
+    return this;
+  }
 
   /**
    * A description of what this resource represents.

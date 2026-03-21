@@ -37,14 +37,14 @@ package com.google.api.services.connectors.v1.model;
 public final class TrafficShapingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. * The duration over which the API call quota limits are calculated. This duration is
-   * used to define the time window for evaluating if the number of API calls made by a user is
-   * within the allowed quota limits. For example: - To define a quota sampled over 16 seconds, set
-   * `seconds` to 16 - To define a quota sampled over 5 minutes, set `seconds` to 300 (5 * 60) - To
-   * define a quota sampled over 1 day, set `seconds` to 86400 (24 * 60 * 60) and so on. It is
-   * important to note that this duration is not the time the quota is valid for, but rather the
-   * time window over which the quota is evaluated. For example, if the quota is 100 calls per 10
-   * seconds, then this duration field would be set to 10 seconds.
+   * Required. Specifies the duration over which the API call quota limits are calculated. This
+   * duration is used to define the time window for evaluating if the number of API calls made by a
+   * user is within the allowed quota limits. For example: - To define a quota sampled over 16
+   * seconds, set `seconds` to 16 - To define a quota sampled over 5 minutes, set `seconds` to 300
+   * (5 * 60) - To define a quota sampled over 1 day, set `seconds` to 86400 (24 * 60 * 60) and so
+   * on. It is important to note that this duration is not the time the quota is valid for, but
+   * rather the time window over which the quota is evaluated. For example, if the quota is 100
+   * calls per 10 seconds, then this duration field would be set to 10 seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,14 +58,14 @@ public final class TrafficShapingConfig extends com.google.api.client.json.Gener
   private java.lang.Long quotaLimit;
 
   /**
-   * Required. * The duration over which the API call quota limits are calculated. This duration is
-   * used to define the time window for evaluating if the number of API calls made by a user is
-   * within the allowed quota limits. For example: - To define a quota sampled over 16 seconds, set
-   * `seconds` to 16 - To define a quota sampled over 5 minutes, set `seconds` to 300 (5 * 60) - To
-   * define a quota sampled over 1 day, set `seconds` to 86400 (24 * 60 * 60) and so on. It is
-   * important to note that this duration is not the time the quota is valid for, but rather the
-   * time window over which the quota is evaluated. For example, if the quota is 100 calls per 10
-   * seconds, then this duration field would be set to 10 seconds.
+   * Required. Specifies the duration over which the API call quota limits are calculated. This
+   * duration is used to define the time window for evaluating if the number of API calls made by a
+   * user is within the allowed quota limits. For example: - To define a quota sampled over 16
+   * seconds, set `seconds` to 16 - To define a quota sampled over 5 minutes, set `seconds` to 300
+   * (5 * 60) - To define a quota sampled over 1 day, set `seconds` to 86400 (24 * 60 * 60) and so
+   * on. It is important to note that this duration is not the time the quota is valid for, but
+   * rather the time window over which the quota is evaluated. For example, if the quota is 100
+   * calls per 10 seconds, then this duration field would be set to 10 seconds.
    * @return value or {@code null} for none
    */
   public String getDuration() {
@@ -73,14 +73,14 @@ public final class TrafficShapingConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. * The duration over which the API call quota limits are calculated. This duration is
-   * used to define the time window for evaluating if the number of API calls made by a user is
-   * within the allowed quota limits. For example: - To define a quota sampled over 16 seconds, set
-   * `seconds` to 16 - To define a quota sampled over 5 minutes, set `seconds` to 300 (5 * 60) - To
-   * define a quota sampled over 1 day, set `seconds` to 86400 (24 * 60 * 60) and so on. It is
-   * important to note that this duration is not the time the quota is valid for, but rather the
-   * time window over which the quota is evaluated. For example, if the quota is 100 calls per 10
-   * seconds, then this duration field would be set to 10 seconds.
+   * Required. Specifies the duration over which the API call quota limits are calculated. This
+   * duration is used to define the time window for evaluating if the number of API calls made by a
+   * user is within the allowed quota limits. For example: - To define a quota sampled over 16
+   * seconds, set `seconds` to 16 - To define a quota sampled over 5 minutes, set `seconds` to 300
+   * (5 * 60) - To define a quota sampled over 1 day, set `seconds` to 86400 (24 * 60 * 60) and so
+   * on. It is important to note that this duration is not the time the quota is valid for, but
+   * rather the time window over which the quota is evaluated. For example, if the quota is 100
+   * calls per 10 seconds, then this duration field would be set to 10 seconds.
    * @param duration duration or {@code null} for none
    */
   public TrafficShapingConfig setDuration(String duration) {

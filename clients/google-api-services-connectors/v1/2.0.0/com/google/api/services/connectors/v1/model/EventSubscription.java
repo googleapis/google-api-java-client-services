@@ -51,6 +51,14 @@ public final class EventSubscription extends com.google.api.client.json.GenericJ
   private java.lang.String eventTypeId;
 
   /**
+   * Optional. Filter for the event subscription. Incoming events are filtered based on the filter
+   * expression.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filter;
+
+  /**
    * Optional. JMS is the source for the event listener.
    * The value may be {@code null}.
    */
@@ -154,6 +162,25 @@ public final class EventSubscription extends com.google.api.client.json.GenericJ
    */
   public EventSubscription setEventTypeId(java.lang.String eventTypeId) {
     this.eventTypeId = eventTypeId;
+    return this;
+  }
+
+  /**
+   * Optional. Filter for the event subscription. Incoming events are filtered based on the filter
+   * expression.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilter() {
+    return filter;
+  }
+
+  /**
+   * Optional. Filter for the event subscription. Incoming events are filtered based on the filter
+   * expression.
+   * @param filter filter or {@code null} for none
+   */
+  public EventSubscription setFilter(java.lang.String filter) {
+    this.filter = filter;
     return this;
   }
 

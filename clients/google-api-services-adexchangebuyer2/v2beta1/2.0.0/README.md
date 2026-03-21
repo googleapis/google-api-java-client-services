@@ -1,6 +1,6 @@
 # Ad Exchange Buyer API II Client Library for Java
 
-Accesses the latest features for managing Authorized Buyers accounts, Real-Time Bidding configurations and auction metrics, and Marketplace programmatic deals.
+Access the latest features for managing Authorized Buyers accounts, Real-Time Bidding configurations and auction metrics, and Marketplace programmatic deals.
 
 This page contains information about getting started with the Ad Exchange Buyer API II
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-adexchangebuyer2</artifactId>
-      <version>v2beta1-rev20251203-2.0.0</version>
+      <version>v2beta1-rev20260319-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-adexchangebuyer2:v2beta1-rev20251203-2.0.0'
+  implementation 'com.google.apis:google-api-services-adexchangebuyer2:v2beta1-rev20260319-2.0.0'
 }
 ```
 

@@ -30,6 +30,54 @@ package com.google.api.services.cloudsearch.v1.model;
 @SuppressWarnings("javadoc")
 public final class QuerySuggestion extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Last query time of the suggestion for query history suggestions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastQueryTime;
+
+  /**
+   * Source corpus of the suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceCorpus;
+
+  /**
+   * Last query time of the suggestion for query history suggestions.
+   * @return value or {@code null} for none
+   */
+  public String getLastQueryTime() {
+    return lastQueryTime;
+  }
+
+  /**
+   * Last query time of the suggestion for query history suggestions.
+   * @param lastQueryTime lastQueryTime or {@code null} for none
+   */
+  public QuerySuggestion setLastQueryTime(String lastQueryTime) {
+    this.lastQueryTime = lastQueryTime;
+    return this;
+  }
+
+  /**
+   * Source corpus of the suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceCorpus() {
+    return sourceCorpus;
+  }
+
+  /**
+   * Source corpus of the suggestion.
+   * @param sourceCorpus sourceCorpus or {@code null} for none
+   */
+  public QuerySuggestion setSourceCorpus(java.lang.String sourceCorpus) {
+    this.sourceCorpus = sourceCorpus;
+    return this;
+  }
+
   @Override
   public QuerySuggestion set(String fieldName, Object value) {
     return (QuerySuggestion) super.set(fieldName, value);

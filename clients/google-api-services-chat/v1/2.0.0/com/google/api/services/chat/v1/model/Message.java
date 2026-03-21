@@ -226,8 +226,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private String lastUpdateTime;
 
   /**
-   * Output only. A URL in `spaces.messages.text` that matches a link preview pattern. For more
-   * information, see [Preview links](https://developers.google.com/workspace/chat/preview-links).
+   * Output only. A URL in the Chat message `text` field that matches a link preview pattern. For
+   * more information, see [Preview links](https://developers.google.com/workspace/chat/preview-
+   * links).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -686,8 +687,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A URL in `spaces.messages.text` that matches a link preview pattern. For more
-   * information, see [Preview links](https://developers.google.com/workspace/chat/preview-links).
+   * Output only. A URL in the Chat message `text` field that matches a link preview pattern. For
+   * more information, see [Preview links](https://developers.google.com/workspace/chat/preview-
+   * links).
    * @return value or {@code null} for none
    */
   public MatchedUrl getMatchedUrl() {
@@ -695,8 +697,9 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A URL in `spaces.messages.text` that matches a link preview pattern. For more
-   * information, see [Preview links](https://developers.google.com/workspace/chat/preview-links).
+   * Output only. A URL in the Chat message `text` field that matches a link preview pattern. For
+   * more information, see [Preview links](https://developers.google.com/workspace/chat/preview-
+   * links).
    * @param matchedUrl matchedUrl or {@code null} for none
    */
   public Message setMatchedUrl(MatchedUrl matchedUrl) {

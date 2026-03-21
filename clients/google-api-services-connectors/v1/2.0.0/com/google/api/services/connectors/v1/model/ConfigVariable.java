@@ -30,21 +30,21 @@ package com.google.api.services.connectors.v1.model;
 public final class ConfigVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Value is a bool.
+   * Optional. Value is a bool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean boolValue;
 
   /**
-   * Value is a Encryption Key.
+   * Optional. Value is a Encryption Key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EncryptionKey encryptionKeyValue;
 
   /**
-   * Value is an integer
+   * Optional. Value is an integer
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -58,21 +58,21 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   private java.lang.String key;
 
   /**
-   * Value is a secret.
+   * Optional. Value is a secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Secret secretValue;
 
   /**
-   * Value is a string.
+   * Optional. Value is a string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stringValue;
 
   /**
-   * Value is a bool.
+   * Optional. Value is a bool.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBoolValue() {
@@ -80,7 +80,7 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is a bool.
+   * Optional. Value is a bool.
    * @param boolValue boolValue or {@code null} for none
    */
   public ConfigVariable setBoolValue(java.lang.Boolean boolValue) {
@@ -89,7 +89,7 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is a Encryption Key.
+   * Optional. Value is a Encryption Key.
    * @return value or {@code null} for none
    */
   public EncryptionKey getEncryptionKeyValue() {
@@ -97,7 +97,7 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is a Encryption Key.
+   * Optional. Value is a Encryption Key.
    * @param encryptionKeyValue encryptionKeyValue or {@code null} for none
    */
   public ConfigVariable setEncryptionKeyValue(EncryptionKey encryptionKeyValue) {
@@ -106,7 +106,7 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is an integer
+   * Optional. Value is an integer
    * @return value or {@code null} for none
    */
   public java.lang.Long getIntValue() {
@@ -114,7 +114,7 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is an integer
+   * Optional. Value is an integer
    * @param intValue intValue or {@code null} for none
    */
   public ConfigVariable setIntValue(java.lang.Long intValue) {
@@ -140,7 +140,7 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is a secret.
+   * Optional. Value is a secret.
    * @return value or {@code null} for none
    */
   public Secret getSecretValue() {
@@ -148,7 +148,7 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is a secret.
+   * Optional. Value is a secret.
    * @param secretValue secretValue or {@code null} for none
    */
   public ConfigVariable setSecretValue(Secret secretValue) {
@@ -157,7 +157,7 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is a string.
+   * Optional. Value is a string.
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -165,7 +165,7 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Value is a string.
+   * Optional. Value is a string.
    * @param stringValue stringValue or {@code null} for none
    */
   public ConfigVariable setStringValue(java.lang.String stringValue) {

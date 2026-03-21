@@ -1308,6 +1308,146 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Fetches Toolspec Override for a connection for the given list of tools. Returns results from the
+         * db if the tool is already present.
+         *
+         * Create a request for the method "connections.fetchToolspecOverride".
+         *
+         * This request holds the parameters needed by the connectors server.  After setting any optional
+         * parameters, call the {@link FetchToolspecOverride#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Resource name format: projects/{project}/locations/{location}/connections/{connection}
+         * @param content the {@link com.google.api.services.connectors.v1.model.FetchConnectionToolspecOverrideRequest}
+         * @return the request
+         */
+        public FetchToolspecOverride fetchToolspecOverride(java.lang.String name, com.google.api.services.connectors.v1.model.FetchConnectionToolspecOverrideRequest content) throws java.io.IOException {
+          FetchToolspecOverride result = new FetchToolspecOverride(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchToolspecOverride extends ConnectorsRequest<com.google.api.services.connectors.v1.model.FetchConnectionToolspecOverrideResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:fetchToolspecOverride";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+
+          /**
+           * Fetches Toolspec Override for a connection for the given list of tools. Returns results from
+           * the db if the tool is already present.
+           *
+           * Create a request for the method "connections.fetchToolspecOverride".
+           *
+           * This request holds the parameters needed by the the connectors server.  After setting any
+           * optional parameters, call the {@link FetchToolspecOverride#execute()} method to invoke the
+           * remote operation. <p> {@link FetchToolspecOverride#initialize(com.google.api.client.googleapis.
+           * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name format: projects/{project}/locations/{location}/connections/{connection}
+           * @param content the {@link com.google.api.services.connectors.v1.model.FetchConnectionToolspecOverrideRequest}
+           * @since 1.13
+           */
+          protected FetchToolspecOverride(java.lang.String name, com.google.api.services.connectors.v1.model.FetchConnectionToolspecOverrideRequest content) {
+            super(Connectors.this, "POST", REST_PATH, content, com.google.api.services.connectors.v1.model.FetchConnectionToolspecOverrideResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+          }
+
+          @Override
+          public FetchToolspecOverride set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchToolspecOverride) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchToolspecOverride setAccessToken(java.lang.String accessToken) {
+            return (FetchToolspecOverride) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchToolspecOverride setAlt(java.lang.String alt) {
+            return (FetchToolspecOverride) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchToolspecOverride setCallback(java.lang.String callback) {
+            return (FetchToolspecOverride) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchToolspecOverride setFields(java.lang.String fields) {
+            return (FetchToolspecOverride) super.setFields(fields);
+          }
+
+          @Override
+          public FetchToolspecOverride setKey(java.lang.String key) {
+            return (FetchToolspecOverride) super.setKey(key);
+          }
+
+          @Override
+          public FetchToolspecOverride setOauthToken(java.lang.String oauthToken) {
+            return (FetchToolspecOverride) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchToolspecOverride setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchToolspecOverride) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchToolspecOverride setQuotaUser(java.lang.String quotaUser) {
+            return (FetchToolspecOverride) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchToolspecOverride setUploadType(java.lang.String uploadType) {
+            return (FetchToolspecOverride) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchToolspecOverride setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchToolspecOverride) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name format: projects/{project}/locations/{location}/connections/{connection}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name format:
+           * projects/{project}/locations/{location}/connections/{connection}
+           */
+          public FetchToolspecOverride setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/connections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public FetchToolspecOverride set(String parameterName, Object value) {
+            return (FetchToolspecOverride) super.set(parameterName, value);
+          }
+        }
+        /**
          * Generates Toolspec Override for a connection for the given list of entityTypes and operations.
          * Returns results from the db if the entityType and operation are already present.
          *

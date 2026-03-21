@@ -30,6 +30,13 @@ package com.google.api.services.connectors.v2.model;
 public final class ExecuteToolResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata for the tool execution result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("_meta")
+  private java.util.Map<String, java.lang.Object> meta;
+
+  /**
    * Metadata like service latency, etc.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class ExecuteToolResponse extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> result;
+
+  /**
+   * Metadata for the tool execution result.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getMeta() {
+    return meta;
+  }
+
+  /**
+   * Metadata for the tool execution result.
+   * @param meta meta or {@code null} for none
+   */
+  public ExecuteToolResponse setMeta(java.util.Map<String, java.lang.Object> meta) {
+    this.meta = meta;
+    return this;
+  }
 
   /**
    * Metadata like service latency, etc.

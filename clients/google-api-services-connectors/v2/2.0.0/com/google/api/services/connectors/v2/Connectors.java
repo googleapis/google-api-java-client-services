@@ -3800,7 +3800,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             private static final String REST_PATH = "v2/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/[^/]+$");
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/.*$");
 
             /**
              * Gets a specific resource.
@@ -3822,7 +3822,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/[^/]+$");
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/.*$");
               }
             }
 
@@ -3913,7 +3913,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/[^/]+$");
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/.*$");
               }
               this.name = name;
               return this;
@@ -3973,7 +3973,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             private static final String REST_PATH = "v2/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/[^/]+$");
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/.*$");
 
             /**
              * Gets a specific resource with POST.
@@ -3997,7 +3997,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/[^/]+$");
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/.*$");
               }
             }
 
@@ -4078,7 +4078,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/[^/]+$");
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/resources/.*$");
               }
               this.name = name;
               return this;

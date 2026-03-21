@@ -60,6 +60,20 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.Object> enum__;
 
   /**
+   * Whether the maximum number value is exclusive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exclusiveMaximum;
+
+  /**
+   * Whether the minimum number value is exclusive.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exclusiveMinimum;
+
+  /**
    * Format of the value as per https://json-schema.org/understanding-json-
    * schema/reference/string.html#format
    * The value may be {@code null}.
@@ -82,6 +96,56 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   private java.lang.String jdbcType;
 
   /**
+   * Maximum number of items in the array field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxItems;
+
+  /**
+   * Maximum length of the string field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxLength;
+
+  /**
+   * Maximum value of the number field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object maximum;
+
+  /**
+   * Minimum number of items in the array field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minItems;
+
+  /**
+   * Minimum length of the string field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minLength;
+
+  /**
+   * Minimum value of the number field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object minimum;
+
+  /**
+   * Regex pattern of the string field. This is a string value that describes the regular expression
+   * that the string value should match.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pattern;
+
+  /**
    * The child schemas, applicable only if this is of type `object`. The key is the name of the
    * property and the value is the json schema that describes that property
    * The value may be {@code null}.
@@ -102,6 +166,13 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> type;
+
+  /**
+   * Whether the items in the array field are unique.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean uniqueItems;
 
   /**
    * Additional details apart from standard json schema fields, this gives flexibility to store
@@ -176,6 +247,40 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Whether the maximum number value is exclusive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExclusiveMaximum() {
+    return exclusiveMaximum;
+  }
+
+  /**
+   * Whether the maximum number value is exclusive.
+   * @param exclusiveMaximum exclusiveMaximum or {@code null} for none
+   */
+  public JsonSchema setExclusiveMaximum(java.lang.Boolean exclusiveMaximum) {
+    this.exclusiveMaximum = exclusiveMaximum;
+    return this;
+  }
+
+  /**
+   * Whether the minimum number value is exclusive.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExclusiveMinimum() {
+    return exclusiveMinimum;
+  }
+
+  /**
+   * Whether the minimum number value is exclusive.
+   * @param exclusiveMinimum exclusiveMinimum or {@code null} for none
+   */
+  public JsonSchema setExclusiveMinimum(java.lang.Boolean exclusiveMinimum) {
+    this.exclusiveMinimum = exclusiveMinimum;
+    return this;
+  }
+
+  /**
    * Format of the value as per https://json-schema.org/understanding-json-
    * schema/reference/string.html#format
    * @return value or {@code null} for none
@@ -229,6 +334,127 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Maximum number of items in the array field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxItems() {
+    return maxItems;
+  }
+
+  /**
+   * Maximum number of items in the array field.
+   * @param maxItems maxItems or {@code null} for none
+   */
+  public JsonSchema setMaxItems(java.lang.Integer maxItems) {
+    this.maxItems = maxItems;
+    return this;
+  }
+
+  /**
+   * Maximum length of the string field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxLength() {
+    return maxLength;
+  }
+
+  /**
+   * Maximum length of the string field.
+   * @param maxLength maxLength or {@code null} for none
+   */
+  public JsonSchema setMaxLength(java.lang.Integer maxLength) {
+    this.maxLength = maxLength;
+    return this;
+  }
+
+  /**
+   * Maximum value of the number field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getMaximum() {
+    return maximum;
+  }
+
+  /**
+   * Maximum value of the number field.
+   * @param maximum maximum or {@code null} for none
+   */
+  public JsonSchema setMaximum(java.lang.Object maximum) {
+    this.maximum = maximum;
+    return this;
+  }
+
+  /**
+   * Minimum number of items in the array field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinItems() {
+    return minItems;
+  }
+
+  /**
+   * Minimum number of items in the array field.
+   * @param minItems minItems or {@code null} for none
+   */
+  public JsonSchema setMinItems(java.lang.Integer minItems) {
+    this.minItems = minItems;
+    return this;
+  }
+
+  /**
+   * Minimum length of the string field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinLength() {
+    return minLength;
+  }
+
+  /**
+   * Minimum length of the string field.
+   * @param minLength minLength or {@code null} for none
+   */
+  public JsonSchema setMinLength(java.lang.Integer minLength) {
+    this.minLength = minLength;
+    return this;
+  }
+
+  /**
+   * Minimum value of the number field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getMinimum() {
+    return minimum;
+  }
+
+  /**
+   * Minimum value of the number field.
+   * @param minimum minimum or {@code null} for none
+   */
+  public JsonSchema setMinimum(java.lang.Object minimum) {
+    this.minimum = minimum;
+    return this;
+  }
+
+  /**
+   * Regex pattern of the string field. This is a string value that describes the regular expression
+   * that the string value should match.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPattern() {
+    return pattern;
+  }
+
+  /**
+   * Regex pattern of the string field. This is a string value that describes the regular expression
+   * that the string value should match.
+   * @param pattern pattern or {@code null} for none
+   */
+  public JsonSchema setPattern(java.lang.String pattern) {
+    this.pattern = pattern;
+    return this;
+  }
+
+  /**
    * The child schemas, applicable only if this is of type `object`. The key is the name of the
    * property and the value is the json schema that describes that property
    * @return value or {@code null} for none
@@ -278,6 +504,23 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   public JsonSchema setType(java.util.List<java.lang.String> type) {
     this.type = type;
+    return this;
+  }
+
+  /**
+   * Whether the items in the array field are unique.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUniqueItems() {
+    return uniqueItems;
+  }
+
+  /**
+   * Whether the items in the array field are unique.
+   * @param uniqueItems uniqueItems or {@code null} for none
+   */
+  public JsonSchema setUniqueItems(java.lang.Boolean uniqueItems) {
+    this.uniqueItems = uniqueItems;
     return this;
   }
 

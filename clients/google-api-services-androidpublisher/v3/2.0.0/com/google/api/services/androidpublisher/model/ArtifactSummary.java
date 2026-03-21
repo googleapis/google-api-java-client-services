@@ -31,14 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class ArtifactSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * The version code of the artifact.
+   * Artifact's version code
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer versionCode;
 
   /**
-   * The version code of the artifact.
+   * Artifact's version code
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersionCode() {
@@ -46,7 +46,7 @@ public final class ArtifactSummary extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The version code of the artifact.
+   * Artifact's version code
    * @param versionCode versionCode or {@code null} for none
    */
   public ArtifactSummary setVersionCode(java.lang.Integer versionCode) {

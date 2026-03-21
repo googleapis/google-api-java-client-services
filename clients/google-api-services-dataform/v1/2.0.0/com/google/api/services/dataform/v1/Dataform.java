@@ -10259,6 +10259,34 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
+            /**
+             * Optional. Specifies the metadata to return for each directory entry. If unspecified,
+             * the default is `DIRECTORY_CONTENTS_VIEW_BASIC`. Currently the
+             * `DIRECTORY_CONTENTS_VIEW_METADATA` view is not supported by CMEK-protected
+             * workspaces.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. Specifies the metadata to return for each directory entry. If unspecified, the default is
+           `DIRECTORY_CONTENTS_VIEW_BASIC`. Currently the `DIRECTORY_CONTENTS_VIEW_METADATA` view is not
+           supported by CMEK-protected workspaces.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. Specifies the metadata to return for each directory entry. If unspecified,
+             * the default is `DIRECTORY_CONTENTS_VIEW_BASIC`. Currently the
+             * `DIRECTORY_CONTENTS_VIEW_METADATA` view is not supported by CMEK-protected
+             * workspaces.
+             */
+            public QueryDirectoryContents setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public QueryDirectoryContents set(String parameterName, Object value) {
               return (QueryDirectoryContents) super.set(parameterName, value);

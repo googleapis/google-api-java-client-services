@@ -662,6 +662,32 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Optional. When set to `true`, this field allows sensitive user-generated content to be
+       * included in the returned audit logs. This parameter is supported only for Rules (DLP) and
+       * Chat applications; using it with any other application will result in a permission error.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeSensitiveData;
+
+      /** Optional. When set to `true`, this field allows sensitive user-generated content to be included in
+     the returned audit logs. This parameter is supported only for Rules (DLP) and Chat applications;
+     using it with any other application will result in a permission error.
+       */
+      public java.lang.Boolean getIncludeSensitiveData() {
+        return includeSensitiveData;
+      }
+
+      /**
+       * Optional. When set to `true`, this field allows sensitive user-generated content to be
+       * included in the returned audit logs. This parameter is supported only for Rules (DLP) and
+       * Chat applications; using it with any other application will result in a permission error.
+       */
+      public List setIncludeSensitiveData(java.lang.Boolean includeSensitiveData) {
+        this.includeSensitiveData = includeSensitiveData;
+        return this;
+      }
+
+      /**
        * Determines how many activity records are shown on each response page. For example, if the
        * request sets `maxResults=1` and the report has two activities, the report has two pages.
        * The response's `nextPageToken` property has the token to the second page. The `maxResults`

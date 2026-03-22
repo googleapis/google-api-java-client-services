@@ -17,7 +17,8 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * The configuration of a protection level for a project's Key Access Justifications enrollment.
+ * Represents the configuration of a protection level for a project's Key Access Justifications
+ * enrollment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a
@@ -31,21 +32,21 @@ package com.google.api.services.cloudkms.v1.model;
 public final class KeyAccessJustificationsEnrollmentConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the project has KAJ logging enabled.
+   * Indicates whether the project has KAJ logging enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean auditLogging;
 
   /**
-   * Whether the project is enrolled in KAJ policy enforcement.
+   * Indicates whether the project is enrolled in KAJ policy enforcement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean policyEnforcement;
 
   /**
-   * Whether the project has KAJ logging enabled.
+   * Indicates whether the project has KAJ logging enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAuditLogging() {
@@ -53,7 +54,7 @@ public final class KeyAccessJustificationsEnrollmentConfig extends com.google.ap
   }
 
   /**
-   * Whether the project has KAJ logging enabled.
+   * Indicates whether the project has KAJ logging enabled.
    * @param auditLogging auditLogging or {@code null} for none
    */
   public KeyAccessJustificationsEnrollmentConfig setAuditLogging(java.lang.Boolean auditLogging) {
@@ -62,7 +63,7 @@ public final class KeyAccessJustificationsEnrollmentConfig extends com.google.ap
   }
 
   /**
-   * Whether the project is enrolled in KAJ policy enforcement.
+   * Indicates whether the project is enrolled in KAJ policy enforcement.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPolicyEnforcement() {
@@ -70,7 +71,7 @@ public final class KeyAccessJustificationsEnrollmentConfig extends com.google.ap
   }
 
   /**
-   * Whether the project is enrolled in KAJ policy enforcement.
+   * Indicates whether the project is enrolled in KAJ policy enforcement.
    * @param policyEnforcement policyEnforcement or {@code null} for none
    */
   public KeyAccessJustificationsEnrollmentConfig setPolicyEnforcement(java.lang.Boolean policyEnforcement) {

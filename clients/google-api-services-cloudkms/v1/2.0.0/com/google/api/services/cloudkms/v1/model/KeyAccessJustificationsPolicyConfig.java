@@ -17,7 +17,7 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * A singleton configuration for Key Access Justifications policies.
+ * Represents a singleton configuration for Key Access Justifications policies.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a
@@ -31,26 +31,32 @@ package com.google.api.services.cloudkms.v1.model;
 public final class KeyAccessJustificationsPolicyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The default key access justification policy used when a CryptoKey is created in this
-   * folder. This is only used when a Key Access Justifications policy is not provided in the
-   * CreateCryptoKeyRequest. This overrides any default policies in its ancestry.
+   * Optional. Specifies the default key access justifications (KAJ) policy used when a CryptoKey is
+   * created in this folder. This is only used when a Key Access Justifications policy is not
+   * provided in the CreateCryptoKeyRequest. This overrides any default policies in its ancestry. If
+   * this field is unset, or is set but contains an empty allowed_access_reasons list, no default
+   * Key Access Justifications (KAJ) policy configuration is active. In this scenario, all newly
+   * created keys will default to an "allow-all" policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KeyAccessJustificationsPolicy defaultKeyAccessJustificationPolicy;
 
   /**
-   * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-   * "{organizations|folders|projects}/kajPolicyConfig".
+   * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the
+   * format of "{organizations|folders|projects}/kajPolicyConfig".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The default key access justification policy used when a CryptoKey is created in this
-   * folder. This is only used when a Key Access Justifications policy is not provided in the
-   * CreateCryptoKeyRequest. This overrides any default policies in its ancestry.
+   * Optional. Specifies the default key access justifications (KAJ) policy used when a CryptoKey is
+   * created in this folder. This is only used when a Key Access Justifications policy is not
+   * provided in the CreateCryptoKeyRequest. This overrides any default policies in its ancestry. If
+   * this field is unset, or is set but contains an empty allowed_access_reasons list, no default
+   * Key Access Justifications (KAJ) policy configuration is active. In this scenario, all newly
+   * created keys will default to an "allow-all" policy.
    * @return value or {@code null} for none
    */
   public KeyAccessJustificationsPolicy getDefaultKeyAccessJustificationPolicy() {
@@ -58,9 +64,12 @@ public final class KeyAccessJustificationsPolicyConfig extends com.google.api.cl
   }
 
   /**
-   * Optional. The default key access justification policy used when a CryptoKey is created in this
-   * folder. This is only used when a Key Access Justifications policy is not provided in the
-   * CreateCryptoKeyRequest. This overrides any default policies in its ancestry.
+   * Optional. Specifies the default key access justifications (KAJ) policy used when a CryptoKey is
+   * created in this folder. This is only used when a Key Access Justifications policy is not
+   * provided in the CreateCryptoKeyRequest. This overrides any default policies in its ancestry. If
+   * this field is unset, or is set but contains an empty allowed_access_reasons list, no default
+   * Key Access Justifications (KAJ) policy configuration is active. In this scenario, all newly
+   * created keys will default to an "allow-all" policy.
    * @param defaultKeyAccessJustificationPolicy defaultKeyAccessJustificationPolicy or {@code null} for none
    */
   public KeyAccessJustificationsPolicyConfig setDefaultKeyAccessJustificationPolicy(KeyAccessJustificationsPolicy defaultKeyAccessJustificationPolicy) {
@@ -69,8 +78,8 @@ public final class KeyAccessJustificationsPolicyConfig extends com.google.api.cl
   }
 
   /**
-   * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-   * "{organizations|folders|projects}/kajPolicyConfig".
+   * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the
+   * format of "{organizations|folders|projects}/kajPolicyConfig".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -78,8 +87,8 @@ public final class KeyAccessJustificationsPolicyConfig extends com.google.api.cl
   }
 
   /**
-   * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-   * "{organizations|folders|projects}/kajPolicyConfig".
+   * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the
+   * format of "{organizations|folders|projects}/kajPolicyConfig".
    * @param name name or {@code null} for none
    */
   public KeyAccessJustificationsPolicyConfig setName(java.lang.String name) {

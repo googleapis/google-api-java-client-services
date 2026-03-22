@@ -309,7 +309,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link GetKajPolicyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+     * @param name Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get.
      * @return the request
      */
     public GetKajPolicyConfig getKajPolicyConfig(java.lang.String name) throws java.io.IOException {
@@ -336,7 +336,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+       * @param name Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get.
        * @since 1.13
        */
       protected GetKajPolicyConfig(java.lang.String name) {
@@ -414,17 +414,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         return (GetKajPolicyConfig) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      /** Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+      /** Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      /** Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get. */
       public GetKajPolicyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -613,8 +613,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link UpdateKajPolicyConfig#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-     *        "{organizations|folders|projects}/kajPolicyConfig".
+     * @param name Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the format
+     *        of "{organizations|folders|projects}/kajPolicyConfig".
      * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
      * @return the request
      */
@@ -642,8 +642,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-     *        "{organizations|folders|projects}/kajPolicyConfig".
+       * @param name Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the format
+     *        of "{organizations|folders|projects}/kajPolicyConfig".
        * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
        * @since 1.13
        */
@@ -713,22 +713,22 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-       * "{organizations|folders|projects}/kajPolicyConfig".
+       * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in
+       * the format of "{organizations|folders|projects}/kajPolicyConfig".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-     "{organizations|folders|projects}/kajPolicyConfig".
+      /** Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the format
+     of "{organizations|folders|projects}/kajPolicyConfig".
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-       * "{organizations|folders|projects}/kajPolicyConfig".
+       * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in
+       * the format of "{organizations|folders|projects}/kajPolicyConfig".
        */
       public UpdateKajPolicyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -740,17 +740,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Optional. The list of fields to update. */
+      /** Optional. Specifies the list of fields to update. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Optional. The list of fields to update.
+      /** Optional. Specifies the list of fields to update.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** Optional. The list of fields to update. */
+      /** Optional. Specifies the list of fields to update. */
       public UpdateKajPolicyConfig setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -792,7 +792,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link GetKajPolicyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+     * @param name Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get.
      * @return the request
      */
     public GetKajPolicyConfig getKajPolicyConfig(java.lang.String name) throws java.io.IOException {
@@ -819,7 +819,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+       * @param name Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get.
        * @since 1.13
        */
       protected GetKajPolicyConfig(java.lang.String name) {
@@ -897,17 +897,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         return (GetKajPolicyConfig) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      /** Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+      /** Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      /** Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get. */
       public GetKajPolicyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -932,8 +932,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link UpdateKajPolicyConfig#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-     *        "{organizations|folders|projects}/kajPolicyConfig".
+     * @param name Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the format
+     *        of "{organizations|folders|projects}/kajPolicyConfig".
      * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
      * @return the request
      */
@@ -961,8 +961,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-     *        "{organizations|folders|projects}/kajPolicyConfig".
+       * @param name Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the format
+     *        of "{organizations|folders|projects}/kajPolicyConfig".
        * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
        * @since 1.13
        */
@@ -1032,22 +1032,22 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-       * "{organizations|folders|projects}/kajPolicyConfig".
+       * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in
+       * the format of "{organizations|folders|projects}/kajPolicyConfig".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-     "{organizations|folders|projects}/kajPolicyConfig".
+      /** Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the format
+     of "{organizations|folders|projects}/kajPolicyConfig".
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-       * "{organizations|folders|projects}/kajPolicyConfig".
+       * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in
+       * the format of "{organizations|folders|projects}/kajPolicyConfig".
        */
       public UpdateKajPolicyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1059,17 +1059,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Optional. The list of fields to update. */
+      /** Optional. Specifies the list of fields to update. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Optional. The list of fields to update.
+      /** Optional. Specifies the list of fields to update.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** Optional. The list of fields to update. */
+      /** Optional. Specifies the list of fields to update. */
       public UpdateKajPolicyConfig setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -1259,7 +1259,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the cloudkms server.  After setting any optional
      * parameters, call the {@link GetKajPolicyConfig#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+     * @param name Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get.
      * @return the request
      */
     public GetKajPolicyConfig getKajPolicyConfig(java.lang.String name) throws java.io.IOException {
@@ -1286,7 +1286,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+       * @param name Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get.
        * @since 1.13
        */
       protected GetKajPolicyConfig(java.lang.String name) {
@@ -1364,17 +1364,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         return (GetKajPolicyConfig) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      /** Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+      /** Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      /** Required. Specifies the name of the KeyAccessJustificationsPolicyConfig to get. */
       public GetKajPolicyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1554,7 +1554,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link ShowEffectiveKeyAccessJustificationsEnrollmentConfig#execute()}
      * method to invoke the remote operation.
      *
-     * @param project Required. The number or id of the project to get the effective
+     * @param project Required. Specifies the number or id of the project to get the effective
      *        KeyAccessJustificationsEnrollmentConfig for.
      * @return the request
      */
@@ -1585,7 +1585,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
        * this instance immediately after invoking the constructor. </p>
        *
-       * @param project Required. The number or id of the project to get the effective
+       * @param project Required. Specifies the number or id of the project to get the effective
      *        KeyAccessJustificationsEnrollmentConfig for.
        * @since 1.13
        */
@@ -1665,13 +1665,13 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Required. The number or id of the project to get the effective
+       * Required. Specifies the number or id of the project to get the effective
        * KeyAccessJustificationsEnrollmentConfig for.
        */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /** Required. The number or id of the project to get the effective
+      /** Required. Specifies the number or id of the project to get the effective
      KeyAccessJustificationsEnrollmentConfig for.
        */
       public java.lang.String getProject() {
@@ -1679,7 +1679,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Required. The number or id of the project to get the effective
+       * Required. Specifies the number or id of the project to get the effective
        * KeyAccessJustificationsEnrollmentConfig for.
        */
       public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setProject(java.lang.String project) {
@@ -1707,8 +1707,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link ShowEffectiveKeyAccessJustificationsPolicyConfig#execute()} method to
      * invoke the remote operation.
      *
-     * @param project Required. The number or id of the project to get the effective KeyAccessJustificationsPolicyConfig.
-     *        In the format of "projects/{|}"
+     * @param project Required. Specifies the number or id of the project to get the effective
+     *        KeyAccessJustificationsPolicyConfig. In the format of "projects/{|}"
      * @return the request
      */
     public ShowEffectiveKeyAccessJustificationsPolicyConfig showEffectiveKeyAccessJustificationsPolicyConfig(java.lang.String project) throws java.io.IOException {
@@ -1737,8 +1737,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * i.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param project Required. The number or id of the project to get the effective KeyAccessJustificationsPolicyConfig.
-     *        In the format of "projects/{|}"
+       * @param project Required. Specifies the number or id of the project to get the effective
+     *        KeyAccessJustificationsPolicyConfig. In the format of "projects/{|}"
        * @since 1.13
        */
       protected ShowEffectiveKeyAccessJustificationsPolicyConfig(java.lang.String project) {
@@ -1817,21 +1817,21 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Required. The number or id of the project to get the effective
+       * Required. Specifies the number or id of the project to get the effective
        * KeyAccessJustificationsPolicyConfig. In the format of "projects/{|}"
        */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /** Required. The number or id of the project to get the effective KeyAccessJustificationsPolicyConfig.
-     In the format of "projects/{|}"
+      /** Required. Specifies the number or id of the project to get the effective
+     KeyAccessJustificationsPolicyConfig. In the format of "projects/{|}"
        */
       public java.lang.String getProject() {
         return project;
       }
 
       /**
-       * Required. The number or id of the project to get the effective
+       * Required. Specifies the number or id of the project to get the effective
        * KeyAccessJustificationsPolicyConfig. In the format of "projects/{|}"
        */
       public ShowEffectiveKeyAccessJustificationsPolicyConfig setProject(java.lang.String project) {
@@ -2022,8 +2022,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * parameters, call the {@link UpdateKajPolicyConfig#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-     *        "{organizations|folders|projects}/kajPolicyConfig".
+     * @param name Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the format
+     *        of "{organizations|folders|projects}/kajPolicyConfig".
      * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
      * @return the request
      */
@@ -2051,8 +2051,8 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
        * after invoking the constructor. </p>
        *
-       * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-     *        "{organizations|folders|projects}/kajPolicyConfig".
+       * @param name Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the format
+     *        of "{organizations|folders|projects}/kajPolicyConfig".
        * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
        * @since 1.13
        */
@@ -2122,22 +2122,22 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-       * "{organizations|folders|projects}/kajPolicyConfig".
+       * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in
+       * the format of "{organizations|folders|projects}/kajPolicyConfig".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-     "{organizations|folders|projects}/kajPolicyConfig".
+      /** Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the format
+     of "{organizations|folders|projects}/kajPolicyConfig".
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
-       * "{organizations|folders|projects}/kajPolicyConfig".
+       * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in
+       * the format of "{organizations|folders|projects}/kajPolicyConfig".
        */
       public UpdateKajPolicyConfig setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -2149,17 +2149,17 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Optional. The list of fields to update. */
+      /** Optional. Specifies the list of fields to update. */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Optional. The list of fields to update.
+      /** Optional. Specifies the list of fields to update.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** Optional. The list of fields to update. */
+      /** Optional. Specifies the list of fields to update. */
       public UpdateKajPolicyConfig setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;

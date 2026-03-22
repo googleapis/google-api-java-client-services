@@ -30,8 +30,10 @@ package com.google.api.services.netapp.v1beta1.model;
 public final class RestoreParameters extends com.google.api.client.json.GenericJson {
 
   /**
-   * Full name of the backup resource. Format:
+   * Full name of the backup resource. Format for standard backup:
    * projects/{project}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}
+   * Format for BackupDR backup: projects/{project}/locations/{location}/backupVaults/{backup_vault}
+   * /dataSources/{data_source}/backups/{backup}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +48,10 @@ public final class RestoreParameters extends com.google.api.client.json.GenericJ
   private java.lang.String sourceSnapshot;
 
   /**
-   * Full name of the backup resource. Format:
+   * Full name of the backup resource. Format for standard backup:
    * projects/{project}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}
+   * Format for BackupDR backup: projects/{project}/locations/{location}/backupVaults/{backup_vault}
+   * /dataSources/{data_source}/backups/{backup}
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceBackup() {
@@ -55,8 +59,10 @@ public final class RestoreParameters extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Full name of the backup resource. Format:
+   * Full name of the backup resource. Format for standard backup:
    * projects/{project}/locations/{location}/backupVaults/{backup_vault_id}/backups/{backup_id}
+   * Format for BackupDR backup: projects/{project}/locations/{location}/backupVaults/{backup_vault}
+   * /dataSources/{data_source}/backups/{backup}
    * @param sourceBackup sourceBackup or {@code null} for none
    */
   public RestoreParameters setSourceBackup(java.lang.String sourceBackup) {

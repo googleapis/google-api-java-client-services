@@ -149,6 +149,15 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean ldapEnabled;
 
   /**
+   * Optional. Mode of the storage pool. This field is used to control whether the user can perform
+   * the ONTAP operations on the storage pool using the GCNV ONTAP Mode APIs. If not specified
+   * during creation, it defaults to `DEFAULT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Identifier. Name of the storage pool
    * The value may be {@code null}.
    */
@@ -198,6 +207,14 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Optional. The effective scale tier of the storage pool. If `scale_tier` is not specified during
+   * creation, this defaults to `SCALE_TIER_STANDARD`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scaleTier;
+
+  /**
    * Required. Service level of the storage pool
    * The value may be {@code null}.
    */
@@ -235,9 +252,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Type of the storage pool. This field is used to control whether the pool supports
-   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes or
-   * `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`) volumes with large capacity. If not
-   * specified during creation, it defaults to `FILE`.
+   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes. If not specified
+   * during creation, it defaults to `FILE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -549,6 +565,27 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Mode of the storage pool. This field is used to control whether the user can perform
+   * the ONTAP operations on the storage pool using the GCNV ONTAP Mode APIs. If not specified
+   * during creation, it defaults to `DEFAULT`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Optional. Mode of the storage pool. This field is used to control whether the user can perform
+   * the ONTAP operations on the storage pool using the GCNV ONTAP Mode APIs. If not specified
+   * during creation, it defaults to `DEFAULT`.
+   * @param mode mode or {@code null} for none
+   */
+  public StoragePool setMode(java.lang.String mode) {
+    this.mode = mode;
+    return this;
+  }
+
+  /**
    * Identifier. Name of the storage pool
    * @return value or {@code null} for none
    */
@@ -668,6 +705,25 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The effective scale tier of the storage pool. If `scale_tier` is not specified during
+   * creation, this defaults to `SCALE_TIER_STANDARD`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScaleTier() {
+    return scaleTier;
+  }
+
+  /**
+   * Optional. The effective scale tier of the storage pool. If `scale_tier` is not specified during
+   * creation, this defaults to `SCALE_TIER_STANDARD`.
+   * @param scaleTier scaleTier or {@code null} for none
+   */
+  public StoragePool setScaleTier(java.lang.String scaleTier) {
+    this.scaleTier = scaleTier;
+    return this;
+  }
+
+  /**
    * Required. Service level of the storage pool
    * @return value or {@code null} for none
    */
@@ -756,9 +812,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Type of the storage pool. This field is used to control whether the pool supports
-   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes or
-   * `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`) volumes with large capacity. If not
-   * specified during creation, it defaults to `FILE`.
+   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes. If not specified
+   * during creation, it defaults to `FILE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -767,9 +822,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Type of the storage pool. This field is used to control whether the pool supports
-   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes or
-   * `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`) volumes with large capacity. If not
-   * specified during creation, it defaults to `FILE`.
+   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes. If not specified
+   * during creation, it defaults to `FILE`.
    * @param type type or {@code null} for none
    */
   public StoragePool setType(java.lang.String type) {

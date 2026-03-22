@@ -30,42 +30,42 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class RolloutStage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Output only. The time at which the wave ended.
+   * Optional. Output only. The time at which the stage ended.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Optional. Duration to soak after this wave before starting the next wave.
+   * Optional. Duration to soak after this stage before starting the next stage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String soakDuration;
 
   /**
-   * Output only. The wave number to which this status applies.
+   * Output only. The stage number to which this status applies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer stageNumber;
 
   /**
-   * Optional. Output only. The time at which the wave started.
+   * Optional. Output only. The time at which the stage started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Output only. The state of the wave.
+   * Output only. The state of the stage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. Output only. The time at which the wave ended.
+   * Optional. Output only. The time at which the stage ended.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -73,7 +73,7 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Output only. The time at which the wave ended.
+   * Optional. Output only. The time at which the stage ended.
    * @param endTime endTime or {@code null} for none
    */
   public RolloutStage setEndTime(String endTime) {
@@ -82,7 +82,7 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Duration to soak after this wave before starting the next wave.
+   * Optional. Duration to soak after this stage before starting the next stage.
    * @return value or {@code null} for none
    */
   public String getSoakDuration() {
@@ -90,7 +90,7 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Duration to soak after this wave before starting the next wave.
+   * Optional. Duration to soak after this stage before starting the next stage.
    * @param soakDuration soakDuration or {@code null} for none
    */
   public RolloutStage setSoakDuration(String soakDuration) {
@@ -99,7 +99,7 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The wave number to which this status applies.
+   * Output only. The stage number to which this status applies.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStageNumber() {
@@ -107,7 +107,7 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The wave number to which this status applies.
+   * Output only. The stage number to which this status applies.
    * @param stageNumber stageNumber or {@code null} for none
    */
   public RolloutStage setStageNumber(java.lang.Integer stageNumber) {
@@ -116,7 +116,7 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Output only. The time at which the wave started.
+   * Optional. Output only. The time at which the stage started.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -124,7 +124,7 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Output only. The time at which the wave started.
+   * Optional. Output only. The time at which the stage started.
    * @param startTime startTime or {@code null} for none
    */
   public RolloutStage setStartTime(String startTime) {
@@ -133,7 +133,7 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the wave.
+   * Output only. The state of the stage.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -141,7 +141,7 @@ public final class RolloutStage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the wave.
+   * Output only. The state of the stage.
    * @param state state or {@code null} for none
    */
   public RolloutStage setState(java.lang.String state) {

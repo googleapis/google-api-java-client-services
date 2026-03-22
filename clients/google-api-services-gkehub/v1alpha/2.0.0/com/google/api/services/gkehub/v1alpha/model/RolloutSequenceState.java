@@ -30,6 +30,14 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class RolloutSequenceState extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The timestamp at which the LifecycleState was last changed. Used to track how long
+   * it has been in the current state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastStateChangeTime;
+
+  /**
    * Output only. Lifecycle state of the Rollout Sequence.
    * The value may be {@code null}.
    */
@@ -42,6 +50,25 @@ public final class RolloutSequenceState extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> stateReasons;
+
+  /**
+   * Output only. The timestamp at which the LifecycleState was last changed. Used to track how long
+   * it has been in the current state.
+   * @return value or {@code null} for none
+   */
+  public String getLastStateChangeTime() {
+    return lastStateChangeTime;
+  }
+
+  /**
+   * Output only. The timestamp at which the LifecycleState was last changed. Used to track how long
+   * it has been in the current state.
+   * @param lastStateChangeTime lastStateChangeTime or {@code null} for none
+   */
+  public RolloutSequenceState setLastStateChangeTime(String lastStateChangeTime) {
+    this.lastStateChangeTime = lastStateChangeTime;
+    return this;
+  }
 
   /**
    * Output only. Lifecycle state of the Rollout Sequence.

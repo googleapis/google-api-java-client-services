@@ -17,7 +17,7 @@
 package com.google.api.services.gkehub.v1beta.model;
 
 /**
- * Rollout contains the Rollout metadata and configuration.
+ * Rollout contains the Rollout metadata and configuration. Next ID: 28
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:
@@ -117,6 +117,13 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String stateReason;
+
+  /**
+   * Output only. StateReasonType specifies the reason type of the Rollout state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stateReasonType;
 
   /**
    * Output only. Google-generated UUID for this resource. This is unique across all Rollout
@@ -352,6 +359,23 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setStateReason(java.lang.String stateReason) {
     this.stateReason = stateReason;
+    return this;
+  }
+
+  /**
+   * Output only. StateReasonType specifies the reason type of the Rollout state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStateReasonType() {
+    return stateReasonType;
+  }
+
+  /**
+   * Output only. StateReasonType specifies the reason type of the Rollout state.
+   * @param stateReasonType stateReasonType or {@code null} for none
+   */
+  public Rollout setStateReasonType(java.lang.String stateReasonType) {
+    this.stateReasonType = stateReasonType;
     return this;
   }
 

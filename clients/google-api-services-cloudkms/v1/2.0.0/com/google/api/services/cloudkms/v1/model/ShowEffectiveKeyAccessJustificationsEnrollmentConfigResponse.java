@@ -17,7 +17,7 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * Response message for
+ * Represents a response message for
  * KeyAccessJustificationsConfig.ShowEffectiveKeyAccessJustificationsEnrollmentConfig
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,28 +32,28 @@ package com.google.api.services.cloudkms.v1.model;
 public final class ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for external keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for external keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KeyAccessJustificationsEnrollmentConfig externalConfig;
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for hardware keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for hardware keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KeyAccessJustificationsEnrollmentConfig hardwareConfig;
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for software keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for software keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KeyAccessJustificationsEnrollmentConfig softwareConfig;
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for external keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for external keys.
    * @return value or {@code null} for none
    */
   public KeyAccessJustificationsEnrollmentConfig getExternalConfig() {
@@ -61,7 +61,7 @@ public final class ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse 
   }
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for external keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for external keys.
    * @param externalConfig externalConfig or {@code null} for none
    */
   public ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse setExternalConfig(KeyAccessJustificationsEnrollmentConfig externalConfig) {
@@ -70,7 +70,7 @@ public final class ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse 
   }
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for hardware keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for hardware keys.
    * @return value or {@code null} for none
    */
   public KeyAccessJustificationsEnrollmentConfig getHardwareConfig() {
@@ -78,7 +78,7 @@ public final class ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse 
   }
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for hardware keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for hardware keys.
    * @param hardwareConfig hardwareConfig or {@code null} for none
    */
   public ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse setHardwareConfig(KeyAccessJustificationsEnrollmentConfig hardwareConfig) {
@@ -87,7 +87,7 @@ public final class ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse 
   }
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for software keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for software keys.
    * @return value or {@code null} for none
    */
   public KeyAccessJustificationsEnrollmentConfig getSoftwareConfig() {
@@ -95,7 +95,7 @@ public final class ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse 
   }
 
   /**
-   * The effective KeyAccessJustificationsEnrollmentConfig for software keys.
+   * Contains the effective KeyAccessJustificationsEnrollmentConfig for software keys.
    * @param softwareConfig softwareConfig or {@code null} for none
    */
   public ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse setSoftwareConfig(KeyAccessJustificationsEnrollmentConfig softwareConfig) {

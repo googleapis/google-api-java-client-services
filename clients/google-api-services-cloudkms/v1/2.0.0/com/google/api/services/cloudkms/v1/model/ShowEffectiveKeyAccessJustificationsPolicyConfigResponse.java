@@ -17,7 +17,7 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * Response message for
+ * Represents a response message for
  * KeyAccessJustificationsConfig.ShowEffectiveKeyAccessJustificationsPolicyConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,14 +32,14 @@ package com.google.api.services.cloudkms.v1.model;
 public final class ShowEffectiveKeyAccessJustificationsPolicyConfigResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The effective KeyAccessJustificationsPolicyConfig.
+   * Contains the effective KeyAccessJustificationsPolicyConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private KeyAccessJustificationsPolicyConfig effectiveKajPolicy;
 
   /**
-   * The effective KeyAccessJustificationsPolicyConfig.
+   * Contains the effective KeyAccessJustificationsPolicyConfig.
    * @return value or {@code null} for none
    */
   public KeyAccessJustificationsPolicyConfig getEffectiveKajPolicy() {
@@ -47,7 +47,7 @@ public final class ShowEffectiveKeyAccessJustificationsPolicyConfigResponse exte
   }
 
   /**
-   * The effective KeyAccessJustificationsPolicyConfig.
+   * Contains the effective KeyAccessJustificationsPolicyConfig.
    * @param effectiveKajPolicy effectiveKajPolicy or {@code null} for none
    */
   public ShowEffectiveKeyAccessJustificationsPolicyConfigResponse setEffectiveKajPolicy(KeyAccessJustificationsPolicyConfig effectiveKajPolicy) {

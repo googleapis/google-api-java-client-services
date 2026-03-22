@@ -113,8 +113,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceSnapshot;
 
   /**
-   * Volume full name of this backup belongs to. Format:
-   * `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
+   * Volume full name of this backup belongs to. Either source_volume or ontap_source should be
+   * provided. Format: `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -343,8 +343,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Volume full name of this backup belongs to. Format:
-   * `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
+   * Volume full name of this backup belongs to. Either source_volume or ontap_source should be
+   * provided. Format: `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceVolume() {
@@ -352,8 +352,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Volume full name of this backup belongs to. Format:
-   * `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
+   * Volume full name of this backup belongs to. Either source_volume or ontap_source should be
+   * provided. Format: `projects/{projects_id}/locations/{location}/volumes/{volume_id}`
    * @param sourceVolume sourceVolume or {@code null} for none
    */
   public Backup setSourceVolume(java.lang.String sourceVolume) {

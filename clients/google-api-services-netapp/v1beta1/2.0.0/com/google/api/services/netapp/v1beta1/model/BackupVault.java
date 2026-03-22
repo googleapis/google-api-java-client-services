@@ -68,6 +68,13 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. Indicates if the backup vault is a cross project vault.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean crossProjectVault;
+
+  /**
    * Description of the backup vault.
    * The value may be {@code null}.
    */
@@ -223,6 +230,23 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
    */
   public BackupVault setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the backup vault is a cross project vault.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCrossProjectVault() {
+    return crossProjectVault;
+  }
+
+  /**
+   * Optional. Indicates if the backup vault is a cross project vault.
+   * @param crossProjectVault crossProjectVault or {@code null} for none
+   */
+  public BackupVault setCrossProjectVault(java.lang.Boolean crossProjectVault) {
+    this.crossProjectVault = crossProjectVault;
     return this;
   }
 

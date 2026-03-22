@@ -252,9 +252,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Type of the storage pool. This field is used to control whether the pool supports
-   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes or
-   * `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`) volumes with large capacity. If not
-   * specified during creation, it defaults to `FILE`.
+   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes. If not specified
+   * during creation, it defaults to `FILE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -813,9 +812,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Type of the storage pool. This field is used to control whether the pool supports
-   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes or
-   * `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`) volumes with large capacity. If not
-   * specified during creation, it defaults to `FILE`.
+   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes. If not specified
+   * during creation, it defaults to `FILE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -824,9 +822,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Type of the storage pool. This field is used to control whether the pool supports
-   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes or
-   * `UNIFIED_LARGE_CAPACITY` (both `FILE` and `BLOCK`) volumes with large capacity. If not
-   * specified during creation, it defaults to `FILE`.
+   * `FILE` based volumes only or `UNIFIED` (both `FILE` and `BLOCK`) volumes. If not specified
+   * during creation, it defaults to `FILE`.
    * @param type type or {@code null} for none
    */
   public StoragePool setType(java.lang.String type) {

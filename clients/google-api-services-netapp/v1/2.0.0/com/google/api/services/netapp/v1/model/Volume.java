@@ -165,6 +165,13 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean largeCapacity;
 
   /**
+   * Optional. Large capacity config for the volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LargeCapacityConfig largeCapacityConfig;
+
+  /**
    * Output only. Flag indicating if the volume is NFS LDAP enabled or not.
    * The value may be {@code null}.
    */
@@ -660,6 +667,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setLargeCapacity(java.lang.Boolean largeCapacity) {
     this.largeCapacity = largeCapacity;
+    return this;
+  }
+
+  /**
+   * Optional. Large capacity config for the volume.
+   * @return value or {@code null} for none
+   */
+  public LargeCapacityConfig getLargeCapacityConfig() {
+    return largeCapacityConfig;
+  }
+
+  /**
+   * Optional. Large capacity config for the volume.
+   * @param largeCapacityConfig largeCapacityConfig or {@code null} for none
+   */
+  public Volume setLargeCapacityConfig(LargeCapacityConfig largeCapacityConfig) {
+    this.largeCapacityConfig = largeCapacityConfig;
     return this;
   }
 

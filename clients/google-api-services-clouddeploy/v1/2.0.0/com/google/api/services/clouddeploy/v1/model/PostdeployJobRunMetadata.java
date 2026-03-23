@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * A verify Job.
+ * PostdeployJobRunMetadata contains metadata about the postdeploy `JobRun`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,46 +27,40 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VerifyJob extends com.google.api.client.json.GenericJson {
+public final class PostdeployJobRunMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
+   * Output only. Custom metadata provided by user-defined postdeploy operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Task> tasks;
-
-  static {
-    // hack to force ProGuard to consider Task used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Task.class);
-  }
+  private CustomMetadata custom;
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
+   * Output only. Custom metadata provided by user-defined postdeploy operation.
    * @return value or {@code null} for none
    */
-  public java.util.List<Task> getTasks() {
-    return tasks;
+  public CustomMetadata getCustom() {
+    return custom;
   }
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
-   * @param tasks tasks or {@code null} for none
+   * Output only. Custom metadata provided by user-defined postdeploy operation.
+   * @param custom custom or {@code null} for none
    */
-  public VerifyJob setTasks(java.util.List<Task> tasks) {
-    this.tasks = tasks;
+  public PostdeployJobRunMetadata setCustom(CustomMetadata custom) {
+    this.custom = custom;
     return this;
   }
 
   @Override
-  public VerifyJob set(String fieldName, Object value) {
-    return (VerifyJob) super.set(fieldName, value);
+  public PostdeployJobRunMetadata set(String fieldName, Object value) {
+    return (PostdeployJobRunMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public VerifyJob clone() {
-    return (VerifyJob) super.clone();
+  public PostdeployJobRunMetadata clone() {
+    return (PostdeployJobRunMetadata) super.clone();
   }
 
 }

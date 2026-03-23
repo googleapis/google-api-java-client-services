@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * A postdeploy Job.
+ * CustomTargetTasks represents the `CustomTargetType` configuration using tasks.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,64 +27,67 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PostdeployJob extends com.google.api.client.json.GenericJson {
+public final class CustomTargetTasks extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The custom actions that the postdeploy Job executes.
+   * Required. The task responsible for deploy operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> actions;
+  private Task deploy;
 
   /**
-   * Output only. The tasks that are executed as part of the postdeploy Job.
+   * Optional. The task responsible for render operations. If not provided then Cloud Deploy will
+   * perform its default rendering operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Task> tasks;
+  private Task render;
 
   /**
-   * Output only. The custom actions that the postdeploy Job executes.
+   * Required. The task responsible for deploy operations.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getActions() {
-    return actions;
+  public Task getDeploy() {
+    return deploy;
   }
 
   /**
-   * Output only. The custom actions that the postdeploy Job executes.
-   * @param actions actions or {@code null} for none
+   * Required. The task responsible for deploy operations.
+   * @param deploy deploy or {@code null} for none
    */
-  public PostdeployJob setActions(java.util.List<java.lang.String> actions) {
-    this.actions = actions;
+  public CustomTargetTasks setDeploy(Task deploy) {
+    this.deploy = deploy;
     return this;
   }
 
   /**
-   * Output only. The tasks that are executed as part of the postdeploy Job.
+   * Optional. The task responsible for render operations. If not provided then Cloud Deploy will
+   * perform its default rendering operation.
    * @return value or {@code null} for none
    */
-  public java.util.List<Task> getTasks() {
-    return tasks;
+  public Task getRender() {
+    return render;
   }
 
   /**
-   * Output only. The tasks that are executed as part of the postdeploy Job.
-   * @param tasks tasks or {@code null} for none
+   * Optional. The task responsible for render operations. If not provided then Cloud Deploy will
+   * perform its default rendering operation.
+   * @param render render or {@code null} for none
    */
-  public PostdeployJob setTasks(java.util.List<Task> tasks) {
-    this.tasks = tasks;
+  public CustomTargetTasks setRender(Task render) {
+    this.render = render;
     return this;
   }
 
   @Override
-  public PostdeployJob set(String fieldName, Object value) {
-    return (PostdeployJob) super.set(fieldName, value);
+  public CustomTargetTasks set(String fieldName, Object value) {
+    return (CustomTargetTasks) super.set(fieldName, value);
   }
 
   @Override
-  public PostdeployJob clone() {
-    return (PostdeployJob) super.clone();
+  public CustomTargetTasks clone() {
+    return (CustomTargetTasks) super.clone();
   }
 
 }

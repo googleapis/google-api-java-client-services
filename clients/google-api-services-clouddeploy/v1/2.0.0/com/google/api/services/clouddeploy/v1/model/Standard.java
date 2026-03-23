@@ -30,6 +30,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Standard extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for the analysis job. If this is not configured, the analysis job will
+   * not be present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Analysis analysis;
+
+  /**
    * Optional. Configuration for the postdeploy job. If this is not configured, the postdeploy job
    * will not be present.
    * The value may be {@code null}.
@@ -51,6 +59,32 @@ public final class Standard extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean verify;
+
+  /**
+   * Optional. Configuration for the verify job. Cannot be set if `verify` is set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Verify verifyConfig;
+
+  /**
+   * Optional. Configuration for the analysis job. If this is not configured, the analysis job will
+   * not be present.
+   * @return value or {@code null} for none
+   */
+  public Analysis getAnalysis() {
+    return analysis;
+  }
+
+  /**
+   * Optional. Configuration for the analysis job. If this is not configured, the analysis job will
+   * not be present.
+   * @param analysis analysis or {@code null} for none
+   */
+  public Standard setAnalysis(Analysis analysis) {
+    this.analysis = analysis;
+    return this;
+  }
 
   /**
    * Optional. Configuration for the postdeploy job. If this is not configured, the postdeploy job
@@ -104,6 +138,23 @@ public final class Standard extends com.google.api.client.json.GenericJson {
    */
   public Standard setVerify(java.lang.Boolean verify) {
     this.verify = verify;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the verify job. Cannot be set if `verify` is set to true.
+   * @return value or {@code null} for none
+   */
+  public Verify getVerifyConfig() {
+    return verifyConfig;
+  }
+
+  /**
+   * Optional. Configuration for the verify job. Cannot be set if `verify` is set to true.
+   * @param verifyConfig verifyConfig or {@code null} for none
+   */
+  public Standard setVerifyConfig(Verify verifyConfig) {
+    this.verifyConfig = verifyConfig;
     return this;
   }
 

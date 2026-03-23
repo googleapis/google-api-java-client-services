@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * A verify Job.
+ * GoogleCloudAnalysis is a set of Google Cloud-based checks to perform on the deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,46 +27,46 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VerifyJob extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAnalysis extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
+   * Optional. A list of Cloud Monitoring Alert Policy checks to perform as part of the analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Task> tasks;
+  private java.util.List<AlertPolicyCheck> alertPolicyChecks;
 
   static {
-    // hack to force ProGuard to consider Task used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider AlertPolicyCheck used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Task.class);
+    com.google.api.client.util.Data.nullOf(AlertPolicyCheck.class);
   }
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
+   * Optional. A list of Cloud Monitoring Alert Policy checks to perform as part of the analysis.
    * @return value or {@code null} for none
    */
-  public java.util.List<Task> getTasks() {
-    return tasks;
+  public java.util.List<AlertPolicyCheck> getAlertPolicyChecks() {
+    return alertPolicyChecks;
   }
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
-   * @param tasks tasks or {@code null} for none
+   * Optional. A list of Cloud Monitoring Alert Policy checks to perform as part of the analysis.
+   * @param alertPolicyChecks alertPolicyChecks or {@code null} for none
    */
-  public VerifyJob setTasks(java.util.List<Task> tasks) {
-    this.tasks = tasks;
+  public GoogleCloudAnalysis setAlertPolicyChecks(java.util.List<AlertPolicyCheck> alertPolicyChecks) {
+    this.alertPolicyChecks = alertPolicyChecks;
     return this;
   }
 
   @Override
-  public VerifyJob set(String fieldName, Object value) {
-    return (VerifyJob) super.set(fieldName, value);
+  public GoogleCloudAnalysis set(String fieldName, Object value) {
+    return (GoogleCloudAnalysis) super.set(fieldName, value);
   }
 
   @Override
-  public VerifyJob clone() {
-    return (VerifyJob) super.clone();
+  public GoogleCloudAnalysis clone() {
+    return (GoogleCloudAnalysis) super.clone();
   }
 
 }

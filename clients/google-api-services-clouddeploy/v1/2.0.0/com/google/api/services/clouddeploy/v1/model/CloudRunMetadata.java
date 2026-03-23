@@ -38,6 +38,17 @@ public final class CloudRunMetadata extends com.google.api.client.json.GenericJs
   private java.lang.String job;
 
   /**
+   * Output only. The previous Cloud Run Revision name associated with a `Rollout`. Only set when a
+   * canary deployment strategy is configured. Format for service is
+   * projects/{project}/locations/{location}/services/{service}/revisions/{revision}. Format for
+   * worker pool is
+   * projects/{project}/locations/{location}/workerPools/{workerpool}/revisions/{revision}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String previousRevision;
+
+  /**
    * Output only. The Cloud Run Revision id associated with a `Rollout`.
    * The value may be {@code null}.
    */
@@ -83,6 +94,31 @@ public final class CloudRunMetadata extends com.google.api.client.json.GenericJs
    */
   public CloudRunMetadata setJob(java.lang.String job) {
     this.job = job;
+    return this;
+  }
+
+  /**
+   * Output only. The previous Cloud Run Revision name associated with a `Rollout`. Only set when a
+   * canary deployment strategy is configured. Format for service is
+   * projects/{project}/locations/{location}/services/{service}/revisions/{revision}. Format for
+   * worker pool is
+   * projects/{project}/locations/{location}/workerPools/{workerpool}/revisions/{revision}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreviousRevision() {
+    return previousRevision;
+  }
+
+  /**
+   * Output only. The previous Cloud Run Revision name associated with a `Rollout`. Only set when a
+   * canary deployment strategy is configured. Format for service is
+   * projects/{project}/locations/{location}/services/{service}/revisions/{revision}. Format for
+   * worker pool is
+   * projects/{project}/locations/{location}/workerPools/{workerpool}/revisions/{revision}.
+   * @param previousRevision previousRevision or {@code null} for none
+   */
+  public CloudRunMetadata setPreviousRevision(java.lang.String previousRevision) {
+    this.previousRevision = previousRevision;
     return this;
   }
 

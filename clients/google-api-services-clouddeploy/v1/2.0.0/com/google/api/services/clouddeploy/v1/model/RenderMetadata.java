@@ -44,6 +44,14 @@ public final class RenderMetadata extends com.google.api.client.json.GenericJson
   private CustomMetadata custom;
 
   /**
+   * Output only. Metadata associated with rendering for a Kubernetes cluster (GKE or GKE Enterprise
+   * target).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KubernetesRenderMetadata kubernetes;
+
+  /**
    * Output only. Metadata associated with rendering for Cloud Run.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class RenderMetadata extends com.google.api.client.json.GenericJson
    */
   public RenderMetadata setCustom(CustomMetadata custom) {
     this.custom = custom;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata associated with rendering for a Kubernetes cluster (GKE or GKE Enterprise
+   * target).
+   * @return value or {@code null} for none
+   */
+  public KubernetesRenderMetadata getKubernetes() {
+    return kubernetes;
+  }
+
+  /**
+   * Output only. Metadata associated with rendering for a Kubernetes cluster (GKE or GKE Enterprise
+   * target).
+   * @param kubernetes kubernetes or {@code null} for none
+   */
+  public RenderMetadata setKubernetes(KubernetesRenderMetadata kubernetes) {
+    this.kubernetes = kubernetes;
     return this;
   }
 

@@ -100,6 +100,13 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * Optional. Configures render and deploy for the `CustomTargetType` using tasks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomTargetTasks tasks;
+
+  /**
    * Output only. Unique identifier of the `CustomTargetType`.
    * The value may be {@code null}.
    */
@@ -270,6 +277,23 @@ public final class CustomTargetType extends com.google.api.client.json.GenericJs
    */
   public CustomTargetType setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Configures render and deploy for the `CustomTargetType` using tasks.
+   * @return value or {@code null} for none
+   */
+  public CustomTargetTasks getTasks() {
+    return tasks;
+  }
+
+  /**
+   * Optional. Configures render and deploy for the `CustomTargetType` using tasks.
+   * @param tasks tasks or {@code null} for none
+   */
+  public CustomTargetType setTasks(CustomTargetTasks tasks) {
+    this.tasks = tasks;
     return this;
   }
 

@@ -54,6 +54,13 @@ public final class PredeployJobRun extends com.google.api.client.json.GenericJso
   private java.lang.String failureMessage;
 
   /**
+   * Output only. Metadata containing information about the predeploy `JobRun`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PredeployJobRunMetadata metadata;
+
+  /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to execute the
    * custom actions associated with the predeploy Job. Format is
    * `projects/{project}/locations/{location}/builds/{build}`.
@@ -107,6 +114,23 @@ public final class PredeployJobRun extends com.google.api.client.json.GenericJso
    */
   public PredeployJobRun setFailureMessage(java.lang.String failureMessage) {
     this.failureMessage = failureMessage;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata containing information about the predeploy `JobRun`.
+   * @return value or {@code null} for none
+   */
+  public PredeployJobRunMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. Metadata containing information about the predeploy `JobRun`.
+   * @param metadata metadata or {@code null} for none
+   */
+  public PredeployJobRun setMetadata(PredeployJobRunMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

@@ -30,6 +30,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class CanaryDeployment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for the analysis job. If configured, the analysis will run after each
+   * percentage deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Analysis analysis;
+
+  /**
    * Required. The percentage based deployments that will occur as a part of a `Rollout`. List is
    * expected in ascending order and each integer n is 0 <= n < 100. If the GatewayServiceMesh is
    * configured for Kubernetes, then the range for n is 0 <= n <= 100.
@@ -60,6 +68,32 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean verify;
+
+  /**
+   * Optional. Configuration for the verify job. Cannot be set if `verify` is set to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Verify verifyConfig;
+
+  /**
+   * Optional. Configuration for the analysis job. If configured, the analysis will run after each
+   * percentage deployment.
+   * @return value or {@code null} for none
+   */
+  public Analysis getAnalysis() {
+    return analysis;
+  }
+
+  /**
+   * Optional. Configuration for the analysis job. If configured, the analysis will run after each
+   * percentage deployment.
+   * @param analysis analysis or {@code null} for none
+   */
+  public CanaryDeployment setAnalysis(Analysis analysis) {
+    this.analysis = analysis;
+    return this;
+  }
 
   /**
    * Required. The percentage based deployments that will occur as a part of a `Rollout`. List is
@@ -134,6 +168,23 @@ public final class CanaryDeployment extends com.google.api.client.json.GenericJs
    */
   public CanaryDeployment setVerify(java.lang.Boolean verify) {
     this.verify = verify;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the verify job. Cannot be set if `verify` is set to true.
+   * @return value or {@code null} for none
+   */
+  public Verify getVerifyConfig() {
+    return verifyConfig;
+  }
+
+  /**
+   * Optional. Configuration for the verify job. Cannot be set if `verify` is set to true.
+   * @param verifyConfig verifyConfig or {@code null} for none
+   */
+  public CanaryDeployment setVerifyConfig(Verify verifyConfig) {
+    this.verifyConfig = verifyConfig;
     return this;
   }
 

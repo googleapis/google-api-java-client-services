@@ -41,6 +41,17 @@ public final class GoogleCloudAiplatformV1beta1PredictLongRunningRequest extends
   private java.util.List<java.lang.Object> instances;
 
   /**
+   * Optional. The labels with user-defined metadata for the request. It is used for billing and
+   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
+   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
+   * International characters are allowed. Label values are optional. Label keys must start with a
+   * letter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Optional. The parameters that govern the prediction. The schema of the parameters may be
    * specified via Endpoint's DeployedModels' Model's PredictSchemata's parameters_schema_uri.
    * The value may be {@code null}.
@@ -70,6 +81,31 @@ public final class GoogleCloudAiplatformV1beta1PredictLongRunningRequest extends
    */
   public GoogleCloudAiplatformV1beta1PredictLongRunningRequest setInstances(java.util.List<java.lang.Object> instances) {
     this.instances = instances;
+    return this;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. It is used for billing and
+   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
+   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
+   * International characters are allowed. Label values are optional. Label keys must start with a
+   * letter.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. The labels with user-defined metadata for the request. It is used for billing and
+   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
+   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
+   * International characters are allowed. Label values are optional. Label keys must start with a
+   * letter.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PredictLongRunningRequest setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

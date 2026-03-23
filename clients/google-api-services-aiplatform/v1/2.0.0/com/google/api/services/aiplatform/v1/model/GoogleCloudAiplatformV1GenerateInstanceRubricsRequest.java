@@ -60,6 +60,16 @@ public final class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends
   private java.lang.String location;
 
   /**
+   * Optional. The resource name of a registered metric. Rubric generation using predefined metric
+   * spec or LLMBasedMetricSpec is supported. If this field is set, the configuration provided in
+   * this field is used for rubric generation. The `predefined_rubric_generation_spec` and
+   * `rubric_generation_spec` fields will be ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metricResourceName;
+
+  /**
    * Optional. Specification for using the rubric generation configs of a pre-defined metric, e.g.
    * "generic_quality_v1" and "instruction_following_v1". Some of the configs may be only used in
    * rubric generation and not supporting evaluation, e.g. "fully_customized_generic_quality_v1". If
@@ -130,6 +140,29 @@ public final class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends
    */
   public GoogleCloudAiplatformV1GenerateInstanceRubricsRequest setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Optional. The resource name of a registered metric. Rubric generation using predefined metric
+   * spec or LLMBasedMetricSpec is supported. If this field is set, the configuration provided in
+   * this field is used for rubric generation. The `predefined_rubric_generation_spec` and
+   * `rubric_generation_spec` fields will be ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetricResourceName() {
+    return metricResourceName;
+  }
+
+  /**
+   * Optional. The resource name of a registered metric. Rubric generation using predefined metric
+   * spec or LLMBasedMetricSpec is supported. If this field is set, the configuration provided in
+   * this field is used for rubric generation. The `predefined_rubric_generation_spec` and
+   * `rubric_generation_spec` fields will be ignored.
+   * @param metricResourceName metricResourceName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateInstanceRubricsRequest setMetricResourceName(java.lang.String metricResourceName) {
+    this.metricResourceName = metricResourceName;
     return this;
   }
 

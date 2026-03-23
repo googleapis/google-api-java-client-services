@@ -79,6 +79,14 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   private java.lang.String tunedTeacherModelSource;
 
   /**
+   * Optional. Specifies the tuning mode for distillation (sft part). This feature is only available
+   * for open source models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tuningMode;
+
+  /**
    * Optional. Cloud Storage path to file containing validation dataset for tuning. The dataset must
    * be formatted as a JSONL file.
    * The value may be {@code null}.
@@ -199,6 +207,25 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
    */
   public GoogleCloudAiplatformV1beta1DistillationSpec setTunedTeacherModelSource(java.lang.String tunedTeacherModelSource) {
     this.tunedTeacherModelSource = tunedTeacherModelSource;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the tuning mode for distillation (sft part). This feature is only available
+   * for open source models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTuningMode() {
+    return tuningMode;
+  }
+
+  /**
+   * Optional. Specifies the tuning mode for distillation (sft part). This feature is only available
+   * for open source models.
+   * @param tuningMode tuningMode or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DistillationSpec setTuningMode(java.lang.String tuningMode) {
+    this.tuningMode = tuningMode;
     return this;
   }
 

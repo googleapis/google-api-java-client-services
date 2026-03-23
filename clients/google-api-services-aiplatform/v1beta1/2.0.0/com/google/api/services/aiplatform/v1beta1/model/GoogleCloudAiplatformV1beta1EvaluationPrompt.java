@@ -53,6 +53,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluationPrompt extends com.goog
   private java.lang.String text;
 
   /**
+   * Optional. The generated user scenario used to drive multi-turn agent running results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EvaluationPromptUserScenario userScenario;
+
+  /**
    * Fields and values that can be used to populate the prompt template.
    * The value may be {@code null}.
    */
@@ -109,6 +116,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluationPrompt extends com.goog
    */
   public GoogleCloudAiplatformV1beta1EvaluationPrompt setText(java.lang.String text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * Optional. The generated user scenario used to drive multi-turn agent running results.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationPromptUserScenario getUserScenario() {
+    return userScenario;
+  }
+
+  /**
+   * Optional. The generated user scenario used to drive multi-turn agent running results.
+   * @param userScenario userScenario or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationPrompt setUserScenario(GoogleCloudAiplatformV1beta1EvaluationPromptUserScenario userScenario) {
+    this.userScenario = userScenario;
     return this;
   }
 

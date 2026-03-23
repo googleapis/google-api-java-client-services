@@ -72,6 +72,13 @@ public final class GoogleCloudAiplatformV1Metric extends com.google.api.client.j
   private GoogleCloudAiplatformV1LLMBasedMetricSpec llmBasedMetricSpec;
 
   /**
+   * Optional. Metadata about the metric, used for visualization and organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1MetricMetadata metadata;
+
+  /**
    * Spec for pairwise metric.
    * The value may be {@code null}.
    */
@@ -198,6 +205,23 @@ public final class GoogleCloudAiplatformV1Metric extends com.google.api.client.j
    */
   public GoogleCloudAiplatformV1Metric setLlmBasedMetricSpec(GoogleCloudAiplatformV1LLMBasedMetricSpec llmBasedMetricSpec) {
     this.llmBasedMetricSpec = llmBasedMetricSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Metadata about the metric, used for visualization and organization.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MetricMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Optional. Metadata about the metric, used for visualization and organization.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Metric setMetadata(GoogleCloudAiplatformV1MetricMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

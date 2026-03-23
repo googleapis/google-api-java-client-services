@@ -37,6 +37,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private AdvanceChildRolloutJob advanceChildRolloutJob;
 
   /**
+   * Output only. An analysis Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnalysisJob analysisJob;
+
+  /**
    * Output only. A createChildRollout Job.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setAdvanceChildRolloutJob(AdvanceChildRolloutJob advanceChildRolloutJob) {
     this.advanceChildRolloutJob = advanceChildRolloutJob;
+    return this;
+  }
+
+  /**
+   * Output only. An analysis Job.
+   * @return value or {@code null} for none
+   */
+  public AnalysisJob getAnalysisJob() {
+    return analysisJob;
+  }
+
+  /**
+   * Output only. An analysis Job.
+   * @param analysisJob analysisJob or {@code null} for none
+   */
+  public Job setAnalysisJob(AnalysisJob analysisJob) {
+    this.analysisJob = analysisJob;
     return this;
   }
 

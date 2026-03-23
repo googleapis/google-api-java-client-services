@@ -30,6 +30,22 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class CloudRunRenderMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The name of the Cloud Run Job in the rendered manifest. Format is
+   * `projects/{project}/locations/{location}/jobs/{job}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String job;
+
+  /**
+   * Output only. The name of the Cloud Run Revision in the rendered manifest. Format is
+   * `projects/{project}/locations/{location}/services/{service}/revisions/{revision}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String revision;
+
+  /**
    * Output only. The name of the Cloud Run Service in the rendered manifest. Format is
    * `projects/{project}/locations/{location}/services/{service}`.
    * The value may be {@code null}.
@@ -44,6 +60,44 @@ public final class CloudRunRenderMetadata extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String workerPool;
+
+  /**
+   * Output only. The name of the Cloud Run Job in the rendered manifest. Format is
+   * `projects/{project}/locations/{location}/jobs/{job}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJob() {
+    return job;
+  }
+
+  /**
+   * Output only. The name of the Cloud Run Job in the rendered manifest. Format is
+   * `projects/{project}/locations/{location}/jobs/{job}`.
+   * @param job job or {@code null} for none
+   */
+  public CloudRunRenderMetadata setJob(java.lang.String job) {
+    this.job = job;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the Cloud Run Revision in the rendered manifest. Format is
+   * `projects/{project}/locations/{location}/services/{service}/revisions/{revision}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRevision() {
+    return revision;
+  }
+
+  /**
+   * Output only. The name of the Cloud Run Revision in the rendered manifest. Format is
+   * `projects/{project}/locations/{location}/services/{service}/revisions/{revision}`.
+   * @param revision revision or {@code null} for none
+   */
+  public CloudRunRenderMetadata setRevision(java.lang.String revision) {
+    this.revision = revision;
+    return this;
+  }
 
   /**
    * Output only. The name of the Cloud Run Service in the rendered manifest. Format is

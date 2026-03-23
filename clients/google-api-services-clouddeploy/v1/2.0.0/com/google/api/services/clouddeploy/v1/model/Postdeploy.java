@@ -38,6 +38,14 @@ public final class Postdeploy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> actions;
 
   /**
+   * Optional. The tasks that will run as a part of the postdeploy job. The tasks are executed
+   * sequentially in the order specified. Only one of `actions` or `tasks` can be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Task> tasks;
+
+  /**
    * Optional. A sequence of Skaffold custom actions to invoke during execution of the postdeploy
    * job.
    * @return value or {@code null} for none
@@ -53,6 +61,25 @@ public final class Postdeploy extends com.google.api.client.json.GenericJson {
    */
   public Postdeploy setActions(java.util.List<java.lang.String> actions) {
     this.actions = actions;
+    return this;
+  }
+
+  /**
+   * Optional. The tasks that will run as a part of the postdeploy job. The tasks are executed
+   * sequentially in the order specified. Only one of `actions` or `tasks` can be specified.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Task> getTasks() {
+    return tasks;
+  }
+
+  /**
+   * Optional. The tasks that will run as a part of the postdeploy job. The tasks are executed
+   * sequentially in the order specified. Only one of `actions` or `tasks` can be specified.
+   * @param tasks tasks or {@code null} for none
+   */
+  public Postdeploy setTasks(java.util.List<Task> tasks) {
+    this.tasks = tasks;
     return this;
   }
 

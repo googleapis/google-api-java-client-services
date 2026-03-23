@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * A postdeploy Job.
+ * Verify contains the verify job configuration information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,41 +27,25 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PostdeployJob extends com.google.api.client.json.GenericJson {
+public final class Verify extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The custom actions that the postdeploy Job executes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> actions;
-
-  /**
-   * Output only. The tasks that are executed as part of the postdeploy Job.
+   * Optional. The tasks that will run as a part of the verify job. The tasks are executed
+   * sequentially in the order specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Task> tasks;
 
-  /**
-   * Output only. The custom actions that the postdeploy Job executes.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getActions() {
-    return actions;
+  static {
+    // hack to force ProGuard to consider Task used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Task.class);
   }
 
   /**
-   * Output only. The custom actions that the postdeploy Job executes.
-   * @param actions actions or {@code null} for none
-   */
-  public PostdeployJob setActions(java.util.List<java.lang.String> actions) {
-    this.actions = actions;
-    return this;
-  }
-
-  /**
-   * Output only. The tasks that are executed as part of the postdeploy Job.
+   * Optional. The tasks that will run as a part of the verify job. The tasks are executed
+   * sequentially in the order specified.
    * @return value or {@code null} for none
    */
   public java.util.List<Task> getTasks() {
@@ -69,22 +53,23 @@ public final class PostdeployJob extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The tasks that are executed as part of the postdeploy Job.
+   * Optional. The tasks that will run as a part of the verify job. The tasks are executed
+   * sequentially in the order specified.
    * @param tasks tasks or {@code null} for none
    */
-  public PostdeployJob setTasks(java.util.List<Task> tasks) {
+  public Verify setTasks(java.util.List<Task> tasks) {
     this.tasks = tasks;
     return this;
   }
 
   @Override
-  public PostdeployJob set(String fieldName, Object value) {
-    return (PostdeployJob) super.set(fieldName, value);
+  public Verify set(String fieldName, Object value) {
+    return (Verify) super.set(fieldName, value);
   }
 
   @Override
-  public PostdeployJob clone() {
-    return (PostdeployJob) super.clone();
+  public Verify clone() {
+    return (Verify) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * A verify Job.
+ * A Task represents a unit of work that is executed as part of a Job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:
@@ -27,46 +27,43 @@ package com.google.api.services.clouddeploy.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VerifyJob extends com.google.api.client.json.GenericJson {
+public final class Task extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
+   * Optional. This task is represented by a container that is executed in the Cloud Build execution
+   * environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Task> tasks;
-
-  static {
-    // hack to force ProGuard to consider Task used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Task.class);
-  }
+  private ContainerTask container;
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
+   * Optional. This task is represented by a container that is executed in the Cloud Build execution
+   * environment.
    * @return value or {@code null} for none
    */
-  public java.util.List<Task> getTasks() {
-    return tasks;
+  public ContainerTask getContainer() {
+    return container;
   }
 
   /**
-   * Output only. The tasks that are executed as part of the verify Job.
-   * @param tasks tasks or {@code null} for none
+   * Optional. This task is represented by a container that is executed in the Cloud Build execution
+   * environment.
+   * @param container container or {@code null} for none
    */
-  public VerifyJob setTasks(java.util.List<Task> tasks) {
-    this.tasks = tasks;
+  public Task setContainer(ContainerTask container) {
+    this.container = container;
     return this;
   }
 
   @Override
-  public VerifyJob set(String fieldName, Object value) {
-    return (VerifyJob) super.set(fieldName, value);
+  public Task set(String fieldName, Object value) {
+    return (Task) super.set(fieldName, value);
   }
 
   @Override
-  public VerifyJob clone() {
-    return (VerifyJob) super.clone();
+  public Task clone() {
+    return (Task) super.clone();
   }
 
 }

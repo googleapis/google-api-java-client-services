@@ -54,6 +54,13 @@ public final class PostdeployJobRun extends com.google.api.client.json.GenericJs
   private java.lang.String failureMessage;
 
   /**
+   * Output only. Metadata containing information about the postdeploy `JobRun`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PostdeployJobRunMetadata metadata;
+
+  /**
    * Output only. The resource name of the Cloud Build `Build` object that is used to execute the
    * custom actions associated with the postdeploy Job. Format is
    * `projects/{project}/locations/{location}/builds/{build}`.
@@ -107,6 +114,23 @@ public final class PostdeployJobRun extends com.google.api.client.json.GenericJs
    */
   public PostdeployJobRun setFailureMessage(java.lang.String failureMessage) {
     this.failureMessage = failureMessage;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata containing information about the postdeploy `JobRun`.
+   * @return value or {@code null} for none
+   */
+  public PostdeployJobRunMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. Metadata containing information about the postdeploy `JobRun`.
+   * @param metadata metadata or {@code null} for none
+   */
+  public PostdeployJobRun setMetadata(PostdeployJobRunMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

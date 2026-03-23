@@ -30,6 +30,14 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class DeploymentJobs extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The analysis Job. Runs after a verify if there is a verify job and the verify job
+   * succeeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Job analysisJob;
+
+  /**
    * Output only. The deploy Job. This is the deploy job in the phase.
    * The value may be {@code null}.
    */
@@ -56,6 +64,25 @@ public final class DeploymentJobs extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private Job verifyJob;
+
+  /**
+   * Output only. The analysis Job. Runs after a verify if there is a verify job and the verify job
+   * succeeds.
+   * @return value or {@code null} for none
+   */
+  public Job getAnalysisJob() {
+    return analysisJob;
+  }
+
+  /**
+   * Output only. The analysis Job. Runs after a verify if there is a verify job and the verify job
+   * succeeds.
+   * @param analysisJob analysisJob or {@code null} for none
+   */
+  public DeploymentJobs setAnalysisJob(Job analysisJob) {
+    this.analysisJob = analysisJob;
+    return this;
+  }
 
   /**
    * Output only. The deploy Job. This is the deploy job in the phase.

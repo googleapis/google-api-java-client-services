@@ -38,6 +38,13 @@ public final class JobRun extends com.google.api.client.json.GenericJson {
   private AdvanceChildRolloutJobRun advanceChildRolloutJobRun;
 
   /**
+   * Output only. Information specific to an analysis `JobRun`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnalysisJobRun analysisJobRun;
+
+  /**
    * Output only. Information specific to a createChildRollout `JobRun`.
    * The value may be {@code null}.
    */
@@ -152,6 +159,23 @@ public final class JobRun extends com.google.api.client.json.GenericJson {
    */
   public JobRun setAdvanceChildRolloutJobRun(AdvanceChildRolloutJobRun advanceChildRolloutJobRun) {
     this.advanceChildRolloutJobRun = advanceChildRolloutJobRun;
+    return this;
+  }
+
+  /**
+   * Output only. Information specific to an analysis `JobRun`.
+   * @return value or {@code null} for none
+   */
+  public AnalysisJobRun getAnalysisJobRun() {
+    return analysisJobRun;
+  }
+
+  /**
+   * Output only. Information specific to an analysis `JobRun`.
+   * @param analysisJobRun analysisJobRun or {@code null} for none
+   */
+  public JobRun setAnalysisJobRun(AnalysisJobRun analysisJobRun) {
+    this.analysisJobRun = analysisJobRun;
     return this;
   }
 

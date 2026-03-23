@@ -68,6 +68,13 @@ public final class VerifyJobRun extends com.google.api.client.json.GenericJson {
   private java.lang.String failureMessage;
 
   /**
+   * Output only. Metadata containing information about the verify `JobRun`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VerifyJobRunMetadata metadata;
+
+  /**
    * Output only. URI of a directory containing the verify artifacts. This contains the Skaffold
    * event log.
    * @return value or {@code null} for none
@@ -155,6 +162,23 @@ public final class VerifyJobRun extends com.google.api.client.json.GenericJson {
    */
   public VerifyJobRun setFailureMessage(java.lang.String failureMessage) {
     this.failureMessage = failureMessage;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata containing information about the verify `JobRun`.
+   * @return value or {@code null} for none
+   */
+  public VerifyJobRunMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. Metadata containing information about the verify `JobRun`.
+   * @param metadata metadata or {@code null} for none
+   */
+  public VerifyJobRun setMetadata(VerifyJobRunMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

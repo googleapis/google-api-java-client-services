@@ -17,7 +17,11 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * An inference config used for model inference during the evaluation run.
+ * Defines the configuration for a candidate model or agent being evaluated. `InferenceConfig`
+ * encapsulates all the necessary information to invoke or scrape the candidate during the
+ * evaluation run. This includes direct model inference parameters, agent execution settings, and
+ * multi-turn scraping configurations (such as user simulators). It serves as the primary
+ * representation of the candidate across different stages of the evaluation process.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -30,6 +34,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Agent run config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig agentRunConfig;
+
+  /**
    * Optional. Generation config.
    * The value may be {@code null}.
    */
@@ -39,14 +50,31 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   /**
    * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
    * Llama third-party models are also supported through Model Garden. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
-   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model formats:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}` or
    * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String model;
+
+  /**
+   * Optional. Agent run config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig getAgentRunConfig() {
+    return agentRunConfig;
+  }
+
+  /**
+   * Optional. Agent run config.
+   * @param agentRunConfig agentRunConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunInferenceConfig setAgentRunConfig(GoogleCloudAiplatformV1EvaluationRunInferenceConfigAgentRunConfig agentRunConfig) {
+    this.agentRunConfig = agentRunConfig;
+    return this;
+  }
 
   /**
    * Optional. Generation config.
@@ -68,8 +96,8 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   /**
    * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
    * Llama third-party models are also supported through Model Garden. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
-   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model formats:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}` or
    * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @return value or {@code null} for none
@@ -81,8 +109,8 @@ public final class GoogleCloudAiplatformV1EvaluationRunInferenceConfig extends c
   /**
    * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
    * Llama third-party models are also supported through Model Garden. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
-   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model formats:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}` or
    * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @param model model or {@code null} for none

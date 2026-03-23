@@ -37,12 +37,27 @@ public final class GoogleCloudAiplatformV1beta1DistillationHyperParameters exten
   private java.lang.String adapterSize;
 
   /**
+   * Optional. Batch size for tuning. This feature is only available for open source models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long batchSize;
+
+  /**
    * Optional. Number of complete passes the model makes over the entire training dataset during
    * training.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long epochCount;
+
+  /**
+   * Optional. Specifies the learning rate for tuning. Mutually exclusive with
+   * `learning_rate_multiplier`. This feature is only available for open source models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double learningRate;
 
   /**
    * Optional. Multiplier for adjusting the default learning rate.
@@ -69,6 +84,23 @@ public final class GoogleCloudAiplatformV1beta1DistillationHyperParameters exten
   }
 
   /**
+   * Optional. Batch size for tuning. This feature is only available for open source models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getBatchSize() {
+    return batchSize;
+  }
+
+  /**
+   * Optional. Batch size for tuning. This feature is only available for open source models.
+   * @param batchSize batchSize or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DistillationHyperParameters setBatchSize(java.lang.Long batchSize) {
+    this.batchSize = batchSize;
+    return this;
+  }
+
+  /**
    * Optional. Number of complete passes the model makes over the entire training dataset during
    * training.
    * @return value or {@code null} for none
@@ -84,6 +116,25 @@ public final class GoogleCloudAiplatformV1beta1DistillationHyperParameters exten
    */
   public GoogleCloudAiplatformV1beta1DistillationHyperParameters setEpochCount(java.lang.Long epochCount) {
     this.epochCount = epochCount;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the learning rate for tuning. Mutually exclusive with
+   * `learning_rate_multiplier`. This feature is only available for open source models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getLearningRate() {
+    return learningRate;
+  }
+
+  /**
+   * Optional. Specifies the learning rate for tuning. Mutually exclusive with
+   * `learning_rate_multiplier`. This feature is only available for open source models.
+   * @param learningRate learningRate or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DistillationHyperParameters setLearningRate(java.lang.Double learningRate) {
+    this.learningRate = learningRate;
     return this;
   }
 

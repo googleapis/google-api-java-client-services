@@ -102,6 +102,15 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
   private java.lang.String location;
 
   /**
+   * Optional. The metrics (either inline or registered) used for evaluation. Currently, we only
+   * support evaluating a single metric. If multiple metrics are provided, only the first one will
+   * be evaluated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1MetricSource> metricSources;
+
+  /**
    * The metrics used for evaluation. Currently, we only support evaluating a single metric. If
    * multiple metrics are provided, only the first one will be evaluated.
    * The value may be {@code null}.
@@ -455,6 +464,27 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
    */
   public GoogleCloudAiplatformV1EvaluateInstancesRequest setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Optional. The metrics (either inline or registered) used for evaluation. Currently, we only
+   * support evaluating a single metric. If multiple metrics are provided, only the first one will
+   * be evaluated.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1MetricSource> getMetricSources() {
+    return metricSources;
+  }
+
+  /**
+   * Optional. The metrics (either inline or registered) used for evaluation. Currently, we only
+   * support evaluating a single metric. If multiple metrics are provided, only the first one will
+   * be evaluated.
+   * @param metricSources metricSources or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesRequest setMetricSources(java.util.List<GoogleCloudAiplatformV1MetricSource> metricSources) {
+    this.metricSources = metricSources;
     return this;
   }
 

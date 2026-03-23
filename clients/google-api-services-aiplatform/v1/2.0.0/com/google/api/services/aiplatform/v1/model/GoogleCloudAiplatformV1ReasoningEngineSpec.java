@@ -45,6 +45,13 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   private java.util.List<java.util.Map<String, java.lang.Object>> classMethods;
 
   /**
+   * Deploy from a container image with a defined entrypoint and commands.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ReasoningEngineSpecContainerSpec containerSpec;
+
+  /**
    * Optional. The specification of a Reasoning Engine deployment.
    * The value may be {@code null}.
    */
@@ -131,6 +138,23 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpec setClassMethods(java.util.List<java.util.Map<String, java.lang.Object>> classMethods) {
     this.classMethods = classMethods;
+    return this;
+  }
+
+  /**
+   * Deploy from a container image with a defined entrypoint and commands.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpecContainerSpec getContainerSpec() {
+    return containerSpec;
+  }
+
+  /**
+   * Deploy from a container image with a defined entrypoint and commands.
+   * @param containerSpec containerSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpec setContainerSpec(GoogleCloudAiplatformV1ReasoningEngineSpecContainerSpec containerSpec) {
+    this.containerSpec = containerSpec;
     return this;
   }
 

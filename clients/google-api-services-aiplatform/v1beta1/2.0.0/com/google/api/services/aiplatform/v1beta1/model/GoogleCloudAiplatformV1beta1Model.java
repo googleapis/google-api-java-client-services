@@ -190,7 +190,7 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
   private GoogleCloudAiplatformV1beta1ModelSourceInfo modelSourceInfo;
 
   /**
-   * The resource name of the Model.
+   * Identifier. The resource name of the Model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -689,7 +689,7 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
   }
 
   /**
-   * The resource name of the Model.
+   * Identifier. The resource name of the Model.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -697,7 +697,7 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
   }
 
   /**
-   * The resource name of the Model.
+   * Identifier. The resource name of the Model.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Model setName(java.lang.String name) {

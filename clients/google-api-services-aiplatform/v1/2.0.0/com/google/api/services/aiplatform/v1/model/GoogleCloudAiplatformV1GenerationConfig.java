@@ -132,7 +132,7 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    * Optional. The IANA standard MIME type of the response. The model will generate output that
    * conforms to this MIME type. Supported values include 'text/plain' (default) and
    * 'application/json'. The model needs to be prompted to output the appropriate response type,
-   * otherwise the behavior is undefined. This is a preview feature.
+   * otherwise the behavior is undefined.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -463,7 +463,7 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    * Optional. The IANA standard MIME type of the response. The model will generate output that
    * conforms to this MIME type. Supported values include 'text/plain' (default) and
    * 'application/json'. The model needs to be prompted to output the appropriate response type,
-   * otherwise the behavior is undefined. This is a preview feature.
+   * otherwise the behavior is undefined.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponseMimeType() {
@@ -474,7 +474,7 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    * Optional. The IANA standard MIME type of the response. The model will generate output that
    * conforms to this MIME type. Supported values include 'text/plain' (default) and
    * 'application/json'. The model needs to be prompted to output the appropriate response type,
-   * otherwise the behavior is undefined. This is a preview feature.
+   * otherwise the behavior is undefined.
    * @param responseMimeType responseMimeType or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerationConfig setResponseMimeType(java.lang.String responseMimeType) {

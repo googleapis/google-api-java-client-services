@@ -17,7 +17,11 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * An inference config used for model inference during the evaluation run.
+ * Defines the configuration for a candidate model or agent being evaluated. `InferenceConfig`
+ * encapsulates all the necessary information to invoke or scrape the candidate during the
+ * evaluation run. This includes direct model inference parameters, agent execution settings, and
+ * multi-turn scraping configurations (such as user simulators). It serves as the primary
+ * representation of the candidate across different stages of the evaluation process.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -37,6 +41,27 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   private GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigInferenceAgentConfig agentConfig;
 
   /**
+   * Optional. Agent run config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentRunConfig agentRunConfig;
+
+  /**
+   * Optional. Contains the static configurations for each agent in the system. Key: agent_id
+   * (matches the `author` field in events). Value: The static configuration of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudAiplatformV1beta1AgentConfig> agents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1AgentConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1AgentConfig.class);
+  }
+
+  /**
    * Optional. Generation config.
    * The value may be {@code null}.
    */
@@ -46,8 +71,8 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   /**
    * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
    * Llama third-party models are also supported through Model Garden. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
-   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model formats:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}` or
    * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * The value may be {@code null}.
@@ -73,6 +98,42 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   }
 
   /**
+   * Optional. Agent run config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentRunConfig getAgentRunConfig() {
+    return agentRunConfig;
+  }
+
+  /**
+   * Optional. Agent run config.
+   * @param agentRunConfig agentRunConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setAgentRunConfig(GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentRunConfig agentRunConfig) {
+    this.agentRunConfig = agentRunConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Contains the static configurations for each agent in the system. Key: agent_id
+   * (matches the `author` field in events). Value: The static configuration of the agent.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudAiplatformV1beta1AgentConfig> getAgents() {
+    return agents;
+  }
+
+  /**
+   * Optional. Contains the static configurations for each agent in the system. Key: agent_id
+   * (matches the `author` field in events). Value: The static configuration of the agent.
+   * @param agents agents or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setAgents(java.util.Map<String, GoogleCloudAiplatformV1beta1AgentConfig> agents) {
+    this.agents = agents;
+    return this;
+  }
+
+  /**
    * Optional. Generation config.
    * @return value or {@code null} for none
    */
@@ -92,8 +153,8 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   /**
    * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
    * Llama third-party models are also supported through Model Garden. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
-   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model formats:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}` or
    * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @return value or {@code null} for none
@@ -105,8 +166,8 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   /**
    * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
    * Llama third-party models are also supported through Model Garden. Publisher model format:
-   * `projects/{project}/locations/{location}/publishers/models` Third-party model format:
-   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}`
+   * `projects/{project}/locations/{location}/publishers/models` Third-party model formats:
+   * `projects/{project}/locations/{location}/publishers/anthropic/models/{model}` or
    * `projects/{project}/locations/{location}/publishers/llama/models/{model}` Endpoint format:
    * `projects/{project}/locations/{location}/endpoints/{endpoint}`
    * @param model model or {@code null} for none

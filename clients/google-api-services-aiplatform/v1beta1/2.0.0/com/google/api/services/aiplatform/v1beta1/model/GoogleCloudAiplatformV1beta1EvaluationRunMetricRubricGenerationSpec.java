@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1EvaluationRunMetricRubricGenerationSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Resource name of the metric definition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metricResourceName;
+
+  /**
    * Optional. Configuration for the model used in rubric generation. Configs including sampling
    * count and base model can be specified here. Flipping is not supported for rubric generation.
    * The value may be {@code null}.
@@ -60,6 +67,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunMetricRubricGenerati
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> rubricTypeOntology;
+
+  /**
+   * Optional. Resource name of the metric definition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetricResourceName() {
+    return metricResourceName;
+  }
+
+  /**
+   * Optional. Resource name of the metric definition.
+   * @param metricResourceName metricResourceName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunMetricRubricGenerationSpec setMetricResourceName(java.lang.String metricResourceName) {
+    this.metricResourceName = metricResourceName;
+    return this;
+  }
 
   /**
    * Optional. Configuration for the model used in rubric generation. Configs including sampling

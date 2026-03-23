@@ -4311,6 +4311,434 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
 
           }
         }
+        /**
+         * An accessor for creating requests from the TransferResources collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code BigQueryDataTransfer bigquerydatatransfer = new BigQueryDataTransfer(...);}
+         *   {@code BigQueryDataTransfer.TransferResources.List request = bigquerydatatransfer.transferResources().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public TransferResources transferResources() {
+          return new TransferResources();
+        }
+
+        /**
+         * The "transferResources" collection of methods.
+         */
+        public class TransferResources {
+
+          /**
+           * Returns a transfer resource.
+           *
+           * Create a request for the method "transferResources.get".
+           *
+           * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the transfer resource in the form of: *
+           *        `projects/{project}/transferConfigs/{transfer_config}/transferResources/{transfer_resource
+           *        }` * `projects/{project}/locations/{location}/transferConfigs/{transfer_config}/transferRe
+           *        sources/{transfer_resource}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends BigQueryDataTransferRequest<com.google.api.services.bigquerydatatransfer.v1.model.TransferResource> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+/transferResources/[^/]+$");
+
+            /**
+             * Returns a transfer resource.
+             *
+             * Create a request for the method "transferResources.get".
+             *
+             * This request holds the parameters needed by the the bigquerydatatransfer server.  After setting
+             * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the transfer resource in the form of: *
+           *        `projects/{project}/transferConfigs/{transfer_config}/transferResources/{transfer_resource
+           *        }` * `projects/{project}/locations/{location}/transferConfigs/{transfer_config}/transferRe
+           *        sources/{transfer_resource}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(BigQueryDataTransfer.this, "GET", REST_PATH, null, com.google.api.services.bigquerydatatransfer.v1.model.TransferResource.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+/transferResources/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the transfer resource in the form of: * `projects/{project}/tra
+             * nsferConfigs/{transfer_config}/transferResources/{transfer_resource}` * `projects/{pr
+             * oject}/locations/{location}/transferConfigs/{transfer_config}/transferResources/{tran
+             * sfer_resource}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the transfer resource in the form of: *
+           `projects/{project}/transferConfigs/{transfer_config}/transferResources/{transfer_resource}` * `pro
+           jects/{project}/locations/{location}/transferConfigs/{transfer_config}/transferResources/{transfer_
+           resource}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the transfer resource in the form of: * `projects/{project}/tra
+             * nsferConfigs/{transfer_config}/transferResources/{transfer_resource}` * `projects/{pr
+             * oject}/locations/{location}/transferConfigs/{transfer_config}/transferResources/{tran
+             * sfer_resource}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+/transferResources/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns information about transfer resources.
+           *
+           * Create a request for the method "transferResources.list".
+           *
+           * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Name of transfer configuration for which transfer resources should be retrieved. The name
+           *        should be in one of the following form: *
+           *        `projects/{project_id}/transferConfigs/{config_id}` *
+           *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends BigQueryDataTransferRequest<com.google.api.services.bigquerydatatransfer.v1.model.ListTransferResourcesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/transferResources";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+$");
+
+            /**
+             * Returns information about transfer resources.
+             *
+             * Create a request for the method "transferResources.list".
+             *
+             * This request holds the parameters needed by the the bigquerydatatransfer server.  After setting
+             * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Name of transfer configuration for which transfer resources should be retrieved. The name
+           *        should be in one of the following form: *
+           *        `projects/{project_id}/transferConfigs/{config_id}` *
+           *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(BigQueryDataTransfer.this, "GET", REST_PATH, null, com.google.api.services.bigquerydatatransfer.v1.model.ListTransferResourcesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of transfer configuration for which transfer resources should be
+             * retrieved. The name should be in one of the following form: *
+             * `projects/{project_id}/transferConfigs/{config_id}` *
+             * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Name of transfer configuration for which transfer resources should be retrieved. The name
+           should be in one of the following form: * `projects/{project_id}/transferConfigs/{config_id}` *
+           `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Name of transfer configuration for which transfer resources should be
+             * retrieved. The name should be in one of the following form: *
+             * `projects/{project_id}/transferConfigs/{config_id}` *
+             * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/transferConfigs/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter for the transfer resources. Currently supported filters include: *
+             * Resource name: `name` - Wildcard supported * Resource type: `type` * Resource
+             * destination: `destination` * Latest resource state: `latest_status_detail.state` *
+             * Last update time: `update_time` - RFC-3339 format * Parent table name:
+             * `hierarchy_detail.partition_detail.table` Multiple filters can be applied using the
+             * `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
+             * latest_status_detail.state="SUCCEEDED")` * `update_time >=
+             * "2012-04-21T11:30:00-04:00` * `hierarchy_detail.partition_detail.table = "table1"`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter for the transfer resources. Currently supported filters include: * Resource name:
+           `name` - Wildcard supported * Resource type: `type` * Resource destination: `destination` * Latest
+           resource state: `latest_status_detail.state` * Last update time: `update_time` - RFC-3339 format *
+           Parent table name: `hierarchy_detail.partition_detail.table` Multiple filters can be applied using
+           the `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
+           latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00` *
+           `hierarchy_detail.partition_detail.table = "table1"`
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter for the transfer resources. Currently supported filters include: *
+             * Resource name: `name` - Wildcard supported * Resource type: `type` * Resource
+             * destination: `destination` * Latest resource state: `latest_status_detail.state` *
+             * Last update time: `update_time` - RFC-3339 format * Parent table name:
+             * `hierarchy_detail.partition_detail.table` Multiple filters can be applied using the
+             * `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
+             * latest_status_detail.state="SUCCEEDED")` * `update_time >=
+             * "2012-04-21T11:30:00-04:00` * `hierarchy_detail.partition_detail.table = "table1"`
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of transfer resources to return. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000. The default page size is the maximum
+             * value of 1000 results.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of transfer resources to return. The maximum value is 1000; values
+           above 1000 will be coerced to 1000. The default page size is the maximum value of 1000 results.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of transfer resources to return. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000. The default page size is the maximum
+             * value of 1000 results.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListTransferResources` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListTransferResources` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListTransferResources` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListTransferResources` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListTransferResources` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListTransferResources` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
     /**
@@ -6593,6 +7021,434 @@ public class BigQueryDataTransfer extends com.google.api.client.googleapis.servi
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the TransferResources collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code BigQueryDataTransfer bigquerydatatransfer = new BigQueryDataTransfer(...);}
+       *   {@code BigQueryDataTransfer.TransferResources.List request = bigquerydatatransfer.transferResources().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TransferResources transferResources() {
+        return new TransferResources();
+      }
+
+      /**
+       * The "transferResources" collection of methods.
+       */
+      public class TransferResources {
+
+        /**
+         * Returns a transfer resource.
+         *
+         * Create a request for the method "transferResources.get".
+         *
+         * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the transfer resource in the form of: *
+         *        `projects/{project}/transferConfigs/{transfer_config}/transferResources/{transfer_resource
+         *        }` * `projects/{project}/locations/{location}/transferConfigs/{transfer_config}/transferRe
+         *        sources/{transfer_resource}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BigQueryDataTransferRequest<com.google.api.services.bigquerydatatransfer.v1.model.TransferResource> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/transferConfigs/[^/]+/transferResources/[^/]+$");
+
+          /**
+           * Returns a transfer resource.
+           *
+           * Create a request for the method "transferResources.get".
+           *
+           * This request holds the parameters needed by the the bigquerydatatransfer server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the transfer resource in the form of: *
+         *        `projects/{project}/transferConfigs/{transfer_config}/transferResources/{transfer_resource
+         *        }` * `projects/{project}/locations/{location}/transferConfigs/{transfer_config}/transferRe
+         *        sources/{transfer_resource}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(BigQueryDataTransfer.this, "GET", REST_PATH, null, com.google.api.services.bigquerydatatransfer.v1.model.TransferResource.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/transferConfigs/[^/]+/transferResources/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the transfer resource in the form of: * `projects/{project}/trans
+           * ferConfigs/{transfer_config}/transferResources/{transfer_resource}` * `projects/{projec
+           * t}/locations/{location}/transferConfigs/{transfer_config}/transferResources/{transfer_r
+           * esource}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the transfer resource in the form of: *
+         `projects/{project}/transferConfigs/{transfer_config}/transferResources/{transfer_resource}` * `pro
+         jects/{project}/locations/{location}/transferConfigs/{transfer_config}/transferResources/{transfer_
+         resource}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the transfer resource in the form of: * `projects/{project}/trans
+           * ferConfigs/{transfer_config}/transferResources/{transfer_resource}` * `projects/{projec
+           * t}/locations/{location}/transferConfigs/{transfer_config}/transferResources/{transfer_r
+           * esource}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/transferConfigs/[^/]+/transferResources/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns information about transfer resources.
+         *
+         * Create a request for the method "transferResources.list".
+         *
+         * This request holds the parameters needed by the bigquerydatatransfer server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of transfer configuration for which transfer resources should be retrieved. The name
+         *        should be in one of the following form: *
+         *        `projects/{project_id}/transferConfigs/{config_id}` *
+         *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BigQueryDataTransferRequest<com.google.api.services.bigquerydatatransfer.v1.model.ListTransferResourcesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/transferResources";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/transferConfigs/[^/]+$");
+
+          /**
+           * Returns information about transfer resources.
+           *
+           * Create a request for the method "transferResources.list".
+           *
+           * This request holds the parameters needed by the the bigquerydatatransfer server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of transfer configuration for which transfer resources should be retrieved. The name
+         *        should be in one of the following form: *
+         *        `projects/{project_id}/transferConfigs/{config_id}` *
+         *        `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(BigQueryDataTransfer.this, "GET", REST_PATH, null, com.google.api.services.bigquerydatatransfer.v1.model.ListTransferResourcesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/transferConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of transfer configuration for which transfer resources should be
+           * retrieved. The name should be in one of the following form: *
+           * `projects/{project_id}/transferConfigs/{config_id}` *
+           * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of transfer configuration for which transfer resources should be retrieved. The name
+         should be in one of the following form: * `projects/{project_id}/transferConfigs/{config_id}` *
+         `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of transfer configuration for which transfer resources should be
+           * retrieved. The name should be in one of the following form: *
+           * `projects/{project_id}/transferConfigs/{config_id}` *
+           * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/transferConfigs/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter for the transfer resources. Currently supported filters include: *
+           * Resource name: `name` - Wildcard supported * Resource type: `type` * Resource
+           * destination: `destination` * Latest resource state: `latest_status_detail.state` * Last
+           * update time: `update_time` - RFC-3339 format * Parent table name:
+           * `hierarchy_detail.partition_detail.table` Multiple filters can be applied using the
+           * `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
+           * latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00`
+           * * `hierarchy_detail.partition_detail.table = "table1"`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter for the transfer resources. Currently supported filters include: * Resource name:
+         `name` - Wildcard supported * Resource type: `type` * Resource destination: `destination` * Latest
+         resource state: `latest_status_detail.state` * Last update time: `update_time` - RFC-3339 format *
+         Parent table name: `hierarchy_detail.partition_detail.table` Multiple filters can be applied using
+         the `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
+         latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00` *
+         `hierarchy_detail.partition_detail.table = "table1"`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter for the transfer resources. Currently supported filters include: *
+           * Resource name: `name` - Wildcard supported * Resource type: `type` * Resource
+           * destination: `destination` * Latest resource state: `latest_status_detail.state` * Last
+           * update time: `update_time` - RFC-3339 format * Parent table name:
+           * `hierarchy_detail.partition_detail.table` Multiple filters can be applied using the
+           * `AND/OR` operator. Examples: * `name="*123" AND (type="TABLE" OR
+           * latest_status_detail.state="SUCCEEDED")` * `update_time >= "2012-04-21T11:30:00-04:00`
+           * * `hierarchy_detail.partition_detail.table = "table1"`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of transfer resources to return. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000. The default page size is the maximum
+           * value of 1000 results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of transfer resources to return. The maximum value is 1000; values
+         above 1000 will be coerced to 1000. The default page size is the maximum value of 1000 results.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of transfer resources to return. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000. The default page size is the maximum
+           * value of 1000 results.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListTransferResources` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListTransferResources` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListTransferResources` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListTransferResources` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListTransferResources` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListTransferResources` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
       }
     }
   }

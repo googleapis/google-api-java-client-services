@@ -515,7 +515,8 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the apikeys server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project in which the API key is created.
+         * @param parent Required. The project in which the API key is created. The parent field must be in format of
+         *        "projects//locations/global".
          * @param content the {@link com.google.api.services.apikeys.v2.model.V2Key}
          * @return the request
          */
@@ -543,7 +544,8 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project in which the API key is created.
+           * @param parent Required. The project in which the API key is created. The parent field must be in format of
+         *        "projects//locations/global".
            * @param content the {@link com.google.api.services.apikeys.v2.model.V2Key}
            * @since 1.13
            */
@@ -612,17 +614,24 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The project in which the API key is created. */
+          /**
+           * Required. The project in which the API key is created. The parent field must be in
+           * format of "projects//locations/global".
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project in which the API key is created.
+          /** Required. The project in which the API key is created. The parent field must be in format of
+         "projects//locations/global".
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. The project in which the API key is created. */
+          /**
+           * Required. The project in which the API key is created. The parent field must be in
+           * format of "projects//locations/global".
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1116,7 +1125,8 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the apikeys server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Lists all API keys associated with this project.
+         * @param parent Required. Lists all API keys associated with this project. The parent field must be in format of
+         *        "projects//locations/global".
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1144,7 +1154,8 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Lists all API keys associated with this project.
+           * @param parent Required. Lists all API keys associated with this project. The parent field must be in format of
+         *        "projects//locations/global".
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1222,17 +1233,24 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Lists all API keys associated with this project. */
+          /**
+           * Required. Lists all API keys associated with this project. The parent field must be in
+           * format of "projects//locations/global".
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Lists all API keys associated with this project.
+          /** Required. Lists all API keys associated with this project. The parent field must be in format of
+         "projects//locations/global".
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Lists all API keys associated with this project. */
+          /**
+           * Required. Lists all API keys associated with this project. The parent field must be in
+           * format of "projects//locations/global".
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1306,7 +1324,7 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
          * This request holds the parameters needed by the apikeys server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The resource name of the key. The `name` has the form:
+         * @param name Identifier. The resource name of the key. The `name` has the form:
          *        `projects//locations/global/keys/`. For example:
          *        `projects/123456867718/locations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2` NOTE:
          *        Key is a global resource; hence the only supported value for location is `global`.
@@ -1338,7 +1356,7 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The resource name of the key. The `name` has the form:
+           * @param name Identifier. The resource name of the key. The `name` has the form:
          *        `projects//locations/global/keys/`. For example:
          *        `projects/123456867718/locations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2` NOTE:
          *        Key is a global resource; hence the only supported value for location is `global`.
@@ -1411,7 +1429,7 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Output only. The resource name of the key. The `name` has the form:
+           * Identifier. The resource name of the key. The `name` has the form:
            * `projects//locations/global/keys/`. For example:
            * `projects/123456867718/locations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2`
            * NOTE: Key is a global resource; hence the only supported value for location is
@@ -1420,7 +1438,7 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The resource name of the key. The `name` has the form:
+          /** Identifier. The resource name of the key. The `name` has the form:
          `projects//locations/global/keys/`. For example:
          `projects/123456867718/locations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2` NOTE: Key is a
          global resource; hence the only supported value for location is `global`.
@@ -1430,7 +1448,7 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
           }
 
           /**
-           * Output only. The resource name of the key. The `name` has the form:
+           * Identifier. The resource name of the key. The `name` has the form:
            * `projects//locations/global/keys/`. For example:
            * `projects/123456867718/locations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2`
            * NOTE: Key is a global resource; hence the only supported value for location is

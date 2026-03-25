@@ -71,9 +71,10 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   private GoogleCloudDiscoveryengineV1betaDocumentIndexStatus indexStatus;
 
   /**
-   * Output only. The last time the document was indexed. If this field is set, the document could
-   * be returned in search results. This field is OUTPUT_ONLY. If this field is not populated, it
-   * means the document has never been indexed.
+   * Output only. The time when the document was last indexed. If this field is populated, it means
+   * the document has been indexed. While documents typically become searchable within seconds of
+   * indexing, it can sometimes take up to a few hours. If this field is not populated, it means the
+   * document has never been indexed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,9 +219,10 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   }
 
   /**
-   * Output only. The last time the document was indexed. If this field is set, the document could
-   * be returned in search results. This field is OUTPUT_ONLY. If this field is not populated, it
-   * means the document has never been indexed.
+   * Output only. The time when the document was last indexed. If this field is populated, it means
+   * the document has been indexed. While documents typically become searchable within seconds of
+   * indexing, it can sometimes take up to a few hours. If this field is not populated, it means the
+   * document has never been indexed.
    * @return value or {@code null} for none
    */
   public String getIndexTime() {
@@ -228,9 +230,10 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   }
 
   /**
-   * Output only. The last time the document was indexed. If this field is set, the document could
-   * be returned in search results. This field is OUTPUT_ONLY. If this field is not populated, it
-   * means the document has never been indexed.
+   * Output only. The time when the document was last indexed. If this field is populated, it means
+   * the document has been indexed. While documents typically become searchable within seconds of
+   * indexing, it can sometimes take up to a few hours. If this field is not populated, it means the
+   * document has never been indexed.
    * @param indexTime indexTime or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocument setIndexTime(String indexTime) {

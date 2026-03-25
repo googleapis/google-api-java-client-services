@@ -162,9 +162,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
 
   /**
    * Output only. The list of FQDNs of the data connector can egress to. This includes both FQDN
-   * derived from the customer provided instance URL and default per connector type FQDNs. Note:
-   * This field is derived from both the DataConnector.params, and connector source spec. It should
-   * only be used for CAIS and Org Policy evaluation purposes.
+   * derived from the customer provided instance URL and default per connector type FQDNs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,7 +281,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private String latestPauseTime;
 
   /**
-   * Output only. The full resource name of the Data Connector. Format:
+   * Identifier. The full resource name of the Data Connector. Format:
    * `projects/locations/collections/dataConnector`.
    * The value may be {@code null}.
    */
@@ -386,8 +384,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private String updateTime;
 
   /**
-   * Output only. Whether the connector is created with VPC-SC enabled. This is only used for CuOP
-   * evaluation purpose.
+   * Output only. Whether the connector is created with VPC-SC enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -684,9 +681,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
 
   /**
    * Output only. The list of FQDNs of the data connector can egress to. This includes both FQDN
-   * derived from the customer provided instance URL and default per connector type FQDNs. Note:
-   * This field is derived from both the DataConnector.params, and connector source spec. It should
-   * only be used for CAIS and Org Policy evaluation purposes.
+   * derived from the customer provided instance URL and default per connector type FQDNs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEgressFqdns() {
@@ -695,9 +690,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
 
   /**
    * Output only. The list of FQDNs of the data connector can egress to. This includes both FQDN
-   * derived from the customer provided instance URL and default per connector type FQDNs. Note:
-   * This field is derived from both the DataConnector.params, and connector source spec. It should
-   * only be used for CAIS and Org Policy evaluation purposes.
+   * derived from the customer provided instance URL and default per connector type FQDNs.
    * @param egressFqdns egressFqdns or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setEgressFqdns(java.util.List<java.lang.String> egressFqdns) {
@@ -969,7 +962,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   }
 
   /**
-   * Output only. The full resource name of the Data Connector. Format:
+   * Identifier. The full resource name of the Data Connector. Format:
    * `projects/locations/collections/dataConnector`.
    * @return value or {@code null} for none
    */
@@ -978,7 +971,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   }
 
   /**
-   * Output only. The full resource name of the Data Connector. Format:
+   * Identifier. The full resource name of the Data Connector. Format:
    * `projects/locations/collections/dataConnector`.
    * @param name name or {@code null} for none
    */
@@ -1214,8 +1207,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   }
 
   /**
-   * Output only. Whether the connector is created with VPC-SC enabled. This is only used for CuOP
-   * evaluation purpose.
+   * Output only. Whether the connector is created with VPC-SC enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVpcscEnabled() {
@@ -1223,8 +1215,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   }
 
   /**
-   * Output only. Whether the connector is created with VPC-SC enabled. This is only used for CuOP
-   * evaluation purpose.
+   * Output only. Whether the connector is created with VPC-SC enabled.
    * @param vpcscEnabled vpcscEnabled or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setVpcscEnabled(java.lang.Boolean vpcscEnabled) {

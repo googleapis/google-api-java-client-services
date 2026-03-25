@@ -39,7 +39,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus extends 
 
   /**
    * The time when the document was indexed. If this field is populated, it means the document has
-   * been indexed.
+   * been indexed. While documents typically become searchable within seconds of indexing, it can
+   * sometimes take up to a few hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +75,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus extends 
 
   /**
    * The time when the document was indexed. If this field is populated, it means the document has
-   * been indexed.
+   * been indexed. While documents typically become searchable within seconds of indexing, it can
+   * sometimes take up to a few hours.
    * @return value or {@code null} for none
    */
   public String getIndexTime() {
@@ -83,7 +85,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus extends 
 
   /**
    * The time when the document was indexed. If this field is populated, it means the document has
-   * been indexed.
+   * been indexed. While documents typically become searchable within seconds of indexing, it can
+   * sometimes take up to a few hours.
    * @param indexTime indexTime or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus setIndexTime(String indexTime) {

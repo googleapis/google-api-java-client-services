@@ -2247,7 +2247,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link UpdateDataConnector#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Output only. The full resource name of the Data Connector. Format:
+         * @param name Identifier. The full resource name of the Data Connector. Format:
          *        `projects/locations/collections/dataConnector`.
          * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector}
          * @return the request
@@ -2276,7 +2276,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Output only. The full resource name of the Data Connector. Format:
+           * @param name Identifier. The full resource name of the Data Connector. Format:
          *        `projects/locations/collections/dataConnector`.
            * @param content the {@link com.google.api.services.discoveryengine.v1.model.GoogleCloudDiscoveryengineV1DataConnector}
            * @since 1.13
@@ -2347,13 +2347,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. The full resource name of the Data Connector. Format:
+           * Identifier. The full resource name of the Data Connector. Format:
            * `projects/locations/collections/dataConnector`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The full resource name of the Data Connector. Format:
+          /** Identifier. The full resource name of the Data Connector. Format:
          `projects/locations/collections/dataConnector`.
            */
           public java.lang.String getName() {
@@ -2361,7 +2361,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. The full resource name of the Data Connector. Format:
+           * Identifier. The full resource name of the Data Connector. Format:
            * `projects/locations/collections/dataConnector`.
            */
           public UpdateDataConnector setName(java.lang.String name) {
@@ -20377,449 +20377,1864 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             public class Agents {
 
               /**
-               * GetAgentCard returns the agent card for the agent.
-               *
-               * Create a request for the method "agents.getCard".
-               *
-               * This request holds the parameters needed by the discoveryengine server.  After setting any
-               * optional parameters, call the {@link GetCard#execute()} method to invoke the remote operation.
-               *
-               * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-               * @return the request
-               */
-              public GetCard getCard(java.lang.String tenant) throws java.io.IOException {
-                GetCard result = new GetCard(tenant);
-                initialize(result);
-                return result;
-              }
-
-              public class GetCard extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1AgentCard> {
-
-                private static final String REST_PATH = "v1/{+tenant}/card";
-
-                private final java.util.regex.Pattern TENANT_PATTERN =
-                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-
-                /**
-                 * GetAgentCard returns the agent card for the agent.
-                 *
-                 * Create a request for the method "agents.getCard".
-                 *
-                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                 * optional parameters, call the {@link GetCard#execute()} method to invoke the remote operation.
-                 * <p> {@link
-                 * GetCard#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-                 * be called to initialize this instance immediately after invoking the constructor. </p>
-                 *
-                 * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                 * @since 1.13
-                 */
-                protected GetCard(java.lang.String tenant) {
-                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1AgentCard.class);
-                  this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                        "Parameter tenant must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                  }
-                }
-
-                @Override
-                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                  return super.executeUsingHead();
-                }
-
-                @Override
-                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                  return super.buildHttpRequestUsingHead();
-                }
-
-                @Override
-                public GetCard set$Xgafv(java.lang.String $Xgafv) {
-                  return (GetCard) super.set$Xgafv($Xgafv);
-                }
-
-                @Override
-                public GetCard setAccessToken(java.lang.String accessToken) {
-                  return (GetCard) super.setAccessToken(accessToken);
-                }
-
-                @Override
-                public GetCard setAlt(java.lang.String alt) {
-                  return (GetCard) super.setAlt(alt);
-                }
-
-                @Override
-                public GetCard setCallback(java.lang.String callback) {
-                  return (GetCard) super.setCallback(callback);
-                }
-
-                @Override
-                public GetCard setFields(java.lang.String fields) {
-                  return (GetCard) super.setFields(fields);
-                }
-
-                @Override
-                public GetCard setKey(java.lang.String key) {
-                  return (GetCard) super.setKey(key);
-                }
-
-                @Override
-                public GetCard setOauthToken(java.lang.String oauthToken) {
-                  return (GetCard) super.setOauthToken(oauthToken);
-                }
-
-                @Override
-                public GetCard setPrettyPrint(java.lang.Boolean prettyPrint) {
-                  return (GetCard) super.setPrettyPrint(prettyPrint);
-                }
-
-                @Override
-                public GetCard setQuotaUser(java.lang.String quotaUser) {
-                  return (GetCard) super.setQuotaUser(quotaUser);
-                }
-
-                @Override
-                public GetCard setUploadType(java.lang.String uploadType) {
-                  return (GetCard) super.setUploadType(uploadType);
-                }
-
-                @Override
-                public GetCard setUploadProtocol(java.lang.String uploadProtocol) {
-                  return (GetCard) super.setUploadProtocol(uploadProtocol);
-                }
-
-                /**
-                 * Optional tenant, provided as a path parameter. Experimental, might still change
-                 * for 1.0 release.
-                 */
-                @com.google.api.client.util.Key
-                private java.lang.String tenant;
-
-                /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                 */
-                public java.lang.String getTenant() {
-                  return tenant;
-                }
-
-                /**
-                 * Optional tenant, provided as a path parameter. Experimental, might still change
-                 * for 1.0 release.
-                 */
-                public GetCard setTenant(java.lang.String tenant) {
-                  if (!getSuppressPatternChecks()) {
-                    com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                        "Parameter tenant must conform to the pattern " +
-                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                  }
-                  this.tenant = tenant;
-                  return this;
-                }
-
-                @Override
-                public GetCard set(String parameterName, Object value) {
-                  return (GetCard) super.set(parameterName, value);
-                }
-              }
-
-              /**
-               * An accessor for creating requests from the Message collection.
+               * An accessor for creating requests from the A2a collection.
                *
                * <p>The typical use is:</p>
                * <pre>
                *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
-               *   {@code DiscoveryEngine.Message.List request = discoveryengine.message().list(parameters ...)}
+               *   {@code DiscoveryEngine.A2a.List request = discoveryengine.a2a().list(parameters ...)}
                * </pre>
                *
                * @return the resource collection
                */
-              public Message message() {
-                return new Message();
+              public A2a a2a() {
+                return new A2a();
               }
 
               /**
-               * The "message" collection of methods.
+               * The "a2a" collection of methods.
                */
-              public class Message {
+              public class A2a {
 
                 /**
-                 * Send a message to the agent. This is a blocking call that will return the task once it is
-                 * completed, or a LRO if requested.
+                 * An accessor for creating requests from the V1 collection.
                  *
-                 * Create a request for the method "message.send".
+                 * <p>The typical use is:</p>
+                 * <pre>
+                 *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+                 *   {@code DiscoveryEngine.V1.List request = discoveryengine.v1().list(parameters ...)}
+                 * </pre>
                  *
-                 * This request holds the parameters needed by the discoveryengine server.  After setting any
-                 * optional parameters, call the {@link Send#execute()} method to invoke the remote operation.
-                 *
-                 * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                 * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest}
-                 * @return the request
+                 * @return the resource collection
                  */
-                public Send send(java.lang.String tenant, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest content) throws java.io.IOException {
-                  Send result = new Send(tenant, content);
-                  initialize(result);
-                  return result;
+                public V1 v1() {
+                  return new V1();
                 }
 
-                public class Send extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageResponse> {
-
-                  private static final String REST_PATH = "v1/{+tenant}/message:send";
-
-                  private final java.util.regex.Pattern TENANT_PATTERN =
-                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-
-                  /**
-                   * Send a message to the agent. This is a blocking call that will return the task once it is
-                   * completed, or a LRO if requested.
-                   *
-                   * Create a request for the method "message.send".
-                   *
-                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                   * optional parameters, call the {@link Send#execute()} method to invoke the remote operation. <p>
-                   * {@link Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                   * must be called to initialize this instance immediately after invoking the constructor. </p>
-                   *
-                   * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest}
-                   * @since 1.13
-                   */
-                  protected Send(java.lang.String tenant, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest content) {
-                    super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageResponse.class);
-                    this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                    }
-                  }
-
-                  @Override
-                  public Send set$Xgafv(java.lang.String $Xgafv) {
-                    return (Send) super.set$Xgafv($Xgafv);
-                  }
-
-                  @Override
-                  public Send setAccessToken(java.lang.String accessToken) {
-                    return (Send) super.setAccessToken(accessToken);
-                  }
-
-                  @Override
-                  public Send setAlt(java.lang.String alt) {
-                    return (Send) super.setAlt(alt);
-                  }
-
-                  @Override
-                  public Send setCallback(java.lang.String callback) {
-                    return (Send) super.setCallback(callback);
-                  }
-
-                  @Override
-                  public Send setFields(java.lang.String fields) {
-                    return (Send) super.setFields(fields);
-                  }
-
-                  @Override
-                  public Send setKey(java.lang.String key) {
-                    return (Send) super.setKey(key);
-                  }
-
-                  @Override
-                  public Send setOauthToken(java.lang.String oauthToken) {
-                    return (Send) super.setOauthToken(oauthToken);
-                  }
-
-                  @Override
-                  public Send setPrettyPrint(java.lang.Boolean prettyPrint) {
-                    return (Send) super.setPrettyPrint(prettyPrint);
-                  }
-
-                  @Override
-                  public Send setQuotaUser(java.lang.String quotaUser) {
-                    return (Send) super.setQuotaUser(quotaUser);
-                  }
-
-                  @Override
-                  public Send setUploadType(java.lang.String uploadType) {
-                    return (Send) super.setUploadType(uploadType);
-                  }
-
-                  @Override
-                  public Send setUploadProtocol(java.lang.String uploadProtocol) {
-                    return (Send) super.setUploadProtocol(uploadProtocol);
-                  }
-
-                  /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
-                   */
-                  @com.google.api.client.util.Key
-                  private java.lang.String tenant;
-
-                  /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   */
-                  public java.lang.String getTenant() {
-                    return tenant;
-                  }
-
-                  /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
-                   */
-                  public Send setTenant(java.lang.String tenant) {
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                    }
-                    this.tenant = tenant;
-                    return this;
-                  }
-
-                  @Override
-                  public Send set(String parameterName, Object value) {
-                    return (Send) super.set(parameterName, value);
-                  }
-                }
                 /**
-                 * SendStreamingMessage is a streaming call that will return a stream of task update events until
-                 * the Task is in an interrupted or terminal state.
-                 *
-                 * Create a request for the method "message.stream".
-                 *
-                 * This request holds the parameters needed by the discoveryengine server.  After setting any
-                 * optional parameters, call the {@link Stream#execute()} method to invoke the remote operation.
-                 *
-                 * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                 * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest}
-                 * @return the request
+                 * The "v1" collection of methods.
                  */
-                public Stream stream(java.lang.String tenant, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest content) throws java.io.IOException {
-                  Stream result = new Stream(tenant, content);
-                  initialize(result);
-                  return result;
-                }
-
-                public class Stream extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1StreamResponse> {
-
-                  private static final String REST_PATH = "v1/{+tenant}/message:stream";
-
-                  private final java.util.regex.Pattern TENANT_PATTERN =
-                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                public class V1 {
 
                   /**
-                   * SendStreamingMessage is a streaming call that will return a stream of task update events until
-                   * the Task is in an interrupted or terminal state.
+                   * GetAgentCard returns the agent card for the agent.
                    *
-                   * Create a request for the method "message.stream".
+                   * Create a request for the method "v1.getCard".
                    *
-                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                   * optional parameters, call the {@link Stream#execute()} method to invoke the remote operation.
-                   * <p> {@link
-                   * Stream#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-                   * be called to initialize this instance immediately after invoking the constructor. </p>
+                   * This request holds the parameters needed by the discoveryengine server.  After setting any
+                   * optional parameters, call the {@link GetCard#execute()} method to invoke the remote operation.
                    *
                    * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest}
-                   * @since 1.13
+                   * @return the request
                    */
-                  protected Stream(java.lang.String tenant, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest content) {
-                    super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.A2aV1StreamResponse.class);
-                    this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                  public GetCard getCard(java.lang.String tenant) throws java.io.IOException {
+                    GetCard result = new GetCard(tenant);
+                    initialize(result);
+                    return result;
+                  }
+
+                  public class GetCard extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1AgentCard> {
+
+                    private static final String REST_PATH = "v1/{+tenant}/a2a/v1/card";
+
+                    private final java.util.regex.Pattern TENANT_PATTERN =
+                        java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                    /**
+                     * GetAgentCard returns the agent card for the agent.
+                     *
+                     * Create a request for the method "v1.getCard".
+                     *
+                     * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                     * optional parameters, call the {@link GetCard#execute()} method to invoke the remote operation.
+                     * <p> {@link
+                     * GetCard#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                     * be called to initialize this instance immediately after invoking the constructor. </p>
+                     *
+                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                     * @since 1.13
+                     */
+                    protected GetCard(java.lang.String tenant) {
+                      super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1AgentCard.class);
+                      this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                            "Parameter tenant must conform to the pattern " +
+                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                      }
+                    }
+
+                    @Override
+                    public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                      return super.executeUsingHead();
+                    }
+
+                    @Override
+                    public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                      return super.buildHttpRequestUsingHead();
+                    }
+
+                    @Override
+                    public GetCard set$Xgafv(java.lang.String $Xgafv) {
+                      return (GetCard) super.set$Xgafv($Xgafv);
+                    }
+
+                    @Override
+                    public GetCard setAccessToken(java.lang.String accessToken) {
+                      return (GetCard) super.setAccessToken(accessToken);
+                    }
+
+                    @Override
+                    public GetCard setAlt(java.lang.String alt) {
+                      return (GetCard) super.setAlt(alt);
+                    }
+
+                    @Override
+                    public GetCard setCallback(java.lang.String callback) {
+                      return (GetCard) super.setCallback(callback);
+                    }
+
+                    @Override
+                    public GetCard setFields(java.lang.String fields) {
+                      return (GetCard) super.setFields(fields);
+                    }
+
+                    @Override
+                    public GetCard setKey(java.lang.String key) {
+                      return (GetCard) super.setKey(key);
+                    }
+
+                    @Override
+                    public GetCard setOauthToken(java.lang.String oauthToken) {
+                      return (GetCard) super.setOauthToken(oauthToken);
+                    }
+
+                    @Override
+                    public GetCard setPrettyPrint(java.lang.Boolean prettyPrint) {
+                      return (GetCard) super.setPrettyPrint(prettyPrint);
+                    }
+
+                    @Override
+                    public GetCard setQuotaUser(java.lang.String quotaUser) {
+                      return (GetCard) super.setQuotaUser(quotaUser);
+                    }
+
+                    @Override
+                    public GetCard setUploadType(java.lang.String uploadType) {
+                      return (GetCard) super.setUploadType(uploadType);
+                    }
+
+                    @Override
+                    public GetCard setUploadProtocol(java.lang.String uploadProtocol) {
+                      return (GetCard) super.setUploadProtocol(uploadProtocol);
+                    }
+
+                    /**
+                     * Optional tenant, provided as a path parameter. Experimental, might still
+                     * change for 1.0 release.
+                     */
+                    @com.google.api.client.util.Key
+                    private java.lang.String tenant;
+
+                    /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                     */
+                    public java.lang.String getTenant() {
+                      return tenant;
+                    }
+
+                    /**
+                     * Optional tenant, provided as a path parameter. Experimental, might still
+                     * change for 1.0 release.
+                     */
+                    public GetCard setTenant(java.lang.String tenant) {
+                      if (!getSuppressPatternChecks()) {
+                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                            "Parameter tenant must conform to the pattern " +
+                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                      }
+                      this.tenant = tenant;
+                      return this;
+                    }
+
+                    @Override
+                    public GetCard set(String parameterName, Object value) {
+                      return (GetCard) super.set(parameterName, value);
                     }
                   }
 
-                  @Override
-                  public Stream set$Xgafv(java.lang.String $Xgafv) {
-                    return (Stream) super.set$Xgafv($Xgafv);
-                  }
-
-                  @Override
-                  public Stream setAccessToken(java.lang.String accessToken) {
-                    return (Stream) super.setAccessToken(accessToken);
-                  }
-
-                  @Override
-                  public Stream setAlt(java.lang.String alt) {
-                    return (Stream) super.setAlt(alt);
-                  }
-
-                  @Override
-                  public Stream setCallback(java.lang.String callback) {
-                    return (Stream) super.setCallback(callback);
-                  }
-
-                  @Override
-                  public Stream setFields(java.lang.String fields) {
-                    return (Stream) super.setFields(fields);
-                  }
-
-                  @Override
-                  public Stream setKey(java.lang.String key) {
-                    return (Stream) super.setKey(key);
-                  }
-
-                  @Override
-                  public Stream setOauthToken(java.lang.String oauthToken) {
-                    return (Stream) super.setOauthToken(oauthToken);
-                  }
-
-                  @Override
-                  public Stream setPrettyPrint(java.lang.Boolean prettyPrint) {
-                    return (Stream) super.setPrettyPrint(prettyPrint);
-                  }
-
-                  @Override
-                  public Stream setQuotaUser(java.lang.String quotaUser) {
-                    return (Stream) super.setQuotaUser(quotaUser);
-                  }
-
-                  @Override
-                  public Stream setUploadType(java.lang.String uploadType) {
-                    return (Stream) super.setUploadType(uploadType);
-                  }
-
-                  @Override
-                  public Stream setUploadProtocol(java.lang.String uploadProtocol) {
-                    return (Stream) super.setUploadProtocol(uploadProtocol);
+                  /**
+                   * An accessor for creating requests from the Message collection.
+                   *
+                   * <p>The typical use is:</p>
+                   * <pre>
+                   *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+                   *   {@code DiscoveryEngine.Message.List request = discoveryengine.message().list(parameters ...)}
+                   * </pre>
+                   *
+                   * @return the resource collection
+                   */
+                  public Message message() {
+                    return new Message();
                   }
 
                   /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
+                   * The "message" collection of methods.
                    */
-                  @com.google.api.client.util.Key
-                  private java.lang.String tenant;
+                  public class Message {
 
-                  /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   */
-                  public java.lang.String getTenant() {
-                    return tenant;
-                  }
-
-                  /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
-                   */
-                  public Stream setTenant(java.lang.String tenant) {
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                    /**
+                     * Send a message to the agent. This is a blocking call that will return the task once it is
+                     * completed, or a LRO if requested.
+                     *
+                     * Create a request for the method "message.send".
+                     *
+                     * This request holds the parameters needed by the discoveryengine server.  After setting any
+                     * optional parameters, call the {@link Send#execute()} method to invoke the remote operation.
+                     *
+                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                     * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest}
+                     * @return the request
+                     */
+                    public Send send(java.lang.String tenant, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest content) throws java.io.IOException {
+                      Send result = new Send(tenant, content);
+                      initialize(result);
+                      return result;
                     }
-                    this.tenant = tenant;
-                    return this;
+
+                    public class Send extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageResponse> {
+
+                      private static final String REST_PATH = "v1/{+tenant}/a2a/v1/message:send";
+
+                      private final java.util.regex.Pattern TENANT_PATTERN =
+                          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                      /**
+                       * Send a message to the agent. This is a blocking call that will return the task once it is
+                       * completed, or a LRO if requested.
+                       *
+                       * Create a request for the method "message.send".
+                       *
+                       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                       * optional parameters, call the {@link Send#execute()} method to invoke the remote operation. <p>
+                       * {@link Send#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                       * must be called to initialize this instance immediately after invoking the constructor. </p>
+                       *
+                       * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest}
+                       * @since 1.13
+                       */
+                      protected Send(java.lang.String tenant, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest content) {
+                        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageResponse.class);
+                        this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                      }
+
+                      @Override
+                      public Send set$Xgafv(java.lang.String $Xgafv) {
+                        return (Send) super.set$Xgafv($Xgafv);
+                      }
+
+                      @Override
+                      public Send setAccessToken(java.lang.String accessToken) {
+                        return (Send) super.setAccessToken(accessToken);
+                      }
+
+                      @Override
+                      public Send setAlt(java.lang.String alt) {
+                        return (Send) super.setAlt(alt);
+                      }
+
+                      @Override
+                      public Send setCallback(java.lang.String callback) {
+                        return (Send) super.setCallback(callback);
+                      }
+
+                      @Override
+                      public Send setFields(java.lang.String fields) {
+                        return (Send) super.setFields(fields);
+                      }
+
+                      @Override
+                      public Send setKey(java.lang.String key) {
+                        return (Send) super.setKey(key);
+                      }
+
+                      @Override
+                      public Send setOauthToken(java.lang.String oauthToken) {
+                        return (Send) super.setOauthToken(oauthToken);
+                      }
+
+                      @Override
+                      public Send setPrettyPrint(java.lang.Boolean prettyPrint) {
+                        return (Send) super.setPrettyPrint(prettyPrint);
+                      }
+
+                      @Override
+                      public Send setQuotaUser(java.lang.String quotaUser) {
+                        return (Send) super.setQuotaUser(quotaUser);
+                      }
+
+                      @Override
+                      public Send setUploadType(java.lang.String uploadType) {
+                        return (Send) super.setUploadType(uploadType);
+                      }
+
+                      @Override
+                      public Send setUploadProtocol(java.lang.String uploadProtocol) {
+                        return (Send) super.setUploadProtocol(uploadProtocol);
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      @com.google.api.client.util.Key
+                      private java.lang.String tenant;
+
+                      /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       */
+                      public java.lang.String getTenant() {
+                        return tenant;
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      public Send setTenant(java.lang.String tenant) {
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                        this.tenant = tenant;
+                        return this;
+                      }
+
+                      @Override
+                      public Send set(String parameterName, Object value) {
+                        return (Send) super.set(parameterName, value);
+                      }
+                    }
+                    /**
+                     * SendStreamingMessage is a streaming call that will return a stream of task update events until
+                     * the Task is in an interrupted or terminal state.
+                     *
+                     * Create a request for the method "message.stream".
+                     *
+                     * This request holds the parameters needed by the discoveryengine server.  After setting any
+                     * optional parameters, call the {@link Stream#execute()} method to invoke the remote operation.
+                     *
+                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                     * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest}
+                     * @return the request
+                     */
+                    public Stream stream(java.lang.String tenant, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest content) throws java.io.IOException {
+                      Stream result = new Stream(tenant, content);
+                      initialize(result);
+                      return result;
+                    }
+
+                    public class Stream extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1StreamResponse> {
+
+                      private static final String REST_PATH = "v1/{+tenant}/a2a/v1/message:stream";
+
+                      private final java.util.regex.Pattern TENANT_PATTERN =
+                          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                      /**
+                       * SendStreamingMessage is a streaming call that will return a stream of task update events until
+                       * the Task is in an interrupted or terminal state.
+                       *
+                       * Create a request for the method "message.stream".
+                       *
+                       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                       * optional parameters, call the {@link Stream#execute()} method to invoke the remote operation.
+                       * <p> {@link
+                       * Stream#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                       * be called to initialize this instance immediately after invoking the constructor. </p>
+                       *
+                       * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest}
+                       * @since 1.13
+                       */
+                      protected Stream(java.lang.String tenant, com.google.api.services.discoveryengine.v1.model.A2aV1SendMessageRequest content) {
+                        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.A2aV1StreamResponse.class);
+                        this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                      }
+
+                      @Override
+                      public Stream set$Xgafv(java.lang.String $Xgafv) {
+                        return (Stream) super.set$Xgafv($Xgafv);
+                      }
+
+                      @Override
+                      public Stream setAccessToken(java.lang.String accessToken) {
+                        return (Stream) super.setAccessToken(accessToken);
+                      }
+
+                      @Override
+                      public Stream setAlt(java.lang.String alt) {
+                        return (Stream) super.setAlt(alt);
+                      }
+
+                      @Override
+                      public Stream setCallback(java.lang.String callback) {
+                        return (Stream) super.setCallback(callback);
+                      }
+
+                      @Override
+                      public Stream setFields(java.lang.String fields) {
+                        return (Stream) super.setFields(fields);
+                      }
+
+                      @Override
+                      public Stream setKey(java.lang.String key) {
+                        return (Stream) super.setKey(key);
+                      }
+
+                      @Override
+                      public Stream setOauthToken(java.lang.String oauthToken) {
+                        return (Stream) super.setOauthToken(oauthToken);
+                      }
+
+                      @Override
+                      public Stream setPrettyPrint(java.lang.Boolean prettyPrint) {
+                        return (Stream) super.setPrettyPrint(prettyPrint);
+                      }
+
+                      @Override
+                      public Stream setQuotaUser(java.lang.String quotaUser) {
+                        return (Stream) super.setQuotaUser(quotaUser);
+                      }
+
+                      @Override
+                      public Stream setUploadType(java.lang.String uploadType) {
+                        return (Stream) super.setUploadType(uploadType);
+                      }
+
+                      @Override
+                      public Stream setUploadProtocol(java.lang.String uploadProtocol) {
+                        return (Stream) super.setUploadProtocol(uploadProtocol);
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      @com.google.api.client.util.Key
+                      private java.lang.String tenant;
+
+                      /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       */
+                      public java.lang.String getTenant() {
+                        return tenant;
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      public Stream setTenant(java.lang.String tenant) {
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                        this.tenant = tenant;
+                        return this;
+                      }
+
+                      @Override
+                      public Stream set(String parameterName, Object value) {
+                        return (Stream) super.set(parameterName, value);
+                      }
+                    }
+
+                  }
+                  /**
+                   * An accessor for creating requests from the Tasks collection.
+                   *
+                   * <p>The typical use is:</p>
+                   * <pre>
+                   *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+                   *   {@code DiscoveryEngine.Tasks.List request = discoveryengine.tasks().list(parameters ...)}
+                   * </pre>
+                   *
+                   * @return the resource collection
+                   */
+                  public Tasks tasks() {
+                    return new Tasks();
                   }
 
-                  @Override
-                  public Stream set(String parameterName, Object value) {
-                    return (Stream) super.set(parameterName, value);
+                  /**
+                   * The "tasks" collection of methods.
+                   */
+                  public class Tasks {
+
+                    /**
+                     * Cancel a task from the agent. If supported one should expect no more task updates for the task.
+                     *
+                     * Create a request for the method "tasks.cancel".
+                     *
+                     * This request holds the parameters needed by the discoveryengine server.  After setting any
+                     * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+                     *
+                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                     * @param name The resource name of the task to cancel. Format: tasks/{task_id}
+                     * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1CancelTaskRequest}
+                     * @return the request
+                     */
+                    public Cancel cancel(java.lang.String tenant, java.lang.String name, com.google.api.services.discoveryengine.v1.model.A2aV1CancelTaskRequest content) throws java.io.IOException {
+                      Cancel result = new Cancel(tenant, name, content);
+                      initialize(result);
+                      return result;
+                    }
+
+                    public class Cancel extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1Task> {
+
+                      private static final String REST_PATH = "v1/{+tenant}/a2a/v1/{+name}:cancel";
+
+                      private final java.util.regex.Pattern TENANT_PATTERN =
+                          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                      private final java.util.regex.Pattern NAME_PATTERN =
+                          java.util.regex.Pattern.compile("^tasks/[^/]+$");
+
+                      /**
+                       * Cancel a task from the agent. If supported one should expect no more task updates for the task.
+                       *
+                       * Create a request for the method "tasks.cancel".
+                       *
+                       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                       * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+                       * <p> {@link
+                       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                       * be called to initialize this instance immediately after invoking the constructor. </p>
+                       *
+                       * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       * @param name The resource name of the task to cancel. Format: tasks/{task_id}
+                       * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1CancelTaskRequest}
+                       * @since 1.13
+                       */
+                      protected Cancel(java.lang.String tenant, java.lang.String name, com.google.api.services.discoveryengine.v1.model.A2aV1CancelTaskRequest content) {
+                        super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.A2aV1Task.class);
+                        this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                              "Parameter name must conform to the pattern " +
+                              "^tasks/[^/]+$");
+                        }
+                      }
+
+                      @Override
+                      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+                        return (Cancel) super.set$Xgafv($Xgafv);
+                      }
+
+                      @Override
+                      public Cancel setAccessToken(java.lang.String accessToken) {
+                        return (Cancel) super.setAccessToken(accessToken);
+                      }
+
+                      @Override
+                      public Cancel setAlt(java.lang.String alt) {
+                        return (Cancel) super.setAlt(alt);
+                      }
+
+                      @Override
+                      public Cancel setCallback(java.lang.String callback) {
+                        return (Cancel) super.setCallback(callback);
+                      }
+
+                      @Override
+                      public Cancel setFields(java.lang.String fields) {
+                        return (Cancel) super.setFields(fields);
+                      }
+
+                      @Override
+                      public Cancel setKey(java.lang.String key) {
+                        return (Cancel) super.setKey(key);
+                      }
+
+                      @Override
+                      public Cancel setOauthToken(java.lang.String oauthToken) {
+                        return (Cancel) super.setOauthToken(oauthToken);
+                      }
+
+                      @Override
+                      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+                        return (Cancel) super.setPrettyPrint(prettyPrint);
+                      }
+
+                      @Override
+                      public Cancel setQuotaUser(java.lang.String quotaUser) {
+                        return (Cancel) super.setQuotaUser(quotaUser);
+                      }
+
+                      @Override
+                      public Cancel setUploadType(java.lang.String uploadType) {
+                        return (Cancel) super.setUploadType(uploadType);
+                      }
+
+                      @Override
+                      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+                        return (Cancel) super.setUploadProtocol(uploadProtocol);
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      @com.google.api.client.util.Key
+                      private java.lang.String tenant;
+
+                      /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       */
+                      public java.lang.String getTenant() {
+                        return tenant;
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      public Cancel setTenant(java.lang.String tenant) {
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                        this.tenant = tenant;
+                        return this;
+                      }
+
+                      /** The resource name of the task to cancel. Format: tasks/{task_id} */
+                      @com.google.api.client.util.Key
+                      private java.lang.String name;
+
+                      /** The resource name of the task to cancel. Format: tasks/{task_id}
+                       */
+                      public java.lang.String getName() {
+                        return name;
+                      }
+
+                      /** The resource name of the task to cancel. Format: tasks/{task_id} */
+                      public Cancel setName(java.lang.String name) {
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                              "Parameter name must conform to the pattern " +
+                              "^tasks/[^/]+$");
+                        }
+                        this.name = name;
+                        return this;
+                      }
+
+                      @Override
+                      public Cancel set(String parameterName, Object value) {
+                        return (Cancel) super.set(parameterName, value);
+                      }
+                    }
+                    /**
+                     * Get the current state of a task from the agent.
+                     *
+                     * Create a request for the method "tasks.get".
+                     *
+                     * This request holds the parameters needed by the discoveryengine server.  After setting any
+                     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+                     *
+                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                     * @param name Required. The resource name of the task. Format: tasks/{task_id}
+                     * @return the request
+                     */
+                    public Get get(java.lang.String tenant, java.lang.String name) throws java.io.IOException {
+                      Get result = new Get(tenant, name);
+                      initialize(result);
+                      return result;
+                    }
+
+                    public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1Task> {
+
+                      private static final String REST_PATH = "v1/{+tenant}/a2a/v1/{+name}";
+
+                      private final java.util.regex.Pattern TENANT_PATTERN =
+                          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                      private final java.util.regex.Pattern NAME_PATTERN =
+                          java.util.regex.Pattern.compile("^tasks/[^/]+$");
+
+                      /**
+                       * Get the current state of a task from the agent.
+                       *
+                       * Create a request for the method "tasks.get".
+                       *
+                       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                       * must be called to initialize this instance immediately after invoking the constructor. </p>
+                       *
+                       * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       * @param name Required. The resource name of the task. Format: tasks/{task_id}
+                       * @since 1.13
+                       */
+                      protected Get(java.lang.String tenant, java.lang.String name) {
+                        super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1Task.class);
+                        this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                              "Parameter name must conform to the pattern " +
+                              "^tasks/[^/]+$");
+                        }
+                      }
+
+                      @Override
+                      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                        return super.executeUsingHead();
+                      }
+
+                      @Override
+                      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                        return super.buildHttpRequestUsingHead();
+                      }
+
+                      @Override
+                      public Get set$Xgafv(java.lang.String $Xgafv) {
+                        return (Get) super.set$Xgafv($Xgafv);
+                      }
+
+                      @Override
+                      public Get setAccessToken(java.lang.String accessToken) {
+                        return (Get) super.setAccessToken(accessToken);
+                      }
+
+                      @Override
+                      public Get setAlt(java.lang.String alt) {
+                        return (Get) super.setAlt(alt);
+                      }
+
+                      @Override
+                      public Get setCallback(java.lang.String callback) {
+                        return (Get) super.setCallback(callback);
+                      }
+
+                      @Override
+                      public Get setFields(java.lang.String fields) {
+                        return (Get) super.setFields(fields);
+                      }
+
+                      @Override
+                      public Get setKey(java.lang.String key) {
+                        return (Get) super.setKey(key);
+                      }
+
+                      @Override
+                      public Get setOauthToken(java.lang.String oauthToken) {
+                        return (Get) super.setOauthToken(oauthToken);
+                      }
+
+                      @Override
+                      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                        return (Get) super.setPrettyPrint(prettyPrint);
+                      }
+
+                      @Override
+                      public Get setQuotaUser(java.lang.String quotaUser) {
+                        return (Get) super.setQuotaUser(quotaUser);
+                      }
+
+                      @Override
+                      public Get setUploadType(java.lang.String uploadType) {
+                        return (Get) super.setUploadType(uploadType);
+                      }
+
+                      @Override
+                      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                        return (Get) super.setUploadProtocol(uploadProtocol);
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      @com.google.api.client.util.Key
+                      private java.lang.String tenant;
+
+                      /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       */
+                      public java.lang.String getTenant() {
+                        return tenant;
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      public Get setTenant(java.lang.String tenant) {
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                        this.tenant = tenant;
+                        return this;
+                      }
+
+                      /** Required. The resource name of the task. Format: tasks/{task_id} */
+                      @com.google.api.client.util.Key
+                      private java.lang.String name;
+
+                      /** Required. The resource name of the task. Format: tasks/{task_id}
+                       */
+                      public java.lang.String getName() {
+                        return name;
+                      }
+
+                      /** Required. The resource name of the task. Format: tasks/{task_id} */
+                      public Get setName(java.lang.String name) {
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                              "Parameter name must conform to the pattern " +
+                              "^tasks/[^/]+$");
+                        }
+                        this.name = name;
+                        return this;
+                      }
+
+                      /**
+                       * The number of most recent messages from the task's history to retrieve.
+                       */
+                      @com.google.api.client.util.Key
+                      private java.lang.Integer historyLength;
+
+                      /** The number of most recent messages from the task's history to retrieve.
+                       */
+                      public java.lang.Integer getHistoryLength() {
+                        return historyLength;
+                      }
+
+                      /**
+                       * The number of most recent messages from the task's history to retrieve.
+                       */
+                      public Get setHistoryLength(java.lang.Integer historyLength) {
+                        this.historyLength = historyLength;
+                        return this;
+                      }
+
+                      @Override
+                      public Get set(String parameterName, Object value) {
+                        return (Get) super.set(parameterName, value);
+                      }
+                    }
+                    /**
+                     * TaskSubscription is a streaming call that will return a stream of task update events. This
+                     * attaches the stream to an existing in process task. If the task is complete the stream will
+                     * return the completed task (like GetTask) and close the stream.
+                     *
+                     * Create a request for the method "tasks.subscribe".
+                     *
+                     * This request holds the parameters needed by the discoveryengine server.  After setting any
+                     * optional parameters, call the {@link Subscribe#execute()} method to invoke the remote operation.
+                     *
+                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                     * @param name The resource name of the task to subscribe to. Format: tasks/{task_id}
+                     * @return the request
+                     */
+                    public Subscribe subscribe(java.lang.String tenant, java.lang.String name) throws java.io.IOException {
+                      Subscribe result = new Subscribe(tenant, name);
+                      initialize(result);
+                      return result;
+                    }
+
+                    public class Subscribe extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1StreamResponse> {
+
+                      private static final String REST_PATH = "v1/{+tenant}/a2a/v1/{+name}:subscribe";
+
+                      private final java.util.regex.Pattern TENANT_PATTERN =
+                          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                      private final java.util.regex.Pattern NAME_PATTERN =
+                          java.util.regex.Pattern.compile("^tasks/[^/]+$");
+
+                      /**
+                       * TaskSubscription is a streaming call that will return a stream of task update events. This
+                       * attaches the stream to an existing in process task. If the task is complete the stream will
+                       * return the completed task (like GetTask) and close the stream.
+                       *
+                       * Create a request for the method "tasks.subscribe".
+                       *
+                       * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                       * optional parameters, call the {@link Subscribe#execute()} method to invoke the remote
+                       * operation. <p> {@link
+                       * Subscribe#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                       * must be called to initialize this instance immediately after invoking the constructor. </p>
+                       *
+                       * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       * @param name The resource name of the task to subscribe to. Format: tasks/{task_id}
+                       * @since 1.13
+                       */
+                      protected Subscribe(java.lang.String tenant, java.lang.String name) {
+                        super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1StreamResponse.class);
+                        this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                              "Parameter name must conform to the pattern " +
+                              "^tasks/[^/]+$");
+                        }
+                      }
+
+                      @Override
+                      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                        return super.executeUsingHead();
+                      }
+
+                      @Override
+                      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                        return super.buildHttpRequestUsingHead();
+                      }
+
+                      @Override
+                      public Subscribe set$Xgafv(java.lang.String $Xgafv) {
+                        return (Subscribe) super.set$Xgafv($Xgafv);
+                      }
+
+                      @Override
+                      public Subscribe setAccessToken(java.lang.String accessToken) {
+                        return (Subscribe) super.setAccessToken(accessToken);
+                      }
+
+                      @Override
+                      public Subscribe setAlt(java.lang.String alt) {
+                        return (Subscribe) super.setAlt(alt);
+                      }
+
+                      @Override
+                      public Subscribe setCallback(java.lang.String callback) {
+                        return (Subscribe) super.setCallback(callback);
+                      }
+
+                      @Override
+                      public Subscribe setFields(java.lang.String fields) {
+                        return (Subscribe) super.setFields(fields);
+                      }
+
+                      @Override
+                      public Subscribe setKey(java.lang.String key) {
+                        return (Subscribe) super.setKey(key);
+                      }
+
+                      @Override
+                      public Subscribe setOauthToken(java.lang.String oauthToken) {
+                        return (Subscribe) super.setOauthToken(oauthToken);
+                      }
+
+                      @Override
+                      public Subscribe setPrettyPrint(java.lang.Boolean prettyPrint) {
+                        return (Subscribe) super.setPrettyPrint(prettyPrint);
+                      }
+
+                      @Override
+                      public Subscribe setQuotaUser(java.lang.String quotaUser) {
+                        return (Subscribe) super.setQuotaUser(quotaUser);
+                      }
+
+                      @Override
+                      public Subscribe setUploadType(java.lang.String uploadType) {
+                        return (Subscribe) super.setUploadType(uploadType);
+                      }
+
+                      @Override
+                      public Subscribe setUploadProtocol(java.lang.String uploadProtocol) {
+                        return (Subscribe) super.setUploadProtocol(uploadProtocol);
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      @com.google.api.client.util.Key
+                      private java.lang.String tenant;
+
+                      /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       */
+                      public java.lang.String getTenant() {
+                        return tenant;
+                      }
+
+                      /**
+                       * Optional tenant, provided as a path parameter. Experimental, might still
+                       * change for 1.0 release.
+                       */
+                      public Subscribe setTenant(java.lang.String tenant) {
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                              "Parameter tenant must conform to the pattern " +
+                              "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                        }
+                        this.tenant = tenant;
+                        return this;
+                      }
+
+                      /** The resource name of the task to subscribe to. Format: tasks/{task_id} */
+                      @com.google.api.client.util.Key
+                      private java.lang.String name;
+
+                      /** The resource name of the task to subscribe to. Format: tasks/{task_id}
+                       */
+                      public java.lang.String getName() {
+                        return name;
+                      }
+
+                      /** The resource name of the task to subscribe to. Format: tasks/{task_id} */
+                      public Subscribe setName(java.lang.String name) {
+                        if (!getSuppressPatternChecks()) {
+                          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                              "Parameter name must conform to the pattern " +
+                              "^tasks/[^/]+$");
+                        }
+                        this.name = name;
+                        return this;
+                      }
+
+                      @Override
+                      public Subscribe set(String parameterName, Object value) {
+                        return (Subscribe) super.set(parameterName, value);
+                      }
+                    }
+
+                    /**
+                     * An accessor for creating requests from the PushNotificationConfigs collection.
+                     *
+                     * <p>The typical use is:</p>
+                     * <pre>
+                     *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+                     *   {@code DiscoveryEngine.PushNotificationConfigs.List request = discoveryengine.pushNotificationConfigs().list(parameters ...)}
+                     * </pre>
+                     *
+                     * @return the resource collection
+                     */
+                    public PushNotificationConfigs pushNotificationConfigs() {
+                      return new PushNotificationConfigs();
+                    }
+
+                    /**
+                     * The "pushNotificationConfigs" collection of methods.
+                     */
+                    public class PushNotificationConfigs {
+
+                      /**
+                       * Set a push notification config for a task.
+                       *
+                       * Create a request for the method "pushNotificationConfigs.create".
+                       *
+                       * This request holds the parameters needed by the discoveryengine server.  After setting any
+                       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+                       *
+                       * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       * @param parent Required. The parent task resource for this config. Format: tasks/{task_id}
+                       * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig}
+                       * @return the request
+                       */
+                      public Create create(java.lang.String tenant, java.lang.String parent, com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig content) throws java.io.IOException {
+                        Create result = new Create(tenant, parent, content);
+                        initialize(result);
+                        return result;
+                      }
+
+                      public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig> {
+
+                        private static final String REST_PATH = "v1/{+tenant}/a2a/v1/{+parent}";
+
+                        private final java.util.regex.Pattern TENANT_PATTERN =
+                            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                        private final java.util.regex.Pattern PARENT_PATTERN =
+                            java.util.regex.Pattern.compile("^tasks/[^/]+/pushNotificationConfigs$");
+
+                        /**
+                         * Set a push notification config for a task.
+                         *
+                         * Create a request for the method "pushNotificationConfigs.create".
+                         *
+                         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+                         * <p> {@link
+                         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                         * be called to initialize this instance immediately after invoking the constructor. </p>
+                         *
+                         * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                         * @param parent Required. The parent task resource for this config. Format: tasks/{task_id}
+                         * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig}
+                         * @since 1.13
+                         */
+                        protected Create(java.lang.String tenant, java.lang.String parent, com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig content) {
+                          super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig.class);
+                          this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                                "Parameter tenant must conform to the pattern " +
+                                "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                          }
+                          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                                "Parameter parent must conform to the pattern " +
+                                "^tasks/[^/]+/pushNotificationConfigs$");
+                          }
+                        }
+
+                        @Override
+                        public Create set$Xgafv(java.lang.String $Xgafv) {
+                          return (Create) super.set$Xgafv($Xgafv);
+                        }
+
+                        @Override
+                        public Create setAccessToken(java.lang.String accessToken) {
+                          return (Create) super.setAccessToken(accessToken);
+                        }
+
+                        @Override
+                        public Create setAlt(java.lang.String alt) {
+                          return (Create) super.setAlt(alt);
+                        }
+
+                        @Override
+                        public Create setCallback(java.lang.String callback) {
+                          return (Create) super.setCallback(callback);
+                        }
+
+                        @Override
+                        public Create setFields(java.lang.String fields) {
+                          return (Create) super.setFields(fields);
+                        }
+
+                        @Override
+                        public Create setKey(java.lang.String key) {
+                          return (Create) super.setKey(key);
+                        }
+
+                        @Override
+                        public Create setOauthToken(java.lang.String oauthToken) {
+                          return (Create) super.setOauthToken(oauthToken);
+                        }
+
+                        @Override
+                        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                          return (Create) super.setPrettyPrint(prettyPrint);
+                        }
+
+                        @Override
+                        public Create setQuotaUser(java.lang.String quotaUser) {
+                          return (Create) super.setQuotaUser(quotaUser);
+                        }
+
+                        @Override
+                        public Create setUploadType(java.lang.String uploadType) {
+                          return (Create) super.setUploadType(uploadType);
+                        }
+
+                        @Override
+                        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                          return (Create) super.setUploadProtocol(uploadProtocol);
+                        }
+
+                        /**
+                         * Optional tenant, provided as a path parameter. Experimental, might still
+                         * change for 1.0 release.
+                         */
+                        @com.google.api.client.util.Key
+                        private java.lang.String tenant;
+
+                        /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                         */
+                        public java.lang.String getTenant() {
+                          return tenant;
+                        }
+
+                        /**
+                         * Optional tenant, provided as a path parameter. Experimental, might still
+                         * change for 1.0 release.
+                         */
+                        public Create setTenant(java.lang.String tenant) {
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                                "Parameter tenant must conform to the pattern " +
+                                "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                          }
+                          this.tenant = tenant;
+                          return this;
+                        }
+
+                        /**
+                         * Required. The parent task resource for this config. Format:
+                         * tasks/{task_id}
+                         */
+                        @com.google.api.client.util.Key
+                        private java.lang.String parent;
+
+                        /** Required. The parent task resource for this config. Format: tasks/{task_id}
+                         */
+                        public java.lang.String getParent() {
+                          return parent;
+                        }
+
+                        /**
+                         * Required. The parent task resource for this config. Format:
+                         * tasks/{task_id}
+                         */
+                        public Create setParent(java.lang.String parent) {
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                                "Parameter parent must conform to the pattern " +
+                                "^tasks/[^/]+/pushNotificationConfigs$");
+                          }
+                          this.parent = parent;
+                          return this;
+                        }
+
+                        /** Required. The ID for the new config. */
+                        @com.google.api.client.util.Key
+                        private java.lang.String configId;
+
+                        /** Required. The ID for the new config.
+                         */
+                        public java.lang.String getConfigId() {
+                          return configId;
+                        }
+
+                        /** Required. The ID for the new config. */
+                        public Create setConfigId(java.lang.String configId) {
+                          this.configId = configId;
+                          return this;
+                        }
+
+                        @Override
+                        public Create set(String parameterName, Object value) {
+                          return (Create) super.set(parameterName, value);
+                        }
+                      }
+                      /**
+                       * Delete a push notification config for a task.
+                       *
+                       * Create a request for the method "pushNotificationConfigs.delete".
+                       *
+                       * This request holds the parameters needed by the discoveryengine server.  After setting any
+                       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+                       *
+                       * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       * @param name The resource name of the config to delete. Format:
+                       *        tasks/{task_id}/pushNotificationConfigs/{config_id}
+                       * @return the request
+                       */
+                      public Delete delete(java.lang.String tenant, java.lang.String name) throws java.io.IOException {
+                        Delete result = new Delete(tenant, name);
+                        initialize(result);
+                        return result;
+                      }
+
+                      public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty> {
+
+                        private static final String REST_PATH = "v1/{+tenant}/a2a/v1/{+name}";
+
+                        private final java.util.regex.Pattern TENANT_PATTERN =
+                            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                        private final java.util.regex.Pattern NAME_PATTERN =
+                            java.util.regex.Pattern.compile("^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+
+                        /**
+                         * Delete a push notification config for a task.
+                         *
+                         * Create a request for the method "pushNotificationConfigs.delete".
+                         *
+                         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+                         * <p> {@link
+                         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                         * be called to initialize this instance immediately after invoking the constructor. </p>
+                         *
+                         * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                         * @param name The resource name of the config to delete. Format:
+                       *        tasks/{task_id}/pushNotificationConfigs/{config_id}
+                         * @since 1.13
+                         */
+                        protected Delete(java.lang.String tenant, java.lang.String name) {
+                          super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty.class);
+                          this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                                "Parameter tenant must conform to the pattern " +
+                                "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                          }
+                          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                                "Parameter name must conform to the pattern " +
+                                "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+                          }
+                        }
+
+                        @Override
+                        public Delete set$Xgafv(java.lang.String $Xgafv) {
+                          return (Delete) super.set$Xgafv($Xgafv);
+                        }
+
+                        @Override
+                        public Delete setAccessToken(java.lang.String accessToken) {
+                          return (Delete) super.setAccessToken(accessToken);
+                        }
+
+                        @Override
+                        public Delete setAlt(java.lang.String alt) {
+                          return (Delete) super.setAlt(alt);
+                        }
+
+                        @Override
+                        public Delete setCallback(java.lang.String callback) {
+                          return (Delete) super.setCallback(callback);
+                        }
+
+                        @Override
+                        public Delete setFields(java.lang.String fields) {
+                          return (Delete) super.setFields(fields);
+                        }
+
+                        @Override
+                        public Delete setKey(java.lang.String key) {
+                          return (Delete) super.setKey(key);
+                        }
+
+                        @Override
+                        public Delete setOauthToken(java.lang.String oauthToken) {
+                          return (Delete) super.setOauthToken(oauthToken);
+                        }
+
+                        @Override
+                        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                          return (Delete) super.setPrettyPrint(prettyPrint);
+                        }
+
+                        @Override
+                        public Delete setQuotaUser(java.lang.String quotaUser) {
+                          return (Delete) super.setQuotaUser(quotaUser);
+                        }
+
+                        @Override
+                        public Delete setUploadType(java.lang.String uploadType) {
+                          return (Delete) super.setUploadType(uploadType);
+                        }
+
+                        @Override
+                        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                          return (Delete) super.setUploadProtocol(uploadProtocol);
+                        }
+
+                        /**
+                         * Optional tenant, provided as a path parameter. Experimental, might still
+                         * change for 1.0 release.
+                         */
+                        @com.google.api.client.util.Key
+                        private java.lang.String tenant;
+
+                        /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                         */
+                        public java.lang.String getTenant() {
+                          return tenant;
+                        }
+
+                        /**
+                         * Optional tenant, provided as a path parameter. Experimental, might still
+                         * change for 1.0 release.
+                         */
+                        public Delete setTenant(java.lang.String tenant) {
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                                "Parameter tenant must conform to the pattern " +
+                                "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                          }
+                          this.tenant = tenant;
+                          return this;
+                        }
+
+                        /**
+                         * The resource name of the config to delete. Format:
+                         * tasks/{task_id}/pushNotificationConfigs/{config_id}
+                         */
+                        @com.google.api.client.util.Key
+                        private java.lang.String name;
+
+                        /** The resource name of the config to delete. Format:
+                       tasks/{task_id}/pushNotificationConfigs/{config_id}
+                         */
+                        public java.lang.String getName() {
+                          return name;
+                        }
+
+                        /**
+                         * The resource name of the config to delete. Format:
+                         * tasks/{task_id}/pushNotificationConfigs/{config_id}
+                         */
+                        public Delete setName(java.lang.String name) {
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                                "Parameter name must conform to the pattern " +
+                                "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+                          }
+                          this.name = name;
+                          return this;
+                        }
+
+                        @Override
+                        public Delete set(String parameterName, Object value) {
+                          return (Delete) super.set(parameterName, value);
+                        }
+                      }
+                      /**
+                       * Get a push notification config for a task.
+                       *
+                       * Create a request for the method "pushNotificationConfigs.get".
+                       *
+                       * This request holds the parameters needed by the discoveryengine server.  After setting any
+                       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+                       *
+                       * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       * @param name The resource name of the config to retrieve. Format:
+                       *        tasks/{task_id}/pushNotificationConfigs/{config_id}
+                       * @return the request
+                       */
+                      public Get get(java.lang.String tenant, java.lang.String name) throws java.io.IOException {
+                        Get result = new Get(tenant, name);
+                        initialize(result);
+                        return result;
+                      }
+
+                      public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig> {
+
+                        private static final String REST_PATH = "v1/{+tenant}/a2a/v1/{+name}";
+
+                        private final java.util.regex.Pattern TENANT_PATTERN =
+                            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                        private final java.util.regex.Pattern NAME_PATTERN =
+                            java.util.regex.Pattern.compile("^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+
+                        /**
+                         * Get a push notification config for a task.
+                         *
+                         * Create a request for the method "pushNotificationConfigs.get".
+                         *
+                         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                         * must be called to initialize this instance immediately after invoking the constructor. </p>
+                         *
+                         * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                         * @param name The resource name of the config to retrieve. Format:
+                       *        tasks/{task_id}/pushNotificationConfigs/{config_id}
+                         * @since 1.13
+                         */
+                        protected Get(java.lang.String tenant, java.lang.String name) {
+                          super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig.class);
+                          this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                                "Parameter tenant must conform to the pattern " +
+                                "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                          }
+                          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                                "Parameter name must conform to the pattern " +
+                                "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+                          }
+                        }
+
+                        @Override
+                        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                          return super.executeUsingHead();
+                        }
+
+                        @Override
+                        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                          return super.buildHttpRequestUsingHead();
+                        }
+
+                        @Override
+                        public Get set$Xgafv(java.lang.String $Xgafv) {
+                          return (Get) super.set$Xgafv($Xgafv);
+                        }
+
+                        @Override
+                        public Get setAccessToken(java.lang.String accessToken) {
+                          return (Get) super.setAccessToken(accessToken);
+                        }
+
+                        @Override
+                        public Get setAlt(java.lang.String alt) {
+                          return (Get) super.setAlt(alt);
+                        }
+
+                        @Override
+                        public Get setCallback(java.lang.String callback) {
+                          return (Get) super.setCallback(callback);
+                        }
+
+                        @Override
+                        public Get setFields(java.lang.String fields) {
+                          return (Get) super.setFields(fields);
+                        }
+
+                        @Override
+                        public Get setKey(java.lang.String key) {
+                          return (Get) super.setKey(key);
+                        }
+
+                        @Override
+                        public Get setOauthToken(java.lang.String oauthToken) {
+                          return (Get) super.setOauthToken(oauthToken);
+                        }
+
+                        @Override
+                        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                          return (Get) super.setPrettyPrint(prettyPrint);
+                        }
+
+                        @Override
+                        public Get setQuotaUser(java.lang.String quotaUser) {
+                          return (Get) super.setQuotaUser(quotaUser);
+                        }
+
+                        @Override
+                        public Get setUploadType(java.lang.String uploadType) {
+                          return (Get) super.setUploadType(uploadType);
+                        }
+
+                        @Override
+                        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                          return (Get) super.setUploadProtocol(uploadProtocol);
+                        }
+
+                        /**
+                         * Optional tenant, provided as a path parameter. Experimental, might still
+                         * change for 1.0 release.
+                         */
+                        @com.google.api.client.util.Key
+                        private java.lang.String tenant;
+
+                        /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                         */
+                        public java.lang.String getTenant() {
+                          return tenant;
+                        }
+
+                        /**
+                         * Optional tenant, provided as a path parameter. Experimental, might still
+                         * change for 1.0 release.
+                         */
+                        public Get setTenant(java.lang.String tenant) {
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                                "Parameter tenant must conform to the pattern " +
+                                "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                          }
+                          this.tenant = tenant;
+                          return this;
+                        }
+
+                        /**
+                         * The resource name of the config to retrieve. Format:
+                         * tasks/{task_id}/pushNotificationConfigs/{config_id}
+                         */
+                        @com.google.api.client.util.Key
+                        private java.lang.String name;
+
+                        /** The resource name of the config to retrieve. Format:
+                       tasks/{task_id}/pushNotificationConfigs/{config_id}
+                         */
+                        public java.lang.String getName() {
+                          return name;
+                        }
+
+                        /**
+                         * The resource name of the config to retrieve. Format:
+                         * tasks/{task_id}/pushNotificationConfigs/{config_id}
+                         */
+                        public Get setName(java.lang.String name) {
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                                "Parameter name must conform to the pattern " +
+                                "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
+                          }
+                          this.name = name;
+                          return this;
+                        }
+
+                        @Override
+                        public Get set(String parameterName, Object value) {
+                          return (Get) super.set(parameterName, value);
+                        }
+                      }
+                      /**
+                       * Get a list of push notifications configured for a task.
+                       *
+                       * Create a request for the method "pushNotificationConfigs.list".
+                       *
+                       * This request holds the parameters needed by the discoveryengine server.  After setting any
+                       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+                       *
+                       * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                       * @param parent The parent task resource. Format: tasks/{task_id}
+                       * @return the request
+                       */
+                      public List list(java.lang.String tenant, java.lang.String parent) throws java.io.IOException {
+                        List result = new List(tenant, parent);
+                        initialize(result);
+                        return result;
+                      }
+
+                      public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1ListTaskPushNotificationConfigResponse> {
+
+                        private static final String REST_PATH = "v1/{+tenant}/a2a/v1/{+parent}/pushNotificationConfigs";
+
+                        private final java.util.regex.Pattern TENANT_PATTERN =
+                            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+
+                        private final java.util.regex.Pattern PARENT_PATTERN =
+                            java.util.regex.Pattern.compile("^tasks/[^/]+$");
+
+                        /**
+                         * Get a list of push notifications configured for a task.
+                         *
+                         * Create a request for the method "pushNotificationConfigs.list".
+                         *
+                         * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                         * must be called to initialize this instance immediately after invoking the constructor. </p>
+                         *
+                         * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                         * @param parent The parent task resource. Format: tasks/{task_id}
+                         * @since 1.13
+                         */
+                        protected List(java.lang.String tenant, java.lang.String parent) {
+                          super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1ListTaskPushNotificationConfigResponse.class);
+                          this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                                "Parameter tenant must conform to the pattern " +
+                                "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                          }
+                          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                                "Parameter parent must conform to the pattern " +
+                                "^tasks/[^/]+$");
+                          }
+                        }
+
+                        @Override
+                        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                          return super.executeUsingHead();
+                        }
+
+                        @Override
+                        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                          return super.buildHttpRequestUsingHead();
+                        }
+
+                        @Override
+                        public List set$Xgafv(java.lang.String $Xgafv) {
+                          return (List) super.set$Xgafv($Xgafv);
+                        }
+
+                        @Override
+                        public List setAccessToken(java.lang.String accessToken) {
+                          return (List) super.setAccessToken(accessToken);
+                        }
+
+                        @Override
+                        public List setAlt(java.lang.String alt) {
+                          return (List) super.setAlt(alt);
+                        }
+
+                        @Override
+                        public List setCallback(java.lang.String callback) {
+                          return (List) super.setCallback(callback);
+                        }
+
+                        @Override
+                        public List setFields(java.lang.String fields) {
+                          return (List) super.setFields(fields);
+                        }
+
+                        @Override
+                        public List setKey(java.lang.String key) {
+                          return (List) super.setKey(key);
+                        }
+
+                        @Override
+                        public List setOauthToken(java.lang.String oauthToken) {
+                          return (List) super.setOauthToken(oauthToken);
+                        }
+
+                        @Override
+                        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                          return (List) super.setPrettyPrint(prettyPrint);
+                        }
+
+                        @Override
+                        public List setQuotaUser(java.lang.String quotaUser) {
+                          return (List) super.setQuotaUser(quotaUser);
+                        }
+
+                        @Override
+                        public List setUploadType(java.lang.String uploadType) {
+                          return (List) super.setUploadType(uploadType);
+                        }
+
+                        @Override
+                        public List setUploadProtocol(java.lang.String uploadProtocol) {
+                          return (List) super.setUploadProtocol(uploadProtocol);
+                        }
+
+                        /**
+                         * Optional tenant, provided as a path parameter. Experimental, might still
+                         * change for 1.0 release.
+                         */
+                        @com.google.api.client.util.Key
+                        private java.lang.String tenant;
+
+                        /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
+                         */
+                        public java.lang.String getTenant() {
+                          return tenant;
+                        }
+
+                        /**
+                         * Optional tenant, provided as a path parameter. Experimental, might still
+                         * change for 1.0 release.
+                         */
+                        public List setTenant(java.lang.String tenant) {
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                                "Parameter tenant must conform to the pattern " +
+                                "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
+                          }
+                          this.tenant = tenant;
+                          return this;
+                        }
+
+                        /** The parent task resource. Format: tasks/{task_id} */
+                        @com.google.api.client.util.Key
+                        private java.lang.String parent;
+
+                        /** The parent task resource. Format: tasks/{task_id}
+                         */
+                        public java.lang.String getParent() {
+                          return parent;
+                        }
+
+                        /** The parent task resource. Format: tasks/{task_id} */
+                        public List setParent(java.lang.String parent) {
+                          if (!getSuppressPatternChecks()) {
+                            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                                "Parameter parent must conform to the pattern " +
+                                "^tasks/[^/]+$");
+                          }
+                          this.parent = parent;
+                          return this;
+                        }
+
+                        /**
+                         * For AIP-158 these fields are present. Usually not used/needed. The
+                         * maximum number of configurations to return. If unspecified, all configs
+                         * will be returned.
+                         */
+                        @com.google.api.client.util.Key
+                        private java.lang.Integer pageSize;
+
+                        /** For AIP-158 these fields are present. Usually not used/needed. The maximum number of configurations
+                       to return. If unspecified, all configs will be returned.
+                         */
+                        public java.lang.Integer getPageSize() {
+                          return pageSize;
+                        }
+
+                        /**
+                         * For AIP-158 these fields are present. Usually not used/needed. The
+                         * maximum number of configurations to return. If unspecified, all configs
+                         * will be returned.
+                         */
+                        public List setPageSize(java.lang.Integer pageSize) {
+                          this.pageSize = pageSize;
+                          return this;
+                        }
+
+                        /**
+                         * A page token received from a previous
+                         * ListTaskPushNotificationConfigRequest call. Provide this to retrieve the
+                         * subsequent page. When paginating, all other parameters provided to
+                         * `ListTaskPushNotificationConfigRequest` must match the call that provided
+                         * the page token.
+                         */
+                        @com.google.api.client.util.Key
+                        private java.lang.String pageToken;
+
+                        /** A page token received from a previous ListTaskPushNotificationConfigRequest call. Provide this to
+                       retrieve the subsequent page. When paginating, all other parameters provided to
+                       `ListTaskPushNotificationConfigRequest` must match the call that provided the page token.
+                         */
+                        public java.lang.String getPageToken() {
+                          return pageToken;
+                        }
+
+                        /**
+                         * A page token received from a previous
+                         * ListTaskPushNotificationConfigRequest call. Provide this to retrieve the
+                         * subsequent page. When paginating, all other parameters provided to
+                         * `ListTaskPushNotificationConfigRequest` must match the call that provided
+                         * the page token.
+                         */
+                        public List setPageToken(java.lang.String pageToken) {
+                          this.pageToken = pageToken;
+                          return this;
+                        }
+
+                        @Override
+                        public List set(String parameterName, Object value) {
+                          return (List) super.set(parameterName, value);
+                        }
+                      }
+
+                    }
                   }
                 }
-
               }
               /**
                * An accessor for creating requests from the Operations collection.
@@ -20982,1371 +22397,6 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                   }
                 }
 
-              }
-              /**
-               * An accessor for creating requests from the Tasks collection.
-               *
-               * <p>The typical use is:</p>
-               * <pre>
-               *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
-               *   {@code DiscoveryEngine.Tasks.List request = discoveryengine.tasks().list(parameters ...)}
-               * </pre>
-               *
-               * @return the resource collection
-               */
-              public Tasks tasks() {
-                return new Tasks();
-              }
-
-              /**
-               * The "tasks" collection of methods.
-               */
-              public class Tasks {
-
-                /**
-                 * Cancel a task from the agent. If supported one should expect no more task updates for the task.
-                 *
-                 * Create a request for the method "tasks.cancel".
-                 *
-                 * This request holds the parameters needed by the discoveryengine server.  After setting any
-                 * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
-                 *
-                 * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                 * @param name The resource name of the task to cancel. Format: tasks/{task_id}
-                 * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1CancelTaskRequest}
-                 * @return the request
-                 */
-                public Cancel cancel(java.lang.String tenant, java.lang.String name, com.google.api.services.discoveryengine.v1.model.A2aV1CancelTaskRequest content) throws java.io.IOException {
-                  Cancel result = new Cancel(tenant, name, content);
-                  initialize(result);
-                  return result;
-                }
-
-                public class Cancel extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1Task> {
-
-                  private static final String REST_PATH = "v1/{+tenant}/{+name}:cancel";
-
-                  private final java.util.regex.Pattern TENANT_PATTERN =
-                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-
-                  private final java.util.regex.Pattern NAME_PATTERN =
-                      java.util.regex.Pattern.compile("^tasks/[^/]+$");
-
-                  /**
-                   * Cancel a task from the agent. If supported one should expect no more task updates for the task.
-                   *
-                   * Create a request for the method "tasks.cancel".
-                   *
-                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                   * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
-                   * <p> {@link
-                   * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-                   * be called to initialize this instance immediately after invoking the constructor. </p>
-                   *
-                   * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   * @param name The resource name of the task to cancel. Format: tasks/{task_id}
-                   * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1CancelTaskRequest}
-                   * @since 1.13
-                   */
-                  protected Cancel(java.lang.String tenant, java.lang.String name, com.google.api.services.discoveryengine.v1.model.A2aV1CancelTaskRequest content) {
-                    super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.A2aV1Task.class);
-                    this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                    }
-                    this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                          "Parameter name must conform to the pattern " +
-                          "^tasks/[^/]+$");
-                    }
-                  }
-
-                  @Override
-                  public Cancel set$Xgafv(java.lang.String $Xgafv) {
-                    return (Cancel) super.set$Xgafv($Xgafv);
-                  }
-
-                  @Override
-                  public Cancel setAccessToken(java.lang.String accessToken) {
-                    return (Cancel) super.setAccessToken(accessToken);
-                  }
-
-                  @Override
-                  public Cancel setAlt(java.lang.String alt) {
-                    return (Cancel) super.setAlt(alt);
-                  }
-
-                  @Override
-                  public Cancel setCallback(java.lang.String callback) {
-                    return (Cancel) super.setCallback(callback);
-                  }
-
-                  @Override
-                  public Cancel setFields(java.lang.String fields) {
-                    return (Cancel) super.setFields(fields);
-                  }
-
-                  @Override
-                  public Cancel setKey(java.lang.String key) {
-                    return (Cancel) super.setKey(key);
-                  }
-
-                  @Override
-                  public Cancel setOauthToken(java.lang.String oauthToken) {
-                    return (Cancel) super.setOauthToken(oauthToken);
-                  }
-
-                  @Override
-                  public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
-                    return (Cancel) super.setPrettyPrint(prettyPrint);
-                  }
-
-                  @Override
-                  public Cancel setQuotaUser(java.lang.String quotaUser) {
-                    return (Cancel) super.setQuotaUser(quotaUser);
-                  }
-
-                  @Override
-                  public Cancel setUploadType(java.lang.String uploadType) {
-                    return (Cancel) super.setUploadType(uploadType);
-                  }
-
-                  @Override
-                  public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
-                    return (Cancel) super.setUploadProtocol(uploadProtocol);
-                  }
-
-                  /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
-                   */
-                  @com.google.api.client.util.Key
-                  private java.lang.String tenant;
-
-                  /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   */
-                  public java.lang.String getTenant() {
-                    return tenant;
-                  }
-
-                  /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
-                   */
-                  public Cancel setTenant(java.lang.String tenant) {
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                    }
-                    this.tenant = tenant;
-                    return this;
-                  }
-
-                  /** The resource name of the task to cancel. Format: tasks/{task_id} */
-                  @com.google.api.client.util.Key
-                  private java.lang.String name;
-
-                  /** The resource name of the task to cancel. Format: tasks/{task_id}
-                   */
-                  public java.lang.String getName() {
-                    return name;
-                  }
-
-                  /** The resource name of the task to cancel. Format: tasks/{task_id} */
-                  public Cancel setName(java.lang.String name) {
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                          "Parameter name must conform to the pattern " +
-                          "^tasks/[^/]+$");
-                    }
-                    this.name = name;
-                    return this;
-                  }
-
-                  @Override
-                  public Cancel set(String parameterName, Object value) {
-                    return (Cancel) super.set(parameterName, value);
-                  }
-                }
-                /**
-                 * Get the current state of a task from the agent.
-                 *
-                 * Create a request for the method "tasks.get".
-                 *
-                 * This request holds the parameters needed by the discoveryengine server.  After setting any
-                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-                 *
-                 * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                 * @param name Required. The resource name of the task. Format: tasks/{task_id}
-                 * @return the request
-                 */
-                public Get get(java.lang.String tenant, java.lang.String name) throws java.io.IOException {
-                  Get result = new Get(tenant, name);
-                  initialize(result);
-                  return result;
-                }
-
-                public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1Task> {
-
-                  private static final String REST_PATH = "v1/{+tenant}/{+name}";
-
-                  private final java.util.regex.Pattern TENANT_PATTERN =
-                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-
-                  private final java.util.regex.Pattern NAME_PATTERN =
-                      java.util.regex.Pattern.compile("^tasks/[^/]+$");
-
-                  /**
-                   * Get the current state of a task from the agent.
-                   *
-                   * Create a request for the method "tasks.get".
-                   *
-                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                   * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-                   * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                   * must be called to initialize this instance immediately after invoking the constructor. </p>
-                   *
-                   * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   * @param name Required. The resource name of the task. Format: tasks/{task_id}
-                   * @since 1.13
-                   */
-                  protected Get(java.lang.String tenant, java.lang.String name) {
-                    super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1Task.class);
-                    this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                    }
-                    this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                          "Parameter name must conform to the pattern " +
-                          "^tasks/[^/]+$");
-                    }
-                  }
-
-                  @Override
-                  public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                    return super.executeUsingHead();
-                  }
-
-                  @Override
-                  public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                    return super.buildHttpRequestUsingHead();
-                  }
-
-                  @Override
-                  public Get set$Xgafv(java.lang.String $Xgafv) {
-                    return (Get) super.set$Xgafv($Xgafv);
-                  }
-
-                  @Override
-                  public Get setAccessToken(java.lang.String accessToken) {
-                    return (Get) super.setAccessToken(accessToken);
-                  }
-
-                  @Override
-                  public Get setAlt(java.lang.String alt) {
-                    return (Get) super.setAlt(alt);
-                  }
-
-                  @Override
-                  public Get setCallback(java.lang.String callback) {
-                    return (Get) super.setCallback(callback);
-                  }
-
-                  @Override
-                  public Get setFields(java.lang.String fields) {
-                    return (Get) super.setFields(fields);
-                  }
-
-                  @Override
-                  public Get setKey(java.lang.String key) {
-                    return (Get) super.setKey(key);
-                  }
-
-                  @Override
-                  public Get setOauthToken(java.lang.String oauthToken) {
-                    return (Get) super.setOauthToken(oauthToken);
-                  }
-
-                  @Override
-                  public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-                    return (Get) super.setPrettyPrint(prettyPrint);
-                  }
-
-                  @Override
-                  public Get setQuotaUser(java.lang.String quotaUser) {
-                    return (Get) super.setQuotaUser(quotaUser);
-                  }
-
-                  @Override
-                  public Get setUploadType(java.lang.String uploadType) {
-                    return (Get) super.setUploadType(uploadType);
-                  }
-
-                  @Override
-                  public Get setUploadProtocol(java.lang.String uploadProtocol) {
-                    return (Get) super.setUploadProtocol(uploadProtocol);
-                  }
-
-                  /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
-                   */
-                  @com.google.api.client.util.Key
-                  private java.lang.String tenant;
-
-                  /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   */
-                  public java.lang.String getTenant() {
-                    return tenant;
-                  }
-
-                  /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
-                   */
-                  public Get setTenant(java.lang.String tenant) {
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                    }
-                    this.tenant = tenant;
-                    return this;
-                  }
-
-                  /** Required. The resource name of the task. Format: tasks/{task_id} */
-                  @com.google.api.client.util.Key
-                  private java.lang.String name;
-
-                  /** Required. The resource name of the task. Format: tasks/{task_id}
-                   */
-                  public java.lang.String getName() {
-                    return name;
-                  }
-
-                  /** Required. The resource name of the task. Format: tasks/{task_id} */
-                  public Get setName(java.lang.String name) {
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                          "Parameter name must conform to the pattern " +
-                          "^tasks/[^/]+$");
-                    }
-                    this.name = name;
-                    return this;
-                  }
-
-                  /** The number of most recent messages from the task's history to retrieve. */
-                  @com.google.api.client.util.Key
-                  private java.lang.Integer historyLength;
-
-                  /** The number of most recent messages from the task's history to retrieve.
-                   */
-                  public java.lang.Integer getHistoryLength() {
-                    return historyLength;
-                  }
-
-                  /** The number of most recent messages from the task's history to retrieve. */
-                  public Get setHistoryLength(java.lang.Integer historyLength) {
-                    this.historyLength = historyLength;
-                    return this;
-                  }
-
-                  @Override
-                  public Get set(String parameterName, Object value) {
-                    return (Get) super.set(parameterName, value);
-                  }
-                }
-                /**
-                 * TaskSubscription is a streaming call that will return a stream of task update events. This
-                 * attaches the stream to an existing in process task. If the task is complete the stream will
-                 * return the completed task (like GetTask) and close the stream.
-                 *
-                 * Create a request for the method "tasks.subscribe".
-                 *
-                 * This request holds the parameters needed by the discoveryengine server.  After setting any
-                 * optional parameters, call the {@link Subscribe#execute()} method to invoke the remote operation.
-                 *
-                 * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                 * @param name The resource name of the task to subscribe to. Format: tasks/{task_id}
-                 * @return the request
-                 */
-                public Subscribe subscribe(java.lang.String tenant, java.lang.String name) throws java.io.IOException {
-                  Subscribe result = new Subscribe(tenant, name);
-                  initialize(result);
-                  return result;
-                }
-
-                public class Subscribe extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1StreamResponse> {
-
-                  private static final String REST_PATH = "v1/{+tenant}/{+name}:subscribe";
-
-                  private final java.util.regex.Pattern TENANT_PATTERN =
-                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-
-                  private final java.util.regex.Pattern NAME_PATTERN =
-                      java.util.regex.Pattern.compile("^tasks/[^/]+$");
-
-                  /**
-                   * TaskSubscription is a streaming call that will return a stream of task update events. This
-                   * attaches the stream to an existing in process task. If the task is complete the stream will
-                   * return the completed task (like GetTask) and close the stream.
-                   *
-                   * Create a request for the method "tasks.subscribe".
-                   *
-                   * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                   * optional parameters, call the {@link Subscribe#execute()} method to invoke the remote
-                   * operation. <p> {@link
-                   * Subscribe#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                   * must be called to initialize this instance immediately after invoking the constructor. </p>
-                   *
-                   * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   * @param name The resource name of the task to subscribe to. Format: tasks/{task_id}
-                   * @since 1.13
-                   */
-                  protected Subscribe(java.lang.String tenant, java.lang.String name) {
-                    super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1StreamResponse.class);
-                    this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                    }
-                    this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                          "Parameter name must conform to the pattern " +
-                          "^tasks/[^/]+$");
-                    }
-                  }
-
-                  @Override
-                  public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                    return super.executeUsingHead();
-                  }
-
-                  @Override
-                  public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                    return super.buildHttpRequestUsingHead();
-                  }
-
-                  @Override
-                  public Subscribe set$Xgafv(java.lang.String $Xgafv) {
-                    return (Subscribe) super.set$Xgafv($Xgafv);
-                  }
-
-                  @Override
-                  public Subscribe setAccessToken(java.lang.String accessToken) {
-                    return (Subscribe) super.setAccessToken(accessToken);
-                  }
-
-                  @Override
-                  public Subscribe setAlt(java.lang.String alt) {
-                    return (Subscribe) super.setAlt(alt);
-                  }
-
-                  @Override
-                  public Subscribe setCallback(java.lang.String callback) {
-                    return (Subscribe) super.setCallback(callback);
-                  }
-
-                  @Override
-                  public Subscribe setFields(java.lang.String fields) {
-                    return (Subscribe) super.setFields(fields);
-                  }
-
-                  @Override
-                  public Subscribe setKey(java.lang.String key) {
-                    return (Subscribe) super.setKey(key);
-                  }
-
-                  @Override
-                  public Subscribe setOauthToken(java.lang.String oauthToken) {
-                    return (Subscribe) super.setOauthToken(oauthToken);
-                  }
-
-                  @Override
-                  public Subscribe setPrettyPrint(java.lang.Boolean prettyPrint) {
-                    return (Subscribe) super.setPrettyPrint(prettyPrint);
-                  }
-
-                  @Override
-                  public Subscribe setQuotaUser(java.lang.String quotaUser) {
-                    return (Subscribe) super.setQuotaUser(quotaUser);
-                  }
-
-                  @Override
-                  public Subscribe setUploadType(java.lang.String uploadType) {
-                    return (Subscribe) super.setUploadType(uploadType);
-                  }
-
-                  @Override
-                  public Subscribe setUploadProtocol(java.lang.String uploadProtocol) {
-                    return (Subscribe) super.setUploadProtocol(uploadProtocol);
-                  }
-
-                  /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
-                   */
-                  @com.google.api.client.util.Key
-                  private java.lang.String tenant;
-
-                  /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   */
-                  public java.lang.String getTenant() {
-                    return tenant;
-                  }
-
-                  /**
-                   * Optional tenant, provided as a path parameter. Experimental, might still change
-                   * for 1.0 release.
-                   */
-                  public Subscribe setTenant(java.lang.String tenant) {
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                          "Parameter tenant must conform to the pattern " +
-                          "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                    }
-                    this.tenant = tenant;
-                    return this;
-                  }
-
-                  /** The resource name of the task to subscribe to. Format: tasks/{task_id} */
-                  @com.google.api.client.util.Key
-                  private java.lang.String name;
-
-                  /** The resource name of the task to subscribe to. Format: tasks/{task_id}
-                   */
-                  public java.lang.String getName() {
-                    return name;
-                  }
-
-                  /** The resource name of the task to subscribe to. Format: tasks/{task_id} */
-                  public Subscribe setName(java.lang.String name) {
-                    if (!getSuppressPatternChecks()) {
-                      com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                          "Parameter name must conform to the pattern " +
-                          "^tasks/[^/]+$");
-                    }
-                    this.name = name;
-                    return this;
-                  }
-
-                  @Override
-                  public Subscribe set(String parameterName, Object value) {
-                    return (Subscribe) super.set(parameterName, value);
-                  }
-                }
-
-                /**
-                 * An accessor for creating requests from the PushNotificationConfigs collection.
-                 *
-                 * <p>The typical use is:</p>
-                 * <pre>
-                 *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
-                 *   {@code DiscoveryEngine.PushNotificationConfigs.List request = discoveryengine.pushNotificationConfigs().list(parameters ...)}
-                 * </pre>
-                 *
-                 * @return the resource collection
-                 */
-                public PushNotificationConfigs pushNotificationConfigs() {
-                  return new PushNotificationConfigs();
-                }
-
-                /**
-                 * The "pushNotificationConfigs" collection of methods.
-                 */
-                public class PushNotificationConfigs {
-
-                  /**
-                   * Set a push notification config for a task.
-                   *
-                   * Create a request for the method "pushNotificationConfigs.create".
-                   *
-                   * This request holds the parameters needed by the discoveryengine server.  After setting any
-                   * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-                   *
-                   * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   * @param parent Required. The parent task resource for this config. Format: tasks/{task_id}
-                   * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig}
-                   * @return the request
-                   */
-                  public Create create(java.lang.String tenant, java.lang.String parent, com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig content) throws java.io.IOException {
-                    Create result = new Create(tenant, parent, content);
-                    initialize(result);
-                    return result;
-                  }
-
-                  public class Create extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig> {
-
-                    private static final String REST_PATH = "v1/{+tenant}/{+parent}";
-
-                    private final java.util.regex.Pattern TENANT_PATTERN =
-                        java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-
-                    private final java.util.regex.Pattern PARENT_PATTERN =
-                        java.util.regex.Pattern.compile("^tasks/[^/]+/pushNotificationConfigs$");
-
-                    /**
-                     * Set a push notification config for a task.
-                     *
-                     * Create a request for the method "pushNotificationConfigs.create".
-                     *
-                     * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                     * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
-                     * <p> {@link
-                     * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-                     * be called to initialize this instance immediately after invoking the constructor. </p>
-                     *
-                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                     * @param parent Required. The parent task resource for this config. Format: tasks/{task_id}
-                     * @param content the {@link com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig}
-                     * @since 1.13
-                     */
-                    protected Create(java.lang.String tenant, java.lang.String parent, com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig content) {
-                      super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig.class);
-                      this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                            "Parameter tenant must conform to the pattern " +
-                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                      }
-                      this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                            "Parameter parent must conform to the pattern " +
-                            "^tasks/[^/]+/pushNotificationConfigs$");
-                      }
-                    }
-
-                    @Override
-                    public Create set$Xgafv(java.lang.String $Xgafv) {
-                      return (Create) super.set$Xgafv($Xgafv);
-                    }
-
-                    @Override
-                    public Create setAccessToken(java.lang.String accessToken) {
-                      return (Create) super.setAccessToken(accessToken);
-                    }
-
-                    @Override
-                    public Create setAlt(java.lang.String alt) {
-                      return (Create) super.setAlt(alt);
-                    }
-
-                    @Override
-                    public Create setCallback(java.lang.String callback) {
-                      return (Create) super.setCallback(callback);
-                    }
-
-                    @Override
-                    public Create setFields(java.lang.String fields) {
-                      return (Create) super.setFields(fields);
-                    }
-
-                    @Override
-                    public Create setKey(java.lang.String key) {
-                      return (Create) super.setKey(key);
-                    }
-
-                    @Override
-                    public Create setOauthToken(java.lang.String oauthToken) {
-                      return (Create) super.setOauthToken(oauthToken);
-                    }
-
-                    @Override
-                    public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
-                      return (Create) super.setPrettyPrint(prettyPrint);
-                    }
-
-                    @Override
-                    public Create setQuotaUser(java.lang.String quotaUser) {
-                      return (Create) super.setQuotaUser(quotaUser);
-                    }
-
-                    @Override
-                    public Create setUploadType(java.lang.String uploadType) {
-                      return (Create) super.setUploadType(uploadType);
-                    }
-
-                    @Override
-                    public Create setUploadProtocol(java.lang.String uploadProtocol) {
-                      return (Create) super.setUploadProtocol(uploadProtocol);
-                    }
-
-                    /**
-                     * Optional tenant, provided as a path parameter. Experimental, might still
-                     * change for 1.0 release.
-                     */
-                    @com.google.api.client.util.Key
-                    private java.lang.String tenant;
-
-                    /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                     */
-                    public java.lang.String getTenant() {
-                      return tenant;
-                    }
-
-                    /**
-                     * Optional tenant, provided as a path parameter. Experimental, might still
-                     * change for 1.0 release.
-                     */
-                    public Create setTenant(java.lang.String tenant) {
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                            "Parameter tenant must conform to the pattern " +
-                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                      }
-                      this.tenant = tenant;
-                      return this;
-                    }
-
-                    /**
-                     * Required. The parent task resource for this config. Format: tasks/{task_id}
-                     */
-                    @com.google.api.client.util.Key
-                    private java.lang.String parent;
-
-                    /** Required. The parent task resource for this config. Format: tasks/{task_id}
-                     */
-                    public java.lang.String getParent() {
-                      return parent;
-                    }
-
-                    /**
-                     * Required. The parent task resource for this config. Format: tasks/{task_id}
-                     */
-                    public Create setParent(java.lang.String parent) {
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                            "Parameter parent must conform to the pattern " +
-                            "^tasks/[^/]+/pushNotificationConfigs$");
-                      }
-                      this.parent = parent;
-                      return this;
-                    }
-
-                    /** Required. The ID for the new config. */
-                    @com.google.api.client.util.Key
-                    private java.lang.String configId;
-
-                    /** Required. The ID for the new config.
-                     */
-                    public java.lang.String getConfigId() {
-                      return configId;
-                    }
-
-                    /** Required. The ID for the new config. */
-                    public Create setConfigId(java.lang.String configId) {
-                      this.configId = configId;
-                      return this;
-                    }
-
-                    @Override
-                    public Create set(String parameterName, Object value) {
-                      return (Create) super.set(parameterName, value);
-                    }
-                  }
-                  /**
-                   * Delete a push notification config for a task.
-                   *
-                   * Create a request for the method "pushNotificationConfigs.delete".
-                   *
-                   * This request holds the parameters needed by the discoveryengine server.  After setting any
-                   * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-                   *
-                   * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   * @param name The resource name of the config to delete. Format:
-                   *        tasks/{task_id}/pushNotificationConfigs/{config_id}
-                   * @return the request
-                   */
-                  public Delete delete(java.lang.String tenant, java.lang.String name) throws java.io.IOException {
-                    Delete result = new Delete(tenant, name);
-                    initialize(result);
-                    return result;
-                  }
-
-                  public class Delete extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty> {
-
-                    private static final String REST_PATH = "v1/{+tenant}/{+name}";
-
-                    private final java.util.regex.Pattern TENANT_PATTERN =
-                        java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-
-                    private final java.util.regex.Pattern NAME_PATTERN =
-                        java.util.regex.Pattern.compile("^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
-
-                    /**
-                     * Delete a push notification config for a task.
-                     *
-                     * Create a request for the method "pushNotificationConfigs.delete".
-                     *
-                     * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                     * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-                     * <p> {@link
-                     * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-                     * be called to initialize this instance immediately after invoking the constructor. </p>
-                     *
-                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                     * @param name The resource name of the config to delete. Format:
-                   *        tasks/{task_id}/pushNotificationConfigs/{config_id}
-                     * @since 1.13
-                     */
-                    protected Delete(java.lang.String tenant, java.lang.String name) {
-                      super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.GoogleProtobufEmpty.class);
-                      this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                            "Parameter tenant must conform to the pattern " +
-                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                      }
-                      this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                            "Parameter name must conform to the pattern " +
-                            "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
-                      }
-                    }
-
-                    @Override
-                    public Delete set$Xgafv(java.lang.String $Xgafv) {
-                      return (Delete) super.set$Xgafv($Xgafv);
-                    }
-
-                    @Override
-                    public Delete setAccessToken(java.lang.String accessToken) {
-                      return (Delete) super.setAccessToken(accessToken);
-                    }
-
-                    @Override
-                    public Delete setAlt(java.lang.String alt) {
-                      return (Delete) super.setAlt(alt);
-                    }
-
-                    @Override
-                    public Delete setCallback(java.lang.String callback) {
-                      return (Delete) super.setCallback(callback);
-                    }
-
-                    @Override
-                    public Delete setFields(java.lang.String fields) {
-                      return (Delete) super.setFields(fields);
-                    }
-
-                    @Override
-                    public Delete setKey(java.lang.String key) {
-                      return (Delete) super.setKey(key);
-                    }
-
-                    @Override
-                    public Delete setOauthToken(java.lang.String oauthToken) {
-                      return (Delete) super.setOauthToken(oauthToken);
-                    }
-
-                    @Override
-                    public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-                      return (Delete) super.setPrettyPrint(prettyPrint);
-                    }
-
-                    @Override
-                    public Delete setQuotaUser(java.lang.String quotaUser) {
-                      return (Delete) super.setQuotaUser(quotaUser);
-                    }
-
-                    @Override
-                    public Delete setUploadType(java.lang.String uploadType) {
-                      return (Delete) super.setUploadType(uploadType);
-                    }
-
-                    @Override
-                    public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-                      return (Delete) super.setUploadProtocol(uploadProtocol);
-                    }
-
-                    /**
-                     * Optional tenant, provided as a path parameter. Experimental, might still
-                     * change for 1.0 release.
-                     */
-                    @com.google.api.client.util.Key
-                    private java.lang.String tenant;
-
-                    /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                     */
-                    public java.lang.String getTenant() {
-                      return tenant;
-                    }
-
-                    /**
-                     * Optional tenant, provided as a path parameter. Experimental, might still
-                     * change for 1.0 release.
-                     */
-                    public Delete setTenant(java.lang.String tenant) {
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                            "Parameter tenant must conform to the pattern " +
-                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                      }
-                      this.tenant = tenant;
-                      return this;
-                    }
-
-                    /**
-                     * The resource name of the config to delete. Format:
-                     * tasks/{task_id}/pushNotificationConfigs/{config_id}
-                     */
-                    @com.google.api.client.util.Key
-                    private java.lang.String name;
-
-                    /** The resource name of the config to delete. Format:
-                   tasks/{task_id}/pushNotificationConfigs/{config_id}
-                     */
-                    public java.lang.String getName() {
-                      return name;
-                    }
-
-                    /**
-                     * The resource name of the config to delete. Format:
-                     * tasks/{task_id}/pushNotificationConfigs/{config_id}
-                     */
-                    public Delete setName(java.lang.String name) {
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                            "Parameter name must conform to the pattern " +
-                            "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
-                      }
-                      this.name = name;
-                      return this;
-                    }
-
-                    @Override
-                    public Delete set(String parameterName, Object value) {
-                      return (Delete) super.set(parameterName, value);
-                    }
-                  }
-                  /**
-                   * Get a push notification config for a task.
-                   *
-                   * Create a request for the method "pushNotificationConfigs.get".
-                   *
-                   * This request holds the parameters needed by the discoveryengine server.  After setting any
-                   * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
-                   *
-                   * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   * @param name The resource name of the config to retrieve. Format:
-                   *        tasks/{task_id}/pushNotificationConfigs/{config_id}
-                   * @return the request
-                   */
-                  public Get get(java.lang.String tenant, java.lang.String name) throws java.io.IOException {
-                    Get result = new Get(tenant, name);
-                    initialize(result);
-                    return result;
-                  }
-
-                  public class Get extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig> {
-
-                    private static final String REST_PATH = "v1/{+tenant}/{+name}";
-
-                    private final java.util.regex.Pattern TENANT_PATTERN =
-                        java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-
-                    private final java.util.regex.Pattern NAME_PATTERN =
-                        java.util.regex.Pattern.compile("^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
-
-                    /**
-                     * Get a push notification config for a task.
-                     *
-                     * Create a request for the method "pushNotificationConfigs.get".
-                     *
-                     * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                     * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-                     * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                     * must be called to initialize this instance immediately after invoking the constructor. </p>
-                     *
-                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                     * @param name The resource name of the config to retrieve. Format:
-                   *        tasks/{task_id}/pushNotificationConfigs/{config_id}
-                     * @since 1.13
-                     */
-                    protected Get(java.lang.String tenant, java.lang.String name) {
-                      super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1TaskPushNotificationConfig.class);
-                      this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                            "Parameter tenant must conform to the pattern " +
-                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                      }
-                      this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                            "Parameter name must conform to the pattern " +
-                            "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
-                      }
-                    }
-
-                    @Override
-                    public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                      return super.executeUsingHead();
-                    }
-
-                    @Override
-                    public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                      return super.buildHttpRequestUsingHead();
-                    }
-
-                    @Override
-                    public Get set$Xgafv(java.lang.String $Xgafv) {
-                      return (Get) super.set$Xgafv($Xgafv);
-                    }
-
-                    @Override
-                    public Get setAccessToken(java.lang.String accessToken) {
-                      return (Get) super.setAccessToken(accessToken);
-                    }
-
-                    @Override
-                    public Get setAlt(java.lang.String alt) {
-                      return (Get) super.setAlt(alt);
-                    }
-
-                    @Override
-                    public Get setCallback(java.lang.String callback) {
-                      return (Get) super.setCallback(callback);
-                    }
-
-                    @Override
-                    public Get setFields(java.lang.String fields) {
-                      return (Get) super.setFields(fields);
-                    }
-
-                    @Override
-                    public Get setKey(java.lang.String key) {
-                      return (Get) super.setKey(key);
-                    }
-
-                    @Override
-                    public Get setOauthToken(java.lang.String oauthToken) {
-                      return (Get) super.setOauthToken(oauthToken);
-                    }
-
-                    @Override
-                    public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-                      return (Get) super.setPrettyPrint(prettyPrint);
-                    }
-
-                    @Override
-                    public Get setQuotaUser(java.lang.String quotaUser) {
-                      return (Get) super.setQuotaUser(quotaUser);
-                    }
-
-                    @Override
-                    public Get setUploadType(java.lang.String uploadType) {
-                      return (Get) super.setUploadType(uploadType);
-                    }
-
-                    @Override
-                    public Get setUploadProtocol(java.lang.String uploadProtocol) {
-                      return (Get) super.setUploadProtocol(uploadProtocol);
-                    }
-
-                    /**
-                     * Optional tenant, provided as a path parameter. Experimental, might still
-                     * change for 1.0 release.
-                     */
-                    @com.google.api.client.util.Key
-                    private java.lang.String tenant;
-
-                    /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                     */
-                    public java.lang.String getTenant() {
-                      return tenant;
-                    }
-
-                    /**
-                     * Optional tenant, provided as a path parameter. Experimental, might still
-                     * change for 1.0 release.
-                     */
-                    public Get setTenant(java.lang.String tenant) {
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                            "Parameter tenant must conform to the pattern " +
-                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                      }
-                      this.tenant = tenant;
-                      return this;
-                    }
-
-                    /**
-                     * The resource name of the config to retrieve. Format:
-                     * tasks/{task_id}/pushNotificationConfigs/{config_id}
-                     */
-                    @com.google.api.client.util.Key
-                    private java.lang.String name;
-
-                    /** The resource name of the config to retrieve. Format:
-                   tasks/{task_id}/pushNotificationConfigs/{config_id}
-                     */
-                    public java.lang.String getName() {
-                      return name;
-                    }
-
-                    /**
-                     * The resource name of the config to retrieve. Format:
-                     * tasks/{task_id}/pushNotificationConfigs/{config_id}
-                     */
-                    public Get setName(java.lang.String name) {
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                            "Parameter name must conform to the pattern " +
-                            "^tasks/[^/]+/pushNotificationConfigs/[^/]+$");
-                      }
-                      this.name = name;
-                      return this;
-                    }
-
-                    @Override
-                    public Get set(String parameterName, Object value) {
-                      return (Get) super.set(parameterName, value);
-                    }
-                  }
-                  /**
-                   * Get a list of push notifications configured for a task.
-                   *
-                   * Create a request for the method "pushNotificationConfigs.list".
-                   *
-                   * This request holds the parameters needed by the discoveryengine server.  After setting any
-                   * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
-                   *
-                   * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                   * @param parent The parent task resource. Format: tasks/{task_id}
-                   * @return the request
-                   */
-                  public List list(java.lang.String tenant, java.lang.String parent) throws java.io.IOException {
-                    List result = new List(tenant, parent);
-                    initialize(result);
-                    return result;
-                  }
-
-                  public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1.model.A2aV1ListTaskPushNotificationConfigResponse> {
-
-                    private static final String REST_PATH = "v1/{+tenant}/{+parent}/pushNotificationConfigs";
-
-                    private final java.util.regex.Pattern TENANT_PATTERN =
-                        java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-
-                    private final java.util.regex.Pattern PARENT_PATTERN =
-                        java.util.regex.Pattern.compile("^tasks/[^/]+$");
-
-                    /**
-                     * Get a list of push notifications configured for a task.
-                     *
-                     * Create a request for the method "pushNotificationConfigs.list".
-                     *
-                     * This request holds the parameters needed by the the discoveryengine server.  After setting any
-                     * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-                     * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-                     * must be called to initialize this instance immediately after invoking the constructor. </p>
-                     *
-                     * @param tenant Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                     * @param parent The parent task resource. Format: tasks/{task_id}
-                     * @since 1.13
-                     */
-                    protected List(java.lang.String tenant, java.lang.String parent) {
-                      super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1.model.A2aV1ListTaskPushNotificationConfigResponse.class);
-                      this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                            "Parameter tenant must conform to the pattern " +
-                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                      }
-                      this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                            "Parameter parent must conform to the pattern " +
-                            "^tasks/[^/]+$");
-                      }
-                    }
-
-                    @Override
-                    public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-                      return super.executeUsingHead();
-                    }
-
-                    @Override
-                    public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-                      return super.buildHttpRequestUsingHead();
-                    }
-
-                    @Override
-                    public List set$Xgafv(java.lang.String $Xgafv) {
-                      return (List) super.set$Xgafv($Xgafv);
-                    }
-
-                    @Override
-                    public List setAccessToken(java.lang.String accessToken) {
-                      return (List) super.setAccessToken(accessToken);
-                    }
-
-                    @Override
-                    public List setAlt(java.lang.String alt) {
-                      return (List) super.setAlt(alt);
-                    }
-
-                    @Override
-                    public List setCallback(java.lang.String callback) {
-                      return (List) super.setCallback(callback);
-                    }
-
-                    @Override
-                    public List setFields(java.lang.String fields) {
-                      return (List) super.setFields(fields);
-                    }
-
-                    @Override
-                    public List setKey(java.lang.String key) {
-                      return (List) super.setKey(key);
-                    }
-
-                    @Override
-                    public List setOauthToken(java.lang.String oauthToken) {
-                      return (List) super.setOauthToken(oauthToken);
-                    }
-
-                    @Override
-                    public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-                      return (List) super.setPrettyPrint(prettyPrint);
-                    }
-
-                    @Override
-                    public List setQuotaUser(java.lang.String quotaUser) {
-                      return (List) super.setQuotaUser(quotaUser);
-                    }
-
-                    @Override
-                    public List setUploadType(java.lang.String uploadType) {
-                      return (List) super.setUploadType(uploadType);
-                    }
-
-                    @Override
-                    public List setUploadProtocol(java.lang.String uploadProtocol) {
-                      return (List) super.setUploadProtocol(uploadProtocol);
-                    }
-
-                    /**
-                     * Optional tenant, provided as a path parameter. Experimental, might still
-                     * change for 1.0 release.
-                     */
-                    @com.google.api.client.util.Key
-                    private java.lang.String tenant;
-
-                    /** Optional tenant, provided as a path parameter. Experimental, might still change for 1.0 release.
-                     */
-                    public java.lang.String getTenant() {
-                      return tenant;
-                    }
-
-                    /**
-                     * Optional tenant, provided as a path parameter. Experimental, might still
-                     * change for 1.0 release.
-                     */
-                    public List setTenant(java.lang.String tenant) {
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
-                            "Parameter tenant must conform to the pattern " +
-                            "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agents/[^/]+$");
-                      }
-                      this.tenant = tenant;
-                      return this;
-                    }
-
-                    /** The parent task resource. Format: tasks/{task_id} */
-                    @com.google.api.client.util.Key
-                    private java.lang.String parent;
-
-                    /** The parent task resource. Format: tasks/{task_id}
-                     */
-                    public java.lang.String getParent() {
-                      return parent;
-                    }
-
-                    /** The parent task resource. Format: tasks/{task_id} */
-                    public List setParent(java.lang.String parent) {
-                      if (!getSuppressPatternChecks()) {
-                        com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                            "Parameter parent must conform to the pattern " +
-                            "^tasks/[^/]+$");
-                      }
-                      this.parent = parent;
-                      return this;
-                    }
-
-                    /**
-                     * For AIP-158 these fields are present. Usually not used/needed. The maximum
-                     * number of configurations to return. If unspecified, all configs will be
-                     * returned.
-                     */
-                    @com.google.api.client.util.Key
-                    private java.lang.Integer pageSize;
-
-                    /** For AIP-158 these fields are present. Usually not used/needed. The maximum number of configurations
-                   to return. If unspecified, all configs will be returned.
-                     */
-                    public java.lang.Integer getPageSize() {
-                      return pageSize;
-                    }
-
-                    /**
-                     * For AIP-158 these fields are present. Usually not used/needed. The maximum
-                     * number of configurations to return. If unspecified, all configs will be
-                     * returned.
-                     */
-                    public List setPageSize(java.lang.Integer pageSize) {
-                      this.pageSize = pageSize;
-                      return this;
-                    }
-
-                    /**
-                     * A page token received from a previous ListTaskPushNotificationConfigRequest
-                     * call. Provide this to retrieve the subsequent page. When paginating, all
-                     * other parameters provided to `ListTaskPushNotificationConfigRequest` must
-                     * match the call that provided the page token.
-                     */
-                    @com.google.api.client.util.Key
-                    private java.lang.String pageToken;
-
-                    /** A page token received from a previous ListTaskPushNotificationConfigRequest call. Provide this to
-                   retrieve the subsequent page. When paginating, all other parameters provided to
-                   `ListTaskPushNotificationConfigRequest` must match the call that provided the page token.
-                     */
-                    public java.lang.String getPageToken() {
-                      return pageToken;
-                    }
-
-                    /**
-                     * A page token received from a previous ListTaskPushNotificationConfigRequest
-                     * call. Provide this to retrieve the subsequent page. When paginating, all
-                     * other parameters provided to `ListTaskPushNotificationConfigRequest` must
-                     * match the call that provided the page token.
-                     */
-                    public List setPageToken(java.lang.String pageToken) {
-                      this.pageToken = pageToken;
-                      return this;
-                    }
-
-                    @Override
-                    public List set(String parameterName, Object value) {
-                      return (List) super.set(parameterName, value);
-                    }
-                  }
-
-                }
               }
             }
           }
@@ -46282,29 +46332,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Optional. The order in which the UserLicenses are listed. The value must be a comma-
              * separated list of fields. Default sorting order is ascending. To specify descending
              * order for a field, append a " desc" suffix. Redundant space characters in the syntax
-             * are insignificant. Supported fields: * `license_assignment_state` * `user_principal`
-             * * `user_profile` * `last_login_date` * `update_time` If not set, the default ordering
-             * is by `user_principal`. Examples: * `user_principal desc` to order by
-             * `user_principal` in descending order. * `license_assignment_state` to order by
-             * `license_assignment_state` in ascending order. * `last_login_date desc` to order by
-             * `last_login_date` in descending order. * `update_time desc` to order by `update_time`
-             * in descending order. * `last_login_date desc, user_principal` to order by
-             * `last_login_date` in descending order and then by `user_principal` in ascending
-             * order.
+             * are insignificant. Supported fields (only `user_principal` is supported for now): *
+             * `user_principal` If not set, the default ordering is by `user_principal`. Examples: *
+             * `user_principal` to order by `user_principal` in ascending order. * `user_principal
+             * desc` to order by `user_principal` in descending order.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** Optional. The order in which the UserLicenses are listed. The value must be a comma-separated list
            of fields. Default sorting order is ascending. To specify descending order for a field, append a "
-           desc" suffix. Redundant space characters in the syntax are insignificant. Supported fields: *
-           `license_assignment_state` * `user_principal` * `user_profile` * `last_login_date` * `update_time`
-           If not set, the default ordering is by `user_principal`. Examples: * `user_principal desc` to order
-           by `user_principal` in descending order. * `license_assignment_state` to order by
-           `license_assignment_state` in ascending order. * `last_login_date desc` to order by
-           `last_login_date` in descending order. * `update_time desc` to order by `update_time` in descending
-           order. * `last_login_date desc, user_principal` to order by `last_login_date` in descending order
-           and then by `user_principal` in ascending order.
+           desc" suffix. Redundant space characters in the syntax are insignificant. Supported fields (only
+           `user_principal` is supported for now): * `user_principal` If not set, the default ordering is by
+           `user_principal`. Examples: * `user_principal` to order by `user_principal` in ascending order. *
+           `user_principal desc` to order by `user_principal` in descending order.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -46314,15 +46355,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Optional. The order in which the UserLicenses are listed. The value must be a comma-
              * separated list of fields. Default sorting order is ascending. To specify descending
              * order for a field, append a " desc" suffix. Redundant space characters in the syntax
-             * are insignificant. Supported fields: * `license_assignment_state` * `user_principal`
-             * * `user_profile` * `last_login_date` * `update_time` If not set, the default ordering
-             * is by `user_principal`. Examples: * `user_principal desc` to order by
-             * `user_principal` in descending order. * `license_assignment_state` to order by
-             * `license_assignment_state` in ascending order. * `last_login_date desc` to order by
-             * `last_login_date` in descending order. * `update_time desc` to order by `update_time`
-             * in descending order. * `last_login_date desc, user_principal` to order by
-             * `last_login_date` in descending order and then by `user_principal` in ascending
-             * order.
+             * are insignificant. Supported fields (only `user_principal` is supported for now): *
+             * `user_principal` If not set, the default ordering is by `user_principal`. Examples: *
+             * `user_principal` to order by `user_principal` in ascending order. * `user_principal
+             * desc` to order by `user_principal` in descending order.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -46331,15 +46367,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, defaults to 1000. The maximum value is 1000; values above 1000 will be
-             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
+             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
+             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
             /** Optional. Requested page size. Server may return fewer items than requested. If unspecified,
-           defaults to 1000. The maximum value is 1000; values above 1000 will be coerced to 1000. If this
-           field is negative, an INVALID_ARGUMENT error is returned.
+           defaults to 10. The maximum value is 50; values above 50 will be coerced to 50. If this field is
+           negative, an INVALID_ARGUMENT error is returned.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
@@ -46347,8 +46383,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, defaults to 1000. The maximum value is 1000; values above 1000 will be
-             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
+             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
+             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;

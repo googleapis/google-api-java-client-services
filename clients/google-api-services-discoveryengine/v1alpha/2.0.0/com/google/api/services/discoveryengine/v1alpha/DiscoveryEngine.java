@@ -5821,7 +5821,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link UpdateDataConnector#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Output only. The full resource name of the Data Connector. Format:
+         * @param name Identifier. The full resource name of the Data Connector. Format:
          *        `projects/locations/collections/dataConnector`.
          * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDataConnector}
          * @return the request
@@ -5850,7 +5850,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Output only. The full resource name of the Data Connector. Format:
+           * @param name Identifier. The full resource name of the Data Connector. Format:
          *        `projects/locations/collections/dataConnector`.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDataConnector}
            * @since 1.13
@@ -5921,13 +5921,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. The full resource name of the Data Connector. Format:
+           * Identifier. The full resource name of the Data Connector. Format:
            * `projects/locations/collections/dataConnector`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The full resource name of the Data Connector. Format:
+          /** Identifier. The full resource name of the Data Connector. Format:
          `projects/locations/collections/dataConnector`.
            */
           public java.lang.String getName() {
@@ -5935,7 +5935,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Output only. The full resource name of the Data Connector. Format:
+           * Identifier. The full resource name of the Data Connector. Format:
            * `projects/locations/collections/dataConnector`.
            */
           public UpdateDataConnector setName(java.lang.String name) {
@@ -28639,25 +28639,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /**
                  * Optional. Filters the Agents list. Supported fields: * `display_name`: display
                  * name of the agent. Supports `=`, `:`. * `id`: ID of the agent. Supports `=`. *
-                 * `state`: state of the agent. Supports `=`. * `type`: type of the agent. Supports
-                 * `=` (e.g., "GOOGLE_MADE", "OUR_AGENTS"). * `create_time`: timestamp when the
+                 * `state`: state of the agent. Supports `=`. * `create_time`: timestamp when the
                  * agent was created. Supports `=`, `>`, `<`, `>=`, `<=`. * `update_time`: timestamp
-                 * when the agent was last updated. Supports `=`, `>`, `<`, `>=`, `<=`. *
-                 * `has_active_iam_proposals`: whether the agent has pending proposals. Supports
-                 * `=`. Examples: * `display_name = "My Agent"` * `type = "GOOGLE_MADE"` *
-                 * `create_time > "2023-01-01T00:00:00Z"` * `has_active_iam_proposals = true`
+                 * when the agent was last updated. Supports `=`, `>`, `<`, `>=`, `<=`. Examples: *
+                 * `display_name = "My Agent"` * `create_time > "2023-01-01T00:00:00Z"`
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String filter;
 
                 /** Optional. Filters the Agents list. Supported fields: * `display_name`: display name of the agent.
                Supports `=`, `:`. * `id`: ID of the agent. Supports `=`. * `state`: state of the agent. Supports
-               `=`. * `type`: type of the agent. Supports `=` (e.g., "GOOGLE_MADE", "OUR_AGENTS"). *
-               `create_time`: timestamp when the agent was created. Supports `=`, `>`, `<`, `>=`, `<=`. *
-               `update_time`: timestamp when the agent was last updated. Supports `=`, `>`, `<`, `>=`, `<=`. *
-               `has_active_iam_proposals`: whether the agent has pending proposals. Supports `=`. Examples: *
-               `display_name = "My Agent"` * `type = "GOOGLE_MADE"` * `create_time > "2023-01-01T00:00:00Z"` *
-               `has_active_iam_proposals = true`
+               `=`. * `create_time`: timestamp when the agent was created. Supports `=`, `>`, `<`, `>=`, `<=`. *
+               `update_time`: timestamp when the agent was last updated. Supports `=`, `>`, `<`, `>=`, `<=`.
+               Examples: * `display_name = "My Agent"` * `create_time > "2023-01-01T00:00:00Z"`
                  */
                 public java.lang.String getFilter() {
                   return filter;
@@ -28666,13 +28660,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 /**
                  * Optional. Filters the Agents list. Supported fields: * `display_name`: display
                  * name of the agent. Supports `=`, `:`. * `id`: ID of the agent. Supports `=`. *
-                 * `state`: state of the agent. Supports `=`. * `type`: type of the agent. Supports
-                 * `=` (e.g., "GOOGLE_MADE", "OUR_AGENTS"). * `create_time`: timestamp when the
+                 * `state`: state of the agent. Supports `=`. * `create_time`: timestamp when the
                  * agent was created. Supports `=`, `>`, `<`, `>=`, `<=`. * `update_time`: timestamp
-                 * when the agent was last updated. Supports `=`, `>`, `<`, `>=`, `<=`. *
-                 * `has_active_iam_proposals`: whether the agent has pending proposals. Supports
-                 * `=`. Examples: * `display_name = "My Agent"` * `type = "GOOGLE_MADE"` *
-                 * `create_time > "2023-01-01T00:00:00Z"` * `has_active_iam_proposals = true`
+                 * when the agent was last updated. Supports `=`, `>`, `<`, `>=`, `<=`. Examples: *
+                 * `display_name = "My Agent"` * `create_time > "2023-01-01T00:00:00Z"`
                  */
                 public List setFilter(java.lang.String filter) {
                   this.filter = filter;
@@ -61781,29 +61772,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Optional. The order in which the UserLicenses are listed. The value must be a comma-
              * separated list of fields. Default sorting order is ascending. To specify descending
              * order for a field, append a " desc" suffix. Redundant space characters in the syntax
-             * are insignificant. Supported fields: * `license_assignment_state` * `user_principal`
-             * * `user_profile` * `last_login_date` * `update_time` If not set, the default ordering
-             * is by `user_principal`. Examples: * `user_principal desc` to order by
-             * `user_principal` in descending order. * `license_assignment_state` to order by
-             * `license_assignment_state` in ascending order. * `last_login_date desc` to order by
-             * `last_login_date` in descending order. * `update_time desc` to order by `update_time`
-             * in descending order. * `last_login_date desc, user_principal` to order by
-             * `last_login_date` in descending order and then by `user_principal` in ascending
-             * order.
+             * are insignificant. Supported fields (only `user_principal` is supported for now): *
+             * `user_principal` If not set, the default ordering is by `user_principal`. Examples: *
+             * `user_principal` to order by `user_principal` in ascending order. * `user_principal
+             * desc` to order by `user_principal` in descending order.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** Optional. The order in which the UserLicenses are listed. The value must be a comma-separated list
            of fields. Default sorting order is ascending. To specify descending order for a field, append a "
-           desc" suffix. Redundant space characters in the syntax are insignificant. Supported fields: *
-           `license_assignment_state` * `user_principal` * `user_profile` * `last_login_date` * `update_time`
-           If not set, the default ordering is by `user_principal`. Examples: * `user_principal desc` to order
-           by `user_principal` in descending order. * `license_assignment_state` to order by
-           `license_assignment_state` in ascending order. * `last_login_date desc` to order by
-           `last_login_date` in descending order. * `update_time desc` to order by `update_time` in descending
-           order. * `last_login_date desc, user_principal` to order by `last_login_date` in descending order
-           and then by `user_principal` in ascending order.
+           desc" suffix. Redundant space characters in the syntax are insignificant. Supported fields (only
+           `user_principal` is supported for now): * `user_principal` If not set, the default ordering is by
+           `user_principal`. Examples: * `user_principal` to order by `user_principal` in ascending order. *
+           `user_principal desc` to order by `user_principal` in descending order.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -61813,15 +61795,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Optional. The order in which the UserLicenses are listed. The value must be a comma-
              * separated list of fields. Default sorting order is ascending. To specify descending
              * order for a field, append a " desc" suffix. Redundant space characters in the syntax
-             * are insignificant. Supported fields: * `license_assignment_state` * `user_principal`
-             * * `user_profile` * `last_login_date` * `update_time` If not set, the default ordering
-             * is by `user_principal`. Examples: * `user_principal desc` to order by
-             * `user_principal` in descending order. * `license_assignment_state` to order by
-             * `license_assignment_state` in ascending order. * `last_login_date desc` to order by
-             * `last_login_date` in descending order. * `update_time desc` to order by `update_time`
-             * in descending order. * `last_login_date desc, user_principal` to order by
-             * `last_login_date` in descending order and then by `user_principal` in ascending
-             * order.
+             * are insignificant. Supported fields (only `user_principal` is supported for now): *
+             * `user_principal` If not set, the default ordering is by `user_principal`. Examples: *
+             * `user_principal` to order by `user_principal` in ascending order. * `user_principal
+             * desc` to order by `user_principal` in descending order.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -61830,15 +61807,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, defaults to 1000. The maximum value is 1000; values above 1000 will be
-             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
+             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
+             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
             /** Optional. Requested page size. Server may return fewer items than requested. If unspecified,
-           defaults to 1000. The maximum value is 1000; values above 1000 will be coerced to 1000. If this
-           field is negative, an INVALID_ARGUMENT error is returned.
+           defaults to 10. The maximum value is 50; values above 50 will be coerced to 50. If this field is
+           negative, an INVALID_ARGUMENT error is returned.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
@@ -61846,8 +61823,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, defaults to 1000. The maximum value is 1000; values above 1000 will be
-             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
+             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
+             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;

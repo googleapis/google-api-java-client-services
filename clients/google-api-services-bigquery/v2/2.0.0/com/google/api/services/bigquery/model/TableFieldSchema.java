@@ -89,6 +89,14 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
   private java.lang.String foreignTypeDefinition;
 
   /**
+   * Optional. Definition of how values are generated for the field. Only valid for top-level schema
+   * fields (not nested fields).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeneratedColumn generatedColumn;
+
+  /**
    * Optional. Maximum length of values of this field for STRINGS or BYTES. If max_length is not
    * specified, no maximum length constraint is imposed on this field. If type = "STRING", then
    * max_length represents the maximum UTF-8 length of strings in this field. If type = "BYTES",
@@ -308,6 +316,25 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
    */
   public TableFieldSchema setForeignTypeDefinition(java.lang.String foreignTypeDefinition) {
     this.foreignTypeDefinition = foreignTypeDefinition;
+    return this;
+  }
+
+  /**
+   * Optional. Definition of how values are generated for the field. Only valid for top-level schema
+   * fields (not nested fields).
+   * @return value or {@code null} for none
+   */
+  public GeneratedColumn getGeneratedColumn() {
+    return generatedColumn;
+  }
+
+  /**
+   * Optional. Definition of how values are generated for the field. Only valid for top-level schema
+   * fields (not nested fields).
+   * @param generatedColumn generatedColumn or {@code null} for none
+   */
+  public TableFieldSchema setGeneratedColumn(GeneratedColumn generatedColumn) {
+    this.generatedColumn = generatedColumn;
     return this;
   }
 

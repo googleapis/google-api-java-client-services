@@ -43,6 +43,14 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The build status of the routine. This field is only applicable to Python UDFs.
+   * [Preview](https://cloud.google.com/products/#product-launch-stages)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RoutineBuildStatus buildStatus;
+
+  /**
    * Output only. The time when this routine was created, in milliseconds since the epoch.
    * The value may be {@code null}.
    */
@@ -224,6 +232,25 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setArguments(java.util.List<Argument> arguments) {
     this.arguments = arguments;
+    return this;
+  }
+
+  /**
+   * Output only. The build status of the routine. This field is only applicable to Python UDFs.
+   * [Preview](https://cloud.google.com/products/#product-launch-stages)
+   * @return value or {@code null} for none
+   */
+  public RoutineBuildStatus getBuildStatus() {
+    return buildStatus;
+  }
+
+  /**
+   * Output only. The build status of the routine. This field is only applicable to Python UDFs.
+   * [Preview](https://cloud.google.com/products/#product-launch-stages)
+   * @param buildStatus buildStatus or {@code null} for none
+   */
+  public Routine setBuildStatus(RoutineBuildStatus buildStatus) {
+    this.buildStatus = buildStatus;
     return this;
   }
 

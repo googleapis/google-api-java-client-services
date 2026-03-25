@@ -51,7 +51,8 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   private java.lang.String nextPageToken;
 
   /**
-   * Projects to which the user has at least READ access.
+   * Projects to which the user has at least READ access. This field can be omitted if `totalItems`
+   * is 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +124,8 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Projects to which the user has at least READ access.
+   * Projects to which the user has at least READ access. This field can be omitted if `totalItems`
+   * is 0.
    * @return value or {@code null} for none
    */
   public java.util.List<Projects> getProjects() {
@@ -131,7 +133,8 @@ public final class ProjectList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Projects to which the user has at least READ access.
+   * Projects to which the user has at least READ access. This field can be omitted if `totalItems`
+   * is 0.
    * @param projects projects or {@code null} for none
    */
   public ProjectList setProjects(java.util.List<Projects> projects) {

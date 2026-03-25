@@ -186,6 +186,14 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
   public static final class Datasets extends com.google.api.client.json.GenericJson {
 
     /**
+     * Output only. The origin of the dataset, one of: * (Unset) - Native BigQuery Dataset. * BIGLAKE
+     * - Dataset is backed by a namespace stored natively in Biglake.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String catalogSource;
+
+    /**
      * The dataset reference. Use this property to access specific parts of the dataset's ID, such as
      * project ID or dataset ID.
      * The value may be {@code null}.
@@ -235,6 +243,36 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.String location;
+
+    /**
+     * Output only. Same as `type` in `Dataset`. The type of the dataset, one of: * DEFAULT - only
+     * accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED -
+     * linked dataset, * EXTERNAL - dataset with definition in external metadata catalog, *
+     * BIGLAKE_ICEBERG - a Biglake dataset accessible through the Iceberg API, * BIGLAKE_HIVE - a
+     * Biglake dataset accessible through the Hive API.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String type;
+
+    /**
+     * Output only. The origin of the dataset, one of: * (Unset) - Native BigQuery Dataset. * BIGLAKE
+     * - Dataset is backed by a namespace stored natively in Biglake.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getCatalogSource() {
+      return catalogSource;
+    }
+
+    /**
+     * Output only. The origin of the dataset, one of: * (Unset) - Native BigQuery Dataset. * BIGLAKE
+     * - Dataset is backed by a namespace stored natively in Biglake.
+     * @param catalogSource catalogSource or {@code null} for none
+     */
+    public Datasets setCatalogSource(java.lang.String catalogSource) {
+      this.catalogSource = catalogSource;
+      return this;
+    }
 
     /**
      * The dataset reference. Use this property to access specific parts of the dataset's ID, such as
@@ -356,6 +394,31 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
      */
     public Datasets setLocation(java.lang.String location) {
       this.location = location;
+      return this;
+    }
+
+    /**
+     * Output only. Same as `type` in `Dataset`. The type of the dataset, one of: * DEFAULT - only
+     * accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED -
+     * linked dataset, * EXTERNAL - dataset with definition in external metadata catalog, *
+     * BIGLAKE_ICEBERG - a Biglake dataset accessible through the Iceberg API, * BIGLAKE_HIVE - a
+     * Biglake dataset accessible through the Hive API.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getType() {
+      return type;
+    }
+
+    /**
+     * Output only. Same as `type` in `Dataset`. The type of the dataset, one of: * DEFAULT - only
+     * accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED -
+     * linked dataset, * EXTERNAL - dataset with definition in external metadata catalog, *
+     * BIGLAKE_ICEBERG - a Biglake dataset accessible through the Iceberg API, * BIGLAKE_HIVE - a
+     * Biglake dataset accessible through the Hive API.
+     * @param type type or {@code null} for none
+     */
+    public Datasets setType(java.lang.String type) {
+      this.type = type;
       return this;
     }
 

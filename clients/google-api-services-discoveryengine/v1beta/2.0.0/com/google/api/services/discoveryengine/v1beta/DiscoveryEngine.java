@@ -46353,29 +46353,20 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Optional. The order in which the UserLicenses are listed. The value must be a comma-
              * separated list of fields. Default sorting order is ascending. To specify descending
              * order for a field, append a " desc" suffix. Redundant space characters in the syntax
-             * are insignificant. Supported fields: * `license_assignment_state` * `user_principal`
-             * * `user_profile` * `last_login_date` * `update_time` If not set, the default ordering
-             * is by `user_principal`. Examples: * `user_principal desc` to order by
-             * `user_principal` in descending order. * `license_assignment_state` to order by
-             * `license_assignment_state` in ascending order. * `last_login_date desc` to order by
-             * `last_login_date` in descending order. * `update_time desc` to order by `update_time`
-             * in descending order. * `last_login_date desc, user_principal` to order by
-             * `last_login_date` in descending order and then by `user_principal` in ascending
-             * order.
+             * are insignificant. Supported fields (only `user_principal` is supported for now): *
+             * `user_principal` If not set, the default ordering is by `user_principal`. Examples: *
+             * `user_principal` to order by `user_principal` in ascending order. * `user_principal
+             * desc` to order by `user_principal` in descending order.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** Optional. The order in which the UserLicenses are listed. The value must be a comma-separated list
            of fields. Default sorting order is ascending. To specify descending order for a field, append a "
-           desc" suffix. Redundant space characters in the syntax are insignificant. Supported fields: *
-           `license_assignment_state` * `user_principal` * `user_profile` * `last_login_date` * `update_time`
-           If not set, the default ordering is by `user_principal`. Examples: * `user_principal desc` to order
-           by `user_principal` in descending order. * `license_assignment_state` to order by
-           `license_assignment_state` in ascending order. * `last_login_date desc` to order by
-           `last_login_date` in descending order. * `update_time desc` to order by `update_time` in descending
-           order. * `last_login_date desc, user_principal` to order by `last_login_date` in descending order
-           and then by `user_principal` in ascending order.
+           desc" suffix. Redundant space characters in the syntax are insignificant. Supported fields (only
+           `user_principal` is supported for now): * `user_principal` If not set, the default ordering is by
+           `user_principal`. Examples: * `user_principal` to order by `user_principal` in ascending order. *
+           `user_principal desc` to order by `user_principal` in descending order.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -46385,15 +46376,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Optional. The order in which the UserLicenses are listed. The value must be a comma-
              * separated list of fields. Default sorting order is ascending. To specify descending
              * order for a field, append a " desc" suffix. Redundant space characters in the syntax
-             * are insignificant. Supported fields: * `license_assignment_state` * `user_principal`
-             * * `user_profile` * `last_login_date` * `update_time` If not set, the default ordering
-             * is by `user_principal`. Examples: * `user_principal desc` to order by
-             * `user_principal` in descending order. * `license_assignment_state` to order by
-             * `license_assignment_state` in ascending order. * `last_login_date desc` to order by
-             * `last_login_date` in descending order. * `update_time desc` to order by `update_time`
-             * in descending order. * `last_login_date desc, user_principal` to order by
-             * `last_login_date` in descending order and then by `user_principal` in ascending
-             * order.
+             * are insignificant. Supported fields (only `user_principal` is supported for now): *
+             * `user_principal` If not set, the default ordering is by `user_principal`. Examples: *
+             * `user_principal` to order by `user_principal` in ascending order. * `user_principal
+             * desc` to order by `user_principal` in descending order.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -46402,15 +46388,15 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, defaults to 1000. The maximum value is 1000; values above 1000 will be
-             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
+             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
+             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
             /** Optional. Requested page size. Server may return fewer items than requested. If unspecified,
-           defaults to 1000. The maximum value is 1000; values above 1000 will be coerced to 1000. If this
-           field is negative, an INVALID_ARGUMENT error is returned.
+           defaults to 10. The maximum value is 50; values above 50 will be coerced to 50. If this field is
+           negative, an INVALID_ARGUMENT error is returned.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
@@ -46418,8 +46404,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, defaults to 1000. The maximum value is 1000; values above 1000 will be
-             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
+             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
+             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;

@@ -52,7 +52,8 @@ public final class GoogleCloudDiscoveryengineV1ImportUserEventsMetadata extends 
   private java.lang.Long successCount;
 
   /**
-   * Operation last update time. If the operation is done, this is also the finish time.
+   * Output only. Operation last update time. If the operation is done, this is also the finish
+   * time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +111,8 @@ public final class GoogleCloudDiscoveryengineV1ImportUserEventsMetadata extends 
   }
 
   /**
-   * Operation last update time. If the operation is done, this is also the finish time.
+   * Output only. Operation last update time. If the operation is done, this is also the finish
+   * time.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -118,7 +120,8 @@ public final class GoogleCloudDiscoveryengineV1ImportUserEventsMetadata extends 
   }
 
   /**
-   * Operation last update time. If the operation is done, this is also the finish time.
+   * Output only. Operation last update time. If the operation is done, this is also the finish
+   * time.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1ImportUserEventsMetadata setUpdateTime(String updateTime) {

@@ -225,10 +225,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean createWindowsDisabled;
 
   /**
-   * Controls which apps are allowed to act as credential providers on Android 14 and above. These
-   * apps store credentials, see this (https://developer.android.com/training/sign-in/passkeys) and
-   * this (https://developer.android.com/reference/androidx/credentials/CredentialManager) for
-   * details. See also credentialProviderPolicy.
+   * Optional. Controls which apps are allowed to act as credential providers on Android 14 and
+   * above. These apps store credentials, see this (https://developer.android.com/training/sign-
+   * in/passkeys) and this
+   * (https://developer.android.com/reference/androidx/credentials/CredentialManager) for details.
+   * See also credentialProviderPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1295,10 +1296,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls which apps are allowed to act as credential providers on Android 14 and above. These
-   * apps store credentials, see this (https://developer.android.com/training/sign-in/passkeys) and
-   * this (https://developer.android.com/reference/androidx/credentials/CredentialManager) for
-   * details. See also credentialProviderPolicy.
+   * Optional. Controls which apps are allowed to act as credential providers on Android 14 and
+   * above. These apps store credentials, see this (https://developer.android.com/training/sign-
+   * in/passkeys) and this
+   * (https://developer.android.com/reference/androidx/credentials/CredentialManager) for details.
+   * See also credentialProviderPolicy.
    * @return value or {@code null} for none
    */
   public java.lang.String getCredentialProviderPolicyDefault() {
@@ -1306,10 +1308,11 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls which apps are allowed to act as credential providers on Android 14 and above. These
-   * apps store credentials, see this (https://developer.android.com/training/sign-in/passkeys) and
-   * this (https://developer.android.com/reference/androidx/credentials/CredentialManager) for
-   * details. See also credentialProviderPolicy.
+   * Optional. Controls which apps are allowed to act as credential providers on Android 14 and
+   * above. These apps store credentials, see this (https://developer.android.com/training/sign-
+   * in/passkeys) and this
+   * (https://developer.android.com/reference/androidx/credentials/CredentialManager) for details.
+   * See also credentialProviderPolicy.
    * @param credentialProviderPolicyDefault credentialProviderPolicyDefault or {@code null} for none
    */
   public Policy setCredentialProviderPolicyDefault(java.lang.String credentialProviderPolicyDefault) {

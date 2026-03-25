@@ -30,6 +30,30 @@ package com.google.api.services.alertcenter.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class ActionInfo extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Google Cloud Storage location of the content that violated the rule. This field has format: "/"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evidenceLockerFilePath;
+
+  /**
+   * Google Cloud Storage location of the content that violated the rule. This field has format: "/"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvidenceLockerFilePath() {
+    return evidenceLockerFilePath;
+  }
+
+  /**
+   * Google Cloud Storage location of the content that violated the rule. This field has format: "/"
+   * @param evidenceLockerFilePath evidenceLockerFilePath or {@code null} for none
+   */
+  public ActionInfo setEvidenceLockerFilePath(java.lang.String evidenceLockerFilePath) {
+    this.evidenceLockerFilePath = evidenceLockerFilePath;
+    return this;
+  }
+
   @Override
   public ActionInfo set(String fieldName, Object value) {
     return (ActionInfo) super.set(fieldName, value);

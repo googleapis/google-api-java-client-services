@@ -165,6 +165,13 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. Statistics related to GenAI usage in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenAiStats genAiStats;
+
+  /**
    * Output only. Statistics related to incremental query results, if enabled for the query. This
    * feature is not yet available.
    * The value may be {@code null}.
@@ -789,6 +796,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setExternalServiceCosts(java.util.List<ExternalServiceCost> externalServiceCosts) {
     this.externalServiceCosts = externalServiceCosts;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics related to GenAI usage in the query.
+   * @return value or {@code null} for none
+   */
+  public GenAiStats getGenAiStats() {
+    return genAiStats;
+  }
+
+  /**
+   * Output only. Statistics related to GenAI usage in the query.
+   * @param genAiStats genAiStats or {@code null} for none
+   */
+  public JobStatistics2 setGenAiStats(GenAiStats genAiStats) {
+    this.genAiStats = genAiStats;
     return this;
   }
 

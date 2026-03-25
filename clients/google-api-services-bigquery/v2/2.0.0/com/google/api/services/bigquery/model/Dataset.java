@@ -51,6 +51,14 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The origin of the dataset, one of: * (Unset) - Native BigQuery Dataset * BIGLAKE -
+   * Dataset is backed by a namespace stored natively in Biglake
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String catalogSource;
+
+  /**
    * Output only. The time when this dataset was created, in milliseconds since the epoch.
    * The value may be {@code null}.
    */
@@ -304,7 +312,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Same as `type` in `ListFormatDataset`. The type of the dataset, one of: * DEFAULT
    * - only accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED
-   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog.
+   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog, *
+   * BIGLAKE_ICEBERG - a Biglake dataset accessible through the Iceberg API, * BIGLAKE_HIVE - a
+   * Biglake dataset accessible through the Hive API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -340,6 +350,25 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setAccess(java.util.List<Access> access) {
     this.access = access;
+    return this;
+  }
+
+  /**
+   * Output only. The origin of the dataset, one of: * (Unset) - Native BigQuery Dataset * BIGLAKE -
+   * Dataset is backed by a namespace stored natively in Biglake
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCatalogSource() {
+    return catalogSource;
+  }
+
+  /**
+   * Output only. The origin of the dataset, one of: * (Unset) - Native BigQuery Dataset * BIGLAKE -
+   * Dataset is backed by a namespace stored natively in Biglake
+   * @param catalogSource catalogSource or {@code null} for none
+   */
+  public Dataset setCatalogSource(java.lang.String catalogSource) {
+    this.catalogSource = catalogSource;
     return this;
   }
 
@@ -920,7 +949,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Same as `type` in `ListFormatDataset`. The type of the dataset, one of: * DEFAULT
    * - only accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED
-   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog.
+   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog, *
+   * BIGLAKE_ICEBERG - a Biglake dataset accessible through the Iceberg API, * BIGLAKE_HIVE - a
+   * Biglake dataset accessible through the Hive API.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -930,7 +961,9 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Same as `type` in `ListFormatDataset`. The type of the dataset, one of: * DEFAULT
    * - only accessible by owner and authorized accounts, * PUBLIC - accessible by everyone, * LINKED
-   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog.
+   * - linked dataset, * EXTERNAL - dataset with definition in external metadata catalog, *
+   * BIGLAKE_ICEBERG - a Biglake dataset accessible through the Iceberg API, * BIGLAKE_HIVE - a
+   * Biglake dataset accessible through the Hive API.
    * @param type type or {@code null} for none
    */
   public Dataset setType(java.lang.String type) {

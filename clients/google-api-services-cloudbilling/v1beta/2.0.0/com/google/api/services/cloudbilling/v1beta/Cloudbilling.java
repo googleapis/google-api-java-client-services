@@ -3157,6 +3157,130 @@ public class Cloudbilling extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the V1beta collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Cloudbilling cloudbilling = new Cloudbilling(...);}
+   *   {@code Cloudbilling.V1beta.List request = cloudbilling.v1beta().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V1beta v1beta() {
+    return new V1beta();
+  }
+
+  /**
+   * The "v1beta" collection of methods.
+   */
+  public class V1beta {
+
+    /**
+     * Analyzes cost data for a billing account and/or specific projects. Returns a natural language
+     * summary and supporting datasets.
+     *
+     * Create a request for the method "v1beta.generateInsights".
+     *
+     * This request holds the parameters needed by the cloudbilling server.  After setting any optional
+     * parameters, call the {@link GenerateInsights#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudbilling.v1beta.model.GenerateInsightsRequest}
+     * @return the request
+     */
+    public GenerateInsights generateInsights(com.google.api.services.cloudbilling.v1beta.model.GenerateInsightsRequest content) throws java.io.IOException {
+      GenerateInsights result = new GenerateInsights(content);
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateInsights extends CloudbillingRequest<com.google.api.services.cloudbilling.v1beta.model.GenerateInsightsResponse> {
+
+      private static final String REST_PATH = "v1beta:generateInsights";
+
+      /**
+       * Analyzes cost data for a billing account and/or specific projects. Returns a natural language
+       * summary and supporting datasets.
+       *
+       * Create a request for the method "v1beta.generateInsights".
+       *
+       * This request holds the parameters needed by the the cloudbilling server.  After setting any
+       * optional parameters, call the {@link GenerateInsights#execute()} method to invoke the remote
+       * operation. <p> {@link GenerateInsights#initialize(com.google.api.client.googleapis.services.Abs
+       * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudbilling.v1beta.model.GenerateInsightsRequest}
+       * @since 1.13
+       */
+      protected GenerateInsights(com.google.api.services.cloudbilling.v1beta.model.GenerateInsightsRequest content) {
+        super(Cloudbilling.this, "POST", REST_PATH, content, com.google.api.services.cloudbilling.v1beta.model.GenerateInsightsResponse.class);
+      }
+
+      @Override
+      public GenerateInsights set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateInsights) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateInsights setAccessToken(java.lang.String accessToken) {
+        return (GenerateInsights) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateInsights setAlt(java.lang.String alt) {
+        return (GenerateInsights) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateInsights setCallback(java.lang.String callback) {
+        return (GenerateInsights) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateInsights setFields(java.lang.String fields) {
+        return (GenerateInsights) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateInsights setKey(java.lang.String key) {
+        return (GenerateInsights) super.setKey(key);
+      }
+
+      @Override
+      public GenerateInsights setOauthToken(java.lang.String oauthToken) {
+        return (GenerateInsights) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateInsights setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateInsights) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateInsights setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateInsights) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateInsights setUploadType(java.lang.String uploadType) {
+        return (GenerateInsights) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateInsights setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateInsights) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GenerateInsights set(String parameterName, Object value) {
+        return (GenerateInsights) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link Cloudbilling}.
    *
    * <p>

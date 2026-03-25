@@ -131,6 +131,13 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Configuration for platform logs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PlatformLogsConfig platformLogsConfig;
+
+  /**
    * Output only. The repository endpoint, for example: `us-docker.pkg.dev/my-proj/my-repo`.
    * The value may be {@code null}.
    */
@@ -408,6 +415,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for platform logs.
+   * @return value or {@code null} for none
+   */
+  public PlatformLogsConfig getPlatformLogsConfig() {
+    return platformLogsConfig;
+  }
+
+  /**
+   * Optional. Configuration for platform logs.
+   * @param platformLogsConfig platformLogsConfig or {@code null} for none
+   */
+  public Repository setPlatformLogsConfig(PlatformLogsConfig platformLogsConfig) {
+    this.platformLogsConfig = platformLogsConfig;
     return this;
   }
 

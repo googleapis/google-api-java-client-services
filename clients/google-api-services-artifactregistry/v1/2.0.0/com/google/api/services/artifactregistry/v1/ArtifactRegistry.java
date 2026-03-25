@@ -610,6 +610,155 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Retrieves the project configuration.
+       *
+       * Create a request for the method "locations.getProjectConfig".
+       *
+       * This request holds the parameters needed by the artifactregistry server.  After setting any
+       * optional parameters, call the {@link GetProjectConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the project's logging configuration:
+       *        projects/{project}/locations/{location}/projectConfig
+       * @return the request
+       */
+      public GetProjectConfig getProjectConfig(java.lang.String name) throws java.io.IOException {
+        GetProjectConfig result = new GetProjectConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetProjectConfig extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ProjectConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/projectConfig$");
+
+        /**
+         * Retrieves the project configuration.
+         *
+         * Create a request for the method "locations.getProjectConfig".
+         *
+         * This request holds the parameters needed by the the artifactregistry server.  After setting any
+         * optional parameters, call the {@link GetProjectConfig#execute()} method to invoke the remote
+         * operation. <p> {@link GetProjectConfig#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the project's logging configuration:
+       *        projects/{project}/locations/{location}/projectConfig
+         * @since 1.13
+         */
+        protected GetProjectConfig(java.lang.String name) {
+          super(ArtifactRegistry.this, "GET", REST_PATH, null, com.google.api.services.artifactregistry.v1.model.ProjectConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/projectConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetProjectConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetProjectConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetProjectConfig setAccessToken(java.lang.String accessToken) {
+          return (GetProjectConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetProjectConfig setAlt(java.lang.String alt) {
+          return (GetProjectConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetProjectConfig setCallback(java.lang.String callback) {
+          return (GetProjectConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetProjectConfig setFields(java.lang.String fields) {
+          return (GetProjectConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetProjectConfig setKey(java.lang.String key) {
+          return (GetProjectConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetProjectConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetProjectConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetProjectConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetProjectConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetProjectConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetProjectConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetProjectConfig setUploadType(java.lang.String uploadType) {
+          return (GetProjectConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetProjectConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetProjectConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the project's logging configuration:
+         * projects/{project}/locations/{location}/projectConfig
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the project's logging configuration:
+       projects/{project}/locations/{location}/projectConfig
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the project's logging configuration:
+         * projects/{project}/locations/{location}/projectConfig
+         */
+        public GetProjectConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/projectConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetProjectConfig set(String parameterName, Object value) {
+          return (GetProjectConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Retrieves the VPCSC Config for the Project.
        *
        * Create a request for the method "locations.getVpcscConfig".
@@ -981,6 +1130,170 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Updates the project configuration.
+       *
+       * Create a request for the method "locations.updateProjectConfig".
+       *
+       * This request holds the parameters needed by the artifactregistry server.  After setting any
+       * optional parameters, call the {@link UpdateProjectConfig#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. The name of the project's configuration. Always of the form:
+       *        projects/{project}/locations/{location}/projectConfig
+       * @param content the {@link com.google.api.services.artifactregistry.v1.model.ProjectConfig}
+       * @return the request
+       */
+      public UpdateProjectConfig updateProjectConfig(java.lang.String name, com.google.api.services.artifactregistry.v1.model.ProjectConfig content) throws java.io.IOException {
+        UpdateProjectConfig result = new UpdateProjectConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateProjectConfig extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.ProjectConfig> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/projectConfig$");
+
+        /**
+         * Updates the project configuration.
+         *
+         * Create a request for the method "locations.updateProjectConfig".
+         *
+         * This request holds the parameters needed by the the artifactregistry server.  After setting any
+         * optional parameters, call the {@link UpdateProjectConfig#execute()} method to invoke the remote
+         * operation. <p> {@link UpdateProjectConfig#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Identifier. The name of the project's configuration. Always of the form:
+       *        projects/{project}/locations/{location}/projectConfig
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.ProjectConfig}
+         * @since 1.13
+         */
+        protected UpdateProjectConfig(java.lang.String name, com.google.api.services.artifactregistry.v1.model.ProjectConfig content) {
+          super(ArtifactRegistry.this, "PATCH", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.ProjectConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/projectConfig$");
+          }
+        }
+
+        @Override
+        public UpdateProjectConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateProjectConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateProjectConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateProjectConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateProjectConfig setAlt(java.lang.String alt) {
+          return (UpdateProjectConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateProjectConfig setCallback(java.lang.String callback) {
+          return (UpdateProjectConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateProjectConfig setFields(java.lang.String fields) {
+          return (UpdateProjectConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateProjectConfig setKey(java.lang.String key) {
+          return (UpdateProjectConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateProjectConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateProjectConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateProjectConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateProjectConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateProjectConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateProjectConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateProjectConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateProjectConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateProjectConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateProjectConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The name of the project's configuration. Always of the form:
+         * projects/{project}/locations/{location}/projectConfig
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The name of the project's configuration. Always of the form:
+       projects/{project}/locations/{location}/projectConfig
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The name of the project's configuration. Always of the form:
+         * projects/{project}/locations/{location}/projectConfig
+         */
+        public UpdateProjectConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/projectConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. Field mask to support partial updates. See
+         * https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask for more details.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. Field mask to support partial updates. See
+       https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask for more details.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. Field mask to support partial updates. See
+         * https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask for more details.
+         */
+        public UpdateProjectConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateProjectConfig set(String parameterName, Object value) {
+          return (UpdateProjectConfig) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates the VPCSC Config for the Project.
        *
        * Create a request for the method "locations.updateVpcscConfig".
@@ -1163,6 +1476,149 @@ public class ArtifactRegistry extends com.google.api.client.googleapis.services.
        */
       public class Operations {
 
+        /**
+         * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+         * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+         * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+         * methods to check whether the cancellation succeeded or whether the operation completed despite
+         * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
+         * `Code.CANCELLED`.
+         *
+         * Create a request for the method "operations.cancel".
+         *
+         * This request holds the parameters needed by the artifactregistry server.  After setting any
+         * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name The name of the operation resource to be cancelled.
+         * @param content the {@link com.google.api.services.artifactregistry.v1.model.CancelOperationRequest}
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name, com.google.api.services.artifactregistry.v1.model.CancelOperationRequest content) throws java.io.IOException {
+          Cancel result = new Cancel(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends ArtifactRegistryRequest<com.google.api.services.artifactregistry.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}:cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+          /**
+           * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+           * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+           * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+           * methods to check whether the cancellation succeeded or whether the operation completed despite
+           * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
+           * `Code.CANCELLED`.
+           *
+           * Create a request for the method "operations.cancel".
+           *
+           * This request holds the parameters needed by the the artifactregistry server.  After setting any
+           * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name The name of the operation resource to be cancelled.
+           * @param content the {@link com.google.api.services.artifactregistry.v1.model.CancelOperationRequest}
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name, com.google.api.services.artifactregistry.v1.model.CancelOperationRequest content) {
+            super(ArtifactRegistry.this, "POST", REST_PATH, content, com.google.api.services.artifactregistry.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** The name of the operation resource to be cancelled.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** The name of the operation resource to be cancelled. */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
         /**
          * Gets the latest state of a long-running operation. Clients can use this method to poll the
          * operation result at intervals as recommended by the API service.

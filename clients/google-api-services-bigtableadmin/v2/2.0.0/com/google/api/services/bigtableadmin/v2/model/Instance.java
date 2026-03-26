@@ -48,6 +48,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Optional. The edition of the instance. See Edition for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that
    * reflect a customer's organizational needs and deployment strategies. They can be used to filter
    * resources and aggregate metrics. * Label keys must be between 1 and 63 characters long and must
@@ -142,6 +149,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. The edition of the instance. See Edition for details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Optional. The edition of the instance. See Edition for details.
+   * @param edition edition or {@code null} for none
+   */
+  public Instance setEdition(java.lang.String edition) {
+    this.edition = edition;
     return this;
   }
 

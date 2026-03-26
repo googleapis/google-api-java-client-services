@@ -17,7 +17,7 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * bool Values of type `Bool` are stored in `Value.bool_value`.
+ * Defines rules used to convert to or from lower level types.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation
@@ -28,40 +28,16 @@ package com.google.api.services.bigtableadmin.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleBigtableAdminV2TypeBool extends com.google.api.client.json.GenericJson {
+public final class GoogleBigtableAdminV2TypeBoolEncoding extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Specifies the encoding to use when converting to or from lower level types.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleBigtableAdminV2TypeBoolEncoding encoding;
-
-  /**
-   * Specifies the encoding to use when converting to or from lower level types.
-   * @return value or {@code null} for none
-   */
-  public GoogleBigtableAdminV2TypeBoolEncoding getEncoding() {
-    return encoding;
-  }
-
-  /**
-   * Specifies the encoding to use when converting to or from lower level types.
-   * @param encoding encoding or {@code null} for none
-   */
-  public GoogleBigtableAdminV2TypeBool setEncoding(GoogleBigtableAdminV2TypeBoolEncoding encoding) {
-    this.encoding = encoding;
-    return this;
+  @Override
+  public GoogleBigtableAdminV2TypeBoolEncoding set(String fieldName, Object value) {
+    return (GoogleBigtableAdminV2TypeBoolEncoding) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleBigtableAdminV2TypeBool set(String fieldName, Object value) {
-    return (GoogleBigtableAdminV2TypeBool) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleBigtableAdminV2TypeBool clone() {
-    return (GoogleBigtableAdminV2TypeBool) super.clone();
+  public GoogleBigtableAdminV2TypeBoolEncoding clone() {
+    return (GoogleBigtableAdminV2TypeBoolEncoding) super.clone();
   }
 
 }

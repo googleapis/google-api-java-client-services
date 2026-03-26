@@ -62,6 +62,13 @@ public final class Results extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> buildStepOutputs;
 
   /**
+   * Output only. Generic artifacts uploaded to Artifact Registry at the end of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UploadedGenericArtifact> genericArtifacts;
+
+  /**
    * Optional. Go module artifacts uploaded to Artifact Registry at the end of the build.
    * The value may be {@code null}.
    */
@@ -183,6 +190,23 @@ public final class Results extends com.google.api.client.json.GenericJson {
    */
   public Results setBuildStepOutputs(java.util.List<java.lang.String> buildStepOutputs) {
     this.buildStepOutputs = buildStepOutputs;
+    return this;
+  }
+
+  /**
+   * Output only. Generic artifacts uploaded to Artifact Registry at the end of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UploadedGenericArtifact> getGenericArtifacts() {
+    return genericArtifacts;
+  }
+
+  /**
+   * Output only. Generic artifacts uploaded to Artifact Registry at the end of the build.
+   * @param genericArtifacts genericArtifacts or {@code null} for none
+   */
+  public Results setGenericArtifacts(java.util.List<UploadedGenericArtifact> genericArtifacts) {
+    this.genericArtifacts = genericArtifacts;
     return this;
   }
 

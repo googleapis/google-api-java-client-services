@@ -37,6 +37,13 @@ public final class Dependency extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean empty;
 
   /**
+   * Represents a generic artifact as a build dependency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenericArtifactDependency genericArtifact;
+
+  /**
    * Represents a git repository as a build dependency.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class Dependency extends com.google.api.client.json.GenericJson {
    */
   public Dependency setEmpty(java.lang.Boolean empty) {
     this.empty = empty;
+    return this;
+  }
+
+  /**
+   * Represents a generic artifact as a build dependency.
+   * @return value or {@code null} for none
+   */
+  public GenericArtifactDependency getGenericArtifact() {
+    return genericArtifact;
+  }
+
+  /**
+   * Represents a generic artifact as a build dependency.
+   * @param genericArtifact genericArtifact or {@code null} for none
+   */
+  public Dependency setGenericArtifact(GenericArtifactDependency genericArtifact) {
+    this.genericArtifact = genericArtifact;
     return this;
   }
 

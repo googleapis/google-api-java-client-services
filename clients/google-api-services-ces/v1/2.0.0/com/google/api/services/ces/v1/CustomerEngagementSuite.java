@@ -6888,6 +6888,154 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               return (RunSession) super.set(parameterName, value);
             }
           }
+          /**
+           * Initiates a single-turn interaction with the CES agent. Uses server-side streaming to deliver
+           * incremental results and partial responses as they are generated. By default, complete responses
+           * (e.g., messages from callbacks or full LLM responses) are sent to the client as soon as they are
+           * available. To enable streaming individual text chunks directly from the model, set
+           * enable_text_streaming to true.
+           *
+           * Create a request for the method "sessions.streamRunSession".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link StreamRunSession#execute()} method to invoke the remote operation.
+           *
+           * @param session Required. The unique identifier of the session. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/sessions/{session}`
+           * @param content the {@link com.google.api.services.ces.v1.model.RunSessionRequest}
+           * @return the request
+           */
+          public StreamRunSession streamRunSession(java.lang.String session, com.google.api.services.ces.v1.model.RunSessionRequest content) throws java.io.IOException {
+            StreamRunSession result = new StreamRunSession(session, content);
+            initialize(result);
+            return result;
+          }
+
+          public class StreamRunSession extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1.model.RunSessionResponse> {
+
+            private static final String REST_PATH = "v1/{+session}:streamRunSession";
+
+            private final java.util.regex.Pattern SESSION_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/sessions/[^/]+$");
+
+            /**
+             * Initiates a single-turn interaction with the CES agent. Uses server-side streaming to deliver
+             * incremental results and partial responses as they are generated. By default, complete responses
+             * (e.g., messages from callbacks or full LLM responses) are sent to the client as soon as they
+             * are available. To enable streaming individual text chunks directly from the model, set
+             * enable_text_streaming to true.
+             *
+             * Create a request for the method "sessions.streamRunSession".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link StreamRunSession#execute()} method to invoke the remote operation.
+             * <p> {@link StreamRunSession#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+             * ClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param session Required. The unique identifier of the session. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/sessions/{session}`
+             * @param content the {@link com.google.api.services.ces.v1.model.RunSessionRequest}
+             * @since 1.13
+             */
+            protected StreamRunSession(java.lang.String session, com.google.api.services.ces.v1.model.RunSessionRequest content) {
+              super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1.model.RunSessionResponse.class);
+              this.session = com.google.api.client.util.Preconditions.checkNotNull(session, "Required parameter session must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                    "Parameter session must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/sessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public StreamRunSession set$Xgafv(java.lang.String $Xgafv) {
+              return (StreamRunSession) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public StreamRunSession setAccessToken(java.lang.String accessToken) {
+              return (StreamRunSession) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public StreamRunSession setAlt(java.lang.String alt) {
+              return (StreamRunSession) super.setAlt(alt);
+            }
+
+            @Override
+            public StreamRunSession setCallback(java.lang.String callback) {
+              return (StreamRunSession) super.setCallback(callback);
+            }
+
+            @Override
+            public StreamRunSession setFields(java.lang.String fields) {
+              return (StreamRunSession) super.setFields(fields);
+            }
+
+            @Override
+            public StreamRunSession setKey(java.lang.String key) {
+              return (StreamRunSession) super.setKey(key);
+            }
+
+            @Override
+            public StreamRunSession setOauthToken(java.lang.String oauthToken) {
+              return (StreamRunSession) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public StreamRunSession setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (StreamRunSession) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public StreamRunSession setQuotaUser(java.lang.String quotaUser) {
+              return (StreamRunSession) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public StreamRunSession setUploadType(java.lang.String uploadType) {
+              return (StreamRunSession) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public StreamRunSession setUploadProtocol(java.lang.String uploadProtocol) {
+              return (StreamRunSession) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The unique identifier of the session. Format:
+             * `projects/{project}/locations/{location}/apps/{app}/sessions/{session}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String session;
+
+            /** Required. The unique identifier of the session. Format:
+           `projects/{project}/locations/{location}/apps/{app}/sessions/{session}`
+             */
+            public java.lang.String getSession() {
+              return session;
+            }
+
+            /**
+             * Required. The unique identifier of the session. Format:
+             * `projects/{project}/locations/{location}/apps/{app}/sessions/{session}`
+             */
+            public StreamRunSession setSession(java.lang.String session) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(SESSION_PATTERN.matcher(session).matches(),
+                    "Parameter session must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/sessions/[^/]+$");
+              }
+              this.session = session;
+              return this;
+            }
+
+            @Override
+            public StreamRunSession set(String parameterName, Object value) {
+              return (StreamRunSession) super.set(parameterName, value);
+            }
+          }
 
         }
         /**

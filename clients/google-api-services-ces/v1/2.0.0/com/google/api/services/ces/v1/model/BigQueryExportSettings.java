@@ -31,7 +31,7 @@ package com.google.api.services.ces.v1.model;
 public final class BigQueryExportSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The BigQuery dataset to export the data to.
+   * Optional. The BigQuery **dataset ID** to export the data to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,16 +45,17 @@ public final class BigQueryExportSettings extends com.google.api.client.json.Gen
   private java.lang.Boolean enabled;
 
   /**
-   * Optional. The project ID of the BigQuery dataset to export the data to. Note: If the BigQuery
-   * dataset is in a different project from the app, you should grant `roles/bigquery.admin` role to
-   * the CES service agent `service-@gcp-sa-ces.iam.gserviceaccount.com`.
+   * Optional. The **project ID** of the BigQuery dataset to export the data to. Note: If the
+   * BigQuery dataset is in a different project from the app, you should grant
+   * `roles/bigquery.admin` role to the CES service agent `service-@gcp-sa-
+   * ces.iam.gserviceaccount.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String project;
 
   /**
-   * Optional. The BigQuery dataset to export the data to.
+   * Optional. The BigQuery **dataset ID** to export the data to.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -62,7 +63,7 @@ public final class BigQueryExportSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The BigQuery dataset to export the data to.
+   * Optional. The BigQuery **dataset ID** to export the data to.
    * @param dataset dataset or {@code null} for none
    */
   public BigQueryExportSettings setDataset(java.lang.String dataset) {
@@ -88,9 +89,10 @@ public final class BigQueryExportSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The project ID of the BigQuery dataset to export the data to. Note: If the BigQuery
-   * dataset is in a different project from the app, you should grant `roles/bigquery.admin` role to
-   * the CES service agent `service-@gcp-sa-ces.iam.gserviceaccount.com`.
+   * Optional. The **project ID** of the BigQuery dataset to export the data to. Note: If the
+   * BigQuery dataset is in a different project from the app, you should grant
+   * `roles/bigquery.admin` role to the CES service agent `service-@gcp-sa-
+   * ces.iam.gserviceaccount.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProject() {
@@ -98,9 +100,10 @@ public final class BigQueryExportSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The project ID of the BigQuery dataset to export the data to. Note: If the BigQuery
-   * dataset is in a different project from the app, you should grant `roles/bigquery.admin` role to
-   * the CES service agent `service-@gcp-sa-ces.iam.gserviceaccount.com`.
+   * Optional. The **project ID** of the BigQuery dataset to export the data to. Note: If the
+   * BigQuery dataset is in a different project from the app, you should grant
+   * `roles/bigquery.admin` role to the CES service agent `service-@gcp-sa-
+   * ces.iam.gserviceaccount.com`.
    * @param project project or {@code null} for none
    */
   public BigQueryExportSettings setProject(java.lang.String project) {

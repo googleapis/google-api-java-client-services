@@ -65,6 +65,14 @@ public final class DataSourceGcpResource extends com.google.api.client.json.Gene
   private DiskDataSourceProperties diskDatasourceProperties;
 
   /**
+   * Output only. FilestoreInstanceDataSourceProperties has a subset of FileStore instance
+   * properties that are useful at the Datasource level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FilestoreInstanceDataSourceProperties filestoreInstanceDatasourceProperties;
+
+  /**
    * Output only. Full resource pathname URL of the source Google Cloud resource.
    * The value may be {@code null}.
    */
@@ -161,6 +169,25 @@ public final class DataSourceGcpResource extends com.google.api.client.json.Gene
    */
   public DataSourceGcpResource setDiskDatasourceProperties(DiskDataSourceProperties diskDatasourceProperties) {
     this.diskDatasourceProperties = diskDatasourceProperties;
+    return this;
+  }
+
+  /**
+   * Output only. FilestoreInstanceDataSourceProperties has a subset of FileStore instance
+   * properties that are useful at the Datasource level.
+   * @return value or {@code null} for none
+   */
+  public FilestoreInstanceDataSourceProperties getFilestoreInstanceDatasourceProperties() {
+    return filestoreInstanceDatasourceProperties;
+  }
+
+  /**
+   * Output only. FilestoreInstanceDataSourceProperties has a subset of FileStore instance
+   * properties that are useful at the Datasource level.
+   * @param filestoreInstanceDatasourceProperties filestoreInstanceDatasourceProperties or {@code null} for none
+   */
+  public DataSourceGcpResource setFilestoreInstanceDatasourceProperties(FilestoreInstanceDataSourceProperties filestoreInstanceDatasourceProperties) {
+    this.filestoreInstanceDatasourceProperties = filestoreInstanceDatasourceProperties;
     return this;
   }
 

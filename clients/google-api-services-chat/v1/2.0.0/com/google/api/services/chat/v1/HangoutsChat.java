@@ -7517,6 +7517,1305 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
   public class Users {
 
     /**
+     * An accessor for creating requests from the Sections collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code HangoutsChat chat = new HangoutsChat(...);}
+     *   {@code HangoutsChat.Sections.List request = chat.sections().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Sections sections() {
+      return new Sections();
+    }
+
+    /**
+     * The "sections" collection of methods.
+     */
+    public class Sections {
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Creates a section in Google
+       * Chat. Sections help users group conversations and customize the list of spaces displayed in Chat
+       * navigation panel. Only sections of type `CUSTOM_SECTION` can be created. For details, see [Create
+       * and organize sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires
+       * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       * user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+       *
+       * Create a request for the method "sections.create".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource name where the section is created. Format: `users/{user}`
+       * @param content the {@link com.google.api.services.chat.v1.model.GoogleChatV1Section}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.chat.v1.model.GoogleChatV1Section content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends HangoutsChatRequest<com.google.api.services.chat.v1.model.GoogleChatV1Section> {
+
+        private static final String REST_PATH = "v1/{+parent}/sections";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Creates a section in
+         * Google Chat. Sections help users group conversations and customize the list of spaces displayed
+         * in Chat navigation panel. Only sections of type `CUSTOM_SECTION` can be created. For details,
+         * see [Create and organize sections in Google
+         * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+         *
+         * Create a request for the method "sections.create".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource name where the section is created. Format: `users/{user}`
+         * @param content the {@link com.google.api.services.chat.v1.model.GoogleChatV1Section}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.chat.v1.model.GoogleChatV1Section content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.GoogleChatV1Section.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^users/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource name where the section is created. Format: `users/{user}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource name where the section is created. Format: `users/{user}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource name where the section is created. Format: `users/{user}`
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^users/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a section of type
+       * `CUSTOM_SECTION`. If the section contains items, such as spaces, the items are moved to Google
+       * Chat's default sections and are not deleted. For details, see [Create and organize sections in
+       * Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+       *
+       * Create a request for the method "sections.delete".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the section to delete. Format: `users/{user}/sections/{section}`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a section of type
+         * `CUSTOM_SECTION`. If the section contains items, such as spaces, the items are moved to Google
+         * Chat's default sections and are not deleted. For details, see [Create and organize sections in
+         * Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+         *
+         * Create a request for the method "sections.delete".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the section to delete. Format: `users/{user}/sections/{section}`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(HangoutsChat.this, "DELETE", REST_PATH, null, com.google.api.services.chat.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/sections/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the section to delete. Format: `users/{user}/sections/{section}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the section to delete. Format: `users/{user}/sections/{section}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the section to delete. Format: `users/{user}/sections/{section}`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/sections/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Lists sections available to
+       * the Chat user. Sections help users group their conversations and customize the list of spaces
+       * displayed in Chat navigation panel. For details, see [Create and organize sections in Google
+       * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections` -
+       * `https://www.googleapis.com/auth/chat.users.sections.readonly`
+       *
+       * Create a request for the method "sections.list".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent, which is the user resource name that owns this collection of sections. Only
+       *        supports listing sections for the calling user. To refer to the calling user, set one of
+       *        the following: - The `me` alias. For example, `users/me`. - Their Workspace email address.
+       *        For example, `users/user@example.com`. - Their user id. For example, `users/123456789`.
+       *        Format: `users/{user}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends HangoutsChatRequest<com.google.api.services.chat.v1.model.ListSectionsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/sections";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Lists sections available
+         * to the Chat user. Sections help users group their conversations and customize the list of
+         * spaces displayed in Chat navigation panel. For details, see [Create and organize sections in
+         * Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections` -
+         * `https://www.googleapis.com/auth/chat.users.sections.readonly`
+         *
+         * Create a request for the method "sections.list".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent, which is the user resource name that owns this collection of sections. Only
+       *        supports listing sections for the calling user. To refer to the calling user, set one of
+       *        the following: - The `me` alias. For example, `users/me`. - Their Workspace email address.
+       *        For example, `users/user@example.com`. - Their user id. For example, `users/123456789`.
+       *        Format: `users/{user}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.ListSectionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^users/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent, which is the user resource name that owns this collection of
+         * sections. Only supports listing sections for the calling user. To refer to the calling
+         * user, set one of the following: - The `me` alias. For example, `users/me`. - Their
+         * Workspace email address. For example, `users/user@example.com`. - Their user id. For
+         * example, `users/123456789`. Format: `users/{user}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent, which is the user resource name that owns this collection of sections. Only
+       supports listing sections for the calling user. To refer to the calling user, set one of the
+       following: - The `me` alias. For example, `users/me`. - Their Workspace email address. For example,
+       `users/user@example.com`. - Their user id. For example, `users/123456789`. Format: `users/{user}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent, which is the user resource name that owns this collection of
+         * sections. Only supports listing sections for the calling user. To refer to the calling
+         * user, set one of the following: - The `me` alias. For example, `users/me`. - Their
+         * Workspace email address. For example, `users/user@example.com`. - Their user id. For
+         * example, `users/123456789`. Format: `users/{user}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^users/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of sections to return. The service may return fewer than
+         * this value. If unspecified, at most 10 sections will be returned. The maximum value is
+         * 100. If you use a value more than 100, it's automatically changed to 100. Negative values
+         * return an `INVALID_ARGUMENT` error.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of sections to return. The service may return fewer than this value.
+       If unspecified, at most 10 sections will be returned. The maximum value is 100. If you use a value
+       more than 100, it's automatically changed to 100. Negative values return an `INVALID_ARGUMENT`
+       error.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of sections to return. The service may return fewer than
+         * this value. If unspecified, at most 10 sections will be returned. The maximum value is
+         * 100. If you use a value more than 100, it's automatically changed to 100. Negative values
+         * return an `INVALID_ARGUMENT` error.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous list sections call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided should match
+         * the call that provided the page token. Passing different values to the other parameters
+         * might lead to unexpected results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous list sections call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided should match the call that provided
+       the page token. Passing different values to the other parameters might lead to unexpected results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous list sections call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided should match
+         * the call that provided the page token. Passing different values to the other parameters
+         * might lead to unexpected results.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Updates a section. Only
+       * sections of type `CUSTOM_SECTION` can be updated. For details, see [Create and organize sections
+       * in Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+       *
+       * Create a request for the method "sections.patch".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. Resource name of the section. For system sections, the section ID is a constant string:
+       *        - DEFAULT_DIRECT_MESSAGES: `users/{user}/sections/default-direct-messages` -
+       *        DEFAULT_SPACES: `users/{user}/sections/default-spaces` - DEFAULT_APPS:
+       *        `users/{user}/sections/default-apps` Format: `users/{user}/sections/{section}`
+       * @param content the {@link com.google.api.services.chat.v1.model.GoogleChatV1Section}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.chat.v1.model.GoogleChatV1Section content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends HangoutsChatRequest<com.google.api.services.chat.v1.model.GoogleChatV1Section> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Updates a section. Only
+         * sections of type `CUSTOM_SECTION` can be updated. For details, see [Create and organize
+         * sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+         *
+         * Create a request for the method "sections.patch".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. Resource name of the section. For system sections, the section ID is a constant string:
+       *        - DEFAULT_DIRECT_MESSAGES: `users/{user}/sections/default-direct-messages` -
+       *        DEFAULT_SPACES: `users/{user}/sections/default-spaces` - DEFAULT_APPS:
+       *        `users/{user}/sections/default-apps` Format: `users/{user}/sections/{section}`
+         * @param content the {@link com.google.api.services.chat.v1.model.GoogleChatV1Section}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.chat.v1.model.GoogleChatV1Section content) {
+          super(HangoutsChat.this, "PATCH", REST_PATH, content, com.google.api.services.chat.v1.model.GoogleChatV1Section.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/sections/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. Resource name of the section. For system sections, the section ID is a
+         * constant string: - DEFAULT_DIRECT_MESSAGES: `users/{user}/sections/default-direct-
+         * messages` - DEFAULT_SPACES: `users/{user}/sections/default-spaces` - DEFAULT_APPS:
+         * `users/{user}/sections/default-apps` Format: `users/{user}/sections/{section}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. Resource name of the section. For system sections, the section ID is a constant string:
+       - DEFAULT_DIRECT_MESSAGES: `users/{user}/sections/default-direct-messages` - DEFAULT_SPACES:
+       `users/{user}/sections/default-spaces` - DEFAULT_APPS: `users/{user}/sections/default-apps` Format:
+       `users/{user}/sections/{section}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. Resource name of the section. For system sections, the section ID is a
+         * constant string: - DEFAULT_DIRECT_MESSAGES: `users/{user}/sections/default-direct-
+         * messages` - DEFAULT_SPACES: `users/{user}/sections/default-spaces` - DEFAULT_APPS:
+         * `users/{user}/sections/default-apps` Format: `users/{user}/sections/{section}`
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/sections/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The mask to specify which fields to update. Currently supported field paths: -
+         * `display_name`
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The mask to specify which fields to update. Currently supported field paths: -
+       `display_name`
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The mask to specify which fields to update. Currently supported field paths: -
+         * `display_name`
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Changes the sort order of a
+       * section. For details, see [Create and organize sections in Google
+       * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+       *
+       * Create a request for the method "sections.position".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Position#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the section to position. Format: `users/{user}/sections/{section}`
+       * @param content the {@link com.google.api.services.chat.v1.model.PositionSectionRequest}
+       * @return the request
+       */
+      public Position position(java.lang.String name, com.google.api.services.chat.v1.model.PositionSectionRequest content) throws java.io.IOException {
+        Position result = new Position(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Position extends HangoutsChatRequest<com.google.api.services.chat.v1.model.PositionSectionResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:position";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+$");
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Changes the sort order of
+         * a section. For details, see [Create and organize sections in Google
+         * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+         *
+         * Create a request for the method "sections.position".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Position#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * Position#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the section to position. Format: `users/{user}/sections/{section}`
+         * @param content the {@link com.google.api.services.chat.v1.model.PositionSectionRequest}
+         * @since 1.13
+         */
+        protected Position(java.lang.String name, com.google.api.services.chat.v1.model.PositionSectionRequest content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.PositionSectionResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/sections/[^/]+$");
+          }
+        }
+
+        @Override
+        public Position set$Xgafv(java.lang.String $Xgafv) {
+          return (Position) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Position setAccessToken(java.lang.String accessToken) {
+          return (Position) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Position setAlt(java.lang.String alt) {
+          return (Position) super.setAlt(alt);
+        }
+
+        @Override
+        public Position setCallback(java.lang.String callback) {
+          return (Position) super.setCallback(callback);
+        }
+
+        @Override
+        public Position setFields(java.lang.String fields) {
+          return (Position) super.setFields(fields);
+        }
+
+        @Override
+        public Position setKey(java.lang.String key) {
+          return (Position) super.setKey(key);
+        }
+
+        @Override
+        public Position setOauthToken(java.lang.String oauthToken) {
+          return (Position) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Position setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Position) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Position setQuotaUser(java.lang.String quotaUser) {
+          return (Position) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Position setUploadType(java.lang.String uploadType) {
+          return (Position) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Position setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Position) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the section to position. Format:
+         * `users/{user}/sections/{section}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the section to position. Format: `users/{user}/sections/{section}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the section to position. Format:
+         * `users/{user}/sections/{section}`
+         */
+        public Position setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^users/[^/]+/sections/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Position set(String parameterName, Object value) {
+          return (Position) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Items collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code HangoutsChat chat = new HangoutsChat(...);}
+       *   {@code HangoutsChat.Items.List request = chat.items().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Items items() {
+        return new Items();
+      }
+
+      /**
+       * The "items" collection of methods.
+       */
+      public class Items {
+
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Lists items in a section.
+         * Only spaces can be section items. For details, see [Create and organize sections in Google
+         * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections` -
+         * `https://www.googleapis.com/auth/chat.users.sections.readonly`
+         *
+         * Create a request for the method "items.list".
+         *
+         * This request holds the parameters needed by the chat server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which is the section resource name that owns this collection of section items.
+         *        Only supports listing section items for the calling user. When you're filtering by space,
+         *        use the wildcard `-` to search across all sections. For example,
+         *        `users/{user}/sections/-`. Format: `users/{user}/sections/{section}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends HangoutsChatRequest<com.google.api.services.chat.v1.model.ListSectionItemsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/items";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+$");
+
+          /**
+           * [Developer Preview](https://developers.google.com/workspace/preview): Lists items in a section.
+           * Only spaces can be section items. For details, see [Create and organize sections in Google
+           * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+           * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+           * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections` -
+           * `https://www.googleapis.com/auth/chat.users.sections.readonly`
+           *
+           * Create a request for the method "items.list".
+           *
+           * This request holds the parameters needed by the the chat server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which is the section resource name that owns this collection of section items.
+         *        Only supports listing section items for the calling user. When you're filtering by space,
+         *        use the wildcard `-` to search across all sections. For example,
+         *        `users/{user}/sections/-`. Format: `users/{user}/sections/{section}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.ListSectionItemsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^users/[^/]+/sections/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which is the section resource name that owns this collection of
+           * section items. Only supports listing section items for the calling user. When you're
+           * filtering by space, use the wildcard `-` to search across all sections. For example,
+           * `users/{user}/sections/-`. Format: `users/{user}/sections/{section}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which is the section resource name that owns this collection of section
+         items. Only supports listing section items for the calling user. When you're filtering by space,
+         use the wildcard `-` to search across all sections. For example, `users/{user}/sections/-`. Format:
+         `users/{user}/sections/{section}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which is the section resource name that owns this collection of
+           * section items. Only supports listing section items for the calling user. When you're
+           * filtering by space, use the wildcard `-` to search across all sections. For example,
+           * `users/{user}/sections/-`. Format: `users/{user}/sections/{section}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^users/[^/]+/sections/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A query filter. Currently only supports filtering by space. For example,
+           * `space = spaces/{space}`. Invalid queries are rejected with an `INVALID_ARGUMENT`
+           * error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A query filter. Currently only supports filtering by space. For example, `space =
+         spaces/{space}`. Invalid queries are rejected with an `INVALID_ARGUMENT` error.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A query filter. Currently only supports filtering by space. For example,
+           * `space = spaces/{space}`. Invalid queries are rejected with an `INVALID_ARGUMENT`
+           * error.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of section items to return. The service may return fewer
+           * than this value. If unspecified, at most 10 section items will be returned. The maximum
+           * value is 100. If you use a value more than 100, it's automatically changed to 100.
+           * Negative values return an `INVALID_ARGUMENT` error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of section items to return. The service may return fewer than this
+         value. If unspecified, at most 10 section items will be returned. The maximum value is 100. If you
+         use a value more than 100, it's automatically changed to 100. Negative values return an
+         `INVALID_ARGUMENT` error.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of section items to return. The service may return fewer
+           * than this value. If unspecified, at most 10 section items will be returned. The maximum
+           * value is 100. If you use a value more than 100, it's automatically changed to 100.
+           * Negative values return an `INVALID_ARGUMENT` error.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous list section items call. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters provided should
+           * match the call that provided the page token. Passing different values to the other
+           * parameters might lead to unexpected results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous list section items call. Provide this to retrieve
+         the subsequent page. When paginating, all other parameters provided should match the call that
+         provided the page token. Passing different values to the other parameters might lead to unexpected
+         results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous list section items call. Provide this
+           * to retrieve the subsequent page. When paginating, all other parameters provided should
+           * match the call that provided the page token. Passing different values to the other
+           * parameters might lead to unexpected results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * [Developer Preview](https://developers.google.com/workspace/preview): Moves an item from one
+         * section to another. For example, if a section contains spaces, this method can be used to move a
+         * space to a different section. For details, see [Create and organize sections in Google
+         * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+         *
+         * Create a request for the method "items.move".
+         *
+         * This request holds the parameters needed by the chat server.  After setting any optional
+         * parameters, call the {@link Move#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the section item to move. Format:
+         *        `users/{user}/sections/{section}/items/{item}`
+         * @param content the {@link com.google.api.services.chat.v1.model.MoveSectionItemRequest}
+         * @return the request
+         */
+        public Move move(java.lang.String name, com.google.api.services.chat.v1.model.MoveSectionItemRequest content) throws java.io.IOException {
+          Move result = new Move(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Move extends HangoutsChatRequest<com.google.api.services.chat.v1.model.MoveSectionItemResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:move";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+/items/[^/]+$");
+
+          /**
+           * [Developer Preview](https://developers.google.com/workspace/preview): Moves an item from one
+           * section to another. For example, if a section contains spaces, this method can be used to move
+           * a space to a different section. For details, see [Create and organize sections in Google
+           * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+           * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+           * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+           *
+           * Create a request for the method "items.move".
+           *
+           * This request holds the parameters needed by the the chat server.  After setting any optional
+           * parameters, call the {@link Move#execute()} method to invoke the remote operation. <p> {@link
+           * Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the section item to move. Format:
+         *        `users/{user}/sections/{section}/items/{item}`
+           * @param content the {@link com.google.api.services.chat.v1.model.MoveSectionItemRequest}
+           * @since 1.13
+           */
+          protected Move(java.lang.String name, com.google.api.services.chat.v1.model.MoveSectionItemRequest content) {
+            super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.MoveSectionItemResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^users/[^/]+/sections/[^/]+/items/[^/]+$");
+            }
+          }
+
+          @Override
+          public Move set$Xgafv(java.lang.String $Xgafv) {
+            return (Move) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Move setAccessToken(java.lang.String accessToken) {
+            return (Move) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Move setAlt(java.lang.String alt) {
+            return (Move) super.setAlt(alt);
+          }
+
+          @Override
+          public Move setCallback(java.lang.String callback) {
+            return (Move) super.setCallback(callback);
+          }
+
+          @Override
+          public Move setFields(java.lang.String fields) {
+            return (Move) super.setFields(fields);
+          }
+
+          @Override
+          public Move setKey(java.lang.String key) {
+            return (Move) super.setKey(key);
+          }
+
+          @Override
+          public Move setOauthToken(java.lang.String oauthToken) {
+            return (Move) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Move) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Move setQuotaUser(java.lang.String quotaUser) {
+            return (Move) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Move setUploadType(java.lang.String uploadType) {
+            return (Move) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Move setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Move) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the section item to move. Format:
+           * `users/{user}/sections/{section}/items/{item}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the section item to move. Format:
+         `users/{user}/sections/{section}/items/{item}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the section item to move. Format:
+           * `users/{user}/sections/{section}/items/{item}`
+           */
+          public Move setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^users/[^/]+/sections/[^/]+/items/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Move set(String parameterName, Object value) {
+            return (Move) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+    /**
      * An accessor for creating requests from the Spaces collection.
      *
      * <p>The typical use is:</p>

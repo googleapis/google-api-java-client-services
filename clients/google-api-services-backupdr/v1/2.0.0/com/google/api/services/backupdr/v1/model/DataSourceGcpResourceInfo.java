@@ -45,6 +45,13 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
   private CloudSqlInstanceDataSourceReferenceProperties cloudSqlInstanceProperties;
 
   /**
+   * Output only. The properties of the Filestore instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FilestoreInstanceDataSourceReferenceProperties filestoreInstanceProperties;
+
+  /**
    * Output only. The resource name of the Google Cloud resource. Ex:
    * projects/{project}/zones/{zone}/instances/{instance}
    * The value may be {@code null}.
@@ -97,6 +104,23 @@ public final class DataSourceGcpResourceInfo extends com.google.api.client.json.
    */
   public DataSourceGcpResourceInfo setCloudSqlInstanceProperties(CloudSqlInstanceDataSourceReferenceProperties cloudSqlInstanceProperties) {
     this.cloudSqlInstanceProperties = cloudSqlInstanceProperties;
+    return this;
+  }
+
+  /**
+   * Output only. The properties of the Filestore instance.
+   * @return value or {@code null} for none
+   */
+  public FilestoreInstanceDataSourceReferenceProperties getFilestoreInstanceProperties() {
+    return filestoreInstanceProperties;
+  }
+
+  /**
+   * Output only. The properties of the Filestore instance.
+   * @param filestoreInstanceProperties filestoreInstanceProperties or {@code null} for none
+   */
+  public DataSourceGcpResourceInfo setFilestoreInstanceProperties(FilestoreInstanceDataSourceReferenceProperties filestoreInstanceProperties) {
+    this.filestoreInstanceProperties = filestoreInstanceProperties;
     return this;
   }
 

@@ -130,6 +130,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String expireTime;
 
   /**
+   * Output only. Filestore specific backup properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FilestoreInstanceBackupProperties filestoreInstanceBackupProperties;
+
+  /**
    * Output only. Configuration for a Google Cloud resource.
    * The value may be {@code null}.
    */
@@ -447,6 +454,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Output only. Filestore specific backup properties.
+   * @return value or {@code null} for none
+   */
+  public FilestoreInstanceBackupProperties getFilestoreInstanceBackupProperties() {
+    return filestoreInstanceBackupProperties;
+  }
+
+  /**
+   * Output only. Filestore specific backup properties.
+   * @param filestoreInstanceBackupProperties filestoreInstanceBackupProperties or {@code null} for none
+   */
+  public Backup setFilestoreInstanceBackupProperties(FilestoreInstanceBackupProperties filestoreInstanceBackupProperties) {
+    this.filestoreInstanceBackupProperties = filestoreInstanceBackupProperties;
     return this;
   }
 

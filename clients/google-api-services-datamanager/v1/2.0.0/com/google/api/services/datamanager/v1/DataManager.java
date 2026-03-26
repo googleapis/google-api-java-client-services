@@ -373,9 +373,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
          * following optional headers to define how the API authorizes access for the request: * `login-
          * account`: (Optional) The resource name of the account where the Google Account of the credentials
          * is a user. If not set, defaults to the account of the request. Format:
-         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
-         * resource name of the account with an established product link to the `login-account`. Format:
-         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
          *
          * Create a request for the method "partnerLinks.create".
          *
@@ -405,9 +403,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
            * following optional headers to define how the API authorizes access for the request: * `login-
            * account`: (Optional) The resource name of the account where the Google Account of the
            * credentials is a user. If not set, defaults to the account of the request. Format:
-           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
-           * resource name of the account with an established product link to the `login-account`. Format:
-           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
            *
            * Create a request for the method "partnerLinks.create".
            *
@@ -525,9 +521,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
          * following optional headers to define how the API authorizes access for the request: * `login-
          * account`: (Optional) The resource name of the account where the Google Account of the credentials
          * is a user. If not set, defaults to the account of the request. Format:
-         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
-         * resource name of the account with an established product link to the `login-account`. Format:
-         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
          *
          * Create a request for the method "partnerLinks.delete".
          *
@@ -556,9 +550,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
            * following optional headers to define how the API authorizes access for the request: * `login-
            * account`: (Optional) The resource name of the account where the Google Account of the
            * credentials is a user. If not set, defaults to the account of the request. Format:
-           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
-           * resource name of the account with an established product link to the `login-account`. Format:
-           * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           * `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
            *
            * Create a request for the method "partnerLinks.delete".
            *
@@ -675,9 +667,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
          * supports the following optional headers to define how the API authorizes access for the request:
          * * `login-account`: (Optional) The resource name of the account where the Google Account of the
          * credentials is a user. If not set, defaults to the account of the request. Format:
-         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`: (Optional) The
-         * resource name of the account with an established product link to the `login-account`. Format:
-         * `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+         * `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
          *
          * Create a request for the method "partnerLinks.search".
          *
@@ -707,9 +697,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
            * supports the following optional headers to define how the API authorizes access for the
            * request: * `login-account`: (Optional) The resource name of the account where the Google
            * Account of the credentials is a user. If not set, defaults to the account of the request.
-           * Format: `accountTypes/{loginAccountType}/accounts/{loginAccountId}` * `linked-account`:
-           * (Optional) The resource name of the account with an established product link to the `login-
-           * account`. Format: `accountTypes/{linkedAccountType}/accounts/{linkedAccountId}`
+           * Format: `accountTypes/{loginAccountType}/accounts/{loginAccountId}`
            *
            * Create a request for the method "partnerLinks.search".
            *

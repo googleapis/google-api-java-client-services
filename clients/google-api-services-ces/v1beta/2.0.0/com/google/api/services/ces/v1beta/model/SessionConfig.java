@@ -39,6 +39,15 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String deployment;
 
   /**
+   * Optional. Whether to enable streaming text outputs from the model. By default, text outputs
+   * from the model are collected before sending to the client. NOTE: This is only supported for
+   * text (non-voice) sessions via StreamRunSession or BidiRunSession.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableTextStreaming;
+
+  /**
    * Optional. The entry agent to handle the session. If not specified, the session will be handled
    * by the root agent of the app. Format:
    * `projects/{project}/locations/{location}/apps/{app}/agents/{agent}`
@@ -121,6 +130,27 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
    */
   public SessionConfig setDeployment(java.lang.String deployment) {
     this.deployment = deployment;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to enable streaming text outputs from the model. By default, text outputs
+   * from the model are collected before sending to the client. NOTE: This is only supported for
+   * text (non-voice) sessions via StreamRunSession or BidiRunSession.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableTextStreaming() {
+    return enableTextStreaming;
+  }
+
+  /**
+   * Optional. Whether to enable streaming text outputs from the model. By default, text outputs
+   * from the model are collected before sending to the client. NOTE: This is only supported for
+   * text (non-voice) sessions via StreamRunSession or BidiRunSession.
+   * @param enableTextStreaming enableTextStreaming or {@code null} for none
+   */
+  public SessionConfig setEnableTextStreaming(java.lang.Boolean enableTextStreaming) {
+    this.enableTextStreaming = enableTextStreaming;
     return this;
   }
 

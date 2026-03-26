@@ -46,8 +46,15 @@ public final class WidgetToolDataMapping extends com.google.api.client.json.Gene
   private java.lang.String mode;
 
   /**
-   * Optional. A Python script used to transform the source tool's output into the widget's input
-   * format. This is used when the mapping is too complex for simple field mappings.
+   * Optional. Configuration for a Python function used to transform the source tool's output into
+   * the widget's input format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PythonFunction pythonFunction;
+
+  /**
+   * Deprecated: Use `python_function` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +106,26 @@ public final class WidgetToolDataMapping extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A Python script used to transform the source tool's output into the widget's input
-   * format. This is used when the mapping is too complex for simple field mappings.
+   * Optional. Configuration for a Python function used to transform the source tool's output into
+   * the widget's input format.
+   * @return value or {@code null} for none
+   */
+  public PythonFunction getPythonFunction() {
+    return pythonFunction;
+  }
+
+  /**
+   * Optional. Configuration for a Python function used to transform the source tool's output into
+   * the widget's input format.
+   * @param pythonFunction pythonFunction or {@code null} for none
+   */
+  public WidgetToolDataMapping setPythonFunction(PythonFunction pythonFunction) {
+    this.pythonFunction = pythonFunction;
+    return this;
+  }
+
+  /**
+   * Deprecated: Use `python_function` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getPythonScript() {
@@ -108,8 +133,7 @@ public final class WidgetToolDataMapping extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. A Python script used to transform the source tool's output into the widget's input
-   * format. This is used when the mapping is too complex for simple field mappings.
+   * Deprecated: Use `python_function` instead.
    * @param pythonScript pythonScript or {@code null} for none
    */
   public WidgetToolDataMapping setPythonScript(java.lang.String pythonScript) {

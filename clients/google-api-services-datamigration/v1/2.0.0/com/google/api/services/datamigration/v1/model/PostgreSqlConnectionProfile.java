@@ -54,6 +54,14 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
   private java.lang.String database;
 
   /**
+   * Optional. If true, Database Migration Service will use IAM database authentication to connect
+   * to the database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableIamAuthentication;
+
+  /**
    * Forward SSH tunnel connectivity.
    * The value may be {@code null}.
    */
@@ -186,6 +194,25 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
    */
   public PostgreSqlConnectionProfile setDatabase(java.lang.String database) {
     this.database = database;
+    return this;
+  }
+
+  /**
+   * Optional. If true, Database Migration Service will use IAM database authentication to connect
+   * to the database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableIamAuthentication() {
+    return enableIamAuthentication;
+  }
+
+  /**
+   * Optional. If true, Database Migration Service will use IAM database authentication to connect
+   * to the database.
+   * @param enableIamAuthentication enableIamAuthentication or {@code null} for none
+   */
+  public PostgreSqlConnectionProfile setEnableIamAuthentication(java.lang.Boolean enableIamAuthentication) {
+    this.enableIamAuthentication = enableIamAuthentication;
     return this;
   }
 

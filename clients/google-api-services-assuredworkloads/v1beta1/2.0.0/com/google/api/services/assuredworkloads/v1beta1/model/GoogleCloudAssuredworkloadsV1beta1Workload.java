@@ -195,7 +195,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
 
   /**
    * Optional. Billing account necessary for purchasing services from Sovereign Partners. This field
-   * is required for creating SIA/PSN/CNTXT partner workloads. The caller should have
+   * is required for creating SIA/PSN/CNTXT/Telefonica partner workloads. The caller should have
    * 'billing.resourceAssociations.create' IAM permission on this billing-account. The format of
    * this string is billingAccounts/AAAAAA-BBBBBB-CCCCCC
    * The value may be {@code null}.
@@ -656,7 +656,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
 
   /**
    * Optional. Billing account necessary for purchasing services from Sovereign Partners. This field
-   * is required for creating SIA/PSN/CNTXT partner workloads. The caller should have
+   * is required for creating SIA/PSN/CNTXT/Telefonica partner workloads. The caller should have
    * 'billing.resourceAssociations.create' IAM permission on this billing-account. The format of
    * this string is billingAccounts/AAAAAA-BBBBBB-CCCCCC
    * @return value or {@code null} for none
@@ -667,7 +667,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1Workload extends com.google
 
   /**
    * Optional. Billing account necessary for purchasing services from Sovereign Partners. This field
-   * is required for creating SIA/PSN/CNTXT partner workloads. The caller should have
+   * is required for creating SIA/PSN/CNTXT/Telefonica partner workloads. The caller should have
    * 'billing.resourceAssociations.create' IAM permission on this billing-account. The format of
    * this string is billingAccounts/AAAAAA-BBBBBB-CCCCCC
    * @param partnerServicesBillingAccount partnerServicesBillingAccount or {@code null} for none

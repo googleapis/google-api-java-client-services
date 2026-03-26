@@ -110,6 +110,12 @@ public class HangoutsChatScopes {
   /** View last read time for Google Chat conversations. */
   public static final String CHAT_USERS_READSTATE_READONLY = "https://www.googleapis.com/auth/chat.users.readstate.readonly";
 
+  /** View, create, update, and delete your sections in Google Chat; move and list your section items in Google Chat. */
+  public static final String CHAT_USERS_SECTIONS = "https://www.googleapis.com/auth/chat.users.sections";
+
+  /** View your sections and their section items in Google Chat. */
+  public static final String CHAT_USERS_SECTIONS_READONLY = "https://www.googleapis.com/auth/chat.users.sections.readonly";
+
   /** Read and update your space settings. */
   public static final String CHAT_USERS_SPACESETTINGS = "https://www.googleapis.com/auth/chat.users.spacesettings";
 
@@ -149,6 +155,8 @@ public class HangoutsChatScopes {
     set.add(CHAT_SPACES_READONLY);
     set.add(CHAT_USERS_READSTATE);
     set.add(CHAT_USERS_READSTATE_READONLY);
+    set.add(CHAT_USERS_SECTIONS);
+    set.add(CHAT_USERS_SECTIONS_READONLY);
     set.add(CHAT_USERS_SPACESETTINGS);
     return java.util.Collections.unmodifiableSet(set);
   }

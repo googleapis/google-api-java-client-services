@@ -98,7 +98,7 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
 
   /**
    * Optional. Input only. The TTL (Time To Live) for the task. If not set, the task will expire in
-   * 365 days by default. Valid range: (0 seconds, 1000 days]
+   * 24 hours by default. Valid range: (0 seconds, 1000 days]
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,7 +274,7 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
 
   /**
    * Optional. Input only. The TTL (Time To Live) for the task. If not set, the task will expire in
-   * 365 days by default. Valid range: (0 seconds, 1000 days]
+   * 24 hours by default. Valid range: (0 seconds, 1000 days]
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -283,7 +283,7 @@ public final class GoogleCloudAiplatformV1beta1A2aTask extends com.google.api.cl
 
   /**
    * Optional. Input only. The TTL (Time To Live) for the task. If not set, the task will expire in
-   * 365 days by default. Valid range: (0 seconds, 1000 days]
+   * 24 hours by default. Valid range: (0 seconds, 1000 days]
    * @param ttl ttl or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1A2aTask setTtl(String ttl) {

@@ -52,6 +52,15 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec exte
   }
 
   /**
+   * Optional. Specifies the configuration for keep-alive probe. Contains configuration on a
+   * specified endpoint that a deployment host should use to keep the container alive based on the
+   * probe settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1KeepAliveProbe keepAliveProbe;
+
+  /**
    * Optional. The maximum number of application instances that can be launched to handle increased
    * traffic. Defaults to 100. Range: [1, 1000]. If VPC-SC or PSC-I is enabled, the acceptable range
    * is [1, 100].
@@ -131,6 +140,27 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec exte
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec setEnv(java.util.List<GoogleCloudAiplatformV1EnvVar> env) {
     this.env = env;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the configuration for keep-alive probe. Contains configuration on a
+   * specified endpoint that a deployment host should use to keep the container alive based on the
+   * probe settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1KeepAliveProbe getKeepAliveProbe() {
+    return keepAliveProbe;
+  }
+
+  /**
+   * Optional. Specifies the configuration for keep-alive probe. Contains configuration on a
+   * specified endpoint that a deployment host should use to keep the container alive based on the
+   * probe settings.
+   * @param keepAliveProbe keepAliveProbe or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec setKeepAliveProbe(GoogleCloudAiplatformV1KeepAliveProbe keepAliveProbe) {
+    this.keepAliveProbe = keepAliveProbe;
     return this;
   }
 

@@ -78,6 +78,13 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt 
   private java.util.List<java.lang.String> inputPrefixes;
 
   /**
+   * Data for interaction use case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SchemaPromptSpecInteractionData interactionData;
+
+  /**
    * Preamble: The output prefixes before each example output.
    * The value may be {@code null}.
    */
@@ -204,6 +211,23 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt 
    */
   public GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt setInputPrefixes(java.util.List<java.lang.String> inputPrefixes) {
     this.inputPrefixes = inputPrefixes;
+    return this;
+  }
+
+  /**
+   * Data for interaction use case.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SchemaPromptSpecInteractionData getInteractionData() {
+    return interactionData;
+  }
+
+  /**
+   * Data for interaction use case.
+   * @param interactionData interactionData or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt setInteractionData(GoogleCloudAiplatformV1beta1SchemaPromptSpecInteractionData interactionData) {
+    this.interactionData = interactionData;
     return this;
   }
 

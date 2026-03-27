@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1UserScenario extends com.google.a
   private java.lang.String startingPrompt;
 
   /**
+   * Represents a short 3-5 word title for eval test case.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String testCaseTitle;
+
+  /**
    * Conversation plan to drive multi-turn agent run and get simulated agent eval dataset.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudAiplatformV1beta1UserScenario extends com.google.a
    */
   public GoogleCloudAiplatformV1beta1UserScenario setStartingPrompt(java.lang.String startingPrompt) {
     this.startingPrompt = startingPrompt;
+    return this;
+  }
+
+  /**
+   * Represents a short 3-5 word title for eval test case.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTestCaseTitle() {
+    return testCaseTitle;
+  }
+
+  /**
+   * Represents a short 3-5 word title for eval test case.
+   * @param testCaseTitle testCaseTitle or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1UserScenario setTestCaseTitle(java.lang.String testCaseTitle) {
+    this.testCaseTitle = testCaseTitle;
     return this;
   }
 

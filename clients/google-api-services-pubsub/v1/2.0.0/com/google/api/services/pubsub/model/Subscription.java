@@ -66,6 +66,14 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private BigQueryConfig bigqueryConfig;
 
   /**
+   * Optional. If delivery to Bigtable is used with this subscription, this field is used to
+   * configure it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigtableConfig bigtableConfig;
+
+  /**
    * Optional. If delivery to Google Cloud Storage is used with this subscription, this field is
    * used to configure it.
    * The value may be {@code null}.
@@ -318,6 +326,25 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setBigqueryConfig(BigQueryConfig bigqueryConfig) {
     this.bigqueryConfig = bigqueryConfig;
+    return this;
+  }
+
+  /**
+   * Optional. If delivery to Bigtable is used with this subscription, this field is used to
+   * configure it.
+   * @return value or {@code null} for none
+   */
+  public BigtableConfig getBigtableConfig() {
+    return bigtableConfig;
+  }
+
+  /**
+   * Optional. If delivery to Bigtable is used with this subscription, this field is used to
+   * configure it.
+   * @param bigtableConfig bigtableConfig or {@code null} for none
+   */
+  public Subscription setBigtableConfig(BigtableConfig bigtableConfig) {
+    this.bigtableConfig = bigtableConfig;
     return this;
   }
 

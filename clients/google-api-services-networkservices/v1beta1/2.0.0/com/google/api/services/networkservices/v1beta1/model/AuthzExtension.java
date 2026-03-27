@@ -31,7 +31,8 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class AuthzExtension extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The `:authority` header in the gRPC request sent from Envoy to the extension service.
+   * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
+   * It is required when the `service` field points to a backend service or a wasm plugin.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -160,7 +161,8 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   private java.lang.String wireFormat;
 
   /**
-   * Required. The `:authority` header in the gRPC request sent from Envoy to the extension service.
+   * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
+   * It is required when the `service` field points to a backend service or a wasm plugin.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthority() {
@@ -168,7 +170,8 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The `:authority` header in the gRPC request sent from Envoy to the extension service.
+   * Optional. The `:authority` header in the gRPC request sent from Envoy to the extension service.
+   * It is required when the `service` field points to a backend service or a wasm plugin.
    * @param authority authority or {@code null} for none
    */
   public AuthzExtension setAuthority(java.lang.String authority) {

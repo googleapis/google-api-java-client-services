@@ -14,11 +14,14 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.saasservicemgmt.v1beta1.model;
+package com.google.api.services.saasservicemgmt.v1.model;
 
 /**
- * An object that describes various settings of Rollout execution. Includes built-in policies across
- * GCP and GDC, and customizable policies.
+ * Tenant represents the service producer side of an instance of the service created based on a
+ * request from a consumer. In a typical scenario a Tenant has a one-to-one mapping with a resource
+ * given out to a service consumer. Example: tenant: name:
+ * "projects/svc1/locations/loc/tenants/inst-068afff8" consumer_resource:
+ * "projects/gshoe/locations/loc/shoes/black-shoe"
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the SaaS Runtime API. For a detailed explanation see:
@@ -28,7 +31,7 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RolloutKind extends com.google.api.client.json.GenericJson {
+public final class Tenant extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Annotations is an unstructured key-value map stored with a resource that may be set
@@ -41,20 +44,21 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Optional. Immutable. A reference to the consumer resource this SaaS Tenant is representing. The
+   * relationship with a consumer resource can be used by SaaS Runtime for retrieving consumer-
+   * defined settings and policies such as maintenance policies (using Unified Maintenance Policy
+   * API).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consumerResource;
+
+  /**
    * Output only. The timestamp when the resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
-
-  /**
-   * Optional. The configuration for error budget. If the number of failed units exceeds
-   * max(allowed_count, allowed_ratio * total_units), the rollout will be paused. If not set, all
-   * units will be attempted to be updated regardless of the number of failures encountered.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ErrorBudget errorBudget;
 
   /**
    * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
@@ -75,21 +79,19 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
-   * "projects/{project}/locations/{location}/rolloutKinds/{rollout_kind_id}"
+   * "projects/{project}/locations/{location}/tenants/{tenant}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. The strategy used for executing a Rollout. This is a required field. There are two
-   * supported values strategies which are used to control - "Google.Cloud.Simple.AllAtOnce" -
-   * "Google.Cloud.Simple.OneLocationAtATime" A rollout with one of these simple strategies will
-   * rollout across all locations defined in the associated UnitKind's Saas Locations.
+   * Required. Immutable. A reference to the Saas that defines the product (managed service) that
+   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String rolloutOrchestrationStrategy;
+  private java.lang.String saas;
 
   /**
    * Output only. The unique identifier of the resource. UID is unique in the time and space for
@@ -102,24 +104,6 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
-   * Optional. CEL(https://github.com/google/cel-spec) formatted filter string against Unit. The
-   * filter will be applied to determine the eligible unit population. This filter can only reduce,
-   * but not expand the scope of the rollout.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String unitFilter;
-
-  /**
-   * Required. Immutable. UnitKind that this rollout kind corresponds to. Rollouts stemming from
-   * this rollout kind will target the units of this unit kind. In other words, this defines the
-   * population of target units to be upgraded by rollouts.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String unitKind;
-
-  /**
    * Output only. The timestamp when the resource was last updated. Any change to the resource made
    * by users must refresh this value. Changes to a resource made by the service should refresh this
    * value.
@@ -127,14 +111,6 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
-
-  /**
-   * Optional. The config for updating the unit kind. By default, the unit kind will be updated on
-   * the rollout start.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String updateUnitKindStrategy;
 
   /**
    * Optional. Annotations is an unstructured key-value map stored with a resource that may be set
@@ -154,8 +130,31 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    * guide/annotations
    * @param annotations annotations or {@code null} for none
    */
-  public RolloutKind setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+  public Tenant setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. A reference to the consumer resource this SaaS Tenant is representing. The
+   * relationship with a consumer resource can be used by SaaS Runtime for retrieving consumer-
+   * defined settings and policies such as maintenance policies (using Unified Maintenance Policy
+   * API).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsumerResource() {
+    return consumerResource;
+  }
+
+  /**
+   * Optional. Immutable. A reference to the consumer resource this SaaS Tenant is representing. The
+   * relationship with a consumer resource can be used by SaaS Runtime for retrieving consumer-
+   * defined settings and policies such as maintenance policies (using Unified Maintenance Policy
+   * API).
+   * @param consumerResource consumerResource or {@code null} for none
+   */
+  public Tenant setConsumerResource(java.lang.String consumerResource) {
+    this.consumerResource = consumerResource;
     return this;
   }
 
@@ -171,29 +170,8 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    * Output only. The timestamp when the resource was created.
    * @param createTime createTime or {@code null} for none
    */
-  public RolloutKind setCreateTime(String createTime) {
+  public Tenant setCreateTime(String createTime) {
     this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * Optional. The configuration for error budget. If the number of failed units exceeds
-   * max(allowed_count, allowed_ratio * total_units), the rollout will be paused. If not set, all
-   * units will be attempted to be updated regardless of the number of failures encountered.
-   * @return value or {@code null} for none
-   */
-  public ErrorBudget getErrorBudget() {
-    return errorBudget;
-  }
-
-  /**
-   * Optional. The configuration for error budget. If the number of failed units exceeds
-   * max(allowed_count, allowed_ratio * total_units), the rollout will be paused. If not set, all
-   * units will be attempted to be updated regardless of the number of failures encountered.
-   * @param errorBudget errorBudget or {@code null} for none
-   */
-  public RolloutKind setErrorBudget(ErrorBudget errorBudget) {
-    this.errorBudget = errorBudget;
     return this;
   }
 
@@ -213,7 +191,7 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    * written.
    * @param etag etag or {@code null} for none
    */
-  public RolloutKind setEtag(java.lang.String etag) {
+  public Tenant setEtag(java.lang.String etag) {
     this.etag = etag;
     return this;
   }
@@ -232,14 +210,14 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    * Kubernetes resource labels.
    * @param labels labels or {@code null} for none
    */
-  public RolloutKind setLabels(java.util.Map<String, java.lang.String> labels) {
+  public Tenant setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
 
   /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
-   * "projects/{project}/locations/{location}/rolloutKinds/{rollout_kind_id}"
+   * "projects/{project}/locations/{location}/tenants/{tenant}"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -248,34 +226,30 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
 
   /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
-   * "projects/{project}/locations/{location}/rolloutKinds/{rollout_kind_id}"
+   * "projects/{project}/locations/{location}/tenants/{tenant}"
    * @param name name or {@code null} for none
    */
-  public RolloutKind setName(java.lang.String name) {
+  public Tenant setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Optional. The strategy used for executing a Rollout. This is a required field. There are two
-   * supported values strategies which are used to control - "Google.Cloud.Simple.AllAtOnce" -
-   * "Google.Cloud.Simple.OneLocationAtATime" A rollout with one of these simple strategies will
-   * rollout across all locations defined in the associated UnitKind's Saas Locations.
+   * Required. Immutable. A reference to the Saas that defines the product (managed service) that
+   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRolloutOrchestrationStrategy() {
-    return rolloutOrchestrationStrategy;
+  public java.lang.String getSaas() {
+    return saas;
   }
 
   /**
-   * Optional. The strategy used for executing a Rollout. This is a required field. There are two
-   * supported values strategies which are used to control - "Google.Cloud.Simple.AllAtOnce" -
-   * "Google.Cloud.Simple.OneLocationAtATime" A rollout with one of these simple strategies will
-   * rollout across all locations defined in the associated UnitKind's Saas Locations.
-   * @param rolloutOrchestrationStrategy rolloutOrchestrationStrategy or {@code null} for none
+   * Required. Immutable. A reference to the Saas that defines the product (managed service) that
+   * the producer wants to manage with SaaS Runtime. Part of the SaaS Runtime common data model.
+   * @param saas saas or {@code null} for none
    */
-  public RolloutKind setRolloutOrchestrationStrategy(java.lang.String rolloutOrchestrationStrategy) {
-    this.rolloutOrchestrationStrategy = rolloutOrchestrationStrategy;
+  public Tenant setSaas(java.lang.String saas) {
+    this.saas = saas;
     return this;
   }
 
@@ -297,50 +271,8 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    * resources with resource name reuses. This should be a UUID4.
    * @param uid uid or {@code null} for none
    */
-  public RolloutKind setUid(java.lang.String uid) {
+  public Tenant setUid(java.lang.String uid) {
     this.uid = uid;
-    return this;
-  }
-
-  /**
-   * Optional. CEL(https://github.com/google/cel-spec) formatted filter string against Unit. The
-   * filter will be applied to determine the eligible unit population. This filter can only reduce,
-   * but not expand the scope of the rollout.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUnitFilter() {
-    return unitFilter;
-  }
-
-  /**
-   * Optional. CEL(https://github.com/google/cel-spec) formatted filter string against Unit. The
-   * filter will be applied to determine the eligible unit population. This filter can only reduce,
-   * but not expand the scope of the rollout.
-   * @param unitFilter unitFilter or {@code null} for none
-   */
-  public RolloutKind setUnitFilter(java.lang.String unitFilter) {
-    this.unitFilter = unitFilter;
-    return this;
-  }
-
-  /**
-   * Required. Immutable. UnitKind that this rollout kind corresponds to. Rollouts stemming from
-   * this rollout kind will target the units of this unit kind. In other words, this defines the
-   * population of target units to be upgraded by rollouts.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUnitKind() {
-    return unitKind;
-  }
-
-  /**
-   * Required. Immutable. UnitKind that this rollout kind corresponds to. Rollouts stemming from
-   * this rollout kind will target the units of this unit kind. In other words, this defines the
-   * population of target units to be upgraded by rollouts.
-   * @param unitKind unitKind or {@code null} for none
-   */
-  public RolloutKind setUnitKind(java.lang.String unitKind) {
-    this.unitKind = unitKind;
     return this;
   }
 
@@ -360,38 +292,19 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    * value.
    * @param updateTime updateTime or {@code null} for none
    */
-  public RolloutKind setUpdateTime(String updateTime) {
+  public Tenant setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
-  /**
-   * Optional. The config for updating the unit kind. By default, the unit kind will be updated on
-   * the rollout start.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUpdateUnitKindStrategy() {
-    return updateUnitKindStrategy;
-  }
-
-  /**
-   * Optional. The config for updating the unit kind. By default, the unit kind will be updated on
-   * the rollout start.
-   * @param updateUnitKindStrategy updateUnitKindStrategy or {@code null} for none
-   */
-  public RolloutKind setUpdateUnitKindStrategy(java.lang.String updateUnitKindStrategy) {
-    this.updateUnitKindStrategy = updateUnitKindStrategy;
-    return this;
+  @Override
+  public Tenant set(String fieldName, Object value) {
+    return (Tenant) super.set(fieldName, value);
   }
 
   @Override
-  public RolloutKind set(String fieldName, Object value) {
-    return (RolloutKind) super.set(fieldName, value);
-  }
-
-  @Override
-  public RolloutKind clone() {
-    return (RolloutKind) super.clone();
+  public Tenant clone() {
+    return (Tenant) super.clone();
   }
 
 }

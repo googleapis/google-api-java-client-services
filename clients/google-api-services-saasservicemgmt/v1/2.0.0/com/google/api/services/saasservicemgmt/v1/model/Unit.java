@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.saasservicemgmt.v1beta1.model;
+package com.google.api.services.saasservicemgmt.v1.model;
 
 /**
  * A unit of deployment that has its lifecycle via a CRUD API using an actuation engine under the

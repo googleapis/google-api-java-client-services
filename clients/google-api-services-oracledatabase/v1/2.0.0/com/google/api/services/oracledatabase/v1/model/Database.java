@@ -32,7 +32,7 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The password for the default ADMIN user.
+   * Optional. The password for the default ADMIN user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +148,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String tdeWalletPassword;
 
   /**
-   * Required. The password for the default ADMIN user.
+   * Optional. The password for the default ADMIN user.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdminPassword() {
@@ -156,7 +156,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The password for the default ADMIN user.
+   * Optional. The password for the default ADMIN user.
    * @param adminPassword adminPassword or {@code null} for none
    */
   public Database setAdminPassword(java.lang.String adminPassword) {

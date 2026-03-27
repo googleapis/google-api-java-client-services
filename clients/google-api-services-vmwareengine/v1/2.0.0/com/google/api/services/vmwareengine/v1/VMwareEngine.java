@@ -480,10 +480,14 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Lists information about the supported locations for this service. This method can be called in
-       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-       * public locations as well as private or other locations specifically visible to the project.
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all projects.
+       * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+       * lists locations visible to that specific project. This includes public, private, or other
+       * project-specific locations enabled for the project. For gRPC and client library implementations,
+       * the resource name is passed as the `name` field. For direct service calls, the resource name is
+       * incorporated into the request path based on the specific service implementation and version.
        *
        * Create a request for the method "locations.list".
        *
@@ -507,10 +511,15 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service. This method can be called in
-         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-         * public locations as well as private or other locations specifically visible to the project.
+         * Lists information about the supported locations for this service. This method lists locations
+         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * locations**: If `name` is empty, the method lists the public locations available to all
+         * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+         * the method lists locations visible to that specific project. This includes public, private, or
+         * other project-specific locations enabled for the project. For gRPC and client library
+         * implementations, the resource name is passed as the `name` field. For direct service calls, the
+         * resource name is incorporated into the request path based on the specific service
+         * implementation and version.
          *
          * Create a request for the method "locations.list".
          *
@@ -2846,6 +2855,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             return this;
           }
 
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -3710,6 +3742,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             return this;
           }
 
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
@@ -4228,6 +4283,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 
@@ -5313,6 +5391,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             return this;
           }
 
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
@@ -5563,6 +5664,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
              */
             public Create setRequestId(java.lang.String requestId) {
               this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+           `false`, validates and executes the request.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /**
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
+             */
+            public Create setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
               return this;
             }
 
@@ -6426,6 +6550,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
+              return this;
+            }
+
+            /**
+             * Optional. If set to `true`, only validates the request but doesn’t execute the//
+             * request. If set to `false`, validates and executes the request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Optional. If set to `true`, only validates the request but doesn’t execute the// request. If set to
+           `false`, validates and executes the request.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /**
+             * Optional. If set to `true`, only validates the request but doesn’t execute the//
+             * request. If set to `false`, validates and executes the request.
+             */
+            public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
               return this;
             }
 
@@ -7612,21 +7759,22 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Optional. True if you want the request to be validated and not executed; false
-           * otherwise.
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. True if you want the request to be validated and not executed; false otherwise.
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. True if you want the request to be validated and not executed; false
-           * otherwise.
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -8887,6 +9035,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 
@@ -10595,21 +10766,22 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Optional. True if you want the request to be validated and not executed; false
-             * otherwise.
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** Optional. True if you want the request to be validated and not executed; false otherwise.
+            /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+           `false`, validates and executes the request.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * Optional. True if you want the request to be validated and not executed; false
-             * otherwise.
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
              */
             public Create setValidateOnly(java.lang.Boolean validateOnly) {
               this.validateOnly = validateOnly;
@@ -11764,21 +11936,22 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Optional. True if you want the request to be validated and not executed; false
-             * otherwise.
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** Optional. True if you want the request to be validated and not executed; false otherwise.
+            /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+           `false`, validates and executes the request.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * Optional. True if you want the request to be validated and not executed; false
-             * otherwise.
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
              */
             public Patch setValidateOnly(java.lang.Boolean validateOnly) {
               this.validateOnly = validateOnly;
@@ -12869,6 +13042,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
               return this;
             }
 
+            /**
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+           `false`, validates and executes the request.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /**
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
+             */
+            public Create setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
+              return this;
+            }
+
             @Override
             public Create set(String parameterName, Object value) {
               return (Create) super.set(parameterName, value);
@@ -13736,6 +13932,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
+              return this;
+            }
+
+            /**
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+           `false`, validates and executes the request.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /**
+             * Optional. If set to `true`, only validates the request but doesn’t execute the
+             * request. If set to `false`, validates and executes the request.
+             */
+            public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
               return this;
             }
 
@@ -18778,6 +18997,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             return this;
           }
 
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -19633,6 +19875,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
             return this;
           }
 
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
@@ -20084,6 +20349,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 
@@ -21017,6 +21305,29 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set to `true`, only validates the request but doesn’t execute the request. If set to
+         `false`, validates and executes the request.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set to `true`, only validates the request but doesn’t execute the request.
+           * If set to `false`, validates and executes the request.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 

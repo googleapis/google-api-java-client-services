@@ -38,6 +38,15 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String aclPolicy;
 
   /**
+   * Optional. Output only. Indicates whether the ACL rules applied to the cluster are in sync with
+   * the latest ACL policy rules. This field is only applicable if the ACL policy is set for the
+   * cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean aclPolicyInSync;
+
+  /**
    * Optional. Immutable. Deprecated, do not use.
    * The value may be {@code null}.
    */
@@ -373,6 +382,27 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setAclPolicy(java.lang.String aclPolicy) {
     this.aclPolicy = aclPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Indicates whether the ACL rules applied to the cluster are in sync with
+   * the latest ACL policy rules. This field is only applicable if the ACL policy is set for the
+   * cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAclPolicyInSync() {
+    return aclPolicyInSync;
+  }
+
+  /**
+   * Optional. Output only. Indicates whether the ACL rules applied to the cluster are in sync with
+   * the latest ACL policy rules. This field is only applicable if the ACL policy is set for the
+   * cluster.
+   * @param aclPolicyInSync aclPolicyInSync or {@code null} for none
+   */
+  public Cluster setAclPolicyInSync(java.lang.Boolean aclPolicyInSync) {
+    this.aclPolicyInSync = aclPolicyInSync;
     return this;
   }
 

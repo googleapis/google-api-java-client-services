@@ -466,10 +466,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists information about the supported locations for this service. This method can be called in
-       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-       * public locations as well as private or other locations specifically visible to the project.
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all projects.
+       * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+       * lists locations visible to that specific project. This includes public, private, or other
+       * project-specific locations enabled for the project. For gRPC and client library implementations,
+       * the resource name is passed as the `name` field. For direct service calls, the resource name is
+       * incorporated into the request path based on the specific service implementation and version.
        *
        * Create a request for the method "locations.list".
        *
@@ -493,10 +497,15 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service. This method can be called in
-         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-         * public locations as well as private or other locations specifically visible to the project.
+         * Lists information about the supported locations for this service. This method lists locations
+         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * locations**: If `name` is empty, the method lists the public locations available to all
+         * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+         * the method lists locations visible to that specific project. This includes public, private, or
+         * other project-specific locations enabled for the project. For gRPC and client library
+         * implementations, the resource name is passed as the `name` field. For direct service calls, the
+         * resource name is incorporated into the request path based on the specific service
+         * implementation and version.
          *
          * Create a request for the method "locations.list".
          *
@@ -697,6 +706,945 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         }
       }
 
+      /**
+       * An accessor for creating requests from the AclPolicies collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRedis redis = new CloudRedis(...);}
+       *   {@code CloudRedis.AclPolicies.List request = redis.aclPolicies().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AclPolicies aclPolicies() {
+        return new AclPolicies();
+      }
+
+      /**
+       * The "aclPolicies" collection of methods.
+       */
+      public class AclPolicies {
+
+        /**
+         * Creates an ACL Policy. The creation is executed synchronously and the policy is available for use
+         * immediately after the RPC returns.
+         *
+         * Create a request for the method "aclPolicies.create".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the cluster location using the form:
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
+         * @param content the {@link com.google.api.services.redis.v1beta1.model.AclPolicy}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.redis.v1beta1.model.AclPolicy content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudRedisRequest<com.google.api.services.redis.v1beta1.model.AclPolicy> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/aclPolicies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates an ACL Policy. The creation is executed synchronously and the policy is available for
+           * use immediately after the RPC returns.
+           *
+           * Create a request for the method "aclPolicies.create".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the cluster location using the form:
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
+           * @param content the {@link com.google.api.services.redis.v1beta1.model.AclPolicy}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.redis.v1beta1.model.AclPolicy content) {
+            super(CloudRedis.this, "POST", REST_PATH, content, com.google.api.services.redis.v1beta1.model.AclPolicy.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the cluster location using the form:
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the cluster location using the form:
+         `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google Cloud
+         region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the cluster location using the form:
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The logical name of the ACL Policy in the customer project with the following
+           * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start
+           * with a letter. * Must be between 1-63 characters. * Must end with a number or a letter.
+           * * Must be unique within the customer project / location
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String aclPolicyId;
+
+          /** Required. The logical name of the ACL Policy in the customer project with the following
+         restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a
+         letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique
+         within the customer project / location
+           */
+          public java.lang.String getAclPolicyId() {
+            return aclPolicyId;
+          }
+
+          /**
+           * Required. The logical name of the ACL Policy in the customer project with the following
+           * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start
+           * with a letter. * Must be between 1-63 characters. * Must end with a number or a letter.
+           * * Must be unique within the customer project / location
+           */
+          public Create setAclPolicyId(java.lang.String aclPolicyId) {
+            this.aclPolicyId = aclPolicyId;
+            return this;
+          }
+
+          /** Optional. Idempotent request UUID. . */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Idempotent request UUID. .
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Idempotent request UUID. . */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a specific Acl Policy. This action will delete the Acl Policy and all the rules
+         * associated with it. An ACL policy cannot be deleted if it is attached to a cluster.
+         *
+         * Create a request for the method "aclPolicies.delete".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Redis ACL Policy resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
+         *        `location_id` refers to a GCP region.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudRedisRequest<com.google.api.services.redis.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+
+          /**
+           * Deletes a specific Acl Policy. This action will delete the Acl Policy and all the rules
+           * associated with it. An ACL policy cannot be deleted if it is attached to a cluster.
+           *
+           * Create a request for the method "aclPolicies.delete".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Redis ACL Policy resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
+         *        `location_id` refers to a GCP region.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudRedis.this, "DELETE", REST_PATH, null, com.google.api.services.redis.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Redis ACL Policy resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Redis ACL Policy resource name using the form:
+         `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where `location_id`
+         refers to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Redis ACL Policy resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Etag of the ACL policy. If this is different from the server's etag, the
+           * request will fail with an ABORTED error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. Etag of the ACL policy. If this is different from the server's etag, the request will
+         fail with an ABORTED error.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. Etag of the ACL policy. If this is different from the server's etag, the
+           * request will fail with an ABORTED error.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets the details of a specific Redis Cluster ACL Policy.
+         *
+         * Create a request for the method "aclPolicies.get".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Redis ACL Policy resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
+         *        `location_id` refers to a GCP region.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudRedisRequest<com.google.api.services.redis.v1beta1.model.AclPolicy> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+
+          /**
+           * Gets the details of a specific Redis Cluster ACL Policy.
+           *
+           * Create a request for the method "aclPolicies.get".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Redis ACL Policy resource name using the form:
+         *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
+         *        `location_id` refers to a GCP region.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1beta1.model.AclPolicy.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Redis ACL Policy resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Redis ACL Policy resource name using the form:
+         `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where `location_id`
+         refers to a GCP region.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Redis ACL Policy resource name using the form:
+           * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
+           * `location_id` refers to a GCP region.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all ACL Policies owned by a project in either the specified location (region) or all
+         * locations. The location should have the following format: *
+         * `projects/{project_id}/locations/{location_id}` If `location_id` is specified as `-` (wildcard),
+         * then all regions available to the project are queried, and the results are aggregated.
+         *
+         * Create a request for the method "aclPolicies.list".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the cluster location using the form:
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudRedisRequest<com.google.api.services.redis.v1beta1.model.ListAclPoliciesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/aclPolicies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all ACL Policies owned by a project in either the specified location (region) or all
+           * locations. The location should have the following format: *
+           * `projects/{project_id}/locations/{location_id}` If `location_id` is specified as `-`
+           * (wildcard), then all regions available to the project are queried, and the results are
+           * aggregated.
+           *
+           * Create a request for the method "aclPolicies.list".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the cluster location using the form:
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1beta1.model.ListAclPoliciesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the cluster location using the form:
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the cluster location using the form:
+         `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google Cloud
+         region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the cluster location using the form:
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If not specified, a default value of
+           * 1000 will be used by the service. Regardless of the page_size value, the response may
+           * include a partial list and a caller should only rely on response's `next_page_token` to
+           * determine if there are more ACL policies left to be queried. The maximum value is 1000;
+           * values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return. If not specified, a default value of 1000 will be
+         used by the service. Regardless of the page_size value, the response may include a partial list and
+         a caller should only rely on response's `next_page_token` to determine if there are more ACL
+         policies left to be queried. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If not specified, a default value of
+           * 1000 will be used by the service. Regardless of the page_size value, the response may
+           * include a partial list and a caller should only rely on response's `next_page_token` to
+           * determine if there are more ACL policies left to be queried. The maximum value is 1000;
+           * values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The `next_page_token` value returned from a previous ListAclPolicies request,
+           * if any.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The `next_page_token` value returned from a previous ListAclPolicies request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The `next_page_token` value returned from a previous ListAclPolicies request,
+           * if any.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the ACL policy. The operation applies the updated ACL policy to all of the linked
+         * clusters. If Memorystore can apply the policy to all clusters, then the operation returns a
+         * SUCCESS status. If Memorystore can't apply the policy to all clusters, then to ensure eventual
+         * consistency, Memorystore uses reconciliation to apply the policy to the failed clusters.
+         * Completed longrunning.Operation will contain the new ACL Policy object in the response field.
+         *
+         * Create a request for the method "aclPolicies.patch".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Full resource path of the ACL policy.
+         * @param content the {@link com.google.api.services.redis.v1beta1.model.AclPolicy}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.redis.v1beta1.model.AclPolicy content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudRedisRequest<com.google.api.services.redis.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+
+          /**
+           * Updates the ACL policy. The operation applies the updated ACL policy to all of the linked
+           * clusters. If Memorystore can apply the policy to all clusters, then the operation returns a
+           * SUCCESS status. If Memorystore can't apply the policy to all clusters, then to ensure eventual
+           * consistency, Memorystore uses reconciliation to apply the policy to the failed clusters.
+           * Completed longrunning.Operation will contain the new ACL Policy object in the response field.
+           *
+           * Create a request for the method "aclPolicies.patch".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Full resource path of the ACL policy.
+           * @param content the {@link com.google.api.services.redis.v1beta1.model.AclPolicy}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.redis.v1beta1.model.AclPolicy content) {
+            super(CloudRedis.this, "PATCH", REST_PATH, content, com.google.api.services.redis.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifier. Full resource path of the ACL policy. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Full resource path of the ACL policy.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Identifier. Full resource path of the ACL policy. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/aclPolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. Idempotent request UUID.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /** Optional. Idempotent request UUID. */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. Mask of fields to be updated. At least one path must be supplied in this
+           * field. The elements of the repeated paths field may only include these fields from
+           * AclPolicy: * `rules`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Mask of fields to be updated. At least one path must be supplied in this field. The
+         elements of the repeated paths field may only include these fields from AclPolicy: * `rules`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Mask of fields to be updated. At least one path must be supplied in this
+           * field. The elements of the repeated paths field may only include these fields from
+           * AclPolicy: * `rules`
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the BackupCollections collection.
        *

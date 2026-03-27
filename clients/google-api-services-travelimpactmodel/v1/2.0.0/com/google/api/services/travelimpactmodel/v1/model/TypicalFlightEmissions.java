@@ -41,7 +41,8 @@ public final class TypicalFlightEmissions extends com.google.api.client.json.Gen
   private EmissionsGramsPerPax emissionsGramsPerPax;
 
   /**
-   * Required. Matches the flight identifiers in the request. Note: all IATA codes are capitalized.
+   * Identifier. Matches the flight identifiers in the request. Note: all IATA codes are
+   * capitalized.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +72,8 @@ public final class TypicalFlightEmissions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Matches the flight identifiers in the request. Note: all IATA codes are capitalized.
+   * Identifier. Matches the flight identifiers in the request. Note: all IATA codes are
+   * capitalized.
    * @return value or {@code null} for none
    */
   public Market getMarket() {
@@ -79,7 +81,8 @@ public final class TypicalFlightEmissions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Matches the flight identifiers in the request. Note: all IATA codes are capitalized.
+   * Identifier. Matches the flight identifiers in the request. Note: all IATA codes are
+   * capitalized.
    * @param market market or {@code null} for none
    */
   public TypicalFlightEmissions setMarket(Market market) {

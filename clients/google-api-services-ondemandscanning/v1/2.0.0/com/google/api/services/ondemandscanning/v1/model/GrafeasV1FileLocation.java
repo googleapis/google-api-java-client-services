@@ -47,6 +47,14 @@ public final class GrafeasV1FileLocation extends com.google.api.client.json.Gene
   private GrafeasV1LayerDetails layerDetails;
 
   /**
+   * Line number in the file where the package was found. Optional field that only applies to source
+   * repository scanning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer lineNumber;
+
+  /**
    * For jars that are contained inside .war files, this filepath can indicate the path to war file
    * combined with the path to jar file.
    * @return value or {@code null} for none
@@ -81,6 +89,25 @@ public final class GrafeasV1FileLocation extends com.google.api.client.json.Gene
    */
   public GrafeasV1FileLocation setLayerDetails(GrafeasV1LayerDetails layerDetails) {
     this.layerDetails = layerDetails;
+    return this;
+  }
+
+  /**
+   * Line number in the file where the package was found. Optional field that only applies to source
+   * repository scanning.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLineNumber() {
+    return lineNumber;
+  }
+
+  /**
+   * Line number in the file where the package was found. Optional field that only applies to source
+   * repository scanning.
+   * @param lineNumber lineNumber or {@code null} for none
+   */
+  public GrafeasV1FileLocation setLineNumber(java.lang.Integer lineNumber) {
+    this.lineNumber = lineNumber;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
   private GoogleMapsPlacesV1SearchTextRequestEVOptions evOptions;
 
   /**
+   * Optional. If true, include businesses that are not yet open but will open in the future.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeFutureOpeningBusinesses;
+
+  /**
    * Optional. Include pure service area businesses if the field is set to true. Pure service area
    * business is a business that visits or delivers to customers directly but does not serve
    * customers at their business address. For example, businesses like cleaning services or
@@ -204,6 +211,23 @@ public final class GoogleMapsPlacesV1SearchTextRequest extends com.google.api.cl
    */
   public GoogleMapsPlacesV1SearchTextRequest setEvOptions(GoogleMapsPlacesV1SearchTextRequestEVOptions evOptions) {
     this.evOptions = evOptions;
+    return this;
+  }
+
+  /**
+   * Optional. If true, include businesses that are not yet open but will open in the future.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeFutureOpeningBusinesses() {
+    return includeFutureOpeningBusinesses;
+  }
+
+  /**
+   * Optional. If true, include businesses that are not yet open but will open in the future.
+   * @param includeFutureOpeningBusinesses includeFutureOpeningBusinesses or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchTextRequest setIncludeFutureOpeningBusinesses(java.lang.Boolean includeFutureOpeningBusinesses) {
+    this.includeFutureOpeningBusinesses = includeFutureOpeningBusinesses;
     return this;
   }
 

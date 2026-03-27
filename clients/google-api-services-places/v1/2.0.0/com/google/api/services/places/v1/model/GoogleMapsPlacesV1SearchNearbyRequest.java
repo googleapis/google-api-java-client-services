@@ -63,6 +63,13 @@ public final class GoogleMapsPlacesV1SearchNearbyRequest extends com.google.api.
   private java.util.List<java.lang.String> excludedTypes;
 
   /**
+   * Optional. If true, include businesses that are not yet open but will open in the future.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeFutureOpeningBusinesses;
+
+  /**
    * Included primary Place type (e.g. "restaurant" or "gas_station") from
    * https://developers.google.com/maps/documentation/places/web-service/place-types. A place can
    * only have a single primary type from the supported types table associated with it. Up to 50
@@ -213,6 +220,23 @@ public final class GoogleMapsPlacesV1SearchNearbyRequest extends com.google.api.
    */
   public GoogleMapsPlacesV1SearchNearbyRequest setExcludedTypes(java.util.List<java.lang.String> excludedTypes) {
     this.excludedTypes = excludedTypes;
+    return this;
+  }
+
+  /**
+   * Optional. If true, include businesses that are not yet open but will open in the future.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeFutureOpeningBusinesses() {
+    return includeFutureOpeningBusinesses;
+  }
+
+  /**
+   * Optional. If true, include businesses that are not yet open but will open in the future.
+   * @param includeFutureOpeningBusinesses includeFutureOpeningBusinesses or {@code null} for none
+   */
+  public GoogleMapsPlacesV1SearchNearbyRequest setIncludeFutureOpeningBusinesses(java.lang.Boolean includeFutureOpeningBusinesses) {
+    this.includeFutureOpeningBusinesses = includeFutureOpeningBusinesses;
     return this;
   }
 

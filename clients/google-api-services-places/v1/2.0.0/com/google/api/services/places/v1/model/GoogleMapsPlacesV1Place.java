@@ -335,6 +335,14 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleMapsPlacesV1PlaceNeighborhoodSummary neighborhoodSummary;
 
   /**
+   * The date this place will open in the future. This field is only populated if the business
+   * status is FUTURE_OPENING.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeDate openingDate;
+
+  /**
    * Place provides outdoor seating.
    * The value may be {@code null}.
    */
@@ -1356,6 +1364,25 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setNeighborhoodSummary(GoogleMapsPlacesV1PlaceNeighborhoodSummary neighborhoodSummary) {
     this.neighborhoodSummary = neighborhoodSummary;
+    return this;
+  }
+
+  /**
+   * The date this place will open in the future. This field is only populated if the business
+   * status is FUTURE_OPENING.
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeDate getOpeningDate() {
+    return openingDate;
+  }
+
+  /**
+   * The date this place will open in the future. This field is only populated if the business
+   * status is FUTURE_OPENING.
+   * @param openingDate openingDate or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setOpeningDate(GoogleTypeDate openingDate) {
+    this.openingDate = openingDate;
     return this;
   }
 

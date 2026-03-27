@@ -30,6 +30,13 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1AutocompletePlacesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, include businesses that are not yet open but will open in the future.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeFutureOpeningBusinesses;
+
+  /**
    * Optional. Include pure service area businesses if the field is set to true. Pure service area
    * business is a business that visits or delivers to customers directly but does not serve
    * customers at their business address. For example, businesses like cleaning services or
@@ -154,6 +161,23 @@ public final class GoogleMapsPlacesV1AutocompletePlacesRequest extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String sessionToken;
+
+  /**
+   * Optional. If true, include businesses that are not yet open but will open in the future.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeFutureOpeningBusinesses() {
+    return includeFutureOpeningBusinesses;
+  }
+
+  /**
+   * Optional. If true, include businesses that are not yet open but will open in the future.
+   * @param includeFutureOpeningBusinesses includeFutureOpeningBusinesses or {@code null} for none
+   */
+  public GoogleMapsPlacesV1AutocompletePlacesRequest setIncludeFutureOpeningBusinesses(java.lang.Boolean includeFutureOpeningBusinesses) {
+    this.includeFutureOpeningBusinesses = includeFutureOpeningBusinesses;
+    return this;
+  }
 
   /**
    * Optional. Include pure service area businesses if the field is set to true. Pure service area

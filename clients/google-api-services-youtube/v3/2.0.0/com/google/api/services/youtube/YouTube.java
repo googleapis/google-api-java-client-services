@@ -14513,6 +14513,21 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      @com.google.api.client.util.Key
+      private java.lang.String onBehalfOfContentOwnerChannel;
+
+      /**
+
+       */
+      public java.lang.String getOnBehalfOfContentOwnerChannel() {
+        return onBehalfOfContentOwnerChannel;
+      }
+
+      public Insert setOnBehalfOfContentOwnerChannel(java.lang.String onBehalfOfContentOwnerChannel) {
+        this.onBehalfOfContentOwnerChannel = onBehalfOfContentOwnerChannel;
+        return this;
+      }
+
       @Override
       public Insert set(String parameterName, Object value) {
         return (Insert) super.set(parameterName, value);

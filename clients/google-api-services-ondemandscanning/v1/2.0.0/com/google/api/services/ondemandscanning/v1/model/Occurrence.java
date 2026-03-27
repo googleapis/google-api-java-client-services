@@ -31,6 +31,13 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class Occurrence extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time this advisory was published by the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String advisoryPublishTime;
+
+  /**
    * Describes an attestation of an artifact.
    * The value may be {@code null}.
    */
@@ -173,6 +180,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private VulnerabilityOccurrence vulnerability;
+
+  /**
+   * The time this advisory was published by the source.
+   * @return value or {@code null} for none
+   */
+  public String getAdvisoryPublishTime() {
+    return advisoryPublishTime;
+  }
+
+  /**
+   * The time this advisory was published by the source.
+   * @param advisoryPublishTime advisoryPublishTime or {@code null} for none
+   */
+  public Occurrence setAdvisoryPublishTime(String advisoryPublishTime) {
+    this.advisoryPublishTime = advisoryPublishTime;
+    return this;
+  }
 
   /**
    * Describes an attestation of an artifact.

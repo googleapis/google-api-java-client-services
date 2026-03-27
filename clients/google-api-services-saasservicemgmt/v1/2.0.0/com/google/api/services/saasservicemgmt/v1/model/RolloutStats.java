@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.saasservicemgmt.v1beta1.model;
+package com.google.api.services.saasservicemgmt.v1.model;
 
 /**
  * RolloutStats contains information about the progress of a rollout.

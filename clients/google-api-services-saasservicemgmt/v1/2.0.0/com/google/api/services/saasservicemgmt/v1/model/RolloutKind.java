@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.saasservicemgmt.v1beta1.model;
+package com.google.api.services.saasservicemgmt.v1.model;
 
 /**
  * An object that describes various settings of Rollout execution. Includes built-in policies across

@@ -55,6 +55,14 @@ public final class MountDatastoreRequest extends com.google.api.client.json.Gene
   private java.lang.String requestId;
 
   /**
+   * Optional. If set to `true`, only validates the request but doesn’t execute the request. If set
+   * to `false`, validates and executes the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean validateOnly;
+
+  /**
    * Required. The datastore mount configuration.
    * @return value or {@code null} for none
    */
@@ -110,6 +118,25 @@ public final class MountDatastoreRequest extends com.google.api.client.json.Gene
    */
   public MountDatastoreRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
+    return this;
+  }
+
+  /**
+   * Optional. If set to `true`, only validates the request but doesn’t execute the request. If set
+   * to `false`, validates and executes the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getValidateOnly() {
+    return validateOnly;
+  }
+
+  /**
+   * Optional. If set to `true`, only validates the request but doesn’t execute the request. If set
+   * to `false`, validates and executes the request.
+   * @param validateOnly validateOnly or {@code null} for none
+   */
+  public MountDatastoreRequest setValidateOnly(java.lang.Boolean validateOnly) {
+    this.validateOnly = validateOnly;
     return this;
   }
 

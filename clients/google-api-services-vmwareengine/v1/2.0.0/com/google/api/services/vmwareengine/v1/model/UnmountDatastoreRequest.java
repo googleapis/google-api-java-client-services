@@ -47,6 +47,14 @@ public final class UnmountDatastoreRequest extends com.google.api.client.json.Ge
   private java.lang.String requestId;
 
   /**
+   * Optional. If set to `true`, only validates the request but doesn’t execute the request. If set
+   * to `false`, validates and executes the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean validateOnly;
+
+  /**
    * Required. The resource name of the datastore to unmount. Resource names are schemeless URIs
    * that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
    * example: `projects/my-project/locations/us-central1/datastores/my-datastore`
@@ -83,6 +91,25 @@ public final class UnmountDatastoreRequest extends com.google.api.client.json.Ge
    */
   public UnmountDatastoreRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
+    return this;
+  }
+
+  /**
+   * Optional. If set to `true`, only validates the request but doesn’t execute the request. If set
+   * to `false`, validates and executes the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getValidateOnly() {
+    return validateOnly;
+  }
+
+  /**
+   * Optional. If set to `true`, only validates the request but doesn’t execute the request. If set
+   * to `false`, validates and executes the request.
+   * @param validateOnly validateOnly or {@code null} for none
+   */
+  public UnmountDatastoreRequest setValidateOnly(java.lang.Boolean validateOnly) {
+    this.validateOnly = validateOnly;
     return this;
   }
 

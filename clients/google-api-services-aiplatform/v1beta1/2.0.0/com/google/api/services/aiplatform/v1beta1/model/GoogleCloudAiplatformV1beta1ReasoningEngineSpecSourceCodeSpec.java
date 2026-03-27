@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Source code is generated from the agent config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecAgentConfigSource agentConfigSource;
+
+  /**
    * Source code is in a Git repository managed by Developer Connect.
    * The value may be {@code null}.
    */
@@ -56,6 +63,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecPythonSpec pythonSpec;
+
+  /**
+   * Source code is generated from the agent config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecAgentConfigSource getAgentConfigSource() {
+    return agentConfigSource;
+  }
+
+  /**
+   * Source code is generated from the agent config.
+   * @param agentConfigSource agentConfigSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec setAgentConfigSource(GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecAgentConfigSource agentConfigSource) {
+    this.agentConfigSource = agentConfigSource;
+    return this;
+  }
 
   /**
    * Source code is in a Git repository managed by Developer Connect.

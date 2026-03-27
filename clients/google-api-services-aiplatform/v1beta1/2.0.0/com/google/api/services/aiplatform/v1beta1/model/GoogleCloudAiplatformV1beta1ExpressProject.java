@@ -37,21 +37,28 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   private String createTime;
 
   /**
-   * The project ID of the project.
+   * Output only. The default API key string of the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultApiKey;
+
+  /**
+   * Output only. The project ID of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * The project number of the project.
+   * Output only. The project number of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long projectNumber;
 
   /**
-   * The region of the project.
+   * Output only. The region of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +82,24 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * The project ID of the project.
+   * Output only. The default API key string of the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultApiKey() {
+    return defaultApiKey;
+  }
+
+  /**
+   * Output only. The default API key string of the project.
+   * @param defaultApiKey defaultApiKey or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ExpressProject setDefaultApiKey(java.lang.String defaultApiKey) {
+    this.defaultApiKey = defaultApiKey;
+    return this;
+  }
+
+  /**
+   * Output only. The project ID of the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -83,7 +107,7 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * The project ID of the project.
+   * Output only. The project ID of the project.
    * @param projectId projectId or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ExpressProject setProjectId(java.lang.String projectId) {
@@ -92,7 +116,7 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * The project number of the project.
+   * Output only. The project number of the project.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProjectNumber() {
@@ -100,7 +124,7 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * The project number of the project.
+   * Output only. The project number of the project.
    * @param projectNumber projectNumber or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ExpressProject setProjectNumber(java.lang.Long projectNumber) {
@@ -109,7 +133,7 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * The region of the project.
+   * Output only. The region of the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -117,7 +141,7 @@ public final class GoogleCloudAiplatformV1beta1ExpressProject extends com.google
   }
 
   /**
-   * The region of the project.
+   * Output only. The region of the project.
    * @param region region or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ExpressProject setRegion(java.lang.String region) {

@@ -17,15 +17,16 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * A constraint describes a way to restrict resource's configuration. For example, you could enforce
- * a constraint that controls which Google Cloud services can be activated across an organization,
- * or whether a Compute Engine instance can have serial port connections established. Constraints
- * can be configured by the organization policy administrator to fit the needs of the organization
- * by setting a policy that includes constraints at different locations in the organization's
- * resource hierarchy. Policies are inherited down the resource hierarchy from higher levels, but
- * can also be overridden. For details about the inheritance rules, see `Policy`. Constraints have a
- * default behavior determined by the `constraint_default` field, which is the enforcement behavior
- * that is used in the absence of a policy being defined or inherited for the resource in question.
+ * A constraint describes a way to restrict a resource's configuration. For example, you could
+ * enforce a constraint that controls which Google Cloud services can be activated across an
+ * organization, or whether a Compute Engine instance can have serial port connections established.
+ * Constraints can be configured by the organization policy administrator to fit the needs of the
+ * organization by setting a policy that includes constraints at different locations in the
+ * organization's resource hierarchy. Policies are inherited down the resource hierarchy from higher
+ * levels, but can also be overridden. For details about the inheritance rules, see `Policy`.
+ * Constraints have a default behavior determined by the `constraint_default` field, which is the
+ * enforcement behavior that is used in the absence of a policy being defined or inherited for the
+ * resource in question.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation
@@ -68,8 +69,10 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   private java.lang.String displayName;
 
   /**
-   * Managed constraint and canned constraint sometimes can have equivalents. This field is used to
-   * store the equivalent constraint name.
+   * Defines the equivalent constraint name, if it exists. Managed constraints can have an
+   * equivalent legacy managed constraint, and legacy managed constraints can have an equivalent
+   * managed constraint. For example, "constraints/iam.disableServiceAccountKeyUpload" is equivalent
+   * to "constraints/iam.managed.disableServiceAccountKeyUpload".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,8 +181,10 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   }
 
   /**
-   * Managed constraint and canned constraint sometimes can have equivalents. This field is used to
-   * store the equivalent constraint name.
+   * Defines the equivalent constraint name, if it exists. Managed constraints can have an
+   * equivalent legacy managed constraint, and legacy managed constraints can have an equivalent
+   * managed constraint. For example, "constraints/iam.disableServiceAccountKeyUpload" is equivalent
+   * to "constraints/iam.managed.disableServiceAccountKeyUpload".
    * @return value or {@code null} for none
    */
   public java.lang.String getEquivalentConstraint() {
@@ -187,8 +192,10 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   }
 
   /**
-   * Managed constraint and canned constraint sometimes can have equivalents. This field is used to
-   * store the equivalent constraint name.
+   * Defines the equivalent constraint name, if it exists. Managed constraints can have an
+   * equivalent legacy managed constraint, and legacy managed constraints can have an equivalent
+   * managed constraint. For example, "constraints/iam.disableServiceAccountKeyUpload" is equivalent
+   * to "constraints/iam.managed.disableServiceAccountKeyUpload".
    * @param equivalentConstraint equivalentConstraint or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2Constraint setEquivalentConstraint(java.lang.String equivalentConstraint) {

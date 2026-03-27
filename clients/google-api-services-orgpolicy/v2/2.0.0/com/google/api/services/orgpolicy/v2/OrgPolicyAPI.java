@@ -669,24 +669,25 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. The current etag of policy. If an etag is provided and does not match the
-         * current etag of the policy, deletion will be blocked and an ABORTED error will be
-         * returned.
+         * Optional. The current entity tag (ETag) of the organization policy. If an ETag is
+         * provided and doesn't match the current ETag of the policy, deletion of the policy will be
+         * blocked and an `ABORTED` error will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String etag;
 
-        /** Optional. The current etag of policy. If an etag is provided and does not match the current etag of
-       the policy, deletion will be blocked and an ABORTED error will be returned.
+        /** Optional. The current entity tag (ETag) of the organization policy. If an ETag is provided and
+       doesn't match the current ETag of the policy, deletion of the policy will be blocked and an
+       `ABORTED` error will be returned.
          */
         public java.lang.String getEtag() {
           return etag;
         }
 
         /**
-         * Optional. The current etag of policy. If an etag is provided and does not match the
-         * current etag of the policy, deletion will be blocked and an ABORTED error will be
-         * returned.
+         * Optional. The current entity tag (ETag) of the organization policy. If an ETag is
+         * provided and doesn't match the current ETag of the policy, deletion of the policy will be
+         * blocked and an `ABORTED` error will be returned.
          */
         public Delete setEtag(java.lang.String etag) {
           this.etag = etag;
@@ -700,7 +701,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
       }
       /**
        * Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The
-       * `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
+       * entity tag (ETag) can be used with `UpdatePolicy()` to update a policy during read-modify-write.
        *
        * Create a request for the method "policies.get".
        *
@@ -725,7 +726,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The
-         * `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
+         * entity tag (ETag) can be used with `UpdatePolicy()` to update a policy during read-modify-
+         * write.
          *
          * Create a request for the method "policies.get".
          *
@@ -840,8 +842,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
       }
       /**
        * Gets the effective policy on a resource. This is the result of merging policies in the resource
-       * hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition`
-       * set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager
+       * hierarchy and evaluating conditions. The returned policy will not have an ETag or `condition` set
+       * because it is an evaluated policy across multiple resources. Subtrees of Resource Manager
        * resource hierarchy with 'under:' prefix will not be expanded.
        *
        * Create a request for the method "policies.getEffectivePolicy".
@@ -867,7 +869,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Gets the effective policy on a resource. This is the result of merging policies in the resource
-         * hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition`
+         * hierarchy and evaluating conditions. The returned policy will not have an ETag or `condition`
          * set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager
          * resource hierarchy with 'under:' prefix will not be expanded.
          *
@@ -1188,9 +1190,9 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
       }
       /**
        * Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-       * constraint or the policy do not exist. Returns a `google.rpc.Status` with
-       * `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag
-       * of the policy Note: the supplied policy will perform a full overwrite of all fields.
+       * constraint or the policy doesn't exist. Returns a `google.rpc.Status` with
+       * `google.rpc.Code.ABORTED` if the ETag supplied in the request doesn't match the persisted ETag of
+       * the policy. Note: the supplied policy will perform a full overwrite of all fields.
        *
        * Create a request for the method "policies.patch".
        *
@@ -1198,7 +1200,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        `constraint_name` is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -1223,9 +1225,9 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-         * constraint or the policy do not exist. Returns a `google.rpc.Status` with
-         * `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag
-         * of the policy Note: the supplied policy will perform a full overwrite of all fields.
+         * constraint or the policy doesn't exist. Returns a `google.rpc.Status` with
+         * `google.rpc.Code.ABORTED` if the ETag supplied in the request doesn't match the persisted ETag
+         * of the policy. Note: the supplied policy will perform a full overwrite of all fields.
          *
          * Create a request for the method "policies.patch".
          *
@@ -1236,7 +1238,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        `constraint_name` is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -1313,7 +1315,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * `constraint_name` is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -1325,7 +1327,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         private java.lang.String name;
 
         /** Immutable. The resource name of the policy. Must be one of the following forms, where
-       `constraint_name` is the name of the constraint which this policy configures: *
+       `constraint_name` is the name of the constraint that this policy configures: *
        `projects/{project_number}/policies/{constraint_name}` *
        `folders/{folder_id}/policies/{constraint_name}` *
        `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -1339,7 +1341,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * `constraint_name` is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -1358,22 +1360,22 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field mask used to specify the fields to be overwritten in the policy by the set. The
-         * fields specified in the update_mask are relative to the policy, not the full request.
+         * Field mask used to specify the fields to be overwritten in the policy. The fields
+         * specified in the update_mask are relative to the policy, not the full request.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Field mask used to specify the fields to be overwritten in the policy by the set. The fields
-       specified in the update_mask are relative to the policy, not the full request.
+        /** Field mask used to specify the fields to be overwritten in the policy. The fields specified in the
+       update_mask are relative to the policy, not the full request.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Field mask used to specify the fields to be overwritten in the policy by the set. The
-         * fields specified in the update_mask are relative to the policy, not the full request.
+         * Field mask used to specify the fields to be overwritten in the policy. The fields
+         * specified in the update_mask are relative to the policy, not the full request.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -2727,24 +2729,25 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. The current etag of policy. If an etag is provided and does not match the
-         * current etag of the policy, deletion will be blocked and an ABORTED error will be
-         * returned.
+         * Optional. The current entity tag (ETag) of the organization policy. If an ETag is
+         * provided and doesn't match the current ETag of the policy, deletion of the policy will be
+         * blocked and an `ABORTED` error will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String etag;
 
-        /** Optional. The current etag of policy. If an etag is provided and does not match the current etag of
-       the policy, deletion will be blocked and an ABORTED error will be returned.
+        /** Optional. The current entity tag (ETag) of the organization policy. If an ETag is provided and
+       doesn't match the current ETag of the policy, deletion of the policy will be blocked and an
+       `ABORTED` error will be returned.
          */
         public java.lang.String getEtag() {
           return etag;
         }
 
         /**
-         * Optional. The current etag of policy. If an etag is provided and does not match the
-         * current etag of the policy, deletion will be blocked and an ABORTED error will be
-         * returned.
+         * Optional. The current entity tag (ETag) of the organization policy. If an ETag is
+         * provided and doesn't match the current ETag of the policy, deletion of the policy will be
+         * blocked and an `ABORTED` error will be returned.
          */
         public Delete setEtag(java.lang.String etag) {
           this.etag = etag;
@@ -2758,7 +2761,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
       }
       /**
        * Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The
-       * `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
+       * entity tag (ETag) can be used with `UpdatePolicy()` to update a policy during read-modify-write.
        *
        * Create a request for the method "policies.get".
        *
@@ -2783,7 +2786,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The
-         * `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
+         * entity tag (ETag) can be used with `UpdatePolicy()` to update a policy during read-modify-
+         * write.
          *
          * Create a request for the method "policies.get".
          *
@@ -2898,8 +2902,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
       }
       /**
        * Gets the effective policy on a resource. This is the result of merging policies in the resource
-       * hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition`
-       * set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager
+       * hierarchy and evaluating conditions. The returned policy will not have an ETag or `condition` set
+       * because it is an evaluated policy across multiple resources. Subtrees of Resource Manager
        * resource hierarchy with 'under:' prefix will not be expanded.
        *
        * Create a request for the method "policies.getEffectivePolicy".
@@ -2925,7 +2929,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Gets the effective policy on a resource. This is the result of merging policies in the resource
-         * hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition`
+         * hierarchy and evaluating conditions. The returned policy will not have an ETag or `condition`
          * set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager
          * resource hierarchy with 'under:' prefix will not be expanded.
          *
@@ -3246,9 +3250,9 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
       }
       /**
        * Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-       * constraint or the policy do not exist. Returns a `google.rpc.Status` with
-       * `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag
-       * of the policy Note: the supplied policy will perform a full overwrite of all fields.
+       * constraint or the policy doesn't exist. Returns a `google.rpc.Status` with
+       * `google.rpc.Code.ABORTED` if the ETag supplied in the request doesn't match the persisted ETag of
+       * the policy. Note: the supplied policy will perform a full overwrite of all fields.
        *
        * Create a request for the method "policies.patch".
        *
@@ -3256,7 +3260,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        `constraint_name` is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -3281,9 +3285,9 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-         * constraint or the policy do not exist. Returns a `google.rpc.Status` with
-         * `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag
-         * of the policy Note: the supplied policy will perform a full overwrite of all fields.
+         * constraint or the policy doesn't exist. Returns a `google.rpc.Status` with
+         * `google.rpc.Code.ABORTED` if the ETag supplied in the request doesn't match the persisted ETag
+         * of the policy. Note: the supplied policy will perform a full overwrite of all fields.
          *
          * Create a request for the method "policies.patch".
          *
@@ -3294,7 +3298,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        `constraint_name` is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -3371,7 +3375,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * `constraint_name` is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -3383,7 +3387,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         private java.lang.String name;
 
         /** Immutable. The resource name of the policy. Must be one of the following forms, where
-       `constraint_name` is the name of the constraint which this policy configures: *
+       `constraint_name` is the name of the constraint that this policy configures: *
        `projects/{project_number}/policies/{constraint_name}` *
        `folders/{folder_id}/policies/{constraint_name}` *
        `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -3397,7 +3401,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * `constraint_name` is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -3416,22 +3420,22 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field mask used to specify the fields to be overwritten in the policy by the set. The
-         * fields specified in the update_mask are relative to the policy, not the full request.
+         * Field mask used to specify the fields to be overwritten in the policy. The fields
+         * specified in the update_mask are relative to the policy, not the full request.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Field mask used to specify the fields to be overwritten in the policy by the set. The fields
-       specified in the update_mask are relative to the policy, not the full request.
+        /** Field mask used to specify the fields to be overwritten in the policy. The fields specified in the
+       update_mask are relative to the policy, not the full request.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Field mask used to specify the fields to be overwritten in the policy by the set. The
-         * fields specified in the update_mask are relative to the policy, not the full request.
+         * Field mask used to specify the fields to be overwritten in the policy. The fields
+         * specified in the update_mask are relative to the policy, not the full request.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -3983,24 +3987,25 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Optional. The current etag of policy. If an etag is provided and does not match the
-         * current etag of the policy, deletion will be blocked and an ABORTED error will be
-         * returned.
+         * Optional. The current entity tag (ETag) of the organization policy. If an ETag is
+         * provided and doesn't match the current ETag of the policy, deletion of the policy will be
+         * blocked and an `ABORTED` error will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.String etag;
 
-        /** Optional. The current etag of policy. If an etag is provided and does not match the current etag of
-       the policy, deletion will be blocked and an ABORTED error will be returned.
+        /** Optional. The current entity tag (ETag) of the organization policy. If an ETag is provided and
+       doesn't match the current ETag of the policy, deletion of the policy will be blocked and an
+       `ABORTED` error will be returned.
          */
         public java.lang.String getEtag() {
           return etag;
         }
 
         /**
-         * Optional. The current etag of policy. If an etag is provided and does not match the
-         * current etag of the policy, deletion will be blocked and an ABORTED error will be
-         * returned.
+         * Optional. The current entity tag (ETag) of the organization policy. If an ETag is
+         * provided and doesn't match the current ETag of the policy, deletion of the policy will be
+         * blocked and an `ABORTED` error will be returned.
          */
         public Delete setEtag(java.lang.String etag) {
           this.etag = etag;
@@ -4014,7 +4019,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
       }
       /**
        * Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The
-       * `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
+       * entity tag (ETag) can be used with `UpdatePolicy()` to update a policy during read-modify-write.
        *
        * Create a request for the method "policies.get".
        *
@@ -4039,7 +4044,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Gets a policy on a resource. If no policy is set on the resource, `NOT_FOUND` is returned. The
-         * `etag` value can be used with `UpdatePolicy()` to update a policy during read-modify-write.
+         * entity tag (ETag) can be used with `UpdatePolicy()` to update a policy during read-modify-
+         * write.
          *
          * Create a request for the method "policies.get".
          *
@@ -4154,8 +4160,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
       }
       /**
        * Gets the effective policy on a resource. This is the result of merging policies in the resource
-       * hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition`
-       * set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager
+       * hierarchy and evaluating conditions. The returned policy will not have an ETag or `condition` set
+       * because it is an evaluated policy across multiple resources. Subtrees of Resource Manager
        * resource hierarchy with 'under:' prefix will not be expanded.
        *
        * Create a request for the method "policies.getEffectivePolicy".
@@ -4181,7 +4187,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Gets the effective policy on a resource. This is the result of merging policies in the resource
-         * hierarchy and evaluating conditions. The returned policy will not have an `etag` or `condition`
+         * hierarchy and evaluating conditions. The returned policy will not have an ETag or `condition`
          * set because it is an evaluated policy across multiple resources. Subtrees of Resource Manager
          * resource hierarchy with 'under:' prefix will not be expanded.
          *
@@ -4502,9 +4508,9 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
       }
       /**
        * Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-       * constraint or the policy do not exist. Returns a `google.rpc.Status` with
-       * `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag
-       * of the policy Note: the supplied policy will perform a full overwrite of all fields.
+       * constraint or the policy doesn't exist. Returns a `google.rpc.Status` with
+       * `google.rpc.Code.ABORTED` if the ETag supplied in the request doesn't match the persisted ETag of
+       * the policy. Note: the supplied policy will perform a full overwrite of all fields.
        *
        * Create a request for the method "policies.patch".
        *
@@ -4512,7 +4518,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        `constraint_name` is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -4537,9 +4543,9 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Updates a policy. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-         * constraint or the policy do not exist. Returns a `google.rpc.Status` with
-         * `google.rpc.Code.ABORTED` if the etag supplied in the request does not match the persisted etag
-         * of the policy Note: the supplied policy will perform a full overwrite of all fields.
+         * constraint or the policy doesn't exist. Returns a `google.rpc.Status` with
+         * `google.rpc.Code.ABORTED` if the ETag supplied in the request doesn't match the persisted ETag
+         * of the policy. Note: the supplied policy will perform a full overwrite of all fields.
          *
          * Create a request for the method "policies.patch".
          *
@@ -4550,7 +4556,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Immutable. The resource name of the policy. Must be one of the following forms, where
-       *        `constraint_name` is the name of the constraint which this policy configures: *
+       *        `constraint_name` is the name of the constraint that this policy configures: *
        *        `projects/{project_number}/policies/{constraint_name}` *
        *        `folders/{folder_id}/policies/{constraint_name}` *
        *        `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -4627,7 +4633,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * `constraint_name` is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -4639,7 +4645,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         private java.lang.String name;
 
         /** Immutable. The resource name of the policy. Must be one of the following forms, where
-       `constraint_name` is the name of the constraint which this policy configures: *
+       `constraint_name` is the name of the constraint that this policy configures: *
        `projects/{project_number}/policies/{constraint_name}` *
        `folders/{folder_id}/policies/{constraint_name}` *
        `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -4653,7 +4659,7 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
 
         /**
          * Immutable. The resource name of the policy. Must be one of the following forms, where
-         * `constraint_name` is the name of the constraint which this policy configures: *
+         * `constraint_name` is the name of the constraint that this policy configures: *
          * `projects/{project_number}/policies/{constraint_name}` *
          * `folders/{folder_id}/policies/{constraint_name}` *
          * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -4672,22 +4678,22 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Field mask used to specify the fields to be overwritten in the policy by the set. The
-         * fields specified in the update_mask are relative to the policy, not the full request.
+         * Field mask used to specify the fields to be overwritten in the policy. The fields
+         * specified in the update_mask are relative to the policy, not the full request.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Field mask used to specify the fields to be overwritten in the policy by the set. The fields
-       specified in the update_mask are relative to the policy, not the full request.
+        /** Field mask used to specify the fields to be overwritten in the policy. The fields specified in the
+       update_mask are relative to the policy, not the full request.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Field mask used to specify the fields to be overwritten in the policy by the set. The
-         * fields specified in the update_mask are relative to the policy, not the full request.
+         * Field mask used to specify the fields to be overwritten in the policy. The fields
+         * specified in the update_mask are relative to the policy, not the full request.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

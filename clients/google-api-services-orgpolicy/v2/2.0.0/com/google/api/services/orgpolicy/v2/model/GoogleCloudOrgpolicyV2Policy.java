@@ -17,7 +17,7 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * Defines an organization policy which is used to specify constraints for configurations of Google
+ * Defines an organization policy that is used to specify constraints for configurations of Google
  * Cloud resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -48,9 +48,9 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
 
   /**
    * Optional. An opaque tag indicating the current state of the policy, used for concurrency
-   * control. This 'etag' is computed by the server based on the value of other fields, and may be
-   * sent on update and delete requests to ensure the client has an up-to-date value before
-   * proceeding.
+   * control. This entity tag (ETag) is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an up-to-date value
+   * before proceeding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
 
   /**
    * Immutable. The resource name of the policy. Must be one of the following forms, where
-   * `constraint_name` is the name of the constraint which this policy configures: *
+   * `constraint_name` is the name of the constraint that this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -115,9 +115,9 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
 
   /**
    * Optional. An opaque tag indicating the current state of the policy, used for concurrency
-   * control. This 'etag' is computed by the server based on the value of other fields, and may be
-   * sent on update and delete requests to ensure the client has an up-to-date value before
-   * proceeding.
+   * control. This entity tag (ETag) is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an up-to-date value
+   * before proceeding.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -126,9 +126,9 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
 
   /**
    * Optional. An opaque tag indicating the current state of the policy, used for concurrency
-   * control. This 'etag' is computed by the server based on the value of other fields, and may be
-   * sent on update and delete requests to ensure the client has an up-to-date value before
-   * proceeding.
+   * control. This entity tag (ETag) is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an up-to-date value
+   * before proceeding.
    * @param etag etag or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2Policy setEtag(java.lang.String etag) {
@@ -138,7 +138,7 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
 
   /**
    * Immutable. The resource name of the policy. Must be one of the following forms, where
-   * `constraint_name` is the name of the constraint which this policy configures: *
+   * `constraint_name` is the name of the constraint that this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,
@@ -153,7 +153,7 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
 
   /**
    * Immutable. The resource name of the policy. Must be one of the following forms, where
-   * `constraint_name` is the name of the constraint which this policy configures: *
+   * `constraint_name` is the name of the constraint that this policy configures: *
    * `projects/{project_number}/policies/{constraint_name}` *
    * `folders/{folder_id}/policies/{constraint_name}` *
    * `organizations/{organization_id}/policies/{constraint_name}` For example,

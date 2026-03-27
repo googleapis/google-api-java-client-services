@@ -31,14 +31,14 @@ package com.google.api.services.orgpolicy.v2.model;
 public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameterMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Detailed description of what this `parameter` is and use of it. Mutable.
+   * Detailed description of what this `parameter` is and its use. Mutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Detailed description of what this `parameter` is and use of it. Mutable.
+   * Detailed description of what this `parameter` is and its use. Mutable.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -46,7 +46,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionPar
   }
 
   /**
-   * Detailed description of what this `parameter` is and use of it. Mutable.
+   * Detailed description of what this `parameter` is and its use. Mutable.
    * @param description description or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameterMetadata setDescription(java.lang.String description) {

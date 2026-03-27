@@ -62,8 +62,8 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition ex
   private java.util.Map<String, GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameter> parameters;
 
   /**
-   * The resource instance type on which this policy applies. Format will be of the form : `/`
-   * Example: * `compute.googleapis.com/Instance`.
+   * The resource instance type that this policy applies to, in the format `/`. Example: *
+   * `compute.googleapis.com/Instance`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,8 +144,8 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition ex
   }
 
   /**
-   * The resource instance type on which this policy applies. Format will be of the form : `/`
-   * Example: * `compute.googleapis.com/Instance`.
+   * The resource instance type that this policy applies to, in the format `/`. Example: *
+   * `compute.googleapis.com/Instance`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceTypes() {
@@ -153,8 +153,8 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition ex
   }
 
   /**
-   * The resource instance type on which this policy applies. Format will be of the form : `/`
-   * Example: * `compute.googleapis.com/Instance`.
+   * The resource instance type that this policy applies to, in the format `/`. Example: *
+   * `compute.googleapis.com/Instance`.
    * @param resourceTypes resourceTypes or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition setResourceTypes(java.util.List<java.lang.String> resourceTypes) {

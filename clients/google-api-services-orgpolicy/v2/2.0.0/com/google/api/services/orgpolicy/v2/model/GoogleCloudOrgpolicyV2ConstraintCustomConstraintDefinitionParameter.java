@@ -61,7 +61,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionPar
 
   /**
    * Provides a CEL expression to specify the acceptable parameter values during assignment. For
-   * example, parameterName in ("parameterValue1", "parameterValue2")
+   * example, parameterName in ("parameterValue1", "parameterValue2").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionPar
 
   /**
    * Provides a CEL expression to specify the acceptable parameter values during assignment. For
-   * example, parameterName in ("parameterValue1", "parameterValue2")
+   * example, parameterName in ("parameterValue1", "parameterValue2").
    * @return value or {@code null} for none
    */
   public java.lang.String getValidValuesExpr() {
@@ -148,7 +148,7 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionPar
 
   /**
    * Provides a CEL expression to specify the acceptable parameter values during assignment. For
-   * example, parameterName in ("parameterValue1", "parameterValue2")
+   * example, parameterName in ("parameterValue1", "parameterValue2").
    * @param validValuesExpr validValuesExpr or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameter setValidValuesExpr(java.lang.String validValuesExpr) {

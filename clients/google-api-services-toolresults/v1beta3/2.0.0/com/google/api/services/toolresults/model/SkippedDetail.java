@@ -52,6 +52,14 @@ public final class SkippedDetail extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean incompatibleDevice;
 
   /**
+   * Indicates that the test could not be scheduled in the requested time because no suitable device
+   * was available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pendingTimeout;
+
+  /**
    * If the App doesn't support the specific API level.
    * @return value or {@code null} for none
    */
@@ -99,6 +107,25 @@ public final class SkippedDetail extends com.google.api.client.json.GenericJson 
    */
   public SkippedDetail setIncompatibleDevice(java.lang.Boolean incompatibleDevice) {
     this.incompatibleDevice = incompatibleDevice;
+    return this;
+  }
+
+  /**
+   * Indicates that the test could not be scheduled in the requested time because no suitable device
+   * was available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPendingTimeout() {
+    return pendingTimeout;
+  }
+
+  /**
+   * Indicates that the test could not be scheduled in the requested time because no suitable device
+   * was available.
+   * @param pendingTimeout pendingTimeout or {@code null} for none
+   */
+  public SkippedDetail setPendingTimeout(java.lang.Boolean pendingTimeout) {
+    this.pendingTimeout = pendingTimeout;
     return this;
   }
 

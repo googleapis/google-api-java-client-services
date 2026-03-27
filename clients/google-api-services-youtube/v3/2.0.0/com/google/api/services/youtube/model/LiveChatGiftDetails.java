@@ -72,11 +72,11 @@ public final class LiveChatGiftDetails extends com.google.api.client.json.Generi
   private java.lang.Boolean hasVisualEffect;
 
   /**
-   * The cost of the gift in jewels.
+   * The value of the gift in jewels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer jewelsCount;
+  private java.lang.Integer jewelsAmount;
 
   /**
    * The BCP-47 language code of the gift.
@@ -188,19 +188,19 @@ public final class LiveChatGiftDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The cost of the gift in jewels.
+   * The value of the gift in jewels.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getJewelsCount() {
-    return jewelsCount;
+  public java.lang.Integer getJewelsAmount() {
+    return jewelsAmount;
   }
 
   /**
-   * The cost of the gift in jewels.
-   * @param jewelsCount jewelsCount or {@code null} for none
+   * The value of the gift in jewels.
+   * @param jewelsAmount jewelsAmount or {@code null} for none
    */
-  public LiveChatGiftDetails setJewelsCount(java.lang.Integer jewelsCount) {
-    this.jewelsCount = jewelsCount;
+  public LiveChatGiftDetails setJewelsAmount(java.lang.Integer jewelsAmount) {
+    this.jewelsAmount = jewelsAmount;
     return this;
   }
 

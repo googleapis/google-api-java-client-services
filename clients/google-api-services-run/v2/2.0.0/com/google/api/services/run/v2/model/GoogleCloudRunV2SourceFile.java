@@ -30,7 +30,10 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2SourceFile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input only. The source code as raw text.
+   * Required. Input only. Represents the exact, literal, and complete source code of the file.
+   * Placeholders like `...` or comments such as `# [rest of code]` should NEVER be used as
+   * omission. Every character in this field will be built into the final container. Any omission
+   * will result in a broken application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +50,10 @@ public final class GoogleCloudRunV2SourceFile extends com.google.api.client.json
   private java.lang.String filename;
 
   /**
-   * Required. Input only. The source code as raw text.
+   * Required. Input only. Represents the exact, literal, and complete source code of the file.
+   * Placeholders like `...` or comments such as `# [rest of code]` should NEVER be used as
+   * omission. Every character in this field will be built into the final container. Any omission
+   * will result in a broken application.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -55,7 +61,10 @@ public final class GoogleCloudRunV2SourceFile extends com.google.api.client.json
   }
 
   /**
-   * Required. Input only. The source code as raw text.
+   * Required. Input only. Represents the exact, literal, and complete source code of the file.
+   * Placeholders like `...` or comments such as `# [rest of code]` should NEVER be used as
+   * omission. Every character in this field will be built into the final container. Any omission
+   * will result in a broken application.
    * @param content content or {@code null} for none
    */
   public GoogleCloudRunV2SourceFile setContent(java.lang.String content) {

@@ -52,6 +52,14 @@ public final class GoogleDevtoolsCloudbuildV1BuiltImage extends com.google.api.c
   private java.lang.String name;
 
   /**
+   * Output only. The OCI media type of the artifact. Non-OCI images, such as Docker images, will
+   * have an unspecified value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ociMediaType;
+
+  /**
    * Output only. Stores timing information for pushing the specified image.
    * The value may be {@code null}.
    */
@@ -108,6 +116,25 @@ public final class GoogleDevtoolsCloudbuildV1BuiltImage extends com.google.api.c
    */
   public GoogleDevtoolsCloudbuildV1BuiltImage setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The OCI media type of the artifact. Non-OCI images, such as Docker images, will
+   * have an unspecified value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOciMediaType() {
+    return ociMediaType;
+  }
+
+  /**
+   * Output only. The OCI media type of the artifact. Non-OCI images, such as Docker images, will
+   * have an unspecified value.
+   * @param ociMediaType ociMediaType or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1BuiltImage setOciMediaType(java.lang.String ociMediaType) {
+    this.ociMediaType = ociMediaType;
     return this;
   }
 

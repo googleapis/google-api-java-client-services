@@ -95,7 +95,7 @@ public final class GoogleCloudRunV2WorkerPool extends com.google.api.client.json
   private java.lang.String creator;
 
   /**
-   * Not supported, and ignored by Cloud Run.
+   * Deprecated: Not supported, and ignored by Cloud Run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -443,7 +443,7 @@ public final class GoogleCloudRunV2WorkerPool extends com.google.api.client.json
   }
 
   /**
-   * Not supported, and ignored by Cloud Run.
+   * Deprecated: Not supported, and ignored by Cloud Run.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCustomAudiences() {
@@ -451,7 +451,7 @@ public final class GoogleCloudRunV2WorkerPool extends com.google.api.client.json
   }
 
   /**
-   * Not supported, and ignored by Cloud Run.
+   * Deprecated: Not supported, and ignored by Cloud Run.
    * @param customAudiences customAudiences or {@code null} for none
    */
   public GoogleCloudRunV2WorkerPool setCustomAudiences(java.util.List<java.lang.String> customAudiences) {

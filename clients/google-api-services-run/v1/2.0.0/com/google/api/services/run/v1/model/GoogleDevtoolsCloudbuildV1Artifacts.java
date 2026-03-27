@@ -80,6 +80,16 @@ public final class GoogleDevtoolsCloudbuildV1Artifacts extends com.google.api.cl
   private GoogleDevtoolsCloudbuildV1ArtifactObjects objects;
 
   /**
+   * Optional. A list of OCI images to be uploaded to Artifact Registry upon successful completion
+   * of all build steps. OCI images in the specified paths will be uploaded to the specified
+   * Artifact Registry repository using the builder service account's credentials. If any images
+   * fail to be pushed, the build is marked FAILURE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleDevtoolsCloudbuildV1Oci> oci;
+
+  /**
    * A list of Python packages to be uploaded to Artifact Registry upon successful completion of all
    * build steps. The build service account credentials will be used to perform the upload. If any
    * objects fail to be pushed, the build is marked FAILURE.
@@ -198,6 +208,29 @@ public final class GoogleDevtoolsCloudbuildV1Artifacts extends com.google.api.cl
    */
   public GoogleDevtoolsCloudbuildV1Artifacts setObjects(GoogleDevtoolsCloudbuildV1ArtifactObjects objects) {
     this.objects = objects;
+    return this;
+  }
+
+  /**
+   * Optional. A list of OCI images to be uploaded to Artifact Registry upon successful completion
+   * of all build steps. OCI images in the specified paths will be uploaded to the specified
+   * Artifact Registry repository using the builder service account's credentials. If any images
+   * fail to be pushed, the build is marked FAILURE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleDevtoolsCloudbuildV1Oci> getOci() {
+    return oci;
+  }
+
+  /**
+   * Optional. A list of OCI images to be uploaded to Artifact Registry upon successful completion
+   * of all build steps. OCI images in the specified paths will be uploaded to the specified
+   * Artifact Registry repository using the builder service account's credentials. If any images
+   * fail to be pushed, the build is marked FAILURE.
+   * @param oci oci or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1Artifacts setOci(java.util.List<GoogleDevtoolsCloudbuildV1Oci> oci) {
+    this.oci = oci;
     return this;
   }
 

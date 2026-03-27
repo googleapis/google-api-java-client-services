@@ -32,7 +32,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
   /**
    * Optional. Determines a threshold for concurrency utilization before scaling begins. Accepted
    * values are between `0.1` and `0.95` (inclusive) or `0.0` to disable concurrency utilization as
-   * threshold for scaling.
+   * threshold for scaling. CPU and concurrency scaling cannot both be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
   /**
    * Optional. Determines a threshold for CPU utilization before scaling begins. Accepted values are
    * between `0.1` and `0.95` (inclusive) or `0.0` to disable CPU utilization as threshold for
-   * scaling.
+   * scaling. CPU and concurrency scaling cannot both be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
   /**
    * Optional. Determines a threshold for concurrency utilization before scaling begins. Accepted
    * values are between `0.1` and `0.95` (inclusive) or `0.0` to disable concurrency utilization as
-   * threshold for scaling.
+   * threshold for scaling. CPU and concurrency scaling cannot both be disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Float getConcurrencyUtilization() {
@@ -76,7 +76,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
   /**
    * Optional. Determines a threshold for concurrency utilization before scaling begins. Accepted
    * values are between `0.1` and `0.95` (inclusive) or `0.0` to disable concurrency utilization as
-   * threshold for scaling.
+   * threshold for scaling. CPU and concurrency scaling cannot both be disabled.
    * @param concurrencyUtilization concurrencyUtilization or {@code null} for none
    */
   public GoogleCloudRunV2RevisionScaling setConcurrencyUtilization(java.lang.Float concurrencyUtilization) {
@@ -87,7 +87,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
   /**
    * Optional. Determines a threshold for CPU utilization before scaling begins. Accepted values are
    * between `0.1` and `0.95` (inclusive) or `0.0` to disable CPU utilization as threshold for
-   * scaling.
+   * scaling. CPU and concurrency scaling cannot both be disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Float getCpuUtilization() {
@@ -97,7 +97,7 @@ public final class GoogleCloudRunV2RevisionScaling extends com.google.api.client
   /**
    * Optional. Determines a threshold for CPU utilization before scaling begins. Accepted values are
    * between `0.1` and `0.95` (inclusive) or `0.0` to disable CPU utilization as threshold for
-   * scaling.
+   * scaling. CPU and concurrency scaling cannot both be disabled.
    * @param cpuUtilization cpuUtilization or {@code null} for none
    */
   public GoogleCloudRunV2RevisionScaling setCpuUtilization(java.lang.Float cpuUtilization) {

@@ -31,7 +31,7 @@ package com.google.api.services.travelimpactmodel.v1.model;
 public final class Scope3FlightEmissions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Matches the flight identifiers in the request.
+   * Identifier. Matches the flight identifiers in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class Scope3FlightEmissions extends com.google.api.client.json.Gene
   private java.lang.Long wtwEmissionsGramsPerPax;
 
   /**
-   * Required. Matches the flight identifiers in the request.
+   * Identifier. Matches the flight identifiers in the request.
    * @return value or {@code null} for none
    */
   public Scope3FlightSegment getFlight() {
@@ -76,7 +76,7 @@ public final class Scope3FlightEmissions extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Matches the flight identifiers in the request.
+   * Identifier. Matches the flight identifiers in the request.
    * @param flight flight or {@code null} for none
    */
   public Scope3FlightEmissions setFlight(Scope3FlightSegment flight) {

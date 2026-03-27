@@ -56,7 +56,8 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
   private EmissionsGramsPerPax emissionsGramsPerPax;
 
   /**
-   * Required. Matches the flight identifiers in the request. Note: all IATA codes are capitalized.
+   * Identifier. Matches the flight identifiers in the request. Note: all IATA codes are
+   * capitalized.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +130,8 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Matches the flight identifiers in the request. Note: all IATA codes are capitalized.
+   * Identifier. Matches the flight identifiers in the request. Note: all IATA codes are
+   * capitalized.
    * @return value or {@code null} for none
    */
   public Flight getFlight() {
@@ -137,7 +139,8 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Matches the flight identifiers in the request. Note: all IATA codes are capitalized.
+   * Identifier. Matches the flight identifiers in the request. Note: all IATA codes are
+   * capitalized.
    * @param flight flight or {@code null} for none
    */
   public FlightWithEmissions setFlight(Flight flight) {

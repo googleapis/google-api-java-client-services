@@ -43,11 +43,11 @@ public final class FieldViolation extends com.google.api.client.json.GenericJson
    * = 2; } optional string email = 1; repeated EmailType type = 2; } string full_name = 1; repeated
    * EmailAddress email_addresses = 2; } In this example, in proto `field` could take one of the
    * following values: * `full_name` for a violation in the `full_name` value *
-   * `email_addresses[1].email` for a violation in the `email` field of the first `email_addresses`
-   * message * `email_addresses[3].type[2]` for a violation in the second `type` value in the third
+   * `email_addresses[0].email` for a violation in the `email` field of the first `email_addresses`
+   * message * `email_addresses[2].type[1]` for a violation in the second `type` value in the third
    * `email_addresses` message. In JSON, the same values are represented as: * `fullName` for a
-   * violation in the `fullName` value * `emailAddresses[1].email` for a violation in the `email`
-   * field of the first `emailAddresses` message * `emailAddresses[3].type[2]` for a violation in
+   * violation in the `fullName` value * `emailAddresses[0].email` for a violation in the `email`
+   * field of the first `emailAddresses` message * `emailAddresses[2].type[1]` for a violation in
    * the second `type` value in the third `emailAddresses` message.
    * The value may be {@code null}.
    */
@@ -96,11 +96,11 @@ public final class FieldViolation extends com.google.api.client.json.GenericJson
    * = 2; } optional string email = 1; repeated EmailType type = 2; } string full_name = 1; repeated
    * EmailAddress email_addresses = 2; } In this example, in proto `field` could take one of the
    * following values: * `full_name` for a violation in the `full_name` value *
-   * `email_addresses[1].email` for a violation in the `email` field of the first `email_addresses`
-   * message * `email_addresses[3].type[2]` for a violation in the second `type` value in the third
+   * `email_addresses[0].email` for a violation in the `email` field of the first `email_addresses`
+   * message * `email_addresses[2].type[1]` for a violation in the second `type` value in the third
    * `email_addresses` message. In JSON, the same values are represented as: * `fullName` for a
-   * violation in the `fullName` value * `emailAddresses[1].email` for a violation in the `email`
-   * field of the first `emailAddresses` message * `emailAddresses[3].type[2]` for a violation in
+   * violation in the `fullName` value * `emailAddresses[0].email` for a violation in the `email`
+   * field of the first `emailAddresses` message * `emailAddresses[2].type[1]` for a violation in
    * the second `type` value in the third `emailAddresses` message.
    * @return value or {@code null} for none
    */
@@ -115,11 +115,11 @@ public final class FieldViolation extends com.google.api.client.json.GenericJson
    * = 2; } optional string email = 1; repeated EmailType type = 2; } string full_name = 1; repeated
    * EmailAddress email_addresses = 2; } In this example, in proto `field` could take one of the
    * following values: * `full_name` for a violation in the `full_name` value *
-   * `email_addresses[1].email` for a violation in the `email` field of the first `email_addresses`
-   * message * `email_addresses[3].type[2]` for a violation in the second `type` value in the third
+   * `email_addresses[0].email` for a violation in the `email` field of the first `email_addresses`
+   * message * `email_addresses[2].type[1]` for a violation in the second `type` value in the third
    * `email_addresses` message. In JSON, the same values are represented as: * `fullName` for a
-   * violation in the `fullName` value * `emailAddresses[1].email` for a violation in the `email`
-   * field of the first `emailAddresses` message * `emailAddresses[3].type[2]` for a violation in
+   * violation in the `fullName` value * `emailAddresses[0].email` for a violation in the `email`
+   * field of the first `emailAddresses` message * `emailAddresses[2].type[1]` for a violation in
    * the second `type` value in the third `emailAddresses` message.
    * @param field field or {@code null} for none
    */

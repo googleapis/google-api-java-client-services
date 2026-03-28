@@ -182,8 +182,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link Compute#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+       * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
        * @return the request
        */
       public Compute compute(java.lang.String parent) throws java.io.IOException {
@@ -211,8 +211,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * Compute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+         * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
          * @since 1.13
          */
         protected Compute(java.lang.String parent) {
@@ -292,13 +292,14 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the resource to compute contacts for. Format:
-         * organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+         * organizations/{organization}, folders/{folder} or projects/{project} (where {project} is
+         * the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the resource to compute contacts for. Format:
-       organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+        /** Required. The name of the resource to compute contacts for. Format: organizations/{organization},
+       folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public java.lang.String getParent() {
           return parent;
@@ -306,7 +307,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the resource to compute contacts for. Format:
-         * organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+         * organizations/{organization}, folders/{folder} or projects/{project} (where {project} is
+         * the project number)
          */
         public Compute setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -406,8 +408,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource to save this contact for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+       * @param parent Required. The resource to save this contact for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
        * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
        * @return the request
        */
@@ -435,8 +437,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource to save this contact for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+         * @param parent Required. The resource to save this contact for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
          * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
          * @since 1.13
          */
@@ -506,22 +508,22 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The resource to save this contact for. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The resource to save this contact for. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource to save this contact for. Format: organizations/{organization_id},
-       folders/{folder_id} or projects/{project_id}
+        /** Required. The resource to save this contact for. Format: organizations/{organization},
+       folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource to save this contact for. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The resource to save this contact for. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -547,8 +549,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the contact to delete. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -576,8 +578,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the contact to delete. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -647,15 +649,15 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to delete. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the contact to delete. Format:
-       organizations/{organization_id}/contacts/{contact_id}, folders/{folder_id}/contacts/{contact_id} or
-       projects/{project_id}/contacts/{contact_id}
+       organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public java.lang.String getName() {
           return name;
@@ -663,8 +665,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to delete. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -690,8 +692,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the contact to retrieve. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -719,8 +721,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the contact to retrieve. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -800,15 +802,15 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to retrieve. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the contact to retrieve. Format:
-       organizations/{organization_id}/contacts/{contact_id}, folders/{folder_id}/contacts/{contact_id} or
-       projects/{project_id}/contacts/{contact_id}
+       organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public java.lang.String getName() {
           return name;
@@ -816,8 +818,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to retrieve. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -842,8 +844,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name. Format: organizations/{organization_id}, folders/{folder_id} or
-       *        projects/{project_id}
+       * @param parent Required. The parent resource name. Format: organizations/{organization}, folders/{folder} or
+       *        projects/{project} (where {project} is the project number)
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -870,8 +872,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name. Format: organizations/{organization_id}, folders/{folder_id} or
-       *        projects/{project_id}
+         * @param parent Required. The parent resource name. Format: organizations/{organization}, folders/{folder} or
+       *        projects/{project} (where {project} is the project number)
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -950,22 +952,22 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The parent resource name. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The parent resource name. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name. Format: organizations/{organization_id}, folders/{folder_id} or
-       projects/{project_id}
+        /** Required. The parent resource name. Format: organizations/{organization}, folders/{folder} or
+       projects/{project} (where {project} is the project number)
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The parent resource name. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1209,7 +1211,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        *
        * @param resource Required. The name of the resource to send the test message for. All contacts must either be set
        *        directly on this resource or inherited from another resource that is an ancestor of this
-       *        one. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+       *        one. Format: organizations/{organization}, folders/{folder} or projects/{project} (where
+       *        {project} is the project number)
        * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1SendTestMessageRequest}
        * @return the request
        */
@@ -1240,7 +1243,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          *
          * @param resource Required. The name of the resource to send the test message for. All contacts must either be set
        *        directly on this resource or inherited from another resource that is an ancestor of this
-       *        one. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+       *        one. Format: organizations/{organization}, folders/{folder} or projects/{project} (where
+       *        {project} is the project number)
          * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1SendTestMessageRequest}
          * @since 1.13
          */
@@ -1312,15 +1316,16 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         /**
          * Required. The name of the resource to send the test message for. All contacts must either
          * be set directly on this resource or inherited from another resource that is an ancestor
-         * of this one. Format: organizations/{organization_id}, folders/{folder_id} or
-         * projects/{project_id}
+         * of this one. Format: organizations/{organization}, folders/{folder} or projects/{project}
+         * (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
         /** Required. The name of the resource to send the test message for. All contacts must either be set
        directly on this resource or inherited from another resource that is an ancestor of this one.
-       Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+       Format: organizations/{organization}, folders/{folder} or projects/{project} (where {project} is
+       the project number)
          */
         public java.lang.String getResource() {
           return resource;
@@ -1329,8 +1334,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         /**
          * Required. The name of the resource to send the test message for. All contacts must either
          * be set directly on this resource or inherited from another resource that is an ancestor
-         * of this one. Format: organizations/{organization_id}, folders/{folder_id} or
-         * projects/{project_id}
+         * of this one. Format: organizations/{organization}, folders/{folder} or projects/{project}
+         * (where {project} is the project number)
          */
         public SendTestMessage setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -1400,8 +1405,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link Compute#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+       * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
        * @return the request
        */
       public Compute compute(java.lang.String parent) throws java.io.IOException {
@@ -1429,8 +1434,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * Compute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+         * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
          * @since 1.13
          */
         protected Compute(java.lang.String parent) {
@@ -1510,13 +1515,14 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the resource to compute contacts for. Format:
-         * organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+         * organizations/{organization}, folders/{folder} or projects/{project} (where {project} is
+         * the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the resource to compute contacts for. Format:
-       organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+        /** Required. The name of the resource to compute contacts for. Format: organizations/{organization},
+       folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public java.lang.String getParent() {
           return parent;
@@ -1524,7 +1530,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the resource to compute contacts for. Format:
-         * organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+         * organizations/{organization}, folders/{folder} or projects/{project} (where {project} is
+         * the project number)
          */
         public Compute setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1624,8 +1631,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource to save this contact for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+       * @param parent Required. The resource to save this contact for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
        * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
        * @return the request
        */
@@ -1653,8 +1660,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource to save this contact for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+         * @param parent Required. The resource to save this contact for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
          * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
          * @since 1.13
          */
@@ -1724,22 +1731,22 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The resource to save this contact for. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The resource to save this contact for. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource to save this contact for. Format: organizations/{organization_id},
-       folders/{folder_id} or projects/{project_id}
+        /** Required. The resource to save this contact for. Format: organizations/{organization},
+       folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource to save this contact for. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The resource to save this contact for. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -1765,8 +1772,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the contact to delete. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1794,8 +1801,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the contact to delete. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -1865,15 +1872,15 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to delete. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the contact to delete. Format:
-       organizations/{organization_id}/contacts/{contact_id}, folders/{folder_id}/contacts/{contact_id} or
-       projects/{project_id}/contacts/{contact_id}
+       organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public java.lang.String getName() {
           return name;
@@ -1881,8 +1888,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to delete. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1908,8 +1915,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the contact to retrieve. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1937,8 +1944,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the contact to retrieve. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2018,15 +2025,15 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to retrieve. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the contact to retrieve. Format:
-       organizations/{organization_id}/contacts/{contact_id}, folders/{folder_id}/contacts/{contact_id} or
-       projects/{project_id}/contacts/{contact_id}
+       organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public java.lang.String getName() {
           return name;
@@ -2034,8 +2041,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to retrieve. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2060,8 +2067,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name. Format: organizations/{organization_id}, folders/{folder_id} or
-       *        projects/{project_id}
+       * @param parent Required. The parent resource name. Format: organizations/{organization}, folders/{folder} or
+       *        projects/{project} (where {project} is the project number)
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -2088,8 +2095,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name. Format: organizations/{organization_id}, folders/{folder_id} or
-       *        projects/{project_id}
+         * @param parent Required. The parent resource name. Format: organizations/{organization}, folders/{folder} or
+       *        projects/{project} (where {project} is the project number)
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -2168,22 +2175,22 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The parent resource name. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The parent resource name. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name. Format: organizations/{organization_id}, folders/{folder_id} or
-       projects/{project_id}
+        /** Required. The parent resource name. Format: organizations/{organization}, folders/{folder} or
+       projects/{project} (where {project} is the project number)
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The parent resource name. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2427,7 +2434,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        *
        * @param resource Required. The name of the resource to send the test message for. All contacts must either be set
        *        directly on this resource or inherited from another resource that is an ancestor of this
-       *        one. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+       *        one. Format: organizations/{organization}, folders/{folder} or projects/{project} (where
+       *        {project} is the project number)
        * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1SendTestMessageRequest}
        * @return the request
        */
@@ -2458,7 +2466,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          *
          * @param resource Required. The name of the resource to send the test message for. All contacts must either be set
        *        directly on this resource or inherited from another resource that is an ancestor of this
-       *        one. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+       *        one. Format: organizations/{organization}, folders/{folder} or projects/{project} (where
+       *        {project} is the project number)
          * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1SendTestMessageRequest}
          * @since 1.13
          */
@@ -2530,15 +2539,16 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         /**
          * Required. The name of the resource to send the test message for. All contacts must either
          * be set directly on this resource or inherited from another resource that is an ancestor
-         * of this one. Format: organizations/{organization_id}, folders/{folder_id} or
-         * projects/{project_id}
+         * of this one. Format: organizations/{organization}, folders/{folder} or projects/{project}
+         * (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
         /** Required. The name of the resource to send the test message for. All contacts must either be set
        directly on this resource or inherited from another resource that is an ancestor of this one.
-       Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+       Format: organizations/{organization}, folders/{folder} or projects/{project} (where {project} is
+       the project number)
          */
         public java.lang.String getResource() {
           return resource;
@@ -2547,8 +2557,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         /**
          * Required. The name of the resource to send the test message for. All contacts must either
          * be set directly on this resource or inherited from another resource that is an ancestor
-         * of this one. Format: organizations/{organization_id}, folders/{folder_id} or
-         * projects/{project_id}
+         * of this one. Format: organizations/{organization}, folders/{folder} or projects/{project}
+         * (where {project} is the project number)
          */
         public SendTestMessage setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {
@@ -2618,8 +2628,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link Compute#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+       * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
        * @return the request
        */
       public Compute compute(java.lang.String parent) throws java.io.IOException {
@@ -2647,8 +2657,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * Compute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+         * @param parent Required. The name of the resource to compute contacts for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
          * @since 1.13
          */
         protected Compute(java.lang.String parent) {
@@ -2728,13 +2738,14 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the resource to compute contacts for. Format:
-         * organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+         * organizations/{organization}, folders/{folder} or projects/{project} (where {project} is
+         * the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The name of the resource to compute contacts for. Format:
-       organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+        /** Required. The name of the resource to compute contacts for. Format: organizations/{organization},
+       folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public java.lang.String getParent() {
           return parent;
@@ -2742,7 +2753,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the resource to compute contacts for. Format:
-         * organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+         * organizations/{organization}, folders/{folder} or projects/{project} (where {project} is
+         * the project number)
          */
         public Compute setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2842,8 +2854,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource to save this contact for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+       * @param parent Required. The resource to save this contact for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
        * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
        * @return the request
        */
@@ -2871,8 +2883,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource to save this contact for. Format: organizations/{organization_id},
-       *        folders/{folder_id} or projects/{project_id}
+         * @param parent Required. The resource to save this contact for. Format: organizations/{organization},
+       *        folders/{folder} or projects/{project} (where {project} is the project number)
          * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1Contact}
          * @since 1.13
          */
@@ -2942,22 +2954,22 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The resource to save this contact for. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The resource to save this contact for. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource to save this contact for. Format: organizations/{organization_id},
-       folders/{folder_id} or projects/{project_id}
+        /** Required. The resource to save this contact for. Format: organizations/{organization},
+       folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The resource to save this contact for. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The resource to save this contact for. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -2983,8 +2995,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the contact to delete. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -3012,8 +3024,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the contact to delete. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -3083,15 +3095,15 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to delete. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the contact to delete. Format:
-       organizations/{organization_id}/contacts/{contact_id}, folders/{folder_id}/contacts/{contact_id} or
-       projects/{project_id}/contacts/{contact_id}
+       organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public java.lang.String getName() {
           return name;
@@ -3099,8 +3111,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to delete. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3126,8 +3138,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the contact to retrieve. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3155,8 +3167,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the contact to retrieve. Format:
-       *        organizations/{organization_id}/contacts/{contact_id},
-       *        folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+       *        organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       *        projects/{project}/contacts/{contact} (where {project} is the project number)
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -3236,15 +3248,15 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to retrieve. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the contact to retrieve. Format:
-       organizations/{organization_id}/contacts/{contact_id}, folders/{folder_id}/contacts/{contact_id} or
-       projects/{project_id}/contacts/{contact_id}
+       organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+       projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public java.lang.String getName() {
           return name;
@@ -3252,8 +3264,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
 
         /**
          * Required. The name of the contact to retrieve. Format:
-         * organizations/{organization_id}/contacts/{contact_id},
-         * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+         * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+         * projects/{project}/contacts/{contact} (where {project} is the project number)
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3278,8 +3290,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the essentialcontacts server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent resource name. Format: organizations/{organization_id}, folders/{folder_id} or
-       *        projects/{project_id}
+       * @param parent Required. The parent resource name. Format: organizations/{organization}, folders/{folder} or
+       *        projects/{project} (where {project} is the project number)
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -3306,8 +3318,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource name. Format: organizations/{organization_id}, folders/{folder_id} or
-       *        projects/{project_id}
+         * @param parent Required. The parent resource name. Format: organizations/{organization}, folders/{folder} or
+       *        projects/{project} (where {project} is the project number)
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -3386,22 +3398,22 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         }
 
         /**
-         * Required. The parent resource name. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The parent resource name. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource name. Format: organizations/{organization_id}, folders/{folder_id} or
-       projects/{project_id}
+        /** Required. The parent resource name. Format: organizations/{organization}, folders/{folder} or
+       projects/{project} (where {project} is the project number)
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource name. Format: organizations/{organization_id},
-         * folders/{folder_id} or projects/{project_id}
+         * Required. The parent resource name. Format: organizations/{organization},
+         * folders/{folder} or projects/{project} (where {project} is the project number)
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3645,7 +3657,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
        *
        * @param resource Required. The name of the resource to send the test message for. All contacts must either be set
        *        directly on this resource or inherited from another resource that is an ancestor of this
-       *        one. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+       *        one. Format: organizations/{organization}, folders/{folder} or projects/{project} (where
+       *        {project} is the project number)
        * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1SendTestMessageRequest}
        * @return the request
        */
@@ -3676,7 +3689,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
          *
          * @param resource Required. The name of the resource to send the test message for. All contacts must either be set
        *        directly on this resource or inherited from another resource that is an ancestor of this
-       *        one. Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+       *        one. Format: organizations/{organization}, folders/{folder} or projects/{project} (where
+       *        {project} is the project number)
          * @param content the {@link com.google.api.services.essentialcontacts.v1.model.GoogleCloudEssentialcontactsV1SendTestMessageRequest}
          * @since 1.13
          */
@@ -3748,15 +3762,16 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         /**
          * Required. The name of the resource to send the test message for. All contacts must either
          * be set directly on this resource or inherited from another resource that is an ancestor
-         * of this one. Format: organizations/{organization_id}, folders/{folder_id} or
-         * projects/{project_id}
+         * of this one. Format: organizations/{organization}, folders/{folder} or projects/{project}
+         * (where {project} is the project number)
          */
         @com.google.api.client.util.Key
         private java.lang.String resource;
 
         /** Required. The name of the resource to send the test message for. All contacts must either be set
        directly on this resource or inherited from another resource that is an ancestor of this one.
-       Format: organizations/{organization_id}, folders/{folder_id} or projects/{project_id}
+       Format: organizations/{organization}, folders/{folder} or projects/{project} (where {project} is
+       the project number)
          */
         public java.lang.String getResource() {
           return resource;
@@ -3765,8 +3780,8 @@ public class Essentialcontacts extends com.google.api.client.googleapis.services
         /**
          * Required. The name of the resource to send the test message for. All contacts must either
          * be set directly on this resource or inherited from another resource that is an ancestor
-         * of this one. Format: organizations/{organization_id}, folders/{folder_id} or
-         * projects/{project_id}
+         * of this one. Format: organizations/{organization}, folders/{folder} or projects/{project}
+         * (where {project} is the project number)
          */
         public SendTestMessage setResource(java.lang.String resource) {
           if (!getSuppressPatternChecks()) {

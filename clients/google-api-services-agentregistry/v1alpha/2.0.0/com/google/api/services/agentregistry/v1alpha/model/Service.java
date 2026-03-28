@@ -97,6 +97,16 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The resource name of the resulting Agent, MCP Server, or Endpoint. Format: *
+   * `projects/{project}/locations/{location}/mcpServers/{mcp_server}` *
+   * `projects/{project}/locations/{location}/agents/{agent}` *
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String registryResource;
+
+  /**
    * Output only. Update time.
    * The value may be {@code null}.
    */
@@ -246,6 +256,29 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the resulting Agent, MCP Server, or Endpoint. Format: *
+   * `projects/{project}/locations/{location}/mcpServers/{mcp_server}` *
+   * `projects/{project}/locations/{location}/agents/{agent}` *
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegistryResource() {
+    return registryResource;
+  }
+
+  /**
+   * Output only. The resource name of the resulting Agent, MCP Server, or Endpoint. Format: *
+   * `projects/{project}/locations/{location}/mcpServers/{mcp_server}` *
+   * `projects/{project}/locations/{location}/agents/{agent}` *
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * @param registryResource registryResource or {@code null} for none
+   */
+  public Service setRegistryResource(java.lang.String registryResource) {
+    this.registryResource = registryResource;
     return this;
   }
 

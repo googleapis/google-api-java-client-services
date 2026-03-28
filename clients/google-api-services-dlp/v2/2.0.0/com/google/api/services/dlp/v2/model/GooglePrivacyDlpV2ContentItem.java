@@ -38,6 +38,13 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
   private GooglePrivacyDlpV2ByteContentItem byteItem;
 
   /**
+   * User provided metadata for the content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2ContentMetadata contentMetadata;
+
+  /**
    * Structured content for inspection. See https://cloud.google.com/sensitive-data-
    * protection/docs/inspecting-text#inspecting_a_table to learn more.
    * The value may be {@code null}.
@@ -66,6 +73,23 @@ public final class GooglePrivacyDlpV2ContentItem extends com.google.api.client.j
    */
   public GooglePrivacyDlpV2ContentItem setByteItem(GooglePrivacyDlpV2ByteContentItem byteItem) {
     this.byteItem = byteItem;
+    return this;
+  }
+
+  /**
+   * User provided metadata for the content.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ContentMetadata getContentMetadata() {
+    return contentMetadata;
+  }
+
+  /**
+   * User provided metadata for the content.
+   * @param contentMetadata contentMetadata or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ContentItem setContentMetadata(GooglePrivacyDlpV2ContentMetadata contentMetadata) {
+    this.contentMetadata = contentMetadata;
     return this;
   }
 

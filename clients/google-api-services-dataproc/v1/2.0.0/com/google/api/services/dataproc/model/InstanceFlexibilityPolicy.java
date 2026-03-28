@@ -30,6 +30,15 @@ package com.google.api.services.dataproc.model;
 public final class InstanceFlexibilityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A map of instance short name to machine type. The key is the short name of the
+   * Compute Engine instance, and the value is the full machine-type name (e.g., 'n1-standard-16').
+   * See Machine types for more information on valid machine type strings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> instanceMachineTypes;
+
+  /**
    * Optional. List of instance selection options that the group will use when creating new VMs.
    * The value may be {@code null}.
    */
@@ -49,6 +58,27 @@ public final class InstanceFlexibilityPolicy extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private ProvisioningModelMix provisioningModelMix;
+
+  /**
+   * Output only. A map of instance short name to machine type. The key is the short name of the
+   * Compute Engine instance, and the value is the full machine-type name (e.g., 'n1-standard-16').
+   * See Machine types for more information on valid machine type strings.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getInstanceMachineTypes() {
+    return instanceMachineTypes;
+  }
+
+  /**
+   * Output only. A map of instance short name to machine type. The key is the short name of the
+   * Compute Engine instance, and the value is the full machine-type name (e.g., 'n1-standard-16').
+   * See Machine types for more information on valid machine type strings.
+   * @param instanceMachineTypes instanceMachineTypes or {@code null} for none
+   */
+  public InstanceFlexibilityPolicy setInstanceMachineTypes(java.util.Map<String, java.lang.String> instanceMachineTypes) {
+    this.instanceMachineTypes = instanceMachineTypes;
+    return this;
+  }
 
   /**
    * Optional. List of instance selection options that the group will use when creating new VMs.

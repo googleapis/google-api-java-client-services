@@ -42,6 +42,13 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
   private UsageMetrics approximateUsage;
 
   /**
+   * Output only. Information about the cohort that the workload belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CohortInfo cohortInfo;
+
+  /**
    * Output only. Snapshot of current workload resource usage.
    * The value may be {@code null}.
    */
@@ -100,6 +107,23 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
    */
   public RuntimeInfo setApproximateUsage(UsageMetrics approximateUsage) {
     this.approximateUsage = approximateUsage;
+    return this;
+  }
+
+  /**
+   * Output only. Information about the cohort that the workload belongs to.
+   * @return value or {@code null} for none
+   */
+  public CohortInfo getCohortInfo() {
+    return cohortInfo;
+  }
+
+  /**
+   * Output only. Information about the cohort that the workload belongs to.
+   * @param cohortInfo cohortInfo or {@code null} for none
+   */
+  public RuntimeInfo setCohortInfo(CohortInfo cohortInfo) {
+    this.cohortInfo = cohortInfo;
     return this;
   }
 

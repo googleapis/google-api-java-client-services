@@ -45,6 +45,24 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String cesApp;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cesTool;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cesToolset;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private String createTime;
 
   /**
@@ -104,6 +122,51 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
    */
   public GoogleCloudDialogflowV2beta1ToolCall setAnswerRecord(java.lang.String answerRecord) {
     this.answerRecord = answerRecord;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCesApp() {
+    return cesApp;
+  }
+
+  /**
+   * @param cesApp cesApp or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ToolCall setCesApp(java.lang.String cesApp) {
+    this.cesApp = cesApp;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCesTool() {
+    return cesTool;
+  }
+
+  /**
+   * @param cesTool cesTool or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ToolCall setCesTool(java.lang.String cesTool) {
+    this.cesTool = cesTool;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCesToolset() {
+    return cesToolset;
+  }
+
+  /**
+   * @param cesToolset cesToolset or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ToolCall setCesToolset(java.lang.String cesToolset) {
+    this.cesToolset = cesToolset;
     return this;
   }
 

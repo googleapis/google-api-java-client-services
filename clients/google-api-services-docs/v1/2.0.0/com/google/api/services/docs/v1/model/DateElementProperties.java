@@ -47,12 +47,12 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
 
   /**
    * The language code of the DateElement. For example, `en`. If unset, the default locale is `en`.
-   * Limited to the following locales: `af`, `am`, `ar`, `az`, `be`, `bg`, `bn`, `ca`, `cs`, `da`,
-   * `de`, `el`, `en`, `en-CA`, `en-GB`, `es`, `es-419`, `et`, `eu`, `fa`, `fi`, `fil`, `fr`, `fr-
-   * CA`, `gl`, `gu`, `hi`, `hr`, `hu`, `hy`, `id`, `is`, `it`, `iw`, `ja`, `ka`, `kk`, `km`, `kn`,
-   * `ko`, `lo`, `lt`, `lv`, `ml`, `mn`, `mr`, `ms`, `ne`, `nl`, `no`, `pa`, `pl`, `pt-BR`, `pt-PT`,
-   * `ro`, `ru`, `si`, `sk`, `sl`, `sr`, `sv`, `sw`, `ta`, `te`, `th`, `tr`, `uk`, `ur`, `vi`, `zh-
-   * CN`, `zh-HK`, `zh-TW`, `zu`, `cy`, `my`.
+   * Limited to the following locales: `af`, `am`, `ar`, `as`, `az`, `be`, `bg`, `bn`, `ca`, `cs`,
+   * `da`, `de`, `el`, `en`, `en-CA`, `en-GB`, `es`, `es-419`, `et`, `eu`, `fa`, `fi`, `fil`, `fr`,
+   * `fr-CA`, `gl`, `gu`, `hi`, `hr`, `hu`, `hy`, `id`, `is`, `it`, `iw`, `ja`, `ka`, `kk`, `km`,
+   * `kn`, `ko`, `lo`, `lt`, `lv`, `mk`, `ml`, `mn`, `mr`, `ms`, `ne`, `nl`, `no`, `or`, `pa`, `pl`,
+   * `pt-BR`, `pt-PT`, `ro`, `ru`, `si`, `sk`, `sl`, `sq`, `sr`, `sv`, `sw`, `ta`, `te`, `th`, `tr`,
+   * `uk`, `ur`, `uz`, `vi`, `zh-CN`, `zh-HK`, `zh-TW`, `zu`, `cy`, `my`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,12 +127,12 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
 
   /**
    * The language code of the DateElement. For example, `en`. If unset, the default locale is `en`.
-   * Limited to the following locales: `af`, `am`, `ar`, `az`, `be`, `bg`, `bn`, `ca`, `cs`, `da`,
-   * `de`, `el`, `en`, `en-CA`, `en-GB`, `es`, `es-419`, `et`, `eu`, `fa`, `fi`, `fil`, `fr`, `fr-
-   * CA`, `gl`, `gu`, `hi`, `hr`, `hu`, `hy`, `id`, `is`, `it`, `iw`, `ja`, `ka`, `kk`, `km`, `kn`,
-   * `ko`, `lo`, `lt`, `lv`, `ml`, `mn`, `mr`, `ms`, `ne`, `nl`, `no`, `pa`, `pl`, `pt-BR`, `pt-PT`,
-   * `ro`, `ru`, `si`, `sk`, `sl`, `sr`, `sv`, `sw`, `ta`, `te`, `th`, `tr`, `uk`, `ur`, `vi`, `zh-
-   * CN`, `zh-HK`, `zh-TW`, `zu`, `cy`, `my`.
+   * Limited to the following locales: `af`, `am`, `ar`, `as`, `az`, `be`, `bg`, `bn`, `ca`, `cs`,
+   * `da`, `de`, `el`, `en`, `en-CA`, `en-GB`, `es`, `es-419`, `et`, `eu`, `fa`, `fi`, `fil`, `fr`,
+   * `fr-CA`, `gl`, `gu`, `hi`, `hr`, `hu`, `hy`, `id`, `is`, `it`, `iw`, `ja`, `ka`, `kk`, `km`,
+   * `kn`, `ko`, `lo`, `lt`, `lv`, `mk`, `ml`, `mn`, `mr`, `ms`, `ne`, `nl`, `no`, `or`, `pa`, `pl`,
+   * `pt-BR`, `pt-PT`, `ro`, `ru`, `si`, `sk`, `sl`, `sq`, `sr`, `sv`, `sw`, `ta`, `te`, `th`, `tr`,
+   * `uk`, `ur`, `uz`, `vi`, `zh-CN`, `zh-HK`, `zh-TW`, `zu`, `cy`, `my`.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocale() {
@@ -141,12 +141,12 @@ public final class DateElementProperties extends com.google.api.client.json.Gene
 
   /**
    * The language code of the DateElement. For example, `en`. If unset, the default locale is `en`.
-   * Limited to the following locales: `af`, `am`, `ar`, `az`, `be`, `bg`, `bn`, `ca`, `cs`, `da`,
-   * `de`, `el`, `en`, `en-CA`, `en-GB`, `es`, `es-419`, `et`, `eu`, `fa`, `fi`, `fil`, `fr`, `fr-
-   * CA`, `gl`, `gu`, `hi`, `hr`, `hu`, `hy`, `id`, `is`, `it`, `iw`, `ja`, `ka`, `kk`, `km`, `kn`,
-   * `ko`, `lo`, `lt`, `lv`, `ml`, `mn`, `mr`, `ms`, `ne`, `nl`, `no`, `pa`, `pl`, `pt-BR`, `pt-PT`,
-   * `ro`, `ru`, `si`, `sk`, `sl`, `sr`, `sv`, `sw`, `ta`, `te`, `th`, `tr`, `uk`, `ur`, `vi`, `zh-
-   * CN`, `zh-HK`, `zh-TW`, `zu`, `cy`, `my`.
+   * Limited to the following locales: `af`, `am`, `ar`, `as`, `az`, `be`, `bg`, `bn`, `ca`, `cs`,
+   * `da`, `de`, `el`, `en`, `en-CA`, `en-GB`, `es`, `es-419`, `et`, `eu`, `fa`, `fi`, `fil`, `fr`,
+   * `fr-CA`, `gl`, `gu`, `hi`, `hr`, `hu`, `hy`, `id`, `is`, `it`, `iw`, `ja`, `ka`, `kk`, `km`,
+   * `kn`, `ko`, `lo`, `lt`, `lv`, `mk`, `ml`, `mn`, `mr`, `ms`, `ne`, `nl`, `no`, `or`, `pa`, `pl`,
+   * `pt-BR`, `pt-PT`, `ro`, `ru`, `si`, `sk`, `sl`, `sq`, `sr`, `sv`, `sw`, `ta`, `te`, `th`, `tr`,
+   * `uk`, `ur`, `uz`, `vi`, `zh-CN`, `zh-HK`, `zh-TW`, `zu`, `cy`, `my`.
    * @param locale locale or {@code null} for none
    */
   public DateElementProperties setLocale(java.lang.String locale) {

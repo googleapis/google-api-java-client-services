@@ -63,8 +63,7 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the BackupDR backup, in the format `projects/{project_id}/locations/{locat
-   * ion_id}/backupVaults/{backupvault_id}/dataSources/{datasource_id}/backups/{backup_id}`, TODO
-   * (b/443690479) - Remove visibility restrictions once the feature is ready
+   * ion_id}/backupVaults/{backupvault_id}/dataSources/{datasource_id}/backups/{backup_id}`,
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +147,7 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the BackupDR backup, in the format `projects/{project_id}/locations/{locat
-   * ion_id}/backupVaults/{backupvault_id}/dataSources/{datasource_id}/backups/{backup_id}`, TODO
-   * (b/443690479) - Remove visibility restrictions once the feature is ready
+   * ion_id}/backupVaults/{backupvault_id}/dataSources/{datasource_id}/backups/{backup_id}`,
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceBackupdrBackup() {
@@ -158,8 +156,7 @@ public final class FileShareConfig extends com.google.api.client.json.GenericJso
 
   /**
    * The resource name of the BackupDR backup, in the format `projects/{project_id}/locations/{locat
-   * ion_id}/backupVaults/{backupvault_id}/dataSources/{datasource_id}/backups/{backup_id}`, TODO
-   * (b/443690479) - Remove visibility restrictions once the feature is ready
+   * ion_id}/backupVaults/{backupvault_id}/dataSources/{datasource_id}/backups/{backup_id}`,
    * @param sourceBackupdrBackup sourceBackupdrBackup or {@code null} for none
    */
   public FileShareConfig setSourceBackupdrBackup(java.lang.String sourceBackupdrBackup) {

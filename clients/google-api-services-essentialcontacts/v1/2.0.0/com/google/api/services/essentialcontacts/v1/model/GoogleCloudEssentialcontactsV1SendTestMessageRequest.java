@@ -32,8 +32,8 @@ public final class GoogleCloudEssentialcontactsV1SendTestMessageRequest extends 
 
   /**
    * Required. The list of names of the contacts to send a test message to. Format:
-   * organizations/{organization_id}/contacts/{contact_id},
-   * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+   * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+   * projects/{project}/contacts/{contact} (where {project} is the project number)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,8 +49,8 @@ public final class GoogleCloudEssentialcontactsV1SendTestMessageRequest extends 
 
   /**
    * Required. The list of names of the contacts to send a test message to. Format:
-   * organizations/{organization_id}/contacts/{contact_id},
-   * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+   * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+   * projects/{project}/contacts/{contact} (where {project} is the project number)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getContacts() {
@@ -59,8 +59,8 @@ public final class GoogleCloudEssentialcontactsV1SendTestMessageRequest extends 
 
   /**
    * Required. The list of names of the contacts to send a test message to. Format:
-   * organizations/{organization_id}/contacts/{contact_id},
-   * folders/{folder_id}/contacts/{contact_id} or projects/{project_id}/contacts/{contact_id}
+   * organizations/{organization}/contacts/{contact}, folders/{folder}/contacts/{contact} or
+   * projects/{project}/contacts/{contact} (where {project} is the project number)
    * @param contacts contacts or {@code null} for none
    */
   public GoogleCloudEssentialcontactsV1SendTestMessageRequest setContacts(java.util.List<java.lang.String> contacts) {

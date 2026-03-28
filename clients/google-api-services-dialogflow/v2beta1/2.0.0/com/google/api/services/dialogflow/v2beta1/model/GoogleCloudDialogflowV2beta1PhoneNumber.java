@@ -33,6 +33,12 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1PhoneNumberAllowedSipTrunks allowedSipTrunks;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String conversationProfile;
 
   /**
@@ -52,6 +58,27 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String purgeTime;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1PhoneNumberAllowedSipTrunks getAllowedSipTrunks() {
+    return allowedSipTrunks;
+  }
+
+  /**
+   * @param allowedSipTrunks allowedSipTrunks or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1PhoneNumber setAllowedSipTrunks(GoogleCloudDialogflowV2beta1PhoneNumberAllowedSipTrunks allowedSipTrunks) {
+    this.allowedSipTrunks = allowedSipTrunks;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -110,6 +137,21 @@ public final class GoogleCloudDialogflowV2beta1PhoneNumber extends com.google.ap
    */
   public GoogleCloudDialogflowV2beta1PhoneNumber setPhoneNumber(java.lang.String phoneNumber) {
     this.phoneNumber = phoneNumber;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public String getPurgeTime() {
+    return purgeTime;
+  }
+
+  /**
+   * @param purgeTime purgeTime or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1PhoneNumber setPurgeTime(String purgeTime) {
+    this.purgeTime = purgeTime;
     return this;
   }
 

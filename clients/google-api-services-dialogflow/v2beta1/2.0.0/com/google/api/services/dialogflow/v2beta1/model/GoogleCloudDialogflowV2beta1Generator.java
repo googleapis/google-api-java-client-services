@@ -39,6 +39,30 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1CesAppSpec> cesAppSpecs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1CesAppSpec used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1CesAppSpec.class);
+  }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1CesToolSpec> cesToolSpecs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1CesToolSpec used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1CesToolSpec.class);
+  }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private String createTime;
 
   /**
@@ -93,6 +117,12 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1ToolsetTool> toolsetTools;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String triggerEvent;
 
   /**
@@ -113,6 +143,36 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
    */
   public GoogleCloudDialogflowV2beta1Generator setAgentCoachingContext(GoogleCloudDialogflowV2beta1AgentCoachingContext agentCoachingContext) {
     this.agentCoachingContext = agentCoachingContext;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1CesAppSpec> getCesAppSpecs() {
+    return cesAppSpecs;
+  }
+
+  /**
+   * @param cesAppSpecs cesAppSpecs or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1Generator setCesAppSpecs(java.util.List<GoogleCloudDialogflowV2beta1CesAppSpec> cesAppSpecs) {
+    this.cesAppSpecs = cesAppSpecs;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1CesToolSpec> getCesToolSpecs() {
+    return cesToolSpecs;
+  }
+
+  /**
+   * @param cesToolSpecs cesToolSpecs or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1Generator setCesToolSpecs(java.util.List<GoogleCloudDialogflowV2beta1CesToolSpec> cesToolSpecs) {
+    this.cesToolSpecs = cesToolSpecs;
     return this;
   }
 
@@ -248,6 +308,21 @@ public final class GoogleCloudDialogflowV2beta1Generator extends com.google.api.
    */
   public GoogleCloudDialogflowV2beta1Generator setTools(java.util.List<java.lang.String> tools) {
     this.tools = tools;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1ToolsetTool> getToolsetTools() {
+    return toolsetTools;
+  }
+
+  /**
+   * @param toolsetTools toolsetTools or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1Generator setToolsetTools(java.util.List<GoogleCloudDialogflowV2beta1ToolsetTool> toolsetTools) {
+    this.toolsetTools = toolsetTools;
     return this;
   }
 

@@ -451,10 +451,14 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Lists information about the supported locations for this service. This method can be called in
-       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-       * public locations as well as private or other locations specifically visible to the project.
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all projects.
+       * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+       * lists locations visible to that specific project. This includes public, private, or other
+       * project-specific locations enabled for the project. For gRPC and client library implementations,
+       * the resource name is passed as the `name` field. For direct service calls, the resource name is
+       * incorporated into the request path based on the specific service implementation and version.
        *
        * Create a request for the method "locations.list".
        *
@@ -478,10 +482,15 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service. This method can be called in
-         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-         * public locations as well as private or other locations specifically visible to the project.
+         * Lists information about the supported locations for this service. This method lists locations
+         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * locations**: If `name` is empty, the method lists the public locations available to all
+         * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+         * the method lists locations visible to that specific project. This includes public, private, or
+         * other project-specific locations enabled for the project. For gRPC and client library
+         * implementations, the resource name is passed as the `name` field. For direct service calls, the
+         * resource name is incorporated into the request path based on the specific service
+         * implementation and version.
          *
          * Create a request for the method "locations.list".
          *
@@ -1239,20 +1248,23 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The ID to use for the Folder, which will become the final component of the Folder's
+           * Deprecated: This field is not used. The resource name is generated automatically. The
+           * ID to use for the Folder, which will become the final component of the Folder's
            * resource name.
            */
           @com.google.api.client.util.Key
           private java.lang.String folderId;
 
-          /** The ID to use for the Folder, which will become the final component of the Folder's resource name.
+          /** Deprecated: This field is not used. The resource name is generated automatically. The ID to use for
+         the Folder, which will become the final component of the Folder's resource name.
            */
           public java.lang.String getFolderId() {
             return folderId;
           }
 
           /**
-           * The ID to use for the Folder, which will become the final component of the Folder's
+           * Deprecated: This field is not used. The resource name is generated automatically. The
+           * ID to use for the Folder, which will become the final component of the Folder's
            * resource name.
            */
           public Create setFolderId(java.lang.String folderId) {
@@ -1392,6 +1404,145 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a Folder with its contents (Folders, Repositories, Workspaces, ReleaseConfigs, and
+         * WorkflowConfigs).
+         *
+         * Create a request for the method "folders.deleteTree".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link DeleteTree#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The Folder's name. Format: projects/{project}/locations/{location}/folders/{folder}
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.DeleteFolderTreeRequest}
+         * @return the request
+         */
+        public DeleteTree deleteTree(java.lang.String name, com.google.api.services.dataform.v1beta1.model.DeleteFolderTreeRequest content) throws java.io.IOException {
+          DeleteTree result = new DeleteTree(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DeleteTree extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:deleteTree";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+
+          /**
+           * Deletes a Folder with its contents (Folders, Repositories, Workspaces, ReleaseConfigs, and
+           * WorkflowConfigs).
+           *
+           * Create a request for the method "folders.deleteTree".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link DeleteTree#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * DeleteTree#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The Folder's name. Format: projects/{project}/locations/{location}/folders/{folder}
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.DeleteFolderTreeRequest}
+           * @since 1.13
+           */
+          protected DeleteTree(java.lang.String name, com.google.api.services.dataform.v1beta1.model.DeleteFolderTreeRequest content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+          }
+
+          @Override
+          public DeleteTree set$Xgafv(java.lang.String $Xgafv) {
+            return (DeleteTree) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DeleteTree setAccessToken(java.lang.String accessToken) {
+            return (DeleteTree) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DeleteTree setAlt(java.lang.String alt) {
+            return (DeleteTree) super.setAlt(alt);
+          }
+
+          @Override
+          public DeleteTree setCallback(java.lang.String callback) {
+            return (DeleteTree) super.setCallback(callback);
+          }
+
+          @Override
+          public DeleteTree setFields(java.lang.String fields) {
+            return (DeleteTree) super.setFields(fields);
+          }
+
+          @Override
+          public DeleteTree setKey(java.lang.String key) {
+            return (DeleteTree) super.setKey(key);
+          }
+
+          @Override
+          public DeleteTree setOauthToken(java.lang.String oauthToken) {
+            return (DeleteTree) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DeleteTree setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DeleteTree) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DeleteTree setQuotaUser(java.lang.String quotaUser) {
+            return (DeleteTree) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DeleteTree setUploadType(java.lang.String uploadType) {
+            return (DeleteTree) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DeleteTree setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DeleteTree) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The Folder's name. Format:
+           * projects/{project}/locations/{location}/folders/{folder}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The Folder's name. Format: projects/{project}/locations/{location}/folders/{folder}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The Folder's name. Format:
+           * projects/{project}/locations/{location}/folders/{folder}
+           */
+          public DeleteTree setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/folders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DeleteTree set(String parameterName, Object value) {
+            return (DeleteTree) super.set(parameterName, value);
           }
         }
         /**
@@ -13009,22 +13160,24 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The ID to use for the TeamFolder, which will become the final component of the
-           * TeamFolder's resource name.
+           * Deprecated: This field is not used. The resource name is generated automatically. The
+           * ID to use for the TeamFolder, which will become the final component of the TeamFolder's
+           * resource name.
            */
           @com.google.api.client.util.Key
           private java.lang.String teamFolderId;
 
-          /** The ID to use for the TeamFolder, which will become the final component of the TeamFolder's
-         resource name.
+          /** Deprecated: This field is not used. The resource name is generated automatically. The ID to use for
+         the TeamFolder, which will become the final component of the TeamFolder's resource name.
            */
           public java.lang.String getTeamFolderId() {
             return teamFolderId;
           }
 
           /**
-           * The ID to use for the TeamFolder, which will become the final component of the
-           * TeamFolder's resource name.
+           * Deprecated: This field is not used. The resource name is generated automatically. The
+           * ID to use for the TeamFolder, which will become the final component of the TeamFolder's
+           * resource name.
            */
           public Create setTeamFolderId(java.lang.String teamFolderId) {
             this.teamFolderId = teamFolderId;
@@ -13163,6 +13316,148 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces, ReleaseConfigs, and
+         * WorkflowConfigs).
+         *
+         * Create a request for the method "teamFolders.deleteTree".
+         *
+         * This request holds the parameters needed by the dataform server.  After setting any optional
+         * parameters, call the {@link DeleteTree#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The TeamFolder's name. Format:
+         *        projects/{project}/locations/{location}/teamFolders/{team_folder}
+         * @param content the {@link com.google.api.services.dataform.v1beta1.model.DeleteTeamFolderTreeRequest}
+         * @return the request
+         */
+        public DeleteTree deleteTree(java.lang.String name, com.google.api.services.dataform.v1beta1.model.DeleteTeamFolderTreeRequest content) throws java.io.IOException {
+          DeleteTree result = new DeleteTree(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DeleteTree extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:deleteTree";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+
+          /**
+           * Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces, ReleaseConfigs, and
+           * WorkflowConfigs).
+           *
+           * Create a request for the method "teamFolders.deleteTree".
+           *
+           * This request holds the parameters needed by the the dataform server.  After setting any
+           * optional parameters, call the {@link DeleteTree#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * DeleteTree#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The TeamFolder's name. Format:
+         *        projects/{project}/locations/{location}/teamFolders/{team_folder}
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.DeleteTeamFolderTreeRequest}
+           * @since 1.13
+           */
+          protected DeleteTree(java.lang.String name, com.google.api.services.dataform.v1beta1.model.DeleteTeamFolderTreeRequest content) {
+            super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+          }
+
+          @Override
+          public DeleteTree set$Xgafv(java.lang.String $Xgafv) {
+            return (DeleteTree) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DeleteTree setAccessToken(java.lang.String accessToken) {
+            return (DeleteTree) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DeleteTree setAlt(java.lang.String alt) {
+            return (DeleteTree) super.setAlt(alt);
+          }
+
+          @Override
+          public DeleteTree setCallback(java.lang.String callback) {
+            return (DeleteTree) super.setCallback(callback);
+          }
+
+          @Override
+          public DeleteTree setFields(java.lang.String fields) {
+            return (DeleteTree) super.setFields(fields);
+          }
+
+          @Override
+          public DeleteTree setKey(java.lang.String key) {
+            return (DeleteTree) super.setKey(key);
+          }
+
+          @Override
+          public DeleteTree setOauthToken(java.lang.String oauthToken) {
+            return (DeleteTree) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DeleteTree setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DeleteTree) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DeleteTree setQuotaUser(java.lang.String quotaUser) {
+            return (DeleteTree) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DeleteTree setUploadType(java.lang.String uploadType) {
+            return (DeleteTree) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DeleteTree setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DeleteTree) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The TeamFolder's name. Format:
+           * projects/{project}/locations/{location}/teamFolders/{team_folder}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The TeamFolder's name. Format:
+         projects/{project}/locations/{location}/teamFolders/{team_folder}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The TeamFolder's name. Format:
+           * projects/{project}/locations/{location}/teamFolders/{team_folder}
+           */
+          public DeleteTree setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/teamFolders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DeleteTree set(String parameterName, Object value) {
+            return (DeleteTree) super.set(parameterName, value);
           }
         }
         /**

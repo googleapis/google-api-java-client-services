@@ -38,9 +38,9 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   private java.lang.String challenge;
 
   /**
-   * Output only. Advanced reasons contributing to the risk analysis verdict. These reasons are
+   * Output only. Additional reasons contributing to the risk analysis verdict. These reasons are
    * available to Enterprise tier projects only. Contact sales for more information. The set of
-   * possible reasons is subject to change.
+   * reasons is subject to change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,9 +93,9 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Output only. Advanced reasons contributing to the risk analysis verdict. These reasons are
+   * Output only. Additional reasons contributing to the risk analysis verdict. These reasons are
    * available to Enterprise tier projects only. Contact sales for more information. The set of
-   * possible reasons is subject to change.
+   * reasons is subject to change.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExtendedVerdictReasons() {
@@ -103,9 +103,9 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   }
 
   /**
-   * Output only. Advanced reasons contributing to the risk analysis verdict. These reasons are
+   * Output only. Additional reasons contributing to the risk analysis verdict. These reasons are
    * available to Enterprise tier projects only. Contact sales for more information. The set of
-   * possible reasons is subject to change.
+   * reasons is subject to change.
    * @param extendedVerdictReasons extendedVerdictReasons or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setExtendedVerdictReasons(java.util.List<java.lang.String> extendedVerdictReasons) {

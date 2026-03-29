@@ -89,15 +89,16 @@ public final class GoogleIdentityStsV1betaExchangeTokenRequest extends com.googl
    * formatted according to section 4.2 of the [OIDC 1.0 Discovery
    * specification](https://openid.net/specs/openid-connect-
    * discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in seconds, since
-   * the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds, since the Unix
-   * epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more secure. If
-   * possible, we recommend setting an expiration time less than 6 hours. - `sub`: The identity
-   * asserted in the JWT. - `aud`: For workload identity pools, this must be a value specified in
-   * the allowed audiences for the workload identity pool provider, or one of the audiences allowed
-   * by default if no audiences were specified. See https://cloud.google.com/iam/docs/reference/rest
-   * /v1/projects.locations.workloadIdentityPools.providers#oidc Example header: ``` { "alg":
-   * "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss": "https://accounts.google.com",
-   * "iat": 1517963104, "exp": 1517966704, "aud":
+   * the Unix epoch. This timestamp must be in the past and no more than 24 hours in the past, or
+   * the token will be rejected. Note that this implies the token is only acceptable within a time
+   * window of at most 24 hours. - `exp`: The expiration time, in seconds, since the Unix epoch.
+   * Shorter expiration times are more secure. If possible, we recommend setting an expiration time
+   * less than 6 hours. - `sub`: The identity asserted in the JWT. - `aud`: For workload identity
+   * pools, this must be a value specified in the allowed audiences for the workload identity pool
+   * provider, or one of the audiences allowed by default if no audiences were specified. See https:
+   * //cloud.google.com/iam/docs/reference/rest/v1/projects.locations.workloadIdentityPools.provider
+   * s#oidc Example header: ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` {
+   * "iss": "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
    * "//iam.googleapis.com/projects/1234567890123/locations/global/workloadIdentityPools/my-
    * pool/providers/my-provider", "sub": "113475438248934895348", "my_claims": { "additional_claim":
    * "value" } } ``` If `subject_token` is for AWS, it must be a serialized `GetCallerIdentity`
@@ -268,15 +269,16 @@ public final class GoogleIdentityStsV1betaExchangeTokenRequest extends com.googl
    * formatted according to section 4.2 of the [OIDC 1.0 Discovery
    * specification](https://openid.net/specs/openid-connect-
    * discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in seconds, since
-   * the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds, since the Unix
-   * epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more secure. If
-   * possible, we recommend setting an expiration time less than 6 hours. - `sub`: The identity
-   * asserted in the JWT. - `aud`: For workload identity pools, this must be a value specified in
-   * the allowed audiences for the workload identity pool provider, or one of the audiences allowed
-   * by default if no audiences were specified. See https://cloud.google.com/iam/docs/reference/rest
-   * /v1/projects.locations.workloadIdentityPools.providers#oidc Example header: ``` { "alg":
-   * "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss": "https://accounts.google.com",
-   * "iat": 1517963104, "exp": 1517966704, "aud":
+   * the Unix epoch. This timestamp must be in the past and no more than 24 hours in the past, or
+   * the token will be rejected. Note that this implies the token is only acceptable within a time
+   * window of at most 24 hours. - `exp`: The expiration time, in seconds, since the Unix epoch.
+   * Shorter expiration times are more secure. If possible, we recommend setting an expiration time
+   * less than 6 hours. - `sub`: The identity asserted in the JWT. - `aud`: For workload identity
+   * pools, this must be a value specified in the allowed audiences for the workload identity pool
+   * provider, or one of the audiences allowed by default if no audiences were specified. See https:
+   * //cloud.google.com/iam/docs/reference/rest/v1/projects.locations.workloadIdentityPools.provider
+   * s#oidc Example header: ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` {
+   * "iss": "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
    * "//iam.googleapis.com/projects/1234567890123/locations/global/workloadIdentityPools/my-
    * pool/providers/my-provider", "sub": "113475438248934895348", "my_claims": { "additional_claim":
    * "value" } } ``` If `subject_token` is for AWS, it must be a serialized `GetCallerIdentity`
@@ -333,15 +335,16 @@ public final class GoogleIdentityStsV1betaExchangeTokenRequest extends com.googl
    * formatted according to section 4.2 of the [OIDC 1.0 Discovery
    * specification](https://openid.net/specs/openid-connect-
    * discovery-1_0.html#ProviderConfigurationResponse). - `iat`: The issue time, in seconds, since
-   * the Unix epoch. Must be in the past. - `exp`: The expiration time, in seconds, since the Unix
-   * epoch. Must be less than 48 hours after `iat`. Shorter expiration times are more secure. If
-   * possible, we recommend setting an expiration time less than 6 hours. - `sub`: The identity
-   * asserted in the JWT. - `aud`: For workload identity pools, this must be a value specified in
-   * the allowed audiences for the workload identity pool provider, or one of the audiences allowed
-   * by default if no audiences were specified. See https://cloud.google.com/iam/docs/reference/rest
-   * /v1/projects.locations.workloadIdentityPools.providers#oidc Example header: ``` { "alg":
-   * "RS256", "kid": "us-east-11" } ``` Example payload: ``` { "iss": "https://accounts.google.com",
-   * "iat": 1517963104, "exp": 1517966704, "aud":
+   * the Unix epoch. This timestamp must be in the past and no more than 24 hours in the past, or
+   * the token will be rejected. Note that this implies the token is only acceptable within a time
+   * window of at most 24 hours. - `exp`: The expiration time, in seconds, since the Unix epoch.
+   * Shorter expiration times are more secure. If possible, we recommend setting an expiration time
+   * less than 6 hours. - `sub`: The identity asserted in the JWT. - `aud`: For workload identity
+   * pools, this must be a value specified in the allowed audiences for the workload identity pool
+   * provider, or one of the audiences allowed by default if no audiences were specified. See https:
+   * //cloud.google.com/iam/docs/reference/rest/v1/projects.locations.workloadIdentityPools.provider
+   * s#oidc Example header: ``` { "alg": "RS256", "kid": "us-east-11" } ``` Example payload: ``` {
+   * "iss": "https://accounts.google.com", "iat": 1517963104, "exp": 1517966704, "aud":
    * "//iam.googleapis.com/projects/1234567890123/locations/global/workloadIdentityPools/my-
    * pool/providers/my-provider", "sub": "113475438248934895348", "my_claims": { "additional_claim":
    * "value" } } ``` If `subject_token` is for AWS, it must be a serialized `GetCallerIdentity`

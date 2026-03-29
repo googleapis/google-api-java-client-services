@@ -49,6 +49,19 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private AffectedResources affectedResources;
 
   /**
+   * Agent data access events associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AgentDataAccessEvent> agentDataAccessEvents;
+
+  static {
+    // hack to force ProGuard to consider AgentDataAccessEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AgentDataAccessEvent.class);
+  }
+
+  /**
    * The AI model associated with the finding.
    * The value may be {@code null}.
    */
@@ -498,6 +511,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String parentDisplayName;
 
   /**
+   * PolicyViolationSummary associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PolicyViolationSummary policyViolationSummary;
+
+  /**
    * Represents operating system processes associated with the Finding.
    * The value may be {@code null}.
    */
@@ -618,6 +638,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setAffectedResources(AffectedResources affectedResources) {
     this.affectedResources = affectedResources;
+    return this;
+  }
+
+  /**
+   * Agent data access events associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AgentDataAccessEvent> getAgentDataAccessEvents() {
+    return agentDataAccessEvents;
+  }
+
+  /**
+   * Agent data access events associated with the finding.
+   * @param agentDataAccessEvents agentDataAccessEvents or {@code null} for none
+   */
+  public Finding setAgentDataAccessEvents(java.util.List<AgentDataAccessEvent> agentDataAccessEvents) {
+    this.agentDataAccessEvents = agentDataAccessEvents;
     return this;
   }
 
@@ -1576,6 +1613,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setParentDisplayName(java.lang.String parentDisplayName) {
     this.parentDisplayName = parentDisplayName;
+    return this;
+  }
+
+  /**
+   * PolicyViolationSummary associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public PolicyViolationSummary getPolicyViolationSummary() {
+    return policyViolationSummary;
+  }
+
+  /**
+   * PolicyViolationSummary associated with the finding.
+   * @param policyViolationSummary policyViolationSummary or {@code null} for none
+   */
+  public Finding setPolicyViolationSummary(PolicyViolationSummary policyViolationSummary) {
+    this.policyViolationSummary = policyViolationSummary;
     return this;
   }
 

@@ -46,11 +46,21 @@ public final class AdvancedVoiceOptions extends com.google.api.client.json.Gener
   private java.lang.Boolean lowLatencyJourneySynthesis;
 
   /**
-   * Optional. Input only. If true, relaxes safety filters for Gemini TTS.
+   * Optional. Input only. Deprecated, use safety_settings instead. If true, relaxes safety filters
+   * for Gemini TTS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean relaxSafetyFilters;
+
+  /**
+   * Optional. Input only. This applies to Gemini TTS only. If set, the category specified in the
+   * safety setting will be blocked if the harm probability is above the threshold. Otherwise, the
+   * safety filter will be disabled by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SafetySettings safetySettings;
 
   /**
    * Optional. If true, textnorm will be applied to text input. This feature is enabled by default.
@@ -89,7 +99,8 @@ public final class AdvancedVoiceOptions extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Input only. If true, relaxes safety filters for Gemini TTS.
+   * Optional. Input only. Deprecated, use safety_settings instead. If true, relaxes safety filters
+   * for Gemini TTS.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRelaxSafetyFilters() {
@@ -97,11 +108,33 @@ public final class AdvancedVoiceOptions extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Input only. If true, relaxes safety filters for Gemini TTS.
+   * Optional. Input only. Deprecated, use safety_settings instead. If true, relaxes safety filters
+   * for Gemini TTS.
    * @param relaxSafetyFilters relaxSafetyFilters or {@code null} for none
    */
   public AdvancedVoiceOptions setRelaxSafetyFilters(java.lang.Boolean relaxSafetyFilters) {
     this.relaxSafetyFilters = relaxSafetyFilters;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. This applies to Gemini TTS only. If set, the category specified in the
+   * safety setting will be blocked if the harm probability is above the threshold. Otherwise, the
+   * safety filter will be disabled by default.
+   * @return value or {@code null} for none
+   */
+  public SafetySettings getSafetySettings() {
+    return safetySettings;
+  }
+
+  /**
+   * Optional. Input only. This applies to Gemini TTS only. If set, the category specified in the
+   * safety setting will be blocked if the harm probability is above the threshold. Otherwise, the
+   * safety filter will be disabled by default.
+   * @param safetySettings safetySettings or {@code null} for none
+   */
+  public AdvancedVoiceOptions setSafetySettings(SafetySettings safetySettings) {
+    this.safetySettings = safetySettings;
     return this;
   }
 

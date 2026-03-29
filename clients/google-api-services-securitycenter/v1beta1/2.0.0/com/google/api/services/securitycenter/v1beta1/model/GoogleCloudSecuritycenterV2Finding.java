@@ -49,6 +49,19 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2AffectedResources affectedResources;
 
   /**
+   * Agent data access events associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV2AgentDataAccessEvent> agentDataAccessEvents;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudSecuritycenterV2AgentDataAccessEvent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudSecuritycenterV2AgentDataAccessEvent.class);
+  }
+
+  /**
    * The AI model associated with the finding.
    * The value may be {@code null}.
    */
@@ -519,6 +532,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private java.lang.String parentDisplayName;
 
   /**
+   * PolicyViolationSummary associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2PolicyViolationSummary policyViolationSummary;
+
+  /**
    * Represents operating system processes associated with the Finding.
    * The value may be {@code null}.
    */
@@ -638,6 +658,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setAffectedResources(GoogleCloudSecuritycenterV2AffectedResources affectedResources) {
     this.affectedResources = affectedResources;
+    return this;
+  }
+
+  /**
+   * Agent data access events associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV2AgentDataAccessEvent> getAgentDataAccessEvents() {
+    return agentDataAccessEvents;
+  }
+
+  /**
+   * Agent data access events associated with the finding.
+   * @param agentDataAccessEvents agentDataAccessEvents or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setAgentDataAccessEvents(java.util.List<GoogleCloudSecuritycenterV2AgentDataAccessEvent> agentDataAccessEvents) {
+    this.agentDataAccessEvents = agentDataAccessEvents;
     return this;
   }
 
@@ -1629,6 +1666,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setParentDisplayName(java.lang.String parentDisplayName) {
     this.parentDisplayName = parentDisplayName;
+    return this;
+  }
+
+  /**
+   * PolicyViolationSummary associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2PolicyViolationSummary getPolicyViolationSummary() {
+    return policyViolationSummary;
+  }
+
+  /**
+   * PolicyViolationSummary associated with the finding.
+   * @param policyViolationSummary policyViolationSummary or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setPolicyViolationSummary(GoogleCloudSecuritycenterV2PolicyViolationSummary policyViolationSummary) {
+    this.policyViolationSummary = policyViolationSummary;
     return this;
   }
 

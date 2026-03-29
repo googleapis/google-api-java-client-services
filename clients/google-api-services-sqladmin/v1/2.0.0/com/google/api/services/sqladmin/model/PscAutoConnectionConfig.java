@@ -48,8 +48,8 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   private java.lang.String consumerNetworkStatus;
 
   /**
-   * Optional. This is the project ID of consumer service project of this consumer endpoint.
-   * Optional. This is only applicable if consumer_network is a shared vpc network.
+   * Optional. This is the project ID of consumer service project of this consumer endpoint. This is
+   * only applicable if `consumer_network` is a shared VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. This is the project ID of consumer service project of this consumer endpoint.
-   * Optional. This is only applicable if consumer_network is a shared vpc network.
+   * Optional. This is the project ID of consumer service project of this consumer endpoint. This is
+   * only applicable if `consumer_network` is a shared VPC network.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerProject() {
@@ -119,8 +119,8 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. This is the project ID of consumer service project of this consumer endpoint.
-   * Optional. This is only applicable if consumer_network is a shared vpc network.
+   * Optional. This is the project ID of consumer service project of this consumer endpoint. This is
+   * only applicable if `consumer_network` is a shared VPC network.
    * @param consumerProject consumerProject or {@code null} for none
    */
   public PscAutoConnectionConfig setConsumerProject(java.lang.String consumerProject) {

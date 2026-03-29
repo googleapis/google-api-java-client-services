@@ -63,11 +63,32 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Indicates whether PSC DNS automation is enabled for this instance. When enabled,
+   * Cloud SQL provisions a universal DNS record across all networks configured with Private Service
+   * Connect (PSC) auto-connections. This will default to true for new instances when Private
+   * Service Connect is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pscAutoDnsEnabled;
+
+  /**
    * Whether PSC connectivity is enabled for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean pscEnabled;
+
+  /**
+   * Optional. Indicates whether PSC write endpoint DNS automation is enabled for this instance.
+   * When enabled, Cloud SQL provisions a universal global DNS record across all networks configured
+   * with Private Service Connect (PSC) auto-connections that always points to the cluster primary
+   * instance. This feature is only supported for Enterprise Plus edition. This will default to true
+   * for new enterprise plus instances when `psc_auto_dns_enabled` is enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pscWriteEndpointDnsEnabled;
 
   /**
    * Optional. The list of consumer projects that are allow-listed for PSC connections to this
@@ -133,6 +154,29 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Indicates whether PSC DNS automation is enabled for this instance. When enabled,
+   * Cloud SQL provisions a universal DNS record across all networks configured with Private Service
+   * Connect (PSC) auto-connections. This will default to true for new instances when Private
+   * Service Connect is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPscAutoDnsEnabled() {
+    return pscAutoDnsEnabled;
+  }
+
+  /**
+   * Optional. Indicates whether PSC DNS automation is enabled for this instance. When enabled,
+   * Cloud SQL provisions a universal DNS record across all networks configured with Private Service
+   * Connect (PSC) auto-connections. This will default to true for new instances when Private
+   * Service Connect is enabled.
+   * @param pscAutoDnsEnabled pscAutoDnsEnabled or {@code null} for none
+   */
+  public PscConfig setPscAutoDnsEnabled(java.lang.Boolean pscAutoDnsEnabled) {
+    this.pscAutoDnsEnabled = pscAutoDnsEnabled;
+    return this;
+  }
+
+  /**
    * Whether PSC connectivity is enabled for this instance.
    * @return value or {@code null} for none
    */
@@ -146,6 +190,31 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
    */
   public PscConfig setPscEnabled(java.lang.Boolean pscEnabled) {
     this.pscEnabled = pscEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether PSC write endpoint DNS automation is enabled for this instance.
+   * When enabled, Cloud SQL provisions a universal global DNS record across all networks configured
+   * with Private Service Connect (PSC) auto-connections that always points to the cluster primary
+   * instance. This feature is only supported for Enterprise Plus edition. This will default to true
+   * for new enterprise plus instances when `psc_auto_dns_enabled` is enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPscWriteEndpointDnsEnabled() {
+    return pscWriteEndpointDnsEnabled;
+  }
+
+  /**
+   * Optional. Indicates whether PSC write endpoint DNS automation is enabled for this instance.
+   * When enabled, Cloud SQL provisions a universal global DNS record across all networks configured
+   * with Private Service Connect (PSC) auto-connections that always points to the cluster primary
+   * instance. This feature is only supported for Enterprise Plus edition. This will default to true
+   * for new enterprise plus instances when `psc_auto_dns_enabled` is enabled.
+   * @param pscWriteEndpointDnsEnabled pscWriteEndpointDnsEnabled or {@code null} for none
+   */
+  public PscConfig setPscWriteEndpointDnsEnabled(java.lang.Boolean pscWriteEndpointDnsEnabled) {
+    this.pscWriteEndpointDnsEnabled = pscWriteEndpointDnsEnabled;
     return this;
   }
 

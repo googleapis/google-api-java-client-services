@@ -207,12 +207,20 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Optional. The effective scale tier of the storage pool. If `scale_tier` is not specified during
-   * creation, this defaults to `SCALE_TIER_STANDARD`.
+   * Optional. Deprecated: Use scale_type instead. The effective scale tier of the storage pool. If
+   * `scale_tier` is not specified during creation, this defaults to `SCALE_TIER_STANDARD`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String scaleTier;
+
+  /**
+   * Optional. The scale type of the storage pool. Defaults to `SCALE_TYPE_DEFAULT` if not
+   * specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scaleType;
 
   /**
    * Required. Service level of the storage pool
@@ -705,8 +713,8 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The effective scale tier of the storage pool. If `scale_tier` is not specified during
-   * creation, this defaults to `SCALE_TIER_STANDARD`.
+   * Optional. Deprecated: Use scale_type instead. The effective scale tier of the storage pool. If
+   * `scale_tier` is not specified during creation, this defaults to `SCALE_TIER_STANDARD`.
    * @return value or {@code null} for none
    */
   public java.lang.String getScaleTier() {
@@ -714,12 +722,31 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The effective scale tier of the storage pool. If `scale_tier` is not specified during
-   * creation, this defaults to `SCALE_TIER_STANDARD`.
+   * Optional. Deprecated: Use scale_type instead. The effective scale tier of the storage pool. If
+   * `scale_tier` is not specified during creation, this defaults to `SCALE_TIER_STANDARD`.
    * @param scaleTier scaleTier or {@code null} for none
    */
   public StoragePool setScaleTier(java.lang.String scaleTier) {
     this.scaleTier = scaleTier;
+    return this;
+  }
+
+  /**
+   * Optional. The scale type of the storage pool. Defaults to `SCALE_TYPE_DEFAULT` if not
+   * specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScaleType() {
+    return scaleType;
+  }
+
+  /**
+   * Optional. The scale type of the storage pool. Defaults to `SCALE_TYPE_DEFAULT` if not
+   * specified.
+   * @param scaleType scaleType or {@code null} for none
+   */
+  public StoragePool setScaleType(java.lang.String scaleType) {
+    this.scaleType = scaleType;
     return this;
   }
 

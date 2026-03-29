@@ -207,14 +207,6 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
-   * Optional. The effective scale tier of the storage pool. If `scale_tier` is not specified during
-   * creation, this defaults to `SCALE_TIER_STANDARD`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String scaleTier;
-
-  /**
    * Required. Service level of the storage pool
    * The value may be {@code null}.
    */
@@ -701,25 +693,6 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
-    return this;
-  }
-
-  /**
-   * Optional. The effective scale tier of the storage pool. If `scale_tier` is not specified during
-   * creation, this defaults to `SCALE_TIER_STANDARD`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getScaleTier() {
-    return scaleTier;
-  }
-
-  /**
-   * Optional. The effective scale tier of the storage pool. If `scale_tier` is not specified during
-   * creation, this defaults to `SCALE_TIER_STANDARD`.
-   * @param scaleTier scaleTier or {@code null} for none
-   */
-  public StoragePool setScaleTier(java.lang.String scaleTier) {
-    this.scaleTier = scaleTier;
     return this;
   }
 

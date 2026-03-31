@@ -115,7 +115,7 @@ public final class GoogleCloudOsconfigV2PolicyOrchestrator extends com.google.ap
   private GoogleCloudOsconfigV2PolicyOrchestratorOrchestrationState orchestrationState;
 
   /**
-   * Output only. Set to true, if the there are ongoing changes being applied by the orchestrator.
+   * Output only. Set to true, if there are ongoing changes being applied by the orchestrator.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,7 +317,7 @@ public final class GoogleCloudOsconfigV2PolicyOrchestrator extends com.google.ap
   }
 
   /**
-   * Output only. Set to true, if the there are ongoing changes being applied by the orchestrator.
+   * Output only. Set to true, if there are ongoing changes being applied by the orchestrator.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -325,7 +325,7 @@ public final class GoogleCloudOsconfigV2PolicyOrchestrator extends com.google.ap
   }
 
   /**
-   * Output only. Set to true, if the there are ongoing changes being applied by the orchestrator.
+   * Output only. Set to true, if there are ongoing changes being applied by the orchestrator.
    * @param reconciling reconciling or {@code null} for none
    */
   public GoogleCloudOsconfigV2PolicyOrchestrator setReconciling(java.lang.Boolean reconciling) {

@@ -30,7 +30,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. All gateways and forwarding rules referenced by this policy and extensions must share
+   * Optional. All gateways and forwarding rules referenced by this policy and extensions must share
    * the same load balancing scheme. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
    * For more information, refer to [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
@@ -47,7 +47,7 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> resources;
 
   /**
-   * Required. All gateways and forwarding rules referenced by this policy and extensions must share
+   * Optional. All gateways and forwarding rules referenced by this policy and extensions must share
    * the same load balancing scheme. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
    * For more information, refer to [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).
@@ -58,7 +58,7 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. All gateways and forwarding rules referenced by this policy and extensions must share
+   * Optional. All gateways and forwarding rules referenced by this policy and extensions must share
    * the same load balancing scheme. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`.
    * For more information, refer to [Backend services overview](https://cloud.google.com/load-
    * balancing/docs/backend-service).

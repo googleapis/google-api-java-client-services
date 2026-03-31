@@ -95,6 +95,14 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Immutable. Defines the type of authorization being performed. If not specified,
+   * `REQUEST_AUTHZ` is applied. This field cannot be changed once AuthzPolicy is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policyProfile;
+
+  /**
    * Required. Specifies the set of resources to which this policy should be applied to.
    * The value may be {@code null}.
    */
@@ -254,6 +262,25 @@ public final class AuthzPolicy extends com.google.api.client.json.GenericJson {
    */
   public AuthzPolicy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Defines the type of authorization being performed. If not specified,
+   * `REQUEST_AUTHZ` is applied. This field cannot be changed once AuthzPolicy is created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicyProfile() {
+    return policyProfile;
+  }
+
+  /**
+   * Optional. Immutable. Defines the type of authorization being performed. If not specified,
+   * `REQUEST_AUTHZ` is applied. This field cannot be changed once AuthzPolicy is created.
+   * @param policyProfile policyProfile or {@code null} for none
+   */
+  public AuthzPolicy setPolicyProfile(java.lang.String policyProfile) {
+    this.policyProfile = policyProfile;
     return this;
   }
 

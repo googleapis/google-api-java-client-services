@@ -82,9 +82,10 @@ public final class HostConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<RegistryHeader> header;
 
   /**
-   * Host configures the registry host/mirror. It supports fully qualified domain names (FQDN) and
-   * IP addresses: Specifying port is supported. Wildcards are NOT supported. Examples: -
-   * my.customdomain.com - 10.0.1.2:5000
+   * Host configures the registry host/mirror. It supports fully qualified domain names (FQDNs) and
+   * IP addresses. Specifying scheme, port or path is supported. Scheme can only be http or https.
+   * Wildcards are NOT supported. Examples: - `my.customdomain.com` -
+   * `https://my.customdomain.com/path` - `10.0.1.2:5000`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,9 +194,10 @@ public final class HostConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Host configures the registry host/mirror. It supports fully qualified domain names (FQDN) and
-   * IP addresses: Specifying port is supported. Wildcards are NOT supported. Examples: -
-   * my.customdomain.com - 10.0.1.2:5000
+   * Host configures the registry host/mirror. It supports fully qualified domain names (FQDNs) and
+   * IP addresses. Specifying scheme, port or path is supported. Scheme can only be http or https.
+   * Wildcards are NOT supported. Examples: - `my.customdomain.com` -
+   * `https://my.customdomain.com/path` - `10.0.1.2:5000`
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -203,9 +205,10 @@ public final class HostConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Host configures the registry host/mirror. It supports fully qualified domain names (FQDN) and
-   * IP addresses: Specifying port is supported. Wildcards are NOT supported. Examples: -
-   * my.customdomain.com - 10.0.1.2:5000
+   * Host configures the registry host/mirror. It supports fully qualified domain names (FQDNs) and
+   * IP addresses. Specifying scheme, port or path is supported. Scheme can only be http or https.
+   * Wildcards are NOT supported. Examples: - `my.customdomain.com` -
+   * `https://my.customdomain.com/path` - `10.0.1.2:5000`
    * @param host host or {@code null} for none
    */
   public HostConfig setHost(java.lang.String host) {

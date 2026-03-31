@@ -32,6 +32,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class AddonsConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for the AgentSandbox addon.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentSandboxConfig agentSandboxConfig;
+
+  /**
    * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to
    * enable Cloud Run addon. This option can only be enabled at cluster creation time.
    * The value may be {@code null}.
@@ -179,6 +186,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private StatefulHAConfig statefulHaConfig;
+
+  /**
+   * Optional. Configuration for the AgentSandbox addon.
+   * @return value or {@code null} for none
+   */
+  public AgentSandboxConfig getAgentSandboxConfig() {
+    return agentSandboxConfig;
+  }
+
+  /**
+   * Optional. Configuration for the AgentSandbox addon.
+   * @param agentSandboxConfig agentSandboxConfig or {@code null} for none
+   */
+  public AddonsConfig setAgentSandboxConfig(AgentSandboxConfig agentSandboxConfig) {
+    this.agentSandboxConfig = agentSandboxConfig;
+    return this;
+  }
 
   /**
    * Configuration for the Cloud Run addon. The `IstioConfig` addon must be enabled in order to

@@ -33,7 +33,7 @@ public final class CertificateAuthorityDomainConfig extends com.google.api.clien
 
   /**
    * List of fully qualified domain names (FQDN). Specifying port is supported. Wildcards are NOT
-   * supported. Examples: - my.customdomain.com - 10.0.1.2:5000
+   * supported. Examples: - `my.customdomain.com` - `10.0.1.2:5000`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class CertificateAuthorityDomainConfig extends com.google.api.clien
 
   /**
    * List of fully qualified domain names (FQDN). Specifying port is supported. Wildcards are NOT
-   * supported. Examples: - my.customdomain.com - 10.0.1.2:5000
+   * supported. Examples: - `my.customdomain.com` - `10.0.1.2:5000`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFqdns() {
@@ -57,7 +57,7 @@ public final class CertificateAuthorityDomainConfig extends com.google.api.clien
 
   /**
    * List of fully qualified domain names (FQDN). Specifying port is supported. Wildcards are NOT
-   * supported. Examples: - my.customdomain.com - 10.0.1.2:5000
+   * supported. Examples: - `my.customdomain.com` - `10.0.1.2:5000`
    * @param fqdns fqdns or {@code null} for none
    */
   public CertificateAuthorityDomainConfig setFqdns(java.util.List<java.lang.String> fqdns) {

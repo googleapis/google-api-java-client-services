@@ -32,6 +32,20 @@ package com.google.api.services.config.v1.model;
 public final class TerraformBlueprint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Map of input variable names in this blueprint to configurations for importing values
+   * from external sources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ExternalValueSource> externalValues;
+
+  static {
+    // hack to force ProGuard to consider ExternalValueSource used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ExternalValueSource.class);
+  }
+
+  /**
    * URI of an object in Google Cloud Storage. Format: `gs://{bucket}/{object}` URI may also specify
    * an object version for zipped objects. Format: `gs://{bucket}/{object}#{version}`
    * The value may be {@code null}.
@@ -52,6 +66,25 @@ public final class TerraformBlueprint extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, TerraformVariable> inputValues;
+
+  /**
+   * Optional. Map of input variable names in this blueprint to configurations for importing values
+   * from external sources.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ExternalValueSource> getExternalValues() {
+    return externalValues;
+  }
+
+  /**
+   * Optional. Map of input variable names in this blueprint to configurations for importing values
+   * from external sources.
+   * @param externalValues externalValues or {@code null} for none
+   */
+  public TerraformBlueprint setExternalValues(java.util.Map<String, ExternalValueSource> externalValues) {
+    this.externalValues = externalValues;
+    return this;
+  }
 
   /**
    * URI of an object in Google Cloud Storage. Format: `gs://{bucket}/{object}` URI may also specify

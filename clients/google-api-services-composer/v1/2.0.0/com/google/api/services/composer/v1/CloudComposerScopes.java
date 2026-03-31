@@ -29,6 +29,9 @@ public class CloudComposerScopes {
   /** See, edit, configure, and delete your Google Cloud Composer data and see the email address for your Google Account. */
   public static final String CLOUDCOMPOSER = "https://www.googleapis.com/auth/cloudcomposer";
 
+  /** See your Google Cloud Composer data and the email address of your Google Account. */
+  public static final String CLOUDCOMPOSER_READONLY = "https://www.googleapis.com/auth/cloudcomposer.readonly";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -38,6 +41,7 @@ public class CloudComposerScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
     set.add(CLOUDCOMPOSER);
+    set.add(CLOUDCOMPOSER_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

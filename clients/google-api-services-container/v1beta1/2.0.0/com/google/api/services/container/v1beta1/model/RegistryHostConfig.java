@@ -49,8 +49,8 @@ public final class RegistryHostConfig extends com.google.api.client.json.Generic
   /**
    * Defines the host name of the registry server, which will be used to create configuration file
    * as /etc/containerd/hosts.d//hosts.toml. It supports fully qualified domain names (FQDN) and IP
-   * addresses: Specifying port is supported. Wildcards are NOT supported. Examples: -
-   * my.customdomain.com - 10.0.1.2:5000
+   * addresses: Specifying port is supported, while scheme and path are NOT supported. Wildcards are
+   * NOT supported. Examples: - `my.customdomain.com` - `10.0.1.2:5000`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +78,8 @@ public final class RegistryHostConfig extends com.google.api.client.json.Generic
   /**
    * Defines the host name of the registry server, which will be used to create configuration file
    * as /etc/containerd/hosts.d//hosts.toml. It supports fully qualified domain names (FQDN) and IP
-   * addresses: Specifying port is supported. Wildcards are NOT supported. Examples: -
-   * my.customdomain.com - 10.0.1.2:5000
+   * addresses: Specifying port is supported, while scheme and path are NOT supported. Wildcards are
+   * NOT supported. Examples: - `my.customdomain.com` - `10.0.1.2:5000`
    * @return value or {@code null} for none
    */
   public java.lang.String getServer() {
@@ -89,8 +89,8 @@ public final class RegistryHostConfig extends com.google.api.client.json.Generic
   /**
    * Defines the host name of the registry server, which will be used to create configuration file
    * as /etc/containerd/hosts.d//hosts.toml. It supports fully qualified domain names (FQDN) and IP
-   * addresses: Specifying port is supported. Wildcards are NOT supported. Examples: -
-   * my.customdomain.com - 10.0.1.2:5000
+   * addresses: Specifying port is supported, while scheme and path are NOT supported. Wildcards are
+   * NOT supported. Examples: - `my.customdomain.com` - `10.0.1.2:5000`
    * @param server server or {@code null} for none
    */
   public RegistryHostConfig setServer(java.lang.String server) {

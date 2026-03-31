@@ -119,6 +119,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private ContainerdConfig desiredContainerdConfig;
 
   /**
+   * The desired control plane egress control config for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ControlPlaneEgress desiredControlPlaneEgress;
+
+  /**
    * Control plane endpoints configuration.
    * The value may be {@code null}.
    */
@@ -531,6 +538,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private SecretManagerConfig desiredSecretManagerConfig;
 
   /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecretSyncConfig desiredSecretSyncConfig;
+
+  /**
    * Enable/Disable Security Posture API features for the cluster.
    * The value may be {@code null}.
    */
@@ -826,6 +840,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredContainerdConfig(ContainerdConfig desiredContainerdConfig) {
     this.desiredContainerdConfig = desiredContainerdConfig;
+    return this;
+  }
+
+  /**
+   * The desired control plane egress control config for the cluster.
+   * @return value or {@code null} for none
+   */
+  public ControlPlaneEgress getDesiredControlPlaneEgress() {
+    return desiredControlPlaneEgress;
+  }
+
+  /**
+   * The desired control plane egress control config for the cluster.
+   * @param desiredControlPlaneEgress desiredControlPlaneEgress or {@code null} for none
+   */
+  public ClusterUpdate setDesiredControlPlaneEgress(ControlPlaneEgress desiredControlPlaneEgress) {
+    this.desiredControlPlaneEgress = desiredControlPlaneEgress;
     return this;
   }
 
@@ -1809,6 +1840,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredSecretManagerConfig(SecretManagerConfig desiredSecretManagerConfig) {
     this.desiredSecretManagerConfig = desiredSecretManagerConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   * @return value or {@code null} for none
+   */
+  public SecretSyncConfig getDesiredSecretSyncConfig() {
+    return desiredSecretSyncConfig;
+  }
+
+  /**
+   * Configuration for sync Secret Manager secrets as k8s secrets.
+   * @param desiredSecretSyncConfig desiredSecretSyncConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredSecretSyncConfig(SecretSyncConfig desiredSecretSyncConfig) {
+    this.desiredSecretSyncConfig = desiredSecretSyncConfig;
     return this;
   }
 

@@ -122,6 +122,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ConfidentialNodes confidentialNodes;
 
   /**
+   * Configuration for control plane egress control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ControlPlaneEgress controlPlaneEgress;
+
+  /**
    * Configuration for all cluster's control plane endpoints.
    * The value may be {@code null}.
    */
@@ -1006,6 +1013,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setConfidentialNodes(ConfidentialNodes confidentialNodes) {
     this.confidentialNodes = confidentialNodes;
+    return this;
+  }
+
+  /**
+   * Configuration for control plane egress control.
+   * @return value or {@code null} for none
+   */
+  public ControlPlaneEgress getControlPlaneEgress() {
+    return controlPlaneEgress;
+  }
+
+  /**
+   * Configuration for control plane egress control.
+   * @param controlPlaneEgress controlPlaneEgress or {@code null} for none
+   */
+  public Cluster setControlPlaneEgress(ControlPlaneEgress controlPlaneEgress) {
+    this.controlPlaneEgress = controlPlaneEgress;
     return this;
   }
 

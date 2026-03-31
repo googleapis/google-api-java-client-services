@@ -31,6 +31,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class LinuxNodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The accurate time configuration for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccurateTimeConfig accurateTimeConfig;
+
+  /**
    * cgroup_mode specifies the cgroup mode to be used on the node.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String transparentHugepageEnabled;
+
+  /**
+   * Optional. The accurate time configuration for the node pool.
+   * @return value or {@code null} for none
+   */
+  public AccurateTimeConfig getAccurateTimeConfig() {
+    return accurateTimeConfig;
+  }
+
+  /**
+   * Optional. The accurate time configuration for the node pool.
+   * @param accurateTimeConfig accurateTimeConfig or {@code null} for none
+   */
+  public LinuxNodeConfig setAccurateTimeConfig(AccurateTimeConfig accurateTimeConfig) {
+    this.accurateTimeConfig = accurateTimeConfig;
+    return this;
+  }
 
   /**
    * cgroup_mode specifies the cgroup mode to be used on the node.

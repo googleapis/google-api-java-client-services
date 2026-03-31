@@ -43,6 +43,15 @@ public final class KeyAccessJustificationsPolicyConfig extends com.google.api.cl
   private KeyAccessJustificationsPolicy defaultKeyAccessJustificationPolicy;
 
   /**
+   * Output only. Indicates whether this parent resource is available to default policy feature.
+   * Please consult [the prerequisite of default policy feature](https://cloud.google.com/assured-
+   * workloads/key-access-justifications/docs/set-default-policy#before) for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultPolicyAvailable;
+
+  /**
    * Identifier. Represents the resource name for this KeyAccessJustificationsPolicyConfig in the
    * format of "{organizations|folders|projects}/kajPolicyConfig".
    * The value may be {@code null}.
@@ -74,6 +83,27 @@ public final class KeyAccessJustificationsPolicyConfig extends com.google.api.cl
    */
   public KeyAccessJustificationsPolicyConfig setDefaultKeyAccessJustificationPolicy(KeyAccessJustificationsPolicy defaultKeyAccessJustificationPolicy) {
     this.defaultKeyAccessJustificationPolicy = defaultKeyAccessJustificationPolicy;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether this parent resource is available to default policy feature.
+   * Please consult [the prerequisite of default policy feature](https://cloud.google.com/assured-
+   * workloads/key-access-justifications/docs/set-default-policy#before) for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultPolicyAvailable() {
+    return defaultPolicyAvailable;
+  }
+
+  /**
+   * Output only. Indicates whether this parent resource is available to default policy feature.
+   * Please consult [the prerequisite of default policy feature](https://cloud.google.com/assured-
+   * workloads/key-access-justifications/docs/set-default-policy#before) for more details.
+   * @param defaultPolicyAvailable defaultPolicyAvailable or {@code null} for none
+   */
+  public KeyAccessJustificationsPolicyConfig setDefaultPolicyAvailable(java.lang.Boolean defaultPolicyAvailable) {
+    this.defaultPolicyAvailable = defaultPolicyAvailable;
     return this;
   }
 

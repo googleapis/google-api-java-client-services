@@ -49,10 +49,11 @@ public final class GoogleIamV3PolicyBinding extends com.google.api.client.json.G
    * 'bob@example.com'". Allowed operations for `principal.subject`: - `principal.subject == ` -
    * `principal.subject != ` - `principal.subject in []` - `principal.subject.startsWith()` -
    * `principal.subject.endsWith()` Allowed operations for `principal.type`: - `principal.type == `
-   * - `principal.type != ` - `principal.type in []` Supported principal types are Workspace,
-   * Workforce Pool, Workload Pool and Service Account. Allowed string must be one of: -
-   * iam.googleapis.com/WorkspaceIdentity - iam.googleapis.com/WorkforcePoolIdentity -
-   * iam.googleapis.com/WorkloadPoolIdentity - iam.googleapis.com/ServiceAccount
+   * - `principal.type != ` - `principal.type in []` Supported principal types are workspace,
+   * workforce pool, workload pool, service account, and Agent Identity. Allowed string must be one
+   * of: - `iam.googleapis.com/WorkspaceIdentity` - `iam.googleapis.com/WorkforcePoolIdentity` -
+   * `iam.googleapis.com/WorkloadPoolIdentity` - `iam.googleapis.com/ServiceAccount` -
+   * `iam.googleapis.com/AgentPoolIdentity` (available in Preview)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,10 +171,11 @@ public final class GoogleIamV3PolicyBinding extends com.google.api.client.json.G
    * 'bob@example.com'". Allowed operations for `principal.subject`: - `principal.subject == ` -
    * `principal.subject != ` - `principal.subject in []` - `principal.subject.startsWith()` -
    * `principal.subject.endsWith()` Allowed operations for `principal.type`: - `principal.type == `
-   * - `principal.type != ` - `principal.type in []` Supported principal types are Workspace,
-   * Workforce Pool, Workload Pool and Service Account. Allowed string must be one of: -
-   * iam.googleapis.com/WorkspaceIdentity - iam.googleapis.com/WorkforcePoolIdentity -
-   * iam.googleapis.com/WorkloadPoolIdentity - iam.googleapis.com/ServiceAccount
+   * - `principal.type != ` - `principal.type in []` Supported principal types are workspace,
+   * workforce pool, workload pool, service account, and Agent Identity. Allowed string must be one
+   * of: - `iam.googleapis.com/WorkspaceIdentity` - `iam.googleapis.com/WorkforcePoolIdentity` -
+   * `iam.googleapis.com/WorkloadPoolIdentity` - `iam.googleapis.com/ServiceAccount` -
+   * `iam.googleapis.com/AgentPoolIdentity` (available in Preview)
    * @return value or {@code null} for none
    */
   public GoogleTypeExpr getCondition() {
@@ -191,10 +193,11 @@ public final class GoogleIamV3PolicyBinding extends com.google.api.client.json.G
    * 'bob@example.com'". Allowed operations for `principal.subject`: - `principal.subject == ` -
    * `principal.subject != ` - `principal.subject in []` - `principal.subject.startsWith()` -
    * `principal.subject.endsWith()` Allowed operations for `principal.type`: - `principal.type == `
-   * - `principal.type != ` - `principal.type in []` Supported principal types are Workspace,
-   * Workforce Pool, Workload Pool and Service Account. Allowed string must be one of: -
-   * iam.googleapis.com/WorkspaceIdentity - iam.googleapis.com/WorkforcePoolIdentity -
-   * iam.googleapis.com/WorkloadPoolIdentity - iam.googleapis.com/ServiceAccount
+   * - `principal.type != ` - `principal.type in []` Supported principal types are workspace,
+   * workforce pool, workload pool, service account, and Agent Identity. Allowed string must be one
+   * of: - `iam.googleapis.com/WorkspaceIdentity` - `iam.googleapis.com/WorkforcePoolIdentity` -
+   * `iam.googleapis.com/WorkloadPoolIdentity` - `iam.googleapis.com/ServiceAccount` -
+   * `iam.googleapis.com/AgentPoolIdentity` (available in Preview)
    * @param condition condition or {@code null} for none
    */
   public GoogleIamV3PolicyBinding setCondition(GoogleTypeExpr condition) {

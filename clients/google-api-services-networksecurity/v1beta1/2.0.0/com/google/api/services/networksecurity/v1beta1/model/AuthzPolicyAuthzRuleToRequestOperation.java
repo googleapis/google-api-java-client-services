@@ -52,6 +52,15 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
   }
 
   /**
+   * Optional. Defines the MCP protocol attributes to match on. If the MCP payload in the request
+   * body cannot be successfully parsed, the request will be denied. This field can be set only for
+   * AuthzPolicies targeting AgentGateway resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthzPolicyAuthzRuleToRequestOperationMCP mcp;
+
+  /**
    * Optional. A list of HTTP methods to match against. Each entry must be a valid HTTP method name
    * (GET, PUT, POST, HEAD, PATCH, DELETE, OPTIONS). It only allows exact match and is always case
    * sensitive. Limited to 10 methods per Authorization Policy.
@@ -112,6 +121,27 @@ public final class AuthzPolicyAuthzRuleToRequestOperation extends com.google.api
    */
   public AuthzPolicyAuthzRuleToRequestOperation setHosts(java.util.List<AuthzPolicyAuthzRuleStringMatch> hosts) {
     this.hosts = hosts;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the MCP protocol attributes to match on. If the MCP payload in the request
+   * body cannot be successfully parsed, the request will be denied. This field can be set only for
+   * AuthzPolicies targeting AgentGateway resources.
+   * @return value or {@code null} for none
+   */
+  public AuthzPolicyAuthzRuleToRequestOperationMCP getMcp() {
+    return mcp;
+  }
+
+  /**
+   * Optional. Defines the MCP protocol attributes to match on. If the MCP payload in the request
+   * body cannot be successfully parsed, the request will be denied. This field can be set only for
+   * AuthzPolicies targeting AgentGateway resources.
+   * @param mcp mcp or {@code null} for none
+   */
+  public AuthzPolicyAuthzRuleToRequestOperation setMcp(AuthzPolicyAuthzRuleToRequestOperationMCP mcp) {
+    this.mcp = mcp;
     return this;
   }
 

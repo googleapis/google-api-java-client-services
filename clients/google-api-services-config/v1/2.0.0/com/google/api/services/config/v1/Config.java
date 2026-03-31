@@ -461,10 +461,14 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
       /**
-       * Lists information about the supported locations for this service. This method can be called in
-       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-       * public locations as well as private or other locations specifically visible to the project.
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all projects.
+       * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+       * lists locations visible to that specific project. This includes public, private, or other
+       * project-specific locations enabled for the project. For gRPC and client library implementations,
+       * the resource name is passed as the `name` field. For direct service calls, the resource name is
+       * incorporated into the request path based on the specific service implementation and version.
        *
        * Create a request for the method "locations.list".
        *
@@ -488,10 +492,15 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service. This method can be called in
-         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-         * public locations as well as private or other locations specifically visible to the project.
+         * Lists information about the supported locations for this service. This method lists locations
+         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * locations**: If `name` is empty, the method lists the public locations available to all
+         * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+         * the method lists locations visible to that specific project. This includes public, private, or
+         * other project-specific locations enabled for the project. For gRPC and client library
+         * implementations, the resource name is passed as the `name` field. For direct service calls, the
+         * resource name is incorporated into the request path based on the specific service
+         * implementation and version.
          *
          * Create a request for the method "locations.list".
          *
@@ -849,6 +858,1743 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
         }
       }
 
+      /**
+       * An accessor for creating requests from the DeploymentGroups collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Config config = new Config(...);}
+       *   {@code Config.DeploymentGroups.List request = config.deploymentGroups().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DeploymentGroups deploymentGroups() {
+        return new DeploymentGroups();
+      }
+
+      /**
+       * The "deploymentGroups" collection of methods.
+       */
+      public class DeploymentGroups {
+
+        /**
+         * Creates a DeploymentGroup The newly created DeploymentGroup will be in the `CREATING` state and
+         * can be retrieved via Get and List calls.
+         *
+         * Create a request for the method "deploymentGroups.create".
+         *
+         * This request holds the parameters needed by the config server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent in whose context the Deployment Group is created. The parent value is in the
+         *        format: 'projects/{project_id}/locations/{location}'
+         * @param content the {@link com.google.api.services.config.v1.model.DeploymentGroup}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.config.v1.model.DeploymentGroup content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ConfigRequest<com.google.api.services.config.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/deploymentGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a DeploymentGroup The newly created DeploymentGroup will be in the `CREATING` state and
+           * can be retrieved via Get and List calls.
+           *
+           * Create a request for the method "deploymentGroups.create".
+           *
+           * This request holds the parameters needed by the the config server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent in whose context the Deployment Group is created. The parent value is in the
+         *        format: 'projects/{project_id}/locations/{location}'
+           * @param content the {@link com.google.api.services.config.v1.model.DeploymentGroup}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.config.v1.model.DeploymentGroup content) {
+            super(Config.this, "POST", REST_PATH, content, com.google.api.services.config.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent in whose context the Deployment Group is created. The parent value
+           * is in the format: 'projects/{project_id}/locations/{location}'
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent in whose context the Deployment Group is created. The parent value is in the
+         format: 'projects/{project_id}/locations/{location}'
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent in whose context the Deployment Group is created. The parent value
+           * is in the format: 'projects/{project_id}/locations/{location}'
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The deployment group ID. */
+          @com.google.api.client.util.Key
+          private java.lang.String deploymentGroupId;
+
+          /** Required. The deployment group ID.
+           */
+          public java.lang.String getDeploymentGroupId() {
+            return deploymentGroupId;
+          }
+
+          /** Required. The deployment group ID. */
+          public Create setDeploymentGroupId(java.lang.String deploymentGroupId) {
+            this.deploymentGroupId = deploymentGroupId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a DeploymentGroup
+         *
+         * Create a request for the method "deploymentGroups.delete".
+         *
+         * This request holds the parameters needed by the config server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of DeploymentGroup in the format
+         *        projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ConfigRequest<com.google.api.services.config.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+
+          /**
+           * Deletes a DeploymentGroup
+           *
+           * Create a request for the method "deploymentGroups.delete".
+           *
+           * This request holds the parameters needed by the the config server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of DeploymentGroup in the format
+         *        projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Config.this, "DELETE", REST_PATH, null, com.google.api.services.config.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of DeploymentGroup in the format
+           * projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of DeploymentGroup in the format
+         projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of DeploymentGroup in the format
+           * projects/{project_id}/locations/{location_id}/deploymentGroups/{deploymentGroup}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Policy on how to handle referenced deployments when deleting the
+           * DeploymentGroup. If unspecified, the default behavior is to fail the deletion if any
+           * deployments currently referenced in the `deployment_units` of the DeploymentGroup or in
+           * the latest revision are not deleted.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String deploymentReferencePolicy;
+
+          /** Optional. Policy on how to handle referenced deployments when deleting the DeploymentGroup. If
+         unspecified, the default behavior is to fail the deletion if any deployments currently referenced
+         in the `deployment_units` of the DeploymentGroup or in the latest revision are not deleted.
+           */
+          public java.lang.String getDeploymentReferencePolicy() {
+            return deploymentReferencePolicy;
+          }
+
+          /**
+           * Optional. Policy on how to handle referenced deployments when deleting the
+           * DeploymentGroup. If unspecified, the default behavior is to fail the deletion if any
+           * deployments currently referenced in the `deployment_units` of the DeploymentGroup or in
+           * the latest revision are not deleted.
+           */
+          public Delete setDeploymentReferencePolicy(java.lang.String deploymentReferencePolicy) {
+            this.deploymentReferencePolicy = deploymentReferencePolicy;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, any revisions for this deployment group will also be deleted.
+           * (Otherwise, the request will only work if the deployment group has no revisions.)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any revisions for this deployment group will also be deleted. (Otherwise,
+         the request will only work if the deployment group has no revisions.)
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any revisions for this deployment group will also be deleted.
+           * (Otherwise, the request will only work if the deployment group has no revisions.)
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes after the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deprovisions a deployment group. NOTE: As a first step of this operation, Infra Manager will
+         * automatically delete any Deployments that were part of the *last successful*
+         * DeploymentGroupRevision but are *no longer* included in the *current* DeploymentGroup definition
+         * (e.g., following an `UpdateDeploymentGroup` call), along with their actuated resources.
+         *
+         * Create a request for the method "deploymentGroups.deprovision".
+         *
+         * This request holds the parameters needed by the config server.  After setting any optional
+         * parameters, call the {@link Deprovision#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the deployment group to deprovision. Format:
+         *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+         * @param content the {@link com.google.api.services.config.v1.model.DeprovisionDeploymentGroupRequest}
+         * @return the request
+         */
+        public Deprovision deprovision(java.lang.String name, com.google.api.services.config.v1.model.DeprovisionDeploymentGroupRequest content) throws java.io.IOException {
+          Deprovision result = new Deprovision(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Deprovision extends ConfigRequest<com.google.api.services.config.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:deprovision";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+
+          /**
+           * Deprovisions a deployment group. NOTE: As a first step of this operation, Infra Manager will
+           * automatically delete any Deployments that were part of the *last successful*
+           * DeploymentGroupRevision but are *no longer* included in the *current* DeploymentGroup
+           * definition (e.g., following an `UpdateDeploymentGroup` call), along with their actuated
+           * resources.
+           *
+           * Create a request for the method "deploymentGroups.deprovision".
+           *
+           * This request holds the parameters needed by the the config server.  After setting any optional
+           * parameters, call the {@link Deprovision#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Deprovision#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the deployment group to deprovision. Format:
+         *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           * @param content the {@link com.google.api.services.config.v1.model.DeprovisionDeploymentGroupRequest}
+           * @since 1.13
+           */
+          protected Deprovision(java.lang.String name, com.google.api.services.config.v1.model.DeprovisionDeploymentGroupRequest content) {
+            super(Config.this, "POST", REST_PATH, content, com.google.api.services.config.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Deprovision set$Xgafv(java.lang.String $Xgafv) {
+            return (Deprovision) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Deprovision setAccessToken(java.lang.String accessToken) {
+            return (Deprovision) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Deprovision setAlt(java.lang.String alt) {
+            return (Deprovision) super.setAlt(alt);
+          }
+
+          @Override
+          public Deprovision setCallback(java.lang.String callback) {
+            return (Deprovision) super.setCallback(callback);
+          }
+
+          @Override
+          public Deprovision setFields(java.lang.String fields) {
+            return (Deprovision) super.setFields(fields);
+          }
+
+          @Override
+          public Deprovision setKey(java.lang.String key) {
+            return (Deprovision) super.setKey(key);
+          }
+
+          @Override
+          public Deprovision setOauthToken(java.lang.String oauthToken) {
+            return (Deprovision) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Deprovision setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Deprovision) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Deprovision setQuotaUser(java.lang.String quotaUser) {
+            return (Deprovision) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Deprovision setUploadType(java.lang.String uploadType) {
+            return (Deprovision) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Deprovision setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Deprovision) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the deployment group to deprovision. Format:
+           * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the deployment group to deprovision. Format:
+         'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the deployment group to deprovision. Format:
+           * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          public Deprovision setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Deprovision set(String parameterName, Object value) {
+            return (Deprovision) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a DeploymentGroup for a given project and location.
+         *
+         * Create a request for the method "deploymentGroups.get".
+         *
+         * This request holds the parameters needed by the config server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the deployment group to retrieve. Format:
+         *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ConfigRequest<com.google.api.services.config.v1.model.DeploymentGroup> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+
+          /**
+           * Get a DeploymentGroup for a given project and location.
+           *
+           * Create a request for the method "deploymentGroups.get".
+           *
+           * This request holds the parameters needed by the the config server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the deployment group to retrieve. Format:
+         *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Config.this, "GET", REST_PATH, null, com.google.api.services.config.v1.model.DeploymentGroup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the deployment group to retrieve. Format:
+           * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the deployment group to retrieve. Format:
+         'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the deployment group to retrieve. Format:
+           * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List DeploymentGroups for a given project and location.
+         *
+         * Create a request for the method "deploymentGroups.list".
+         *
+         * This request holds the parameters needed by the config server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of deployment groups. Format:
+         *        'projects/{project_id}/locations/{location}'.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ConfigRequest<com.google.api.services.config.v1.model.ListDeploymentGroupsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/deploymentGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List DeploymentGroups for a given project and location.
+           *
+           * Create a request for the method "deploymentGroups.list".
+           *
+           * This request holds the parameters needed by the the config server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of deployment groups. Format:
+         *        'projects/{project_id}/locations/{location}'.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Config.this, "GET", REST_PATH, null, com.google.api.services.config.v1.model.ListDeploymentGroupsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns this collection of deployment groups. Format:
+           * 'projects/{project_id}/locations/{location}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of deployment groups. Format:
+         'projects/{project_id}/locations/{location}'.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns this collection of deployment groups. Format:
+           * 'projects/{project_id}/locations/{location}'.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Lists the DeploymentGroups that match the filter expression. A filter
+           * expression filters the deployment groups listed in the response. The expression must be
+           * of the form '{field} {operator} {value}' where operators: '<', '>', '<=', '>=', '!=',
+           * '=', ':' are supported (colon ':' represents a HAS operator which is roughly synonymous
+           * with equality). {field} can refer to a proto or JSON field, or a synthetic field. Field
+           * names can be camelCase or snake_case. Examples: - Filter by name: name =
+           * "projects/foo/locations/us-central1/deploymentGroups/bar" - Filter by labels: -
+           * Resources that have a key called 'foo' labels.foo:* - Resources that have a key called
+           * 'foo' whose value is 'bar' labels.foo = bar - Filter by state: - DeploymentGroups in
+           * CREATING state. state=CREATING
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Lists the DeploymentGroups that match the filter expression. A filter expression filters
+         the deployment groups listed in the response. The expression must be of the form '{field}
+         {operator} {value}' where operators: '<', '>', '<=', '>=', '!=', '=', ':' are supported (colon ':'
+         represents a HAS operator which is roughly synonymous with equality). {field} can refer to a proto
+         or JSON field, or a synthetic field. Field names can be camelCase or snake_case. Examples: - Filter
+         by name: name = "projects/foo/locations/us-central1/deploymentGroups/bar" - Filter by labels: -
+         Resources that have a key called 'foo' labels.foo:* - Resources that have a key called 'foo' whose
+         value is 'bar' labels.foo = bar - Filter by state: - DeploymentGroups in CREATING state.
+         state=CREATING
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Lists the DeploymentGroups that match the filter expression. A filter
+           * expression filters the deployment groups listed in the response. The expression must be
+           * of the form '{field} {operator} {value}' where operators: '<', '>', '<=', '>=', '!=',
+           * '=', ':' are supported (colon ':' represents a HAS operator which is roughly synonymous
+           * with equality). {field} can refer to a proto or JSON field, or a synthetic field. Field
+           * names can be camelCase or snake_case. Examples: - Filter by name: name =
+           * "projects/foo/locations/us-central1/deploymentGroups/bar" - Filter by labels: -
+           * Resources that have a key called 'foo' labels.foo:* - Resources that have a key called
+           * 'foo' whose value is 'bar' labels.foo = bar - Filter by state: - DeploymentGroups in
+           * CREATING state. state=CREATING
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Field to use to sort the list. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field to use to sort the list.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Field to use to sort the list. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. When requesting a page of resources, 'page_size' specifies number of
+           * resources to return. If unspecified, at most 500 will be returned. The maximum value is
+           * 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. When requesting a page of resources, 'page_size' specifies number of resources to return.
+         If unspecified, at most 500 will be returned. The maximum value is 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. When requesting a page of resources, 'page_size' specifies number of
+           * resources to return. If unspecified, at most 500 will be returned. The maximum value is
+           * 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. Token returned by previous call to 'ListDeploymentGroups' which specifies the
+           * position in the list from where to continue listing the deployment groups.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. Token returned by previous call to 'ListDeploymentGroups' which specifies the position in
+         the list from where to continue listing the deployment groups.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. Token returned by previous call to 'ListDeploymentGroups' which specifies the
+           * position in the list from where to continue listing the deployment groups.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a DeploymentGroup
+         *
+         * Create a request for the method "deploymentGroups.patch".
+         *
+         * This request holds the parameters needed by the config server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the deployment group. Format:
+         *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+         * @param content the {@link com.google.api.services.config.v1.model.DeploymentGroup}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.config.v1.model.DeploymentGroup content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ConfigRequest<com.google.api.services.config.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+
+          /**
+           * Updates a DeploymentGroup
+           *
+           * Create a request for the method "deploymentGroups.patch".
+           *
+           * This request holds the parameters needed by the the config server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the deployment group. Format:
+         *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           * @param content the {@link com.google.api.services.config.v1.model.DeploymentGroup}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.config.v1.model.DeploymentGroup content) {
+            super(Config.this, "PATCH", REST_PATH, content, com.google.api.services.config.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the deployment group. Format:
+           * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the deployment group. Format:
+         'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the deployment group. Format:
+           * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask used to specify the fields to be overwritten in the Deployment
+           * Group resource by the update. The fields specified in the update_mask are relative to
+           * the resource, not the full request. A field will be overwritten if it is in the mask.
+           * If the user does not provide a mask then all fields will be overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask used to specify the fields to be overwritten in the Deployment Group resource
+         by the update. The fields specified in the update_mask are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask used to specify the fields to be overwritten in the Deployment
+           * Group resource by the update. The fields specified in the update_mask are relative to
+           * the resource, not the full request. A field will be overwritten if it is in the mask.
+           * If the user does not provide a mask then all fields will be overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Provisions a deployment group. NOTE: As a first step of this operation, Infra Manager will
+         * automatically delete any Deployments that were part of the *last successful*
+         * DeploymentGroupRevision but are *no longer* included in the *current* DeploymentGroup definition
+         * (e.g., following an `UpdateDeploymentGroup` call), along with their actuated resources.
+         *
+         * Create a request for the method "deploymentGroups.provision".
+         *
+         * This request holds the parameters needed by the config server.  After setting any optional
+         * parameters, call the {@link Provision#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the deployment group to provision. Format:
+         *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+         * @param content the {@link com.google.api.services.config.v1.model.ProvisionDeploymentGroupRequest}
+         * @return the request
+         */
+        public Provision provision(java.lang.String name, com.google.api.services.config.v1.model.ProvisionDeploymentGroupRequest content) throws java.io.IOException {
+          Provision result = new Provision(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Provision extends ConfigRequest<com.google.api.services.config.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:provision";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+
+          /**
+           * Provisions a deployment group. NOTE: As a first step of this operation, Infra Manager will
+           * automatically delete any Deployments that were part of the *last successful*
+           * DeploymentGroupRevision but are *no longer* included in the *current* DeploymentGroup
+           * definition (e.g., following an `UpdateDeploymentGroup` call), along with their actuated
+           * resources.
+           *
+           * Create a request for the method "deploymentGroups.provision".
+           *
+           * This request holds the parameters needed by the the config server.  After setting any optional
+           * parameters, call the {@link Provision#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Provision#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the deployment group to provision. Format:
+         *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           * @param content the {@link com.google.api.services.config.v1.model.ProvisionDeploymentGroupRequest}
+           * @since 1.13
+           */
+          protected Provision(java.lang.String name, com.google.api.services.config.v1.model.ProvisionDeploymentGroupRequest content) {
+            super(Config.this, "POST", REST_PATH, content, com.google.api.services.config.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Provision set$Xgafv(java.lang.String $Xgafv) {
+            return (Provision) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Provision setAccessToken(java.lang.String accessToken) {
+            return (Provision) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Provision setAlt(java.lang.String alt) {
+            return (Provision) super.setAlt(alt);
+          }
+
+          @Override
+          public Provision setCallback(java.lang.String callback) {
+            return (Provision) super.setCallback(callback);
+          }
+
+          @Override
+          public Provision setFields(java.lang.String fields) {
+            return (Provision) super.setFields(fields);
+          }
+
+          @Override
+          public Provision setKey(java.lang.String key) {
+            return (Provision) super.setKey(key);
+          }
+
+          @Override
+          public Provision setOauthToken(java.lang.String oauthToken) {
+            return (Provision) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Provision setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Provision) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Provision setQuotaUser(java.lang.String quotaUser) {
+            return (Provision) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Provision setUploadType(java.lang.String uploadType) {
+            return (Provision) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Provision setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Provision) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the deployment group to provision. Format:
+           * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the deployment group to provision. Format:
+         'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the deployment group to provision. Format:
+           * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           */
+          public Provision setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Provision set(String parameterName, Object value) {
+            return (Provision) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Revisions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Config config = new Config(...);}
+         *   {@code Config.Revisions.List request = config.revisions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Revisions revisions() {
+          return new Revisions();
+        }
+
+        /**
+         * The "revisions" collection of methods.
+         */
+        public class Revisions {
+
+          /**
+           * Gets details about a DeploymentGroupRevision.
+           *
+           * Create a request for the method "revisions.get".
+           *
+           * This request holds the parameters needed by the config server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the deployment group revision to retrieve. Format: 'projects/{project_id}/loca
+           *        tions/{location}/deploymentGroups/{deployment_group}/revisions/{revision}'.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ConfigRequest<com.google.api.services.config.v1.model.DeploymentGroupRevision> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+/revisions/[^/]+$");
+
+            /**
+             * Gets details about a DeploymentGroupRevision.
+             *
+             * Create a request for the method "revisions.get".
+             *
+             * This request holds the parameters needed by the the config server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the deployment group revision to retrieve. Format: 'projects/{project_id}/loca
+           *        tions/{location}/deploymentGroups/{deployment_group}/revisions/{revision}'.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Config.this, "GET", REST_PATH, null, com.google.api.services.config.v1.model.DeploymentGroupRevision.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+/revisions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the deployment group revision to retrieve. Format: 'projects/{p
+             * roject_id}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revisi
+             * on}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the deployment group revision to retrieve. Format: 'projects/{project_id}/loc
+           ations/{location}/deploymentGroups/{deployment_group}/revisions/{revision}'.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the deployment group revision to retrieve. Format: 'projects/{p
+             * roject_id}/locations/{location}/deploymentGroups/{deployment_group}/revisions/{revisi
+             * on}'.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+/revisions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists DeploymentGroupRevisions in a given DeploymentGroup.
+           *
+           * Create a request for the method "revisions.list".
+           *
+           * This request holds the parameters needed by the config server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent, which owns this collection of deployment group revisions. Format:
+           *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ConfigRequest<com.google.api.services.config.v1.model.ListDeploymentGroupRevisionsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/revisions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+
+            /**
+             * Lists DeploymentGroupRevisions in a given DeploymentGroup.
+             *
+             * Create a request for the method "revisions.list".
+             *
+             * This request holds the parameters needed by the the config server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent, which owns this collection of deployment group revisions. Format:
+           *        'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Config.this, "GET", REST_PATH, null, com.google.api.services.config.v1.model.ListDeploymentGroupRevisionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent, which owns this collection of deployment group revisions.
+             * Format:
+             * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent, which owns this collection of deployment group revisions. Format:
+           'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent, which owns this collection of deployment group revisions.
+             * Format:
+             * 'projects/{project_id}/locations/{location}/deploymentGroups/{deployment_group}'.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/deploymentGroups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. When requesting a page of resources, 'page_size' specifies number of
+             * resources to return. If unspecified, a sensible default will be used by the server.
+             * The maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. When requesting a page of resources, 'page_size' specifies number of resources to return.
+           If unspecified, a sensible default will be used by the server. The maximum value is 1000; values
+           above 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. When requesting a page of resources, 'page_size' specifies number of
+             * resources to return. If unspecified, a sensible default will be used by the server.
+             * The maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Token returned by previous call to 'ListDeploymentGroupRevisions' which
+             * specifies the position in the list from where to continue listing the deployment
+             * group revisions. All other parameters provided to `ListDeploymentGroupRevisions` must
+             * match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Token returned by previous call to 'ListDeploymentGroupRevisions' which specifies the
+           position in the list from where to continue listing the deployment group revisions. All other
+           parameters provided to `ListDeploymentGroupRevisions` must match the call that provided the page
+           token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Token returned by previous call to 'ListDeploymentGroupRevisions' which
+             * specifies the position in the list from where to continue listing the deployment
+             * group revisions. All other parameters provided to `ListDeploymentGroupRevisions` must
+             * match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
       /**
        * An accessor for creating requests from the Deployments collection.
        *

@@ -66,6 +66,13 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private PreviewOperationMetadata previewMetadata;
 
   /**
+   * Output only. Metadata about ProvisionDeploymentGroup operation state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProvisionDeploymentGroupOperationMetadata provisionDeploymentGroupMetadata;
+
+  /**
    * Output only. Identifies whether the user has requested cancellation of the operation.
    * Operations that have successfully been cancelled have google.longrunning.Operation.error value
    * with a google.rpc.Status.code of `1`, corresponding to `Code.CANCELLED`.
@@ -177,6 +184,23 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    */
   public OperationMetadata setPreviewMetadata(PreviewOperationMetadata previewMetadata) {
     this.previewMetadata = previewMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about ProvisionDeploymentGroup operation state.
+   * @return value or {@code null} for none
+   */
+  public ProvisionDeploymentGroupOperationMetadata getProvisionDeploymentGroupMetadata() {
+    return provisionDeploymentGroupMetadata;
+  }
+
+  /**
+   * Output only. Metadata about ProvisionDeploymentGroup operation state.
+   * @param provisionDeploymentGroupMetadata provisionDeploymentGroupMetadata or {@code null} for none
+   */
+  public OperationMetadata setProvisionDeploymentGroupMetadata(ProvisionDeploymentGroupOperationMetadata provisionDeploymentGroupMetadata) {
+    this.provisionDeploymentGroupMetadata = provisionDeploymentGroupMetadata;
     return this;
   }
 

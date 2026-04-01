@@ -43,7 +43,9 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
    * scan against. The field could either be: Cloud Storage bucket for DataDiscoveryScan Format:
    * //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID or BigQuery table of type
    * "TABLE" for DataProfileScan/DataQualityScan/DataDocumentationScan Format:
-   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID or BigQuery
+   * dataset for DataDocumentationScan only Format:
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +77,9 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
    * scan against. The field could either be: Cloud Storage bucket for DataDiscoveryScan Format:
    * //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID or BigQuery table of type
    * "TABLE" for DataProfileScan/DataQualityScan/DataDocumentationScan Format:
-   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID or BigQuery
+   * dataset for DataDocumentationScan only Format:
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -87,7 +91,9 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
    * scan against. The field could either be: Cloud Storage bucket for DataDiscoveryScan Format:
    * //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID or BigQuery table of type
    * "TABLE" for DataProfileScan/DataQualityScan/DataDocumentationScan Format:
-   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID or BigQuery
+   * dataset for DataDocumentationScan only Format:
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID
    * @param resource resource or {@code null} for none
    */
   public GoogleCloudDataplexV1DataSource setResource(java.lang.String resource) {

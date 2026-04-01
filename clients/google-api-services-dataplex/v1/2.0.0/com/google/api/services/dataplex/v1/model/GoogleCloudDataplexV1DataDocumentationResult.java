@@ -30,14 +30,38 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataDocumentationResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Table result for insights.
+   * Output only. Insights for a Dataset resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDocumentationResultDatasetResult datasetResult;
+
+  /**
+   * Output only. Insights for a Table resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataDocumentationResultTableResult tableResult;
 
   /**
-   * Output only. Table result for insights.
+   * Output only. Insights for a Dataset resource.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationResultDatasetResult getDatasetResult() {
+    return datasetResult;
+  }
+
+  /**
+   * Output only. Insights for a Dataset resource.
+   * @param datasetResult datasetResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationResult setDatasetResult(GoogleCloudDataplexV1DataDocumentationResultDatasetResult datasetResult) {
+    this.datasetResult = datasetResult;
+    return this;
+  }
+
+  /**
+   * Output only. Insights for a Table resource.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1DataDocumentationResultTableResult getTableResult() {
@@ -45,7 +69,7 @@ public final class GoogleCloudDataplexV1DataDocumentationResult extends com.goog
   }
 
   /**
-   * Output only. Table result for insights.
+   * Output only. Insights for a Table resource.
    * @param tableResult tableResult or {@code null} for none
    */
   public GoogleCloudDataplexV1DataDocumentationResult setTableResult(GoogleCloudDataplexV1DataDocumentationResultTableResult tableResult) {

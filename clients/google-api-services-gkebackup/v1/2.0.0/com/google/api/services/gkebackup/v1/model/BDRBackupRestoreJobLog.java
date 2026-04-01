@@ -17,7 +17,7 @@
 package com.google.api.services.gkebackup.v1.model;
 
 /**
- * Log entry for Backup and Restore Job for resources using BackupPlan based protection. Next Id: 23
+ * Log entry for Backup and Restore Job for resources using BackupPlan based protection. Next Id: 24
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:
@@ -71,6 +71,13 @@ public final class BDRBackupRestoreJobLog extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String backupVaultName;
+
+  /**
+   * Canonical Data Source Name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataSourceName;
 
   /**
    * End time of the job.
@@ -285,6 +292,23 @@ public final class BDRBackupRestoreJobLog extends com.google.api.client.json.Gen
    */
   public BDRBackupRestoreJobLog setBackupVaultName(java.lang.String backupVaultName) {
     this.backupVaultName = backupVaultName;
+    return this;
+  }
+
+  /**
+   * Canonical Data Source Name
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataSourceName() {
+    return dataSourceName;
+  }
+
+  /**
+   * Canonical Data Source Name
+   * @param dataSourceName dataSourceName or {@code null} for none
+   */
+  public BDRBackupRestoreJobLog setDataSourceName(java.lang.String dataSourceName) {
+    this.dataSourceName = dataSourceName;
     return this;
   }
 

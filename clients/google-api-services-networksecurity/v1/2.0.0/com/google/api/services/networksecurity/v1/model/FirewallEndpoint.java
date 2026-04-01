@@ -48,7 +48,8 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.util.List<FirewallEndpointAssociationReference> associations;
 
   /**
-   * Required. Project to bill on endpoint uptime usage.
+   * Optional. Project to charge for the deployed firewall endpoint. This field must be specified
+   * when creating the endpoint in the organization scope, and should be omitted otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +168,8 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Project to bill on endpoint uptime usage.
+   * Optional. Project to charge for the deployed firewall endpoint. This field must be specified
+   * when creating the endpoint in the organization scope, and should be omitted otherwise.
    * @return value or {@code null} for none
    */
   public java.lang.String getBillingProjectId() {
@@ -175,7 +177,8 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Project to bill on endpoint uptime usage.
+   * Optional. Project to charge for the deployed firewall endpoint. This field must be specified
+   * when creating the endpoint in the organization scope, and should be omitted otherwise.
    * @param billingProjectId billingProjectId or {@code null} for none
    */
   public FirewallEndpoint setBillingProjectId(java.lang.String billingProjectId) {

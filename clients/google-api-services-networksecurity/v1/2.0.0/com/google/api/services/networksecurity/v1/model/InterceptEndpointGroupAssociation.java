@@ -91,6 +91,14 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
   private java.lang.String network;
 
   /**
+   * Output only. Identifier used by the data-path. See the NSI GENEVE format for more details:
+   * https://docs.cloud.google.com/network-security-integration/docs/understand-geneve#network_id
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Long networkCookie;
+
+  /**
    * Output only. The current state of the resource does not match the user's intended state, and
    * the system is working to reconcile them. This part of the normal operation (e.g. adding a new
    * location to the target deployment group). See https://google.aip.dev/128.
@@ -246,6 +254,25 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
    */
   public InterceptEndpointGroupAssociation setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Output only. Identifier used by the data-path. See the NSI GENEVE format for more details:
+   * https://docs.cloud.google.com/network-security-integration/docs/understand-geneve#network_id
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getNetworkCookie() {
+    return networkCookie;
+  }
+
+  /**
+   * Output only. Identifier used by the data-path. See the NSI GENEVE format for more details:
+   * https://docs.cloud.google.com/network-security-integration/docs/understand-geneve#network_id
+   * @param networkCookie networkCookie or {@code null} for none
+   */
+  public InterceptEndpointGroupAssociation setNetworkCookie(java.lang.Long networkCookie) {
+    this.networkCookie = networkCookie;
     return this;
   }
 

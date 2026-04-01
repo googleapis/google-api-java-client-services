@@ -232,8 +232,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.Boolean isAutoScalingEnabled;
 
   /**
-   * Output only. This field indicates whether the Autonomous Database has local (in-region) Data
-   * Guard enabled.
+   * Output only. Deprecated: Please use `local_data_guard_enabled` instead. This field indicates
+   * whether the Autonomous Database has local (in-region) Data Guard enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,12 +262,29 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.String lifecycleDetails;
 
   /**
-   * Output only. This field indicates the maximum data loss limit for an Autonomous Database, in
+   * Output only. Deprecated: Please use `local_adg_auto_failover_max_data_loss_limit_duration`
+   * instead. This field indicates the maximum data loss limit for an Autonomous Database, in
    * seconds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer localAdgAutoFailoverMaxDataLossLimit;
+
+  /**
+   * Optional. This field indicates the maximum data loss limit for an Autonomous Database, in
+   * seconds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer localAdgAutoFailoverMaxDataLossLimitDuration;
+
+  /**
+   * Optional. Indicates whether the Autonomous Database has a local (in-region) standby database.
+   * Not applicable to cross-region Data Guard or dedicated Exadata infrastructure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean localDataGuardEnabled;
 
   /**
    * Output only. This field indicates the local disaster recovery (DR) type of an Autonomous
@@ -976,8 +993,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Output only. This field indicates whether the Autonomous Database has local (in-region) Data
-   * Guard enabled.
+   * Output only. Deprecated: Please use `local_data_guard_enabled` instead. This field indicates
+   * whether the Autonomous Database has local (in-region) Data Guard enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsLocalDataGuardEnabled() {
@@ -985,8 +1002,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Output only. This field indicates whether the Autonomous Database has local (in-region) Data
-   * Guard enabled.
+   * Output only. Deprecated: Please use `local_data_guard_enabled` instead. This field indicates
+   * whether the Autonomous Database has local (in-region) Data Guard enabled.
    * @param isLocalDataGuardEnabled isLocalDataGuardEnabled or {@code null} for none
    */
   public AutonomousDatabaseProperties setIsLocalDataGuardEnabled(java.lang.Boolean isLocalDataGuardEnabled) {
@@ -1048,7 +1065,8 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Output only. This field indicates the maximum data loss limit for an Autonomous Database, in
+   * Output only. Deprecated: Please use `local_adg_auto_failover_max_data_loss_limit_duration`
+   * instead. This field indicates the maximum data loss limit for an Autonomous Database, in
    * seconds.
    * @return value or {@code null} for none
    */
@@ -1057,12 +1075,51 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
-   * Output only. This field indicates the maximum data loss limit for an Autonomous Database, in
+   * Output only. Deprecated: Please use `local_adg_auto_failover_max_data_loss_limit_duration`
+   * instead. This field indicates the maximum data loss limit for an Autonomous Database, in
    * seconds.
    * @param localAdgAutoFailoverMaxDataLossLimit localAdgAutoFailoverMaxDataLossLimit or {@code null} for none
    */
   public AutonomousDatabaseProperties setLocalAdgAutoFailoverMaxDataLossLimit(java.lang.Integer localAdgAutoFailoverMaxDataLossLimit) {
     this.localAdgAutoFailoverMaxDataLossLimit = localAdgAutoFailoverMaxDataLossLimit;
+    return this;
+  }
+
+  /**
+   * Optional. This field indicates the maximum data loss limit for an Autonomous Database, in
+   * seconds.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLocalAdgAutoFailoverMaxDataLossLimitDuration() {
+    return localAdgAutoFailoverMaxDataLossLimitDuration;
+  }
+
+  /**
+   * Optional. This field indicates the maximum data loss limit for an Autonomous Database, in
+   * seconds.
+   * @param localAdgAutoFailoverMaxDataLossLimitDuration localAdgAutoFailoverMaxDataLossLimitDuration or {@code null} for none
+   */
+  public AutonomousDatabaseProperties setLocalAdgAutoFailoverMaxDataLossLimitDuration(java.lang.Integer localAdgAutoFailoverMaxDataLossLimitDuration) {
+    this.localAdgAutoFailoverMaxDataLossLimitDuration = localAdgAutoFailoverMaxDataLossLimitDuration;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether the Autonomous Database has a local (in-region) standby database.
+   * Not applicable to cross-region Data Guard or dedicated Exadata infrastructure.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLocalDataGuardEnabled() {
+    return localDataGuardEnabled;
+  }
+
+  /**
+   * Optional. Indicates whether the Autonomous Database has a local (in-region) standby database.
+   * Not applicable to cross-region Data Guard or dedicated Exadata infrastructure.
+   * @param localDataGuardEnabled localDataGuardEnabled or {@code null} for none
+   */
+  public AutonomousDatabaseProperties setLocalDataGuardEnabled(java.lang.Boolean localDataGuardEnabled) {
+    this.localDataGuardEnabled = localDataGuardEnabled;
     return this;
   }
 

@@ -981,20 +981,20 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Optional. If set, validate the request and preview the review, but do not actually
+           * Optional. If set, validate the request and preview the result, but do not actually
            * apply it.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. If set, validate the request and preview the review, but do not actually apply it.
+          /** Optional. If set, validate the request and preview the result, but do not actually apply it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. If set, validate the request and preview the review, but do not actually
+           * Optional. If set, validate the request and preview the result, but do not actually
            * apply it.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
@@ -1197,19 +1197,19 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Optional. If set, validate the request and preview the review, but do not apply it.
+           * Optional. If set, validate the request and preview the result, but do not apply it.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. If set, validate the request and preview the review, but do not apply it.
+          /** Optional. If set, validate the request and preview the result, but do not apply it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. If set, validate the request and preview the review, but do not apply it.
+           * Optional. If set, validate the request and preview the result, but do not apply it.
            */
           public Delete setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -1724,20 +1724,20 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Optional. If set, validate the request and preview the review, but do not actually
+           * Optional. If set, validate the request and preview the result, but do not actually
            * apply it.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. If set, validate the request and preview the review, but do not actually apply it.
+          /** Optional. If set, validate the request and preview the result, but do not actually apply it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. If set, validate the request and preview the review, but do not actually
+           * Optional. If set, validate the request and preview the result, but do not actually
            * apply it.
            */
           public Patch setValidateOnly(java.lang.Boolean validateOnly) {
@@ -1898,20 +1898,20 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Optional. If set, validate the request and preview the review, but do not actually
+             * Optional. If set, validate the request and preview the result, but do not actually
              * apply it.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** Optional. If set, validate the request and preview the review, but do not actually apply it.
+            /** Optional. If set, validate the request and preview the result, but do not actually apply it.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * Optional. If set, validate the request and preview the review, but do not actually
+             * Optional. If set, validate the request and preview the result, but do not actually
              * apply it.
              */
             public Create setValidateOnly(java.lang.Boolean validateOnly) {
@@ -2113,20 +2113,20 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Optional. If set, validate the request and preview the review, but do not actually
+             * Optional. If set, validate the request and preview the result, but do not actually
              * apply it.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** Optional. If set, validate the request and preview the review, but do not actually apply it.
+            /** Optional. If set, validate the request and preview the result, but do not actually apply it.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * Optional. If set, validate the request and preview the review, but do not actually
+             * Optional. If set, validate the request and preview the result, but do not actually
              * apply it.
              */
             public Delete setValidateOnly(java.lang.Boolean validateOnly) {
@@ -3013,20 +3013,20 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Optional. If set, validate the request and preview the review, but do not actually
+             * Optional. If set, validate the request and preview the result, but do not actually
              * apply it.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean validateOnly;
 
-            /** Optional. If set, validate the request and preview the review, but do not actually apply it.
+            /** Optional. If set, validate the request and preview the result, but do not actually apply it.
              */
             public java.lang.Boolean getValidateOnly() {
               return validateOnly;
             }
 
             /**
-             * Optional. If set, validate the request and preview the review, but do not actually
+             * Optional. If set, validate the request and preview the result, but do not actually
              * apply it.
              */
             public Patch setValidateOnly(java.lang.Boolean validateOnly) {
@@ -3485,20 +3485,20 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Optional. If set, validate the request and preview the review, but do not actually
+               * Optional. If set, validate the request and preview the result, but do not actually
                * apply it.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean validateOnly;
 
-              /** Optional. If set, validate the request and preview the review, but do not actually apply it.
+              /** Optional. If set, validate the request and preview the result, but do not actually apply it.
                */
               public java.lang.Boolean getValidateOnly() {
                 return validateOnly;
               }
 
               /**
-               * Optional. If set, validate the request and preview the review, but do not actually
+               * Optional. If set, validate the request and preview the result, but do not actually
                * apply it.
                */
               public Create setValidateOnly(java.lang.Boolean validateOnly) {
@@ -3675,20 +3675,20 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Optional. If set, validate the request and preview the review, but do not actually
+               * Optional. If set, validate the request and preview the result, but do not actually
                * apply it.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean validateOnly;
 
-              /** Optional. If set, validate the request and preview the review, but do not actually apply it.
+              /** Optional. If set, validate the request and preview the result, but do not actually apply it.
                */
               public java.lang.Boolean getValidateOnly() {
                 return validateOnly;
               }
 
               /**
-               * Optional. If set, validate the request and preview the review, but do not actually
+               * Optional. If set, validate the request and preview the result, but do not actually
                * apply it.
                */
               public Delete setValidateOnly(java.lang.Boolean validateOnly) {
@@ -4671,65 +4671,59 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
               }
 
               /**
-               * Optional. If set and the workstation configuration is not found, a new workstation
-               * configuration is created. In this situation, update_mask is ignored.
+               * Optional. If set and the workstation is not found, a new workstation is created. In
+               * this situation, update_mask is ignored.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean allowMissing;
 
-              /** Optional. If set and the workstation configuration is not found, a new workstation configuration is
-             created. In this situation, update_mask is ignored.
+              /** Optional. If set and the workstation is not found, a new workstation is created. In this situation,
+             update_mask is ignored.
                */
               public java.lang.Boolean getAllowMissing() {
                 return allowMissing;
               }
 
               /**
-               * Optional. If set and the workstation configuration is not found, a new workstation
-               * configuration is created. In this situation, update_mask is ignored.
+               * Optional. If set and the workstation is not found, a new workstation is created. In
+               * this situation, update_mask is ignored.
                */
               public Patch setAllowMissing(java.lang.Boolean allowMissing) {
                 this.allowMissing = allowMissing;
                 return this;
               }
 
-              /**
-               * Required. Mask specifying which fields in the workstation configuration should be
-               * updated.
-               */
+              /** Required. Mask specifying which fields in the workstation should be updated. */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Required. Mask specifying which fields in the workstation configuration should be updated.
+              /** Required. Mask specifying which fields in the workstation should be updated.
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /**
-               * Required. Mask specifying which fields in the workstation configuration should be
-               * updated.
-               */
+              /** Required. Mask specifying which fields in the workstation should be updated. */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
               }
 
               /**
-               * Optional. If set, validate the request and preview the review, but do not actually
+               * Optional. If set, validate the request and preview the result, but do not actually
                * apply it.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean validateOnly;
 
-              /** Optional. If set, validate the request and preview the review, but do not actually apply it.
+              /** Optional. If set, validate the request and preview the result, but do not actually apply it.
                */
               public java.lang.Boolean getValidateOnly() {
                 return validateOnly;
               }
 
               /**
-               * Optional. If set, validate the request and preview the review, but do not actually
+               * Optional. If set, validate the request and preview the result, but do not actually
                * apply it.
                */
               public Patch setValidateOnly(java.lang.Boolean validateOnly) {

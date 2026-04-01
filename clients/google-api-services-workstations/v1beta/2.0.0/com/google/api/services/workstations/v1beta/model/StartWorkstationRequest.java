@@ -46,7 +46,7 @@ public final class StartWorkstationRequest extends com.google.api.client.json.Ge
   private java.lang.String etag;
 
   /**
-   * Optional. If set, validate the request and preview the review, but do not actually apply it.
+   * Optional. If set, validate the request and preview the result, but do not actually apply it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class StartWorkstationRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. If set, validate the request and preview the review, but do not actually apply it.
+   * Optional. If set, validate the request and preview the result, but do not actually apply it.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -97,7 +97,7 @@ public final class StartWorkstationRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. If set, validate the request and preview the review, but do not actually apply it.
+   * Optional. If set, validate the request and preview the result, but do not actually apply it.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public StartWorkstationRequest setValidateOnly(java.lang.Boolean validateOnly) {

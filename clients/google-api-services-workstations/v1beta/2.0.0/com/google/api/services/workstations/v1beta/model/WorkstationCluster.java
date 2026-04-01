@@ -197,6 +197,29 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private String updateTime;
 
   /**
+   * Optional. Specifies the redirect URL for unauthorized requests received by workstation VMs in
+   * this cluster. Redirects to this endpoint will send a base64 encoded `state` query param
+   * containing the target workstation name and original request hostname. The endpoint is
+   * responsible for retrieving a token using `GenerateAccessToken` and redirecting back to the
+   * original hostname with the token.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workstationAuthorizationUrl;
+
+  /**
+   * Optional. Specifies the launch URL for workstations in this cluster. Requests sent to unstarted
+   * workstations will be redirected to this URL. Requests redirected to the launch endpoint will be
+   * sent with a `workstation` and `project` query parameter containing the full workstation
+   * resource name and project ID, respectively. The launch endpoint is responsible for starting the
+   * workstation, polling it until it reaches `STATE_RUNNING`, and then issuing a redirect to the
+   * workstation's host URL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workstationLaunchUrl;
+
+  /**
    * Optional. Client-specified annotations.
    * @return value or {@code null} for none
    */
@@ -574,6 +597,58 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
    */
   public WorkstationCluster setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the redirect URL for unauthorized requests received by workstation VMs in
+   * this cluster. Redirects to this endpoint will send a base64 encoded `state` query param
+   * containing the target workstation name and original request hostname. The endpoint is
+   * responsible for retrieving a token using `GenerateAccessToken` and redirecting back to the
+   * original hostname with the token.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkstationAuthorizationUrl() {
+    return workstationAuthorizationUrl;
+  }
+
+  /**
+   * Optional. Specifies the redirect URL for unauthorized requests received by workstation VMs in
+   * this cluster. Redirects to this endpoint will send a base64 encoded `state` query param
+   * containing the target workstation name and original request hostname. The endpoint is
+   * responsible for retrieving a token using `GenerateAccessToken` and redirecting back to the
+   * original hostname with the token.
+   * @param workstationAuthorizationUrl workstationAuthorizationUrl or {@code null} for none
+   */
+  public WorkstationCluster setWorkstationAuthorizationUrl(java.lang.String workstationAuthorizationUrl) {
+    this.workstationAuthorizationUrl = workstationAuthorizationUrl;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the launch URL for workstations in this cluster. Requests sent to unstarted
+   * workstations will be redirected to this URL. Requests redirected to the launch endpoint will be
+   * sent with a `workstation` and `project` query parameter containing the full workstation
+   * resource name and project ID, respectively. The launch endpoint is responsible for starting the
+   * workstation, polling it until it reaches `STATE_RUNNING`, and then issuing a redirect to the
+   * workstation's host URL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkstationLaunchUrl() {
+    return workstationLaunchUrl;
+  }
+
+  /**
+   * Optional. Specifies the launch URL for workstations in this cluster. Requests sent to unstarted
+   * workstations will be redirected to this URL. Requests redirected to the launch endpoint will be
+   * sent with a `workstation` and `project` query parameter containing the full workstation
+   * resource name and project ID, respectively. The launch endpoint is responsible for starting the
+   * workstation, polling it until it reaches `STATE_RUNNING`, and then issuing a redirect to the
+   * workstation's host URL.
+   * @param workstationLaunchUrl workstationLaunchUrl or {@code null} for none
+   */
+  public WorkstationCluster setWorkstationLaunchUrl(java.lang.String workstationLaunchUrl) {
+    this.workstationLaunchUrl = workstationLaunchUrl;
     return this;
   }
 

@@ -37,8 +37,9 @@ public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.
   private java.util.Map<String, java.lang.String> options;
 
   /**
-   * Required. The entry names to lookup context for. The request should have max 10 of those.Exampl
-   * es:projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}
+   * Required. The entry names to look up the context for. The maximum number of resources for a
+   * request is limited to
+   * 10.Examples:projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +63,9 @@ public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.
   }
 
   /**
-   * Required. The entry names to lookup context for. The request should have max 10 of those.Exampl
-   * es:projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}
+   * Required. The entry names to look up the context for. The maximum number of resources for a
+   * request is limited to
+   * 10.Examples:projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -71,8 +73,9 @@ public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.
   }
 
   /**
-   * Required. The entry names to lookup context for. The request should have max 10 of those.Exampl
-   * es:projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}
+   * Required. The entry names to look up the context for. The maximum number of resources for a
+   * request is limited to
+   * 10.Examples:projects/{project}/locations/{location}/entryGroups/{entry_group}/entries/{entry}
    * @param resources resources or {@code null} for none
    */
   public GoogleCloudDataplexV1LookupContextRequest setResources(java.util.List<java.lang.String> resources) {

@@ -26,9 +26,10 @@ package com.google.api.services.dataplex.v1.model;
  * (https://cloud.google.com/dataplex/docs/data-profiling-overview). Data discovery: scans data in
  * Cloud Storage buckets to extract and then catalog metadata. For more information, see Discover
  * and catalog Cloud Storage data (https://cloud.google.com/bigquery/docs/automatic-discovery). Data
- * documentation: analyzes the table details and generates insights including descriptions and
- * sample SQL queries for the table. For more information, see Generate data insights in BigQuery
- * (https://cloud.google.com/bigquery/docs/data-insights).
+ * documentation: analyzes the table or dataset metadata and generates insights. For tables,
+ * insights include descriptions and sample SQL queries. For datasets, insights include
+ * descriptions, schema relationships and sample SQL queries. For more information, see Generate
+ * data insights in BigQuery (https://cloud.google.com/bigquery/docs/data-insights).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:

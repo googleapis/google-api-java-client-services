@@ -31,11 +31,36 @@ package com.google.api.services.storagebatchoperations.v1.model;
 public final class Counters extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Number of objects failed.
+   * Output only. The number of objects that failed due to user errors or service errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long failedObjectCount;
+
+  /**
+   * Output only. Number of object custom contexts created. This field is only populated for jobs
+   * with the UpdateObjectCustomContext transformation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long objectCustomContextsCreated;
+
+  /**
+   * Output only. Number of object custom contexts deleted. This field is only populated for jobs
+   * with the UpdateObjectCustomContext transformation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long objectCustomContextsDeleted;
+
+  /**
+   * Output only. Number of object custom contexts updated. This counter tracks custom contexts
+   * where the key already existed, but the payload was modified. This field is only populated for
+   * jobs with the UpdateObjectCustomContext transformation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long objectCustomContextsUpdated;
 
   /**
    * Output only. Number of objects completed.
@@ -60,7 +85,7 @@ public final class Counters extends com.google.api.client.json.GenericJson {
   private java.lang.Long totalObjectCount;
 
   /**
-   * Output only. Number of objects failed.
+   * Output only. The number of objects that failed due to user errors or service errors.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFailedObjectCount() {
@@ -68,11 +93,70 @@ public final class Counters extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Number of objects failed.
+   * Output only. The number of objects that failed due to user errors or service errors.
    * @param failedObjectCount failedObjectCount or {@code null} for none
    */
   public Counters setFailedObjectCount(java.lang.Long failedObjectCount) {
     this.failedObjectCount = failedObjectCount;
+    return this;
+  }
+
+  /**
+   * Output only. Number of object custom contexts created. This field is only populated for jobs
+   * with the UpdateObjectCustomContext transformation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getObjectCustomContextsCreated() {
+    return objectCustomContextsCreated;
+  }
+
+  /**
+   * Output only. Number of object custom contexts created. This field is only populated for jobs
+   * with the UpdateObjectCustomContext transformation.
+   * @param objectCustomContextsCreated objectCustomContextsCreated or {@code null} for none
+   */
+  public Counters setObjectCustomContextsCreated(java.lang.Long objectCustomContextsCreated) {
+    this.objectCustomContextsCreated = objectCustomContextsCreated;
+    return this;
+  }
+
+  /**
+   * Output only. Number of object custom contexts deleted. This field is only populated for jobs
+   * with the UpdateObjectCustomContext transformation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getObjectCustomContextsDeleted() {
+    return objectCustomContextsDeleted;
+  }
+
+  /**
+   * Output only. Number of object custom contexts deleted. This field is only populated for jobs
+   * with the UpdateObjectCustomContext transformation.
+   * @param objectCustomContextsDeleted objectCustomContextsDeleted or {@code null} for none
+   */
+  public Counters setObjectCustomContextsDeleted(java.lang.Long objectCustomContextsDeleted) {
+    this.objectCustomContextsDeleted = objectCustomContextsDeleted;
+    return this;
+  }
+
+  /**
+   * Output only. Number of object custom contexts updated. This counter tracks custom contexts
+   * where the key already existed, but the payload was modified. This field is only populated for
+   * jobs with the UpdateObjectCustomContext transformation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getObjectCustomContextsUpdated() {
+    return objectCustomContextsUpdated;
+  }
+
+  /**
+   * Output only. Number of object custom contexts updated. This counter tracks custom contexts
+   * where the key already existed, but the payload was modified. This field is only populated for
+   * jobs with the UpdateObjectCustomContext transformation.
+   * @param objectCustomContextsUpdated objectCustomContextsUpdated or {@code null} for none
+   */
+  public Counters setObjectCustomContextsUpdated(java.lang.Long objectCustomContextsUpdated) {
+    this.objectCustomContextsUpdated = objectCustomContextsUpdated;
     return this;
   }
 

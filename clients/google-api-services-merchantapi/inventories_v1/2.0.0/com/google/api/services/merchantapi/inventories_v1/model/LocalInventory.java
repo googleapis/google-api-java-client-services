@@ -60,18 +60,14 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
    * structure. This encoding MUST be used if any part of the product identifier (like `offer_id`)
    * contains characters such as `/`, `%`, or `~`. * Example: To represent the product ID
    * `en~US~sku/123` for `store_code` "store123", the `{product}` segment must be the base64url
-   * encoding of this string, which is `ZW5-VVMtc2t1LzEyMw`. The full resource name for the local
-   * inventory would be `accounts/123/products/ZW5-VVMtc2t1LzEyMw/localInventories/store123`. 2.
+   * encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the local
+   * inventory would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2.
    * **Plain Format**: The `{product}` segment is the tilde-separated string
    * `content_language~feed_label~offer_id`. This format is suitable only when `content_language`,
    * `feed_label`, and `offer_id` do not contain URL-problematic characters like `/`, `%`, or `~`.
    * We recommend using the **Encoded Format** for all product IDs to ensure correct parsing,
    * especially those containing special characters. The presence of tilde (`~`) characters in the
-   * `{product}` segment is used to differentiate between the two formats. Note: For calls to the
-   * v1beta version, the plain format for the product segment is
-   * `channel~content_language~feed_label~offer_id`. For example, the full resource name for a local
-   * inventory at `store_code` "store123" would be:
-   * `accounts/123/products/online~en~US~sku123/localInventories/store123`.
+   * `{product}` segment is used to differentiate between the two formats.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,18 +131,14 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
    * structure. This encoding MUST be used if any part of the product identifier (like `offer_id`)
    * contains characters such as `/`, `%`, or `~`. * Example: To represent the product ID
    * `en~US~sku/123` for `store_code` "store123", the `{product}` segment must be the base64url
-   * encoding of this string, which is `ZW5-VVMtc2t1LzEyMw`. The full resource name for the local
-   * inventory would be `accounts/123/products/ZW5-VVMtc2t1LzEyMw/localInventories/store123`. 2.
+   * encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the local
+   * inventory would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2.
    * **Plain Format**: The `{product}` segment is the tilde-separated string
    * `content_language~feed_label~offer_id`. This format is suitable only when `content_language`,
    * `feed_label`, and `offer_id` do not contain URL-problematic characters like `/`, `%`, or `~`.
    * We recommend using the **Encoded Format** for all product IDs to ensure correct parsing,
    * especially those containing special characters. The presence of tilde (`~`) characters in the
-   * `{product}` segment is used to differentiate between the two formats. Note: For calls to the
-   * v1beta version, the plain format for the product segment is
-   * `channel~content_language~feed_label~offer_id`. For example, the full resource name for a local
-   * inventory at `store_code` "store123" would be:
-   * `accounts/123/products/online~en~US~sku123/localInventories/store123`.
+   * `{product}` segment is used to differentiate between the two formats.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -166,18 +158,14 @@ public final class LocalInventory extends com.google.api.client.json.GenericJson
    * structure. This encoding MUST be used if any part of the product identifier (like `offer_id`)
    * contains characters such as `/`, `%`, or `~`. * Example: To represent the product ID
    * `en~US~sku/123` for `store_code` "store123", the `{product}` segment must be the base64url
-   * encoding of this string, which is `ZW5-VVMtc2t1LzEyMw`. The full resource name for the local
-   * inventory would be `accounts/123/products/ZW5-VVMtc2t1LzEyMw/localInventories/store123`. 2.
+   * encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the local
+   * inventory would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2.
    * **Plain Format**: The `{product}` segment is the tilde-separated string
    * `content_language~feed_label~offer_id`. This format is suitable only when `content_language`,
    * `feed_label`, and `offer_id` do not contain URL-problematic characters like `/`, `%`, or `~`.
    * We recommend using the **Encoded Format** for all product IDs to ensure correct parsing,
    * especially those containing special characters. The presence of tilde (`~`) characters in the
-   * `{product}` segment is used to differentiate between the two formats. Note: For calls to the
-   * v1beta version, the plain format for the product segment is
-   * `channel~content_language~feed_label~offer_id`. For example, the full resource name for a local
-   * inventory at `store_code` "store123" would be:
-   * `accounts/123/products/online~en~US~sku123/localInventories/store123`.
+   * `{product}` segment is used to differentiate between the two formats.
    * @param name name or {@code null} for none
    */
   public LocalInventory setName(java.lang.String name) {

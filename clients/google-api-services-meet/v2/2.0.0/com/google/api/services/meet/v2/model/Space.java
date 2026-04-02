@@ -45,6 +45,20 @@ public final class Space extends com.google.api.client.json.GenericJson {
   private SpaceConfig config;
 
   /**
+   * Output only. The SIP based access methods that can be used to join the conference. Can be
+   * empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GatewaySipAccess> gatewaySipAccess;
+
+  static {
+    // hack to force ProGuard to consider GatewaySipAccess used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GatewaySipAccess.class);
+  }
+
+  /**
    * Output only. Type friendly unique string used to join the meeting. Format:
    * `[a-z]+-[a-z]+-[a-z]+`. For example, `abc-mnop-xyz`. The maximum length is 128 characters. Can
    * only be used as an alias of the space name to get the space.
@@ -71,6 +85,19 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. All regional phone access methods for this meeting space. Can be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PhoneAccess> phoneAccess;
+
+  static {
+    // hack to force ProGuard to consider PhoneAccess used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PhoneAccess.class);
+  }
 
   /**
    * Active conference, if it exists.
@@ -103,6 +130,25 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   public Space setConfig(SpaceConfig config) {
     this.config = config;
+    return this;
+  }
+
+  /**
+   * Output only. The SIP based access methods that can be used to join the conference. Can be
+   * empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GatewaySipAccess> getGatewaySipAccess() {
+    return gatewaySipAccess;
+  }
+
+  /**
+   * Output only. The SIP based access methods that can be used to join the conference. Can be
+   * empty.
+   * @param gatewaySipAccess gatewaySipAccess or {@code null} for none
+   */
+  public Space setGatewaySipAccess(java.util.List<GatewaySipAccess> gatewaySipAccess) {
+    this.gatewaySipAccess = gatewaySipAccess;
     return this;
   }
 
@@ -168,6 +214,23 @@ public final class Space extends com.google.api.client.json.GenericJson {
    */
   public Space setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. All regional phone access methods for this meeting space. Can be empty.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PhoneAccess> getPhoneAccess() {
+    return phoneAccess;
+  }
+
+  /**
+   * Output only. All regional phone access methods for this meeting space. Can be empty.
+   * @param phoneAccess phoneAccess or {@code null} for none
+   */
+  public Space setPhoneAccess(java.util.List<PhoneAccess> phoneAccess) {
+    this.phoneAccess = phoneAccess;
     return this;
   }
 

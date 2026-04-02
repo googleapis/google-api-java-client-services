@@ -77,6 +77,14 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
   }
 
   /**
+   * Optional. Indicates whether to perform a guest flush operation before taking a compute backup.
+   * When set to false, the system will create crash-consistent backups. Default value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean guestFlush;
+
+  /**
    * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
    * value is "NONE" if it is not specified.
    * The value may be {@code null}.
@@ -237,6 +245,25 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
    */
   public ComputeInstanceBackupProperties setGuestAccelerator(java.util.List<AcceleratorConfig> guestAccelerator) {
     this.guestAccelerator = guestAccelerator;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether to perform a guest flush operation before taking a compute backup.
+   * When set to false, the system will create crash-consistent backups. Default value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGuestFlush() {
+    return guestFlush;
+  }
+
+  /**
+   * Optional. Indicates whether to perform a guest flush operation before taking a compute backup.
+   * When set to false, the system will create crash-consistent backups. Default value is false.
+   * @param guestFlush guestFlush or {@code null} for none
+   */
+  public ComputeInstanceBackupProperties setGuestFlush(java.lang.Boolean guestFlush) {
+    this.guestFlush = guestFlush;
     return this;
   }
 

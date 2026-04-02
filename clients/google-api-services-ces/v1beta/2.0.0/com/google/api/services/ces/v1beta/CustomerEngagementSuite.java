@@ -460,10 +460,14 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
         }
       }
       /**
-       * Lists information about the supported locations for this service. This method can be called in
-       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-       * public locations as well as private or other locations specifically visible to the project.
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all projects.
+       * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+       * lists locations visible to that specific project. This includes public, private, or other
+       * project-specific locations enabled for the project. For gRPC and client library implementations,
+       * the resource name is passed as the `name` field. For direct service calls, the resource name is
+       * incorporated into the request path based on the specific service implementation and version.
        *
        * Create a request for the method "locations.list".
        *
@@ -487,10 +491,15 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service. This method can be called in
-         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-         * public locations as well as private or other locations specifically visible to the project.
+         * Lists information about the supported locations for this service. This method lists locations
+         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * locations**: If `name` is empty, the method lists the public locations available to all
+         * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+         * the method lists locations visible to that specific project. This includes public, private, or
+         * other project-specific locations enabled for the project. For gRPC and client library
+         * implementations, the resource name is passed as the `name` field. For direct service calls, the
+         * resource name is incorporated into the request path based on the specific service
+         * implementation and version.
          *
          * Create a request for the method "locations.list".
          *
@@ -1451,6 +1460,137 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
           @Override
           public ExportApp set(String parameterName, Object value) {
             return (ExportApp) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Generates specific resources (e.g. agent) in the app using LLM assistant.
+         *
+         * Create a request for the method "apps.generateAppResource".
+         *
+         * This request holds the parameters needed by the ces server.  After setting any optional
+         * parameters, call the {@link GenerateAppResource#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the app to generate the resource for.
+         * @param content the {@link com.google.api.services.ces.v1beta.model.GenerateAppResourceRequest}
+         * @return the request
+         */
+        public GenerateAppResource generateAppResource(java.lang.String parent, com.google.api.services.ces.v1beta.model.GenerateAppResourceRequest content) throws java.io.IOException {
+          GenerateAppResource result = new GenerateAppResource(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateAppResource extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+parent}:generateAppResource";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+
+          /**
+           * Generates specific resources (e.g. agent) in the app using LLM assistant.
+           *
+           * Create a request for the method "apps.generateAppResource".
+           *
+           * This request holds the parameters needed by the the ces server.  After setting any optional
+           * parameters, call the {@link GenerateAppResource#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateAppResource#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the app to generate the resource for.
+           * @param content the {@link com.google.api.services.ces.v1beta.model.GenerateAppResourceRequest}
+           * @since 1.13
+           */
+          protected GenerateAppResource(java.lang.String parent, com.google.api.services.ces.v1beta.model.GenerateAppResourceRequest content) {
+            super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateAppResource set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateAppResource) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateAppResource setAccessToken(java.lang.String accessToken) {
+            return (GenerateAppResource) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateAppResource setAlt(java.lang.String alt) {
+            return (GenerateAppResource) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateAppResource setCallback(java.lang.String callback) {
+            return (GenerateAppResource) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateAppResource setFields(java.lang.String fields) {
+            return (GenerateAppResource) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateAppResource setKey(java.lang.String key) {
+            return (GenerateAppResource) super.setKey(key);
+          }
+
+          @Override
+          public GenerateAppResource setOauthToken(java.lang.String oauthToken) {
+            return (GenerateAppResource) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateAppResource setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateAppResource) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateAppResource setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateAppResource) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateAppResource setUploadType(java.lang.String uploadType) {
+            return (GenerateAppResource) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateAppResource setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateAppResource) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the app to generate the resource for. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the app to generate the resource for.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The resource name of the app to generate the resource for. */
+          public GenerateAppResource setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public GenerateAppResource set(String parameterName, Object value) {
+            return (GenerateAppResource) super.set(parameterName, value);
           }
         }
         /**

@@ -38,8 +38,7 @@ public final class GoogleCloudApigeeV1EnvironmentClientIPResolutionConfigHeaderI
   private java.lang.Integer ipHeaderIndex;
 
   /**
-   * Required. The name of the header to extract the client ip from. We are currently only
-   * supporting the X-Forwarded-For header.
+   * Required. The name of the header to extract the client ip from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +64,7 @@ public final class GoogleCloudApigeeV1EnvironmentClientIPResolutionConfigHeaderI
   }
 
   /**
-   * Required. The name of the header to extract the client ip from. We are currently only
-   * supporting the X-Forwarded-For header.
+   * Required. The name of the header to extract the client ip from.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpHeaderName() {
@@ -74,8 +72,7 @@ public final class GoogleCloudApigeeV1EnvironmentClientIPResolutionConfigHeaderI
   }
 
   /**
-   * Required. The name of the header to extract the client ip from. We are currently only
-   * supporting the X-Forwarded-For header.
+   * Required. The name of the header to extract the client ip from.
    * @param ipHeaderName ipHeaderName or {@code null} for none
    */
   public GoogleCloudApigeeV1EnvironmentClientIPResolutionConfigHeaderIndexAlgorithm setIpHeaderName(java.lang.String ipHeaderName) {

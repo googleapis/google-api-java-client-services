@@ -19444,13 +19444,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           /**
            * Optional. Specifies whether to expand the results. Set to `true` to expand the results.
            * This query parameter is not valid if you use the `count` or `startKey` query
-           * parameters.
+           * parameters. **Note**: If set to `true`, the `apigee.developerapps.get` permission is
+           * required.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean expand;
 
           /** Optional. Specifies whether to expand the results. Set to `true` to expand the results. This query
-         parameter is not valid if you use the `count` or `startKey` query parameters.
+         parameter is not valid if you use the `count` or `startKey` query parameters. **Note**: If set to
+         `true`, the `apigee.developerapps.get` permission is required.
            */
           public java.lang.Boolean getExpand() {
             return expand;
@@ -19459,7 +19461,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           /**
            * Optional. Specifies whether to expand the results. Set to `true` to expand the results.
            * This query parameter is not valid if you use the `count` or `startKey` query
-           * parameters.
+           * parameters. **Note**: If set to `true`, the `apigee.developerapps.get` permission is
+           * required.
            */
           public List setExpand(java.lang.Boolean expand) {
             this.expand = expand;
@@ -19468,13 +19471,15 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Optional. Specifies whether to expand the results in shallow mode. Set to `true` to
-           * expand the results in shallow mode.
+           * expand the results in shallow mode. **Note**: If set to `true`, the
+           * `apigee.developerapps.get` permission is required.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean shallowExpand;
 
           /** Optional. Specifies whether to expand the results in shallow mode. Set to `true` to expand the
-         results in shallow mode.
+         results in shallow mode. **Note**: If set to `true`, the `apigee.developerapps.get` permission is
+         required.
            */
           public java.lang.Boolean getShallowExpand() {
             return shallowExpand;
@@ -19482,7 +19487,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Optional. Specifies whether to expand the results in shallow mode. Set to `true` to
-           * expand the results in shallow mode.
+           * expand the results in shallow mode. **Note**: If set to `true`, the
+           * `apigee.developerapps.get` permission is required.
            */
           public List setShallowExpand(java.lang.Boolean shallowExpand) {
             this.shallowExpand = shallowExpand;

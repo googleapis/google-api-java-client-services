@@ -17,7 +17,8 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * NEXT ID: 9 RuntimeTraceConfig defines the configurations for distributed trace in an environment.
+ * NEXT ID: 10 RuntimeTraceConfig defines the configurations for distributed trace in an
+ * environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Apigee API. For a detailed explanation see:
@@ -54,11 +55,12 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
   private java.lang.String name;
 
   /**
-   * If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace data. Configuration
-   * Requirements (if `open_telemetry_protocol_enabled` is `true`): - Allowed `Exporter`s:
-   * `CLOUD_TRACE` or `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is `OPEN_TELEMETRY_COLLECTOR`: -
-   * `endpoint` refers to a valid OTLP collector URL. - If `Exporter` is `CLOUD_TRACE`: - `endpoint`
-   * refers to a valid project ID
+   * Optional. If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace data.
+   * Configuration Requirements (if `open_telemetry_protocol_enabled` is `true`): - Allowed
+   * `Exporter`s: `CLOUD_TRACE` or `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is
+   * `OPEN_TELEMETRY_COLLECTOR`: - `endpoint` refers to a valid OTLP collector URL. - If `Exporter`
+   * is `CLOUD_TRACE`: - `endpoint` refers to a valid project ID Deprecated: Use trace_protocol
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,6 +94,13 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApigeeV1RuntimeTraceSamplingConfig samplingConfig;
+
+  /**
+   * Optional. The trace protocol to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String traceProtocol;
 
   /**
    * Endpoint of the exporter.
@@ -151,11 +160,12 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
   }
 
   /**
-   * If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace data. Configuration
-   * Requirements (if `open_telemetry_protocol_enabled` is `true`): - Allowed `Exporter`s:
-   * `CLOUD_TRACE` or `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is `OPEN_TELEMETRY_COLLECTOR`: -
-   * `endpoint` refers to a valid OTLP collector URL. - If `Exporter` is `CLOUD_TRACE`: - `endpoint`
-   * refers to a valid project ID
+   * Optional. If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace data.
+   * Configuration Requirements (if `open_telemetry_protocol_enabled` is `true`): - Allowed
+   * `Exporter`s: `CLOUD_TRACE` or `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is
+   * `OPEN_TELEMETRY_COLLECTOR`: - `endpoint` refers to a valid OTLP collector URL. - If `Exporter`
+   * is `CLOUD_TRACE`: - `endpoint` refers to a valid project ID Deprecated: Use trace_protocol
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOpenTelemetryProtocolEnabled() {
@@ -163,11 +173,12 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
   }
 
   /**
-   * If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace data. Configuration
-   * Requirements (if `open_telemetry_protocol_enabled` is `true`): - Allowed `Exporter`s:
-   * `CLOUD_TRACE` or `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is `OPEN_TELEMETRY_COLLECTOR`: -
-   * `endpoint` refers to a valid OTLP collector URL. - If `Exporter` is `CLOUD_TRACE`: - `endpoint`
-   * refers to a valid project ID
+   * Optional. If `true`, the runtime uses OpenTelemetry Protocol (OTLP) to send trace data.
+   * Configuration Requirements (if `open_telemetry_protocol_enabled` is `true`): - Allowed
+   * `Exporter`s: `CLOUD_TRACE` or `OPEN_TELEMETRY_COLLECTOR`. - If `Exporter` is
+   * `OPEN_TELEMETRY_COLLECTOR`: - `endpoint` refers to a valid OTLP collector URL. - If `Exporter`
+   * is `CLOUD_TRACE`: - `endpoint` refers to a valid project ID Deprecated: Use trace_protocol
+   * instead.
    * @param openTelemetryProtocolEnabled openTelemetryProtocolEnabled or {@code null} for none
    */
   public GoogleCloudApigeeV1RuntimeTraceConfig setOpenTelemetryProtocolEnabled(java.lang.Boolean openTelemetryProtocolEnabled) {
@@ -242,6 +253,23 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
    */
   public GoogleCloudApigeeV1RuntimeTraceConfig setSamplingConfig(GoogleCloudApigeeV1RuntimeTraceSamplingConfig samplingConfig) {
     this.samplingConfig = samplingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The trace protocol to use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTraceProtocol() {
+    return traceProtocol;
+  }
+
+  /**
+   * Optional. The trace protocol to use.
+   * @param traceProtocol traceProtocol or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RuntimeTraceConfig setTraceProtocol(java.lang.String traceProtocol) {
+    this.traceProtocol = traceProtocol;
     return this;
   }
 

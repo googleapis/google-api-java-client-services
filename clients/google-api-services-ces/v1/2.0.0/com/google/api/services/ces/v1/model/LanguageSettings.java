@@ -46,11 +46,12 @@ public final class LanguageSettings extends com.google.api.client.json.GenericJs
   private java.lang.Boolean enableMultilingualSupport;
 
   /**
-   * Optional. The action to perform when an agent receives input in an unsupported language. This
-   * can be a predefined action or a custom tool call. Valid values are: - A tool's full resource
-   * name, which triggers a specific tool execution. - A predefined system action, such as
-   * "escalate" or "exit", which triggers an EndSession signal with corresponding metadata to
-   * terminate the conversation.
+   * Optional. Deprecated: This feature is no longer supported. Use `enable_multilingual_support`
+   * instead to improve handling of multilingual input. The action to perform when an agent receives
+   * input in an unsupported language. This can be a predefined action or a custom tool call. Valid
+   * values are: - A tool's full resource name, which triggers a specific tool execution. - A
+   * predefined system action, such as "escalate" or "exit", which triggers an EndSession signal
+   * with corresponding metadata to terminate the conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,11 +102,12 @@ public final class LanguageSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The action to perform when an agent receives input in an unsupported language. This
-   * can be a predefined action or a custom tool call. Valid values are: - A tool's full resource
-   * name, which triggers a specific tool execution. - A predefined system action, such as
-   * "escalate" or "exit", which triggers an EndSession signal with corresponding metadata to
-   * terminate the conversation.
+   * Optional. Deprecated: This feature is no longer supported. Use `enable_multilingual_support`
+   * instead to improve handling of multilingual input. The action to perform when an agent receives
+   * input in an unsupported language. This can be a predefined action or a custom tool call. Valid
+   * values are: - A tool's full resource name, which triggers a specific tool execution. - A
+   * predefined system action, such as "escalate" or "exit", which triggers an EndSession signal
+   * with corresponding metadata to terminate the conversation.
    * @return value or {@code null} for none
    */
   public java.lang.String getFallbackAction() {
@@ -113,11 +115,12 @@ public final class LanguageSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The action to perform when an agent receives input in an unsupported language. This
-   * can be a predefined action or a custom tool call. Valid values are: - A tool's full resource
-   * name, which triggers a specific tool execution. - A predefined system action, such as
-   * "escalate" or "exit", which triggers an EndSession signal with corresponding metadata to
-   * terminate the conversation.
+   * Optional. Deprecated: This feature is no longer supported. Use `enable_multilingual_support`
+   * instead to improve handling of multilingual input. The action to perform when an agent receives
+   * input in an unsupported language. This can be a predefined action or a custom tool call. Valid
+   * values are: - A tool's full resource name, which triggers a specific tool execution. - A
+   * predefined system action, such as "escalate" or "exit", which triggers an EndSession signal
+   * with corresponding metadata to terminate the conversation.
    * @param fallbackAction fallbackAction or {@code null} for none
    */
   public LanguageSettings setFallbackAction(java.lang.String fallbackAction) {

@@ -37,9 +37,9 @@ public final class GoogleCloudApigeeV1TraceConfig extends com.google.api.client.
   private java.lang.String endpoint;
 
   /**
-   * Required. Exporter that is used to view the distributed trace captured using OpenCensus. An
-   * exporter sends traces to any backend that is capable of consuming them. Recorded spans can be
-   * exported by registered exporters.
+   * Required. Exporter that is used to view the distributed trace captured using the chosen trace
+   * protocol. An exporter sends traces to any backend that is capable of consuming them. Recorded
+   * spans can be exported by registered exporters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,9 +72,9 @@ public final class GoogleCloudApigeeV1TraceConfig extends com.google.api.client.
   }
 
   /**
-   * Required. Exporter that is used to view the distributed trace captured using OpenCensus. An
-   * exporter sends traces to any backend that is capable of consuming them. Recorded spans can be
-   * exported by registered exporters.
+   * Required. Exporter that is used to view the distributed trace captured using the chosen trace
+   * protocol. An exporter sends traces to any backend that is capable of consuming them. Recorded
+   * spans can be exported by registered exporters.
    * @return value or {@code null} for none
    */
   public java.lang.String getExporter() {
@@ -82,9 +82,9 @@ public final class GoogleCloudApigeeV1TraceConfig extends com.google.api.client.
   }
 
   /**
-   * Required. Exporter that is used to view the distributed trace captured using OpenCensus. An
-   * exporter sends traces to any backend that is capable of consuming them. Recorded spans can be
-   * exported by registered exporters.
+   * Required. Exporter that is used to view the distributed trace captured using the chosen trace
+   * protocol. An exporter sends traces to any backend that is capable of consuming them. Recorded
+   * spans can be exported by registered exporters.
    * @param exporter exporter or {@code null} for none
    */
   public GoogleCloudApigeeV1TraceConfig setExporter(java.lang.String exporter) {

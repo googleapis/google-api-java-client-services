@@ -207,6 +207,14 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean satisfiesPzs;
 
   /**
+   * Optional. The scale type of the storage pool. Defaults to `SCALE_TYPE_DEFAULT` if not
+   * specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scaleType;
+
+  /**
    * Required. Service level of the storage pool
    * The value may be {@code null}.
    */
@@ -693,6 +701,25 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * Optional. The scale type of the storage pool. Defaults to `SCALE_TYPE_DEFAULT` if not
+   * specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScaleType() {
+    return scaleType;
+  }
+
+  /**
+   * Optional. The scale type of the storage pool. Defaults to `SCALE_TYPE_DEFAULT` if not
+   * specified.
+   * @param scaleType scaleType or {@code null} for none
+   */
+  public StoragePool setScaleType(java.lang.String scaleType) {
+    this.scaleType = scaleType;
     return this;
   }
 

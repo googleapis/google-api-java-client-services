@@ -56,6 +56,14 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String backupVaultServiceAccount;
 
   /**
+   * Optional. Defines optional properties specific to backups of disk-based resources, such as
+   * Compute Engine. This includes settings like whether to perform a guest flush.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComputeInstanceBackupPlanProperties computeInstanceBackupPlanProperties;
+
+  /**
    * Output only. When the `BackupPlan` was created.
    * The value may be {@code null}.
    */
@@ -220,6 +228,25 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   public BackupPlan setBackupVaultServiceAccount(java.lang.String backupVaultServiceAccount) {
     this.backupVaultServiceAccount = backupVaultServiceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. Defines optional properties specific to backups of disk-based resources, such as
+   * Compute Engine. This includes settings like whether to perform a guest flush.
+   * @return value or {@code null} for none
+   */
+  public ComputeInstanceBackupPlanProperties getComputeInstanceBackupPlanProperties() {
+    return computeInstanceBackupPlanProperties;
+  }
+
+  /**
+   * Optional. Defines optional properties specific to backups of disk-based resources, such as
+   * Compute Engine. This includes settings like whether to perform a guest flush.
+   * @param computeInstanceBackupPlanProperties computeInstanceBackupPlanProperties or {@code null} for none
+   */
+  public BackupPlan setComputeInstanceBackupPlanProperties(ComputeInstanceBackupPlanProperties computeInstanceBackupPlanProperties) {
+    this.computeInstanceBackupPlanProperties = computeInstanceBackupPlanProperties;
     return this;
   }
 

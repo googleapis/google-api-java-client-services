@@ -271,6 +271,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * DiscoveredWorkload associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiscoveredWorkload discoveredWorkload;
+
+  /**
    * Disk associated with the finding.
    * The value may be {@code null}.
    */
@@ -1055,6 +1062,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * DiscoveredWorkload associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public DiscoveredWorkload getDiscoveredWorkload() {
+    return discoveredWorkload;
+  }
+
+  /**
+   * DiscoveredWorkload associated with the finding.
+   * @param discoveredWorkload discoveredWorkload or {@code null} for none
+   */
+  public Finding setDiscoveredWorkload(DiscoveredWorkload discoveredWorkload) {
+    this.discoveredWorkload = discoveredWorkload;
     return this;
   }
 

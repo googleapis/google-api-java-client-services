@@ -278,6 +278,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private java.lang.String description;
 
   /**
+   * DiscoveredWorkload associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2DiscoveredWorkload discoveredWorkload;
+
+  /**
    * Disk associated with the finding.
    * The value may be {@code null}.
    */
@@ -1092,6 +1099,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * DiscoveredWorkload associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2DiscoveredWorkload getDiscoveredWorkload() {
+    return discoveredWorkload;
+  }
+
+  /**
+   * DiscoveredWorkload associated with the finding.
+   * @param discoveredWorkload discoveredWorkload or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setDiscoveredWorkload(GoogleCloudSecuritycenterV2DiscoveredWorkload discoveredWorkload) {
+    this.discoveredWorkload = discoveredWorkload;
     return this;
   }
 

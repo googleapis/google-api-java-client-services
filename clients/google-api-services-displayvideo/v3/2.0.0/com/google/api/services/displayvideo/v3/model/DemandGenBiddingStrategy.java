@@ -56,10 +56,11 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   /**
    * Optional. The value used by the bidding strategy. This can be set at the line item and ad group
    * level. This field is only applicable for the following strategy types: *
-   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS`
-   * Value of this field is in micros of the advertiser's currency or ROAS value. For example,
-   * 1000000 represents 1.0 standard units of the currency or 100% ROAS value. If not using an
-   * applicable strategy, the value of this field will be 0.
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC` *
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS` Value of this field is in micros of the
+   * advertiser's currency or ROAS value. For example, 1000000 represents 1.0 standard units of the
+   * currency or 100% ROAS value. If not using an applicable strategy, the value of this field will
+   * be 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -123,10 +124,11 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   /**
    * Optional. The value used by the bidding strategy. This can be set at the line item and ad group
    * level. This field is only applicable for the following strategy types: *
-   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS`
-   * Value of this field is in micros of the advertiser's currency or ROAS value. For example,
-   * 1000000 represents 1.0 standard units of the currency or 100% ROAS value. If not using an
-   * applicable strategy, the value of this field will be 0.
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC` *
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS` Value of this field is in micros of the
+   * advertiser's currency or ROAS value. For example, 1000000 represents 1.0 standard units of the
+   * currency or 100% ROAS value. If not using an applicable strategy, the value of this field will
+   * be 0.
    * @return value or {@code null} for none
    */
   public java.lang.Long getValue() {
@@ -136,10 +138,11 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   /**
    * Optional. The value used by the bidding strategy. This can be set at the line item and ad group
    * level. This field is only applicable for the following strategy types: *
-   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS`
-   * Value of this field is in micros of the advertiser's currency or ROAS value. For example,
-   * 1000000 represents 1.0 standard units of the currency or 100% ROAS value. If not using an
-   * applicable strategy, the value of this field will be 0.
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC` *
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS` Value of this field is in micros of the
+   * advertiser's currency or ROAS value. For example, 1000000 represents 1.0 standard units of the
+   * currency or 100% ROAS value. If not using an applicable strategy, the value of this field will
+   * be 0.
    * @param value value or {@code null} for none
    */
   public DemandGenBiddingStrategy setValue(java.lang.Long value) {

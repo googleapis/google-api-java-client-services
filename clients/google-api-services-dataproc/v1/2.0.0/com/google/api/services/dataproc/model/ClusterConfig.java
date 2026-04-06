@@ -110,6 +110,13 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private EndpointConfig endpointConfig;
 
   /**
+   * Optional. The cluster engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String engine;
+
+  /**
    * Optional. The shared Compute Engine config settings for all instances in a cluster.
    * The value may be {@code null}.
    */
@@ -373,6 +380,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setEndpointConfig(EndpointConfig endpointConfig) {
     this.endpointConfig = endpointConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The cluster engine.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEngine() {
+    return engine;
+  }
+
+  /**
+   * Optional. The cluster engine.
+   * @param engine engine or {@code null} for none
+   */
+  public ClusterConfig setEngine(java.lang.String engine) {
+    this.engine = engine;
     return this;
   }
 

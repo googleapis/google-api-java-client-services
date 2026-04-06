@@ -17761,33 +17761,49 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
-          /** Optional. The standard List page size. */
+          /**
+           * Optional. The maximum number of clusters to return in each response. The service may
+           * return fewer than this value. If unspecified, the default value is 200. The maximum
+           * value is 1000.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The standard List page size.
+          /** Optional. The maximum number of clusters to return in each response. The service may return fewer
+         than this value. If unspecified, the default value is 200. The maximum value is 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. The standard List page size. */
+          /**
+           * Optional. The maximum number of clusters to return in each response. The service may
+           * return fewer than this value. If unspecified, the default value is 200. The maximum
+           * value is 1000.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** Optional. The standard List page token. */
+          /**
+           * Optional. A page token received from a previous ListClusters call. Provide this token
+           * to retrieve the subsequent page.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. The standard List page token.
+          /** Optional. A page token received from a previous ListClusters call. Provide this token to retrieve
+         the subsequent page.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** Optional. The standard List page token. */
+          /**
+           * Optional. A page token received from a previous ListClusters call. Provide this token
+           * to retrieve the subsequent page.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;

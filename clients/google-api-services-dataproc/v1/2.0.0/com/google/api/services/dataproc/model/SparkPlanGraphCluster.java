@@ -36,6 +36,13 @@ public final class SparkPlanGraphCluster extends com.google.api.client.json.Gene
   private java.lang.String desc;
 
   /**
+   * Optional. Additional metadata for the spark plan graph cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> metadata;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,6 +78,23 @@ public final class SparkPlanGraphCluster extends com.google.api.client.json.Gene
    */
   public SparkPlanGraphCluster setDesc(java.lang.String desc) {
     this.desc = desc;
+    return this;
+  }
+
+  /**
+   * Optional. Additional metadata for the spark plan graph cluster.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Optional. Additional metadata for the spark plan graph cluster.
+   * @param metadata metadata or {@code null} for none
+   */
+  public SparkPlanGraphCluster setMetadata(java.util.Map<String, java.lang.String> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

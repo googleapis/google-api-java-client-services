@@ -17,10 +17,11 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * The TTL (time-to-live) configuration for documents that have this `Field` set. Storing a
- * timestamp value into a TTL-enabled field will be treated as the document's absolute expiration
- * time. For Enterprise edition databases, the timestamp value may also be stored in an array value
- * in the TTL-enabled field. Timestamp values in the past indicate that the document is eligible for
+ * The TTL (time-to-live) configuration for documents that have this `Field` set. A timestamp stored
+ * in a TTL-enabled field will be used to determine the expiration time of the document. The
+ * expiration time is the sum of the timestamp value and the `expiration_offset`. For Enterprise
+ * edition databases, the timestamp value may alternatively be stored in an array value in the TTL-
+ * enabled field. An expiration time in the past indicates that the document is eligible for
  * immediate expiration. Using any other data type or leaving the field absent will disable
  * expiration for the individual document.
  *
@@ -35,11 +36,47 @@ package com.google.api.services.firestore.v1.model;
 public final class GoogleFirestoreAdminV1TtlConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The offset, relative to the timestamp value from the TTL-enabled field, used to
+   * determine the document's expiration time. `expiration_offset.seconds` must be between 0 and
+   * 2,147,483,647 inclusive. Values more precise than seconds are rejected. If unset, defaults to
+   * 0, in which case the expiration time is the same as the timestamp value from the TTL-enabled
+   * field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String expirationOffset;
+
+  /**
    * Output only. The state of the TTL configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. The offset, relative to the timestamp value from the TTL-enabled field, used to
+   * determine the document's expiration time. `expiration_offset.seconds` must be between 0 and
+   * 2,147,483,647 inclusive. Values more precise than seconds are rejected. If unset, defaults to
+   * 0, in which case the expiration time is the same as the timestamp value from the TTL-enabled
+   * field.
+   * @return value or {@code null} for none
+   */
+  public String getExpirationOffset() {
+    return expirationOffset;
+  }
+
+  /**
+   * Optional. The offset, relative to the timestamp value from the TTL-enabled field, used to
+   * determine the document's expiration time. `expiration_offset.seconds` must be between 0 and
+   * 2,147,483,647 inclusive. Values more precise than seconds are rejected. If unset, defaults to
+   * 0, in which case the expiration time is the same as the timestamp value from the TTL-enabled
+   * field.
+   * @param expirationOffset expirationOffset or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1TtlConfig setExpirationOffset(String expirationOffset) {
+    this.expirationOffset = expirationOffset;
+    return this;
+  }
 
   /**
    * Output only. The state of the TTL configuration.

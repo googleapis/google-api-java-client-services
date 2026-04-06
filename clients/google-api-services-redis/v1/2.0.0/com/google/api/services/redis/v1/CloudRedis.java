@@ -2708,6 +2708,146 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
       public class Clusters {
 
         /**
+         * Adds a token auth user for a token based auth enabled cluster.
+         *
+         * Create a request for the method "clusters.addTokenAuthUser".
+         *
+         * This request holds the parameters needed by the redis server.  After setting any optional
+         * parameters, call the {@link AddTokenAuthUser#execute()} method to invoke the remote operation.
+         *
+         * @param cluster Required. The cluster resource that this token auth user will be added for. Format:
+         *        projects/{project}/locations/{location}/clusters/{cluster}
+         * @param content the {@link com.google.api.services.redis.v1.model.AddTokenAuthUserRequest}
+         * @return the request
+         */
+        public AddTokenAuthUser addTokenAuthUser(java.lang.String cluster, com.google.api.services.redis.v1.model.AddTokenAuthUserRequest content) throws java.io.IOException {
+          AddTokenAuthUser result = new AddTokenAuthUser(cluster, content);
+          initialize(result);
+          return result;
+        }
+
+        public class AddTokenAuthUser extends CloudRedisRequest<com.google.api.services.redis.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+cluster}:addTokenAuthUser";
+
+          private final java.util.regex.Pattern CLUSTER_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Adds a token auth user for a token based auth enabled cluster.
+           *
+           * Create a request for the method "clusters.addTokenAuthUser".
+           *
+           * This request holds the parameters needed by the the redis server.  After setting any optional
+           * parameters, call the {@link AddTokenAuthUser#execute()} method to invoke the remote operation.
+           * <p> {@link AddTokenAuthUser#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+           * ClientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param cluster Required. The cluster resource that this token auth user will be added for. Format:
+         *        projects/{project}/locations/{location}/clusters/{cluster}
+           * @param content the {@link com.google.api.services.redis.v1.model.AddTokenAuthUserRequest}
+           * @since 1.13
+           */
+          protected AddTokenAuthUser(java.lang.String cluster, com.google.api.services.redis.v1.model.AddTokenAuthUserRequest content) {
+            super(CloudRedis.this, "POST", REST_PATH, content, com.google.api.services.redis.v1.model.Operation.class);
+            this.cluster = com.google.api.client.util.Preconditions.checkNotNull(cluster, "Required parameter cluster must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_PATTERN.matcher(cluster).matches(),
+                  "Parameter cluster must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public AddTokenAuthUser set$Xgafv(java.lang.String $Xgafv) {
+            return (AddTokenAuthUser) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public AddTokenAuthUser setAccessToken(java.lang.String accessToken) {
+            return (AddTokenAuthUser) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public AddTokenAuthUser setAlt(java.lang.String alt) {
+            return (AddTokenAuthUser) super.setAlt(alt);
+          }
+
+          @Override
+          public AddTokenAuthUser setCallback(java.lang.String callback) {
+            return (AddTokenAuthUser) super.setCallback(callback);
+          }
+
+          @Override
+          public AddTokenAuthUser setFields(java.lang.String fields) {
+            return (AddTokenAuthUser) super.setFields(fields);
+          }
+
+          @Override
+          public AddTokenAuthUser setKey(java.lang.String key) {
+            return (AddTokenAuthUser) super.setKey(key);
+          }
+
+          @Override
+          public AddTokenAuthUser setOauthToken(java.lang.String oauthToken) {
+            return (AddTokenAuthUser) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public AddTokenAuthUser setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (AddTokenAuthUser) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public AddTokenAuthUser setQuotaUser(java.lang.String quotaUser) {
+            return (AddTokenAuthUser) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public AddTokenAuthUser setUploadType(java.lang.String uploadType) {
+            return (AddTokenAuthUser) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public AddTokenAuthUser setUploadProtocol(java.lang.String uploadProtocol) {
+            return (AddTokenAuthUser) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The cluster resource that this token auth user will be added for. Format:
+           * projects/{project}/locations/{location}/clusters/{cluster}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String cluster;
+
+          /** Required. The cluster resource that this token auth user will be added for. Format:
+         projects/{project}/locations/{location}/clusters/{cluster}
+           */
+          public java.lang.String getCluster() {
+            return cluster;
+          }
+
+          /**
+           * Required. The cluster resource that this token auth user will be added for. Format:
+           * projects/{project}/locations/{location}/clusters/{cluster}
+           */
+          public AddTokenAuthUser setCluster(java.lang.String cluster) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CLUSTER_PATTERN.matcher(cluster).matches(),
+                  "Parameter cluster must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.cluster = cluster;
+            return this;
+          }
+
+          @Override
+          public AddTokenAuthUser set(String parameterName, Object value) {
+            return (AddTokenAuthUser) super.set(parameterName, value);
+          }
+        }
+        /**
          * Backup Redis Cluster. If this is the first time a backup is being created, a backup collection
          * will be created at the backend, and this backup belongs to this collection. Both collection and
          * backup will have a resource name. Backup will be executed for each shard. A replica (primary if
@@ -4070,6 +4210,1313 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           }
         }
 
+        /**
+         * An accessor for creating requests from the TokenAuthUsers collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudRedis redis = new CloudRedis(...);}
+         *   {@code CloudRedis.TokenAuthUsers.List request = redis.tokenAuthUsers().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public TokenAuthUsers tokenAuthUsers() {
+          return new TokenAuthUsers();
+        }
+
+        /**
+         * The "tokenAuthUsers" collection of methods.
+         */
+        public class TokenAuthUsers {
+
+          /**
+           * Adds a auth token for a user of a token based auth enabled cluster.
+           *
+           * Create a request for the method "tokenAuthUsers.addAuthToken".
+           *
+           * This request holds the parameters needed by the redis server.  After setting any optional
+           * parameters, call the {@link AddAuthToken#execute()} method to invoke the remote operation.
+           *
+           * @param tokenAuthUser Required. The name of the token auth user resource that this auth token will be added for. Format:
+           *        projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user
+           *        }
+           * @param content the {@link com.google.api.services.redis.v1.model.AddAuthTokenRequest}
+           * @return the request
+           */
+          public AddAuthToken addAuthToken(java.lang.String tokenAuthUser, com.google.api.services.redis.v1.model.AddAuthTokenRequest content) throws java.io.IOException {
+            AddAuthToken result = new AddAuthToken(tokenAuthUser, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AddAuthToken extends CloudRedisRequest<com.google.api.services.redis.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+tokenAuthUser}:addAuthToken";
+
+            private final java.util.regex.Pattern TOKEN_AUTH_USER_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+
+            /**
+             * Adds a auth token for a user of a token based auth enabled cluster.
+             *
+             * Create a request for the method "tokenAuthUsers.addAuthToken".
+             *
+             * This request holds the parameters needed by the the redis server.  After setting any optional
+             * parameters, call the {@link AddAuthToken#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * AddAuthToken#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param tokenAuthUser Required. The name of the token auth user resource that this auth token will be added for. Format:
+           *        projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user
+           *        }
+             * @param content the {@link com.google.api.services.redis.v1.model.AddAuthTokenRequest}
+             * @since 1.13
+             */
+            protected AddAuthToken(java.lang.String tokenAuthUser, com.google.api.services.redis.v1.model.AddAuthTokenRequest content) {
+              super(CloudRedis.this, "POST", REST_PATH, content, com.google.api.services.redis.v1.model.Operation.class);
+              this.tokenAuthUser = com.google.api.client.util.Preconditions.checkNotNull(tokenAuthUser, "Required parameter tokenAuthUser must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TOKEN_AUTH_USER_PATTERN.matcher(tokenAuthUser).matches(),
+                    "Parameter tokenAuthUser must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+              }
+            }
+
+            @Override
+            public AddAuthToken set$Xgafv(java.lang.String $Xgafv) {
+              return (AddAuthToken) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AddAuthToken setAccessToken(java.lang.String accessToken) {
+              return (AddAuthToken) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AddAuthToken setAlt(java.lang.String alt) {
+              return (AddAuthToken) super.setAlt(alt);
+            }
+
+            @Override
+            public AddAuthToken setCallback(java.lang.String callback) {
+              return (AddAuthToken) super.setCallback(callback);
+            }
+
+            @Override
+            public AddAuthToken setFields(java.lang.String fields) {
+              return (AddAuthToken) super.setFields(fields);
+            }
+
+            @Override
+            public AddAuthToken setKey(java.lang.String key) {
+              return (AddAuthToken) super.setKey(key);
+            }
+
+            @Override
+            public AddAuthToken setOauthToken(java.lang.String oauthToken) {
+              return (AddAuthToken) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AddAuthToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AddAuthToken) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AddAuthToken setQuotaUser(java.lang.String quotaUser) {
+              return (AddAuthToken) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AddAuthToken setUploadType(java.lang.String uploadType) {
+              return (AddAuthToken) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AddAuthToken setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AddAuthToken) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the token auth user resource that this auth token will be added
+             * for. Format: projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUser
+             * s/{token_auth_user}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String tokenAuthUser;
+
+            /** Required. The name of the token auth user resource that this auth token will be added for. Format:
+           projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}
+             */
+            public java.lang.String getTokenAuthUser() {
+              return tokenAuthUser;
+            }
+
+            /**
+             * Required. The name of the token auth user resource that this auth token will be added
+             * for. Format: projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUser
+             * s/{token_auth_user}
+             */
+            public AddAuthToken setTokenAuthUser(java.lang.String tokenAuthUser) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TOKEN_AUTH_USER_PATTERN.matcher(tokenAuthUser).matches(),
+                    "Parameter tokenAuthUser must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+              }
+              this.tokenAuthUser = tokenAuthUser;
+              return this;
+            }
+
+            @Override
+            public AddAuthToken set(String parameterName, Object value) {
+              return (AddAuthToken) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a token auth user for a token based auth enabled cluster.
+           *
+           * Create a request for the method "tokenAuthUsers.delete".
+           *
+           * This request holds the parameters needed by the redis server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the token auth user to delete. Format:
+           *        projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user
+           *        }
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudRedisRequest<com.google.api.services.redis.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+
+            /**
+             * Deletes a token auth user for a token based auth enabled cluster.
+             *
+             * Create a request for the method "tokenAuthUsers.delete".
+             *
+             * This request holds the parameters needed by the the redis server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the token auth user to delete. Format:
+           *        projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user
+           *        }
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudRedis.this, "DELETE", REST_PATH, null, com.google.api.services.redis.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the token auth user to delete. Format: projects/{project}/locat
+             * ions/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the token auth user to delete. Format:
+           projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the token auth user to delete. Format: projects/{project}/locat
+             * ions/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, any child auth tokens of this user will also be deleted.
+             * Otherwise, the request will only work if the user has no auth tokens.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Optional. If set to true, any child auth tokens of this user will also be deleted. Otherwise, the
+           request will only work if the user has no auth tokens.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Optional. If set to true, any child auth tokens of this user will also be deleted.
+             * Otherwise, the request will only work if the user has no auth tokens.
+             */
+            public Delete setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes after the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets a specific token auth user for a basic auth enabled cluster.
+           *
+           * Create a request for the method "tokenAuthUsers.get".
+           *
+           * This request holds the parameters needed by the redis server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of token auth user for a token based auth enabled cluster. Format:
+           *        projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user
+           *        }
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudRedisRequest<com.google.api.services.redis.v1.model.TokenAuthUser> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+
+            /**
+             * Gets a specific token auth user for a basic auth enabled cluster.
+             *
+             * Create a request for the method "tokenAuthUsers.get".
+             *
+             * This request holds the parameters needed by the the redis server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of token auth user for a token based auth enabled cluster. Format:
+           *        projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user
+           *        }
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1.model.TokenAuthUser.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of token auth user for a token based auth enabled cluster. Format:
+             * projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth
+             * _user}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of token auth user for a token based auth enabled cluster. Format:
+           projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of token auth user for a token based auth enabled cluster. Format:
+             * projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth
+             * _user}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all the token auth users for a token based auth enabled cluster.
+           *
+           * Create a request for the method "tokenAuthUsers.list".
+           *
+           * This request holds the parameters needed by the redis server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource that this token based auth user will be listed for. Format:
+           *        projects/{project}/locations/{location}/clusters/{cluster}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudRedisRequest<com.google.api.services.redis.v1.model.ListTokenAuthUsersResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/tokenAuthUsers";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+            /**
+             * Lists all the token auth users for a token based auth enabled cluster.
+             *
+             * Create a request for the method "tokenAuthUsers.list".
+             *
+             * This request holds the parameters needed by the the redis server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource that this token based auth user will be listed for. Format:
+           *        projects/{project}/locations/{location}/clusters/{cluster}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1.model.ListTokenAuthUsersResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource that this token based auth user will be listed for.
+             * Format: projects/{project}/locations/{location}/clusters/{cluster}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource that this token based auth user will be listed for. Format:
+           projects/{project}/locations/{location}/clusters/{cluster}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource that this token based auth user will be listed for.
+             * Format: projects/{project}/locations/{location}/clusters/{cluster}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Expression for filtering results. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Expression for filtering results.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Expression for filtering results. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Sort results by a defined order. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Sort results by a defined order.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Sort results by a defined order. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If not specified, a default value of
+             * 1000 will be used by the service. Regardless of the page_size value, the response may
+             * include a partial list and a caller should only rely on response's The maximum value
+             * is 1000; values above 1000 will be coerced to 1000. `next_page_token` to determine if
+             * there are more clusters left to be queried.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of items to return. If not specified, a default value of 1000 will be
+           used by the service. Regardless of the page_size value, the response may include a partial list and
+           a caller should only rely on response's The maximum value is 1000; values above 1000 will be
+           coerced to 1000. `next_page_token` to determine if there are more clusters left to be queried.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If not specified, a default value of
+             * 1000 will be used by the service. Regardless of the page_size value, the response may
+             * include a partial list and a caller should only rely on response's The maximum value
+             * is 1000; values above 1000 will be coerced to 1000. `next_page_token` to determine if
+             * there are more clusters left to be queried.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The `next_page_token` value returned from a previous [ListTokenAuthUsers]
+             * request, if any.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The `next_page_token` value returned from a previous [ListTokenAuthUsers] request, if
+           any.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The `next_page_token` value returned from a previous [ListTokenAuthUsers]
+             * request, if any.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the AuthTokens collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code CloudRedis redis = new CloudRedis(...);}
+           *   {@code CloudRedis.AuthTokens.List request = redis.authTokens().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public AuthTokens authTokens() {
+            return new AuthTokens();
+          }
+
+          /**
+           * The "authTokens" collection of methods.
+           */
+          public class AuthTokens {
+
+            /**
+             * Removes a auth token for a user of a token based auth enabled instance.
+             *
+             * Create a request for the method "authTokens.delete".
+             *
+             * This request holds the parameters needed by the redis server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the token auth user resource that this auth token will be deleted from.
+             *        Format: projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_a
+             *        uth_user}/authTokens/{auth_token}
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends CloudRedisRequest<com.google.api.services.redis.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+/authTokens/[^/]+$");
+
+              /**
+               * Removes a auth token for a user of a token based auth enabled instance.
+               *
+               * Create a request for the method "authTokens.delete".
+               *
+               * This request holds the parameters needed by the the redis server.  After setting any optional
+               * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the token auth user resource that this auth token will be deleted from.
+             *        Format: projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_a
+             *        uth_user}/authTokens/{auth_token}
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(CloudRedis.this, "DELETE", REST_PATH, null, com.google.api.services.redis.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+/authTokens/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the token auth user resource that this auth token will be
+               * deleted from. Format: projects/{project}/locations/{location}/clusters/{cluster}/to
+               * kenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the token auth user resource that this auth token will be deleted from.
+             Format: projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}
+             /authTokens/{auth_token}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the token auth user resource that this auth token will be
+               * deleted from. Format: projects/{project}/locations/{location}/clusters/{cluster}/to
+               * kenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+/authTokens/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets a specific auth token for a specific token auth user.
+             *
+             * Create a request for the method "authTokens.get".
+             *
+             * This request holds the parameters needed by the redis server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of auth token for a token based auth enabled cluster. Format: projects/{project}/
+             *        locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_
+             *        token}
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends CloudRedisRequest<com.google.api.services.redis.v1.model.AuthToken> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+/authTokens/[^/]+$");
+
+              /**
+               * Gets a specific auth token for a specific token auth user.
+               *
+               * Create a request for the method "authTokens.get".
+               *
+               * This request holds the parameters needed by the the redis server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of auth token for a token based auth enabled cluster. Format: projects/{project}/
+             *        locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_
+             *        token}
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1.model.AuthToken.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+/authTokens/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of auth token for a token based auth enabled cluster. Format: pr
+               * ojects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth
+               * _user}/authTokens/{auth_token}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of auth token for a token based auth enabled cluster. Format: projects/{project}
+             /locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of auth token for a token based auth enabled cluster. Format: pr
+               * ojects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth
+               * _user}/authTokens/{auth_token}
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+/authTokens/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists all the auth tokens for a specific token auth user.
+             *
+             * Create a request for the method "authTokens.list".
+             *
+             * This request holds the parameters needed by the redis server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource that this auth token will be listed for. Format:
+             *        projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user
+             *        }
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends CloudRedisRequest<com.google.api.services.redis.v1.model.ListAuthTokensResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/authTokens";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+
+              /**
+               * Lists all the auth tokens for a specific token auth user.
+               *
+               * Create a request for the method "authTokens.list".
+               *
+               * This request holds the parameters needed by the the redis server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource that this auth token will be listed for. Format:
+             *        projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user
+             *        }
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(CloudRedis.this, "GET", REST_PATH, null, com.google.api.services.redis.v1.model.ListAuthTokensResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent resource that this auth token will be listed for. Format: proj
+               * ects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_u
+               * ser}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource that this auth token will be listed for. Format:
+             projects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_user}
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent resource that this auth token will be listed for. Format: proj
+               * ects/{project}/locations/{location}/clusters/{cluster}/tokenAuthUsers/{token_auth_u
+               * ser}
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/tokenAuthUsers/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Optional. Expression for filtering results. */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Expression for filtering results.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /** Optional. Expression for filtering results. */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /** Optional. Sort results by a defined order. */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. Sort results by a defined order.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /** Optional. Sort results by a defined order. */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of items to return. The maximum value is 1000; values
+               * above 1000 will be coerced to 1000. If not specified, a default value of 1000 will
+               * be used by the service. Regardless of the page_size value, the response may include
+               * a partial list and a caller should only rely on response's `next_page_token` to
+               * determine if there are more clusters left to be queried.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of items to return. The maximum value is 1000; values above 1000 will
+             be coerced to 1000. If not specified, a default value of 1000 will be used by the service.
+             Regardless of the page_size value, the response may include a partial list and a caller should only
+             rely on response's `next_page_token` to determine if there are more clusters left to be queried.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of items to return. The maximum value is 1000; values
+               * above 1000 will be coerced to 1000. If not specified, a default value of 1000 will
+               * be used by the service. Regardless of the page_size value, the response may include
+               * a partial list and a caller should only rely on response's `next_page_token` to
+               * determine if there are more clusters left to be queried.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. The `next_page_token` value returned from a previous [ListTokenAuthUsers]
+               * request, if any.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The `next_page_token` value returned from a previous [ListTokenAuthUsers] request, if
+             any.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. The `next_page_token` value returned from a previous [ListTokenAuthUsers]
+               * request, if any.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
       }
       /**
        * An accessor for creating requests from the Instances collection.

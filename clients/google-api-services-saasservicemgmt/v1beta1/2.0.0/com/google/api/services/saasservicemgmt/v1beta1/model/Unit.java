@@ -42,6 +42,14 @@ public final class Unit extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Optional. Reference to the AppHub Application this unit belongs to. All resources deployed in
+   * this Unit will be associated with the specified Application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String application;
+
+  /**
    * Optional. Output only. A set of conditions which indicate the various conditions this resource
    * can have.
    * The value may be {@code null}.
@@ -250,6 +258,25 @@ public final class Unit extends com.google.api.client.json.GenericJson {
    */
   public Unit setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Optional. Reference to the AppHub Application this unit belongs to. All resources deployed in
+   * this Unit will be associated with the specified Application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApplication() {
+    return application;
+  }
+
+  /**
+   * Optional. Reference to the AppHub Application this unit belongs to. All resources deployed in
+   * this Unit will be associated with the specified Application.
+   * @param application application or {@code null} for none
+   */
+  public Unit setApplication(java.lang.String application) {
+    this.application = application;
     return this;
   }
 

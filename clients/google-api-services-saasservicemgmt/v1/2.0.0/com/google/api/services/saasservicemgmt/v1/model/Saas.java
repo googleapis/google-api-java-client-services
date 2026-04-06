@@ -40,11 +40,26 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Output only. A set of conditions which indicate the various conditions this resource can have.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SaasCondition> conditions;
+
+  /**
    * Output only. The timestamp when the resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Output only. If the state is FAILED, the corresponding error code and message. Defaults to
+   * code=OK for all other states.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Status error;
 
   /**
    * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
@@ -84,6 +99,14 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. State of the Saas. It is always in ACTIVE state if the application_template is
+   * empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * Output only. The unique identifier of the resource. UID is unique in the time and space for
@@ -128,6 +151,23 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. A set of conditions which indicate the various conditions this resource can have.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SaasCondition> getConditions() {
+    return conditions;
+  }
+
+  /**
+   * Output only. A set of conditions which indicate the various conditions this resource can have.
+   * @param conditions conditions or {@code null} for none
+   */
+  public Saas setConditions(java.util.List<SaasCondition> conditions) {
+    this.conditions = conditions;
+    return this;
+  }
+
+  /**
    * Output only. The timestamp when the resource was created.
    * @return value or {@code null} for none
    */
@@ -141,6 +181,25 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    */
   public Saas setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. If the state is FAILED, the corresponding error code and message. Defaults to
+   * code=OK for all other states.
+   * @return value or {@code null} for none
+   */
+  public Status getError() {
+    return error;
+  }
+
+  /**
+   * Output only. If the state is FAILED, the corresponding error code and message. Defaults to
+   * code=OK for all other states.
+   * @param error error or {@code null} for none
+   */
+  public Saas setError(Status error) {
+    this.error = error;
     return this;
   }
 
@@ -219,6 +278,25 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    */
   public Saas setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. State of the Saas. It is always in ACTIVE state if the application_template is
+   * empty.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. State of the Saas. It is always in ACTIVE state if the application_template is
+   * empty.
+   * @param state state or {@code null} for none
+   */
+  public Saas setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -26,6 +26,12 @@ public class CloudRedisScopes {
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** See your Google Cloud Memorystore for Redis data and the email address of your Google Account. */
+  public static final String REDIS_READ_ONLY = "https://www.googleapis.com/auth/redis.read-only";
+
+  /** See, edit, configure, and delete your Google Cloud Memorystore for Redis data and see the email address for your Google Account. */
+  public static final String REDIS_READ_WRITE = "https://www.googleapis.com/auth/redis.read-write";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +40,8 @@ public class CloudRedisScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(REDIS_READ_ONLY);
+    set.add(REDIS_READ_WRITE);
     return java.util.Collections.unmodifiableSet(set);
   }
 

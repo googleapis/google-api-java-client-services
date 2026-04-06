@@ -17,7 +17,7 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * Information about a TTL configuration change.
+ * Specification of how the field should be indexed for search text indexes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -27,67 +27,64 @@ package com.google.api.services.firestore.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleFirestoreAdminV1TtlConfigDelta extends com.google.api.client.json.GenericJson {
+public final class GoogleFirestoreAdminV1SearchTextIndexSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies how the TTL configuration is changing.
+   * Required. How to index the text field value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String changeType;
+  private java.lang.String indexType;
 
   /**
-   * The offset, relative to the timestamp value in the TTL-enabled field, used determine the
-   * document's expiration time.
+   * Required. How to match the text field value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String expirationOffset;
+  private java.lang.String matchType;
 
   /**
-   * Specifies how the TTL configuration is changing.
+   * Required. How to index the text field value.
    * @return value or {@code null} for none
    */
-  public java.lang.String getChangeType() {
-    return changeType;
+  public java.lang.String getIndexType() {
+    return indexType;
   }
 
   /**
-   * Specifies how the TTL configuration is changing.
-   * @param changeType changeType or {@code null} for none
+   * Required. How to index the text field value.
+   * @param indexType indexType or {@code null} for none
    */
-  public GoogleFirestoreAdminV1TtlConfigDelta setChangeType(java.lang.String changeType) {
-    this.changeType = changeType;
+  public GoogleFirestoreAdminV1SearchTextIndexSpec setIndexType(java.lang.String indexType) {
+    this.indexType = indexType;
     return this;
   }
 
   /**
-   * The offset, relative to the timestamp value in the TTL-enabled field, used determine the
-   * document's expiration time.
+   * Required. How to match the text field value.
    * @return value or {@code null} for none
    */
-  public String getExpirationOffset() {
-    return expirationOffset;
+  public java.lang.String getMatchType() {
+    return matchType;
   }
 
   /**
-   * The offset, relative to the timestamp value in the TTL-enabled field, used determine the
-   * document's expiration time.
-   * @param expirationOffset expirationOffset or {@code null} for none
+   * Required. How to match the text field value.
+   * @param matchType matchType or {@code null} for none
    */
-  public GoogleFirestoreAdminV1TtlConfigDelta setExpirationOffset(String expirationOffset) {
-    this.expirationOffset = expirationOffset;
+  public GoogleFirestoreAdminV1SearchTextIndexSpec setMatchType(java.lang.String matchType) {
+    this.matchType = matchType;
     return this;
   }
 
   @Override
-  public GoogleFirestoreAdminV1TtlConfigDelta set(String fieldName, Object value) {
-    return (GoogleFirestoreAdminV1TtlConfigDelta) super.set(fieldName, value);
+  public GoogleFirestoreAdminV1SearchTextIndexSpec set(String fieldName, Object value) {
+    return (GoogleFirestoreAdminV1SearchTextIndexSpec) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleFirestoreAdminV1TtlConfigDelta clone() {
-    return (GoogleFirestoreAdminV1TtlConfigDelta) super.clone();
+  public GoogleFirestoreAdminV1SearchTextIndexSpec clone() {
+    return (GoogleFirestoreAdminV1SearchTextIndexSpec) super.clone();
   }
 
 }

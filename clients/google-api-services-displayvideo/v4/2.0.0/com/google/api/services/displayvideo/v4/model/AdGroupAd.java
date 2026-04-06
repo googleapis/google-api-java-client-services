@@ -83,6 +83,15 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private BumperAd bumperAd;
 
   /**
+   * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To remove the DCM tracking
+   * ad info, please leave this field empty. Retrieval and management of Demand Gen resources is
+   * currently in beta. This field is only available to allowlisted users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DcmTrackingInfo dcmTrackingInfo;
+
+  /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
    * 1207068802760924844-NC#CarouselAd).
    * The value may be {@code null}.
@@ -307,6 +316,27 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
    */
   public AdGroupAd setBumperAd(BumperAd bumperAd) {
     this.bumperAd = bumperAd;
+    return this;
+  }
+
+  /**
+   * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To remove the DCM tracking
+   * ad info, please leave this field empty. Retrieval and management of Demand Gen resources is
+   * currently in beta. This field is only available to allowlisted users.
+   * @return value or {@code null} for none
+   */
+  public DcmTrackingInfo getDcmTrackingInfo() {
+    return dcmTrackingInfo;
+  }
+
+  /**
+   * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To remove the DCM tracking
+   * ad info, please leave this field empty. Retrieval and management of Demand Gen resources is
+   * currently in beta. This field is only available to allowlisted users.
+   * @param dcmTrackingInfo dcmTrackingInfo or {@code null} for none
+   */
+  public AdGroupAd setDcmTrackingInfo(DcmTrackingInfo dcmTrackingInfo) {
+    this.dcmTrackingInfo = dcmTrackingInfo;
     return this;
   }
 

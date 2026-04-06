@@ -139,6 +139,16 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private LogEntryOperation operation;
 
   /**
+   * Optional. The structured OpenTelemetry protocol payload. Contains the OpenTelemetry Resource,
+   * Instrumentation Scope, and Entities attributes for this log as they are defined in the OTLP
+   * specification, and any other fields that do not have a direct analog in the LogEntry. See
+   * https://opentelemetry.io/docs/specs/otel/logs/data-model/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> otel;
+
+  /**
    * The log entry payload, represented as a protocol buffer. Some Google Cloud Platform services
    * use this field for their log entry payloads.The following protocol buffer types are supported;
    * user-defined types are not supported:"type.googleapis.com/google.cloud.audit.AuditLog"
@@ -495,6 +505,29 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    */
   public LogEntry setOperation(LogEntryOperation operation) {
     this.operation = operation;
+    return this;
+  }
+
+  /**
+   * Optional. The structured OpenTelemetry protocol payload. Contains the OpenTelemetry Resource,
+   * Instrumentation Scope, and Entities attributes for this log as they are defined in the OTLP
+   * specification, and any other fields that do not have a direct analog in the LogEntry. See
+   * https://opentelemetry.io/docs/specs/otel/logs/data-model/
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getOtel() {
+    return otel;
+  }
+
+  /**
+   * Optional. The structured OpenTelemetry protocol payload. Contains the OpenTelemetry Resource,
+   * Instrumentation Scope, and Entities attributes for this log as they are defined in the OTLP
+   * specification, and any other fields that do not have a direct analog in the LogEntry. See
+   * https://opentelemetry.io/docs/specs/otel/logs/data-model/
+   * @param otel otel or {@code null} for none
+   */
+  public LogEntry setOtel(java.util.Map<String, java.lang.Object> otel) {
+    this.otel = otel;
     return this;
   }
 

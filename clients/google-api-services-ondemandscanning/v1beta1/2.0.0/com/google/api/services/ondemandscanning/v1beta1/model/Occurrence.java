@@ -38,6 +38,13 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private String advisoryPublishTime;
 
   /**
+   * Describes an AI skill analysis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AISkillAnalysisOccurrence aiSkillAnalysis;
+
+  /**
    * Describes an attestation of an artifact.
    * The value may be {@code null}.
    */
@@ -195,6 +202,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setAdvisoryPublishTime(String advisoryPublishTime) {
     this.advisoryPublishTime = advisoryPublishTime;
+    return this;
+  }
+
+  /**
+   * Describes an AI skill analysis.
+   * @return value or {@code null} for none
+   */
+  public AISkillAnalysisOccurrence getAiSkillAnalysis() {
+    return aiSkillAnalysis;
+  }
+
+  /**
+   * Describes an AI skill analysis.
+   * @param aiSkillAnalysis aiSkillAnalysis or {@code null} for none
+   */
+  public Occurrence setAiSkillAnalysis(AISkillAnalysisOccurrence aiSkillAnalysis) {
+    this.aiSkillAnalysis = aiSkillAnalysis;
     return this;
   }
 

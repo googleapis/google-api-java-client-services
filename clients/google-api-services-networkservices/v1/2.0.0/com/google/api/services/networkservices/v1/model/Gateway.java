@@ -42,6 +42,14 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> addresses;
 
   /**
+   * Optional. If true, the Gateway will listen on all ports. This is mutually exclusive with the
+   * `ports` field. This field only applies to gateways of type 'SECURE_WEB_GATEWAY'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allPorts;
+
+  /**
    * Optional. If true, the gateway will allow traffic from clients outside of the region where the
    * gateway is located. This field is configurable only for gateways of type SECURE_WEB_GATEWAY.
    * The value may be {@code null}.
@@ -208,6 +216,25 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
    */
   public Gateway setAddresses(java.util.List<java.lang.String> addresses) {
     this.addresses = addresses;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the Gateway will listen on all ports. This is mutually exclusive with the
+   * `ports` field. This field only applies to gateways of type 'SECURE_WEB_GATEWAY'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllPorts() {
+    return allPorts;
+  }
+
+  /**
+   * Optional. If true, the Gateway will listen on all ports. This is mutually exclusive with the
+   * `ports` field. This field only applies to gateways of type 'SECURE_WEB_GATEWAY'.
+   * @param allPorts allPorts or {@code null} for none
+   */
+  public Gateway setAllPorts(java.lang.Boolean allPorts) {
+    this.allPorts = allPorts;
     return this;
   }
 

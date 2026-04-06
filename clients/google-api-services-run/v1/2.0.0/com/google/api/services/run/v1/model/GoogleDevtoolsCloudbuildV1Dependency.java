@@ -37,6 +37,13 @@ public final class GoogleDevtoolsCloudbuildV1Dependency extends com.google.api.c
   private java.lang.Boolean empty;
 
   /**
+   * Represents a generic artifact as a build dependency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsCloudbuildV1GenericArtifactDependency genericArtifact;
+
+  /**
    * Represents a git repository as a build dependency.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleDevtoolsCloudbuildV1Dependency extends com.google.api.c
    */
   public GoogleDevtoolsCloudbuildV1Dependency setEmpty(java.lang.Boolean empty) {
     this.empty = empty;
+    return this;
+  }
+
+  /**
+   * Represents a generic artifact as a build dependency.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1GenericArtifactDependency getGenericArtifact() {
+    return genericArtifact;
+  }
+
+  /**
+   * Represents a generic artifact as a build dependency.
+   * @param genericArtifact genericArtifact or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1Dependency setGenericArtifact(GoogleDevtoolsCloudbuildV1GenericArtifactDependency genericArtifact) {
+    this.genericArtifact = genericArtifact;
     return this;
   }
 

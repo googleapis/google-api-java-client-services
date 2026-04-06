@@ -159,13 +159,17 @@ public final class Volume extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Flag indicating if the volume will be a large capacity volume or a regular volume.
+   * This field is used for legacy FILE pools. For Unified pools, use the `large_capacity_config`
+   * field instead. This field and `large_capacity_config` are mutually exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean largeCapacity;
 
   /**
-   * Optional. Large capacity config for the volume.
+   * Optional. Large capacity config for the volume. Enables and configures large capacity for
+   * volumes in Unified pools with File protocols. Not applicable for Block protocols in Unified
+   * pools. This field and the legacy `large_capacity` boolean field are mutually exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -655,6 +659,8 @@ public final class Volume extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Flag indicating if the volume will be a large capacity volume or a regular volume.
+   * This field is used for legacy FILE pools. For Unified pools, use the `large_capacity_config`
+   * field instead. This field and `large_capacity_config` are mutually exclusive.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLargeCapacity() {
@@ -663,6 +669,8 @@ public final class Volume extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Flag indicating if the volume will be a large capacity volume or a regular volume.
+   * This field is used for legacy FILE pools. For Unified pools, use the `large_capacity_config`
+   * field instead. This field and `large_capacity_config` are mutually exclusive.
    * @param largeCapacity largeCapacity or {@code null} for none
    */
   public Volume setLargeCapacity(java.lang.Boolean largeCapacity) {
@@ -671,7 +679,9 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Large capacity config for the volume.
+   * Optional. Large capacity config for the volume. Enables and configures large capacity for
+   * volumes in Unified pools with File protocols. Not applicable for Block protocols in Unified
+   * pools. This field and the legacy `large_capacity` boolean field are mutually exclusive.
    * @return value or {@code null} for none
    */
   public LargeCapacityConfig getLargeCapacityConfig() {
@@ -679,7 +689,9 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Large capacity config for the volume.
+   * Optional. Large capacity config for the volume. Enables and configures large capacity for
+   * volumes in Unified pools with File protocols. Not applicable for Block protocols in Unified
+   * pools. This field and the legacy `large_capacity` boolean field are mutually exclusive.
    * @param largeCapacityConfig largeCapacityConfig or {@code null} for none
    */
   public Volume setLargeCapacityConfig(LargeCapacityConfig largeCapacityConfig) {

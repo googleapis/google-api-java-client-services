@@ -182,7 +182,7 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * optional parameters, call the {@link GetAllowedLocations#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. Resource name of workforce pool.
+       * @param name Required. Resource name of workforce pool. Format: `locations/global/workforcePools/{pool_id}`
        * @return the request
        */
       public GetAllowedLocations getAllowedLocations(java.lang.String name) throws java.io.IOException {
@@ -209,7 +209,7 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. Resource name of workforce pool.
+         * @param name Required. Resource name of workforce pool. Format: `locations/global/workforcePools/{pool_id}`
          * @since 1.13
          */
         protected GetAllowedLocations(java.lang.String name) {
@@ -287,17 +287,23 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
           return (GetAllowedLocations) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Resource name of workforce pool. */
+        /**
+         * Required. Resource name of workforce pool. Format:
+         * `locations/global/workforcePools/{pool_id}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of workforce pool.
+        /** Required. Resource name of workforce pool. Format: `locations/global/workforcePools/{pool_id}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Resource name of workforce pool. */
+        /**
+         * Required. Resource name of workforce pool. Format:
+         * `locations/global/workforcePools/{pool_id}`
+         */
         public GetAllowedLocations setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -386,7 +392,8 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * optional parameters, call the {@link GetAllowedLocations#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. Resource name of workload identity pool.
+         * @param name Required. Resource name of workload identity pool. Format:
+         *        `projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}`
          * @return the request
          */
         public GetAllowedLocations getAllowedLocations(java.lang.String name) throws java.io.IOException {
@@ -413,7 +420,8 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. Resource name of workload identity pool.
+           * @param name Required. Resource name of workload identity pool. Format:
+         *        `projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}`
            * @since 1.13
            */
           protected GetAllowedLocations(java.lang.String name) {
@@ -491,17 +499,24 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
             return (GetAllowedLocations) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Resource name of workload identity pool. */
+          /**
+           * Required. Resource name of workload identity pool. Format:
+           * `projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}`
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Resource name of workload identity pool.
+          /** Required. Resource name of workload identity pool. Format:
+         `projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Resource name of workload identity pool. */
+          /**
+           * Required. Resource name of workload identity pool. Format:
+           * `projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}`
+           */
           public GetAllowedLocations setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -845,7 +860,8 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
        * optional parameters, call the {@link GetAllowedLocations#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. Resource name of service account.
+       * @param name Required. Resource name of service account. Format:
+       *        `projects/-/serviceAccounts/{service_account_email}`
        * @return the request
        */
       public GetAllowedLocations getAllowedLocations(java.lang.String name) throws java.io.IOException {
@@ -872,7 +888,8 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. Resource name of service account.
+         * @param name Required. Resource name of service account. Format:
+       *        `projects/-/serviceAccounts/{service_account_email}`
          * @since 1.13
          */
         protected GetAllowedLocations(java.lang.String name) {
@@ -950,17 +967,24 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
           return (GetAllowedLocations) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Resource name of service account. */
+        /**
+         * Required. Resource name of service account. Format:
+         * `projects/-/serviceAccounts/{service_account_email}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of service account.
+        /** Required. Resource name of service account. Format:
+       `projects/-/serviceAccounts/{service_account_email}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Resource name of service account. */
+        /**
+         * Required. Resource name of service account. Format:
+         * `projects/-/serviceAccounts/{service_account_email}`
+         */
         public GetAllowedLocations setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

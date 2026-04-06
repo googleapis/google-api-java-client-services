@@ -41,6 +41,20 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * AppParams contains the parameters for creating an AppHub Application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppParams appParams;
+
+  /**
+   * Output only. Reference to component and revision in a composite ApplicationTemplate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComponentRef applicationTemplateComponent;
+
+  /**
    * Output only. The timestamp when the resource was created.
    * The value may be {@code null}.
    */
@@ -160,6 +174,40 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    */
   public UnitKind setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * AppParams contains the parameters for creating an AppHub Application.
+   * @return value or {@code null} for none
+   */
+  public AppParams getAppParams() {
+    return appParams;
+  }
+
+  /**
+   * AppParams contains the parameters for creating an AppHub Application.
+   * @param appParams appParams or {@code null} for none
+   */
+  public UnitKind setAppParams(AppParams appParams) {
+    this.appParams = appParams;
+    return this;
+  }
+
+  /**
+   * Output only. Reference to component and revision in a composite ApplicationTemplate.
+   * @return value or {@code null} for none
+   */
+  public ComponentRef getApplicationTemplateComponent() {
+    return applicationTemplateComponent;
+  }
+
+  /**
+   * Output only. Reference to component and revision in a composite ApplicationTemplate.
+   * @param applicationTemplateComponent applicationTemplateComponent or {@code null} for none
+   */
+  public UnitKind setApplicationTemplateComponent(ComponentRef applicationTemplateComponent) {
+    this.applicationTemplateComponent = applicationTemplateComponent;
     return this;
   }
 

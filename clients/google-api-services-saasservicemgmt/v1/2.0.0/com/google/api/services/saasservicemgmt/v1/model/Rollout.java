@@ -127,7 +127,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String release;
 
   /**
-   * Optional. Immutable. Name of the RolloutKind this rollout is stemming from and adhering to.
+   * Required. Immutable. Name of the RolloutKind this rollout is stemming from and adhering to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -447,7 +447,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. Name of the RolloutKind this rollout is stemming from and adhering to.
+   * Required. Immutable. Name of the RolloutKind this rollout is stemming from and adhering to.
    * @return value or {@code null} for none
    */
   public java.lang.String getRolloutKind() {
@@ -455,7 +455,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. Name of the RolloutKind this rollout is stemming from and adhering to.
+   * Required. Immutable. Name of the RolloutKind this rollout is stemming from and adhering to.
    * @param rolloutKind rolloutKind or {@code null} for none
    */
   public Rollout setRolloutKind(java.lang.String rolloutKind) {

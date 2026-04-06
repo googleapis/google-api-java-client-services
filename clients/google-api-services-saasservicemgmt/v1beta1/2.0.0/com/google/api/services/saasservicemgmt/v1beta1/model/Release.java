@@ -41,6 +41,13 @@ public final class Release extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Output only. Reference to component and revision in a composite ApplicationTemplate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComponentRef applicationTemplateComponent;
+
+  /**
    * Optional. Blueprints are OCI Images that contain all of the artifacts needed to provision a
    * unit.
    * The value may be {@code null}.
@@ -157,6 +164,23 @@ public final class Release extends com.google.api.client.json.GenericJson {
    */
   public Release setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Output only. Reference to component and revision in a composite ApplicationTemplate.
+   * @return value or {@code null} for none
+   */
+  public ComponentRef getApplicationTemplateComponent() {
+    return applicationTemplateComponent;
+  }
+
+  /**
+   * Output only. Reference to component and revision in a composite ApplicationTemplate.
+   * @param applicationTemplateComponent applicationTemplateComponent or {@code null} for none
+   */
+  public Release setApplicationTemplateComponent(ComponentRef applicationTemplateComponent) {
+    this.applicationTemplateComponent = applicationTemplateComponent;
     return this;
   }
 

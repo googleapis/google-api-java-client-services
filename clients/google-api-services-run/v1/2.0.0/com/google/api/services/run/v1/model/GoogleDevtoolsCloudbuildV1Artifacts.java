@@ -31,6 +31,14 @@ package com.google.api.services.run.v1.model;
 public final class GoogleDevtoolsCloudbuildV1Artifacts extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A list of generic artifacts to be uploaded to Artifact Registry upon successful
+   * completion of all build steps. If any artifacts fail to be pushed, the build is marked FAILURE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleDevtoolsCloudbuildV1GenericArtifact> genericArtifacts;
+
+  /**
    * Optional. A list of Go modules to be uploaded to Artifact Registry upon successful completion
    * of all build steps. If any objects fail to be pushed, the build is marked FAILURE.
    * The value may be {@code null}.
@@ -97,6 +105,25 @@ public final class GoogleDevtoolsCloudbuildV1Artifacts extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleDevtoolsCloudbuildV1PythonPackage> pythonPackages;
+
+  /**
+   * Optional. A list of generic artifacts to be uploaded to Artifact Registry upon successful
+   * completion of all build steps. If any artifacts fail to be pushed, the build is marked FAILURE.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleDevtoolsCloudbuildV1GenericArtifact> getGenericArtifacts() {
+    return genericArtifacts;
+  }
+
+  /**
+   * Optional. A list of generic artifacts to be uploaded to Artifact Registry upon successful
+   * completion of all build steps. If any artifacts fail to be pushed, the build is marked FAILURE.
+   * @param genericArtifacts genericArtifacts or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1Artifacts setGenericArtifacts(java.util.List<GoogleDevtoolsCloudbuildV1GenericArtifact> genericArtifacts) {
+    this.genericArtifacts = genericArtifacts;
+    return this;
+  }
 
   /**
    * Optional. A list of Go modules to be uploaded to Artifact Registry upon successful completion

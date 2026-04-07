@@ -312,10 +312,14 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
         }
       }
       /**
-       * Lists information about the supported locations for this service. This method can be called in
-       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-       * public locations as well as private or other locations specifically visible to the project.
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all projects.
+       * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+       * lists locations visible to that specific project. This includes public, private, or other
+       * project-specific locations enabled for the project. For gRPC and client library implementations,
+       * the resource name is passed as the `name` field. For direct service calls, the resource name is
+       * incorporated into the request path based on the specific service implementation and version.
        *
        * Create a request for the method "locations.list".
        *
@@ -339,10 +343,15 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service. This method can be called in
-         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-         * public locations as well as private or other locations specifically visible to the project.
+         * Lists information about the supported locations for this service. This method lists locations
+         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * locations**: If `name` is empty, the method lists the public locations available to all
+         * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+         * the method lists locations visible to that specific project. This includes public, private, or
+         * other project-specific locations enabled for the project. For gRPC and client library
+         * implementations, the resource name is passed as the `name` field. For direct service calls, the
+         * resource name is incorporated into the request path based on the specific service
+         * implementation and version.
          *
          * Create a request for the method "locations.list".
          *
@@ -7001,6 +7010,1127 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Endpoints collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudAlloyDBAdmin alloydb = new CloudAlloyDBAdmin(...);}
+       *   {@code CloudAlloyDBAdmin.Endpoints.List request = alloydb.endpoints().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Endpoints endpoints() {
+        return new Endpoints();
+      }
+
+      /**
+       * The "endpoints" collection of methods.
+       */
+      public class Endpoints {
+
+        /**
+         * Creates a new Endpoint in a given project and location.
+         *
+         * Create a request for the method "endpoints.create".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location of the new endpoint. For the required format, see the comment on the
+         *        Endpoint.name field.
+         * @param content the {@link com.google.api.services.alloydb.v1beta.model.Endpoint}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.alloydb.v1beta.model.Endpoint content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/endpoints";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new Endpoint in a given project and location.
+           *
+           * Create a request for the method "endpoints.create".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location of the new endpoint. For the required format, see the comment on the
+         *        Endpoint.name field.
+           * @param content the {@link com.google.api.services.alloydb.v1beta.model.Endpoint}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.alloydb.v1beta.model.Endpoint content) {
+            super(CloudAlloyDBAdmin.this, "POST", REST_PATH, content, com.google.api.services.alloydb.v1beta.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location of the new endpoint. For the required format, see the comment on
+           * the Endpoint.name field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location of the new endpoint. For the required format, see the comment on the
+         Endpoint.name field.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location of the new endpoint. For the required format, see the comment on
+           * the Endpoint.name field.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. ID of the requesting object. */
+          @com.google.api.client.util.Key
+          private java.lang.String endpointId;
+
+          /** Required. ID of the requesting object.
+           */
+          public java.lang.String getEndpointId() {
+            return endpointId;
+          }
+
+          /** Required. ID of the requesting object. */
+          public Create setEndpointId(java.lang.String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server ignores the request if it has already
+           * been completed. The server guarantees that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if the original operation with the same request ID was received, and if so,
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server ignores the request if it has already been completed. The
+         server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server ignores the request if it has already
+           * been completed. The server guarantees that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if the original operation with the same request ID was received, and if so,
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. If set, the backend validates the request, but doesn't actually execute it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, the backend validates the request, but doesn't actually execute it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set, the backend validates the request, but doesn't actually execute it.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single Endpoint.
+         *
+         * Create a request for the method "endpoints.delete".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the resource. For the required format, see the comment on the Endpoint.name
+         *        field.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Deletes a single Endpoint.
+           *
+           * Create a request for the method "endpoints.delete".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the resource. For the required format, see the comment on the Endpoint.name
+         *        field.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudAlloyDBAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.alloydb.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the resource. For the required format, see the comment on the
+           * Endpoint.name field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the resource. For the required format, see the comment on the Endpoint.name
+         field.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the resource. For the required format, see the comment on the
+           * Endpoint.name field.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The current etag of the Endpoint. If an etag is provided and does not match
+           * the current etag of the Endpoint, deletion will be blocked and an ABORTED error will be
+           * returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. The current etag of the Endpoint. If an etag is provided and does not match the current
+         etag of the Endpoint, deletion will be blocked and an ABORTED error will be returned.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. The current etag of the Endpoint. If an etag is provided and does not match
+           * the current etag of the Endpoint, deletion will be blocked and an ABORTED error will be
+           * returned.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server ignores the request if it has already
+           * been completed. The server guarantees that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if the original operation with the same request ID was received, and if so,
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server ignores the request if it has already been completed. The
+         server guarantees that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server ignores the request if it has already
+           * been completed. The server guarantees that for at least 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if the original operation with the same request ID was received, and if so,
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. If set, the backend validates the request, but doesn't actually execute it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, the backend validates the request, but doesn't actually execute it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set, the backend validates the request, but doesn't actually execute it.
+           */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single Endpoint.
+         *
+         * Create a request for the method "endpoints.get".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the resource. For the required format, see the comment on the Endpoint.name
+         *        field.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1beta.model.Endpoint> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Gets details of a single Endpoint.
+           *
+           * Create a request for the method "endpoints.get".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the resource. For the required format, see the comment on the Endpoint.name
+         *        field.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudAlloyDBAdmin.this, "GET", REST_PATH, null, com.google.api.services.alloydb.v1beta.model.Endpoint.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the resource. For the required format, see the comment on the
+           * Endpoint.name field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the resource. For the required format, see the comment on the Endpoint.name
+         field.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the resource. For the required format, see the comment on the
+           * Endpoint.name field.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Endpoints in a given project and location.
+         *
+         * Create a request for the method "endpoints.list".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The name of the parent resource. For the required format, see the comment on the
+         *        Endpoint.name field. Additionally, you can perform an aggregated list operation by
+         *        specifying a value with the following format: * projects/{project}/locations/-
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1beta.model.ListEndpointsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/endpoints";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Endpoints in a given project and location.
+           *
+           * Create a request for the method "endpoints.list".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The name of the parent resource. For the required format, see the comment on the
+         *        Endpoint.name field. Additionally, you can perform an aggregated list operation by
+         *        specifying a value with the following format: * projects/{project}/locations/-
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudAlloyDBAdmin.this, "GET", REST_PATH, null, com.google.api.services.alloydb.v1beta.model.ListEndpointsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the parent resource. For the required format, see the comment on
+           * the Endpoint.name field. Additionally, you can perform an aggregated list operation by
+           * specifying a value with the following format: * projects/{project}/locations/-
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The name of the parent resource. For the required format, see the comment on the
+         Endpoint.name field. Additionally, you can perform an aggregated list operation by specifying a
+         value with the following format: * projects/{project}/locations/-
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The name of the parent resource. For the required format, see the comment on
+           * the Endpoint.name field. Additionally, you can perform an aggregated list operation by
+           * specifying a value with the following format: * projects/{project}/locations/-
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filtering results. This field is currently not supported, its value will be
+           * ignored if passed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results. This field is currently not supported, its value will be ignored if
+         passed.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filtering results. This field is currently not supported, its value will be
+           * ignored if passed.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListEndpoints` call. This should be
+           * provided to retrieve the subsequent page. This field is currently not supported, its
+           * value will be ignored if passed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListEndpoints` call. This should be provided to
+         retrieve the subsequent page. This field is currently not supported, its value will be ignored if
+         passed.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListEndpoints` call. This should be
+           * provided to retrieve the subsequent page. This field is currently not supported, its
+           * value will be ignored if passed.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single Endpoint.
+         *
+         * Create a request for the method "endpoints.patch".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Identifier. The name of the endpoint resource with the format: *
+         *        projects/{project}/locations/{region}/endpoints/{endpoint_id} where the endpoint ID
+         *        segment should satisfy the regex expression `[a-z0-9-]+`. For more details see
+         *        https://google.aip.dev/122. The prefix of the endpoint resource name is the name of the
+         *        parent resource: * projects/{project}/locations/{region}
+         * @param content the {@link com.google.api.services.alloydb.v1beta.model.Endpoint}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.alloydb.v1beta.model.Endpoint content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+
+          /**
+           * Updates the parameters of a single Endpoint.
+           *
+           * Create a request for the method "endpoints.patch".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Identifier. The name of the endpoint resource with the format: *
+         *        projects/{project}/locations/{region}/endpoints/{endpoint_id} where the endpoint ID
+         *        segment should satisfy the regex expression `[a-z0-9-]+`. For more details see
+         *        https://google.aip.dev/122. The prefix of the endpoint resource name is the name of the
+         *        parent resource: * projects/{project}/locations/{region}
+           * @param content the {@link com.google.api.services.alloydb.v1beta.model.Endpoint}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.alloydb.v1beta.model.Endpoint content) {
+            super(CloudAlloyDBAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.alloydb.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Identifier. The name of the endpoint resource with the format: *
+           * projects/{project}/locations/{region}/endpoints/{endpoint_id} where the endpoint ID
+           * segment should satisfy the regex expression `[a-z0-9-]+`. For more details see
+           * https://google.aip.dev/122. The prefix of the endpoint resource name is the name of the
+           * parent resource: * projects/{project}/locations/{region}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Identifier. The name of the endpoint resource with the format: *
+         projects/{project}/locations/{region}/endpoints/{endpoint_id} where the endpoint ID segment should
+         satisfy the regex expression `[a-z0-9-]+`. For more details see https://google.aip.dev/122. The
+         prefix of the endpoint resource name is the name of the parent resource: *
+         projects/{project}/locations/{region}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Identifier. The name of the endpoint resource with the format: *
+           * projects/{project}/locations/{region}/endpoints/{endpoint_id} where the endpoint ID
+           * segment should satisfy the regex expression `[a-z0-9-]+`. For more details see
+           * https://google.aip.dev/122. The prefix of the endpoint resource name is the name of the
+           * parent resource: * projects/{project}/locations/{region}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/endpoints/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, update succeeds even if endpoint is not found. In that case,
+           * a new endpoint is created and `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, update succeeds even if endpoint is not found. In that case, a new
+         endpoint is created and `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, update succeeds even if endpoint is not found. In that case,
+           * a new endpoint is created and `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server ignores the request if it has already
+           * been completed. The server guarantees that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if the original operation with the same request ID was received, and if so,
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server ignores the request if it has already been completed. The
+         server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server ignores the request if it has already
+           * been completed. The server guarantees that for at least 60 minutes since the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * can check if the original operation with the same request ID was received, and if so,
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID with the exception that zero UUID is
+           * not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the Endpoint
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then all fields will be overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the Endpoint resource by
+         the update. The fields specified in the update_mask are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the Endpoint
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then all fields will be overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. If set, the backend validates the request, but doesn't actually execute it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, the backend validates the request, but doesn't actually execute it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set, the backend validates the request, but doesn't actually execute it.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
       }
       /**
        * An accessor for creating requests from the Operations collection.

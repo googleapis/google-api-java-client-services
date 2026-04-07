@@ -19,7 +19,7 @@ package com.google.api.services.alloydb.v1beta.model;
 /**
  * Database resource signal data. This is used to send signals to Condor which are based on the
  * DB/Instance/Fleet level configurations. These will be used to send signals for all inventory
- * types. Next ID: 9
+ * types. Next ID: 10
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -51,6 +51,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalDa
    */
   @com.google.api.client.util.Key
   private String lastRefreshTime;
+
+  /**
+   * Resource location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
 
   /**
    * Database resource id.
@@ -135,6 +142,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalDa
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData setLastRefreshTime(String lastRefreshTime) {
     this.lastRefreshTime = lastRefreshTime;
+    return this;
+  }
+
+  /**
+   * Resource location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Resource location.
+   * @param location location or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

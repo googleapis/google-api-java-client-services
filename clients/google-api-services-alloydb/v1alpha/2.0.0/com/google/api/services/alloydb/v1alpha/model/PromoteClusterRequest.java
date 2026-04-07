@@ -38,6 +38,15 @@ public final class PromoteClusterRequest extends com.google.api.client.json.Gene
   private java.lang.String etag;
 
   /**
+   * Optional. If set, the promote operation will attempt to recreate the original primary cluster
+   * as a secondary cluster when it comes back online. Otherwise, the promoted cluster will be a
+   * standalone cluster. Currently only supported when there is a single secondary cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean failover;
+
+  /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
    * you must retry your request, the server ignores the request if it has already been completed.
    * The server guarantees that for at least 60 minutes since the first request. For example,
@@ -75,6 +84,27 @@ public final class PromoteClusterRequest extends com.google.api.client.json.Gene
    */
   public PromoteClusterRequest setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. If set, the promote operation will attempt to recreate the original primary cluster
+   * as a secondary cluster when it comes back online. Otherwise, the promoted cluster will be a
+   * standalone cluster. Currently only supported when there is a single secondary cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFailover() {
+    return failover;
+  }
+
+  /**
+   * Optional. If set, the promote operation will attempt to recreate the original primary cluster
+   * as a secondary cluster when it comes back online. Otherwise, the promoted cluster will be a
+   * standalone cluster. Currently only supported when there is a single secondary cluster.
+   * @param failover failover or {@code null} for none
+   */
+  public PromoteClusterRequest setFailover(java.lang.Boolean failover) {
+    this.failover = failover;
     return this;
   }
 

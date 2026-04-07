@@ -73,6 +73,13 @@ public final class GoogleCloudContactcenterinsightsV1mainConversationQualityMeta
   private java.lang.String dispositionCode;
 
   /**
+   * The entry subagent's display name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entrySubagentDisplayName;
+
+  /**
    * The agent's location.
    * The value may be {@code null}.
    */
@@ -207,6 +214,23 @@ public final class GoogleCloudContactcenterinsightsV1mainConversationQualityMeta
    */
   public GoogleCloudContactcenterinsightsV1mainConversationQualityMetadataAgentInfo setDispositionCode(java.lang.String dispositionCode) {
     this.dispositionCode = dispositionCode;
+    return this;
+  }
+
+  /**
+   * The entry subagent's display name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntrySubagentDisplayName() {
+    return entrySubagentDisplayName;
+  }
+
+  /**
+   * The entry subagent's display name.
+   * @param entrySubagentDisplayName entrySubagentDisplayName or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainConversationQualityMetadataAgentInfo setEntrySubagentDisplayName(java.lang.String entrySubagentDisplayName) {
+    this.entrySubagentDisplayName = entrySubagentDisplayName;
     return this;
   }
 

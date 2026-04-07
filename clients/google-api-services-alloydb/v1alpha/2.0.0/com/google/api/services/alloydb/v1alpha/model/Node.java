@@ -45,6 +45,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.lang.String ip;
 
   /**
+   * Output only. Indicates whether the node set up to be configured as a hot standby.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isHotStandby;
+
+  /**
    * Output only. Determined by state of the compute VM and postgres-service health. Compute VM
    * state can have values listed in https://cloud.google.com/compute/docs/instances/instance-life-
    * cycle and postgres-service health can have values: HEALTHY and UNHEALTHY.
@@ -91,6 +98,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setIp(java.lang.String ip) {
     this.ip = ip;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether the node set up to be configured as a hot standby.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsHotStandby() {
+    return isHotStandby;
+  }
+
+  /**
+   * Output only. Indicates whether the node set up to be configured as a hot standby.
+   * @param isHotStandby isHotStandby or {@code null} for none
+   */
+  public Node setIsHotStandby(java.lang.Boolean isHotStandby) {
+    this.isHotStandby = isHotStandby;
     return this;
   }
 

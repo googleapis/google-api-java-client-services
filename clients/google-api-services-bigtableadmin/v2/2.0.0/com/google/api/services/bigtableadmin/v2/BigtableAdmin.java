@@ -3297,6 +3297,154 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Gets information about the memory layer of a cluster.
+         *
+         * Create a request for the method "clusters.getMemoryLayer".
+         *
+         * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+         * parameters, call the {@link GetMemoryLayer#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The unique name of the requested cluster's memory layer. Values are of the form
+         *        `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+         * @return the request
+         */
+        public GetMemoryLayer getMemoryLayer(java.lang.String name) throws java.io.IOException {
+          GetMemoryLayer result = new GetMemoryLayer(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetMemoryLayer extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.MemoryLayer> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/clusters/[^/]+/memoryLayer$");
+
+          /**
+           * Gets information about the memory layer of a cluster.
+           *
+           * Create a request for the method "clusters.getMemoryLayer".
+           *
+           * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+           * optional parameters, call the {@link GetMemoryLayer#execute()} method to invoke the remote
+           * operation. <p> {@link GetMemoryLayer#initialize(com.google.api.client.googleapis.services.Abstr
+           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. The unique name of the requested cluster's memory layer. Values are of the form
+         *        `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+           * @since 1.13
+           */
+          protected GetMemoryLayer(java.lang.String name) {
+            super(BigtableAdmin.this, "GET", REST_PATH, null, com.google.api.services.bigtableadmin.v2.model.MemoryLayer.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/clusters/[^/]+/memoryLayer$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetMemoryLayer set$Xgafv(java.lang.String $Xgafv) {
+            return (GetMemoryLayer) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetMemoryLayer setAccessToken(java.lang.String accessToken) {
+            return (GetMemoryLayer) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetMemoryLayer setAlt(java.lang.String alt) {
+            return (GetMemoryLayer) super.setAlt(alt);
+          }
+
+          @Override
+          public GetMemoryLayer setCallback(java.lang.String callback) {
+            return (GetMemoryLayer) super.setCallback(callback);
+          }
+
+          @Override
+          public GetMemoryLayer setFields(java.lang.String fields) {
+            return (GetMemoryLayer) super.setFields(fields);
+          }
+
+          @Override
+          public GetMemoryLayer setKey(java.lang.String key) {
+            return (GetMemoryLayer) super.setKey(key);
+          }
+
+          @Override
+          public GetMemoryLayer setOauthToken(java.lang.String oauthToken) {
+            return (GetMemoryLayer) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetMemoryLayer setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetMemoryLayer) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetMemoryLayer setQuotaUser(java.lang.String quotaUser) {
+            return (GetMemoryLayer) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetMemoryLayer setUploadType(java.lang.String uploadType) {
+            return (GetMemoryLayer) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetMemoryLayer setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetMemoryLayer) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The unique name of the requested cluster's memory layer. Values are of the
+           * form `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The unique name of the requested cluster's memory layer. Values are of the form
+         `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The unique name of the requested cluster's memory layer. Values are of the
+           * form `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+           */
+          public GetMemoryLayer setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/clusters/[^/]+/memoryLayer$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetMemoryLayer set(String parameterName, Object value) {
+            return (GetMemoryLayer) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists information about clusters in an instance.
          *
          * Create a request for the method "clusters.list".
@@ -3777,6 +3925,164 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           @Override
           public Update set(String parameterName, Object value) {
             return (Update) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the memory layer of a cluster. To enable the memory layer, set the memory_config. To
+         * disable the memory layer, unset the memory_config.
+         *
+         * Create a request for the method "clusters.updateMemoryLayer".
+         *
+         * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+         * parameters, call the {@link UpdateMemoryLayer#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Name of the memory layer. This is always:
+         *        "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+         * @param content the {@link com.google.api.services.bigtableadmin.v2.model.MemoryLayer}
+         * @return the request
+         */
+        public UpdateMemoryLayer updateMemoryLayer(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.MemoryLayer content) throws java.io.IOException {
+          UpdateMemoryLayer result = new UpdateMemoryLayer(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateMemoryLayer extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.Operation> {
+
+          private static final String REST_PATH = "v2/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/clusters/[^/]+/memoryLayer$");
+
+          /**
+           * Updates the memory layer of a cluster. To enable the memory layer, set the memory_config. To
+           * disable the memory layer, unset the memory_config.
+           *
+           * Create a request for the method "clusters.updateMemoryLayer".
+           *
+           * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+           * optional parameters, call the {@link UpdateMemoryLayer#execute()} method to invoke the remote
+           * operation. <p> {@link UpdateMemoryLayer#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Identifier. Name of the memory layer. This is always:
+         *        "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+           * @param content the {@link com.google.api.services.bigtableadmin.v2.model.MemoryLayer}
+           * @since 1.13
+           */
+          protected UpdateMemoryLayer(java.lang.String name, com.google.api.services.bigtableadmin.v2.model.MemoryLayer content) {
+            super(BigtableAdmin.this, "PATCH", REST_PATH, content, com.google.api.services.bigtableadmin.v2.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/clusters/[^/]+/memoryLayer$");
+            }
+          }
+
+          @Override
+          public UpdateMemoryLayer set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateMemoryLayer) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateMemoryLayer setAccessToken(java.lang.String accessToken) {
+            return (UpdateMemoryLayer) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateMemoryLayer setAlt(java.lang.String alt) {
+            return (UpdateMemoryLayer) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateMemoryLayer setCallback(java.lang.String callback) {
+            return (UpdateMemoryLayer) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateMemoryLayer setFields(java.lang.String fields) {
+            return (UpdateMemoryLayer) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateMemoryLayer setKey(java.lang.String key) {
+            return (UpdateMemoryLayer) super.setKey(key);
+          }
+
+          @Override
+          public UpdateMemoryLayer setOauthToken(java.lang.String oauthToken) {
+            return (UpdateMemoryLayer) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateMemoryLayer setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateMemoryLayer) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateMemoryLayer setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateMemoryLayer) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateMemoryLayer setUploadType(java.lang.String uploadType) {
+            return (UpdateMemoryLayer) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateMemoryLayer setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateMemoryLayer) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Name of the memory layer. This is always:
+           * "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Name of the memory layer. This is always:
+         "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Name of the memory layer. This is always:
+           * "projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer".
+           */
+          public UpdateMemoryLayer setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/instances/[^/]+/clusters/[^/]+/memoryLayer$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. The list of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. The list of fields to update. */
+          public UpdateMemoryLayer setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateMemoryLayer set(String parameterName, Object value) {
+            return (UpdateMemoryLayer) super.set(parameterName, value);
           }
         }
 
@@ -5615,6 +5921,236 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
              */
             public List setStartTime(String startTime) {
               this.startTime = startTime;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the MemoryLayers collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code BigtableAdmin bigtableadmin = new BigtableAdmin(...);}
+         *   {@code BigtableAdmin.MemoryLayers.List request = bigtableadmin.memoryLayers().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public MemoryLayers memoryLayers() {
+          return new MemoryLayers();
+        }
+
+        /**
+         * The "memoryLayers" collection of methods.
+         */
+        public class MemoryLayers {
+
+          /**
+           * Lists information about memory layers.
+           *
+           * Create a request for the method "memoryLayers.list".
+           *
+           * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The unique name of the cluster for which a list of memory layers is requested. Values are
+           *        of the form `projects/{project}/instances/{instance}/clusters/{cluster}`. Use `{cluster} =
+           *        '-'` to list MemoryLayers for all Clusters in an instance, e.g.,
+           *        `projects/myproject/instances/myinstance/clusters/-`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends BigtableAdminRequest<com.google.api.services.bigtableadmin.v2.model.ListMemoryLayersResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/memoryLayers";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/clusters/[^/]+$");
+
+            /**
+             * Lists information about memory layers.
+             *
+             * Create a request for the method "memoryLayers.list".
+             *
+             * This request holds the parameters needed by the the bigtableadmin server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The unique name of the cluster for which a list of memory layers is requested. Values are
+           *        of the form `projects/{project}/instances/{instance}/clusters/{cluster}`. Use `{cluster} =
+           *        '-'` to list MemoryLayers for all Clusters in an instance, e.g.,
+           *        `projects/myproject/instances/myinstance/clusters/-`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(BigtableAdmin.this, "GET", REST_PATH, null, com.google.api.services.bigtableadmin.v2.model.ListMemoryLayersResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/clusters/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The unique name of the cluster for which a list of memory layers is
+             * requested. Values are of the form
+             * `projects/{project}/instances/{instance}/clusters/{cluster}`. Use `{cluster} = '-'`
+             * to list MemoryLayers for all Clusters in an instance, e.g.,
+             * `projects/myproject/instances/myinstance/clusters/-`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The unique name of the cluster for which a list of memory layers is requested. Values are
+           of the form `projects/{project}/instances/{instance}/clusters/{cluster}`. Use `{cluster} = '-'` to
+           list MemoryLayers for all Clusters in an instance, e.g.,
+           `projects/myproject/instances/myinstance/clusters/-`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The unique name of the cluster for which a list of memory layers is
+             * requested. Values are of the form
+             * `projects/{project}/instances/{instance}/clusters/{cluster}`. Use `{cluster} = '-'`
+             * to list MemoryLayers for all Clusters in an instance, e.g.,
+             * `projects/myproject/instances/myinstance/clusters/-`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/clusters/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of memory layers to return. The service may return fewer
+             * than this value.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of memory layers to return. The service may return fewer than this
+           value.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of memory layers to return. The service may return fewer
+             * than this value.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListMemoryLayers` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListMemoryLayers` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListMemoryLayers` call. Provide this to retrieve
+           the subsequent page. When paginating, all other parameters provided to `ListMemoryLayers` must
+           match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListMemoryLayers` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListMemoryLayers` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
               return this;
             }
 
@@ -13171,10 +13707,14 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
     public class Locations {
 
       /**
-       * Lists information about the supported locations for this service. This method can be called in
-       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-       * public locations as well as private or other locations specifically visible to the project.
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all projects.
+       * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+       * lists locations visible to that specific project. This includes public, private, or other
+       * project-specific locations enabled for the project. For gRPC and client library implementations,
+       * the resource name is passed as the `name` field. For direct service calls, the resource name is
+       * incorporated into the request path based on the specific service implementation and version.
        *
        * Create a request for the method "locations.list".
        *
@@ -13198,10 +13738,15 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service. This method can be called in
-         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
-         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
-         * public locations as well as private or other locations specifically visible to the project.
+         * Lists information about the supported locations for this service. This method lists locations
+         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * locations**: If `name` is empty, the method lists the public locations available to all
+         * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+         * the method lists locations visible to that specific project. This includes public, private, or
+         * other project-specific locations enabled for the project. For gRPC and client library
+         * implementations, the resource name is passed as the `name` field. For direct service calls, the
+         * resource name is incorporated into the request path based on the specific service
+         * implementation and version.
          *
          * Create a request for the method "locations.list".
          *

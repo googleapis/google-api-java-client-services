@@ -106,6 +106,13 @@ public final class Type extends com.google.api.client.json.GenericJson {
   private GoogleBigtableAdminV2TypeGeography geographyType;
 
   /**
+   * Int32
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeInt32 int32Type;
+
+  /**
    * Int64
    * The value may be {@code null}.
    */
@@ -297,6 +304,23 @@ public final class Type extends com.google.api.client.json.GenericJson {
    */
   public Type setGeographyType(GoogleBigtableAdminV2TypeGeography geographyType) {
     this.geographyType = geographyType;
+    return this;
+  }
+
+  /**
+   * Int32
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeInt32 getInt32Type() {
+    return int32Type;
+  }
+
+  /**
+   * Int32
+   * @param int32Type int32Type or {@code null} for none
+   */
+  public Type setInt32Type(GoogleBigtableAdminV2TypeInt32 int32Type) {
+    this.int32Type = int32Type;
     return this;
   }
 

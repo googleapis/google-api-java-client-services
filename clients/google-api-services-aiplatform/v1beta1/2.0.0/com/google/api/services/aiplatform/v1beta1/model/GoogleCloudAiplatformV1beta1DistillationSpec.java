@@ -55,6 +55,14 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   private java.lang.String pipelineRootDirectory;
 
   /**
+   * Optional. Cloud Storage path to file containing prompt dataset for distillation. The dataset
+   * must be formatted as a JSONL file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String promptDatasetUri;
+
+  /**
    * The student model that is being tuned, e.g., "google/gemma-2b-1.1-it". Deprecated. Use
    * base_model instead.
    * The value may be {@code null}.
@@ -150,6 +158,25 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
    */
   public GoogleCloudAiplatformV1beta1DistillationSpec setPipelineRootDirectory(java.lang.String pipelineRootDirectory) {
     this.pipelineRootDirectory = pipelineRootDirectory;
+    return this;
+  }
+
+  /**
+   * Optional. Cloud Storage path to file containing prompt dataset for distillation. The dataset
+   * must be formatted as a JSONL file.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPromptDatasetUri() {
+    return promptDatasetUri;
+  }
+
+  /**
+   * Optional. Cloud Storage path to file containing prompt dataset for distillation. The dataset
+   * must be formatted as a JSONL file.
+   * @param promptDatasetUri promptDatasetUri or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DistillationSpec setPromptDatasetUri(java.lang.String promptDatasetUri) {
+    this.promptDatasetUri = promptDatasetUri;
     return this;
   }
 

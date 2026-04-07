@@ -45,6 +45,13 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
   private java.lang.Double learningRateMultiplier;
 
   /**
+   * Optional. The speed of the tuning job. Only supported for Veo 3.0 models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tuningSpeed;
+
+  /**
    * Optional. The tuning task. Either I2V or T2V.
    * The value may be {@code null}.
    */
@@ -93,6 +100,23 @@ public final class GoogleCloudAiplatformV1beta1VeoHyperParameters extends com.go
    */
   public GoogleCloudAiplatformV1beta1VeoHyperParameters setLearningRateMultiplier(java.lang.Double learningRateMultiplier) {
     this.learningRateMultiplier = learningRateMultiplier;
+    return this;
+  }
+
+  /**
+   * Optional. The speed of the tuning job. Only supported for Veo 3.0 models.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTuningSpeed() {
+    return tuningSpeed;
+  }
+
+  /**
+   * Optional. The speed of the tuning job. Only supported for Veo 3.0 models.
+   * @param tuningSpeed tuningSpeed or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VeoHyperParameters setTuningSpeed(java.lang.String tuningSpeed) {
+    this.tuningSpeed = tuningSpeed;
     return this;
   }
 

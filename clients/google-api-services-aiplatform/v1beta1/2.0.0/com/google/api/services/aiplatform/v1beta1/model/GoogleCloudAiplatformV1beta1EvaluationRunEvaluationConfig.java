@@ -50,6 +50,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig ext
   }
 
   /**
+   * Optional. Specifications for loss analysis. Each config can be specified for one metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1LossAnalysisConfig> lossAnalysisConfig;
+
+  /**
    * Required. The metrics to be calculated in the evaluation run.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig ext
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig setDatasetCustomMetrics(java.util.List<GoogleCloudAiplatformV1beta1DatasetCustomMetric> datasetCustomMetrics) {
     this.datasetCustomMetrics = datasetCustomMetrics;
+    return this;
+  }
+
+  /**
+   * Optional. Specifications for loss analysis. Each config can be specified for one metric.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1LossAnalysisConfig> getLossAnalysisConfig() {
+    return lossAnalysisConfig;
+  }
+
+  /**
+   * Optional. Specifications for loss analysis. Each config can be specified for one metric.
+   * @param lossAnalysisConfig lossAnalysisConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig setLossAnalysisConfig(java.util.List<GoogleCloudAiplatformV1beta1LossAnalysisConfig> lossAnalysisConfig) {
+    this.lossAnalysisConfig = lossAnalysisConfig;
     return this;
   }
 

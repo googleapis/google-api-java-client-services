@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1beta1EvaluationResults extends com.goo
   private java.lang.String evaluationSet;
 
   /**
+   * Output only. The results of the auto-loss analysis performed on the eval set associated with
+   * the run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1LossAnalysisResult> lossAnalysisResults;
+
+  /**
    * Optional. The summary metrics for the evaluation run.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class GoogleCloudAiplatformV1beta1EvaluationResults extends com.goo
    */
   public GoogleCloudAiplatformV1beta1EvaluationResults setEvaluationSet(java.lang.String evaluationSet) {
     this.evaluationSet = evaluationSet;
+    return this;
+  }
+
+  /**
+   * Output only. The results of the auto-loss analysis performed on the eval set associated with
+   * the run.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1LossAnalysisResult> getLossAnalysisResults() {
+    return lossAnalysisResults;
+  }
+
+  /**
+   * Output only. The results of the auto-loss analysis performed on the eval set associated with
+   * the run.
+   * @param lossAnalysisResults lossAnalysisResults or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationResults setLossAnalysisResults(java.util.List<GoogleCloudAiplatformV1beta1LossAnalysisResult> lossAnalysisResults) {
+    this.lossAnalysisResults = lossAnalysisResults;
     return this;
   }
 

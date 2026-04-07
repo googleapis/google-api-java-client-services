@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.google.api.client.json.GenericJson {
 
   /**
+   * Conditioning frames for veo experimental models ONLY, not to be confused with keyframes (ID:31)
+   * in GenerateVideoRequest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame> conditioningFrames;
+
+  /**
    * Human pose parameters for Pose Control
    * The value may be {@code null}.
    */
@@ -72,6 +80,25 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.Float videoTransformStrength;
+
+  /**
+   * Conditioning frames for veo experimental models ONLY, not to be confused with keyframes (ID:31)
+   * in GenerateVideoRequest.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame> getConditioningFrames() {
+    return conditioningFrames;
+  }
+
+  /**
+   * Conditioning frames for veo experimental models ONLY, not to be confused with keyframes (ID:31)
+   * in GenerateVideoRequest.
+   * @param conditioningFrames conditioningFrames or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setConditioningFrames(java.util.List<CloudAiLargeModelsVisionGenerateVideoExperimentsConditioningFrame> conditioningFrames) {
+    this.conditioningFrames = conditioningFrames;
+    return this;
+  }
 
   /**
    * Human pose parameters for Pose Control

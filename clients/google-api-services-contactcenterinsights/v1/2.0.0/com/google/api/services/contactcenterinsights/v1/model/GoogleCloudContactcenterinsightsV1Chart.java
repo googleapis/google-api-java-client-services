@@ -31,6 +31,13 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1Chart extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional action to be taken when the chart is clicked.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1ChartAction action;
+
+  /**
    * Output only. Chart type.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class GoogleCloudContactcenterinsightsV1Chart extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Integer width;
+
+  /**
+   * Optional action to be taken when the chart is clicked.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ChartAction getAction() {
+    return action;
+  }
+
+  /**
+   * Optional action to be taken when the chart is clicked.
+   * @param action action or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Chart setAction(GoogleCloudContactcenterinsightsV1ChartAction action) {
+    this.action = action;
+    return this;
+  }
 
   /**
    * Output only. Chart type.

@@ -255,25 +255,27 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The maximum number of AccountSummary resources to return. The service may return fewer than
-       * this value, even if there are additional pages. If unspecified, at most 50 resources will
-       * be returned. The maximum value is 200; (higher values will be coerced to the maximum)
+       * Optional. The maximum number of AccountSummary resources to return. The service may return
+       * fewer than this value, even if there are additional pages. If unspecified, at most 50
+       * resources will be returned. The maximum value is 200; (higher values will be coerced to the
+       * maximum)
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of AccountSummary resources to return. The service may return fewer than this
-     value, even if there are additional pages. If unspecified, at most 50 resources will be returned.
-     The maximum value is 200; (higher values will be coerced to the maximum)
+      /** Optional. The maximum number of AccountSummary resources to return. The service may return fewer
+     than this value, even if there are additional pages. If unspecified, at most 50 resources will be
+     returned. The maximum value is 200; (higher values will be coerced to the maximum)
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * The maximum number of AccountSummary resources to return. The service may return fewer than
-       * this value, even if there are additional pages. If unspecified, at most 50 resources will
-       * be returned. The maximum value is 200; (higher values will be coerced to the maximum)
+       * Optional. The maximum number of AccountSummary resources to return. The service may return
+       * fewer than this value, even if there are additional pages. If unspecified, at most 50
+       * resources will be returned. The maximum value is 200; (higher values will be coerced to the
+       * maximum)
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -281,24 +283,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * A page token, received from a previous `ListAccountSummaries` call. Provide this to
-       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * Optional. A page token, received from a previous `ListAccountSummaries` call. Provide this
+       * to retrieve the subsequent page. When paginating, all other parameters provided to
        * `ListAccountSummaries` must match the call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** A page token, received from a previous `ListAccountSummaries` call. Provide this to retrieve the
-     subsequent page. When paginating, all other parameters provided to `ListAccountSummaries` must
-     match the call that provided the page token.
+      /** Optional. A page token, received from a previous `ListAccountSummaries` call. Provide this to
+     retrieve the subsequent page. When paginating, all other parameters provided to
+     `ListAccountSummaries` must match the call that provided the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * A page token, received from a previous `ListAccountSummaries` call. Provide this to
-       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * Optional. A page token, received from a previous `ListAccountSummaries` call. Provide this
+       * to retrieve the subsequent page. When paginating, all other parameters provided to
        * `ListAccountSummaries` must match the call that provided the page token.
        */
       public List setPageToken(java.lang.String pageToken) {
@@ -878,25 +880,25 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The maximum number of resources to return. The service may return fewer than this value,
-       * even if there are additional pages. If unspecified, at most 50 resources will be returned.
-       * The maximum value is 200; (higher values will be coerced to the maximum)
+       * Optional. The maximum number of resources to return. The service may return fewer than this
+       * value, even if there are additional pages. If unspecified, at most 50 resources will be
+       * returned. The maximum value is 200; (higher values will be coerced to the maximum)
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of resources to return. The service may return fewer than this value, even if
-     there are additional pages. If unspecified, at most 50 resources will be returned. The maximum
-     value is 200; (higher values will be coerced to the maximum)
+      /** Optional. The maximum number of resources to return. The service may return fewer than this value,
+     even if there are additional pages. If unspecified, at most 50 resources will be returned. The
+     maximum value is 200; (higher values will be coerced to the maximum)
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * The maximum number of resources to return. The service may return fewer than this value,
-       * even if there are additional pages. If unspecified, at most 50 resources will be returned.
-       * The maximum value is 200; (higher values will be coerced to the maximum)
+       * Optional. The maximum number of resources to return. The service may return fewer than this
+       * value, even if there are additional pages. If unspecified, at most 50 resources will be
+       * returned. The maximum value is 200; (higher values will be coerced to the maximum)
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -904,25 +906,25 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * A page token, received from a previous `ListAccounts` call. Provide this to retrieve the
-       * subsequent page. When paginating, all other parameters provided to `ListAccounts` must
-       * match the call that provided the page token.
+       * Optional. A page token, received from a previous `ListAccounts` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListAccounts` must match the call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** A page token, received from a previous `ListAccounts` call. Provide this to retrieve the subsequent
-     page. When paginating, all other parameters provided to `ListAccounts` must match the call that
-     provided the page token.
+      /** Optional. A page token, received from a previous `ListAccounts` call. Provide this to retrieve the
+     subsequent page. When paginating, all other parameters provided to `ListAccounts` must match the
+     call that provided the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * A page token, received from a previous `ListAccounts` call. Provide this to retrieve the
-       * subsequent page. When paginating, all other parameters provided to `ListAccounts` must
-       * match the call that provided the page token.
+       * Optional. A page token, received from a previous `ListAccounts` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListAccounts` must match the call that provided the page token.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -965,7 +967,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the analyticsadmin server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
+     * @param name Identifier. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
      * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaAccount}
      * @return the request
      */
@@ -993,7 +995,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
+       * @param name Identifier. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaAccount}
        * @since 1.13
        */
@@ -1063,20 +1065,20 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output only. Resource name of this account. Format: accounts/{account} Example:
+       * Identifier. Resource name of this account. Format: accounts/{account} Example:
        * "accounts/100"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Output only. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
+      /** Identifier. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Output only. Resource name of this account. Format: accounts/{account} Example:
+       * Identifier. Resource name of this account. Format: accounts/{account} Example:
        * "accounts/100"
        */
       public Patch setName(java.lang.String name) {
@@ -2396,25 +2398,25 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * The maximum number of resources to return. The service may return fewer than this value,
-       * even if there are additional pages. If unspecified, at most 50 resources will be returned.
-       * The maximum value is 200; (higher values will be coerced to the maximum)
+       * Optional. The maximum number of resources to return. The service may return fewer than this
+       * value, even if there are additional pages. If unspecified, at most 50 resources will be
+       * returned. The maximum value is 200; (higher values will be coerced to the maximum)
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of resources to return. The service may return fewer than this value, even if
-     there are additional pages. If unspecified, at most 50 resources will be returned. The maximum
-     value is 200; (higher values will be coerced to the maximum)
+      /** Optional. The maximum number of resources to return. The service may return fewer than this value,
+     even if there are additional pages. If unspecified, at most 50 resources will be returned. The
+     maximum value is 200; (higher values will be coerced to the maximum)
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * The maximum number of resources to return. The service may return fewer than this value,
-       * even if there are additional pages. If unspecified, at most 50 resources will be returned.
-       * The maximum value is 200; (higher values will be coerced to the maximum)
+       * Optional. The maximum number of resources to return. The service may return fewer than this
+       * value, even if there are additional pages. If unspecified, at most 50 resources will be
+       * returned. The maximum value is 200; (higher values will be coerced to the maximum)
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -2422,25 +2424,25 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * A page token, received from a previous `ListProperties` call. Provide this to retrieve the
-       * subsequent page. When paginating, all other parameters provided to `ListProperties` must
-       * match the call that provided the page token.
+       * Optional. A page token, received from a previous `ListProperties` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListProperties` must match the call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** A page token, received from a previous `ListProperties` call. Provide this to retrieve the
-     subsequent page. When paginating, all other parameters provided to `ListProperties` must match the
-     call that provided the page token.
+      /** Optional. A page token, received from a previous `ListProperties` call. Provide this to retrieve
+     the subsequent page. When paginating, all other parameters provided to `ListProperties` must match
+     the call that provided the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * A page token, received from a previous `ListProperties` call. Provide this to retrieve the
-       * subsequent page. When paginating, all other parameters provided to `ListProperties` must
-       * match the call that provided the page token.
+       * Optional. A page token, received from a previous `ListProperties` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided to
+       * `ListProperties` must match the call that provided the page token.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -2483,7 +2485,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the analyticsadmin server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. Resource name of this property. Format: properties/{property_id} Example:
+     * @param name Identifier. Resource name of this property. Format: properties/{property_id} Example:
      *        "properties/1000"
      * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaProperty}
      * @return the request
@@ -2512,7 +2514,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. Resource name of this property. Format: properties/{property_id} Example:
+       * @param name Identifier. Resource name of this property. Format: properties/{property_id} Example:
      *        "properties/1000"
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaProperty}
        * @since 1.13
@@ -2583,13 +2585,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output only. Resource name of this property. Format: properties/{property_id} Example:
+       * Identifier. Resource name of this property. Format: properties/{property_id} Example:
        * "properties/1000"
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Output only. Resource name of this property. Format: properties/{property_id} Example:
+      /** Identifier. Resource name of this property. Format: properties/{property_id} Example:
      "properties/1000"
        */
       public java.lang.String getName() {
@@ -2597,7 +2599,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output only. Resource name of this property. Format: properties/{property_id} Example:
+       * Identifier. Resource name of this property. Format: properties/{property_id} Example:
        * "properties/1000"
        */
       public Patch setName(java.lang.String name) {
@@ -2830,7 +2832,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link UpdateDataRetentionSettings#execute()} method to invoke the
      * remote operation.
      *
-     * @param name Output only. Resource name for this DataRetentionSetting resource. Format:
+     * @param name Identifier. Resource name for this DataRetentionSetting resource. Format:
      *        properties/{property}/dataRetentionSettings
      * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaDataRetentionSettings}
      * @return the request
@@ -2859,7 +2861,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
        * immediately after invoking the constructor. </p>
        *
-       * @param name Output only. Resource name for this DataRetentionSetting resource. Format:
+       * @param name Identifier. Resource name for this DataRetentionSetting resource. Format:
      *        properties/{property}/dataRetentionSettings
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaDataRetentionSettings}
        * @since 1.13
@@ -2930,13 +2932,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output only. Resource name for this DataRetentionSetting resource. Format:
+       * Identifier. Resource name for this DataRetentionSetting resource. Format:
        * properties/{property}/dataRetentionSettings
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Output only. Resource name for this DataRetentionSetting resource. Format:
+      /** Identifier. Resource name for this DataRetentionSetting resource. Format:
      properties/{property}/dataRetentionSettings
        */
       public java.lang.String getName() {
@@ -2944,7 +2946,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output only. Resource name for this DataRetentionSetting resource. Format:
+       * Identifier. Resource name for this DataRetentionSetting resource. Format:
        * properties/{property}/dataRetentionSettings
        */
       public UpdateDataRetentionSettings setName(java.lang.String name) {
@@ -3582,22 +3584,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The maximum number of resources to return. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         * Optional. The maximum number of resources to return. If unspecified, at most 50 resources
+         * will be returned. The maximum value is 200; (higher values will be coerced to the
+         * maximum)
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of resources to return. If unspecified, at most 50 resources will be returned.
-       The maximum value is 200; (higher values will be coerced to the maximum)
+        /** Optional. The maximum number of resources to return. If unspecified, at most 50 resources will be
+       returned. The maximum value is 200; (higher values will be coerced to the maximum)
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of resources to return. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         * Optional. The maximum number of resources to return. If unspecified, at most 50 resources
+         * will be returned. The maximum value is 200; (higher values will be coerced to the
+         * maximum)
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -3605,24 +3609,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * A page token, received from a previous `ListConversionEvents` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListConversionEvents` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListConversionEvents` must match the call that provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListConversionEvents` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListConversionEvents` must
-       match the call that provided the page token.
+        /** Optional. A page token, received from a previous `ListConversionEvents` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListConversionEvents` must match the call that provided the page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * A page token, received from a previous `ListConversionEvents` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListConversionEvents` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListConversionEvents` must match the call that provided the page token.
          */
         public List setPageToken(java.lang.String pageToken) {
@@ -3644,7 +3648,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Output only. Resource name of this conversion event. Format:
+       * @param name Identifier. Resource name of this conversion event. Format:
        *        properties/{property}/conversionEvents/{conversion_event}
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaConversionEvent}
        * @return the request
@@ -3674,7 +3678,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Output only. Resource name of this conversion event. Format:
+         * @param name Identifier. Resource name of this conversion event. Format:
        *        properties/{property}/conversionEvents/{conversion_event}
          * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaConversionEvent}
          * @since 1.13
@@ -3745,13 +3749,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Resource name of this conversion event. Format:
+         * Identifier. Resource name of this conversion event. Format:
          * properties/{property}/conversionEvents/{conversion_event}
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Output only. Resource name of this conversion event. Format:
+        /** Identifier. Resource name of this conversion event. Format:
        properties/{property}/conversionEvents/{conversion_event}
          */
         public java.lang.String getName() {
@@ -3759,7 +3763,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Resource name of this conversion event. Format:
+         * Identifier. Resource name of this conversion event. Format:
          * properties/{property}/conversionEvents/{conversion_event}
          */
         public Patch setName(java.lang.String name) {
@@ -4377,22 +4381,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The maximum number of resources to return. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200 (higher values will be coerced to the maximum).
+         * Optional. The maximum number of resources to return. If unspecified, at most 50 resources
+         * will be returned. The maximum value is 200 (higher values will be coerced to the
+         * maximum).
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of resources to return. If unspecified, at most 50 resources will be returned.
-       The maximum value is 200 (higher values will be coerced to the maximum).
+        /** Optional. The maximum number of resources to return. If unspecified, at most 50 resources will be
+       returned. The maximum value is 200 (higher values will be coerced to the maximum).
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of resources to return. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200 (higher values will be coerced to the maximum).
+         * Optional. The maximum number of resources to return. If unspecified, at most 50 resources
+         * will be returned. The maximum value is 200 (higher values will be coerced to the
+         * maximum).
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -4400,24 +4406,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * A page token, received from a previous `ListCustomDimensions` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListCustomDimensions` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListCustomDimensions` must match the call that provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListCustomDimensions` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListCustomDimensions` must
-       match the call that provided the page token.
+        /** Optional. A page token, received from a previous `ListCustomDimensions` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListCustomDimensions` must match the call that provided the page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * A page token, received from a previous `ListCustomDimensions` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListCustomDimensions` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListCustomDimensions` must match the call that provided the page token.
          */
         public List setPageToken(java.lang.String pageToken) {
@@ -4438,7 +4444,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Output only. Resource name for this CustomDimension resource. Format:
+       * @param name Identifier. Resource name for this CustomDimension resource. Format:
        *        properties/{property}/customDimensions/{customDimension}
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaCustomDimension}
        * @return the request
@@ -4467,7 +4473,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Output only. Resource name for this CustomDimension resource. Format:
+         * @param name Identifier. Resource name for this CustomDimension resource. Format:
        *        properties/{property}/customDimensions/{customDimension}
          * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaCustomDimension}
          * @since 1.13
@@ -4538,13 +4544,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Resource name for this CustomDimension resource. Format:
+         * Identifier. Resource name for this CustomDimension resource. Format:
          * properties/{property}/customDimensions/{customDimension}
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Output only. Resource name for this CustomDimension resource. Format:
+        /** Identifier. Resource name for this CustomDimension resource. Format:
        properties/{property}/customDimensions/{customDimension}
          */
         public java.lang.String getName() {
@@ -4552,7 +4558,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Resource name for this CustomDimension resource. Format:
+         * Identifier. Resource name for this CustomDimension resource. Format:
          * properties/{property}/customDimensions/{customDimension}
          */
         public Patch setName(java.lang.String name) {
@@ -5225,7 +5231,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Output only. Resource name for this CustomMetric resource. Format:
+       * @param name Identifier. Resource name for this CustomMetric resource. Format:
        *        properties/{property}/customMetrics/{customMetric}
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaCustomMetric}
        * @return the request
@@ -5254,7 +5260,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Output only. Resource name for this CustomMetric resource. Format:
+         * @param name Identifier. Resource name for this CustomMetric resource. Format:
        *        properties/{property}/customMetrics/{customMetric}
          * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaCustomMetric}
          * @since 1.13
@@ -5325,13 +5331,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Resource name for this CustomMetric resource. Format:
+         * Identifier. Resource name for this CustomMetric resource. Format:
          * properties/{property}/customMetrics/{customMetric}
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Output only. Resource name for this CustomMetric resource. Format:
+        /** Identifier. Resource name for this CustomMetric resource. Format:
        properties/{property}/customMetrics/{customMetric}
          */
         public java.lang.String getName() {
@@ -5339,7 +5345,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Resource name for this CustomMetric resource. Format:
+         * Identifier. Resource name for this CustomMetric resource. Format:
          * properties/{property}/customMetrics/{customMetric}
          */
         public Patch setName(java.lang.String name) {
@@ -6007,7 +6013,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Output only. Resource name of this Data Stream. Format:
+       * @param name Identifier. Resource name of this Data Stream. Format:
        *        properties/{property_id}/dataStreams/{stream_id} Example:
        *        "properties/1000/dataStreams/2000"
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaDataStream}
@@ -6037,7 +6043,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Output only. Resource name of this Data Stream. Format:
+         * @param name Identifier. Resource name of this Data Stream. Format:
        *        properties/{property_id}/dataStreams/{stream_id} Example:
        *        "properties/1000/dataStreams/2000"
          * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaDataStream}
@@ -6109,14 +6115,14 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Resource name of this Data Stream. Format:
+         * Identifier. Resource name of this Data Stream. Format:
          * properties/{property_id}/dataStreams/{stream_id} Example:
          * "properties/1000/dataStreams/2000"
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Output only. Resource name of this Data Stream. Format:
+        /** Identifier. Resource name of this Data Stream. Format:
        properties/{property_id}/dataStreams/{stream_id} Example: "properties/1000/dataStreams/2000"
          */
         public java.lang.String getName() {
@@ -6124,7 +6130,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Resource name of this Data Stream. Format:
+         * Identifier. Resource name of this Data Stream. Format:
          * properties/{property_id}/dataStreams/{stream_id} Example:
          * "properties/1000/dataStreams/2000"
          */
@@ -6755,22 +6761,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * The maximum number of resources to return. If unspecified, at most 10 resources will be
-           * returned. The maximum value is 10. Higher values will be coerced to the maximum.
+           * Optional. The maximum number of resources to return. If unspecified, at most 10
+           * resources will be returned. The maximum value is 10. Higher values will be coerced to
+           * the maximum.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of resources to return. If unspecified, at most 10 resources will be returned.
-         The maximum value is 10. Higher values will be coerced to the maximum.
+          /** Optional. The maximum number of resources to return. If unspecified, at most 10 resources will be
+         returned. The maximum value is 10. Higher values will be coerced to the maximum.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of resources to return. If unspecified, at most 10 resources will be
-           * returned. The maximum value is 10. Higher values will be coerced to the maximum.
+           * Optional. The maximum number of resources to return. If unspecified, at most 10
+           * resources will be returned. The maximum value is 10. Higher values will be coerced to
+           * the maximum.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -6778,15 +6786,16 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * A page token, received from a previous `ListMeasurementProtocolSecrets` call. Provide
-           * this to retrieve the subsequent page. When paginating, all other parameters provided to
-           * `ListMeasurementProtocolSecrets` must match the call that provided the page token.
+           * Optional. A page token, received from a previous `ListMeasurementProtocolSecrets` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListMeasurementProtocolSecrets` must match the call that provided the page
+           * token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A page token, received from a previous `ListMeasurementProtocolSecrets` call. Provide this to
-         retrieve the subsequent page. When paginating, all other parameters provided to
+          /** Optional. A page token, received from a previous `ListMeasurementProtocolSecrets` call. Provide
+         this to retrieve the subsequent page. When paginating, all other parameters provided to
          `ListMeasurementProtocolSecrets` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
@@ -6794,9 +6803,10 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * A page token, received from a previous `ListMeasurementProtocolSecrets` call. Provide
-           * this to retrieve the subsequent page. When paginating, all other parameters provided to
-           * `ListMeasurementProtocolSecrets` must match the call that provided the page token.
+           * Optional. A page token, received from a previous `ListMeasurementProtocolSecrets` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListMeasurementProtocolSecrets` must match the call that provided the page
+           * token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -6816,7 +6826,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * This request holds the parameters needed by the analyticsadmin server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Resource name of this secret. This secret may be a child of any type of stream. Format:
+         * @param name Identifier. Resource name of this secret. This secret may be a child of any type of stream. Format:
          *        properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProt
          *        ocolSecret}
          * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaMeasurementProtocolSecret}
@@ -6846,7 +6856,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Resource name of this secret. This secret may be a child of any type of stream. Format:
+           * @param name Identifier. Resource name of this secret. This secret may be a child of any type of stream. Format:
          *        properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProt
          *        ocolSecret}
            * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaMeasurementProtocolSecret}
@@ -6918,23 +6928,23 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
           }
 
           /**
-           * Output only. Resource name of this secret. This secret may be a child of any type of
+           * Identifier. Resource name of this secret. This secret may be a child of any type of
            * stream. Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecre
            * ts/{measurementProtocolSecret}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Resource name of this secret. This secret may be a child of any type of stream.
-         Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProto
-         colSecret}
+          /** Identifier. Resource name of this secret. This secret may be a child of any type of stream. Format:
+         properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementProtocolSecre
+         t}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. Resource name of this secret. This secret may be a child of any type of
+           * Identifier. Resource name of this secret. This secret may be a child of any type of
            * stream. Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecre
            * ts/{measurementProtocolSecret}
            */
@@ -7395,25 +7405,25 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The maximum number of resources to return. The service may return fewer than this value,
-         * even if there are additional pages. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         * Optional. The maximum number of resources to return. The service may return fewer than
+         * this value, even if there are additional pages. If unspecified, at most 50 resources will
+         * be returned. The maximum value is 200; (higher values will be coerced to the maximum)
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of resources to return. The service may return fewer than this value, even if
-       there are additional pages. If unspecified, at most 50 resources will be returned. The maximum
-       value is 200; (higher values will be coerced to the maximum)
+        /** Optional. The maximum number of resources to return. The service may return fewer than this value,
+       even if there are additional pages. If unspecified, at most 50 resources will be returned. The
+       maximum value is 200; (higher values will be coerced to the maximum)
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of resources to return. The service may return fewer than this value,
-         * even if there are additional pages. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         * Optional. The maximum number of resources to return. The service may return fewer than
+         * this value, even if there are additional pages. If unspecified, at most 50 resources will
+         * be returned. The maximum value is 200; (higher values will be coerced to the maximum)
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -7421,24 +7431,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * A page token, received from a previous `ListFirebaseLinks` call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListFirebaseLinks` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListFirebaseLinks` must match the call that provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListFirebaseLinks` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListFirebaseLinks` must match
-       the call that provided the page token.
+        /** Optional. A page token, received from a previous `ListFirebaseLinks` call. Provide this to retrieve
+       the subsequent page. When paginating, all other parameters provided to `ListFirebaseLinks` must
+       match the call that provided the page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * A page token, received from a previous `ListFirebaseLinks` call. Provide this to retrieve
-         * the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListFirebaseLinks` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListFirebaseLinks` must match the call that provided the page token.
          */
         public List setPageToken(java.lang.String pageToken) {
@@ -7867,22 +7877,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The maximum number of resources to return. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200 (higher values will be coerced to the maximum).
+         * Optional. The maximum number of resources to return. If unspecified, at most 50 resources
+         * will be returned. The maximum value is 200 (higher values will be coerced to the
+         * maximum).
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of resources to return. If unspecified, at most 50 resources will be returned.
-       The maximum value is 200 (higher values will be coerced to the maximum).
+        /** Optional. The maximum number of resources to return. If unspecified, at most 50 resources will be
+       returned. The maximum value is 200 (higher values will be coerced to the maximum).
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of resources to return. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200 (higher values will be coerced to the maximum).
+         * Optional. The maximum number of resources to return. If unspecified, at most 50 resources
+         * will be returned. The maximum value is 200 (higher values will be coerced to the
+         * maximum).
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -7890,24 +7902,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * A page token, received from a previous `ListGoogleAdsLinks` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListGoogleAdsLinks` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListGoogleAdsLinks` must match the call that provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListGoogleAdsLinks` call. Provide this to retrieve the
-       subsequent page. When paginating, all other parameters provided to `ListGoogleAdsLinks` must match
-       the call that provided the page token.
+        /** Optional. A page token, received from a previous `ListGoogleAdsLinks` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListGoogleAdsLinks` must match the call that provided the page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * A page token, received from a previous `ListGoogleAdsLinks` call. Provide this to
-         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * Optional. A page token, received from a previous `ListGoogleAdsLinks` call. Provide this
+         * to retrieve the subsequent page. When paginating, all other parameters provided to
          * `ListGoogleAdsLinks` must match the call that provided the page token.
          */
         public List setPageToken(java.lang.String pageToken) {
@@ -7928,7 +7940,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
        * This request holds the parameters needed by the analyticsadmin server.  After setting any
        * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note: googleAdsLinkId
+       * @param name Identifier. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note: googleAdsLinkId
        *        is not the Google Ads customer ID.
        * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaGoogleAdsLink}
        * @return the request
@@ -7957,7 +7969,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note: googleAdsLinkId
+         * @param name Identifier. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note: googleAdsLinkId
        *        is not the Google Ads customer ID.
          * @param content the {@link com.google.api.services.analyticsadmin.v1beta.model.GoogleAnalyticsAdminV1betaGoogleAdsLink}
          * @since 1.13
@@ -8028,13 +8040,13 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
+         * Identifier. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
          * googleAdsLinkId is not the Google Ads customer ID.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note: googleAdsLinkId
+        /** Identifier. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note: googleAdsLinkId
        is not the Google Ads customer ID.
          */
         public java.lang.String getName() {
@@ -8042,7 +8054,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
+         * Identifier. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
          * googleAdsLinkId is not the Google Ads customer ID.
          */
         public Patch setName(java.lang.String name) {
@@ -8669,22 +8681,24 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * The maximum number of resources to return. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         * Optional. The maximum number of resources to return. If unspecified, at most 50 resources
+         * will be returned. The maximum value is 200; (higher values will be coerced to the
+         * maximum)
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of resources to return. If unspecified, at most 50 resources will be returned.
-       The maximum value is 200; (higher values will be coerced to the maximum)
+        /** Optional. The maximum number of resources to return. If unspecified, at most 50 resources will be
+       returned. The maximum value is 200; (higher values will be coerced to the maximum)
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of resources to return. If unspecified, at most 50 resources will be
-         * returned. The maximum value is 200; (higher values will be coerced to the maximum)
+         * Optional. The maximum number of resources to return. If unspecified, at most 50 resources
+         * will be returned. The maximum value is 200; (higher values will be coerced to the
+         * maximum)
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -8692,14 +8706,14 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * A page token, received from a previous `ListKeyEvents` call. Provide this to retrieve the
-         * subsequent page. When paginating, all other parameters provided to `ListKeyEvents` must
-         * match the call that provided the page token.
+         * Optional. A page token, received from a previous `ListKeyEvents` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListKeyEvents` must match the call that provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** A page token, received from a previous `ListKeyEvents` call. Provide this to retrieve the
+        /** Optional. A page token, received from a previous `ListKeyEvents` call. Provide this to retrieve the
        subsequent page. When paginating, all other parameters provided to `ListKeyEvents` must match the
        call that provided the page token.
          */
@@ -8708,9 +8722,9 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * A page token, received from a previous `ListKeyEvents` call. Provide this to retrieve the
-         * subsequent page. When paginating, all other parameters provided to `ListKeyEvents` must
-         * match the call that provided the page token.
+         * Optional. A page token, received from a previous `ListKeyEvents` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListKeyEvents` must match the call that provided the page token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

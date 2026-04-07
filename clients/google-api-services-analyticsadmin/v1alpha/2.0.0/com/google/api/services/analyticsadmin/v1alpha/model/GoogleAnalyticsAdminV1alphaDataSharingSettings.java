@@ -31,7 +31,7 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Resource name. Format: accounts/{account}/dataSharingSettings Example:
+   * Identifier. Resource name. Format: accounts/{account}/dataSharingSettings Example:
    * "accounts/1000/dataSharingSettings"
    * The value may be {@code null}.
    */
@@ -86,7 +86,7 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   private java.lang.Boolean sharingWithOthersEnabled;
 
   /**
-   * Output only. Resource name. Format: accounts/{account}/dataSharingSettings Example:
+   * Identifier. Resource name. Format: accounts/{account}/dataSharingSettings Example:
    * "accounts/1000/dataSharingSettings"
    * @return value or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Output only. Resource name. Format: accounts/{account}/dataSharingSettings Example:
+   * Identifier. Resource name. Format: accounts/{account}/dataSharingSettings Example:
    * "accounts/1000/dataSharingSettings"
    * @param name name or {@code null} for none
    */

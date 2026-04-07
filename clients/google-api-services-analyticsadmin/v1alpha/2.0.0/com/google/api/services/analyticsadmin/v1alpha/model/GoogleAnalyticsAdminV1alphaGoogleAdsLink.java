@@ -69,7 +69,7 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
   private java.lang.String customerId;
 
   /**
-   * Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
+   * Identifier. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
    * googleAdsLinkId is not the Google Ads customer ID.
    * The value may be {@code null}.
    */
@@ -175,7 +175,7 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
   }
 
   /**
-   * Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
+   * Identifier. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
    * googleAdsLinkId is not the Google Ads customer ID.
    * @return value or {@code null} for none
    */
@@ -184,7 +184,7 @@ public final class GoogleAnalyticsAdminV1alphaGoogleAdsLink extends com.google.a
   }
 
   /**
-   * Output only. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
+   * Identifier. Format: properties/{propertyId}/googleAdsLinks/{googleAdsLinkId} Note:
    * googleAdsLinkId is not the Google Ads customer ID.
    * @param name name or {@code null} for none
    */

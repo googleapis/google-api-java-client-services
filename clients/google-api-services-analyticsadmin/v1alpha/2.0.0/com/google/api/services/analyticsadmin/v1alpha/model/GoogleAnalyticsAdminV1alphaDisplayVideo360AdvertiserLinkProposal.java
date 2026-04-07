@@ -80,7 +80,7 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkPropo
   private GoogleAnalyticsAdminV1alphaLinkProposalStatusDetails linkProposalStatusDetails;
 
   /**
-   * Output only. The resource name for this DisplayVideo360AdvertiserLinkProposal resource. Format:
+   * Identifier. The resource name for this DisplayVideo360AdvertiserLinkProposal resource. Format:
    * properties/{propertyId}/displayVideo360AdvertiserLinkProposals/{proposalId} Note: proposalId is
    * not the Display & Video 360 Advertiser ID
    * The value may be {@code null}.
@@ -212,7 +212,7 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkPropo
   }
 
   /**
-   * Output only. The resource name for this DisplayVideo360AdvertiserLinkProposal resource. Format:
+   * Identifier. The resource name for this DisplayVideo360AdvertiserLinkProposal resource. Format:
    * properties/{propertyId}/displayVideo360AdvertiserLinkProposals/{proposalId} Note: proposalId is
    * not the Display & Video 360 Advertiser ID
    * @return value or {@code null} for none
@@ -222,7 +222,7 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkPropo
   }
 
   /**
-   * Output only. The resource name for this DisplayVideo360AdvertiserLinkProposal resource. Format:
+   * Identifier. The resource name for this DisplayVideo360AdvertiserLinkProposal resource. Format:
    * properties/{propertyId}/displayVideo360AdvertiserLinkProposals/{proposalId} Note: proposalId is
    * not the Display & Video 360 Advertiser ID
    * @param name name or {@code null} for none

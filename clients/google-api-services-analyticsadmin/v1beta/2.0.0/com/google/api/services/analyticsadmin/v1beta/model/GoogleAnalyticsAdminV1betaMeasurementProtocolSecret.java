@@ -38,7 +38,7 @@ public final class GoogleAnalyticsAdminV1betaMeasurementProtocolSecret extends c
   private java.lang.String displayName;
 
   /**
-   * Output only. Resource name of this secret. This secret may be a child of any type of stream.
+   * Identifier. Resource name of this secret. This secret may be a child of any type of stream.
    * Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementP
    * rotocolSecret}
    * The value may be {@code null}.
@@ -72,7 +72,7 @@ public final class GoogleAnalyticsAdminV1betaMeasurementProtocolSecret extends c
   }
 
   /**
-   * Output only. Resource name of this secret. This secret may be a child of any type of stream.
+   * Identifier. Resource name of this secret. This secret may be a child of any type of stream.
    * Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementP
    * rotocolSecret}
    * @return value or {@code null} for none
@@ -82,7 +82,7 @@ public final class GoogleAnalyticsAdminV1betaMeasurementProtocolSecret extends c
   }
 
   /**
-   * Output only. Resource name of this secret. This secret may be a child of any type of stream.
+   * Identifier. Resource name of this secret. This secret may be a child of any type of stream.
    * Format: properties/{property}/dataStreams/{dataStream}/measurementProtocolSecrets/{measurementP
    * rotocolSecret}
    * @param name name or {@code null} for none

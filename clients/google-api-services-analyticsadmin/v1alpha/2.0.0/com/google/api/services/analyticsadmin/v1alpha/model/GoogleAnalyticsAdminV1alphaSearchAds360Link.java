@@ -74,7 +74,7 @@ public final class GoogleAnalyticsAdminV1alphaSearchAds360Link extends com.googl
   private java.lang.Boolean costDataSharingEnabled;
 
   /**
-   * Output only. The resource name for this SearchAds360Link resource. Format:
+   * Identifier. The resource name for this SearchAds360Link resource. Format:
    * properties/{propertyId}/searchAds360Links/{linkId} Note: linkId is not the Search Ads 360
    * advertiser ID
    * The value may be {@code null}.
@@ -192,7 +192,7 @@ public final class GoogleAnalyticsAdminV1alphaSearchAds360Link extends com.googl
   }
 
   /**
-   * Output only. The resource name for this SearchAds360Link resource. Format:
+   * Identifier. The resource name for this SearchAds360Link resource. Format:
    * properties/{propertyId}/searchAds360Links/{linkId} Note: linkId is not the Search Ads 360
    * advertiser ID
    * @return value or {@code null} for none
@@ -202,7 +202,7 @@ public final class GoogleAnalyticsAdminV1alphaSearchAds360Link extends com.googl
   }
 
   /**
-   * Output only. The resource name for this SearchAds360Link resource. Format:
+   * Identifier. The resource name for this SearchAds360Link resource. Format:
    * properties/{propertyId}/searchAds360Links/{linkId} Note: linkId is not the Search Ads 360
    * advertiser ID
    * @param name name or {@code null} for none

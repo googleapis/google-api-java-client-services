@@ -38,7 +38,7 @@ public final class GoogleAnalyticsAdminV1alphaDataRetentionSettings extends com.
   private java.lang.String eventDataRetention;
 
   /**
-   * Output only. Resource name for this DataRetentionSetting resource. Format:
+   * Identifier. Resource name for this DataRetentionSetting resource. Format:
    * properties/{property}/dataRetentionSettings
    * The value may be {@code null}.
    */
@@ -77,7 +77,7 @@ public final class GoogleAnalyticsAdminV1alphaDataRetentionSettings extends com.
   }
 
   /**
-   * Output only. Resource name for this DataRetentionSetting resource. Format:
+   * Identifier. Resource name for this DataRetentionSetting resource. Format:
    * properties/{property}/dataRetentionSettings
    * @return value or {@code null} for none
    */
@@ -86,7 +86,7 @@ public final class GoogleAnalyticsAdminV1alphaDataRetentionSettings extends com.
   }
 
   /**
-   * Output only. Resource name for this DataRetentionSetting resource. Format:
+   * Identifier. Resource name for this DataRetentionSetting resource. Format:
    * properties/{property}/dataRetentionSettings
    * @param name name or {@code null} for none
    */

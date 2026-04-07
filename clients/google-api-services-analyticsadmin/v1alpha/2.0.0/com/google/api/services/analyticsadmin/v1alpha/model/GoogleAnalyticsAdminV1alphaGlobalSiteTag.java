@@ -32,7 +32,7 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaGlobalSiteTag extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Resource name for this GlobalSiteTag resource. Format:
+   * Identifier. Resource name for this GlobalSiteTag resource. Format:
    * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
    * "properties/123/dataStreams/456/globalSiteTag"
    * The value may be {@code null}.
@@ -49,7 +49,7 @@ public final class GoogleAnalyticsAdminV1alphaGlobalSiteTag extends com.google.a
   private java.lang.String snippet;
 
   /**
-   * Output only. Resource name for this GlobalSiteTag resource. Format:
+   * Identifier. Resource name for this GlobalSiteTag resource. Format:
    * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
    * "properties/123/dataStreams/456/globalSiteTag"
    * @return value or {@code null} for none
@@ -59,7 +59,7 @@ public final class GoogleAnalyticsAdminV1alphaGlobalSiteTag extends com.google.a
   }
 
   /**
-   * Output only. Resource name for this GlobalSiteTag resource. Format:
+   * Identifier. Resource name for this GlobalSiteTag resource. Format:
    * properties/{property_id}/dataStreams/{stream_id}/globalSiteTag Example:
    * "properties/123/dataStreams/456/globalSiteTag"
    * @param name name or {@code null} for none

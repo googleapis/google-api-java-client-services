@@ -60,7 +60,7 @@ public final class GoogleAnalyticsAdminV1alphaDataStream extends com.google.api.
   private GoogleAnalyticsAdminV1alphaDataStreamIosAppStreamData iosAppStreamData;
 
   /**
-   * Output only. Resource name of this Data Stream. Format:
+   * Identifier. Resource name of this Data Stream. Format:
    * properties/{property_id}/dataStreams/{stream_id} Example: "properties/1000/dataStreams/2000"
    * The value may be {@code null}.
    */
@@ -159,7 +159,7 @@ public final class GoogleAnalyticsAdminV1alphaDataStream extends com.google.api.
   }
 
   /**
-   * Output only. Resource name of this Data Stream. Format:
+   * Identifier. Resource name of this Data Stream. Format:
    * properties/{property_id}/dataStreams/{stream_id} Example: "properties/1000/dataStreams/2000"
    * @return value or {@code null} for none
    */
@@ -168,7 +168,7 @@ public final class GoogleAnalyticsAdminV1alphaDataStream extends com.google.api.
   }
 
   /**
-   * Output only. Resource name of this Data Stream. Format:
+   * Identifier. Resource name of this Data Stream. Format:
    * properties/{property_id}/dataStreams/{stream_id} Example: "properties/1000/dataStreams/2000"
    * @param name name or {@code null} for none
    */

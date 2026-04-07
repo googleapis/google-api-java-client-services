@@ -72,7 +72,7 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink exte
   private java.lang.Boolean costDataSharingEnabled;
 
   /**
-   * Output only. The resource name for this DisplayVideo360AdvertiserLink resource. Format:
+   * Identifier. The resource name for this DisplayVideo360AdvertiserLink resource. Format:
    * properties/{propertyId}/displayVideo360AdvertiserLinks/{linkId} Note: linkId is not the Display
    * & Video 360 Advertiser ID
    * The value may be {@code null}.
@@ -178,7 +178,7 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink exte
   }
 
   /**
-   * Output only. The resource name for this DisplayVideo360AdvertiserLink resource. Format:
+   * Identifier. The resource name for this DisplayVideo360AdvertiserLink resource. Format:
    * properties/{propertyId}/displayVideo360AdvertiserLinks/{linkId} Note: linkId is not the Display
    * & Video 360 Advertiser ID
    * @return value or {@code null} for none
@@ -188,7 +188,7 @@ public final class GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink exte
   }
 
   /**
-   * Output only. The resource name for this DisplayVideo360AdvertiserLink resource. Format:
+   * Identifier. The resource name for this DisplayVideo360AdvertiserLink resource. Format:
    * properties/{propertyId}/displayVideo360AdvertiserLinks/{linkId} Note: linkId is not the Display
    * & Video 360 Advertiser ID
    * @param name name or {@code null} for none

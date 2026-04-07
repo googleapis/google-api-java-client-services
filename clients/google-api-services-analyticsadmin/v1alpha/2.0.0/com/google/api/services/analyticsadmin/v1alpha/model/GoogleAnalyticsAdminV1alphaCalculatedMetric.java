@@ -82,7 +82,7 @@ public final class GoogleAnalyticsAdminV1alphaCalculatedMetric extends com.googl
   private java.lang.String metricUnit;
 
   /**
-   * Output only. Resource name for this CalculatedMetric. Format:
+   * Identifier. Resource name for this CalculatedMetric. Format:
    * 'properties/{property_id}/calculatedMetrics/{calculated_metric_id}'
    * The value may be {@code null}.
    */
@@ -217,7 +217,7 @@ public final class GoogleAnalyticsAdminV1alphaCalculatedMetric extends com.googl
   }
 
   /**
-   * Output only. Resource name for this CalculatedMetric. Format:
+   * Identifier. Resource name for this CalculatedMetric. Format:
    * 'properties/{property_id}/calculatedMetrics/{calculated_metric_id}'
    * @return value or {@code null} for none
    */
@@ -226,7 +226,7 @@ public final class GoogleAnalyticsAdminV1alphaCalculatedMetric extends com.googl
   }
 
   /**
-   * Output only. Resource name for this CalculatedMetric. Format:
+   * Identifier. Resource name for this CalculatedMetric. Format:
    * 'properties/{property_id}/calculatedMetrics/{calculated_metric_id}'
    * @param name name or {@code null} for none
    */

@@ -40,7 +40,7 @@ public final class GoogleAnalyticsAdminV1alphaSKAdNetworkConversionValueSchema e
   private java.lang.Boolean applyConversionValues;
 
   /**
-   * Output only. Resource name of the schema. This will be child of ONLY an iOS stream, and there
+   * Identifier. Resource name of the schema. This will be child of ONLY an iOS stream, and there
    * can be at most one such child under an iOS stream. Format:
    * properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
    * The value may be {@code null}.
@@ -101,7 +101,7 @@ public final class GoogleAnalyticsAdminV1alphaSKAdNetworkConversionValueSchema e
   }
 
   /**
-   * Output only. Resource name of the schema. This will be child of ONLY an iOS stream, and there
+   * Identifier. Resource name of the schema. This will be child of ONLY an iOS stream, and there
    * can be at most one such child under an iOS stream. Format:
    * properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
    * @return value or {@code null} for none
@@ -111,7 +111,7 @@ public final class GoogleAnalyticsAdminV1alphaSKAdNetworkConversionValueSchema e
   }
 
   /**
-   * Output only. Resource name of the schema. This will be child of ONLY an iOS stream, and there
+   * Identifier. Resource name of the schema. This will be child of ONLY an iOS stream, and there
    * can be at most one such child under an iOS stream. Format:
    * properties/{property}/dataStreams/{dataStream}/sKAdNetworkConversionValueSchema
    * @param name name or {@code null} for none

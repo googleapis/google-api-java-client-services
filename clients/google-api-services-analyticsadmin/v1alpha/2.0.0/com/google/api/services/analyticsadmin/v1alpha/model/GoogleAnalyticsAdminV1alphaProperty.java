@@ -85,7 +85,7 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   private java.lang.String industryCategory;
 
   /**
-   * Output only. Resource name of this property. Format: properties/{property_id} Example:
+   * Identifier. Resource name of this property. Format: properties/{property_id} Example:
    * "properties/1000"
    * The value may be {@code null}.
    */
@@ -263,7 +263,7 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   }
 
   /**
-   * Output only. Resource name of this property. Format: properties/{property_id} Example:
+   * Identifier. Resource name of this property. Format: properties/{property_id} Example:
    * "properties/1000"
    * @return value or {@code null} for none
    */
@@ -272,7 +272,7 @@ public final class GoogleAnalyticsAdminV1alphaProperty extends com.google.api.cl
   }
 
   /**
-   * Output only. Resource name of this property. Format: properties/{property_id} Example:
+   * Identifier. Resource name of this property. Format: properties/{property_id} Example:
    * "properties/1000"
    * @param name name or {@code null} for none
    */

@@ -47,8 +47,8 @@ public final class GoogleAnalyticsAdminV1betaAccountSummary extends com.google.a
   private java.lang.String displayName;
 
   /**
-   * Resource name for this account summary. Format: accountSummaries/{account_id} Example:
-   * "accountSummaries/1000"
+   * Identifier. Resource name for this account summary. Format: accountSummaries/{account_id}
+   * Example: "accountSummaries/1000"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +98,8 @@ public final class GoogleAnalyticsAdminV1betaAccountSummary extends com.google.a
   }
 
   /**
-   * Resource name for this account summary. Format: accountSummaries/{account_id} Example:
-   * "accountSummaries/1000"
+   * Identifier. Resource name for this account summary. Format: accountSummaries/{account_id}
+   * Example: "accountSummaries/1000"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,8 +107,8 @@ public final class GoogleAnalyticsAdminV1betaAccountSummary extends com.google.a
   }
 
   /**
-   * Resource name for this account summary. Format: accountSummaries/{account_id} Example:
-   * "accountSummaries/1000"
+   * Identifier. Resource name for this account summary. Format: accountSummaries/{account_id}
+   * Example: "accountSummaries/1000"
    * @param name name or {@code null} for none
    */
   public GoogleAnalyticsAdminV1betaAccountSummary setName(java.lang.String name) {

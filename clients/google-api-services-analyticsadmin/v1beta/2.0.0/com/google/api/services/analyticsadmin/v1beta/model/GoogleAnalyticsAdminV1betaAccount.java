@@ -62,7 +62,7 @@ public final class GoogleAnalyticsAdminV1betaAccount extends com.google.api.clie
   private java.lang.String gmpOrganization;
 
   /**
-   * Output only. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
+   * Identifier. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class GoogleAnalyticsAdminV1betaAccount extends com.google.api.clie
   }
 
   /**
-   * Output only. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
+   * Identifier. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -165,7 +165,7 @@ public final class GoogleAnalyticsAdminV1betaAccount extends com.google.api.clie
   }
 
   /**
-   * Output only. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
+   * Identifier. Resource name of this account. Format: accounts/{account} Example: "accounts/100"
    * @param name name or {@code null} for none
    */
   public GoogleAnalyticsAdminV1betaAccount setName(java.lang.String name) {

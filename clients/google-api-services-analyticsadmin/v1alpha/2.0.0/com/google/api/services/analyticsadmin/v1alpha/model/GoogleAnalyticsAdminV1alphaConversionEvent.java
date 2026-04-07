@@ -78,7 +78,7 @@ public final class GoogleAnalyticsAdminV1alphaConversionEvent extends com.google
   private java.lang.String eventName;
 
   /**
-   * Output only. Resource name of this conversion event. Format:
+   * Identifier. Resource name of this conversion event. Format:
    * properties/{property}/conversionEvents/{conversion_event}
    * The value may be {@code null}.
    */
@@ -198,7 +198,7 @@ public final class GoogleAnalyticsAdminV1alphaConversionEvent extends com.google
   }
 
   /**
-   * Output only. Resource name of this conversion event. Format:
+   * Identifier. Resource name of this conversion event. Format:
    * properties/{property}/conversionEvents/{conversion_event}
    * @return value or {@code null} for none
    */
@@ -207,7 +207,7 @@ public final class GoogleAnalyticsAdminV1alphaConversionEvent extends com.google
   }
 
   /**
-   * Output only. Resource name of this conversion event. Format:
+   * Identifier. Resource name of this conversion event. Format:
    * properties/{property}/conversionEvents/{conversion_event}
    * @param name name or {@code null} for none
    */

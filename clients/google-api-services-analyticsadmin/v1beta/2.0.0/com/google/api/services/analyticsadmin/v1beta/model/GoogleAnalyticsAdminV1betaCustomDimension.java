@@ -56,7 +56,7 @@ public final class GoogleAnalyticsAdminV1betaCustomDimension extends com.google.
   private java.lang.String displayName;
 
   /**
-   * Output only. Resource name for this CustomDimension resource. Format:
+   * Identifier. Resource name for this CustomDimension resource. Format:
    * properties/{property}/customDimensions/{customDimension}
    * The value may be {@code null}.
    */
@@ -142,7 +142,7 @@ public final class GoogleAnalyticsAdminV1betaCustomDimension extends com.google.
   }
 
   /**
-   * Output only. Resource name for this CustomDimension resource. Format:
+   * Identifier. Resource name for this CustomDimension resource. Format:
    * properties/{property}/customDimensions/{customDimension}
    * @return value or {@code null} for none
    */
@@ -151,7 +151,7 @@ public final class GoogleAnalyticsAdminV1betaCustomDimension extends com.google.
   }
 
   /**
-   * Output only. Resource name for this CustomDimension resource. Format:
+   * Identifier. Resource name for this CustomDimension resource. Format:
    * properties/{property}/customDimensions/{customDimension}
    * @param name name or {@code null} for none
    */

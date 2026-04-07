@@ -38,7 +38,7 @@ public final class GoogleAnalyticsAdminV1betaFirebaseLink extends com.google.api
   private String createTime;
 
   /**
-   * Output only. Example format: properties/1234/firebaseLinks/5678
+   * Identifier. Example format: properties/1234/firebaseLinks/5678
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class GoogleAnalyticsAdminV1betaFirebaseLink extends com.google.api
   }
 
   /**
-   * Output only. Example format: properties/1234/firebaseLinks/5678
+   * Identifier. Example format: properties/1234/firebaseLinks/5678
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -80,7 +80,7 @@ public final class GoogleAnalyticsAdminV1betaFirebaseLink extends com.google.api
   }
 
   /**
-   * Output only. Example format: properties/1234/firebaseLinks/5678
+   * Identifier. Example format: properties/1234/firebaseLinks/5678
    * @param name name or {@code null} for none
    */
   public GoogleAnalyticsAdminV1betaFirebaseLink setName(java.lang.String name) {

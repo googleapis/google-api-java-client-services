@@ -55,7 +55,7 @@ public final class GoogleAnalyticsAdminV1alphaCustomMetric extends com.google.ap
   private java.lang.String measurementUnit;
 
   /**
-   * Output only. Resource name for this CustomMetric resource. Format:
+   * Identifier. Resource name for this CustomMetric resource. Format:
    * properties/{property}/customMetrics/{customMetric}
    * The value may be {@code null}.
    */
@@ -144,7 +144,7 @@ public final class GoogleAnalyticsAdminV1alphaCustomMetric extends com.google.ap
   }
 
   /**
-   * Output only. Resource name for this CustomMetric resource. Format:
+   * Identifier. Resource name for this CustomMetric resource. Format:
    * properties/{property}/customMetrics/{customMetric}
    * @return value or {@code null} for none
    */
@@ -153,7 +153,7 @@ public final class GoogleAnalyticsAdminV1alphaCustomMetric extends com.google.ap
   }
 
   /**
-   * Output only. Resource name for this CustomMetric resource. Format:
+   * Identifier. Resource name for this CustomMetric resource. Format:
    * properties/{property}/customMetrics/{customMetric}
    * @param name name or {@code null} for none
    */

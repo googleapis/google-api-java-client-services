@@ -39,6 +39,16 @@ public final class AutomatedBackupPolicy extends com.google.api.client.json.Gene
   private String frequency;
 
   /**
+   * Optional. A list of Cloud Bigtable zones where automated backups are allowed to be created. If
+   * empty, automated backups will be created in all zones of the instance. Locations are in the
+   * format `projects/{project}/locations/{zone}`. This field can only set for tables in Enterprise
+   * Plus instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> locations;
+
+  /**
    * Required. How long the automated backups should be retained. Values must be at least 3 days and
    * at most 90 days.
    * The value may be {@code null}.
@@ -62,6 +72,29 @@ public final class AutomatedBackupPolicy extends com.google.api.client.json.Gene
    */
   public AutomatedBackupPolicy setFrequency(String frequency) {
     this.frequency = frequency;
+    return this;
+  }
+
+  /**
+   * Optional. A list of Cloud Bigtable zones where automated backups are allowed to be created. If
+   * empty, automated backups will be created in all zones of the instance. Locations are in the
+   * format `projects/{project}/locations/{zone}`. This field can only set for tables in Enterprise
+   * Plus instances.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLocations() {
+    return locations;
+  }
+
+  /**
+   * Optional. A list of Cloud Bigtable zones where automated backups are allowed to be created. If
+   * empty, automated backups will be created in all zones of the instance. Locations are in the
+   * format `projects/{project}/locations/{zone}`. This field can only set for tables in Enterprise
+   * Plus instances.
+   * @param locations locations or {@code null} for none
+   */
+  public AutomatedBackupPolicy setLocations(java.util.List<java.lang.String> locations) {
+    this.locations = locations;
     return this;
   }
 

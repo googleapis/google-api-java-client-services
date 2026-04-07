@@ -17,7 +17,7 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * Standard options for isolating this app profile's traffic from other use cases.
+ * Rules used to convert to or from lower level types.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation
@@ -28,64 +28,64 @@ package com.google.api.services.bigtableadmin.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class StandardIsolation extends com.google.api.client.json.GenericJson {
+public final class GoogleBigtableAdminV2TypeInt32Encoding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The memory config to use for requests sent using this app profile.
+   * Use `BigEndianBytes` encoding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MemoryConfig memoryConfig;
+  private GoogleBigtableAdminV2TypeInt32EncodingBigEndianBytes bigEndianBytes;
 
   /**
-   * The priority of requests sent using this app profile.
+   * Use `OrderedCodeBytes` encoding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String priority;
+  private GoogleBigtableAdminV2TypeInt32EncodingOrderedCodeBytes orderedCodeBytes;
 
   /**
-   * Optional. The memory config to use for requests sent using this app profile.
+   * Use `BigEndianBytes` encoding.
    * @return value or {@code null} for none
    */
-  public MemoryConfig getMemoryConfig() {
-    return memoryConfig;
+  public GoogleBigtableAdminV2TypeInt32EncodingBigEndianBytes getBigEndianBytes() {
+    return bigEndianBytes;
   }
 
   /**
-   * Optional. The memory config to use for requests sent using this app profile.
-   * @param memoryConfig memoryConfig or {@code null} for none
+   * Use `BigEndianBytes` encoding.
+   * @param bigEndianBytes bigEndianBytes or {@code null} for none
    */
-  public StandardIsolation setMemoryConfig(MemoryConfig memoryConfig) {
-    this.memoryConfig = memoryConfig;
+  public GoogleBigtableAdminV2TypeInt32Encoding setBigEndianBytes(GoogleBigtableAdminV2TypeInt32EncodingBigEndianBytes bigEndianBytes) {
+    this.bigEndianBytes = bigEndianBytes;
     return this;
   }
 
   /**
-   * The priority of requests sent using this app profile.
+   * Use `OrderedCodeBytes` encoding.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPriority() {
-    return priority;
+  public GoogleBigtableAdminV2TypeInt32EncodingOrderedCodeBytes getOrderedCodeBytes() {
+    return orderedCodeBytes;
   }
 
   /**
-   * The priority of requests sent using this app profile.
-   * @param priority priority or {@code null} for none
+   * Use `OrderedCodeBytes` encoding.
+   * @param orderedCodeBytes orderedCodeBytes or {@code null} for none
    */
-  public StandardIsolation setPriority(java.lang.String priority) {
-    this.priority = priority;
+  public GoogleBigtableAdminV2TypeInt32Encoding setOrderedCodeBytes(GoogleBigtableAdminV2TypeInt32EncodingOrderedCodeBytes orderedCodeBytes) {
+    this.orderedCodeBytes = orderedCodeBytes;
     return this;
   }
 
   @Override
-  public StandardIsolation set(String fieldName, Object value) {
-    return (StandardIsolation) super.set(fieldName, value);
+  public GoogleBigtableAdminV2TypeInt32Encoding set(String fieldName, Object value) {
+    return (GoogleBigtableAdminV2TypeInt32Encoding) super.set(fieldName, value);
   }
 
   @Override
-  public StandardIsolation clone() {
-    return (StandardIsolation) super.clone();
+  public GoogleBigtableAdminV2TypeInt32Encoding clone() {
+    return (GoogleBigtableAdminV2TypeInt32Encoding) super.clone();
   }
 
 }

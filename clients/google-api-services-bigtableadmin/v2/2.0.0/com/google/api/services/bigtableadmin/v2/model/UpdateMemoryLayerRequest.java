@@ -17,7 +17,7 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * Standard options for isolating this app profile's traffic from other use cases.
+ * Request message for BigtableInstanceAdmin.UpdateMemoryLayer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation
@@ -28,64 +28,67 @@ package com.google.api.services.bigtableadmin.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class StandardIsolation extends com.google.api.client.json.GenericJson {
+public final class UpdateMemoryLayerRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The memory config to use for requests sent using this app profile.
+   * Required. The memory layer to update. The memory layer's `name` format is as follows:
+   * `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private MemoryConfig memoryConfig;
+  private MemoryLayer memoryLayer;
 
   /**
-   * The priority of requests sent using this app profile.
+   * Optional. The list of fields to update.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String priority;
+  private String updateMask;
 
   /**
-   * Optional. The memory config to use for requests sent using this app profile.
+   * Required. The memory layer to update. The memory layer's `name` format is as follows:
+   * `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
    * @return value or {@code null} for none
    */
-  public MemoryConfig getMemoryConfig() {
-    return memoryConfig;
+  public MemoryLayer getMemoryLayer() {
+    return memoryLayer;
   }
 
   /**
-   * Optional. The memory config to use for requests sent using this app profile.
-   * @param memoryConfig memoryConfig or {@code null} for none
+   * Required. The memory layer to update. The memory layer's `name` format is as follows:
+   * `projects/{project}/instances/{instance}/clusters/{cluster}/memoryLayer`.
+   * @param memoryLayer memoryLayer or {@code null} for none
    */
-  public StandardIsolation setMemoryConfig(MemoryConfig memoryConfig) {
-    this.memoryConfig = memoryConfig;
+  public UpdateMemoryLayerRequest setMemoryLayer(MemoryLayer memoryLayer) {
+    this.memoryLayer = memoryLayer;
     return this;
   }
 
   /**
-   * The priority of requests sent using this app profile.
+   * Optional. The list of fields to update.
    * @return value or {@code null} for none
    */
-  public java.lang.String getPriority() {
-    return priority;
+  public String getUpdateMask() {
+    return updateMask;
   }
 
   /**
-   * The priority of requests sent using this app profile.
-   * @param priority priority or {@code null} for none
+   * Optional. The list of fields to update.
+   * @param updateMask updateMask or {@code null} for none
    */
-  public StandardIsolation setPriority(java.lang.String priority) {
-    this.priority = priority;
+  public UpdateMemoryLayerRequest setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
     return this;
   }
 
   @Override
-  public StandardIsolation set(String fieldName, Object value) {
-    return (StandardIsolation) super.set(fieldName, value);
+  public UpdateMemoryLayerRequest set(String fieldName, Object value) {
+    return (UpdateMemoryLayerRequest) super.set(fieldName, value);
   }
 
   @Override
-  public StandardIsolation clone() {
-    return (StandardIsolation) super.clone();
+  public UpdateMemoryLayerRequest clone() {
+    return (UpdateMemoryLayerRequest) super.clone();
   }
 
 }

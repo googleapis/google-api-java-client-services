@@ -67,7 +67,7 @@ public final class GoogleCloudAiplatformV1Memory extends com.google.api.client.j
   private String expireTime;
 
   /**
-   * Required. Semantic knowledge extracted from the source content.
+   * Optional. Semantic knowledge extracted from the source content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +232,7 @@ public final class GoogleCloudAiplatformV1Memory extends com.google.api.client.j
   }
 
   /**
-   * Required. Semantic knowledge extracted from the source content.
+   * Optional. Semantic knowledge extracted from the source content.
    * @return value or {@code null} for none
    */
   public java.lang.String getFact() {
@@ -240,7 +240,7 @@ public final class GoogleCloudAiplatformV1Memory extends com.google.api.client.j
   }
 
   /**
-   * Required. Semantic knowledge extracted from the source content.
+   * Optional. Semantic knowledge extracted from the source content.
    * @param fact fact or {@code null} for none
    */
   public GoogleCloudAiplatformV1Memory setFact(java.lang.String fact) {

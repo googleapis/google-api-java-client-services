@@ -44,6 +44,13 @@ public final class CloudAiLargeModelsVisionHumanPose extends com.google.api.clie
   private java.lang.String faceLandmarksGcsUri;
 
   /**
+   * GCS URI of the performance mesh to condition video generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String perfMeshGcsUri;
+
+  /**
    * GCS URI of the human pose video to condition video generation.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class CloudAiLargeModelsVisionHumanPose extends com.google.api.clie
    */
   public CloudAiLargeModelsVisionHumanPose setFaceLandmarksGcsUri(java.lang.String faceLandmarksGcsUri) {
     this.faceLandmarksGcsUri = faceLandmarksGcsUri;
+    return this;
+  }
+
+  /**
+   * GCS URI of the performance mesh to condition video generation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPerfMeshGcsUri() {
+    return perfMeshGcsUri;
+  }
+
+  /**
+   * GCS URI of the performance mesh to condition video generation.
+   * @param perfMeshGcsUri perfMeshGcsUri or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionHumanPose setPerfMeshGcsUri(java.lang.String perfMeshGcsUri) {
+    this.perfMeshGcsUri = perfMeshGcsUri;
     return this;
   }
 

@@ -919,6 +919,143 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Searches Agents in a given project and location.
+         *
+         * Create a request for the method "agents.search".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for SearchAgentsRequest. Format: `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.SearchAgentsRequest}
+         * @return the request
+         */
+        public Search search(java.lang.String parent, com.google.api.services.agentregistry.v1alpha.model.SearchAgentsRequest content) throws java.io.IOException {
+          Search result = new Search(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.SearchAgentsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/agents:search";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Searches Agents in a given project and location.
+           *
+           * Create a request for the method "agents.search".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for SearchAgentsRequest. Format: `projects/{project}/locations/{location}`.
+           * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.SearchAgentsRequest}
+           * @since 1.13
+           */
+          protected Search(java.lang.String parent, com.google.api.services.agentregistry.v1alpha.model.SearchAgentsRequest content) {
+            super(AgentRegistry.this, "POST", REST_PATH, content, com.google.api.services.agentregistry.v1alpha.model.SearchAgentsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent value for SearchAgentsRequest. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for SearchAgentsRequest. Format: `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent value for SearchAgentsRequest. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          public Search setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -1682,6 +1819,146 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Searches McpServers in a given project and location.
+         *
+         * Create a request for the method "mcpServers.search".
+         *
+         * This request holds the parameters needed by the agentregistry server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for SearchMcpServersRequest. Format:
+         *        `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.SearchMcpServersRequest}
+         * @return the request
+         */
+        public Search search(java.lang.String parent, com.google.api.services.agentregistry.v1alpha.model.SearchMcpServersRequest content) throws java.io.IOException {
+          Search result = new Search(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends AgentRegistryRequest<com.google.api.services.agentregistry.v1alpha.model.SearchMcpServersResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/mcpServers:search";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Searches McpServers in a given project and location.
+           *
+           * Create a request for the method "mcpServers.search".
+           *
+           * This request holds the parameters needed by the the agentregistry server.  After setting any
+           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for SearchMcpServersRequest. Format:
+         *        `projects/{project}/locations/{location}`.
+           * @param content the {@link com.google.api.services.agentregistry.v1alpha.model.SearchMcpServersRequest}
+           * @since 1.13
+           */
+          protected Search(java.lang.String parent, com.google.api.services.agentregistry.v1alpha.model.SearchMcpServersRequest content) {
+            super(AgentRegistry.this, "POST", REST_PATH, content, com.google.api.services.agentregistry.v1alpha.model.SearchMcpServersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent value for SearchMcpServersRequest. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for SearchMcpServersRequest. Format:
+         `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent value for SearchMcpServersRequest. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          public Search setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
           }
         }
 

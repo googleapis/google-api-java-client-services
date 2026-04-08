@@ -35,8 +35,8 @@ public final class EgressFrom extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of identities that are allowed access through [EgressPolicy]. Identities can be an
-   * individual user, service account, Google group, or third-party identity. For the list of
-   * supported identity types, see https://docs.cloud.google.com/vpc-service-
+   * individual user, service account, Google group, third-party identity, or agent identity. For
+   * the list of supported identity types, see https://docs.cloud.google.com/vpc-service-
    * controls/docs/supported-identities.
    * The value may be {@code null}.
    */
@@ -69,8 +69,8 @@ public final class EgressFrom extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of identities that are allowed access through [EgressPolicy]. Identities can be an
-   * individual user, service account, Google group, or third-party identity. For the list of
-   * supported identity types, see https://docs.cloud.google.com/vpc-service-
+   * individual user, service account, Google group, third-party identity, or agent identity. For
+   * the list of supported identity types, see https://docs.cloud.google.com/vpc-service-
    * controls/docs/supported-identities.
    * @return value or {@code null} for none
    */
@@ -80,8 +80,8 @@ public final class EgressFrom extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of identities that are allowed access through [EgressPolicy]. Identities can be an
-   * individual user, service account, Google group, or third-party identity. For the list of
-   * supported identity types, see https://docs.cloud.google.com/vpc-service-
+   * individual user, service account, Google group, third-party identity, or agent identity. For
+   * the list of supported identity types, see https://docs.cloud.google.com/vpc-service-
    * controls/docs/supported-identities.
    * @param identities identities or {@code null} for none
    */

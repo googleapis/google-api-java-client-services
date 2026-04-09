@@ -6584,6 +6584,164 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
+     * Generates a CSE token which can be used to create or update CSE files.
+     *
+     * Create a request for the method "files.generateCseToken".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link GenerateCseToken#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public GenerateCseToken generateCseToken() throws java.io.IOException {
+      GenerateCseToken result = new GenerateCseToken();
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateCseToken extends DriveRequest<com.google.api.services.drive.model.GenerateCseTokenResponse> {
+
+      private static final String REST_PATH = "files/generateCseToken";
+
+      /**
+       * Generates a CSE token which can be used to create or update CSE files.
+       *
+       * Create a request for the method "files.generateCseToken".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link GenerateCseToken#execute()} method to invoke the remote operation.
+       * <p> {@link GenerateCseToken#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+       * ClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected GenerateCseToken() {
+        super(Drive.this, "GET", REST_PATH, null, com.google.api.services.drive.model.GenerateCseTokenResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GenerateCseToken set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateCseToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateCseToken setAccessToken(java.lang.String accessToken) {
+        return (GenerateCseToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateCseToken setAlt(java.lang.String alt) {
+        return (GenerateCseToken) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateCseToken setCallback(java.lang.String callback) {
+        return (GenerateCseToken) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateCseToken setFields(java.lang.String fields) {
+        return (GenerateCseToken) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateCseToken setKey(java.lang.String key) {
+        return (GenerateCseToken) super.setKey(key);
+      }
+
+      @Override
+      public GenerateCseToken setOauthToken(java.lang.String oauthToken) {
+        return (GenerateCseToken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateCseToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateCseToken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateCseToken setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateCseToken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateCseToken setUploadType(java.lang.String uploadType) {
+        return (GenerateCseToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateCseToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateCseToken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The ID of the file for which the JWT should be generated. If not provided, an id will be
+       * generated.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** The ID of the file for which the JWT should be generated. If not provided, an id will be generated.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /**
+       * The ID of the file for which the JWT should be generated. If not provided, an id will be
+       * generated.
+       */
+      public GenerateCseToken setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /**
+       * The ID of the expected parent of the file. Used when generating a JWT for a new CSE file.
+       * If specified, the parent will be fetched, and if the parent is a shared drive item, the
+       * shared drive's policy will be used to determine the KACLS that should be used. It is
+       * invalid to specify both file_id and parent in a single request.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** The ID of the expected parent of the file. Used when generating a JWT for a new CSE file. If
+     specified, the parent will be fetched, and if the parent is a shared drive item, the shared drive's
+     policy will be used to determine the KACLS that should be used. It is invalid to specify both
+     file_id and parent in a single request.
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * The ID of the expected parent of the file. Used when generating a JWT for a new CSE file.
+       * If specified, the parent will be fetched, and if the parent is a shared drive item, the
+       * shared drive's policy will be used to determine the KACLS that should be used. It is
+       * invalid to specify both file_id and parent in a single request.
+       */
+      public GenerateCseToken setParent(java.lang.String parent) {
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public GenerateCseToken set(String parameterName, Object value) {
+        return (GenerateCseToken) super.set(parameterName, value);
+      }
+    }
+    /**
      * Generates a set of file IDs which can be provided in insert or copy requests.
      *
      * Create a request for the method "files.generateIds".

@@ -2872,7 +2872,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link RegisterGcp#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the developer registration to be created for the merchant account that the GCP
-       *        will be registered with. Format: `accounts/{account}/developerRegistration`
+       *        will be registered with. Format: `accounts/{account}/developerRegistration` The {account}
+       *        used must be the same account where user calling this API method is directly added to.
        * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.RegisterGcpRequest}
        * @return the request
        */
@@ -2903,7 +2904,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the developer registration to be created for the merchant account that the GCP
-       *        will be registered with. Format: `accounts/{account}/developerRegistration`
+       *        will be registered with. Format: `accounts/{account}/developerRegistration` The {account}
+       *        used must be the same account where user calling this API method is directly added to.
          * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.RegisterGcpRequest}
          * @since 1.13
          */
@@ -2975,12 +2977,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The name of the developer registration to be created for the merchant account
          * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
+         * The {account} used must be the same account where user calling this API method is
+         * directly added to.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the developer registration to be created for the merchant account that the
-       GCP will be registered with. Format: `accounts/{account}/developerRegistration`
+       GCP will be registered with. Format: `accounts/{account}/developerRegistration` The {account} used
+       must be the same account where user calling this API method is directly added to.
          */
         public java.lang.String getName() {
           return name;
@@ -2989,6 +2994,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The name of the developer registration to be created for the merchant account
          * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
+         * The {account} used must be the same account where user calling this API method is
+         * directly added to.
          */
         public RegisterGcp setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

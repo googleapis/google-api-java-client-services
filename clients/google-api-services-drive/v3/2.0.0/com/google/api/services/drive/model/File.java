@@ -51,6 +51,15 @@ public final class File extends com.google.api.client.json.GenericJson {
   private Capabilities capabilities;
 
   /**
+   * Client Side Encryption related details. Contains details about the encryption state of the file
+   * and details regarding the encryption mechanism that clients need to use when decrypting the
+   * contents of this item. This will only be present on files and not on folders or shortcuts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ClientEncryptionDetails clientEncryptionDetails;
+
+  /**
    * Additional information about the content of the file. These fields are never populated in
    * responses.
    * The value may be {@code null}.
@@ -462,7 +471,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the
-   * owner may trash a file, and other users cannot see files in the owner's trash.
+   * owner may trash a file, but other users can still access the file in the owner's trash until
+   * it's permanently deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -587,6 +597,27 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setCapabilities(Capabilities capabilities) {
     this.capabilities = capabilities;
+    return this;
+  }
+
+  /**
+   * Client Side Encryption related details. Contains details about the encryption state of the file
+   * and details regarding the encryption mechanism that clients need to use when decrypting the
+   * contents of this item. This will only be present on files and not on folders or shortcuts.
+   * @return value or {@code null} for none
+   */
+  public ClientEncryptionDetails getClientEncryptionDetails() {
+    return clientEncryptionDetails;
+  }
+
+  /**
+   * Client Side Encryption related details. Contains details about the encryption state of the file
+   * and details regarding the encryption mechanism that clients need to use when decrypting the
+   * contents of this item. This will only be present on files and not on folders or shortcuts.
+   * @param clientEncryptionDetails clientEncryptionDetails or {@code null} for none
+   */
+  public File setClientEncryptionDetails(ClientEncryptionDetails clientEncryptionDetails) {
+    this.clientEncryptionDetails = clientEncryptionDetails;
     return this;
   }
 
@@ -1553,7 +1584,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the
-   * owner may trash a file, and other users cannot see files in the owner's trash.
+   * owner may trash a file, but other users can still access the file in the owner's trash until
+   * it's permanently deleted.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTrashed() {
@@ -1562,7 +1594,8 @@ public final class File extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the
-   * owner may trash a file, and other users cannot see files in the owner's trash.
+   * owner may trash a file, but other users can still access the file in the owner's trash until
+   * it's permanently deleted.
    * @param trashed trashed or {@code null} for none
    */
   public File setTrashed(java.lang.Boolean trashed) {

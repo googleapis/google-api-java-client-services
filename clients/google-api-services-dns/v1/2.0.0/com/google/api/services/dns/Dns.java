@@ -4944,22 +4944,23 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Specify a filter expression to view records that exactly match the specified domain. Both
-       * the name and type parameters are not supported when you use filter and must be omitted.
-       * Your filter expression must conform to AIP-160 and you must specify a domain in the name
-       * field. Optionally, you can include the type field to filter records by type. You can also
-       * include the has_suffix function to view records that match by domain suffix. Examples: -
-       * name="example.com." - name="example.com." AND type="A" - name=has_suffix("example.com.") -
-       * name=has_suffix("example.com.") AND type="A"
+       * the `name` and `type` parameters are not supported and must be omitted when you use
+       * `filter`. Your `filter` expression must conform to AIP-160 and you must specify a domain in
+       * the `name` field. Optionally, you can include the `type` field to filter records by type.
+       * You can also include the `has_suffix` function to view records that match by domain suffix.
+       * Examples: * `name`="example.com." * `name`="example.com." AND type="A" *
+       * `name`=`has_suffix`("example.com.") * `name`=`has_suffix`("example.com.") AND type="A"
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Specify a filter expression to view records that exactly match the specified domain. Both the name
-     and type parameters are not supported when you use filter and must be omitted. Your filter
-     expression must conform to AIP-160 and you must specify a domain in the name field. Optionally, you
-     can include the type field to filter records by type. You can also include the has_suffix function
-     to view records that match by domain suffix. Examples: - name="example.com." - name="example.com."
-     AND type="A" - name=has_suffix("example.com.") - name=has_suffix("example.com.") AND type="A"
+      /** Specify a filter expression to view records that exactly match the specified domain. Both the
+     `name` and `type` parameters are not supported and must be omitted when you use `filter`. Your
+     `filter` expression must conform to AIP-160 and you must specify a domain in the `name` field.
+     Optionally, you can include the `type` field to filter records by type. You can also include the
+     `has_suffix` function to view records that match by domain suffix. Examples: *
+     `name`="example.com." * `name`="example.com." AND type="A" * `name`=`has_suffix`("example.com.") *
+     `name`=`has_suffix`("example.com.") AND type="A"
        */
       public java.lang.String getFilter() {
         return filter;
@@ -4967,12 +4968,12 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
 
       /**
        * Specify a filter expression to view records that exactly match the specified domain. Both
-       * the name and type parameters are not supported when you use filter and must be omitted.
-       * Your filter expression must conform to AIP-160 and you must specify a domain in the name
-       * field. Optionally, you can include the type field to filter records by type. You can also
-       * include the has_suffix function to view records that match by domain suffix. Examples: -
-       * name="example.com." - name="example.com." AND type="A" - name=has_suffix("example.com.") -
-       * name=has_suffix("example.com.") AND type="A"
+       * the `name` and `type` parameters are not supported and must be omitted when you use
+       * `filter`. Your `filter` expression must conform to AIP-160 and you must specify a domain in
+       * the `name` field. Optionally, you can include the `type` field to filter records by type.
+       * You can also include the `has_suffix` function to view records that match by domain suffix.
+       * Examples: * `name`="example.com." * `name`="example.com." AND type="A" *
+       * `name`=`has_suffix`("example.com.") * `name`=`has_suffix`("example.com.") AND type="A"
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -5003,22 +5004,22 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Specify a fully qualified domain name to view only those records. The name parameter is not
-       * supported and must be omitted when you use filter.
+       * Specify a fully qualified domain name to view only those records. The `name` parameter is
+       * not supported and must be omitted when you use `filter`.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Specify a fully qualified domain name to view only those records. The name parameter is not
-     supported and must be omitted when you use filter.
+      /** Specify a fully qualified domain name to view only those records. The `name` parameter is not
+     supported and must be omitted when you use `filter`.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Specify a fully qualified domain name to view only those records. The name parameter is not
-       * supported and must be omitted when you use filter.
+       * Specify a fully qualified domain name to view only those records. The `name` parameter is
+       * not supported and must be omitted when you use `filter`.
        */
       public List setName(java.lang.String name) {
         this.name = name;
@@ -5049,22 +5050,22 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
-       * Specify a record type to view only those records. You must also specify the name parameter.
-       * The type parameter is not supported and must be omitted when you use filter.
+       * Specify a record type to view only those records. You must also specify the `name`
+       * parameter. The `type` parameter is not supported and must be omitted when you use `filter`.
        */
       @com.google.api.client.util.Key
       private java.lang.String type;
 
-      /** Specify a record type to view only those records. You must also specify the name parameter. The
-     type parameter is not supported and must be omitted when you use filter.
+      /** Specify a record type to view only those records. You must also specify the `name` parameter. The
+     `type` parameter is not supported and must be omitted when you use `filter`.
        */
       public java.lang.String getType() {
         return type;
       }
 
       /**
-       * Specify a record type to view only those records. You must also specify the name parameter.
-       * The type parameter is not supported and must be omitted when you use filter.
+       * Specify a record type to view only those records. You must also specify the `name`
+       * parameter. The `type` parameter is not supported and must be omitted when you use `filter`.
        */
       public List setType(java.lang.String type) {
         this.type = type;

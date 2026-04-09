@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaAssistAnswerReply extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time when the reply was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Possibly grounded response text or media from the assistant.
    * The value may be {@code null}.
    */
@@ -45,6 +52,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswerReply extends co
    */
   @com.google.api.client.util.Key
   private java.lang.String replyId;
+
+  /**
+   * The time when the reply was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * The time when the reply was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAssistAnswerReply setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Possibly grounded response text or media from the assistant.

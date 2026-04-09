@@ -65,8 +65,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguage
   /**
    * Field names used for location-based filtering, where geolocation filters are detected in
    * natural language search queries. Only valid when the FilterExtractionCondition is set to
-   * `ENABLED`. If this field is set, it overrides the field names set in
-   * ServingConfig.geo_search_query_detection_field_names.
+   * `ENABLED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,8 +149,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguage
   /**
    * Field names used for location-based filtering, where geolocation filters are detected in
    * natural language search queries. Only valid when the FilterExtractionCondition is set to
-   * `ENABLED`. If this field is set, it overrides the field names set in
-   * ServingConfig.geo_search_query_detection_field_names.
+   * `ENABLED`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGeoSearchQueryDetectionFieldNames() {
@@ -161,8 +159,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguage
   /**
    * Field names used for location-based filtering, where geolocation filters are detected in
    * natural language search queries. Only valid when the FilterExtractionCondition is set to
-   * `ENABLED`. If this field is set, it overrides the field names set in
-   * ServingConfig.geo_search_query_detection_field_names.
+   * `ENABLED`.
    * @param geoSearchQueryDetectionFieldNames geoSearchQueryDetectionFieldNames or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec setGeoSearchQueryDetectionFieldNames(java.util.List<java.lang.String> geoSearchQueryDetectionFieldNames) {

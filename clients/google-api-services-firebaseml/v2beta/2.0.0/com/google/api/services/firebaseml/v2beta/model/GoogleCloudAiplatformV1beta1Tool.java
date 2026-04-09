@@ -56,6 +56,14 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1EnterpriseWebSearch enterpriseWebSearch;
 
   /**
+   * Optional. Uses Exa.ai to search for information to answer user queries. The search results will
+   * be grounded on Exa.ai and presented to the model for response generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ToolExaAiSearch exaAiSearch;
+
+  /**
    * Optional. Function tool type. One or more function declarations to be passed to the model along
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
@@ -170,6 +178,25 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Tool setEnterpriseWebSearch(GoogleCloudAiplatformV1beta1EnterpriseWebSearch enterpriseWebSearch) {
     this.enterpriseWebSearch = enterpriseWebSearch;
+    return this;
+  }
+
+  /**
+   * Optional. Uses Exa.ai to search for information to answer user queries. The search results will
+   * be grounded on Exa.ai and presented to the model for response generation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ToolExaAiSearch getExaAiSearch() {
+    return exaAiSearch;
+  }
+
+  /**
+   * Optional. Uses Exa.ai to search for information to answer user queries. The search results will
+   * be grounded on Exa.ai and presented to the model for response generation.
+   * @param exaAiSearch exaAiSearch or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Tool setExaAiSearch(GoogleCloudAiplatformV1beta1ToolExaAiSearch exaAiSearch) {
+    this.exaAiSearch = exaAiSearch;
     return this;
   }
 

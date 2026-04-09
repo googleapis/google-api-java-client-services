@@ -30,6 +30,20 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1RagChunk extends com.google.api.client.json.GenericJson {
 
   /**
+   * The ID of the chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String chunkId;
+
+  /**
+   * The ID of the file that the chunk belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileId;
+
+  /**
    * If populated, represents where the chunk starts and ends in the document.
    * The value may be {@code null}.
    */
@@ -42,6 +56,40 @@ public final class GoogleCloudAiplatformV1beta1RagChunk extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * The ID of the chunk.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChunkId() {
+    return chunkId;
+  }
+
+  /**
+   * The ID of the chunk.
+   * @param chunkId chunkId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagChunk setChunkId(java.lang.String chunkId) {
+    this.chunkId = chunkId;
+    return this;
+  }
+
+  /**
+   * The ID of the file that the chunk belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileId() {
+    return fileId;
+  }
+
+  /**
+   * The ID of the file that the chunk belongs to.
+   * @param fileId fileId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagChunk setFileId(java.lang.String fileId) {
+    this.fileId = fileId;
+    return this;
+  }
 
   /**
    * If populated, represents where the chunk starts and ends in the document.

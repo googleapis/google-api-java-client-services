@@ -54,6 +54,13 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
   private GoogleCloudDataplexV1DataProfileSpecSelectedFields includeFields;
 
   /**
+   * Optional. The execution mode for the profile scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Optional. Actions to take upon job completion..
    * The value may be {@code null}.
    */
@@ -132,6 +139,23 @@ public final class GoogleCloudDataplexV1DataProfileSpec extends com.google.api.c
    */
   public GoogleCloudDataplexV1DataProfileSpec setIncludeFields(GoogleCloudDataplexV1DataProfileSpecSelectedFields includeFields) {
     this.includeFields = includeFields;
+    return this;
+  }
+
+  /**
+   * Optional. The execution mode for the profile scan.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Optional. The execution mode for the profile scan.
+   * @param mode mode or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProfileSpec setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

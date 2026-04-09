@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Lookup Context response.
+ * The Dataplex service agent associated with the user's project.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.dataplex.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudDataplexV1LookupContextResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudDataplexV1ExecutionIdentityDataplexServiceAgent extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Pre-formatted block of text containing the context for the requested resources.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String context;
-
-  /**
-   * Pre-formatted block of text containing the context for the requested resources.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getContext() {
-    return context;
-  }
-
-  /**
-   * Pre-formatted block of text containing the context for the requested resources.
-   * @param context context or {@code null} for none
-   */
-  public GoogleCloudDataplexV1LookupContextResponse setContext(java.lang.String context) {
-    this.context = context;
-    return this;
+  @Override
+  public GoogleCloudDataplexV1ExecutionIdentityDataplexServiceAgent set(String fieldName, Object value) {
+    return (GoogleCloudDataplexV1ExecutionIdentityDataplexServiceAgent) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudDataplexV1LookupContextResponse set(String fieldName, Object value) {
-    return (GoogleCloudDataplexV1LookupContextResponse) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleCloudDataplexV1LookupContextResponse clone() {
-    return (GoogleCloudDataplexV1LookupContextResponse) super.clone();
+  public GoogleCloudDataplexV1ExecutionIdentityDataplexServiceAgent clone() {
+    return (GoogleCloudDataplexV1ExecutionIdentityDataplexServiceAgent) super.clone();
   }
 
 }

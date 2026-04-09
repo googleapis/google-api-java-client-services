@@ -30,7 +30,10 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Allows to configure the context.
+   * Optional. Allows to configure the context.Supported options: format - The format of the context
+   * (one of yaml, xml, json, default is yaml). context_budget - If provided, the output will be
+   * intelligently truncated on a best-effort basis to contain approximately the desired amount of
+   * characters. There is no guarantee to achieve the specific amount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +49,10 @@ public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.
   private java.util.List<java.lang.String> resources;
 
   /**
-   * Optional. Allows to configure the context.
+   * Optional. Allows to configure the context.Supported options: format - The format of the context
+   * (one of yaml, xml, json, default is yaml). context_budget - If provided, the output will be
+   * intelligently truncated on a best-effort basis to contain approximately the desired amount of
+   * characters. There is no guarantee to achieve the specific amount.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getOptions() {
@@ -54,7 +60,10 @@ public final class GoogleCloudDataplexV1LookupContextRequest extends com.google.
   }
 
   /**
-   * Optional. Allows to configure the context.
+   * Optional. Allows to configure the context.Supported options: format - The format of the context
+   * (one of yaml, xml, json, default is yaml). context_budget - If provided, the output will be
+   * intelligently truncated on a best-effort basis to contain approximately the desired amount of
+   * characters. There is no guarantee to achieve the specific amount.
    * @param options options or {@code null} for none
    */
   public GoogleCloudDataplexV1LookupContextRequest setOptions(java.util.Map<String, java.lang.String> options) {

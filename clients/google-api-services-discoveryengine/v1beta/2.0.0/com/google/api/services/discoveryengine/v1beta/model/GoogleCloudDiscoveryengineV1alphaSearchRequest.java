@@ -87,6 +87,13 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec;
 
   /**
+   * Optional. Optional configuration for the Custom Ranking feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestCustomRankingParams customRankingParams;
+
+  /**
    * Specifications that define the specific DataStores to be searched, along with configurations
    * for those data stores. This is only considered for Engines with multiple data stores. For
    * engines with a single data store, the specs directly under SearchRequest should be used.
@@ -112,6 +119,16 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec embeddingSpec;
+
+  /**
+   * Optional. The entity for customers that may run multiple different entities, domains, sites or
+   * regions, for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If
+   * this is set, it should be exactly matched with UserEvent.entity to get search results boosted
+   * by entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entity;
 
   /**
    * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 100
@@ -610,6 +627,23 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
+   * Optional. Optional configuration for the Custom Ranking feature.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestCustomRankingParams getCustomRankingParams() {
+    return customRankingParams;
+  }
+
+  /**
+   * Optional. Optional configuration for the Custom Ranking feature.
+   * @param customRankingParams customRankingParams or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setCustomRankingParams(GoogleCloudDiscoveryengineV1alphaSearchRequestCustomRankingParams customRankingParams) {
+    this.customRankingParams = customRankingParams;
+    return this;
+  }
+
+  /**
    * Specifications that define the specific DataStores to be searched, along with configurations
    * for those data stores. This is only considered for Engines with multiple data stores. For
    * engines with a single data store, the specs directly under SearchRequest should be used.
@@ -669,6 +703,29 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setEmbeddingSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec embeddingSpec) {
     this.embeddingSpec = embeddingSpec;
+    return this;
+  }
+
+  /**
+   * Optional. The entity for customers that may run multiple different entities, domains, sites or
+   * regions, for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If
+   * this is set, it should be exactly matched with UserEvent.entity to get search results boosted
+   * by entity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntity() {
+    return entity;
+  }
+
+  /**
+   * Optional. The entity for customers that may run multiple different entities, domains, sites or
+   * regions, for example, "Google US", "Google Ads", "Waymo", "google.com", "youtube.com", etc. If
+   * this is set, it should be exactly matched with UserEvent.entity to get search results boosted
+   * by entity.
+   * @param entity entity or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setEntity(java.lang.String entity) {
+    this.entity = entity;
     return this;
   }
 

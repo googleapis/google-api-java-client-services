@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswer extends com.google.ap
   private java.lang.String answerText;
 
   /**
-   * List of blob attachments in the answer.
+   * Output only. List of blob attachments in the answer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +173,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswer extends com.google.ap
   }
 
   /**
-   * List of blob attachments in the answer.
+   * Output only. List of blob attachments in the answer.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerBlobAttachment> getBlobAttachments() {
@@ -181,7 +181,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswer extends com.google.ap
   }
 
   /**
-   * List of blob attachments in the answer.
+   * Output only. List of blob attachments in the answer.
    * @param blobAttachments blobAttachments or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswer setBlobAttachments(java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerBlobAttachment> blobAttachments) {

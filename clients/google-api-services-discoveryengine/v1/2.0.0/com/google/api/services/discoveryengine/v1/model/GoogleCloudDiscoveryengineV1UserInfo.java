@@ -30,6 +30,14 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1UserInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Input only. Precise location of the user. It is used in Custom Ranking to calculate
+   * the distance between the user and the relevant documents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1UserInfoPreciseLocation preciseLocation;
+
+  /**
    * Optional. IANA time zone, e.g. Europe/Budapest.
    * The value may be {@code null}.
    */
@@ -58,6 +66,25 @@ public final class GoogleCloudDiscoveryengineV1UserInfo extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
+
+  /**
+   * Optional. Input only. Precise location of the user. It is used in Custom Ranking to calculate
+   * the distance between the user and the relevant documents.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1UserInfoPreciseLocation getPreciseLocation() {
+    return preciseLocation;
+  }
+
+  /**
+   * Optional. Input only. Precise location of the user. It is used in Custom Ranking to calculate
+   * the distance between the user and the relevant documents.
+   * @param preciseLocation preciseLocation or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1UserInfo setPreciseLocation(GoogleCloudDiscoveryengineV1UserInfoPreciseLocation preciseLocation) {
+    this.preciseLocation = preciseLocation;
+    return this;
+  }
 
   /**
    * Optional. IANA time zone, e.g. Europe/Budapest.

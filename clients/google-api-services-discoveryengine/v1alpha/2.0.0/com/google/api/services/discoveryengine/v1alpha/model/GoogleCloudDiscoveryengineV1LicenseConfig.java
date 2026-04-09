@@ -88,6 +88,13 @@ public final class GoogleCloudDiscoveryengineV1LicenseConfig extends com.google.
   private java.lang.String name;
 
   /**
+   * Optional. Scheduled update configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1LicenseConfigScheduledUpdate scheduledUpdate;
+
+  /**
    * Required. The start date.
    * The value may be {@code null}.
    */
@@ -252,6 +259,23 @@ public final class GoogleCloudDiscoveryengineV1LicenseConfig extends com.google.
    */
   public GoogleCloudDiscoveryengineV1LicenseConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Scheduled update configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1LicenseConfigScheduledUpdate getScheduledUpdate() {
+    return scheduledUpdate;
+  }
+
+  /**
+   * Optional. Scheduled update configuration.
+   * @param scheduledUpdate scheduledUpdate or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1LicenseConfig setScheduledUpdate(GoogleCloudDiscoveryengineV1LicenseConfigScheduledUpdate scheduledUpdate) {
+    this.scheduledUpdate = scheduledUpdate;
     return this;
   }
 

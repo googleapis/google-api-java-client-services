@@ -6441,6 +6441,210 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * ServeMcpDeleteRequest serves a MCP DELETE request.
+           *
+           * Create a request for the method "dataConnector.mcp".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Mcp#execute()} method to invoke the remote operation.
+           *
+           * @param projectsId
+           * @param locationsId
+           * @param collectionsId
+           * @return the request
+           */
+          public Mcp mcp(java.lang.String projectsId, java.lang.String locationsId, java.lang.String collectionsId) throws java.io.IOException {
+            Mcp result = new Mcp(projectsId, locationsId, collectionsId);
+            initialize(result);
+            return result;
+          }
+
+          public class Mcp extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleApiHttpBody> {
+
+            private static final String REST_PATH = "v1alpha/projects/{projectsId}/locations/{locationsId}/collections/{collectionsId}/dataConnector/mcp";
+
+            /**
+             * ServeMcpDeleteRequest serves a MCP DELETE request.
+             *
+             * Create a request for the method "dataConnector.mcp".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Mcp#execute()} method to invoke the remote operation. <p>
+             * {@link Mcp#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param projectsId
+             * @param locationsId
+             * @param collectionsId
+             * @since 1.13
+             */
+            protected Mcp(java.lang.String projectsId, java.lang.String locationsId, java.lang.String collectionsId) {
+              super(DiscoveryEngine.this, "DELETE", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleApiHttpBody.class);
+              this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+              this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+              this.collectionsId = com.google.api.client.util.Preconditions.checkNotNull(collectionsId, "Required parameter collectionsId must be specified.");
+            }
+
+            @Override
+            public Mcp set$Xgafv(java.lang.String $Xgafv) {
+              return (Mcp) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Mcp setAccessToken(java.lang.String accessToken) {
+              return (Mcp) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Mcp setAlt(java.lang.String alt) {
+              return (Mcp) super.setAlt(alt);
+            }
+
+            @Override
+            public Mcp setCallback(java.lang.String callback) {
+              return (Mcp) super.setCallback(callback);
+            }
+
+            @Override
+            public Mcp setFields(java.lang.String fields) {
+              return (Mcp) super.setFields(fields);
+            }
+
+            @Override
+            public Mcp setKey(java.lang.String key) {
+              return (Mcp) super.setKey(key);
+            }
+
+            @Override
+            public Mcp setOauthToken(java.lang.String oauthToken) {
+              return (Mcp) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Mcp setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Mcp) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Mcp setQuotaUser(java.lang.String quotaUser) {
+              return (Mcp) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Mcp setUploadType(java.lang.String uploadType) {
+              return (Mcp) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Mcp setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Mcp) super.setUploadProtocol(uploadProtocol);
+            }
+
+            @com.google.api.client.util.Key
+            private java.lang.String projectsId;
+
+            /**
+
+             */
+            public java.lang.String getProjectsId() {
+              return projectsId;
+            }
+
+            public Mcp setProjectsId(java.lang.String projectsId) {
+              this.projectsId = projectsId;
+              return this;
+            }
+
+            @com.google.api.client.util.Key
+            private java.lang.String locationsId;
+
+            /**
+
+             */
+            public java.lang.String getLocationsId() {
+              return locationsId;
+            }
+
+            public Mcp setLocationsId(java.lang.String locationsId) {
+              this.locationsId = locationsId;
+              return this;
+            }
+
+            @com.google.api.client.util.Key
+            private java.lang.String collectionsId;
+
+            /**
+
+             */
+            public java.lang.String getCollectionsId() {
+              return collectionsId;
+            }
+
+            public Mcp setCollectionsId(java.lang.String collectionsId) {
+              this.collectionsId = collectionsId;
+              return this;
+            }
+
+            /** The HTTP Content-Type header value specifying the content type of the body. */
+            @com.google.api.client.util.Key
+            private java.lang.String contentType;
+
+            /** The HTTP Content-Type header value specifying the content type of the body.
+             */
+            public java.lang.String getContentType() {
+              return contentType;
+            }
+
+            /** The HTTP Content-Type header value specifying the content type of the body. */
+            public Mcp setContentType(java.lang.String contentType) {
+              this.contentType = contentType;
+              return this;
+            }
+
+            /** The HTTP request/response body as raw binary. */
+            @com.google.api.client.util.Key
+            private java.lang.String data;
+
+            /** The HTTP request/response body as raw binary.
+             */
+            public java.lang.String getData() {
+              return data;
+            }
+
+            /** The HTTP request/response body as raw binary. */
+            public Mcp setData(java.lang.String data) {
+              this.data = data;
+              return this;
+            }
+
+            /**
+             * Application specific response metadata. Must be set in the first response for
+             * streaming APIs.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.Object> extensions;
+
+            /** Application specific response metadata. Must be set in the first response for streaming APIs.
+             */
+            public java.util.List<java.lang.Object> getExtensions() {
+              return extensions;
+            }
+
+            /**
+             * Application specific response metadata. Must be set in the first response for
+             * streaming APIs.
+             */
+            public Mcp setExtensions(java.util.List<java.lang.Object> extensions) {
+              this.extensions = extensions;
+              return this;
+            }
+
+            @Override
+            public Mcp set(String parameterName, Object value) {
+              return (Mcp) super.set(parameterName, value);
+            }
+          }
+          /**
            * Starts an immediate synchronization process for a DataConnector. Third Party Connector Users must
            * specify which entities should be synced. FHIR Connectors must provide a timestamp to indicate the
            * point in time from which data should be synced.
@@ -17323,8 +17527,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
              *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
              *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+             *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+             *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+             *        configured) This field is used to identify the serving configuration name, set of models
+             *        used to make the search.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
              * @return the request
              */
@@ -17355,8 +17562,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
              *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
              *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+             *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+             *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+             *        configured) This field is used to identify the serving configuration name, set of models
+             *        used to make the search.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
                * @since 1.13
                */
@@ -17429,16 +17639,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The resource name of the Search serving config, such as `projects/locatio
                * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
                * fig`, or `projects/locations/global/collections/default_collection/dataStores/servi
-               * ngConfigs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ngConfigs/default_serving_config`. Or the resource name of the agent engine serving
+               * config, such as: `projects/locations/global/collections/default_collection/engines/
+               * servingConfigs/default_agent_answer`. (use when `enable_agent_invocation` set to
+               * true, and you have custom `AI_MODE` agent engine configured) This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
 
               /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
              tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
-             bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. This field is
-             used to identify the serving configuration name, set of models used to make the search.
+             bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. Or the
+             resource name of the agent engine serving config, such as: `projects/locations/global/collections/d
+             efault_collection/engines/servingConfigs/default_agent_answer`. (use when `enable_agent_invocation`
+             set to true, and you have custom `AI_MODE` agent engine configured) This field is used to identify
+             the serving configuration name, set of models used to make the search.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
@@ -17448,8 +17664,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The resource name of the Search serving config, such as `projects/locatio
                * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
                * fig`, or `projects/locations/global/collections/default_collection/dataStores/servi
-               * ngConfigs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ngConfigs/default_serving_config`. Or the resource name of the agent engine serving
+               * config, such as: `projects/locations/global/collections/default_collection/engines/
+               * servingConfigs/default_agent_answer`. (use when `enable_agent_invocation` set to
+               * true, and you have custom `AI_MODE` agent engine configured) This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               public Answer setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -18785,8 +19004,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
              *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
              *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+             *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+             *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+             *        configured) This field is used to identify the serving configuration name, set of models
+             *        used to make the search.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
              * @return the request
              */
@@ -18818,8 +19040,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
              *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
              *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+             *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+             *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+             *        configured) This field is used to identify the serving configuration name, set of models
+             *        used to make the search.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
                * @since 1.13
                */
@@ -18892,16 +19117,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The resource name of the Search serving config, such as `projects/locatio
                * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
                * fig`, or `projects/locations/global/collections/default_collection/dataStores/servi
-               * ngConfigs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ngConfigs/default_serving_config`. Or the resource name of the agent engine serving
+               * config, such as: `projects/locations/global/collections/default_collection/engines/
+               * servingConfigs/default_agent_answer`. (use when `enable_agent_invocation` set to
+               * true, and you have custom `AI_MODE` agent engine configured) This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
 
               /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
              tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
-             bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. This field is
-             used to identify the serving configuration name, set of models used to make the search.
+             bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. Or the
+             resource name of the agent engine serving config, such as: `projects/locations/global/collections/d
+             efault_collection/engines/servingConfigs/default_agent_answer`. (use when `enable_agent_invocation`
+             set to true, and you have custom `AI_MODE` agent engine configured) This field is used to identify
+             the serving configuration name, set of models used to make the search.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
@@ -18911,8 +19142,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The resource name of the Search serving config, such as `projects/locatio
                * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
                * fig`, or `projects/locations/global/collections/default_collection/dataStores/servi
-               * ngConfigs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ngConfigs/default_serving_config`. Or the resource name of the agent engine serving
+               * config, such as: `projects/locations/global/collections/default_collection/engines/
+               * servingConfigs/default_agent_answer`. (use when `enable_agent_invocation` set to
+               * true, and you have custom `AI_MODE` agent engine configured) This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               public StreamAnswer setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -19086,6 +19320,34 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                       "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataStores/[^/]+$");
                 }
                 this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The ID to use for the session, which will become the final component of
+               * the session's resource name. This value should be 1-63 characters, and valid
+               * characters are /a-z0-9{0,61}[a-z0-9]/. If not specified, a unique ID will be
+               * generated.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String sessionId;
+
+              /** Optional. The ID to use for the session, which will become the final component of the session's
+             resource name. This value should be 1-63 characters, and valid characters are
+             /a-z0-9{0,61}[a-z0-9]/. If not specified, a unique ID will be generated.
+               */
+              public java.lang.String getSessionId() {
+                return sessionId;
+              }
+
+              /**
+               * Optional. The ID to use for the session, which will become the final component of
+               * the session's resource name. This value should be 1-63 characters, and valid
+               * characters are /a-z0-9{0,61}[a-z0-9]/. If not specified, a unique ID will be
+               * generated.
+               */
+              public Create setSessionId(java.lang.String sessionId) {
+                this.sessionId = sessionId;
                 return this;
               }
 
@@ -32768,8 +33030,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
              *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
              *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+             *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+             *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+             *        configured) This field is used to identify the serving configuration name, set of models
+             *        used to make the search.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
              * @return the request
              */
@@ -32800,8 +33065,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
              *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
              *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+             *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+             *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+             *        configured) This field is used to identify the serving configuration name, set of models
+             *        used to make the search.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
                * @since 1.13
                */
@@ -32874,16 +33142,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The resource name of the Search serving config, such as `projects/locatio
                * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
                * fig`, or `projects/locations/global/collections/default_collection/dataStores/servi
-               * ngConfigs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ngConfigs/default_serving_config`. Or the resource name of the agent engine serving
+               * config, such as: `projects/locations/global/collections/default_collection/engines/
+               * servingConfigs/default_agent_answer`. (use when `enable_agent_invocation` set to
+               * true, and you have custom `AI_MODE` agent engine configured) This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
 
               /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
              tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
-             bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. This field is
-             used to identify the serving configuration name, set of models used to make the search.
+             bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. Or the
+             resource name of the agent engine serving config, such as: `projects/locations/global/collections/d
+             efault_collection/engines/servingConfigs/default_agent_answer`. (use when `enable_agent_invocation`
+             set to true, and you have custom `AI_MODE` agent engine configured) This field is used to identify
+             the serving configuration name, set of models used to make the search.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
@@ -32893,8 +33167,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The resource name of the Search serving config, such as `projects/locatio
                * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
                * fig`, or `projects/locations/global/collections/default_collection/dataStores/servi
-               * ngConfigs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ngConfigs/default_serving_config`. Or the resource name of the agent engine serving
+               * config, such as: `projects/locations/global/collections/default_collection/engines/
+               * servingConfigs/default_agent_answer`. (use when `enable_agent_invocation` set to
+               * true, and you have custom `AI_MODE` agent engine configured) This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               public Answer setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -34230,8 +34507,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
              *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
              *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+             *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+             *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+             *        configured) This field is used to identify the serving configuration name, set of models
+             *        used to make the search.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
              * @return the request
              */
@@ -34263,8 +34543,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
              *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
              *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-             *        g`. This field is used to identify the serving configuration name, set of models used to
-             *        make the search.
+             *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+             *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+             *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+             *        configured) This field is used to identify the serving configuration name, set of models
+             *        used to make the search.
                * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
                * @since 1.13
                */
@@ -34337,16 +34620,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The resource name of the Search serving config, such as `projects/locatio
                * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
                * fig`, or `projects/locations/global/collections/default_collection/dataStores/servi
-               * ngConfigs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ngConfigs/default_serving_config`. Or the resource name of the agent engine serving
+               * config, such as: `projects/locations/global/collections/default_collection/engines/
+               * servingConfigs/default_agent_answer`. (use when `enable_agent_invocation` set to
+               * true, and you have custom `AI_MODE` agent engine configured) This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               @com.google.api.client.util.Key
               private java.lang.String servingConfig;
 
               /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
              tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
-             bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. This field is
-             used to identify the serving configuration name, set of models used to make the search.
+             bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. Or the
+             resource name of the agent engine serving config, such as: `projects/locations/global/collections/d
+             efault_collection/engines/servingConfigs/default_agent_answer`. (use when `enable_agent_invocation`
+             set to true, and you have custom `AI_MODE` agent engine configured) This field is used to identify
+             the serving configuration name, set of models used to make the search.
                */
               public java.lang.String getServingConfig() {
                 return servingConfig;
@@ -34356,8 +34645,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                * Required. The resource name of the Search serving config, such as `projects/locatio
                * ns/global/collections/default_collection/engines/servingConfigs/default_serving_con
                * fig`, or `projects/locations/global/collections/default_collection/dataStores/servi
-               * ngConfigs/default_serving_config`. This field is used to identify the serving
-               * configuration name, set of models used to make the search.
+               * ngConfigs/default_serving_config`. Or the resource name of the agent engine serving
+               * config, such as: `projects/locations/global/collections/default_collection/engines/
+               * servingConfigs/default_agent_answer`. (use when `enable_agent_invocation` set to
+               * true, and you have custom `AI_MODE` agent engine configured) This field is used to
+               * identify the serving configuration name, set of models used to make the search.
                */
               public StreamAnswer setServingConfig(java.lang.String servingConfig) {
                 if (!getSuppressPatternChecks()) {
@@ -34531,6 +34823,34 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                       "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
                 }
                 this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The ID to use for the session, which will become the final component of
+               * the session's resource name. This value should be 1-63 characters, and valid
+               * characters are /a-z0-9{0,61}[a-z0-9]/. If not specified, a unique ID will be
+               * generated.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String sessionId;
+
+              /** Optional. The ID to use for the session, which will become the final component of the session's
+             resource name. This value should be 1-63 characters, and valid characters are
+             /a-z0-9{0,61}[a-z0-9]/. If not specified, a unique ID will be generated.
+               */
+              public java.lang.String getSessionId() {
+                return sessionId;
+              }
+
+              /**
+               * Optional. The ID to use for the session, which will become the final component of
+               * the session's resource name. This value should be 1-63 characters, and valid
+               * characters are /a-z0-9{0,61}[a-z0-9]/. If not specified, a unique ID will be
+               * generated.
+               */
+              public Create setSessionId(java.lang.String sessionId) {
+                this.sessionId = sessionId;
                 return this;
               }
 
@@ -46299,8 +46619,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
            *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
            *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-           *        g`. This field is used to identify the serving configuration name, set of models used to
-           *        make the search.
+           *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+           *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+           *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+           *        configured) This field is used to identify the serving configuration name, set of models
+           *        used to make the search.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
            * @return the request
            */
@@ -46331,8 +46654,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
            *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
            *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-           *        g`. This field is used to identify the serving configuration name, set of models used to
-           *        make the search.
+           *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+           *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+           *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+           *        configured) This field is used to identify the serving configuration name, set of models
+           *        used to make the search.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
              * @since 1.13
              */
@@ -46405,16 +46731,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Required. The resource name of the Search serving config, such as `projects/locations
              * /global/collections/default_collection/engines/servingConfigs/default_serving_config`
              * , or `projects/locations/global/collections/default_collection/dataStores/servingConf
-             * igs/default_serving_config`. This field is used to identify the serving configuration
-             * name, set of models used to make the search.
+             * igs/default_serving_config`. Or the resource name of the agent engine serving config,
+             * such as: `projects/locations/global/collections/default_collection/engines/servingCon
+             * figs/default_agent_answer`. (use when `enable_agent_invocation` set to true, and you
+             * have custom `AI_MODE` agent engine configured) This field is used to identify the
+             * serving configuration name, set of models used to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String servingConfig;
 
             /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
            tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
-           bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. This field is
-           used to identify the serving configuration name, set of models used to make the search.
+           bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. Or the
+           resource name of the agent engine serving config, such as: `projects/locations/global/collections/d
+           efault_collection/engines/servingConfigs/default_agent_answer`. (use when `enable_agent_invocation`
+           set to true, and you have custom `AI_MODE` agent engine configured) This field is used to identify
+           the serving configuration name, set of models used to make the search.
              */
             public java.lang.String getServingConfig() {
               return servingConfig;
@@ -46424,8 +46756,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Required. The resource name of the Search serving config, such as `projects/locations
              * /global/collections/default_collection/engines/servingConfigs/default_serving_config`
              * , or `projects/locations/global/collections/default_collection/dataStores/servingConf
-             * igs/default_serving_config`. This field is used to identify the serving configuration
-             * name, set of models used to make the search.
+             * igs/default_serving_config`. Or the resource name of the agent engine serving config,
+             * such as: `projects/locations/global/collections/default_collection/engines/servingCon
+             * figs/default_agent_answer`. (use when `enable_agent_invocation` set to true, and you
+             * have custom `AI_MODE` agent engine configured) This field is used to identify the
+             * serving configuration name, set of models used to make the search.
              */
             public Answer setServingConfig(java.lang.String servingConfig) {
               if (!getSuppressPatternChecks()) {
@@ -47761,8 +48096,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
            *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
            *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-           *        g`. This field is used to identify the serving configuration name, set of models used to
-           *        make the search.
+           *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+           *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+           *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+           *        configured) This field is used to identify the serving configuration name, set of models
+           *        used to make the search.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
            * @return the request
            */
@@ -47794,8 +48132,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * @param servingConfig Required. The resource name of the Search serving config, such as `projects/locations/global/collect
            *        ions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locat
            *        ions/global/collections/default_collection/dataStores/servingConfigs/default_serving_confi
-           *        g`. This field is used to identify the serving configuration name, set of models used to
-           *        make the search.
+           *        g`. Or the resource name of the agent engine serving config, such as: `projects/locations/
+           *        global/collections/default_collection/engines/servingConfigs/default_agent_answer`. (use
+           *        when `enable_agent_invocation` set to true, and you have custom `AI_MODE` agent engine
+           *        configured) This field is used to identify the serving configuration name, set of models
+           *        used to make the search.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest}
              * @since 1.13
              */
@@ -47868,16 +48209,22 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Required. The resource name of the Search serving config, such as `projects/locations
              * /global/collections/default_collection/engines/servingConfigs/default_serving_config`
              * , or `projects/locations/global/collections/default_collection/dataStores/servingConf
-             * igs/default_serving_config`. This field is used to identify the serving configuration
-             * name, set of models used to make the search.
+             * igs/default_serving_config`. Or the resource name of the agent engine serving config,
+             * such as: `projects/locations/global/collections/default_collection/engines/servingCon
+             * figs/default_agent_answer`. (use when `enable_agent_invocation` set to true, and you
+             * have custom `AI_MODE` agent engine configured) This field is used to identify the
+             * serving configuration name, set of models used to make the search.
              */
             @com.google.api.client.util.Key
             private java.lang.String servingConfig;
 
             /** Required. The resource name of the Search serving config, such as `projects/locations/global/collec
            tions/default_collection/engines/servingConfigs/default_serving_config`, or `projects/locations/glo
-           bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. This field is
-           used to identify the serving configuration name, set of models used to make the search.
+           bal/collections/default_collection/dataStores/servingConfigs/default_serving_config`. Or the
+           resource name of the agent engine serving config, such as: `projects/locations/global/collections/d
+           efault_collection/engines/servingConfigs/default_agent_answer`. (use when `enable_agent_invocation`
+           set to true, and you have custom `AI_MODE` agent engine configured) This field is used to identify
+           the serving configuration name, set of models used to make the search.
              */
             public java.lang.String getServingConfig() {
               return servingConfig;
@@ -47887,8 +48234,11 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Required. The resource name of the Search serving config, such as `projects/locations
              * /global/collections/default_collection/engines/servingConfigs/default_serving_config`
              * , or `projects/locations/global/collections/default_collection/dataStores/servingConf
-             * igs/default_serving_config`. This field is used to identify the serving configuration
-             * name, set of models used to make the search.
+             * igs/default_serving_config`. Or the resource name of the agent engine serving config,
+             * such as: `projects/locations/global/collections/default_collection/engines/servingCon
+             * figs/default_agent_answer`. (use when `enable_agent_invocation` set to true, and you
+             * have custom `AI_MODE` agent engine configured) This field is used to identify the
+             * serving configuration name, set of models used to make the search.
              */
             public StreamAnswer setServingConfig(java.lang.String servingConfig) {
               if (!getSuppressPatternChecks()) {
@@ -48062,6 +48412,32 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                     "^projects/[^/]+/locations/[^/]+/dataStores/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. The ID to use for the session, which will become the final component of the
+             * session's resource name. This value should be 1-63 characters, and valid characters
+             * are /a-z0-9{0,61}[a-z0-9]/. If not specified, a unique ID will be generated.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String sessionId;
+
+            /** Optional. The ID to use for the session, which will become the final component of the session's
+           resource name. This value should be 1-63 characters, and valid characters are
+           /a-z0-9{0,61}[a-z0-9]/. If not specified, a unique ID will be generated.
+             */
+            public java.lang.String getSessionId() {
+              return sessionId;
+            }
+
+            /**
+             * Optional. The ID to use for the session, which will become the final component of the
+             * session's resource name. This value should be 1-63 characters, and valid characters
+             * are /a-z0-9{0,61}[a-z0-9]/. If not specified, a unique ID will be generated.
+             */
+            public Create setSessionId(java.lang.String sessionId) {
+              this.sessionId = sessionId;
               return this;
             }
 
@@ -61765,6 +62141,46 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                     "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
+             * * `user_principal` * Examples: * `license_assignment_state = ASSIGNED` to list
+             * assigned user licenses. * `license_assignment_state = NO_LICENSE` to list not
+             * licensed users. * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list
+             * users who attempted login but no license assigned. * `license_assignment_state !=
+             * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
+             * assigned. * `user_principal = user1@abc.com` to list user license for
+             * `user1@abc.com`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter for the list request. Supported fields: * `license_assignment_state` *
+           `user_principal` * Examples: * `license_assignment_state = ASSIGNED` to list assigned user
+           licenses. * `license_assignment_state = NO_LICENSE` to list not licensed users. *
+           `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted login but no
+           license assigned. * `license_assignment_state != NO_LICENSE_ATTEMPTED_LOGIN` to filter out users
+           who attempted login but no license assigned. * `user_principal = user1@abc.com` to list user
+           license for `user1@abc.com`.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
+             * * `user_principal` * Examples: * `license_assignment_state = ASSIGNED` to list
+             * assigned user licenses. * `license_assignment_state = NO_LICENSE` to list not
+             * licensed users. * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list
+             * users who attempted login but no license assigned. * `license_assignment_state !=
+             * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
+             * assigned. * `user_principal = user1@abc.com` to list user license for
+             * `user1@abc.com`.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
               return this;
             }
 

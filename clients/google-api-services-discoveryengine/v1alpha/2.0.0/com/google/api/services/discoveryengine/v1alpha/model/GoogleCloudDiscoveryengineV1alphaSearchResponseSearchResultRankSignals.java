@@ -72,6 +72,14 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResultRa
   private java.lang.Float pctrRank;
 
   /**
+   * Optional. A list of precomputed expression results for a given document, in the same order as
+   * requested in `SearchRequest.custom_ranking_params.expressions_to_precompute`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Float> precomputedExpressionValues;
+
+  /**
    * Optional. Semantic relevance adjustment.
    * The value may be {@code null}.
    */
@@ -191,6 +199,25 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResultRa
    */
   public GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResultRankSignals setPctrRank(java.lang.Float pctrRank) {
     this.pctrRank = pctrRank;
+    return this;
+  }
+
+  /**
+   * Optional. A list of precomputed expression results for a given document, in the same order as
+   * requested in `SearchRequest.custom_ranking_params.expressions_to_precompute`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Float> getPrecomputedExpressionValues() {
+    return precomputedExpressionValues;
+  }
+
+  /**
+   * Optional. A list of precomputed expression results for a given document, in the same order as
+   * requested in `SearchRequest.custom_ranking_params.expressions_to_precompute`.
+   * @param precomputedExpressionValues precomputedExpressionValues or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchResponseSearchResultRankSignals setPrecomputedExpressionValues(java.util.List<java.lang.Float> precomputedExpressionValues) {
+    this.precomputedExpressionValues = precomputedExpressionValues;
     return this;
   }
 

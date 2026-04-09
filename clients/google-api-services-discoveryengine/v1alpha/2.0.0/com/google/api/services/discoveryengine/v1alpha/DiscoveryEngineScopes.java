@@ -35,6 +35,9 @@ public class DiscoveryEngineScopes {
   /** View, edit, create, and delete all your data associated with any Discovery Engine API product, such as Agentspace, Vertex AI Search, or NotebookLM Enterprise, including both end user data and administration or configuration data.. */
   public static final String DISCOVERYENGINE_READWRITE = "https://www.googleapis.com/auth/discoveryengine.readwrite";
 
+  /** Interact with Discovery Engine API products, such as Agentspace, Vertex AI Search, or NotebookLM Enterprise, on your behalf. It will also allow the app to view all data that you have access to when you use or interact with a Discovery Engine API product.. */
+  public static final String DISCOVERYENGINE_SERVING_READWRITE = "https://www.googleapis.com/auth/discoveryengine.serving.readwrite";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -46,6 +49,7 @@ public class DiscoveryEngineScopes {
     set.add(CLOUD_SEARCH_QUERY);
     set.add(DISCOVERYENGINE_ASSIST_READWRITE);
     set.add(DISCOVERYENGINE_READWRITE);
+    set.add(DISCOVERYENGINE_SERVING_READWRITE);
     return java.util.Collections.unmodifiableSet(set);
   }
 

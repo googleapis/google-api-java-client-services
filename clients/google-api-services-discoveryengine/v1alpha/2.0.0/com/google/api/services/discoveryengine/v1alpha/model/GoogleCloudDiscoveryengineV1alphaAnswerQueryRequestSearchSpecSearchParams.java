@@ -39,7 +39,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   private GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec boostSpec;
 
   /**
-   * Custom fine tuning configs.
+   * Optional. Custom fine tuning configs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +126,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   }
 
   /**
-   * Custom fine tuning configs.
+   * Optional. Custom fine tuning configs.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec getCustomFineTuningSpec() {
@@ -134,7 +134,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpec
   }
 
   /**
-   * Custom fine tuning configs.
+   * Optional. Custom fine tuning configs.
    * @param customFineTuningSpec customFineTuningSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestSearchSpecSearchParams setCustomFineTuningSpec(GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec) {

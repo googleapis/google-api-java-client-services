@@ -17,7 +17,8 @@
 package com.google.api.services.mybusinessbusinessinformation.v1.model;
 
 /**
- * Represents a location that was modified by Google.
+ * Represents the view of a location as it appears to consumers, which includes updates that are
+ * currently serving on Google Maps and Search.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the My Business Business Information API. For a detailed
@@ -31,7 +32,9 @@ package com.google.api.services.mybusinessbusinessinformation.v1.model;
 public final class GoogleUpdatedLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fields that Google updated.
+   * The fields where the values in the view as it appears to consumers are different than the
+   * merchant's information. To accept these changes, patch the location. To reject, patch with your
+   * preferred values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,14 +48,18 @@ public final class GoogleUpdatedLocation extends com.google.api.client.json.Gene
   private Location location;
 
   /**
-   * The fields that have pending edits that haven't yet been pushed to Maps and Search.
+   * The fields where the merchant has provided an update that is currently in flight and hasn't yet
+   * been published to Maps and Search. This mask only tracks the status of the merchant's own
+   * edits, not external changes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String pendingMask;
 
   /**
-   * The fields that Google updated.
+   * The fields where the values in the view as it appears to consumers are different than the
+   * merchant's information. To accept these changes, patch the location. To reject, patch with your
+   * preferred values.
    * @return value or {@code null} for none
    */
   public String getDiffMask() {
@@ -60,7 +67,9 @@ public final class GoogleUpdatedLocation extends com.google.api.client.json.Gene
   }
 
   /**
-   * The fields that Google updated.
+   * The fields where the values in the view as it appears to consumers are different than the
+   * merchant's information. To accept these changes, patch the location. To reject, patch with your
+   * preferred values.
    * @param diffMask diffMask or {@code null} for none
    */
   public GoogleUpdatedLocation setDiffMask(String diffMask) {
@@ -86,7 +95,9 @@ public final class GoogleUpdatedLocation extends com.google.api.client.json.Gene
   }
 
   /**
-   * The fields that have pending edits that haven't yet been pushed to Maps and Search.
+   * The fields where the merchant has provided an update that is currently in flight and hasn't yet
+   * been published to Maps and Search. This mask only tracks the status of the merchant's own
+   * edits, not external changes.
    * @return value or {@code null} for none
    */
   public String getPendingMask() {
@@ -94,7 +105,9 @@ public final class GoogleUpdatedLocation extends com.google.api.client.json.Gene
   }
 
   /**
-   * The fields that have pending edits that haven't yet been pushed to Maps and Search.
+   * The fields where the merchant has provided an update that is currently in flight and hasn't yet
+   * been published to Maps and Search. This mask only tracks the status of the merchant's own
+   * edits, not external changes.
    * @param pendingMask pendingMask or {@code null} for none
    */
   public GoogleUpdatedLocation setPendingMask(String pendingMask) {

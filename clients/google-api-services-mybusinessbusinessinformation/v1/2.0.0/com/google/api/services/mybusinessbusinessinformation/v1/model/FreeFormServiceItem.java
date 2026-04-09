@@ -18,8 +18,8 @@ package com.google.api.services.mybusinessbusinessinformation.v1.model;
 
 /**
  * Represents a free-form service offered by the merchant. These are services that are not exposed
- * as part of our structure service data. The merchant manually enters the names for of such
- * services via a geomerchant surface.
+ * as part of our structure service data. The merchant manually enters the names for such services
+ * using a geomerchant surface.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the My Business Business Information API. For a detailed
@@ -44,7 +44,7 @@ public final class FreeFormServiceItem extends com.google.api.client.json.Generi
   /**
    * Required. Language-tagged labels for the item. We recommend that item names be 140 characters
    * or less, and descriptions 250 characters or less. This field should only be set if the input is
-   * a custom service item. Standardized service types should be updated via service_type_id.
+   * a custom service item. Standardized service types should be updated using service_type_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class FreeFormServiceItem extends com.google.api.client.json.Generi
   /**
    * Required. Language-tagged labels for the item. We recommend that item names be 140 characters
    * or less, and descriptions 250 characters or less. This field should only be set if the input is
-   * a custom service item. Standardized service types should be updated via service_type_id.
+   * a custom service item. Standardized service types should be updated using service_type_id.
    * @return value or {@code null} for none
    */
   public Label getLabel() {
@@ -84,7 +84,7 @@ public final class FreeFormServiceItem extends com.google.api.client.json.Generi
   /**
    * Required. Language-tagged labels for the item. We recommend that item names be 140 characters
    * or less, and descriptions 250 characters or less. This field should only be set if the input is
-   * a custom service item. Standardized service types should be updated via service_type_id.
+   * a custom service item. Standardized service types should be updated using service_type_id.
    * @param label label or {@code null} for none
    */
   public FreeFormServiceItem setLabel(Label label) {

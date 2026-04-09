@@ -90,7 +90,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Indicates whether the place ID associated with this location has updates that need
    * to be updated or rejected by the client. If this boolean is set, you should call the
-   * `getGoogleUpdated` method to lookup information that's needs to be verified.
+   * `getGoogleUpdated` method to look up information that's needs to be verified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,7 +284,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Indicates whether the place ID associated with this location has updates that need
    * to be updated or rejected by the client. If this boolean is set, you should call the
-   * `getGoogleUpdated` method to lookup information that's needs to be verified.
+   * `getGoogleUpdated` method to look up information that's needs to be verified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHasGoogleUpdated() {
@@ -294,7 +294,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   /**
    * Output only. Indicates whether the place ID associated with this location has updates that need
    * to be updated or rejected by the client. If this boolean is set, you should call the
-   * `getGoogleUpdated` method to lookup information that's needs to be verified.
+   * `getGoogleUpdated` method to look up information that's needs to be verified.
    * @param hasGoogleUpdated hasGoogleUpdated or {@code null} for none
    */
   public Metadata setHasGoogleUpdated(java.lang.Boolean hasGoogleUpdated) {

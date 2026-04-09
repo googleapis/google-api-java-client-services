@@ -4276,7 +4276,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Fetch upgrade information of a specific nodepool.
+           * Fetch upgrade information of a specific node pool.
            *
            * Create a request for the method "nodePools.fetchNodePoolUpgradeInfo".
            *
@@ -4284,7 +4284,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link FetchNodePoolUpgradeInfo#execute()} method to invoke the remote
            * operation.
            *
-           * @param name Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+           * @param name Required. The name (project, location, cluster, node pool) of the node pool to get. Specified in the
            *        format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
            * @return the request
            */
@@ -4302,7 +4302,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
 
             /**
-             * Fetch upgrade information of a specific nodepool.
+             * Fetch upgrade information of a specific node pool.
              *
              * Create a request for the method "nodePools.fetchNodePoolUpgradeInfo".
              *
@@ -4312,7 +4312,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+             * @param name Required. The name (project, location, cluster, node pool) of the node pool to get. Specified in the
            *        format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
              * @since 1.13
              */
@@ -4392,22 +4392,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. The name (project, location, cluster, nodepool) of the nodepool to get.
+             * Required. The name (project, location, cluster, node pool) of the node pool to get.
              * Specified in the format `projects/locations/clusters/nodePools` or
              * `projects/zones/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
-           format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
+            /** Required. The name (project, location, cluster, node pool) of the node pool to get. Specified in
+           the format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name (project, location, cluster, nodepool) of the nodepool to get.
+             * Required. The name (project, location, cluster, node pool) of the node pool to get.
              * Specified in the format `projects/locations/clusters/nodePools` or
              * `projects/zones/clusters/nodePools`.
              */
@@ -10758,7 +10758,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
-           * Fetch upgrade information of a specific nodepool.
+           * Fetch upgrade information of a specific node pool.
            *
            * Create a request for the method "nodePools.fetchNodePoolUpgradeInfo".
            *
@@ -10766,7 +10766,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
            * parameters, call the {@link FetchNodePoolUpgradeInfo#execute()} method to invoke the remote
            * operation.
            *
-           * @param name Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+           * @param name Required. The name (project, location, cluster, node pool) of the node pool to get. Specified in the
            *        format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
            * @return the request
            */
@@ -10784,7 +10784,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
                 java.util.regex.Pattern.compile("^projects/[^/]+/zones/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
 
             /**
-             * Fetch upgrade information of a specific nodepool.
+             * Fetch upgrade information of a specific node pool.
              *
              * Create a request for the method "nodePools.fetchNodePoolUpgradeInfo".
              *
@@ -10794,7 +10794,7 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
              * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
              * immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+             * @param name Required. The name (project, location, cluster, node pool) of the node pool to get. Specified in the
            *        format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
              * @since 1.13
              */
@@ -10874,22 +10874,22 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             }
 
             /**
-             * Required. The name (project, location, cluster, nodepool) of the nodepool to get.
+             * Required. The name (project, location, cluster, node pool) of the node pool to get.
              * Specified in the format `projects/locations/clusters/nodePools` or
              * `projects/zones/clusters/nodePools`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
-           format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
+            /** Required. The name (project, location, cluster, node pool) of the node pool to get. Specified in
+           the format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name (project, location, cluster, nodepool) of the nodepool to get.
+             * Required. The name (project, location, cluster, node pool) of the node pool to get.
              * Specified in the format `projects/locations/clusters/nodePools` or
              * `projects/zones/clusters/nodePools`.
              */

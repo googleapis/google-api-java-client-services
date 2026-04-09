@@ -312,7 +312,14 @@ public class IDS extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all projects.
+       * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+       * lists locations visible to that specific project. This includes public, private, or other
+       * project-specific locations enabled for the project. For gRPC and client library implementations,
+       * the resource name is passed as the `name` field. For direct service calls, the resource name is
+       * incorporated into the request path based on the specific service implementation and version.
        *
        * Create a request for the method "locations.list".
        *
@@ -336,7 +343,15 @@ public class IDS extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method lists locations
+         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * locations**: If `name` is empty, the method lists the public locations available to all
+         * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+         * the method lists locations visible to that specific project. This includes public, private, or
+         * other project-specific locations enabled for the project. For gRPC and client library
+         * implementations, the resource name is passed as the `name` field. For direct service calls, the
+         * resource name is incorporated into the request path based on the specific service
+         * implementation and version.
          *
          * Create a request for the method "locations.list".
          *

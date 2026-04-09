@@ -2686,22 +2686,22 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * If set to true and the process is not found, the request succeeds but the server
-           * doesn't perform any actions.
+           * Optional. If set to true and the process is not found, the request succeeds but the
+           * server doesn't perform any actions.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean allowMissing;
 
-          /** If set to true and the process is not found, the request succeeds but the server doesn't perform
-         any actions.
+          /** Optional. If set to true and the process is not found, the request succeeds but the server doesn't
+         perform any actions.
            */
           public java.lang.Boolean getAllowMissing() {
             return allowMissing;
           }
 
           /**
-           * If set to true and the process is not found, the request succeeds but the server
-           * doesn't perform any actions.
+           * Optional. If set to true and the process is not found, the request succeeds but the
+           * server doesn't perform any actions.
            */
           public Delete setAllowMissing(java.lang.Boolean allowMissing) {
             this.allowMissing = allowMissing;
@@ -2991,25 +2991,25 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The maximum number of processes to return. The service may return fewer than this
-           * value. If unspecified, at most 50 processes are returned. The maximum value is 100;
-           * values greater than 100 are cut to 100.
+           * Optional. The maximum number of processes to return. The service may return fewer than
+           * this value. If unspecified, at most 50 processes are returned. The maximum value is
+           * 100; values greater than 100 are cut to 100.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of processes to return. The service may return fewer than this value. If
-         unspecified, at most 50 processes are returned. The maximum value is 100; values greater than 100
-         are cut to 100.
+          /** Optional. The maximum number of processes to return. The service may return fewer than this value.
+         If unspecified, at most 50 processes are returned. The maximum value is 100; values greater than
+         100 are cut to 100.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * The maximum number of processes to return. The service may return fewer than this
-           * value. If unspecified, at most 50 processes are returned. The maximum value is 100;
-           * values greater than 100 are cut to 100.
+           * Optional. The maximum number of processes to return. The service may return fewer than
+           * this value. If unspecified, at most 50 processes are returned. The maximum value is
+           * 100; values greater than 100 are cut to 100.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -3017,25 +3017,25 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
           }
 
           /**
-           * The page token received from a previous `ListProcesses` call. Specify it to get the
-           * next page. When paginating, all other parameters specified in this call must match the
-           * parameters of the call that provided the page token.
+           * Optional. The page token received from a previous `ListProcesses` call. Specify it to
+           * get the next page. When paginating, all other parameters specified in this call must
+           * match the parameters of the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The page token received from a previous `ListProcesses` call. Specify it to get the next page. When
-         paginating, all other parameters specified in this call must match the parameters of the call that
-         provided the page token.
+          /** Optional. The page token received from a previous `ListProcesses` call. Specify it to get the next
+         page. When paginating, all other parameters specified in this call must match the parameters of the
+         call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * The page token received from a previous `ListProcesses` call. Specify it to get the
-           * next page. When paginating, all other parameters specified in this call must match the
-           * parameters of the call that provided the page token.
+           * Optional. The page token received from a previous `ListProcesses` call. Specify it to
+           * get the next page. When paginating, all other parameters specified in this call must
+           * match the parameters of the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -3192,17 +3192,17 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
-          /** If set to true and the process is not found, the request inserts it. */
+          /** Optional. If set to true and the process is not found, the request inserts it. */
           @com.google.api.client.util.Key
           private java.lang.Boolean allowMissing;
 
-          /** If set to true and the process is not found, the request inserts it.
+          /** Optional. If set to true and the process is not found, the request inserts it.
            */
           public java.lang.Boolean getAllowMissing() {
             return allowMissing;
           }
 
-          /** If set to true and the process is not found, the request inserts it. */
+          /** Optional. If set to true and the process is not found, the request inserts it. */
           public Patch setAllowMissing(java.lang.Boolean allowMissing) {
             this.allowMissing = allowMissing;
             return this;
@@ -3233,17 +3233,23 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
             return this;
           }
 
-          /** The list of fields to update. Currently not used. The whole message is updated. */
+          /**
+           * Optional. The list of fields to update. Currently not used. The whole message is
+           * updated.
+           */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** The list of fields to update. Currently not used. The whole message is updated.
+          /** Optional. The list of fields to update. Currently not used. The whole message is updated.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** The list of fields to update. Currently not used. The whole message is updated. */
+          /**
+           * Optional. The list of fields to update. Currently not used. The whole message is
+           * updated.
+           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;
@@ -3556,22 +3562,22 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * If set to true and the run is not found, the request succeeds but the server doesn't
-             * perform any actions.
+             * Optional. If set to true and the run is not found, the request succeeds but the
+             * server doesn't perform any actions.
              */
             @com.google.api.client.util.Key
             private java.lang.Boolean allowMissing;
 
-            /** If set to true and the run is not found, the request succeeds but the server doesn't perform any
-           actions.
+            /** Optional. If set to true and the run is not found, the request succeeds but the server doesn't
+           perform any actions.
              */
             public java.lang.Boolean getAllowMissing() {
               return allowMissing;
             }
 
             /**
-             * If set to true and the run is not found, the request succeeds but the server doesn't
-             * perform any actions.
+             * Optional. If set to true and the run is not found, the request succeeds but the
+             * server doesn't perform any actions.
              */
             public Delete setAllowMissing(java.lang.Boolean allowMissing) {
               this.allowMissing = allowMissing;
@@ -3855,24 +3861,25 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * The maximum number of runs to return. The service may return fewer than this value.
-             * If unspecified, at most 50 runs are returned. The maximum value is 100; values
-             * greater than 100 are cut to 100.
+             * Optional. The maximum number of runs to return. The service may return fewer than
+             * this value. If unspecified, at most 50 runs are returned. The maximum value is 100;
+             * values greater than 100 are cut to 100.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of runs to return. The service may return fewer than this value. If unspecified,
-           at most 50 runs are returned. The maximum value is 100; values greater than 100 are cut to 100.
+            /** Optional. The maximum number of runs to return. The service may return fewer than this value. If
+           unspecified, at most 50 runs are returned. The maximum value is 100; values greater than 100 are
+           cut to 100.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * The maximum number of runs to return. The service may return fewer than this value.
-             * If unspecified, at most 50 runs are returned. The maximum value is 100; values
-             * greater than 100 are cut to 100.
+             * Optional. The maximum number of runs to return. The service may return fewer than
+             * this value. If unspecified, at most 50 runs are returned. The maximum value is 100;
+             * values greater than 100 are cut to 100.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -3880,25 +3887,25 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
             }
 
             /**
-             * The page token received from a previous `ListRuns` call. Specify it to get the next
-             * page. When paginating, all other parameters specified in this call must match the
-             * parameters of the call that provided the page token.
+             * Optional. The page token received from a previous `ListRuns` call. Specify it to get
+             * the next page. When paginating, all other parameters specified in this call must
+             * match the parameters of the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The page token received from a previous `ListRuns` call. Specify it to get the next page. When
-           paginating, all other parameters specified in this call must match the parameters of the call that
-           provided the page token.
+            /** Optional. The page token received from a previous `ListRuns` call. Specify it to get the next page.
+           When paginating, all other parameters specified in this call must match the parameters of the call
+           that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * The page token received from a previous `ListRuns` call. Specify it to get the next
-             * page. When paginating, all other parameters specified in this call must match the
-             * parameters of the call that provided the page token.
+             * Optional. The page token received from a previous `ListRuns` call. Specify it to get
+             * the next page. When paginating, all other parameters specified in this call must
+             * match the parameters of the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -4055,33 +4062,39 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
               return this;
             }
 
-            /** If set to true and the run is not found, the request creates it. */
+            /** Optional. If set to true and the run is not found, the request creates it. */
             @com.google.api.client.util.Key
             private java.lang.Boolean allowMissing;
 
-            /** If set to true and the run is not found, the request creates it.
+            /** Optional. If set to true and the run is not found, the request creates it.
              */
             public java.lang.Boolean getAllowMissing() {
               return allowMissing;
             }
 
-            /** If set to true and the run is not found, the request creates it. */
+            /** Optional. If set to true and the run is not found, the request creates it. */
             public Patch setAllowMissing(java.lang.Boolean allowMissing) {
               this.allowMissing = allowMissing;
               return this;
             }
 
-            /** The list of fields to update. Currently not used. The whole message is updated. */
+            /**
+             * Optional. The list of fields to update. Currently not used. The whole message is
+             * updated.
+             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** The list of fields to update. Currently not used. The whole message is updated.
+            /** Optional. The list of fields to update. Currently not used. The whole message is updated.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** The list of fields to update. Currently not used. The whole message is updated. */
+            /**
+             * Optional. The list of fields to update. Currently not used. The whole message is
+             * updated.
+             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -4394,22 +4407,22 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * If set to true and the lineage event is not found, the request succeeds but the
-               * server doesn't perform any actions.
+               * Optional. If set to true and the lineage event is not found, the request succeeds
+               * but the server doesn't perform any actions.
                */
               @com.google.api.client.util.Key
               private java.lang.Boolean allowMissing;
 
-              /** If set to true and the lineage event is not found, the request succeeds but the server doesn't
-             perform any actions.
+              /** Optional. If set to true and the lineage event is not found, the request succeeds but the server
+             doesn't perform any actions.
                */
               public java.lang.Boolean getAllowMissing() {
                 return allowMissing;
               }
 
               /**
-               * If set to true and the lineage event is not found, the request succeeds but the
-               * server doesn't perform any actions.
+               * Optional. If set to true and the lineage event is not found, the request succeeds
+               * but the server doesn't perform any actions.
                */
               public Delete setAllowMissing(java.lang.Boolean allowMissing) {
                 this.allowMissing = allowMissing;
@@ -4697,25 +4710,25 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * The maximum number of lineage events to return. The service may return fewer events
-               * than this value. If unspecified, at most 50 events are returned. The maximum value
-               * is 100; values greater than 100 are cut to 100.
+               * Optional. The maximum number of lineage events to return. The service may return
+               * fewer events than this value. If unspecified, at most 50 events are returned. The
+               * maximum value is 100; values greater than 100 are cut to 100.
                */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** The maximum number of lineage events to return. The service may return fewer events than this
-             value. If unspecified, at most 50 events are returned. The maximum value is 100; values greater
-             than 100 are cut to 100.
+              /** Optional. The maximum number of lineage events to return. The service may return fewer events than
+             this value. If unspecified, at most 50 events are returned. The maximum value is 100; values
+             greater than 100 are cut to 100.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
               /**
-               * The maximum number of lineage events to return. The service may return fewer events
-               * than this value. If unspecified, at most 50 events are returned. The maximum value
-               * is 100; values greater than 100 are cut to 100.
+               * Optional. The maximum number of lineage events to return. The service may return
+               * fewer events than this value. If unspecified, at most 50 events are returned. The
+               * maximum value is 100; values greater than 100 are cut to 100.
                */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
@@ -4723,25 +4736,25 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
               }
 
               /**
-               * The page token received from a previous `ListLineageEvents` call. Specify it to get
-               * the next page. When paginating, all other parameters specified in this call must
-               * match the parameters of the call that provided the page token.
+               * Optional. The page token received from a previous `ListLineageEvents` call. Specify
+               * it to get the next page. When paginating, all other parameters specified in this
+               * call must match the parameters of the call that provided the page token.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** The page token received from a previous `ListLineageEvents` call. Specify it to get the next page.
-             When paginating, all other parameters specified in this call must match the parameters of the call
-             that provided the page token.
+              /** Optional. The page token received from a previous `ListLineageEvents` call. Specify it to get the
+             next page. When paginating, all other parameters specified in this call must match the parameters
+             of the call that provided the page token.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * The page token received from a previous `ListLineageEvents` call. Specify it to get
-               * the next page. When paginating, all other parameters specified in this call must
-               * match the parameters of the call that provided the page token.
+               * Optional. The page token received from a previous `ListLineageEvents` call. Specify
+               * it to get the next page. When paginating, all other parameters specified in this
+               * call must match the parameters of the call that provided the page token.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;

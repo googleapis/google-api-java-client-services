@@ -104,9 +104,9 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
    * base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
    * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any part of the
    * product identifier (like `offer_id`) contains characters such as `/`, `%`, or `~`. * Example:
-   * To represent the product ID `en~US~sku/123`, the `{productinput}` segment must be the base64url
-   * encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product
-   * would be `accounts/123/productInputs/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The
+   * To represent the product ID `en~US~sku/123`, the `{productinput}` segment must be the unpadded
+   * base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for
+   * the product would be `accounts/123/productInputs/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The
    * `{productinput}` segment is the tilde-separated string `content_language~feed_label~offer_id`.
    * This format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
    * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the **Encoded
@@ -264,9 +264,9 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
    * base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
    * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any part of the
    * product identifier (like `offer_id`) contains characters such as `/`, `%`, or `~`. * Example:
-   * To represent the product ID `en~US~sku/123`, the `{productinput}` segment must be the base64url
-   * encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product
-   * would be `accounts/123/productInputs/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The
+   * To represent the product ID `en~US~sku/123`, the `{productinput}` segment must be the unpadded
+   * base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for
+   * the product would be `accounts/123/productInputs/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The
    * `{productinput}` segment is the tilde-separated string `content_language~feed_label~offer_id`.
    * This format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
    * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the **Encoded
@@ -290,9 +290,9 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
    * base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
    * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any part of the
    * product identifier (like `offer_id`) contains characters such as `/`, `%`, or `~`. * Example:
-   * To represent the product ID `en~US~sku/123`, the `{productinput}` segment must be the base64url
-   * encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product
-   * would be `accounts/123/productInputs/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The
+   * To represent the product ID `en~US~sku/123`, the `{productinput}` segment must be the unpadded
+   * base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for
+   * the product would be `accounts/123/productInputs/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The
    * `{productinput}` segment is the tilde-separated string `content_language~feed_label~offer_id`.
    * This format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
    * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the **Encoded

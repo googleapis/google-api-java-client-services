@@ -216,10 +216,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        must result in the `content_language~feed_label~offer_id` structure. This encoding MUST be
          *        used if any part of the product identifier (like `offer_id`) contains characters such as
          *        `/`, `%`, or `~`. * Example: To represent the product ID `en~US~sku/123` for `store_code`
-         *        "store123", the `{product}` segment must be the base64url encoding of this string, which
-         *        is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the local inventory would be
-         *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2. **Plain Format**:
-         *        The `{product}` segment is the tilde-separated string
+         *        "store123", the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the local inventory
+         *        would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2. **Plain
+         *        Format**: The `{product}` segment is the tilde-separated string
          *        `content_language~feed_label~offer_id`. This format is suitable only when
          *        `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters
          *        like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to
@@ -267,10 +267,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        must result in the `content_language~feed_label~offer_id` structure. This encoding MUST be
          *        used if any part of the product identifier (like `offer_id`) contains characters such as
          *        `/`, `%`, or `~`. * Example: To represent the product ID `en~US~sku/123` for `store_code`
-         *        "store123", the `{product}` segment must be the base64url encoding of this string, which
-         *        is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the local inventory would be
-         *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2. **Plain Format**:
-         *        The `{product}` segment is the tilde-separated string
+         *        "store123", the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the local inventory
+         *        would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2. **Plain
+         *        Format**: The `{product}` segment is the tilde-separated string
          *        `content_language~feed_label~offer_id`. This format is suitable only when
          *        `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters
          *        like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to
@@ -358,8 +358,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * encoding MUST be used if any part of the product identifier (like `offer_id`) contains
            * characters such as `/`, `%`, or `~`. * Example: To represent the product ID
            * `en~US~sku/123` for `store_code` "store123", the `{product}` segment must be the
-           * base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource
-           * name for the local inventory would be
+           * unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
+           * resource name for the local inventory would be
            * `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2. **Plain
            * Format**: The `{product}` segment is the tilde-separated string
            * `content_language~feed_label~offer_id`. This format is suitable only when
@@ -383,14 +383,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          `content_language~feed_label~offer_id` structure. This encoding MUST be used if any part of the
          product identifier (like `offer_id`) contains characters such as `/`, `%`, or `~`. * Example: To
          represent the product ID `en~US~sku/123` for `store_code` "store123", the `{product}` segment must
-         be the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for
-         the local inventory would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`.
-         2. **Plain Format**: The `{product}` segment is the tilde-separated string
-         `content_language~feed_label~offer_id`. This format is suitable only when `content_language`,
-         `feed_label`, and `offer_id` do not contain URL-problematic characters like `/`, `%`, or `~`. We
-         recommend using the **Encoded Format** for all product IDs to ensure correct parsing, especially
-         those containing special characters. The presence of tilde (`~`) characters in the `{product}`
-         segment is used to differentiate between the two formats.
+         be the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource
+         name for the local inventory would be
+         `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2. **Plain Format**: The
+         `{product}` segment is the tilde-separated string `content_language~feed_label~offer_id`. This
+         format is suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
+         problematic characters like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all
+         product IDs to ensure correct parsing, especially those containing special characters. The presence
+         of tilde (`~`) characters in the `{product}` segment is used to differentiate between the two
+         formats.
            */
           public java.lang.String getName() {
             return name;
@@ -410,8 +411,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * encoding MUST be used if any part of the product identifier (like `offer_id`) contains
            * characters such as `/`, `%`, or `~`. * Example: To represent the product ID
            * `en~US~sku/123` for `store_code` "store123", the `{product}` segment must be the
-           * base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource
-           * name for the local inventory would be
+           * unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
+           * resource name for the local inventory would be
            * `accounts/123/products/ZW5-VVN-c2t1LzEyMw/localInventories/store123`. 2. **Plain
            * Format**: The `{product}` segment is the tilde-separated string
            * `content_language~feed_label~offer_id`. This format is suitable only when
@@ -458,8 +459,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        decoded string must result in the `content_language~feed_label~offer_id` structure. This
          *        encoding MUST be used if any part of the product identifier (like `offer_id`) contains
          *        characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-         *        `en~US~sku/123`, the `{product}` segment must be the base64url encoding of this string,
-         *        which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
+         *        `en~US~sku/123`, the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
          *        is the tilde-separated string `content_language~feed_label~offer_id`. This format is
          *        suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
@@ -508,8 +509,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        decoded string must result in the `content_language~feed_label~offer_id` structure. This
          *        encoding MUST be used if any part of the product identifier (like `offer_id`) contains
          *        characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-         *        `en~US~sku/123`, the `{product}` segment must be the base64url encoding of this string,
-         *        which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
+         *        `en~US~sku/123`, the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
          *        is the tilde-separated string `content_language~feed_label~offer_id`. This format is
          *        suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
@@ -598,15 +599,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any
            * part of the product identifier (like `offer_id`) contains characters such as `/`, `%`,
            * or `~`. * Example: To represent the product ID `en~US~sku/123`, the `{product}` segment
-           * must be the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
-           * resource name for the product would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2.
-           * **Plain Format**: The `{product}` segment is the tilde-separated string
-           * `content_language~feed_label~offer_id`. This format is suitable only when
-           * `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic
-           * characters like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all
-           * product IDs to ensure correct parsing, especially those containing special characters.
-           * The presence of tilde (`~`) characters in the `{product}` segment is used to
-           * differentiate between the two formats.
+           * must be the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`.
+           * The full resource name for the product would be
+           * `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}`
+           * segment is the tilde-separated string `content_language~feed_label~offer_id`. This
+           * format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
+           * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the
+           * **Encoded Format** for all product IDs to ensure correct parsing, especially those
+           * containing special characters. The presence of tilde (`~`) characters in the
+           * `{product}` segment is used to differentiate between the two formats.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -621,14 +622,14 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
          `content_language~feed_label~offer_id` structure. This encoding MUST be used if any part of the
          product identifier (like `offer_id`) contains characters such as `/`, `%`, or `~`. * Example: To
-         represent the product ID `en~US~sku/123`, the `{product}` segment must be the base64url encoding of
-         this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
-         `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment is the
-         tilde-separated string `content_language~feed_label~offer_id`. This format is suitable only when
-         `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters like
-         `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to ensure correct
-         parsing, especially those containing special characters. The presence of tilde (`~`) characters in
-         the `{product}` segment is used to differentiate between the two formats.
+         represent the product ID `en~US~sku/123`, the `{product}` segment must be the unpadded base64url
+         encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product
+         would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
+         is the tilde-separated string `content_language~feed_label~offer_id`. This format is suitable only
+         when `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters
+         like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to ensure
+         correct parsing, especially those containing special characters. The presence of tilde (`~`)
+         characters in the `{product}` segment is used to differentiate between the two formats.
            */
           public java.lang.String getParent() {
             return parent;
@@ -647,15 +648,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any
            * part of the product identifier (like `offer_id`) contains characters such as `/`, `%`,
            * or `~`. * Example: To represent the product ID `en~US~sku/123`, the `{product}` segment
-           * must be the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
-           * resource name for the product would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2.
-           * **Plain Format**: The `{product}` segment is the tilde-separated string
-           * `content_language~feed_label~offer_id`. This format is suitable only when
-           * `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic
-           * characters like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all
-           * product IDs to ensure correct parsing, especially those containing special characters.
-           * The presence of tilde (`~`) characters in the `{product}` segment is used to
-           * differentiate between the two formats.
+           * must be the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`.
+           * The full resource name for the product would be
+           * `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}`
+           * segment is the tilde-separated string `content_language~feed_label~offer_id`. This
+           * format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
+           * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the
+           * **Encoded Format** for all product IDs to ensure correct parsing, especially those
+           * containing special characters. The presence of tilde (`~`) characters in the
+           * `{product}` segment is used to differentiate between the two formats.
            */
           public Insert setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -694,8 +695,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        decoded string must result in the `content_language~feed_label~offer_id` structure. This
          *        encoding MUST be used if any part of the product identifier (like `offer_id`) contains
          *        characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-         *        `en~US~sku/123`, the `{product}` segment must be the base64url encoding of this string,
-         *        which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
+         *        `en~US~sku/123`, the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
          *        is the tilde-separated string `content_language~feed_label~offer_id`. This format is
          *        suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
@@ -742,8 +743,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        decoded string must result in the `content_language~feed_label~offer_id` structure. This
          *        encoding MUST be used if any part of the product identifier (like `offer_id`) contains
          *        characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-         *        `en~US~sku/123`, the `{product}` segment must be the base64url encoding of this string,
-         *        which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
+         *        `en~US~sku/123`, the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
          *        is the tilde-separated string `content_language~feed_label~offer_id`. This format is
          *        suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
@@ -841,15 +842,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any
            * part of the product identifier (like `offer_id`) contains characters such as `/`, `%`,
            * or `~`. * Example: To represent the product ID `en~US~sku/123`, the `{product}` segment
-           * must be the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
-           * resource name for the product would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2.
-           * **Plain Format**: The `{product}` segment is the tilde-separated string
-           * `content_language~feed_label~offer_id`. This format is suitable only when
-           * `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic
-           * characters like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all
-           * product IDs to ensure correct parsing, especially those containing special characters.
-           * The presence of tilde (`~`) characters in the `{product}` segment is used to
-           * differentiate between the two formats.
+           * must be the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`.
+           * The full resource name for the product would be
+           * `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}`
+           * segment is the tilde-separated string `content_language~feed_label~offer_id`. This
+           * format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
+           * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the
+           * **Encoded Format** for all product IDs to ensure correct parsing, especially those
+           * containing special characters. The presence of tilde (`~`) characters in the
+           * `{product}` segment is used to differentiate between the two formats.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -864,14 +865,14 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
          `content_language~feed_label~offer_id` structure. This encoding MUST be used if any part of the
          product identifier (like `offer_id`) contains characters such as `/`, `%`, or `~`. * Example: To
-         represent the product ID `en~US~sku/123`, the `{product}` segment must be the base64url encoding of
-         this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
-         `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment is the
-         tilde-separated string `content_language~feed_label~offer_id`. This format is suitable only when
-         `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters like
-         `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to ensure correct
-         parsing, especially those containing special characters. The presence of tilde (`~`) characters in
-         the `{product}` segment is used to differentiate between the two formats.
+         represent the product ID `en~US~sku/123`, the `{product}` segment must be the unpadded base64url
+         encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product
+         would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
+         is the tilde-separated string `content_language~feed_label~offer_id`. This format is suitable only
+         when `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters
+         like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to ensure
+         correct parsing, especially those containing special characters. The presence of tilde (`~`)
+         characters in the `{product}` segment is used to differentiate between the two formats.
            */
           public java.lang.String getParent() {
             return parent;
@@ -890,15 +891,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any
            * part of the product identifier (like `offer_id`) contains characters such as `/`, `%`,
            * or `~`. * Example: To represent the product ID `en~US~sku/123`, the `{product}` segment
-           * must be the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
-           * resource name for the product would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2.
-           * **Plain Format**: The `{product}` segment is the tilde-separated string
-           * `content_language~feed_label~offer_id`. This format is suitable only when
-           * `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic
-           * characters like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all
-           * product IDs to ensure correct parsing, especially those containing special characters.
-           * The presence of tilde (`~`) characters in the `{product}` segment is used to
-           * differentiate between the two formats.
+           * must be the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`.
+           * The full resource name for the product would be
+           * `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}`
+           * segment is the tilde-separated string `content_language~feed_label~offer_id`. This
+           * format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
+           * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the
+           * **Encoded Format** for all product IDs to ensure correct parsing, especially those
+           * containing special characters. The presence of tilde (`~`) characters in the
+           * `{product}` segment is used to differentiate between the two formats.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1016,12 +1017,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        the structure is: `local~content_language~feed_label~offer_id`. Example:
          *        `local~en~US~sku123` The format of the `{product}` segment in the URL is automatically
          *        detected by the server, supporting two options: 1. **Encoded Format**: The `{product}`
-         *        segment is an unpadded base64url encoded string (RFC 4648 Section 5). The decoded string
-         *        must result in the `content_language~feed_label~offer_id` structure. This encoding MUST be
-         *        used if any part of the product identifier (like `offer_id`) contains characters such as
-         *        `/`, `%`, or `~`. * Example: To represent the product ID `en~US~sku/123` for `region`
-         *        "region123", the `{product}` segment must be the base64url encoding of this string, which
-         *        is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the regional inventory would be
+         *        segment is an **unpadded base64url** encoded string (RFC 4648 Section 5). The decoded
+         *        string must result in the `content_language~feed_label~offer_id` structure. This encoding
+         *        MUST be used if any part of the product identifier (like `offer_id`) contains characters
+         *        such as `/`, `%`, or `~`. * Example: To represent the product ID `en~US~sku/123` for
+         *        `region` "region123", the `{product}` segment must be the unpadded base64url encoding of
+         *        this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the regional
+         *        inventory would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123`. 2. **Plain
          *        Format**: The `{product}` segment is the tilde-separated string
          *        `content_language~feed_label~offer_id`. This format is suitable only when
@@ -1067,12 +1069,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        the structure is: `local~content_language~feed_label~offer_id`. Example:
          *        `local~en~US~sku123` The format of the `{product}` segment in the URL is automatically
          *        detected by the server, supporting two options: 1. **Encoded Format**: The `{product}`
-         *        segment is an unpadded base64url encoded string (RFC 4648 Section 5). The decoded string
-         *        must result in the `content_language~feed_label~offer_id` structure. This encoding MUST be
-         *        used if any part of the product identifier (like `offer_id`) contains characters such as
-         *        `/`, `%`, or `~`. * Example: To represent the product ID `en~US~sku/123` for `region`
-         *        "region123", the `{product}` segment must be the base64url encoding of this string, which
-         *        is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the regional inventory would be
+         *        segment is an **unpadded base64url** encoded string (RFC 4648 Section 5). The decoded
+         *        string must result in the `content_language~feed_label~offer_id` structure. This encoding
+         *        MUST be used if any part of the product identifier (like `offer_id`) contains characters
+         *        such as `/`, `%`, or `~`. * Example: To represent the product ID `en~US~sku/123` for
+         *        `region` "region123", the `{product}` segment must be the unpadded base64url encoding of
+         *        this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the regional
+         *        inventory would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123`. 2. **Plain
          *        Format**: The `{product}` segment is the tilde-separated string
          *        `content_language~feed_label~offer_id`. This format is suitable only when
@@ -1157,13 +1160,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * products, the structure is: `local~content_language~feed_label~offer_id`. Example:
            * `local~en~US~sku123` The format of the `{product}` segment in the URL is automatically
            * detected by the server, supporting two options: 1. **Encoded Format**: The `{product}`
-           * segment is an unpadded base64url encoded string (RFC 4648 Section 5). The decoded
+           * segment is an **unpadded base64url** encoded string (RFC 4648 Section 5). The decoded
            * string must result in the `content_language~feed_label~offer_id` structure. This
            * encoding MUST be used if any part of the product identifier (like `offer_id`) contains
            * characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-           * `en~US~sku/123` for `region` "region123", the `{product}` segment must be the base64url
-           * encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the
-           * regional inventory would be
+           * `en~US~sku/123` for `region` "region123", the `{product}` segment must be the unpadded
+           * base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource
+           * name for the regional inventory would be
            * `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123`. 2. **Plain
            * Format**: The `{product}` segment is the tilde-separated string
            * `content_language~feed_label~offer_id`. This format is suitable only when
@@ -1182,13 +1185,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          generally follows the structure: `content_language~feed_label~offer_id`. Example: `en~US~sku123`
          For legacy local products, the structure is: `local~content_language~feed_label~offer_id`. Example:
          `local~en~US~sku123` The format of the `{product}` segment in the URL is automatically detected by
-         the server, supporting two options: 1. **Encoded Format**: The `{product}` segment is an unpadded
-         base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
+         the server, supporting two options: 1. **Encoded Format**: The `{product}` segment is an **unpadded
+         base64url** encoded string (RFC 4648 Section 5). The decoded string must result in the
          `content_language~feed_label~offer_id` structure. This encoding MUST be used if any part of the
          product identifier (like `offer_id`) contains characters such as `/`, `%`, or `~`. * Example: To
          represent the product ID `en~US~sku/123` for `region` "region123", the `{product}` segment must be
-         the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for
-         the regional inventory would be
+         the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource
+         name for the regional inventory would be
          `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123`. 2. **Plain Format**: The
          `{product}` segment is the tilde-separated string `content_language~feed_label~offer_id`. This
          format is suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
@@ -1210,13 +1213,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * products, the structure is: `local~content_language~feed_label~offer_id`. Example:
            * `local~en~US~sku123` The format of the `{product}` segment in the URL is automatically
            * detected by the server, supporting two options: 1. **Encoded Format**: The `{product}`
-           * segment is an unpadded base64url encoded string (RFC 4648 Section 5). The decoded
+           * segment is an **unpadded base64url** encoded string (RFC 4648 Section 5). The decoded
            * string must result in the `content_language~feed_label~offer_id` structure. This
            * encoding MUST be used if any part of the product identifier (like `offer_id`) contains
            * characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-           * `en~US~sku/123` for `region` "region123", the `{product}` segment must be the base64url
-           * encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the
-           * regional inventory would be
+           * `en~US~sku/123` for `region` "region123", the `{product}` segment must be the unpadded
+           * base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource
+           * name for the regional inventory would be
            * `accounts/123/products/ZW5-VVN-c2t1LzEyMw/regionalInventories/region123`. 2. **Plain
            * Format**: The `{product}` segment is the tilde-separated string
            * `content_language~feed_label~offer_id`. This format is suitable only when
@@ -1259,12 +1262,12 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        legacy local products, the structure is: `local~content_language~feed_label~offer_id`.
          *        Example: `local~en~US~sku123` The format of the `{product}` segment in the URL is
          *        automatically detected by the server, supporting two options: 1. **Encoded Format**: The
-         *        `{product}` segment is an unpadded base64url encoded string (RFC 4648 Section 5). The
+         *        `{product}` segment is an **unpadded base64url** encoded string (RFC 4648 Section 5). The
          *        decoded string must result in the `content_language~feed_label~offer_id` structure. This
          *        encoding MUST be used if any part of the product identifier (like `offer_id`) contains
          *        characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-         *        `en~US~sku/123`, the `{product}` segment must be the base64url encoding of this string,
-         *        which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
+         *        `en~US~sku/123`, the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
          *        is the tilde-separated string `content_language~feed_label~offer_id`. This format is
          *        suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
@@ -1309,12 +1312,12 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        legacy local products, the structure is: `local~content_language~feed_label~offer_id`.
          *        Example: `local~en~US~sku123` The format of the `{product}` segment in the URL is
          *        automatically detected by the server, supporting two options: 1. **Encoded Format**: The
-         *        `{product}` segment is an unpadded base64url encoded string (RFC 4648 Section 5). The
+         *        `{product}` segment is an **unpadded base64url** encoded string (RFC 4648 Section 5). The
          *        decoded string must result in the `content_language~feed_label~offer_id` structure. This
          *        encoding MUST be used if any part of the product identifier (like `offer_id`) contains
          *        characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-         *        `en~US~sku/123`, the `{product}` segment must be the base64url encoding of this string,
-         *        which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
+         *        `en~US~sku/123`, the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
          *        is the tilde-separated string `content_language~feed_label~offer_id`. This format is
          *        suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
@@ -1398,20 +1401,20 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * For legacy local products, the structure is:
            * `local~content_language~feed_label~offer_id`. Example: `local~en~US~sku123` The format
            * of the `{product}` segment in the URL is automatically detected by the server,
-           * supporting two options: 1. **Encoded Format**: The `{product}` segment is an unpadded
-           * base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
+           * supporting two options: 1. **Encoded Format**: The `{product}` segment is an **unpadded
+           * base64url** encoded string (RFC 4648 Section 5). The decoded string must result in the
            * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any
            * part of the product identifier (like `offer_id`) contains characters such as `/`, `%`,
            * or `~`. * Example: To represent the product ID `en~US~sku/123`, the `{product}` segment
-           * must be the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
-           * resource name for the product would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2.
-           * **Plain Format**: The `{product}` segment is the tilde-separated string
-           * `content_language~feed_label~offer_id`. This format is suitable only when
-           * `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic
-           * characters like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all
-           * product IDs to ensure correct parsing, especially those containing special characters.
-           * The presence of tilde (`~`) characters in the `{product}` segment is used to
-           * differentiate between the two formats.
+           * must be the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`.
+           * The full resource name for the product would be
+           * `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}`
+           * segment is the tilde-separated string `content_language~feed_label~offer_id`. This
+           * format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
+           * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the
+           * **Encoded Format** for all product IDs to ensure correct parsing, especially those
+           * containing special characters. The presence of tilde (`~`) characters in the
+           * `{product}` segment is used to differentiate between the two formats.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -1422,18 +1425,18 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          structure: `content_language~feed_label~offer_id`. Example: `en~US~sku123` For legacy local
          products, the structure is: `local~content_language~feed_label~offer_id`. Example:
          `local~en~US~sku123` The format of the `{product}` segment in the URL is automatically detected by
-         the server, supporting two options: 1. **Encoded Format**: The `{product}` segment is an unpadded
-         base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
+         the server, supporting two options: 1. **Encoded Format**: The `{product}` segment is an **unpadded
+         base64url** encoded string (RFC 4648 Section 5). The decoded string must result in the
          `content_language~feed_label~offer_id` structure. This encoding MUST be used if any part of the
          product identifier (like `offer_id`) contains characters such as `/`, `%`, or `~`. * Example: To
-         represent the product ID `en~US~sku/123`, the `{product}` segment must be the base64url encoding of
-         this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
-         `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment is the
-         tilde-separated string `content_language~feed_label~offer_id`. This format is suitable only when
-         `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters like
-         `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to ensure correct
-         parsing, especially those containing special characters. The presence of tilde (`~`) characters in
-         the `{product}` segment is used to differentiate between the two formats.
+         represent the product ID `en~US~sku/123`, the `{product}` segment must be the unpadded base64url
+         encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product
+         would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
+         is the tilde-separated string `content_language~feed_label~offer_id`. This format is suitable only
+         when `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters
+         like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to ensure
+         correct parsing, especially those containing special characters. The presence of tilde (`~`)
+         characters in the `{product}` segment is used to differentiate between the two formats.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1447,20 +1450,20 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * For legacy local products, the structure is:
            * `local~content_language~feed_label~offer_id`. Example: `local~en~US~sku123` The format
            * of the `{product}` segment in the URL is automatically detected by the server,
-           * supporting two options: 1. **Encoded Format**: The `{product}` segment is an unpadded
-           * base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
+           * supporting two options: 1. **Encoded Format**: The `{product}` segment is an **unpadded
+           * base64url** encoded string (RFC 4648 Section 5). The decoded string must result in the
            * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any
            * part of the product identifier (like `offer_id`) contains characters such as `/`, `%`,
            * or `~`. * Example: To represent the product ID `en~US~sku/123`, the `{product}` segment
-           * must be the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
-           * resource name for the product would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2.
-           * **Plain Format**: The `{product}` segment is the tilde-separated string
-           * `content_language~feed_label~offer_id`. This format is suitable only when
-           * `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic
-           * characters like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all
-           * product IDs to ensure correct parsing, especially those containing special characters.
-           * The presence of tilde (`~`) characters in the `{product}` segment is used to
-           * differentiate between the two formats.
+           * must be the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`.
+           * The full resource name for the product would be
+           * `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}`
+           * segment is the tilde-separated string `content_language~feed_label~offer_id`. This
+           * format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
+           * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the
+           * **Encoded Format** for all product IDs to ensure correct parsing, especially those
+           * containing special characters. The presence of tilde (`~`) characters in the
+           * `{product}` segment is used to differentiate between the two formats.
            */
           public Insert setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1495,12 +1498,12 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        legacy local products, the structure is: `local~content_language~feed_label~offer_id`.
          *        Example: `local~en~US~sku123` The format of the `{product}` segment in the URL is
          *        automatically detected by the server, supporting two options: 1. **Encoded Format**: The
-         *        `{product}` segment is an unpadded base64url encoded string (RFC 4648 Section 5). The
+         *        `{product}` segment is an **unpadded base64url** encoded string (RFC 4648 Section 5). The
          *        decoded string must result in the `content_language~feed_label~offer_id` structure. This
          *        encoding MUST be used if any part of the product identifier (like `offer_id`) contains
          *        characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-         *        `en~US~sku/123`, the `{product}` segment must be the base64url encoding of this string,
-         *        which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
+         *        `en~US~sku/123`, the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
          *        is the tilde-separated string `content_language~feed_label~offer_id`. This format is
          *        suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
@@ -1543,12 +1546,12 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          *        legacy local products, the structure is: `local~content_language~feed_label~offer_id`.
          *        Example: `local~en~US~sku123` The format of the `{product}` segment in the URL is
          *        automatically detected by the server, supporting two options: 1. **Encoded Format**: The
-         *        `{product}` segment is an unpadded base64url encoded string (RFC 4648 Section 5). The
+         *        `{product}` segment is an **unpadded base64url** encoded string (RFC 4648 Section 5). The
          *        decoded string must result in the `content_language~feed_label~offer_id` structure. This
          *        encoding MUST be used if any part of the product identifier (like `offer_id`) contains
          *        characters such as `/`, `%`, or `~`. * Example: To represent the product ID
-         *        `en~US~sku/123`, the `{product}` segment must be the base64url encoding of this string,
-         *        which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
+         *        `en~US~sku/123`, the `{product}` segment must be the unpadded base64url encoding of this
+         *        string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
          *        `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
          *        is the tilde-separated string `content_language~feed_label~offer_id`. This format is
          *        suitable only when `content_language`, `feed_label`, and `offer_id` do not contain URL-
@@ -1641,20 +1644,20 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * `en~US~sku123` For legacy local products, the structure is:
            * `local~content_language~feed_label~offer_id`. Example: `local~en~US~sku123` The format
            * of the `{product}` segment in the URL is automatically detected by the server,
-           * supporting two options: 1. **Encoded Format**: The `{product}` segment is an unpadded
-           * base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
+           * supporting two options: 1. **Encoded Format**: The `{product}` segment is an **unpadded
+           * base64url** encoded string (RFC 4648 Section 5). The decoded string must result in the
            * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any
            * part of the product identifier (like `offer_id`) contains characters such as `/`, `%`,
            * or `~`. * Example: To represent the product ID `en~US~sku/123`, the `{product}` segment
-           * must be the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
-           * resource name for the product would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2.
-           * **Plain Format**: The `{product}` segment is the tilde-separated string
-           * `content_language~feed_label~offer_id`. This format is suitable only when
-           * `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic
-           * characters like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all
-           * product IDs to ensure correct parsing, especially those containing special characters.
-           * The presence of tilde (`~`) characters in the `{product}` segment is used to
-           * differentiate between the two formats.
+           * must be the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`.
+           * The full resource name for the product would be
+           * `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}`
+           * segment is the tilde-separated string `content_language~feed_label~offer_id`. This
+           * format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
+           * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the
+           * **Encoded Format** for all product IDs to ensure correct parsing, especially those
+           * containing special characters. The presence of tilde (`~`) characters in the
+           * `{product}` segment is used to differentiate between the two formats.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
@@ -1665,18 +1668,18 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          structure: `content_language~feed_label~offer_id`. Example: `en~US~sku123` For legacy local
          products, the structure is: `local~content_language~feed_label~offer_id`. Example:
          `local~en~US~sku123` The format of the `{product}` segment in the URL is automatically detected by
-         the server, supporting two options: 1. **Encoded Format**: The `{product}` segment is an unpadded
-         base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
+         the server, supporting two options: 1. **Encoded Format**: The `{product}` segment is an **unpadded
+         base64url** encoded string (RFC 4648 Section 5). The decoded string must result in the
          `content_language~feed_label~offer_id` structure. This encoding MUST be used if any part of the
          product identifier (like `offer_id`) contains characters such as `/`, `%`, or `~`. * Example: To
-         represent the product ID `en~US~sku/123`, the `{product}` segment must be the base64url encoding of
-         this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product would be
-         `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment is the
-         tilde-separated string `content_language~feed_label~offer_id`. This format is suitable only when
-         `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters like
-         `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to ensure correct
-         parsing, especially those containing special characters. The presence of tilde (`~`) characters in
-         the `{product}` segment is used to differentiate between the two formats.
+         represent the product ID `en~US~sku/123`, the `{product}` segment must be the unpadded base64url
+         encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full resource name for the product
+         would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}` segment
+         is the tilde-separated string `content_language~feed_label~offer_id`. This format is suitable only
+         when `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic characters
+         like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all product IDs to ensure
+         correct parsing, especially those containing special characters. The presence of tilde (`~`)
+         characters in the `{product}` segment is used to differentiate between the two formats.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1690,20 +1693,20 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * `en~US~sku123` For legacy local products, the structure is:
            * `local~content_language~feed_label~offer_id`. Example: `local~en~US~sku123` The format
            * of the `{product}` segment in the URL is automatically detected by the server,
-           * supporting two options: 1. **Encoded Format**: The `{product}` segment is an unpadded
-           * base64url encoded string (RFC 4648 Section 5). The decoded string must result in the
+           * supporting two options: 1. **Encoded Format**: The `{product}` segment is an **unpadded
+           * base64url** encoded string (RFC 4648 Section 5). The decoded string must result in the
            * `content_language~feed_label~offer_id` structure. This encoding MUST be used if any
            * part of the product identifier (like `offer_id`) contains characters such as `/`, `%`,
            * or `~`. * Example: To represent the product ID `en~US~sku/123`, the `{product}` segment
-           * must be the base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`. The full
-           * resource name for the product would be `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2.
-           * **Plain Format**: The `{product}` segment is the tilde-separated string
-           * `content_language~feed_label~offer_id`. This format is suitable only when
-           * `content_language`, `feed_label`, and `offer_id` do not contain URL-problematic
-           * characters like `/`, `%`, or `~`. We recommend using the **Encoded Format** for all
-           * product IDs to ensure correct parsing, especially those containing special characters.
-           * The presence of tilde (`~`) characters in the `{product}` segment is used to
-           * differentiate between the two formats.
+           * must be the unpadded base64url encoding of this string, which is `ZW5-VVN-c2t1LzEyMw`.
+           * The full resource name for the product would be
+           * `accounts/123/products/ZW5-VVN-c2t1LzEyMw`. 2. **Plain Format**: The `{product}`
+           * segment is the tilde-separated string `content_language~feed_label~offer_id`. This
+           * format is suitable only when `content_language`, `feed_label`, and `offer_id` do not
+           * contain URL-problematic characters like `/`, `%`, or `~`. We recommend using the
+           * **Encoded Format** for all product IDs to ensure correct parsing, especially those
+           * containing special characters. The presence of tilde (`~`) characters in the
+           * `{product}` segment is used to differentiate between the two formats.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

@@ -116,6 +116,13 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
   private java.lang.String name;
 
   /**
+   * Output only. A message indicating partial failure details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String partialFailureMessage;
+
+  /**
    * Output only. The time when the DataScanJob was started.
    * The value may be {@code null}.
    */
@@ -348,6 +355,23 @@ public final class GoogleCloudDataplexV1DataScanJob extends com.google.api.clien
    */
   public GoogleCloudDataplexV1DataScanJob setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. A message indicating partial failure details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPartialFailureMessage() {
+    return partialFailureMessage;
+  }
+
+  /**
+   * Output only. A message indicating partial failure details.
+   * @param partialFailureMessage partialFailureMessage or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanJob setPartialFailureMessage(java.lang.String partialFailureMessage) {
+    this.partialFailureMessage = partialFailureMessage;
     return this;
   }
 

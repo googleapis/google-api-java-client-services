@@ -52,13 +52,6 @@ public final class GoogleCloudDataplexV1DataDocumentationResultDatasetResult ext
   private java.util.List<GoogleCloudDataplexV1DataDocumentationResultSchemaRelationship> schemaRelationships;
 
   /**
-   * Output only. Generated table and column descriptions for each table in the dataset.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudDataplexV1DataDocumentationResultTableResult> tableResults;
-
-  /**
    * Output only. Generated Dataset description.
    * @return value or {@code null} for none
    */
@@ -108,23 +101,6 @@ public final class GoogleCloudDataplexV1DataDocumentationResultDatasetResult ext
    */
   public GoogleCloudDataplexV1DataDocumentationResultDatasetResult setSchemaRelationships(java.util.List<GoogleCloudDataplexV1DataDocumentationResultSchemaRelationship> schemaRelationships) {
     this.schemaRelationships = schemaRelationships;
-    return this;
-  }
-
-  /**
-   * Output only. Generated table and column descriptions for each table in the dataset.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GoogleCloudDataplexV1DataDocumentationResultTableResult> getTableResults() {
-    return tableResults;
-  }
-
-  /**
-   * Output only. Generated table and column descriptions for each table in the dataset.
-   * @param tableResults tableResults or {@code null} for none
-   */
-  public GoogleCloudDataplexV1DataDocumentationResultDatasetResult setTableResults(java.util.List<GoogleCloudDataplexV1DataDocumentationResultTableResult> tableResults) {
-    this.tableResults = tableResults;
     return this;
   }
 

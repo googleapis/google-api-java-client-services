@@ -64,6 +64,13 @@ public final class GoogleCloudDataplexV1DataDiscoverySpecStorageConfig extends c
   private GoogleCloudDataplexV1DataDiscoverySpecStorageConfigJsonOptions jsonOptions;
 
   /**
+   * Optional. Specifies configuration for unstructured data discovery.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions unstructuredDataOptions;
+
+  /**
    * Optional. Configuration for CSV data.
    * @return value or {@code null} for none
    */
@@ -140,6 +147,23 @@ public final class GoogleCloudDataplexV1DataDiscoverySpecStorageConfig extends c
    */
   public GoogleCloudDataplexV1DataDiscoverySpecStorageConfig setJsonOptions(GoogleCloudDataplexV1DataDiscoverySpecStorageConfigJsonOptions jsonOptions) {
     this.jsonOptions = jsonOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies configuration for unstructured data discovery.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions getUnstructuredDataOptions() {
+    return unstructuredDataOptions;
+  }
+
+  /**
+   * Optional. Specifies configuration for unstructured data discovery.
+   * @param unstructuredDataOptions unstructuredDataOptions or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoverySpecStorageConfig setUnstructuredDataOptions(GoogleCloudDataplexV1DataDiscoverySpecStorageConfigUnstructuredDataOptions unstructuredDataOptions) {
+    this.unstructuredDataOptions = unstructuredDataOptions;
     return this;
   }
 

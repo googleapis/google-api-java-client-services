@@ -126,6 +126,14 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   private java.lang.String displayName;
 
   /**
+   * Optional. Immutable. The identity to run the datascan. If not specified, defaults to the
+   * Dataplex Service Agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1ExecutionIdentity executionIdentity;
+
+  /**
    * Optional. DataScan execution settings.If not specified, the fields in it will use their default
    * values.
    * The value may be {@code null}.
@@ -386,6 +394,25 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
    */
   public GoogleCloudDataplexV1DataScan setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The identity to run the datascan. If not specified, defaults to the
+   * Dataplex Service Agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1ExecutionIdentity getExecutionIdentity() {
+    return executionIdentity;
+  }
+
+  /**
+   * Optional. Immutable. The identity to run the datascan. If not specified, defaults to the
+   * Dataplex Service Agent.
+   * @param executionIdentity executionIdentity or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScan setExecutionIdentity(GoogleCloudDataplexV1ExecutionIdentity executionIdentity) {
+    this.executionIdentity = executionIdentity;
     return this;
   }
 

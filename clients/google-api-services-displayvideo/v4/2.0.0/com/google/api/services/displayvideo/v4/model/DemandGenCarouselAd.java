@@ -51,7 +51,7 @@ public final class DemandGenCarouselAd extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL template.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,7 +141,7 @@ public final class DemandGenCarouselAd extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL template.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCustomParameters() {
@@ -149,7 +149,7 @@ public final class DemandGenCarouselAd extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL template.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @param customParameters customParameters or {@code null} for none
    */
   public DemandGenCarouselAd setCustomParameters(java.util.Map<String, java.lang.String> customParameters) {

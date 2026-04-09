@@ -34,8 +34,7 @@ public final class BulkEditAdvertiserAssignedTargetingOptionsRequest extends com
    * The assigned targeting options to create in batch, specified as a list of
    * `CreateAssignedTargetingOptionsRequest`. Supported targeting types: * `TARGETING_TYPE_CHANNEL`
    * * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD` *
-   * `TARGETING_TYPE_INVENTORY_MODE`
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +44,7 @@ public final class BulkEditAdvertiserAssignedTargetingOptionsRequest extends com
    * The assigned targeting options to delete in batch, specified as a list of
    * `DeleteAssignedTargetingOptionsRequest`. Supported targeting types: * `TARGETING_TYPE_CHANNEL`
    * * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD` *
-   * `TARGETING_TYPE_INVENTORY_MODE`
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +54,7 @@ public final class BulkEditAdvertiserAssignedTargetingOptionsRequest extends com
    * The assigned targeting options to create in batch, specified as a list of
    * `CreateAssignedTargetingOptionsRequest`. Supported targeting types: * `TARGETING_TYPE_CHANNEL`
    * * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD` *
-   * `TARGETING_TYPE_INVENTORY_MODE`
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
    * @return value or {@code null} for none
    */
   public java.util.List<CreateAssignedTargetingOptionsRequest> getCreateRequests() {
@@ -68,8 +65,7 @@ public final class BulkEditAdvertiserAssignedTargetingOptionsRequest extends com
    * The assigned targeting options to create in batch, specified as a list of
    * `CreateAssignedTargetingOptionsRequest`. Supported targeting types: * `TARGETING_TYPE_CHANNEL`
    * * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD` *
-   * `TARGETING_TYPE_INVENTORY_MODE`
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
    * @param createRequests createRequests or {@code null} for none
    */
   public BulkEditAdvertiserAssignedTargetingOptionsRequest setCreateRequests(java.util.List<CreateAssignedTargetingOptionsRequest> createRequests) {
@@ -81,8 +77,7 @@ public final class BulkEditAdvertiserAssignedTargetingOptionsRequest extends com
    * The assigned targeting options to delete in batch, specified as a list of
    * `DeleteAssignedTargetingOptionsRequest`. Supported targeting types: * `TARGETING_TYPE_CHANNEL`
    * * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD` *
-   * `TARGETING_TYPE_INVENTORY_MODE`
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
    * @return value or {@code null} for none
    */
   public java.util.List<DeleteAssignedTargetingOptionsRequest> getDeleteRequests() {
@@ -93,8 +88,7 @@ public final class BulkEditAdvertiserAssignedTargetingOptionsRequest extends com
    * The assigned targeting options to delete in batch, specified as a list of
    * `DeleteAssignedTargetingOptionsRequest`. Supported targeting types: * `TARGETING_TYPE_CHANNEL`
    * * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD` *
-   * `TARGETING_TYPE_INVENTORY_MODE`
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
    * @param deleteRequests deleteRequests or {@code null} for none
    */
   public BulkEditAdvertiserAssignedTargetingOptionsRequest setDeleteRequests(java.util.List<DeleteAssignedTargetingOptionsRequest> deleteRequests) {

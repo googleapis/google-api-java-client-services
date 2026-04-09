@@ -63,7 +63,8 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private java.lang.Long leadFormId;
 
   /**
-   * Optional. The ID of the merchant which is linked to the line item for product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product feed. This Merchant
+   * Center account must already be linked to the advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -191,7 +192,8 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * Optional. The ID of the merchant which is linked to the line item for product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product feed. This Merchant
+   * Center account must already be linked to the advertiser.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLinkedMerchantId() {
@@ -199,7 +201,8 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * Optional. The ID of the merchant which is linked to the line item for product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product feed. This Merchant
+   * Center account must already be linked to the advertiser.
    * @param linkedMerchantId linkedMerchantId or {@code null} for none
    */
   public YoutubeAndPartnersSettings setLinkedMerchantId(java.lang.Long linkedMerchantId) {

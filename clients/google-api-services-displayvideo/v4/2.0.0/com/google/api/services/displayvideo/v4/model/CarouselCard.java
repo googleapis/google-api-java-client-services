@@ -31,7 +31,8 @@ package com.google.api.services.displayvideo.v4.model;
 public final class CarouselCard extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The call-to-action button shown on the card. Must use 10 characters or less.
+   * Required. The text on the call-to-action button shown on the card. Must use 10 characters or
+   * less.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +82,8 @@ public final class CarouselCard extends com.google.api.client.json.GenericJson {
   private ImageAsset squareMarketingImage;
 
   /**
-   * Required. The call-to-action button shown on the card. Must use 10 characters or less.
+   * Required. The text on the call-to-action button shown on the card. Must use 10 characters or
+   * less.
    * @return value or {@code null} for none
    */
   public java.lang.String getCallToAction() {
@@ -89,7 +91,8 @@ public final class CarouselCard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The call-to-action button shown on the card. Must use 10 characters or less.
+   * Required. The text on the call-to-action button shown on the card. Must use 10 characters or
+   * less.
    * @param callToAction callToAction or {@code null} for none
    */
   public CarouselCard setCallToAction(java.lang.String callToAction) {

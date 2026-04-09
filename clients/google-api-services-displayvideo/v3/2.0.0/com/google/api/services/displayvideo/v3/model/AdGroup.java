@@ -45,8 +45,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   private java.lang.Long adGroupId;
 
   /**
-   * Optional. Specifies the inventory control of the ad group. This field is required for Demand
-   * Gen ad groups.
+   * Optional. Required for Demand Gen ad groups. Specifies the inventory control of the ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +147,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies the inventory control of the ad group. This field is required for Demand
-   * Gen ad groups.
+   * Optional. Required for Demand Gen ad groups. Specifies the inventory control of the ad group.
    * @return value or {@code null} for none
    */
   public AdGroupInventoryControl getAdGroupInventoryControl() {
@@ -157,8 +155,7 @@ public final class AdGroup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies the inventory control of the ad group. This field is required for Demand
-   * Gen ad groups.
+   * Optional. Required for Demand Gen ad groups. Specifies the inventory control of the ad group.
    * @param adGroupInventoryControl adGroupInventoryControl or {@code null} for none
    */
   public AdGroup setAdGroupInventoryControl(AdGroupInventoryControl adGroupInventoryControl) {

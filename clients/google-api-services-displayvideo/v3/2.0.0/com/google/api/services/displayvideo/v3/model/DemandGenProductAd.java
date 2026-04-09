@@ -47,7 +47,7 @@ public final class DemandGenProductAd extends com.google.api.client.json.Generic
   private java.lang.String callToAction;
 
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL template.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +155,7 @@ public final class DemandGenProductAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL template.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCustomParameters() {
@@ -163,7 +163,7 @@ public final class DemandGenProductAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL template.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @param customParameters customParameters or {@code null} for none
    */
   public DemandGenProductAd setCustomParameters(java.util.Map<String, java.lang.String> customParameters) {

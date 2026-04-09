@@ -66,7 +66,7 @@ public final class SelectedInventories extends com.google.api.client.json.Generi
   private java.lang.Boolean allowYoutubeShorts;
 
   /**
-   * Whether the ad group is opted-in to YouTube in-stream.
+   * Whether the ad group is opted-in to YouTube in-stream inventory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +158,7 @@ public final class SelectedInventories extends com.google.api.client.json.Generi
   }
 
   /**
-   * Whether the ad group is opted-in to YouTube in-stream.
+   * Whether the ad group is opted-in to YouTube in-stream inventory.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowYoutubeStream() {
@@ -166,7 +166,7 @@ public final class SelectedInventories extends com.google.api.client.json.Generi
   }
 
   /**
-   * Whether the ad group is opted-in to YouTube in-stream.
+   * Whether the ad group is opted-in to YouTube in-stream inventory.
    * @param allowYoutubeStream allowYoutubeStream or {@code null} for none
    */
   public SelectedInventories setAllowYoutubeStream(java.lang.Boolean allowYoutubeStream) {

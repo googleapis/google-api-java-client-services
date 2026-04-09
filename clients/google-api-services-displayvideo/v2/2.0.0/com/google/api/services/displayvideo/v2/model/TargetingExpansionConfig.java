@@ -32,8 +32,9 @@ package com.google.api.services.displayvideo.v2.model;
 public final class TargetingExpansionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field only
-   * applies to Demand Gen ad groups.
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field can only
+   * be set for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
+   * in beta. This field is only available to allowlisted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +64,9 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   private java.lang.String targetingExpansionLevel;
 
   /**
-   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field only
-   * applies to Demand Gen ad groups.
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field can only
+   * be set for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
+   * in beta. This field is only available to allowlisted users.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExcludeDemographicExpansion() {
@@ -72,8 +74,9 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field only
-   * applies to Demand Gen ad groups.
+   * Optional. Whether to exclude demographic expansion for Optimized Targeting. This field can only
+   * be set for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
+   * in beta. This field is only available to allowlisted users.
    * @param excludeDemographicExpansion excludeDemographicExpansion or {@code null} for none
    */
   public TargetingExpansionConfig setExcludeDemographicExpansion(java.lang.Boolean excludeDemographicExpansion) {

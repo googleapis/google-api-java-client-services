@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Response message for listing section items.
+ * A response containing group chat spaces with exactly the calling user and the requested users.
+ * [Developer Preview](https://developers.google.com/workspace/preview):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -27,26 +28,26 @@ package com.google.api.services.chat.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListSectionItemsResponse extends com.google.api.client.json.GenericJson {
+public final class FindGroupChatsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token that you can send as `pageToken` to retrieve the next page of results. If empty, there
+   * are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The section items from the specified section.
+   * List of spaces in the requested (or first) page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SectionItem> sectionItems;
+  private java.util.List<Space> spaces;
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token that you can send as `pageToken` to retrieve the next page of results. If empty, there
+   * are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,40 +55,40 @@ public final class ListSectionItemsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token that you can send as `pageToken` to retrieve the next page of results. If empty, there
+   * are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListSectionItemsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public FindGroupChatsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * The section items from the specified section.
+   * List of spaces in the requested (or first) page.
    * @return value or {@code null} for none
    */
-  public java.util.List<SectionItem> getSectionItems() {
-    return sectionItems;
+  public java.util.List<Space> getSpaces() {
+    return spaces;
   }
 
   /**
-   * The section items from the specified section.
-   * @param sectionItems sectionItems or {@code null} for none
+   * List of spaces in the requested (or first) page.
+   * @param spaces spaces or {@code null} for none
    */
-  public ListSectionItemsResponse setSectionItems(java.util.List<SectionItem> sectionItems) {
-    this.sectionItems = sectionItems;
+  public FindGroupChatsResponse setSpaces(java.util.List<Space> spaces) {
+    this.spaces = spaces;
     return this;
   }
 
   @Override
-  public ListSectionItemsResponse set(String fieldName, Object value) {
-    return (ListSectionItemsResponse) super.set(fieldName, value);
+  public FindGroupChatsResponse set(String fieldName, Object value) {
+    return (FindGroupChatsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListSectionItemsResponse clone() {
-    return (ListSectionItemsResponse) super.clone();
+  public FindGroupChatsResponse clone() {
+    return (FindGroupChatsResponse) super.clone();
   }
 
 }

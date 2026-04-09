@@ -1920,6 +1920,270 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       }
     }
     /**
+     * [Developer Preview](https://developers.google.com/workspace/preview): Returns all spaces with
+     * `spaceType == GROUP_CHAT`, whose human memberships contain exactly the calling user, and the
+     * users specified in `FindGroupChatsRequest.users`. Only members that have joined the conversation
+     * are supported. For an example, see [Find group
+     * chats](https://developers.google.com/workspace/chat/find-group-chats). If the calling user
+     * blocks, or is blocked by, some users, and no spaces with the entire specified set of users are
+     * found, this method returns spaces that don't include the blocked or blocking users. The specified
+     * set of users must contain only human (non-app) memberships. A request that contains non-human
+     * users doesn't return any spaces. Requires [user
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following [authorization
+     * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+     * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+     * `https://www.googleapis.com/auth/chat.memberships`
+     *
+     * Create a request for the method "spaces.findGroupChats".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link FindGroupChats#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public FindGroupChats findGroupChats() throws java.io.IOException {
+      FindGroupChats result = new FindGroupChats();
+      initialize(result);
+      return result;
+    }
+
+    public class FindGroupChats extends HangoutsChatRequest<com.google.api.services.chat.v1.model.FindGroupChatsResponse> {
+
+      private static final String REST_PATH = "v1/spaces:findGroupChats";
+
+      /**
+       * [Developer Preview](https://developers.google.com/workspace/preview): Returns all spaces with
+       * `spaceType == GROUP_CHAT`, whose human memberships contain exactly the calling user, and the
+       * users specified in `FindGroupChatsRequest.users`. Only members that have joined the
+       * conversation are supported. For an example, see [Find group
+       * chats](https://developers.google.com/workspace/chat/find-group-chats). If the calling user
+       * blocks, or is blocked by, some users, and no spaces with the entire specified set of users are
+       * found, this method returns spaces that don't include the blocked or blocking users. The
+       * specified set of users must contain only human (non-app) memberships. A request that contains
+       * non-human users doesn't return any spaces. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+       * `https://www.googleapis.com/auth/chat.memberships`
+       *
+       * Create a request for the method "spaces.findGroupChats".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link FindGroupChats#execute()} method to invoke the remote operation.
+       * <p> {@link FindGroupChats#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+       * ientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected FindGroupChats() {
+        super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.FindGroupChatsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public FindGroupChats set$Xgafv(java.lang.String $Xgafv) {
+        return (FindGroupChats) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public FindGroupChats setAccessToken(java.lang.String accessToken) {
+        return (FindGroupChats) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public FindGroupChats setAlt(java.lang.String alt) {
+        return (FindGroupChats) super.setAlt(alt);
+      }
+
+      @Override
+      public FindGroupChats setCallback(java.lang.String callback) {
+        return (FindGroupChats) super.setCallback(callback);
+      }
+
+      @Override
+      public FindGroupChats setFields(java.lang.String fields) {
+        return (FindGroupChats) super.setFields(fields);
+      }
+
+      @Override
+      public FindGroupChats setKey(java.lang.String key) {
+        return (FindGroupChats) super.setKey(key);
+      }
+
+      @Override
+      public FindGroupChats setOauthToken(java.lang.String oauthToken) {
+        return (FindGroupChats) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public FindGroupChats setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (FindGroupChats) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public FindGroupChats setQuotaUser(java.lang.String quotaUser) {
+        return (FindGroupChats) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public FindGroupChats setUploadType(java.lang.String uploadType) {
+        return (FindGroupChats) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public FindGroupChats setUploadProtocol(java.lang.String uploadProtocol) {
+        return (FindGroupChats) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. The maximum number of spaces to return. The service might return fewer than this
+       * value. If unspecified, at most 10 spaces are returned. The maximum value is 30. If you use
+       * a value more than 30, it's automatically changed to 30. Negative values return an
+       * `INVALID_ARGUMENT` error.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of spaces to return. The service might return fewer than this value.
+     If unspecified, at most 10 spaces are returned. The maximum value is 30. If you use a value more
+     than 30, it's automatically changed to 30. Negative values return an `INVALID_ARGUMENT` error.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of spaces to return. The service might return fewer than this
+       * value. If unspecified, at most 10 spaces are returned. The maximum value is 30. If you use
+       * a value more than 30, it's automatically changed to 30. Negative values return an
+       * `INVALID_ARGUMENT` error.
+       */
+      public FindGroupChats setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous call to find group chats. Provide this
+       * parameter to retrieve the subsequent page. When paginating, all other parameters provided
+       * should match the call that provided the token. Passing different values may lead to
+       * unexpected results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous call to find group chats. Provide this parameter
+     to retrieve the subsequent page. When paginating, all other parameters provided should match the
+     call that provided the token. Passing different values may lead to unexpected results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous call to find group chats. Provide this
+       * parameter to retrieve the subsequent page. When paginating, all other parameters provided
+       * should match the call that provided the token. Passing different values may lead to
+       * unexpected results.
+       */
+      public FindGroupChats setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * Requested space view type. If unset, defaults to `SPACE_VIEW_RESOURCE_NAME_ONLY`. Requests
+       * that specify `SPACE_VIEW_EXPANDED` must include scopes that allow reading space data, for
+       * example, https://www.googleapis.com/auth/chat.spaces or
+       * https://www.googleapis.com/auth/chat.spaces.readonly.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String spaceView;
+
+      /** Requested space view type. If unset, defaults to `SPACE_VIEW_RESOURCE_NAME_ONLY`. Requests that
+     specify `SPACE_VIEW_EXPANDED` must include scopes that allow reading space data, for example,
+     https://www.googleapis.com/auth/chat.spaces or
+     https://www.googleapis.com/auth/chat.spaces.readonly.
+       */
+      public java.lang.String getSpaceView() {
+        return spaceView;
+      }
+
+      /**
+       * Requested space view type. If unset, defaults to `SPACE_VIEW_RESOURCE_NAME_ONLY`. Requests
+       * that specify `SPACE_VIEW_EXPANDED` must include scopes that allow reading space data, for
+       * example, https://www.googleapis.com/auth/chat.spaces or
+       * https://www.googleapis.com/auth/chat.spaces.readonly.
+       */
+      public FindGroupChats setSpaceView(java.lang.String spaceView) {
+        this.spaceView = spaceView;
+        return this;
+      }
+
+      /**
+       * Optional. Resource names of all human users in group chat with the calling user. Chat apps
+       * can't be included in the request. The maximum number of users that can be specified in a
+       * single request is `49`. Format: `users/{user}`, where `{user}` is either the `id` for the
+       * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or
+       * the `id` for the [user](https://developers.google.com/admin-
+       * sdk/directory/reference/rest/v1/users) in the Directory API. For example, to find all group
+       * chats with the calling user and two other users, with People API profile IDs `123456789`
+       * and `987654321`, you can use `users/123456789` and `users/987654321`. You can also use the
+       * email as an alias for `{user}`. For example, `users/example@gmail.com` where
+       * `example@gmail.com` is the email of the Google Chat user.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> users;
+
+      /** Optional. Resource names of all human users in group chat with the calling user. Chat apps can't be
+     included in the request. The maximum number of users that can be specified in a single request is
+     `49`. Format: `users/{user}`, where `{user}` is either the `id` for the
+     [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or the `id`
+     for the [user](https://developers.google.com/admin-sdk/directory/reference/rest/v1/users) in the
+     Directory API. For example, to find all group chats with the calling user and two other users, with
+     People API profile IDs `123456789` and `987654321`, you can use `users/123456789` and
+     `users/987654321`. You can also use the email as an alias for `{user}`. For example,
+     `users/example@gmail.com` where `example@gmail.com` is the email of the Google Chat user.
+       */
+      public java.util.List<java.lang.String> getUsers() {
+        return users;
+      }
+
+      /**
+       * Optional. Resource names of all human users in group chat with the calling user. Chat apps
+       * can't be included in the request. The maximum number of users that can be specified in a
+       * single request is `49`. Format: `users/{user}`, where `{user}` is either the `id` for the
+       * [person](https://developers.google.com/people/api/rest/v1/people) from the People API, or
+       * the `id` for the [user](https://developers.google.com/admin-
+       * sdk/directory/reference/rest/v1/users) in the Directory API. For example, to find all group
+       * chats with the calling user and two other users, with People API profile IDs `123456789`
+       * and `987654321`, you can use `users/123456789` and `users/987654321`. You can also use the
+       * email as an alias for `{user}`. For example, `users/example@gmail.com` where
+       * `example@gmail.com` is the email of the Google Chat user.
+       */
+      public FindGroupChats setUsers(java.util.List<java.lang.String> users) {
+        this.users = users;
+        return this;
+      }
+
+      @Override
+      public FindGroupChats set(String parameterName, Object value) {
+        return (FindGroupChats) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns details about a space. For an example, see [Get details about a
      * space](https://developers.google.com/workspace/chat/get-spaces). Supports the following types of
      * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
@@ -5105,8 +5369,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * access to, like direct messages and [slash
        * commands](https://developers.google.com/workspace/chat/slash-commands) that invoke the Chat app.
        * - `https://www.googleapis.com/auth/chat.app.messages.readonly` with [administrator
-       * approval](https://support.google.com/a?p=chat-app-auth) (available in [Developer
-       * Preview](https://developers.google.com/workspace/preview)). When using this authentication scope,
+       * approval](https://support.google.com/a?p=chat-app-auth). When using this authentication scope,
        * this method returns details about a public message in a space. - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
        * with one of the following authorization scopes: -
@@ -5148,9 +5411,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * returns details about a message the Chat app has access to, like direct messages and [slash
          * commands](https://developers.google.com/workspace/chat/slash-commands) that invoke the Chat
          * app. - `https://www.googleapis.com/auth/chat.app.messages.readonly` with [administrator
-         * approval](https://support.google.com/a?p=chat-app-auth) (available in [Developer
-         * Preview](https://developers.google.com/workspace/preview)). When using this authentication
-         * scope, this method returns details about a public message in a space. - [User
+         * approval](https://support.google.com/a?p=chat-app-auth). When using this authentication scope,
+         * this method returns details about a public message in a space. - [User
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
          * with one of the following authorization scopes: -
          * `https://www.googleapis.com/auth/chat.messages.readonly` -
@@ -5293,10 +5555,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
        * authorize): - [App authentication](https://developers.google.com/workspace/chat/authenticate-
        * authorize-chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth)
-       * in [Developer Preview](https://developers.google.com/workspace/preview) with the authorization
-       * scope: - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When using this
-       * authentication scope, this method only returns public messages in a space. It doesn't include
-       * private messages. - [User
+       * with the authorization scope: - `https://www.googleapis.com/auth/chat.app.messages.readonly`.
+       * When using this authentication scope, this method only returns public messages in a space. It
+       * doesn't include private messages. - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
        * with one of the following authorization scopes: -
        * `https://www.googleapis.com/auth/chat.messages.readonly` -
@@ -5333,12 +5594,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Supports the following types of
          * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-         * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-         * Preview](https://developers.google.com/workspace/preview) with the authorization scope: -
-         * `https://www.googleapis.com/auth/chat.app.messages.readonly`. When using this authentication
-         * scope, this method only returns public messages in a space. It doesn't include private
-         * messages. - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-         * authorize-chat-user) with one of the following authorization scopes: -
+         * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with the
+         * authorization scope: - `https://www.googleapis.com/auth/chat.app.messages.readonly`. When using
+         * this authentication scope, this method only returns public messages in a space. It doesn't
+         * include private messages. - [User
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following authorization scopes: -
          * `https://www.googleapis.com/auth/chat.messages.readonly` -
          * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
          * (import mode spaces only)
@@ -6963,11 +7224,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
        * api-scopes) appropriate for reading the requested data: - [App
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-       * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-       * Preview](https://developers.google.com/workspace/preview) with one of the following authorization
-       * scopes: - `https://www.googleapis.com/auth/chat.app.spaces` -
+       * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with one of the
+       * following authorization scopes: - `https://www.googleapis.com/auth/chat.app.spaces` -
+       * `https://www.googleapis.com/auth/chat.app.spaces.readonly` -
        * `https://www.googleapis.com/auth/chat.app.messages.readonly` -
-       * `https://www.googleapis.com/auth/chat.app.memberships` - [User
+       * `https://www.googleapis.com/auth/chat.app.memberships` -
+       * `https://www.googleapis.com/auth/chat.app.memberships.readonly` - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
        * with one of the following authorization scopes: -
        * `https://www.googleapis.com/auth/chat.spaces.readonly` -
@@ -7013,11 +7275,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
          * api-scopes) appropriate for reading the requested data: - [App
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-         * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-         * Preview](https://developers.google.com/workspace/preview) with one of the following
-         * authorization scopes: - `https://www.googleapis.com/auth/chat.app.spaces` -
+         * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with one of the
+         * following authorization scopes: - `https://www.googleapis.com/auth/chat.app.spaces` -
+         * `https://www.googleapis.com/auth/chat.app.spaces.readonly` -
          * `https://www.googleapis.com/auth/chat.app.messages.readonly` -
-         * `https://www.googleapis.com/auth/chat.app.memberships` - [User
+         * `https://www.googleapis.com/auth/chat.app.memberships` -
+         * `https://www.googleapis.com/auth/chat.app.memberships.readonly` - [User
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
          * with one of the following authorization scopes: -
          * `https://www.googleapis.com/auth/chat.spaces.readonly` -
@@ -7159,11 +7422,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
        * api-scopes) appropriate for reading the requested data: - [App
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-       * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-       * Preview](https://developers.google.com/workspace/preview) with one of the following authorization
-       * scopes: - `https://www.googleapis.com/auth/chat.app.spaces` -
+       * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with one of the
+       * following authorization scopes: - `https://www.googleapis.com/auth/chat.app.spaces` -
+       * `https://www.googleapis.com/auth/chat.app.spaces.readonly` -
        * `https://www.googleapis.com/auth/chat.app.messages.readonly` -
-       * `https://www.googleapis.com/auth/chat.app.memberships` - [User
+       * `https://www.googleapis.com/auth/chat.app.memberships` -
+       * `https://www.googleapis.com/auth/chat.app.memberships.readonly` - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
        * with one of the following authorization scopes: -
        * `https://www.googleapis.com/auth/chat.spaces.readonly` -
@@ -7211,11 +7475,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * [authorization scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-
          * api-scopes) appropriate for reading the requested data: - [App
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-         * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-         * Preview](https://developers.google.com/workspace/preview) with one of the following
-         * authorization scopes: - `https://www.googleapis.com/auth/chat.app.spaces` -
+         * with [administrator approval](https://support.google.com/a?p=chat-app-auth) with one of the
+         * following authorization scopes: - `https://www.googleapis.com/auth/chat.app.spaces` -
+         * `https://www.googleapis.com/auth/chat.app.spaces.readonly` -
          * `https://www.googleapis.com/auth/chat.app.messages.readonly` -
-         * `https://www.googleapis.com/auth/chat.app.memberships` - [User
+         * `https://www.googleapis.com/auth/chat.app.memberships` -
+         * `https://www.googleapis.com/auth/chat.app.memberships.readonly` - [User
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
          * with one of the following authorization scopes: -
          * `https://www.googleapis.com/auth/chat.spaces.readonly` -
@@ -7537,12 +7802,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     public class Sections {
 
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview): Creates a section in Google
-       * Chat. Sections help users group conversations and customize the list of spaces displayed in Chat
-       * navigation panel. Only sections of type `CUSTOM_SECTION` can be created. For details, see [Create
-       * and organize sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires
-       * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * Creates a section in Google Chat. Sections help users group conversations and customize the list
+       * of spaces displayed in Chat navigation panel. Only sections of type `CUSTOM_SECTION` can be
+       * created. For details, see [Create and organize sections in Google
+       * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
        * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
        *
        * Create a request for the method "sections.create".
@@ -7568,10 +7833,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^users/[^/]+$");
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Creates a section in
-         * Google Chat. Sections help users group conversations and customize the list of spaces displayed
-         * in Chat navigation panel. Only sections of type `CUSTOM_SECTION` can be created. For details,
-         * see [Create and organize sections in Google
+         * Creates a section in Google Chat. Sections help users group conversations and customize the
+         * list of spaces displayed in Chat navigation panel. Only sections of type `CUSTOM_SECTION` can
+         * be created. For details, see [Create and organize sections in Google
          * Chat](https://support.google.com/chat/answer/16059854). Requires [user
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
          * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
@@ -7684,12 +7948,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a section of type
-       * `CUSTOM_SECTION`. If the section contains items, such as spaces, the items are moved to Google
-       * Chat's default sections and are not deleted. For details, see [Create and organize sections in
-       * Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * Deletes a section of type `CUSTOM_SECTION`. If the section contains items, such as spaces, the
+       * items are moved to Google Chat's default sections and are not deleted. For details, see [Create
+       * and organize sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires
+       * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       * user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
        * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
        *
        * Create a request for the method "sections.delete".
@@ -7714,13 +7977,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+$");
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Deletes a section of type
-         * `CUSTOM_SECTION`. If the section contains items, such as spaces, the items are moved to Google
-         * Chat's default sections and are not deleted. For details, see [Create and organize sections in
-         * Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
-         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+         * Deletes a section of type `CUSTOM_SECTION`. If the section contains items, such as spaces, the
+         * items are moved to Google Chat's default sections and are not deleted. For details, see [Create
+         * and organize sections in Google Chat](https://support.google.com/chat/answer/16059854).
+         * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
+         * authorize-chat-user) with the [authorization
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.users.sections`
          *
          * Create a request for the method "sections.delete".
          *
@@ -7828,12 +8091,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview): Lists sections available to
-       * the Chat user. Sections help users group their conversations and customize the list of spaces
-       * displayed in Chat navigation panel. For details, see [Create and organize sections in Google
-       * Chat](https://support.google.com/chat/answer/16059854). Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * Lists sections available to the Chat user. Sections help users group their conversations and
+       * customize the list of spaces displayed in Chat navigation panel. For details, see [Create and
+       * organize sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires
+       * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       * user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
        * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections` -
        * `https://www.googleapis.com/auth/chat.users.sections.readonly`
        *
@@ -7863,12 +8125,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^users/[^/]+$");
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Lists sections available
-         * to the Chat user. Sections help users group their conversations and customize the list of
-         * spaces displayed in Chat navigation panel. For details, see [Create and organize sections in
-         * Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * Lists sections available to the Chat user. Sections help users group their conversations and
+         * customize the list of spaces displayed in Chat navigation panel. For details, see [Create and
+         * organize sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires
+         * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+         * user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
          * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections` -
          * `https://www.googleapis.com/auth/chat.users.sections.readonly`
          *
@@ -8060,12 +8321,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview): Updates a section. Only
-       * sections of type `CUSTOM_SECTION` can be updated. For details, see [Create and organize sections
-       * in Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
-       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+       * Updates a section. Only sections of type `CUSTOM_SECTION` can be updated. For details, see
+       * [Create and organize sections in Google Chat](https://support.google.com/chat/answer/16059854).
+       * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
+       * authorize-chat-user) with the [authorization
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.users.sections`
        *
        * Create a request for the method "sections.patch".
        *
@@ -8093,12 +8354,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+$");
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Updates a section. Only
-         * sections of type `CUSTOM_SECTION` can be updated. For details, see [Create and organize
-         * sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
-         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
+         * Updates a section. Only sections of type `CUSTOM_SECTION` can be updated. For details, see
+         * [Create and organize sections in Google Chat](https://support.google.com/chat/answer/16059854).
+         * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
+         * authorize-chat-user) with the [authorization
+         * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.users.sections`
          *
          * Create a request for the method "sections.patch".
          *
@@ -8242,8 +8503,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * [Developer Preview](https://developers.google.com/workspace/preview): Changes the sort order of a
-       * section. For details, see [Create and organize sections in Google
+       * Changes the sort order of a section. For details, see [Create and organize sections in Google
        * Chat](https://support.google.com/chat/answer/16059854). Requires [user
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
        * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
@@ -8272,8 +8532,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+$");
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Changes the sort order of
-         * a section. For details, see [Create and organize sections in Google
+         * Changes the sort order of a section. For details, see [Create and organize sections in Google
          * Chat](https://support.google.com/chat/answer/16059854). Requires [user
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
          * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
@@ -8410,9 +8669,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       public class Items {
 
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Lists items in a section.
-         * Only spaces can be section items. For details, see [Create and organize sections in Google
-         * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+         * Lists items in a section. Only spaces can be section items. For details, see [Create and organize
+         * sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
          * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
          * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections` -
@@ -8443,11 +8701,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+$");
 
           /**
-           * [Developer Preview](https://developers.google.com/workspace/preview): Lists items in a section.
-           * Only spaces can be section items. For details, see [Create and organize sections in Google
-           * Chat](https://support.google.com/chat/answer/16059854). Requires [user
-           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-           * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+           * Lists items in a section. Only spaces can be section items. For details, see [Create and
+           * organize sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires
+           * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+           * user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
            * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections` -
            * `https://www.googleapis.com/auth/chat.users.sections.readonly`
            *
@@ -8662,10 +8919,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * [Developer Preview](https://developers.google.com/workspace/preview): Moves an item from one
-         * section to another. For example, if a section contains spaces, this method can be used to move a
-         * space to a different section. For details, see [Create and organize sections in Google
-         * Chat](https://support.google.com/chat/answer/16059854). Requires [user
+         * Moves an item from one section to another. For example, if a section contains spaces, this method
+         * can be used to move a space to a different section. For details, see [Create and organize
+         * sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires [user
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
          * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
          * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
@@ -8694,12 +8950,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^users/[^/]+/sections/[^/]+/items/[^/]+$");
 
           /**
-           * [Developer Preview](https://developers.google.com/workspace/preview): Moves an item from one
-           * section to another. For example, if a section contains spaces, this method can be used to move
-           * a space to a different section. For details, see [Create and organize sections in Google
-           * Chat](https://support.google.com/chat/answer/16059854). Requires [user
-           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-           * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+           * Moves an item from one section to another. For example, if a section contains spaces, this
+           * method can be used to move a space to a different section. For details, see [Create and
+           * organize sections in Google Chat](https://support.google.com/chat/answer/16059854). Requires
+           * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+           * user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
            * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.sections`
            *
            * Create a request for the method "items.move".

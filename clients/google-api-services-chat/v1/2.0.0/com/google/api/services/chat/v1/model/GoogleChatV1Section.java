@@ -25,7 +25,7 @@ package com.google.api.services.chat.v1.model;
  * `users/{user}/sections/default-apps` 2. **Custom Sections:** These are sections created and
  * managed by the user. Creating a custom section using `CreateSection` **requires** a
  * `display_name`. Custom sections can be updated using `UpdateSection` and deleted using
- * `DeleteSection`. [Developer Preview](https://developers.google.com/workspace/preview).
+ * `DeleteSection`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

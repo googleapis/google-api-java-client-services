@@ -32,14 +32,15 @@ public final class DemandGenSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Immutable. Whether location and language targeting can be set at the line item level.
-   * Otherwise, relevant targeting types must be assigned directly to the ad groups.
+   * Otherwise, relevant targeting types must be assigned directly to ad groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean geoLanguageTargetingEnabled;
 
   /**
-   * Optional. The ID of the merchant which is linked to the line item for product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product feed. This Merchant
+   * Center account must already be linked to the advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -54,7 +55,7 @@ public final class DemandGenSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Immutable. Whether location and language targeting can be set at the line item level.
-   * Otherwise, relevant targeting types must be assigned directly to the ad groups.
+   * Otherwise, relevant targeting types must be assigned directly to ad groups.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGeoLanguageTargetingEnabled() {
@@ -63,7 +64,7 @@ public final class DemandGenSettings extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Immutable. Whether location and language targeting can be set at the line item level.
-   * Otherwise, relevant targeting types must be assigned directly to the ad groups.
+   * Otherwise, relevant targeting types must be assigned directly to ad groups.
    * @param geoLanguageTargetingEnabled geoLanguageTargetingEnabled or {@code null} for none
    */
   public DemandGenSettings setGeoLanguageTargetingEnabled(java.lang.Boolean geoLanguageTargetingEnabled) {
@@ -72,7 +73,8 @@ public final class DemandGenSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The ID of the merchant which is linked to the line item for product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product feed. This Merchant
+   * Center account must already be linked to the advertiser.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLinkedMerchantId() {
@@ -80,7 +82,8 @@ public final class DemandGenSettings extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The ID of the merchant which is linked to the line item for product feed.
+   * Optional. The ID of the Merchant Center account used to provide a product feed. This Merchant
+   * Center account must already be linked to the advertiser.
    * @param linkedMerchantId linkedMerchantId or {@code null} for none
    */
   public DemandGenSettings setLinkedMerchantId(java.lang.Long linkedMerchantId) {

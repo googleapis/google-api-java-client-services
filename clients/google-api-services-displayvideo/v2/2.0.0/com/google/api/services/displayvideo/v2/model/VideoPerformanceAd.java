@@ -51,7 +51,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> headlines;
 
   /**
-   * The list of lone headlines shown on the call-to-action banner.
+   * The list of long headlines shown on the call-to-action banner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +155,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCustomParameters() {
@@ -163,7 +163,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    * @param customParameters customParameters or {@code null} for none
    */
   public VideoPerformanceAd setCustomParameters(java.util.Map<String, java.lang.String> customParameters) {
@@ -274,7 +274,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of lone headlines shown on the call-to-action banner.
+   * The list of long headlines shown on the call-to-action banner.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLongHeadlines() {
@@ -282,7 +282,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of lone headlines shown on the call-to-action banner.
+   * The list of long headlines shown on the call-to-action banner.
    * @param longHeadlines longHeadlines or {@code null} for none
    */
   public VideoPerformanceAd setLongHeadlines(java.util.List<java.lang.String> longHeadlines) {

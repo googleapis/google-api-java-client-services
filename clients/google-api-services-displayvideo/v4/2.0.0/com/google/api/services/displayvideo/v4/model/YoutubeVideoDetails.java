@@ -45,7 +45,7 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   private java.lang.String unavailableReason;
 
   /**
-   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   * Required. The YouTube video asset id. This is the adAssetId of an AdAsset resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -86,7 +86,7 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   * Required. The YouTube video asset id. This is the adAssetId of an AdAsset resource.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVideoAssetId() {
@@ -94,7 +94,7 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The YouTube video asset id. This is ad_asset.ad_asset_id.
+   * Required. The YouTube video asset id. This is the adAssetId of an AdAsset resource.
    * @param videoAssetId videoAssetId or {@code null} for none
    */
   public YoutubeVideoDetails setVideoAssetId(java.lang.Long videoAssetId) {

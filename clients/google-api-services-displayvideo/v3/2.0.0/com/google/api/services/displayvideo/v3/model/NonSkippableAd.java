@@ -38,7 +38,7 @@ public final class NonSkippableAd extends com.google.api.client.json.GenericJson
   private CommonInStreamAttribute commonInStreamAttribute;
 
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class NonSkippableAd extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCustomParameters() {
@@ -70,7 +70,7 @@ public final class NonSkippableAd extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The custom parameters to pass custom values to tracking URL template.
+   * The custom parameters and accompanying values to add to the tracking URL.
    * @param customParameters customParameters or {@code null} for none
    */
   public NonSkippableAd setCustomParameters(java.util.Map<String, java.lang.String> customParameters) {

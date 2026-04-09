@@ -32,8 +32,12 @@ package com.google.api.services.displayvideo.v2.model;
 public final class KeywordAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The policy names to exempt the keyword from. This field is only applicable for Demand
-   * Gen keywords, which are positively targeted.
+   * Optional. The policy names to exempt the keyword from. When attempting to target a keyword that
+   * violates a policy, the error returned will include the name of the relevant policy. Use that
+   * name in this field to exempt the targeted keyword from the policy. This field is only
+   * applicable for positively-targeted keywords assigned to Demand Gen resources. Retrieval and
+   * management of Demand Gen resources is currently in beta. This field is only available to
+   * allowlisted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +60,12 @@ public final class KeywordAssignedTargetingOptionDetails extends com.google.api.
   private java.lang.Boolean negative;
 
   /**
-   * Optional. The policy names to exempt the keyword from. This field is only applicable for Demand
-   * Gen keywords, which are positively targeted.
+   * Optional. The policy names to exempt the keyword from. When attempting to target a keyword that
+   * violates a policy, the error returned will include the name of the relevant policy. Use that
+   * name in this field to exempt the targeted keyword from the policy. This field is only
+   * applicable for positively-targeted keywords assigned to Demand Gen resources. Retrieval and
+   * management of Demand Gen resources is currently in beta. This field is only available to
+   * allowlisted users.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExemptedPolicyNames() {
@@ -65,8 +73,12 @@ public final class KeywordAssignedTargetingOptionDetails extends com.google.api.
   }
 
   /**
-   * Optional. The policy names to exempt the keyword from. This field is only applicable for Demand
-   * Gen keywords, which are positively targeted.
+   * Optional. The policy names to exempt the keyword from. When attempting to target a keyword that
+   * violates a policy, the error returned will include the name of the relevant policy. Use that
+   * name in this field to exempt the targeted keyword from the policy. This field is only
+   * applicable for positively-targeted keywords assigned to Demand Gen resources. Retrieval and
+   * management of Demand Gen resources is currently in beta. This field is only available to
+   * allowlisted users.
    * @param exemptedPolicyNames exemptedPolicyNames or {@code null} for none
    */
   public KeywordAssignedTargetingOptionDetails setExemptedPolicyNames(java.util.List<java.lang.String> exemptedPolicyNames) {

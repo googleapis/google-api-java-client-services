@@ -55,7 +55,7 @@ public final class DemandGenVideoAd extends com.google.api.client.json.GenericJs
   private ImageAsset companionBanner;
 
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL template.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +119,7 @@ public final class DemandGenVideoAd extends com.google.api.client.json.GenericJs
   private ImageAsset logo;
 
   /**
-   * Required. The list of lone headlines shown on the ad.
+   * Required. The list of long headlines shown on the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -204,7 +204,7 @@ public final class DemandGenVideoAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL template.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCustomParameters() {
@@ -212,7 +212,7 @@ public final class DemandGenVideoAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The custom parameters to pass custom values to tracking URL template.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @param customParameters customParameters or {@code null} for none
    */
   public DemandGenVideoAd setCustomParameters(java.util.Map<String, java.lang.String> customParameters) {
@@ -359,7 +359,7 @@ public final class DemandGenVideoAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The list of lone headlines shown on the ad.
+   * Required. The list of long headlines shown on the ad.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLongHeadlines() {
@@ -367,7 +367,7 @@ public final class DemandGenVideoAd extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The list of lone headlines shown on the ad.
+   * Required. The list of long headlines shown on the ad.
    * @param longHeadlines longHeadlines or {@code null} for none
    */
   public DemandGenVideoAd setLongHeadlines(java.util.List<java.lang.String> longHeadlines) {

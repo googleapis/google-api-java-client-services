@@ -41,8 +41,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
 
   /**
    * Optional. The third-party vendors measuring brand safety. The following third-party vendors are
-   * applicable: * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` *
-   * `THIRD_PARTY_VENDOR_ZEFR`
+   * applicable: * `THIRD_PARTY_VENDOR_ZEFR` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
+   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +92,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
 
   /**
    * Optional. The third-party vendors measuring brand safety. The following third-party vendors are
-   * applicable: * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` *
-   * `THIRD_PARTY_VENDOR_ZEFR`
+   * applicable: * `THIRD_PARTY_VENDOR_ZEFR` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
+   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
    * @return value or {@code null} for none
    */
   public java.util.List<ThirdPartyVendorConfig> getBrandSafetyVendorConfigs() {
@@ -102,8 +102,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
 
   /**
    * Optional. The third-party vendors measuring brand safety. The following third-party vendors are
-   * applicable: * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` *
-   * `THIRD_PARTY_VENDOR_ZEFR`
+   * applicable: * `THIRD_PARTY_VENDOR_ZEFR` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
+   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
    * @param brandSafetyVendorConfigs brandSafetyVendorConfigs or {@code null} for none
    */
   public ThirdPartyMeasurementConfigs setBrandSafetyVendorConfigs(java.util.List<ThirdPartyVendorConfig> brandSafetyVendorConfigs) {

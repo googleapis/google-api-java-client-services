@@ -1463,7 +1463,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class AdGroupAds {
 
       /**
-       * Creates an ad group ad.
+       * Creates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
+       * management of Demand Gen resources is currently in beta. This method is only available to
+       * allowlisted users.
        *
        * Create a request for the method "adGroupAds.create".
        *
@@ -1488,7 +1490,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Creates an ad group ad.
+         * Creates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
+         * management of Demand Gen resources is currently in beta. This method is only available to
+         * allowlisted users.
          *
          * Create a request for the method "adGroupAds.create".
          *
@@ -1584,7 +1588,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Deletes an ad group ad.
+       * Deletes an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
+       * management of Demand Gen resources is currently in beta. This method is only available to
+       * allowlisted users.
        *
        * Create a request for the method "adGroupAds.delete".
        *
@@ -1592,7 +1598,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param advertiserId Required. The ID of the advertiser the ad belongs to.
-       * @param adGroupAdId Required. The ID of the ad to delete.
+       * @param adGroupAdId Required. The ID of the ad to delete. Only Demand Gen ads are supported.
        * @return the request
        */
       public Delete delete(java.lang.Long advertiserId, java.lang.Long adGroupAdId) throws java.io.IOException {
@@ -1612,7 +1618,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Deletes an ad group ad.
+         * Deletes an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
+         * management of Demand Gen resources is currently in beta. This method is only available to
+         * allowlisted users.
          *
          * Create a request for the method "adGroupAds.delete".
          *
@@ -1623,7 +1631,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param advertiserId Required. The ID of the advertiser the ad belongs to.
-         * @param adGroupAdId Required. The ID of the ad to delete.
+         * @param adGroupAdId Required. The ID of the ad to delete. Only Demand Gen ads are supported.
          * @since 1.13
          */
         protected Delete(java.lang.Long advertiserId, java.lang.Long adGroupAdId) {
@@ -1703,17 +1711,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** Required. The ID of the ad to delete. */
+        /** Required. The ID of the ad to delete. Only Demand Gen ads are supported. */
         @com.google.api.client.util.Key
         private java.lang.Long adGroupAdId;
 
-        /** Required. The ID of the ad to delete.
+        /** Required. The ID of the ad to delete. Only Demand Gen ads are supported.
          */
         public java.lang.Long getAdGroupAdId() {
           return adGroupAdId;
         }
 
-        /** Required. The ID of the ad to delete. */
+        /** Required. The ID of the ad to delete. Only Demand Gen ads are supported. */
         public Delete setAdGroupAdId(java.lang.Long adGroupAdId) {
           this.adGroupAdId = adGroupAdId;
           return this;
@@ -2129,7 +2137,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates an ad group ad.
+       * Updates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
+       * management of Demand Gen resources is currently in beta. This method is only available to
+       * allowlisted users.
        *
        * Create a request for the method "adGroupAds.patch".
        *
@@ -2158,7 +2168,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Updates an ad group ad.
+         * Updates an ad group ad. This method is only supported for Demand Gen ads. Retrieval and
+         * management of Demand Gen resources is currently in beta. This method is only available to
+         * allowlisted users.
          *
          * Create a request for the method "adGroupAds.patch".
          *
@@ -2314,8 +2326,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * will be applied to all specified ad groups. Specifically, the operation will delete the assigned
        * targeting options provided in BulkEditAdGroupAssignedTargetingOptionsRequest.delete_requests from
        * each ad group, and then create the assigned targeting options provided in
-       * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. Only ad groups under a line item
-       * of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+       * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. This method is only supported for
+       * Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently in beta. This
+       * method is only available to allowlisted users.
        *
        * Create a request for the method "adGroups.bulkEditAssignedTargetingOptions".
        *
@@ -2346,8 +2359,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * assigned targeting options provided in
          * BulkEditAdGroupAssignedTargetingOptionsRequest.delete_requests from each ad group, and then
          * create the assigned targeting options provided in
-         * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. Only ad groups under a line
-         * item of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+         * BulkEditAdGroupAssignedTargetingOptionsRequest.create_requests. This method is only supported
+         * for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently in
+         * beta. This method is only available to allowlisted users.
          *
          * Create a request for the method "adGroups.bulkEditAssignedTargetingOptions".
          *
@@ -2719,7 +2733,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Creates a new ad group. Returns the newly created ad group if successful.
+       * Creates a new ad group. Returns the newly created ad group if successful. This method is only
+       * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
+       * in beta. This method is only available to allowlisted users.
        *
        * Create a request for the method "adGroups.create".
        *
@@ -2744,7 +2760,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Creates a new ad group. Returns the newly created ad group if successful.
+         * Creates a new ad group. Returns the newly created ad group if successful. This method is only
+         * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
+         * currently in beta. This method is only available to allowlisted users.
          *
          * Create a request for the method "adGroups.create".
          *
@@ -2840,7 +2858,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist.
+       * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist. This method is
+       * only supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
+       * currently in beta. This method is only available to allowlisted users.
        *
        * Create a request for the method "adGroups.delete".
        *
@@ -2868,7 +2888,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist.
+         * Deletes a AdGroup. Returns error code `NOT_FOUND` if the ad group does not exist. This method
+         * is only supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
+         * currently in beta. This method is only available to allowlisted users.
          *
          * Create a request for the method "adGroups.delete".
          *
@@ -3385,7 +3407,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates an existing ad group. Returns the updated ad group if successful.
+       * Updates an existing ad group. Returns the updated ad group if successful. This method is only
+       * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is currently
+       * in beta. This method is only available to allowlisted users.
        *
        * Create a request for the method "adGroups.patch".
        *
@@ -3414,7 +3438,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Updates an existing ad group. Returns the updated ad group if successful.
+         * Updates an existing ad group. Returns the updated ad group if successful. This method is only
+         * supported for Demand Gen ad groups. Retrieval and management of Demand Gen resources is
+         * currently in beta. This method is only available to allowlisted users.
          *
          * Create a request for the method "adGroups.patch".
          *
@@ -3586,8 +3612,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
           /**
            * Assigns a targeting option to an ad group. Returns the assigned targeting option if successful.
-           * Only ad groups under a line item of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for
-           * this method.
+           * This method is only supported for Demand Gen ad groups. Retrieval and management of Demand Gen
+           * resources is currently in beta. This method is only available to allowlisted users.
            *
            * Create a request for the method "assignedTargetingOptions.create".
            *
@@ -3627,8 +3653,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
             /**
              * Assigns a targeting option to an ad group. Returns the assigned targeting option if successful.
-             * Only ad groups under a line item of line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported
-             * for this method.
+             * This method is only supported for Demand Gen ad groups. Retrieval and management of Demand Gen
+             * resources is currently in beta. This method is only available to allowlisted users.
              *
              * Create a request for the method "assignedTargetingOptions.create".
              *
@@ -3800,8 +3826,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             }
           }
           /**
-           * Deletes an assigned targeting option from an ad group. Only ad groups under a line item of
-           * line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+           * Deletes an assigned targeting option from an ad group. This method is only supported for Demand
+           * Gen ad groups with the AdGroupFormat `AD_GROUP_FORMAT_DEMAND_GEN`. Retrieval and management of
+           * Demand Gen resources is currently in beta. This method is only available to allowlisted users.
            *
            * Create a request for the method "assignedTargetingOptions.delete".
            *
@@ -3842,8 +3869,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
                 java.util.regex.Pattern.compile("^[^/]+$");
 
             /**
-             * Deletes an assigned targeting option from an ad group. Only ad groups under a line item of
-             * line_item_type `LINE_ITEM_TYPE_DEMAND_GEN` are supported for this method.
+             * Deletes an assigned targeting option from an ad group. This method is only supported for Demand
+             * Gen ad groups with the AdGroupFormat `AD_GROUP_FORMAT_DEMAND_GEN`. Retrieval and management of
+             * Demand Gen resources is currently in beta. This method is only available to allowlisted users.
              *
              * Create a request for the method "assignedTargetingOptions.delete".
              *
@@ -11858,7 +11886,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            *        `TARGETING_TYPE_SUB_EXCHANGE` * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` *
            *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_USER_REWARDED_CONTENT` *
            *        `TARGETING_TYPE_VIDEO_PLAYER_SIZE` * `TARGETING_TYPE_VIEWABILITY` *
-           *        `TARGETING_TYPE_INVENTORY_MODE` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
            *        `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
            *        `TARGETING_TYPE_YOUTUBE_VIDEO` (only for
            *        `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
@@ -11922,7 +11950,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            *        `TARGETING_TYPE_SUB_EXCHANGE` * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` *
            *        `TARGETING_TYPE_URL` * `TARGETING_TYPE_USER_REWARDED_CONTENT` *
            *        `TARGETING_TYPE_VIDEO_PLAYER_SIZE` * `TARGETING_TYPE_VIEWABILITY` *
-           *        `TARGETING_TYPE_INVENTORY_MODE` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
            *        `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
            *        `TARGETING_TYPE_YOUTUBE_VIDEO` (only for
            *        `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
@@ -12069,8 +12097,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
              * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_URL` *
              * `TARGETING_TYPE_USER_REWARDED_CONTENT` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
-             * `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_INVENTORY_MODE` *
-             * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+             * `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
              * `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
              * `TARGETING_TYPE_YOUTUBE_VIDEO` (only for
              * `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
@@ -12097,10 +12124,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
            `TARGETING_TYPE_SUB_EXCHANGE` * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_URL` *
            `TARGETING_TYPE_USER_REWARDED_CONTENT` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
-           `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_INVENTORY_MODE` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
-           (only for `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
-           `TARGETING_TYPE_YOUTUBE_VIDEO` (only for `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line
-           items)
+           `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+           `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           (only for `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
              */
             public java.lang.String getTargetingType() {
               return targetingType;
@@ -12130,8 +12156,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
              * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_URL` *
              * `TARGETING_TYPE_USER_REWARDED_CONTENT` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
-             * `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_INVENTORY_MODE` *
-             * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+             * `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
              * `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
              * `TARGETING_TYPE_YOUTUBE_VIDEO` (only for
              * `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
@@ -12211,8 +12236,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
            *        `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_URL` *
            *        `TARGETING_TYPE_USER_REWARDED_CONTENT` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
-           *        `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_INVENTORY_MODE` *
-           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+           *        `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
            *        `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
            *        `TARGETING_TYPE_YOUTUBE_VIDEO` (only for
            *        `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
@@ -12271,8 +12295,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            *        `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
            *        `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_URL` *
            *        `TARGETING_TYPE_USER_REWARDED_CONTENT` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
-           *        `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_INVENTORY_MODE` *
-           *        `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+           *        `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
            *        `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
            *        `TARGETING_TYPE_YOUTUBE_VIDEO` (only for
            *        `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
@@ -12411,8 +12434,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
              * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_URL` *
              * `TARGETING_TYPE_USER_REWARDED_CONTENT` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
-             * `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_INVENTORY_MODE` *
-             * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+             * `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
              * `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
              * `TARGETING_TYPE_YOUTUBE_VIDEO` (only for
              * `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
@@ -12439,10 +12461,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * `TARGETING_TYPE_REGIONAL_LOCATION_LIST` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
            `TARGETING_TYPE_SUB_EXCHANGE` * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_URL` *
            `TARGETING_TYPE_USER_REWARDED_CONTENT` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
-           `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_INVENTORY_MODE` * `TARGETING_TYPE_YOUTUBE_CHANNEL`
-           (only for `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
-           `TARGETING_TYPE_YOUTUBE_VIDEO` (only for `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line
-           items)
+           `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+           `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) * `TARGETING_TYPE_YOUTUBE_VIDEO`
+           (only for `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
              */
             public java.lang.String getTargetingType() {
               return targetingType;
@@ -12472,8 +12493,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
              * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_SUB_EXCHANGE` *
              * `TARGETING_TYPE_THIRD_PARTY_VERIFIER` * `TARGETING_TYPE_URL` *
              * `TARGETING_TYPE_USER_REWARDED_CONTENT` * `TARGETING_TYPE_VIDEO_PLAYER_SIZE` *
-             * `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_INVENTORY_MODE` *
-             * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
+             * `TARGETING_TYPE_VIEWABILITY` * `TARGETING_TYPE_YOUTUBE_CHANNEL` (only for
              * `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items) *
              * `TARGETING_TYPE_YOUTUBE_VIDEO` (only for
              * `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_VIDEO_SEQUENCE` line items)
@@ -15824,7 +15844,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-         *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+         *        `TARGETING_TYPE_KEYWORD`
          * @param content the {@link com.google.api.services.displayvideo.v3.model.AssignedTargetingOption}
          * @return the request
          */
@@ -15860,7 +15880,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-         *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+         *        `TARGETING_TYPE_KEYWORD`
            * @param content the {@link com.google.api.services.displayvideo.v3.model.AssignedTargetingOption}
            * @since 1.13
            */
@@ -15950,15 +15970,14 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
            * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-           * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+           * `TARGETING_TYPE_KEYWORD`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
           /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
-         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD` *
-         `TARGETING_TYPE_INVENTORY_MODE`
+         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -15968,7 +15987,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
            * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-           * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+           * `TARGETING_TYPE_KEYWORD`
            */
           public Create setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
@@ -15997,7 +16016,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-         *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+         *        `TARGETING_TYPE_KEYWORD`
          * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
          * @return the request
          */
@@ -16035,7 +16054,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * @param targetingType Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-         *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+         *        `TARGETING_TYPE_KEYWORD`
            * @param assignedTargetingOptionId Required. The ID of the assigned targeting option to delete.
            * @since 1.13
            */
@@ -16131,15 +16150,14 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
            * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-           * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+           * `TARGETING_TYPE_KEYWORD`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
 
           /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
-         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD` *
-         `TARGETING_TYPE_INVENTORY_MODE`
+         * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -16149,7 +16167,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * Required. Identifies the type of this assigned targeting option. Supported targeting
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
            * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
-           * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_INVENTORY_MODE`
+           * `TARGETING_TYPE_KEYWORD`
            */
           public Delete setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {

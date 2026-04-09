@@ -31,9 +31,11 @@ package com.google.api.services.displayvideo.v3.model;
 public final class DemandGenBiddingStrategy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. If AG doesn't set value for tCPA or tROAS, line item bidding value will be the
-   * effective_bidding_value, if the bidding strategy type is not tCPA or tROAS,
-   * effective_bidding_value is always 0. For line item, it will be the same as the value field.
+   * Output only. The value effectively used by the bidding strategy. This field will be the same as
+   * value if set. If value is not set and the strategy is assigned to an ad group, this field will
+   * be inherited from the line item's bidding strategy. If type is not
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` or
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS`, this field will be 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -47,15 +49,16 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   private java.lang.String effectiveBiddingValueSource;
 
   /**
-   * Optional. The type of the bidding strategy. This can only be set at the line item level.
+   * Optional. The type of the bidding strategy. This can only be set when assigned to a line item.
+   * Ad groups will inherit this value from their line item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. The value used by the bidding strategy. This can be set at the line item and ad group
-   * level. This field is only applicable for the following strategy types: *
+   * Optional. The value used by the bidding strategy. This can be set when assigned to line items
+   * or ad groups. This field is only applicable for the following strategy types: *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC` *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS` Value of this field is in micros of the
    * advertiser's currency or ROAS value. For example, 1000000 represents 1.0 standard units of the
@@ -67,9 +70,11 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   private java.lang.Long value;
 
   /**
-   * Output only. If AG doesn't set value for tCPA or tROAS, line item bidding value will be the
-   * effective_bidding_value, if the bidding strategy type is not tCPA or tROAS,
-   * effective_bidding_value is always 0. For line item, it will be the same as the value field.
+   * Output only. The value effectively used by the bidding strategy. This field will be the same as
+   * value if set. If value is not set and the strategy is assigned to an ad group, this field will
+   * be inherited from the line item's bidding strategy. If type is not
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` or
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS`, this field will be 0.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEffectiveBiddingValue() {
@@ -77,9 +82,11 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. If AG doesn't set value for tCPA or tROAS, line item bidding value will be the
-   * effective_bidding_value, if the bidding strategy type is not tCPA or tROAS,
-   * effective_bidding_value is always 0. For line item, it will be the same as the value field.
+   * Output only. The value effectively used by the bidding strategy. This field will be the same as
+   * value if set. If value is not set and the strategy is assigned to an ad group, this field will
+   * be inherited from the line item's bidding strategy. If type is not
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` or
+   * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS`, this field will be 0.
    * @param effectiveBiddingValue effectiveBiddingValue or {@code null} for none
    */
   public DemandGenBiddingStrategy setEffectiveBiddingValue(java.lang.Long effectiveBiddingValue) {
@@ -105,7 +112,8 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The type of the bidding strategy. This can only be set at the line item level.
+   * Optional. The type of the bidding strategy. This can only be set when assigned to a line item.
+   * Ad groups will inherit this value from their line item.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -113,7 +121,8 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The type of the bidding strategy. This can only be set at the line item level.
+   * Optional. The type of the bidding strategy. This can only be set when assigned to a line item.
+   * Ad groups will inherit this value from their line item.
    * @param type type or {@code null} for none
    */
   public DemandGenBiddingStrategy setType(java.lang.String type) {
@@ -122,8 +131,8 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The value used by the bidding strategy. This can be set at the line item and ad group
-   * level. This field is only applicable for the following strategy types: *
+   * Optional. The value used by the bidding strategy. This can be set when assigned to line items
+   * or ad groups. This field is only applicable for the following strategy types: *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC` *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS` Value of this field is in micros of the
    * advertiser's currency or ROAS value. For example, 1000000 represents 1.0 standard units of the
@@ -136,8 +145,8 @@ public final class DemandGenBiddingStrategy extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. The value used by the bidding strategy. This can be set at the line item and ad group
-   * level. This field is only applicable for the following strategy types: *
+   * Optional. The value used by the bidding strategy. This can be set when assigned to line items
+   * or ad groups. This field is only applicable for the following strategy types: *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPA` * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_CPC` *
    * `DEMAND_GEN_BIDDING_STRATEGY_TYPE_TARGET_ROAS` Value of this field is in micros of the
    * advertiser's currency or ROAS value. For example, 1000000 represents 1.0 standard units of the

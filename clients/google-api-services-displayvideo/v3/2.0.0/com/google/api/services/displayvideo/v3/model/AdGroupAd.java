@@ -93,7 +93,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
 
   /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
-   * 1207068802760924844-NC#CarouselAd).
+   * 1207068802760924844-NC#CarouselAd). Retrieval and management of Demand Gen resources is
+   * currently in beta. This field is only available to allowlisted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,6 +103,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen image
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
+   * Retrieval and management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +113,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen product
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#Product-
-   * onlyAd).
+   * onlyAd). Retrieval and management of Demand Gen resources is currently in beta. This field is
+   * only available to allowlisted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,6 +123,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen video
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
+   * Retrieval and management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -342,7 +348,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
 
   /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
-   * 1207068802760924844-NC#CarouselAd).
+   * 1207068802760924844-NC#CarouselAd). Retrieval and management of Demand Gen resources is
+   * currently in beta. This field is only available to allowlisted users.
    * @return value or {@code null} for none
    */
   public DemandGenCarouselAd getDemandGenCarouselAd() {
@@ -351,7 +358,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
 
   /**
    * Details of a [Demand Gen carousel ad](//support.google.com/displayvideo/answer/15598924?&sjid=1
-   * 1207068802760924844-NC#CarouselAd).
+   * 1207068802760924844-NC#CarouselAd). Retrieval and management of Demand Gen resources is
+   * currently in beta. This field is only available to allowlisted users.
    * @param demandGenCarouselAd demandGenCarouselAd or {@code null} for none
    */
   public AdGroupAd setDemandGenCarouselAd(DemandGenCarouselAd demandGenCarouselAd) {
@@ -362,6 +370,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen image
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
+   * Retrieval and management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    * @return value or {@code null} for none
    */
   public DemandGenImageAd getDemandGenImageAd() {
@@ -371,6 +381,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen image
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#ImageAd).
+   * Retrieval and management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    * @param demandGenImageAd demandGenImageAd or {@code null} for none
    */
   public AdGroupAd setDemandGenImageAd(DemandGenImageAd demandGenImageAd) {
@@ -381,7 +393,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen product
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#Product-
-   * onlyAd).
+   * onlyAd). Retrieval and management of Demand Gen resources is currently in beta. This field is
+   * only available to allowlisted users.
    * @return value or {@code null} for none
    */
   public DemandGenProductAd getDemandGenProductAd() {
@@ -391,7 +404,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen product
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#Product-
-   * onlyAd).
+   * onlyAd). Retrieval and management of Demand Gen resources is currently in beta. This field is
+   * only available to allowlisted users.
    * @param demandGenProductAd demandGenProductAd or {@code null} for none
    */
   public AdGroupAd setDemandGenProductAd(DemandGenProductAd demandGenProductAd) {
@@ -402,6 +416,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen video
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
+   * Retrieval and management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    * @return value or {@code null} for none
    */
   public DemandGenVideoAd getDemandGenVideoAd() {
@@ -411,6 +427,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   /**
    * Details of a [Demand Gen video
    * ad](//support.google.com/displayvideo/answer/15598924?&sjid=11207068802760924844-NC#VideoAd).
+   * Retrieval and management of Demand Gen resources is currently in beta. This field is only
+   * available to allowlisted users.
    * @param demandGenVideoAd demandGenVideoAd or {@code null} for none
    */
   public AdGroupAd setDemandGenVideoAd(DemandGenVideoAd demandGenVideoAd) {

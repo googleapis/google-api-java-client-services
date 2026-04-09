@@ -17,7 +17,7 @@
 package com.google.api.services.container.model;
 
 /**
- * BootDisk specifies the boot disk configuration for nodepools.
+ * BootDisk specifies the boot disk configuration for node pools.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

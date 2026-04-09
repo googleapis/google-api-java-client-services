@@ -46,7 +46,7 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   private java.lang.Boolean enabled;
 
   /**
-   * Location policy used when scaling up a nodepool.
+   * Location policy used when scaling up a node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Location policy used when scaling up a nodepool.
+   * Location policy used when scaling up a node pool.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocationPolicy() {
@@ -129,7 +129,7 @@ public final class NodePoolAutoscaling extends com.google.api.client.json.Generi
   }
 
   /**
-   * Location policy used when scaling up a nodepool.
+   * Location policy used when scaling up a node pool.
    * @param locationPolicy locationPolicy or {@code null} for none
    */
   public NodePoolAutoscaling setLocationPolicy(java.lang.String locationPolicy) {

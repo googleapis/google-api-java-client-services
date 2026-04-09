@@ -104,7 +104,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private NetworkTierConfig networkTierConfig;
 
   /**
-   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the nodepool. Pod CIDR size per node
+   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the node pool. Pod CIDR size per node
    * depends on max_pods_per_node. By default, the value of max_pods_per_node is rounded off to next
    * power of 2 and we then double that to get the size of pod CIDR block per node. Example:
    * max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of
@@ -304,7 +304,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the nodepool. Pod CIDR size per node
+   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the node pool. Pod CIDR size per node
    * depends on max_pods_per_node. By default, the value of max_pods_per_node is rounded off to next
    * power of 2 and we then double that to get the size of pod CIDR block per node. Example:
    * max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of
@@ -317,7 +317,7 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the nodepool. Pod CIDR size per node
+   * [PRIVATE FIELD] Pod CIDR size overprovisioning config for the node pool. Pod CIDR size per node
    * depends on max_pods_per_node. By default, the value of max_pods_per_node is rounded off to next
    * power of 2 and we then double that to get the size of pod CIDR block per node. Example:
    * max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of

@@ -3186,6 +3186,148 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * Replace an Instance.
+       *
+       * Create a request for the method "instances.replaceInstance".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link ReplaceInstance#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Instance being replaced. Replace {namespace} with the project ID or
+       *        number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+       * @param content the {@link com.google.api.services.run.v1.model.Instance}
+       * @return the request
+       */
+      public ReplaceInstance replaceInstance(java.lang.String name, com.google.api.services.run.v1.model.Instance content) throws java.io.IOException {
+        ReplaceInstance result = new ReplaceInstance(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ReplaceInstance extends CloudRunRequest<com.google.api.services.run.v1.model.Instance> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/instances/[^/]+$");
+
+        /**
+         * Replace an Instance.
+         *
+         * Create a request for the method "instances.replaceInstance".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link ReplaceInstance#execute()} method to invoke the remote operation.
+         * <p> {@link ReplaceInstance#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+         * lientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Required. The name of the Instance being replaced. Replace {namespace} with the project ID or
+       *        number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         * @param content the {@link com.google.api.services.run.v1.model.Instance}
+         * @since 1.13
+         */
+        protected ReplaceInstance(java.lang.String name, com.google.api.services.run.v1.model.Instance content) {
+          super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.Instance.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+        }
+
+        @Override
+        public ReplaceInstance set$Xgafv(java.lang.String $Xgafv) {
+          return (ReplaceInstance) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ReplaceInstance setAccessToken(java.lang.String accessToken) {
+          return (ReplaceInstance) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ReplaceInstance setAlt(java.lang.String alt) {
+          return (ReplaceInstance) super.setAlt(alt);
+        }
+
+        @Override
+        public ReplaceInstance setCallback(java.lang.String callback) {
+          return (ReplaceInstance) super.setCallback(callback);
+        }
+
+        @Override
+        public ReplaceInstance setFields(java.lang.String fields) {
+          return (ReplaceInstance) super.setFields(fields);
+        }
+
+        @Override
+        public ReplaceInstance setKey(java.lang.String key) {
+          return (ReplaceInstance) super.setKey(key);
+        }
+
+        @Override
+        public ReplaceInstance setOauthToken(java.lang.String oauthToken) {
+          return (ReplaceInstance) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ReplaceInstance setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ReplaceInstance) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ReplaceInstance setQuotaUser(java.lang.String quotaUser) {
+          return (ReplaceInstance) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ReplaceInstance setUploadType(java.lang.String uploadType) {
+          return (ReplaceInstance) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ReplaceInstance setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ReplaceInstance) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Instance being replaced. Replace {namespace} with the project
+         * ID or number. It takes the form namespaces/{namespace}. For example:
+         * namespaces/PROJECT_ID
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Instance being replaced. Replace {namespace} with the project ID or
+       number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Instance being replaced. Replace {namespace} with the project
+         * ID or number. It takes the form namespaces/{namespace}. For example:
+         * namespaces/PROJECT_ID
+         */
+        public ReplaceInstance setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/instances/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ReplaceInstance set(String parameterName, Object value) {
+          return (ReplaceInstance) super.set(parameterName, value);
+        }
+      }
+      /**
        * Start an Instance which has been stopped.
        *
        * Create a request for the method "instances.start".

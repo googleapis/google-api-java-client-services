@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * AutopilotConfig contains configuration of autopilot feature for this nodepool.
+ * AutopilotConfig contains configuration of autopilot feature for this node pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

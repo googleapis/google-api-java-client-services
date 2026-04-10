@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * NodePoolUpgradeInfo contains the upgrade information of a nodepool.
+ * NodePoolUpgradeInfo contains the upgrade information of a node pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -38,14 +38,14 @@ public final class NodePoolUpgradeInfo extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> autoUpgradeStatus;
 
   /**
-   * The nodepool's current minor version's end of extended support timestamp.
+   * The node pool's current minor version's end of extended support timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String endOfExtendedSupportTimestamp;
 
   /**
-   * The nodepool's current minor version's end of standard support timestamp.
+   * The node pool's current minor version's end of standard support timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class NodePoolUpgradeInfo extends com.google.api.client.json.Generi
   }
 
   /**
-   * The nodepool's current minor version's end of extended support timestamp.
+   * The node pool's current minor version's end of extended support timestamp.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndOfExtendedSupportTimestamp() {
@@ -105,7 +105,7 @@ public final class NodePoolUpgradeInfo extends com.google.api.client.json.Generi
   }
 
   /**
-   * The nodepool's current minor version's end of extended support timestamp.
+   * The node pool's current minor version's end of extended support timestamp.
    * @param endOfExtendedSupportTimestamp endOfExtendedSupportTimestamp or {@code null} for none
    */
   public NodePoolUpgradeInfo setEndOfExtendedSupportTimestamp(java.lang.String endOfExtendedSupportTimestamp) {
@@ -114,7 +114,7 @@ public final class NodePoolUpgradeInfo extends com.google.api.client.json.Generi
   }
 
   /**
-   * The nodepool's current minor version's end of standard support timestamp.
+   * The node pool's current minor version's end of standard support timestamp.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndOfStandardSupportTimestamp() {
@@ -122,7 +122,7 @@ public final class NodePoolUpgradeInfo extends com.google.api.client.json.Generi
   }
 
   /**
-   * The nodepool's current minor version's end of standard support timestamp.
+   * The node pool's current minor version's end of standard support timestamp.
    * @param endOfStandardSupportTimestamp endOfStandardSupportTimestamp or {@code null} for none
    */
   public NodePoolUpgradeInfo setEndOfStandardSupportTimestamp(java.lang.String endOfStandardSupportTimestamp) {

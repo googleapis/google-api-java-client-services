@@ -56,6 +56,13 @@ public final class ContentTypeInfo extends com.google.api.client.json.GenericJso
   private java.lang.String fromFileName;
 
   /**
+   * The content type of the file detected by Fusion ID. go/fusionid
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fromFusionId;
+
+  /**
    * The content type of the file as specified in the request headers, multipart headers, or RUPIO
    * start request.
    * The value may be {@code null}.
@@ -71,6 +78,14 @@ public final class ContentTypeInfo extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String fromUrlPath;
+
+  /**
+   * Metadata information from Fusion ID detection. Serialized FusionIdDetectionMetadata proto. Only
+   * set if from_fusion_id is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fusionIdDetectionMetadata;
 
   /**
    * Scotty's best guess of what the content type of the file is.
@@ -128,6 +143,23 @@ public final class ContentTypeInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The content type of the file detected by Fusion ID. go/fusionid
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFromFusionId() {
+    return fromFusionId;
+  }
+
+  /**
+   * The content type of the file detected by Fusion ID. go/fusionid
+   * @param fromFusionId fromFusionId or {@code null} for none
+   */
+  public ContentTypeInfo setFromFusionId(java.lang.String fromFusionId) {
+    this.fromFusionId = fromFusionId;
+    return this;
+  }
+
+  /**
    * The content type of the file as specified in the request headers, multipart headers, or RUPIO
    * start request.
    * @return value or {@code null} for none
@@ -164,6 +196,55 @@ public final class ContentTypeInfo extends com.google.api.client.json.GenericJso
    */
   public ContentTypeInfo setFromUrlPath(java.lang.String fromUrlPath) {
     this.fromUrlPath = fromUrlPath;
+    return this;
+  }
+
+  /**
+   * Metadata information from Fusion ID detection. Serialized FusionIdDetectionMetadata proto. Only
+   * set if from_fusion_id is set.
+   * @see #decodeFusionIdDetectionMetadata()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFusionIdDetectionMetadata() {
+    return fusionIdDetectionMetadata;
+  }
+
+  /**
+   * Metadata information from Fusion ID detection. Serialized FusionIdDetectionMetadata proto. Only
+   * set if from_fusion_id is set.
+   * @see #getFusionIdDetectionMetadata()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeFusionIdDetectionMetadata() {
+    return com.google.api.client.util.Base64.decodeBase64(fusionIdDetectionMetadata);
+  }
+
+  /**
+   * Metadata information from Fusion ID detection. Serialized FusionIdDetectionMetadata proto. Only
+   * set if from_fusion_id is set.
+   * @see #encodeFusionIdDetectionMetadata()
+   * @param fusionIdDetectionMetadata fusionIdDetectionMetadata or {@code null} for none
+   */
+  public ContentTypeInfo setFusionIdDetectionMetadata(java.lang.String fusionIdDetectionMetadata) {
+    this.fusionIdDetectionMetadata = fusionIdDetectionMetadata;
+    return this;
+  }
+
+  /**
+   * Metadata information from Fusion ID detection. Serialized FusionIdDetectionMetadata proto. Only
+   * set if from_fusion_id is set.
+   * @see #setFusionIdDetectionMetadata()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public ContentTypeInfo encodeFusionIdDetectionMetadata(byte[] fusionIdDetectionMetadata) {
+    this.fusionIdDetectionMetadata = com.google.api.client.util.Base64.encodeBase64URLSafeString(fusionIdDetectionMetadata);
     return this;
   }
 

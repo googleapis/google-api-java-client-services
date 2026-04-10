@@ -41,7 +41,7 @@ public final class Annotations extends com.google.api.client.json.GenericJson {
   /**
    * Output only. If true, calling the tool repeatedly with the same arguments will have no
    * additional effect on its environment. NOTE: This property is meaningful only when
-   * `read_only_hint == false. Default: false
+   * `read_only_hint == false` Default: false
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class Annotations extends com.google.api.client.json.GenericJson {
   /**
    * Output only. If true, calling the tool repeatedly with the same arguments will have no
    * additional effect on its environment. NOTE: This property is meaningful only when
-   * `read_only_hint == false. Default: false
+   * `read_only_hint == false` Default: false
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIdempotentHint() {
@@ -104,7 +104,7 @@ public final class Annotations extends com.google.api.client.json.GenericJson {
   /**
    * Output only. If true, calling the tool repeatedly with the same arguments will have no
    * additional effect on its environment. NOTE: This property is meaningful only when
-   * `read_only_hint == false. Default: false
+   * `read_only_hint == false` Default: false
    * @param idempotentHint idempotentHint or {@code null} for none
    */
   public Annotations setIdempotentHint(java.lang.Boolean idempotentHint) {

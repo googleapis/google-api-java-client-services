@@ -56,6 +56,13 @@ public final class GdataContentTypeInfo extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String fromFusionId;
+
+  /**
+   * gdata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String fromHeader;
 
   /**
@@ -64,6 +71,13 @@ public final class GdataContentTypeInfo extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String fromUrlPath;
+
+  /**
+   * gdata
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fusionIdDetectionMetadata;
 
   /**
    * gdata
@@ -120,6 +134,23 @@ public final class GdataContentTypeInfo extends com.google.api.client.json.Gener
    * gdata
    * @return value or {@code null} for none
    */
+  public java.lang.String getFromFusionId() {
+    return fromFusionId;
+  }
+
+  /**
+   * gdata
+   * @param fromFusionId fromFusionId or {@code null} for none
+   */
+  public GdataContentTypeInfo setFromFusionId(java.lang.String fromFusionId) {
+    this.fromFusionId = fromFusionId;
+    return this;
+  }
+
+  /**
+   * gdata
+   * @return value or {@code null} for none
+   */
   public java.lang.String getFromHeader() {
     return fromHeader;
   }
@@ -147,6 +178,51 @@ public final class GdataContentTypeInfo extends com.google.api.client.json.Gener
    */
   public GdataContentTypeInfo setFromUrlPath(java.lang.String fromUrlPath) {
     this.fromUrlPath = fromUrlPath;
+    return this;
+  }
+
+  /**
+   * gdata
+   * @see #decodeFusionIdDetectionMetadata()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFusionIdDetectionMetadata() {
+    return fusionIdDetectionMetadata;
+  }
+
+  /**
+   * gdata
+   * @see #getFusionIdDetectionMetadata()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeFusionIdDetectionMetadata() {
+    return com.google.api.client.util.Base64.decodeBase64(fusionIdDetectionMetadata);
+  }
+
+  /**
+   * gdata
+   * @see #encodeFusionIdDetectionMetadata()
+   * @param fusionIdDetectionMetadata fusionIdDetectionMetadata or {@code null} for none
+   */
+  public GdataContentTypeInfo setFusionIdDetectionMetadata(java.lang.String fusionIdDetectionMetadata) {
+    this.fusionIdDetectionMetadata = fusionIdDetectionMetadata;
+    return this;
+  }
+
+  /**
+   * gdata
+   * @see #setFusionIdDetectionMetadata()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GdataContentTypeInfo encodeFusionIdDetectionMetadata(byte[] fusionIdDetectionMetadata) {
+    this.fusionIdDetectionMetadata = com.google.api.client.util.Base64.encodeBase64URLSafeString(fusionIdDetectionMetadata);
     return this;
   }
 
